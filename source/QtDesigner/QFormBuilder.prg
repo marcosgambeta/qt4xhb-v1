@@ -48,14 +48,14 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QFormBuilder()
-*/
-HB_FUNC_STATIC( QFORMBUILDER_NEW )
+    /*
+    QFormBuilder()
+    */
+HB_FUNC_STATIC(QFORMBUILDER_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
-    QFormBuilder * obj = new QFormBuilder();
+    QFormBuilder *obj = new QFormBuilder();
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -64,11 +64,11 @@ HB_FUNC_STATIC( QFORMBUILDER_NEW )
   }
 }
 
-HB_FUNC_STATIC( QFORMBUILDER_DELETE )
+HB_FUNC_STATIC(QFORMBUILDER_DELETE)
 {
-  QFormBuilder * obj = static_cast<QFormBuilder*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QFormBuilder *obj = static_cast<QFormBuilder *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -83,17 +83,17 @@ HB_FUNC_STATIC( QFORMBUILDER_DELETE )
 /*
 void addPluginPath( const QString & pluginPath )
 */
-HB_FUNC_STATIC( QFORMBUILDER_ADDPLUGINPATH )
+HB_FUNC_STATIC(QFORMBUILDER_ADDPLUGINPATH)
 {
-  QFormBuilder * obj = static_cast<QFormBuilder*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QFormBuilder *obj = static_cast<QFormBuilder *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->addPluginPath( PQSTRING(1) );
+      obj->addPluginPath(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -109,14 +109,14 @@ HB_FUNC_STATIC( QFORMBUILDER_ADDPLUGINPATH )
 /*
 void clearPluginPaths()
 */
-HB_FUNC_STATIC( QFORMBUILDER_CLEARPLUGINPATHS )
+HB_FUNC_STATIC(QFORMBUILDER_CLEARPLUGINPATHS)
 {
-  QFormBuilder * obj = static_cast<QFormBuilder*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QFormBuilder *obj = static_cast<QFormBuilder *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clearPluginPaths();
@@ -135,30 +135,30 @@ HB_FUNC_STATIC( QFORMBUILDER_CLEARPLUGINPATHS )
 /*
 QList<QDesignerCustomWidgetInterface *> customWidgets() const
 */
-HB_FUNC_STATIC( QFORMBUILDER_CUSTOMWIDGETS )
+HB_FUNC_STATIC(QFORMBUILDER_CUSTOMWIDGETS)
 {
-  QFormBuilder * obj = static_cast<QFormBuilder*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QFormBuilder *obj = static_cast<QFormBuilder *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QList<QDesignerCustomWidgetInterface *> list = obj->customWidgets();
       PHB_DYNS pDynSym = hb_dynsymFindName("QDESIGNERCUSTOMWIDGETINTERFACE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
         const int count = list.count();
-        for( int i = 0; i < count; i++ )
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -183,17 +183,17 @@ HB_FUNC_STATIC( QFORMBUILDER_CUSTOMWIDGETS )
 /*
 QStringList pluginPaths() const
 */
-HB_FUNC_STATIC( QFORMBUILDER_PLUGINPATHS )
+HB_FUNC_STATIC(QFORMBUILDER_PLUGINPATHS)
 {
-  QFormBuilder * obj = static_cast<QFormBuilder*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QFormBuilder *obj = static_cast<QFormBuilder *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->pluginPaths() );
+      RQSTRINGLIST(obj->pluginPaths());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -207,17 +207,17 @@ HB_FUNC_STATIC( QFORMBUILDER_PLUGINPATHS )
 /*
 void setPluginPath( const QStringList & pluginPaths )
 */
-HB_FUNC_STATIC( QFORMBUILDER_SETPLUGINPATH )
+HB_FUNC_STATIC(QFORMBUILDER_SETPLUGINPATH)
 {
-  QFormBuilder * obj = static_cast<QFormBuilder*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QFormBuilder *obj = static_cast<QFormBuilder *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
 #endif
-      obj->setPluginPath( PQSTRINGLIST(1) );
+      obj->setPluginPath(PQSTRINGLIST(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

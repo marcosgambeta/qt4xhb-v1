@@ -50,14 +50,14 @@ RETURN
 
 #include <QtDesigner/QExtensionManager>
 
-/*
-QExtensionFactory( QExtensionManager * parent = 0 )
-*/
-HB_FUNC_STATIC( QEXTENSIONFACTORY_NEW )
+    /*
+    QExtensionFactory( QExtensionManager * parent = 0 )
+    */
+HB_FUNC_STATIC(QEXTENSIONFACTORY_NEW)
 {
-  if( ISBETWEEN(0, 1) && (ISQEXTENSIONMANAGER(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQEXTENSIONMANAGER(1) || HB_ISNIL(1)))
   {
-    QExtensionFactory * obj = new QExtensionFactory( OPQEXTENSIONMANAGER( 1, 0 ) );
+    QExtensionFactory *obj = new QExtensionFactory(OPQEXTENSIONMANAGER(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -66,11 +66,11 @@ HB_FUNC_STATIC( QEXTENSIONFACTORY_NEW )
   }
 }
 
-HB_FUNC_STATIC( QEXTENSIONFACTORY_DELETE )
+HB_FUNC_STATIC(QEXTENSIONFACTORY_DELETE)
 {
-  QExtensionFactory * obj = qobject_cast<QExtensionFactory*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QExtensionFactory *obj = qobject_cast<QExtensionFactory *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -87,17 +87,17 @@ HB_FUNC_STATIC( QEXTENSIONFACTORY_DELETE )
 /*
 QExtensionManager * extensionManager() const
 */
-HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSIONMANAGER )
+HB_FUNC_STATIC(QEXTENSIONFACTORY_EXTENSIONMANAGER)
 {
-  QExtensionFactory * obj = qobject_cast<QExtensionFactory*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QExtensionFactory *obj = qobject_cast<QExtensionFactory *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QExtensionManager * ptr = obj->extensionManager();
+      QExtensionManager *ptr = obj->extensionManager();
       Qt4xHb::createReturnQObjectClass(ptr, "QEXTENSIONMANAGER");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -112,17 +112,17 @@ HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSIONMANAGER )
 /*
 virtual QObject * extension( QObject * object, const QString & iid ) const
 */
-HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSION )
+HB_FUNC_STATIC(QEXTENSIONFACTORY_EXTENSION)
 {
-  QExtensionFactory * obj = qobject_cast<QExtensionFactory*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QExtensionFactory *obj = qobject_cast<QExtensionFactory *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
     {
 #endif
-      QObject * ptr = obj->extension( PQOBJECT(1), PQSTRING(2) );
+      QObject *ptr = obj->extension(PQOBJECT(1), PQSTRING(2));
       Qt4xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

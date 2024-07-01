@@ -48,11 +48,12 @@ RETURN
 
 #include <QtDesigner/QDesignerFormEditorInterface>
 
-HB_FUNC_STATIC( QDESIGNEROBJECTINSPECTORINTERFACE_DELETE )
+HB_FUNC_STATIC(QDESIGNEROBJECTINSPECTORINTERFACE_DELETE)
 {
-  QDesignerObjectInspectorInterface * obj = qobject_cast<QDesignerObjectInspectorInterface*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDesignerObjectInspectorInterface *obj =
+      qobject_cast<QDesignerObjectInspectorInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -69,17 +70,18 @@ HB_FUNC_STATIC( QDESIGNEROBJECTINSPECTORINTERFACE_DELETE )
 /*
 virtual QDesignerFormEditorInterface * core() const
 */
-HB_FUNC_STATIC( QDESIGNEROBJECTINSPECTORINTERFACE_CORE )
+HB_FUNC_STATIC(QDESIGNEROBJECTINSPECTORINTERFACE_CORE)
 {
-  QDesignerObjectInspectorInterface * obj = qobject_cast<QDesignerObjectInspectorInterface*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDesignerObjectInspectorInterface *obj =
+      qobject_cast<QDesignerObjectInspectorInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QDesignerFormEditorInterface * ptr = obj->core();
+      QDesignerFormEditorInterface *ptr = obj->core();
       Qt4xHb::createReturnQObjectClass(ptr, "QDESIGNERFORMEDITORINTERFACE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -94,17 +96,18 @@ HB_FUNC_STATIC( QDESIGNEROBJECTINSPECTORINTERFACE_CORE )
 /*
 virtual void setFormWindow( QDesignerFormWindowInterface * formWindow ) = 0
 */
-HB_FUNC_STATIC( QDESIGNEROBJECTINSPECTORINTERFACE_SETFORMWINDOW )
+HB_FUNC_STATIC(QDESIGNEROBJECTINSPECTORINTERFACE_SETFORMWINDOW)
 {
-  QDesignerObjectInspectorInterface * obj = qobject_cast<QDesignerObjectInspectorInterface*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDesignerObjectInspectorInterface *obj =
+      qobject_cast<QDesignerObjectInspectorInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1) )
+    if (ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1))
     {
 #endif
-      obj->setFormWindow( PQDESIGNERFORMWINDOWINTERFACE(1) );
+      obj->setFormWindow(PQDESIGNERFORMWINDOWINTERFACE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -55,11 +55,11 @@ RETURN
 
 #include <QtGui/QAction>
 
-HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_DELETE )
+HB_FUNC_STATIC(QDESIGNERTASKMENUEXTENSION_DELETE)
 {
-  QDesignerTaskMenuExtension * obj = static_cast<QDesignerTaskMenuExtension*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDesignerTaskMenuExtension *obj = static_cast<QDesignerTaskMenuExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -74,17 +74,17 @@ HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_DELETE )
 /*
 virtual QAction * preferredEditAction() const
 */
-HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_PREFERREDEDITACTION )
+HB_FUNC_STATIC(QDESIGNERTASKMENUEXTENSION_PREFERREDEDITACTION)
 {
-  QDesignerTaskMenuExtension * obj = static_cast<QDesignerTaskMenuExtension*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDesignerTaskMenuExtension *obj = static_cast<QDesignerTaskMenuExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAction * ptr = obj->preferredEditAction();
+      QAction *ptr = obj->preferredEditAction();
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -99,30 +99,30 @@ HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_PREFERREDEDITACTION )
 /*
 virtual QList<QAction *> taskActions() const = 0
 */
-HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_TASKACTIONS )
+HB_FUNC_STATIC(QDESIGNERTASKMENUEXTENSION_TASKACTIONS)
 {
-  QDesignerTaskMenuExtension * obj = static_cast<QDesignerTaskMenuExtension*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDesignerTaskMenuExtension *obj = static_cast<QDesignerTaskMenuExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QList<QAction *> list = obj->taskActions();
       PHB_DYNS pDynSym = hb_dynsymFindName("QACTION");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
         const int count = list.count();
-        for( int i = 0; i < count; i++ )
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -144,11 +144,11 @@ HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_TASKACTIONS )
   }
 }
 
-HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_NEWFROM )
+HB_FUNC_STATIC(QDESIGNERTASKMENUEXTENSION_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -174,26 +174,26 @@ HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_NEWFROMOBJECT )
+HB_FUNC_STATIC(QDESIGNERTASKMENUEXTENSION_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QDESIGNERTASKMENUEXTENSION_NEWFROM );
+  HB_FUNC_EXEC(QDESIGNERTASKMENUEXTENSION_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_NEWFROMPOINTER )
+HB_FUNC_STATIC(QDESIGNERTASKMENUEXTENSION_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QDESIGNERTASKMENUEXTENSION_NEWFROM );
+  HB_FUNC_EXEC(QDESIGNERTASKMENUEXTENSION_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_SELFDESTRUCTION )
+HB_FUNC_STATIC(QDESIGNERTASKMENUEXTENSION_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QDESIGNERTASKMENUEXTENSION_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

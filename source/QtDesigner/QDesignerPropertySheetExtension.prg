@@ -68,11 +68,12 @@ RETURN
 
 #include <QtCore/QVariant>
 
-HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_DELETE )
+HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_DELETE)
 {
-  QDesignerPropertySheetExtension * obj = static_cast<QDesignerPropertySheetExtension*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDesignerPropertySheetExtension *obj =
+      static_cast<QDesignerPropertySheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -87,17 +88,18 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_DELETE )
 /*
 virtual int count() const = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_COUNT )
+HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_COUNT)
 {
-  QDesignerPropertySheetExtension * obj = static_cast<QDesignerPropertySheetExtension*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDesignerPropertySheetExtension *obj =
+      static_cast<QDesignerPropertySheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->count() );
+      RINT(obj->count());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -111,17 +113,18 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_COUNT )
 /*
 virtual bool hasReset( int index ) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_HASRESET )
+HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_HASRESET)
 {
-  QDesignerPropertySheetExtension * obj = static_cast<QDesignerPropertySheetExtension*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDesignerPropertySheetExtension *obj =
+      static_cast<QDesignerPropertySheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->hasReset( PINT(1)) );
+      RBOOL(obj->hasReset(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,17 +138,18 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_HASRESET )
 /*
 virtual int indexOf( const QString & name ) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_INDEXOF )
+HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_INDEXOF)
 {
-  QDesignerPropertySheetExtension * obj = static_cast<QDesignerPropertySheetExtension*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDesignerPropertySheetExtension *obj =
+      static_cast<QDesignerPropertySheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RINT( obj->indexOf( PQSTRING(1)) );
+      RINT(obj->indexOf(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -159,17 +163,18 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_INDEXOF )
 /*
 virtual bool isAttribute( int index ) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_ISATTRIBUTE )
+HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_ISATTRIBUTE)
 {
-  QDesignerPropertySheetExtension * obj = static_cast<QDesignerPropertySheetExtension*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDesignerPropertySheetExtension *obj =
+      static_cast<QDesignerPropertySheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->isAttribute( PINT(1)) );
+      RBOOL(obj->isAttribute(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,17 +188,18 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_ISATTRIBUTE )
 /*
 virtual bool isChanged( int index ) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_ISCHANGED )
+HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_ISCHANGED)
 {
-  QDesignerPropertySheetExtension * obj = static_cast<QDesignerPropertySheetExtension*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDesignerPropertySheetExtension *obj =
+      static_cast<QDesignerPropertySheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->isChanged( PINT(1)) );
+      RBOOL(obj->isChanged(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -207,17 +213,18 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_ISCHANGED )
 /*
 virtual bool isVisible( int index ) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_ISVISIBLE )
+HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_ISVISIBLE)
 {
-  QDesignerPropertySheetExtension * obj = static_cast<QDesignerPropertySheetExtension*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDesignerPropertySheetExtension *obj =
+      static_cast<QDesignerPropertySheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->isVisible( PINT(1)) );
+      RBOOL(obj->isVisible(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -231,17 +238,18 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_ISVISIBLE )
 /*
 virtual QVariant property( int index ) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_PROPERTY )
+HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_PROPERTY)
 {
-  QDesignerPropertySheetExtension * obj = static_cast<QDesignerPropertySheetExtension*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDesignerPropertySheetExtension *obj =
+      static_cast<QDesignerPropertySheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      QVariant * ptr = new QVariant( obj->property( PINT(1)) );
+      QVariant *ptr = new QVariant(obj->property(PINT(1)));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -256,17 +264,18 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_PROPERTY )
 /*
 virtual QString propertyGroup( int index ) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_PROPERTYGROUP )
+HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_PROPERTYGROUP)
 {
-  QDesignerPropertySheetExtension * obj = static_cast<QDesignerPropertySheetExtension*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDesignerPropertySheetExtension *obj =
+      static_cast<QDesignerPropertySheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQSTRING( obj->propertyGroup( PINT(1)) );
+      RQSTRING(obj->propertyGroup(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -280,17 +289,18 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_PROPERTYGROUP )
 /*
 virtual QString propertyName( int index ) const = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_PROPERTYNAME )
+HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_PROPERTYNAME)
 {
-  QDesignerPropertySheetExtension * obj = static_cast<QDesignerPropertySheetExtension*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDesignerPropertySheetExtension *obj =
+      static_cast<QDesignerPropertySheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQSTRING( obj->propertyName( PINT(1)) );
+      RQSTRING(obj->propertyName(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -304,17 +314,18 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_PROPERTYNAME )
 /*
 virtual bool reset( int index ) = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_RESET )
+HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_RESET)
 {
-  QDesignerPropertySheetExtension * obj = static_cast<QDesignerPropertySheetExtension*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDesignerPropertySheetExtension *obj =
+      static_cast<QDesignerPropertySheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->reset( PINT(1)) );
+      RBOOL(obj->reset(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -328,17 +339,18 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_RESET )
 /*
 virtual void setAttribute( int index, bool attribute ) = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETATTRIBUTE )
+HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_SETATTRIBUTE)
 {
-  QDesignerPropertySheetExtension * obj = static_cast<QDesignerPropertySheetExtension*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDesignerPropertySheetExtension *obj =
+      static_cast<QDesignerPropertySheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2))
     {
 #endif
-      obj->setAttribute( PINT(1), PBOOL(2) );
+      obj->setAttribute(PINT(1), PBOOL(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -354,17 +366,18 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETATTRIBUTE )
 /*
 virtual void setChanged( int index, bool changed ) = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETCHANGED )
+HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_SETCHANGED)
 {
-  QDesignerPropertySheetExtension * obj = static_cast<QDesignerPropertySheetExtension*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDesignerPropertySheetExtension *obj =
+      static_cast<QDesignerPropertySheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2))
     {
 #endif
-      obj->setChanged( PINT(1), PBOOL(2) );
+      obj->setChanged(PINT(1), PBOOL(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -380,17 +393,18 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETCHANGED )
 /*
 virtual void setProperty( int index, const QVariant & value ) = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETPROPERTY )
+HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_SETPROPERTY)
 {
-  QDesignerPropertySheetExtension * obj = static_cast<QDesignerPropertySheetExtension*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDesignerPropertySheetExtension *obj =
+      static_cast<QDesignerPropertySheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2))
     {
 #endif
-      obj->setProperty( PINT(1), *PQVARIANT(2) );
+      obj->setProperty(PINT(1), *PQVARIANT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -406,17 +420,18 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETPROPERTY )
 /*
 virtual void setPropertyGroup( int index, const QString & group ) = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETPROPERTYGROUP )
+HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_SETPROPERTYGROUP)
 {
-  QDesignerPropertySheetExtension * obj = static_cast<QDesignerPropertySheetExtension*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDesignerPropertySheetExtension *obj =
+      static_cast<QDesignerPropertySheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {
 #endif
-      obj->setPropertyGroup( PINT(1), PQSTRING(2) );
+      obj->setPropertyGroup(PINT(1), PQSTRING(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -432,17 +447,18 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETPROPERTYGROUP )
 /*
 virtual void setVisible( int index, bool visible ) = 0
 */
-HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETVISIBLE )
+HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_SETVISIBLE)
 {
-  QDesignerPropertySheetExtension * obj = static_cast<QDesignerPropertySheetExtension*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDesignerPropertySheetExtension *obj =
+      static_cast<QDesignerPropertySheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2))
     {
 #endif
-      obj->setVisible( PINT(1), PBOOL(2) );
+      obj->setVisible(PINT(1), PBOOL(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -455,11 +471,11 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETVISIBLE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_NEWFROM )
+HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -468,7 +484,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -485,26 +501,26 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_NEWFROMOBJECT )
+HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QDESIGNERPROPERTYSHEETEXTENSION_NEWFROM );
+  HB_FUNC_EXEC(QDESIGNERPROPERTYSHEETEXTENSION_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_NEWFROMPOINTER )
+HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QDESIGNERPROPERTYSHEETEXTENSION_NEWFROM );
+  HB_FUNC_EXEC(QDESIGNERPROPERTYSHEETEXTENSION_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SELFDESTRUCTION )
+HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

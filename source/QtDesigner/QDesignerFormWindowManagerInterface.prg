@@ -79,11 +79,12 @@ RETURN
 #include <QtGui/QAction>
 #include <QtDesigner/QDesignerFormEditorInterface>
 
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_DELETE )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_DELETE)
 {
-  QDesignerFormWindowManagerInterface * obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDesignerFormWindowManagerInterface *obj =
+      qobject_cast<QDesignerFormWindowManagerInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -100,17 +101,18 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_DELETE )
 /*
 virtual QAction * actionAdjustSize() const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONADJUSTSIZE )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONADJUSTSIZE)
 {
-  QDesignerFormWindowManagerInterface * obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDesignerFormWindowManagerInterface *obj =
+      qobject_cast<QDesignerFormWindowManagerInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAction * ptr = obj->actionAdjustSize();
+      QAction *ptr = obj->actionAdjustSize();
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -125,17 +127,18 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONADJUSTSIZE )
 /*
 virtual QAction * actionBreakLayout() const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONBREAKLAYOUT )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONBREAKLAYOUT)
 {
-  QDesignerFormWindowManagerInterface * obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDesignerFormWindowManagerInterface *obj =
+      qobject_cast<QDesignerFormWindowManagerInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAction * ptr = obj->actionBreakLayout();
+      QAction *ptr = obj->actionBreakLayout();
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -150,17 +153,18 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONBREAKLAYOUT )
 /*
 virtual QAction * actionCopy() const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONCOPY )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONCOPY)
 {
-  QDesignerFormWindowManagerInterface * obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDesignerFormWindowManagerInterface *obj =
+      qobject_cast<QDesignerFormWindowManagerInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAction * ptr = obj->actionCopy();
+      QAction *ptr = obj->actionCopy();
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -175,17 +179,18 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONCOPY )
 /*
 virtual QAction * actionCut() const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONCUT )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONCUT)
 {
-  QDesignerFormWindowManagerInterface * obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDesignerFormWindowManagerInterface *obj =
+      qobject_cast<QDesignerFormWindowManagerInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAction * ptr = obj->actionCut();
+      QAction *ptr = obj->actionCut();
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -200,17 +205,18 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONCUT )
 /*
 virtual QAction * actionDelete() const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONDELETE )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONDELETE)
 {
-  QDesignerFormWindowManagerInterface * obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDesignerFormWindowManagerInterface *obj =
+      qobject_cast<QDesignerFormWindowManagerInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAction * ptr = obj->actionDelete();
+      QAction *ptr = obj->actionDelete();
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -225,17 +231,18 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONDELETE )
 /*
 QAction * actionFormLayout() const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONFORMLAYOUT )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONFORMLAYOUT)
 {
-  QDesignerFormWindowManagerInterface * obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDesignerFormWindowManagerInterface *obj =
+      qobject_cast<QDesignerFormWindowManagerInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAction * ptr = obj->actionFormLayout();
+      QAction *ptr = obj->actionFormLayout();
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -250,17 +257,18 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONFORMLAYOUT )
 /*
 virtual QAction * actionGridLayout() const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONGRIDLAYOUT )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONGRIDLAYOUT)
 {
-  QDesignerFormWindowManagerInterface * obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDesignerFormWindowManagerInterface *obj =
+      qobject_cast<QDesignerFormWindowManagerInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAction * ptr = obj->actionGridLayout();
+      QAction *ptr = obj->actionGridLayout();
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -275,17 +283,18 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONGRIDLAYOUT )
 /*
 virtual QAction * actionHorizontalLayout() const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONHORIZONTALLAYOUT )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONHORIZONTALLAYOUT)
 {
-  QDesignerFormWindowManagerInterface * obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDesignerFormWindowManagerInterface *obj =
+      qobject_cast<QDesignerFormWindowManagerInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAction * ptr = obj->actionHorizontalLayout();
+      QAction *ptr = obj->actionHorizontalLayout();
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -300,17 +309,18 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONHORIZONTALLAYOUT )
 /*
 virtual QAction * actionLower() const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONLOWER )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONLOWER)
 {
-  QDesignerFormWindowManagerInterface * obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDesignerFormWindowManagerInterface *obj =
+      qobject_cast<QDesignerFormWindowManagerInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAction * ptr = obj->actionLower();
+      QAction *ptr = obj->actionLower();
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -325,17 +335,18 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONLOWER )
 /*
 virtual QAction * actionPaste() const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONPASTE )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONPASTE)
 {
-  QDesignerFormWindowManagerInterface * obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDesignerFormWindowManagerInterface *obj =
+      qobject_cast<QDesignerFormWindowManagerInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAction * ptr = obj->actionPaste();
+      QAction *ptr = obj->actionPaste();
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -350,17 +361,18 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONPASTE )
 /*
 virtual QAction * actionRaise() const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONRAISE )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONRAISE)
 {
-  QDesignerFormWindowManagerInterface * obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDesignerFormWindowManagerInterface *obj =
+      qobject_cast<QDesignerFormWindowManagerInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAction * ptr = obj->actionRaise();
+      QAction *ptr = obj->actionRaise();
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -375,17 +387,18 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONRAISE )
 /*
 virtual QAction * actionRedo() const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONREDO )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONREDO)
 {
-  QDesignerFormWindowManagerInterface * obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDesignerFormWindowManagerInterface *obj =
+      qobject_cast<QDesignerFormWindowManagerInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAction * ptr = obj->actionRedo();
+      QAction *ptr = obj->actionRedo();
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -400,17 +413,18 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONREDO )
 /*
 virtual QAction * actionSelectAll() const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSELECTALL )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSELECTALL)
 {
-  QDesignerFormWindowManagerInterface * obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDesignerFormWindowManagerInterface *obj =
+      qobject_cast<QDesignerFormWindowManagerInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAction * ptr = obj->actionSelectAll();
+      QAction *ptr = obj->actionSelectAll();
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -425,17 +439,18 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSELECTALL )
 /*
 QAction * actionSimplifyLayout() const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSIMPLIFYLAYOUT )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSIMPLIFYLAYOUT)
 {
-  QDesignerFormWindowManagerInterface * obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDesignerFormWindowManagerInterface *obj =
+      qobject_cast<QDesignerFormWindowManagerInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAction * ptr = obj->actionSimplifyLayout();
+      QAction *ptr = obj->actionSimplifyLayout();
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -450,17 +465,18 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSIMPLIFYLAYOUT )
 /*
 virtual QAction * actionSplitHorizontal() const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSPLITHORIZONTAL )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSPLITHORIZONTAL)
 {
-  QDesignerFormWindowManagerInterface * obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDesignerFormWindowManagerInterface *obj =
+      qobject_cast<QDesignerFormWindowManagerInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAction * ptr = obj->actionSplitHorizontal();
+      QAction *ptr = obj->actionSplitHorizontal();
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -475,17 +491,18 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSPLITHORIZONTAL )
 /*
 virtual QAction * actionSplitVertical() const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSPLITVERTICAL )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSPLITVERTICAL)
 {
-  QDesignerFormWindowManagerInterface * obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDesignerFormWindowManagerInterface *obj =
+      qobject_cast<QDesignerFormWindowManagerInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAction * ptr = obj->actionSplitVertical();
+      QAction *ptr = obj->actionSplitVertical();
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -500,17 +517,18 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSPLITVERTICAL )
 /*
 virtual QAction * actionUndo() const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONUNDO )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONUNDO)
 {
-  QDesignerFormWindowManagerInterface * obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDesignerFormWindowManagerInterface *obj =
+      qobject_cast<QDesignerFormWindowManagerInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAction * ptr = obj->actionUndo();
+      QAction *ptr = obj->actionUndo();
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -525,17 +543,18 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONUNDO )
 /*
 virtual QAction * actionVerticalLayout() const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONVERTICALLAYOUT )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONVERTICALLAYOUT)
 {
-  QDesignerFormWindowManagerInterface * obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDesignerFormWindowManagerInterface *obj =
+      qobject_cast<QDesignerFormWindowManagerInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAction * ptr = obj->actionVerticalLayout();
+      QAction *ptr = obj->actionVerticalLayout();
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -550,18 +569,19 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONVERTICALLAYOUT )
 /*
 virtual QDesignerFormWindowInterface * activeFormWindow() const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIVEFORMWINDOW )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIVEFORMWINDOW)
 {
-  QDesignerFormWindowManagerInterface * obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDesignerFormWindowManagerInterface *obj =
+      qobject_cast<QDesignerFormWindowManagerInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QDesignerFormWindowInterface * ptr = obj->activeFormWindow();
-      Qt4xHb::createReturnQWidgetClass( ptr, "QDESIGNERFORMWINDOWINTERFACE");
+      QDesignerFormWindowInterface *ptr = obj->activeFormWindow();
+      Qt4xHb::createReturnQWidgetClass(ptr, "QDESIGNERFORMWINDOWINTERFACE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -575,17 +595,18 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIVEFORMWINDOW )
 /*
 virtual QDesignerFormEditorInterface * core() const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_CORE )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_CORE)
 {
-  QDesignerFormWindowManagerInterface * obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDesignerFormWindowManagerInterface *obj =
+      qobject_cast<QDesignerFormWindowManagerInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QDesignerFormEditorInterface * ptr = obj->core();
+      QDesignerFormEditorInterface *ptr = obj->core();
       Qt4xHb::createReturnQObjectClass(ptr, "QDESIGNERFORMEDITORINTERFACE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -600,18 +621,20 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_CORE )
 /*
 virtual QDesignerFormWindowInterface * createFormWindow( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_CREATEFORMWINDOW )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_CREATEFORMWINDOW)
 {
-  QDesignerFormWindowManagerInterface * obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDesignerFormWindowManagerInterface *obj =
+      qobject_cast<QDesignerFormWindowManagerInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)) )
+    if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      QDesignerFormWindowInterface * ptr = obj->createFormWindow( OPQWIDGET( 1, 0 ), HB_ISNIL(2) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(2) );
-      Qt4xHb::createReturnQWidgetClass( ptr, "QDESIGNERFORMWINDOWINTERFACE");
+      QDesignerFormWindowInterface *ptr =
+          obj->createFormWindow(OPQWIDGET(1, 0), HB_ISNIL(2) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(2));
+      Qt4xHb::createReturnQWidgetClass(ptr, "QDESIGNERFORMWINDOWINTERFACE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -625,18 +648,19 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_CREATEFORMWINDOW )
 /*
 virtual QDesignerFormWindowInterface * formWindow( int index ) const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_FORMWINDOW )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_FORMWINDOW)
 {
-  QDesignerFormWindowManagerInterface * obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDesignerFormWindowManagerInterface *obj =
+      qobject_cast<QDesignerFormWindowManagerInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      QDesignerFormWindowInterface * ptr = obj->formWindow( PINT(1) );
-      Qt4xHb::createReturnQWidgetClass( ptr, "QDESIGNERFORMWINDOWINTERFACE");
+      QDesignerFormWindowInterface *ptr = obj->formWindow(PINT(1));
+      Qt4xHb::createReturnQWidgetClass(ptr, "QDESIGNERFORMWINDOWINTERFACE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -650,17 +674,18 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_FORMWINDOW )
 /*
 virtual int formWindowCount() const
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_FORMWINDOWCOUNT )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_FORMWINDOWCOUNT)
 {
-  QDesignerFormWindowManagerInterface * obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDesignerFormWindowManagerInterface *obj =
+      qobject_cast<QDesignerFormWindowManagerInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->formWindowCount() );
+      RINT(obj->formWindowCount());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -674,17 +699,18 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_FORMWINDOWCOUNT )
 /*
 virtual void addFormWindow( QDesignerFormWindowInterface * formWindow )
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ADDFORMWINDOW )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ADDFORMWINDOW)
 {
-  QDesignerFormWindowManagerInterface * obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDesignerFormWindowManagerInterface *obj =
+      qobject_cast<QDesignerFormWindowManagerInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1) )
+    if (ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1))
     {
 #endif
-      obj->addFormWindow( PQDESIGNERFORMWINDOWINTERFACE(1) );
+      obj->addFormWindow(PQDESIGNERFORMWINDOWINTERFACE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -700,17 +726,18 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ADDFORMWINDOW )
 /*
 virtual void removeFormWindow( QDesignerFormWindowInterface * formWindow )
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_REMOVEFORMWINDOW )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_REMOVEFORMWINDOW)
 {
-  QDesignerFormWindowManagerInterface * obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDesignerFormWindowManagerInterface *obj =
+      qobject_cast<QDesignerFormWindowManagerInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1) )
+    if (ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1))
     {
 #endif
-      obj->removeFormWindow( PQDESIGNERFORMWINDOWINTERFACE(1) );
+      obj->removeFormWindow(PQDESIGNERFORMWINDOWINTERFACE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -726,17 +753,18 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_REMOVEFORMWINDOW )
 /*
 virtual void setActiveFormWindow( QDesignerFormWindowInterface * formWindow )
 */
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_SETACTIVEFORMWINDOW )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_SETACTIVEFORMWINDOW)
 {
-  QDesignerFormWindowManagerInterface * obj = qobject_cast<QDesignerFormWindowManagerInterface*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDesignerFormWindowManagerInterface *obj =
+      qobject_cast<QDesignerFormWindowManagerInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1) )
+    if (ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1))
     {
 #endif
-      obj->setActiveFormWindow( PQDESIGNERFORMWINDOWINTERFACE(1) );
+      obj->setActiveFormWindow(PQDESIGNERFORMWINDOWINTERFACE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -749,21 +777,24 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_SETACTIVEFORMWINDOW )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QDesignerFormWindowManagerInterfaceSlots_connect_signal(const QString & signal, const QString & slot);
+void QDesignerFormWindowManagerInterfaceSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONACTIVEFORMWINDOWCHANGED )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ONACTIVEFORMWINDOWCHANGED)
 {
-  QDesignerFormWindowManagerInterfaceSlots_connect_signal("activeFormWindowChanged(QDesignerFormWindowInterface*)", "activeFormWindowChanged(QDesignerFormWindowInterface*)");
+  QDesignerFormWindowManagerInterfaceSlots_connect_signal("activeFormWindowChanged(QDesignerFormWindowInterface*)",
+                                                          "activeFormWindowChanged(QDesignerFormWindowInterface*)");
 }
 
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWADDED )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWADDED)
 {
-  QDesignerFormWindowManagerInterfaceSlots_connect_signal("formWindowAdded(QDesignerFormWindowInterface*)", "formWindowAdded(QDesignerFormWindowInterface*)");
+  QDesignerFormWindowManagerInterfaceSlots_connect_signal("formWindowAdded(QDesignerFormWindowInterface*)",
+                                                          "formWindowAdded(QDesignerFormWindowInterface*)");
 }
 
-HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWREMOVED )
+HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWREMOVED)
 {
-  QDesignerFormWindowManagerInterfaceSlots_connect_signal("formWindowRemoved(QDesignerFormWindowInterface*)", "formWindowRemoved(QDesignerFormWindowInterface*)");
+  QDesignerFormWindowManagerInterfaceSlots_connect_signal("formWindowRemoved(QDesignerFormWindowInterface*)",
+                                                          "formWindowRemoved(QDesignerFormWindowInterface*)");
 }
 
 #pragma ENDDUMP
