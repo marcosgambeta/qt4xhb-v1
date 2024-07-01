@@ -65,22 +65,27 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-HB_FUNC_STATIC( QAUDIOINPUT_NEW )
+HB_FUNC_STATIC(QAUDIOINPUT_NEW)
 {
-  if( ISBETWEEN(0, 2) && (ISQAUDIOFORMAT(1) || HB_ISNIL(1)) && (ISQOBJECT(2) || HB_ISNIL(2)) )
+  if (ISBETWEEN(0, 2) && (ISQAUDIOFORMAT(1) || HB_ISNIL(1)) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
     QAudioInput( const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
     */
-    QAudioInput * obj = new QAudioInput( HB_ISNIL(1) ? QAudioFormat() : *static_cast<QAudioFormat*>( Qt4xHb::itemGetPtr(1) ), OPQOBJECT( 2, 0 ) );
+    QAudioInput *obj = new QAudioInput(
+        HB_ISNIL(1) ? QAudioFormat() : *static_cast<QAudioFormat *>(Qt4xHb::itemGetPtr(1)), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1, 3) && ISQAUDIODEVICEINFO(1) && (ISQAUDIOFORMAT(2) || HB_ISNIL(2)) && (ISQOBJECT(3) || HB_ISNIL(3)) )
+  else if (ISBETWEEN(1, 3) && ISQAUDIODEVICEINFO(1) && (ISQAUDIOFORMAT(2) || HB_ISNIL(2)) &&
+           (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
-    QAudioInput( const QAudioDeviceInfo & audioDevice, const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
+    QAudioInput( const QAudioDeviceInfo & audioDevice, const QAudioFormat & format = QAudioFormat(), QObject * parent =
+    0 )
     */
-    QAudioInput * obj = new QAudioInput( *PQAUDIODEVICEINFO(1), HB_ISNIL(2) ? QAudioFormat() : *static_cast<QAudioFormat*>( Qt4xHb::itemGetPtr(2) ), OPQOBJECT( 3, 0 ) );
+    QAudioInput *obj = new QAudioInput(
+        *PQAUDIODEVICEINFO(1), HB_ISNIL(2) ? QAudioFormat() : *static_cast<QAudioFormat *>(Qt4xHb::itemGetPtr(2)),
+        OPQOBJECT(3, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -89,11 +94,11 @@ HB_FUNC_STATIC( QAUDIOINPUT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QAUDIOINPUT_DELETE )
+HB_FUNC_STATIC(QAUDIOINPUT_DELETE)
 {
-  QAudioInput * obj = qobject_cast<QAudioInput*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAudioInput *obj = qobject_cast<QAudioInput *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -110,17 +115,17 @@ HB_FUNC_STATIC( QAUDIOINPUT_DELETE )
 /*
 int bufferSize() const
 */
-HB_FUNC_STATIC( QAUDIOINPUT_BUFFERSIZE )
+HB_FUNC_STATIC(QAUDIOINPUT_BUFFERSIZE)
 {
-  QAudioInput * obj = qobject_cast<QAudioInput*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAudioInput *obj = qobject_cast<QAudioInput *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->bufferSize() );
+      RINT(obj->bufferSize());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -134,17 +139,17 @@ HB_FUNC_STATIC( QAUDIOINPUT_BUFFERSIZE )
 /*
 int bytesReady() const
 */
-HB_FUNC_STATIC( QAUDIOINPUT_BYTESREADY )
+HB_FUNC_STATIC(QAUDIOINPUT_BYTESREADY)
 {
-  QAudioInput * obj = qobject_cast<QAudioInput*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAudioInput *obj = qobject_cast<QAudioInput *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->bytesReady() );
+      RINT(obj->bytesReady());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,17 +163,17 @@ HB_FUNC_STATIC( QAUDIOINPUT_BYTESREADY )
 /*
 qint64 elapsedUSecs() const
 */
-HB_FUNC_STATIC( QAUDIOINPUT_ELAPSEDUSECS )
+HB_FUNC_STATIC(QAUDIOINPUT_ELAPSEDUSECS)
 {
-  QAudioInput * obj = qobject_cast<QAudioInput*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAudioInput *obj = qobject_cast<QAudioInput *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQINT64( obj->elapsedUSecs() );
+      RQINT64(obj->elapsedUSecs());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,17 +187,17 @@ HB_FUNC_STATIC( QAUDIOINPUT_ELAPSEDUSECS )
 /*
 QAudio::Error error() const
 */
-HB_FUNC_STATIC( QAUDIOINPUT_ERROR )
+HB_FUNC_STATIC(QAUDIOINPUT_ERROR)
 {
-  QAudioInput * obj = qobject_cast<QAudioInput*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAudioInput *obj = qobject_cast<QAudioInput *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->error() );
+      RENUM(obj->error());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,17 +211,17 @@ HB_FUNC_STATIC( QAUDIOINPUT_ERROR )
 /*
 QAudioFormat format() const
 */
-HB_FUNC_STATIC( QAUDIOINPUT_FORMAT )
+HB_FUNC_STATIC(QAUDIOINPUT_FORMAT)
 {
-  QAudioInput * obj = qobject_cast<QAudioInput*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAudioInput *obj = qobject_cast<QAudioInput *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAudioFormat * ptr = new QAudioFormat( obj->format() );
+      QAudioFormat *ptr = new QAudioFormat(obj->format());
       Qt4xHb::createReturnClass(ptr, "QAUDIOFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -231,17 +236,17 @@ HB_FUNC_STATIC( QAUDIOINPUT_FORMAT )
 /*
 int notifyInterval() const
 */
-HB_FUNC_STATIC( QAUDIOINPUT_NOTIFYINTERVAL )
+HB_FUNC_STATIC(QAUDIOINPUT_NOTIFYINTERVAL)
 {
-  QAudioInput * obj = qobject_cast<QAudioInput*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAudioInput *obj = qobject_cast<QAudioInput *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->notifyInterval() );
+      RINT(obj->notifyInterval());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -255,17 +260,17 @@ HB_FUNC_STATIC( QAUDIOINPUT_NOTIFYINTERVAL )
 /*
 int periodSize() const
 */
-HB_FUNC_STATIC( QAUDIOINPUT_PERIODSIZE )
+HB_FUNC_STATIC(QAUDIOINPUT_PERIODSIZE)
 {
-  QAudioInput * obj = qobject_cast<QAudioInput*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAudioInput *obj = qobject_cast<QAudioInput *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->periodSize() );
+      RINT(obj->periodSize());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,17 +284,17 @@ HB_FUNC_STATIC( QAUDIOINPUT_PERIODSIZE )
 /*
 qint64 processedUSecs() const
 */
-HB_FUNC_STATIC( QAUDIOINPUT_PROCESSEDUSECS )
+HB_FUNC_STATIC(QAUDIOINPUT_PROCESSEDUSECS)
 {
-  QAudioInput * obj = qobject_cast<QAudioInput*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAudioInput *obj = qobject_cast<QAudioInput *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQINT64( obj->processedUSecs() );
+      RQINT64(obj->processedUSecs());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -303,14 +308,14 @@ HB_FUNC_STATIC( QAUDIOINPUT_PROCESSEDUSECS )
 /*
 void reset()
 */
-HB_FUNC_STATIC( QAUDIOINPUT_RESET )
+HB_FUNC_STATIC(QAUDIOINPUT_RESET)
 {
-  QAudioInput * obj = qobject_cast<QAudioInput*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAudioInput *obj = qobject_cast<QAudioInput *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->reset();
@@ -329,14 +334,14 @@ HB_FUNC_STATIC( QAUDIOINPUT_RESET )
 /*
 void resume()
 */
-HB_FUNC_STATIC( QAUDIOINPUT_RESUME )
+HB_FUNC_STATIC(QAUDIOINPUT_RESUME)
 {
-  QAudioInput * obj = qobject_cast<QAudioInput*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAudioInput *obj = qobject_cast<QAudioInput *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->resume();
@@ -355,17 +360,17 @@ HB_FUNC_STATIC( QAUDIOINPUT_RESUME )
 /*
 void setBufferSize( int value )
 */
-HB_FUNC_STATIC( QAUDIOINPUT_SETBUFFERSIZE )
+HB_FUNC_STATIC(QAUDIOINPUT_SETBUFFERSIZE)
 {
-  QAudioInput * obj = qobject_cast<QAudioInput*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAudioInput *obj = qobject_cast<QAudioInput *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setBufferSize( PINT(1) );
+      obj->setBufferSize(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -381,17 +386,17 @@ HB_FUNC_STATIC( QAUDIOINPUT_SETBUFFERSIZE )
 /*
 void setNotifyInterval( int ms )
 */
-HB_FUNC_STATIC( QAUDIOINPUT_SETNOTIFYINTERVAL )
+HB_FUNC_STATIC(QAUDIOINPUT_SETNOTIFYINTERVAL)
 {
-  QAudioInput * obj = qobject_cast<QAudioInput*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAudioInput *obj = qobject_cast<QAudioInput *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setNotifyInterval( PINT(1) );
+      obj->setNotifyInterval(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -404,32 +409,32 @@ HB_FUNC_STATIC( QAUDIOINPUT_SETNOTIFYINTERVAL )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QAUDIOINPUT_START )
+HB_FUNC_STATIC(QAUDIOINPUT_START)
 {
-  if( ISNUMPAR(1) && ISQIODEVICE(1) )
+  if (ISNUMPAR(1) && ISQIODEVICE(1))
   {
     /*
     void start( QIODevice * device )
     */
-    QAudioInput * obj = qobject_cast<QAudioInput*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QAudioInput *obj = qobject_cast<QAudioInput *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->start( PQIODEVICE(1) );
+      obj->start(PQIODEVICE(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR(0) )
+  else if (ISNUMPAR(0))
   {
     /*
     QIODevice * start()
     */
-    QAudioInput * obj = qobject_cast<QAudioInput*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QAudioInput *obj = qobject_cast<QAudioInput *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      QIODevice * ptr = obj->start();
+      QIODevice *ptr = obj->start();
       Qt4xHb::createReturnQObjectClass(ptr, "QIODEVICE");
     }
   }
@@ -442,17 +447,17 @@ HB_FUNC_STATIC( QAUDIOINPUT_START )
 /*
 QAudio::State state() const
 */
-HB_FUNC_STATIC( QAUDIOINPUT_STATE )
+HB_FUNC_STATIC(QAUDIOINPUT_STATE)
 {
-  QAudioInput * obj = qobject_cast<QAudioInput*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAudioInput *obj = qobject_cast<QAudioInput *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->state() );
+      RENUM(obj->state());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -466,14 +471,14 @@ HB_FUNC_STATIC( QAUDIOINPUT_STATE )
 /*
 void stop()
 */
-HB_FUNC_STATIC( QAUDIOINPUT_STOP )
+HB_FUNC_STATIC(QAUDIOINPUT_STOP)
 {
-  QAudioInput * obj = qobject_cast<QAudioInput*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAudioInput *obj = qobject_cast<QAudioInput *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->stop();
@@ -492,14 +497,14 @@ HB_FUNC_STATIC( QAUDIOINPUT_STOP )
 /*
 void suspend()
 */
-HB_FUNC_STATIC( QAUDIOINPUT_SUSPEND )
+HB_FUNC_STATIC(QAUDIOINPUT_SUSPEND)
 {
-  QAudioInput * obj = qobject_cast<QAudioInput*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAudioInput *obj = qobject_cast<QAudioInput *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->suspend();
@@ -515,14 +520,14 @@ HB_FUNC_STATIC( QAUDIOINPUT_SUSPEND )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QAudioInputSlots_connect_signal(const QString & signal, const QString & slot);
+void QAudioInputSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QAUDIOINPUT_ONSTATECHANGED )
+HB_FUNC_STATIC(QAUDIOINPUT_ONSTATECHANGED)
 {
   QAudioInputSlots_connect_signal("stateChanged(QAudio::State)", "stateChanged(QAudio::State)");
 }
 
-HB_FUNC_STATIC( QAUDIOINPUT_ONNOTIFY )
+HB_FUNC_STATIC(QAUDIOINPUT_ONNOTIFY)
 {
   QAudioInputSlots_connect_signal("notify()", "notify()");
 }
