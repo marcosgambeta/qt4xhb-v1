@@ -49,14 +49,14 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-/*
-HUiLoader( QObject *parent = 0 )
-*/
-HB_FUNC_STATIC( HUILOADER_NEW )
+    /*
+    HUiLoader( QObject *parent = 0 )
+    */
+HB_FUNC_STATIC(HUILOADER_NEW)
 {
-  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    HUiLoader * obj = new HUiLoader( OPQOBJECT( 1, 0 ) );
+    HUiLoader *obj = new HUiLoader(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -68,11 +68,11 @@ HB_FUNC_STATIC( HUILOADER_NEW )
 /*
 ~HUiLoader()
 */
-HB_FUNC_STATIC( HUILOADER_DELETE )
+HB_FUNC_STATIC(HUILOADER_DELETE)
 {
-  HUiLoader * obj = (HUiLoader *) Qt4xHb::itemGetPtrStackSelfItem();
+  HUiLoader *obj = (HUiLoader *)Qt4xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -105,17 +105,17 @@ QWidget * createWidget( const QString &className, QWidget *parent = 0, const QSt
 /*
 void setCreateActionCB ( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HUILOADER_SETCREATEACTIONCB )
+HB_FUNC_STATIC(HUILOADER_SETCREATEACTIONCB)
 {
-  HUiLoader * obj = (HUiLoader *) Qt4xHb::itemGetPtrStackSelfItem();
+  HUiLoader *obj = (HUiLoader *)Qt4xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if (ISNUMPAR(1))
     {
 #endif
-      obj->setCreateActionCB( PBLOCKORSYMBOL(1) );
+      obj->setCreateActionCB(PBLOCKORSYMBOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -131,17 +131,17 @@ HB_FUNC_STATIC( HUILOADER_SETCREATEACTIONCB )
 /*
 void setCreateActionGroupCB ( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HUILOADER_SETCREATEACTIONGROUPCB )
+HB_FUNC_STATIC(HUILOADER_SETCREATEACTIONGROUPCB)
 {
-  HUiLoader * obj = (HUiLoader *) Qt4xHb::itemGetPtrStackSelfItem();
+  HUiLoader *obj = (HUiLoader *)Qt4xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if (ISNUMPAR(1))
     {
 #endif
-      obj->setCreateActionGroupCB( PBLOCKORSYMBOL(1) );
+      obj->setCreateActionGroupCB(PBLOCKORSYMBOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,17 +157,17 @@ HB_FUNC_STATIC( HUILOADER_SETCREATEACTIONGROUPCB )
 /*
 void setCreateLayoutCB ( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HUILOADER_SETCREATELAYOUTCB )
+HB_FUNC_STATIC(HUILOADER_SETCREATELAYOUTCB)
 {
-  HUiLoader * obj = (HUiLoader *) Qt4xHb::itemGetPtrStackSelfItem();
+  HUiLoader *obj = (HUiLoader *)Qt4xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if (ISNUMPAR(1))
     {
 #endif
-      obj->setCreateLayoutCB( PBLOCKORSYMBOL(1) );
+      obj->setCreateLayoutCB(PBLOCKORSYMBOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,17 +183,17 @@ HB_FUNC_STATIC( HUILOADER_SETCREATELAYOUTCB )
 /*
 void setCreateWidgetCB ( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HUILOADER_SETCREATEWIDGETCB )
+HB_FUNC_STATIC(HUILOADER_SETCREATEWIDGETCB)
 {
-  HUiLoader * obj = (HUiLoader *) Qt4xHb::itemGetPtrStackSelfItem();
+  HUiLoader *obj = (HUiLoader *)Qt4xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if (ISNUMPAR(1))
     {
 #endif
-      obj->setCreateWidgetCB( PBLOCKORSYMBOL(1) );
+      obj->setCreateWidgetCB(PBLOCKORSYMBOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
