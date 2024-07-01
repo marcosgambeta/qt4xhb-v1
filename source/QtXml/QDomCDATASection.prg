@@ -42,22 +42,22 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QDOMCDATASECTION_NEW )
+HB_FUNC_STATIC(QDOMCDATASECTION_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QDomCDATASection()
     */
-    QDomCDATASection * obj = new QDomCDATASection();
+    QDomCDATASection *obj = new QDomCDATASection();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQDOMCDATASECTION(1) )
+  else if (ISNUMPAR(1) && ISQDOMCDATASECTION(1))
   {
     /*
     QDomCDATASection( const QDomCDATASection & x )
     */
-    QDomCDATASection * obj = new QDomCDATASection( *PQDOMCDATASECTION(1) );
+    QDomCDATASection *obj = new QDomCDATASection(*PQDOMCDATASECTION(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -69,17 +69,17 @@ HB_FUNC_STATIC( QDOMCDATASECTION_NEW )
 /*
 QDomNode::NodeType nodeType() const
 */
-HB_FUNC_STATIC( QDOMCDATASECTION_NODETYPE )
+HB_FUNC_STATIC(QDOMCDATASECTION_NODETYPE)
 {
-  QDomCDATASection * obj = static_cast<QDomCDATASection*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomCDATASection *obj = static_cast<QDomCDATASection *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->nodeType() );
+      RENUM(obj->nodeType());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

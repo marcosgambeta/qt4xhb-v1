@@ -42,22 +42,22 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QDOMENTITYREFERENCE_NEW )
+HB_FUNC_STATIC(QDOMENTITYREFERENCE_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QDomEntityReference()
     */
-    QDomEntityReference * obj = new QDomEntityReference();
+    QDomEntityReference *obj = new QDomEntityReference();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQDOMENTITYREFERENCE(1) )
+  else if (ISNUMPAR(1) && ISQDOMENTITYREFERENCE(1))
   {
     /*
     QDomEntityReference( const QDomEntityReference & x )
     */
-    QDomEntityReference * obj = new QDomEntityReference( *PQDOMENTITYREFERENCE(1) );
+    QDomEntityReference *obj = new QDomEntityReference(*PQDOMENTITYREFERENCE(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -69,17 +69,17 @@ HB_FUNC_STATIC( QDOMENTITYREFERENCE_NEW )
 /*
 QDomNode::NodeType nodeType() const
 */
-HB_FUNC_STATIC( QDOMENTITYREFERENCE_NODETYPE )
+HB_FUNC_STATIC(QDOMENTITYREFERENCE_NODETYPE)
 {
-  QDomEntityReference * obj = static_cast<QDomEntityReference*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomEntityReference *obj = static_cast<QDomEntityReference *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->nodeType() );
+      RENUM(obj->nodeType());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -42,22 +42,22 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QDOMCOMMENT_NEW )
+HB_FUNC_STATIC(QDOMCOMMENT_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QDomComment()
     */
-    QDomComment * obj = new QDomComment();
+    QDomComment *obj = new QDomComment();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQDOMCOMMENT(1) )
+  else if (ISNUMPAR(1) && ISQDOMCOMMENT(1))
   {
     /*
     QDomComment( const QDomComment & x )
     */
-    QDomComment * obj = new QDomComment( *PQDOMCOMMENT(1) );
+    QDomComment *obj = new QDomComment(*PQDOMCOMMENT(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -69,17 +69,17 @@ HB_FUNC_STATIC( QDOMCOMMENT_NEW )
 /*
 QDomNode::NodeType nodeType() const
 */
-HB_FUNC_STATIC( QDOMCOMMENT_NODETYPE )
+HB_FUNC_STATIC(QDOMCOMMENT_NODETYPE)
 {
-  QDomComment * obj = static_cast<QDomComment*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomComment *obj = static_cast<QDomComment *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->nodeType() );
+      RENUM(obj->nodeType());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

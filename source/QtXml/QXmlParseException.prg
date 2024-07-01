@@ -56,22 +56,25 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW )
+HB_FUNC_STATIC(QXMLPARSEEXCEPTION_NEW)
 {
-  if( ISBETWEEN(0, 5) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISCHAR(4) || HB_ISNIL(4)) && (HB_ISCHAR(5) || HB_ISNIL(5)) )
+  if (ISBETWEEN(0, 5) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)) &&
+      (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISCHAR(4) || HB_ISNIL(4)) && (HB_ISCHAR(5) || HB_ISNIL(5)))
   {
     /*
-    QXmlParseException( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const QString & s = QString() )
+    QXmlParseException( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const
+    QString & s = QString() )
     */
-    QXmlParseException * obj = new QXmlParseException( OPQSTRING( 1, QString() ), OPINT( 2, -1 ), OPINT( 3, -1 ), OPQSTRING( 4, QString() ), OPQSTRING( 5, QString()) );
+    QXmlParseException *obj = new QXmlParseException(OPQSTRING(1, QString()), OPINT(2, -1), OPINT(3, -1),
+                                                     OPQSTRING(4, QString()), OPQSTRING(5, QString()));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1) )
+  else if (ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1))
   {
     /*
     QXmlParseException( const QXmlParseException & other )
     */
-    QXmlParseException * obj = new QXmlParseException( *PQXMLPARSEEXCEPTION(1) );
+    QXmlParseException *obj = new QXmlParseException(*PQXMLPARSEEXCEPTION(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -80,11 +83,11 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW )
   }
 }
 
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_DELETE )
+HB_FUNC_STATIC(QXMLPARSEEXCEPTION_DELETE)
 {
-  QXmlParseException * obj = static_cast<QXmlParseException*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlParseException *obj = static_cast<QXmlParseException *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -99,17 +102,17 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_DELETE )
 /*
 int columnNumber() const
 */
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_COLUMNNUMBER )
+HB_FUNC_STATIC(QXMLPARSEEXCEPTION_COLUMNNUMBER)
 {
-  QXmlParseException * obj = static_cast<QXmlParseException*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlParseException *obj = static_cast<QXmlParseException *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->columnNumber() );
+      RINT(obj->columnNumber());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -123,17 +126,17 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_COLUMNNUMBER )
 /*
 int lineNumber() const
 */
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_LINENUMBER )
+HB_FUNC_STATIC(QXMLPARSEEXCEPTION_LINENUMBER)
 {
-  QXmlParseException * obj = static_cast<QXmlParseException*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlParseException *obj = static_cast<QXmlParseException *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->lineNumber() );
+      RINT(obj->lineNumber());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -147,17 +150,17 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_LINENUMBER )
 /*
 QString message() const
 */
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_MESSAGE )
+HB_FUNC_STATIC(QXMLPARSEEXCEPTION_MESSAGE)
 {
-  QXmlParseException * obj = static_cast<QXmlParseException*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlParseException *obj = static_cast<QXmlParseException *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->message() );
+      RQSTRING(obj->message());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,17 +174,17 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_MESSAGE )
 /*
 QString publicId() const
 */
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_PUBLICID )
+HB_FUNC_STATIC(QXMLPARSEEXCEPTION_PUBLICID)
 {
-  QXmlParseException * obj = static_cast<QXmlParseException*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlParseException *obj = static_cast<QXmlParseException *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->publicId() );
+      RQSTRING(obj->publicId());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,17 +198,17 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_PUBLICID )
 /*
 QString systemId() const
 */
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_SYSTEMID )
+HB_FUNC_STATIC(QXMLPARSEEXCEPTION_SYSTEMID)
 {
-  QXmlParseException * obj = static_cast<QXmlParseException*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlParseException *obj = static_cast<QXmlParseException *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->systemId() );
+      RQSTRING(obj->systemId());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,11 +219,11 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_SYSTEMID )
   }
 }
 
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEWFROM )
+HB_FUNC_STATIC(QXMLPARSEEXCEPTION_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -229,7 +232,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -246,26 +249,26 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEWFROMOBJECT )
+HB_FUNC_STATIC(QXMLPARSEEXCEPTION_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QXMLPARSEEXCEPTION_NEWFROM );
+  HB_FUNC_EXEC(QXMLPARSEEXCEPTION_NEWFROM);
 }
 
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEWFROMPOINTER )
+HB_FUNC_STATIC(QXMLPARSEEXCEPTION_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QXMLPARSEEXCEPTION_NEWFROM );
+  HB_FUNC_EXEC(QXMLPARSEEXCEPTION_NEWFROM);
 }
 
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_SELFDESTRUCTION )
+HB_FUNC_STATIC(QXMLPARSEEXCEPTION_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QXMLPARSEEXCEPTION_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QXMLPARSEEXCEPTION_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

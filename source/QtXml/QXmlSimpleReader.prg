@@ -44,14 +44,14 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QXmlSimpleReader()
-*/
-HB_FUNC_STATIC( QXMLSIMPLEREADER_NEW )
+    /*
+    QXmlSimpleReader()
+    */
+HB_FUNC_STATIC(QXMLSIMPLEREADER_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
-    QXmlSimpleReader * obj = new QXmlSimpleReader();
+    QXmlSimpleReader *obj = new QXmlSimpleReader();
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -60,11 +60,11 @@ HB_FUNC_STATIC( QXMLSIMPLEREADER_NEW )
   }
 }
 
-HB_FUNC_STATIC( QXMLSIMPLEREADER_DELETE )
+HB_FUNC_STATIC(QXMLSIMPLEREADER_DELETE)
 {
-  QXmlSimpleReader * obj = static_cast<QXmlSimpleReader*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlSimpleReader *obj = static_cast<QXmlSimpleReader *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -79,17 +79,17 @@ HB_FUNC_STATIC( QXMLSIMPLEREADER_DELETE )
 /*
 virtual bool parse( const QXmlInputSource * input, bool incremental )
 */
-HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSE )
+HB_FUNC_STATIC(QXMLSIMPLEREADER_PARSE)
 {
-  QXmlSimpleReader * obj = static_cast<QXmlSimpleReader*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlSimpleReader *obj = static_cast<QXmlSimpleReader *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQXMLINPUTSOURCE(1) && HB_ISLOG(2) )
+    if (ISNUMPAR(2) && ISQXMLINPUTSOURCE(1) && HB_ISLOG(2))
     {
 #endif
-      RBOOL( obj->parse( PQXMLINPUTSOURCE(1), PBOOL(2)) );
+      RBOOL(obj->parse(PQXMLINPUTSOURCE(1), PBOOL(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -103,17 +103,17 @@ HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSE )
 /*
 virtual bool parseContinue()
 */
-HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSECONTINUE )
+HB_FUNC_STATIC(QXMLSIMPLEREADER_PARSECONTINUE)
 {
-  QXmlSimpleReader * obj = static_cast<QXmlSimpleReader*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlSimpleReader *obj = static_cast<QXmlSimpleReader *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->parseContinue() );
+      RBOOL(obj->parseContinue());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -77,22 +77,22 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QDOMELEMENT_NEW )
+HB_FUNC_STATIC(QDOMELEMENT_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QDomElement()
     */
-    QDomElement * obj = new QDomElement();
+    QDomElement *obj = new QDomElement();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQDOMELEMENT(1) )
+  else if (ISNUMPAR(1) && ISQDOMELEMENT(1))
   {
     /*
     QDomElement( const QDomElement & x )
     */
-    QDomElement * obj = new QDomElement( *PQDOMELEMENT(1) );
+    QDomElement *obj = new QDomElement(*PQDOMELEMENT(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -104,17 +104,17 @@ HB_FUNC_STATIC( QDOMELEMENT_NEW )
 /*
 QString attribute( const QString & name, const QString & defValue = QString() ) const
 */
-HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTE )
+HB_FUNC_STATIC(QDOMELEMENT_ATTRIBUTE)
 {
-  QDomElement * obj = static_cast<QDomElement*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
     {
 #endif
-      RQSTRING( obj->attribute( PQSTRING(1), OPQSTRING( 2, QString()) ) );
+      RQSTRING(obj->attribute(PQSTRING(1), OPQSTRING(2, QString())));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,17 +128,17 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTE )
 /*
 QString attributeNS( const QString nsURI, const QString & localName, const QString & defValue = QString() ) const
 */
-HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTENS )
+HB_FUNC_STATIC(QDOMELEMENT_ATTRIBUTENS)
 {
-  QDomElement * obj = static_cast<QDomElement*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISCHAR(2) && (HB_ISCHAR(3) || HB_ISNIL(3)) )
+    if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISCHAR(2) && (HB_ISCHAR(3) || HB_ISNIL(3)))
     {
 #endif
-      RQSTRING( obj->attributeNS( PQSTRING(1), PQSTRING(2), OPQSTRING( 3, QString()) ) );
+      RQSTRING(obj->attributeNS(PQSTRING(1), PQSTRING(2), OPQSTRING(3, QString())));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,17 +152,17 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTENS )
 /*
 QDomAttr attributeNode( const QString & name )
 */
-HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTENODE )
+HB_FUNC_STATIC(QDOMELEMENT_ATTRIBUTENODE)
 {
-  QDomElement * obj = static_cast<QDomElement*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      QDomAttr * ptr = new QDomAttr( obj->attributeNode( PQSTRING(1)) );
+      QDomAttr *ptr = new QDomAttr(obj->attributeNode(PQSTRING(1)));
       Qt4xHb::createReturnClass(ptr, "QDOMATTR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -177,17 +177,17 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTENODE )
 /*
 QDomAttr attributeNodeNS( const QString & nsURI, const QString & localName )
 */
-HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTENODENS )
+HB_FUNC_STATIC(QDOMELEMENT_ATTRIBUTENODENS)
 {
-  QDomElement * obj = static_cast<QDomElement*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
 #endif
-      QDomAttr * ptr = new QDomAttr( obj->attributeNodeNS( PQSTRING(1), PQSTRING(2)) );
+      QDomAttr *ptr = new QDomAttr(obj->attributeNodeNS(PQSTRING(1), PQSTRING(2)));
       Qt4xHb::createReturnClass(ptr, "QDOMATTR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -202,17 +202,17 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTENODENS )
 /*
 QDomNamedNodeMap attributes() const
 */
-HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTES )
+HB_FUNC_STATIC(QDOMELEMENT_ATTRIBUTES)
 {
-  QDomElement * obj = static_cast<QDomElement*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->attributes() );
+      QDomNamedNodeMap *ptr = new QDomNamedNodeMap(obj->attributes());
       Qt4xHb::createReturnClass(ptr, "QDOMNAMEDNODEMAP", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -227,17 +227,17 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTES )
 /*
 QDomNodeList elementsByTagName( const QString & tagname ) const
 */
-HB_FUNC_STATIC( QDOMELEMENT_ELEMENTSBYTAGNAME )
+HB_FUNC_STATIC(QDOMELEMENT_ELEMENTSBYTAGNAME)
 {
-  QDomElement * obj = static_cast<QDomElement*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      QDomNodeList * ptr = new QDomNodeList( obj->elementsByTagName( PQSTRING(1)) );
+      QDomNodeList *ptr = new QDomNodeList(obj->elementsByTagName(PQSTRING(1)));
       Qt4xHb::createReturnClass(ptr, "QDOMNODELIST", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -252,17 +252,17 @@ HB_FUNC_STATIC( QDOMELEMENT_ELEMENTSBYTAGNAME )
 /*
 QDomNodeList elementsByTagNameNS( const QString & nsURI, const QString & localName ) const
 */
-HB_FUNC_STATIC( QDOMELEMENT_ELEMENTSBYTAGNAMENS )
+HB_FUNC_STATIC(QDOMELEMENT_ELEMENTSBYTAGNAMENS)
 {
-  QDomElement * obj = static_cast<QDomElement*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
 #endif
-      QDomNodeList * ptr = new QDomNodeList( obj->elementsByTagNameNS( PQSTRING(1), PQSTRING(2)) );
+      QDomNodeList *ptr = new QDomNodeList(obj->elementsByTagNameNS(PQSTRING(1), PQSTRING(2)));
       Qt4xHb::createReturnClass(ptr, "QDOMNODELIST", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -277,17 +277,17 @@ HB_FUNC_STATIC( QDOMELEMENT_ELEMENTSBYTAGNAMENS )
 /*
 bool hasAttribute( const QString & name ) const
 */
-HB_FUNC_STATIC( QDOMELEMENT_HASATTRIBUTE )
+HB_FUNC_STATIC(QDOMELEMENT_HASATTRIBUTE)
 {
-  QDomElement * obj = static_cast<QDomElement*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RBOOL( obj->hasAttribute( PQSTRING(1)) );
+      RBOOL(obj->hasAttribute(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -301,17 +301,17 @@ HB_FUNC_STATIC( QDOMELEMENT_HASATTRIBUTE )
 /*
 bool hasAttributeNS( const QString & nsURI, const QString & localName ) const
 */
-HB_FUNC_STATIC( QDOMELEMENT_HASATTRIBUTENS )
+HB_FUNC_STATIC(QDOMELEMENT_HASATTRIBUTENS)
 {
-  QDomElement * obj = static_cast<QDomElement*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
 #endif
-      RBOOL( obj->hasAttributeNS( PQSTRING(1), PQSTRING(2)) );
+      RBOOL(obj->hasAttributeNS(PQSTRING(1), PQSTRING(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -325,17 +325,17 @@ HB_FUNC_STATIC( QDOMELEMENT_HASATTRIBUTENS )
 /*
 QDomNode::NodeType nodeType() const
 */
-HB_FUNC_STATIC( QDOMELEMENT_NODETYPE )
+HB_FUNC_STATIC(QDOMELEMENT_NODETYPE)
 {
-  QDomElement * obj = static_cast<QDomElement*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->nodeType() );
+      RENUM(obj->nodeType());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -349,17 +349,17 @@ HB_FUNC_STATIC( QDOMELEMENT_NODETYPE )
 /*
 void removeAttribute( const QString & name )
 */
-HB_FUNC_STATIC( QDOMELEMENT_REMOVEATTRIBUTE )
+HB_FUNC_STATIC(QDOMELEMENT_REMOVEATTRIBUTE)
 {
-  QDomElement * obj = static_cast<QDomElement*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->removeAttribute( PQSTRING(1) );
+      obj->removeAttribute(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -375,17 +375,17 @@ HB_FUNC_STATIC( QDOMELEMENT_REMOVEATTRIBUTE )
 /*
 void removeAttributeNS( const QString & nsURI, const QString & localName )
 */
-HB_FUNC_STATIC( QDOMELEMENT_REMOVEATTRIBUTENS )
+HB_FUNC_STATIC(QDOMELEMENT_REMOVEATTRIBUTENS)
 {
-  QDomElement * obj = static_cast<QDomElement*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
 #endif
-      obj->removeAttributeNS( PQSTRING(1), PQSTRING(2) );
+      obj->removeAttributeNS(PQSTRING(1), PQSTRING(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -401,17 +401,17 @@ HB_FUNC_STATIC( QDOMELEMENT_REMOVEATTRIBUTENS )
 /*
 QDomAttr removeAttributeNode( const QDomAttr & oldAttr )
 */
-HB_FUNC_STATIC( QDOMELEMENT_REMOVEATTRIBUTENODE )
+HB_FUNC_STATIC(QDOMELEMENT_REMOVEATTRIBUTENODE)
 {
-  QDomElement * obj = static_cast<QDomElement*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDOMATTR(1) )
+    if (ISNUMPAR(1) && ISQDOMATTR(1))
     {
 #endif
-      QDomAttr * ptr = new QDomAttr( obj->removeAttributeNode( *PQDOMATTR(1)) );
+      QDomAttr *ptr = new QDomAttr(obj->removeAttributeNode(*PQDOMATTR(1)));
       Qt4xHb::createReturnClass(ptr, "QDOMATTR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -426,17 +426,17 @@ HB_FUNC_STATIC( QDOMELEMENT_REMOVEATTRIBUTENODE )
 /*
 void setAttribute( const QString & name, const QString & value )
 */
-HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE1 )
+HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE1)
 {
-  QDomElement * obj = static_cast<QDomElement*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
 #endif
-      obj->setAttribute( PQSTRING(1), PQSTRING(2) );
+      obj->setAttribute(PQSTRING(1), PQSTRING(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -452,17 +452,17 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE1 )
 /*
 void setAttribute( const QString & name, int value )
 */
-HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE2 )
+HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE2)
 {
-  QDomElement * obj = static_cast<QDomElement*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setAttribute( PQSTRING(1), PINT(2) );
+      obj->setAttribute(PQSTRING(1), PINT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -478,17 +478,17 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE2 )
 /*
 void setAttribute( const QString & name, uint value )
 */
-HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE3 )
+HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE3)
 {
-  QDomElement * obj = static_cast<QDomElement*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setAttribute( PQSTRING(1), PUINT(2) );
+      obj->setAttribute(PQSTRING(1), PUINT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -504,17 +504,17 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE3 )
 /*
 void setAttribute( const QString & name, qlonglong value )
 */
-HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE4 )
+HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE4)
 {
-  QDomElement * obj = static_cast<QDomElement*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setAttribute( PQSTRING(1), PQLONGLONG(2) );
+      obj->setAttribute(PQSTRING(1), PQLONGLONG(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -530,17 +530,17 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE4 )
 /*
 void setAttribute( const QString & name, qulonglong value )
 */
-HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE5 )
+HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE5)
 {
-  QDomElement * obj = static_cast<QDomElement*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setAttribute( PQSTRING(1), PQULONGLONG(2) );
+      obj->setAttribute(PQSTRING(1), PQULONGLONG(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -556,17 +556,17 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE5 )
 /*
 void setAttribute( const QString & name, float value )
 */
-HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE6 )
+HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE6)
 {
-  QDomElement * obj = static_cast<QDomElement*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setAttribute( PQSTRING(1), PFLOAT(2) );
+      obj->setAttribute(PQSTRING(1), PFLOAT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -582,17 +582,17 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE6 )
 /*
 void setAttribute( const QString & name, double value )
 */
-HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE7 )
+HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE7)
 {
-  QDomElement * obj = static_cast<QDomElement*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setAttribute( PQSTRING(1), PDOUBLE(2) );
+      obj->setAttribute(PQSTRING(1), PDOUBLE(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -605,15 +605,15 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE7 )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE )
+HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE)
 {
-  if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
+  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
-    HB_FUNC_EXEC( QDOMELEMENT_SETATTRIBUTE1 );
+    HB_FUNC_EXEC(QDOMELEMENT_SETATTRIBUTE1);
   }
-  else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
+  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
-    HB_FUNC_EXEC( QDOMELEMENT_SETATTRIBUTE2 );
+    HB_FUNC_EXEC(QDOMELEMENT_SETATTRIBUTE2);
   }
   else
   {
@@ -624,17 +624,17 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE )
 /*
 void setAttributeNS( const QString nsURI, const QString & qName, const QString & value )
 */
-HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS1 )
+HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS1)
 {
-  QDomElement * obj = static_cast<QDomElement*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
+    if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3))
     {
 #endif
-      obj->setAttributeNS( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
+      obj->setAttributeNS(PQSTRING(1), PQSTRING(2), PQSTRING(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -650,17 +650,17 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS1 )
 /*
 void setAttributeNS( const QString nsURI, const QString & qName, int value )
 */
-HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS2 )
+HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS2)
 {
-  QDomElement * obj = static_cast<QDomElement*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) )
+    if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3))
     {
 #endif
-      obj->setAttributeNS( PQSTRING(1), PQSTRING(2), PINT(3) );
+      obj->setAttributeNS(PQSTRING(1), PQSTRING(2), PINT(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -676,17 +676,17 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS2 )
 /*
 void setAttributeNS( const QString nsURI, const QString & qName, uint value )
 */
-HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS3 )
+HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS3)
 {
-  QDomElement * obj = static_cast<QDomElement*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) )
+    if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3))
     {
 #endif
-      obj->setAttributeNS( PQSTRING(1), PQSTRING(2), PUINT(3) );
+      obj->setAttributeNS(PQSTRING(1), PQSTRING(2), PUINT(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -702,17 +702,17 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS3 )
 /*
 void setAttributeNS( const QString nsURI, const QString & qName, qlonglong value )
 */
-HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS4 )
+HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS4)
 {
-  QDomElement * obj = static_cast<QDomElement*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) )
+    if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3))
     {
 #endif
-      obj->setAttributeNS( PQSTRING(1), PQSTRING(2), PQLONGLONG(3) );
+      obj->setAttributeNS(PQSTRING(1), PQSTRING(2), PQLONGLONG(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -728,17 +728,17 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS4 )
 /*
 void setAttributeNS( const QString nsURI, const QString & qName, qulonglong value )
 */
-HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS5 )
+HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS5)
 {
-  QDomElement * obj = static_cast<QDomElement*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) )
+    if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3))
     {
 #endif
-      obj->setAttributeNS( PQSTRING(1), PQSTRING(2), PQULONGLONG(3) );
+      obj->setAttributeNS(PQSTRING(1), PQSTRING(2), PQULONGLONG(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -754,17 +754,17 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS5 )
 /*
 void setAttributeNS( const QString nsURI, const QString & qName, double value )
 */
-HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS6 )
+HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS6)
 {
-  QDomElement * obj = static_cast<QDomElement*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) )
+    if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3))
     {
 #endif
-      obj->setAttributeNS( PQSTRING(1), PQSTRING(2), PDOUBLE(3) );
+      obj->setAttributeNS(PQSTRING(1), PQSTRING(2), PDOUBLE(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -777,15 +777,15 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS6 )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS )
+HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS)
 {
-  if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
+  if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3))
   {
-    HB_FUNC_EXEC( QDOMELEMENT_SETATTRIBUTENS1 );
+    HB_FUNC_EXEC(QDOMELEMENT_SETATTRIBUTENS1);
   }
-  else if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) )
+  else if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3))
   {
-    HB_FUNC_EXEC( QDOMELEMENT_SETATTRIBUTENS2 );
+    HB_FUNC_EXEC(QDOMELEMENT_SETATTRIBUTENS2);
   }
   else
   {
@@ -796,17 +796,17 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS )
 /*
 QDomAttr setAttributeNode( const QDomAttr & newAttr )
 */
-HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENODE )
+HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENODE)
 {
-  QDomElement * obj = static_cast<QDomElement*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDOMATTR(1) )
+    if (ISNUMPAR(1) && ISQDOMATTR(1))
     {
 #endif
-      QDomAttr * ptr = new QDomAttr( obj->setAttributeNode( *PQDOMATTR(1)) );
+      QDomAttr *ptr = new QDomAttr(obj->setAttributeNode(*PQDOMATTR(1)));
       Qt4xHb::createReturnClass(ptr, "QDOMATTR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -821,17 +821,17 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENODE )
 /*
 QDomAttr setAttributeNodeNS( const QDomAttr & newAttr )
 */
-HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENODENS )
+HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENODENS)
 {
-  QDomElement * obj = static_cast<QDomElement*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDOMATTR(1) )
+    if (ISNUMPAR(1) && ISQDOMATTR(1))
     {
 #endif
-      QDomAttr * ptr = new QDomAttr( obj->setAttributeNodeNS( *PQDOMATTR(1)) );
+      QDomAttr *ptr = new QDomAttr(obj->setAttributeNodeNS(*PQDOMATTR(1)));
       Qt4xHb::createReturnClass(ptr, "QDOMATTR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -846,17 +846,17 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENODENS )
 /*
 void setTagName( const QString & name )
 */
-HB_FUNC_STATIC( QDOMELEMENT_SETTAGNAME )
+HB_FUNC_STATIC(QDOMELEMENT_SETTAGNAME)
 {
-  QDomElement * obj = static_cast<QDomElement*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setTagName( PQSTRING(1) );
+      obj->setTagName(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -872,17 +872,17 @@ HB_FUNC_STATIC( QDOMELEMENT_SETTAGNAME )
 /*
 QString tagName() const
 */
-HB_FUNC_STATIC( QDOMELEMENT_TAGNAME )
+HB_FUNC_STATIC(QDOMELEMENT_TAGNAME)
 {
-  QDomElement * obj = static_cast<QDomElement*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->tagName() );
+      RQSTRING(obj->tagName());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -896,17 +896,17 @@ HB_FUNC_STATIC( QDOMELEMENT_TAGNAME )
 /*
 QString text() const
 */
-HB_FUNC_STATIC( QDOMELEMENT_TEXT )
+HB_FUNC_STATIC(QDOMELEMENT_TEXT)
 {
-  QDomElement * obj = static_cast<QDomElement*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->text() );
+      RQSTRING(obj->text());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

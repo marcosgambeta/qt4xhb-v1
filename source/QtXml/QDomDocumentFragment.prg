@@ -42,22 +42,22 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW )
+HB_FUNC_STATIC(QDOMDOCUMENTFRAGMENT_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QDomDocumentFragment()
     */
-    QDomDocumentFragment * obj = new QDomDocumentFragment();
+    QDomDocumentFragment *obj = new QDomDocumentFragment();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQDOMDOCUMENTFRAGMENT(1) )
+  else if (ISNUMPAR(1) && ISQDOMDOCUMENTFRAGMENT(1))
   {
     /*
     QDomDocumentFragment( const QDomDocumentFragment & x )
     */
-    QDomDocumentFragment * obj = new QDomDocumentFragment( *PQDOMDOCUMENTFRAGMENT(1) );
+    QDomDocumentFragment *obj = new QDomDocumentFragment(*PQDOMDOCUMENTFRAGMENT(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -69,17 +69,17 @@ HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW )
 /*
 QDomNode::NodeType nodeType() const
 */
-HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NODETYPE )
+HB_FUNC_STATIC(QDOMDOCUMENTFRAGMENT_NODETYPE)
 {
-  QDomDocumentFragment * obj = static_cast<QDomDocumentFragment*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDomDocumentFragment *obj = static_cast<QDomDocumentFragment *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->nodeType() );
+      RENUM(obj->nodeType());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

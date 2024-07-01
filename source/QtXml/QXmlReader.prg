@@ -75,11 +75,11 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QXMLREADER_DELETE )
+HB_FUNC_STATIC(QXMLREADER_DELETE)
 {
-  QXmlReader * obj = static_cast<QXmlReader*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -94,17 +94,17 @@ HB_FUNC_STATIC( QXMLREADER_DELETE )
 /*
 virtual QXmlDTDHandler * DTDHandler() const = 0
 */
-HB_FUNC_STATIC( QXMLREADER_DTDHANDLER )
+HB_FUNC_STATIC(QXMLREADER_DTDHANDLER)
 {
-  QXmlReader * obj = static_cast<QXmlReader*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QXmlDTDHandler * ptr = obj->DTDHandler();
+      QXmlDTDHandler *ptr = obj->DTDHandler();
       Qt4xHb::createReturnClass(ptr, "QXMLDTDHANDLER", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -119,17 +119,17 @@ HB_FUNC_STATIC( QXMLREADER_DTDHANDLER )
 /*
 virtual QXmlContentHandler * contentHandler() const = 0
 */
-HB_FUNC_STATIC( QXMLREADER_CONTENTHANDLER )
+HB_FUNC_STATIC(QXMLREADER_CONTENTHANDLER)
 {
-  QXmlReader * obj = static_cast<QXmlReader*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QXmlContentHandler * ptr = obj->contentHandler();
+      QXmlContentHandler *ptr = obj->contentHandler();
       Qt4xHb::createReturnClass(ptr, "QXMLCONTENTHANDLER", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -144,17 +144,17 @@ HB_FUNC_STATIC( QXMLREADER_CONTENTHANDLER )
 /*
 virtual QXmlDeclHandler * declHandler() const = 0
 */
-HB_FUNC_STATIC( QXMLREADER_DECLHANDLER )
+HB_FUNC_STATIC(QXMLREADER_DECLHANDLER)
 {
-  QXmlReader * obj = static_cast<QXmlReader*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QXmlDeclHandler * ptr = obj->declHandler();
+      QXmlDeclHandler *ptr = obj->declHandler();
       Qt4xHb::createReturnClass(ptr, "QXMLDECLHANDLER", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -169,17 +169,17 @@ HB_FUNC_STATIC( QXMLREADER_DECLHANDLER )
 /*
 virtual QXmlEntityResolver * entityResolver() const = 0
 */
-HB_FUNC_STATIC( QXMLREADER_ENTITYRESOLVER )
+HB_FUNC_STATIC(QXMLREADER_ENTITYRESOLVER)
 {
-  QXmlReader * obj = static_cast<QXmlReader*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QXmlEntityResolver * ptr = obj->entityResolver();
+      QXmlEntityResolver *ptr = obj->entityResolver();
       Qt4xHb::createReturnClass(ptr, "QXMLENTITYRESOLVER", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -194,17 +194,17 @@ HB_FUNC_STATIC( QXMLREADER_ENTITYRESOLVER )
 /*
 virtual QXmlErrorHandler * errorHandler() const = 0
 */
-HB_FUNC_STATIC( QXMLREADER_ERRORHANDLER )
+HB_FUNC_STATIC(QXMLREADER_ERRORHANDLER)
 {
-  QXmlReader * obj = static_cast<QXmlReader*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QXmlErrorHandler * ptr = obj->errorHandler();
+      QXmlErrorHandler *ptr = obj->errorHandler();
       Qt4xHb::createReturnClass(ptr, "QXMLERRORHANDLER", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -219,19 +219,19 @@ HB_FUNC_STATIC( QXMLREADER_ERRORHANDLER )
 /*
 virtual bool feature( const QString & name, bool * ok = 0 ) const = 0
 */
-HB_FUNC_STATIC( QXMLREADER_FEATURE )
+HB_FUNC_STATIC(QXMLREADER_FEATURE)
 {
-  QXmlReader * obj = static_cast<QXmlReader*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISLOG(2) || HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
       bool par2;
-      RBOOL( obj->feature( PQSTRING(1), &par2 ) );
-      hb_storl( par2, 2 );
+      RBOOL(obj->feature(PQSTRING(1), &par2));
+      hb_storl(par2, 2);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,17 +245,17 @@ HB_FUNC_STATIC( QXMLREADER_FEATURE )
 /*
 virtual bool hasFeature( const QString & name ) const = 0
 */
-HB_FUNC_STATIC( QXMLREADER_HASFEATURE )
+HB_FUNC_STATIC(QXMLREADER_HASFEATURE)
 {
-  QXmlReader * obj = static_cast<QXmlReader*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RBOOL( obj->hasFeature( PQSTRING(1)) );
+      RBOOL(obj->hasFeature(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -269,17 +269,17 @@ HB_FUNC_STATIC( QXMLREADER_HASFEATURE )
 /*
 virtual bool hasProperty( const QString & name ) const = 0
 */
-HB_FUNC_STATIC( QXMLREADER_HASPROPERTY )
+HB_FUNC_STATIC(QXMLREADER_HASPROPERTY)
 {
-  QXmlReader * obj = static_cast<QXmlReader*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RBOOL( obj->hasProperty( PQSTRING(1)) );
+      RBOOL(obj->hasProperty(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -293,17 +293,17 @@ HB_FUNC_STATIC( QXMLREADER_HASPROPERTY )
 /*
 virtual QXmlLexicalHandler * lexicalHandler() const = 0
 */
-HB_FUNC_STATIC( QXMLREADER_LEXICALHANDLER )
+HB_FUNC_STATIC(QXMLREADER_LEXICALHANDLER)
 {
-  QXmlReader * obj = static_cast<QXmlReader*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QXmlLexicalHandler * ptr = obj->lexicalHandler();
+      QXmlLexicalHandler *ptr = obj->lexicalHandler();
       Qt4xHb::createReturnClass(ptr, "QXMLLEXICALHANDLER", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -318,17 +318,17 @@ HB_FUNC_STATIC( QXMLREADER_LEXICALHANDLER )
 /*
 virtual bool parse( const QXmlInputSource * input ) = 0
 */
-HB_FUNC_STATIC( QXMLREADER_PARSE )
+HB_FUNC_STATIC(QXMLREADER_PARSE)
 {
-  QXmlReader * obj = static_cast<QXmlReader*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQXMLINPUTSOURCE(1) )
+    if (ISNUMPAR(1) && ISQXMLINPUTSOURCE(1))
     {
 #endif
-      RBOOL( obj->parse( PQXMLINPUTSOURCE(1)) );
+      RBOOL(obj->parse(PQXMLINPUTSOURCE(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -342,19 +342,19 @@ HB_FUNC_STATIC( QXMLREADER_PARSE )
 /*
 virtual void * property( const QString & name, bool * ok = 0 ) const = 0
 */
-HB_FUNC_STATIC( QXMLREADER_PROPERTY )
+HB_FUNC_STATIC(QXMLREADER_PROPERTY)
 {
-  QXmlReader * obj = static_cast<QXmlReader*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISLOG(2) || HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
       bool par2;
-      hb_retptr( static_cast<void*>( obj->property( PQSTRING(1), &par2 )) );
-      hb_storl( par2, 2 );
+      hb_retptr(static_cast<void *>(obj->property(PQSTRING(1), &par2)));
+      hb_storl(par2, 2);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -368,17 +368,17 @@ HB_FUNC_STATIC( QXMLREADER_PROPERTY )
 /*
 virtual void setContentHandler( QXmlContentHandler * handler ) = 0
 */
-HB_FUNC_STATIC( QXMLREADER_SETCONTENTHANDLER )
+HB_FUNC_STATIC(QXMLREADER_SETCONTENTHANDLER)
 {
-  QXmlReader * obj = static_cast<QXmlReader*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQXMLCONTENTHANDLER(1) )
+    if (ISNUMPAR(1) && ISQXMLCONTENTHANDLER(1))
     {
 #endif
-      obj->setContentHandler( PQXMLCONTENTHANDLER(1) );
+      obj->setContentHandler(PQXMLCONTENTHANDLER(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -394,17 +394,17 @@ HB_FUNC_STATIC( QXMLREADER_SETCONTENTHANDLER )
 /*
 virtual void setDTDHandler( QXmlDTDHandler * handler ) = 0
 */
-HB_FUNC_STATIC( QXMLREADER_SETDTDHANDLER )
+HB_FUNC_STATIC(QXMLREADER_SETDTDHANDLER)
 {
-  QXmlReader * obj = static_cast<QXmlReader*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQXMLDTDHANDLER(1) )
+    if (ISNUMPAR(1) && ISQXMLDTDHANDLER(1))
     {
 #endif
-      obj->setDTDHandler( PQXMLDTDHANDLER(1) );
+      obj->setDTDHandler(PQXMLDTDHANDLER(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -420,17 +420,17 @@ HB_FUNC_STATIC( QXMLREADER_SETDTDHANDLER )
 /*
 virtual void setDeclHandler( QXmlDeclHandler * handler ) = 0
 */
-HB_FUNC_STATIC( QXMLREADER_SETDECLHANDLER )
+HB_FUNC_STATIC(QXMLREADER_SETDECLHANDLER)
 {
-  QXmlReader * obj = static_cast<QXmlReader*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQXMLDECLHANDLER(1) )
+    if (ISNUMPAR(1) && ISQXMLDECLHANDLER(1))
     {
 #endif
-      obj->setDeclHandler( PQXMLDECLHANDLER(1) );
+      obj->setDeclHandler(PQXMLDECLHANDLER(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -446,17 +446,17 @@ HB_FUNC_STATIC( QXMLREADER_SETDECLHANDLER )
 /*
 virtual void setEntityResolver( QXmlEntityResolver * handler ) = 0
 */
-HB_FUNC_STATIC( QXMLREADER_SETENTITYRESOLVER )
+HB_FUNC_STATIC(QXMLREADER_SETENTITYRESOLVER)
 {
-  QXmlReader * obj = static_cast<QXmlReader*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQXMLENTITYRESOLVER(1) )
+    if (ISNUMPAR(1) && ISQXMLENTITYRESOLVER(1))
     {
 #endif
-      obj->setEntityResolver( PQXMLENTITYRESOLVER(1) );
+      obj->setEntityResolver(PQXMLENTITYRESOLVER(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -472,17 +472,17 @@ HB_FUNC_STATIC( QXMLREADER_SETENTITYRESOLVER )
 /*
 virtual void setErrorHandler( QXmlErrorHandler * handler ) = 0
 */
-HB_FUNC_STATIC( QXMLREADER_SETERRORHANDLER )
+HB_FUNC_STATIC(QXMLREADER_SETERRORHANDLER)
 {
-  QXmlReader * obj = static_cast<QXmlReader*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQXMLERRORHANDLER(1) )
+    if (ISNUMPAR(1) && ISQXMLERRORHANDLER(1))
     {
 #endif
-      obj->setErrorHandler( PQXMLERRORHANDLER(1) );
+      obj->setErrorHandler(PQXMLERRORHANDLER(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -498,17 +498,17 @@ HB_FUNC_STATIC( QXMLREADER_SETERRORHANDLER )
 /*
 virtual void setFeature( const QString & name, bool value ) = 0
 */
-HB_FUNC_STATIC( QXMLREADER_SETFEATURE )
+HB_FUNC_STATIC(QXMLREADER_SETFEATURE)
 {
-  QXmlReader * obj = static_cast<QXmlReader*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISLOG(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISLOG(2))
     {
 #endif
-      obj->setFeature( PQSTRING(1), PBOOL(2) );
+      obj->setFeature(PQSTRING(1), PBOOL(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -524,17 +524,17 @@ HB_FUNC_STATIC( QXMLREADER_SETFEATURE )
 /*
 virtual void setLexicalHandler( QXmlLexicalHandler * handler ) = 0
 */
-HB_FUNC_STATIC( QXMLREADER_SETLEXICALHANDLER )
+HB_FUNC_STATIC(QXMLREADER_SETLEXICALHANDLER)
 {
-  QXmlReader * obj = static_cast<QXmlReader*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQXMLLEXICALHANDLER(1) )
+    if (ISNUMPAR(1) && ISQXMLLEXICALHANDLER(1))
     {
 #endif
-      obj->setLexicalHandler( PQXMLLEXICALHANDLER(1) );
+      obj->setLexicalHandler(PQXMLLEXICALHANDLER(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -550,17 +550,17 @@ HB_FUNC_STATIC( QXMLREADER_SETLEXICALHANDLER )
 /*
 virtual void setProperty( const QString & name, void * value ) = 0
 */
-HB_FUNC_STATIC( QXMLREADER_SETPROPERTY )
+HB_FUNC_STATIC(QXMLREADER_SETPROPERTY)
 {
-  QXmlReader * obj = static_cast<QXmlReader*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISPOINTER(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISPOINTER(2))
     {
 #endif
-      obj->setProperty( PQSTRING(1), static_cast<void*>( hb_parptr(2)) );
+      obj->setProperty(PQSTRING(1), static_cast<void *>(hb_parptr(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -573,11 +573,11 @@ HB_FUNC_STATIC( QXMLREADER_SETPROPERTY )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QXMLREADER_NEWFROM )
+HB_FUNC_STATIC(QXMLREADER_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -586,7 +586,7 @@ HB_FUNC_STATIC( QXMLREADER_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -603,26 +603,26 @@ HB_FUNC_STATIC( QXMLREADER_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QXMLREADER_NEWFROMOBJECT )
+HB_FUNC_STATIC(QXMLREADER_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QXMLREADER_NEWFROM );
+  HB_FUNC_EXEC(QXMLREADER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QXMLREADER_NEWFROMPOINTER )
+HB_FUNC_STATIC(QXMLREADER_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QXMLREADER_NEWFROM );
+  HB_FUNC_EXEC(QXMLREADER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QXMLREADER_SELFDESTRUCTION )
+HB_FUNC_STATIC(QXMLREADER_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QXMLREADER_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QXMLREADER_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

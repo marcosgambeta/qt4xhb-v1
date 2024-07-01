@@ -53,11 +53,11 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QXMLDTDHANDLER_DELETE )
+HB_FUNC_STATIC(QXMLDTDHANDLER_DELETE)
 {
-  QXmlDTDHandler * obj = static_cast<QXmlDTDHandler*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlDTDHandler *obj = static_cast<QXmlDTDHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -72,17 +72,17 @@ HB_FUNC_STATIC( QXMLDTDHANDLER_DELETE )
 /*
 virtual QString errorString() const = 0
 */
-HB_FUNC_STATIC( QXMLDTDHANDLER_ERRORSTRING )
+HB_FUNC_STATIC(QXMLDTDHANDLER_ERRORSTRING)
 {
-  QXmlDTDHandler * obj = static_cast<QXmlDTDHandler*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlDTDHandler *obj = static_cast<QXmlDTDHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->errorString() );
+      RQSTRING(obj->errorString());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -96,17 +96,17 @@ HB_FUNC_STATIC( QXMLDTDHANDLER_ERRORSTRING )
 /*
 virtual bool notationDecl( const QString & name, const QString & publicId, const QString & systemId ) = 0
 */
-HB_FUNC_STATIC( QXMLDTDHANDLER_NOTATIONDECL )
+HB_FUNC_STATIC(QXMLDTDHANDLER_NOTATIONDECL)
 {
-  QXmlDTDHandler * obj = static_cast<QXmlDTDHandler*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlDTDHandler *obj = static_cast<QXmlDTDHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
+    if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3))
     {
 #endif
-      RBOOL( obj->notationDecl( PQSTRING(1), PQSTRING(2), PQSTRING(3)) );
+      RBOOL(obj->notationDecl(PQSTRING(1), PQSTRING(2), PQSTRING(3)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -118,19 +118,20 @@ HB_FUNC_STATIC( QXMLDTDHANDLER_NOTATIONDECL )
 }
 
 /*
-virtual bool unparsedEntityDecl( const QString & name, const QString & publicId, const QString & systemId, const QString & notationName ) = 0
+virtual bool unparsedEntityDecl( const QString & name, const QString & publicId, const QString & systemId, const QString
+& notationName ) = 0
 */
-HB_FUNC_STATIC( QXMLDTDHANDLER_UNPARSEDENTITYDECL )
+HB_FUNC_STATIC(QXMLDTDHANDLER_UNPARSEDENTITYDECL)
 {
-  QXmlDTDHandler * obj = static_cast<QXmlDTDHandler*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlDTDHandler *obj = static_cast<QXmlDTDHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) )
+    if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4))
     {
 #endif
-      RBOOL( obj->unparsedEntityDecl( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4)) );
+      RBOOL(obj->unparsedEntityDecl(PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,11 +142,11 @@ HB_FUNC_STATIC( QXMLDTDHANDLER_UNPARSEDENTITYDECL )
   }
 }
 
-HB_FUNC_STATIC( QXMLDTDHANDLER_NEWFROM )
+HB_FUNC_STATIC(QXMLDTDHANDLER_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -154,7 +155,7 @@ HB_FUNC_STATIC( QXMLDTDHANDLER_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -171,26 +172,26 @@ HB_FUNC_STATIC( QXMLDTDHANDLER_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QXMLDTDHANDLER_NEWFROMOBJECT )
+HB_FUNC_STATIC(QXMLDTDHANDLER_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QXMLDTDHANDLER_NEWFROM );
+  HB_FUNC_EXEC(QXMLDTDHANDLER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QXMLDTDHANDLER_NEWFROMPOINTER )
+HB_FUNC_STATIC(QXMLDTDHANDLER_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QXMLDTDHANDLER_NEWFROM );
+  HB_FUNC_EXEC(QXMLDTDHANDLER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QXMLDTDHANDLER_SELFDESTRUCTION )
+HB_FUNC_STATIC(QXMLDTDHANDLER_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QXMLDTDHANDLER_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QXMLDTDHANDLER_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
