@@ -44,14 +44,14 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-/*
-QTcpSocket( QObject * parent = 0 )
-*/
-HB_FUNC_STATIC( QTCPSOCKET_NEW )
+    /*
+    QTcpSocket( QObject * parent = 0 )
+    */
+HB_FUNC_STATIC(QTCPSOCKET_NEW)
 {
-  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QTcpSocket * obj = new QTcpSocket( OPQOBJECT( 1, 0 ) );
+    QTcpSocket *obj = new QTcpSocket(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -60,11 +60,11 @@ HB_FUNC_STATIC( QTCPSOCKET_NEW )
   }
 }
 
-HB_FUNC_STATIC( QTCPSOCKET_DELETE )
+HB_FUNC_STATIC(QTCPSOCKET_DELETE)
 {
-  QTcpSocket * obj = qobject_cast<QTcpSocket*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTcpSocket *obj = qobject_cast<QTcpSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);

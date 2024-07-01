@@ -49,22 +49,22 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-HB_FUNC_STATIC( QHTTPMULTIPART_NEW )
+HB_FUNC_STATIC(QHTTPMULTIPART_NEW)
 {
-  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
     QHttpMultiPart( QObject * parent = 0 )
     */
-    QHttpMultiPart * obj = new QHttpMultiPart( OPQOBJECT( 1, 0 ) );
+    QHttpMultiPart *obj = new QHttpMultiPart(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQOBJECT(2) || HB_ISNIL(2)) )
+  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
     QHttpMultiPart( QHttpMultiPart::ContentType contentType, QObject * parent = 0 )
     */
-    QHttpMultiPart * obj = new QHttpMultiPart( ( QHttpMultiPart::ContentType ) hb_parni(1), OPQOBJECT( 2, 0 ) );
+    QHttpMultiPart *obj = new QHttpMultiPart((QHttpMultiPart::ContentType)hb_parni(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -73,11 +73,11 @@ HB_FUNC_STATIC( QHTTPMULTIPART_NEW )
   }
 }
 
-HB_FUNC_STATIC( QHTTPMULTIPART_DELETE )
+HB_FUNC_STATIC(QHTTPMULTIPART_DELETE)
 {
-  QHttpMultiPart * obj = qobject_cast<QHttpMultiPart*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHttpMultiPart *obj = qobject_cast<QHttpMultiPart *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -94,17 +94,17 @@ HB_FUNC_STATIC( QHTTPMULTIPART_DELETE )
 /*
 void append( const QHttpPart & httpPart )
 */
-HB_FUNC_STATIC( QHTTPMULTIPART_APPEND )
+HB_FUNC_STATIC(QHTTPMULTIPART_APPEND)
 {
-  QHttpMultiPart * obj = qobject_cast<QHttpMultiPart*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHttpMultiPart *obj = qobject_cast<QHttpMultiPart *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQHTTPPART(1) )
+    if (ISNUMPAR(1) && ISQHTTPPART(1))
     {
 #endif
-      obj->append( *PQHTTPPART(1) );
+      obj->append(*PQHTTPPART(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -120,17 +120,17 @@ HB_FUNC_STATIC( QHTTPMULTIPART_APPEND )
 /*
 QByteArray boundary() const
 */
-HB_FUNC_STATIC( QHTTPMULTIPART_BOUNDARY )
+HB_FUNC_STATIC(QHTTPMULTIPART_BOUNDARY)
 {
-  QHttpMultiPart * obj = qobject_cast<QHttpMultiPart*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHttpMultiPart *obj = qobject_cast<QHttpMultiPart *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->boundary() );
+      QByteArray *ptr = new QByteArray(obj->boundary());
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -145,17 +145,17 @@ HB_FUNC_STATIC( QHTTPMULTIPART_BOUNDARY )
 /*
 void setBoundary( const QByteArray & boundary )
 */
-HB_FUNC_STATIC( QHTTPMULTIPART_SETBOUNDARY )
+HB_FUNC_STATIC(QHTTPMULTIPART_SETBOUNDARY)
 {
-  QHttpMultiPart * obj = qobject_cast<QHttpMultiPart*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHttpMultiPart *obj = qobject_cast<QHttpMultiPart *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      obj->setBoundary( *PQBYTEARRAY(1) );
+      obj->setBoundary(*PQBYTEARRAY(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,17 +171,17 @@ HB_FUNC_STATIC( QHTTPMULTIPART_SETBOUNDARY )
 /*
 void setContentType( QHttpMultiPart::ContentType contentType )
 */
-HB_FUNC_STATIC( QHTTPMULTIPART_SETCONTENTTYPE )
+HB_FUNC_STATIC(QHTTPMULTIPART_SETCONTENTTYPE)
 {
-  QHttpMultiPart * obj = qobject_cast<QHttpMultiPart*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHttpMultiPart *obj = qobject_cast<QHttpMultiPart *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setContentType( ( QHttpMultiPart::ContentType ) hb_parni(1) );
+      obj->setContentType((QHttpMultiPart::ContentType)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

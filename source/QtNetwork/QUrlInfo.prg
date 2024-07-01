@@ -81,38 +81,47 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QURLINFO_NEW )
+HB_FUNC_STATIC(QURLINFO_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QUrlInfo()
     */
-    QUrlInfo * obj = new QUrlInfo();
+    QUrlInfo *obj = new QUrlInfo();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQURLINFO(1) )
+  else if (ISNUMPAR(1) && ISQURLINFO(1))
   {
     /*
     QUrlInfo( const QUrlInfo & ui )
     */
-    QUrlInfo * obj = new QUrlInfo( *PQURLINFO(1) );
+    QUrlInfo *obj = new QUrlInfo(*PQURLINFO(1));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(13) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && HB_ISNUM(5) && ISQDATETIME(6) && ISQDATETIME(7) && HB_ISLOG(8) && HB_ISLOG(9) && HB_ISLOG(10) && HB_ISLOG(11) && HB_ISLOG(12) && HB_ISLOG(13) )
+  else if (ISNUMPAR(13) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && HB_ISNUM(5) &&
+           ISQDATETIME(6) && ISQDATETIME(7) && HB_ISLOG(8) && HB_ISLOG(9) && HB_ISLOG(10) && HB_ISLOG(11) &&
+           HB_ISLOG(12) && HB_ISLOG(13))
   {
     /*
-    QUrlInfo( const QString & name, int permissions, const QString & owner, const QString & group, qint64 size, const QDateTime & lastModified, const QDateTime & lastRead, bool isDir, bool isFile, bool isSymLink, bool isWritable, bool isReadable, bool isExecutable )
+    QUrlInfo( const QString & name, int permissions, const QString & owner, const QString & group, qint64 size, const
+    QDateTime & lastModified, const QDateTime & lastRead, bool isDir, bool isFile, bool isSymLink, bool isWritable, bool
+    isReadable, bool isExecutable )
     */
-    QUrlInfo * obj = new QUrlInfo( PQSTRING(1), PINT(2), PQSTRING(3), PQSTRING(4), PQINT64(5), *PQDATETIME(6), *PQDATETIME(7), PBOOL(8), PBOOL(9), PBOOL(10), PBOOL(11), PBOOL(12), PBOOL(13) );
+    QUrlInfo *obj = new QUrlInfo(PQSTRING(1), PINT(2), PQSTRING(3), PQSTRING(4), PQINT64(5), *PQDATETIME(6),
+                                 *PQDATETIME(7), PBOOL(8), PBOOL(9), PBOOL(10), PBOOL(11), PBOOL(12), PBOOL(13));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(13) && ISQURL(1) && HB_ISNUM(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && HB_ISNUM(5) && ISQDATETIME(6) && ISQDATETIME(7) && HB_ISLOG(8) && HB_ISLOG(9) && HB_ISLOG(10) && HB_ISLOG(11) && HB_ISLOG(12) && HB_ISLOG(13) )
+  else if (ISNUMPAR(13) && ISQURL(1) && HB_ISNUM(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && HB_ISNUM(5) && ISQDATETIME(6) &&
+           ISQDATETIME(7) && HB_ISLOG(8) && HB_ISLOG(9) && HB_ISLOG(10) && HB_ISLOG(11) && HB_ISLOG(12) && HB_ISLOG(13))
   {
     /*
-    QUrlInfo( const QUrl & url, int permissions, const QString & owner, const QString & group, qint64 size, const QDateTime & lastModified, const QDateTime & lastRead, bool isDir, bool isFile, bool isSymLink, bool isWritable, bool isReadable, bool isExecutable )
+    QUrlInfo( const QUrl & url, int permissions, const QString & owner, const QString & group, qint64 size, const
+    QDateTime & lastModified, const QDateTime & lastRead, bool isDir, bool isFile, bool isSymLink, bool isWritable, bool
+    isReadable, bool isExecutable )
     */
-    QUrlInfo * obj = new QUrlInfo( *PQURL(1), PINT(2), PQSTRING(3), PQSTRING(4), PQINT64(5), *PQDATETIME(6), *PQDATETIME(7), PBOOL(8), PBOOL(9), PBOOL(10), PBOOL(11), PBOOL(12), PBOOL(13) );
+    QUrlInfo *obj = new QUrlInfo(*PQURL(1), PINT(2), PQSTRING(3), PQSTRING(4), PQINT64(5), *PQDATETIME(6),
+                                 *PQDATETIME(7), PBOOL(8), PBOOL(9), PBOOL(10), PBOOL(11), PBOOL(12), PBOOL(13));
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -121,11 +130,11 @@ HB_FUNC_STATIC( QURLINFO_NEW )
   }
 }
 
-HB_FUNC_STATIC( QURLINFO_DELETE )
+HB_FUNC_STATIC(QURLINFO_DELETE)
 {
-  QUrlInfo * obj = static_cast<QUrlInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUrlInfo *obj = static_cast<QUrlInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -140,17 +149,17 @@ HB_FUNC_STATIC( QURLINFO_DELETE )
 /*
 QString group() const
 */
-HB_FUNC_STATIC( QURLINFO_GROUP )
+HB_FUNC_STATIC(QURLINFO_GROUP)
 {
-  QUrlInfo * obj = static_cast<QUrlInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUrlInfo *obj = static_cast<QUrlInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->group() );
+      RQSTRING(obj->group());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,17 +173,17 @@ HB_FUNC_STATIC( QURLINFO_GROUP )
 /*
 bool isDir() const
 */
-HB_FUNC_STATIC( QURLINFO_ISDIR )
+HB_FUNC_STATIC(QURLINFO_ISDIR)
 {
-  QUrlInfo * obj = static_cast<QUrlInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUrlInfo *obj = static_cast<QUrlInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isDir() );
+      RBOOL(obj->isDir());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,17 +197,17 @@ HB_FUNC_STATIC( QURLINFO_ISDIR )
 /*
 bool isExecutable() const
 */
-HB_FUNC_STATIC( QURLINFO_ISEXECUTABLE )
+HB_FUNC_STATIC(QURLINFO_ISEXECUTABLE)
 {
-  QUrlInfo * obj = static_cast<QUrlInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUrlInfo *obj = static_cast<QUrlInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isExecutable() );
+      RBOOL(obj->isExecutable());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,17 +221,17 @@ HB_FUNC_STATIC( QURLINFO_ISEXECUTABLE )
 /*
 bool isFile() const
 */
-HB_FUNC_STATIC( QURLINFO_ISFILE )
+HB_FUNC_STATIC(QURLINFO_ISFILE)
 {
-  QUrlInfo * obj = static_cast<QUrlInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUrlInfo *obj = static_cast<QUrlInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isFile() );
+      RBOOL(obj->isFile());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -236,17 +245,17 @@ HB_FUNC_STATIC( QURLINFO_ISFILE )
 /*
 bool isReadable() const
 */
-HB_FUNC_STATIC( QURLINFO_ISREADABLE )
+HB_FUNC_STATIC(QURLINFO_ISREADABLE)
 {
-  QUrlInfo * obj = static_cast<QUrlInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUrlInfo *obj = static_cast<QUrlInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isReadable() );
+      RBOOL(obj->isReadable());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -260,17 +269,17 @@ HB_FUNC_STATIC( QURLINFO_ISREADABLE )
 /*
 bool isSymLink() const
 */
-HB_FUNC_STATIC( QURLINFO_ISSYMLINK )
+HB_FUNC_STATIC(QURLINFO_ISSYMLINK)
 {
-  QUrlInfo * obj = static_cast<QUrlInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUrlInfo *obj = static_cast<QUrlInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isSymLink() );
+      RBOOL(obj->isSymLink());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -284,17 +293,17 @@ HB_FUNC_STATIC( QURLINFO_ISSYMLINK )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QURLINFO_ISVALID )
+HB_FUNC_STATIC(QURLINFO_ISVALID)
 {
-  QUrlInfo * obj = static_cast<QUrlInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUrlInfo *obj = static_cast<QUrlInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -308,17 +317,17 @@ HB_FUNC_STATIC( QURLINFO_ISVALID )
 /*
 bool isWritable() const
 */
-HB_FUNC_STATIC( QURLINFO_ISWRITABLE )
+HB_FUNC_STATIC(QURLINFO_ISWRITABLE)
 {
-  QUrlInfo * obj = static_cast<QUrlInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUrlInfo *obj = static_cast<QUrlInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isWritable() );
+      RBOOL(obj->isWritable());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -332,17 +341,17 @@ HB_FUNC_STATIC( QURLINFO_ISWRITABLE )
 /*
 QDateTime lastModified() const
 */
-HB_FUNC_STATIC( QURLINFO_LASTMODIFIED )
+HB_FUNC_STATIC(QURLINFO_LASTMODIFIED)
 {
-  QUrlInfo * obj = static_cast<QUrlInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUrlInfo *obj = static_cast<QUrlInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->lastModified() );
+      QDateTime *ptr = new QDateTime(obj->lastModified());
       Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -357,17 +366,17 @@ HB_FUNC_STATIC( QURLINFO_LASTMODIFIED )
 /*
 QDateTime lastRead() const
 */
-HB_FUNC_STATIC( QURLINFO_LASTREAD )
+HB_FUNC_STATIC(QURLINFO_LASTREAD)
 {
-  QUrlInfo * obj = static_cast<QUrlInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUrlInfo *obj = static_cast<QUrlInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->lastRead() );
+      QDateTime *ptr = new QDateTime(obj->lastRead());
       Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -382,17 +391,17 @@ HB_FUNC_STATIC( QURLINFO_LASTREAD )
 /*
 QString name() const
 */
-HB_FUNC_STATIC( QURLINFO_NAME )
+HB_FUNC_STATIC(QURLINFO_NAME)
 {
-  QUrlInfo * obj = static_cast<QUrlInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUrlInfo *obj = static_cast<QUrlInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->name() );
+      RQSTRING(obj->name());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -406,17 +415,17 @@ HB_FUNC_STATIC( QURLINFO_NAME )
 /*
 QString owner() const
 */
-HB_FUNC_STATIC( QURLINFO_OWNER )
+HB_FUNC_STATIC(QURLINFO_OWNER)
 {
-  QUrlInfo * obj = static_cast<QUrlInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUrlInfo *obj = static_cast<QUrlInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->owner() );
+      RQSTRING(obj->owner());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -430,17 +439,17 @@ HB_FUNC_STATIC( QURLINFO_OWNER )
 /*
 int permissions() const
 */
-HB_FUNC_STATIC( QURLINFO_PERMISSIONS )
+HB_FUNC_STATIC(QURLINFO_PERMISSIONS)
 {
-  QUrlInfo * obj = static_cast<QUrlInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUrlInfo *obj = static_cast<QUrlInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->permissions() );
+      RINT(obj->permissions());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -454,17 +463,17 @@ HB_FUNC_STATIC( QURLINFO_PERMISSIONS )
 /*
 virtual void setDir( bool b )
 */
-HB_FUNC_STATIC( QURLINFO_SETDIR )
+HB_FUNC_STATIC(QURLINFO_SETDIR)
 {
-  QUrlInfo * obj = static_cast<QUrlInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUrlInfo *obj = static_cast<QUrlInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setDir( PBOOL(1) );
+      obj->setDir(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -480,17 +489,17 @@ HB_FUNC_STATIC( QURLINFO_SETDIR )
 /*
 virtual void setFile( bool b )
 */
-HB_FUNC_STATIC( QURLINFO_SETFILE )
+HB_FUNC_STATIC(QURLINFO_SETFILE)
 {
-  QUrlInfo * obj = static_cast<QUrlInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUrlInfo *obj = static_cast<QUrlInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setFile( PBOOL(1) );
+      obj->setFile(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -506,17 +515,17 @@ HB_FUNC_STATIC( QURLINFO_SETFILE )
 /*
 virtual void setGroup( const QString & s )
 */
-HB_FUNC_STATIC( QURLINFO_SETGROUP )
+HB_FUNC_STATIC(QURLINFO_SETGROUP)
 {
-  QUrlInfo * obj = static_cast<QUrlInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUrlInfo *obj = static_cast<QUrlInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setGroup( PQSTRING(1) );
+      obj->setGroup(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -532,17 +541,17 @@ HB_FUNC_STATIC( QURLINFO_SETGROUP )
 /*
 virtual void setLastModified( const QDateTime & dt )
 */
-HB_FUNC_STATIC( QURLINFO_SETLASTMODIFIED )
+HB_FUNC_STATIC(QURLINFO_SETLASTMODIFIED)
 {
-  QUrlInfo * obj = static_cast<QUrlInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUrlInfo *obj = static_cast<QUrlInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDATETIME(1) )
+    if (ISNUMPAR(1) && ISQDATETIME(1))
     {
 #endif
-      obj->setLastModified( *PQDATETIME(1) );
+      obj->setLastModified(*PQDATETIME(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -558,17 +567,17 @@ HB_FUNC_STATIC( QURLINFO_SETLASTMODIFIED )
 /*
 void setLastRead( const QDateTime & dt )
 */
-HB_FUNC_STATIC( QURLINFO_SETLASTREAD )
+HB_FUNC_STATIC(QURLINFO_SETLASTREAD)
 {
-  QUrlInfo * obj = static_cast<QUrlInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUrlInfo *obj = static_cast<QUrlInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDATETIME(1) )
+    if (ISNUMPAR(1) && ISQDATETIME(1))
     {
 #endif
-      obj->setLastRead( *PQDATETIME(1) );
+      obj->setLastRead(*PQDATETIME(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -584,17 +593,17 @@ HB_FUNC_STATIC( QURLINFO_SETLASTREAD )
 /*
 virtual void setName( const QString & name )
 */
-HB_FUNC_STATIC( QURLINFO_SETNAME )
+HB_FUNC_STATIC(QURLINFO_SETNAME)
 {
-  QUrlInfo * obj = static_cast<QUrlInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUrlInfo *obj = static_cast<QUrlInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setName( PQSTRING(1) );
+      obj->setName(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -610,17 +619,17 @@ HB_FUNC_STATIC( QURLINFO_SETNAME )
 /*
 virtual void setOwner( const QString & s )
 */
-HB_FUNC_STATIC( QURLINFO_SETOWNER )
+HB_FUNC_STATIC(QURLINFO_SETOWNER)
 {
-  QUrlInfo * obj = static_cast<QUrlInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUrlInfo *obj = static_cast<QUrlInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setOwner( PQSTRING(1) );
+      obj->setOwner(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -636,17 +645,17 @@ HB_FUNC_STATIC( QURLINFO_SETOWNER )
 /*
 virtual void setPermissions( int p )
 */
-HB_FUNC_STATIC( QURLINFO_SETPERMISSIONS )
+HB_FUNC_STATIC(QURLINFO_SETPERMISSIONS)
 {
-  QUrlInfo * obj = static_cast<QUrlInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUrlInfo *obj = static_cast<QUrlInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setPermissions( PINT(1) );
+      obj->setPermissions(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -662,17 +671,17 @@ HB_FUNC_STATIC( QURLINFO_SETPERMISSIONS )
 /*
 virtual void setReadable( bool b )
 */
-HB_FUNC_STATIC( QURLINFO_SETREADABLE )
+HB_FUNC_STATIC(QURLINFO_SETREADABLE)
 {
-  QUrlInfo * obj = static_cast<QUrlInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUrlInfo *obj = static_cast<QUrlInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setReadable( PBOOL(1) );
+      obj->setReadable(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -688,17 +697,17 @@ HB_FUNC_STATIC( QURLINFO_SETREADABLE )
 /*
 virtual void setSize( qint64 size )
 */
-HB_FUNC_STATIC( QURLINFO_SETSIZE )
+HB_FUNC_STATIC(QURLINFO_SETSIZE)
 {
-  QUrlInfo * obj = static_cast<QUrlInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUrlInfo *obj = static_cast<QUrlInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSize( PQINT64(1) );
+      obj->setSize(PQINT64(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -714,17 +723,17 @@ HB_FUNC_STATIC( QURLINFO_SETSIZE )
 /*
 virtual void setSymLink( bool b )
 */
-HB_FUNC_STATIC( QURLINFO_SETSYMLINK )
+HB_FUNC_STATIC(QURLINFO_SETSYMLINK)
 {
-  QUrlInfo * obj = static_cast<QUrlInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUrlInfo *obj = static_cast<QUrlInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setSymLink( PBOOL(1) );
+      obj->setSymLink(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -740,17 +749,17 @@ HB_FUNC_STATIC( QURLINFO_SETSYMLINK )
 /*
 virtual void setWritable( bool b )
 */
-HB_FUNC_STATIC( QURLINFO_SETWRITABLE )
+HB_FUNC_STATIC(QURLINFO_SETWRITABLE)
 {
-  QUrlInfo * obj = static_cast<QUrlInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUrlInfo *obj = static_cast<QUrlInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setWritable( PBOOL(1) );
+      obj->setWritable(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -766,17 +775,17 @@ HB_FUNC_STATIC( QURLINFO_SETWRITABLE )
 /*
 qint64 size() const
 */
-HB_FUNC_STATIC( QURLINFO_SIZE )
+HB_FUNC_STATIC(QURLINFO_SIZE)
 {
-  QUrlInfo * obj = static_cast<QUrlInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUrlInfo *obj = static_cast<QUrlInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQINT64( obj->size() );
+      RQINT64(obj->size());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -790,13 +799,13 @@ HB_FUNC_STATIC( QURLINFO_SIZE )
 /*
 static bool equal( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
 */
-HB_FUNC_STATIC( QURLINFO_EQUAL )
+HB_FUNC_STATIC(QURLINFO_EQUAL)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(3) && ISQURLINFO(1) && ISQURLINFO(2) && HB_ISNUM(3) )
+  if (ISNUMPAR(3) && ISQURLINFO(1) && ISQURLINFO(2) && HB_ISNUM(3))
   {
 #endif
-    RBOOL( QUrlInfo::equal( *PQURLINFO(1), *PQURLINFO(2), PINT(3)) );
+    RBOOL(QUrlInfo::equal(*PQURLINFO(1), *PQURLINFO(2), PINT(3)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -809,13 +818,13 @@ HB_FUNC_STATIC( QURLINFO_EQUAL )
 /*
 static bool greaterThan( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
 */
-HB_FUNC_STATIC( QURLINFO_GREATERTHAN )
+HB_FUNC_STATIC(QURLINFO_GREATERTHAN)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(3) && ISQURLINFO(1) && ISQURLINFO(2) && HB_ISNUM(3) )
+  if (ISNUMPAR(3) && ISQURLINFO(1) && ISQURLINFO(2) && HB_ISNUM(3))
   {
 #endif
-    RBOOL( QUrlInfo::greaterThan( *PQURLINFO(1), *PQURLINFO(2), PINT(3)) );
+    RBOOL(QUrlInfo::greaterThan(*PQURLINFO(1), *PQURLINFO(2), PINT(3)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -828,13 +837,13 @@ HB_FUNC_STATIC( QURLINFO_GREATERTHAN )
 /*
 static bool lessThan( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
 */
-HB_FUNC_STATIC( QURLINFO_LESSTHAN )
+HB_FUNC_STATIC(QURLINFO_LESSTHAN)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(3) && ISQURLINFO(1) && ISQURLINFO(2) && HB_ISNUM(3) )
+  if (ISNUMPAR(3) && ISQURLINFO(1) && ISQURLINFO(2) && HB_ISNUM(3))
   {
 #endif
-    RBOOL( QUrlInfo::lessThan( *PQURLINFO(1), *PQURLINFO(2), PINT(3)) );
+    RBOOL(QUrlInfo::lessThan(*PQURLINFO(1), *PQURLINFO(2), PINT(3)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -844,11 +853,11 @@ HB_FUNC_STATIC( QURLINFO_LESSTHAN )
 #endif
 }
 
-HB_FUNC_STATIC( QURLINFO_NEWFROM )
+HB_FUNC_STATIC(QURLINFO_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -857,7 +866,7 @@ HB_FUNC_STATIC( QURLINFO_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -874,26 +883,26 @@ HB_FUNC_STATIC( QURLINFO_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QURLINFO_NEWFROMOBJECT )
+HB_FUNC_STATIC(QURLINFO_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QURLINFO_NEWFROM );
+  HB_FUNC_EXEC(QURLINFO_NEWFROM);
 }
 
-HB_FUNC_STATIC( QURLINFO_NEWFROMPOINTER )
+HB_FUNC_STATIC(QURLINFO_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QURLINFO_NEWFROM );
+  HB_FUNC_EXEC(QURLINFO_NEWFROM);
 }
 
-HB_FUNC_STATIC( QURLINFO_SELFDESTRUCTION )
+HB_FUNC_STATIC(QURLINFO_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QURLINFO_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QURLINFO_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

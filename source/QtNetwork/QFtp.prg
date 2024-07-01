@@ -81,14 +81,14 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-/*
-QFtp( QObject * parent = 0 )
-*/
-HB_FUNC_STATIC( QFTP_NEW )
+    /*
+    QFtp( QObject * parent = 0 )
+    */
+HB_FUNC_STATIC(QFTP_NEW)
 {
-  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QFtp * obj = new QFtp( OPQOBJECT( 1, 0 ) );
+    QFtp *obj = new QFtp(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -97,11 +97,11 @@ HB_FUNC_STATIC( QFTP_NEW )
   }
 }
 
-HB_FUNC_STATIC( QFTP_DELETE )
+HB_FUNC_STATIC(QFTP_DELETE)
 {
-  QFtp * obj = qobject_cast<QFtp*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -118,17 +118,17 @@ HB_FUNC_STATIC( QFTP_DELETE )
 /*
 qint64 bytesAvailable() const
 */
-HB_FUNC_STATIC( QFTP_BYTESAVAILABLE )
+HB_FUNC_STATIC(QFTP_BYTESAVAILABLE)
 {
-  QFtp * obj = qobject_cast<QFtp*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQINT64( obj->bytesAvailable() );
+      RQINT64(obj->bytesAvailable());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,17 +142,17 @@ HB_FUNC_STATIC( QFTP_BYTESAVAILABLE )
 /*
 int cd( const QString & dir )
 */
-HB_FUNC_STATIC( QFTP_CD )
+HB_FUNC_STATIC(QFTP_CD)
 {
-  QFtp * obj = qobject_cast<QFtp*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RINT( obj->cd( PQSTRING(1)) );
+      RINT(obj->cd(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,14 +166,14 @@ HB_FUNC_STATIC( QFTP_CD )
 /*
 void clearPendingCommands()
 */
-HB_FUNC_STATIC( QFTP_CLEARPENDINGCOMMANDS )
+HB_FUNC_STATIC(QFTP_CLEARPENDINGCOMMANDS)
 {
-  QFtp * obj = qobject_cast<QFtp*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clearPendingCommands();
@@ -192,17 +192,17 @@ HB_FUNC_STATIC( QFTP_CLEARPENDINGCOMMANDS )
 /*
 int close()
 */
-HB_FUNC_STATIC( QFTP_CLOSE )
+HB_FUNC_STATIC(QFTP_CLOSE)
 {
-  QFtp * obj = qobject_cast<QFtp*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->close() );
+      RINT(obj->close());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,17 +216,17 @@ HB_FUNC_STATIC( QFTP_CLOSE )
 /*
 int connectToHost( const QString & host, quint16 port = 21 )
 */
-HB_FUNC_STATIC( QFTP_CONNECTTOHOST )
+HB_FUNC_STATIC(QFTP_CONNECTTOHOST)
 {
-  QFtp * obj = qobject_cast<QFtp*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      RINT( obj->connectToHost( PQSTRING(1), OPQUINT16( 2, 21 )) );
+      RINT(obj->connectToHost(PQSTRING(1), OPQUINT16(2, 21)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -240,17 +240,17 @@ HB_FUNC_STATIC( QFTP_CONNECTTOHOST )
 /*
 QFtp::Command currentCommand() const
 */
-HB_FUNC_STATIC( QFTP_CURRENTCOMMAND )
+HB_FUNC_STATIC(QFTP_CURRENTCOMMAND)
 {
-  QFtp * obj = qobject_cast<QFtp*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->currentCommand() );
+      RENUM(obj->currentCommand());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -264,17 +264,17 @@ HB_FUNC_STATIC( QFTP_CURRENTCOMMAND )
 /*
 QIODevice * currentDevice() const
 */
-HB_FUNC_STATIC( QFTP_CURRENTDEVICE )
+HB_FUNC_STATIC(QFTP_CURRENTDEVICE)
 {
-  QFtp * obj = qobject_cast<QFtp*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QIODevice * ptr = obj->currentDevice();
+      QIODevice *ptr = obj->currentDevice();
       Qt4xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -289,17 +289,17 @@ HB_FUNC_STATIC( QFTP_CURRENTDEVICE )
 /*
 int currentId() const
 */
-HB_FUNC_STATIC( QFTP_CURRENTID )
+HB_FUNC_STATIC(QFTP_CURRENTID)
 {
-  QFtp * obj = qobject_cast<QFtp*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->currentId() );
+      RINT(obj->currentId());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -313,17 +313,17 @@ HB_FUNC_STATIC( QFTP_CURRENTID )
 /*
 QFtp::Error error() const
 */
-HB_FUNC_STATIC( QFTP_ERROR )
+HB_FUNC_STATIC(QFTP_ERROR)
 {
-  QFtp * obj = qobject_cast<QFtp*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->error() );
+      RENUM(obj->error());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -337,17 +337,17 @@ HB_FUNC_STATIC( QFTP_ERROR )
 /*
 QString errorString() const
 */
-HB_FUNC_STATIC( QFTP_ERRORSTRING )
+HB_FUNC_STATIC(QFTP_ERRORSTRING)
 {
-  QFtp * obj = qobject_cast<QFtp*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->errorString() );
+      RQSTRING(obj->errorString());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -361,17 +361,18 @@ HB_FUNC_STATIC( QFTP_ERRORSTRING )
 /*
 int get( const QString & file, QIODevice * dev = 0, QFtp::TransferType type = QFtp::Binary )
 */
-HB_FUNC_STATIC( QFTP_GET )
+HB_FUNC_STATIC(QFTP_GET)
 {
-  QFtp * obj = qobject_cast<QFtp*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQIODEVICE(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)) )
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQIODEVICE(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      RINT( obj->get( PQSTRING(1), OPQIODEVICE( 2, 0 ), HB_ISNIL(3) ? ( QFtp::TransferType ) QFtp::Binary : ( QFtp::TransferType ) hb_parni(3)) );
+      RINT(obj->get(PQSTRING(1), OPQIODEVICE(2, 0),
+                    HB_ISNIL(3) ? (QFtp::TransferType)QFtp::Binary : (QFtp::TransferType)hb_parni(3)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -385,17 +386,17 @@ HB_FUNC_STATIC( QFTP_GET )
 /*
 bool hasPendingCommands() const
 */
-HB_FUNC_STATIC( QFTP_HASPENDINGCOMMANDS )
+HB_FUNC_STATIC(QFTP_HASPENDINGCOMMANDS)
 {
-  QFtp * obj = qobject_cast<QFtp*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->hasPendingCommands() );
+      RBOOL(obj->hasPendingCommands());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -409,17 +410,17 @@ HB_FUNC_STATIC( QFTP_HASPENDINGCOMMANDS )
 /*
 int list( const QString & dir = QString() )
 */
-HB_FUNC_STATIC( QFTP_LIST )
+HB_FUNC_STATIC(QFTP_LIST)
 {
-  QFtp * obj = qobject_cast<QFtp*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)))
     {
 #endif
-      RINT( obj->list( OPQSTRING( 1, QString()) ) );
+      RINT(obj->list(OPQSTRING(1, QString())));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -433,17 +434,17 @@ HB_FUNC_STATIC( QFTP_LIST )
 /*
 int login( const QString & user = QString(), const QString & password = QString() )
 */
-HB_FUNC_STATIC( QFTP_LOGIN )
+HB_FUNC_STATIC(QFTP_LOGIN)
 {
-  QFtp * obj = qobject_cast<QFtp*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (HB_ISCHAR(2) || HB_ISNIL(2)) )
+    if (ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (HB_ISCHAR(2) || HB_ISNIL(2)))
     {
 #endif
-      RINT( obj->login( OPQSTRING( 1, QString() ), OPQSTRING( 2, QString()) ) );
+      RINT(obj->login(OPQSTRING(1, QString()), OPQSTRING(2, QString())));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -457,17 +458,17 @@ HB_FUNC_STATIC( QFTP_LOGIN )
 /*
 int mkdir( const QString & dir )
 */
-HB_FUNC_STATIC( QFTP_MKDIR )
+HB_FUNC_STATIC(QFTP_MKDIR)
 {
-  QFtp * obj = qobject_cast<QFtp*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RINT( obj->mkdir( PQSTRING(1)) );
+      RINT(obj->mkdir(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -478,30 +479,32 @@ HB_FUNC_STATIC( QFTP_MKDIR )
   }
 }
 
-HB_FUNC_STATIC( QFTP_PUT )
+HB_FUNC_STATIC(QFTP_PUT)
 {
-  if( ISBETWEEN(2, 3) && ISQIODEVICE(1) && HB_ISCHAR(2) && (HB_ISNUM(3) || HB_ISNIL(3)) )
+  if (ISBETWEEN(2, 3) && ISQIODEVICE(1) && HB_ISCHAR(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
     int put( QIODevice * dev, const QString & file, QFtp::TransferType type = QFtp::Binary )
     */
-    QFtp * obj = qobject_cast<QFtp*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      RINT( obj->put( PQIODEVICE(1), PQSTRING(2), HB_ISNIL(3) ? ( QFtp::TransferType ) QFtp::Binary : ( QFtp::TransferType ) hb_parni(3)) );
+      RINT(obj->put(PQIODEVICE(1), PQSTRING(2),
+                    HB_ISNIL(3) ? (QFtp::TransferType)QFtp::Binary : (QFtp::TransferType)hb_parni(3)));
     }
   }
-  else if( ISBETWEEN(2, 3) && ISQBYTEARRAY(1) && HB_ISCHAR(2) && (HB_ISNUM(3) || HB_ISNIL(3)) )
+  else if (ISBETWEEN(2, 3) && ISQBYTEARRAY(1) && HB_ISCHAR(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
     int put( const QByteArray & data, const QString & file, QFtp::TransferType type = QFtp::Binary )
     */
-    QFtp * obj = qobject_cast<QFtp*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      RINT( obj->put( *PQBYTEARRAY(1), PQSTRING(2), HB_ISNIL(3) ? ( QFtp::TransferType ) QFtp::Binary : ( QFtp::TransferType ) hb_parni(3)) );
+      RINT(obj->put(*PQBYTEARRAY(1), PQSTRING(2),
+                    HB_ISNIL(3) ? (QFtp::TransferType)QFtp::Binary : (QFtp::TransferType)hb_parni(3)));
     }
   }
   else
@@ -513,17 +516,17 @@ HB_FUNC_STATIC( QFTP_PUT )
 /*
 int rawCommand( const QString & command )
 */
-HB_FUNC_STATIC( QFTP_RAWCOMMAND )
+HB_FUNC_STATIC(QFTP_RAWCOMMAND)
 {
-  QFtp * obj = qobject_cast<QFtp*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RINT( obj->rawCommand( PQSTRING(1)) );
+      RINT(obj->rawCommand(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -537,17 +540,17 @@ HB_FUNC_STATIC( QFTP_RAWCOMMAND )
 /*
 qint64 read( char * data, qint64 maxlen )
 */
-HB_FUNC_STATIC( QFTP_READ )
+HB_FUNC_STATIC(QFTP_READ)
 {
-  QFtp * obj = qobject_cast<QFtp*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
 #endif
-      RQINT64( obj->read( ( char * ) hb_parc(1), PQINT64(2)) );
+      RQINT64(obj->read((char *)hb_parc(1), PQINT64(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -561,17 +564,17 @@ HB_FUNC_STATIC( QFTP_READ )
 /*
 QByteArray readAll()
 */
-HB_FUNC_STATIC( QFTP_READALL )
+HB_FUNC_STATIC(QFTP_READALL)
 {
-  QFtp * obj = qobject_cast<QFtp*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->readAll() );
+      QByteArray *ptr = new QByteArray(obj->readAll());
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -586,17 +589,17 @@ HB_FUNC_STATIC( QFTP_READALL )
 /*
 int remove( const QString & file )
 */
-HB_FUNC_STATIC( QFTP_REMOVE )
+HB_FUNC_STATIC(QFTP_REMOVE)
 {
-  QFtp * obj = qobject_cast<QFtp*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RINT( obj->remove( PQSTRING(1)) );
+      RINT(obj->remove(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -610,17 +613,17 @@ HB_FUNC_STATIC( QFTP_REMOVE )
 /*
 int rename( const QString & oldname, const QString & newname )
 */
-HB_FUNC_STATIC( QFTP_RENAME )
+HB_FUNC_STATIC(QFTP_RENAME)
 {
-  QFtp * obj = qobject_cast<QFtp*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
 #endif
-      RINT( obj->rename( PQSTRING(1), PQSTRING(2)) );
+      RINT(obj->rename(PQSTRING(1), PQSTRING(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -634,17 +637,17 @@ HB_FUNC_STATIC( QFTP_RENAME )
 /*
 int rmdir( const QString & dir )
 */
-HB_FUNC_STATIC( QFTP_RMDIR )
+HB_FUNC_STATIC(QFTP_RMDIR)
 {
-  QFtp * obj = qobject_cast<QFtp*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RINT( obj->rmdir( PQSTRING(1)) );
+      RINT(obj->rmdir(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -658,17 +661,17 @@ HB_FUNC_STATIC( QFTP_RMDIR )
 /*
 int setProxy( const QString & host, quint16 port )
 */
-HB_FUNC_STATIC( QFTP_SETPROXY )
+HB_FUNC_STATIC(QFTP_SETPROXY)
 {
-  QFtp * obj = qobject_cast<QFtp*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
 #endif
-      RINT( obj->setProxy( PQSTRING(1), PQUINT16(2)) );
+      RINT(obj->setProxy(PQSTRING(1), PQUINT16(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -682,17 +685,17 @@ HB_FUNC_STATIC( QFTP_SETPROXY )
 /*
 int setTransferMode( QFtp::TransferMode mode )
 */
-HB_FUNC_STATIC( QFTP_SETTRANSFERMODE )
+HB_FUNC_STATIC(QFTP_SETTRANSFERMODE)
 {
-  QFtp * obj = qobject_cast<QFtp*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT( obj->setTransferMode( ( QFtp::TransferMode ) hb_parni(1)) );
+      RINT(obj->setTransferMode((QFtp::TransferMode)hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -706,17 +709,17 @@ HB_FUNC_STATIC( QFTP_SETTRANSFERMODE )
 /*
 QFtp::State state() const
 */
-HB_FUNC_STATIC( QFTP_STATE )
+HB_FUNC_STATIC(QFTP_STATE)
 {
-  QFtp * obj = qobject_cast<QFtp*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->state() );
+      RENUM(obj->state());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -730,14 +733,14 @@ HB_FUNC_STATIC( QFTP_STATE )
 /*
 void abort()
 */
-HB_FUNC_STATIC( QFTP_ABORT )
+HB_FUNC_STATIC(QFTP_ABORT)
 {
-  QFtp * obj = qobject_cast<QFtp*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->abort();
@@ -753,44 +756,44 @@ HB_FUNC_STATIC( QFTP_ABORT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QFtpSlots_connect_signal(const QString & signal, const QString & slot);
+void QFtpSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QFTP_ONCOMMANDFINISHED )
+HB_FUNC_STATIC(QFTP_ONCOMMANDFINISHED)
 {
   QFtpSlots_connect_signal("commandFinished(int,bool)", "commandFinished(int,bool)");
 }
 
-HB_FUNC_STATIC( QFTP_ONCOMMANDSTARTED )
+HB_FUNC_STATIC(QFTP_ONCOMMANDSTARTED)
 {
   QFtpSlots_connect_signal("commandStarted(int)", "commandStarted(int)");
 }
 
-HB_FUNC_STATIC( QFTP_ONDATATRANSFERPROGRESS )
+HB_FUNC_STATIC(QFTP_ONDATATRANSFERPROGRESS)
 {
   QFtpSlots_connect_signal("dataTransferProgress(qint64,qint64)", "dataTransferProgress(qint64,qint64)");
 }
 
-HB_FUNC_STATIC( QFTP_ONDONE )
+HB_FUNC_STATIC(QFTP_ONDONE)
 {
   QFtpSlots_connect_signal("done(bool)", "done(bool)");
 }
 
-HB_FUNC_STATIC( QFTP_ONLISTINFO )
+HB_FUNC_STATIC(QFTP_ONLISTINFO)
 {
   QFtpSlots_connect_signal("listInfo(QUrlInfo)", "listInfo(QUrlInfo)");
 }
 
-HB_FUNC_STATIC( QFTP_ONRAWCOMMANDREPLY )
+HB_FUNC_STATIC(QFTP_ONRAWCOMMANDREPLY)
 {
   QFtpSlots_connect_signal("rawCommandReply(int,QString)", "rawCommandReply(int,QString)");
 }
 
-HB_FUNC_STATIC( QFTP_ONREADYREAD )
+HB_FUNC_STATIC(QFTP_ONREADYREAD)
 {
   QFtpSlots_connect_signal("readyRead()", "readyRead()");
 }
 
-HB_FUNC_STATIC( QFTP_ONSTATECHANGED )
+HB_FUNC_STATIC(QFTP_ONSTATECHANGED)
 {
   QFtpSlots_connect_signal("stateChanged(int)", "stateChanged(int)");
 }

@@ -60,30 +60,30 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QSSLCIPHER_NEW )
+HB_FUNC_STATIC(QSSLCIPHER_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QSslCipher()
     */
-    QSslCipher * obj = new QSslCipher();
+    QSslCipher *obj = new QSslCipher();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
+  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
     /*
     QSslCipher( const QString & name, QSsl::SslProtocol protocol )
     */
-    QSslCipher * obj = new QSslCipher( PQSTRING(1), ( QSsl::SslProtocol ) hb_parni(2) );
+    QSslCipher *obj = new QSslCipher(PQSTRING(1), (QSsl::SslProtocol)hb_parni(2));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQSSLCIPHER(1) )
+  else if (ISNUMPAR(1) && ISQSSLCIPHER(1))
   {
     /*
     QSslCipher( const QSslCipher & other )
     */
-    QSslCipher * obj = new QSslCipher( *PQSSLCIPHER(1) );
+    QSslCipher *obj = new QSslCipher(*PQSSLCIPHER(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -92,11 +92,11 @@ HB_FUNC_STATIC( QSSLCIPHER_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSSLCIPHER_DELETE )
+HB_FUNC_STATIC(QSSLCIPHER_DELETE)
 {
-  QSslCipher * obj = static_cast<QSslCipher*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QSslCipher *obj = static_cast<QSslCipher *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -111,17 +111,17 @@ HB_FUNC_STATIC( QSSLCIPHER_DELETE )
 /*
 QString authenticationMethod() const
 */
-HB_FUNC_STATIC( QSSLCIPHER_AUTHENTICATIONMETHOD )
+HB_FUNC_STATIC(QSSLCIPHER_AUTHENTICATIONMETHOD)
 {
-  QSslCipher * obj = static_cast<QSslCipher*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QSslCipher *obj = static_cast<QSslCipher *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->authenticationMethod() );
+      RQSTRING(obj->authenticationMethod());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,17 +135,17 @@ HB_FUNC_STATIC( QSSLCIPHER_AUTHENTICATIONMETHOD )
 /*
 QString encryptionMethod() const
 */
-HB_FUNC_STATIC( QSSLCIPHER_ENCRYPTIONMETHOD )
+HB_FUNC_STATIC(QSSLCIPHER_ENCRYPTIONMETHOD)
 {
-  QSslCipher * obj = static_cast<QSslCipher*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QSslCipher *obj = static_cast<QSslCipher *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->encryptionMethod() );
+      RQSTRING(obj->encryptionMethod());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -159,17 +159,17 @@ HB_FUNC_STATIC( QSSLCIPHER_ENCRYPTIONMETHOD )
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QSSLCIPHER_ISNULL )
+HB_FUNC_STATIC(QSSLCIPHER_ISNULL)
 {
-  QSslCipher * obj = static_cast<QSslCipher*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QSslCipher *obj = static_cast<QSslCipher *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isNull() );
+      RBOOL(obj->isNull());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,17 +183,17 @@ HB_FUNC_STATIC( QSSLCIPHER_ISNULL )
 /*
 QString keyExchangeMethod() const
 */
-HB_FUNC_STATIC( QSSLCIPHER_KEYEXCHANGEMETHOD )
+HB_FUNC_STATIC(QSSLCIPHER_KEYEXCHANGEMETHOD)
 {
-  QSslCipher * obj = static_cast<QSslCipher*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QSslCipher *obj = static_cast<QSslCipher *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->keyExchangeMethod() );
+      RQSTRING(obj->keyExchangeMethod());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -207,17 +207,17 @@ HB_FUNC_STATIC( QSSLCIPHER_KEYEXCHANGEMETHOD )
 /*
 QString name() const
 */
-HB_FUNC_STATIC( QSSLCIPHER_NAME )
+HB_FUNC_STATIC(QSSLCIPHER_NAME)
 {
-  QSslCipher * obj = static_cast<QSslCipher*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QSslCipher *obj = static_cast<QSslCipher *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->name() );
+      RQSTRING(obj->name());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -231,17 +231,17 @@ HB_FUNC_STATIC( QSSLCIPHER_NAME )
 /*
 QSsl::SslProtocol protocol() const
 */
-HB_FUNC_STATIC( QSSLCIPHER_PROTOCOL )
+HB_FUNC_STATIC(QSSLCIPHER_PROTOCOL)
 {
-  QSslCipher * obj = static_cast<QSslCipher*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QSslCipher *obj = static_cast<QSslCipher *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->protocol() );
+      RENUM(obj->protocol());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -255,17 +255,17 @@ HB_FUNC_STATIC( QSSLCIPHER_PROTOCOL )
 /*
 QString protocolString() const
 */
-HB_FUNC_STATIC( QSSLCIPHER_PROTOCOLSTRING )
+HB_FUNC_STATIC(QSSLCIPHER_PROTOCOLSTRING)
 {
-  QSslCipher * obj = static_cast<QSslCipher*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QSslCipher *obj = static_cast<QSslCipher *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->protocolString() );
+      RQSTRING(obj->protocolString());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,17 +279,17 @@ HB_FUNC_STATIC( QSSLCIPHER_PROTOCOLSTRING )
 /*
 int supportedBits() const
 */
-HB_FUNC_STATIC( QSSLCIPHER_SUPPORTEDBITS )
+HB_FUNC_STATIC(QSSLCIPHER_SUPPORTEDBITS)
 {
-  QSslCipher * obj = static_cast<QSslCipher*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QSslCipher *obj = static_cast<QSslCipher *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->supportedBits() );
+      RINT(obj->supportedBits());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -303,17 +303,17 @@ HB_FUNC_STATIC( QSSLCIPHER_SUPPORTEDBITS )
 /*
 int usedBits() const
 */
-HB_FUNC_STATIC( QSSLCIPHER_USEDBITS )
+HB_FUNC_STATIC(QSSLCIPHER_USEDBITS)
 {
-  QSslCipher * obj = static_cast<QSslCipher*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QSslCipher *obj = static_cast<QSslCipher *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->usedBits() );
+      RINT(obj->usedBits());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -324,11 +324,11 @@ HB_FUNC_STATIC( QSSLCIPHER_USEDBITS )
   }
 }
 
-HB_FUNC_STATIC( QSSLCIPHER_NEWFROM )
+HB_FUNC_STATIC(QSSLCIPHER_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QSSLCIPHER_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -354,26 +354,26 @@ HB_FUNC_STATIC( QSSLCIPHER_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QSSLCIPHER_NEWFROMOBJECT )
+HB_FUNC_STATIC(QSSLCIPHER_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QSSLCIPHER_NEWFROM );
+  HB_FUNC_EXEC(QSSLCIPHER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSSLCIPHER_NEWFROMPOINTER )
+HB_FUNC_STATIC(QSSLCIPHER_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QSSLCIPHER_NEWFROM );
+  HB_FUNC_EXEC(QSSLCIPHER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSSLCIPHER_SELFDESTRUCTION )
+HB_FUNC_STATIC(QSSLCIPHER_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QSSLCIPHER_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QSSLCIPHER_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
