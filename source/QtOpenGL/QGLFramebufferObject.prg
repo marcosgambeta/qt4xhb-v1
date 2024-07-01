@@ -61,54 +61,60 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW )
+HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_NEW)
 {
-  if( ISBETWEEN(1, 2) && ISQSIZE(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
+  if (ISBETWEEN(1, 2) && ISQSIZE(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
     QGLFramebufferObject( const QSize & size, GLenum target = GL_TEXTURE_2D )
     */
-    QGLFramebufferObject * obj = new QGLFramebufferObject( *PQSIZE(1), OPGLENUM( 2, GL_TEXTURE_2D ) );
+    QGLFramebufferObject *obj = new QGLFramebufferObject(*PQSIZE(1), OPGLENUM(2, GL_TEXTURE_2D));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) )
+  else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
     QGLFramebufferObject( int width, int height, GLenum target = GL_TEXTURE_2D )
     */
-    QGLFramebufferObject * obj = new QGLFramebufferObject( PINT(1), PINT(2), OPGLENUM( 3, GL_TEXTURE_2D ) );
+    QGLFramebufferObject *obj = new QGLFramebufferObject(PINT(1), PINT(2), OPGLENUM(3, GL_TEXTURE_2D));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(2) && ISQSIZE(1) && ISQGLFRAMEBUFFEROBJECTFORMAT(2) )
+  else if (ISNUMPAR(2) && ISQSIZE(1) && ISQGLFRAMEBUFFEROBJECTFORMAT(2))
   {
     /*
     QGLFramebufferObject( const QSize & size, const QGLFramebufferObjectFormat & format )
     */
-    QGLFramebufferObject * obj = new QGLFramebufferObject( *PQSIZE(1), *PQGLFRAMEBUFFEROBJECTFORMAT(2) );
+    QGLFramebufferObject *obj = new QGLFramebufferObject(*PQSIZE(1), *PQGLFRAMEBUFFEROBJECTFORMAT(2));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQGLFRAMEBUFFEROBJECTFORMAT(3) )
+  else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQGLFRAMEBUFFEROBJECTFORMAT(3))
   {
     /*
     QGLFramebufferObject( int width, int height, const QGLFramebufferObjectFormat & format )
     */
-    QGLFramebufferObject * obj = new QGLFramebufferObject( PINT(1), PINT(2), *PQGLFRAMEBUFFEROBJECTFORMAT(3) );
+    QGLFramebufferObject *obj = new QGLFramebufferObject(PINT(1), PINT(2), *PQGLFRAMEBUFFEROBJECTFORMAT(3));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)) && (HB_ISNUM(5) || HB_ISNIL(5)) )
+  else if (ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)) &&
+           (HB_ISNUM(5) || HB_ISNIL(5)))
   {
     /*
-    QGLFramebufferObject( int width, int height, QGLFramebufferObject::Attachment attachment, GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
+    QGLFramebufferObject( int width, int height, QGLFramebufferObject::Attachment attachment, GLenum target =
+    GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
     */
-    QGLFramebufferObject * obj = new QGLFramebufferObject( PINT(1), PINT(2), ( QGLFramebufferObject::Attachment ) hb_parni(3), OPGLENUM( 4, GL_TEXTURE_2D ), OPGLENUM( 5, GL_RGBA8 ) );
+    QGLFramebufferObject *obj =
+        new QGLFramebufferObject(PINT(1), PINT(2), (QGLFramebufferObject::Attachment)hb_parni(3),
+                                 OPGLENUM(4, GL_TEXTURE_2D), OPGLENUM(5, GL_RGBA8));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(3, 4) && ISQSIZE(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)) )
+  else if (ISBETWEEN(3, 4) && ISQSIZE(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
-    QGLFramebufferObject( const QSize & size, QGLFramebufferObject::Attachment attachment, GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
+    QGLFramebufferObject( const QSize & size, QGLFramebufferObject::Attachment attachment, GLenum target =
+    GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
     */
-    QGLFramebufferObject * obj = new QGLFramebufferObject( *PQSIZE(1), ( QGLFramebufferObject::Attachment ) hb_parni(2), OPGLENUM( 3, GL_TEXTURE_2D ), OPGLENUM( 4, GL_RGBA8 ) );
+    QGLFramebufferObject *obj = new QGLFramebufferObject(*PQSIZE(1), (QGLFramebufferObject::Attachment)hb_parni(2),
+                                                         OPGLENUM(3, GL_TEXTURE_2D), OPGLENUM(4, GL_RGBA8));
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -117,11 +123,11 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_DELETE )
+HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_DELETE)
 {
-  QGLFramebufferObject * obj = static_cast<QGLFramebufferObject*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGLFramebufferObject *obj = static_cast<QGLFramebufferObject *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -136,17 +142,17 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_DELETE )
 /*
 QGLFramebufferObject::Attachment attachment() const
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_ATTACHMENT )
+HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_ATTACHMENT)
 {
-  QGLFramebufferObject * obj = static_cast<QGLFramebufferObject*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGLFramebufferObject *obj = static_cast<QGLFramebufferObject *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->attachment() );
+      RENUM(obj->attachment());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,17 +166,17 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_ATTACHMENT )
 /*
 bool bind()
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_BIND )
+HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_BIND)
 {
-  QGLFramebufferObject * obj = static_cast<QGLFramebufferObject*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGLFramebufferObject *obj = static_cast<QGLFramebufferObject *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->bind() );
+      RBOOL(obj->bind());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,32 +187,32 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_BIND )
   }
 }
 
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_DRAWTEXTURE )
+HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_DRAWTEXTURE)
 {
-  if( ISBETWEEN(2, 3) && ISQRECTF(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) )
+  if (ISBETWEEN(2, 3) && ISQRECTF(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
     void drawTexture( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
     */
-    QGLFramebufferObject * obj = static_cast<QGLFramebufferObject*>(Qt4xHb::itemGetPtrStackSelfItem());
+    QGLFramebufferObject *obj = static_cast<QGLFramebufferObject *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->drawTexture( *PQRECTF(1), PGLUINT(2), OPGLENUM( 3, GL_TEXTURE_2D ) );
+      obj->drawTexture(*PQRECTF(1), PGLUINT(2), OPGLENUM(3, GL_TEXTURE_2D));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISBETWEEN(2, 3) && ISQPOINTF(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) )
+  else if (ISBETWEEN(2, 3) && ISQPOINTF(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
     void drawTexture( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
     */
-    QGLFramebufferObject * obj = static_cast<QGLFramebufferObject*>(Qt4xHb::itemGetPtrStackSelfItem());
+    QGLFramebufferObject *obj = static_cast<QGLFramebufferObject *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->drawTexture( *PQPOINTF(1), PGLUINT(2), OPGLENUM( 3, GL_TEXTURE_2D ) );
+      obj->drawTexture(*PQPOINTF(1), PGLUINT(2), OPGLENUM(3, GL_TEXTURE_2D));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -220,17 +226,17 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_DRAWTEXTURE )
 /*
 QGLFramebufferObjectFormat format() const
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_FORMAT )
+HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_FORMAT)
 {
-  QGLFramebufferObject * obj = static_cast<QGLFramebufferObject*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGLFramebufferObject *obj = static_cast<QGLFramebufferObject *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QGLFramebufferObjectFormat * ptr = new QGLFramebufferObjectFormat( obj->format() );
+      QGLFramebufferObjectFormat *ptr = new QGLFramebufferObjectFormat(obj->format());
       Qt4xHb::createReturnClass(ptr, "QGLFRAMEBUFFEROBJECTFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -245,17 +251,17 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_FORMAT )
 /*
 GLuint handle() const
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_HANDLE )
+HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_HANDLE)
 {
-  QGLFramebufferObject * obj = static_cast<QGLFramebufferObject*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGLFramebufferObject *obj = static_cast<QGLFramebufferObject *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RGLUINT( obj->handle() );
+      RGLUINT(obj->handle());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -269,17 +275,17 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_HANDLE )
 /*
 bool isBound() const
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_ISBOUND )
+HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_ISBOUND)
 {
-  QGLFramebufferObject * obj = static_cast<QGLFramebufferObject*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGLFramebufferObject *obj = static_cast<QGLFramebufferObject *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isBound() );
+      RBOOL(obj->isBound());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -293,17 +299,17 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_ISBOUND )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_ISVALID )
+HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_ISVALID)
 {
-  QGLFramebufferObject * obj = static_cast<QGLFramebufferObject*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGLFramebufferObject *obj = static_cast<QGLFramebufferObject *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -317,17 +323,17 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_ISVALID )
 /*
 bool release()
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_RELEASE )
+HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_RELEASE)
 {
-  QGLFramebufferObject * obj = static_cast<QGLFramebufferObject*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGLFramebufferObject *obj = static_cast<QGLFramebufferObject *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->release() );
+      RBOOL(obj->release());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -341,17 +347,17 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_RELEASE )
 /*
 QSize size() const
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_SIZE )
+HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_SIZE)
 {
-  QGLFramebufferObject * obj = static_cast<QGLFramebufferObject*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGLFramebufferObject *obj = static_cast<QGLFramebufferObject *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSize * ptr = new QSize( obj->size() );
+      QSize *ptr = new QSize(obj->size());
       Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -366,17 +372,17 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_SIZE )
 /*
 GLuint texture() const
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_TEXTURE )
+HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_TEXTURE)
 {
-  QGLFramebufferObject * obj = static_cast<QGLFramebufferObject*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGLFramebufferObject *obj = static_cast<QGLFramebufferObject *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RGLUINT( obj->texture() );
+      RGLUINT(obj->texture());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -390,17 +396,17 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_TEXTURE )
 /*
 QImage toImage() const
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_TOIMAGE )
+HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_TOIMAGE)
 {
-  QGLFramebufferObject * obj = static_cast<QGLFramebufferObject*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGLFramebufferObject *obj = static_cast<QGLFramebufferObject *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QImage * ptr = new QImage( obj->toImage() );
+      QImage *ptr = new QImage(obj->toImage());
       Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -415,17 +421,17 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_TOIMAGE )
 /*
 virtual QPaintEngine * paintEngine() const
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_PAINTENGINE )
+HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_PAINTENGINE)
 {
-  QGLFramebufferObject * obj = static_cast<QGLFramebufferObject*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGLFramebufferObject *obj = static_cast<QGLFramebufferObject *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPaintEngine * ptr = obj->paintEngine();
+      QPaintEngine *ptr = obj->paintEngine();
       Qt4xHb::createReturnClass(ptr, "QPAINTENGINE", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -438,15 +444,18 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_PAINTENGINE )
 }
 
 /*
-static void blitFramebuffer( QGLFramebufferObject * target, const QRect & targetRect, QGLFramebufferObject * source, const QRect & sourceRect, GLbitfield buffers = GL_COLOR_BUFFER_BIT, GLenum filter = GL_NEAREST )
+static void blitFramebuffer( QGLFramebufferObject * target, const QRect & targetRect, QGLFramebufferObject * source,
+const QRect & sourceRect, GLbitfield buffers = GL_COLOR_BUFFER_BIT, GLenum filter = GL_NEAREST )
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_BLITFRAMEBUFFER )
+HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_BLITFRAMEBUFFER)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(4, 6) && ISQGLFRAMEBUFFEROBJECT(1) && ISQRECT(2) && ISQGLFRAMEBUFFEROBJECT(3) && ISQRECT(4) && (HB_ISNUM(5) || HB_ISNIL(5)) && (HB_ISNUM(6) || HB_ISNIL(6)) )
+  if (ISBETWEEN(4, 6) && ISQGLFRAMEBUFFEROBJECT(1) && ISQRECT(2) && ISQGLFRAMEBUFFEROBJECT(3) && ISQRECT(4) &&
+      (HB_ISNUM(5) || HB_ISNIL(5)) && (HB_ISNUM(6) || HB_ISNIL(6)))
   {
 #endif
-    QGLFramebufferObject::blitFramebuffer( PQGLFRAMEBUFFEROBJECT(1), *PQRECT(2), PQGLFRAMEBUFFEROBJECT(3), *PQRECT(4), OPGLBITFIELD( 5, GL_COLOR_BUFFER_BIT ), OPGLENUM( 6, GL_NEAREST ) );
+    QGLFramebufferObject::blitFramebuffer(PQGLFRAMEBUFFEROBJECT(1), *PQRECT(2), PQGLFRAMEBUFFEROBJECT(3), *PQRECT(4),
+                                          OPGLBITFIELD(5, GL_COLOR_BUFFER_BIT), OPGLENUM(6, GL_NEAREST));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -461,13 +470,13 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_BLITFRAMEBUFFER )
 /*
 static bool hasOpenGLFramebufferBlit()
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_HASOPENGLFRAMEBUFFERBLIT )
+HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_HASOPENGLFRAMEBUFFERBLIT)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RBOOL( QGLFramebufferObject::hasOpenGLFramebufferBlit() );
+    RBOOL(QGLFramebufferObject::hasOpenGLFramebufferBlit());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -480,13 +489,13 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_HASOPENGLFRAMEBUFFERBLIT )
 /*
 static bool hasOpenGLFramebufferObjects()
 */
-HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_HASOPENGLFRAMEBUFFEROBJECTS )
+HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_HASOPENGLFRAMEBUFFEROBJECTS)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RBOOL( QGLFramebufferObject::hasOpenGLFramebufferObjects() );
+    RBOOL(QGLFramebufferObject::hasOpenGLFramebufferObjects());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
