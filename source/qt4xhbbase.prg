@@ -6,6 +6,8 @@
 
 */
 
+// clang-format off
+
 #include "hbclass.ch"
 
 CLASS Qt4xHbBase
@@ -17,6 +19,8 @@ CLASS Qt4xHbBase
    METHOD setSelfDestruction
 
 END CLASS
+
+// clang-format on
 
 #pragma BEGINDUMP
 
