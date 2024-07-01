@@ -51,22 +51,22 @@ RETURN
 
 #include <QtSvg/QSvgRenderer>
 
-HB_FUNC_STATIC( QSVGWIDGET_NEW )
+HB_FUNC_STATIC(QSVGWIDGET_NEW)
 {
-  if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
     QSvgWidget( QWidget * parent = 0 )
     */
-    QSvgWidget * obj = new QSvgWidget( OPQWIDGET( 1, 0 ) );
+    QSvgWidget *obj = new QSvgWidget(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)) )
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
     QSvgWidget( const QString & file, QWidget * parent = 0 )
     */
-    QSvgWidget * obj = new QSvgWidget( PQSTRING(1), OPQWIDGET( 2, 0 ) );
+    QSvgWidget *obj = new QSvgWidget(PQSTRING(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -75,11 +75,11 @@ HB_FUNC_STATIC( QSVGWIDGET_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSVGWIDGET_DELETE )
+HB_FUNC_STATIC(QSVGWIDGET_DELETE)
 {
-  QSvgWidget * obj = qobject_cast<QSvgWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSvgWidget *obj = qobject_cast<QSvgWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -96,17 +96,17 @@ HB_FUNC_STATIC( QSVGWIDGET_DELETE )
 /*
 QSvgRenderer * renderer() const
 */
-HB_FUNC_STATIC( QSVGWIDGET_RENDERER )
+HB_FUNC_STATIC(QSVGWIDGET_RENDERER)
 {
-  QSvgWidget * obj = qobject_cast<QSvgWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSvgWidget *obj = qobject_cast<QSvgWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSvgRenderer * ptr = obj->renderer();
+      QSvgRenderer *ptr = obj->renderer();
       Qt4xHb::createReturnQObjectClass(ptr, "QSVGRENDERER");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -121,17 +121,17 @@ HB_FUNC_STATIC( QSVGWIDGET_RENDERER )
 /*
 virtual QSize sizeHint() const
 */
-HB_FUNC_STATIC( QSVGWIDGET_SIZEHINT )
+HB_FUNC_STATIC(QSVGWIDGET_SIZEHINT)
 {
-  QSvgWidget * obj = qobject_cast<QSvgWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSvgWidget *obj = qobject_cast<QSvgWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint() );
+      QSize *ptr = new QSize(obj->sizeHint());
       Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -143,32 +143,32 @@ HB_FUNC_STATIC( QSVGWIDGET_SIZEHINT )
   }
 }
 
-HB_FUNC_STATIC( QSVGWIDGET_LOAD )
+HB_FUNC_STATIC(QSVGWIDGET_LOAD)
 {
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
     void load( const QString & file )
     */
-    QSvgWidget * obj = qobject_cast<QSvgWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QSvgWidget *obj = qobject_cast<QSvgWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->load( PQSTRING(1) );
+      obj->load(PQSTRING(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+  else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
     void load( const QByteArray & contents )
     */
-    QSvgWidget * obj = qobject_cast<QSvgWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QSvgWidget *obj = qobject_cast<QSvgWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->load( *PQBYTEARRAY(1) );
+      obj->load(*PQBYTEARRAY(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
