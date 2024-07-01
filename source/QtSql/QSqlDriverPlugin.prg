@@ -48,11 +48,11 @@ RETURN
 
 #include <QtSql/QSqlDriver>
 
-HB_FUNC_STATIC( QSQLDRIVERPLUGIN_DELETE )
+HB_FUNC_STATIC(QSQLDRIVERPLUGIN_DELETE)
 {
-  QSqlDriverPlugin * obj = qobject_cast<QSqlDriverPlugin*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSqlDriverPlugin *obj = qobject_cast<QSqlDriverPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -69,17 +69,17 @@ HB_FUNC_STATIC( QSQLDRIVERPLUGIN_DELETE )
 /*
 virtual QSqlDriver * create( const QString & key ) = 0
 */
-HB_FUNC_STATIC( QSQLDRIVERPLUGIN_CREATE )
+HB_FUNC_STATIC(QSQLDRIVERPLUGIN_CREATE)
 {
-  QSqlDriverPlugin * obj = qobject_cast<QSqlDriverPlugin*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSqlDriverPlugin *obj = qobject_cast<QSqlDriverPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      QSqlDriver * ptr = obj->create( PQSTRING(1) );
+      QSqlDriver *ptr = obj->create(PQSTRING(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QSQLDRIVER");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -94,17 +94,17 @@ HB_FUNC_STATIC( QSQLDRIVERPLUGIN_CREATE )
 /*
 virtual QStringList keys() const = 0
 */
-HB_FUNC_STATIC( QSQLDRIVERPLUGIN_KEYS )
+HB_FUNC_STATIC(QSQLDRIVERPLUGIN_KEYS)
 {
-  QSqlDriverPlugin * obj = qobject_cast<QSqlDriverPlugin*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSqlDriverPlugin *obj = qobject_cast<QSqlDriverPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->keys() );
+      RQSTRINGLIST(obj->keys());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
