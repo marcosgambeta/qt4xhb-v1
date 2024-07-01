@@ -6,6 +6,8 @@
 
 */
 
+// clang-format off
+
 #include "hbclass.ch"
 
 REQUEST QMODELINDEX
@@ -61,6 +63,8 @@ END CLASS
 
 CLASS HArrayTableModel INHERIT HAbstractTableModel
 END CLASS
+
+// clang-format on
 
 #pragma BEGINDUMP
 

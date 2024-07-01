@@ -6,6 +6,8 @@
 
 */
 
+// clang-format off
+
 #include "hbclass.ch"
 
 CLASS HAbstractListModel INHERIT QAbstractListModel
@@ -58,6 +60,8 @@ END CLASS
 
 CLASS HArrayListModel INHERIT HAbstractListModel
 END CLASS
+
+// clang-format on
 
 #pragma BEGINDUMP
 
