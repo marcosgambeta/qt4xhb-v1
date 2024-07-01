@@ -50,22 +50,22 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-HB_FUNC_STATIC( QPROPERTYANIMATION_NEW )
+HB_FUNC_STATIC(QPROPERTYANIMATION_NEW)
 {
-  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
     QPropertyAnimation( QObject * parent = 0 )
     */
-    QPropertyAnimation * obj = new QPropertyAnimation( OPQOBJECT( 1, 0 ) );
+    QPropertyAnimation *obj = new QPropertyAnimation(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(2, 3) && ISQOBJECT(1) && ISQBYTEARRAY(2) && (ISQOBJECT(3) || HB_ISNIL(3)) )
+  else if (ISBETWEEN(2, 3) && ISQOBJECT(1) && ISQBYTEARRAY(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
     QPropertyAnimation( QObject * target, const QByteArray & propertyName, QObject * parent = 0 )
     */
-    QPropertyAnimation * obj = new QPropertyAnimation( PQOBJECT(1), *PQBYTEARRAY(2), OPQOBJECT( 3, 0 ) );
+    QPropertyAnimation *obj = new QPropertyAnimation(PQOBJECT(1), *PQBYTEARRAY(2), OPQOBJECT(3, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -74,11 +74,11 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_NEW )
   }
 }
 
-HB_FUNC_STATIC( QPROPERTYANIMATION_DELETE )
+HB_FUNC_STATIC(QPROPERTYANIMATION_DELETE)
 {
-  QPropertyAnimation * obj = qobject_cast<QPropertyAnimation*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QPropertyAnimation *obj = qobject_cast<QPropertyAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -95,17 +95,17 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_DELETE )
 /*
 QByteArray propertyName() const
 */
-HB_FUNC_STATIC( QPROPERTYANIMATION_PROPERTYNAME )
+HB_FUNC_STATIC(QPROPERTYANIMATION_PROPERTYNAME)
 {
-  QPropertyAnimation * obj = qobject_cast<QPropertyAnimation*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QPropertyAnimation *obj = qobject_cast<QPropertyAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->propertyName() );
+      QByteArray *ptr = new QByteArray(obj->propertyName());
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -120,17 +120,17 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_PROPERTYNAME )
 /*
 void setPropertyName( const QByteArray & propertyName )
 */
-HB_FUNC_STATIC( QPROPERTYANIMATION_SETPROPERTYNAME )
+HB_FUNC_STATIC(QPROPERTYANIMATION_SETPROPERTYNAME)
 {
-  QPropertyAnimation * obj = qobject_cast<QPropertyAnimation*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QPropertyAnimation *obj = qobject_cast<QPropertyAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      obj->setPropertyName( *PQBYTEARRAY(1) );
+      obj->setPropertyName(*PQBYTEARRAY(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,17 +146,17 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_SETPROPERTYNAME )
 /*
 void setTargetObject( QObject * target )
 */
-HB_FUNC_STATIC( QPROPERTYANIMATION_SETTARGETOBJECT )
+HB_FUNC_STATIC(QPROPERTYANIMATION_SETTARGETOBJECT)
 {
-  QPropertyAnimation * obj = qobject_cast<QPropertyAnimation*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QPropertyAnimation *obj = qobject_cast<QPropertyAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    if (ISNUMPAR(1) && ISQOBJECT(1))
     {
 #endif
-      obj->setTargetObject( PQOBJECT(1) );
+      obj->setTargetObject(PQOBJECT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -172,17 +172,17 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_SETTARGETOBJECT )
 /*
 QObject * targetObject() const
 */
-HB_FUNC_STATIC( QPROPERTYANIMATION_TARGETOBJECT )
+HB_FUNC_STATIC(QPROPERTYANIMATION_TARGETOBJECT)
 {
-  QPropertyAnimation * obj = qobject_cast<QPropertyAnimation*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QPropertyAnimation *obj = qobject_cast<QPropertyAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QObject * ptr = obj->targetObject();
+      QObject *ptr = obj->targetObject();
       Qt4xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

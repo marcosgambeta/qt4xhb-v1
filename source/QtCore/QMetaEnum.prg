@@ -65,14 +65,14 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QMetaEnum()
-*/
-HB_FUNC_STATIC( QMETAENUM_NEW )
+    /*
+    QMetaEnum()
+    */
+HB_FUNC_STATIC(QMETAENUM_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
-    QMetaEnum * obj = new QMetaEnum();
+    QMetaEnum *obj = new QMetaEnum();
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -81,11 +81,11 @@ HB_FUNC_STATIC( QMETAENUM_NEW )
   }
 }
 
-HB_FUNC_STATIC( QMETAENUM_DELETE )
+HB_FUNC_STATIC(QMETAENUM_DELETE)
 {
-  QMetaEnum * obj = static_cast<QMetaEnum*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaEnum *obj = static_cast<QMetaEnum *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -100,17 +100,17 @@ HB_FUNC_STATIC( QMETAENUM_DELETE )
 /*
 const char * name() const
 */
-HB_FUNC_STATIC( QMETAENUM_NAME )
+HB_FUNC_STATIC(QMETAENUM_NAME)
 {
-  QMetaEnum * obj = static_cast<QMetaEnum*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaEnum *obj = static_cast<QMetaEnum *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      hb_retc( ( const char * ) obj->name() );
+      hb_retc((const char *)obj->name());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -124,17 +124,17 @@ HB_FUNC_STATIC( QMETAENUM_NAME )
 /*
 bool isFlag() const
 */
-HB_FUNC_STATIC( QMETAENUM_ISFLAG )
+HB_FUNC_STATIC(QMETAENUM_ISFLAG)
 {
-  QMetaEnum * obj = static_cast<QMetaEnum*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaEnum *obj = static_cast<QMetaEnum *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isFlag() );
+      RBOOL(obj->isFlag());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -148,17 +148,17 @@ HB_FUNC_STATIC( QMETAENUM_ISFLAG )
 /*
 int keyCount() const
 */
-HB_FUNC_STATIC( QMETAENUM_KEYCOUNT )
+HB_FUNC_STATIC(QMETAENUM_KEYCOUNT)
 {
-  QMetaEnum * obj = static_cast<QMetaEnum*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaEnum *obj = static_cast<QMetaEnum *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->keyCount() );
+      RINT(obj->keyCount());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -172,17 +172,17 @@ HB_FUNC_STATIC( QMETAENUM_KEYCOUNT )
 /*
 const char * key( int index ) const
 */
-HB_FUNC_STATIC( QMETAENUM_KEY )
+HB_FUNC_STATIC(QMETAENUM_KEY)
 {
-  QMetaEnum * obj = static_cast<QMetaEnum*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaEnum *obj = static_cast<QMetaEnum *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      hb_retc( ( const char * ) obj->key( PINT(1)) );
+      hb_retc((const char *)obj->key(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,17 +196,17 @@ HB_FUNC_STATIC( QMETAENUM_KEY )
 /*
 int value( int index ) const
 */
-HB_FUNC_STATIC( QMETAENUM_VALUE )
+HB_FUNC_STATIC(QMETAENUM_VALUE)
 {
-  QMetaEnum * obj = static_cast<QMetaEnum*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaEnum *obj = static_cast<QMetaEnum *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT( obj->value( PINT(1)) );
+      RINT(obj->value(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,17 +220,17 @@ HB_FUNC_STATIC( QMETAENUM_VALUE )
 /*
 const char * scope() const
 */
-HB_FUNC_STATIC( QMETAENUM_SCOPE )
+HB_FUNC_STATIC(QMETAENUM_SCOPE)
 {
-  QMetaEnum * obj = static_cast<QMetaEnum*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaEnum *obj = static_cast<QMetaEnum *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      hb_retc( ( const char * ) obj->scope() );
+      hb_retc((const char *)obj->scope());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,17 +244,17 @@ HB_FUNC_STATIC( QMETAENUM_SCOPE )
 /*
 int keyToValue( const char * key ) const
 */
-HB_FUNC_STATIC( QMETAENUM_KEYTOVALUE )
+HB_FUNC_STATIC(QMETAENUM_KEYTOVALUE)
 {
-  QMetaEnum * obj = static_cast<QMetaEnum*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaEnum *obj = static_cast<QMetaEnum *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RINT( obj->keyToValue( PCONSTCHAR(1)) );
+      RINT(obj->keyToValue(PCONSTCHAR(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -268,17 +268,17 @@ HB_FUNC_STATIC( QMETAENUM_KEYTOVALUE )
 /*
 const char * valueToKey( int value ) const
 */
-HB_FUNC_STATIC( QMETAENUM_VALUETOKEY )
+HB_FUNC_STATIC(QMETAENUM_VALUETOKEY)
 {
-  QMetaEnum * obj = static_cast<QMetaEnum*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaEnum *obj = static_cast<QMetaEnum *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      hb_retc( ( const char * ) obj->valueToKey( PINT(1)) );
+      hb_retc((const char *)obj->valueToKey(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -292,17 +292,17 @@ HB_FUNC_STATIC( QMETAENUM_VALUETOKEY )
 /*
 int keysToValue( const char * keys ) const
 */
-HB_FUNC_STATIC( QMETAENUM_KEYSTOVALUE )
+HB_FUNC_STATIC(QMETAENUM_KEYSTOVALUE)
 {
-  QMetaEnum * obj = static_cast<QMetaEnum*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaEnum *obj = static_cast<QMetaEnum *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RINT( obj->keysToValue( PCONSTCHAR(1)) );
+      RINT(obj->keysToValue(PCONSTCHAR(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -316,17 +316,17 @@ HB_FUNC_STATIC( QMETAENUM_KEYSTOVALUE )
 /*
 QByteArray valueToKeys( int value ) const
 */
-HB_FUNC_STATIC( QMETAENUM_VALUETOKEYS )
+HB_FUNC_STATIC(QMETAENUM_VALUETOKEYS)
 {
-  QMetaEnum * obj = static_cast<QMetaEnum*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaEnum *obj = static_cast<QMetaEnum *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->valueToKeys( PINT(1)) );
+      QByteArray *ptr = new QByteArray(obj->valueToKeys(PINT(1)));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -341,17 +341,17 @@ HB_FUNC_STATIC( QMETAENUM_VALUETOKEYS )
 /*
 const QMetaObject * enclosingMetaObject() const
 */
-HB_FUNC_STATIC( QMETAENUM_ENCLOSINGMETAOBJECT )
+HB_FUNC_STATIC(QMETAENUM_ENCLOSINGMETAOBJECT)
 {
-  QMetaEnum * obj = static_cast<QMetaEnum*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaEnum *obj = static_cast<QMetaEnum *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      const QMetaObject * ptr = obj->enclosingMetaObject();
+      const QMetaObject *ptr = obj->enclosingMetaObject();
       Qt4xHb::createReturnClass(ptr, "QMETAOBJECT", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -366,17 +366,17 @@ HB_FUNC_STATIC( QMETAENUM_ENCLOSINGMETAOBJECT )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QMETAENUM_ISVALID )
+HB_FUNC_STATIC(QMETAENUM_ISVALID)
 {
-  QMetaEnum * obj = static_cast<QMetaEnum*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaEnum *obj = static_cast<QMetaEnum *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -387,11 +387,11 @@ HB_FUNC_STATIC( QMETAENUM_ISVALID )
   }
 }
 
-HB_FUNC_STATIC( QMETAENUM_NEWFROM )
+HB_FUNC_STATIC(QMETAENUM_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QMETAENUM_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -417,26 +417,26 @@ HB_FUNC_STATIC( QMETAENUM_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QMETAENUM_NEWFROMOBJECT )
+HB_FUNC_STATIC(QMETAENUM_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QMETAENUM_NEWFROM );
+  HB_FUNC_EXEC(QMETAENUM_NEWFROM);
 }
 
-HB_FUNC_STATIC( QMETAENUM_NEWFROMPOINTER )
+HB_FUNC_STATIC(QMETAENUM_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QMETAENUM_NEWFROM );
+  HB_FUNC_EXEC(QMETAENUM_NEWFROM);
 }
 
-HB_FUNC_STATIC( QMETAENUM_SELFDESTRUCTION )
+HB_FUNC_STATIC(QMETAENUM_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QMETAENUM_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QMETAENUM_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

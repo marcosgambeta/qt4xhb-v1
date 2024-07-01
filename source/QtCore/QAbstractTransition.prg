@@ -62,11 +62,11 @@ RETURN
 #include <QtCore/QState>
 #include <QtCore/QAbstractState>
 
-HB_FUNC_STATIC( QABSTRACTTRANSITION_DELETE )
+HB_FUNC_STATIC(QABSTRACTTRANSITION_DELETE)
 {
-  QAbstractTransition * obj = qobject_cast<QAbstractTransition*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -83,17 +83,17 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_DELETE )
 /*
 void addAnimation( QAbstractAnimation * animation )
 */
-HB_FUNC_STATIC( QABSTRACTTRANSITION_ADDANIMATION )
+HB_FUNC_STATIC(QABSTRACTTRANSITION_ADDANIMATION)
 {
-  QAbstractTransition * obj = qobject_cast<QAbstractTransition*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQABSTRACTANIMATION(1) )
+    if (ISNUMPAR(1) && ISQABSTRACTANIMATION(1))
     {
 #endif
-      obj->addAnimation( PQABSTRACTANIMATION(1) );
+      obj->addAnimation(PQABSTRACTANIMATION(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -109,30 +109,30 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_ADDANIMATION )
 /*
 QList<QAbstractAnimation *> animations() const
 */
-HB_FUNC_STATIC( QABSTRACTTRANSITION_ANIMATIONS )
+HB_FUNC_STATIC(QABSTRACTTRANSITION_ANIMATIONS)
 {
-  QAbstractTransition * obj = qobject_cast<QAbstractTransition*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QList<QAbstractAnimation *> list = obj->animations();
       PHB_DYNS pDynSym = hb_dynsymFindName("QABSTRACTANIMATION");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
         const int count = list.count();
-        for( int i = 0; i < count; i++ )
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -157,17 +157,17 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_ANIMATIONS )
 /*
 QStateMachine * machine() const
 */
-HB_FUNC_STATIC( QABSTRACTTRANSITION_MACHINE )
+HB_FUNC_STATIC(QABSTRACTTRANSITION_MACHINE)
 {
-  QAbstractTransition * obj = qobject_cast<QAbstractTransition*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QStateMachine * ptr = obj->machine();
+      QStateMachine *ptr = obj->machine();
       Qt4xHb::createReturnQObjectClass(ptr, "QSTATEMACHINE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -182,17 +182,17 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_MACHINE )
 /*
 void removeAnimation( QAbstractAnimation * animation )
 */
-HB_FUNC_STATIC( QABSTRACTTRANSITION_REMOVEANIMATION )
+HB_FUNC_STATIC(QABSTRACTTRANSITION_REMOVEANIMATION)
 {
-  QAbstractTransition * obj = qobject_cast<QAbstractTransition*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQABSTRACTANIMATION(1) )
+    if (ISNUMPAR(1) && ISQABSTRACTANIMATION(1))
     {
 #endif
-      obj->removeAnimation( PQABSTRACTANIMATION(1) );
+      obj->removeAnimation(PQABSTRACTANIMATION(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -208,17 +208,17 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_REMOVEANIMATION )
 /*
 void setTargetState( QAbstractState * target )
 */
-HB_FUNC_STATIC( QABSTRACTTRANSITION_SETTARGETSTATE )
+HB_FUNC_STATIC(QABSTRACTTRANSITION_SETTARGETSTATE)
 {
-  QAbstractTransition * obj = qobject_cast<QAbstractTransition*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQABSTRACTSTATE(1) )
+    if (ISNUMPAR(1) && ISQABSTRACTSTATE(1))
     {
 #endif
-      obj->setTargetState( PQABSTRACTSTATE(1) );
+      obj->setTargetState(PQABSTRACTSTATE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -234,24 +234,25 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_SETTARGETSTATE )
 /*
 void setTargetStates( const QList<QAbstractState *> & targets )
 */
-HB_FUNC_STATIC( QABSTRACTTRANSITION_SETTARGETSTATES )
+HB_FUNC_STATIC(QABSTRACTTRANSITION_SETTARGETSTATES)
 {
-  QAbstractTransition * obj = qobject_cast<QAbstractTransition*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
 #endif
       QList<QAbstractState *> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
       const int nLen1 = hb_arrayLen(aList1);
-      for( int i1 = 0; i1 < nLen1; i1++ )
+      for (int i1 = 0; i1 < nLen1; i1++)
       {
-        par1 << static_cast<QAbstractState*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
+        par1 << static_cast<QAbstractState *>(
+            hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1 + 1), "POINTER", 0)));
       }
-      obj->setTargetStates( par1 );
+      obj->setTargetStates(par1);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -267,17 +268,17 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_SETTARGETSTATES )
 /*
 QState * sourceState() const
 */
-HB_FUNC_STATIC( QABSTRACTTRANSITION_SOURCESTATE )
+HB_FUNC_STATIC(QABSTRACTTRANSITION_SOURCESTATE)
 {
-  QAbstractTransition * obj = qobject_cast<QAbstractTransition*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QState * ptr = obj->sourceState();
+      QState *ptr = obj->sourceState();
       Qt4xHb::createReturnQObjectClass(ptr, "QSTATE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -292,17 +293,17 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_SOURCESTATE )
 /*
 QAbstractState * targetState() const
 */
-HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATE )
+HB_FUNC_STATIC(QABSTRACTTRANSITION_TARGETSTATE)
 {
-  QAbstractTransition * obj = qobject_cast<QAbstractTransition*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAbstractState * ptr = obj->targetState();
+      QAbstractState *ptr = obj->targetState();
       Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTSTATE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -317,30 +318,30 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATE )
 /*
 QList<QAbstractState *> targetStates() const
 */
-HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATES )
+HB_FUNC_STATIC(QABSTRACTTRANSITION_TARGETSTATES)
 {
-  QAbstractTransition * obj = qobject_cast<QAbstractTransition*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QList<QAbstractState *> list = obj->targetStates();
       PHB_DYNS pDynSym = hb_dynsymFindName("QABSTRACTSTATE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
         const int count = list.count();
-        for( int i = 0; i < count; i++ )
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -362,9 +363,9 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATES )
   }
 }
 
-void QAbstractTransitionSlots_connect_signal(const QString & signal, const QString & slot);
+void QAbstractTransitionSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QABSTRACTTRANSITION_ONTRIGGERED )
+HB_FUNC_STATIC(QABSTRACTTRANSITION_ONTRIGGERED)
 {
   QAbstractTransitionSlots_connect_signal("triggered()", "triggered()");
 }

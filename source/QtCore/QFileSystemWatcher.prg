@@ -55,22 +55,22 @@ RETURN
 
 #include <QtCore/QStringList>
 
-HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW )
+HB_FUNC_STATIC(QFILESYSTEMWATCHER_NEW)
 {
-  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
     QFileSystemWatcher( QObject * parent = 0 )
     */
-    QFileSystemWatcher * obj = new QFileSystemWatcher( OPQOBJECT( 1, 0 ) );
+    QFileSystemWatcher *obj = new QFileSystemWatcher(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1, 2) && HB_ISARRAY(1) && (ISQOBJECT(2) || HB_ISNIL(2)) )
+  else if (ISBETWEEN(1, 2) && HB_ISARRAY(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
     QFileSystemWatcher( const QStringList & paths, QObject * parent = 0 )
     */
-    QFileSystemWatcher * obj = new QFileSystemWatcher( PQSTRINGLIST(1), OPQOBJECT( 2, 0 ) );
+    QFileSystemWatcher *obj = new QFileSystemWatcher(PQSTRINGLIST(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -79,11 +79,11 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW )
   }
 }
 
-HB_FUNC_STATIC( QFILESYSTEMWATCHER_DELETE )
+HB_FUNC_STATIC(QFILESYSTEMWATCHER_DELETE)
 {
-  QFileSystemWatcher * obj = qobject_cast<QFileSystemWatcher*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFileSystemWatcher *obj = qobject_cast<QFileSystemWatcher *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -100,17 +100,17 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_DELETE )
 /*
 void addPath( const QString & path )
 */
-HB_FUNC_STATIC( QFILESYSTEMWATCHER_ADDPATH )
+HB_FUNC_STATIC(QFILESYSTEMWATCHER_ADDPATH)
 {
-  QFileSystemWatcher * obj = qobject_cast<QFileSystemWatcher*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFileSystemWatcher *obj = qobject_cast<QFileSystemWatcher *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->addPath( PQSTRING(1) );
+      obj->addPath(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,17 +126,17 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_ADDPATH )
 /*
 void addPaths( const QStringList & paths )
 */
-HB_FUNC_STATIC( QFILESYSTEMWATCHER_ADDPATHS )
+HB_FUNC_STATIC(QFILESYSTEMWATCHER_ADDPATHS)
 {
-  QFileSystemWatcher * obj = qobject_cast<QFileSystemWatcher*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFileSystemWatcher *obj = qobject_cast<QFileSystemWatcher *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
 #endif
-      obj->addPaths( PQSTRINGLIST(1) );
+      obj->addPaths(PQSTRINGLIST(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,17 +152,17 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_ADDPATHS )
 /*
 QStringList directories() const
 */
-HB_FUNC_STATIC( QFILESYSTEMWATCHER_DIRECTORIES )
+HB_FUNC_STATIC(QFILESYSTEMWATCHER_DIRECTORIES)
 {
-  QFileSystemWatcher * obj = qobject_cast<QFileSystemWatcher*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFileSystemWatcher *obj = qobject_cast<QFileSystemWatcher *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->directories() );
+      RQSTRINGLIST(obj->directories());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,17 +176,17 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_DIRECTORIES )
 /*
 QStringList files() const
 */
-HB_FUNC_STATIC( QFILESYSTEMWATCHER_FILES )
+HB_FUNC_STATIC(QFILESYSTEMWATCHER_FILES)
 {
-  QFileSystemWatcher * obj = qobject_cast<QFileSystemWatcher*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFileSystemWatcher *obj = qobject_cast<QFileSystemWatcher *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->files() );
+      RQSTRINGLIST(obj->files());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,17 +200,17 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_FILES )
 /*
 void removePath( const QString & path )
 */
-HB_FUNC_STATIC( QFILESYSTEMWATCHER_REMOVEPATH )
+HB_FUNC_STATIC(QFILESYSTEMWATCHER_REMOVEPATH)
 {
-  QFileSystemWatcher * obj = qobject_cast<QFileSystemWatcher*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFileSystemWatcher *obj = qobject_cast<QFileSystemWatcher *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->removePath( PQSTRING(1) );
+      obj->removePath(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -226,17 +226,17 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_REMOVEPATH )
 /*
 void removePaths( const QStringList & paths )
 */
-HB_FUNC_STATIC( QFILESYSTEMWATCHER_REMOVEPATHS )
+HB_FUNC_STATIC(QFILESYSTEMWATCHER_REMOVEPATHS)
 {
-  QFileSystemWatcher * obj = qobject_cast<QFileSystemWatcher*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFileSystemWatcher *obj = qobject_cast<QFileSystemWatcher *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
 #endif
-      obj->removePaths( PQSTRINGLIST(1) );
+      obj->removePaths(PQSTRINGLIST(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -249,14 +249,14 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_REMOVEPATHS )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QFileSystemWatcherSlots_connect_signal(const QString & signal, const QString & slot);
+void QFileSystemWatcherSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QFILESYSTEMWATCHER_ONDIRECTORYCHANGED )
+HB_FUNC_STATIC(QFILESYSTEMWATCHER_ONDIRECTORYCHANGED)
 {
   QFileSystemWatcherSlots_connect_signal("directoryChanged(QString)", "directoryChanged(QString)");
 }
 
-HB_FUNC_STATIC( QFILESYSTEMWATCHER_ONFILECHANGED )
+HB_FUNC_STATIC(QFILESYSTEMWATCHER_ONFILECHANGED)
 {
   QFileSystemWatcherSlots_connect_signal("fileChanged(QString)", "fileChanged(QString)");
 }

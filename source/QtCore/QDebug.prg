@@ -54,30 +54,30 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QDEBUG_NEW )
+HB_FUNC_STATIC(QDEBUG_NEW)
 {
-  if( ISNUMPAR(1) && ISQIODEVICE(1) )
+  if (ISNUMPAR(1) && ISQIODEVICE(1))
   {
     /*
     QDebug( QIODevice * device )
     */
-    QDebug * obj = new QDebug( PQIODEVICE(1) );
+    QDebug *obj = new QDebug(PQIODEVICE(1));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     QDebug( QtMsgType type )
     */
-    QDebug * obj = new QDebug( ( QtMsgType ) hb_parni(1) );
+    QDebug *obj = new QDebug((QtMsgType)hb_parni(1));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQDEBUG(1) )
+  else if (ISNUMPAR(1) && ISQDEBUG(1))
   {
     /*
     QDebug( const QDebug & other )
     */
-    QDebug * obj = new QDebug( *PQDEBUG(1) );
+    QDebug *obj = new QDebug(*PQDEBUG(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -86,11 +86,11 @@ HB_FUNC_STATIC( QDEBUG_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDEBUG_DELETE )
+HB_FUNC_STATIC(QDEBUG_DELETE)
 {
-  QDebug * obj = static_cast<QDebug*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDebug *obj = static_cast<QDebug *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -105,17 +105,17 @@ HB_FUNC_STATIC( QDEBUG_DELETE )
 /*
 QDebug & maybeSpace()
 */
-HB_FUNC_STATIC( QDEBUG_MAYBESPACE )
+HB_FUNC_STATIC(QDEBUG_MAYBESPACE)
 {
-  QDebug * obj = static_cast<QDebug*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDebug *obj = static_cast<QDebug *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QDebug * ptr = &obj->maybeSpace();
+      QDebug *ptr = &obj->maybeSpace();
       Qt4xHb::createReturnClass(ptr, "QDEBUG", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -130,17 +130,17 @@ HB_FUNC_STATIC( QDEBUG_MAYBESPACE )
 /*
 QDebug & nospace()
 */
-HB_FUNC_STATIC( QDEBUG_NOSPACE )
+HB_FUNC_STATIC(QDEBUG_NOSPACE)
 {
-  QDebug * obj = static_cast<QDebug*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDebug *obj = static_cast<QDebug *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QDebug * ptr = &obj->nospace();
+      QDebug *ptr = &obj->nospace();
       Qt4xHb::createReturnClass(ptr, "QDEBUG", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -155,17 +155,17 @@ HB_FUNC_STATIC( QDEBUG_NOSPACE )
 /*
 QDebug & space()
 */
-HB_FUNC_STATIC( QDEBUG_SPACE )
+HB_FUNC_STATIC(QDEBUG_SPACE)
 {
-  QDebug * obj = static_cast<QDebug*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDebug *obj = static_cast<QDebug *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QDebug * ptr = &obj->space();
+      QDebug *ptr = &obj->space();
       Qt4xHb::createReturnClass(ptr, "QDEBUG", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -177,11 +177,11 @@ HB_FUNC_STATIC( QDEBUG_SPACE )
   }
 }
 
-HB_FUNC_STATIC( QDEBUG_NEWFROM )
+HB_FUNC_STATIC(QDEBUG_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QDEBUG_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -207,26 +207,26 @@ HB_FUNC_STATIC( QDEBUG_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QDEBUG_NEWFROMOBJECT )
+HB_FUNC_STATIC(QDEBUG_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QDEBUG_NEWFROM );
+  HB_FUNC_EXEC(QDEBUG_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDEBUG_NEWFROMPOINTER )
+HB_FUNC_STATIC(QDEBUG_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QDEBUG_NEWFROM );
+  HB_FUNC_EXEC(QDEBUG_NEWFROM);
 }
 
-HB_FUNC_STATIC( QDEBUG_SELFDESTRUCTION )
+HB_FUNC_STATIC(QDEBUG_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QDEBUG_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QDEBUG_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

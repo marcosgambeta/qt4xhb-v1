@@ -236,17 +236,17 @@ RETURN
 #include <QtCore/QEvent>
 #include <QtCore/QThread>
 
-void _qtxhb_processOnEventMethod (QEvent::Type event);
-void _qtxhb_processOnEventMethod2 (QEvent::Type event);
+    void _qtxhb_processOnEventMethod(QEvent::Type event);
+void _qtxhb_processOnEventMethod2(QEvent::Type event);
 
 /*
 QObject( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QOBJECT_NEW )
+HB_FUNC_STATIC(QOBJECT_NEW)
 {
-  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QObject * obj = new QObject( OPQOBJECT( 1, 0 ) );
+    QObject *obj = new QObject(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -255,11 +255,11 @@ HB_FUNC_STATIC( QOBJECT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QOBJECT_DELETE )
+HB_FUNC_STATIC(QOBJECT_DELETE)
 {
-  QObject * obj = qobject_cast<QObject*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -276,17 +276,17 @@ HB_FUNC_STATIC( QOBJECT_DELETE )
 /*
 bool blockSignals( bool block )
 */
-HB_FUNC_STATIC( QOBJECT_BLOCKSIGNALS )
+HB_FUNC_STATIC(QOBJECT_BLOCKSIGNALS)
 {
-  QObject * obj = qobject_cast<QObject*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      RBOOL( obj->blockSignals( PBOOL(1)) );
+      RBOOL(obj->blockSignals(PBOOL(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -300,30 +300,30 @@ HB_FUNC_STATIC( QOBJECT_BLOCKSIGNALS )
 /*
 const QObjectList & children() const
 */
-HB_FUNC_STATIC( QOBJECT_CHILDREN )
+HB_FUNC_STATIC(QOBJECT_CHILDREN)
 {
-  QObject * obj = qobject_cast<QObject*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       const QObjectList list = obj->children();
       PHB_DYNS pDynSym = hb_dynsymFindName("QOBJECT");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
         const int count = list.count();
-        for( int i = 0; i < count; i++ )
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -348,14 +348,14 @@ HB_FUNC_STATIC( QOBJECT_CHILDREN )
 /*
 void dumpObjectInfo()
 */
-HB_FUNC_STATIC( QOBJECT_DUMPOBJECTINFO )
+HB_FUNC_STATIC(QOBJECT_DUMPOBJECTINFO)
 {
-  QObject * obj = qobject_cast<QObject*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->dumpObjectInfo();
@@ -374,14 +374,14 @@ HB_FUNC_STATIC( QOBJECT_DUMPOBJECTINFO )
 /*
 void dumpObjectTree()
 */
-HB_FUNC_STATIC( QOBJECT_DUMPOBJECTTREE )
+HB_FUNC_STATIC(QOBJECT_DUMPOBJECTTREE)
 {
-  QObject * obj = qobject_cast<QObject*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->dumpObjectTree();
@@ -400,23 +400,23 @@ HB_FUNC_STATIC( QOBJECT_DUMPOBJECTTREE )
 /*
 QList<QByteArray> dynamicPropertyNames() const
 */
-HB_FUNC_STATIC( QOBJECT_DYNAMICPROPERTYNAMES )
+HB_FUNC_STATIC(QOBJECT_DYNAMICPROPERTYNAMES)
 {
-  QObject * obj = qobject_cast<QObject*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QList<QByteArray> list = obj->dynamicPropertyNames();
       PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
         const int count = list.count();
-        for( int i = 0; i < count; i++ )
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -451,17 +451,17 @@ HB_FUNC_STATIC( QOBJECT_DYNAMICPROPERTYNAMES )
 /*
 virtual bool event( QEvent * e )
 */
-HB_FUNC_STATIC( QOBJECT_EVENT )
+HB_FUNC_STATIC(QOBJECT_EVENT)
 {
-  QObject * obj = qobject_cast<QObject*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQEVENT(1) )
+    if (ISNUMPAR(1) && ISQEVENT(1))
     {
 #endif
-      RBOOL( obj->event( PQEVENT(1)) );
+      RBOOL(obj->event(PQEVENT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -475,17 +475,17 @@ HB_FUNC_STATIC( QOBJECT_EVENT )
 /*
 virtual bool eventFilter( QObject * watched, QEvent * event )
 */
-HB_FUNC_STATIC( QOBJECT_EVENTFILTER )
+HB_FUNC_STATIC(QOBJECT_EVENTFILTER)
 {
-  QObject * obj = qobject_cast<QObject*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQOBJECT(1) && ISQEVENT(2) )
+    if (ISNUMPAR(2) && ISQOBJECT(1) && ISQEVENT(2))
     {
 #endif
-      RBOOL( obj->eventFilter( PQOBJECT(1), PQEVENT(2)) );
+      RBOOL(obj->eventFilter(PQOBJECT(1), PQEVENT(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -499,17 +499,17 @@ HB_FUNC_STATIC( QOBJECT_EVENTFILTER )
 /*
 T findChild ( const QString & name = QString() ) const
 */
-HB_FUNC_STATIC( QOBJECT_FINDCHILD )
+HB_FUNC_STATIC(QOBJECT_FINDCHILD)
 {
-  QObject * obj = qobject_cast<QObject*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)))
     {
 #endif
-      QObject * ptr = obj->findChild<QObject *>( OPQSTRING( 1, QString()) );
+      QObject *ptr = obj->findChild<QObject *>(OPQSTRING(1, QString()));
       Qt4xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -526,24 +526,24 @@ QList<T> findChildren ( const QString & name = QString() ) const
 */
 void QObject_findChildren1()
 {
-  QObject * obj = qobject_cast<QObject*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QList<QObject *> list = obj->findChildren<QObject *>( OPQSTRING( 1, QString()) );
+    QList<QObject *> list = obj->findChildren<QObject *>(OPQSTRING(1, QString()));
     PHB_DYNS pDynSym = hb_dynsymFindName("QOBJECT");
     PHB_ITEM pArray = hb_itemArrayNew(0);
-    if( pDynSym != NULL )
+    if (pDynSym != NULL)
     {
       const int count = list.count();
-      for( int i = 0; i < count; i++ )
+      for (int i = 0; i < count; i++)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
         PHB_ITEM pObject = hb_itemNew(NULL);
         hb_itemCopy(pObject, hb_stackReturnItem());
-        PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
+        PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
         hb_objSendMsg(pObject, "_POINTER", 1, pItem);
         hb_itemRelease(pItem);
         hb_arrayAddForward(pArray, pObject);
@@ -562,24 +562,24 @@ QList<T> findChildren ( const QRegExp & regExp ) const
 */
 void QObject_findChildren2()
 {
-  QObject * obj = qobject_cast<QObject*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QList<QObject *> list = obj->findChildren<QObject *>( *PQREGEXP(1) );
+    QList<QObject *> list = obj->findChildren<QObject *>(*PQREGEXP(1));
     PHB_DYNS pDynSym = hb_dynsymFindName("QOBJECT");
     PHB_ITEM pArray = hb_itemArrayNew(0);
-    if( pDynSym != NULL )
+    if (pDynSym != NULL)
     {
       const int count = list.count();
-      for( int i = 0; i < count; i++ )
+      for (int i = 0; i < count; i++)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
         PHB_ITEM pObject = hb_itemNew(NULL);
         hb_itemCopy(pObject, hb_stackReturnItem());
-        PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
+        PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
         hb_objSendMsg(pObject, "_POINTER", 1, pItem);
         hb_itemRelease(pItem);
         hb_arrayAddForward(pArray, pObject);
@@ -594,13 +594,13 @@ void QObject_findChildren2()
   }
 }
 
-HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
+HB_FUNC_STATIC(QOBJECT_FINDCHILDREN)
 {
-  if( ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)))
   {
     QObject_findChildren1();
   }
-  else if( ISNUMPAR(1) && ISQREGEXP(1) )
+  else if (ISNUMPAR(1) && ISQREGEXP(1))
   {
     QObject_findChildren2();
   }
@@ -613,17 +613,17 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
 /*
 bool inherits( const char * className ) const
 */
-HB_FUNC_STATIC( QOBJECT_INHERITS )
+HB_FUNC_STATIC(QOBJECT_INHERITS)
 {
-  QObject * obj = qobject_cast<QObject*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RBOOL( obj->inherits( PCONSTCHAR(1)) );
+      RBOOL(obj->inherits(PCONSTCHAR(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -637,17 +637,17 @@ HB_FUNC_STATIC( QOBJECT_INHERITS )
 /*
 void installEventFilter( QObject * filterObj )
 */
-HB_FUNC_STATIC( QOBJECT_INSTALLEVENTFILTER )
+HB_FUNC_STATIC(QOBJECT_INSTALLEVENTFILTER)
 {
-  QObject * obj = qobject_cast<QObject*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    if (ISNUMPAR(1) && ISQOBJECT(1))
     {
 #endif
-      obj->installEventFilter( PQOBJECT(1) );
+      obj->installEventFilter(PQOBJECT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -663,17 +663,17 @@ HB_FUNC_STATIC( QOBJECT_INSTALLEVENTFILTER )
 /*
 bool isWidgetType() const
 */
-HB_FUNC_STATIC( QOBJECT_ISWIDGETTYPE )
+HB_FUNC_STATIC(QOBJECT_ISWIDGETTYPE)
 {
-  QObject * obj = qobject_cast<QObject*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isWidgetType() );
+      RBOOL(obj->isWidgetType());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -687,17 +687,17 @@ HB_FUNC_STATIC( QOBJECT_ISWIDGETTYPE )
 /*
 void killTimer( int id )
 */
-HB_FUNC_STATIC( QOBJECT_KILLTIMER )
+HB_FUNC_STATIC(QOBJECT_KILLTIMER)
 {
-  QObject * obj = qobject_cast<QObject*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->killTimer( PINT(1) );
+      obj->killTimer(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -713,17 +713,17 @@ HB_FUNC_STATIC( QOBJECT_KILLTIMER )
 /*
 virtual const QMetaObject * metaObject() const
 */
-HB_FUNC_STATIC( QOBJECT_METAOBJECT )
+HB_FUNC_STATIC(QOBJECT_METAOBJECT)
 {
-  QObject * obj = qobject_cast<QObject*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      const QMetaObject * ptr = obj->metaObject();
+      const QMetaObject *ptr = obj->metaObject();
       Qt4xHb::createReturnClass(ptr, "QMETAOBJECT", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -738,17 +738,17 @@ HB_FUNC_STATIC( QOBJECT_METAOBJECT )
 /*
 void moveToThread( QThread * targetThread )
 */
-HB_FUNC_STATIC( QOBJECT_MOVETOTHREAD )
+HB_FUNC_STATIC(QOBJECT_MOVETOTHREAD)
 {
-  QObject * obj = qobject_cast<QObject*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTHREAD(1) )
+    if (ISNUMPAR(1) && ISQTHREAD(1))
     {
 #endif
-      obj->moveToThread( PQTHREAD(1) );
+      obj->moveToThread(PQTHREAD(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -764,17 +764,17 @@ HB_FUNC_STATIC( QOBJECT_MOVETOTHREAD )
 /*
 QString objectName() const
 */
-HB_FUNC_STATIC( QOBJECT_OBJECTNAME )
+HB_FUNC_STATIC(QOBJECT_OBJECTNAME)
 {
-  QObject * obj = qobject_cast<QObject*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->objectName() );
+      RQSTRING(obj->objectName());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -788,17 +788,17 @@ HB_FUNC_STATIC( QOBJECT_OBJECTNAME )
 /*
 QObject * parent() const
 */
-HB_FUNC_STATIC( QOBJECT_PARENT )
+HB_FUNC_STATIC(QOBJECT_PARENT)
 {
-  QObject * obj = qobject_cast<QObject*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QObject * ptr = obj->parent();
+      QObject *ptr = obj->parent();
       Qt4xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -813,17 +813,17 @@ HB_FUNC_STATIC( QOBJECT_PARENT )
 /*
 QVariant property( const char * name ) const
 */
-HB_FUNC_STATIC( QOBJECT_PROPERTY )
+HB_FUNC_STATIC(QOBJECT_PROPERTY)
 {
-  QObject * obj = qobject_cast<QObject*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      QVariant * ptr = new QVariant( obj->property( PCONSTCHAR(1)) );
+      QVariant *ptr = new QVariant(obj->property(PCONSTCHAR(1)));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -838,17 +838,17 @@ HB_FUNC_STATIC( QOBJECT_PROPERTY )
 /*
 void removeEventFilter( QObject * obj )
 */
-HB_FUNC_STATIC( QOBJECT_REMOVEEVENTFILTER )
+HB_FUNC_STATIC(QOBJECT_REMOVEEVENTFILTER)
 {
-  QObject * obj = qobject_cast<QObject*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    if (ISNUMPAR(1) && ISQOBJECT(1))
     {
 #endif
-      obj->removeEventFilter( PQOBJECT(1) );
+      obj->removeEventFilter(PQOBJECT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -864,17 +864,17 @@ HB_FUNC_STATIC( QOBJECT_REMOVEEVENTFILTER )
 /*
 void setObjectName( const QString & name )
 */
-HB_FUNC_STATIC( QOBJECT_SETOBJECTNAME )
+HB_FUNC_STATIC(QOBJECT_SETOBJECTNAME)
 {
-  QObject * obj = qobject_cast<QObject*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setObjectName( PQSTRING(1) );
+      obj->setObjectName(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -890,17 +890,17 @@ HB_FUNC_STATIC( QOBJECT_SETOBJECTNAME )
 /*
 void setParent( QObject * parent )
 */
-HB_FUNC_STATIC( QOBJECT_SETPARENT )
+HB_FUNC_STATIC(QOBJECT_SETPARENT)
 {
-  QObject * obj = qobject_cast<QObject*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    if (ISNUMPAR(1) && ISQOBJECT(1))
     {
 #endif
-      obj->setParent( PQOBJECT(1) );
+      obj->setParent(PQOBJECT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -916,17 +916,17 @@ HB_FUNC_STATIC( QOBJECT_SETPARENT )
 /*
 bool setProperty( const char * name, const QVariant & value )
 */
-HB_FUNC_STATIC( QOBJECT_SETPROPERTY )
+HB_FUNC_STATIC(QOBJECT_SETPROPERTY)
 {
-  QObject * obj = qobject_cast<QObject*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2))
     {
 #endif
-      RBOOL( obj->setProperty( PCONSTCHAR(1), *PQVARIANT(2)) );
+      RBOOL(obj->setProperty(PCONSTCHAR(1), *PQVARIANT(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -940,17 +940,17 @@ HB_FUNC_STATIC( QOBJECT_SETPROPERTY )
 /*
 bool signalsBlocked() const
 */
-HB_FUNC_STATIC( QOBJECT_SIGNALSBLOCKED )
+HB_FUNC_STATIC(QOBJECT_SIGNALSBLOCKED)
 {
-  QObject * obj = qobject_cast<QObject*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->signalsBlocked() );
+      RBOOL(obj->signalsBlocked());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -964,17 +964,17 @@ HB_FUNC_STATIC( QOBJECT_SIGNALSBLOCKED )
 /*
 int startTimer( int interval )
 */
-HB_FUNC_STATIC( QOBJECT_STARTTIMER )
+HB_FUNC_STATIC(QOBJECT_STARTTIMER)
 {
-  QObject * obj = qobject_cast<QObject*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT( obj->startTimer( PINT(1)) );
+      RINT(obj->startTimer(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -988,17 +988,17 @@ HB_FUNC_STATIC( QOBJECT_STARTTIMER )
 /*
 QThread * thread() const
 */
-HB_FUNC_STATIC( QOBJECT_THREAD )
+HB_FUNC_STATIC(QOBJECT_THREAD)
 {
-  QObject * obj = qobject_cast<QObject*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QThread * ptr = obj->thread();
+      QThread *ptr = obj->thread();
       Qt4xHb::createReturnQObjectClass(ptr, "QTHREAD");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1013,14 +1013,14 @@ HB_FUNC_STATIC( QOBJECT_THREAD )
 /*
 void deleteLater()
 */
-HB_FUNC_STATIC( QOBJECT_DELETELATER )
+HB_FUNC_STATIC(QOBJECT_DELETELATER)
 {
-  QObject * obj = qobject_cast<QObject*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->deleteLater();
@@ -1036,21 +1036,21 @@ HB_FUNC_STATIC( QOBJECT_DELETELATER )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QOBJECT_DISCONNECTALL )
+HB_FUNC_STATIC(QOBJECT_DISCONNECTALL)
 {
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QObject *obj = (QObject *)hb_itemGetPtr(hb_objSendMsg(hb_stackSelfItem(), "POINTER", 0));
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( hb_pcount() == 0 )
+    if (hb_pcount() == 0)
     {
-      Qt4xHb::Events_disconnect_all_events (obj, false);
-      Qt4xHb::Signals_disconnect_all_signals (obj, false);
+      Qt4xHb::Events_disconnect_all_events(obj, false);
+      Qt4xHb::Signals_disconnect_all_signals(obj, false);
     }
-    else if( hb_pcount() == 1 && HB_ISLOG(1) )
+    else if (hb_pcount() == 1 && HB_ISLOG(1))
     {
-      Qt4xHb::Events_disconnect_all_events (obj, PBOOL(1) );
-      Qt4xHb::Signals_disconnect_all_signals (obj, PBOOL(1) );
+      Qt4xHb::Events_disconnect_all_events(obj, PBOOL(1));
+      Qt4xHb::Signals_disconnect_all_signals(obj, PBOOL(1));
     }
     else
     {
@@ -1061,19 +1061,19 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALL )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QOBJECT_DISCONNECTALLEVENTS )
+HB_FUNC_STATIC(QOBJECT_DISCONNECTALLEVENTS)
 {
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QObject *obj = (QObject *)hb_itemGetPtr(hb_objSendMsg(hb_stackSelfItem(), "POINTER", 0));
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( hb_pcount() == 0 )
+    if (hb_pcount() == 0)
     {
-      Qt4xHb::Events_disconnect_all_events (obj, false);
+      Qt4xHb::Events_disconnect_all_events(obj, false);
     }
-    else if( hb_pcount() == 1 && HB_ISLOG(1) )
+    else if (hb_pcount() == 1 && HB_ISLOG(1))
     {
-      Qt4xHb::Events_disconnect_all_events (obj, PBOOL(1) );
+      Qt4xHb::Events_disconnect_all_events(obj, PBOOL(1));
     }
     else
     {
@@ -1084,19 +1084,19 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALLEVENTS )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QOBJECT_DISCONNECTALLSIGNALS )
+HB_FUNC_STATIC(QOBJECT_DISCONNECTALLSIGNALS)
 {
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QObject *obj = (QObject *)hb_itemGetPtr(hb_objSendMsg(hb_stackSelfItem(), "POINTER", 0));
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( hb_pcount() == 0 )
+    if (hb_pcount() == 0)
     {
-      Qt4xHb::Signals_disconnect_all_signals (obj, false);
+      Qt4xHb::Signals_disconnect_all_signals(obj, false);
     }
-    else if( hb_pcount() == 1 && HB_ISLOG(1) )
+    else if (hb_pcount() == 1 && HB_ISLOG(1))
     {
-      Qt4xHb::Signals_disconnect_all_signals (obj, PBOOL(1) );
+      Qt4xHb::Signals_disconnect_all_signals(obj, PBOOL(1));
     }
     else
     {
@@ -1107,27 +1107,27 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALLSIGNALS )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void _qtxhb_processOnEventMethod (QEvent::Type event)
+void _qtxhb_processOnEventMethod(QEvent::Type event)
 {
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QObject *obj = (QObject *)hb_itemGetPtr(hb_objSendMsg(hb_stackSelfItem(), "POINTER", 0));
 
-  if( hb_pcount() == 1 )
+  if (hb_pcount() == 1)
   {
-    PHB_ITEM item = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-    if( item )
+    PHB_ITEM item = hb_itemNew(hb_param(1, HB_IT_BLOCK | HB_IT_SYMBOL));
+    if (item)
     {
-      //hb_retl( Events_connect_event( obj, QEvent::Close, item ) );
-      hb_retl( Qt4xHb::Events_connect_event( obj, event, item ) );
+      // hb_retl( Events_connect_event( obj, QEvent::Close, item ) );
+      hb_retl(Qt4xHb::Events_connect_event(obj, event, item));
     }
     else
     {
       hb_retl(0);
     }
   }
-  else if( hb_pcount() == 0 )
+  else if (hb_pcount() == 0)
   {
-    //hb_retl( Events_disconnect_event( obj, QEvent::Close ) );
-    hb_retl( Qt4xHb::Events_disconnect_event( obj, event ) );
+    // hb_retl( Events_disconnect_event( obj, QEvent::Close ) );
+    hb_retl(Qt4xHb::Events_disconnect_event(obj, event));
   }
   else
   {
@@ -1135,27 +1135,27 @@ void _qtxhb_processOnEventMethod (QEvent::Type event)
   }
 }
 
-void _qtxhb_processOnEventMethod2 (QEvent::Type event)
+void _qtxhb_processOnEventMethod2(QEvent::Type event)
 {
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QObject *obj = (QObject *)hb_itemGetPtr(hb_objSendMsg(hb_stackSelfItem(), "POINTER", 0));
 
-  if( hb_pcount() == 2 )
+  if (hb_pcount() == 2)
   {
-    PHB_ITEM item = hb_itemNew( hb_param( 2, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-    if( item )
+    PHB_ITEM item = hb_itemNew(hb_param(2, HB_IT_BLOCK | HB_IT_SYMBOL));
+    if (item)
     {
-      //hb_retl( Events_connect_event( obj, QEvent::Close, item ) );
-      hb_retl( Qt4xHb::Events_connect_event( obj, event, item ) );
+      // hb_retl( Events_connect_event( obj, QEvent::Close, item ) );
+      hb_retl(Qt4xHb::Events_connect_event(obj, event, item));
     }
     else
     {
       hb_retl(0);
     }
   }
-  else if( hb_pcount() == 1 )
+  else if (hb_pcount() == 1)
   {
-    //hb_retl( Events_disconnect_event( obj, QEvent::Close ) );
-    hb_retl( Qt4xHb::Events_disconnect_event( obj, event ) );
+    // hb_retl( Events_disconnect_event( obj, QEvent::Close ) );
+    hb_retl(Qt4xHb::Events_disconnect_event(obj, event));
   }
   else
   {
@@ -1163,604 +1163,604 @@ void _qtxhb_processOnEventMethod2 (QEvent::Type event)
   }
 }
 
-HB_FUNC_STATIC( QOBJECT_ONCLOSEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONCLOSEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::Close );
+  _qtxhb_processOnEventMethod(QEvent::Close);
 }
-HB_FUNC_STATIC( QOBJECT_ONENTEREVENT )
+HB_FUNC_STATIC(QOBJECT_ONENTEREVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::Enter );
+  _qtxhb_processOnEventMethod(QEvent::Enter);
 }
-HB_FUNC_STATIC( QOBJECT_ONFOCUSINEVENT )
+HB_FUNC_STATIC(QOBJECT_ONFOCUSINEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::FocusIn );
+  _qtxhb_processOnEventMethod(QEvent::FocusIn);
 }
-HB_FUNC_STATIC( QOBJECT_ONFOCUSOUTEVENT )
+HB_FUNC_STATIC(QOBJECT_ONFOCUSOUTEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::FocusOut );
+  _qtxhb_processOnEventMethod(QEvent::FocusOut);
 }
-HB_FUNC_STATIC( QOBJECT_ONHIDEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONHIDEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::Hide );
+  _qtxhb_processOnEventMethod(QEvent::Hide);
 }
-HB_FUNC_STATIC( QOBJECT_ONKEYPRESSEVENT )
+HB_FUNC_STATIC(QOBJECT_ONKEYPRESSEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::KeyPress );
+  _qtxhb_processOnEventMethod(QEvent::KeyPress);
 }
-HB_FUNC_STATIC( QOBJECT_ONKEYRELEASEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONKEYRELEASEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::KeyRelease );
+  _qtxhb_processOnEventMethod(QEvent::KeyRelease);
 }
-HB_FUNC_STATIC( QOBJECT_ONLEAVEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONLEAVEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::Leave );
+  _qtxhb_processOnEventMethod(QEvent::Leave);
 }
-HB_FUNC_STATIC( QOBJECT_ONSHOWEVENT )
+HB_FUNC_STATIC(QOBJECT_ONSHOWEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::Show );
+  _qtxhb_processOnEventMethod(QEvent::Show);
 }
-HB_FUNC_STATIC( QOBJECT_ONMOUSEBUTTONDBLCLICKEVENT )
+HB_FUNC_STATIC(QOBJECT_ONMOUSEBUTTONDBLCLICKEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::MouseButtonDblClick );
+  _qtxhb_processOnEventMethod(QEvent::MouseButtonDblClick);
 }
-HB_FUNC_STATIC( QOBJECT_ONMOUSEBUTTONPRESSEVENT )
+HB_FUNC_STATIC(QOBJECT_ONMOUSEBUTTONPRESSEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::MouseButtonPress );
+  _qtxhb_processOnEventMethod(QEvent::MouseButtonPress);
 }
-HB_FUNC_STATIC( QOBJECT_ONMOUSEBUTTONRELEASEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONMOUSEBUTTONRELEASEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::MouseButtonRelease );
+  _qtxhb_processOnEventMethod(QEvent::MouseButtonRelease);
 }
-HB_FUNC_STATIC( QOBJECT_ONMOUSEMOVEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONMOUSEMOVEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::MouseMove );
+  _qtxhb_processOnEventMethod(QEvent::MouseMove);
 }
-HB_FUNC_STATIC( QOBJECT_ONMOVEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONMOVEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::Move );
+  _qtxhb_processOnEventMethod(QEvent::Move);
 }
-HB_FUNC_STATIC( QOBJECT_ONPAINTEVENT )
+HB_FUNC_STATIC(QOBJECT_ONPAINTEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::Paint );
+  _qtxhb_processOnEventMethod(QEvent::Paint);
 }
-HB_FUNC_STATIC( QOBJECT_ONRESIZEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONRESIZEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::Resize );
+  _qtxhb_processOnEventMethod(QEvent::Resize);
 }
-HB_FUNC_STATIC( QOBJECT_ONDRAGENTEREVENT )
+HB_FUNC_STATIC(QOBJECT_ONDRAGENTEREVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::DragEnter );
+  _qtxhb_processOnEventMethod(QEvent::DragEnter);
 }
-HB_FUNC_STATIC( QOBJECT_ONDRAGLEAVEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONDRAGLEAVEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::DragLeave );
+  _qtxhb_processOnEventMethod(QEvent::DragLeave);
 }
-HB_FUNC_STATIC( QOBJECT_ONDRAGMOVEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONDRAGMOVEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::DragMove );
+  _qtxhb_processOnEventMethod(QEvent::DragMove);
 }
-HB_FUNC_STATIC( QOBJECT_ONDROPEVENT )
+HB_FUNC_STATIC(QOBJECT_ONDROPEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::Drop );
+  _qtxhb_processOnEventMethod(QEvent::Drop);
 }
-HB_FUNC_STATIC( QOBJECT_ONACCESSIBILITYDESCRIPTIONEVENT )
+HB_FUNC_STATIC(QOBJECT_ONACCESSIBILITYDESCRIPTIONEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::AccessibilityDescription );
+  _qtxhb_processOnEventMethod(QEvent::AccessibilityDescription);
 }
-HB_FUNC_STATIC( QOBJECT_ONACCESSIBILITYHELPEVENT )
+HB_FUNC_STATIC(QOBJECT_ONACCESSIBILITYHELPEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::AccessibilityHelp );
+  _qtxhb_processOnEventMethod(QEvent::AccessibilityHelp);
 }
-HB_FUNC_STATIC( QOBJECT_ONACCESSIBILITYPREPAREEVENT )
+HB_FUNC_STATIC(QOBJECT_ONACCESSIBILITYPREPAREEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::AccessibilityPrepare );
+  _qtxhb_processOnEventMethod(QEvent::AccessibilityPrepare);
 }
-HB_FUNC_STATIC( QOBJECT_ONACTIONADDEDEVENT )
+HB_FUNC_STATIC(QOBJECT_ONACTIONADDEDEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::ActionAdded );
+  _qtxhb_processOnEventMethod(QEvent::ActionAdded);
 }
-HB_FUNC_STATIC( QOBJECT_ONACTIONCHANGEDEVENT )
+HB_FUNC_STATIC(QOBJECT_ONACTIONCHANGEDEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::ActionChanged );
+  _qtxhb_processOnEventMethod(QEvent::ActionChanged);
 }
-HB_FUNC_STATIC( QOBJECT_ONACTIONREMOVEDEVENT )
+HB_FUNC_STATIC(QOBJECT_ONACTIONREMOVEDEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::ActionRemoved );
+  _qtxhb_processOnEventMethod(QEvent::ActionRemoved);
 }
-HB_FUNC_STATIC( QOBJECT_ONACTIVATIONCHANGEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONACTIVATIONCHANGEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::ActivationChange );
+  _qtxhb_processOnEventMethod(QEvent::ActivationChange);
 }
-HB_FUNC_STATIC( QOBJECT_ONAPPLICATIONACTIVATEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONAPPLICATIONACTIVATEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::ApplicationActivate );
+  _qtxhb_processOnEventMethod(QEvent::ApplicationActivate);
 }
-HB_FUNC_STATIC( QOBJECT_ONAPPLICATIONACTIVATEDEVENT )
+HB_FUNC_STATIC(QOBJECT_ONAPPLICATIONACTIVATEDEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::ApplicationActivated );
+  _qtxhb_processOnEventMethod(QEvent::ApplicationActivated);
 }
-HB_FUNC_STATIC( QOBJECT_ONAPPLICATIONDEACTIVATEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONAPPLICATIONDEACTIVATEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::ApplicationDeactivate );
+  _qtxhb_processOnEventMethod(QEvent::ApplicationDeactivate);
 }
-HB_FUNC_STATIC( QOBJECT_ONAPPLICATIONFONTCHANGEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONAPPLICATIONFONTCHANGEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::ApplicationFontChange );
+  _qtxhb_processOnEventMethod(QEvent::ApplicationFontChange);
 }
-HB_FUNC_STATIC( QOBJECT_ONAPPLICATIONLAYOUTDIRECTIONCHANGEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONAPPLICATIONLAYOUTDIRECTIONCHANGEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::ApplicationLayoutDirectionChange );
+  _qtxhb_processOnEventMethod(QEvent::ApplicationLayoutDirectionChange);
 }
-HB_FUNC_STATIC( QOBJECT_ONAPPLICATIONPALETTECHANGEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONAPPLICATIONPALETTECHANGEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::ApplicationPaletteChange );
+  _qtxhb_processOnEventMethod(QEvent::ApplicationPaletteChange);
 }
-HB_FUNC_STATIC( QOBJECT_ONAPPLICATIONWINDOWICONCHANGEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONAPPLICATIONWINDOWICONCHANGEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::ApplicationWindowIconChange );
+  _qtxhb_processOnEventMethod(QEvent::ApplicationWindowIconChange);
 }
-HB_FUNC_STATIC( QOBJECT_ONCHILDADDEDEVENT )
+HB_FUNC_STATIC(QOBJECT_ONCHILDADDEDEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::ChildAdded );
+  _qtxhb_processOnEventMethod(QEvent::ChildAdded);
 }
-HB_FUNC_STATIC( QOBJECT_ONCHILDPOLISHEDEVENT )
+HB_FUNC_STATIC(QOBJECT_ONCHILDPOLISHEDEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::ChildPolished );
+  _qtxhb_processOnEventMethod(QEvent::ChildPolished);
 }
-HB_FUNC_STATIC( QOBJECT_ONCHILDREMOVEDEVENT )
+HB_FUNC_STATIC(QOBJECT_ONCHILDREMOVEDEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::ChildRemoved );
+  _qtxhb_processOnEventMethod(QEvent::ChildRemoved);
 }
-HB_FUNC_STATIC( QOBJECT_ONCLIPBOARDEVENT )
+HB_FUNC_STATIC(QOBJECT_ONCLIPBOARDEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::Clipboard );
+  _qtxhb_processOnEventMethod(QEvent::Clipboard);
 }
-HB_FUNC_STATIC( QOBJECT_ONCLOSESOFTWAREINPUTPANELEVENT )
+HB_FUNC_STATIC(QOBJECT_ONCLOSESOFTWAREINPUTPANELEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::CloseSoftwareInputPanel );
+  _qtxhb_processOnEventMethod(QEvent::CloseSoftwareInputPanel);
 }
-HB_FUNC_STATIC( QOBJECT_ONCONTENTSRECTCHANGEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONCONTENTSRECTCHANGEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::ContentsRectChange );
+  _qtxhb_processOnEventMethod(QEvent::ContentsRectChange);
 }
-HB_FUNC_STATIC( QOBJECT_ONCONTEXTMENUEVENT )
+HB_FUNC_STATIC(QOBJECT_ONCONTEXTMENUEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::ContextMenu );
+  _qtxhb_processOnEventMethod(QEvent::ContextMenu);
 }
-HB_FUNC_STATIC( QOBJECT_ONCURSORCHANGEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONCURSORCHANGEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::CursorChange );
+  _qtxhb_processOnEventMethod(QEvent::CursorChange);
 }
-HB_FUNC_STATIC( QOBJECT_ONDEFERREDDELETEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONDEFERREDDELETEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::DeferredDelete );
+  _qtxhb_processOnEventMethod(QEvent::DeferredDelete);
 }
-HB_FUNC_STATIC( QOBJECT_ONENABLEDCHANGEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONENABLEDCHANGEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::EnabledChange );
+  _qtxhb_processOnEventMethod(QEvent::EnabledChange);
 }
-HB_FUNC_STATIC( QOBJECT_ONENTERWHATSTHISMODEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONENTERWHATSTHISMODEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::EnterWhatsThisMode );
+  _qtxhb_processOnEventMethod(QEvent::EnterWhatsThisMode);
 }
-HB_FUNC_STATIC( QOBJECT_ONFILEOPENEVENT )
+HB_FUNC_STATIC(QOBJECT_ONFILEOPENEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::FileOpen );
+  _qtxhb_processOnEventMethod(QEvent::FileOpen);
 }
-HB_FUNC_STATIC( QOBJECT_ONFONTCHANGEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONFONTCHANGEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::FontChange );
+  _qtxhb_processOnEventMethod(QEvent::FontChange);
 }
-HB_FUNC_STATIC( QOBJECT_ONGRABKEYBOARDEVENT )
+HB_FUNC_STATIC(QOBJECT_ONGRABKEYBOARDEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::GrabKeyboard );
+  _qtxhb_processOnEventMethod(QEvent::GrabKeyboard);
 }
-HB_FUNC_STATIC( QOBJECT_ONGRABMOUSEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONGRABMOUSEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::GrabMouse );
+  _qtxhb_processOnEventMethod(QEvent::GrabMouse);
 }
-HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENECONTEXTMENUEVENT )
+HB_FUNC_STATIC(QOBJECT_ONGRAPHICSSCENECONTEXTMENUEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneContextMenu );
+  _qtxhb_processOnEventMethod(QEvent::GraphicsSceneContextMenu);
 }
-HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEDRAGENTEREVENT )
+HB_FUNC_STATIC(QOBJECT_ONGRAPHICSSCENEDRAGENTEREVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneDragEnter );
+  _qtxhb_processOnEventMethod(QEvent::GraphicsSceneDragEnter);
 }
-HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEDRAGLEAVEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONGRAPHICSSCENEDRAGLEAVEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneDragLeave );
+  _qtxhb_processOnEventMethod(QEvent::GraphicsSceneDragLeave);
 }
-HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEDRAGMOVEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONGRAPHICSSCENEDRAGMOVEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneDragMove );
+  _qtxhb_processOnEventMethod(QEvent::GraphicsSceneDragMove);
 }
-HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEDROPEVENT )
+HB_FUNC_STATIC(QOBJECT_ONGRAPHICSSCENEDROPEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneDrop );
+  _qtxhb_processOnEventMethod(QEvent::GraphicsSceneDrop);
 }
-HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEHELPEVENT )
+HB_FUNC_STATIC(QOBJECT_ONGRAPHICSSCENEHELPEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneHelp );
+  _qtxhb_processOnEventMethod(QEvent::GraphicsSceneHelp);
 }
-HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEHOVERENTEREVENT )
+HB_FUNC_STATIC(QOBJECT_ONGRAPHICSSCENEHOVERENTEREVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneHoverEnter );
+  _qtxhb_processOnEventMethod(QEvent::GraphicsSceneHoverEnter);
 }
-HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEHOVERLEAVEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONGRAPHICSSCENEHOVERLEAVEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneHoverLeave );
+  _qtxhb_processOnEventMethod(QEvent::GraphicsSceneHoverLeave);
 }
-HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEHOVERMOVEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONGRAPHICSSCENEHOVERMOVEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneHoverMove );
+  _qtxhb_processOnEventMethod(QEvent::GraphicsSceneHoverMove);
 }
-HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEMOUSEDOUBLECLICKEVENT )
+HB_FUNC_STATIC(QOBJECT_ONGRAPHICSSCENEMOUSEDOUBLECLICKEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneMouseDoubleClick );
+  _qtxhb_processOnEventMethod(QEvent::GraphicsSceneMouseDoubleClick);
 }
-HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEMOUSEMOVEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONGRAPHICSSCENEMOUSEMOVEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneMouseMove );
+  _qtxhb_processOnEventMethod(QEvent::GraphicsSceneMouseMove);
 }
-HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEMOUSEPRESSEVENT )
+HB_FUNC_STATIC(QOBJECT_ONGRAPHICSSCENEMOUSEPRESSEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneMousePress );
+  _qtxhb_processOnEventMethod(QEvent::GraphicsSceneMousePress);
 }
-HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEMOUSERELEASEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONGRAPHICSSCENEMOUSERELEASEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneMouseRelease );
+  _qtxhb_processOnEventMethod(QEvent::GraphicsSceneMouseRelease);
 }
-HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEMOVEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONGRAPHICSSCENEMOVEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneMove );
+  _qtxhb_processOnEventMethod(QEvent::GraphicsSceneMove);
 }
-HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENERESIZEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONGRAPHICSSCENERESIZEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneResize );
+  _qtxhb_processOnEventMethod(QEvent::GraphicsSceneResize);
 }
-HB_FUNC_STATIC( QOBJECT_ONGRAPHICSSCENEWHEELEVENT )
+HB_FUNC_STATIC(QOBJECT_ONGRAPHICSSCENEWHEELEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::GraphicsSceneWheel );
+  _qtxhb_processOnEventMethod(QEvent::GraphicsSceneWheel);
 }
-HB_FUNC_STATIC( QOBJECT_ONHIDETOPARENTEVENT )
+HB_FUNC_STATIC(QOBJECT_ONHIDETOPARENTEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::HideToParent );
+  _qtxhb_processOnEventMethod(QEvent::HideToParent);
 }
-HB_FUNC_STATIC( QOBJECT_ONHOVERENTEREVENT )
+HB_FUNC_STATIC(QOBJECT_ONHOVERENTEREVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::HoverEnter );
+  _qtxhb_processOnEventMethod(QEvent::HoverEnter);
 }
-HB_FUNC_STATIC( QOBJECT_ONHOVERLEAVEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONHOVERLEAVEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::HoverLeave );
+  _qtxhb_processOnEventMethod(QEvent::HoverLeave);
 }
-HB_FUNC_STATIC( QOBJECT_ONHOVERMOVEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONHOVERMOVEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::HoverMove );
+  _qtxhb_processOnEventMethod(QEvent::HoverMove);
 }
-HB_FUNC_STATIC( QOBJECT_ONICONDRAGEVENT )
+HB_FUNC_STATIC(QOBJECT_ONICONDRAGEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::IconDrag );
+  _qtxhb_processOnEventMethod(QEvent::IconDrag);
 }
-HB_FUNC_STATIC( QOBJECT_ONICONTEXTCHANGEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONICONTEXTCHANGEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::IconTextChange );
+  _qtxhb_processOnEventMethod(QEvent::IconTextChange);
 }
-HB_FUNC_STATIC( QOBJECT_ONINPUTMETHODEVENT )
+HB_FUNC_STATIC(QOBJECT_ONINPUTMETHODEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::InputMethod );
+  _qtxhb_processOnEventMethod(QEvent::InputMethod);
 }
-HB_FUNC_STATIC( QOBJECT_ONLANGUAGECHANGEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONLANGUAGECHANGEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::LanguageChange );
+  _qtxhb_processOnEventMethod(QEvent::LanguageChange);
 }
-HB_FUNC_STATIC( QOBJECT_ONLAYOUTDIRECTIONCHANGEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONLAYOUTDIRECTIONCHANGEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::LayoutDirectionChange );
+  _qtxhb_processOnEventMethod(QEvent::LayoutDirectionChange);
 }
-HB_FUNC_STATIC( QOBJECT_ONLAYOUTREQUESTEVENT )
+HB_FUNC_STATIC(QOBJECT_ONLAYOUTREQUESTEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::LayoutRequest );
+  _qtxhb_processOnEventMethod(QEvent::LayoutRequest);
 }
-HB_FUNC_STATIC( QOBJECT_ONLEAVEWHATSTHISMODEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONLEAVEWHATSTHISMODEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::LeaveWhatsThisMode );
+  _qtxhb_processOnEventMethod(QEvent::LeaveWhatsThisMode);
 }
-HB_FUNC_STATIC( QOBJECT_ONLOCALECHANGEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONLOCALECHANGEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::LocaleChange );
+  _qtxhb_processOnEventMethod(QEvent::LocaleChange);
 }
-HB_FUNC_STATIC( QOBJECT_ONNONCLIENTAREAMOUSEBUTTONDBLCLICKEVENT )
+HB_FUNC_STATIC(QOBJECT_ONNONCLIENTAREAMOUSEBUTTONDBLCLICKEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::NonClientAreaMouseButtonDblClick );
+  _qtxhb_processOnEventMethod(QEvent::NonClientAreaMouseButtonDblClick);
 }
-HB_FUNC_STATIC( QOBJECT_ONNONCLIENTAREAMOUSEBUTTONPRESSEVENT )
+HB_FUNC_STATIC(QOBJECT_ONNONCLIENTAREAMOUSEBUTTONPRESSEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::NonClientAreaMouseButtonPress );
+  _qtxhb_processOnEventMethod(QEvent::NonClientAreaMouseButtonPress);
 }
-HB_FUNC_STATIC( QOBJECT_ONNONCLIENTAREAMOUSEBUTTONRELEASEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONNONCLIENTAREAMOUSEBUTTONRELEASEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::NonClientAreaMouseButtonRelease );
+  _qtxhb_processOnEventMethod(QEvent::NonClientAreaMouseButtonRelease);
 }
-HB_FUNC_STATIC( QOBJECT_ONNONCLIENTAREAMOUSEMOVEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONNONCLIENTAREAMOUSEMOVEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::NonClientAreaMouseMove );
+  _qtxhb_processOnEventMethod(QEvent::NonClientAreaMouseMove);
 }
-HB_FUNC_STATIC( QOBJECT_ONMACSIZECHANGEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONMACSIZECHANGEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::MacSizeChange );
+  _qtxhb_processOnEventMethod(QEvent::MacSizeChange);
 }
-HB_FUNC_STATIC( QOBJECT_ONMENUBARUPDATEDEVENT )
+HB_FUNC_STATIC(QOBJECT_ONMENUBARUPDATEDEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::MenubarUpdated );
+  _qtxhb_processOnEventMethod(QEvent::MenubarUpdated);
 }
-HB_FUNC_STATIC( QOBJECT_ONMETACALLEVENT )
+HB_FUNC_STATIC(QOBJECT_ONMETACALLEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::MetaCall );
+  _qtxhb_processOnEventMethod(QEvent::MetaCall);
 }
-HB_FUNC_STATIC( QOBJECT_ONMODIFIEDCHANGEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONMODIFIEDCHANGEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::ModifiedChange );
+  _qtxhb_processOnEventMethod(QEvent::ModifiedChange);
 }
-HB_FUNC_STATIC( QOBJECT_ONMOUSETRACKINGCHANGEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONMOUSETRACKINGCHANGEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::MouseTrackingChange );
+  _qtxhb_processOnEventMethod(QEvent::MouseTrackingChange);
 }
-HB_FUNC_STATIC( QOBJECT_ONPALETTECHANGEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONPALETTECHANGEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::PaletteChange );
+  _qtxhb_processOnEventMethod(QEvent::PaletteChange);
 }
-HB_FUNC_STATIC( QOBJECT_ONPARENTABOUTTOCHANGEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONPARENTABOUTTOCHANGEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::ParentAboutToChange );
+  _qtxhb_processOnEventMethod(QEvent::ParentAboutToChange);
 }
-HB_FUNC_STATIC( QOBJECT_ONPARENTCHANGEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONPARENTCHANGEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::ParentChange );
+  _qtxhb_processOnEventMethod(QEvent::ParentChange);
 }
-HB_FUNC_STATIC( QOBJECT_ONPOLISHEVENT )
+HB_FUNC_STATIC(QOBJECT_ONPOLISHEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::Polish );
+  _qtxhb_processOnEventMethod(QEvent::Polish);
 }
-HB_FUNC_STATIC( QOBJECT_ONPOLISHREQUESTEVENT )
+HB_FUNC_STATIC(QOBJECT_ONPOLISHREQUESTEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::PolishRequest );
+  _qtxhb_processOnEventMethod(QEvent::PolishRequest);
 }
-HB_FUNC_STATIC( QOBJECT_ONQUERYWHATSTHISEVENT )
+HB_FUNC_STATIC(QOBJECT_ONQUERYWHATSTHISEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::QueryWhatsThis );
+  _qtxhb_processOnEventMethod(QEvent::QueryWhatsThis);
 }
-HB_FUNC_STATIC( QOBJECT_ONREQUESTSOFTWAREINPUTPANELEVENT )
+HB_FUNC_STATIC(QOBJECT_ONREQUESTSOFTWAREINPUTPANELEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::RequestSoftwareInputPanel );
+  _qtxhb_processOnEventMethod(QEvent::RequestSoftwareInputPanel);
 }
-HB_FUNC_STATIC( QOBJECT_ONSHORTCUTEVENT )
+HB_FUNC_STATIC(QOBJECT_ONSHORTCUTEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::Shortcut );
+  _qtxhb_processOnEventMethod(QEvent::Shortcut);
 }
-HB_FUNC_STATIC( QOBJECT_ONSHORTCUTOVERRIDEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONSHORTCUTOVERRIDEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::ShortcutOverride );
+  _qtxhb_processOnEventMethod(QEvent::ShortcutOverride);
 }
-HB_FUNC_STATIC( QOBJECT_ONSHOWTOPARENTEVENT )
+HB_FUNC_STATIC(QOBJECT_ONSHOWTOPARENTEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::ShowToParent );
+  _qtxhb_processOnEventMethod(QEvent::ShowToParent);
 }
-HB_FUNC_STATIC( QOBJECT_ONSOCKACTEVENT )
+HB_FUNC_STATIC(QOBJECT_ONSOCKACTEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::SockAct );
+  _qtxhb_processOnEventMethod(QEvent::SockAct);
 }
-HB_FUNC_STATIC( QOBJECT_ONSTATEMACHINESIGNALEVENT )
+HB_FUNC_STATIC(QOBJECT_ONSTATEMACHINESIGNALEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::StateMachineSignal );
+  _qtxhb_processOnEventMethod(QEvent::StateMachineSignal);
 }
-HB_FUNC_STATIC( QOBJECT_ONSTATEMACHINEWRAPPEDEVENT )
+HB_FUNC_STATIC(QOBJECT_ONSTATEMACHINEWRAPPEDEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::StateMachineWrapped );
+  _qtxhb_processOnEventMethod(QEvent::StateMachineWrapped);
 }
-HB_FUNC_STATIC( QOBJECT_ONSTATUSTIPEVENT )
+HB_FUNC_STATIC(QOBJECT_ONSTATUSTIPEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::StatusTip );
+  _qtxhb_processOnEventMethod(QEvent::StatusTip);
 }
-HB_FUNC_STATIC( QOBJECT_ONSTYLECHANGEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONSTYLECHANGEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::StyleChange );
+  _qtxhb_processOnEventMethod(QEvent::StyleChange);
 }
-HB_FUNC_STATIC( QOBJECT_ONTABLETMOVEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONTABLETMOVEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::TabletMove );
+  _qtxhb_processOnEventMethod(QEvent::TabletMove);
 }
-HB_FUNC_STATIC( QOBJECT_ONTABLETPRESSEVENT )
+HB_FUNC_STATIC(QOBJECT_ONTABLETPRESSEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::TabletPress );
+  _qtxhb_processOnEventMethod(QEvent::TabletPress);
 }
-HB_FUNC_STATIC( QOBJECT_ONTABLETRELEASEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONTABLETRELEASEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::TabletRelease );
+  _qtxhb_processOnEventMethod(QEvent::TabletRelease);
 }
-HB_FUNC_STATIC( QOBJECT_ONOKREQUESTEVENT )
+HB_FUNC_STATIC(QOBJECT_ONOKREQUESTEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::OkRequest );
+  _qtxhb_processOnEventMethod(QEvent::OkRequest);
 }
-HB_FUNC_STATIC( QOBJECT_ONTABLETENTERPROXIMITYEVENT )
+HB_FUNC_STATIC(QOBJECT_ONTABLETENTERPROXIMITYEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::TabletEnterProximity );
+  _qtxhb_processOnEventMethod(QEvent::TabletEnterProximity);
 }
-HB_FUNC_STATIC( QOBJECT_ONTABLETLEAVEPROXIMITYEVENT )
+HB_FUNC_STATIC(QOBJECT_ONTABLETLEAVEPROXIMITYEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::TabletLeaveProximity );
+  _qtxhb_processOnEventMethod(QEvent::TabletLeaveProximity);
 }
-HB_FUNC_STATIC( QOBJECT_ONTIMEREVENT )
+HB_FUNC_STATIC(QOBJECT_ONTIMEREVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::Timer );
+  _qtxhb_processOnEventMethod(QEvent::Timer);
 }
-HB_FUNC_STATIC( QOBJECT_ONTOOLBARCHANGEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONTOOLBARCHANGEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::ToolBarChange );
+  _qtxhb_processOnEventMethod(QEvent::ToolBarChange);
 }
-HB_FUNC_STATIC( QOBJECT_ONTOOLTIPEVENT )
+HB_FUNC_STATIC(QOBJECT_ONTOOLTIPEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::ToolTip );
+  _qtxhb_processOnEventMethod(QEvent::ToolTip);
 }
-HB_FUNC_STATIC( QOBJECT_ONTOOLTIPCHANGEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONTOOLTIPCHANGEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::ToolTipChange );
+  _qtxhb_processOnEventMethod(QEvent::ToolTipChange);
 }
-HB_FUNC_STATIC( QOBJECT_ONUNGRABKEYBOARDEVENT )
+HB_FUNC_STATIC(QOBJECT_ONUNGRABKEYBOARDEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::UngrabKeyboard );
+  _qtxhb_processOnEventMethod(QEvent::UngrabKeyboard);
 }
-HB_FUNC_STATIC( QOBJECT_ONUNGRABMOUSEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONUNGRABMOUSEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::UngrabMouse );
+  _qtxhb_processOnEventMethod(QEvent::UngrabMouse);
 }
-HB_FUNC_STATIC( QOBJECT_ONUPDATELATEREVENT )
+HB_FUNC_STATIC(QOBJECT_ONUPDATELATEREVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::UpdateLater );
+  _qtxhb_processOnEventMethod(QEvent::UpdateLater);
 }
-HB_FUNC_STATIC( QOBJECT_ONUPDATEREQUESTEVENT )
+HB_FUNC_STATIC(QOBJECT_ONUPDATEREQUESTEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::UpdateRequest );
+  _qtxhb_processOnEventMethod(QEvent::UpdateRequest);
 }
-HB_FUNC_STATIC( QOBJECT_ONWHATSTHISEVENT )
+HB_FUNC_STATIC(QOBJECT_ONWHATSTHISEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::WhatsThis );
+  _qtxhb_processOnEventMethod(QEvent::WhatsThis);
 }
-HB_FUNC_STATIC( QOBJECT_ONWHATSTHISCLICKEDEVENT )
+HB_FUNC_STATIC(QOBJECT_ONWHATSTHISCLICKEDEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::WhatsThisClicked );
+  _qtxhb_processOnEventMethod(QEvent::WhatsThisClicked);
 }
-HB_FUNC_STATIC( QOBJECT_ONWHEELEVENT )
+HB_FUNC_STATIC(QOBJECT_ONWHEELEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::Wheel );
+  _qtxhb_processOnEventMethod(QEvent::Wheel);
 }
-HB_FUNC_STATIC( QOBJECT_ONWINEVENTACTEVENT )
+HB_FUNC_STATIC(QOBJECT_ONWINEVENTACTEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::WinEventAct );
+  _qtxhb_processOnEventMethod(QEvent::WinEventAct);
 }
-HB_FUNC_STATIC( QOBJECT_ONWINDOWACTIVATEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONWINDOWACTIVATEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::WindowActivate );
+  _qtxhb_processOnEventMethod(QEvent::WindowActivate);
 }
-HB_FUNC_STATIC( QOBJECT_ONWINDOWBLOCKEDEVENT )
+HB_FUNC_STATIC(QOBJECT_ONWINDOWBLOCKEDEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::WindowBlocked );
+  _qtxhb_processOnEventMethod(QEvent::WindowBlocked);
 }
-HB_FUNC_STATIC( QOBJECT_ONWINDOWDEACTIVATEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONWINDOWDEACTIVATEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::WindowDeactivate );
+  _qtxhb_processOnEventMethod(QEvent::WindowDeactivate);
 }
-HB_FUNC_STATIC( QOBJECT_ONWINDOWICONCHANGEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONWINDOWICONCHANGEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::WindowIconChange );
+  _qtxhb_processOnEventMethod(QEvent::WindowIconChange);
 }
-HB_FUNC_STATIC( QOBJECT_ONWINDOWSTATECHANGEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONWINDOWSTATECHANGEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::WindowStateChange );
+  _qtxhb_processOnEventMethod(QEvent::WindowStateChange);
 }
-HB_FUNC_STATIC( QOBJECT_ONWINDOWTITLECHANGEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONWINDOWTITLECHANGEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::WindowTitleChange );
+  _qtxhb_processOnEventMethod(QEvent::WindowTitleChange);
 }
-HB_FUNC_STATIC( QOBJECT_ONWINDOWUNBLOCKEDEVENT )
+HB_FUNC_STATIC(QOBJECT_ONWINDOWUNBLOCKEDEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::WindowUnblocked );
+  _qtxhb_processOnEventMethod(QEvent::WindowUnblocked);
 }
-HB_FUNC_STATIC( QOBJECT_ONZORDERCHANGEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONZORDERCHANGEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::ZOrderChange );
+  _qtxhb_processOnEventMethod(QEvent::ZOrderChange);
 }
-HB_FUNC_STATIC( QOBJECT_ONKEYBOARDLAYOUTCHANGEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONKEYBOARDLAYOUTCHANGEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::KeyboardLayoutChange );
+  _qtxhb_processOnEventMethod(QEvent::KeyboardLayoutChange);
 }
-HB_FUNC_STATIC( QOBJECT_ONDYNAMICPROPERTYCHANGEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONDYNAMICPROPERTYCHANGEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::DynamicPropertyChange );
+  _qtxhb_processOnEventMethod(QEvent::DynamicPropertyChange);
 }
-HB_FUNC_STATIC( QOBJECT_ONTOUCHBEGINEVENT )
+HB_FUNC_STATIC(QOBJECT_ONTOUCHBEGINEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::TouchBegin );
+  _qtxhb_processOnEventMethod(QEvent::TouchBegin);
 }
-HB_FUNC_STATIC( QOBJECT_ONTOUCHUPDATEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONTOUCHUPDATEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::TouchUpdate );
+  _qtxhb_processOnEventMethod(QEvent::TouchUpdate);
 }
-HB_FUNC_STATIC( QOBJECT_ONTOUCHENDEVENT )
+HB_FUNC_STATIC(QOBJECT_ONTOUCHENDEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::TouchEnd );
+  _qtxhb_processOnEventMethod(QEvent::TouchEnd);
 }
-HB_FUNC_STATIC( QOBJECT_ONWINIDCHANGEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONWINIDCHANGEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::WinIdChange );
+  _qtxhb_processOnEventMethod(QEvent::WinIdChange);
 }
-HB_FUNC_STATIC( QOBJECT_ONGESTUREEVENT )
+HB_FUNC_STATIC(QOBJECT_ONGESTUREEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::Gesture );
+  _qtxhb_processOnEventMethod(QEvent::Gesture);
 }
-HB_FUNC_STATIC( QOBJECT_ONGESTUREOVERRIDEEVENT )
+HB_FUNC_STATIC(QOBJECT_ONGESTUREOVERRIDEEVENT)
 {
-  _qtxhb_processOnEventMethod( QEvent::GestureOverride );
+  _qtxhb_processOnEventMethod(QEvent::GestureOverride);
 }
 
-HB_FUNC_STATIC( QOBJECT_CONNECT )
+HB_FUNC_STATIC(QOBJECT_CONNECT)
 {
-  QObject * obj = (QObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QObject *obj = (QObject *)Qt4xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(2) && HB_ISCHAR(1) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1))
     {
       QString signal = hb_parc(1);
       int pos = signal.indexOf("(");
       QString method = signal.left(pos).toUpper();
       method.prepend("ON");
 
-      PHB_DYNS pDynSym = hb_dynsymFindName( method.toLatin1().data() );
+      PHB_DYNS pDynSym = hb_dynsymFindName(method.toLatin1().data());
 
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
         hb_vmPushDynSym(pDynSym);
-        hb_vmPush( hb_stackSelfItem() );
-        PHB_ITEM codeblock = hb_param( 2, HB_IT_BLOCK | HB_IT_SYMBOL );
-        hb_vmPush( codeblock );
+        hb_vmPush(hb_stackSelfItem());
+        PHB_ITEM codeblock = hb_param(2, HB_IT_BLOCK | HB_IT_SYMBOL);
+        hb_vmPush(codeblock);
         hb_vmSend(1);
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS);
       }
     }
-    else if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    else if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
       QString signal = hb_parc(1);
       int pos = signal.indexOf("(");
       QString method = signal.left(pos).toUpper();
       method.prepend("ON");
 
-      PHB_DYNS pDynSym = hb_dynsymFindName( method.toLatin1().data() );
+      PHB_DYNS pDynSym = hb_dynsymFindName(method.toLatin1().data());
 
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
         hb_vmPushDynSym(pDynSym);
-        hb_vmPush( hb_stackSelfItem() );
+        hb_vmPush(hb_stackSelfItem());
         hb_vmSend(0);
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS);
       }
     }
-    else if( ISNUMPAR(2) && HB_ISNUM(1) )
+    else if (ISNUMPAR(2) && HB_ISNUM(1))
     {
       int event = hb_parni(1);
-      _qtxhb_processOnEventMethod2( (QEvent::Type) event );
+      _qtxhb_processOnEventMethod2((QEvent::Type)event);
     }
-    else if( ISNUMPAR(1) && HB_ISNUM(1) )
+    else if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       int event = hb_parni(1);
-      _qtxhb_processOnEventMethod2( (QEvent::Type) event );
+      _qtxhb_processOnEventMethod2((QEvent::Type)event);
     }
     else
     {
@@ -1769,36 +1769,36 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
   }
 }
 
-HB_FUNC_STATIC( QOBJECT_DISCONNECT )
+HB_FUNC_STATIC(QOBJECT_DISCONNECT)
 {
-  QObject * obj = (QObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QObject *obj = (QObject *)Qt4xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
       QString signal = hb_parc(1);
       int pos = signal.indexOf("(");
       QString method = signal.left(pos).toUpper();
       method.prepend("ON");
 
-      PHB_DYNS pDynSym = hb_dynsymFindName( method.toLatin1().data() );
+      PHB_DYNS pDynSym = hb_dynsymFindName(method.toLatin1().data());
 
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
         hb_vmPushDynSym(pDynSym);
-        hb_vmPush( hb_stackSelfItem() );
+        hb_vmPush(hb_stackSelfItem());
         hb_vmSend(0);
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS);
       }
     }
-    else if( ISNUMPAR(1) && HB_ISNUM(1) )
+    else if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       int event = hb_parni(1);
-      _qtxhb_processOnEventMethod2( (QEvent::Type) event );
+      _qtxhb_processOnEventMethod2((QEvent::Type)event);
     }
     else
     {
@@ -1807,11 +1807,11 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECT )
   }
 }
 
-HB_FUNC_STATIC( QOBJECT_NEWFROM )
+HB_FUNC_STATIC(QOBJECT_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -1820,7 +1820,7 @@ HB_FUNC_STATIC( QOBJECT_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -1837,26 +1837,26 @@ HB_FUNC_STATIC( QOBJECT_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QOBJECT_NEWFROMOBJECT )
+HB_FUNC_STATIC(QOBJECT_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QOBJECT_NEWFROM );
+  HB_FUNC_EXEC(QOBJECT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QOBJECT_NEWFROMPOINTER )
+HB_FUNC_STATIC(QOBJECT_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QOBJECT_NEWFROM );
+  HB_FUNC_EXEC(QOBJECT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QOBJECT_SELFDESTRUCTION )
+HB_FUNC_STATIC(QOBJECT_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QOBJECT_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QOBJECT_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
@@ -1870,9 +1870,9 @@ HB_FUNC_STATIC( QOBJECT_SETSELFDESTRUCTION )
   hb_itemReturn(self);
 }
 
-void QObjectSlots_connect_signal(const QString & signal, const QString & slot);
+void QObjectSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QOBJECT_ONDESTROYED )
+HB_FUNC_STATIC(QOBJECT_ONDESTROYED)
 {
   QObjectSlots_connect_signal("destroyed(QObject*)", "destroyed(QObject*)");
 }

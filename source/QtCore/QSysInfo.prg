@@ -50,11 +50,11 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QSYSINFO_DELETE )
+HB_FUNC_STATIC(QSYSINFO_DELETE)
 {
-  QSysInfo * obj = static_cast<QSysInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QSysInfo *obj = static_cast<QSysInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -66,11 +66,11 @@ HB_FUNC_STATIC( QSYSINFO_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QSYSINFO_NEWFROM )
+HB_FUNC_STATIC(QSYSINFO_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QSYSINFO_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -96,26 +96,26 @@ HB_FUNC_STATIC( QSYSINFO_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QSYSINFO_NEWFROMOBJECT )
+HB_FUNC_STATIC(QSYSINFO_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QSYSINFO_NEWFROM );
+  HB_FUNC_EXEC(QSYSINFO_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSYSINFO_NEWFROMPOINTER )
+HB_FUNC_STATIC(QSYSINFO_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QSYSINFO_NEWFROM );
+  HB_FUNC_EXEC(QSYSINFO_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSYSINFO_SELFDESTRUCTION )
+HB_FUNC_STATIC(QSYSINFO_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QSYSINFO_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QSYSINFO_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

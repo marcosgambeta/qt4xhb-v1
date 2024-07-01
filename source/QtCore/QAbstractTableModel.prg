@@ -46,11 +46,11 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-HB_FUNC_STATIC( QABSTRACTTABLEMODEL_DELETE )
+HB_FUNC_STATIC(QABSTRACTTABLEMODEL_DELETE)
 {
-  QAbstractTableModel * obj = qobject_cast<QAbstractTableModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractTableModel *obj = qobject_cast<QAbstractTableModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -65,19 +65,20 @@ HB_FUNC_STATIC( QABSTRACTTABLEMODEL_DELETE )
 }
 
 /*
-virtual bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
+virtual bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex &
+parent )
 */
-HB_FUNC_STATIC( QABSTRACTTABLEMODEL_DROPMIMEDATA )
+HB_FUNC_STATIC(QABSTRACTTABLEMODEL_DROPMIMEDATA)
 {
-  QAbstractTableModel * obj = qobject_cast<QAbstractTableModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractTableModel *obj = qobject_cast<QAbstractTableModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(5) && ISQMIMEDATA(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQMODELINDEX(5) )
+    if (ISNUMPAR(5) && ISQMIMEDATA(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQMODELINDEX(5))
     {
 #endif
-      RBOOL( obj->dropMimeData( PQMIMEDATA(1), ( Qt::DropAction ) hb_parni(2), PINT(3), PINT(4), *PQMODELINDEX(5)) );
+      RBOOL(obj->dropMimeData(PQMIMEDATA(1), (Qt::DropAction)hb_parni(2), PINT(3), PINT(4), *PQMODELINDEX(5)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -91,17 +92,18 @@ HB_FUNC_STATIC( QABSTRACTTABLEMODEL_DROPMIMEDATA )
 /*
 virtual QModelIndex index( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 */
-HB_FUNC_STATIC( QABSTRACTTABLEMODEL_INDEX )
+HB_FUNC_STATIC(QABSTRACTTABLEMODEL_INDEX)
 {
-  QAbstractTableModel * obj = qobject_cast<QAbstractTableModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractTableModel *obj = qobject_cast<QAbstractTableModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)) )
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->index( PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex*>( Qt4xHb::itemGetPtr(3)) ) );
+      QModelIndex *ptr = new QModelIndex(obj->index(
+          PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex *>(Qt4xHb::itemGetPtr(3))));
       Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

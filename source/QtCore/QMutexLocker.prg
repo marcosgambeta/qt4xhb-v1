@@ -55,14 +55,14 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QMutexLocker( QMutex * mutex )
-*/
-HB_FUNC_STATIC( QMUTEXLOCKER_NEW )
+    /*
+    QMutexLocker( QMutex * mutex )
+    */
+HB_FUNC_STATIC(QMUTEXLOCKER_NEW)
 {
-  if( ISNUMPAR(1) && ISQMUTEX(1) )
+  if (ISNUMPAR(1) && ISQMUTEX(1))
   {
-    QMutexLocker * obj = new QMutexLocker( PQMUTEX(1) );
+    QMutexLocker *obj = new QMutexLocker(PQMUTEX(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -71,11 +71,11 @@ HB_FUNC_STATIC( QMUTEXLOCKER_NEW )
   }
 }
 
-HB_FUNC_STATIC( QMUTEXLOCKER_DELETE )
+HB_FUNC_STATIC(QMUTEXLOCKER_DELETE)
 {
-  QMutexLocker * obj = static_cast<QMutexLocker*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMutexLocker *obj = static_cast<QMutexLocker *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -90,17 +90,17 @@ HB_FUNC_STATIC( QMUTEXLOCKER_DELETE )
 /*
 QMutex * mutex() const
 */
-HB_FUNC_STATIC( QMUTEXLOCKER_MUTEX )
+HB_FUNC_STATIC(QMUTEXLOCKER_MUTEX)
 {
-  QMutexLocker * obj = static_cast<QMutexLocker*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMutexLocker *obj = static_cast<QMutexLocker *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QMutex * ptr = obj->mutex();
+      QMutex *ptr = obj->mutex();
       Qt4xHb::createReturnClass(ptr, "QMUTEX", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -115,14 +115,14 @@ HB_FUNC_STATIC( QMUTEXLOCKER_MUTEX )
 /*
 void relock()
 */
-HB_FUNC_STATIC( QMUTEXLOCKER_RELOCK )
+HB_FUNC_STATIC(QMUTEXLOCKER_RELOCK)
 {
-  QMutexLocker * obj = static_cast<QMutexLocker*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMutexLocker *obj = static_cast<QMutexLocker *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->relock();
@@ -141,14 +141,14 @@ HB_FUNC_STATIC( QMUTEXLOCKER_RELOCK )
 /*
 void unlock()
 */
-HB_FUNC_STATIC( QMUTEXLOCKER_UNLOCK )
+HB_FUNC_STATIC(QMUTEXLOCKER_UNLOCK)
 {
-  QMutexLocker * obj = static_cast<QMutexLocker*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMutexLocker *obj = static_cast<QMutexLocker *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->unlock();
@@ -164,11 +164,11 @@ HB_FUNC_STATIC( QMUTEXLOCKER_UNLOCK )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QMUTEXLOCKER_NEWFROM )
+HB_FUNC_STATIC(QMUTEXLOCKER_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QMUTEXLOCKER_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -194,26 +194,26 @@ HB_FUNC_STATIC( QMUTEXLOCKER_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QMUTEXLOCKER_NEWFROMOBJECT )
+HB_FUNC_STATIC(QMUTEXLOCKER_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QMUTEXLOCKER_NEWFROM );
+  HB_FUNC_EXEC(QMUTEXLOCKER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QMUTEXLOCKER_NEWFROMPOINTER )
+HB_FUNC_STATIC(QMUTEXLOCKER_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QMUTEXLOCKER_NEWFROM );
+  HB_FUNC_EXEC(QMUTEXLOCKER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QMUTEXLOCKER_SELFDESTRUCTION )
+HB_FUNC_STATIC(QMUTEXLOCKER_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QMUTEXLOCKER_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QMUTEXLOCKER_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

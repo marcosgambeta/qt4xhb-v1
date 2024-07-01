@@ -72,11 +72,11 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QBASICATOMICINT_DELETE )
+HB_FUNC_STATIC(QBASICATOMICINT_DELETE)
 {
-  QBasicAtomicInt * obj = static_cast<QBasicAtomicInt*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QBasicAtomicInt *obj = static_cast<QBasicAtomicInt *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -91,17 +91,17 @@ HB_FUNC_STATIC( QBASICATOMICINT_DELETE )
 /*
 bool ref()
 */
-HB_FUNC_STATIC( QBASICATOMICINT_REF )
+HB_FUNC_STATIC(QBASICATOMICINT_REF)
 {
-  QBasicAtomicInt * obj = static_cast<QBasicAtomicInt*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QBasicAtomicInt *obj = static_cast<QBasicAtomicInt *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->ref() );
+      RBOOL(obj->ref());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -115,17 +115,17 @@ HB_FUNC_STATIC( QBASICATOMICINT_REF )
 /*
 bool deref()
 */
-HB_FUNC_STATIC( QBASICATOMICINT_DEREF )
+HB_FUNC_STATIC(QBASICATOMICINT_DEREF)
 {
-  QBasicAtomicInt * obj = static_cast<QBasicAtomicInt*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QBasicAtomicInt *obj = static_cast<QBasicAtomicInt *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->deref() );
+      RBOOL(obj->deref());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -139,17 +139,17 @@ HB_FUNC_STATIC( QBASICATOMICINT_DEREF )
 /*
 bool testAndSetRelaxed( int expectedValue, int newValue )
 */
-HB_FUNC_STATIC( QBASICATOMICINT_TESTANDSETRELAXED )
+HB_FUNC_STATIC(QBASICATOMICINT_TESTANDSETRELAXED)
 {
-  QBasicAtomicInt * obj = static_cast<QBasicAtomicInt*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QBasicAtomicInt *obj = static_cast<QBasicAtomicInt *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      RBOOL( obj->testAndSetRelaxed( PINT(1), PINT(2)) );
+      RBOOL(obj->testAndSetRelaxed(PINT(1), PINT(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -163,17 +163,17 @@ HB_FUNC_STATIC( QBASICATOMICINT_TESTANDSETRELAXED )
 /*
 bool testAndSetAcquire( int expectedValue, int newValue )
 */
-HB_FUNC_STATIC( QBASICATOMICINT_TESTANDSETACQUIRE )
+HB_FUNC_STATIC(QBASICATOMICINT_TESTANDSETACQUIRE)
 {
-  QBasicAtomicInt * obj = static_cast<QBasicAtomicInt*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QBasicAtomicInt *obj = static_cast<QBasicAtomicInt *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      RBOOL( obj->testAndSetAcquire( PINT(1), PINT(2)) );
+      RBOOL(obj->testAndSetAcquire(PINT(1), PINT(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,17 +187,17 @@ HB_FUNC_STATIC( QBASICATOMICINT_TESTANDSETACQUIRE )
 /*
 bool testAndSetRelease( int expectedValue, int newValue )
 */
-HB_FUNC_STATIC( QBASICATOMICINT_TESTANDSETRELEASE )
+HB_FUNC_STATIC(QBASICATOMICINT_TESTANDSETRELEASE)
 {
-  QBasicAtomicInt * obj = static_cast<QBasicAtomicInt*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QBasicAtomicInt *obj = static_cast<QBasicAtomicInt *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      RBOOL( obj->testAndSetRelease( PINT(1), PINT(2)) );
+      RBOOL(obj->testAndSetRelease(PINT(1), PINT(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,17 +211,17 @@ HB_FUNC_STATIC( QBASICATOMICINT_TESTANDSETRELEASE )
 /*
 bool testAndSetOrdered( int expectedValue, int newValue )
 */
-HB_FUNC_STATIC( QBASICATOMICINT_TESTANDSETORDERED )
+HB_FUNC_STATIC(QBASICATOMICINT_TESTANDSETORDERED)
 {
-  QBasicAtomicInt * obj = static_cast<QBasicAtomicInt*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QBasicAtomicInt *obj = static_cast<QBasicAtomicInt *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      RBOOL( obj->testAndSetOrdered( PINT(1), PINT(2)) );
+      RBOOL(obj->testAndSetOrdered(PINT(1), PINT(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,17 +235,17 @@ HB_FUNC_STATIC( QBASICATOMICINT_TESTANDSETORDERED )
 /*
 int fetchAndStoreRelaxed( int newValue )
 */
-HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDSTORERELAXED )
+HB_FUNC_STATIC(QBASICATOMICINT_FETCHANDSTORERELAXED)
 {
-  QBasicAtomicInt * obj = static_cast<QBasicAtomicInt*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QBasicAtomicInt *obj = static_cast<QBasicAtomicInt *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT( obj->fetchAndStoreRelaxed( PINT(1)) );
+      RINT(obj->fetchAndStoreRelaxed(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -259,17 +259,17 @@ HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDSTORERELAXED )
 /*
 int fetchAndStoreAcquire( int newValue )
 */
-HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDSTOREACQUIRE )
+HB_FUNC_STATIC(QBASICATOMICINT_FETCHANDSTOREACQUIRE)
 {
-  QBasicAtomicInt * obj = static_cast<QBasicAtomicInt*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QBasicAtomicInt *obj = static_cast<QBasicAtomicInt *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT( obj->fetchAndStoreAcquire( PINT(1)) );
+      RINT(obj->fetchAndStoreAcquire(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -283,17 +283,17 @@ HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDSTOREACQUIRE )
 /*
 int fetchAndStoreRelease( int newValue )
 */
-HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDSTORERELEASE )
+HB_FUNC_STATIC(QBASICATOMICINT_FETCHANDSTORERELEASE)
 {
-  QBasicAtomicInt * obj = static_cast<QBasicAtomicInt*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QBasicAtomicInt *obj = static_cast<QBasicAtomicInt *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT( obj->fetchAndStoreRelease( PINT(1)) );
+      RINT(obj->fetchAndStoreRelease(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -307,17 +307,17 @@ HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDSTORERELEASE )
 /*
 int fetchAndStoreOrdered( int newValue )
 */
-HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDSTOREORDERED )
+HB_FUNC_STATIC(QBASICATOMICINT_FETCHANDSTOREORDERED)
 {
-  QBasicAtomicInt * obj = static_cast<QBasicAtomicInt*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QBasicAtomicInt *obj = static_cast<QBasicAtomicInt *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT( obj->fetchAndStoreOrdered( PINT(1)) );
+      RINT(obj->fetchAndStoreOrdered(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -331,17 +331,17 @@ HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDSTOREORDERED )
 /*
 int fetchAndAddRelaxed( int valueToAdd )
 */
-HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDADDRELAXED )
+HB_FUNC_STATIC(QBASICATOMICINT_FETCHANDADDRELAXED)
 {
-  QBasicAtomicInt * obj = static_cast<QBasicAtomicInt*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QBasicAtomicInt *obj = static_cast<QBasicAtomicInt *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT( obj->fetchAndAddRelaxed( PINT(1)) );
+      RINT(obj->fetchAndAddRelaxed(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -355,17 +355,17 @@ HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDADDRELAXED )
 /*
 int fetchAndAddAcquire( int valueToAdd )
 */
-HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDADDACQUIRE )
+HB_FUNC_STATIC(QBASICATOMICINT_FETCHANDADDACQUIRE)
 {
-  QBasicAtomicInt * obj = static_cast<QBasicAtomicInt*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QBasicAtomicInt *obj = static_cast<QBasicAtomicInt *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT( obj->fetchAndAddAcquire( PINT(1)) );
+      RINT(obj->fetchAndAddAcquire(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -379,17 +379,17 @@ HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDADDACQUIRE )
 /*
 int fetchAndAddRelease( int valueToAdd )
 */
-HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDADDRELEASE )
+HB_FUNC_STATIC(QBASICATOMICINT_FETCHANDADDRELEASE)
 {
-  QBasicAtomicInt * obj = static_cast<QBasicAtomicInt*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QBasicAtomicInt *obj = static_cast<QBasicAtomicInt *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT( obj->fetchAndAddRelease( PINT(1)) );
+      RINT(obj->fetchAndAddRelease(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -403,17 +403,17 @@ HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDADDRELEASE )
 /*
 int fetchAndAddOrdered( int valueToAdd )
 */
-HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDADDORDERED )
+HB_FUNC_STATIC(QBASICATOMICINT_FETCHANDADDORDERED)
 {
-  QBasicAtomicInt * obj = static_cast<QBasicAtomicInt*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QBasicAtomicInt *obj = static_cast<QBasicAtomicInt *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT( obj->fetchAndAddOrdered( PINT(1)) );
+      RINT(obj->fetchAndAddOrdered(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -427,13 +427,13 @@ HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDADDORDERED )
 /*
 static bool isReferenceCountingNative()
 */
-HB_FUNC_STATIC( QBASICATOMICINT_ISREFERENCECOUNTINGNATIVE )
+HB_FUNC_STATIC(QBASICATOMICINT_ISREFERENCECOUNTINGNATIVE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RBOOL( QBasicAtomicInt::isReferenceCountingNative() );
+    RBOOL(QBasicAtomicInt::isReferenceCountingNative());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -446,13 +446,13 @@ HB_FUNC_STATIC( QBASICATOMICINT_ISREFERENCECOUNTINGNATIVE )
 /*
 static bool isReferenceCountingWaitFree()
 */
-HB_FUNC_STATIC( QBASICATOMICINT_ISREFERENCECOUNTINGWAITFREE )
+HB_FUNC_STATIC(QBASICATOMICINT_ISREFERENCECOUNTINGWAITFREE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RBOOL( QBasicAtomicInt::isReferenceCountingWaitFree() );
+    RBOOL(QBasicAtomicInt::isReferenceCountingWaitFree());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -465,13 +465,13 @@ HB_FUNC_STATIC( QBASICATOMICINT_ISREFERENCECOUNTINGWAITFREE )
 /*
 static bool isTestAndSetNative()
 */
-HB_FUNC_STATIC( QBASICATOMICINT_ISTESTANDSETNATIVE )
+HB_FUNC_STATIC(QBASICATOMICINT_ISTESTANDSETNATIVE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RBOOL( QBasicAtomicInt::isTestAndSetNative() );
+    RBOOL(QBasicAtomicInt::isTestAndSetNative());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -484,13 +484,13 @@ HB_FUNC_STATIC( QBASICATOMICINT_ISTESTANDSETNATIVE )
 /*
 static bool isTestAndSetWaitFree()
 */
-HB_FUNC_STATIC( QBASICATOMICINT_ISTESTANDSETWAITFREE )
+HB_FUNC_STATIC(QBASICATOMICINT_ISTESTANDSETWAITFREE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RBOOL( QBasicAtomicInt::isTestAndSetWaitFree() );
+    RBOOL(QBasicAtomicInt::isTestAndSetWaitFree());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -503,13 +503,13 @@ HB_FUNC_STATIC( QBASICATOMICINT_ISTESTANDSETWAITFREE )
 /*
 static bool isFetchAndStoreNative()
 */
-HB_FUNC_STATIC( QBASICATOMICINT_ISFETCHANDSTORENATIVE )
+HB_FUNC_STATIC(QBASICATOMICINT_ISFETCHANDSTORENATIVE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RBOOL( QBasicAtomicInt::isFetchAndStoreNative() );
+    RBOOL(QBasicAtomicInt::isFetchAndStoreNative());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -522,13 +522,13 @@ HB_FUNC_STATIC( QBASICATOMICINT_ISFETCHANDSTORENATIVE )
 /*
 static bool isFetchAndStoreWaitFree()
 */
-HB_FUNC_STATIC( QBASICATOMICINT_ISFETCHANDSTOREWAITFREE )
+HB_FUNC_STATIC(QBASICATOMICINT_ISFETCHANDSTOREWAITFREE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RBOOL( QBasicAtomicInt::isFetchAndStoreWaitFree() );
+    RBOOL(QBasicAtomicInt::isFetchAndStoreWaitFree());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -541,13 +541,13 @@ HB_FUNC_STATIC( QBASICATOMICINT_ISFETCHANDSTOREWAITFREE )
 /*
 static bool isFetchAndAddNative()
 */
-HB_FUNC_STATIC( QBASICATOMICINT_ISFETCHANDADDNATIVE )
+HB_FUNC_STATIC(QBASICATOMICINT_ISFETCHANDADDNATIVE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RBOOL( QBasicAtomicInt::isFetchAndAddNative() );
+    RBOOL(QBasicAtomicInt::isFetchAndAddNative());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -560,13 +560,13 @@ HB_FUNC_STATIC( QBASICATOMICINT_ISFETCHANDADDNATIVE )
 /*
 static bool isFetchAndAddWaitFree()
 */
-HB_FUNC_STATIC( QBASICATOMICINT_ISFETCHANDADDWAITFREE )
+HB_FUNC_STATIC(QBASICATOMICINT_ISFETCHANDADDWAITFREE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RBOOL( QBasicAtomicInt::isFetchAndAddWaitFree() );
+    RBOOL(QBasicAtomicInt::isFetchAndAddWaitFree());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -576,11 +576,11 @@ HB_FUNC_STATIC( QBASICATOMICINT_ISFETCHANDADDWAITFREE )
 #endif
 }
 
-HB_FUNC_STATIC( QBASICATOMICINT_NEWFROM )
+HB_FUNC_STATIC(QBASICATOMICINT_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QBASICATOMICINT_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -606,26 +606,26 @@ HB_FUNC_STATIC( QBASICATOMICINT_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QBASICATOMICINT_NEWFROMOBJECT )
+HB_FUNC_STATIC(QBASICATOMICINT_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QBASICATOMICINT_NEWFROM );
+  HB_FUNC_EXEC(QBASICATOMICINT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QBASICATOMICINT_NEWFROMPOINTER )
+HB_FUNC_STATIC(QBASICATOMICINT_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QBASICATOMICINT_NEWFROM );
+  HB_FUNC_EXEC(QBASICATOMICINT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QBASICATOMICINT_SELFDESTRUCTION )
+HB_FUNC_STATIC(QBASICATOMICINT_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QBASICATOMICINT_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QBASICATOMICINT_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

@@ -83,14 +83,14 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QMetaProperty()
-*/
-HB_FUNC_STATIC( QMETAPROPERTY_NEW )
+    /*
+    QMetaProperty()
+    */
+HB_FUNC_STATIC(QMETAPROPERTY_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
-    QMetaProperty * obj = new QMetaProperty();
+    QMetaProperty *obj = new QMetaProperty();
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -99,11 +99,11 @@ HB_FUNC_STATIC( QMETAPROPERTY_NEW )
   }
 }
 
-HB_FUNC_STATIC( QMETAPROPERTY_DELETE )
+HB_FUNC_STATIC(QMETAPROPERTY_DELETE)
 {
-  QMetaProperty * obj = static_cast<QMetaProperty*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaProperty *obj = static_cast<QMetaProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -118,17 +118,17 @@ HB_FUNC_STATIC( QMETAPROPERTY_DELETE )
 /*
 const char * name() const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_NAME )
+HB_FUNC_STATIC(QMETAPROPERTY_NAME)
 {
-  QMetaProperty * obj = static_cast<QMetaProperty*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaProperty *obj = static_cast<QMetaProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      hb_retc( ( const char * ) obj->name() );
+      hb_retc((const char *)obj->name());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,17 +142,17 @@ HB_FUNC_STATIC( QMETAPROPERTY_NAME )
 /*
 const char * typeName() const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_TYPENAME )
+HB_FUNC_STATIC(QMETAPROPERTY_TYPENAME)
 {
-  QMetaProperty * obj = static_cast<QMetaProperty*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaProperty *obj = static_cast<QMetaProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      hb_retc( ( const char * ) obj->typeName() );
+      hb_retc((const char *)obj->typeName());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,17 +166,17 @@ HB_FUNC_STATIC( QMETAPROPERTY_TYPENAME )
 /*
 QVariant::Type type() const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_TYPE )
+HB_FUNC_STATIC(QMETAPROPERTY_TYPE)
 {
-  QMetaProperty * obj = static_cast<QMetaProperty*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaProperty *obj = static_cast<QMetaProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->type() );
+      RENUM(obj->type());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,17 +190,17 @@ HB_FUNC_STATIC( QMETAPROPERTY_TYPE )
 /*
 int userType() const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_USERTYPE )
+HB_FUNC_STATIC(QMETAPROPERTY_USERTYPE)
 {
-  QMetaProperty * obj = static_cast<QMetaProperty*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaProperty *obj = static_cast<QMetaProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->userType() );
+      RINT(obj->userType());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,17 +214,17 @@ HB_FUNC_STATIC( QMETAPROPERTY_USERTYPE )
 /*
 int propertyIndex() const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_PROPERTYINDEX )
+HB_FUNC_STATIC(QMETAPROPERTY_PROPERTYINDEX)
 {
-  QMetaProperty * obj = static_cast<QMetaProperty*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaProperty *obj = static_cast<QMetaProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->propertyIndex() );
+      RINT(obj->propertyIndex());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -238,17 +238,17 @@ HB_FUNC_STATIC( QMETAPROPERTY_PROPERTYINDEX )
 /*
 bool isReadable() const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_ISREADABLE )
+HB_FUNC_STATIC(QMETAPROPERTY_ISREADABLE)
 {
-  QMetaProperty * obj = static_cast<QMetaProperty*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaProperty *obj = static_cast<QMetaProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isReadable() );
+      RBOOL(obj->isReadable());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -262,17 +262,17 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISREADABLE )
 /*
 bool isWritable() const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_ISWRITABLE )
+HB_FUNC_STATIC(QMETAPROPERTY_ISWRITABLE)
 {
-  QMetaProperty * obj = static_cast<QMetaProperty*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaProperty *obj = static_cast<QMetaProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isWritable() );
+      RBOOL(obj->isWritable());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -286,17 +286,17 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISWRITABLE )
 /*
 bool isResettable() const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_ISRESETTABLE )
+HB_FUNC_STATIC(QMETAPROPERTY_ISRESETTABLE)
 {
-  QMetaProperty * obj = static_cast<QMetaProperty*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaProperty *obj = static_cast<QMetaProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isResettable() );
+      RBOOL(obj->isResettable());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -310,17 +310,17 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISRESETTABLE )
 /*
 bool isDesignable( const QObject * obj = 0 ) const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_ISDESIGNABLE )
+HB_FUNC_STATIC(QMETAPROPERTY_ISDESIGNABLE)
 {
-  QMetaProperty * obj = static_cast<QMetaProperty*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaProperty *obj = static_cast<QMetaProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
     {
 #endif
-      RBOOL( obj->isDesignable( OPQOBJECT( 1, 0 )) );
+      RBOOL(obj->isDesignable(OPQOBJECT(1, 0)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -334,17 +334,17 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISDESIGNABLE )
 /*
 bool isScriptable( const QObject * obj = 0 ) const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_ISSCRIPTABLE )
+HB_FUNC_STATIC(QMETAPROPERTY_ISSCRIPTABLE)
 {
-  QMetaProperty * obj = static_cast<QMetaProperty*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaProperty *obj = static_cast<QMetaProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
     {
 #endif
-      RBOOL( obj->isScriptable( OPQOBJECT( 1, 0 )) );
+      RBOOL(obj->isScriptable(OPQOBJECT(1, 0)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -358,17 +358,17 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISSCRIPTABLE )
 /*
 bool isStored( const QObject * obj = 0 ) const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_ISSTORED )
+HB_FUNC_STATIC(QMETAPROPERTY_ISSTORED)
 {
-  QMetaProperty * obj = static_cast<QMetaProperty*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaProperty *obj = static_cast<QMetaProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
     {
 #endif
-      RBOOL( obj->isStored( OPQOBJECT( 1, 0 )) );
+      RBOOL(obj->isStored(OPQOBJECT(1, 0)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -382,17 +382,17 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISSTORED )
 /*
 bool isEditable( const QObject * obj = 0 ) const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_ISEDITABLE )
+HB_FUNC_STATIC(QMETAPROPERTY_ISEDITABLE)
 {
-  QMetaProperty * obj = static_cast<QMetaProperty*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaProperty *obj = static_cast<QMetaProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
     {
 #endif
-      RBOOL( obj->isEditable( OPQOBJECT( 1, 0 )) );
+      RBOOL(obj->isEditable(OPQOBJECT(1, 0)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -406,17 +406,17 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISEDITABLE )
 /*
 bool isUser( const QObject * obj = 0 ) const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_ISUSER )
+HB_FUNC_STATIC(QMETAPROPERTY_ISUSER)
 {
-  QMetaProperty * obj = static_cast<QMetaProperty*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaProperty *obj = static_cast<QMetaProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
     {
 #endif
-      RBOOL( obj->isUser( OPQOBJECT( 1, 0 )) );
+      RBOOL(obj->isUser(OPQOBJECT(1, 0)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -430,17 +430,17 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISUSER )
 /*
 bool isConstant() const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_ISCONSTANT )
+HB_FUNC_STATIC(QMETAPROPERTY_ISCONSTANT)
 {
-  QMetaProperty * obj = static_cast<QMetaProperty*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaProperty *obj = static_cast<QMetaProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isConstant() );
+      RBOOL(obj->isConstant());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -454,17 +454,17 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISCONSTANT )
 /*
 bool isFinal() const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_ISFINAL )
+HB_FUNC_STATIC(QMETAPROPERTY_ISFINAL)
 {
-  QMetaProperty * obj = static_cast<QMetaProperty*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaProperty *obj = static_cast<QMetaProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isFinal() );
+      RBOOL(obj->isFinal());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -478,17 +478,17 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISFINAL )
 /*
 bool isFlagType() const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_ISFLAGTYPE )
+HB_FUNC_STATIC(QMETAPROPERTY_ISFLAGTYPE)
 {
-  QMetaProperty * obj = static_cast<QMetaProperty*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaProperty *obj = static_cast<QMetaProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isFlagType() );
+      RBOOL(obj->isFlagType());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -502,17 +502,17 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISFLAGTYPE )
 /*
 bool isEnumType() const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_ISENUMTYPE )
+HB_FUNC_STATIC(QMETAPROPERTY_ISENUMTYPE)
 {
-  QMetaProperty * obj = static_cast<QMetaProperty*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaProperty *obj = static_cast<QMetaProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isEnumType() );
+      RBOOL(obj->isEnumType());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -526,17 +526,17 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISENUMTYPE )
 /*
 QMetaEnum enumerator() const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_ENUMERATOR )
+HB_FUNC_STATIC(QMETAPROPERTY_ENUMERATOR)
 {
-  QMetaProperty * obj = static_cast<QMetaProperty*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaProperty *obj = static_cast<QMetaProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QMetaEnum * ptr = new QMetaEnum( obj->enumerator() );
+      QMetaEnum *ptr = new QMetaEnum(obj->enumerator());
       Qt4xHb::createReturnClass(ptr, "QMETAENUM", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -551,17 +551,17 @@ HB_FUNC_STATIC( QMETAPROPERTY_ENUMERATOR )
 /*
 bool hasNotifySignal() const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_HASNOTIFYSIGNAL )
+HB_FUNC_STATIC(QMETAPROPERTY_HASNOTIFYSIGNAL)
 {
-  QMetaProperty * obj = static_cast<QMetaProperty*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaProperty *obj = static_cast<QMetaProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->hasNotifySignal() );
+      RBOOL(obj->hasNotifySignal());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -575,17 +575,17 @@ HB_FUNC_STATIC( QMETAPROPERTY_HASNOTIFYSIGNAL )
 /*
 QMetaMethod notifySignal() const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_NOTIFYSIGNAL )
+HB_FUNC_STATIC(QMETAPROPERTY_NOTIFYSIGNAL)
 {
-  QMetaProperty * obj = static_cast<QMetaProperty*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaProperty *obj = static_cast<QMetaProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QMetaMethod * ptr = new QMetaMethod( obj->notifySignal() );
+      QMetaMethod *ptr = new QMetaMethod(obj->notifySignal());
       Qt4xHb::createReturnClass(ptr, "QMETAMETHOD", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -600,17 +600,17 @@ HB_FUNC_STATIC( QMETAPROPERTY_NOTIFYSIGNAL )
 /*
 int notifySignalIndex() const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_NOTIFYSIGNALINDEX )
+HB_FUNC_STATIC(QMETAPROPERTY_NOTIFYSIGNALINDEX)
 {
-  QMetaProperty * obj = static_cast<QMetaProperty*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaProperty *obj = static_cast<QMetaProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->notifySignalIndex() );
+      RINT(obj->notifySignalIndex());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -624,17 +624,17 @@ HB_FUNC_STATIC( QMETAPROPERTY_NOTIFYSIGNALINDEX )
 /*
 int revision() const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_REVISION )
+HB_FUNC_STATIC(QMETAPROPERTY_REVISION)
 {
-  QMetaProperty * obj = static_cast<QMetaProperty*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaProperty *obj = static_cast<QMetaProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->revision() );
+      RINT(obj->revision());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -648,17 +648,17 @@ HB_FUNC_STATIC( QMETAPROPERTY_REVISION )
 /*
 QVariant read( const QObject * obj ) const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_READ )
+HB_FUNC_STATIC(QMETAPROPERTY_READ)
 {
-  QMetaProperty * obj = static_cast<QMetaProperty*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaProperty *obj = static_cast<QMetaProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    if (ISNUMPAR(1) && ISQOBJECT(1))
     {
 #endif
-      QVariant * ptr = new QVariant( obj->read( PQOBJECT(1)) );
+      QVariant *ptr = new QVariant(obj->read(PQOBJECT(1)));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -673,17 +673,17 @@ HB_FUNC_STATIC( QMETAPROPERTY_READ )
 /*
 bool write( QObject * obj, const QVariant & value ) const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_WRITE )
+HB_FUNC_STATIC(QMETAPROPERTY_WRITE)
 {
-  QMetaProperty * obj = static_cast<QMetaProperty*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaProperty *obj = static_cast<QMetaProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQOBJECT(1) && ISQVARIANT(2) )
+    if (ISNUMPAR(2) && ISQOBJECT(1) && ISQVARIANT(2))
     {
 #endif
-      RBOOL( obj->write( PQOBJECT(1), *PQVARIANT(2)) );
+      RBOOL(obj->write(PQOBJECT(1), *PQVARIANT(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -697,17 +697,17 @@ HB_FUNC_STATIC( QMETAPROPERTY_WRITE )
 /*
 bool reset( QObject * obj ) const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_RESET )
+HB_FUNC_STATIC(QMETAPROPERTY_RESET)
 {
-  QMetaProperty * obj = static_cast<QMetaProperty*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaProperty *obj = static_cast<QMetaProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    if (ISNUMPAR(1) && ISQOBJECT(1))
     {
 #endif
-      RBOOL( obj->reset( PQOBJECT(1)) );
+      RBOOL(obj->reset(PQOBJECT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -721,17 +721,17 @@ HB_FUNC_STATIC( QMETAPROPERTY_RESET )
 /*
 bool hasStdCppSet() const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_HASSTDCPPSET )
+HB_FUNC_STATIC(QMETAPROPERTY_HASSTDCPPSET)
 {
-  QMetaProperty * obj = static_cast<QMetaProperty*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaProperty *obj = static_cast<QMetaProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->hasStdCppSet() );
+      RBOOL(obj->hasStdCppSet());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -745,17 +745,17 @@ HB_FUNC_STATIC( QMETAPROPERTY_HASSTDCPPSET )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_ISVALID )
+HB_FUNC_STATIC(QMETAPROPERTY_ISVALID)
 {
-  QMetaProperty * obj = static_cast<QMetaProperty*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaProperty *obj = static_cast<QMetaProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -769,17 +769,17 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISVALID )
 /*
 const QMetaObject * enclosingMetaObject() const
 */
-HB_FUNC_STATIC( QMETAPROPERTY_ENCLOSINGMETAOBJECT )
+HB_FUNC_STATIC(QMETAPROPERTY_ENCLOSINGMETAOBJECT)
 {
-  QMetaProperty * obj = static_cast<QMetaProperty*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaProperty *obj = static_cast<QMetaProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      const QMetaObject * ptr = obj->enclosingMetaObject();
+      const QMetaObject *ptr = obj->enclosingMetaObject();
       Qt4xHb::createReturnClass(ptr, "QMETAOBJECT", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -791,11 +791,11 @@ HB_FUNC_STATIC( QMETAPROPERTY_ENCLOSINGMETAOBJECT )
   }
 }
 
-HB_FUNC_STATIC( QMETAPROPERTY_NEWFROM )
+HB_FUNC_STATIC(QMETAPROPERTY_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -804,7 +804,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -821,26 +821,26 @@ HB_FUNC_STATIC( QMETAPROPERTY_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QMETAPROPERTY_NEWFROMOBJECT )
+HB_FUNC_STATIC(QMETAPROPERTY_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QMETAPROPERTY_NEWFROM );
+  HB_FUNC_EXEC(QMETAPROPERTY_NEWFROM);
 }
 
-HB_FUNC_STATIC( QMETAPROPERTY_NEWFROMPOINTER )
+HB_FUNC_STATIC(QMETAPROPERTY_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QMETAPROPERTY_NEWFROM );
+  HB_FUNC_EXEC(QMETAPROPERTY_NEWFROM);
 }
 
-HB_FUNC_STATIC( QMETAPROPERTY_SELFDESTRUCTION )
+HB_FUNC_STATIC(QMETAPROPERTY_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QMETAPROPERTY_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QMETAPROPERTY_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

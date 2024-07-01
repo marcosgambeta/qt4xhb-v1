@@ -45,14 +45,14 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-/*
-QParallelAnimationGroup( QObject * parent = 0 )
-*/
-HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_NEW )
+    /*
+    QParallelAnimationGroup( QObject * parent = 0 )
+    */
+HB_FUNC_STATIC(QPARALLELANIMATIONGROUP_NEW)
 {
-  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QParallelAnimationGroup * obj = new QParallelAnimationGroup( OPQOBJECT( 1, 0 ) );
+    QParallelAnimationGroup *obj = new QParallelAnimationGroup(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -61,11 +61,11 @@ HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_NEW )
   }
 }
 
-HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_DELETE )
+HB_FUNC_STATIC(QPARALLELANIMATIONGROUP_DELETE)
 {
-  QParallelAnimationGroup * obj = qobject_cast<QParallelAnimationGroup*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QParallelAnimationGroup *obj = qobject_cast<QParallelAnimationGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -82,17 +82,17 @@ HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_DELETE )
 /*
 virtual int duration() const
 */
-HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_DURATION )
+HB_FUNC_STATIC(QPARALLELANIMATIONGROUP_DURATION)
 {
-  QParallelAnimationGroup * obj = qobject_cast<QParallelAnimationGroup*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QParallelAnimationGroup *obj = qobject_cast<QParallelAnimationGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->duration() );
+      RINT(obj->duration());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

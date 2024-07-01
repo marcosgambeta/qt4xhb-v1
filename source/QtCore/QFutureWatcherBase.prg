@@ -71,11 +71,11 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-HB_FUNC_STATIC( QFUTUREWATCHERBASE_DELETE )
+HB_FUNC_STATIC(QFUTUREWATCHERBASE_DELETE)
 {
-  QFutureWatcherBase * obj = qobject_cast<QFutureWatcherBase*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFutureWatcherBase *obj = qobject_cast<QFutureWatcherBase *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -92,17 +92,17 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_DELETE )
 /*
 int progressValue() const
 */
-HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSVALUE )
+HB_FUNC_STATIC(QFUTUREWATCHERBASE_PROGRESSVALUE)
 {
-  QFutureWatcherBase * obj = qobject_cast<QFutureWatcherBase*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFutureWatcherBase *obj = qobject_cast<QFutureWatcherBase *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->progressValue() );
+      RINT(obj->progressValue());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -116,17 +116,17 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSVALUE )
 /*
 int progressMinimum() const
 */
-HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSMINIMUM )
+HB_FUNC_STATIC(QFUTUREWATCHERBASE_PROGRESSMINIMUM)
 {
-  QFutureWatcherBase * obj = qobject_cast<QFutureWatcherBase*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFutureWatcherBase *obj = qobject_cast<QFutureWatcherBase *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->progressMinimum() );
+      RINT(obj->progressMinimum());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -140,17 +140,17 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSMINIMUM )
 /*
 int progressMaximum() const
 */
-HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSMAXIMUM )
+HB_FUNC_STATIC(QFUTUREWATCHERBASE_PROGRESSMAXIMUM)
 {
-  QFutureWatcherBase * obj = qobject_cast<QFutureWatcherBase*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFutureWatcherBase *obj = qobject_cast<QFutureWatcherBase *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->progressMaximum() );
+      RINT(obj->progressMaximum());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,17 +164,17 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSMAXIMUM )
 /*
 QString progressText() const
 */
-HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSTEXT )
+HB_FUNC_STATIC(QFUTUREWATCHERBASE_PROGRESSTEXT)
 {
-  QFutureWatcherBase * obj = qobject_cast<QFutureWatcherBase*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFutureWatcherBase *obj = qobject_cast<QFutureWatcherBase *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->progressText() );
+      RQSTRING(obj->progressText());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,17 +188,17 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSTEXT )
 /*
 bool isStarted() const
 */
-HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISSTARTED )
+HB_FUNC_STATIC(QFUTUREWATCHERBASE_ISSTARTED)
 {
-  QFutureWatcherBase * obj = qobject_cast<QFutureWatcherBase*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFutureWatcherBase *obj = qobject_cast<QFutureWatcherBase *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isStarted() );
+      RBOOL(obj->isStarted());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,17 +212,17 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISSTARTED )
 /*
 bool isFinished() const
 */
-HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISFINISHED )
+HB_FUNC_STATIC(QFUTUREWATCHERBASE_ISFINISHED)
 {
-  QFutureWatcherBase * obj = qobject_cast<QFutureWatcherBase*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFutureWatcherBase *obj = qobject_cast<QFutureWatcherBase *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isFinished() );
+      RBOOL(obj->isFinished());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -236,17 +236,17 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISFINISHED )
 /*
 bool isRunning() const
 */
-HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISRUNNING )
+HB_FUNC_STATIC(QFUTUREWATCHERBASE_ISRUNNING)
 {
-  QFutureWatcherBase * obj = qobject_cast<QFutureWatcherBase*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFutureWatcherBase *obj = qobject_cast<QFutureWatcherBase *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isRunning() );
+      RBOOL(obj->isRunning());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -260,17 +260,17 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISRUNNING )
 /*
 bool isCanceled() const
 */
-HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISCANCELED )
+HB_FUNC_STATIC(QFUTUREWATCHERBASE_ISCANCELED)
 {
-  QFutureWatcherBase * obj = qobject_cast<QFutureWatcherBase*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFutureWatcherBase *obj = qobject_cast<QFutureWatcherBase *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isCanceled() );
+      RBOOL(obj->isCanceled());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -284,17 +284,17 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISCANCELED )
 /*
 bool isPaused() const
 */
-HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISPAUSED )
+HB_FUNC_STATIC(QFUTUREWATCHERBASE_ISPAUSED)
 {
-  QFutureWatcherBase * obj = qobject_cast<QFutureWatcherBase*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFutureWatcherBase *obj = qobject_cast<QFutureWatcherBase *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isPaused() );
+      RBOOL(obj->isPaused());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -308,14 +308,14 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISPAUSED )
 /*
 void waitForFinished()
 */
-HB_FUNC_STATIC( QFUTUREWATCHERBASE_WAITFORFINISHED )
+HB_FUNC_STATIC(QFUTUREWATCHERBASE_WAITFORFINISHED)
 {
-  QFutureWatcherBase * obj = qobject_cast<QFutureWatcherBase*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFutureWatcherBase *obj = qobject_cast<QFutureWatcherBase *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->waitForFinished();
@@ -334,17 +334,17 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_WAITFORFINISHED )
 /*
 void setPendingResultsLimit( int limit )
 */
-HB_FUNC_STATIC( QFUTUREWATCHERBASE_SETPENDINGRESULTSLIMIT )
+HB_FUNC_STATIC(QFUTUREWATCHERBASE_SETPENDINGRESULTSLIMIT)
 {
-  QFutureWatcherBase * obj = qobject_cast<QFutureWatcherBase*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFutureWatcherBase *obj = qobject_cast<QFutureWatcherBase *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setPendingResultsLimit( PINT(1) );
+      obj->setPendingResultsLimit(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -360,17 +360,17 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_SETPENDINGRESULTSLIMIT )
 /*
 bool event( QEvent * event )
 */
-HB_FUNC_STATIC( QFUTUREWATCHERBASE_EVENT )
+HB_FUNC_STATIC(QFUTUREWATCHERBASE_EVENT)
 {
-  QFutureWatcherBase * obj = qobject_cast<QFutureWatcherBase*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFutureWatcherBase *obj = qobject_cast<QFutureWatcherBase *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQEVENT(1) )
+    if (ISNUMPAR(1) && ISQEVENT(1))
     {
 #endif
-      RBOOL( obj->event( PQEVENT(1)) );
+      RBOOL(obj->event(PQEVENT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -384,14 +384,14 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_EVENT )
 /*
 void cancel()
 */
-HB_FUNC_STATIC( QFUTUREWATCHERBASE_CANCEL )
+HB_FUNC_STATIC(QFUTUREWATCHERBASE_CANCEL)
 {
-  QFutureWatcherBase * obj = qobject_cast<QFutureWatcherBase*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFutureWatcherBase *obj = qobject_cast<QFutureWatcherBase *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->cancel();
@@ -410,17 +410,17 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_CANCEL )
 /*
 void setPaused( bool paused )
 */
-HB_FUNC_STATIC( QFUTUREWATCHERBASE_SETPAUSED )
+HB_FUNC_STATIC(QFUTUREWATCHERBASE_SETPAUSED)
 {
-  QFutureWatcherBase * obj = qobject_cast<QFutureWatcherBase*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFutureWatcherBase *obj = qobject_cast<QFutureWatcherBase *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setPaused( PBOOL(1) );
+      obj->setPaused(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -436,14 +436,14 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_SETPAUSED )
 /*
 void pause()
 */
-HB_FUNC_STATIC( QFUTUREWATCHERBASE_PAUSE )
+HB_FUNC_STATIC(QFUTUREWATCHERBASE_PAUSE)
 {
-  QFutureWatcherBase * obj = qobject_cast<QFutureWatcherBase*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFutureWatcherBase *obj = qobject_cast<QFutureWatcherBase *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->pause();
@@ -462,14 +462,14 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_PAUSE )
 /*
 void resume()
 */
-HB_FUNC_STATIC( QFUTUREWATCHERBASE_RESUME )
+HB_FUNC_STATIC(QFUTUREWATCHERBASE_RESUME)
 {
-  QFutureWatcherBase * obj = qobject_cast<QFutureWatcherBase*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFutureWatcherBase *obj = qobject_cast<QFutureWatcherBase *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->resume();
@@ -488,14 +488,14 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_RESUME )
 /*
 void togglePaused()
 */
-HB_FUNC_STATIC( QFUTUREWATCHERBASE_TOGGLEPAUSED )
+HB_FUNC_STATIC(QFUTUREWATCHERBASE_TOGGLEPAUSED)
 {
-  QFutureWatcherBase * obj = qobject_cast<QFutureWatcherBase*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFutureWatcherBase *obj = qobject_cast<QFutureWatcherBase *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->togglePaused();
@@ -511,54 +511,54 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_TOGGLEPAUSED )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QFutureWatcherBaseSlots_connect_signal(const QString & signal, const QString & slot);
+void QFutureWatcherBaseSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QFUTUREWATCHERBASE_ONSTARTED )
+HB_FUNC_STATIC(QFUTUREWATCHERBASE_ONSTARTED)
 {
   QFutureWatcherBaseSlots_connect_signal("started()", "started()");
 }
 
-HB_FUNC_STATIC( QFUTUREWATCHERBASE_ONFINISHED )
+HB_FUNC_STATIC(QFUTUREWATCHERBASE_ONFINISHED)
 {
   QFutureWatcherBaseSlots_connect_signal("finished()", "finished()");
 }
 
-HB_FUNC_STATIC( QFUTUREWATCHERBASE_ONCANCELED )
+HB_FUNC_STATIC(QFUTUREWATCHERBASE_ONCANCELED)
 {
   QFutureWatcherBaseSlots_connect_signal("canceled()", "canceled()");
 }
 
-HB_FUNC_STATIC( QFUTUREWATCHERBASE_ONPAUSED )
+HB_FUNC_STATIC(QFUTUREWATCHERBASE_ONPAUSED)
 {
   QFutureWatcherBaseSlots_connect_signal("paused()", "paused()");
 }
 
-HB_FUNC_STATIC( QFUTUREWATCHERBASE_ONRESUMED )
+HB_FUNC_STATIC(QFUTUREWATCHERBASE_ONRESUMED)
 {
   QFutureWatcherBaseSlots_connect_signal("resumed()", "resumed()");
 }
 
-HB_FUNC_STATIC( QFUTUREWATCHERBASE_ONRESULTREADYAT )
+HB_FUNC_STATIC(QFUTUREWATCHERBASE_ONRESULTREADYAT)
 {
   QFutureWatcherBaseSlots_connect_signal("resultReadyAt(int)", "resultReadyAt(int)");
 }
 
-HB_FUNC_STATIC( QFUTUREWATCHERBASE_ONRESULTSREADYAT )
+HB_FUNC_STATIC(QFUTUREWATCHERBASE_ONRESULTSREADYAT)
 {
   QFutureWatcherBaseSlots_connect_signal("resultsReadyAt(int,int)", "resultsReadyAt(int,int)");
 }
 
-HB_FUNC_STATIC( QFUTUREWATCHERBASE_ONPROGRESSRANGECHANGED )
+HB_FUNC_STATIC(QFUTUREWATCHERBASE_ONPROGRESSRANGECHANGED)
 {
   QFutureWatcherBaseSlots_connect_signal("progressRangeChanged(int,int)", "progressRangeChanged(int,int)");
 }
 
-HB_FUNC_STATIC( QFUTUREWATCHERBASE_ONPROGRESSVALUECHANGED )
+HB_FUNC_STATIC(QFUTUREWATCHERBASE_ONPROGRESSVALUECHANGED)
 {
   QFutureWatcherBaseSlots_connect_signal("progressValueChanged(int)", "progressValueChanged(int)");
 }
 
-HB_FUNC_STATIC( QFUTUREWATCHERBASE_ONPROGRESSTEXTCHANGED )
+HB_FUNC_STATIC(QFUTUREWATCHERBASE_ONPROGRESSTEXTCHANGED)
 {
   QFutureWatcherBaseSlots_connect_signal("progressTextChanged(QString)", "progressTextChanged(QString)");
 }

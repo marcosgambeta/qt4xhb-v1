@@ -53,11 +53,11 @@ RETURN
 #include <QtCore/QStateMachine>
 #include <QtCore/QState>
 
-HB_FUNC_STATIC( QABSTRACTSTATE_DELETE )
+HB_FUNC_STATIC(QABSTRACTSTATE_DELETE)
 {
-  QAbstractState * obj = qobject_cast<QAbstractState*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractState *obj = qobject_cast<QAbstractState *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -74,17 +74,17 @@ HB_FUNC_STATIC( QABSTRACTSTATE_DELETE )
 /*
 QStateMachine * machine() const
 */
-HB_FUNC_STATIC( QABSTRACTSTATE_MACHINE )
+HB_FUNC_STATIC(QABSTRACTSTATE_MACHINE)
 {
-  QAbstractState * obj = qobject_cast<QAbstractState*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractState *obj = qobject_cast<QAbstractState *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QStateMachine * ptr = obj->machine();
+      QStateMachine *ptr = obj->machine();
       Qt4xHb::createReturnQObjectClass(ptr, "QSTATEMACHINE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -99,17 +99,17 @@ HB_FUNC_STATIC( QABSTRACTSTATE_MACHINE )
 /*
 QState * parentState() const
 */
-HB_FUNC_STATIC( QABSTRACTSTATE_PARENTSTATE )
+HB_FUNC_STATIC(QABSTRACTSTATE_PARENTSTATE)
 {
-  QAbstractState * obj = qobject_cast<QAbstractState*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractState *obj = qobject_cast<QAbstractState *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QState * ptr = obj->parentState();
+      QState *ptr = obj->parentState();
       Qt4xHb::createReturnQObjectClass(ptr, "QSTATE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -121,14 +121,14 @@ HB_FUNC_STATIC( QABSTRACTSTATE_PARENTSTATE )
   }
 }
 
-void QAbstractStateSlots_connect_signal(const QString & signal, const QString & slot);
+void QAbstractStateSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QABSTRACTSTATE_ONENTERED )
+HB_FUNC_STATIC(QABSTRACTSTATE_ONENTERED)
 {
   QAbstractStateSlots_connect_signal("entered()", "entered()");
 }
 
-HB_FUNC_STATIC( QABSTRACTSTATE_ONEXITED )
+HB_FUNC_STATIC(QABSTRACTSTATE_ONEXITED)
 {
   QAbstractStateSlots_connect_signal("exited()", "exited()");
 }

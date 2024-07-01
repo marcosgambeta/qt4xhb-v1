@@ -43,14 +43,14 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QTimerEvent( int timerId )
-*/
-HB_FUNC_STATIC( QTIMEREVENT_NEW )
+    /*
+    QTimerEvent( int timerId )
+    */
+HB_FUNC_STATIC(QTIMEREVENT_NEW)
 {
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    QTimerEvent * obj = new QTimerEvent( PINT(1) );
+    QTimerEvent *obj = new QTimerEvent(PINT(1));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -59,11 +59,11 @@ HB_FUNC_STATIC( QTIMEREVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QTIMEREVENT_DELETE )
+HB_FUNC_STATIC(QTIMEREVENT_DELETE)
 {
-  QTimerEvent * obj = static_cast<QTimerEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTimerEvent *obj = static_cast<QTimerEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -78,17 +78,17 @@ HB_FUNC_STATIC( QTIMEREVENT_DELETE )
 /*
 int timerId() const
 */
-HB_FUNC_STATIC( QTIMEREVENT_TIMERID )
+HB_FUNC_STATIC(QTIMEREVENT_TIMERID)
 {
-  QTimerEvent * obj = static_cast<QTimerEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTimerEvent *obj = static_cast<QTimerEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->timerId() );
+      RINT(obj->timerId());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

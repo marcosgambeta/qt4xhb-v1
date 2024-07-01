@@ -88,101 +88,101 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QChar()
-*/
-HB_FUNC_STATIC( QCHAR_NEW1 )
+    /*
+    QChar()
+    */
+HB_FUNC_STATIC(QCHAR_NEW1)
 {
-  QChar * obj = new QChar();
+  QChar *obj = new QChar();
   Qt4xHb::returnNewObject(obj, true);
 }
 
 /*
 QChar( char ch )
 */
-HB_FUNC_STATIC( QCHAR_NEW2 )
+HB_FUNC_STATIC(QCHAR_NEW2)
 {
-  QChar * obj = new QChar( PCHAR(1) );
+  QChar *obj = new QChar(PCHAR(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 
 /*
 QChar( uchar ch )
 */
-HB_FUNC_STATIC( QCHAR_NEW3 )
+HB_FUNC_STATIC(QCHAR_NEW3)
 {
-  QChar * obj = new QChar( PUCHAR(1) );
+  QChar *obj = new QChar(PUCHAR(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 
 /*
 QChar( QLatin1Char ch )
 */
-HB_FUNC_STATIC( QCHAR_NEW4 )
+HB_FUNC_STATIC(QCHAR_NEW4)
 {
-  QChar * obj = new QChar( *PQLATIN1CHAR(1) );
+  QChar *obj = new QChar(*PQLATIN1CHAR(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 
 /*
 QChar( uchar cell, uchar row )
 */
-HB_FUNC_STATIC( QCHAR_NEW5 )
+HB_FUNC_STATIC(QCHAR_NEW5)
 {
-  QChar * obj = new QChar( PUCHAR(1), PUCHAR(2) );
+  QChar *obj = new QChar(PUCHAR(1), PUCHAR(2));
   Qt4xHb::returnNewObject(obj, true);
 }
 
 /*
 QChar( ushort code )
 */
-HB_FUNC_STATIC( QCHAR_NEW6 )
+HB_FUNC_STATIC(QCHAR_NEW6)
 {
-  QChar * obj = new QChar( PUSHORT(1) );
+  QChar *obj = new QChar(PUSHORT(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 
 /*
 QChar( short code )
 */
-HB_FUNC_STATIC( QCHAR_NEW7 )
+HB_FUNC_STATIC(QCHAR_NEW7)
 {
-  QChar * obj = new QChar( PSHORT(1) );
+  QChar *obj = new QChar(PSHORT(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 
 /*
 QChar( uint code )
 */
-HB_FUNC_STATIC( QCHAR_NEW8 )
+HB_FUNC_STATIC(QCHAR_NEW8)
 {
-  QChar * obj = new QChar( PUINT(1) );
+  QChar *obj = new QChar(PUINT(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 
 /*
 QChar( int code )
 */
-HB_FUNC_STATIC( QCHAR_NEW9 )
+HB_FUNC_STATIC(QCHAR_NEW9)
 {
-  QChar * obj = new QChar( PINT(1) );
+  QChar *obj = new QChar(PINT(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 
 /*
 QChar( QChar::SpecialCharacter ch )
 */
-HB_FUNC_STATIC( QCHAR_NEW10 )
+HB_FUNC_STATIC(QCHAR_NEW10)
 {
-  QChar * obj = new QChar( ( QChar::SpecialCharacter ) hb_parni(1) );
+  QChar *obj = new QChar((QChar::SpecialCharacter)hb_parni(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 
-HB_FUNC_STATIC( QCHAR_NEW )
+HB_FUNC_STATIC(QCHAR_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
-    HB_FUNC_EXEC( QCHAR_NEW1 );
+    HB_FUNC_EXEC(QCHAR_NEW1);
   }
   else
   {
@@ -190,11 +190,11 @@ HB_FUNC_STATIC( QCHAR_NEW )
   }
 }
 
-HB_FUNC_STATIC( QCHAR_DELETE )
+HB_FUNC_STATIC(QCHAR_DELETE)
 {
-  QChar * obj = static_cast<QChar*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -209,17 +209,17 @@ HB_FUNC_STATIC( QCHAR_DELETE )
 /*
 QChar::Category category() const
 */
-HB_FUNC_STATIC( QCHAR_CATEGORY )
+HB_FUNC_STATIC(QCHAR_CATEGORY)
 {
-  QChar * obj = static_cast<QChar*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->category() );
+      RENUM(obj->category());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -233,17 +233,17 @@ HB_FUNC_STATIC( QCHAR_CATEGORY )
 /*
 QChar::Decomposition decompositionTag() const
 */
-HB_FUNC_STATIC( QCHAR_DECOMPOSITIONTAG )
+HB_FUNC_STATIC(QCHAR_DECOMPOSITIONTAG)
 {
-  QChar * obj = static_cast<QChar*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->decompositionTag() );
+      RENUM(obj->decompositionTag());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -257,17 +257,17 @@ HB_FUNC_STATIC( QCHAR_DECOMPOSITIONTAG )
 /*
 int digitValue() const
 */
-HB_FUNC_STATIC( QCHAR_DIGITVALUE )
+HB_FUNC_STATIC(QCHAR_DIGITVALUE)
 {
-  QChar * obj = static_cast<QChar*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->digitValue() );
+      RINT(obj->digitValue());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -281,17 +281,17 @@ HB_FUNC_STATIC( QCHAR_DIGITVALUE )
 /*
 QChar::Direction direction() const
 */
-HB_FUNC_STATIC( QCHAR_DIRECTION )
+HB_FUNC_STATIC(QCHAR_DIRECTION)
 {
-  QChar * obj = static_cast<QChar*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->direction() );
+      RENUM(obj->direction());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -305,17 +305,17 @@ HB_FUNC_STATIC( QCHAR_DIRECTION )
 /*
 bool hasMirrored() const
 */
-HB_FUNC_STATIC( QCHAR_HASMIRRORED )
+HB_FUNC_STATIC(QCHAR_HASMIRRORED)
 {
-  QChar * obj = static_cast<QChar*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->hasMirrored() );
+      RBOOL(obj->hasMirrored());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -329,17 +329,17 @@ HB_FUNC_STATIC( QCHAR_HASMIRRORED )
 /*
 bool isDigit() const
 */
-HB_FUNC_STATIC( QCHAR_ISDIGIT )
+HB_FUNC_STATIC(QCHAR_ISDIGIT)
 {
-  QChar * obj = static_cast<QChar*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isDigit() );
+      RBOOL(obj->isDigit());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -353,17 +353,17 @@ HB_FUNC_STATIC( QCHAR_ISDIGIT )
 /*
 bool isHighSurrogate() const
 */
-HB_FUNC_STATIC( QCHAR_ISHIGHSURROGATE )
+HB_FUNC_STATIC(QCHAR_ISHIGHSURROGATE)
 {
-  QChar * obj = static_cast<QChar*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isHighSurrogate() );
+      RBOOL(obj->isHighSurrogate());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -377,17 +377,17 @@ HB_FUNC_STATIC( QCHAR_ISHIGHSURROGATE )
 /*
 bool isLetter() const
 */
-HB_FUNC_STATIC( QCHAR_ISLETTER )
+HB_FUNC_STATIC(QCHAR_ISLETTER)
 {
-  QChar * obj = static_cast<QChar*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isLetter() );
+      RBOOL(obj->isLetter());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -401,17 +401,17 @@ HB_FUNC_STATIC( QCHAR_ISLETTER )
 /*
 bool isLetterOrNumber() const
 */
-HB_FUNC_STATIC( QCHAR_ISLETTERORNUMBER )
+HB_FUNC_STATIC(QCHAR_ISLETTERORNUMBER)
 {
-  QChar * obj = static_cast<QChar*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isLetterOrNumber() );
+      RBOOL(obj->isLetterOrNumber());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -425,17 +425,17 @@ HB_FUNC_STATIC( QCHAR_ISLETTERORNUMBER )
 /*
 bool isLowSurrogate() const
 */
-HB_FUNC_STATIC( QCHAR_ISLOWSURROGATE )
+HB_FUNC_STATIC(QCHAR_ISLOWSURROGATE)
 {
-  QChar * obj = static_cast<QChar*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isLowSurrogate() );
+      RBOOL(obj->isLowSurrogate());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -449,17 +449,17 @@ HB_FUNC_STATIC( QCHAR_ISLOWSURROGATE )
 /*
 bool isLower() const
 */
-HB_FUNC_STATIC( QCHAR_ISLOWER )
+HB_FUNC_STATIC(QCHAR_ISLOWER)
 {
-  QChar * obj = static_cast<QChar*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isLower() );
+      RBOOL(obj->isLower());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -473,17 +473,17 @@ HB_FUNC_STATIC( QCHAR_ISLOWER )
 /*
 bool isMark() const
 */
-HB_FUNC_STATIC( QCHAR_ISMARK )
+HB_FUNC_STATIC(QCHAR_ISMARK)
 {
-  QChar * obj = static_cast<QChar*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isMark() );
+      RBOOL(obj->isMark());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -497,17 +497,17 @@ HB_FUNC_STATIC( QCHAR_ISMARK )
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QCHAR_ISNULL )
+HB_FUNC_STATIC(QCHAR_ISNULL)
 {
-  QChar * obj = static_cast<QChar*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isNull() );
+      RBOOL(obj->isNull());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -521,17 +521,17 @@ HB_FUNC_STATIC( QCHAR_ISNULL )
 /*
 bool isNumber() const
 */
-HB_FUNC_STATIC( QCHAR_ISNUMBER )
+HB_FUNC_STATIC(QCHAR_ISNUMBER)
 {
-  QChar * obj = static_cast<QChar*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isNumber() );
+      RBOOL(obj->isNumber());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -545,17 +545,17 @@ HB_FUNC_STATIC( QCHAR_ISNUMBER )
 /*
 bool isPrint() const
 */
-HB_FUNC_STATIC( QCHAR_ISPRINT )
+HB_FUNC_STATIC(QCHAR_ISPRINT)
 {
-  QChar * obj = static_cast<QChar*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isPrint() );
+      RBOOL(obj->isPrint());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -569,17 +569,17 @@ HB_FUNC_STATIC( QCHAR_ISPRINT )
 /*
 bool isPunct() const
 */
-HB_FUNC_STATIC( QCHAR_ISPUNCT )
+HB_FUNC_STATIC(QCHAR_ISPUNCT)
 {
-  QChar * obj = static_cast<QChar*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isPunct() );
+      RBOOL(obj->isPunct());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -593,17 +593,17 @@ HB_FUNC_STATIC( QCHAR_ISPUNCT )
 /*
 bool isSpace() const
 */
-HB_FUNC_STATIC( QCHAR_ISSPACE )
+HB_FUNC_STATIC(QCHAR_ISSPACE)
 {
-  QChar * obj = static_cast<QChar*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isSpace() );
+      RBOOL(obj->isSpace());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -617,17 +617,17 @@ HB_FUNC_STATIC( QCHAR_ISSPACE )
 /*
 bool isSymbol() const
 */
-HB_FUNC_STATIC( QCHAR_ISSYMBOL )
+HB_FUNC_STATIC(QCHAR_ISSYMBOL)
 {
-  QChar * obj = static_cast<QChar*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isSymbol() );
+      RBOOL(obj->isSymbol());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -641,17 +641,17 @@ HB_FUNC_STATIC( QCHAR_ISSYMBOL )
 /*
 bool isTitleCase() const
 */
-HB_FUNC_STATIC( QCHAR_ISTITLECASE )
+HB_FUNC_STATIC(QCHAR_ISTITLECASE)
 {
-  QChar * obj = static_cast<QChar*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isTitleCase() );
+      RBOOL(obj->isTitleCase());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -665,17 +665,17 @@ HB_FUNC_STATIC( QCHAR_ISTITLECASE )
 /*
 bool isUpper() const
 */
-HB_FUNC_STATIC( QCHAR_ISUPPER )
+HB_FUNC_STATIC(QCHAR_ISUPPER)
 {
-  QChar * obj = static_cast<QChar*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isUpper() );
+      RBOOL(obj->isUpper());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -689,17 +689,17 @@ HB_FUNC_STATIC( QCHAR_ISUPPER )
 /*
 QChar::Joining joining() const
 */
-HB_FUNC_STATIC( QCHAR_JOINING )
+HB_FUNC_STATIC(QCHAR_JOINING)
 {
-  QChar * obj = static_cast<QChar*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->joining() );
+      RENUM(obj->joining());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -713,17 +713,17 @@ HB_FUNC_STATIC( QCHAR_JOINING )
 /*
 QChar mirroredChar() const
 */
-HB_FUNC_STATIC( QCHAR_MIRROREDCHAR )
+HB_FUNC_STATIC(QCHAR_MIRROREDCHAR)
 {
-  QChar * obj = static_cast<QChar*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QChar * ptr = new QChar( obj->mirroredChar() );
+      QChar *ptr = new QChar(obj->mirroredChar());
       Qt4xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -738,17 +738,17 @@ HB_FUNC_STATIC( QCHAR_MIRROREDCHAR )
 /*
 QChar toCaseFolded() const
 */
-HB_FUNC_STATIC( QCHAR_TOCASEFOLDED )
+HB_FUNC_STATIC(QCHAR_TOCASEFOLDED)
 {
-  QChar * obj = static_cast<QChar*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QChar * ptr = new QChar( obj->toCaseFolded() );
+      QChar *ptr = new QChar(obj->toCaseFolded());
       Qt4xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -763,17 +763,17 @@ HB_FUNC_STATIC( QCHAR_TOCASEFOLDED )
 /*
 QChar toLower() const
 */
-HB_FUNC_STATIC( QCHAR_TOLOWER )
+HB_FUNC_STATIC(QCHAR_TOLOWER)
 {
-  QChar * obj = static_cast<QChar*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QChar * ptr = new QChar( obj->toLower() );
+      QChar *ptr = new QChar(obj->toLower());
       Qt4xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -788,17 +788,17 @@ HB_FUNC_STATIC( QCHAR_TOLOWER )
 /*
 QChar toTitleCase() const
 */
-HB_FUNC_STATIC( QCHAR_TOTITLECASE )
+HB_FUNC_STATIC(QCHAR_TOTITLECASE)
 {
-  QChar * obj = static_cast<QChar*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QChar * ptr = new QChar( obj->toTitleCase() );
+      QChar *ptr = new QChar(obj->toTitleCase());
       Qt4xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -813,17 +813,17 @@ HB_FUNC_STATIC( QCHAR_TOTITLECASE )
 /*
 QChar toUpper() const
 */
-HB_FUNC_STATIC( QCHAR_TOUPPER )
+HB_FUNC_STATIC(QCHAR_TOUPPER)
 {
-  QChar * obj = static_cast<QChar*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QChar * ptr = new QChar( obj->toUpper() );
+      QChar *ptr = new QChar(obj->toUpper());
       Qt4xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -838,17 +838,17 @@ HB_FUNC_STATIC( QCHAR_TOUPPER )
 /*
 QChar::UnicodeVersion unicodeVersion() const
 */
-HB_FUNC_STATIC( QCHAR_UNICODEVERSION )
+HB_FUNC_STATIC(QCHAR_UNICODEVERSION)
 {
-  QChar * obj = static_cast<QChar*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->unicodeVersion() );
+      RENUM(obj->unicodeVersion());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -859,11 +859,11 @@ HB_FUNC_STATIC( QCHAR_UNICODEVERSION )
   }
 }
 
-HB_FUNC_STATIC( QCHAR_NEWFROM )
+HB_FUNC_STATIC(QCHAR_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -872,7 +872,7 @@ HB_FUNC_STATIC( QCHAR_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -889,26 +889,26 @@ HB_FUNC_STATIC( QCHAR_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QCHAR_NEWFROMOBJECT )
+HB_FUNC_STATIC(QCHAR_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QCHAR_NEWFROM );
+  HB_FUNC_EXEC(QCHAR_NEWFROM);
 }
 
-HB_FUNC_STATIC( QCHAR_NEWFROMPOINTER )
+HB_FUNC_STATIC(QCHAR_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QCHAR_NEWFROM );
+  HB_FUNC_EXEC(QCHAR_NEWFROM);
 }
 
-HB_FUNC_STATIC( QCHAR_SELFDESTRUCTION )
+HB_FUNC_STATIC(QCHAR_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QCHAR_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QCHAR_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

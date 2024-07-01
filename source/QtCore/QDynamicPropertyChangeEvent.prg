@@ -44,14 +44,14 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QDynamicPropertyChangeEvent( const QByteArray & name )
-*/
-HB_FUNC_STATIC( QDYNAMICPROPERTYCHANGEEVENT_NEW )
+    /*
+    QDynamicPropertyChangeEvent( const QByteArray & name )
+    */
+HB_FUNC_STATIC(QDYNAMICPROPERTYCHANGEEVENT_NEW)
 {
-  if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+  if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
-    QDynamicPropertyChangeEvent * obj = new QDynamicPropertyChangeEvent( *PQBYTEARRAY(1) );
+    QDynamicPropertyChangeEvent *obj = new QDynamicPropertyChangeEvent(*PQBYTEARRAY(1));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -60,11 +60,11 @@ HB_FUNC_STATIC( QDYNAMICPROPERTYCHANGEEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDYNAMICPROPERTYCHANGEEVENT_DELETE )
+HB_FUNC_STATIC(QDYNAMICPROPERTYCHANGEEVENT_DELETE)
 {
-  QDynamicPropertyChangeEvent * obj = static_cast<QDynamicPropertyChangeEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDynamicPropertyChangeEvent *obj = static_cast<QDynamicPropertyChangeEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -79,17 +79,17 @@ HB_FUNC_STATIC( QDYNAMICPROPERTYCHANGEEVENT_DELETE )
 /*
 QByteArray propertyName() const
 */
-HB_FUNC_STATIC( QDYNAMICPROPERTYCHANGEEVENT_PROPERTYNAME )
+HB_FUNC_STATIC(QDYNAMICPROPERTYCHANGEEVENT_PROPERTYNAME)
 {
-  QDynamicPropertyChangeEvent * obj = static_cast<QDynamicPropertyChangeEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDynamicPropertyChangeEvent *obj = static_cast<QDynamicPropertyChangeEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->propertyName() );
+      QByteArray *ptr = new QByteArray(obj->propertyName());
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

@@ -59,11 +59,11 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_DELETE )
+HB_FUNC_STATIC(QABSTRACTFILEENGINEITERATOR_DELETE)
 {
-  QAbstractFileEngineIterator * obj = static_cast<QAbstractFileEngineIterator*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QAbstractFileEngineIterator *obj = static_cast<QAbstractFileEngineIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -78,17 +78,17 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_DELETE )
 /*
 virtual QFileInfo currentFileInfo() const
 */
-HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_CURRENTFILEINFO )
+HB_FUNC_STATIC(QABSTRACTFILEENGINEITERATOR_CURRENTFILEINFO)
 {
-  QAbstractFileEngineIterator * obj = static_cast<QAbstractFileEngineIterator*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QAbstractFileEngineIterator *obj = static_cast<QAbstractFileEngineIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QFileInfo * ptr = new QFileInfo( obj->currentFileInfo() );
+      QFileInfo *ptr = new QFileInfo(obj->currentFileInfo());
       Qt4xHb::createReturnClass(ptr, "QFILEINFO", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -103,17 +103,17 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_CURRENTFILEINFO )
 /*
 virtual QString currentFileName() const = 0
 */
-HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_CURRENTFILENAME )
+HB_FUNC_STATIC(QABSTRACTFILEENGINEITERATOR_CURRENTFILENAME)
 {
-  QAbstractFileEngineIterator * obj = static_cast<QAbstractFileEngineIterator*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QAbstractFileEngineIterator *obj = static_cast<QAbstractFileEngineIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->currentFileName() );
+      RQSTRING(obj->currentFileName());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -127,17 +127,17 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_CURRENTFILENAME )
 /*
 QString currentFilePath() const
 */
-HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_CURRENTFILEPATH )
+HB_FUNC_STATIC(QABSTRACTFILEENGINEITERATOR_CURRENTFILEPATH)
 {
-  QAbstractFileEngineIterator * obj = static_cast<QAbstractFileEngineIterator*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QAbstractFileEngineIterator *obj = static_cast<QAbstractFileEngineIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->currentFilePath() );
+      RQSTRING(obj->currentFilePath());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,17 +151,17 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_CURRENTFILEPATH )
 /*
 QDir::Filters filters() const
 */
-HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_FILTERS )
+HB_FUNC_STATIC(QABSTRACTFILEENGINEITERATOR_FILTERS)
 {
-  QAbstractFileEngineIterator * obj = static_cast<QAbstractFileEngineIterator*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QAbstractFileEngineIterator *obj = static_cast<QAbstractFileEngineIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->filters() );
+      RENUM(obj->filters());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,17 +175,17 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_FILTERS )
 /*
 virtual bool hasNext() const = 0
 */
-HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_HASNEXT )
+HB_FUNC_STATIC(QABSTRACTFILEENGINEITERATOR_HASNEXT)
 {
-  QAbstractFileEngineIterator * obj = static_cast<QAbstractFileEngineIterator*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QAbstractFileEngineIterator *obj = static_cast<QAbstractFileEngineIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->hasNext() );
+      RBOOL(obj->hasNext());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,17 +199,17 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_HASNEXT )
 /*
 QStringList nameFilters() const
 */
-HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_NAMEFILTERS )
+HB_FUNC_STATIC(QABSTRACTFILEENGINEITERATOR_NAMEFILTERS)
 {
-  QAbstractFileEngineIterator * obj = static_cast<QAbstractFileEngineIterator*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QAbstractFileEngineIterator *obj = static_cast<QAbstractFileEngineIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->nameFilters() );
+      RQSTRINGLIST(obj->nameFilters());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -223,17 +223,17 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_NAMEFILTERS )
 /*
 virtual QString next() = 0
 */
-HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_NEXT )
+HB_FUNC_STATIC(QABSTRACTFILEENGINEITERATOR_NEXT)
 {
-  QAbstractFileEngineIterator * obj = static_cast<QAbstractFileEngineIterator*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QAbstractFileEngineIterator *obj = static_cast<QAbstractFileEngineIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->next() );
+      RQSTRING(obj->next());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -247,17 +247,17 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_NEXT )
 /*
 QString path() const
 */
-HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_PATH )
+HB_FUNC_STATIC(QABSTRACTFILEENGINEITERATOR_PATH)
 {
-  QAbstractFileEngineIterator * obj = static_cast<QAbstractFileEngineIterator*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QAbstractFileEngineIterator *obj = static_cast<QAbstractFileEngineIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->path() );
+      RQSTRING(obj->path());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -268,11 +268,11 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_PATH )
   }
 }
 
-HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_NEWFROM )
+HB_FUNC_STATIC(QABSTRACTFILEENGINEITERATOR_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -298,26 +298,26 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_NEWFROMOBJECT )
+HB_FUNC_STATIC(QABSTRACTFILEENGINEITERATOR_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QABSTRACTFILEENGINEITERATOR_NEWFROM );
+  HB_FUNC_EXEC(QABSTRACTFILEENGINEITERATOR_NEWFROM);
 }
 
-HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_NEWFROMPOINTER )
+HB_FUNC_STATIC(QABSTRACTFILEENGINEITERATOR_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QABSTRACTFILEENGINEITERATOR_NEWFROM );
+  HB_FUNC_EXEC(QABSTRACTFILEENGINEITERATOR_NEWFROM);
 }
 
-HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_SELFDESTRUCTION )
+HB_FUNC_STATIC(QABSTRACTFILEENGINEITERATOR_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QABSTRACTFILEENGINEITERATOR_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QABSTRACTFILEENGINEITERATOR_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

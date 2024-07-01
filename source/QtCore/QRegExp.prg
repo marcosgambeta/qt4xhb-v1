@@ -73,30 +73,33 @@ RETURN
 
 #include <QtCore/QStringList>
 
-HB_FUNC_STATIC( QREGEXP_NEW )
+HB_FUNC_STATIC(QREGEXP_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QRegExp()
     */
-    QRegExp * obj = new QRegExp();
+    QRegExp *obj = new QRegExp();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)) )
+  else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QRegExp( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, QRegExp::PatternSyntax syntax = QRegExp::RegExp )
+    QRegExp( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, QRegExp::PatternSyntax syntax =
+    QRegExp::RegExp )
     */
-    QRegExp * obj = new QRegExp( PQSTRING(1), HB_ISNIL(2) ? ( Qt::CaseSensitivity ) Qt::CaseSensitive : ( Qt::CaseSensitivity ) hb_parni(2), HB_ISNIL(3) ? ( QRegExp::PatternSyntax ) QRegExp::RegExp : ( QRegExp::PatternSyntax ) hb_parni(3) );
+    QRegExp *obj = new QRegExp(
+        PQSTRING(1), HB_ISNIL(2) ? (Qt::CaseSensitivity)Qt::CaseSensitive : (Qt::CaseSensitivity)hb_parni(2),
+        HB_ISNIL(3) ? (QRegExp::PatternSyntax)QRegExp::RegExp : (QRegExp::PatternSyntax)hb_parni(3));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQREGEXP(1) )
+  else if (ISNUMPAR(1) && ISQREGEXP(1))
   {
     /*
     QRegExp( const QRegExp & rx )
     */
-    QRegExp * obj = new QRegExp( *PQREGEXP(1) );
+    QRegExp *obj = new QRegExp(*PQREGEXP(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -105,11 +108,11 @@ HB_FUNC_STATIC( QREGEXP_NEW )
   }
 }
 
-HB_FUNC_STATIC( QREGEXP_DELETE )
+HB_FUNC_STATIC(QREGEXP_DELETE)
 {
-  QRegExp * obj = static_cast<QRegExp*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QRegExp *obj = static_cast<QRegExp *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -124,17 +127,17 @@ HB_FUNC_STATIC( QREGEXP_DELETE )
 /*
 QString cap( int nth = 0 ) const
 */
-HB_FUNC_STATIC( QREGEXP_CAP )
+HB_FUNC_STATIC(QREGEXP_CAP)
 {
-  QRegExp * obj = static_cast<QRegExp*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QRegExp *obj = static_cast<QRegExp *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      RQSTRING( obj->cap( OPINT( 1, 0 )) );
+      RQSTRING(obj->cap(OPINT(1, 0)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -148,17 +151,17 @@ HB_FUNC_STATIC( QREGEXP_CAP )
 /*
 int captureCount() const
 */
-HB_FUNC_STATIC( QREGEXP_CAPTURECOUNT )
+HB_FUNC_STATIC(QREGEXP_CAPTURECOUNT)
 {
-  QRegExp * obj = static_cast<QRegExp*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QRegExp *obj = static_cast<QRegExp *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->captureCount() );
+      RINT(obj->captureCount());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -172,17 +175,17 @@ HB_FUNC_STATIC( QREGEXP_CAPTURECOUNT )
 /*
 QStringList capturedTexts() const
 */
-HB_FUNC_STATIC( QREGEXP_CAPTUREDTEXTS )
+HB_FUNC_STATIC(QREGEXP_CAPTUREDTEXTS)
 {
-  QRegExp * obj = static_cast<QRegExp*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QRegExp *obj = static_cast<QRegExp *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->capturedTexts() );
+      RQSTRINGLIST(obj->capturedTexts());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,17 +199,17 @@ HB_FUNC_STATIC( QREGEXP_CAPTUREDTEXTS )
 /*
 Qt::CaseSensitivity caseSensitivity() const
 */
-HB_FUNC_STATIC( QREGEXP_CASESENSITIVITY )
+HB_FUNC_STATIC(QREGEXP_CASESENSITIVITY)
 {
-  QRegExp * obj = static_cast<QRegExp*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QRegExp *obj = static_cast<QRegExp *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->caseSensitivity() );
+      RENUM(obj->caseSensitivity());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,17 +223,17 @@ HB_FUNC_STATIC( QREGEXP_CASESENSITIVITY )
 /*
 QString errorString() const
 */
-HB_FUNC_STATIC( QREGEXP_ERRORSTRING )
+HB_FUNC_STATIC(QREGEXP_ERRORSTRING)
 {
-  QRegExp * obj = static_cast<QRegExp*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QRegExp *obj = static_cast<QRegExp *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->errorString() );
+      RQSTRING(obj->errorString());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,17 +247,17 @@ HB_FUNC_STATIC( QREGEXP_ERRORSTRING )
 /*
 bool exactMatch( const QString & str ) const
 */
-HB_FUNC_STATIC( QREGEXP_EXACTMATCH )
+HB_FUNC_STATIC(QREGEXP_EXACTMATCH)
 {
-  QRegExp * obj = static_cast<QRegExp*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QRegExp *obj = static_cast<QRegExp *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RBOOL( obj->exactMatch( PQSTRING(1)) );
+      RBOOL(obj->exactMatch(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -268,17 +271,18 @@ HB_FUNC_STATIC( QREGEXP_EXACTMATCH )
 /*
 int indexIn( const QString & str, int offset = 0, QRegExp::CaretMode caretMode = QRegExp::CaretAtZero ) const
 */
-HB_FUNC_STATIC( QREGEXP_INDEXIN )
+HB_FUNC_STATIC(QREGEXP_INDEXIN)
 {
-  QRegExp * obj = static_cast<QRegExp*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QRegExp *obj = static_cast<QRegExp *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)) )
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      RINT( obj->indexIn( PQSTRING(1), OPINT( 2, 0 ), HB_ISNIL(3) ? ( QRegExp::CaretMode ) QRegExp::CaretAtZero : ( QRegExp::CaretMode ) hb_parni(3)) );
+      RINT(obj->indexIn(PQSTRING(1), OPINT(2, 0),
+                        HB_ISNIL(3) ? (QRegExp::CaretMode)QRegExp::CaretAtZero : (QRegExp::CaretMode)hb_parni(3)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -292,17 +296,17 @@ HB_FUNC_STATIC( QREGEXP_INDEXIN )
 /*
 bool isEmpty() const
 */
-HB_FUNC_STATIC( QREGEXP_ISEMPTY )
+HB_FUNC_STATIC(QREGEXP_ISEMPTY)
 {
-  QRegExp * obj = static_cast<QRegExp*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QRegExp *obj = static_cast<QRegExp *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isEmpty() );
+      RBOOL(obj->isEmpty());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -316,17 +320,17 @@ HB_FUNC_STATIC( QREGEXP_ISEMPTY )
 /*
 bool isMinimal() const
 */
-HB_FUNC_STATIC( QREGEXP_ISMINIMAL )
+HB_FUNC_STATIC(QREGEXP_ISMINIMAL)
 {
-  QRegExp * obj = static_cast<QRegExp*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QRegExp *obj = static_cast<QRegExp *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isMinimal() );
+      RBOOL(obj->isMinimal());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -340,17 +344,17 @@ HB_FUNC_STATIC( QREGEXP_ISMINIMAL )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QREGEXP_ISVALID )
+HB_FUNC_STATIC(QREGEXP_ISVALID)
 {
-  QRegExp * obj = static_cast<QRegExp*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QRegExp *obj = static_cast<QRegExp *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -364,17 +368,18 @@ HB_FUNC_STATIC( QREGEXP_ISVALID )
 /*
 int lastIndexIn( const QString & str, int offset = -1, QRegExp::CaretMode caretMode = QRegExp::CaretAtZero ) const
 */
-HB_FUNC_STATIC( QREGEXP_LASTINDEXIN )
+HB_FUNC_STATIC(QREGEXP_LASTINDEXIN)
 {
-  QRegExp * obj = static_cast<QRegExp*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QRegExp *obj = static_cast<QRegExp *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)) )
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      RINT( obj->lastIndexIn( PQSTRING(1), OPINT( 2, -1 ), HB_ISNIL(3) ? ( QRegExp::CaretMode ) QRegExp::CaretAtZero : ( QRegExp::CaretMode ) hb_parni(3)) );
+      RINT(obj->lastIndexIn(PQSTRING(1), OPINT(2, -1),
+                            HB_ISNIL(3) ? (QRegExp::CaretMode)QRegExp::CaretAtZero : (QRegExp::CaretMode)hb_parni(3)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -388,17 +393,17 @@ HB_FUNC_STATIC( QREGEXP_LASTINDEXIN )
 /*
 int matchedLength() const
 */
-HB_FUNC_STATIC( QREGEXP_MATCHEDLENGTH )
+HB_FUNC_STATIC(QREGEXP_MATCHEDLENGTH)
 {
-  QRegExp * obj = static_cast<QRegExp*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QRegExp *obj = static_cast<QRegExp *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->matchedLength() );
+      RINT(obj->matchedLength());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -412,17 +417,17 @@ HB_FUNC_STATIC( QREGEXP_MATCHEDLENGTH )
 /*
 QString pattern() const
 */
-HB_FUNC_STATIC( QREGEXP_PATTERN )
+HB_FUNC_STATIC(QREGEXP_PATTERN)
 {
-  QRegExp * obj = static_cast<QRegExp*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QRegExp *obj = static_cast<QRegExp *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->pattern() );
+      RQSTRING(obj->pattern());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -436,17 +441,17 @@ HB_FUNC_STATIC( QREGEXP_PATTERN )
 /*
 QRegExp::PatternSyntax patternSyntax() const
 */
-HB_FUNC_STATIC( QREGEXP_PATTERNSYNTAX )
+HB_FUNC_STATIC(QREGEXP_PATTERNSYNTAX)
 {
-  QRegExp * obj = static_cast<QRegExp*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QRegExp *obj = static_cast<QRegExp *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->patternSyntax() );
+      RENUM(obj->patternSyntax());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -460,17 +465,17 @@ HB_FUNC_STATIC( QREGEXP_PATTERNSYNTAX )
 /*
 int pos( int nth = 0 ) const
 */
-HB_FUNC_STATIC( QREGEXP_POS )
+HB_FUNC_STATIC(QREGEXP_POS)
 {
-  QRegExp * obj = static_cast<QRegExp*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QRegExp *obj = static_cast<QRegExp *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      RINT( obj->pos( OPINT( 1, 0 )) );
+      RINT(obj->pos(OPINT(1, 0)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -484,17 +489,17 @@ HB_FUNC_STATIC( QREGEXP_POS )
 /*
 void setCaseSensitivity( Qt::CaseSensitivity cs )
 */
-HB_FUNC_STATIC( QREGEXP_SETCASESENSITIVITY )
+HB_FUNC_STATIC(QREGEXP_SETCASESENSITIVITY)
 {
-  QRegExp * obj = static_cast<QRegExp*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QRegExp *obj = static_cast<QRegExp *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCaseSensitivity( ( Qt::CaseSensitivity ) hb_parni(1) );
+      obj->setCaseSensitivity((Qt::CaseSensitivity)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -510,17 +515,17 @@ HB_FUNC_STATIC( QREGEXP_SETCASESENSITIVITY )
 /*
 void setMinimal( bool minimal )
 */
-HB_FUNC_STATIC( QREGEXP_SETMINIMAL )
+HB_FUNC_STATIC(QREGEXP_SETMINIMAL)
 {
-  QRegExp * obj = static_cast<QRegExp*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QRegExp *obj = static_cast<QRegExp *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setMinimal( PBOOL(1) );
+      obj->setMinimal(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -536,17 +541,17 @@ HB_FUNC_STATIC( QREGEXP_SETMINIMAL )
 /*
 void setPattern( const QString & pattern )
 */
-HB_FUNC_STATIC( QREGEXP_SETPATTERN )
+HB_FUNC_STATIC(QREGEXP_SETPATTERN)
 {
-  QRegExp * obj = static_cast<QRegExp*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QRegExp *obj = static_cast<QRegExp *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setPattern( PQSTRING(1) );
+      obj->setPattern(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -562,17 +567,17 @@ HB_FUNC_STATIC( QREGEXP_SETPATTERN )
 /*
 void setPatternSyntax( QRegExp::PatternSyntax syntax )
 */
-HB_FUNC_STATIC( QREGEXP_SETPATTERNSYNTAX )
+HB_FUNC_STATIC(QREGEXP_SETPATTERNSYNTAX)
 {
-  QRegExp * obj = static_cast<QRegExp*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QRegExp *obj = static_cast<QRegExp *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setPatternSyntax( ( QRegExp::PatternSyntax ) hb_parni(1) );
+      obj->setPatternSyntax((QRegExp::PatternSyntax)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -588,13 +593,13 @@ HB_FUNC_STATIC( QREGEXP_SETPATTERNSYNTAX )
 /*
 static QString escape( const QString & str )
 */
-HB_FUNC_STATIC( QREGEXP_ESCAPE )
+HB_FUNC_STATIC(QREGEXP_ESCAPE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
 #endif
-    RQSTRING( QRegExp::escape( PQSTRING(1)) );
+    RQSTRING(QRegExp::escape(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -604,11 +609,11 @@ HB_FUNC_STATIC( QREGEXP_ESCAPE )
 #endif
 }
 
-HB_FUNC_STATIC( QREGEXP_NEWFROM )
+HB_FUNC_STATIC(QREGEXP_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -617,7 +622,7 @@ HB_FUNC_STATIC( QREGEXP_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -634,26 +639,26 @@ HB_FUNC_STATIC( QREGEXP_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QREGEXP_NEWFROMOBJECT )
+HB_FUNC_STATIC(QREGEXP_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QREGEXP_NEWFROM );
+  HB_FUNC_EXEC(QREGEXP_NEWFROM);
 }
 
-HB_FUNC_STATIC( QREGEXP_NEWFROMPOINTER )
+HB_FUNC_STATIC(QREGEXP_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QREGEXP_NEWFROM );
+  HB_FUNC_EXEC(QREGEXP_NEWFROM);
 }
 
-HB_FUNC_STATIC( QREGEXP_SELFDESTRUCTION )
+HB_FUNC_STATIC(QREGEXP_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QREGEXP_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QREGEXP_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

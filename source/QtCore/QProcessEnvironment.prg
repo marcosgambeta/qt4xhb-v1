@@ -60,22 +60,22 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW )
+HB_FUNC_STATIC(QPROCESSENVIRONMENT_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QProcessEnvironment()
     */
-    QProcessEnvironment * obj = new QProcessEnvironment();
+    QProcessEnvironment *obj = new QProcessEnvironment();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQPROCESSENVIRONMENT(1) )
+  else if (ISNUMPAR(1) && ISQPROCESSENVIRONMENT(1))
   {
     /*
     QProcessEnvironment( const QProcessEnvironment & other )
     */
-    QProcessEnvironment * obj = new QProcessEnvironment( *PQPROCESSENVIRONMENT(1) );
+    QProcessEnvironment *obj = new QProcessEnvironment(*PQPROCESSENVIRONMENT(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -84,11 +84,11 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_DELETE )
+HB_FUNC_STATIC(QPROCESSENVIRONMENT_DELETE)
 {
-  QProcessEnvironment * obj = static_cast<QProcessEnvironment*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QProcessEnvironment *obj = static_cast<QProcessEnvironment *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -103,17 +103,17 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_DELETE )
 /*
 bool isEmpty() const
 */
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_ISEMPTY )
+HB_FUNC_STATIC(QPROCESSENVIRONMENT_ISEMPTY)
 {
-  QProcessEnvironment * obj = static_cast<QProcessEnvironment*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QProcessEnvironment *obj = static_cast<QProcessEnvironment *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isEmpty() );
+      RBOOL(obj->isEmpty());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -127,14 +127,14 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_ISEMPTY )
 /*
 void clear()
 */
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_CLEAR )
+HB_FUNC_STATIC(QPROCESSENVIRONMENT_CLEAR)
 {
-  QProcessEnvironment * obj = static_cast<QProcessEnvironment*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QProcessEnvironment *obj = static_cast<QProcessEnvironment *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clear();
@@ -153,17 +153,17 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_CLEAR )
 /*
 bool contains( const QString & name ) const
 */
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_CONTAINS )
+HB_FUNC_STATIC(QPROCESSENVIRONMENT_CONTAINS)
 {
-  QProcessEnvironment * obj = static_cast<QProcessEnvironment*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QProcessEnvironment *obj = static_cast<QProcessEnvironment *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RBOOL( obj->contains( PQSTRING(1)) );
+      RBOOL(obj->contains(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,17 +177,17 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_CONTAINS )
 /*
 void remove( const QString & name )
 */
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_REMOVE )
+HB_FUNC_STATIC(QPROCESSENVIRONMENT_REMOVE)
 {
-  QProcessEnvironment * obj = static_cast<QProcessEnvironment*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QProcessEnvironment *obj = static_cast<QProcessEnvironment *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->remove( PQSTRING(1) );
+      obj->remove(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -203,17 +203,17 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_REMOVE )
 /*
 QString value( const QString & name, const QString & defaultValue = QString() ) const
 */
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_VALUE )
+HB_FUNC_STATIC(QPROCESSENVIRONMENT_VALUE)
 {
-  QProcessEnvironment * obj = static_cast<QProcessEnvironment*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QProcessEnvironment *obj = static_cast<QProcessEnvironment *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
     {
 #endif
-      RQSTRING( obj->value( PQSTRING(1), OPQSTRING( 2, QString()) ) );
+      RQSTRING(obj->value(PQSTRING(1), OPQSTRING(2, QString())));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,17 +227,17 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_VALUE )
 /*
 QStringList toStringList() const
 */
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_TOSTRINGLIST )
+HB_FUNC_STATIC(QPROCESSENVIRONMENT_TOSTRINGLIST)
 {
-  QProcessEnvironment * obj = static_cast<QProcessEnvironment*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QProcessEnvironment *obj = static_cast<QProcessEnvironment *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->toStringList() );
+      RQSTRINGLIST(obj->toStringList());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -251,17 +251,17 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_TOSTRINGLIST )
 /*
 QStringList keys() const
 */
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_KEYS )
+HB_FUNC_STATIC(QPROCESSENVIRONMENT_KEYS)
 {
-  QProcessEnvironment * obj = static_cast<QProcessEnvironment*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QProcessEnvironment *obj = static_cast<QProcessEnvironment *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->keys() );
+      RQSTRINGLIST(obj->keys());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -272,32 +272,32 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_KEYS )
   }
 }
 
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_INSERT )
+HB_FUNC_STATIC(QPROCESSENVIRONMENT_INSERT)
 {
-  if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
+  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
     void insert( const QString & name, const QString & value)
     */
-    QProcessEnvironment * obj = static_cast<QProcessEnvironment*>(Qt4xHb::itemGetPtrStackSelfItem());
+    QProcessEnvironment *obj = static_cast<QProcessEnvironment *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->insert( PQSTRING(1), PQSTRING(2) );
+      obj->insert(PQSTRING(1), PQSTRING(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR(1) && ISQPROCESSENVIRONMENT(1) )
+  else if (ISNUMPAR(1) && ISQPROCESSENVIRONMENT(1))
   {
     /*
     void insert( const QProcessEnvironment & e )
     */
-    QProcessEnvironment * obj = static_cast<QProcessEnvironment*>(Qt4xHb::itemGetPtrStackSelfItem());
+    QProcessEnvironment *obj = static_cast<QProcessEnvironment *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->insert( *PQPROCESSENVIRONMENT(1) );
+      obj->insert(*PQPROCESSENVIRONMENT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -311,13 +311,13 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_INSERT )
 /*
 static QProcessEnvironment systemEnvironment()
 */
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_SYSTEMENVIRONMENT )
+HB_FUNC_STATIC(QPROCESSENVIRONMENT_SYSTEMENVIRONMENT)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    QProcessEnvironment * ptr = new QProcessEnvironment( QProcessEnvironment::systemEnvironment() );
+    QProcessEnvironment *ptr = new QProcessEnvironment(QProcessEnvironment::systemEnvironment());
     Qt4xHb::createReturnClass(ptr, "QPROCESSENVIRONMENT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
@@ -328,11 +328,11 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_SYSTEMENVIRONMENT )
 #endif
 }
 
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEWFROM )
+HB_FUNC_STATIC(QPROCESSENVIRONMENT_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -358,26 +358,26 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEWFROMOBJECT )
+HB_FUNC_STATIC(QPROCESSENVIRONMENT_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QPROCESSENVIRONMENT_NEWFROM );
+  HB_FUNC_EXEC(QPROCESSENVIRONMENT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEWFROMPOINTER )
+HB_FUNC_STATIC(QPROCESSENVIRONMENT_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QPROCESSENVIRONMENT_NEWFROM );
+  HB_FUNC_EXEC(QPROCESSENVIRONMENT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_SELFDESTRUCTION )
+HB_FUNC_STATIC(QPROCESSENVIRONMENT_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QPROCESSENVIRONMENT_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QPROCESSENVIRONMENT_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

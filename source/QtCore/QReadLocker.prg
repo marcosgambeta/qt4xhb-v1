@@ -55,14 +55,14 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QReadLocker( QReadWriteLock * lock )
-*/
-HB_FUNC_STATIC( QREADLOCKER_NEW )
+    /*
+    QReadLocker( QReadWriteLock * lock )
+    */
+HB_FUNC_STATIC(QREADLOCKER_NEW)
 {
-  if( ISNUMPAR(1) && ISQREADWRITELOCK(1) )
+  if (ISNUMPAR(1) && ISQREADWRITELOCK(1))
   {
-    QReadLocker * obj = new QReadLocker( PQREADWRITELOCK(1) );
+    QReadLocker *obj = new QReadLocker(PQREADWRITELOCK(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -71,11 +71,11 @@ HB_FUNC_STATIC( QREADLOCKER_NEW )
   }
 }
 
-HB_FUNC_STATIC( QREADLOCKER_DELETE )
+HB_FUNC_STATIC(QREADLOCKER_DELETE)
 {
-  QReadLocker * obj = static_cast<QReadLocker*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QReadLocker *obj = static_cast<QReadLocker *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -90,17 +90,17 @@ HB_FUNC_STATIC( QREADLOCKER_DELETE )
 /*
 QReadWriteLock * readWriteLock() const
 */
-HB_FUNC_STATIC( QREADLOCKER_READWRITELOCK )
+HB_FUNC_STATIC(QREADLOCKER_READWRITELOCK)
 {
-  QReadLocker * obj = static_cast<QReadLocker*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QReadLocker *obj = static_cast<QReadLocker *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QReadWriteLock * ptr = obj->readWriteLock();
+      QReadWriteLock *ptr = obj->readWriteLock();
       Qt4xHb::createReturnClass(ptr, "QREADWRITELOCK", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -115,14 +115,14 @@ HB_FUNC_STATIC( QREADLOCKER_READWRITELOCK )
 /*
 void relock()
 */
-HB_FUNC_STATIC( QREADLOCKER_RELOCK )
+HB_FUNC_STATIC(QREADLOCKER_RELOCK)
 {
-  QReadLocker * obj = static_cast<QReadLocker*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QReadLocker *obj = static_cast<QReadLocker *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->relock();
@@ -141,14 +141,14 @@ HB_FUNC_STATIC( QREADLOCKER_RELOCK )
 /*
 void unlock()
 */
-HB_FUNC_STATIC( QREADLOCKER_UNLOCK )
+HB_FUNC_STATIC(QREADLOCKER_UNLOCK)
 {
-  QReadLocker * obj = static_cast<QReadLocker*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QReadLocker *obj = static_cast<QReadLocker *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->unlock();
@@ -164,11 +164,11 @@ HB_FUNC_STATIC( QREADLOCKER_UNLOCK )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QREADLOCKER_NEWFROM )
+HB_FUNC_STATIC(QREADLOCKER_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QREADLOCKER_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -194,26 +194,26 @@ HB_FUNC_STATIC( QREADLOCKER_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QREADLOCKER_NEWFROMOBJECT )
+HB_FUNC_STATIC(QREADLOCKER_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QREADLOCKER_NEWFROM );
+  HB_FUNC_EXEC(QREADLOCKER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QREADLOCKER_NEWFROMPOINTER )
+HB_FUNC_STATIC(QREADLOCKER_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QREADLOCKER_NEWFROM );
+  HB_FUNC_EXEC(QREADLOCKER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QREADLOCKER_SELFDESTRUCTION )
+HB_FUNC_STATIC(QREADLOCKER_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QREADLOCKER_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QREADLOCKER_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

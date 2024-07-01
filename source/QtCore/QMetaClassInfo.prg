@@ -55,14 +55,14 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QMetaClassInfo()
-*/
-HB_FUNC_STATIC( QMETACLASSINFO_NEW )
+    /*
+    QMetaClassInfo()
+    */
+HB_FUNC_STATIC(QMETACLASSINFO_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
-    QMetaClassInfo * obj = new QMetaClassInfo();
+    QMetaClassInfo *obj = new QMetaClassInfo();
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -71,11 +71,11 @@ HB_FUNC_STATIC( QMETACLASSINFO_NEW )
   }
 }
 
-HB_FUNC_STATIC( QMETACLASSINFO_DELETE )
+HB_FUNC_STATIC(QMETACLASSINFO_DELETE)
 {
-  QMetaClassInfo * obj = static_cast<QMetaClassInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaClassInfo *obj = static_cast<QMetaClassInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -90,17 +90,17 @@ HB_FUNC_STATIC( QMETACLASSINFO_DELETE )
 /*
 const char * name() const
 */
-HB_FUNC_STATIC( QMETACLASSINFO_NAME )
+HB_FUNC_STATIC(QMETACLASSINFO_NAME)
 {
-  QMetaClassInfo * obj = static_cast<QMetaClassInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaClassInfo *obj = static_cast<QMetaClassInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      hb_retc( ( const char * ) obj->name() );
+      hb_retc((const char *)obj->name());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -114,17 +114,17 @@ HB_FUNC_STATIC( QMETACLASSINFO_NAME )
 /*
 const char * value() const
 */
-HB_FUNC_STATIC( QMETACLASSINFO_VALUE )
+HB_FUNC_STATIC(QMETACLASSINFO_VALUE)
 {
-  QMetaClassInfo * obj = static_cast<QMetaClassInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaClassInfo *obj = static_cast<QMetaClassInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      hb_retc( ( const char * ) obj->value() );
+      hb_retc((const char *)obj->value());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -138,17 +138,17 @@ HB_FUNC_STATIC( QMETACLASSINFO_VALUE )
 /*
 const QMetaObject * enclosingMetaObject() const
 */
-HB_FUNC_STATIC( QMETACLASSINFO_ENCLOSINGMETAOBJECT )
+HB_FUNC_STATIC(QMETACLASSINFO_ENCLOSINGMETAOBJECT)
 {
-  QMetaClassInfo * obj = static_cast<QMetaClassInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMetaClassInfo *obj = static_cast<QMetaClassInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      const QMetaObject * ptr = obj->enclosingMetaObject();
+      const QMetaObject *ptr = obj->enclosingMetaObject();
       Qt4xHb::createReturnClass(ptr, "QMETAOBJECT", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -160,11 +160,11 @@ HB_FUNC_STATIC( QMETACLASSINFO_ENCLOSINGMETAOBJECT )
   }
 }
 
-HB_FUNC_STATIC( QMETACLASSINFO_NEWFROM )
+HB_FUNC_STATIC(QMETACLASSINFO_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QMETACLASSINFO_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -190,26 +190,26 @@ HB_FUNC_STATIC( QMETACLASSINFO_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QMETACLASSINFO_NEWFROMOBJECT )
+HB_FUNC_STATIC(QMETACLASSINFO_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QMETACLASSINFO_NEWFROM );
+  HB_FUNC_EXEC(QMETACLASSINFO_NEWFROM);
 }
 
-HB_FUNC_STATIC( QMETACLASSINFO_NEWFROMPOINTER )
+HB_FUNC_STATIC(QMETACLASSINFO_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QMETACLASSINFO_NEWFROM );
+  HB_FUNC_EXEC(QMETACLASSINFO_NEWFROM);
 }
 
-HB_FUNC_STATIC( QMETACLASSINFO_SELFDESTRUCTION )
+HB_FUNC_STATIC(QMETACLASSINFO_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QMETACLASSINFO_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QMETACLASSINFO_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
