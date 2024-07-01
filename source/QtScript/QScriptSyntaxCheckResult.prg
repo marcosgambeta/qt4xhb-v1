@@ -55,14 +55,14 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QScriptSyntaxCheckResult( const QScriptSyntaxCheckResult & other )
-*/
-HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_NEW )
+    /*
+    QScriptSyntaxCheckResult( const QScriptSyntaxCheckResult & other )
+    */
+HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_NEW)
 {
-  if( ISNUMPAR(1) && ISQSCRIPTSYNTAXCHECKRESULT(1) )
+  if (ISNUMPAR(1) && ISQSCRIPTSYNTAXCHECKRESULT(1))
   {
-    QScriptSyntaxCheckResult * obj = new QScriptSyntaxCheckResult( *PQSCRIPTSYNTAXCHECKRESULT(1) );
+    QScriptSyntaxCheckResult *obj = new QScriptSyntaxCheckResult(*PQSCRIPTSYNTAXCHECKRESULT(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -71,11 +71,11 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_DELETE )
+HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_DELETE)
 {
-  QScriptSyntaxCheckResult * obj = static_cast<QScriptSyntaxCheckResult*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QScriptSyntaxCheckResult *obj = static_cast<QScriptSyntaxCheckResult *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -90,17 +90,17 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_DELETE )
 /*
 int errorColumnNumber() const
 */
-HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORCOLUMNNUMBER )
+HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_ERRORCOLUMNNUMBER)
 {
-  QScriptSyntaxCheckResult * obj = static_cast<QScriptSyntaxCheckResult*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QScriptSyntaxCheckResult *obj = static_cast<QScriptSyntaxCheckResult *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->errorColumnNumber() );
+      RINT(obj->errorColumnNumber());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -114,17 +114,17 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORCOLUMNNUMBER )
 /*
 int errorLineNumber() const
 */
-HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORLINENUMBER )
+HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_ERRORLINENUMBER)
 {
-  QScriptSyntaxCheckResult * obj = static_cast<QScriptSyntaxCheckResult*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QScriptSyntaxCheckResult *obj = static_cast<QScriptSyntaxCheckResult *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->errorLineNumber() );
+      RINT(obj->errorLineNumber());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -138,17 +138,17 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORLINENUMBER )
 /*
 QString errorMessage() const
 */
-HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORMESSAGE )
+HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_ERRORMESSAGE)
 {
-  QScriptSyntaxCheckResult * obj = static_cast<QScriptSyntaxCheckResult*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QScriptSyntaxCheckResult *obj = static_cast<QScriptSyntaxCheckResult *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->errorMessage() );
+      RQSTRING(obj->errorMessage());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -162,17 +162,17 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORMESSAGE )
 /*
 QScriptSyntaxCheckResult::State state() const
 */
-HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_STATE )
+HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_STATE)
 {
-  QScriptSyntaxCheckResult * obj = static_cast<QScriptSyntaxCheckResult*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QScriptSyntaxCheckResult *obj = static_cast<QScriptSyntaxCheckResult *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->state() );
+      RENUM(obj->state());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,11 +183,11 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_STATE )
   }
 }
 
-HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_NEWFROM )
+HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -213,26 +213,26 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_NEWFROMOBJECT )
+HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QSCRIPTSYNTAXCHECKRESULT_NEWFROM );
+  HB_FUNC_EXEC(QSCRIPTSYNTAXCHECKRESULT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_NEWFROMPOINTER )
+HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QSCRIPTSYNTAXCHECKRESULT_NEWFROM );
+  HB_FUNC_EXEC(QSCRIPTSYNTAXCHECKRESULT_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_SELFDESTRUCTION )
+HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

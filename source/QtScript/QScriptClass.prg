@@ -62,14 +62,14 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QScriptClass( QScriptEngine * engine )
-*/
-HB_FUNC_STATIC( QSCRIPTCLASS_NEW )
+    /*
+    QScriptClass( QScriptEngine * engine )
+    */
+HB_FUNC_STATIC(QSCRIPTCLASS_NEW)
 {
-  if( ISNUMPAR(1) && ISQSCRIPTENGINE(1) )
+  if (ISNUMPAR(1) && ISQSCRIPTENGINE(1))
   {
-    QScriptClass * obj = new QScriptClass( PQSCRIPTENGINE(1) );
+    QScriptClass *obj = new QScriptClass(PQSCRIPTENGINE(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -78,11 +78,11 @@ HB_FUNC_STATIC( QSCRIPTCLASS_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSCRIPTCLASS_DELETE )
+HB_FUNC_STATIC(QSCRIPTCLASS_DELETE)
 {
-  QScriptClass * obj = static_cast<QScriptClass*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QScriptClass *obj = static_cast<QScriptClass *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -97,17 +97,19 @@ HB_FUNC_STATIC( QSCRIPTCLASS_DELETE )
 /*
 virtual QVariant extension( QScriptClass::Extension extension, const QVariant & argument = QVariant() )
 */
-HB_FUNC_STATIC( QSCRIPTCLASS_EXTENSION )
+HB_FUNC_STATIC(QSCRIPTCLASS_EXTENSION)
 {
-  QScriptClass * obj = static_cast<QScriptClass*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QScriptClass *obj = static_cast<QScriptClass *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQVARIANT(2) || HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQVARIANT(2) || HB_ISNIL(2)))
     {
 #endif
-      QVariant * ptr = new QVariant( obj->extension( ( QScriptClass::Extension ) hb_parni(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(2)) ) );
+      QVariant *ptr =
+          new QVariant(obj->extension((QScriptClass::Extension)hb_parni(1),
+                                      HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(2))));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -122,17 +124,17 @@ HB_FUNC_STATIC( QSCRIPTCLASS_EXTENSION )
 /*
 virtual QString name() const
 */
-HB_FUNC_STATIC( QSCRIPTCLASS_NAME )
+HB_FUNC_STATIC(QSCRIPTCLASS_NAME)
 {
-  QScriptClass * obj = static_cast<QScriptClass*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QScriptClass *obj = static_cast<QScriptClass *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->name() );
+      RQSTRING(obj->name());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,17 +148,17 @@ HB_FUNC_STATIC( QSCRIPTCLASS_NAME )
 /*
 virtual QScriptClassPropertyIterator * newIterator( const QScriptValue & object )
 */
-HB_FUNC_STATIC( QSCRIPTCLASS_NEWITERATOR )
+HB_FUNC_STATIC(QSCRIPTCLASS_NEWITERATOR)
 {
-  QScriptClass * obj = static_cast<QScriptClass*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QScriptClass *obj = static_cast<QScriptClass *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSCRIPTVALUE(1) )
+    if (ISNUMPAR(1) && ISQSCRIPTVALUE(1))
     {
 #endif
-      QScriptClassPropertyIterator * ptr = obj->newIterator( *PQSCRIPTVALUE(1) );
+      QScriptClassPropertyIterator *ptr = obj->newIterator(*PQSCRIPTVALUE(1));
       Qt4xHb::createReturnClass(ptr, "QSCRIPTCLASSPROPERTYITERATOR", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -171,17 +173,17 @@ HB_FUNC_STATIC( QSCRIPTCLASS_NEWITERATOR )
 /*
 virtual QScriptValue property( const QScriptValue & object, const QScriptString & name, uint id )
 */
-HB_FUNC_STATIC( QSCRIPTCLASS_PROPERTY )
+HB_FUNC_STATIC(QSCRIPTCLASS_PROPERTY)
 {
-  QScriptClass * obj = static_cast<QScriptClass*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QScriptClass *obj = static_cast<QScriptClass *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQSCRIPTVALUE(1) && ISQSCRIPTSTRING(2) && HB_ISNUM(3) )
+    if (ISNUMPAR(3) && ISQSCRIPTVALUE(1) && ISQSCRIPTSTRING(2) && HB_ISNUM(3))
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->property( *PQSCRIPTVALUE(1), *PQSCRIPTSTRING(2), PUINT(3)) );
+      QScriptValue *ptr = new QScriptValue(obj->property(*PQSCRIPTVALUE(1), *PQSCRIPTSTRING(2), PUINT(3)));
       Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -196,17 +198,17 @@ HB_FUNC_STATIC( QSCRIPTCLASS_PROPERTY )
 /*
 virtual QScriptValue::PropertyFlags propertyFlags( const QScriptValue & object, const QScriptString & name, uint id )
 */
-HB_FUNC_STATIC( QSCRIPTCLASS_PROPERTYFLAGS )
+HB_FUNC_STATIC(QSCRIPTCLASS_PROPERTYFLAGS)
 {
-  QScriptClass * obj = static_cast<QScriptClass*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QScriptClass *obj = static_cast<QScriptClass *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQSCRIPTVALUE(1) && ISQSCRIPTSTRING(2) && HB_ISNUM(3) )
+    if (ISNUMPAR(3) && ISQSCRIPTVALUE(1) && ISQSCRIPTSTRING(2) && HB_ISNUM(3))
     {
 #endif
-      RENUM( obj->propertyFlags( *PQSCRIPTVALUE(1), *PQSCRIPTSTRING(2), PUINT(3)) );
+      RENUM(obj->propertyFlags(*PQSCRIPTVALUE(1), *PQSCRIPTSTRING(2), PUINT(3)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,17 +222,17 @@ HB_FUNC_STATIC( QSCRIPTCLASS_PROPERTYFLAGS )
 /*
 virtual QScriptValue prototype() const
 */
-HB_FUNC_STATIC( QSCRIPTCLASS_PROTOTYPE )
+HB_FUNC_STATIC(QSCRIPTCLASS_PROTOTYPE)
 {
-  QScriptClass * obj = static_cast<QScriptClass*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QScriptClass *obj = static_cast<QScriptClass *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->prototype() );
+      QScriptValue *ptr = new QScriptValue(obj->prototype());
       Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -245,17 +247,17 @@ HB_FUNC_STATIC( QSCRIPTCLASS_PROTOTYPE )
 /*
 virtual void setProperty( QScriptValue & object, const QScriptString & name, uint id, const QScriptValue & value )
 */
-HB_FUNC_STATIC( QSCRIPTCLASS_SETPROPERTY )
+HB_FUNC_STATIC(QSCRIPTCLASS_SETPROPERTY)
 {
-  QScriptClass * obj = static_cast<QScriptClass*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QScriptClass *obj = static_cast<QScriptClass *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && ISQSCRIPTVALUE(1) && ISQSCRIPTSTRING(2) && HB_ISNUM(3) && ISQSCRIPTVALUE(4) )
+    if (ISNUMPAR(4) && ISQSCRIPTVALUE(1) && ISQSCRIPTSTRING(2) && HB_ISNUM(3) && ISQSCRIPTVALUE(4))
     {
 #endif
-      obj->setProperty( *PQSCRIPTVALUE(1), *PQSCRIPTSTRING(2), PUINT(3), *PQSCRIPTVALUE(4) );
+      obj->setProperty(*PQSCRIPTVALUE(1), *PQSCRIPTSTRING(2), PUINT(3), *PQSCRIPTVALUE(4));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -271,17 +273,17 @@ HB_FUNC_STATIC( QSCRIPTCLASS_SETPROPERTY )
 /*
 virtual bool supportsExtension( QScriptClass::Extension extension ) const
 */
-HB_FUNC_STATIC( QSCRIPTCLASS_SUPPORTSEXTENSION )
+HB_FUNC_STATIC(QSCRIPTCLASS_SUPPORTSEXTENSION)
 {
-  QScriptClass * obj = static_cast<QScriptClass*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QScriptClass *obj = static_cast<QScriptClass *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->supportsExtension( ( QScriptClass::Extension ) hb_parni(1)) );
+      RBOOL(obj->supportsExtension((QScriptClass::Extension)hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -292,11 +294,11 @@ HB_FUNC_STATIC( QSCRIPTCLASS_SUPPORTSEXTENSION )
   }
 }
 
-HB_FUNC_STATIC( QSCRIPTCLASS_NEWFROM )
+HB_FUNC_STATIC(QSCRIPTCLASS_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -305,7 +307,7 @@ HB_FUNC_STATIC( QSCRIPTCLASS_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -322,26 +324,26 @@ HB_FUNC_STATIC( QSCRIPTCLASS_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QSCRIPTCLASS_NEWFROMOBJECT )
+HB_FUNC_STATIC(QSCRIPTCLASS_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QSCRIPTCLASS_NEWFROM );
+  HB_FUNC_EXEC(QSCRIPTCLASS_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSCRIPTCLASS_NEWFROMPOINTER )
+HB_FUNC_STATIC(QSCRIPTCLASS_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QSCRIPTCLASS_NEWFROM );
+  HB_FUNC_EXEC(QSCRIPTCLASS_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSCRIPTCLASS_SELFDESTRUCTION )
+HB_FUNC_STATIC(QSCRIPTCLASS_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QSCRIPTCLASS_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QSCRIPTCLASS_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
