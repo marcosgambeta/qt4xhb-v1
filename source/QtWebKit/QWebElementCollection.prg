@@ -58,30 +58,30 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW )
+HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QWebElementCollection()
     */
-    QWebElementCollection * obj = new QWebElementCollection();
+    QWebElementCollection *obj = new QWebElementCollection();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(2) && ISQWEBELEMENT(1) && HB_ISCHAR(2) )
+  else if (ISNUMPAR(2) && ISQWEBELEMENT(1) && HB_ISCHAR(2))
   {
     /*
     QWebElementCollection( const QWebElement & contextElement, const QString & query )
     */
-    QWebElementCollection * obj = new QWebElementCollection( *PQWEBELEMENT(1), PQSTRING(2) );
+    QWebElementCollection *obj = new QWebElementCollection(*PQWEBELEMENT(1), PQSTRING(2));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQWEBELEMENTCOLLECTION(1) )
+  else if (ISNUMPAR(1) && ISQWEBELEMENTCOLLECTION(1))
   {
     /*
     QWebElementCollection( const QWebElementCollection & other )
     */
-    QWebElementCollection * obj = new QWebElementCollection( *PQWEBELEMENTCOLLECTION(1) );
+    QWebElementCollection *obj = new QWebElementCollection(*PQWEBELEMENTCOLLECTION(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -90,11 +90,11 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW )
   }
 }
 
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_DELETE )
+HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_DELETE)
 {
-  QWebElementCollection * obj = static_cast<QWebElementCollection*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebElementCollection *obj = static_cast<QWebElementCollection *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -109,17 +109,17 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_DELETE )
 /*
 void append( const QWebElementCollection & other )
 */
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_APPEND )
+HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_APPEND)
 {
-  QWebElementCollection * obj = static_cast<QWebElementCollection*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebElementCollection *obj = static_cast<QWebElementCollection *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWEBELEMENTCOLLECTION(1) )
+    if (ISNUMPAR(1) && ISQWEBELEMENTCOLLECTION(1))
     {
 #endif
-      obj->append( *PQWEBELEMENTCOLLECTION(1) );
+      obj->append(*PQWEBELEMENTCOLLECTION(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,17 +135,17 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_APPEND )
 /*
 QWebElement at( int i ) const
 */
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_AT )
+HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_AT)
 {
-  QWebElementCollection * obj = static_cast<QWebElementCollection*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebElementCollection *obj = static_cast<QWebElementCollection *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      QWebElement * ptr = new QWebElement( obj->at( PINT(1)) );
+      QWebElement *ptr = new QWebElement(obj->at(PINT(1)));
       Qt4xHb::createReturnClass(ptr, "QWEBELEMENT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -160,17 +160,17 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_AT )
 /*
 int count() const
 */
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_COUNT )
+HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_COUNT)
 {
-  QWebElementCollection * obj = static_cast<QWebElementCollection*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebElementCollection *obj = static_cast<QWebElementCollection *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->count() );
+      RINT(obj->count());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,17 +184,17 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_COUNT )
 /*
 QWebElement first() const
 */
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_FIRST )
+HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_FIRST)
 {
-  QWebElementCollection * obj = static_cast<QWebElementCollection*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebElementCollection *obj = static_cast<QWebElementCollection *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QWebElement * ptr = new QWebElement( obj->first() );
+      QWebElement *ptr = new QWebElement(obj->first());
       Qt4xHb::createReturnClass(ptr, "QWEBELEMENT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -209,17 +209,17 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_FIRST )
 /*
 QWebElement last() const
 */
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_LAST )
+HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_LAST)
 {
-  QWebElementCollection * obj = static_cast<QWebElementCollection*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebElementCollection *obj = static_cast<QWebElementCollection *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QWebElement * ptr = new QWebElement( obj->last() );
+      QWebElement *ptr = new QWebElement(obj->last());
       Qt4xHb::createReturnClass(ptr, "QWEBELEMENT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -234,23 +234,23 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_LAST )
 /*
 QList<QWebElement> toList() const
 */
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_TOLIST )
+HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_TOLIST)
 {
-  QWebElementCollection * obj = static_cast<QWebElementCollection*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebElementCollection *obj = static_cast<QWebElementCollection *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QList<QWebElement> list = obj->toList();
       PHB_DYNS pDynSym = hb_dynsymFindName("QWEBELEMENT");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
         const int count = list.count();
-        for( int i = 0; i < count; i++ )
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -282,11 +282,11 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_TOLIST )
   }
 }
 
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEWFROM )
+HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -312,26 +312,26 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEWFROMOBJECT )
+HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QWEBELEMENTCOLLECTION_NEWFROM );
+  HB_FUNC_EXEC(QWEBELEMENTCOLLECTION_NEWFROM);
 }
 
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEWFROMPOINTER )
+HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QWEBELEMENTCOLLECTION_NEWFROM );
+  HB_FUNC_EXEC(QWEBELEMENTCOLLECTION_NEWFROM);
 }
 
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_SELFDESTRUCTION )
+HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

@@ -46,11 +46,11 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-HB_FUNC_STATIC( QWEBPLUGINFACTORY_DELETE )
+HB_FUNC_STATIC(QWEBPLUGINFACTORY_DELETE)
 {
-  QWebPluginFactory * obj = qobject_cast<QWebPluginFactory*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPluginFactory *obj = qobject_cast<QWebPluginFactory *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -65,19 +65,20 @@ HB_FUNC_STATIC( QWEBPLUGINFACTORY_DELETE )
 }
 
 /*
-virtual QObject * create( const QString & mimeType, const QUrl & url, const QStringList & argumentNames, const QStringList & argumentValues ) const = 0
+virtual QObject * create( const QString & mimeType, const QUrl & url, const QStringList & argumentNames, const
+QStringList & argumentValues ) const = 0
 */
-HB_FUNC_STATIC( QWEBPLUGINFACTORY_CREATE )
+HB_FUNC_STATIC(QWEBPLUGINFACTORY_CREATE)
 {
-  QWebPluginFactory * obj = qobject_cast<QWebPluginFactory*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPluginFactory *obj = qobject_cast<QWebPluginFactory *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && HB_ISCHAR(1) && ISQURL(2) && HB_ISARRAY(3) && HB_ISARRAY(4) )
+    if (ISNUMPAR(4) && HB_ISCHAR(1) && ISQURL(2) && HB_ISARRAY(3) && HB_ISARRAY(4))
     {
 #endif
-      QObject * ptr = obj->create( PQSTRING(1), *PQURL(2), PQSTRINGLIST(3), PQSTRINGLIST(4) );
+      QObject *ptr = obj->create(PQSTRING(1), *PQURL(2), PQSTRINGLIST(3), PQSTRINGLIST(4));
       Qt4xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -92,14 +93,14 @@ HB_FUNC_STATIC( QWEBPLUGINFACTORY_CREATE )
 /*
 virtual void refreshPlugins()
 */
-HB_FUNC_STATIC( QWEBPLUGINFACTORY_REFRESHPLUGINS )
+HB_FUNC_STATIC(QWEBPLUGINFACTORY_REFRESHPLUGINS)
 {
-  QWebPluginFactory * obj = qobject_cast<QWebPluginFactory*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPluginFactory *obj = qobject_cast<QWebPluginFactory *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->refreshPlugins();

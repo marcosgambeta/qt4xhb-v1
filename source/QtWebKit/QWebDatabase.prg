@@ -62,14 +62,14 @@ RETURN
 
 #include <QtWebKit/QWebSecurityOrigin>
 
-/*
-QWebDatabase( const QWebDatabase & other )
-*/
-HB_FUNC_STATIC( QWEBDATABASE_NEW )
+    /*
+    QWebDatabase( const QWebDatabase & other )
+    */
+HB_FUNC_STATIC(QWEBDATABASE_NEW)
 {
-  if( ISNUMPAR(1) && ISQWEBDATABASE(1) )
+  if (ISNUMPAR(1) && ISQWEBDATABASE(1))
   {
-    QWebDatabase * obj = new QWebDatabase( *PQWEBDATABASE(1) );
+    QWebDatabase *obj = new QWebDatabase(*PQWEBDATABASE(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -78,11 +78,11 @@ HB_FUNC_STATIC( QWEBDATABASE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QWEBDATABASE_DELETE )
+HB_FUNC_STATIC(QWEBDATABASE_DELETE)
 {
-  QWebDatabase * obj = static_cast<QWebDatabase*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebDatabase *obj = static_cast<QWebDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -97,17 +97,17 @@ HB_FUNC_STATIC( QWEBDATABASE_DELETE )
 /*
 QString displayName() const
 */
-HB_FUNC_STATIC( QWEBDATABASE_DISPLAYNAME )
+HB_FUNC_STATIC(QWEBDATABASE_DISPLAYNAME)
 {
-  QWebDatabase * obj = static_cast<QWebDatabase*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebDatabase *obj = static_cast<QWebDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->displayName() );
+      RQSTRING(obj->displayName());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -121,17 +121,17 @@ HB_FUNC_STATIC( QWEBDATABASE_DISPLAYNAME )
 /*
 qint64 expectedSize() const
 */
-HB_FUNC_STATIC( QWEBDATABASE_EXPECTEDSIZE )
+HB_FUNC_STATIC(QWEBDATABASE_EXPECTEDSIZE)
 {
-  QWebDatabase * obj = static_cast<QWebDatabase*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebDatabase *obj = static_cast<QWebDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQINT64( obj->expectedSize() );
+      RQINT64(obj->expectedSize());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,17 +145,17 @@ HB_FUNC_STATIC( QWEBDATABASE_EXPECTEDSIZE )
 /*
 QString fileName() const
 */
-HB_FUNC_STATIC( QWEBDATABASE_FILENAME )
+HB_FUNC_STATIC(QWEBDATABASE_FILENAME)
 {
-  QWebDatabase * obj = static_cast<QWebDatabase*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebDatabase *obj = static_cast<QWebDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->fileName() );
+      RQSTRING(obj->fileName());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,17 +169,17 @@ HB_FUNC_STATIC( QWEBDATABASE_FILENAME )
 /*
 QString name() const
 */
-HB_FUNC_STATIC( QWEBDATABASE_NAME )
+HB_FUNC_STATIC(QWEBDATABASE_NAME)
 {
-  QWebDatabase * obj = static_cast<QWebDatabase*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebDatabase *obj = static_cast<QWebDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->name() );
+      RQSTRING(obj->name());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,17 +193,17 @@ HB_FUNC_STATIC( QWEBDATABASE_NAME )
 /*
 QWebSecurityOrigin origin() const
 */
-HB_FUNC_STATIC( QWEBDATABASE_ORIGIN )
+HB_FUNC_STATIC(QWEBDATABASE_ORIGIN)
 {
-  QWebDatabase * obj = static_cast<QWebDatabase*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebDatabase *obj = static_cast<QWebDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QWebSecurityOrigin * ptr = new QWebSecurityOrigin( obj->origin() );
+      QWebSecurityOrigin *ptr = new QWebSecurityOrigin(obj->origin());
       Qt4xHb::createReturnClass(ptr, "QWEBSECURITYORIGIN", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -218,17 +218,17 @@ HB_FUNC_STATIC( QWEBDATABASE_ORIGIN )
 /*
 qint64 size() const
 */
-HB_FUNC_STATIC( QWEBDATABASE_SIZE )
+HB_FUNC_STATIC(QWEBDATABASE_SIZE)
 {
-  QWebDatabase * obj = static_cast<QWebDatabase*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebDatabase *obj = static_cast<QWebDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQINT64( obj->size() );
+      RQINT64(obj->size());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -242,10 +242,10 @@ HB_FUNC_STATIC( QWEBDATABASE_SIZE )
 /*
 static void removeAllDatabases()
 */
-HB_FUNC_STATIC( QWEBDATABASE_REMOVEALLDATABASES )
+HB_FUNC_STATIC(QWEBDATABASE_REMOVEALLDATABASES)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
     QWebDatabase::removeAllDatabases();
@@ -263,13 +263,13 @@ HB_FUNC_STATIC( QWEBDATABASE_REMOVEALLDATABASES )
 /*
 static void removeDatabase( const QWebDatabase & db )
 */
-HB_FUNC_STATIC( QWEBDATABASE_REMOVEDATABASE )
+HB_FUNC_STATIC(QWEBDATABASE_REMOVEDATABASE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISQWEBDATABASE(1) )
+  if (ISNUMPAR(1) && ISQWEBDATABASE(1))
   {
 #endif
-    QWebDatabase::removeDatabase( *PQWEBDATABASE(1) );
+    QWebDatabase::removeDatabase(*PQWEBDATABASE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -281,11 +281,11 @@ HB_FUNC_STATIC( QWEBDATABASE_REMOVEDATABASE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QWEBDATABASE_NEWFROM )
+HB_FUNC_STATIC(QWEBDATABASE_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QWEBDATABASE_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -311,26 +311,26 @@ HB_FUNC_STATIC( QWEBDATABASE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QWEBDATABASE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QWEBDATABASE_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QWEBDATABASE_NEWFROM );
+  HB_FUNC_EXEC(QWEBDATABASE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QWEBDATABASE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QWEBDATABASE_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QWEBDATABASE_NEWFROM );
+  HB_FUNC_EXEC(QWEBDATABASE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QWEBDATABASE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QWEBDATABASE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QWEBDATABASE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QWEBDATABASE_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

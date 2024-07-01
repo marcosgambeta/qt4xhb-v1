@@ -89,20 +89,20 @@ RETURN
 
 #include <QtCore/QUrl>
 
-/*
-QString defaultTextEncoding() const
-*/
-HB_FUNC_STATIC( QWEBSETTINGS_DEFAULTTEXTENCODING )
+    /*
+    QString defaultTextEncoding() const
+    */
+HB_FUNC_STATIC(QWEBSETTINGS_DEFAULTTEXTENCODING)
 {
-  QWebSettings * obj = static_cast<QWebSettings*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebSettings *obj = static_cast<QWebSettings *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->defaultTextEncoding() );
+      RQSTRING(obj->defaultTextEncoding());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -116,17 +116,17 @@ HB_FUNC_STATIC( QWEBSETTINGS_DEFAULTTEXTENCODING )
 /*
 QString fontFamily( QWebSettings::FontFamily which ) const
 */
-HB_FUNC_STATIC( QWEBSETTINGS_FONTFAMILY )
+HB_FUNC_STATIC(QWEBSETTINGS_FONTFAMILY)
 {
-  QWebSettings * obj = static_cast<QWebSettings*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebSettings *obj = static_cast<QWebSettings *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RQSTRING( obj->fontFamily( ( QWebSettings::FontFamily ) hb_parni(1)) );
+      RQSTRING(obj->fontFamily((QWebSettings::FontFamily)hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -140,17 +140,17 @@ HB_FUNC_STATIC( QWEBSETTINGS_FONTFAMILY )
 /*
 int fontSize( QWebSettings::FontSize type ) const
 */
-HB_FUNC_STATIC( QWEBSETTINGS_FONTSIZE )
+HB_FUNC_STATIC(QWEBSETTINGS_FONTSIZE)
 {
-  QWebSettings * obj = static_cast<QWebSettings*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebSettings *obj = static_cast<QWebSettings *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT( obj->fontSize( ( QWebSettings::FontSize ) hb_parni(1)) );
+      RINT(obj->fontSize((QWebSettings::FontSize)hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,17 +164,17 @@ HB_FUNC_STATIC( QWEBSETTINGS_FONTSIZE )
 /*
 QString localStoragePath() const
 */
-HB_FUNC_STATIC( QWEBSETTINGS_LOCALSTORAGEPATH )
+HB_FUNC_STATIC(QWEBSETTINGS_LOCALSTORAGEPATH)
 {
-  QWebSettings * obj = static_cast<QWebSettings*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebSettings *obj = static_cast<QWebSettings *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->localStoragePath() );
+      RQSTRING(obj->localStoragePath());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,17 +188,17 @@ HB_FUNC_STATIC( QWEBSETTINGS_LOCALSTORAGEPATH )
 /*
 void resetAttribute( QWebSettings::WebAttribute attribute )
 */
-HB_FUNC_STATIC( QWEBSETTINGS_RESETATTRIBUTE )
+HB_FUNC_STATIC(QWEBSETTINGS_RESETATTRIBUTE)
 {
-  QWebSettings * obj = static_cast<QWebSettings*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebSettings *obj = static_cast<QWebSettings *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->resetAttribute( ( QWebSettings::WebAttribute ) hb_parni(1) );
+      obj->resetAttribute((QWebSettings::WebAttribute)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,17 +214,17 @@ HB_FUNC_STATIC( QWEBSETTINGS_RESETATTRIBUTE )
 /*
 void resetFontFamily( QWebSettings::FontFamily which )
 */
-HB_FUNC_STATIC( QWEBSETTINGS_RESETFONTFAMILY )
+HB_FUNC_STATIC(QWEBSETTINGS_RESETFONTFAMILY)
 {
-  QWebSettings * obj = static_cast<QWebSettings*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebSettings *obj = static_cast<QWebSettings *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->resetFontFamily( ( QWebSettings::FontFamily ) hb_parni(1) );
+      obj->resetFontFamily((QWebSettings::FontFamily)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -240,17 +240,17 @@ HB_FUNC_STATIC( QWEBSETTINGS_RESETFONTFAMILY )
 /*
 void resetFontSize( QWebSettings::FontSize type )
 */
-HB_FUNC_STATIC( QWEBSETTINGS_RESETFONTSIZE )
+HB_FUNC_STATIC(QWEBSETTINGS_RESETFONTSIZE)
 {
-  QWebSettings * obj = static_cast<QWebSettings*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebSettings *obj = static_cast<QWebSettings *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->resetFontSize( ( QWebSettings::FontSize ) hb_parni(1) );
+      obj->resetFontSize((QWebSettings::FontSize)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -266,17 +266,17 @@ HB_FUNC_STATIC( QWEBSETTINGS_RESETFONTSIZE )
 /*
 void setAttribute( QWebSettings::WebAttribute attribute, bool on )
 */
-HB_FUNC_STATIC( QWEBSETTINGS_SETATTRIBUTE )
+HB_FUNC_STATIC(QWEBSETTINGS_SETATTRIBUTE)
 {
-  QWebSettings * obj = static_cast<QWebSettings*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebSettings *obj = static_cast<QWebSettings *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2))
     {
 #endif
-      obj->setAttribute( ( QWebSettings::WebAttribute ) hb_parni(1), PBOOL(2) );
+      obj->setAttribute((QWebSettings::WebAttribute)hb_parni(1), PBOOL(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -292,17 +292,17 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETATTRIBUTE )
 /*
 void setDefaultTextEncoding( const QString & encoding )
 */
-HB_FUNC_STATIC( QWEBSETTINGS_SETDEFAULTTEXTENCODING )
+HB_FUNC_STATIC(QWEBSETTINGS_SETDEFAULTTEXTENCODING)
 {
-  QWebSettings * obj = static_cast<QWebSettings*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebSettings *obj = static_cast<QWebSettings *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setDefaultTextEncoding( PQSTRING(1) );
+      obj->setDefaultTextEncoding(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -318,17 +318,17 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETDEFAULTTEXTENCODING )
 /*
 void setFontFamily( QWebSettings::FontFamily which, const QString & family )
 */
-HB_FUNC_STATIC( QWEBSETTINGS_SETFONTFAMILY )
+HB_FUNC_STATIC(QWEBSETTINGS_SETFONTFAMILY)
 {
-  QWebSettings * obj = static_cast<QWebSettings*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebSettings *obj = static_cast<QWebSettings *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {
 #endif
-      obj->setFontFamily( ( QWebSettings::FontFamily ) hb_parni(1), PQSTRING(2) );
+      obj->setFontFamily((QWebSettings::FontFamily)hb_parni(1), PQSTRING(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -344,17 +344,17 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETFONTFAMILY )
 /*
 void setFontSize( QWebSettings::FontSize type, int size )
 */
-HB_FUNC_STATIC( QWEBSETTINGS_SETFONTSIZE )
+HB_FUNC_STATIC(QWEBSETTINGS_SETFONTSIZE)
 {
-  QWebSettings * obj = static_cast<QWebSettings*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebSettings *obj = static_cast<QWebSettings *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setFontSize( ( QWebSettings::FontSize ) hb_parni(1), PINT(2) );
+      obj->setFontSize((QWebSettings::FontSize)hb_parni(1), PINT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -370,17 +370,17 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETFONTSIZE )
 /*
 void setLocalStoragePath( const QString & path )
 */
-HB_FUNC_STATIC( QWEBSETTINGS_SETLOCALSTORAGEPATH )
+HB_FUNC_STATIC(QWEBSETTINGS_SETLOCALSTORAGEPATH)
 {
-  QWebSettings * obj = static_cast<QWebSettings*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebSettings *obj = static_cast<QWebSettings *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setLocalStoragePath( PQSTRING(1) );
+      obj->setLocalStoragePath(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -396,17 +396,17 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETLOCALSTORAGEPATH )
 /*
 void setUserStyleSheetUrl( const QUrl & location )
 */
-HB_FUNC_STATIC( QWEBSETTINGS_SETUSERSTYLESHEETURL )
+HB_FUNC_STATIC(QWEBSETTINGS_SETUSERSTYLESHEETURL)
 {
-  QWebSettings * obj = static_cast<QWebSettings*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebSettings *obj = static_cast<QWebSettings *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQURL(1) )
+    if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->setUserStyleSheetUrl( *PQURL(1) );
+      obj->setUserStyleSheetUrl(*PQURL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -422,17 +422,17 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETUSERSTYLESHEETURL )
 /*
 bool testAttribute( QWebSettings::WebAttribute attribute ) const
 */
-HB_FUNC_STATIC( QWEBSETTINGS_TESTATTRIBUTE )
+HB_FUNC_STATIC(QWEBSETTINGS_TESTATTRIBUTE)
 {
-  QWebSettings * obj = static_cast<QWebSettings*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebSettings *obj = static_cast<QWebSettings *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->testAttribute( ( QWebSettings::WebAttribute ) hb_parni(1)) );
+      RBOOL(obj->testAttribute((QWebSettings::WebAttribute)hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -446,17 +446,17 @@ HB_FUNC_STATIC( QWEBSETTINGS_TESTATTRIBUTE )
 /*
 QUrl userStyleSheetUrl() const
 */
-HB_FUNC_STATIC( QWEBSETTINGS_USERSTYLESHEETURL )
+HB_FUNC_STATIC(QWEBSETTINGS_USERSTYLESHEETURL)
 {
-  QWebSettings * obj = static_cast<QWebSettings*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebSettings *obj = static_cast<QWebSettings *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QUrl * ptr = new QUrl( obj->userStyleSheetUrl() );
+      QUrl *ptr = new QUrl(obj->userStyleSheetUrl());
       Qt4xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -471,10 +471,10 @@ HB_FUNC_STATIC( QWEBSETTINGS_USERSTYLESHEETURL )
 /*
 static void clearIconDatabase()
 */
-HB_FUNC_STATIC( QWEBSETTINGS_CLEARICONDATABASE )
+HB_FUNC_STATIC(QWEBSETTINGS_CLEARICONDATABASE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
     QWebSettings::clearIconDatabase();
@@ -492,10 +492,10 @@ HB_FUNC_STATIC( QWEBSETTINGS_CLEARICONDATABASE )
 /*
 static void clearMemoryCaches()
 */
-HB_FUNC_STATIC( QWEBSETTINGS_CLEARMEMORYCACHES )
+HB_FUNC_STATIC(QWEBSETTINGS_CLEARMEMORYCACHES)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
     QWebSettings::clearMemoryCaches();
@@ -513,13 +513,13 @@ HB_FUNC_STATIC( QWEBSETTINGS_CLEARMEMORYCACHES )
 /*
 static void enablePersistentStorage( const QString & path = QString() )
 */
-HB_FUNC_STATIC( QWEBSETTINGS_ENABLEPERSISTENTSTORAGE )
+HB_FUNC_STATIC(QWEBSETTINGS_ENABLEPERSISTENTSTORAGE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)))
   {
 #endif
-    QWebSettings::enablePersistentStorage( OPQSTRING( 1, QString()) );
+    QWebSettings::enablePersistentStorage(OPQSTRING(1, QString()));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -534,13 +534,13 @@ HB_FUNC_STATIC( QWEBSETTINGS_ENABLEPERSISTENTSTORAGE )
 /*
 static QWebSettings * globalSettings()
 */
-HB_FUNC_STATIC( QWEBSETTINGS_GLOBALSETTINGS )
+HB_FUNC_STATIC(QWEBSETTINGS_GLOBALSETTINGS)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    QWebSettings * ptr = QWebSettings::globalSettings();
+    QWebSettings *ptr = QWebSettings::globalSettings();
     Qt4xHb::createReturnClass(ptr, "QWEBSETTINGS", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
@@ -554,13 +554,13 @@ HB_FUNC_STATIC( QWEBSETTINGS_GLOBALSETTINGS )
 /*
 static QString iconDatabasePath()
 */
-HB_FUNC_STATIC( QWEBSETTINGS_ICONDATABASEPATH )
+HB_FUNC_STATIC(QWEBSETTINGS_ICONDATABASEPATH)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RQSTRING( QWebSettings::iconDatabasePath() );
+    RQSTRING(QWebSettings::iconDatabasePath());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -573,13 +573,13 @@ HB_FUNC_STATIC( QWEBSETTINGS_ICONDATABASEPATH )
 /*
 static QIcon iconForUrl( const QUrl & url )
 */
-HB_FUNC_STATIC( QWEBSETTINGS_ICONFORURL )
+HB_FUNC_STATIC(QWEBSETTINGS_ICONFORURL)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISQURL(1) )
+  if (ISNUMPAR(1) && ISQURL(1))
   {
 #endif
-    QIcon * ptr = new QIcon( QWebSettings::iconForUrl( *PQURL(1)) );
+    QIcon *ptr = new QIcon(QWebSettings::iconForUrl(*PQURL(1)));
     Qt4xHb::createReturnClass(ptr, "QICON", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
@@ -593,13 +593,13 @@ HB_FUNC_STATIC( QWEBSETTINGS_ICONFORURL )
 /*
 static int maximumPagesInCache()
 */
-HB_FUNC_STATIC( QWEBSETTINGS_MAXIMUMPAGESINCACHE )
+HB_FUNC_STATIC(QWEBSETTINGS_MAXIMUMPAGESINCACHE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RINT( QWebSettings::maximumPagesInCache() );
+    RINT(QWebSettings::maximumPagesInCache());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -612,13 +612,13 @@ HB_FUNC_STATIC( QWEBSETTINGS_MAXIMUMPAGESINCACHE )
 /*
 static qint64 offlineStorageDefaultQuota()
 */
-HB_FUNC_STATIC( QWEBSETTINGS_OFFLINESTORAGEDEFAULTQUOTA )
+HB_FUNC_STATIC(QWEBSETTINGS_OFFLINESTORAGEDEFAULTQUOTA)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RQINT64( QWebSettings::offlineStorageDefaultQuota() );
+    RQINT64(QWebSettings::offlineStorageDefaultQuota());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -631,13 +631,13 @@ HB_FUNC_STATIC( QWEBSETTINGS_OFFLINESTORAGEDEFAULTQUOTA )
 /*
 static QString offlineStoragePath()
 */
-HB_FUNC_STATIC( QWEBSETTINGS_OFFLINESTORAGEPATH )
+HB_FUNC_STATIC(QWEBSETTINGS_OFFLINESTORAGEPATH)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RQSTRING( QWebSettings::offlineStoragePath() );
+    RQSTRING(QWebSettings::offlineStoragePath());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -650,13 +650,13 @@ HB_FUNC_STATIC( QWEBSETTINGS_OFFLINESTORAGEPATH )
 /*
 static QString offlineWebApplicationCachePath()
 */
-HB_FUNC_STATIC( QWEBSETTINGS_OFFLINEWEBAPPLICATIONCACHEPATH )
+HB_FUNC_STATIC(QWEBSETTINGS_OFFLINEWEBAPPLICATIONCACHEPATH)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RQSTRING( QWebSettings::offlineWebApplicationCachePath() );
+    RQSTRING(QWebSettings::offlineWebApplicationCachePath());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -669,13 +669,13 @@ HB_FUNC_STATIC( QWEBSETTINGS_OFFLINEWEBAPPLICATIONCACHEPATH )
 /*
 static qint64 offlineWebApplicationCacheQuota()
 */
-HB_FUNC_STATIC( QWEBSETTINGS_OFFLINEWEBAPPLICATIONCACHEQUOTA )
+HB_FUNC_STATIC(QWEBSETTINGS_OFFLINEWEBAPPLICATIONCACHEQUOTA)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RQINT64( QWebSettings::offlineWebApplicationCacheQuota() );
+    RQINT64(QWebSettings::offlineWebApplicationCacheQuota());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -688,13 +688,13 @@ HB_FUNC_STATIC( QWEBSETTINGS_OFFLINEWEBAPPLICATIONCACHEQUOTA )
 /*
 static void setIconDatabasePath( const QString & path )
 */
-HB_FUNC_STATIC( QWEBSETTINGS_SETICONDATABASEPATH )
+HB_FUNC_STATIC(QWEBSETTINGS_SETICONDATABASEPATH)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
 #endif
-    QWebSettings::setIconDatabasePath( PQSTRING(1) );
+    QWebSettings::setIconDatabasePath(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -709,13 +709,13 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETICONDATABASEPATH )
 /*
 static void setMaximumPagesInCache( int pages )
 */
-HB_FUNC_STATIC( QWEBSETTINGS_SETMAXIMUMPAGESINCACHE )
+HB_FUNC_STATIC(QWEBSETTINGS_SETMAXIMUMPAGESINCACHE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    QWebSettings::setMaximumPagesInCache( PINT(1) );
+    QWebSettings::setMaximumPagesInCache(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -730,13 +730,13 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETMAXIMUMPAGESINCACHE )
 /*
 static void setObjectCacheCapacities( int cacheMinDeadCapacity, int cacheMaxDead, int totalCapacity )
 */
-HB_FUNC_STATIC( QWEBSETTINGS_SETOBJECTCACHECAPACITIES )
+HB_FUNC_STATIC(QWEBSETTINGS_SETOBJECTCACHECAPACITIES)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
+  if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
 #endif
-    QWebSettings::setObjectCacheCapacities( PINT(1), PINT(2), PINT(3) );
+    QWebSettings::setObjectCacheCapacities(PINT(1), PINT(2), PINT(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -751,13 +751,13 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETOBJECTCACHECAPACITIES )
 /*
 static void setOfflineStorageDefaultQuota( qint64 maximumSize )
 */
-HB_FUNC_STATIC( QWEBSETTINGS_SETOFFLINESTORAGEDEFAULTQUOTA )
+HB_FUNC_STATIC(QWEBSETTINGS_SETOFFLINESTORAGEDEFAULTQUOTA)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    QWebSettings::setOfflineStorageDefaultQuota( PQINT64(1) );
+    QWebSettings::setOfflineStorageDefaultQuota(PQINT64(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -772,13 +772,13 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETOFFLINESTORAGEDEFAULTQUOTA )
 /*
 static void setOfflineStoragePath( const QString & path )
 */
-HB_FUNC_STATIC( QWEBSETTINGS_SETOFFLINESTORAGEPATH )
+HB_FUNC_STATIC(QWEBSETTINGS_SETOFFLINESTORAGEPATH)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
 #endif
-    QWebSettings::setOfflineStoragePath( PQSTRING(1) );
+    QWebSettings::setOfflineStoragePath(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -793,13 +793,13 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETOFFLINESTORAGEPATH )
 /*
 static void setOfflineWebApplicationCachePath( const QString & path )
 */
-HB_FUNC_STATIC( QWEBSETTINGS_SETOFFLINEWEBAPPLICATIONCACHEPATH )
+HB_FUNC_STATIC(QWEBSETTINGS_SETOFFLINEWEBAPPLICATIONCACHEPATH)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
 #endif
-    QWebSettings::setOfflineWebApplicationCachePath( PQSTRING(1) );
+    QWebSettings::setOfflineWebApplicationCachePath(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -814,13 +814,13 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETOFFLINEWEBAPPLICATIONCACHEPATH )
 /*
 static void setOfflineWebApplicationCacheQuota( qint64 maximumSize )
 */
-HB_FUNC_STATIC( QWEBSETTINGS_SETOFFLINEWEBAPPLICATIONCACHEQUOTA )
+HB_FUNC_STATIC(QWEBSETTINGS_SETOFFLINEWEBAPPLICATIONCACHEQUOTA)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    QWebSettings::setOfflineWebApplicationCacheQuota( PQINT64(1) );
+    QWebSettings::setOfflineWebApplicationCacheQuota(PQINT64(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -835,13 +835,13 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETOFFLINEWEBAPPLICATIONCACHEQUOTA )
 /*
 static void setWebGraphic( QWebSettings::WebGraphic type, const QPixmap & graphic )
 */
-HB_FUNC_STATIC( QWEBSETTINGS_SETWEBGRAPHIC )
+HB_FUNC_STATIC(QWEBSETTINGS_SETWEBGRAPHIC)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(2) && HB_ISNUM(1) && ISQPIXMAP(2) )
+  if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPIXMAP(2))
   {
 #endif
-    QWebSettings::setWebGraphic( ( QWebSettings::WebGraphic ) hb_parni(1), *PQPIXMAP(2) );
+    QWebSettings::setWebGraphic((QWebSettings::WebGraphic)hb_parni(1), *PQPIXMAP(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -856,13 +856,13 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETWEBGRAPHIC )
 /*
 static QPixmap webGraphic( QWebSettings::WebGraphic type )
 */
-HB_FUNC_STATIC( QWEBSETTINGS_WEBGRAPHIC )
+HB_FUNC_STATIC(QWEBSETTINGS_WEBGRAPHIC)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
 #endif
-    QPixmap * ptr = new QPixmap( QWebSettings::webGraphic( ( QWebSettings::WebGraphic ) hb_parni(1)) );
+    QPixmap *ptr = new QPixmap(QWebSettings::webGraphic((QWebSettings::WebGraphic)hb_parni(1)));
     Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
@@ -873,11 +873,11 @@ HB_FUNC_STATIC( QWEBSETTINGS_WEBGRAPHIC )
 #endif
 }
 
-HB_FUNC_STATIC( QWEBSETTINGS_NEWFROM )
+HB_FUNC_STATIC(QWEBSETTINGS_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -886,7 +886,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -903,26 +903,26 @@ HB_FUNC_STATIC( QWEBSETTINGS_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QWEBSETTINGS_NEWFROMOBJECT )
+HB_FUNC_STATIC(QWEBSETTINGS_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QWEBSETTINGS_NEWFROM );
+  HB_FUNC_EXEC(QWEBSETTINGS_NEWFROM);
 }
 
-HB_FUNC_STATIC( QWEBSETTINGS_NEWFROMPOINTER )
+HB_FUNC_STATIC(QWEBSETTINGS_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QWEBSETTINGS_NEWFROM );
+  HB_FUNC_EXEC(QWEBSETTINGS_NEWFROM);
 }
 
-HB_FUNC_STATIC( QWEBSETTINGS_SELFDESTRUCTION )
+HB_FUNC_STATIC(QWEBSETTINGS_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QWEBSETTINGS_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QWEBSETTINGS_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

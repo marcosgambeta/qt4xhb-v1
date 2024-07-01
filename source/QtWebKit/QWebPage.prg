@@ -126,14 +126,14 @@ RETURN
 #include <QtWebKit/QWebPluginFactory>
 #include <QtGui/QUndoStack>
 
-/*
-QWebPage( QObject * parent = 0 )
-*/
-HB_FUNC_STATIC( QWEBPAGE_NEW )
+    /*
+    QWebPage( QObject * parent = 0 )
+    */
+HB_FUNC_STATIC(QWEBPAGE_NEW)
 {
-  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QWebPage * obj = new QWebPage( OPQOBJECT( 1, 0 ) );
+    QWebPage *obj = new QWebPage(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -142,11 +142,11 @@ HB_FUNC_STATIC( QWEBPAGE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QWEBPAGE_DELETE )
+HB_FUNC_STATIC(QWEBPAGE_DELETE)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -163,17 +163,17 @@ HB_FUNC_STATIC( QWEBPAGE_DELETE )
 /*
 QAction * action( QWebPage::WebAction action ) const
 */
-HB_FUNC_STATIC( QWEBPAGE_ACTION )
+HB_FUNC_STATIC(QWEBPAGE_ACTION)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      QAction * ptr = obj->action( ( QWebPage::WebAction ) hb_parni(1) );
+      QAction *ptr = obj->action((QWebPage::WebAction)hb_parni(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -188,17 +188,17 @@ HB_FUNC_STATIC( QWEBPAGE_ACTION )
 /*
 quint64 bytesReceived() const
 */
-HB_FUNC_STATIC( QWEBPAGE_BYTESRECEIVED )
+HB_FUNC_STATIC(QWEBPAGE_BYTESRECEIVED)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQUINT64( obj->bytesReceived() );
+      RQUINT64(obj->bytesReceived());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,17 +212,17 @@ HB_FUNC_STATIC( QWEBPAGE_BYTESRECEIVED )
 /*
 QMenu * createStandardContextMenu()
 */
-HB_FUNC_STATIC( QWEBPAGE_CREATESTANDARDCONTEXTMENU )
+HB_FUNC_STATIC(QWEBPAGE_CREATESTANDARDCONTEXTMENU)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QMenu * ptr = obj->createStandardContextMenu();
+      QMenu *ptr = obj->createStandardContextMenu();
       Qt4xHb::createReturnQObjectClass(ptr, "QMENU");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -237,17 +237,17 @@ HB_FUNC_STATIC( QWEBPAGE_CREATESTANDARDCONTEXTMENU )
 /*
 QWebFrame * currentFrame() const
 */
-HB_FUNC_STATIC( QWEBPAGE_CURRENTFRAME )
+HB_FUNC_STATIC(QWEBPAGE_CURRENTFRAME)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QWebFrame * ptr = obj->currentFrame();
+      QWebFrame *ptr = obj->currentFrame();
       Qt4xHb::createReturnQObjectClass(ptr, "QWEBFRAME");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -262,17 +262,17 @@ HB_FUNC_STATIC( QWEBPAGE_CURRENTFRAME )
 /*
 bool findText( const QString & subString, QWebPage::FindFlags options = 0 )
 */
-HB_FUNC_STATIC( QWEBPAGE_FINDTEXT )
+HB_FUNC_STATIC(QWEBPAGE_FINDTEXT)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      RBOOL( obj->findText( PQSTRING(1), HB_ISNIL(2) ? ( QWebPage::FindFlags ) 0 : ( QWebPage::FindFlags ) hb_parni(2)) );
+      RBOOL(obj->findText(PQSTRING(1), HB_ISNIL(2) ? (QWebPage::FindFlags)0 : (QWebPage::FindFlags)hb_parni(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -286,17 +286,17 @@ HB_FUNC_STATIC( QWEBPAGE_FINDTEXT )
 /*
 bool focusNextPrevChild( bool next )
 */
-HB_FUNC_STATIC( QWEBPAGE_FOCUSNEXTPREVCHILD )
+HB_FUNC_STATIC(QWEBPAGE_FOCUSNEXTPREVCHILD)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      RBOOL( obj->focusNextPrevChild( PBOOL(1)) );
+      RBOOL(obj->focusNextPrevChild(PBOOL(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -310,17 +310,17 @@ HB_FUNC_STATIC( QWEBPAGE_FOCUSNEXTPREVCHILD )
 /*
 bool forwardUnsupportedContent() const
 */
-HB_FUNC_STATIC( QWEBPAGE_FORWARDUNSUPPORTEDCONTENT )
+HB_FUNC_STATIC(QWEBPAGE_FORWARDUNSUPPORTEDCONTENT)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->forwardUnsupportedContent() );
+      RBOOL(obj->forwardUnsupportedContent());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -334,17 +334,17 @@ HB_FUNC_STATIC( QWEBPAGE_FORWARDUNSUPPORTEDCONTENT )
 /*
 QWebFrame * frameAt( const QPoint & pos ) const
 */
-HB_FUNC_STATIC( QWEBPAGE_FRAMEAT )
+HB_FUNC_STATIC(QWEBPAGE_FRAMEAT)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINT(1) )
+    if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      QWebFrame * ptr = obj->frameAt( *PQPOINT(1) );
+      QWebFrame *ptr = obj->frameAt(*PQPOINT(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QWEBFRAME");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -359,17 +359,17 @@ HB_FUNC_STATIC( QWEBPAGE_FRAMEAT )
 /*
 QWebHistory * history() const
 */
-HB_FUNC_STATIC( QWEBPAGE_HISTORY )
+HB_FUNC_STATIC(QWEBPAGE_HISTORY)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QWebHistory * ptr = obj->history();
+      QWebHistory *ptr = obj->history();
       Qt4xHb::createReturnClass(ptr, "QWEBHISTORY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -384,17 +384,17 @@ HB_FUNC_STATIC( QWEBPAGE_HISTORY )
 /*
 QVariant inputMethodQuery( Qt::InputMethodQuery property ) const
 */
-HB_FUNC_STATIC( QWEBPAGE_INPUTMETHODQUERY )
+HB_FUNC_STATIC(QWEBPAGE_INPUTMETHODQUERY)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      QVariant * ptr = new QVariant( obj->inputMethodQuery( ( Qt::InputMethodQuery ) hb_parni(1)) );
+      QVariant *ptr = new QVariant(obj->inputMethodQuery((Qt::InputMethodQuery)hb_parni(1)));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -409,17 +409,17 @@ HB_FUNC_STATIC( QWEBPAGE_INPUTMETHODQUERY )
 /*
 bool isContentEditable() const
 */
-HB_FUNC_STATIC( QWEBPAGE_ISCONTENTEDITABLE )
+HB_FUNC_STATIC(QWEBPAGE_ISCONTENTEDITABLE)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isContentEditable() );
+      RBOOL(obj->isContentEditable());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -433,17 +433,17 @@ HB_FUNC_STATIC( QWEBPAGE_ISCONTENTEDITABLE )
 /*
 bool isModified() const
 */
-HB_FUNC_STATIC( QWEBPAGE_ISMODIFIED )
+HB_FUNC_STATIC(QWEBPAGE_ISMODIFIED)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isModified() );
+      RBOOL(obj->isModified());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -457,17 +457,17 @@ HB_FUNC_STATIC( QWEBPAGE_ISMODIFIED )
 /*
 QWebPage::LinkDelegationPolicy linkDelegationPolicy() const
 */
-HB_FUNC_STATIC( QWEBPAGE_LINKDELEGATIONPOLICY )
+HB_FUNC_STATIC(QWEBPAGE_LINKDELEGATIONPOLICY)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->linkDelegationPolicy() );
+      RENUM(obj->linkDelegationPolicy());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -481,17 +481,17 @@ HB_FUNC_STATIC( QWEBPAGE_LINKDELEGATIONPOLICY )
 /*
 QWebFrame * mainFrame() const
 */
-HB_FUNC_STATIC( QWEBPAGE_MAINFRAME )
+HB_FUNC_STATIC(QWEBPAGE_MAINFRAME)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QWebFrame * ptr = obj->mainFrame();
+      QWebFrame *ptr = obj->mainFrame();
       Qt4xHb::createReturnQObjectClass(ptr, "QWEBFRAME");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -506,17 +506,17 @@ HB_FUNC_STATIC( QWEBPAGE_MAINFRAME )
 /*
 QNetworkAccessManager * networkAccessManager() const
 */
-HB_FUNC_STATIC( QWEBPAGE_NETWORKACCESSMANAGER )
+HB_FUNC_STATIC(QWEBPAGE_NETWORKACCESSMANAGER)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QNetworkAccessManager * ptr = obj->networkAccessManager();
+      QNetworkAccessManager *ptr = obj->networkAccessManager();
       Qt4xHb::createReturnQObjectClass(ptr, "QNETWORKACCESSMANAGER");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -531,17 +531,17 @@ HB_FUNC_STATIC( QWEBPAGE_NETWORKACCESSMANAGER )
 /*
 QPalette palette() const
 */
-HB_FUNC_STATIC( QWEBPAGE_PALETTE )
+HB_FUNC_STATIC(QWEBPAGE_PALETTE)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPalette * ptr = new QPalette( obj->palette() );
+      QPalette *ptr = new QPalette(obj->palette());
       Qt4xHb::createReturnClass(ptr, "QPALETTE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -556,17 +556,17 @@ HB_FUNC_STATIC( QWEBPAGE_PALETTE )
 /*
 QWebPluginFactory * pluginFactory() const
 */
-HB_FUNC_STATIC( QWEBPAGE_PLUGINFACTORY )
+HB_FUNC_STATIC(QWEBPAGE_PLUGINFACTORY)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QWebPluginFactory * ptr = obj->pluginFactory();
+      QWebPluginFactory *ptr = obj->pluginFactory();
       Qt4xHb::createReturnQObjectClass(ptr, "QWEBPLUGINFACTORY");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -581,17 +581,17 @@ HB_FUNC_STATIC( QWEBPAGE_PLUGINFACTORY )
 /*
 QSize preferredContentsSize() const
 */
-HB_FUNC_STATIC( QWEBPAGE_PREFERREDCONTENTSSIZE )
+HB_FUNC_STATIC(QWEBPAGE_PREFERREDCONTENTSSIZE)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSize * ptr = new QSize( obj->preferredContentsSize() );
+      QSize *ptr = new QSize(obj->preferredContentsSize());
       Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -606,17 +606,17 @@ HB_FUNC_STATIC( QWEBPAGE_PREFERREDCONTENTSSIZE )
 /*
 QString selectedText() const
 */
-HB_FUNC_STATIC( QWEBPAGE_SELECTEDTEXT )
+HB_FUNC_STATIC(QWEBPAGE_SELECTEDTEXT)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->selectedText() );
+      RQSTRING(obj->selectedText());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -630,17 +630,17 @@ HB_FUNC_STATIC( QWEBPAGE_SELECTEDTEXT )
 /*
 void setContentEditable( bool editable )
 */
-HB_FUNC_STATIC( QWEBPAGE_SETCONTENTEDITABLE )
+HB_FUNC_STATIC(QWEBPAGE_SETCONTENTEDITABLE)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setContentEditable( PBOOL(1) );
+      obj->setContentEditable(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -656,17 +656,17 @@ HB_FUNC_STATIC( QWEBPAGE_SETCONTENTEDITABLE )
 /*
 void setForwardUnsupportedContent( bool forward )
 */
-HB_FUNC_STATIC( QWEBPAGE_SETFORWARDUNSUPPORTEDCONTENT )
+HB_FUNC_STATIC(QWEBPAGE_SETFORWARDUNSUPPORTEDCONTENT)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setForwardUnsupportedContent( PBOOL(1) );
+      obj->setForwardUnsupportedContent(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -682,17 +682,17 @@ HB_FUNC_STATIC( QWEBPAGE_SETFORWARDUNSUPPORTEDCONTENT )
 /*
 void setLinkDelegationPolicy( QWebPage::LinkDelegationPolicy policy )
 */
-HB_FUNC_STATIC( QWEBPAGE_SETLINKDELEGATIONPOLICY )
+HB_FUNC_STATIC(QWEBPAGE_SETLINKDELEGATIONPOLICY)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLinkDelegationPolicy( ( QWebPage::LinkDelegationPolicy ) hb_parni(1) );
+      obj->setLinkDelegationPolicy((QWebPage::LinkDelegationPolicy)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -708,17 +708,17 @@ HB_FUNC_STATIC( QWEBPAGE_SETLINKDELEGATIONPOLICY )
 /*
 void setNetworkAccessManager( QNetworkAccessManager * manager )
 */
-HB_FUNC_STATIC( QWEBPAGE_SETNETWORKACCESSMANAGER )
+HB_FUNC_STATIC(QWEBPAGE_SETNETWORKACCESSMANAGER)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQNETWORKACCESSMANAGER(1) )
+    if (ISNUMPAR(1) && ISQNETWORKACCESSMANAGER(1))
     {
 #endif
-      obj->setNetworkAccessManager( PQNETWORKACCESSMANAGER(1) );
+      obj->setNetworkAccessManager(PQNETWORKACCESSMANAGER(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -734,17 +734,17 @@ HB_FUNC_STATIC( QWEBPAGE_SETNETWORKACCESSMANAGER )
 /*
 void setPalette( const QPalette & palette )
 */
-HB_FUNC_STATIC( QWEBPAGE_SETPALETTE )
+HB_FUNC_STATIC(QWEBPAGE_SETPALETTE)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPALETTE(1) )
+    if (ISNUMPAR(1) && ISQPALETTE(1))
     {
 #endif
-      obj->setPalette( *PQPALETTE(1) );
+      obj->setPalette(*PQPALETTE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -760,17 +760,17 @@ HB_FUNC_STATIC( QWEBPAGE_SETPALETTE )
 /*
 void setPluginFactory( QWebPluginFactory * factory )
 */
-HB_FUNC_STATIC( QWEBPAGE_SETPLUGINFACTORY )
+HB_FUNC_STATIC(QWEBPAGE_SETPLUGINFACTORY)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWEBPLUGINFACTORY(1) )
+    if (ISNUMPAR(1) && ISQWEBPLUGINFACTORY(1))
     {
 #endif
-      obj->setPluginFactory( PQWEBPLUGINFACTORY(1) );
+      obj->setPluginFactory(PQWEBPLUGINFACTORY(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -786,17 +786,17 @@ HB_FUNC_STATIC( QWEBPAGE_SETPLUGINFACTORY )
 /*
 void setPreferredContentsSize( const QSize & size ) const
 */
-HB_FUNC_STATIC( QWEBPAGE_SETPREFERREDCONTENTSSIZE )
+HB_FUNC_STATIC(QWEBPAGE_SETPREFERREDCONTENTSSIZE)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSIZE(1) )
+    if (ISNUMPAR(1) && ISQSIZE(1))
     {
 #endif
-      obj->setPreferredContentsSize( *PQSIZE(1) );
+      obj->setPreferredContentsSize(*PQSIZE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -812,17 +812,17 @@ HB_FUNC_STATIC( QWEBPAGE_SETPREFERREDCONTENTSSIZE )
 /*
 void setView( QWidget * view )
 */
-HB_FUNC_STATIC( QWEBPAGE_SETVIEW )
+HB_FUNC_STATIC(QWEBPAGE_SETVIEW)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if (ISNUMPAR(1) && ISQWIDGET(1))
     {
 #endif
-      obj->setView( PQWIDGET(1) );
+      obj->setView(PQWIDGET(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -838,17 +838,17 @@ HB_FUNC_STATIC( QWEBPAGE_SETVIEW )
 /*
 void setViewportSize( const QSize & size ) const
 */
-HB_FUNC_STATIC( QWEBPAGE_SETVIEWPORTSIZE )
+HB_FUNC_STATIC(QWEBPAGE_SETVIEWPORTSIZE)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSIZE(1) )
+    if (ISNUMPAR(1) && ISQSIZE(1))
     {
 #endif
-      obj->setViewportSize( *PQSIZE(1) );
+      obj->setViewportSize(*PQSIZE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -864,17 +864,17 @@ HB_FUNC_STATIC( QWEBPAGE_SETVIEWPORTSIZE )
 /*
 QWebSettings * settings() const
 */
-HB_FUNC_STATIC( QWEBPAGE_SETTINGS )
+HB_FUNC_STATIC(QWEBPAGE_SETTINGS)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QWebSettings * ptr = obj->settings();
+      QWebSettings *ptr = obj->settings();
       Qt4xHb::createReturnClass(ptr, "QWEBSETTINGS", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -889,17 +889,17 @@ HB_FUNC_STATIC( QWEBPAGE_SETTINGS )
 /*
 virtual bool supportsExtension( QWebPage::Extension extension ) const
 */
-HB_FUNC_STATIC( QWEBPAGE_SUPPORTSEXTENSION )
+HB_FUNC_STATIC(QWEBPAGE_SUPPORTSEXTENSION)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->supportsExtension( ( QWebPage::Extension ) hb_parni(1)) );
+      RBOOL(obj->supportsExtension((QWebPage::Extension)hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -913,17 +913,17 @@ HB_FUNC_STATIC( QWEBPAGE_SUPPORTSEXTENSION )
 /*
 bool swallowContextMenuEvent( QContextMenuEvent * event )
 */
-HB_FUNC_STATIC( QWEBPAGE_SWALLOWCONTEXTMENUEVENT )
+HB_FUNC_STATIC(QWEBPAGE_SWALLOWCONTEXTMENUEVENT)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQCONTEXTMENUEVENT(1) )
+    if (ISNUMPAR(1) && ISQCONTEXTMENUEVENT(1))
     {
 #endif
-      RBOOL( obj->swallowContextMenuEvent( PQCONTEXTMENUEVENT(1)) );
+      RBOOL(obj->swallowContextMenuEvent(PQCONTEXTMENUEVENT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -937,17 +937,17 @@ HB_FUNC_STATIC( QWEBPAGE_SWALLOWCONTEXTMENUEVENT )
 /*
 quint64 totalBytes() const
 */
-HB_FUNC_STATIC( QWEBPAGE_TOTALBYTES )
+HB_FUNC_STATIC(QWEBPAGE_TOTALBYTES)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQUINT64( obj->totalBytes() );
+      RQUINT64(obj->totalBytes());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -961,17 +961,17 @@ HB_FUNC_STATIC( QWEBPAGE_TOTALBYTES )
 /*
 virtual void triggerAction( QWebPage::WebAction action, bool checked = false )
 */
-HB_FUNC_STATIC( QWEBPAGE_TRIGGERACTION )
+HB_FUNC_STATIC(QWEBPAGE_TRIGGERACTION)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->triggerAction( ( QWebPage::WebAction ) hb_parni(1), OPBOOL( 2, false ) );
+      obj->triggerAction((QWebPage::WebAction)hb_parni(1), OPBOOL(2, false));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -987,17 +987,17 @@ HB_FUNC_STATIC( QWEBPAGE_TRIGGERACTION )
 /*
 QUndoStack * undoStack() const
 */
-HB_FUNC_STATIC( QWEBPAGE_UNDOSTACK )
+HB_FUNC_STATIC(QWEBPAGE_UNDOSTACK)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QUndoStack * ptr = obj->undoStack();
+      QUndoStack *ptr = obj->undoStack();
       Qt4xHb::createReturnQObjectClass(ptr, "QUNDOSTACK");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1012,17 +1012,17 @@ HB_FUNC_STATIC( QWEBPAGE_UNDOSTACK )
 /*
 void updatePositionDependentActions( const QPoint & pos )
 */
-HB_FUNC_STATIC( QWEBPAGE_UPDATEPOSITIONDEPENDENTACTIONS )
+HB_FUNC_STATIC(QWEBPAGE_UPDATEPOSITIONDEPENDENTACTIONS)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINT(1) )
+    if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      obj->updatePositionDependentActions( *PQPOINT(1) );
+      obj->updatePositionDependentActions(*PQPOINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1038,18 +1038,18 @@ HB_FUNC_STATIC( QWEBPAGE_UPDATEPOSITIONDEPENDENTACTIONS )
 /*
 QWidget * view() const
 */
-HB_FUNC_STATIC( QWEBPAGE_VIEW )
+HB_FUNC_STATIC(QWEBPAGE_VIEW)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QWidget * ptr = obj->view();
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
+      QWidget *ptr = obj->view();
+      Qt4xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1063,17 +1063,17 @@ HB_FUNC_STATIC( QWEBPAGE_VIEW )
 /*
 QSize viewportSize() const
 */
-HB_FUNC_STATIC( QWEBPAGE_VIEWPORTSIZE )
+HB_FUNC_STATIC(QWEBPAGE_VIEWPORTSIZE)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSize * ptr = new QSize( obj->viewportSize() );
+      QSize *ptr = new QSize(obj->viewportSize());
       Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1088,17 +1088,17 @@ HB_FUNC_STATIC( QWEBPAGE_VIEWPORTSIZE )
 /*
 virtual bool event( QEvent * ev )
 */
-HB_FUNC_STATIC( QWEBPAGE_EVENT )
+HB_FUNC_STATIC(QWEBPAGE_EVENT)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQEVENT(1) )
+    if (ISNUMPAR(1) && ISQEVENT(1))
     {
 #endif
-      RBOOL( obj->event( PQEVENT(1)) );
+      RBOOL(obj->event(PQEVENT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1112,17 +1112,17 @@ HB_FUNC_STATIC( QWEBPAGE_EVENT )
 /*
 bool shouldInterruptJavaScript()
 */
-HB_FUNC_STATIC( QWEBPAGE_SHOULDINTERRUPTJAVASCRIPT )
+HB_FUNC_STATIC(QWEBPAGE_SHOULDINTERRUPTJAVASCRIPT)
 {
-  QWebPage * obj = qobject_cast<QWebPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebPage *obj = qobject_cast<QWebPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->shouldInterruptJavaScript() );
+      RBOOL(obj->shouldInterruptJavaScript());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1133,119 +1133,121 @@ HB_FUNC_STATIC( QWEBPAGE_SHOULDINTERRUPTJAVASCRIPT )
   }
 }
 
-void QWebPageSlots_connect_signal(const QString & signal, const QString & slot);
+void QWebPageSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QWEBPAGE_ONCONTENTSCHANGED )
+HB_FUNC_STATIC(QWEBPAGE_ONCONTENTSCHANGED)
 {
   QWebPageSlots_connect_signal("contentsChanged()", "contentsChanged()");
 }
 
-HB_FUNC_STATIC( QWEBPAGE_ONDATABASEQUOTAEXCEEDED )
+HB_FUNC_STATIC(QWEBPAGE_ONDATABASEQUOTAEXCEEDED)
 {
-  QWebPageSlots_connect_signal("databaseQuotaExceeded(QWebFrame*,QString)", "databaseQuotaExceeded(QWebFrame*,QString)");
+  QWebPageSlots_connect_signal("databaseQuotaExceeded(QWebFrame*,QString)",
+                               "databaseQuotaExceeded(QWebFrame*,QString)");
 }
 
-HB_FUNC_STATIC( QWEBPAGE_ONDOWNLOADREQUESTED )
+HB_FUNC_STATIC(QWEBPAGE_ONDOWNLOADREQUESTED)
 {
   QWebPageSlots_connect_signal("downloadRequested(QNetworkRequest)", "downloadRequested(QNetworkRequest)");
 }
 
-HB_FUNC_STATIC( QWEBPAGE_ONFRAMECREATED )
+HB_FUNC_STATIC(QWEBPAGE_ONFRAMECREATED)
 {
   QWebPageSlots_connect_signal("frameCreated(QWebFrame*)", "frameCreated(QWebFrame*)");
 }
 
-HB_FUNC_STATIC( QWEBPAGE_ONGEOMETRYCHANGEREQUESTED )
+HB_FUNC_STATIC(QWEBPAGE_ONGEOMETRYCHANGEREQUESTED)
 {
   QWebPageSlots_connect_signal("geometryChangeRequested(QRect)", "geometryChangeRequested(QRect)");
 }
 
-HB_FUNC_STATIC( QWEBPAGE_ONLINKCLICKED )
+HB_FUNC_STATIC(QWEBPAGE_ONLINKCLICKED)
 {
   QWebPageSlots_connect_signal("linkClicked(QUrl)", "linkClicked(QUrl)");
 }
 
-HB_FUNC_STATIC( QWEBPAGE_ONLINKHOVERED )
+HB_FUNC_STATIC(QWEBPAGE_ONLINKHOVERED)
 {
   QWebPageSlots_connect_signal("linkHovered(QString,QString,QString)", "linkHovered(QString,QString,QString)");
 }
 
-HB_FUNC_STATIC( QWEBPAGE_ONLOADFINISHED )
+HB_FUNC_STATIC(QWEBPAGE_ONLOADFINISHED)
 {
   QWebPageSlots_connect_signal("loadFinished(bool)", "loadFinished(bool)");
 }
 
-HB_FUNC_STATIC( QWEBPAGE_ONLOADPROGRESS )
+HB_FUNC_STATIC(QWEBPAGE_ONLOADPROGRESS)
 {
   QWebPageSlots_connect_signal("loadProgress(int)", "loadProgress(int)");
 }
 
-HB_FUNC_STATIC( QWEBPAGE_ONLOADSTARTED )
+HB_FUNC_STATIC(QWEBPAGE_ONLOADSTARTED)
 {
   QWebPageSlots_connect_signal("loadStarted()", "loadStarted()");
 }
 
-HB_FUNC_STATIC( QWEBPAGE_ONMENUBARVISIBILITYCHANGEREQUESTED )
+HB_FUNC_STATIC(QWEBPAGE_ONMENUBARVISIBILITYCHANGEREQUESTED)
 {
   QWebPageSlots_connect_signal("menuBarVisibilityChangeRequested(bool)", "menuBarVisibilityChangeRequested(bool)");
 }
 
-HB_FUNC_STATIC( QWEBPAGE_ONMICROFOCUSCHANGED )
+HB_FUNC_STATIC(QWEBPAGE_ONMICROFOCUSCHANGED)
 {
   QWebPageSlots_connect_signal("microFocusChanged()", "microFocusChanged()");
 }
 
-HB_FUNC_STATIC( QWEBPAGE_ONPRINTREQUESTED )
+HB_FUNC_STATIC(QWEBPAGE_ONPRINTREQUESTED)
 {
   QWebPageSlots_connect_signal("printRequested(QWebFrame*)", "printRequested(QWebFrame*)");
 }
 
-HB_FUNC_STATIC( QWEBPAGE_ONREPAINTREQUESTED )
+HB_FUNC_STATIC(QWEBPAGE_ONREPAINTREQUESTED)
 {
   QWebPageSlots_connect_signal("repaintRequested(QRect)", "repaintRequested(QRect)");
 }
 
-HB_FUNC_STATIC( QWEBPAGE_ONRESTOREFRAMESTATEREQUESTED )
+HB_FUNC_STATIC(QWEBPAGE_ONRESTOREFRAMESTATEREQUESTED)
 {
   QWebPageSlots_connect_signal("restoreFrameStateRequested(QWebFrame*)", "restoreFrameStateRequested(QWebFrame*)");
 }
 
-HB_FUNC_STATIC( QWEBPAGE_ONSAVEFRAMESTATEREQUESTED )
+HB_FUNC_STATIC(QWEBPAGE_ONSAVEFRAMESTATEREQUESTED)
 {
-  QWebPageSlots_connect_signal("saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)", "saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)");
+  QWebPageSlots_connect_signal("saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)",
+                               "saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)");
 }
 
-HB_FUNC_STATIC( QWEBPAGE_ONSCROLLREQUESTED )
+HB_FUNC_STATIC(QWEBPAGE_ONSCROLLREQUESTED)
 {
   QWebPageSlots_connect_signal("scrollRequested(int,int,QRect)", "scrollRequested(int,int,QRect)");
 }
 
-HB_FUNC_STATIC( QWEBPAGE_ONSELECTIONCHANGED )
+HB_FUNC_STATIC(QWEBPAGE_ONSELECTIONCHANGED)
 {
   QWebPageSlots_connect_signal("selectionChanged()", "selectionChanged()");
 }
 
-HB_FUNC_STATIC( QWEBPAGE_ONSTATUSBARMESSAGE )
+HB_FUNC_STATIC(QWEBPAGE_ONSTATUSBARMESSAGE)
 {
   QWebPageSlots_connect_signal("statusBarMessage(QString)", "statusBarMessage(QString)");
 }
 
-HB_FUNC_STATIC( QWEBPAGE_ONSTATUSBARVISIBILITYCHANGEREQUESTED )
+HB_FUNC_STATIC(QWEBPAGE_ONSTATUSBARVISIBILITYCHANGEREQUESTED)
 {
   QWebPageSlots_connect_signal("statusBarVisibilityChangeRequested(bool)", "statusBarVisibilityChangeRequested(bool)");
 }
 
-HB_FUNC_STATIC( QWEBPAGE_ONTOOLBARVISIBILITYCHANGEREQUESTED )
+HB_FUNC_STATIC(QWEBPAGE_ONTOOLBARVISIBILITYCHANGEREQUESTED)
 {
   QWebPageSlots_connect_signal("toolBarVisibilityChangeRequested(bool)", "toolBarVisibilityChangeRequested(bool)");
 }
 
-HB_FUNC_STATIC( QWEBPAGE_ONUNSUPPORTEDCONTENT )
+HB_FUNC_STATIC(QWEBPAGE_ONUNSUPPORTEDCONTENT)
 {
   QWebPageSlots_connect_signal("unsupportedContent(QNetworkReply*)", "unsupportedContent(QNetworkReply*)");
 }
 
-HB_FUNC_STATIC( QWEBPAGE_ONWINDOWCLOSEREQUESTED )
+HB_FUNC_STATIC(QWEBPAGE_ONWINDOWCLOSEREQUESTED)
 {
   QWebPageSlots_connect_signal("windowCloseRequested()", "windowCloseRequested()");
 }

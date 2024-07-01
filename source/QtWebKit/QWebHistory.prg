@@ -67,17 +67,17 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-void back()
-*/
-HB_FUNC_STATIC( QWEBHISTORY_BACK )
+    /*
+    void back()
+    */
+HB_FUNC_STATIC(QWEBHISTORY_BACK)
 {
-  QWebHistory * obj = static_cast<QWebHistory*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->back();
@@ -96,17 +96,17 @@ HB_FUNC_STATIC( QWEBHISTORY_BACK )
 /*
 QWebHistoryItem backItem() const
 */
-HB_FUNC_STATIC( QWEBHISTORY_BACKITEM )
+HB_FUNC_STATIC(QWEBHISTORY_BACKITEM)
 {
-  QWebHistory * obj = static_cast<QWebHistory*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QWebHistoryItem * ptr = new QWebHistoryItem( obj->backItem() );
+      QWebHistoryItem *ptr = new QWebHistoryItem(obj->backItem());
       Qt4xHb::createReturnClass(ptr, "QWEBHISTORYITEM", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -121,23 +121,23 @@ HB_FUNC_STATIC( QWEBHISTORY_BACKITEM )
 /*
 QList<QWebHistoryItem> backItems( int maxItems ) const
 */
-HB_FUNC_STATIC( QWEBHISTORY_BACKITEMS )
+HB_FUNC_STATIC(QWEBHISTORY_BACKITEMS)
 {
-  QWebHistory * obj = static_cast<QWebHistory*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      QList<QWebHistoryItem> list = obj->backItems( PINT(1) );
+      QList<QWebHistoryItem> list = obj->backItems(PINT(1));
       PHB_DYNS pDynSym = hb_dynsymFindName("QWEBHISTORYITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
         const int count = list.count();
-        for( int i = 0; i < count; i++ )
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -172,17 +172,17 @@ HB_FUNC_STATIC( QWEBHISTORY_BACKITEMS )
 /*
 bool canGoBack() const
 */
-HB_FUNC_STATIC( QWEBHISTORY_CANGOBACK )
+HB_FUNC_STATIC(QWEBHISTORY_CANGOBACK)
 {
-  QWebHistory * obj = static_cast<QWebHistory*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->canGoBack() );
+      RBOOL(obj->canGoBack());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,17 +196,17 @@ HB_FUNC_STATIC( QWEBHISTORY_CANGOBACK )
 /*
 bool canGoForward() const
 */
-HB_FUNC_STATIC( QWEBHISTORY_CANGOFORWARD )
+HB_FUNC_STATIC(QWEBHISTORY_CANGOFORWARD)
 {
-  QWebHistory * obj = static_cast<QWebHistory*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->canGoForward() );
+      RBOOL(obj->canGoForward());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,14 +220,14 @@ HB_FUNC_STATIC( QWEBHISTORY_CANGOFORWARD )
 /*
 void clear()
 */
-HB_FUNC_STATIC( QWEBHISTORY_CLEAR )
+HB_FUNC_STATIC(QWEBHISTORY_CLEAR)
 {
-  QWebHistory * obj = static_cast<QWebHistory*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clear();
@@ -246,17 +246,17 @@ HB_FUNC_STATIC( QWEBHISTORY_CLEAR )
 /*
 int count() const
 */
-HB_FUNC_STATIC( QWEBHISTORY_COUNT )
+HB_FUNC_STATIC(QWEBHISTORY_COUNT)
 {
-  QWebHistory * obj = static_cast<QWebHistory*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->count() );
+      RINT(obj->count());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -270,17 +270,17 @@ HB_FUNC_STATIC( QWEBHISTORY_COUNT )
 /*
 QWebHistoryItem currentItem() const
 */
-HB_FUNC_STATIC( QWEBHISTORY_CURRENTITEM )
+HB_FUNC_STATIC(QWEBHISTORY_CURRENTITEM)
 {
-  QWebHistory * obj = static_cast<QWebHistory*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QWebHistoryItem * ptr = new QWebHistoryItem( obj->currentItem() );
+      QWebHistoryItem *ptr = new QWebHistoryItem(obj->currentItem());
       Qt4xHb::createReturnClass(ptr, "QWEBHISTORYITEM", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -295,17 +295,17 @@ HB_FUNC_STATIC( QWEBHISTORY_CURRENTITEM )
 /*
 int currentItemIndex() const
 */
-HB_FUNC_STATIC( QWEBHISTORY_CURRENTITEMINDEX )
+HB_FUNC_STATIC(QWEBHISTORY_CURRENTITEMINDEX)
 {
-  QWebHistory * obj = static_cast<QWebHistory*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->currentItemIndex() );
+      RINT(obj->currentItemIndex());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -319,14 +319,14 @@ HB_FUNC_STATIC( QWEBHISTORY_CURRENTITEMINDEX )
 /*
 void forward()
 */
-HB_FUNC_STATIC( QWEBHISTORY_FORWARD )
+HB_FUNC_STATIC(QWEBHISTORY_FORWARD)
 {
-  QWebHistory * obj = static_cast<QWebHistory*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->forward();
@@ -345,17 +345,17 @@ HB_FUNC_STATIC( QWEBHISTORY_FORWARD )
 /*
 QWebHistoryItem forwardItem() const
 */
-HB_FUNC_STATIC( QWEBHISTORY_FORWARDITEM )
+HB_FUNC_STATIC(QWEBHISTORY_FORWARDITEM)
 {
-  QWebHistory * obj = static_cast<QWebHistory*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QWebHistoryItem * ptr = new QWebHistoryItem( obj->forwardItem() );
+      QWebHistoryItem *ptr = new QWebHistoryItem(obj->forwardItem());
       Qt4xHb::createReturnClass(ptr, "QWEBHISTORYITEM", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -370,23 +370,23 @@ HB_FUNC_STATIC( QWEBHISTORY_FORWARDITEM )
 /*
 QList<QWebHistoryItem> forwardItems( int maxItems ) const
 */
-HB_FUNC_STATIC( QWEBHISTORY_FORWARDITEMS )
+HB_FUNC_STATIC(QWEBHISTORY_FORWARDITEMS)
 {
-  QWebHistory * obj = static_cast<QWebHistory*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      QList<QWebHistoryItem> list = obj->forwardItems( PINT(1) );
+      QList<QWebHistoryItem> list = obj->forwardItems(PINT(1));
       PHB_DYNS pDynSym = hb_dynsymFindName("QWEBHISTORYITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
         const int count = list.count();
-        for( int i = 0; i < count; i++ )
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -421,17 +421,17 @@ HB_FUNC_STATIC( QWEBHISTORY_FORWARDITEMS )
 /*
 void goToItem( const QWebHistoryItem & item )
 */
-HB_FUNC_STATIC( QWEBHISTORY_GOTOITEM )
+HB_FUNC_STATIC(QWEBHISTORY_GOTOITEM)
 {
-  QWebHistory * obj = static_cast<QWebHistory*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWEBHISTORYITEM(1) )
+    if (ISNUMPAR(1) && ISQWEBHISTORYITEM(1))
     {
 #endif
-      obj->goToItem( *PQWEBHISTORYITEM(1) );
+      obj->goToItem(*PQWEBHISTORYITEM(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -447,17 +447,17 @@ HB_FUNC_STATIC( QWEBHISTORY_GOTOITEM )
 /*
 QWebHistoryItem itemAt( int i ) const
 */
-HB_FUNC_STATIC( QWEBHISTORY_ITEMAT )
+HB_FUNC_STATIC(QWEBHISTORY_ITEMAT)
 {
-  QWebHistory * obj = static_cast<QWebHistory*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      QWebHistoryItem * ptr = new QWebHistoryItem( obj->itemAt( PINT(1)) );
+      QWebHistoryItem *ptr = new QWebHistoryItem(obj->itemAt(PINT(1)));
       Qt4xHb::createReturnClass(ptr, "QWEBHISTORYITEM", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -472,23 +472,23 @@ HB_FUNC_STATIC( QWEBHISTORY_ITEMAT )
 /*
 QList<QWebHistoryItem> items() const
 */
-HB_FUNC_STATIC( QWEBHISTORY_ITEMS )
+HB_FUNC_STATIC(QWEBHISTORY_ITEMS)
 {
-  QWebHistory * obj = static_cast<QWebHistory*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QList<QWebHistoryItem> list = obj->items();
       PHB_DYNS pDynSym = hb_dynsymFindName("QWEBHISTORYITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
         const int count = list.count();
-        for( int i = 0; i < count; i++ )
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -523,17 +523,17 @@ HB_FUNC_STATIC( QWEBHISTORY_ITEMS )
 /*
 int maximumItemCount() const
 */
-HB_FUNC_STATIC( QWEBHISTORY_MAXIMUMITEMCOUNT )
+HB_FUNC_STATIC(QWEBHISTORY_MAXIMUMITEMCOUNT)
 {
-  QWebHistory * obj = static_cast<QWebHistory*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->maximumItemCount() );
+      RINT(obj->maximumItemCount());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -547,17 +547,17 @@ HB_FUNC_STATIC( QWEBHISTORY_MAXIMUMITEMCOUNT )
 /*
 void setMaximumItemCount( int count )
 */
-HB_FUNC_STATIC( QWEBHISTORY_SETMAXIMUMITEMCOUNT )
+HB_FUNC_STATIC(QWEBHISTORY_SETMAXIMUMITEMCOUNT)
 {
-  QWebHistory * obj = static_cast<QWebHistory*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMaximumItemCount( PINT(1) );
+      obj->setMaximumItemCount(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -570,11 +570,11 @@ HB_FUNC_STATIC( QWEBHISTORY_SETMAXIMUMITEMCOUNT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QWEBHISTORY_NEWFROM )
+HB_FUNC_STATIC(QWEBHISTORY_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -583,7 +583,7 @@ HB_FUNC_STATIC( QWEBHISTORY_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -600,26 +600,26 @@ HB_FUNC_STATIC( QWEBHISTORY_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QWEBHISTORY_NEWFROMOBJECT )
+HB_FUNC_STATIC(QWEBHISTORY_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QWEBHISTORY_NEWFROM );
+  HB_FUNC_EXEC(QWEBHISTORY_NEWFROM);
 }
 
-HB_FUNC_STATIC( QWEBHISTORY_NEWFROMPOINTER )
+HB_FUNC_STATIC(QWEBHISTORY_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QWEBHISTORY_NEWFROM );
+  HB_FUNC_EXEC(QWEBHISTORY_NEWFROM);
 }
 
-HB_FUNC_STATIC( QWEBHISTORY_SELFDESTRUCTION )
+HB_FUNC_STATIC(QWEBHISTORY_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QWEBHISTORY_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QWEBHISTORY_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
