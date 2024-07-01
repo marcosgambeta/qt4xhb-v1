@@ -44,11 +44,11 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-HB_FUNC_STATIC( QABSTRACTMESSAGEHANDLER_DELETE )
+HB_FUNC_STATIC(QABSTRACTMESSAGEHANDLER_DELETE)
 {
-  QAbstractMessageHandler * obj = qobject_cast<QAbstractMessageHandler*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractMessageHandler *obj = qobject_cast<QAbstractMessageHandler *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -63,19 +63,23 @@ HB_FUNC_STATIC( QABSTRACTMESSAGEHANDLER_DELETE )
 }
 
 /*
-void message( QtMsgType type, const QString & description, const QUrl & identifier = QUrl(), const QSourceLocation & sourceLocation = QSourceLocation() )
+void message( QtMsgType type, const QString & description, const QUrl & identifier = QUrl(), const QSourceLocation &
+sourceLocation = QSourceLocation() )
 */
-HB_FUNC_STATIC( QABSTRACTMESSAGEHANDLER_MESSAGE )
+HB_FUNC_STATIC(QABSTRACTMESSAGEHANDLER_MESSAGE)
 {
-  QAbstractMessageHandler * obj = qobject_cast<QAbstractMessageHandler*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractMessageHandler *obj = qobject_cast<QAbstractMessageHandler *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && (ISQURL(3) || HB_ISNIL(3)) && (ISQSOURCELOCATION(4) || HB_ISNIL(4)) )
+    if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && (ISQURL(3) || HB_ISNIL(3)) &&
+        (ISQSOURCELOCATION(4) || HB_ISNIL(4)))
     {
 #endif
-      obj->message( ( QtMsgType ) hb_parni(1), PQSTRING(2), HB_ISNIL(3) ? QUrl() : *static_cast<QUrl*>( Qt4xHb::itemGetPtr(3) ), HB_ISNIL(4) ? QSourceLocation() : *static_cast<QSourceLocation*>( Qt4xHb::itemGetPtr(4)) );
+      obj->message((QtMsgType)hb_parni(1), PQSTRING(2),
+                   HB_ISNIL(3) ? QUrl() : *static_cast<QUrl *>(Qt4xHb::itemGetPtr(3)),
+                   HB_ISNIL(4) ? QSourceLocation() : *static_cast<QSourceLocation *>(Qt4xHb::itemGetPtr(4)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

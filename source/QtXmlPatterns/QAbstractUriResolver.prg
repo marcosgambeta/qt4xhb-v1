@@ -47,11 +47,11 @@ RETURN
 
 #include <QtCore/QUrl>
 
-HB_FUNC_STATIC( QABSTRACTURIRESOLVER_DELETE )
+HB_FUNC_STATIC(QABSTRACTURIRESOLVER_DELETE)
 {
-  QAbstractUriResolver * obj = qobject_cast<QAbstractUriResolver*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractUriResolver *obj = qobject_cast<QAbstractUriResolver *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -68,17 +68,17 @@ HB_FUNC_STATIC( QABSTRACTURIRESOLVER_DELETE )
 /*
 virtual QUrl resolve( const QUrl & relative, const QUrl & baseURI ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTURIRESOLVER_RESOLVE )
+HB_FUNC_STATIC(QABSTRACTURIRESOLVER_RESOLVE)
 {
-  QAbstractUriResolver * obj = qobject_cast<QAbstractUriResolver*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractUriResolver *obj = qobject_cast<QAbstractUriResolver *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQURL(1) && ISQURL(2) )
+    if (ISNUMPAR(2) && ISQURL(1) && ISQURL(2))
     {
 #endif
-      QUrl * ptr = new QUrl( obj->resolve( *PQURL(1), *PQURL(2)) );
+      QUrl *ptr = new QUrl(obj->resolve(*PQURL(1), *PQURL(2)));
       Qt4xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

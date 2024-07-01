@@ -56,22 +56,22 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEW )
+HB_FUNC_STATIC(QXMLNODEMODELINDEX_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QXmlNodeModelIndex()
     */
-    QXmlNodeModelIndex * obj = new QXmlNodeModelIndex();
+    QXmlNodeModelIndex *obj = new QXmlNodeModelIndex();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
+  else if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
   {
     /*
     QXmlNodeModelIndex( const QXmlNodeModelIndex & other )
     */
-    QXmlNodeModelIndex * obj = new QXmlNodeModelIndex( *PQXMLNODEMODELINDEX(1) );
+    QXmlNodeModelIndex *obj = new QXmlNodeModelIndex(*PQXMLNODEMODELINDEX(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -83,17 +83,17 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEW )
 /*
 qint64 additionalData() const
 */
-HB_FUNC_STATIC( QXMLNODEMODELINDEX_ADDITIONALDATA )
+HB_FUNC_STATIC(QXMLNODEMODELINDEX_ADDITIONALDATA)
 {
-  QXmlNodeModelIndex * obj = static_cast<QXmlNodeModelIndex*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlNodeModelIndex *obj = static_cast<QXmlNodeModelIndex *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQINT64( obj->additionalData() );
+      RQINT64(obj->additionalData());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -107,17 +107,17 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_ADDITIONALDATA )
 /*
 qint64 data() const
 */
-HB_FUNC_STATIC( QXMLNODEMODELINDEX_DATA )
+HB_FUNC_STATIC(QXMLNODEMODELINDEX_DATA)
 {
-  QXmlNodeModelIndex * obj = static_cast<QXmlNodeModelIndex*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlNodeModelIndex *obj = static_cast<QXmlNodeModelIndex *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQINT64( obj->data() );
+      RQINT64(obj->data());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -131,17 +131,17 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_DATA )
 /*
 void * internalPointer() const
 */
-HB_FUNC_STATIC( QXMLNODEMODELINDEX_INTERNALPOINTER )
+HB_FUNC_STATIC(QXMLNODEMODELINDEX_INTERNALPOINTER)
 {
-  QXmlNodeModelIndex * obj = static_cast<QXmlNodeModelIndex*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlNodeModelIndex *obj = static_cast<QXmlNodeModelIndex *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      hb_retptr( static_cast<void*>( obj->internalPointer()) );
+      hb_retptr(static_cast<void *>(obj->internalPointer()));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,17 +155,17 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_INTERNALPOINTER )
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QXMLNODEMODELINDEX_ISNULL )
+HB_FUNC_STATIC(QXMLNODEMODELINDEX_ISNULL)
 {
-  QXmlNodeModelIndex * obj = static_cast<QXmlNodeModelIndex*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlNodeModelIndex *obj = static_cast<QXmlNodeModelIndex *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isNull() );
+      RBOOL(obj->isNull());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -179,17 +179,17 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_ISNULL )
 /*
 const QAbstractXmlNodeModel * model() const
 */
-HB_FUNC_STATIC( QXMLNODEMODELINDEX_MODEL )
+HB_FUNC_STATIC(QXMLNODEMODELINDEX_MODEL)
 {
-  QXmlNodeModelIndex * obj = static_cast<QXmlNodeModelIndex*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlNodeModelIndex *obj = static_cast<QXmlNodeModelIndex *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      const QAbstractXmlNodeModel * ptr = obj->model();
+      const QAbstractXmlNodeModel *ptr = obj->model();
       Qt4xHb::createReturnClass(ptr, "QABSTRACTXMLNODEMODEL", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -201,11 +201,11 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_MODEL )
   }
 }
 
-HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEWFROM )
+HB_FUNC_STATIC(QXMLNODEMODELINDEX_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -231,26 +231,26 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEWFROMOBJECT )
+HB_FUNC_STATIC(QXMLNODEMODELINDEX_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QXMLNODEMODELINDEX_NEWFROM );
+  HB_FUNC_EXEC(QXMLNODEMODELINDEX_NEWFROM);
 }
 
-HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEWFROMPOINTER )
+HB_FUNC_STATIC(QXMLNODEMODELINDEX_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QXMLNODEMODELINDEX_NEWFROM );
+  HB_FUNC_EXEC(QXMLNODEMODELINDEX_NEWFROM);
 }
 
-HB_FUNC_STATIC( QXMLNODEMODELINDEX_SELFDESTRUCTION )
+HB_FUNC_STATIC(QXMLNODEMODELINDEX_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QXMLNODEMODELINDEX_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QXMLNODEMODELINDEX_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

@@ -60,38 +60,38 @@ RETURN
 
 #include <QtCore/QVariant>
 
-HB_FUNC_STATIC( QXMLITEM_NEW )
+HB_FUNC_STATIC(QXMLITEM_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QXmlItem()
     */
-    QXmlItem * obj = new QXmlItem();
+    QXmlItem *obj = new QXmlItem();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQXMLITEM(1) )
+  else if (ISNUMPAR(1) && ISQXMLITEM(1))
   {
     /*
     QXmlItem( const QXmlItem & other )
     */
-    QXmlItem * obj = new QXmlItem( *PQXMLITEM(1) );
+    QXmlItem *obj = new QXmlItem(*PQXMLITEM(1));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
+  else if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
   {
     /*
     QXmlItem( const QXmlNodeModelIndex & node )
     */
-    QXmlItem * obj = new QXmlItem( *PQXMLNODEMODELINDEX(1) );
+    QXmlItem *obj = new QXmlItem(*PQXMLNODEMODELINDEX(1));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQVARIANT(1) )
+  else if (ISNUMPAR(1) && ISQVARIANT(1))
   {
     /*
     QXmlItem( const QVariant & atomicValue )
     */
-    QXmlItem * obj = new QXmlItem( *PQVARIANT(1) );
+    QXmlItem *obj = new QXmlItem(*PQVARIANT(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -100,11 +100,11 @@ HB_FUNC_STATIC( QXMLITEM_NEW )
   }
 }
 
-HB_FUNC_STATIC( QXMLITEM_DELETE )
+HB_FUNC_STATIC(QXMLITEM_DELETE)
 {
-  QXmlItem * obj = static_cast<QXmlItem*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlItem *obj = static_cast<QXmlItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -119,17 +119,17 @@ HB_FUNC_STATIC( QXMLITEM_DELETE )
 /*
 bool isAtomicValue() const
 */
-HB_FUNC_STATIC( QXMLITEM_ISATOMICVALUE )
+HB_FUNC_STATIC(QXMLITEM_ISATOMICVALUE)
 {
-  QXmlItem * obj = static_cast<QXmlItem*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlItem *obj = static_cast<QXmlItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isAtomicValue() );
+      RBOOL(obj->isAtomicValue());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -143,17 +143,17 @@ HB_FUNC_STATIC( QXMLITEM_ISATOMICVALUE )
 /*
 bool isNode() const
 */
-HB_FUNC_STATIC( QXMLITEM_ISNODE )
+HB_FUNC_STATIC(QXMLITEM_ISNODE)
 {
-  QXmlItem * obj = static_cast<QXmlItem*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlItem *obj = static_cast<QXmlItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isNode() );
+      RBOOL(obj->isNode());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,17 +167,17 @@ HB_FUNC_STATIC( QXMLITEM_ISNODE )
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QXMLITEM_ISNULL )
+HB_FUNC_STATIC(QXMLITEM_ISNULL)
 {
-  QXmlItem * obj = static_cast<QXmlItem*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlItem *obj = static_cast<QXmlItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isNull() );
+      RBOOL(obj->isNull());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -191,17 +191,17 @@ HB_FUNC_STATIC( QXMLITEM_ISNULL )
 /*
 QVariant toAtomicValue() const
 */
-HB_FUNC_STATIC( QXMLITEM_TOATOMICVALUE )
+HB_FUNC_STATIC(QXMLITEM_TOATOMICVALUE)
 {
-  QXmlItem * obj = static_cast<QXmlItem*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlItem *obj = static_cast<QXmlItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QVariant * ptr = new QVariant( obj->toAtomicValue() );
+      QVariant *ptr = new QVariant(obj->toAtomicValue());
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -216,17 +216,17 @@ HB_FUNC_STATIC( QXMLITEM_TOATOMICVALUE )
 /*
 QXmlNodeModelIndex toNodeModelIndex() const
 */
-HB_FUNC_STATIC( QXMLITEM_TONODEMODELINDEX )
+HB_FUNC_STATIC(QXMLITEM_TONODEMODELINDEX)
 {
-  QXmlItem * obj = static_cast<QXmlItem*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlItem *obj = static_cast<QXmlItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->toNodeModelIndex() );
+      QXmlNodeModelIndex *ptr = new QXmlNodeModelIndex(obj->toNodeModelIndex());
       Qt4xHb::createReturnClass(ptr, "QXMLNODEMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -238,11 +238,11 @@ HB_FUNC_STATIC( QXMLITEM_TONODEMODELINDEX )
   }
 }
 
-HB_FUNC_STATIC( QXMLITEM_NEWFROM )
+HB_FUNC_STATIC(QXMLITEM_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QXMLITEM_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -268,26 +268,26 @@ HB_FUNC_STATIC( QXMLITEM_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QXMLITEM_NEWFROMOBJECT )
+HB_FUNC_STATIC(QXMLITEM_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QXMLITEM_NEWFROM );
+  HB_FUNC_EXEC(QXMLITEM_NEWFROM);
 }
 
-HB_FUNC_STATIC( QXMLITEM_NEWFROMPOINTER )
+HB_FUNC_STATIC(QXMLITEM_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QXMLITEM_NEWFROM );
+  HB_FUNC_EXEC(QXMLITEM_NEWFROM);
 }
 
-HB_FUNC_STATIC( QXMLITEM_SELFDESTRUCTION )
+HB_FUNC_STATIC(QXMLITEM_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QXMLITEM_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QXMLITEM_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

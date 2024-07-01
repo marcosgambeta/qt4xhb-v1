@@ -54,14 +54,14 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QXmlFormatter( const QXmlQuery & query, QIODevice * outputDevice )
-*/
-HB_FUNC_STATIC( QXMLFORMATTER_NEW )
+    /*
+    QXmlFormatter( const QXmlQuery & query, QIODevice * outputDevice )
+    */
+HB_FUNC_STATIC(QXMLFORMATTER_NEW)
 {
-  if( ISNUMPAR(2) && ISQXMLQUERY(1) && ISQIODEVICE(2) )
+  if (ISNUMPAR(2) && ISQXMLQUERY(1) && ISQIODEVICE(2))
   {
-    QXmlFormatter * obj = new QXmlFormatter( *PQXMLQUERY(1), PQIODEVICE(2) );
+    QXmlFormatter *obj = new QXmlFormatter(*PQXMLQUERY(1), PQIODEVICE(2));
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -73,17 +73,17 @@ HB_FUNC_STATIC( QXMLFORMATTER_NEW )
 /*
 int indentationDepth() const
 */
-HB_FUNC_STATIC( QXMLFORMATTER_INDENTATIONDEPTH )
+HB_FUNC_STATIC(QXMLFORMATTER_INDENTATIONDEPTH)
 {
-  QXmlFormatter * obj = static_cast<QXmlFormatter*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlFormatter *obj = static_cast<QXmlFormatter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->indentationDepth() );
+      RINT(obj->indentationDepth());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -97,17 +97,17 @@ HB_FUNC_STATIC( QXMLFORMATTER_INDENTATIONDEPTH )
 /*
 void setIndentationDepth( int depth )
 */
-HB_FUNC_STATIC( QXMLFORMATTER_SETINDENTATIONDEPTH )
+HB_FUNC_STATIC(QXMLFORMATTER_SETINDENTATIONDEPTH)
 {
-  QXmlFormatter * obj = static_cast<QXmlFormatter*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlFormatter *obj = static_cast<QXmlFormatter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setIndentationDepth( PINT(1) );
+      obj->setIndentationDepth(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -123,17 +123,17 @@ HB_FUNC_STATIC( QXMLFORMATTER_SETINDENTATIONDEPTH )
 /*
 virtual void atomicValue( const QVariant & value )
 */
-HB_FUNC_STATIC( QXMLFORMATTER_ATOMICVALUE )
+HB_FUNC_STATIC(QXMLFORMATTER_ATOMICVALUE)
 {
-  QXmlFormatter * obj = static_cast<QXmlFormatter*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlFormatter *obj = static_cast<QXmlFormatter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQVARIANT(1) )
+    if (ISNUMPAR(1) && ISQVARIANT(1))
     {
 #endif
-      obj->atomicValue( *PQVARIANT(1) );
+      obj->atomicValue(*PQVARIANT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,17 +149,17 @@ HB_FUNC_STATIC( QXMLFORMATTER_ATOMICVALUE )
 /*
 virtual void attribute( const QXmlName & name, const QStringRef & value )
 */
-HB_FUNC_STATIC( QXMLFORMATTER_ATTRIBUTE )
+HB_FUNC_STATIC(QXMLFORMATTER_ATTRIBUTE)
 {
-  QXmlFormatter * obj = static_cast<QXmlFormatter*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlFormatter *obj = static_cast<QXmlFormatter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQXMLNAME(1) && ISQSTRINGREF(2) )
+    if (ISNUMPAR(2) && ISQXMLNAME(1) && ISQSTRINGREF(2))
     {
 #endif
-      obj->attribute( *PQXMLNAME(1), *PQSTRINGREF(2) );
+      obj->attribute(*PQXMLNAME(1), *PQSTRINGREF(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,17 +175,17 @@ HB_FUNC_STATIC( QXMLFORMATTER_ATTRIBUTE )
 /*
 virtual void characters( const QStringRef & value )
 */
-HB_FUNC_STATIC( QXMLFORMATTER_CHARACTERS )
+HB_FUNC_STATIC(QXMLFORMATTER_CHARACTERS)
 {
-  QXmlFormatter * obj = static_cast<QXmlFormatter*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlFormatter *obj = static_cast<QXmlFormatter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSTRINGREF(1) )
+    if (ISNUMPAR(1) && ISQSTRINGREF(1))
     {
 #endif
-      obj->characters( *PQSTRINGREF(1) );
+      obj->characters(*PQSTRINGREF(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,17 +201,17 @@ HB_FUNC_STATIC( QXMLFORMATTER_CHARACTERS )
 /*
 virtual void comment( const QString & value )
 */
-HB_FUNC_STATIC( QXMLFORMATTER_COMMENT )
+HB_FUNC_STATIC(QXMLFORMATTER_COMMENT)
 {
-  QXmlFormatter * obj = static_cast<QXmlFormatter*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlFormatter *obj = static_cast<QXmlFormatter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->comment( PQSTRING(1) );
+      obj->comment(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,14 +227,14 @@ HB_FUNC_STATIC( QXMLFORMATTER_COMMENT )
 /*
 virtual void endDocument()
 */
-HB_FUNC_STATIC( QXMLFORMATTER_ENDDOCUMENT )
+HB_FUNC_STATIC(QXMLFORMATTER_ENDDOCUMENT)
 {
-  QXmlFormatter * obj = static_cast<QXmlFormatter*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlFormatter *obj = static_cast<QXmlFormatter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->endDocument();
@@ -253,14 +253,14 @@ HB_FUNC_STATIC( QXMLFORMATTER_ENDDOCUMENT )
 /*
 virtual void endElement()
 */
-HB_FUNC_STATIC( QXMLFORMATTER_ENDELEMENT )
+HB_FUNC_STATIC(QXMLFORMATTER_ENDELEMENT)
 {
-  QXmlFormatter * obj = static_cast<QXmlFormatter*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlFormatter *obj = static_cast<QXmlFormatter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->endElement();
@@ -279,14 +279,14 @@ HB_FUNC_STATIC( QXMLFORMATTER_ENDELEMENT )
 /*
 virtual void endOfSequence()
 */
-HB_FUNC_STATIC( QXMLFORMATTER_ENDOFSEQUENCE )
+HB_FUNC_STATIC(QXMLFORMATTER_ENDOFSEQUENCE)
 {
-  QXmlFormatter * obj = static_cast<QXmlFormatter*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlFormatter *obj = static_cast<QXmlFormatter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->endOfSequence();
@@ -305,17 +305,17 @@ HB_FUNC_STATIC( QXMLFORMATTER_ENDOFSEQUENCE )
 /*
 virtual void processingInstruction( const QXmlName & name, const QString & value )
 */
-HB_FUNC_STATIC( QXMLFORMATTER_PROCESSINGINSTRUCTION )
+HB_FUNC_STATIC(QXMLFORMATTER_PROCESSINGINSTRUCTION)
 {
-  QXmlFormatter * obj = static_cast<QXmlFormatter*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlFormatter *obj = static_cast<QXmlFormatter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQXMLNAME(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && ISQXMLNAME(1) && HB_ISCHAR(2))
     {
 #endif
-      obj->processingInstruction( *PQXMLNAME(1), PQSTRING(2) );
+      obj->processingInstruction(*PQXMLNAME(1), PQSTRING(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -331,14 +331,14 @@ HB_FUNC_STATIC( QXMLFORMATTER_PROCESSINGINSTRUCTION )
 /*
 virtual void startDocument()
 */
-HB_FUNC_STATIC( QXMLFORMATTER_STARTDOCUMENT )
+HB_FUNC_STATIC(QXMLFORMATTER_STARTDOCUMENT)
 {
-  QXmlFormatter * obj = static_cast<QXmlFormatter*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlFormatter *obj = static_cast<QXmlFormatter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->startDocument();
@@ -357,17 +357,17 @@ HB_FUNC_STATIC( QXMLFORMATTER_STARTDOCUMENT )
 /*
 virtual void startElement( const QXmlName & name )
 */
-HB_FUNC_STATIC( QXMLFORMATTER_STARTELEMENT )
+HB_FUNC_STATIC(QXMLFORMATTER_STARTELEMENT)
 {
-  QXmlFormatter * obj = static_cast<QXmlFormatter*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlFormatter *obj = static_cast<QXmlFormatter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQXMLNAME(1) )
+    if (ISNUMPAR(1) && ISQXMLNAME(1))
     {
 #endif
-      obj->startElement( *PQXMLNAME(1) );
+      obj->startElement(*PQXMLNAME(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -383,14 +383,14 @@ HB_FUNC_STATIC( QXMLFORMATTER_STARTELEMENT )
 /*
 virtual void startOfSequence()
 */
-HB_FUNC_STATIC( QXMLFORMATTER_STARTOFSEQUENCE )
+HB_FUNC_STATIC(QXMLFORMATTER_STARTOFSEQUENCE)
 {
-  QXmlFormatter * obj = static_cast<QXmlFormatter*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QXmlFormatter *obj = static_cast<QXmlFormatter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->startOfSequence();
