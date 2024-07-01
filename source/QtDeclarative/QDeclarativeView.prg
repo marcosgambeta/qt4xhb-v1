@@ -68,22 +68,22 @@ RETURN
 #include <QtDeclarative/QDeclarativeContext>
 #include <QtGui/QGraphicsObject>
 
-HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW )
+HB_FUNC_STATIC(QDECLARATIVEVIEW_NEW)
 {
-  if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
     QDeclarativeView( QWidget * parent = 0 )
     */
-    QDeclarativeView * obj = new QDeclarativeView( OPQWIDGET( 1, 0 ) );
+    QDeclarativeView *obj = new QDeclarativeView(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1, 2) && ISQURL(1) && (ISQWIDGET(2) || HB_ISNIL(2)) )
+  else if (ISBETWEEN(1, 2) && ISQURL(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
     QDeclarativeView( const QUrl & source, QWidget * parent = 0 )
     */
-    QDeclarativeView * obj = new QDeclarativeView( *PQURL(1), OPQWIDGET( 2, 0 ) );
+    QDeclarativeView *obj = new QDeclarativeView(*PQURL(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -92,11 +92,11 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDECLARATIVEVIEW_DELETE )
+HB_FUNC_STATIC(QDECLARATIVEVIEW_DELETE)
 {
-  QDeclarativeView * obj = qobject_cast<QDeclarativeView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDeclarativeView *obj = qobject_cast<QDeclarativeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -113,17 +113,17 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_DELETE )
 /*
 QDeclarativeEngine * engine() const
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_ENGINE )
+HB_FUNC_STATIC(QDECLARATIVEVIEW_ENGINE)
 {
-  QDeclarativeView * obj = qobject_cast<QDeclarativeView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDeclarativeView *obj = qobject_cast<QDeclarativeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QDeclarativeEngine * ptr = obj->engine();
+      QDeclarativeEngine *ptr = obj->engine();
       Qt4xHb::createReturnQObjectClass(ptr, "QDECLARATIVEENGINE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -138,23 +138,23 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ENGINE )
 /*
 QList<QDeclarativeError> errors() const
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
+HB_FUNC_STATIC(QDECLARATIVEVIEW_ERRORS)
 {
-  QDeclarativeView * obj = qobject_cast<QDeclarativeView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDeclarativeView *obj = qobject_cast<QDeclarativeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QList<QDeclarativeError> list = obj->errors();
       PHB_DYNS pDynSym = hb_dynsymFindName("QDECLARATIVEERROR");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
         const int count = list.count();
-        for( int i = 0; i < count; i++ )
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -189,17 +189,17 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
 /*
 QSize initialSize() const
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_INITIALSIZE )
+HB_FUNC_STATIC(QDECLARATIVEVIEW_INITIALSIZE)
 {
-  QDeclarativeView * obj = qobject_cast<QDeclarativeView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDeclarativeView *obj = qobject_cast<QDeclarativeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSize * ptr = new QSize( obj->initialSize() );
+      QSize *ptr = new QSize(obj->initialSize());
       Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -214,17 +214,17 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_INITIALSIZE )
 /*
 QDeclarativeView::ResizeMode resizeMode() const
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_RESIZEMODE )
+HB_FUNC_STATIC(QDECLARATIVEVIEW_RESIZEMODE)
 {
-  QDeclarativeView * obj = qobject_cast<QDeclarativeView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDeclarativeView *obj = qobject_cast<QDeclarativeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->resizeMode() );
+      RENUM(obj->resizeMode());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -238,17 +238,17 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_RESIZEMODE )
 /*
 QDeclarativeContext * rootContext() const
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTCONTEXT )
+HB_FUNC_STATIC(QDECLARATIVEVIEW_ROOTCONTEXT)
 {
-  QDeclarativeView * obj = qobject_cast<QDeclarativeView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDeclarativeView *obj = qobject_cast<QDeclarativeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QDeclarativeContext * ptr = obj->rootContext();
+      QDeclarativeContext *ptr = obj->rootContext();
       Qt4xHb::createReturnQObjectClass(ptr, "QDECLARATIVECONTEXT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -263,17 +263,17 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTCONTEXT )
 /*
 QGraphicsObject * rootObject() const
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTOBJECT )
+HB_FUNC_STATIC(QDECLARATIVEVIEW_ROOTOBJECT)
 {
-  QDeclarativeView * obj = qobject_cast<QDeclarativeView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDeclarativeView *obj = qobject_cast<QDeclarativeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QGraphicsObject * ptr = obj->rootObject();
+      QGraphicsObject *ptr = obj->rootObject();
       Qt4xHb::createReturnQObjectClass(ptr, "QGRAPHICSOBJECT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -288,17 +288,17 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTOBJECT )
 /*
 void setResizeMode( QDeclarativeView::ResizeMode )
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_SETRESIZEMODE )
+HB_FUNC_STATIC(QDECLARATIVEVIEW_SETRESIZEMODE)
 {
-  QDeclarativeView * obj = qobject_cast<QDeclarativeView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDeclarativeView *obj = qobject_cast<QDeclarativeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setResizeMode( ( QDeclarativeView::ResizeMode ) hb_parni(1) );
+      obj->setResizeMode((QDeclarativeView::ResizeMode)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -314,17 +314,17 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SETRESIZEMODE )
 /*
 void setSource( const QUrl & url )
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_SETSOURCE )
+HB_FUNC_STATIC(QDECLARATIVEVIEW_SETSOURCE)
 {
-  QDeclarativeView * obj = qobject_cast<QDeclarativeView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDeclarativeView *obj = qobject_cast<QDeclarativeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQURL(1) )
+    if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      obj->setSource( *PQURL(1) );
+      obj->setSource(*PQURL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -340,17 +340,17 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SETSOURCE )
 /*
 QUrl source() const
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_SOURCE )
+HB_FUNC_STATIC(QDECLARATIVEVIEW_SOURCE)
 {
-  QDeclarativeView * obj = qobject_cast<QDeclarativeView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDeclarativeView *obj = qobject_cast<QDeclarativeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QUrl * ptr = new QUrl( obj->source() );
+      QUrl *ptr = new QUrl(obj->source());
       Qt4xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -365,17 +365,17 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SOURCE )
 /*
 QDeclarativeView::Status status() const
 */
-HB_FUNC_STATIC( QDECLARATIVEVIEW_STATUS )
+HB_FUNC_STATIC(QDECLARATIVEVIEW_STATUS)
 {
-  QDeclarativeView * obj = qobject_cast<QDeclarativeView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDeclarativeView *obj = qobject_cast<QDeclarativeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->status() );
+      RENUM(obj->status());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -386,16 +386,17 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_STATUS )
   }
 }
 
-void QDeclarativeViewSlots_connect_signal(const QString & signal, const QString & slot);
+void QDeclarativeViewSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSCENERESIZED )
+HB_FUNC_STATIC(QDECLARATIVEVIEW_ONSCENERESIZED)
 {
   QDeclarativeViewSlots_connect_signal("sceneResized(QSize)", "sceneResized(QSize)");
 }
 
-HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSTATUSCHANGED )
+HB_FUNC_STATIC(QDECLARATIVEVIEW_ONSTATUSCHANGED)
 {
-  QDeclarativeViewSlots_connect_signal("statusChanged(QDeclarativeView::Status)", "statusChanged(QDeclarativeView::Status)");
+  QDeclarativeViewSlots_connect_signal("statusChanged(QDeclarativeView::Status)",
+                                       "statusChanged(QDeclarativeView::Status)");
 }
 
 #pragma ENDDUMP
