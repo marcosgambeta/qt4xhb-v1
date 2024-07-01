@@ -60,14 +60,14 @@ RETURN
 #include <QtHelp/QHelpIndexWidget>
 #include <QtHelp/QHelpSearchEngine>
 
-/*
-QHelpEngine( const QString & collectionFile, QObject * parent = 0 )
-*/
-HB_FUNC_STATIC( QHELPENGINE_NEW )
+    /*
+    QHelpEngine( const QString & collectionFile, QObject * parent = 0 )
+    */
+HB_FUNC_STATIC(QHELPENGINE_NEW)
 {
-  if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)) )
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
-    QHelpEngine * obj = new QHelpEngine( PQSTRING(1), OPQOBJECT( 2, 0 ) );
+    QHelpEngine *obj = new QHelpEngine(PQSTRING(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -76,11 +76,11 @@ HB_FUNC_STATIC( QHELPENGINE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QHELPENGINE_DELETE )
+HB_FUNC_STATIC(QHELPENGINE_DELETE)
 {
-  QHelpEngine * obj = qobject_cast<QHelpEngine*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHelpEngine *obj = qobject_cast<QHelpEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -97,17 +97,17 @@ HB_FUNC_STATIC( QHELPENGINE_DELETE )
 /*
 QHelpContentModel * contentModel() const
 */
-HB_FUNC_STATIC( QHELPENGINE_CONTENTMODEL )
+HB_FUNC_STATIC(QHELPENGINE_CONTENTMODEL)
 {
-  QHelpEngine * obj = qobject_cast<QHelpEngine*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHelpEngine *obj = qobject_cast<QHelpEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QHelpContentModel * ptr = obj->contentModel();
+      QHelpContentModel *ptr = obj->contentModel();
       Qt4xHb::createReturnQObjectClass(ptr, "QHELPCONTENTMODEL");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -122,17 +122,17 @@ HB_FUNC_STATIC( QHELPENGINE_CONTENTMODEL )
 /*
 QHelpContentWidget * contentWidget()
 */
-HB_FUNC_STATIC( QHELPENGINE_CONTENTWIDGET )
+HB_FUNC_STATIC(QHELPENGINE_CONTENTWIDGET)
 {
-  QHelpEngine * obj = qobject_cast<QHelpEngine*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHelpEngine *obj = qobject_cast<QHelpEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QHelpContentWidget * ptr = obj->contentWidget();
+      QHelpContentWidget *ptr = obj->contentWidget();
       Qt4xHb::createReturnQObjectClass(ptr, "QHELPCONTENTWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -147,17 +147,17 @@ HB_FUNC_STATIC( QHELPENGINE_CONTENTWIDGET )
 /*
 QHelpIndexModel * indexModel() const
 */
-HB_FUNC_STATIC( QHELPENGINE_INDEXMODEL )
+HB_FUNC_STATIC(QHELPENGINE_INDEXMODEL)
 {
-  QHelpEngine * obj = qobject_cast<QHelpEngine*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHelpEngine *obj = qobject_cast<QHelpEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QHelpIndexModel * ptr = obj->indexModel();
+      QHelpIndexModel *ptr = obj->indexModel();
       Qt4xHb::createReturnQObjectClass(ptr, "QHELPINDEXMODEL");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -172,17 +172,17 @@ HB_FUNC_STATIC( QHELPENGINE_INDEXMODEL )
 /*
 QHelpIndexWidget * indexWidget()
 */
-HB_FUNC_STATIC( QHELPENGINE_INDEXWIDGET )
+HB_FUNC_STATIC(QHELPENGINE_INDEXWIDGET)
 {
-  QHelpEngine * obj = qobject_cast<QHelpEngine*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHelpEngine *obj = qobject_cast<QHelpEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QHelpIndexWidget * ptr = obj->indexWidget();
+      QHelpIndexWidget *ptr = obj->indexWidget();
       Qt4xHb::createReturnQObjectClass(ptr, "QHELPINDEXWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -197,17 +197,17 @@ HB_FUNC_STATIC( QHELPENGINE_INDEXWIDGET )
 /*
 QHelpSearchEngine * searchEngine()
 */
-HB_FUNC_STATIC( QHELPENGINE_SEARCHENGINE )
+HB_FUNC_STATIC(QHELPENGINE_SEARCHENGINE)
 {
-  QHelpEngine * obj = qobject_cast<QHelpEngine*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHelpEngine *obj = qobject_cast<QHelpEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QHelpSearchEngine * ptr = obj->searchEngine();
+      QHelpSearchEngine *ptr = obj->searchEngine();
       Qt4xHb::createReturnQObjectClass(ptr, "QHELPSEARCHENGINE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

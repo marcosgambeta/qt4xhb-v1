@@ -47,11 +47,11 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_DELETE )
+HB_FUNC_STATIC(QHELPSEARCHRESULTWIDGET_DELETE)
 {
-  QHelpSearchResultWidget * obj = qobject_cast<QHelpSearchResultWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHelpSearchResultWidget *obj = qobject_cast<QHelpSearchResultWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -68,17 +68,17 @@ HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_DELETE )
 /*
 QUrl linkAt( const QPoint & point )
 */
-HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_LINKAT )
+HB_FUNC_STATIC(QHELPSEARCHRESULTWIDGET_LINKAT)
 {
-  QHelpSearchResultWidget * obj = qobject_cast<QHelpSearchResultWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHelpSearchResultWidget *obj = qobject_cast<QHelpSearchResultWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINT(1) )
+    if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      QUrl * ptr = new QUrl( obj->linkAt( *PQPOINT(1)) );
+      QUrl *ptr = new QUrl(obj->linkAt(*PQPOINT(1)));
       Qt4xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -90,9 +90,9 @@ HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_LINKAT )
   }
 }
 
-void QHelpSearchResultWidgetSlots_connect_signal(const QString & signal, const QString & slot);
+void QHelpSearchResultWidgetSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_ONREQUESTSHOWLINK )
+HB_FUNC_STATIC(QHELPSEARCHRESULTWIDGET_ONREQUESTSHOWLINK)
 {
   QHelpSearchResultWidgetSlots_connect_signal("requestShowLink(QUrl)", "requestShowLink(QUrl)");
 }

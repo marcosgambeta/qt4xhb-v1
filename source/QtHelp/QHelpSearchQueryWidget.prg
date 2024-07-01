@@ -48,14 +48,14 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-/*
-QHelpSearchQueryWidget( QWidget * parent = 0 )
-*/
-HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_NEW )
+    /*
+    QHelpSearchQueryWidget( QWidget * parent = 0 )
+    */
+HB_FUNC_STATIC(QHELPSEARCHQUERYWIDGET_NEW)
 {
-  if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
-    QHelpSearchQueryWidget * obj = new QHelpSearchQueryWidget( OPQWIDGET( 1, 0 ) );
+    QHelpSearchQueryWidget *obj = new QHelpSearchQueryWidget(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -64,11 +64,11 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_NEW )
   }
 }
 
-HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_DELETE )
+HB_FUNC_STATIC(QHELPSEARCHQUERYWIDGET_DELETE)
 {
-  QHelpSearchQueryWidget * obj = qobject_cast<QHelpSearchQueryWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHelpSearchQueryWidget *obj = qobject_cast<QHelpSearchQueryWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -85,23 +85,23 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_DELETE )
 /*
 QList<QHelpSearchQuery> query() const
 */
-HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_QUERY )
+HB_FUNC_STATIC(QHELPSEARCHQUERYWIDGET_QUERY)
 {
-  QHelpSearchQueryWidget * obj = qobject_cast<QHelpSearchQueryWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHelpSearchQueryWidget *obj = qobject_cast<QHelpSearchQueryWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QList<QHelpSearchQuery> list = obj->query();
       PHB_DYNS pDynSym = hb_dynsymFindName("QHELPSEARCHQUERY");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
         const int count = list.count();
-        for( int i = 0; i < count; i++ )
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -133,9 +133,9 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_QUERY )
   }
 }
 
-void QHelpSearchQueryWidgetSlots_connect_signal(const QString & signal, const QString & slot);
+void QHelpSearchQueryWidgetSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_ONSEARCH )
+HB_FUNC_STATIC(QHELPSEARCHQUERYWIDGET_ONSEARCH)
 {
   QHelpSearchQueryWidgetSlots_connect_signal("search()", "search()");
 }

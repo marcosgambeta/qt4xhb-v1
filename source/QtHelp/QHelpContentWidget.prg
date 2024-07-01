@@ -46,20 +46,20 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-/*
-QModelIndex indexOf( const QUrl & link )
-*/
-HB_FUNC_STATIC( QHELPCONTENTWIDGET_INDEXOF )
+    /*
+    QModelIndex indexOf( const QUrl & link )
+    */
+HB_FUNC_STATIC(QHELPCONTENTWIDGET_INDEXOF)
 {
-  QHelpContentWidget * obj = qobject_cast<QHelpContentWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHelpContentWidget *obj = qobject_cast<QHelpContentWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQURL(1) )
+    if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->indexOf( *PQURL(1)) );
+      QModelIndex *ptr = new QModelIndex(obj->indexOf(*PQURL(1)));
       Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -71,9 +71,9 @@ HB_FUNC_STATIC( QHELPCONTENTWIDGET_INDEXOF )
   }
 }
 
-void QHelpContentWidgetSlots_connect_signal(const QString & signal, const QString & slot);
+void QHelpContentWidgetSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QHELPCONTENTWIDGET_ONLINKACTIVATED )
+HB_FUNC_STATIC(QHELPCONTENTWIDGET_ONLINKACTIVATED)
 {
   QHelpContentWidgetSlots_connect_signal("linkActivated(QUrl)", "linkActivated(QUrl)");
 }

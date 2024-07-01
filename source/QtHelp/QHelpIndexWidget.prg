@@ -46,17 +46,17 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-/*
-void activateCurrentItem()
-*/
-HB_FUNC_STATIC( QHELPINDEXWIDGET_ACTIVATECURRENTITEM )
+    /*
+    void activateCurrentItem()
+    */
+HB_FUNC_STATIC(QHELPINDEXWIDGET_ACTIVATECURRENTITEM)
 {
-  QHelpIndexWidget * obj = qobject_cast<QHelpIndexWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHelpIndexWidget *obj = qobject_cast<QHelpIndexWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->activateCurrentItem();
@@ -75,17 +75,17 @@ HB_FUNC_STATIC( QHELPINDEXWIDGET_ACTIVATECURRENTITEM )
 /*
 void filterIndices( const QString & filter, const QString & wildcard = QString() )
 */
-HB_FUNC_STATIC( QHELPINDEXWIDGET_FILTERINDICES )
+HB_FUNC_STATIC(QHELPINDEXWIDGET_FILTERINDICES)
 {
-  QHelpIndexWidget * obj = qobject_cast<QHelpIndexWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHelpIndexWidget *obj = qobject_cast<QHelpIndexWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->filterIndices( PQSTRING(1), OPQSTRING( 2, QString()) );
+      obj->filterIndices(PQSTRING(1), OPQSTRING(2, QString()));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -98,9 +98,9 @@ HB_FUNC_STATIC( QHELPINDEXWIDGET_FILTERINDICES )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QHelpIndexWidgetSlots_connect_signal(const QString & signal, const QString & slot);
+void QHelpIndexWidgetSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QHELPINDEXWIDGET_ONLINKACTIVATED )
+HB_FUNC_STATIC(QHELPINDEXWIDGET_ONLINKACTIVATED)
 {
   QHelpIndexWidgetSlots_connect_signal("linkActivated(QUrl,QString)", "linkActivated(QUrl,QString)");
 }
