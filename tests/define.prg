@@ -24,8 +24,8 @@ PROCEDURE Main ()
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
-   oWindow:setWindowTitle( "Test" )
-   oWindow:resize( 640, 480 )
+   oWindow:setWindowTitle("Test")
+   oWindow:resize(640, 480)
 
    oWindow:show()
 
@@ -44,7 +44,7 @@ RETURN
 #include <iostream>
 #include "hbapi.h"
 
-HB_FUNC( TEST )
+HB_FUNC(TEST)
 {
 #ifdef __QT4XHB__
    std::cout << "\n" << "using Qt4xHb (cpp)" << "\n";

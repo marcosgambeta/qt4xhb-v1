@@ -23,15 +23,15 @@ PROCEDURE Main()
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
-   oWindow:setWindowTitle( "Teste" )
-   oWindow:resize( 640, 480 )
+   oWindow:setWindowTitle("Teste")
+   oWindow:resize(640, 480)
    oWindow:show()
 
    oDesktopWidget := QApplication():desktop()
    ? oDesktopWidget:isVirtualDesktop()
    ? oDesktopWidget:primaryScreen()
    ? oDesktopWidget:screenCount()
-   ? oDesktopWidget:screenNumber( oWindow )
+   ? oDesktopWidget:screenNumber(oWindow)
 
    oApp:exec()
 

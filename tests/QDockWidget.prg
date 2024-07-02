@@ -23,7 +23,7 @@ PROCEDURE Main()
    oApp := QApplication():new()
 
    oMainWindow := QMainWindow():new()
-   oDockWidget := QDockWidget():new( "Teste", oMainWindow )
+   oDockWidget := QDockWidget():new("Teste", oMainWindow)
 
    oMainWindow:show()
 

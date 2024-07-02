@@ -23,13 +23,13 @@ PROCEDURE Main()
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
-   oWindow:setWindowTitle( "Teste" )
-   oWindow:resize( 640, 480 )
+   oWindow:setWindowTitle("Teste")
+   oWindow:resize(640, 480)
    oWindow:show()
 
-   oDateTimeEdit := QDateTimeEdit():new( oWindow )
-   oDateTimeEdit:move( 20, 20 )
-   oDateTimeEdit:setTooltip( "Eu sou um DateTimeEdit" )
+   oDateTimeEdit := QDateTimeEdit():new(oWindow)
+   oDateTimeEdit:move(20, 20)
+   oDateTimeEdit:setTooltip("Eu sou um DateTimeEdit")
    oDateTimeEdit:show()
 
    oApp:exec()

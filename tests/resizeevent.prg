@@ -23,15 +23,15 @@ PROCEDURE Main()
 
    oApp := QApplication():new()
 
-   oWindow := QWidget():new():setWindowTitle( "Teste do evento resize" ):resize( 640, 480 )
+   oWindow := QWidget():new():setWindowTitle("Teste do evento resize"):resize(640, 480)
 
-   oLabelWidth := QLabel():new( "0", oWindow ):move( 20, 20 ):resize( 100, 30 )
-   oLabelHeight := QLabel():new( "0", oWindow ):move( 20, 80 ):resize( 100, 30 )
+   oLabelWidth := QLabel():new("0", oWindow):move(20, 20):resize(100, 30)
+   oLabelHeight := QLabel():new("0", oWindow):move(20, 80):resize(100, 30)
 
-   oWindow:onResizeEvent( { | oSender, oResizeEvent |
-      oLabelWidth:setText( alltrim( str( oResizeEvent:size():width() ) ) )
-      oLabelHeight:setText( alltrim( str( oResizeEvent:size():height() ) ) )
-      } )
+   oWindow:onResizeEvent({|oSender, oResizeEvent|
+      oLabelWidth:setText(alltrim(str(oResizeEvent:size():width())))
+      oLabelHeight:setText(alltrim(str(oResizeEvent:size():height())))
+      })
 
    oWindow:show()
 

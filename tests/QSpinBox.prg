@@ -23,13 +23,13 @@ PROCEDURE Main()
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
-   oWindow:setWindowTitle( "Teste" )
-   oWindow:resize( 640, 480 )
+   oWindow:setWindowTitle("Teste")
+   oWindow:resize(640, 480)
    oWindow:show()
 
-   oSpinBox := QSpinBox():new( oWindow )
-   oSpinBox:move( 20, 20 )
-   oSpinBox:setTooltip( "Eu sou um SpinBox" )
+   oSpinBox := QSpinBox():new(oWindow)
+   oSpinBox:move(20, 20)
+   oSpinBox:setTooltip("Eu sou um SpinBox")
    oSpinBox:show()
 
    oApp:exec()
