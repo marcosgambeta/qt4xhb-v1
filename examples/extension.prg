@@ -1,16 +1,8 @@
-/*
-
-  Qt4xHb Project - Example Program
-
-  Copyright (c) 2024 Marcos Antonio Gambeta
-
-  E-mail:
-  marcosgambeta AT outlook DOT com
-
-  Website:
-  https://github.com/magsoftinfo/qt4xhb
-
-*/
+//
+// Qt4xHb Project - Example Program
+//
+// Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+//
 
 /*
   Baseado no exemplo "Extension" do Qt Framework
