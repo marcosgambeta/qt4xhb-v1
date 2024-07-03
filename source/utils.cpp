@@ -1,10 +1,8 @@
-/*
-
-  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
-
-  Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
-
-*/
+//
+// Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
+//
+// Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+//
 
 #include "qt4xhb_common.hpp"
 #include "qt4xhb_macros.hpp"
