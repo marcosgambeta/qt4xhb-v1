@@ -159,4 +159,4 @@
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  static_cast<const char*>(x.toAscii().data())
 
-#endif /* QT4XHB_MACROS_H */
+#endif // QT4XHB_MACROS_H

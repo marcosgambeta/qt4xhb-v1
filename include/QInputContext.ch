@@ -15,4 +15,4 @@ enum QInputContext::StandardFormat
 #define QInputContext_PreeditFormat                                  0
 #define QInputContext_SelectionFormat                                1
 
-#endif /* QINPUTCONTEXT_CH */
+#endif // QINPUTCONTEXT_CH

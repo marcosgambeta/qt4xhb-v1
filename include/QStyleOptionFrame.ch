@@ -19,4 +19,4 @@ enum QStyleOptionFrame::StyleOptionVersion
 */
 #define QStyleOptionFrame_Version                                    1
 
-#endif /* QSTYLEOPTIONFRAME_CH */
+#endif // QSTYLEOPTIONFRAME_CH

@@ -98,4 +98,4 @@ enum QSysInfo::WinVersion
 #define QSysInfo_WV_NT_based                                         0x00f0
 #define QSysInfo_WV_CE_based                                         0x0f00
 
-#endif /* QSYSINFO_CH */
+#endif // QSYSINFO_CH

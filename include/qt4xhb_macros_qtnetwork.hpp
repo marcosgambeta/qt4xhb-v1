@@ -117,4 +117,4 @@
 #define OPQUDPSOCKET(n, v)                                  HB_ISNIL(n) ? v : static_cast<QUdpSocket*>(Qt4xHb::itemGetPtr(n))
 #define OPQURLINFO(n, v)                                    HB_ISNIL(n) ? v : static_cast<QUrlInfo*>(Qt4xHb::itemGetPtr(n))
 
-#endif /* QT4XHB_MACROS_QTNETWORK_H */
+#endif // QT4XHB_MACROS_QTNETWORK_H

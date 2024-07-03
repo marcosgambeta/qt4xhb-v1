@@ -22,4 +22,4 @@ enum QUrlInfo::PermissionSpec
 #define QUrlInfo_WriteOther                                          00002
 #define QUrlInfo_ExeOther                                            00001
 
-#endif /* QURLINFO_CH */
+#endif // QURLINFO_CH

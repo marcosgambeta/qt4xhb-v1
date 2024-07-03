@@ -69,4 +69,4 @@ enum QAbstractFileEngine::FileTime
 #define QAbstractFileEngine_ModificationTime                         1
 #define QAbstractFileEngine_AccessTime                               2
 
-#endif /* QABSTRACTFILEENGINE_CH */
+#endif // QABSTRACTFILEENGINE_CH

@@ -30,4 +30,4 @@
 #include "QUdpSocket.ch"
 #include "QUrlInfo.ch"
 
-#endif /* QTNETWORK_CH */
+#endif // QTNETWORK_CH

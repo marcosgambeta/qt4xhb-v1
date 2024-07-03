@@ -21,4 +21,4 @@ flags QStyleOptionFrameV2::FrameFeature2
 #define QStyleOptionFrameV2_None                                     0x00
 #define QStyleOptionFrameV2_Flat                                     0x01
 
-#endif /* QSTYLEOPTIONFRAMEV2_CH */
+#endif // QSTYLEOPTIONFRAMEV2_CH

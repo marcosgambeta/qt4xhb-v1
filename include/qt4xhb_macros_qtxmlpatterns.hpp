@@ -60,4 +60,4 @@
 #define OPQXMLSCHEMAVALIDATOR(n, v)                         HB_ISNIL(n) ? v : static_cast<QXmlSchemaValidator*>(Qt4xHb::itemGetPtr(n))
 #define OPQXMLSERIALIZER(n, v)                              HB_ISNIL(n) ? v : static_cast<QXmlSerializer*>(Qt4xHb::itemGetPtr(n))
 
-#endif /* QT4XHB_MACROS_QTXMLPATTERNS_H */
+#endif // QT4XHB_MACROS_QTXMLPATTERNS_H

@@ -20,4 +20,4 @@ enum QFileIconProvider::IconType
 #define QFileIconProvider_Folder                                     5
 #define QFileIconProvider_File                                       6
 
-#endif /* QFILEICONPROVIDER_CH */
+#endif // QFILEICONPROVIDER_CH

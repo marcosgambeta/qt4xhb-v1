@@ -15,4 +15,4 @@ flags QPageSetupDialog::PageSetupDialogOptions
 */
 #define QPageSetupDialog_DontUseSheet                                0x00000001
 
-#endif /* QPAGESETUPDIALOG_CH */
+#endif // QPAGESETUPDIALOG_CH

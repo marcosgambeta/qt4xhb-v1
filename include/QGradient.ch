@@ -31,4 +31,4 @@ enum QGradient::Type
 #define QGradient_ConicalGradient                                    2
 #define QGradient_NoGradient                                         3
 
-#endif /* QGRADIENT_CH */
+#endif // QGRADIENT_CH

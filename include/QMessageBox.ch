@@ -63,4 +63,4 @@ flags QMessageBox::StandardButtons
 #define QMessageBox_FlagMask                                         0x00000300
 //#define QMessageBox_ButtonMask                                     ~FlagMask
 
-#endif /* QMESSAGEBOX_CH */
+#endif // QMESSAGEBOX_CH

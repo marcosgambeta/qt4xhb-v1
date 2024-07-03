@@ -37,4 +37,4 @@ enum QNetworkReply::NetworkError
 #define QNetworkReply_UnknownContentError                            299
 #define QNetworkReply_ProtocolFailure                                399
 
-#endif /* QNETWORKREPLY_CH */
+#endif // QNETWORKREPLY_CH

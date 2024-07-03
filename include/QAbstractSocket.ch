@@ -66,4 +66,4 @@ enum QAbstractSocket::SocketType
 #define QAbstractSocket_UdpSocket                                    1
 #define QAbstractSocket_UnknownSocketType                            -1
 
-#endif /* QABSTRACTSOCKET_CH */
+#endif // QABSTRACTSOCKET_CH

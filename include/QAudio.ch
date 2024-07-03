@@ -32,4 +32,4 @@ enum QAudio::State
 #define QAudio_StoppedState                                          2
 #define QAudio_IdleState                                             3
 
-#endif /* QAUDIO_CH */
+#endif // QAUDIO_CH

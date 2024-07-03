@@ -41,4 +41,4 @@ enum QDecoration::DecorationState
 #define QDecoration_Hover                                            0x01
 #define QDecoration_Pressed                                          0x02
 
-#endif /* QDECORATION_CH */
+#endif // QDECORATION_CH

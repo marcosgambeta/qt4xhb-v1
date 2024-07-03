@@ -17,4 +17,4 @@ enum QLibrary::LoadHint
 #define QLibrary_LoadArchiveMemberHint                               0x04
 #define QLibrary_ImprovedSearchHeuristics                            0x08
 
-#endif /* QLIBRARY_CH */
+#endif // QLIBRARY_CH

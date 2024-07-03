@@ -118,4 +118,4 @@ enum QTextFormat::Property
 #define QTextFormat_PageBreakPolicy                                  0x7000
 #define QTextFormat_UserProperty                                     0x100000
 
-#endif /* QTEXTFORMAT_CH */
+#endif // QTEXTFORMAT_CH

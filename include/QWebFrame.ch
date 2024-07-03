@@ -17,4 +17,4 @@ enum QWebFrame::RenderLayer
 #define QWebFrame_PanIconLayer                                       0x40
 #define QWebFrame_AllLayers                                          0xff
 
-#endif /* QWEBFRAME_CH */
+#endif // QWEBFRAME_CH

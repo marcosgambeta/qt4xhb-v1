@@ -28,4 +28,4 @@ enum QTabletEvent::PointerType
 #define QTabletEvent_Cursor                                          2
 #define QTabletEvent_Eraser                                          3
 
-#endif /* QTABLETEVENT_CH */
+#endif // QTABLETEVENT_CH

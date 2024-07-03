@@ -18,4 +18,4 @@ flags QDesignerFormWindowInterface::Feature
 #define QDesignerFormWindowInterface_TabOrderFeature                 0x04
 #define QDesignerFormWindowInterface_DefaultFeature                  hb_or(QDesignerFormWindowInterface_EditFeature,QDesignerFormWindowInterface_GridFeature)
 
-#endif /* QDESIGNERFORMWINDOWINTERFACE_CH */
+#endif // QDESIGNERFORMWINDOWINTERFACE_CH

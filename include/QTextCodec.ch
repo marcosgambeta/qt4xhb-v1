@@ -17,4 +17,4 @@ enum QTextCodec::ConversionFlag
 #define QTextCodec_IgnoreHeader                                      0x1
 #define QTextCodec_FreeFunction                                      0x2
 
-#endif /* QTEXTCODEC_CH */
+#endif // QTEXTCODEC_CH

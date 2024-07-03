@@ -19,4 +19,4 @@ enum QHeaderView::ResizeMode
 // obsolete
 #define QHeaderView_Custom                                           QHeaderView_Fixed
 
-#endif /* QHEADERVIEW_CH */
+#endif // QHEADERVIEW_CH

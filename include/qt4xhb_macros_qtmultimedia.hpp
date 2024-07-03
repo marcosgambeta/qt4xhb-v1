@@ -36,4 +36,4 @@
 #define OPQVIDEOFRAME(n, v)                                 HB_ISNIL(n) ? v : static_cast<QVideoFrame*>(Qt4xHb::itemGetPtr(n))
 #define OPQVIDEOSURFACEFORMAT(n, v)                         HB_ISNIL(n) ? v : static_cast<QVideoSurfaceFormat*>(Qt4xHb::itemGetPtr(n))
 
-#endif /* QT4XHB_MACROS_QTMULTIMEDIA_H */
+#endif // QT4XHB_MACROS_QTMULTIMEDIA_H

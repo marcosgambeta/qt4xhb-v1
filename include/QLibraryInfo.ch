@@ -25,4 +25,4 @@ enum QLibraryInfo::LibraryLocation
 #define QLibraryInfo_ExamplesPath                                    10
 #define QLibraryInfo_ImportsPath                                     11
 
-#endif /* QLIBRARYINFO_CH */
+#endif // QLIBRARYINFO_CH

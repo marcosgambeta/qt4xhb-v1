@@ -17,4 +17,4 @@
 #include <hbapicls.h>
 #endif
 
-#endif /* QT4XHB_COMMON_H */
+#endif // QT4XHB_COMMON_H

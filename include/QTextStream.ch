@@ -41,4 +41,4 @@ enum QTextStream::NumberFlag
 #define QTextStream_UppercaseBase                                    0x8
 #define QTextStream_UppercaseDigits                                  0x10
 
-#endif /* QTEXTSTREAM_CH */
+#endif // QTEXTSTREAM_CH

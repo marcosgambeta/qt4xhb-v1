@@ -36,4 +36,4 @@
 #define OPQAXSCRIPTMANAGER(n, v)                            HB_ISNIL(n) ? v : static_cast<QAxScriptManager*>(Qt4xHb::itemGetPtr(n))
 #define OPQAXWIDGET(n, v)                                   HB_ISNIL(n) ? v : static_cast<QAxWidget*>(Qt4xHb::itemGetPtr(n))
 
-#endif /* QT4XHB_MACROS_ACTIVEQT_H */
+#endif // QT4XHB_MACROS_ACTIVEQT_H

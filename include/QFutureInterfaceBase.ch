@@ -20,4 +20,4 @@ enum QFutureInterfaceBase::State
 #define QFutureInterfaceBase_Paused                                  0x10
 #define QFutureInterfaceBase_Throttled                               0x20
 
-#endif /* QFUTUREINTERFACEBASE_CH */
+#endif // QFUTUREINTERFACEBASE_CH

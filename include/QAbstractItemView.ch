@@ -93,4 +93,4 @@ enum QAbstractItemView::State
 #define QAbstractItemView_CollapsingState                            5
 #define QAbstractItemView_AnimatingState                             6
 
-#endif /* QABSTRACTITEMVIEW_CH */
+#endif // QABSTRACTITEMVIEW_CH

@@ -45,4 +45,4 @@
 #define OPQHELPSEARCHQUERYWIDGET(n, v)                      HB_ISNIL(n) ? v : static_cast<QHelpSearchQueryWidget*>(Qt4xHb::itemGetPtr(n))
 #define OPQHELPSEARCHRESULTWIDGET(n, v)                     HB_ISNIL(n) ? v : static_cast<QHelpSearchResultWidget*>(Qt4xHb::itemGetPtr(n))
 
-#endif /* QT4XHB_MACROS_QTHELP_H */
+#endif // QT4XHB_MACROS_QTHELP_H

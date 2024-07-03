@@ -15,4 +15,4 @@
 
 #define OPQUILOADER(n, v)                                   HB_ISNIL(n) ? v : static_cast<QUiLoader*>(Qt4xHb::itemGetPtr(n))
 
-#endif /* QT4XHB_MACROS_QTUITOOLS_H */
+#endif // QT4XHB_MACROS_QTUITOOLS_H

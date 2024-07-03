@@ -19,4 +19,4 @@ enum QHostAddress::SpecialAddress
 #define QHostAddress_Any                                             4
 #define QHostAddress_AnyIPv6                                         5
 
-#endif /* QHOSTADDRESS_CH */
+#endif // QHOSTADDRESS_CH

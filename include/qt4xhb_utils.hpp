@@ -65,4 +65,4 @@ namespace Qt4xHb
   PHB_ITEM returnQObjectObject(QObject * ptr);
 }
 
-#endif /* QT4XHB_UTILS_H */
+#endif // QT4XHB_UTILS_H

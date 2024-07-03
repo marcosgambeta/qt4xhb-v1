@@ -21,4 +21,4 @@ enum QTextLine::Edge
 #define QTextLine_Leading                                            0
 #define QTextLine_Trailing                                           1
 
-#endif /* QTEXTLINE_CH */
+#endif // QTEXTLINE_CH

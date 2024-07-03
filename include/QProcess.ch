@@ -45,4 +45,4 @@ enum QProcess::ProcessState
 #define QProcess_Starting                                            1
 #define QProcess_Running                                             2
 
-#endif /* QPROCESS_CH */
+#endif // QPROCESS_CH

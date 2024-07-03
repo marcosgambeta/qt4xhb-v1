@@ -54,4 +54,4 @@ enum QSsl::SslProtocol
 #define QSsl_TlsV1SslV3                                              4
 #define QSsl_SecureProtocols                                         5
 
-#endif /* QSSL_CH */
+#endif // QSSL_CH

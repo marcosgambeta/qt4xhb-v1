@@ -155,4 +155,4 @@
 #include "QWidget.ch"
 #include "QWizard.ch"
 
-#endif /* QTGUI_CH */
+#endif // QTGUI_CH

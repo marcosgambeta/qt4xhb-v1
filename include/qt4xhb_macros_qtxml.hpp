@@ -105,4 +105,4 @@
 #define OPQXMLREADER(n, v)                                  HB_ISNIL(n) ? v : static_cast<QXmlReader*>(Qt4xHb::itemGetPtr(n))
 #define OPQXMLSIMPLEREADER(n, v)                            HB_ISNIL(n) ? v : static_cast<QXmlSimpleReader*>(Qt4xHb::itemGetPtr(n))
 
-#endif /* QT4XHB_MACROS_QTXML_H */
+#endif // QT4XHB_MACROS_QTXML_H

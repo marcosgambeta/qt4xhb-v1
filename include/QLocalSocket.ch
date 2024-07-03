@@ -31,4 +31,4 @@ enum QLocalSocket::LocalSocketState
 #define QLocalSocket_ConnectedState                                  QAbstractSocket_ConnectedState
 #define QLocalSocket_ClosingState                                    QAbstractSocket_ClosingState
 
-#endif /* QLOCALSOCKET_CH */
+#endif // QLOCALSOCKET_CH

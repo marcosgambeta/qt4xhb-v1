@@ -36,4 +36,4 @@ enum QTextOption::WrapMode
 #define QTextOption_WrapAnywhere                                     3
 #define QTextOption_WrapAtWordBoundaryOrAnywhere                     4
 
-#endif /* QTEXTOPTION_CH */
+#endif // QTEXTOPTION_CH

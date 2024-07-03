@@ -75,4 +75,4 @@
 #define OPQEXTENSIONMANAGER(n, v)                           HB_ISNIL(n) ? v : static_cast<QExtensionManager*>(Qt4xHb::itemGetPtr(n))
 #define OPQFORMBUILDER(n, v)                                HB_ISNIL(n) ? v : static_cast<QFormBuilder*>(Qt4xHb::itemGetPtr(n))
 
-#endif /* QT4XHB_MACROS_QTDESIGNER_H */
+#endif // QT4XHB_MACROS_QTDESIGNER_H

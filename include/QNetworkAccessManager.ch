@@ -26,4 +26,4 @@ enum QNetworkAccessManager::Operation
 #define QNetworkAccessManager_DeleteOperation                        5
 #define QNetworkAccessManager_CustomOperation                        6
 
-#endif /* QNETWORKACCESSMANAGER_CH */
+#endif // QNETWORKACCESSMANAGER_CH

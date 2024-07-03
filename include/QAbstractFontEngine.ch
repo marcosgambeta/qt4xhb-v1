@@ -42,4 +42,4 @@ flags QAbstractFontEngine::TextShapingFlags
 #define QAbstractFontEngine_RightToLeft                              0x0001
 #define QAbstractFontEngine_ReturnDesignMetrics                      0x0002
 
-#endif /* QABSTRACTFONTENGINE_CH */
+#endif // QABSTRACTFONTENGINE_CH

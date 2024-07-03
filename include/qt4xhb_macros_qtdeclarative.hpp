@@ -60,4 +60,4 @@
 #define OPQDECLARATIVESCRIPTSTRING(n, v)                    HB_ISNIL(n) ? v : static_cast<QDeclarativeScriptString*>(Qt4xHb::itemGetPtr(n))
 #define OPQDECLARATIVEVIEW(n, v)                            HB_ISNIL(n) ? v : static_cast<QDeclarativeView*>(Qt4xHb::itemGetPtr(n))
 
-#endif /* QT4XHB_MACROS_QTDECLARATIVE_H */
+#endif // QT4XHB_MACROS_QTDECLARATIVE_H

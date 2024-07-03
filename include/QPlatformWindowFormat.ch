@@ -45,4 +45,4 @@ enum QPlatformWindowFormat::WindowApi
 #define QPlatformWindowFormat_OpenGL                                 1
 #define QPlatformWindowFormat_OpenVG                                 2
 
-#endif /* QPLATFORMWINDOWFORMAT_CH */
+#endif // QPLATFORMWINDOWFORMAT_CH

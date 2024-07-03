@@ -60,4 +60,4 @@ enum QNetworkRequest::Priority
 #define QNetworkRequest_NormalPriority                               3
 #define QNetworkRequest_LowPriority                                  5
 
-#endif /* QNETWORKREQUEST_CH */
+#endif // QNETWORKREQUEST_CH

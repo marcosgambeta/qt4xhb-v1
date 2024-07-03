@@ -9,4 +9,4 @@
 #ifndef QTTEST_CH
 #define QTTEST_CH
 
-#endif /* QTTEST_CH */
+#endif // QTTEST_CH

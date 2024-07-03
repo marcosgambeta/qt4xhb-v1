@@ -51,4 +51,4 @@ enum QSystemLocale::QueryType
 #define QSystemLocale_NativeLanguageName                             36
 #define QSystemLocale_NativeCountryName                              37
 
-#endif /* QSYSTEMLOCALE_CH */
+#endif // QSYSTEMLOCALE_CH

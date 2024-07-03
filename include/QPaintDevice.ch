@@ -23,4 +23,4 @@ enum QPaintDevice::PaintDeviceMetric
 #define QPaintDevice_PdmPhysicalDpiX                                 9
 #define QPaintDevice_PdmPhysicalDpiY                                 10
 
-#endif /* QPAINTDEVICE_CH */
+#endif // QPAINTDEVICE_CH

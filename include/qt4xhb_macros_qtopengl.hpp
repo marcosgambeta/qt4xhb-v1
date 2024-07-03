@@ -45,4 +45,4 @@
 #define OPQGLSHADERPROGRAM(n, v)                            HB_ISNIL(n) ? v : static_cast<QGLShaderProgram*>(Qt4xHb::itemGetPtr(n))
 #define OPQGLWIDGET(n, v)                                   HB_ISNIL(n) ? v : static_cast<QGLWidget*>(Qt4xHb::itemGetPtr(n))
 
-#endif /* QT4XHB_MACROS_QTOPENGL_H */
+#endif // QT4XHB_MACROS_QTOPENGL_H

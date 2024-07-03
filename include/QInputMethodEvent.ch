@@ -18,4 +18,4 @@ enum QInputMethodEvent::AttributeType
 #define QInputMethodEvent_Ruby                                       3
 #define QInputMethodEvent_Selection                                  4
 
-#endif /* QINPUTMETHODEVENT_CH */
+#endif // QINPUTMETHODEVENT_CH

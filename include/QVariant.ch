@@ -68,4 +68,4 @@ enum QVariant::Type
 #define QVariant_Vector4D                                            85
 #define QVariant_UserType                                            127
 
-#endif /* QVARIANT_CH */
+#endif // QVARIANT_CH

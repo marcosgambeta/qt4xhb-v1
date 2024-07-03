@@ -87,4 +87,4 @@ enum QMetaType::Type
 #define QMetaType_QReal                                              QMetaType_Double
 #define QMetaType_User                                               256
 
-#endif /* QMETATYPE_CH */
+#endif // QMETATYPE_CH

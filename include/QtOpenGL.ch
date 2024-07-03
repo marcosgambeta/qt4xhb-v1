@@ -16,4 +16,4 @@
 #include "QGLFunctions.ch"
 #include "QGLShader.ch"
 
-#endif /* QTOPENGL_CH */
+#endif // QTOPENGL_CH

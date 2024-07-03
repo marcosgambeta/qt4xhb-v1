@@ -16,4 +16,4 @@ enum QDirectPainter::SurfaceFlag
 #define QDirectPainter_Reserved                                      1
 #define QDirectPainter_ReservedSynchronous                           3
 
-#endif /* QDIRECTPAINTER_CH */
+#endif // QDIRECTPAINTER_CH

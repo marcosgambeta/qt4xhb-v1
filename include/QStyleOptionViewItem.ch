@@ -27,4 +27,4 @@ enum QStyleOptionViewItem::Position
 #define QStyleOptionViewItem_Top                                     2
 #define QStyleOptionViewItem_Bottom                                  3
 
-#endif /* QSTYLEOPTIONVIEWITEM_CH */
+#endif // QSTYLEOPTIONVIEWITEM_CH

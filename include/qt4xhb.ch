@@ -25,4 +25,4 @@
 #include "QtXml.ch"
 #include "QtXmlPatterns.ch"
 
-#endif /* QT4XHB_CH */
+#endif // QT4XHB_CH

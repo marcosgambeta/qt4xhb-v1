@@ -29,4 +29,4 @@ enum QStateMachine::RestorePolicy
 #define QStateMachine_DontRestoreProperties                          0
 #define QStateMachine_RestoreProperties                              1
 
-#endif /* QSTATEMACHINE_CH */
+#endif // QSTATEMACHINE_CH

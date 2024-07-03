@@ -24,4 +24,4 @@
 #define OPQSVGRENDERER(n, v)                                HB_ISNIL(n) ? v : static_cast<QSvgRenderer*>(Qt4xHb::itemGetPtr(n))
 #define OPQSVGWIDGET(n, v)                                  HB_ISNIL(n) ? v : static_cast<QSvgWidget*>(Qt4xHb::itemGetPtr(n))
 
-#endif /* QT4XHB_MACROS_QTSVG_H */
+#endif // QT4XHB_MACROS_QTSVG_H

@@ -13,4 +13,4 @@ enum QX11EmbedWidget::Error
 #define QX11EmbedWidget_Unknown                                      0
 #define QX11EmbedWidget_InvalidWindowID                              2
 
-#endif /* QX11EMBEDWIDGET_CH */
+#endif // QX11EMBEDWIDGET_CH

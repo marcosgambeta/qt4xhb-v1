@@ -25,4 +25,4 @@ enum QTextBoundaryFinder::BoundaryReason
 #define QTextBoundaryFinder_EndWord                                  2
 //Hyphen
 
-#endif /* QTEXTBOUNDARYFINDER_CH */
+#endif // QTEXTBOUNDARYFINDER_CH

@@ -42,4 +42,4 @@ enum QSqlDriver::StatementType
 #define QSqlDriver_InsertStatement                                   3
 #define QSqlDriver_DeleteStatement                                   4
 
-#endif /* QSQLDRIVER_CH */
+#endif // QSQLDRIVER_CH

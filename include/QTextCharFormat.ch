@@ -32,4 +32,4 @@ enum QTextCharFormat::VerticalAlignment
 #define QTextCharFormat_AlignTop                                     4
 #define QTextCharFormat_AlignBaseline                                6
 
-#endif /* QTEXTCHARFORMAT_CH */
+#endif // QTEXTCHARFORMAT_CH

@@ -17,4 +17,4 @@ enum QFileSystemModel::Roles
 #define QFileSystemModel_FileNameRole                                Qt_UserRole + 2
 #define QFileSystemModel_FilePermissions                             Qt_UserRole + 3
 
-#endif /* QFILESYSTEMMODEL_CH */
+#endif // QFILESYSTEMMODEL_CH

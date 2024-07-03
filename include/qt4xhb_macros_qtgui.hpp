@@ -1074,4 +1074,4 @@
 #define OPQWIZARDPAGE(n, v)                                 HB_ISNIL(n) ? v : static_cast<QWizardPage*>(Qt4xHb::itemGetPtr(n))
 #define OPQWORKSPACE(n, v)                                  HB_ISNIL(n) ? v : static_cast<QWorkspace*>(Qt4xHb::itemGetPtr(n))
 
-#endif /* QT4XHB_MACROS_QTGUI_H */
+#endif // QT4XHB_MACROS_QTGUI_H

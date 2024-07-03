@@ -47,4 +47,4 @@ enum QNetworkConfiguration::Type
 #define QNetworkConfiguration_UserChoice                             2
 #define QNetworkConfiguration_Invalid                                3
 
-#endif /* QNETWORKCONFIGURATION_CH */
+#endif // QNETWORKCONFIGURATION_CH

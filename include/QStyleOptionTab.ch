@@ -42,4 +42,4 @@ flags QStyleOptionTab::CornerWidgets
 #define QStyleOptionTab_LeftCornerWidget                             0x01
 #define QStyleOptionTab_RightCornerWidget                            0x02
 
-#endif /* QSTYLEOPTIONTAB_CH */
+#endif // QSTYLEOPTIONTAB_CH

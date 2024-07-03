@@ -82,4 +82,4 @@ enum QTest::TestFailMode
 #define QTest_Abort                                                  1
 #define QTest_Continue                                               2
 
-#endif /* QTEST_CH */
+#endif // QTEST_CH

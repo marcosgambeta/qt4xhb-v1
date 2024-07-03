@@ -52,4 +52,4 @@ enum QTextCursor::SelectionType
 #define QTextCursor_LineUnderCursor                                  1
 #define QTextCursor_WordUnderCursor                                  0
 
-#endif /* QTEXTCURSOR_CH */
+#endif // QTEXTCURSOR_CH

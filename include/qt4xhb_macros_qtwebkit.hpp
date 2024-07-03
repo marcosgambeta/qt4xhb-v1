@@ -57,4 +57,4 @@
 #define OPQWEBSETTINGS(n, v)                                HB_ISNIL(n) ? v : static_cast<QWebSettings*>(Qt4xHb::itemGetPtr(n))
 #define OPQWEBVIEW(n, v)                                    HB_ISNIL(n) ? v : static_cast<QWebView*>(Qt4xHb::itemGetPtr(n))
 
-#endif /* QT4XHB_MACROS_QTWEBKIT_H */
+#endif // QT4XHB_MACROS_QTWEBKIT_H

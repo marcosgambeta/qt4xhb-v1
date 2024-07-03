@@ -39,4 +39,4 @@ enum QSslError::SslError
 #define QSslError_NoSslSupport                                       23
 #define QSslError_CertificateBlacklisted                             24
 
-#endif /* QSSLERROR_CH */
+#endif // QSSLERROR_CH

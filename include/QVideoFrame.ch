@@ -52,4 +52,4 @@ enum QVideoFrame::PixelFormat
 #define QVideoFrame_Format_Y16                                       29
 #define QVideoFrame_Format_User                                      1000
 
-#endif /* QVIDEOFRAME_CH */
+#endif // QVIDEOFRAME_CH

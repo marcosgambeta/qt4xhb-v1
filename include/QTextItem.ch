@@ -18,4 +18,4 @@ flags QTextItem::RenderFlags
 #define QTextItem_Underline                                          0x20
 #define QTextItem_StrikeOut                                          0x40
 
-#endif /* QTEXTITEM_CH */
+#endif // QTEXTITEM_CH

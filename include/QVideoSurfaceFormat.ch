@@ -25,4 +25,4 @@ enum QVideoSurfaceFormat::YCbCrColorSpace
 #define QVideoSurfaceFormat_YCbCr_xvYCC709                           4
 #define QVideoSurfaceFormat_YCbCr_JPEG                               5
 
-#endif /* QVIDEOSURFACEFORMAT_CH */
+#endif // QVIDEOSURFACEFORMAT_CH

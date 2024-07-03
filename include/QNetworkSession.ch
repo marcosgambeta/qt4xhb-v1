@@ -29,4 +29,4 @@ enum QNetworkSession::State
 #define QNetworkSession_Disconnected                                 5
 #define QNetworkSession_Roaming                                      6
 
-#endif /* QNETWORKSESSION_CH */
+#endif // QNETWORKSESSION_CH

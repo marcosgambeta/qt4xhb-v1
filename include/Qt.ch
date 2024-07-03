@@ -1277,4 +1277,4 @@ flags #define Qt_WindowFlags
 #define Qt_WResizeNoErase                                  0
 #define Qt_WMacNoSheet                                     0
 
-#endif /* QT_CH */
+#endif // QT_CH

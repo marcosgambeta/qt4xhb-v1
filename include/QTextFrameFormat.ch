@@ -31,4 +31,4 @@ enum QTextFrameFormat::Position
 #define QTextFrameFormat_FloatLeft                                   1
 #define QTextFrameFormat_FloatRight                                  2
 
-#endif /* QTEXTFRAMEFORMAT_CH */
+#endif // QTEXTFRAMEFORMAT_CH

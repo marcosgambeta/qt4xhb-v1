@@ -27,4 +27,4 @@ enum QUuid::Version
 #define QUuid_Name                                                   3
 #define QUuid_Random                                                 4
 
-#endif /* QUUID_CH */
+#endif // QUUID_CH

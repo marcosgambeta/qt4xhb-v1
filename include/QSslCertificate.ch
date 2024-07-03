@@ -19,4 +19,4 @@ enum QSslCertificate::SubjectInfo
 #define QSslCertificate_CountryName                                  4
 #define QSslCertificate_StateOrProvinceName                          5
 
-#endif /* QSSLCERTIFICATE_CH */
+#endif // QSSLCERTIFICATE_CH

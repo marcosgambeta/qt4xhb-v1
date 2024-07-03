@@ -20,4 +20,4 @@ flags QGLContext::BindOptions
 #define QGLContext_LinearFilteringBindOption                         0x0008
 #define QGLContext_DefaultBindOption                                 hb_bitor(hb_bitor(QGLContext_LinearFilteringBindOption,QGLContext_InvertedYBindOption),QGLContext_MipmapBindOption)
 
-#endif /* QGLCONTEXT_CH */
+#endif // QGLCONTEXT_CH

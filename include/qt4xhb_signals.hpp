@@ -19,4 +19,4 @@ namespace Qt4xHb
   PHB_ITEM Signals_return_qobject(QObject * ptr, const char * classname);
 }
 
-#endif /* QT4XHB_SIGNALS_H */
+#endif // QT4XHB_SIGNALS_H

@@ -242,4 +242,4 @@ enum QAccessible::Text
 #define QAccessible_Accelerator                                      4
 #define QAccessible_UserText                                         0x0000ffff
 
-#endif /* QACCESSIBLE_CH */
+#endif // QACCESSIBLE_CH

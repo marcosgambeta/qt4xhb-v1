@@ -52,4 +52,4 @@ enum QStyleOption::StyleOptionVersion
 */
 #define QStyleOption_Version                                         1
 
-#endif /* QSTYLEOPTION_CH */
+#endif // QSTYLEOPTION_CH

@@ -48,4 +48,4 @@ enum QDataStream::Version
 #define QDataStream_Qt_4_7                                           QDataStream_Qt_4_6
 #define QDataStream_Qt_4_8                                           QDataStream_Qt_4_7
 
-#endif /* QDATASTREAM_CH */
+#endif // QDATASTREAM_CH

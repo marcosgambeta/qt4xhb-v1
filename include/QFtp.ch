@@ -59,4 +59,4 @@ enum QFtp::TransferType
 #define QFtp_Binary                                                  0
 #define QFtp_Ascii                                                   1
 
-#endif /* QFTP_CH */
+#endif // QFTP_CH

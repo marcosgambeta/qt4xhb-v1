@@ -29,4 +29,4 @@ enum QAbstractSlider::SliderChange
 #define QAbstractSlider_SliderStepsChange                            2
 #define QAbstractSlider_SliderValueChange                            3
 
-#endif /* QABSTRACTSLIDER_CH */
+#endif // QABSTRACTSLIDER_CH

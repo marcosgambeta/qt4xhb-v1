@@ -16,4 +16,4 @@ enum QCryptographicHash::Algorithm
 #define QCryptographicHash_Md5                                       1
 #define QCryptographicHash_Sha1                                      2
 
-#endif /* QCRYPTOGRAPHICHASH_CH */
+#endif // QCRYPTOGRAPHICHASH_CH

@@ -553,4 +553,4 @@ enum QLocale::QuotationStyle
 #define QLocale_StandardQuotation                                    0
 #define QLocale_AlternateQuotation                                   1
 
-#endif /* QLOCALE_CH */
+#endif // QLOCALE_CH

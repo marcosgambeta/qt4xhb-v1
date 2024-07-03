@@ -15,4 +15,4 @@ enum QTouchEvent::DeviceType
 #define QTouchEvent_TouchScreen                                      0
 #define QTouchEvent_TouchPad                                         1
 
-#endif /* QTOUCHEVENT_CH */
+#endif // QTOUCHEVENT_CH

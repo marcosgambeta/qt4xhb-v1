@@ -13,4 +13,4 @@ enum QX11EmbedContainer::Error
 #define QX11EmbedContainer_Unknown                                   0
 #define QX11EmbedContainer_InvalidWindowID                           2
 
-#endif /* QX11EMBEDCONTAINER_CH */
+#endif // QX11EMBEDCONTAINER_CH
