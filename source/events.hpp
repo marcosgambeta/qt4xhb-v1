@@ -57,4 +57,4 @@ public:
   int active();
 };
 
-#endif
+#endif // EVENTS_H
