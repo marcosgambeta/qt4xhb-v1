@@ -62,4 +62,4 @@ public:
   int active();
 };
 
-#endif
+#endif // SIGNALS_H
