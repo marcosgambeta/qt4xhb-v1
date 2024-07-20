@@ -46,7 +46,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    void createIndex( const QString & customFilterName )
+    void createIndex( const QString &customFilterName )
     */
 HB_FUNC_STATIC(QHELPINDEXMODEL_CREATEINDEX)
 {
@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QHELPINDEXMODEL_CREATEINDEX)
 }
 
 /*
-QModelIndex filter( const QString & filter, const QString & wildcard = QString() )
+QModelIndex filter( const QString &filter, const QString &wildcard = QString() )
 */
 HB_FUNC_STATIC(QHELPINDEXMODEL_FILTER)
 {

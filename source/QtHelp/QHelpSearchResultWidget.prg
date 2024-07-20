@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QHELPSEARCHRESULTWIDGET_DELETE)
 }
 
 /*
-QUrl linkAt( const QPoint & point )
+QUrl linkAt( const QPoint &point )
 */
 HB_FUNC_STATIC(QHELPSEARCHRESULTWIDGET_LINKAT)
 {
