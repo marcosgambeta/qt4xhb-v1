@@ -206,7 +206,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE1)
 }
 
 /*
-bool addShaderFromSourceCode( QGLShader::ShaderType type, const QByteArray & source )
+bool addShaderFromSourceCode( QGLShader::ShaderType type, const QByteArray &source )
 */
 HB_FUNC_STATIC(QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE2)
 {
@@ -230,7 +230,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE2)
 }
 
 /*
-bool addShaderFromSourceCode( QGLShader::ShaderType type, const QString & source )
+bool addShaderFromSourceCode( QGLShader::ShaderType type, const QString &source )
 */
 HB_FUNC_STATIC(QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE3)
 {
@@ -274,7 +274,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE)
 }
 
 /*
-bool addShaderFromSourceFile( QGLShader::ShaderType type, const QString & fileName )
+bool addShaderFromSourceFile( QGLShader::ShaderType type, const QString &fileName )
 */
 HB_FUNC_STATIC(QGLSHADERPROGRAM_ADDSHADERFROMSOURCEFILE)
 {
@@ -322,7 +322,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_ATTRIBUTELOCATION1)
 }
 
 /*
-int attributeLocation( const QByteArray & name ) const
+int attributeLocation( const QByteArray &name ) const
 */
 HB_FUNC_STATIC(QGLSHADERPROGRAM_ATTRIBUTELOCATION2)
 {
@@ -346,7 +346,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_ATTRIBUTELOCATION2)
 }
 
 /*
-int attributeLocation( const QString & name ) const
+int attributeLocation( const QString &name ) const
 */
 HB_FUNC_STATIC(QGLSHADERPROGRAM_ATTRIBUTELOCATION3)
 {
@@ -440,7 +440,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_BINDATTRIBUTELOCATION1)
 }
 
 /*
-void bindAttributeLocation( const QByteArray & name, int location )
+void bindAttributeLocation( const QByteArray &name, int location )
 */
 HB_FUNC_STATIC(QGLSHADERPROGRAM_BINDATTRIBUTELOCATION2)
 {
@@ -466,7 +466,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_BINDATTRIBUTELOCATION2)
 }
 
 /*
-void bindAttributeLocation( const QString & name, int location )
+void bindAttributeLocation( const QString &name, int location )
 */
 HB_FUNC_STATIC(QGLSHADERPROGRAM_BINDATTRIBUTELOCATION3)
 {
@@ -994,7 +994,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE4)
 }
 
 /*
-void setAttributeValue( int location, const QColor & value )
+void setAttributeValue( int location, const QColor &value )
 */
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE8)
 {
@@ -1125,7 +1125,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE13)
 }
 
 /*
-void setAttributeValue( const char * name, const QColor & value )
+void setAttributeValue( const char * name, const QColor &value )
 */
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE17)
 {
@@ -1304,7 +1304,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE1)
 }
 
 /*
-void setUniformValue( const char * name, const QPointF & point )
+void setUniformValue( const char * name, const QPointF &point )
 */
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE2)
 {
@@ -1330,7 +1330,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE2)
 }
 
 /*
-void setUniformValue( const char * name, const QSize & size )
+void setUniformValue( const char * name, const QSize &size )
 */
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE3)
 {
@@ -1356,7 +1356,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE3)
 }
 
 /*
-void setUniformValue( const char * name, const QSizeF & size )
+void setUniformValue( const char * name, const QSizeF &size )
 */
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE4)
 {
@@ -1382,7 +1382,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE4)
 }
 
 /*
-void setUniformValue( const char * name, const QTransform & value )
+void setUniformValue( const char * name, const QTransform &value )
 */
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE20)
 {
@@ -1538,7 +1538,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE25)
 }
 
 /*
-void setUniformValue( int location, const QColor & color )
+void setUniformValue( int location, const QColor &color )
 */
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE29)
 {
@@ -1565,7 +1565,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE29)
 }
 
 /*
-void setUniformValue( int location, const QPoint & point )
+void setUniformValue( int location, const QPoint &point )
 */
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE30)
 {
@@ -1591,7 +1591,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE30)
 }
 
 /*
-void setUniformValue( int location, const QPointF & point )
+void setUniformValue( int location, const QPointF &point )
 */
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE31)
 {
@@ -1617,7 +1617,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE31)
 }
 
 /*
-void setUniformValue( int location, const QSize & size )
+void setUniformValue( int location, const QSize &size )
 */
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE32)
 {
@@ -1643,7 +1643,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE32)
 }
 
 /*
-void setUniformValue( int location, const QSizeF & size )
+void setUniformValue( int location, const QSizeF &size )
 */
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE33)
 {
@@ -1669,7 +1669,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE33)
 }
 
 /*
-void setUniformValue( int location, const QTransform & value )
+void setUniformValue( int location, const QTransform &value )
 */
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE43)
 {
@@ -1851,7 +1851,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE49)
 }
 
 /*
-void setUniformValue( const char * name, const QColor & color )
+void setUniformValue( const char * name, const QColor &color )
 */
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE53)
 {
@@ -1878,7 +1878,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE53)
 }
 
 /*
-void setUniformValue( const char * name, const QPoint & point )
+void setUniformValue( const char * name, const QPoint &point )
 */
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE54)
 {
@@ -1992,7 +1992,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_UNIFORMLOCATION1)
 }
 
 /*
-int uniformLocation( const QByteArray & name ) const
+int uniformLocation( const QByteArray &name ) const
 */
 HB_FUNC_STATIC(QGLSHADERPROGRAM_UNIFORMLOCATION2)
 {
@@ -2016,7 +2016,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_UNIFORMLOCATION2)
 }
 
 /*
-int uniformLocation( const QString & name ) const
+int uniformLocation( const QString &name ) const
 */
 HB_FUNC_STATIC(QGLSHADERPROGRAM_UNIFORMLOCATION3)
 {

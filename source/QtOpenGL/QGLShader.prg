@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE1)
 }
 
 /*
-bool compileSourceCode( const QByteArray & source )
+bool compileSourceCode( const QByteArray &source )
 */
 HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE2)
 {
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE2)
 }
 
 /*
-bool compileSourceCode( const QString & source )
+bool compileSourceCode( const QString &source )
 */
 HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE3)
 {
@@ -187,7 +187,7 @@ HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE)
 }
 
 /*
-bool compileSourceFile( const QString & fileName )
+bool compileSourceFile( const QString &fileName )
 */
 HB_FUNC_STATIC(QGLSHADER_COMPILESOURCEFILE)
 {
