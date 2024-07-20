@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_EDITSTRATEGY)
 }
 
 /*
-int fieldIndex( const QString & fieldName ) const
+int fieldIndex( const QString &fieldName ) const
 */
 HB_FUNC_STATIC(QSQLTABLEMODEL_FIELDINDEX)
 {
@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_FILTER)
 }
 
 /*
-bool insertRecord( int row, const QSqlRecord & record )
+bool insertRecord( int row, const QSqlRecord &record )
 */
 HB_FUNC_STATIC(QSQLTABLEMODEL_INSERTRECORD)
 {
@@ -236,7 +236,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_INSERTRECORD)
 }
 
 /*
-bool isDirty( const QModelIndex & index ) const
+bool isDirty( const QModelIndex &index ) const
 */
 HB_FUNC_STATIC(QSQLTABLEMODEL_ISDIRTY)
 {
@@ -361,7 +361,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETEDITSTRATEGY)
 }
 
 /*
-virtual void setFilter( const QString & filter )
+virtual void setFilter( const QString &filter )
 */
 HB_FUNC_STATIC(QSQLTABLEMODEL_SETFILTER)
 {
@@ -387,7 +387,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETFILTER)
 }
 
 /*
-bool setRecord( int row, const QSqlRecord & record )
+bool setRecord( int row, const QSqlRecord &record )
 */
 HB_FUNC_STATIC(QSQLTABLEMODEL_SETRECORD)
 {
@@ -437,7 +437,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETSORT)
 }
 
 /*
-virtual void setTable( const QString & tableName )
+virtual void setTable( const QString &tableName )
 */
 HB_FUNC_STATIC(QSQLTABLEMODEL_SETTABLE)
 {
@@ -513,7 +513,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_CLEAR)
 }
 
 /*
-virtual QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) const
+virtual QVariant data( const QModelIndex &index, int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC(QSQLTABLEMODEL_DATA)
 {
@@ -538,7 +538,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_DATA)
 }
 
 /*
-virtual Qt::ItemFlags flags( const QModelIndex & index ) const
+virtual Qt::ItemFlags flags( const QModelIndex &index ) const
 */
 HB_FUNC_STATIC(QSQLTABLEMODEL_FLAGS)
 {
@@ -587,7 +587,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_HEADERDATA)
 }
 
 /*
-virtual bool insertRows( int row, int count, const QModelIndex & parent = QModelIndex() )
+virtual bool insertRows( int row, int count, const QModelIndex &parent = QModelIndex() )
 */
 HB_FUNC_STATIC(QSQLTABLEMODEL_INSERTROWS)
 {
@@ -612,7 +612,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_INSERTROWS)
 }
 
 /*
-virtual bool removeColumns( int column, int count, const QModelIndex & parent = QModelIndex() )
+virtual bool removeColumns( int column, int count, const QModelIndex &parent = QModelIndex() )
 */
 HB_FUNC_STATIC(QSQLTABLEMODEL_REMOVECOLUMNS)
 {
@@ -637,7 +637,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_REMOVECOLUMNS)
 }
 
 /*
-virtual bool removeRows( int row, int count, const QModelIndex & parent = QModelIndex() )
+virtual bool removeRows( int row, int count, const QModelIndex &parent = QModelIndex() )
 */
 HB_FUNC_STATIC(QSQLTABLEMODEL_REMOVEROWS)
 {
@@ -662,7 +662,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_REMOVEROWS)
 }
 
 /*
-virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const
+virtual int rowCount( const QModelIndex &parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC(QSQLTABLEMODEL_ROWCOUNT)
 {
@@ -686,7 +686,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_ROWCOUNT)
 }
 
 /*
-virtual bool setData( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
+virtual bool setData( const QModelIndex &index, const QVariant &value, int role = Qt::EditRole )
 */
 HB_FUNC_STATIC(QSQLTABLEMODEL_SETDATA)
 {

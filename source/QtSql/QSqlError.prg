@@ -63,7 +63,7 @@ HB_FUNC_STATIC(QSQLERROR_NEW)
       (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
-    QSqlError( const QString & driverText = QString(), const QString & databaseText = QString(), QSqlError::ErrorType
+    QSqlError( const QString &driverText = QString(), const QString &databaseText = QString(), QSqlError::ErrorType
     type = QSqlError::NoError, int number = -1 )
     */
     QSqlError *obj = new QSqlError(
@@ -74,7 +74,7 @@ HB_FUNC_STATIC(QSQLERROR_NEW)
   else if (ISNUMPAR(1) && ISQSQLERROR(1))
   {
     /*
-    QSqlError( const QSqlError & other )
+    QSqlError( const QSqlError &other )
     */
     QSqlError *obj = new QSqlError(*PQSQLERROR(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -198,7 +198,7 @@ HB_FUNC_STATIC(QSQLERROR_NUMBER)
 }
 
 /*
-void setDatabaseText( const QString & databaseText )
+void setDatabaseText( const QString &databaseText )
 */
 HB_FUNC_STATIC(QSQLERROR_SETDATABASETEXT)
 {
@@ -224,7 +224,7 @@ HB_FUNC_STATIC(QSQLERROR_SETDATABASETEXT)
 }
 
 /*
-void setDriverText( const QString & driverText )
+void setDriverText( const QString &driverText )
 */
 HB_FUNC_STATIC(QSQLERROR_SETDRIVERTEXT)
 {

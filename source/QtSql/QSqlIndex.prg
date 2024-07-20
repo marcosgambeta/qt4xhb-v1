@@ -50,7 +50,7 @@ HB_FUNC_STATIC(QSQLINDEX_NEW)
   if (ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (HB_ISCHAR(1) || HB_ISNIL(1)))
   {
     /*
-    QSqlIndex( const QString & cursorname = QString(), const QString & name = QString() )
+    QSqlIndex( const QString &cursorname = QString(), const QString &name = QString() )
     */
     QSqlIndex *obj = new QSqlIndex(OPQSTRING(1, QString()), OPQSTRING(2, QString()));
     Qt4xHb::returnNewObject(obj, true);
@@ -58,7 +58,7 @@ HB_FUNC_STATIC(QSQLINDEX_NEW)
   else if (ISNUMPAR(1) && ISQSQLINDEX(1))
   {
     /*
-    QSqlIndex( const QSqlIndex & other )
+    QSqlIndex( const QSqlIndex &other )
     */
     QSqlIndex *obj = new QSqlIndex(*PQSQLINDEX(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QSQLINDEX_APPEND)
   if (ISNUMPAR(1) && ISQSQLFIELD(1))
   {
     /*
-    void append( const QSqlField & field )
+    void append( const QSqlField &field )
     */
     QSqlIndex *obj = static_cast<QSqlIndex *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QSQLINDEX_APPEND)
   else if (ISNUMPAR(2) && ISQSQLFIELD(1) && HB_ISLOG(2))
   {
     /*
-    void append( const QSqlField & field, bool desc )
+    void append( const QSqlField &field, bool desc )
     */
     QSqlIndex *obj = static_cast<QSqlIndex *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -194,7 +194,7 @@ HB_FUNC_STATIC(QSQLINDEX_NAME)
 }
 
 /*
-void setCursorName( const QString & cursorName )
+void setCursorName( const QString &cursorName )
 */
 HB_FUNC_STATIC(QSQLINDEX_SETCURSORNAME)
 {
@@ -246,7 +246,7 @@ HB_FUNC_STATIC(QSQLINDEX_SETDESCENDING)
 }
 
 /*
-void setName( const QString & name )
+void setName( const QString &name )
 */
 HB_FUNC_STATIC(QSQLINDEX_SETNAME)
 {

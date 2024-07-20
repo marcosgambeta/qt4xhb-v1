@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QSQLDRIVER_CREATERESULT)
 }
 
 /*
-virtual QString escapeIdentifier( const QString & identifier, QSqlDriver::IdentifierType type ) const
+virtual QString escapeIdentifier( const QString &identifier, QSqlDriver::IdentifierType type ) const
 */
 HB_FUNC_STATIC(QSQLDRIVER_ESCAPEIDENTIFIER)
 {
@@ -217,7 +217,7 @@ HB_FUNC_STATIC(QSQLDRIVER_ESCAPEIDENTIFIER)
 }
 
 /*
-virtual QString formatValue( const QSqlField & field, bool trimStrings = false ) const
+virtual QString formatValue( const QSqlField &field, bool trimStrings = false ) const
 */
 HB_FUNC_STATIC(QSQLDRIVER_FORMATVALUE)
 {
@@ -290,7 +290,7 @@ HB_FUNC_STATIC(QSQLDRIVER_HASFEATURE)
 }
 
 /*
-bool isIdentifierEscaped( const QString & identifier, QSqlDriver::IdentifierType type ) const
+bool isIdentifierEscaped( const QString &identifier, QSqlDriver::IdentifierType type ) const
 */
 HB_FUNC_STATIC(QSQLDRIVER_ISIDENTIFIERESCAPED)
 {
@@ -411,8 +411,8 @@ HB_FUNC_STATIC(QSQLDRIVER_NUMERICALPRECISIONPOLICY)
 }
 
 /*
-virtual bool open( const QString & db, const QString & user = QString(), const QString & password = QString(), const
-QString & host = QString(), int port = -1, const QString & options = QString() ) = 0
+virtual bool open( const QString &db, const QString &user = QString(), const QString &password = QString(), const
+QString &host = QString(), int port = -1, const QString &options = QString() ) = 0
 */
 HB_FUNC_STATIC(QSQLDRIVER_OPEN)
 {
@@ -438,7 +438,7 @@ HB_FUNC_STATIC(QSQLDRIVER_OPEN)
 }
 
 /*
-virtual QSqlIndex primaryIndex( const QString & tableName ) const
+virtual QSqlIndex primaryIndex( const QString &tableName ) const
 */
 HB_FUNC_STATIC(QSQLDRIVER_PRIMARYINDEX)
 {
@@ -463,7 +463,7 @@ HB_FUNC_STATIC(QSQLDRIVER_PRIMARYINDEX)
 }
 
 /*
-virtual QSqlRecord record( const QString & tableName ) const
+virtual QSqlRecord record( const QString &tableName ) const
 */
 HB_FUNC_STATIC(QSQLDRIVER_RECORD)
 {
@@ -538,7 +538,7 @@ HB_FUNC_STATIC(QSQLDRIVER_SETNUMERICALPRECISIONPOLICY)
 }
 
 /*
-virtual QString sqlStatement( QSqlDriver::StatementType type, const QString & tableName, const QSqlRecord & rec, bool
+virtual QString sqlStatement( QSqlDriver::StatementType type, const QString &tableName, const QSqlRecord &rec, bool
 preparedStatement ) const
 */
 HB_FUNC_STATIC(QSQLDRIVER_SQLSTATEMENT)
@@ -563,7 +563,7 @@ HB_FUNC_STATIC(QSQLDRIVER_SQLSTATEMENT)
 }
 
 /*
-QString stripDelimiters( const QString & identifier, QSqlDriver::IdentifierType type ) const
+QString stripDelimiters( const QString &identifier, QSqlDriver::IdentifierType type ) const
 */
 HB_FUNC_STATIC(QSQLDRIVER_STRIPDELIMITERS)
 {
@@ -587,7 +587,7 @@ HB_FUNC_STATIC(QSQLDRIVER_STRIPDELIMITERS)
 }
 
 /*
-bool subscribeToNotification( const QString & name )
+bool subscribeToNotification( const QString &name )
 */
 HB_FUNC_STATIC(QSQLDRIVER_SUBSCRIBETONOTIFICATION)
 {
@@ -659,7 +659,7 @@ HB_FUNC_STATIC(QSQLDRIVER_TABLES)
 }
 
 /*
-bool unsubscribeFromNotification( const QString & name )
+bool unsubscribeFromNotification( const QString &name )
 */
 HB_FUNC_STATIC(QSQLDRIVER_UNSUBSCRIBEFROMNOTIFICATION)
 {

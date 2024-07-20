@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QSQLQUERY_NEW)
   else if (ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (ISQSQLDATABASE(2) || HB_ISNIL(2)))
   {
     /*
-    QSqlQuery( const QString & query = QString(), QSqlDatabase db = QSqlDatabase() )
+    QSqlQuery( const QString &query = QString(), QSqlDatabase db = QSqlDatabase() )
     */
     QSqlQuery *obj = new QSqlQuery(OPQSTRING(1, QString()),
                                    HB_ISNIL(2) ? QSqlDatabase() : *static_cast<QSqlDatabase *>(Qt4xHb::itemGetPtr(2)));
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QSQLQUERY_NEW)
   else if (ISNUMPAR(1) && ISQSQLQUERY(1))
   {
     /*
-    QSqlQuery( const QSqlQuery & other )
+    QSqlQuery( const QSqlQuery &other )
     */
     QSqlQuery *obj = new QSqlQuery(*PQSQLQUERY(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QSQLQUERY_DELETE)
 }
 
 /*
-void addBindValue( const QVariant & val, QSql::ParamType paramType = QSql::In )
+void addBindValue( const QVariant &val, QSql::ParamType paramType = QSql::In )
 */
 HB_FUNC_STATIC(QSQLQUERY_ADDBINDVALUE)
 {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QSQLQUERY_BINDVALUE)
   if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQVARIANT(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    void bindValue( const QString & placeholder, const QVariant & val, QSql::ParamType paramType = QSql::In )
+    void bindValue( const QString &placeholder, const QVariant &val, QSql::ParamType paramType = QSql::In )
     */
     QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -217,7 +217,7 @@ HB_FUNC_STATIC(QSQLQUERY_BINDVALUE)
   else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQVARIANT(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    void bindValue( int pos, const QVariant & val, QSql::ParamType paramType = QSql::In )
+    void bindValue( int pos, const QVariant &val, QSql::ParamType paramType = QSql::In )
     */
     QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -239,7 +239,7 @@ HB_FUNC_STATIC(QSQLQUERY_BOUNDVALUE)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QVariant boundValue( const QString & placeholder ) const
+    QVariant boundValue( const QString &placeholder ) const
     */
     QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -324,7 +324,7 @@ HB_FUNC_STATIC(QSQLQUERY_EXEC)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    bool exec( const QString & query )
+    bool exec( const QString &query )
     */
     QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -765,7 +765,7 @@ HB_FUNC_STATIC(QSQLQUERY_NUMERICALPRECISIONPOLICY)
 }
 
 /*
-bool prepare( const QString & query )
+bool prepare( const QString &query )
 */
 HB_FUNC_STATIC(QSQLQUERY_PREPARE)
 {
