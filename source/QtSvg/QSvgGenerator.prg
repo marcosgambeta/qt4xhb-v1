@@ -187,7 +187,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_RESOLUTION)
 }
 
 /*
-void setDescription( const QString & description )
+void setDescription( const QString &description )
 */
 HB_FUNC_STATIC(QSVGGENERATOR_SETDESCRIPTION)
 {
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETDESCRIPTION)
 }
 
 /*
-void setFileName( const QString & fileName )
+void setFileName( const QString &fileName )
 */
 HB_FUNC_STATIC(QSVGGENERATOR_SETFILENAME)
 {
@@ -291,7 +291,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETRESOLUTION)
 }
 
 /*
-void setSize( const QSize & size )
+void setSize( const QSize &size )
 */
 HB_FUNC_STATIC(QSVGGENERATOR_SETSIZE)
 {
@@ -317,7 +317,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETSIZE)
 }
 
 /*
-void setTitle( const QString & title )
+void setTitle( const QString &title )
 */
 HB_FUNC_STATIC(QSVGGENERATOR_SETTITLE)
 {
@@ -347,7 +347,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETVIEWBOX)
   if (ISNUMPAR(1) && ISQRECT(1))
   {
     /*
-    void setViewBox( const QRect & viewBox )
+    void setViewBox( const QRect &viewBox )
     */
     QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -361,7 +361,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETVIEWBOX)
   else if (ISNUMPAR(1) && ISQRECTF(1))
   {
     /*
-    void setViewBox( const QRectF & viewBox )
+    void setViewBox( const QRectF &viewBox )
     */
     QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
 
