@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QLISTWIDGET_ADDITEM)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    void addItem( const QString & label )
+    void addItem( const QString &label )
     */
     QListWidget *obj = qobject_cast<QListWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QLISTWIDGET_ADDITEM)
 }
 
 /*
-void addItems( const QStringList & labels )
+void addItems( const QStringList &labels )
 */
 HB_FUNC_STATIC(QLISTWIDGET_ADDITEMS)
 {
@@ -304,7 +304,7 @@ HB_FUNC_STATIC(QLISTWIDGET_EDITITEM)
 }
 
 /*
-QList<QListWidgetItem *> findItems( const QString & text, Qt::MatchFlags flags ) const
+QList<QListWidgetItem *> findItems( const QString &text, Qt::MatchFlags flags ) const
 */
 HB_FUNC_STATIC(QLISTWIDGET_FINDITEMS)
 {
@@ -370,7 +370,7 @@ HB_FUNC_STATIC(QLISTWIDGET_INSERTITEM)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
   {
     /*
-    void insertItem( int row, const QString & label )
+    void insertItem( int row, const QString &label )
     */
     QListWidget *obj = qobject_cast<QListWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -388,7 +388,7 @@ HB_FUNC_STATIC(QLISTWIDGET_INSERTITEM)
 }
 
 /*
-void insertItems( int row, const QStringList & labels )
+void insertItems( int row, const QStringList &labels )
 */
 HB_FUNC_STATIC(QLISTWIDGET_INSERTITEMS)
 {
@@ -467,7 +467,7 @@ HB_FUNC_STATIC(QLISTWIDGET_ITEMAT)
   if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    QListWidgetItem * itemAt( const QPoint & p ) const
+    QListWidgetItem * itemAt( const QPoint &p ) const
     */
     QListWidget *obj = qobject_cast<QListWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

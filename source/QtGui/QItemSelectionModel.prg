@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_DELETE)
 }
 
 /*
-bool columnIntersectsSelection( int column, const QModelIndex & parent ) const
+bool columnIntersectsSelection( int column, const QModelIndex &parent ) const
 */
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_COLUMNINTERSECTSSELECTION)
 {
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_HASSELECTION)
 }
 
 /*
-bool isColumnSelected( int column, const QModelIndex & parent ) const
+bool isColumnSelected( int column, const QModelIndex &parent ) const
 */
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_ISCOLUMNSELECTED)
 {
@@ -205,7 +205,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_ISCOLUMNSELECTED)
 }
 
 /*
-bool isRowSelected( int row, const QModelIndex & parent ) const
+bool isRowSelected( int row, const QModelIndex &parent ) const
 */
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_ISROWSELECTED)
 {
@@ -229,7 +229,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_ISROWSELECTED)
 }
 
 /*
-bool isSelected( const QModelIndex & index ) const
+bool isSelected( const QModelIndex &index ) const
 */
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_ISSELECTED)
 {
@@ -278,7 +278,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_MODEL)
 }
 
 /*
-bool rowIntersectsSelection( int row, const QModelIndex & parent ) const
+bool rowIntersectsSelection( int row, const QModelIndex &parent ) const
 */
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_ROWINTERSECTSSELECTION)
 {
@@ -562,7 +562,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECT)
   if (ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISNUM(2))
   {
     /*
-    virtual void select( const QModelIndex & index, QItemSelectionModel::SelectionFlags command )
+    virtual void select( const QModelIndex &index, QItemSelectionModel::SelectionFlags command )
     */
     QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -576,7 +576,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECT)
   else if (ISNUMPAR(2) && ISQITEMSELECTION(1) && HB_ISNUM(2))
   {
     /*
-    virtual void select( const QItemSelection & selection, QItemSelectionModel::SelectionFlags command )
+    virtual void select( const QItemSelection &selection, QItemSelectionModel::SelectionFlags command )
     */
     QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -594,7 +594,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECT)
 }
 
 /*
-void setCurrentIndex( const QModelIndex & index, QItemSelectionModel::SelectionFlags command )
+void setCurrentIndex( const QModelIndex &index, QItemSelectionModel::SelectionFlags command )
 */
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_SETCURRENTINDEX)
 {

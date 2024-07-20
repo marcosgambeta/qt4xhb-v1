@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_NEW)
   else if (ISNUMPAR(1) && ISQITEMSELECTIONRANGE(1))
   {
     /*
-    QItemSelectionRange( const QItemSelectionRange & other )
+    QItemSelectionRange( const QItemSelectionRange &other )
     */
     QItemSelectionRange *obj = new QItemSelectionRange(*PQITEMSELECTIONRANGE(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_NEW)
   else if (ISNUMPAR(2) && ISQMODELINDEX(1) && ISQMODELINDEX(2))
   {
     /*
-    QItemSelectionRange( const QModelIndex & topLeft, const QModelIndex & bottomRight )
+    QItemSelectionRange( const QModelIndex &topLeft, const QModelIndex &bottomRight )
     */
     QItemSelectionRange *obj = new QItemSelectionRange(*PQMODELINDEX(1), *PQMODELINDEX(2));
     Qt4xHb::returnNewObject(obj, true);
@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_NEW)
   else if (ISNUMPAR(1) && ISQMODELINDEX(1))
   {
     /*
-    QItemSelectionRange( const QModelIndex & index )
+    QItemSelectionRange( const QModelIndex &index )
     */
     QItemSelectionRange *obj = new QItemSelectionRange(*PQMODELINDEX(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_CONTAINS)
   if (ISNUMPAR(1) && ISQMODELINDEX(1))
   {
     /*
-    bool contains( const QModelIndex & index ) const
+    bool contains( const QModelIndex &index ) const
     */
     QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -187,7 +187,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_CONTAINS)
   else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEX(3))
   {
     /*
-    bool contains( int row, int column, const QModelIndex & parentIndex ) const
+    bool contains( int row, int column, const QModelIndex &parentIndex ) const
     */
     QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -278,7 +278,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_INDEXES)
 }
 
 /*
-QItemSelectionRange intersected( const QItemSelectionRange & other ) const
+QItemSelectionRange intersected( const QItemSelectionRange &other ) const
 */
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_INTERSECTED)
 {
@@ -303,7 +303,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_INTERSECTED)
 }
 
 /*
-bool intersects( const QItemSelectionRange & other ) const
+bool intersects( const QItemSelectionRange &other ) const
 */
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_INTERSECTS)
 {

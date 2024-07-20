@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QACCESSIBLEEVENT_CHILD)
 }
 
 /*
-void setValue( const QString & text )
+void setValue( const QString &text )
 */
 HB_FUNC_STATIC(QACCESSIBLEEVENT_SETVALUE)
 {

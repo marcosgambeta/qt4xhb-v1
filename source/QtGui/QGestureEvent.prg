@@ -55,7 +55,7 @@ RETURN
 #include <QtGui/QGesture>
 
     /*
-    QGestureEvent( const QList<QGesture *> & gestures )
+    QGestureEvent( const QList<QGesture *> &gestures )
     */
 HB_FUNC_STATIC(QGESTUREEVENT_NEW)
 {
@@ -407,7 +407,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_ISACCEPTED)
 }
 
 /*
-QPointF mapToGraphicsScene( const QPointF & gesturePoint ) const
+QPointF mapToGraphicsScene( const QPointF &gesturePoint ) const
 */
 HB_FUNC_STATIC(QGESTUREEVENT_MAPTOGRAPHICSSCENE)
 {

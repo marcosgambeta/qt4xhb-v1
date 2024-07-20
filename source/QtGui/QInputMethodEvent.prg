@@ -54,7 +54,7 @@ HB_FUNC_STATIC(QINPUTMETHODEVENT_NEW)
   else if (ISNUMPAR(1) && ISQINPUTMETHODEVENT(1))
   {
     /*
-    QInputMethodEvent( const QInputMethodEvent & other )
+    QInputMethodEvent( const QInputMethodEvent &other )
     */
     QInputMethodEvent *obj = new QInputMethodEvent(*PQINPUTMETHODEVENT(1));
     Qt4xHb::returnNewObject(obj, false);
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QINPUTMETHODEVENT_REPLACEMENTSTART)
 }
 
 /*
-void setCommitString( const QString & commitString, int replaceFrom = 0, int replaceLength = 0 )
+void setCommitString( const QString &commitString, int replaceFrom = 0, int replaceLength = 0 )
 */
 HB_FUNC_STATIC(QINPUTMETHODEVENT_SETCOMMITSTRING)
 {

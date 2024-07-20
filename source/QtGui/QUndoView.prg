@@ -179,7 +179,7 @@ HB_FUNC_STATIC(QUNDOVIEW_GROUP)
 }
 
 /*
-void setCleanIcon( const QIcon & icon )
+void setCleanIcon( const QIcon &icon )
 */
 HB_FUNC_STATIC(QUNDOVIEW_SETCLEANICON)
 {
@@ -205,7 +205,7 @@ HB_FUNC_STATIC(QUNDOVIEW_SETCLEANICON)
 }
 
 /*
-void setEmptyLabel( const QString & label )
+void setEmptyLabel( const QString &label )
 */
 HB_FUNC_STATIC(QUNDOVIEW_SETEMPTYLABEL)
 {

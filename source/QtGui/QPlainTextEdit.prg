@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QPlainTextEdit( const QString & text, QWidget * parent = 0 )
+    QPlainTextEdit( const QString &text, QWidget * parent = 0 )
     */
     QPlainTextEdit *obj = new QPlainTextEdit(PQSTRING(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -158,7 +158,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_DELETE)
 }
 
 /*
-QString anchorAt( const QPoint & pos ) const
+QString anchorAt( const QPoint &pos ) const
 */
 HB_FUNC_STATIC(QPLAINTEXTEDIT_ANCHORAT)
 {
@@ -328,7 +328,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_CURRENTCHARFORMAT)
 }
 
 /*
-QTextCursor cursorForPosition( const QPoint & pos ) const
+QTextCursor cursorForPosition( const QPoint &pos ) const
 */
 HB_FUNC_STATIC(QPLAINTEXTEDIT_CURSORFORPOSITION)
 {
@@ -357,7 +357,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_CURSORRECT)
   if (ISNUMPAR(1) && ISQTEXTCURSOR(1))
   {
     /*
-    QRect cursorRect( const QTextCursor & cursor ) const
+    QRect cursorRect( const QTextCursor &cursor ) const
     */
     QPlainTextEdit *obj = qobject_cast<QPlainTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -486,7 +486,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_ENSURECURSORVISIBLE)
 }
 
 /*
-bool find( const QString & exp, QTextDocument::FindFlags options = 0 )
+bool find( const QString &exp, QTextDocument::FindFlags options = 0 )
 */
 HB_FUNC_STATIC(QPLAINTEXTEDIT_FIND)
 {
@@ -582,7 +582,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_LINEWRAPMODE)
 }
 
 /*
-virtual QVariant loadResource( int type, const QUrl & name )
+virtual QVariant loadResource( int type, const QUrl &name )
 */
 HB_FUNC_STATIC(QPLAINTEXTEDIT_LOADRESOURCE)
 {
@@ -631,7 +631,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_MAXIMUMBLOCKCOUNT)
 }
 
 /*
-void mergeCurrentCharFormat( const QTextCharFormat & modifier )
+void mergeCurrentCharFormat( const QTextCharFormat &modifier )
 */
 HB_FUNC_STATIC(QPLAINTEXTEDIT_MERGECURRENTCHARFORMAT)
 {
@@ -787,7 +787,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_SETCENTERONSCROLL)
 }
 
 /*
-void setCurrentCharFormat( const QTextCharFormat & format )
+void setCurrentCharFormat( const QTextCharFormat &format )
 */
 HB_FUNC_STATIC(QPLAINTEXTEDIT_SETCURRENTCHARFORMAT)
 {
@@ -865,7 +865,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_SETDOCUMENT)
 }
 
 /*
-void setDocumentTitle( const QString & title )
+void setDocumentTitle( const QString &title )
 */
 HB_FUNC_STATIC(QPLAINTEXTEDIT_SETDOCUMENTTITLE)
 {
@@ -1047,7 +1047,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_SETTABSTOPWIDTH)
 }
 
 /*
-void setTextCursor( const QTextCursor & cursor )
+void setTextCursor( const QTextCursor &cursor )
 */
 HB_FUNC_STATIC(QPLAINTEXTEDIT_SETTEXTCURSOR)
 {
@@ -1296,7 +1296,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_WORDWRAPMODE)
 }
 
 /*
-void appendHtml( const QString & html )
+void appendHtml( const QString &html )
 */
 HB_FUNC_STATIC(QPLAINTEXTEDIT_APPENDHTML)
 {
@@ -1322,7 +1322,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_APPENDHTML)
 }
 
 /*
-void appendPlainText( const QString & text )
+void appendPlainText( const QString &text )
 */
 HB_FUNC_STATIC(QPLAINTEXTEDIT_APPENDPLAINTEXT)
 {
@@ -1452,7 +1452,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_CUT)
 }
 
 /*
-void insertPlainText( const QString & text )
+void insertPlainText( const QString &text )
 */
 HB_FUNC_STATIC(QPLAINTEXTEDIT_INSERTPLAINTEXT)
 {
@@ -1556,7 +1556,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_SELECTALL)
 }
 
 /*
-void setPlainText( const QString & text )
+void setPlainText( const QString &text )
 */
 HB_FUNC_STATIC(QPLAINTEXTEDIT_SETPLAINTEXT)
 {

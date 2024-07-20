@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QTextDocument( const QString & text, QObject * parent = 0 )
+    QTextDocument( const QString &text, QObject * parent = 0 )
     */
     QTextDocument *obj = new QTextDocument(PQSTRING(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_DELETE)
 }
 
 /*
-void addResource( int type, const QUrl & name, const QVariant & resource )
+void addResource( int type, const QUrl &name, const QVariant &resource )
 */
 HB_FUNC_STATIC(QTEXTDOCUMENT_ADDRESOURCE)
 {
@@ -652,7 +652,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_DOCUMENTMARGIN)
 }
 
 /*
-void drawContents( QPainter * p, const QRectF & rect = QRectF() )
+void drawContents( QPainter * p, const QRectF &rect = QRectF() )
 */
 HB_FUNC_STATIC(QTEXTDOCUMENT_DRAWCONTENTS)
 {
@@ -707,7 +707,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
   if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQTEXTCURSOR(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QTextCursor find( const QString & subString, const QTextCursor & cursor, QTextDocument::FindFlags options = 0 )
+    QTextCursor find( const QString &subString, const QTextCursor &cursor, QTextDocument::FindFlags options = 0 )
     const
     */
     QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -723,7 +723,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
   else if (ISBETWEEN(2, 3) && ISQREGEXP(1) && ISQTEXTCURSOR(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QTextCursor find( const QRegExp & expr, const QTextCursor & cursor, QTextDocument::FindFlags options = 0 ) const
+    QTextCursor find( const QRegExp &expr, const QTextCursor &cursor, QTextDocument::FindFlags options = 0 ) const
     */
     QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -738,7 +738,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
   else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QTextCursor find( const QString & subString, int position = 0, QTextDocument::FindFlags options = 0 ) const
+    QTextCursor find( const QString &subString, int position = 0, QTextDocument::FindFlags options = 0 ) const
     */
     QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -752,7 +752,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
   else if (ISBETWEEN(1, 3) && ISQREGEXP(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QTextCursor find( const QRegExp & expr, int position = 0, QTextDocument::FindFlags options = 0 ) const
+    QTextCursor find( const QRegExp &expr, int position = 0, QTextDocument::FindFlags options = 0 ) const
     */
     QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -1187,7 +1187,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_OBJECT)
 }
 
 /*
-QTextObject * objectForFormat( const QTextFormat & f ) const
+QTextObject * objectForFormat( const QTextFormat &f ) const
 */
 HB_FUNC_STATIC(QTEXTDOCUMENT_OBJECTFORFORMAT)
 {
@@ -1287,7 +1287,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_PRINT)
 }
 
 /*
-QVariant resource( int type, const QUrl & name ) const
+QVariant resource( int type, const QUrl &name ) const
 */
 HB_FUNC_STATIC(QTEXTDOCUMENT_RESOURCE)
 {
@@ -1387,7 +1387,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETDEFAULTCURSORMOVESTYLE)
 }
 
 /*
-void setDefaultFont( const QFont & font )
+void setDefaultFont( const QFont &font )
 */
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETDEFAULTFONT)
 {
@@ -1413,7 +1413,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETDEFAULTFONT)
 }
 
 /*
-void setDefaultStyleSheet( const QString & sheet )
+void setDefaultStyleSheet( const QString &sheet )
 */
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETDEFAULTSTYLESHEET)
 {
@@ -1439,7 +1439,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETDEFAULTSTYLESHEET)
 }
 
 /*
-void setDefaultTextOption( const QTextOption & option )
+void setDefaultTextOption( const QTextOption &option )
 */
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETDEFAULTTEXTOPTION)
 {
@@ -1517,7 +1517,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETDOCUMENTMARGIN)
 }
 
 /*
-void setHtml( const QString & html )
+void setHtml( const QString &html )
 */
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETHTML)
 {
@@ -1595,7 +1595,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETMAXIMUMBLOCKCOUNT)
 }
 
 /*
-void setMetaInformation( QTextDocument::MetaInformation info, const QString & string )
+void setMetaInformation( QTextDocument::MetaInformation info, const QString &string )
 */
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETMETAINFORMATION)
 {
@@ -1621,7 +1621,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETMETAINFORMATION)
 }
 
 /*
-void setPageSize( const QSizeF & size )
+void setPageSize( const QSizeF &size )
 */
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETPAGESIZE)
 {
@@ -1647,7 +1647,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETPAGESIZE)
 }
 
 /*
-void setPlainText( const QString & text )
+void setPlainText( const QString &text )
 */
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETPLAINTEXT)
 {
@@ -1800,7 +1800,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_TEXTWIDTH)
 }
 
 /*
-QString toHtml( const QByteArray & encoding = QByteArray() ) const
+QString toHtml( const QByteArray &encoding = QByteArray() ) const
 */
 HB_FUNC_STATIC(QTEXTDOCUMENT_TOHTML)
 {

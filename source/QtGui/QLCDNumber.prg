@@ -415,7 +415,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SIZEHINT)
 }
 
 /*
-void display( const QString & s )
+void display( const QString &s )
 */
 HB_FUNC_STATIC(QLCDNUMBER_DISPLAY1)
 {

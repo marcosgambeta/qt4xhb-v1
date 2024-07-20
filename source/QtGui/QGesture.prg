@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QGESTURE_SETGESTURECANCELPOLICY)
 }
 
 /*
-void setHotSpot( const QPointF & value )
+void setHotSpot( const QPointF &value )
 */
 HB_FUNC_STATIC(QGESTURE_SETHOTSPOT)
 {

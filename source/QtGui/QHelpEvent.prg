@@ -46,7 +46,7 @@ RETURN
 #include "qt4xhb_utils.hpp"
 
     /*
-    QHelpEvent( QEvent::Type type, const QPoint & pos, const QPoint & globalPos )
+    QHelpEvent( QEvent::Type type, const QPoint &pos, const QPoint &globalPos )
     */
 HB_FUNC_STATIC(QHELPEVENT_NEW)
 {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QHELPEVENT_DELETE)
 }
 
 /*
-const QPoint & globalPos() const
+const QPoint &globalPos() const
 */
 HB_FUNC_STATIC(QHELPEVENT_GLOBALPOS)
 {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QHELPEVENT_GLOBALY)
 }
 
 /*
-const QPoint & pos() const
+const QPoint &pos() const
 */
 HB_FUNC_STATIC(QHELPEVENT_POS)
 {

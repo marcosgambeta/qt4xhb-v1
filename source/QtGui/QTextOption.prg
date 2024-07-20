@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QTEXTOPTION_NEW)
   else if (ISNUMPAR(1) && ISQTEXTOPTION(1))
   {
     /*
-    QTextOption( const QTextOption & other )
+    QTextOption( const QTextOption &other )
     */
     QTextOption *obj = new QTextOption(*PQTEXTOPTION(1));
     Qt4xHb::returnNewObject(obj, true);

@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_DELETE)
 }
 
 /*
-QInputContext * create( const QString & key, QObject * parent )
+QInputContext * create( const QString &key, QObject * parent )
 */
 HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_CREATE)
 {
@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_CREATE)
 }
 
 /*
-static QString description( const QString & key )
+static QString description( const QString &key )
 */
 HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_DESCRIPTION)
 {
@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_DESCRIPTION)
 }
 
 /*
-static QString displayName( const QString & key )
+static QString displayName( const QString &key )
 */
 HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_DISPLAYNAME)
 {
@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_KEYS)
 }
 
 /*
-static QStringList languages( const QString & key )
+static QStringList languages( const QString &key )
 */
 HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_LANGUAGES)
 {

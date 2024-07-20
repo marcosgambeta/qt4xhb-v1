@@ -85,7 +85,7 @@ RETURN
 #include <QtGui/QTextList>
 
     /*
-    QTextBlock( const QTextBlock & other )
+    QTextBlock( const QTextBlock &other )
     */
 HB_FUNC_STATIC(QTEXTBLOCK_NEW)
 {

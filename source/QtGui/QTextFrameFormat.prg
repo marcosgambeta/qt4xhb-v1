@@ -416,7 +416,7 @@ HB_FUNC_STATIC(QTEXTFRAMEFORMAT_SETBORDER)
 }
 
 /*
-void setBorderBrush( const QBrush & brush )
+void setBorderBrush( const QBrush &brush )
 */
 HB_FUNC_STATIC(QTEXTFRAMEFORMAT_SETBORDERBRUSH)
 {
@@ -498,7 +498,7 @@ HB_FUNC_STATIC(QTEXTFRAMEFORMAT_SETHEIGHT)
   if (ISNUMPAR(1) && ISQTEXTLENGTH(1))
   {
     /*
-    void setHeight( const QTextLength & height )
+    void setHeight( const QTextLength &height )
     */
     QTextFrameFormat *obj = static_cast<QTextFrameFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -716,7 +716,7 @@ HB_FUNC_STATIC(QTEXTFRAMEFORMAT_SETWIDTH)
   if (ISNUMPAR(1) && ISQTEXTLENGTH(1))
   {
     /*
-    void setWidth( const QTextLength & width )
+    void setWidth( const QTextLength &width )
     */
     QTextFrameFormat *obj = static_cast<QTextFrameFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 

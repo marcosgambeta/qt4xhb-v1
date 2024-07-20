@@ -50,7 +50,7 @@ RETURN
 #include "qt4xhb_utils.hpp"
 
     /*
-    QAccessibleWidget( QWidget * w, QAccessible::Role role = QAccessible::Client, const QString & name = QString() )
+    QAccessibleWidget( QWidget * w, QAccessible::Role role = QAccessible::Client, const QString &name = QString() )
     */
 HB_FUNC_STATIC(QACCESSIBLEWIDGET_NEW)
 {
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QACCESSIBLEWIDGET_CHILDCOUNT)
 }
 
 /*
-virtual bool doAction( int action, int child, const QVariantList & params )
+virtual bool doAction( int action, int child, const QVariantList &params )
 */
 HB_FUNC_STATIC(QACCESSIBLEWIDGET_DOACTION)
 {

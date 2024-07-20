@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QPLATFORMFONTDATABASE_DELETE)
 }
 
 /*
-virtual QStringList addApplicationFont( const QByteArray & fontData, const QString & fileName )
+virtual QStringList addApplicationFont( const QByteArray &fontData, const QString &fileName )
 */
 HB_FUNC_STATIC(QPLATFORMFONTDATABASE_ADDAPPLICATIONFONT)
 {
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QPLATFORMFONTDATABASE_FONTDIR)
 }
 
 /*
-virtual QFontEngine * fontEngine( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference
+virtual QFontEngine * fontEngine( const QByteArray &fontData, qreal pixelSize, QFont::HintingPreference
 hintingPreference )
 */
 HB_FUNC_STATIC(QPLATFORMFONTDATABASE_FONTENGINE)
@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QPLATFORMFONTDATABASE_RELEASEHANDLE)
 }
 
 /*
-static void registerFont( const QString & familyName, const QString & foundryName, QFont::Weight weight, QFont::Style
+static void registerFont( const QString &familyName, const QString &foundryName, QFont::Weight weight, QFont::Style
 style, QFont::Stretch stretch, bool antialiased, bool scalable, int pixelSize, const QSupportedWritingSystems &
 writingSystems, void * usrPtr )
 */
@@ -223,7 +223,7 @@ HB_FUNC_STATIC(QPLATFORMFONTDATABASE_REGISTERFONT)
 }
 
 /*
-static void registerQPF2Font( const QByteArray & dataArray, void * handle )
+static void registerQPF2Font( const QByteArray &dataArray, void * handle )
 */
 HB_FUNC_STATIC(QPLATFORMFONTDATABASE_REGISTERQPF2FONT)
 {

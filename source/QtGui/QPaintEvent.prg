@@ -47,7 +47,7 @@ HB_FUNC_STATIC(QPAINTEVENT_NEW)
   if (ISNUMPAR(1) && ISQREGION(1))
   {
     /*
-    QPaintEvent( const QRegion & paintRegion )
+    QPaintEvent( const QRegion &paintRegion )
     */
     QPaintEvent *obj = new QPaintEvent(*PQREGION(1));
     Qt4xHb::returnNewObject(obj, false);
@@ -55,7 +55,7 @@ HB_FUNC_STATIC(QPAINTEVENT_NEW)
   else if (ISNUMPAR(1) && ISQRECT(1))
   {
     /*
-    QPaintEvent( const QRect & paintRect )
+    QPaintEvent( const QRect &paintRect )
     */
     QPaintEvent *obj = new QPaintEvent(*PQRECT(1));
     Qt4xHb::returnNewObject(obj, false);
@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QPAINTEVENT_DELETE)
 }
 
 /*
-const QRect & rect() const
+const QRect &rect() const
 */
 HB_FUNC_STATIC(QPAINTEVENT_RECT)
 {
@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QPAINTEVENT_RECT)
 }
 
 /*
-const QRegion & region() const
+const QRegion &region() const
 */
 HB_FUNC_STATIC(QPAINTEVENT_REGION)
 {

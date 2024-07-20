@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QSUPPORTEDWRITINGSYSTEMS_NEW)
   else if (ISNUMPAR(1) && ISQSUPPORTEDWRITINGSYSTEMS(1))
   {
     /*
-    QSupportedWritingSystems( const QSupportedWritingSystems & other )
+    QSupportedWritingSystems( const QSupportedWritingSystems &other )
     */
     QSupportedWritingSystems *obj = new QSupportedWritingSystems(*PQSUPPORTEDWRITINGSYSTEMS(1));
     Qt4xHb::returnNewObject(obj, true);

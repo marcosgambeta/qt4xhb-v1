@@ -66,7 +66,7 @@ HB_FUNC_STATIC(QINPUTCONTEXTPLUGIN_DELETE)
 }
 
 /*
-virtual QInputContext * create( const QString & key ) = 0
+virtual QInputContext * create( const QString &key ) = 0
 */
 HB_FUNC_STATIC(QINPUTCONTEXTPLUGIN_CREATE)
 {
@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QINPUTCONTEXTPLUGIN_CREATE)
 }
 
 /*
-virtual QString description( const QString & key ) = 0
+virtual QString description( const QString &key ) = 0
 */
 HB_FUNC_STATIC(QINPUTCONTEXTPLUGIN_DESCRIPTION)
 {
@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QINPUTCONTEXTPLUGIN_DESCRIPTION)
 }
 
 /*
-virtual QString displayName( const QString & key ) = 0
+virtual QString displayName( const QString &key ) = 0
 */
 HB_FUNC_STATIC(QINPUTCONTEXTPLUGIN_DISPLAYNAME)
 {
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QINPUTCONTEXTPLUGIN_KEYS)
 }
 
 /*
-virtual QStringList languages( const QString & key ) = 0
+virtual QStringList languages( const QString &key ) = 0
 */
 HB_FUNC_STATIC(QINPUTCONTEXTPLUGIN_LANGUAGES)
 {

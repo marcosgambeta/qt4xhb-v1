@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QTOOLBOX_ADDITEM)
   if (ISNUMPAR(3) && ISQWIDGET(1) && (ISQICON(2) || HB_ISCHAR(2)) && HB_ISCHAR(3))
   {
     /*
-    int addItem( QWidget * widget, const QIcon & iconSet, const QString & text )
+    int addItem( QWidget * widget, const QIcon &iconSet, const QString &text )
     */
     QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QTOOLBOX_ADDITEM)
   else if (ISNUMPAR(2) && ISQWIDGET(1) && HB_ISCHAR(2))
   {
     /*
-    int addItem( QWidget * w, const QString & text )
+    int addItem( QWidget * w, const QString &text )
     */
     QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -231,7 +231,7 @@ HB_FUNC_STATIC(QTOOLBOX_INSERTITEM)
   if (ISNUMPAR(4) && HB_ISNUM(1) && ISQWIDGET(2) && (ISQICON(3) || HB_ISCHAR(3)) && HB_ISCHAR(4))
   {
     /*
-    int insertItem( int index, QWidget * widget, const QIcon & icon, const QString & text )
+    int insertItem( int index, QWidget * widget, const QIcon &icon, const QString &text )
     */
     QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QTOOLBOX_INSERTITEM)
   else if (ISNUMPAR(3) && HB_ISNUM(1) && ISQWIDGET(2) && HB_ISCHAR(3))
   {
     /*
-    int insertItem( int index, QWidget * widget, const QString & text )
+    int insertItem( int index, QWidget * widget, const QString &text )
     */
     QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -410,7 +410,7 @@ HB_FUNC_STATIC(QTOOLBOX_SETITEMENABLED)
 }
 
 /*
-void setItemIcon( int index, const QIcon & icon )
+void setItemIcon( int index, const QIcon &icon )
 */
 HB_FUNC_STATIC(QTOOLBOX_SETITEMICON)
 {
@@ -436,7 +436,7 @@ HB_FUNC_STATIC(QTOOLBOX_SETITEMICON)
 }
 
 /*
-void setItemText( int index, const QString & text )
+void setItemText( int index, const QString &text )
 */
 HB_FUNC_STATIC(QTOOLBOX_SETITEMTEXT)
 {
@@ -462,7 +462,7 @@ HB_FUNC_STATIC(QTOOLBOX_SETITEMTEXT)
 }
 
 /*
-void setItemToolTip( int index, const QString & toolTip )
+void setItemToolTip( int index, const QString &toolTip )
 */
 HB_FUNC_STATIC(QTOOLBOX_SETITEMTOOLTIP)
 {

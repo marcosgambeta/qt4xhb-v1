@@ -154,7 +154,7 @@ HB_FUNC_STATIC(QPLATFORMCURSORIMAGE_SET)
   else if (ISNUMPAR(3) && ISQIMAGE(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
     /*
-    void set( const QImage & image, int hx, int hy )
+    void set( const QImage &image, int hx, int hy )
     */
     QPlatformCursorImage *obj = static_cast<QPlatformCursorImage *>(Qt4xHb::itemGetPtrStackSelfItem());
 

@@ -154,7 +154,7 @@ HB_FUNC_STATIC(QTREEWIDGET_ADDTOPLEVELITEM)
 }
 
 /*
-void addTopLevelItems( const QList<QTreeWidgetItem *> & items )
+void addTopLevelItems( const QList<QTreeWidgetItem *> &items )
 */
 HB_FUNC_STATIC(QTREEWIDGET_ADDTOPLEVELITEMS)
 {
@@ -313,7 +313,7 @@ HB_FUNC_STATIC(QTREEWIDGET_EDITITEM)
 }
 
 /*
-QList<QTreeWidgetItem *> findItems( const QString & text, Qt::MatchFlags flags, int column = 0 ) const
+QList<QTreeWidgetItem *> findItems( const QString &text, Qt::MatchFlags flags, int column = 0 ) const
 */
 HB_FUNC_STATIC(QTREEWIDGET_FINDITEMS)
 {
@@ -436,7 +436,7 @@ HB_FUNC_STATIC(QTREEWIDGET_INSERTTOPLEVELITEM)
 }
 
 /*
-void insertTopLevelItems( int index, const QList<QTreeWidgetItem *> & items )
+void insertTopLevelItems( int index, const QList<QTreeWidgetItem *> &items )
 */
 HB_FUNC_STATIC(QTREEWIDGET_INSERTTOPLEVELITEMS)
 {
@@ -548,7 +548,7 @@ HB_FUNC_STATIC(QTREEWIDGET_ITEMAT)
   if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    QTreeWidgetItem * itemAt( const QPoint & p ) const
+    QTreeWidgetItem * itemAt( const QPoint &p ) const
     */
     QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -856,7 +856,7 @@ HB_FUNC_STATIC(QTREEWIDGET_SETHEADERITEM)
 }
 
 /*
-void setHeaderLabel( const QString & label )
+void setHeaderLabel( const QString &label )
 */
 HB_FUNC_STATIC(QTREEWIDGET_SETHEADERLABEL)
 {
@@ -882,7 +882,7 @@ HB_FUNC_STATIC(QTREEWIDGET_SETHEADERLABEL)
 }
 
 /*
-void setHeaderLabels( const QStringList & labels )
+void setHeaderLabels( const QStringList &labels )
 */
 HB_FUNC_STATIC(QTREEWIDGET_SETHEADERLABELS)
 {

@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_ORIGIN)
 }
 
 /*
-void setOrigin( const QVector3D & point )
+void setOrigin( const QVector3D &point )
 */
 HB_FUNC_STATIC(QGRAPHICSSCALE_SETORIGIN)
 {

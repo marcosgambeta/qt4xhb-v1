@@ -43,7 +43,7 @@ RETURN
 #include "qt4xhb_utils.hpp"
 
     /*
-    QShortcutEvent( const QKeySequence & key, int id, bool ambiguous = false )
+    QShortcutEvent( const QKeySequence &key, int id, bool ambiguous = false )
     */
 HB_FUNC_STATIC(QSHORTCUTEVENT_NEW)
 {
@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QSHORTCUTEVENT_DELETE)
 }
 
 /*
-const QKeySequence & key()
+const QKeySequence &key()
 */
 HB_FUNC_STATIC(QSHORTCUTEVENT_KEY)
 {

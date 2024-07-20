@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QLINEEDIT_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QLineEdit( const QString & contents, QWidget * parent = 0 )
+    QLineEdit( const QString &contents, QWidget * parent = 0 )
     */
     QLineEdit *obj = new QLineEdit(PQSTRING(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -336,7 +336,7 @@ HB_FUNC_STATIC(QLINEEDIT_CURSORPOSITION)
 }
 
 /*
-int cursorPositionAt( const QPoint & pos )
+int cursorPositionAt( const QPoint &pos )
 */
 HB_FUNC_STATIC(QLINEEDIT_CURSORPOSITIONAT)
 {
@@ -718,7 +718,7 @@ HB_FUNC_STATIC(QLINEEDIT_INPUTMASK)
 }
 
 /*
-void insert( const QString & newText )
+void insert( const QString &newText )
 */
 HB_FUNC_STATIC(QLINEEDIT_INSERT)
 {
@@ -1117,7 +1117,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETFRAME)
 }
 
 /*
-void setInputMask( const QString & inputMask )
+void setInputMask( const QString &inputMask )
 */
 HB_FUNC_STATIC(QLINEEDIT_SETINPUTMASK)
 {
@@ -1195,7 +1195,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETMODIFIED)
 }
 
 /*
-void setPlaceholderText( const QString & )
+void setPlaceholderText( const QString &)
 */
 HB_FUNC_STATIC(QLINEEDIT_SETPLACEHOLDERTEXT)
 {
@@ -1291,7 +1291,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETTEXTMARGINS)
   else if (ISNUMPAR(1) && ISQMARGINS(1))
   {
     /*
-    void setTextMargins( const QMargins & margins )
+    void setTextMargins( const QMargins &margins )
     */
     QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -1613,7 +1613,7 @@ HB_FUNC_STATIC(QLINEEDIT_SELECTALL)
 }
 
 /*
-void setText( const QString & )
+void setText( const QString &)
 */
 HB_FUNC_STATIC(QLINEEDIT_SETTEXT)
 {

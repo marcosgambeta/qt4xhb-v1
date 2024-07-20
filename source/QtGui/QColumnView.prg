@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_RESIZEGRIPSVISIBLE)
 }
 
 /*
-void setColumnWidths( const QList<int> & list )
+void setColumnWidths( const QList<int> &list )
 */
 HB_FUNC_STATIC(QCOLUMNVIEW_SETCOLUMNWIDTHS)
 {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETRESIZEGRIPSVISIBLE)
 }
 
 /*
-virtual QModelIndex indexAt( const QPoint & point ) const
+virtual QModelIndex indexAt( const QPoint &point ) const
 */
 HB_FUNC_STATIC(QCOLUMNVIEW_INDEXAT)
 {
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_INDEXAT)
 }
 
 /*
-virtual void scrollTo( const QModelIndex & index, QColumnView::ScrollHint hint = QColumnView::EnsureVisible )
+virtual void scrollTo( const QModelIndex &index, QColumnView::ScrollHint hint = QColumnView::EnsureVisible )
 */
 HB_FUNC_STATIC(QCOLUMNVIEW_SCROLLTO)
 {
@@ -360,7 +360,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETMODEL)
 }
 
 /*
-virtual void setRootIndex( const QModelIndex & index )
+virtual void setRootIndex( const QModelIndex &index )
 */
 HB_FUNC_STATIC(QCOLUMNVIEW_SETROOTINDEX)
 {
@@ -437,7 +437,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SIZEHINT)
 }
 
 /*
-virtual QRect visualRect( const QModelIndex & index ) const
+virtual QRect visualRect( const QModelIndex &index ) const
 */
 HB_FUNC_STATIC(QCOLUMNVIEW_VISUALRECT)
 {

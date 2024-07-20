@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QPEN_NEW)
   else if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
   {
     /*
-    QPen( const QColor & color )
+    QPen( const QColor &color )
     */
     QPen *obj = new QPen(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
     Qt4xHb::returnNewObject(obj, true);
@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QPEN_NEW)
            (HB_ISNUM(4) || HB_ISNIL(4)) && (HB_ISNUM(5) || HB_ISNIL(5)))
   {
     /*
-    QPen( const QBrush & brush, qreal width, Qt::PenStyle style = Qt::SolidLine, Qt::PenCapStyle cap = Qt::SquareCap,
+    QPen( const QBrush &brush, qreal width, Qt::PenStyle style = Qt::SolidLine, Qt::PenCapStyle cap = Qt::SquareCap,
     Qt::PenJoinStyle join = Qt::BevelJoin )
     */
     QPen *obj = new QPen(*PQBRUSH(1), PQREAL(2), HB_ISNIL(3) ? (Qt::PenStyle)Qt::SolidLine : (Qt::PenStyle)hb_parni(3),
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QPEN_NEW)
   else if (ISNUMPAR(1) && ISQPEN(1))
   {
     /*
-    QPen( const QPen & pen )
+    QPen( const QPen &pen )
     */
     QPen *obj = new QPen(*PQPEN(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -368,7 +368,7 @@ HB_FUNC_STATIC(QPEN_MITERLIMIT)
 }
 
 /*
-void setBrush( const QBrush & brush )
+void setBrush( const QBrush &brush )
 */
 HB_FUNC_STATIC(QPEN_SETBRUSH)
 {
@@ -420,7 +420,7 @@ HB_FUNC_STATIC(QPEN_SETCAPSTYLE)
 }
 
 /*
-void setColor( const QColor & color )
+void setColor( const QColor &color )
 */
 HB_FUNC_STATIC(QPEN_SETCOLOR)
 {
@@ -498,7 +498,7 @@ HB_FUNC_STATIC(QPEN_SETDASHOFFSET)
 }
 
 /*
-void setDashPattern( const QVector<qreal> & pattern )
+void setDashPattern( const QVector<qreal> &pattern )
 */
 HB_FUNC_STATIC(QPEN_SETDASHPATTERN)
 {

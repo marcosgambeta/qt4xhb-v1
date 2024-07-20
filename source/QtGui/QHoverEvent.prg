@@ -42,7 +42,7 @@ RETURN
 #include "qt4xhb_utils.hpp"
 
     /*
-    QHoverEvent( QEvent::Type type, const QPoint & pos, const QPoint & oldPos )
+    QHoverEvent( QEvent::Type type, const QPoint &pos, const QPoint &oldPos )
     */
 HB_FUNC_STATIC(QHOVEREVENT_NEW)
 {
@@ -74,7 +74,7 @@ HB_FUNC_STATIC(QHOVEREVENT_DELETE)
 }
 
 /*
-const QPoint & pos() const
+const QPoint &pos() const
 */
 HB_FUNC_STATIC(QHOVEREVENT_POS)
 {
@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QHOVEREVENT_POS)
 }
 
 /*
-const QPoint & oldPos() const
+const QPoint &oldPos() const
 */
 HB_FUNC_STATIC(QHOVEREVENT_OLDPOS)
 {

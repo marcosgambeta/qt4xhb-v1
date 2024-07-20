@@ -574,7 +574,7 @@ HB_FUNC_STATIC(QLAYOUT_SETCONTENTSMARGINS)
   else if (ISNUMPAR(1) && ISQMARGINS(1))
   {
     /*
-    void setContentsMargins( const QMargins & margins )
+    void setContentsMargins( const QMargins &margins )
     */
     QLayout *obj = qobject_cast<QLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -895,7 +895,7 @@ HB_FUNC_STATIC(QLAYOUT_LAYOUT)
 }
 
 /*
-virtual void setGeometry( const QRect & r )
+virtual void setGeometry( const QRect &r )
 */
 HB_FUNC_STATIC(QLAYOUT_SETGEOMETRY)
 {
@@ -921,7 +921,7 @@ HB_FUNC_STATIC(QLAYOUT_SETGEOMETRY)
 }
 
 /*
-static QSize closestAcceptableSize( const QWidget * widget, const QSize & size )
+static QSize closestAcceptableSize( const QWidget * widget, const QSize &size )
 */
 HB_FUNC_STATIC(QLAYOUT_CLOSESTACCEPTABLESIZE)
 {

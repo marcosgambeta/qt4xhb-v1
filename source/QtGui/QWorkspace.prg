@@ -195,7 +195,7 @@ HB_FUNC_STATIC(QWORKSPACE_SCROLLBARSENABLED)
 }
 
 /*
-void setBackground( const QBrush & background )
+void setBackground( const QBrush &background )
 */
 HB_FUNC_STATIC(QWORKSPACE_SETBACKGROUND)
 {

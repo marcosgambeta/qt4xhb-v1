@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_CAPSTYLE)
 }
 
 /*
-QPainterPath createStroke( const QPainterPath & path ) const
+QPainterPath createStroke( const QPainterPath &path ) const
 */
 HB_FUNC_STATIC(QPAINTERPATHSTROKER_CREATESTROKE)
 {
@@ -370,7 +370,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_SETDASHPATTERN)
   else if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
-    void setDashPattern( const QVector<qreal> & dashPattern )
+    void setDashPattern( const QVector<qreal> &dashPattern )
     */
     QPainterPathStroker *obj = static_cast<QPainterPathStroker *>(Qt4xHb::itemGetPtrStackSelfItem());
 

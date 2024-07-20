@@ -67,7 +67,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_NEW)
   else if (ISBETWEEN(1, 2) && ISQRECTF(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2)))
   {
     /*
-    QGraphicsEllipseItem( const QRectF & rect, QGraphicsItem * parent = 0 )
+    QGraphicsEllipseItem( const QRectF &rect, QGraphicsItem * parent = 0 )
     */
     QGraphicsEllipseItem *obj =
         new QGraphicsEllipseItem(*PQRECTF(1), HB_ISNIL(2) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(2)));
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_SETRECT)
   if (ISNUMPAR(1) && ISQRECTF(1))
   {
     /*
-    void setRect( const QRectF & rect )
+    void setRect( const QRectF &rect )
     */
     QGraphicsEllipseItem *obj = static_cast<QGraphicsEllipseItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -293,7 +293,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_BOUNDINGRECT)
 }
 
 /*
-virtual bool contains( const QPointF & point ) const
+virtual bool contains( const QPointF &point ) const
 */
 HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_CONTAINS)
 {

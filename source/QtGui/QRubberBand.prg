@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QRUBBERBAND_MOVE)
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    void move( const QPoint & p )
+    void move( const QPoint &p )
     */
     QRubberBand *obj = qobject_cast<QRubberBand *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QRUBBERBAND_RESIZE)
   else if (ISNUMPAR(1) && ISQSIZE(1))
   {
     /*
-    void resize( const QSize & size )
+    void resize( const QSize &size )
     */
     QRubberBand *obj = qobject_cast<QRubberBand *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QRUBBERBAND_SETGEOMETRY)
   if (ISNUMPAR(1) && ISQRECT(1))
   {
     /*
-    void setGeometry( const QRect & rect )
+    void setGeometry( const QRect &rect )
     */
     QRubberBand *obj = qobject_cast<QRubberBand *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

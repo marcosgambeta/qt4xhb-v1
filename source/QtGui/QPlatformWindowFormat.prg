@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_NEW)
   else if (ISNUMPAR(1) && ISQPLATFORMWINDOWFORMAT(1))
   {
     /*
-    QPlatformWindowFormat( const QPlatformWindowFormat & other )
+    QPlatformWindowFormat( const QPlatformWindowFormat &other )
     */
     QPlatformWindowFormat *obj = new QPlatformWindowFormat(*PQPLATFORMWINDOWFORMAT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -1264,7 +1264,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_DEFAULTFORMAT)
 }
 
 /*
-static void setDefaultFormat( const QPlatformWindowFormat & f )
+static void setDefaultFormat( const QPlatformWindowFormat &f )
 */
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETDEFAULTFORMAT)
 {

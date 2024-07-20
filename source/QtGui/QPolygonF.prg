@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QPOLYGONF_NEW)
   else if (ISNUMPAR(1) && ISQPOLYGONF(1))
   {
     /*
-    QPolygonF( const QPolygonF & polygon )
+    QPolygonF( const QPolygonF &polygon )
     */
     QPolygonF *obj = new QPolygonF(*PQPOLYGONF(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QPOLYGONF_NEW)
   else if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
-    QPolygonF( const QVector<QPointF> & points )
+    QPolygonF( const QVector<QPointF> &points )
     */
     QVector<QPointF> par1;
     PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QPOLYGONF_NEW)
   else if (ISNUMPAR(1) && ISQRECTF(1))
   {
     /*
-    QPolygonF( const QRectF & rectangle )
+    QPolygonF( const QRectF &rectangle )
     */
     QPolygonF *obj = new QPolygonF(*PQRECTF(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QPOLYGONF_NEW)
   else if (ISNUMPAR(1) && ISQPOLYGON(1))
   {
     /*
-    QPolygonF( const QPolygon & polygon )
+    QPolygonF( const QPolygon &polygon )
     */
     QPolygonF *obj = new QPolygonF(*PQPOLYGON(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QPOLYGONF_BOUNDINGRECT)
 }
 
 /*
-bool containsPoint( const QPointF & point, Qt::FillRule fillRule ) const
+bool containsPoint( const QPointF &point, Qt::FillRule fillRule ) const
 */
 HB_FUNC_STATIC(QPOLYGONF_CONTAINSPOINT)
 {
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QPOLYGONF_CONTAINSPOINT)
 }
 
 /*
-QPolygonF intersected( const QPolygonF & r ) const
+QPolygonF intersected( const QPolygonF &r ) const
 */
 HB_FUNC_STATIC(QPOLYGONF_INTERSECTED)
 {
@@ -237,7 +237,7 @@ HB_FUNC_STATIC(QPOLYGONF_ISCLOSED)
 }
 
 /*
-QPolygonF subtracted( const QPolygonF & r ) const
+QPolygonF subtracted( const QPolygonF &r ) const
 */
 HB_FUNC_STATIC(QPOLYGONF_SUBTRACTED)
 {
@@ -262,7 +262,7 @@ HB_FUNC_STATIC(QPOLYGONF_SUBTRACTED)
 }
 
 /*
-void swap( QPolygonF & other )
+void swap( QPolygonF &other )
 */
 HB_FUNC_STATIC(QPOLYGONF_SWAP)
 {
@@ -317,7 +317,7 @@ HB_FUNC_STATIC(QPOLYGONF_TRANSLATE)
   if (ISNUMPAR(1) && ISQPOINTF(1))
   {
     /*
-    void translate( const QPointF & offset )
+    void translate( const QPointF &offset )
     */
     QPolygonF *obj = static_cast<QPolygonF *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -353,7 +353,7 @@ HB_FUNC_STATIC(QPOLYGONF_TRANSLATED)
   if (ISNUMPAR(1) && ISQPOINTF(1))
   {
     /*
-    QPolygonF translated( const QPointF & offset ) const
+    QPolygonF translated( const QPointF &offset ) const
     */
     QPolygonF *obj = static_cast<QPolygonF *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -383,7 +383,7 @@ HB_FUNC_STATIC(QPOLYGONF_TRANSLATED)
 }
 
 /*
-QPolygonF united( const QPolygonF & r ) const
+QPolygonF united( const QPolygonF &r ) const
 */
 HB_FUNC_STATIC(QPOLYGONF_UNITED)
 {

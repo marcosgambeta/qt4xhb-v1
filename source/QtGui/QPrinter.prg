@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QPRINTER_NEW)
   else if (ISBETWEEN(1, 2) && ISQPRINTERINFO(1) && HB_ISNUM(2))
   {
     /*
-    QPrinter( const QPrinterInfo & printer, QPrinter::PrinterMode mode = QPrinter::ScreenResolution )
+    QPrinter( const QPrinterInfo &printer, QPrinter::PrinterMode mode = QPrinter::ScreenResolution )
     */
     QPrinter *obj = new QPrinter(*PQPRINTERINFO(1), HB_ISNIL(2) ? (QPrinter::PrinterMode)QPrinter::ScreenResolution
                                                                 : (QPrinter::PrinterMode)hb_parni(2));
@@ -899,7 +899,7 @@ HB_FUNC_STATIC(QPRINTER_SETCOPYCOUNT)
 }
 
 /*
-void setCreator( const QString & creator )
+void setCreator( const QString &creator )
 */
 HB_FUNC_STATIC(QPRINTER_SETCREATOR)
 {
@@ -925,7 +925,7 @@ HB_FUNC_STATIC(QPRINTER_SETCREATOR)
 }
 
 /*
-void setDocName( const QString & name )
+void setDocName( const QString &name )
 */
 HB_FUNC_STATIC(QPRINTER_SETDOCNAME)
 {
@@ -1107,7 +1107,7 @@ HB_FUNC_STATIC(QPRINTER_SETORIENTATION)
 }
 
 /*
-void setOutputFileName( const QString & fileName )
+void setOutputFileName( const QString &fileName )
 */
 HB_FUNC_STATIC(QPRINTER_SETOUTPUTFILENAME)
 {
@@ -1229,7 +1229,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAPERSIZE)
   else if (ISNUMPAR(2) && ISQSIZEF(1) && HB_ISNUM(2))
   {
     /*
-    void setPaperSize( const QSizeF & paperSize, QPrinter::Unit unit )
+    void setPaperSize( const QSizeF &paperSize, QPrinter::Unit unit )
     */
     QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1273,7 +1273,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAPERSOURCE)
 }
 
 /*
-void setPrintProgram( const QString & printProg )
+void setPrintProgram( const QString &printProg )
 */
 HB_FUNC_STATIC(QPRINTER_SETPRINTPROGRAM)
 {
@@ -1325,7 +1325,7 @@ HB_FUNC_STATIC(QPRINTER_SETPRINTRANGE)
 }
 
 /*
-void setPrinterName( const QString & name )
+void setPrinterName( const QString &name )
 */
 HB_FUNC_STATIC(QPRINTER_SETPRINTERNAME)
 {

@@ -77,7 +77,7 @@ HB_FUNC_STATIC(QFONTMETRICSF_NEW)
   if (ISNUMPAR(1) && ISQFONT(1))
   {
     /*
-    QFontMetricsF( const QFont & font )
+    QFontMetricsF( const QFont &font )
     */
     QFontMetricsF *obj = new QFontMetricsF(*PQFONT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QFONTMETRICSF_NEW)
   else if (ISNUMPAR(2) && ISQFONT(1) && HB_ISOBJECT(2))
   {
     /*
-    QFontMetricsF( const QFont & font, QPaintDevice * paintdevice )
+    QFontMetricsF( const QFont &font, QPaintDevice * paintdevice )
     */
     QFontMetricsF *obj = new QFontMetricsF(*PQFONT(1), PQPAINTDEVICE(2));
     Qt4xHb::returnNewObject(obj, true);
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QFONTMETRICSF_NEW)
   else if (ISNUMPAR(1) && ISQFONTMETRICS(1))
   {
     /*
-    QFontMetricsF( const QFontMetrics & fontMetrics )
+    QFontMetricsF( const QFontMetrics &fontMetrics )
     */
     QFontMetricsF *obj = new QFontMetricsF(*PQFONTMETRICS(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QFONTMETRICSF_NEW)
   else if (ISNUMPAR(1) && ISQFONTMETRICSF(1))
   {
     /*
-    QFontMetricsF( const QFontMetricsF & fm )
+    QFontMetricsF( const QFontMetricsF &fm )
     */
     QFontMetricsF *obj = new QFontMetricsF(*PQFONTMETRICSF(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QFONTMETRICSF_BOUNDINGRECT)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QRectF boundingRect( const QString & text ) const
+    QRectF boundingRect( const QString &text ) const
     */
     QFontMetricsF *obj = static_cast<QFontMetricsF *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QFONTMETRICSF_BOUNDINGRECT)
            (HB_ISARRAY(5) || HB_ISNIL(5)))
   {
     /*
-    QRectF boundingRect( const QRectF & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 )
+    QRectF boundingRect( const QRectF &rect, int flags, const QString &text, int tabStops = 0, int * tabArray = 0 )
     const
     */
     QFontMetricsF *obj = static_cast<QFontMetricsF *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -252,7 +252,7 @@ HB_FUNC_STATIC(QFONTMETRICSF_DESCENT)
 }
 
 /*
-QString elidedText( const QString & text, Qt::TextElideMode mode, qreal width, int flags = 0 ) const
+QString elidedText( const QString &text, Qt::TextElideMode mode, qreal width, int flags = 0 ) const
 */
 HB_FUNC_STATIC(QFONTMETRICSF_ELIDEDTEXT)
 {
@@ -564,7 +564,7 @@ HB_FUNC_STATIC(QFONTMETRICSF_RIGHTBEARING)
 }
 
 /*
-QSizeF size( int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
+QSizeF size( int flags, const QString &text, int tabStops = 0, int * tabArray = 0 ) const
 */
 HB_FUNC_STATIC(QFONTMETRICSF_SIZE)
 {
@@ -615,7 +615,7 @@ HB_FUNC_STATIC(QFONTMETRICSF_STRIKEOUTPOS)
 }
 
 /*
-QRectF tightBoundingRect( const QString & text ) const
+QRectF tightBoundingRect( const QString &text ) const
 */
 HB_FUNC_STATIC(QFONTMETRICSF_TIGHTBOUNDINGRECT)
 {
@@ -668,7 +668,7 @@ HB_FUNC_STATIC(QFONTMETRICSF_WIDTH)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    qreal width( const QString & text ) const
+    qreal width( const QString &text ) const
     */
     QFontMetricsF *obj = static_cast<QFontMetricsF *>(Qt4xHb::itemGetPtrStackSelfItem());
 

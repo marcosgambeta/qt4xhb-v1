@@ -52,7 +52,7 @@ HB_FUNC_STATIC(QTIMEEDIT_NEW)
   else if (ISBETWEEN(1, 2) && ISQTIME(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QTimeEdit( const QTime & time, QWidget * parent = 0 )
+    QTimeEdit( const QTime &time, QWidget * parent = 0 )
     */
     QTimeEdit *obj = new QTimeEdit(*PQTIME(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);

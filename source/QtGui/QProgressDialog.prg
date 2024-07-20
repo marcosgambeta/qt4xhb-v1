@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_NEW)
            (ISQWIDGET(5) || HB_ISNIL(5)) && (HB_ISNUM(6) || HB_ISNIL(6)))
   {
     /*
-    QProgressDialog( const QString & labelText, const QString & cancelButtonText, int minimum, int maximum, QWidget *
+    QProgressDialog( const QString &labelText, const QString &cancelButtonText, int minimum, int maximum, QWidget *
     parent = 0, Qt::WindowFlags f = 0 )
     */
     QProgressDialog *obj = new QProgressDialog(PQSTRING(1), PQSTRING(2), PINT(3), PINT(4), OPQWIDGET(5, 0),
@@ -539,7 +539,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_RESET)
 }
 
 /*
-void setCancelButtonText( const QString & cancelButtonText )
+void setCancelButtonText( const QString &cancelButtonText )
 */
 HB_FUNC_STATIC(QPROGRESSDIALOG_SETCANCELBUTTONTEXT)
 {
@@ -565,7 +565,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETCANCELBUTTONTEXT)
 }
 
 /*
-void setLabelText( const QString & text )
+void setLabelText( const QString &text )
 */
 HB_FUNC_STATIC(QPROGRESSDIALOG_SETLABELTEXT)
 {

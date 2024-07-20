@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QDECORATIONDEFAULT_PAINT)
 }
 
 /*
-virtual QRegion region( const QWidget * widget, const QRect & rect, int decorationRegion = QDecoration::All )
+virtual QRegion region( const QWidget * widget, const QRect &rect, int decorationRegion = QDecoration::All )
 */
 HB_FUNC_STATIC(QDECORATIONDEFAULT_REGION)
 {

@@ -43,7 +43,7 @@ RETURN
 #include "qt4xhb_utils.hpp"
 
     /*
-    QDragMoveEvent( const QPoint & pos, Qt::DropActions actions, const QMimeData * data, Qt::MouseButtons buttons,
+    QDragMoveEvent( const QPoint &pos, Qt::DropActions actions, const QMimeData * data, Qt::MouseButtons buttons,
     Qt::KeyboardModifiers modifiers, QEvent::Type type = QEvent::DragMove )
     */
 HB_FUNC_STATIC(QDRAGMOVEEVENT_NEW)
@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_ACCEPT)
   if (ISNUMPAR(1) && ISQRECT(1))
   {
     /*
-    void accept( const QRect & rectangle )
+    void accept( const QRect &rectangle )
     */
     QDragMoveEvent *obj = static_cast<QDragMoveEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_IGNORE)
   if (ISNUMPAR(1) && ISQRECT(1))
   {
     /*
-    void ignore( const QRect & rectangle )
+    void ignore( const QRect &rectangle )
     */
     QDragMoveEvent *obj = static_cast<QDragMoveEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 

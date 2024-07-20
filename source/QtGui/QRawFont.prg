@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QRAWFONT_NEW)
   else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QRawFont( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference =
+    QRawFont( const QString &fileName, qreal pixelSize, QFont::HintingPreference hintingPreference =
     QFont::PreferDefaultHinting )
     */
     QRawFont *obj = new QRawFont(PQSTRING(1), PQREAL(2),
@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QRAWFONT_NEW)
   else if (ISBETWEEN(2, 3) && ISQBYTEARRAY(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QRawFont( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference =
+    QRawFont( const QByteArray &fontData, qreal pixelSize, QFont::HintingPreference hintingPreference =
     QFont::PreferDefaultHinting )
     */
     QRawFont *obj = new QRawFont(*PQBYTEARRAY(1), PQREAL(2),
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QRAWFONT_NEW)
   else if (ISNUMPAR(1) && ISQRAWFONT(1))
   {
     /*
-    QRawFont( const QRawFont & other )
+    QRawFont( const QRawFont &other )
     */
     QRawFont *obj = new QRawFont(*PQRAWFONT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QRAWFONT_DELETE)
 }
 
 /*
-QVector<QPointF> advancesForGlyphIndexes( const QVector<quint32> & glyphIndexes ) const
+QVector<QPointF> advancesForGlyphIndexes( const QVector<quint32> &glyphIndexes ) const
 */
 HB_FUNC_STATIC(QRAWFONT_ADVANCESFORGLYPHINDEXES)
 {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QRAWFONT_ADVANCESFORGLYPHINDEXES)
 
 /*
 QImage alphaMapForGlyph( quint32 glyphIndex, QRawFont::AntialiasingType antialiasingType =
-QRawFont::SubPixelAntialiasing, const QTransform & transform = QTransform() ) const
+QRawFont::SubPixelAntialiasing, const QTransform &transform = QTransform() ) const
 */
 HB_FUNC_STATIC(QRAWFONT_ALPHAMAPFORGLYPH)
 {
@@ -352,7 +352,7 @@ HB_FUNC_STATIC(QRAWFONT_FONTTABLE)
 }
 
 /*
-QVector<quint32> glyphIndexesForString( const QString & text ) const
+QVector<quint32> glyphIndexesForString( const QString &text ) const
 */
 HB_FUNC_STATIC(QRAWFONT_GLYPHINDEXESFORSTRING)
 {
@@ -457,7 +457,7 @@ HB_FUNC_STATIC(QRAWFONT_LEADING)
 }
 
 /*
-void loadFromData( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference )
+void loadFromData( const QByteArray &fontData, qreal pixelSize, QFont::HintingPreference hintingPreference )
 */
 HB_FUNC_STATIC(QRAWFONT_LOADFROMDATA)
 {
@@ -483,7 +483,7 @@ HB_FUNC_STATIC(QRAWFONT_LOADFROMDATA)
 }
 
 /*
-void loadFromFile( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference )
+void loadFromFile( const QString &fileName, qreal pixelSize, QFont::HintingPreference hintingPreference )
 */
 HB_FUNC_STATIC(QRAWFONT_LOADFROMFILE)
 {
@@ -793,7 +793,7 @@ HB_FUNC_STATIC(QRAWFONT_XHEIGHT)
 }
 
 /*
-static QRawFont fromFont( const QFont & font, QFontDatabase::WritingSystem writingSystem = QFontDatabase::Any )
+static QRawFont fromFont( const QFont &font, QFontDatabase::WritingSystem writingSystem = QFontDatabase::Any )
 */
 HB_FUNC_STATIC(QRAWFONT_FROMFONT)
 {

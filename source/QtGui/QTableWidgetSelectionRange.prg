@@ -74,7 +74,7 @@ HB_FUNC_STATIC(QTABLEWIDGETSELECTIONRANGE_NEW)
   else if (ISNUMPAR(1) && ISQTABLEWIDGETSELECTIONRANGE(1))
   {
     /*
-    QTableWidgetSelectionRange( const QTableWidgetSelectionRange & other )
+    QTableWidgetSelectionRange( const QTableWidgetSelectionRange &other )
     */
     QTableWidgetSelectionRange *obj = new QTableWidgetSelectionRange(*PQTABLEWIDGETSELECTIONRANGE(1));
     Qt4xHb::returnNewObject(obj, true);

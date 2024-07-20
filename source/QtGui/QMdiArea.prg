@@ -311,7 +311,7 @@ HB_FUNC_STATIC(QMDIAREA_SETACTIVATIONORDER)
 }
 
 /*
-void setBackground( const QBrush & background )
+void setBackground( const QBrush &background )
 */
 HB_FUNC_STATIC(QMDIAREA_SETBACKGROUND)
 {

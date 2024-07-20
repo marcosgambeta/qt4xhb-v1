@@ -487,7 +487,7 @@ HB_FUNC_STATIC(QHEADERVIEW_LOGICALINDEXAT)
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    int logicalIndexAt( const QPoint & pos ) const
+    int logicalIndexAt( const QPoint &pos ) const
     */
     QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -677,7 +677,7 @@ HB_FUNC_STATIC(QHEADERVIEW_RESIZESECTIONS)
 }
 
 /*
-bool restoreState( const QByteArray & state )
+bool restoreState( const QByteArray &state )
 */
 HB_FUNC_STATIC(QHEADERVIEW_RESTORESTATE)
 {

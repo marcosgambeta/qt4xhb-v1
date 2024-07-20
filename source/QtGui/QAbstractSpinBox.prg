@@ -183,7 +183,7 @@ HB_FUNC_STATIC(QABSTRACTSPINBOX_CORRECTIONMODE)
 }
 
 /*
-virtual void fixup( QString & input ) const
+virtual void fixup( QString &input ) const
 */
 HB_FUNC_STATIC(QABSTRACTSPINBOX_FIXUP)
 {
@@ -539,7 +539,7 @@ HB_FUNC_STATIC(QABSTRACTSPINBOX_SETREADONLY)
 }
 
 /*
-void setSpecialValueText( const QString & txt )
+void setSpecialValueText( const QString &txt )
 */
 HB_FUNC_STATIC(QABSTRACTSPINBOX_SETSPECIALVALUETEXT)
 {
@@ -665,7 +665,7 @@ HB_FUNC_STATIC(QABSTRACTSPINBOX_TEXT)
 }
 
 /*
-virtual QValidator::State validate( QString & input, int & pos ) const
+virtual QValidator::State validate( QString &input, int &pos ) const
 */
 HB_FUNC_STATIC(QABSTRACTSPINBOX_VALIDATE)
 {

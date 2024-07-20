@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QTRANSFORM_NEW)
   else if (ISNUMPAR(1) && ISQMATRIX(1))
   {
     /*
-    QTransform( const QMatrix & matrix )
+    QTransform( const QMatrix &matrix )
     */
     QTransform *obj = new QTransform(*PQMATRIX(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -703,7 +703,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
   else if (ISNUMPAR(1) && ISQPOINTF(1))
   {
     /*
-    QPointF map( const QPointF & p ) const
+    QPointF map( const QPointF &p ) const
     */
     QTransform *obj = static_cast<QTransform *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -716,7 +716,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    QPoint map( const QPoint & point ) const
+    QPoint map( const QPoint &point ) const
     */
     QTransform *obj = static_cast<QTransform *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -729,7 +729,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
   else if (ISNUMPAR(1) && ISQLINE(1))
   {
     /*
-    QLine map( const QLine & l ) const
+    QLine map( const QLine &l ) const
     */
     QTransform *obj = static_cast<QTransform *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -742,7 +742,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
   else if (ISNUMPAR(1) && ISQLINEF(1))
   {
     /*
-    QLineF map( const QLineF & line ) const
+    QLineF map( const QLineF &line ) const
     */
     QTransform *obj = static_cast<QTransform *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -755,7 +755,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
   else if (ISNUMPAR(1) && ISQPOLYGONF(1))
   {
     /*
-    QPolygonF map( const QPolygonF & polygon ) const
+    QPolygonF map( const QPolygonF &polygon ) const
     */
     QTransform *obj = static_cast<QTransform *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -768,7 +768,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
   else if (ISNUMPAR(1) && ISQPOLYGON(1))
   {
     /*
-    QPolygon map( const QPolygon & polygon ) const
+    QPolygon map( const QPolygon &polygon ) const
     */
     QTransform *obj = static_cast<QTransform *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -781,7 +781,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
   else if (ISNUMPAR(1) && ISQREGION(1))
   {
     /*
-    QRegion map( const QRegion & region ) const
+    QRegion map( const QRegion &region ) const
     */
     QTransform *obj = static_cast<QTransform *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -794,7 +794,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
   else if (ISNUMPAR(1) && ISQPAINTERPATH(1))
   {
     /*
-    QPainterPath map( const QPainterPath & path ) const
+    QPainterPath map( const QPainterPath &path ) const
     */
     QTransform *obj = static_cast<QTransform *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -819,7 +819,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAPRECT)
   if (ISNUMPAR(1) && ISQRECTF(1))
   {
     /*
-    QRectF mapRect( const QRectF & rectangle ) const
+    QRectF mapRect( const QRectF &rectangle ) const
     */
     QTransform *obj = static_cast<QTransform *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -832,7 +832,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAPRECT)
   else if (ISNUMPAR(1) && ISQRECT(1))
   {
     /*
-    QRect mapRect( const QRect & rectangle ) const
+    QRect mapRect( const QRect &rectangle ) const
     */
     QTransform *obj = static_cast<QTransform *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -849,7 +849,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAPRECT)
 }
 
 /*
-QPolygon mapToPolygon( const QRect & rectangle ) const
+QPolygon mapToPolygon( const QRect &rectangle ) const
 */
 HB_FUNC_STATIC(QTRANSFORM_MAPTOPOLYGON)
 {
@@ -1016,7 +1016,7 @@ HB_FUNC_STATIC(QTRANSFORM_FROMTRANSLATE)
 }
 
 /*
-static bool quadToQuad( const QPolygonF & one, const QPolygonF & two, QTransform & trans )
+static bool quadToQuad( const QPolygonF &one, const QPolygonF &two, QTransform &trans )
 */
 HB_FUNC_STATIC(QTRANSFORM_QUADTOQUAD)
 {
@@ -1035,7 +1035,7 @@ HB_FUNC_STATIC(QTRANSFORM_QUADTOQUAD)
 }
 
 /*
-static bool quadToSquare( const QPolygonF & quad, QTransform & trans )
+static bool quadToSquare( const QPolygonF &quad, QTransform &trans )
 */
 HB_FUNC_STATIC(QTRANSFORM_QUADTOSQUARE)
 {
@@ -1054,7 +1054,7 @@ HB_FUNC_STATIC(QTRANSFORM_QUADTOSQUARE)
 }
 
 /*
-static bool squareToQuad( const QPolygonF & quad, QTransform & trans )
+static bool squareToQuad( const QPolygonF &quad, QTransform &trans )
 */
 HB_FUNC_STATIC(QTRANSFORM_SQUARETOQUAD)
 {

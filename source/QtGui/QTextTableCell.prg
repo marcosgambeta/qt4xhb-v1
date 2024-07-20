@@ -74,7 +74,7 @@ HB_FUNC_STATIC(QTEXTTABLECELL_NEW)
   else if (ISNUMPAR(1) && ISQTEXTTABLECELL(1))
   {
     /*
-    QTextTableCell( const QTextTableCell & other )
+    QTextTableCell( const QTextTableCell &other )
     */
     QTextTableCell *obj = new QTextTableCell(*PQTEXTTABLECELL(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -297,7 +297,7 @@ HB_FUNC_STATIC(QTEXTTABLECELL_ROWSPAN)
 }
 
 /*
-void setFormat( const QTextCharFormat & format )
+void setFormat( const QTextCharFormat &format )
 */
 HB_FUNC_STATIC(QTEXTTABLECELL_SETFORMAT)
 {

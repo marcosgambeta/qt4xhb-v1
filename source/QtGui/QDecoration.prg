@@ -157,7 +157,7 @@ HB_FUNC_STATIC(QDECORATION_REGION)
   if (ISBETWEEN(2, 3) && ISQWIDGET(1) && ISQRECT(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    virtual QRegion region( const QWidget * widget, const QRect & rectangle, int decorationRegion = QDecoration::All ) =
+    virtual QRegion region( const QWidget * widget, const QRect &rectangle, int decorationRegion = QDecoration::All ) =
     0
     */
     QDecoration *obj = static_cast<QDecoration *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QDECORATION_REGION)
 }
 
 /*
-virtual int regionAt( const QWidget * widget, const QPoint & point )
+virtual int regionAt( const QWidget * widget, const QPoint &point )
 */
 HB_FUNC_STATIC(QDECORATION_REGIONAT)
 {

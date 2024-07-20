@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_NEW)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QStandardItem( const QString & text )
+    QStandardItem( const QString &text )
     */
     QStandardItem *obj = new QStandardItem(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, false);
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_NEW)
   else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2))
   {
     /*
-    QStandardItem( const QIcon & icon, const QString & text )
+    QStandardItem( const QIcon &icon, const QString &text )
     */
     QStandardItem *obj = new QStandardItem(
         HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt4xHb::itemGetPtr(1)) : QIcon(hb_parc(1)), PQSTRING(2));
@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_DATA)
 }
 
 /*
-virtual void setData( const QVariant & value, int role = Qt::UserRole + 1 )
+virtual void setData( const QVariant &value, int role = Qt::UserRole + 1 )
 */
 HB_FUNC_STATIC(QSTANDARDITEM_SETDATA)
 {
@@ -262,7 +262,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_TEXT)
 }
 
 /*
-void setText( const QString & text )
+void setText( const QString &text )
 */
 HB_FUNC_STATIC(QSTANDARDITEM_SETTEXT)
 {
@@ -313,7 +313,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_ICON)
 }
 
 /*
-void setIcon( const QIcon & icon )
+void setIcon( const QIcon &icon )
 */
 HB_FUNC_STATIC(QSTANDARDITEM_SETICON)
 {
@@ -363,7 +363,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_TOOLTIP)
 }
 
 /*
-void setToolTip( const QString & toolTip )
+void setToolTip( const QString &toolTip )
 */
 HB_FUNC_STATIC(QSTANDARDITEM_SETTOOLTIP)
 {
@@ -413,7 +413,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_STATUSTIP)
 }
 
 /*
-void setStatusTip( const QString & statusTip )
+void setStatusTip( const QString &statusTip )
 */
 HB_FUNC_STATIC(QSTANDARDITEM_SETSTATUSTIP)
 {
@@ -463,7 +463,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_WHATSTHIS)
 }
 
 /*
-void setWhatsThis( const QString & whatsThis )
+void setWhatsThis( const QString &whatsThis )
 */
 HB_FUNC_STATIC(QSTANDARDITEM_SETWHATSTHIS)
 {
@@ -514,7 +514,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SIZEHINT)
 }
 
 /*
-void setSizeHint( const QSize & sizeHint )
+void setSizeHint( const QSize &sizeHint )
 */
 HB_FUNC_STATIC(QSTANDARDITEM_SETSIZEHINT)
 {
@@ -565,7 +565,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_FONT)
 }
 
 /*
-void setFont( const QFont & font )
+void setFont( const QFont &font )
 */
 HB_FUNC_STATIC(QSTANDARDITEM_SETFONT)
 {
@@ -666,7 +666,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_BACKGROUND)
 }
 
 /*
-void setBackground( const QBrush & brush )
+void setBackground( const QBrush &brush )
 */
 HB_FUNC_STATIC(QSTANDARDITEM_SETBACKGROUND)
 {
@@ -717,7 +717,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_FOREGROUND)
 }
 
 /*
-void setForeground( const QBrush & brush )
+void setForeground( const QBrush &brush )
 */
 HB_FUNC_STATIC(QSTANDARDITEM_SETFOREGROUND)
 {
@@ -817,7 +817,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_ACCESSIBLETEXT)
 }
 
 /*
-void setAccessibleText( const QString & accessibleText )
+void setAccessibleText( const QString &accessibleText )
 */
 HB_FUNC_STATIC(QSTANDARDITEM_SETACCESSIBLETEXT)
 {
@@ -867,7 +867,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_ACCESSIBLEDESCRIPTION)
 }
 
 /*
-void setAccessibleDescription( const QString & accessibleDescription )
+void setAccessibleDescription( const QString &accessibleDescription )
 */
 HB_FUNC_STATIC(QSTANDARDITEM_SETACCESSIBLEDESCRIPTION)
 {
@@ -1605,7 +1605,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_INSERTROW)
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISARRAY(2))
   {
     /*
-    void insertRow( int row, const QList<QStandardItem *> & items )
+    void insertRow( int row, const QList<QStandardItem *> &items )
     */
     QStandardItem *obj = static_cast<QStandardItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1645,7 +1645,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_INSERTROW)
 }
 
 /*
-void insertColumn( int column, const QList<QStandardItem *> & items )
+void insertColumn( int column, const QList<QStandardItem *> &items )
 */
 HB_FUNC_STATIC(QSTANDARDITEM_INSERTCOLUMN)
 {
@@ -1683,7 +1683,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_INSERTROWS)
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISARRAY(2))
   {
     /*
-    void insertRows( int row, const QList<QStandardItem *> & items )
+    void insertRows( int row, const QList<QStandardItem *> &items )
     */
     QStandardItem *obj = static_cast<QStandardItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1857,7 +1857,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_APPENDROW)
   if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
-    void appendRow( const QList<QStandardItem *> & items )
+    void appendRow( const QList<QStandardItem *> &items )
     */
     QStandardItem *obj = static_cast<QStandardItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1897,7 +1897,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_APPENDROW)
 }
 
 /*
-void appendRows( const QList<QStandardItem *> & items )
+void appendRows( const QList<QStandardItem *> &items )
 */
 HB_FUNC_STATIC(QSTANDARDITEM_APPENDROWS)
 {
@@ -1931,7 +1931,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_APPENDROWS)
 }
 
 /*
-void appendColumn( const QList<QStandardItem *> & items )
+void appendColumn( const QList<QStandardItem *> &items )
 */
 HB_FUNC_STATIC(QSTANDARDITEM_APPENDCOLUMN)
 {
@@ -2161,7 +2161,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_TYPE)
 }
 
 /*
-virtual void read( QDataStream & in )
+virtual void read( QDataStream &in )
 */
 HB_FUNC_STATIC(QSTANDARDITEM_READ)
 {
@@ -2187,7 +2187,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_READ)
 }
 
 /*
-virtual void write( QDataStream & out ) const
+virtual void write( QDataStream &out ) const
 */
 HB_FUNC_STATIC(QSTANDARDITEM_WRITE)
 {

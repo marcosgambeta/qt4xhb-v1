@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_ENDPAINTING)
   else if (ISNUMPAR(1) && ISQREGION(1))
   {
     /*
-    void endPainting( const QRegion & region )
+    void endPainting( const QRegion &region )
     */
     QDirectPainter *obj = qobject_cast<QDirectPainter *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -157,7 +157,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_ENDPAINTING)
 }
 
 /*
-void flush( const QRegion & region )
+void flush( const QRegion &region )
 */
 HB_FUNC_STATIC(QDIRECTPAINTER_FLUSH)
 {
@@ -260,7 +260,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_RAISE)
 }
 
 /*
-virtual void regionChanged( const QRegion & newRegion )
+virtual void regionChanged( const QRegion &newRegion )
 */
 HB_FUNC_STATIC(QDIRECTPAINTER_REGIONCHANGED)
 {
@@ -311,7 +311,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_REQUESTEDREGION)
 }
 
 /*
-void setGeometry( const QRect & rectangle )
+void setGeometry( const QRect &rectangle )
 */
 HB_FUNC_STATIC(QDIRECTPAINTER_SETGEOMETRY)
 {
@@ -337,7 +337,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_SETGEOMETRY)
 }
 
 /*
-void setRegion( const QRegion & region )
+void setRegion( const QRegion &region )
 */
 HB_FUNC_STATIC(QDIRECTPAINTER_SETREGION)
 {

@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QPICTURE_NEW)
   else if (ISNUMPAR(1) && ISQPICTURE(1))
   {
     /*
-    QPicture( const QPicture & pic )
+    QPicture( const QPicture &pic )
     */
     QPicture *obj = new QPicture(*PQPICTURE(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QPICTURE_LOAD)
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
-    bool load( const QString & fileName, const char * format = 0 )
+    bool load( const QString &fileName, const char * format = 0 )
     */
     QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -223,7 +223,7 @@ HB_FUNC_STATIC(QPICTURE_SAVE)
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
-    bool save( const QString & fileName, const char * format = 0 )
+    bool save( const QString &fileName, const char * format = 0 )
     */
     QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -251,7 +251,7 @@ HB_FUNC_STATIC(QPICTURE_SAVE)
 }
 
 /*
-void setBoundingRect( const QRect & r )
+void setBoundingRect( const QRect &r )
 */
 HB_FUNC_STATIC(QPICTURE_SETBOUNDINGRECT)
 {
@@ -327,7 +327,7 @@ HB_FUNC_STATIC(QPICTURE_SIZE)
 }
 
 /*
-void swap( QPicture & other )
+void swap( QPicture &other )
 */
 HB_FUNC_STATIC(QPICTURE_SWAP)
 {

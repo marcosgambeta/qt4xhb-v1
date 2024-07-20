@@ -52,7 +52,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEMITERATOR_NEW)
   if (ISNUMPAR(1) && ISQTREEWIDGETITEMITERATOR(1))
   {
     /*
-    QTreeWidgetItemIterator( const QTreeWidgetItemIterator & it )
+    QTreeWidgetItemIterator( const QTreeWidgetItemIterator &it )
     */
     QTreeWidgetItemIterator *obj = new QTreeWidgetItemIterator(*PQTREEWIDGETITEMITERATOR(1));
     Qt4xHb::returnNewObject(obj, true);

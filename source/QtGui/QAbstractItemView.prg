@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_AUTOSCROLLMARGIN)
 }
 
 /*
-void closePersistentEditor( const QModelIndex & index )
+void closePersistentEditor( const QModelIndex &index )
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_CLOSEPERSISTENTEDITOR)
 {
@@ -430,7 +430,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ICONSIZE)
 }
 
 /*
-virtual QModelIndex indexAt( const QPoint & point ) const = 0
+virtual QModelIndex indexAt( const QPoint &point ) const = 0
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_INDEXAT)
 {
@@ -455,7 +455,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_INDEXAT)
 }
 
 /*
-QWidget * indexWidget( const QModelIndex & index ) const
+QWidget * indexWidget( const QModelIndex &index ) const
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_INDEXWIDGET)
 {
@@ -497,7 +497,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ITEMDELEGATE)
   else if (ISNUMPAR(1) && ISQMODELINDEX(1))
   {
     /*
-    QAbstractItemDelegate * itemDelegate( const QModelIndex & index ) const
+    QAbstractItemDelegate * itemDelegate( const QModelIndex &index ) const
     */
     QAbstractItemView *obj = qobject_cast<QAbstractItemView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -564,7 +564,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ITEMDELEGATEFORROW)
 }
 
 /*
-virtual void keyboardSearch( const QString & search )
+virtual void keyboardSearch( const QString &search )
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_KEYBOARDSEARCH)
 {
@@ -615,7 +615,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_MODEL)
 }
 
 /*
-void openPersistentEditor( const QModelIndex & index )
+void openPersistentEditor( const QModelIndex &index )
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_OPENPERSISTENTEDITOR)
 {
@@ -666,7 +666,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ROOTINDEX)
 }
 
 /*
-virtual void scrollTo( const QModelIndex & index, QAbstractItemView::ScrollHint hint = QAbstractItemView::EnsureVisible
+virtual void scrollTo( const QModelIndex &index, QAbstractItemView::ScrollHint hint = QAbstractItemView::EnsureVisible
 ) = 0
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SCROLLTO)
@@ -1027,7 +1027,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETHORIZONTALSCROLLMODE)
 }
 
 /*
-void setIconSize( const QSize & size )
+void setIconSize( const QSize &size )
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETICONSIZE)
 {
@@ -1053,7 +1053,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETICONSIZE)
 }
 
 /*
-void setIndexWidget( const QModelIndex & index, QWidget * widget )
+void setIndexWidget( const QModelIndex &index, QWidget * widget )
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETINDEXWIDGET)
 {
@@ -1387,7 +1387,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SIZEHINTFORCOLUMN)
 }
 
 /*
-QSize sizeHintForIndex( const QModelIndex & index ) const
+QSize sizeHintForIndex( const QModelIndex &index ) const
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SIZEHINTFORINDEX)
 {
@@ -1508,7 +1508,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_VERTICALSCROLLMODE)
 }
 
 /*
-virtual QRect visualRect( const QModelIndex & index ) const = 0
+virtual QRect visualRect( const QModelIndex &index ) const = 0
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_VISUALRECT)
 {
@@ -1584,7 +1584,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_CLEARSELECTION)
 }
 
 /*
-void edit( const QModelIndex & index )
+void edit( const QModelIndex &index )
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_EDIT)
 {
@@ -1714,7 +1714,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SELECTALL)
 }
 
 /*
-void setCurrentIndex( const QModelIndex & index )
+void setCurrentIndex( const QModelIndex &index )
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETCURRENTINDEX)
 {
@@ -1740,7 +1740,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETCURRENTINDEX)
 }
 
 /*
-virtual void setRootIndex( const QModelIndex & index )
+virtual void setRootIndex( const QModelIndex &index )
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETROOTINDEX)
 {
@@ -1766,7 +1766,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETROOTINDEX)
 }
 
 /*
-void update( const QModelIndex & index )
+void update( const QModelIndex &index )
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_UPDATE)
 {

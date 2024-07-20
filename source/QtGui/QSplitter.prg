@@ -415,7 +415,7 @@ HB_FUNC_STATIC(QSPLITTER_REFRESH)
 }
 
 /*
-bool restoreState( const QByteArray & state )
+bool restoreState( const QByteArray &state )
 */
 HB_FUNC_STATIC(QSPLITTER_RESTORESTATE)
 {
@@ -594,7 +594,7 @@ HB_FUNC_STATIC(QSPLITTER_SETORIENTATION)
 }
 
 /*
-void setSizes( const QList<int> & list )
+void setSizes( const QList<int> &list )
 */
 HB_FUNC_STATIC(QSPLITTER_SETSIZES)
 {

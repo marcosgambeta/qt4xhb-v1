@@ -872,7 +872,7 @@ HB_FUNC_STATIC(QTABLEVIEW_WORDWRAP)
 }
 
 /*
-virtual QModelIndex indexAt( const QPoint & pos ) const
+virtual QModelIndex indexAt( const QPoint &pos ) const
 */
 HB_FUNC_STATIC(QTABLEVIEW_INDEXAT)
 {
@@ -923,7 +923,7 @@ HB_FUNC_STATIC(QTABLEVIEW_SETMODEL)
 }
 
 /*
-virtual void setRootIndex( const QModelIndex & index )
+virtual void setRootIndex( const QModelIndex &index )
 */
 HB_FUNC_STATIC(QTABLEVIEW_SETROOTINDEX)
 {

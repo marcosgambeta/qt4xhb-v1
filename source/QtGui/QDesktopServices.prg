@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QDESKTOPSERVICES_DISPLAYNAME)
 }
 
 /*
-static bool openUrl( const QUrl & url )
+static bool openUrl( const QUrl &url )
 */
 HB_FUNC_STATIC(QDESKTOPSERVICES_OPENURL)
 {
@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QDESKTOPSERVICES_OPENURL)
 }
 
 /*
-static void setUrlHandler( const QString & scheme, QObject * receiver, const char * method )
+static void setUrlHandler( const QString &scheme, QObject * receiver, const char * method )
 */
 HB_FUNC_STATIC(QDESKTOPSERVICES_SETURLHANDLER)
 {
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QDESKTOPSERVICES_STORAGELOCATION)
 }
 
 /*
-static void unsetUrlHandler( const QString & scheme )
+static void unsetUrlHandler( const QString &scheme )
 */
 HB_FUNC_STATIC(QDESKTOPSERVICES_UNSETURLHANDLER)
 {

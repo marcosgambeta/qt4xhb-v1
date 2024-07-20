@@ -59,7 +59,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_NEW)
   else if (ISNUMPAR(1) && ISQSTYLEOPTIONGRAPHICSITEM(1))
   {
     /*
-    QStyleOptionGraphicsItem( const QStyleOptionGraphicsItem & other )
+    QStyleOptionGraphicsItem( const QStyleOptionGraphicsItem &other )
     */
     QStyleOptionGraphicsItem *obj = new QStyleOptionGraphicsItem(*PQSTYLEOPTIONGRAPHICSITEM(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_NEW)
 }
 
 /*
-static qreal levelOfDetailFromTransform( const QTransform & worldTransform )
+static qreal levelOfDetailFromTransform( const QTransform &worldTransform )
 */
 HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_LEVELOFDETAILFROMTRANSFORM)
 {

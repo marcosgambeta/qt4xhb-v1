@@ -324,7 +324,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_RESET)
 }
 
 /*
-void sendEvent( const QInputMethodEvent & event )
+void sendEvent( const QInputMethodEvent &event )
 */
 HB_FUNC_STATIC(QINPUTCONTEXT_SENDEVENT)
 {

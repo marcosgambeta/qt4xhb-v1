@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QACCESSIBLEOBJECT_ACTIONTEXT)
 }
 
 /*
-virtual bool doAction( int action, int child, const QVariantList & params )
+virtual bool doAction( int action, int child, const QVariantList &params )
 */
 HB_FUNC_STATIC(QACCESSIBLEOBJECT_DOACTION)
 {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QACCESSIBLEOBJECT_RECT)
 }
 
 /*
-virtual void setText( QAccessibleObject::Text t, int child, const QString & text )
+virtual void setText( QAccessibleObject::Text t, int child, const QString &text )
 */
 HB_FUNC_STATIC(QACCESSIBLEOBJECT_SETTEXT)
 {

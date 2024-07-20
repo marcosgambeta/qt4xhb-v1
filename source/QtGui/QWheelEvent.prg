@@ -53,7 +53,7 @@ HB_FUNC_STATIC(QWHEELEVENT_NEW)
   if (ISBETWEEN(4, 5) && ISQPOINT(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5) || HB_ISNIL(5)))
   {
     /*
-    QWheelEvent( const QPoint & pos, int delta, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,
+    QWheelEvent( const QPoint &pos, int delta, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,
     Qt::Orientation orient = Qt::Vertical )
     */
     QWheelEvent *obj =
@@ -65,7 +65,7 @@ HB_FUNC_STATIC(QWHEELEVENT_NEW)
            (HB_ISNUM(6) || HB_ISNIL(6)))
   {
     /*
-    QWheelEvent( const QPoint & pos, const QPoint & globalPos, int delta, Qt::MouseButtons buttons,
+    QWheelEvent( const QPoint &pos, const QPoint &globalPos, int delta, Qt::MouseButtons buttons,
     Qt::KeyboardModifiers modifiers, Qt::Orientation orient = Qt::Vertical )
     */
     QWheelEvent *obj = new QWheelEvent(*PQPOINT(1), *PQPOINT(2), PINT(3), (Qt::MouseButtons)hb_parni(4),
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QWHEELEVENT_DELTA)
 }
 
 /*
-const QPoint & pos() const
+const QPoint &pos() const
 */
 HB_FUNC_STATIC(QWHEELEVENT_POS)
 {
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QWHEELEVENT_POS)
 }
 
 /*
-const QPoint & globalPos() const
+const QPoint &globalPos() const
 */
 HB_FUNC_STATIC(QWHEELEVENT_GLOBALPOS)
 {

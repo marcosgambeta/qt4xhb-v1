@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QACTION_NEW)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2))
   {
     /*
-    QAction( const QString & text, QObject * parent )
+    QAction( const QString &text, QObject * parent )
     */
     QAction *obj = new QAction(PQSTRING(1), PQOBJECT(2));
     Qt4xHb::returnNewObject(obj, false);
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QACTION_NEW)
   else if (ISNUMPAR(3) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && ISQOBJECT(3))
   {
     /*
-    QAction( const QIcon & icon, const QString & text, QObject * parent )
+    QAction( const QIcon &icon, const QString &text, QObject * parent )
     */
     QAction *obj = new QAction(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt4xHb::itemGetPtr(1)) : QIcon(hb_parc(1)),
                                PQSTRING(2), PQOBJECT(3));
@@ -752,7 +752,7 @@ HB_FUNC_STATIC(QACTION_SETCHECKABLE)
 }
 
 /*
-void setData( const QVariant & userData )
+void setData( const QVariant &userData )
 */
 HB_FUNC_STATIC(QACTION_SETDATA)
 {
@@ -778,7 +778,7 @@ HB_FUNC_STATIC(QACTION_SETDATA)
 }
 
 /*
-void setFont( const QFont & font )
+void setFont( const QFont &font )
 */
 HB_FUNC_STATIC(QACTION_SETFONT)
 {
@@ -804,7 +804,7 @@ HB_FUNC_STATIC(QACTION_SETFONT)
 }
 
 /*
-void setIcon( const QIcon & icon )
+void setIcon( const QIcon &icon )
 */
 HB_FUNC_STATIC(QACTION_SETICON)
 {
@@ -830,7 +830,7 @@ HB_FUNC_STATIC(QACTION_SETICON)
 }
 
 /*
-void setIconText( const QString & text )
+void setIconText( const QString &text )
 */
 HB_FUNC_STATIC(QACTION_SETICONTEXT)
 {
@@ -986,7 +986,7 @@ HB_FUNC_STATIC(QACTION_SETSEPARATOR)
 }
 
 /*
-void setShortcut( const QKeySequence & shortcut )
+void setShortcut( const QKeySequence &shortcut )
 */
 HB_FUNC_STATIC(QACTION_SETSHORTCUT)
 {
@@ -1042,7 +1042,7 @@ HB_FUNC_STATIC(QACTION_SETSHORTCUTS)
   if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
-    void setShortcuts( const QList<QKeySequence> & shortcuts )
+    void setShortcuts( const QList<QKeySequence> &shortcuts )
     */
     QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -1108,7 +1108,7 @@ HB_FUNC_STATIC(QACTION_SETSOFTKEYROLE)
 }
 
 /*
-void setStatusTip( const QString & statusTip )
+void setStatusTip( const QString &statusTip )
 */
 HB_FUNC_STATIC(QACTION_SETSTATUSTIP)
 {
@@ -1134,7 +1134,7 @@ HB_FUNC_STATIC(QACTION_SETSTATUSTIP)
 }
 
 /*
-void setText( const QString & text )
+void setText( const QString &text )
 */
 HB_FUNC_STATIC(QACTION_SETTEXT)
 {
@@ -1160,7 +1160,7 @@ HB_FUNC_STATIC(QACTION_SETTEXT)
 }
 
 /*
-void setToolTip( const QString & tip )
+void setToolTip( const QString &tip )
 */
 HB_FUNC_STATIC(QACTION_SETTOOLTIP)
 {
@@ -1186,7 +1186,7 @@ HB_FUNC_STATIC(QACTION_SETTOOLTIP)
 }
 
 /*
-void setWhatsThis( const QString & what )
+void setWhatsThis( const QString &what )
 */
 HB_FUNC_STATIC(QACTION_SETWHATSTHIS)
 {

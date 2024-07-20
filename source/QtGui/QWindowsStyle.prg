@@ -227,7 +227,7 @@ HB_FUNC_STATIC(QWINDOWSSTYLE_POLISH)
   else if (ISNUMPAR(1) && ISQPALETTE(1))
   {
     /*
-    virtual void polish( QPalette & pal )
+    virtual void polish( QPalette &pal )
     */
     QWindowsStyle *obj = qobject_cast<QWindowsStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QWINDOWSSTYLE_POLISH)
 }
 
 /*
-virtual QSize sizeFromContents( QStyle::ContentsType ct, const QStyleOption * opt, const QSize & csz, const QWidget *
+virtual QSize sizeFromContents( QStyle::ContentsType ct, const QStyleOption * opt, const QSize &csz, const QWidget *
 widget = 0 ) const
 */
 HB_FUNC_STATIC(QWINDOWSSTYLE_SIZEFROMCONTENTS)

@@ -406,7 +406,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_GETWINDOWFRAMEMARGINS)
 }
 
 /*
-int grabShortcut( const QKeySequence & sequence, Qt::ShortcutContext context = Qt::WindowShortcut )
+int grabShortcut( const QKeySequence &sequence, Qt::ShortcutContext context = Qt::WindowShortcut )
 */
 HB_FUNC_STATIC(QGRAPHICSWIDGET_GRABSHORTCUT)
 {
@@ -695,7 +695,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_RESIZE)
   if (ISNUMPAR(1) && ISQSIZEF(1))
   {
     /*
-    void resize( const QSizeF & size )
+    void resize( const QSizeF &size )
     */
     QGraphicsWidget *obj = qobject_cast<QGraphicsWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -831,7 +831,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_SETFOCUSPOLICY)
 }
 
 /*
-void setFont( const QFont & font )
+void setFont( const QFont &font )
 */
 HB_FUNC_STATIC(QGRAPHICSWIDGET_SETFONT)
 {
@@ -909,7 +909,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_SETLAYOUTDIRECTION)
 }
 
 /*
-void setPalette( const QPalette & palette )
+void setPalette( const QPalette &palette )
 */
 HB_FUNC_STATIC(QGRAPHICSWIDGET_SETPALETTE)
 {
@@ -1065,7 +1065,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_SETWINDOWFRAMEMARGINS)
 }
 
 /*
-void setWindowTitle( const QString & title )
+void setWindowTitle( const QString &title )
 */
 HB_FUNC_STATIC(QGRAPHICSWIDGET_SETWINDOWTITLE)
 {
@@ -1442,7 +1442,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_SETGEOMETRY)
   else if (ISNUMPAR(1) && ISQRECTF(1))
   {
     /*
-    virtual void setGeometry( const QRectF & rect )
+    virtual void setGeometry( const QRectF &rect )
     */
     QGraphicsWidget *obj = qobject_cast<QGraphicsWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QTEXTIMAGEFORMAT_SETHEIGHT)
 }
 
 /*
-void setName( const QString & name )
+void setName( const QString &name )
 */
 HB_FUNC_STATIC(QTEXTIMAGEFORMAT_SETNAME)
 {

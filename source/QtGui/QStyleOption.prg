@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_NEW)
   else if (ISNUMPAR(1) && ISQSTYLEOPTION(1))
   {
     /*
-    QStyleOption( const QStyleOption & other )
+    QStyleOption( const QStyleOption &other )
     */
     QStyleOption *obj = new QStyleOption(*PQSTYLEOPTION(1));
     Qt4xHb::returnNewObject(obj, true);

@@ -59,7 +59,7 @@ RETURN
 #include "qt4xhb_utils.hpp"
 
     /*
-    QTabletEvent( QEvent::Type t, const QPoint & pos, const QPoint & globalPos, const QPointF & hiResGlobalPos, int
+    QTabletEvent( QEvent::Type t, const QPoint &pos, const QPoint &globalPos, const QPointF &hiResGlobalPos, int
     device, int pointerType, qreal pressure, int xTilt, int yTilt, qreal tangentialPressure, qreal rotation, int z,
     Qt::KeyboardModifiers keyState, qint64 uniqueID )
     */
@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QTABLETEVENT_DELETE)
 }
 
 /*
-const QPoint & pos() const
+const QPoint &pos() const
 */
 HB_FUNC_STATIC(QTABLETEVENT_POS)
 {
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QTABLETEVENT_POS)
 }
 
 /*
-const QPoint & globalPos() const
+const QPoint &globalPos() const
 */
 HB_FUNC_STATIC(QTABLETEVENT_GLOBALPOS)
 {
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QTABLETEVENT_GLOBALPOS)
 }
 
 /*
-const QPointF & hiResGlobalPos() const
+const QPointF &hiResGlobalPos() const
 */
 HB_FUNC_STATIC(QTABLETEVENT_HIRESGLOBALPOS)
 {

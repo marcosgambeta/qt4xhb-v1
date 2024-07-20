@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QCOMMONSTYLE_DRAWPRIMITIVE)
 }
 
 /*
-virtual QPixmap generatedIconPixmap( QIcon::Mode iconMode, const QPixmap & pixmap, const QStyleOption * opt ) const
+virtual QPixmap generatedIconPixmap( QIcon::Mode iconMode, const QPixmap &pixmap, const QStyleOption * opt ) const
 */
 HB_FUNC_STATIC(QCOMMONSTYLE_GENERATEDICONPIXMAP)
 {
@@ -199,7 +199,7 @@ HB_FUNC_STATIC(QCOMMONSTYLE_GENERATEDICONPIXMAP)
 
 /*
 virtual QStyle::SubControl hitTestComplexControl( QStyle::ComplexControl cc, const QStyleOptionComplex * opt, const
-QPoint & pt, const QWidget * widget = 0 ) const
+QPoint &pt, const QWidget * widget = 0 ) const
 */
 HB_FUNC_STATIC(QCOMMONSTYLE_HITTESTCOMPLEXCONTROL)
 {
@@ -253,7 +253,7 @@ HB_FUNC_STATIC(QCOMMONSTYLE_POLISH)
   if (ISNUMPAR(1) && ISQPALETTE(1))
   {
     /*
-    virtual void polish( QPalette & pal )
+    virtual void polish( QPalette &pal )
     */
     QCommonStyle *obj = qobject_cast<QCommonStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -299,7 +299,7 @@ HB_FUNC_STATIC(QCOMMONSTYLE_POLISH)
 }
 
 /*
-virtual QSize sizeFromContents( QStyle::ContentsType ct, const QStyleOption * opt, const QSize & csz, const QWidget *
+virtual QSize sizeFromContents( QStyle::ContentsType ct, const QStyleOption * opt, const QSize &csz, const QWidget *
 widget = 0 ) const
 */
 HB_FUNC_STATIC(QCOMMONSTYLE_SIZEFROMCONTENTS)

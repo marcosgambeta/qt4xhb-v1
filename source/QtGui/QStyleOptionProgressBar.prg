@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_NEW)
   else if (ISNUMPAR(1) && ISQSTYLEOPTIONPROGRESSBAR(1))
   {
     /*
-    QStyleOptionProgressBar( const QStyleOptionProgressBar & other )
+    QStyleOptionProgressBar( const QStyleOptionProgressBar &other )
     */
     QStyleOptionProgressBar *obj = new QStyleOptionProgressBar(*PQSTYLEOPTIONPROGRESSBAR(1));
     Qt4xHb::returnNewObject(obj, true);

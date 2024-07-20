@@ -61,7 +61,7 @@ HB_FUNC_STATIC(QACCESSIBLEBRIDGEPLUGIN_DELETE)
 }
 
 /*
-virtual QAccessibleBridge * create( const QString & key ) = 0
+virtual QAccessibleBridge * create( const QString &key ) = 0
 */
 HB_FUNC_STATIC(QACCESSIBLEBRIDGEPLUGIN_CREATE)
 {

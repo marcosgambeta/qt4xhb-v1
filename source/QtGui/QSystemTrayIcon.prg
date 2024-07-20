@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_NEW)
   else if (ISBETWEEN(1, 2) && (ISQICON(1) || HB_ISCHAR(1)) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QSystemTrayIcon( const QIcon & icon, QObject * parent = 0 )
+    QSystemTrayIcon( const QIcon &icon, QObject * parent = 0 )
     */
     QSystemTrayIcon *obj = new QSystemTrayIcon(
         HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt4xHb::itemGetPtr(1)) : QIcon(hb_parc(1)), OPQOBJECT(2, 0));
@@ -231,7 +231,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_SETCONTEXTMENU)
 }
 
 /*
-void setIcon( const QIcon & icon )
+void setIcon( const QIcon &icon )
 */
 HB_FUNC_STATIC(QSYSTEMTRAYICON_SETICON)
 {
@@ -257,7 +257,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_SETICON)
 }
 
 /*
-void setToolTip( const QString & tip )
+void setToolTip( const QString &tip )
 */
 HB_FUNC_STATIC(QSYSTEMTRAYICON_SETTOOLTIP)
 {
@@ -283,7 +283,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_SETTOOLTIP)
 }
 
 /*
-void showMessage( const QString & title, const QString & message, QSystemTrayIcon::MessageIcon icon =
+void showMessage( const QString &title, const QString &message, QSystemTrayIcon::MessageIcon icon =
 QSystemTrayIcon::Information, int millisecondsTimeoutHint = 10000 )
 */
 HB_FUNC_STATIC(QSYSTEMTRAYICON_SHOWMESSAGE)

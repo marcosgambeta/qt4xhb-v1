@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_NEW)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QTextLayout( const QString & text )
+    QTextLayout( const QString &text )
     */
     QTextLayout *obj = new QTextLayout(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_NEW)
   else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQFONT(2) && (HB_ISOBJECT(3) || HB_ISNIL(3)))
   {
     /*
-    QTextLayout( const QString & text, const QFont & font, QPaintDevice * paintdevice = 0 )
+    QTextLayout( const QString &text, const QFont &font, QPaintDevice * paintdevice = 0 )
     */
     QTextLayout *obj =
         new QTextLayout(PQSTRING(1), *PQFONT(2), HB_ISNIL(3) ? 0 : static_cast<QPaintDevice *>(Qt4xHb::itemGetPtr(3)));
@@ -316,7 +316,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_DRAWCURSOR)
   if (ISNUMPAR(4) && ISQPAINTER(1) && ISQPOINTF(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
-    void drawCursor( QPainter * painter, const QPointF & position, int cursorPosition, int width ) const
+    void drawCursor( QPainter * painter, const QPointF &position, int cursorPosition, int width ) const
     */
     QTextLayout *obj = static_cast<QTextLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -330,7 +330,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_DRAWCURSOR)
   else if (ISNUMPAR(3) && ISQPAINTER(1) && ISQPOINTF(2) && HB_ISNUM(3))
   {
     /*
-    void drawCursor( QPainter * painter, const QPointF & position, int cursorPosition ) const
+    void drawCursor( QPainter * painter, const QPointF &position, int cursorPosition ) const
     */
     QTextLayout *obj = static_cast<QTextLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -819,7 +819,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_SETCURSORMOVESTYLE)
 }
 
 /*
-void setFont( const QFont & font )
+void setFont( const QFont &font )
 */
 HB_FUNC_STATIC(QTEXTLAYOUT_SETFONT)
 {
@@ -845,7 +845,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_SETFONT)
 }
 
 /*
-void setPosition( const QPointF & p )
+void setPosition( const QPointF &p )
 */
 HB_FUNC_STATIC(QTEXTLAYOUT_SETPOSITION)
 {
@@ -871,7 +871,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_SETPOSITION)
 }
 
 /*
-void setPreeditArea( int position, const QString & text )
+void setPreeditArea( int position, const QString &text )
 */
 HB_FUNC_STATIC(QTEXTLAYOUT_SETPREEDITAREA)
 {
@@ -897,7 +897,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_SETPREEDITAREA)
 }
 
 /*
-void setText( const QString & string )
+void setText( const QString &string )
 */
 HB_FUNC_STATIC(QTEXTLAYOUT_SETTEXT)
 {
@@ -923,7 +923,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_SETTEXT)
 }
 
 /*
-void setTextOption( const QTextOption & option )
+void setTextOption( const QTextOption &option )
 */
 HB_FUNC_STATIC(QTEXTLAYOUT_SETTEXTOPTION)
 {

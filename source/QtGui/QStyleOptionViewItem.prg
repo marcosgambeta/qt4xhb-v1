@@ -66,7 +66,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_NEW)
   else if (ISNUMPAR(1) && ISQSTYLEOPTIONVIEWITEM(1))
   {
     /*
-    QStyleOptionViewItem( const QStyleOptionViewItem & other )
+    QStyleOptionViewItem( const QStyleOptionViewItem &other )
     */
     QStyleOptionViewItem *obj = new QStyleOptionViewItem(*PQSTYLEOPTIONVIEWITEM(1));
     Qt4xHb::returnNewObject(obj, true);

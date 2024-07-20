@@ -381,7 +381,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_SETOPENLINKS)
 }
 
 /*
-void setSearchPaths( const QStringList & paths )
+void setSearchPaths( const QStringList &paths )
 */
 HB_FUNC_STATIC(QTEXTBROWSER_SETSEARCHPATHS)
 {
@@ -432,7 +432,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_SOURCE)
 }
 
 /*
-virtual QVariant loadResource( int type, const QUrl & name )
+virtual QVariant loadResource( int type, const QUrl &name )
 */
 HB_FUNC_STATIC(QTEXTBROWSER_LOADRESOURCE)
 {
@@ -561,7 +561,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_RELOAD)
 }
 
 /*
-virtual void setSource( const QUrl & name )
+virtual void setSource( const QUrl &name )
 */
 HB_FUNC_STATIC(QTEXTBROWSER_SETSOURCE)
 {

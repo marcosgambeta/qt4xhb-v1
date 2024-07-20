@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_NEW)
   else if (ISNUMPAR(1) && ISQTEXTFRAGMENT(1))
   {
     /*
-    QTextFragment( const QTextFragment & other )
+    QTextFragment( const QTextFragment &other )
     */
     QTextFragment *obj = new QTextFragment(*PQTEXTFRAGMENT(1));
     Qt4xHb::returnNewObject(obj, true);

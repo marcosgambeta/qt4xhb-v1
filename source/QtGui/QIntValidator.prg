@@ -216,7 +216,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_TOP)
 }
 
 /*
-virtual void fixup( QString & input ) const
+virtual void fixup( QString &input ) const
 */
 HB_FUNC_STATIC(QINTVALIDATOR_FIXUP)
 {
@@ -244,7 +244,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_FIXUP)
 }
 
 /*
-virtual QValidator::State validate( QString & input, int & pos ) const
+virtual QValidator::State validate( QString &input, int &pos ) const
 */
 HB_FUNC_STATIC(QINTVALIDATOR_VALIDATE)
 {

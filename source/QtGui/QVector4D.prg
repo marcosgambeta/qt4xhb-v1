@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QVECTOR4D_NEW)
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    QVector4D( const QPoint & point )
+    QVector4D( const QPoint &point )
     */
     QVector4D *obj = new QVector4D(*PQPOINT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QVECTOR4D_NEW)
   else if (ISNUMPAR(1) && ISQPOINTF(1))
   {
     /*
-    QVector4D( const QPointF & point )
+    QVector4D( const QPointF &point )
     */
     QVector4D *obj = new QVector4D(*PQPOINTF(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QVECTOR4D_NEW)
   else if (ISNUMPAR(1) && ISQVECTOR2D(1))
   {
     /*
-    QVector4D( const QVector2D & vector )
+    QVector4D( const QVector2D &vector )
     */
     QVector4D *obj = new QVector4D(*PQVECTOR2D(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QVECTOR4D_NEW)
   else if (ISNUMPAR(3) && ISQVECTOR2D(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
     /*
-    QVector4D( const QVector2D & vector, qreal zpos, qreal wpos )
+    QVector4D( const QVector2D &vector, qreal zpos, qreal wpos )
     */
     QVector4D *obj = new QVector4D(*PQVECTOR2D(1), PQREAL(2), PQREAL(3));
     Qt4xHb::returnNewObject(obj, true);
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QVECTOR4D_NEW)
   else if (ISNUMPAR(1) && ISQVECTOR3D(1))
   {
     /*
-    QVector4D( const QVector3D & vector )
+    QVector4D( const QVector3D &vector )
     */
     QVector4D *obj = new QVector4D(*PQVECTOR3D(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QVECTOR4D_NEW)
   else if (ISNUMPAR(2) && ISQVECTOR3D(1) && HB_ISNUM(2))
   {
     /*
-    QVector4D( const QVector3D & vector, qreal wpos )
+    QVector4D( const QVector3D &vector, qreal wpos )
     */
     QVector4D *obj = new QVector4D(*PQVECTOR3D(1), PQREAL(2));
     Qt4xHb::returnNewObject(obj, true);
@@ -636,7 +636,7 @@ HB_FUNC_STATIC(QVECTOR4D_Z)
 }
 
 /*
-static qreal dotProduct( const QVector4D & v1, const QVector4D & v2 )
+static qreal dotProduct( const QVector4D &v1, const QVector4D &v2 )
 */
 HB_FUNC_STATIC(QVECTOR4D_DOTPRODUCT)
 {

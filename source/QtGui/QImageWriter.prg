@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_NEW)
   else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)))
   {
     /*
-    QImageWriter( QIODevice * device, const QByteArray & format )
+    QImageWriter( QIODevice * device, const QByteArray &format )
     */
     QImageWriter *obj = new QImageWriter(PQIODEVICE(1), *PQBYTEARRAY(2));
     Qt4xHb::returnNewObject(obj, true);
@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)))
   {
     /*
-    QImageWriter( const QString & fileName, const QByteArray & format = QByteArray() )
+    QImageWriter( const QString &fileName, const QByteArray &format = QByteArray() )
     */
     QImageWriter *obj =
         new QImageWriter(PQSTRING(1), HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(2)));
@@ -388,7 +388,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_SETDEVICE)
 }
 
 /*
-void setFileName( const QString & fileName )
+void setFileName( const QString &fileName )
 */
 HB_FUNC_STATIC(QIMAGEWRITER_SETFILENAME)
 {
@@ -414,7 +414,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_SETFILENAME)
 }
 
 /*
-void setFormat( const QByteArray & format )
+void setFormat( const QByteArray &format )
 */
 HB_FUNC_STATIC(QIMAGEWRITER_SETFORMAT)
 {
@@ -492,7 +492,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_SETQUALITY)
 }
 
 /*
-void setText( const QString & key, const QString & text )
+void setText( const QString &key, const QString &text )
 */
 HB_FUNC_STATIC(QIMAGEWRITER_SETTEXT)
 {
@@ -542,7 +542,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_SUPPORTSOPTION)
 }
 
 /*
-bool write( const QImage & image )
+bool write( const QImage &image )
 */
 HB_FUNC_STATIC(QIMAGEWRITER_WRITE)
 {

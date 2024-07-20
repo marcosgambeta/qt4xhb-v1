@@ -274,7 +274,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_PIXELMETRIC)
 }
 
 /*
-virtual void polish( QPalette & pal )
+virtual void polish( QPalette &pal )
 */
 HB_FUNC_STATIC(QMOTIFSTYLE_POLISH)
 {
@@ -300,7 +300,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_POLISH)
 }
 
 /*
-virtual QSize sizeFromContents( QStyle::ContentsType ct, const QStyleOption * opt, const QSize & contentsSize, const
+virtual QSize sizeFromContents( QStyle::ContentsType ct, const QStyleOption * opt, const QSize &contentsSize, const
 QWidget * widget = 0 ) const
 */
 HB_FUNC_STATIC(QMOTIFSTYLE_SIZEFROMCONTENTS)

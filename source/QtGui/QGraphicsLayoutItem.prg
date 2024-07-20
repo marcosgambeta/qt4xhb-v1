@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_CONTENTSRECT)
 }
 
 /*
-QSizeF effectiveSizeHint( Qt::SizeHint which, const QSizeF & constraint = QSizeF() ) const
+QSizeF effectiveSizeHint( Qt::SizeHint which, const QSizeF &constraint = QSizeF() ) const
 */
 HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_EFFECTIVESIZEHINT)
 {
@@ -516,7 +516,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_PREFERREDWIDTH)
 }
 
 /*
-virtual void setGeometry( const QRectF & rect )
+virtual void setGeometry( const QRectF &rect )
 */
 HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETGEOMETRY)
 {
@@ -572,7 +572,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETMAXIMUMSIZE)
   if (ISNUMPAR(1) && ISQSIZEF(1))
   {
     /*
-    void setMaximumSize( const QSizeF & size )
+    void setMaximumSize( const QSizeF &size )
     */
     QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -660,7 +660,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETMINIMUMSIZE)
   if (ISNUMPAR(1) && ISQSIZEF(1))
   {
     /*
-    void setMinimumSize( const QSizeF & size )
+    void setMinimumSize( const QSizeF &size )
     */
     QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -774,7 +774,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETPREFERREDSIZE)
   if (ISNUMPAR(1) && ISQSIZEF(1))
   {
     /*
-    void setPreferredSize( const QSizeF & size )
+    void setPreferredSize( const QSizeF &size )
     */
     QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -836,7 +836,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETSIZEPOLICY)
   if (ISNUMPAR(1) && ISQSIZEPOLICY(1))
   {
     /*
-    void setSizePolicy( const QSizePolicy & policy )
+    void setSizePolicy( const QSizePolicy &policy )
     */
     QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 

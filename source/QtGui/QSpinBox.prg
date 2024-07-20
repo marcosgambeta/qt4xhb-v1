@@ -240,7 +240,7 @@ HB_FUNC_STATIC(QSPINBOX_SETMINIMUM)
 }
 
 /*
-void setPrefix( const QString & prefix )
+void setPrefix( const QString &prefix )
 */
 HB_FUNC_STATIC(QSPINBOX_SETPREFIX)
 {
@@ -318,7 +318,7 @@ HB_FUNC_STATIC(QSPINBOX_SETSINGLESTEP)
 }
 
 /*
-void setSuffix( const QString & suffix )
+void setSuffix( const QString &suffix )
 */
 HB_FUNC_STATIC(QSPINBOX_SETSUFFIX)
 {
