@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_NEW)
   else if (ISNUMPAR(1) && ISQTESTEVENTLIST(1))
   {
     /*
-    QTestEventList( const QTestEventList & other )
+    QTestEventList( const QTestEventList &other )
     */
     QTestEventList *obj = new QTestEventList(*PQTESTEVENTLIST(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -204,7 +204,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYCLICK)
 }
 
 /*
-void addKeyClicks( const QString & keys, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
+void addKeyClicks( const QString &keys, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 */
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYCLICKS)
 {
