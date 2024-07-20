@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_NEW)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QDomDocument( const QString & name )
+    QDomDocument( const QString &name )
     */
     QDomDocument *obj = new QDomDocument(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_NEW)
   else if (ISNUMPAR(1) && ISQDOMDOCUMENTTYPE(1))
   {
     /*
-    QDomDocument( const QDomDocumentType & doctype )
+    QDomDocument( const QDomDocumentType &doctype )
     */
     QDomDocument *obj = new QDomDocument(*PQDOMDOCUMENTTYPE(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_NEW)
   else if (ISNUMPAR(1) && ISQDOMDOCUMENT(1))
   {
     /*
-    QDomDocument( const QDomDocument & x )
+    QDomDocument( const QDomDocument &x )
     */
     QDomDocument *obj = new QDomDocument(*PQDOMDOCUMENT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_DELETE)
 }
 
 /*
-QDomAttr createAttribute( const QString & name )
+QDomAttr createAttribute( const QString &name )
 */
 HB_FUNC_STATIC(QDOMDOCUMENT_CREATEATTRIBUTE)
 {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_CREATEATTRIBUTE)
 }
 
 /*
-QDomAttr createAttributeNS( const QString & nsURI, const QString & qName )
+QDomAttr createAttributeNS( const QString &nsURI, const QString &qName )
 */
 HB_FUNC_STATIC(QDOMDOCUMENT_CREATEATTRIBUTENS)
 {
@@ -180,7 +180,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_CREATEATTRIBUTENS)
 }
 
 /*
-QDomCDATASection createCDATASection( const QString & value )
+QDomCDATASection createCDATASection( const QString &value )
 */
 HB_FUNC_STATIC(QDOMDOCUMENT_CREATECDATASECTION)
 {
@@ -205,7 +205,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_CREATECDATASECTION)
 }
 
 /*
-QDomComment createComment( const QString & value )
+QDomComment createComment( const QString &value )
 */
 HB_FUNC_STATIC(QDOMDOCUMENT_CREATECOMMENT)
 {
@@ -255,7 +255,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_CREATEDOCUMENTFRAGMENT)
 }
 
 /*
-QDomElement createElement( const QString & tagName )
+QDomElement createElement( const QString &tagName )
 */
 HB_FUNC_STATIC(QDOMDOCUMENT_CREATEELEMENT)
 {
@@ -280,7 +280,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_CREATEELEMENT)
 }
 
 /*
-QDomElement createElementNS( const QString & nsURI, const QString & qName )
+QDomElement createElementNS( const QString &nsURI, const QString &qName )
 */
 HB_FUNC_STATIC(QDOMDOCUMENT_CREATEELEMENTNS)
 {
@@ -305,7 +305,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_CREATEELEMENTNS)
 }
 
 /*
-QDomEntityReference createEntityReference( const QString & name )
+QDomEntityReference createEntityReference( const QString &name )
 */
 HB_FUNC_STATIC(QDOMDOCUMENT_CREATEENTITYREFERENCE)
 {
@@ -330,7 +330,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_CREATEENTITYREFERENCE)
 }
 
 /*
-QDomProcessingInstruction createProcessingInstruction( const QString & target, const QString & data )
+QDomProcessingInstruction createProcessingInstruction( const QString &target, const QString &data )
 */
 HB_FUNC_STATIC(QDOMDOCUMENT_CREATEPROCESSINGINSTRUCTION)
 {
@@ -356,7 +356,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_CREATEPROCESSINGINSTRUCTION)
 }
 
 /*
-QDomText createTextNode( const QString & value )
+QDomText createTextNode( const QString &value )
 */
 HB_FUNC_STATIC(QDOMDOCUMENT_CREATETEXTNODE)
 {
@@ -431,7 +431,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_DOCUMENTELEMENT)
 }
 
 /*
-QDomElement elementById( const QString & elementId )
+QDomElement elementById( const QString &elementId )
 */
 HB_FUNC_STATIC(QDOMDOCUMENT_ELEMENTBYID)
 {
@@ -456,7 +456,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_ELEMENTBYID)
 }
 
 /*
-QDomNodeList elementsByTagName( const QString & tagname ) const
+QDomNodeList elementsByTagName( const QString &tagname ) const
 */
 HB_FUNC_STATIC(QDOMDOCUMENT_ELEMENTSBYTAGNAME)
 {
@@ -481,7 +481,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_ELEMENTSBYTAGNAME)
 }
 
 /*
-QDomNodeList elementsByTagNameNS( const QString & nsURI, const QString & localName )
+QDomNodeList elementsByTagNameNS( const QString &nsURI, const QString &localName )
 */
 HB_FUNC_STATIC(QDOMDOCUMENT_ELEMENTSBYTAGNAMENS)
 {
@@ -531,7 +531,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_IMPLEMENTATION)
 }
 
 /*
-QDomNode importNode( const QDomNode & importedNode, bool deep )
+QDomNode importNode( const QDomNode &importedNode, bool deep )
 */
 HB_FUNC_STATIC(QDOMDOCUMENT_IMPORTNODE)
 {
@@ -585,7 +585,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
       (HB_ISNUM(4) || HB_ISNIL(4)) && (HB_ISNUM(5) || HB_ISNIL(5)))
   {
     /*
-    bool setContent( const QByteArray & data, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int
+    bool setContent( const QByteArray &data, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int
     * errorColumn = 0 )
     */
     QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -603,7 +603,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
            (HB_ISNUM(4) || HB_ISNIL(4)) && (HB_ISNUM(5) || HB_ISNIL(5)))
   {
     /*
-    bool setContent( const QString & text, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int *
+    bool setContent( const QString &text, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int *
     errorColumn = 0 )
     */
     QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -657,7 +657,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
            (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
-    bool setContent( const QString & text, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+    bool setContent( const QString &text, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
     */
     QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -674,7 +674,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
            (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
-    bool setContent( const QByteArray & buffer, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+    bool setContent( const QByteArray &buffer, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
     */
     QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
 

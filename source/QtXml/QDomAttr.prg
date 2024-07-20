@@ -57,7 +57,7 @@ HB_FUNC_STATIC(QDOMATTR_NEW)
   else if (ISNUMPAR(1) && ISQDOMATTR(1))
   {
     /*
-    QDomAttr( const QDomAttr & x )
+    QDomAttr( const QDomAttr &x )
     */
     QDomAttr *obj = new QDomAttr(*PQDOMATTR(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QDOMATTR_OWNERELEMENT)
 }
 
 /*
-void setValue( const QString & v )
+void setValue( const QString &v )
 */
 HB_FUNC_STATIC(QDOMATTR_SETVALUE)
 {

@@ -59,7 +59,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_NEW)
   else if (ISNUMPAR(1) && ISQDOMCHARACTERDATA(1))
   {
     /*
-    QDomCharacterData( const QDomCharacterData & x )
+    QDomCharacterData( const QDomCharacterData &x )
     */
     QDomCharacterData *obj = new QDomCharacterData(*PQDOMCHARACTERDATA(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_NEW)
 }
 
 /*
-void appendData( const QString & arg )
+void appendData( const QString &arg )
 */
 HB_FUNC_STATIC(QDOMCHARACTERDATA_APPENDDATA)
 {
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_DELETEDATA)
 }
 
 /*
-void insertData( unsigned long offset, const QString & arg )
+void insertData( unsigned long offset, const QString &arg )
 */
 HB_FUNC_STATIC(QDOMCHARACTERDATA_INSERTDATA)
 {
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_NODETYPE)
 }
 
 /*
-void replaceData( unsigned long offset, unsigned long count, const QString & arg )
+void replaceData( unsigned long offset, unsigned long count, const QString &arg )
 */
 HB_FUNC_STATIC(QDOMCHARACTERDATA_REPLACEDATA)
 {
@@ -247,7 +247,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_REPLACEDATA)
 }
 
 /*
-void setData( const QString & v )
+void setData( const QString &v )
 */
 HB_FUNC_STATIC(QDOMCHARACTERDATA_SETDATA)
 {
