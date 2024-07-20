@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_NEW)
   else if (ISBETWEEN(2, 3) && ISQDECLARATIVEENGINE(1) && HB_ISCHAR(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
-    QDeclarativeComponent( QDeclarativeEngine *, const QString & fileName, QObject * parent = 0 )
+    QDeclarativeComponent( QDeclarativeEngine *, const QString &fileName, QObject * parent = 0 )
     */
     QDeclarativeComponent *obj = new QDeclarativeComponent(PQDECLARATIVEENGINE(1), PQSTRING(2), OPQOBJECT(3, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_NEW)
   else if (ISBETWEEN(2, 3) && ISQDECLARATIVEENGINE(1) && ISQURL(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
-    QDeclarativeComponent( QDeclarativeEngine *, const QUrl & url, QObject * parent = 0 )
+    QDeclarativeComponent( QDeclarativeEngine *, const QUrl &url, QObject * parent = 0 )
     */
     QDeclarativeComponent *obj = new QDeclarativeComponent(PQDECLARATIVEENGINE(1), *PQURL(2), OPQOBJECT(3, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -371,7 +371,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ISREADY)
 }
 
 /*
-void loadUrl( const QUrl & url )
+void loadUrl( const QUrl &url )
 */
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_LOADURL)
 {
@@ -421,7 +421,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_PROGRESS)
 }
 
 /*
-void setData( const QByteArray & data, const QUrl & url )
+void setData( const QByteArray &data, const QUrl &url )
 */
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_SETDATA)
 {

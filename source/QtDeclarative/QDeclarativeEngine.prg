@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_DELETE)
 }
 
 /*
-void addImageProvider( const QString & providerId, QDeclarativeImageProvider * provider )
+void addImageProvider( const QString &providerId, QDeclarativeImageProvider * provider )
 */
 HB_FUNC_STATIC(QDECLARATIVEENGINE_ADDIMAGEPROVIDER)
 {
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_ADDIMAGEPROVIDER)
 }
 
 /*
-void addImportPath( const QString & path )
+void addImportPath( const QString &path )
 */
 HB_FUNC_STATIC(QDECLARATIVEENGINE_ADDIMPORTPATH)
 {
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_ADDIMPORTPATH)
 }
 
 /*
-void addPluginPath( const QString & path )
+void addPluginPath( const QString &path )
 */
 HB_FUNC_STATIC(QDECLARATIVEENGINE_ADDPLUGINPATH)
 {
@@ -241,7 +241,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_CLEARCOMPONENTCACHE)
 }
 
 /*
-QDeclarativeImageProvider * imageProvider( const QString & providerId ) const
+QDeclarativeImageProvider * imageProvider( const QString &providerId ) const
 */
 HB_FUNC_STATIC(QDECLARATIVEENGINE_IMAGEPROVIDER)
 {
@@ -290,7 +290,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_IMPORTPATHLIST)
 }
 
 /*
-bool importPlugin( const QString & filePath, const QString & uri, QString * errorString )
+bool importPlugin( const QString &filePath, const QString &uri, QString * errorString )
 */
 HB_FUNC_STATIC(QDECLARATIVEENGINE_IMPORTPLUGIN)
 {
@@ -436,7 +436,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_PLUGINPATHLIST)
 }
 
 /*
-void removeImageProvider( const QString & providerId )
+void removeImageProvider( const QString &providerId )
 */
 HB_FUNC_STATIC(QDECLARATIVEENGINE_REMOVEIMAGEPROVIDER)
 {
@@ -487,7 +487,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_ROOTCONTEXT)
 }
 
 /*
-void setBaseUrl( const QUrl & url )
+void setBaseUrl( const QUrl &url )
 */
 HB_FUNC_STATIC(QDECLARATIVEENGINE_SETBASEURL)
 {
@@ -513,7 +513,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_SETBASEURL)
 }
 
 /*
-void setImportPathList( const QStringList & paths )
+void setImportPathList( const QStringList &paths )
 */
 HB_FUNC_STATIC(QDECLARATIVEENGINE_SETIMPORTPATHLIST)
 {
@@ -565,7 +565,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_SETNETWORKACCESSMANAGERFACTORY)
 }
 
 /*
-void setOfflineStoragePath( const QString & dir )
+void setOfflineStoragePath( const QString &dir )
 */
 HB_FUNC_STATIC(QDECLARATIVEENGINE_SETOFFLINESTORAGEPATH)
 {
@@ -617,7 +617,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_SETOUTPUTWARNINGSTOSTANDARDERROR)
 }
 
 /*
-void setPluginPathList( const QStringList & paths )
+void setPluginPathList( const QStringList &paths )
 */
 HB_FUNC_STATIC(QDECLARATIVEENGINE_SETPLUGINPATHLIST)
 {

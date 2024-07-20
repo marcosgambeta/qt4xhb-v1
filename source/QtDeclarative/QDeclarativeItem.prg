@@ -292,7 +292,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_KEEPMOUSEGRAB)
 }
 
 /*
-QScriptValue mapFromItem( const QScriptValue & item, qreal x, qreal y ) const
+QScriptValue mapFromItem( const QScriptValue &item, qreal x, qreal y ) const
 */
 HB_FUNC_STATIC(QDECLARATIVEITEM_MAPFROMITEM)
 {
@@ -317,7 +317,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_MAPFROMITEM)
 }
 
 /*
-QScriptValue mapToItem( const QScriptValue & item, qreal x, qreal y ) const
+QScriptValue mapToItem( const QScriptValue &item, qreal x, qreal y ) const
 */
 HB_FUNC_STATIC(QDECLARATIVEITEM_MAPTOITEM)
 {

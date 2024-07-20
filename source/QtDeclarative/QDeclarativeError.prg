@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_NEW)
   else if (ISNUMPAR(1) && ISQDECLARATIVEERROR(1))
   {
     /*
-    QDeclarativeError( const QDeclarativeError & other )
+    QDeclarativeError( const QDeclarativeError &other )
     */
     QDeclarativeError *obj = new QDeclarativeError(*PQDECLARATIVEERROR(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_SETCOLUMN)
 }
 
 /*
-void setDescription( const QString & description )
+void setDescription( const QString &description )
 */
 HB_FUNC_STATIC(QDECLARATIVEERROR_SETDESCRIPTION)
 {
@@ -273,7 +273,7 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_SETLINE)
 }
 
 /*
-void setUrl( const QUrl & url )
+void setUrl( const QUrl &url )
 */
 HB_FUNC_STATIC(QDECLARATIVEERROR_SETURL)
 {
