@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_DELETE)
 }
 
 /*
-virtual QVariant extension( QScriptClass::Extension extension, const QVariant & argument = QVariant() )
+virtual QVariant extension( QScriptClass::Extension extension, const QVariant &argument = QVariant() )
 */
 HB_FUNC_STATIC(QSCRIPTCLASS_EXTENSION)
 {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_NAME)
 }
 
 /*
-virtual QScriptClassPropertyIterator * newIterator( const QScriptValue & object )
+virtual QScriptClassPropertyIterator * newIterator( const QScriptValue &object )
 */
 HB_FUNC_STATIC(QSCRIPTCLASS_NEWITERATOR)
 {
@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_NEWITERATOR)
 }
 
 /*
-virtual QScriptValue property( const QScriptValue & object, const QScriptString & name, uint id )
+virtual QScriptValue property( const QScriptValue &object, const QScriptString &name, uint id )
 */
 HB_FUNC_STATIC(QSCRIPTCLASS_PROPERTY)
 {
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_PROPERTY)
 }
 
 /*
-virtual QScriptValue::PropertyFlags propertyFlags( const QScriptValue & object, const QScriptString & name, uint id )
+virtual QScriptValue::PropertyFlags propertyFlags( const QScriptValue &object, const QScriptString &name, uint id )
 */
 HB_FUNC_STATIC(QSCRIPTCLASS_PROPERTYFLAGS)
 {
@@ -241,7 +241,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_PROTOTYPE)
 }
 
 /*
-virtual void setProperty( QScriptValue & object, const QScriptString & name, uint id, const QScriptValue & value )
+virtual void setProperty( QScriptValue &object, const QScriptString &name, uint id, const QScriptValue &value )
 */
 HB_FUNC_STATIC(QSCRIPTCLASS_SETPROPERTY)
 {

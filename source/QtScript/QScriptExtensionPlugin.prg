@@ -64,7 +64,7 @@ HB_FUNC_STATIC(QSCRIPTEXTENSIONPLUGIN_DELETE)
 }
 
 /*
-QScriptValue setupPackage( const QString & key, QScriptEngine * engine ) const
+QScriptValue setupPackage( const QString &key, QScriptEngine * engine ) const
 */
 HB_FUNC_STATIC(QSCRIPTEXTENSIONPLUGIN_SETUPPACKAGE)
 {
@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QSCRIPTEXTENSIONPLUGIN_SETUPPACKAGE)
 }
 
 /*
-virtual void initialize( const QString & key, QScriptEngine * engine ) = 0
+virtual void initialize( const QString &key, QScriptEngine * engine ) = 0
 */
 HB_FUNC_STATIC(QSCRIPTEXTENSIONPLUGIN_INITIALIZE)
 {

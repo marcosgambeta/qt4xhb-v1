@@ -52,7 +52,7 @@ RETURN
 #include "qt4xhb_utils.hpp"
 
     /*
-    QScriptSyntaxCheckResult( const QScriptSyntaxCheckResult & other )
+    QScriptSyntaxCheckResult( const QScriptSyntaxCheckResult &other )
     */
 HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_NEW)
 {

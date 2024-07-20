@@ -64,7 +64,7 @@ HB_FUNC_STATIC(QSCRIPTPROGRAM_NEW)
   else if (ISNUMPAR(1) && ISQSCRIPTPROGRAM(1))
   {
     /*
-    QScriptProgram( const QScriptProgram & other )
+    QScriptProgram( const QScriptProgram &other )
     */
     QScriptProgram *obj = new QScriptProgram(*PQSCRIPTPROGRAM(1));
     Qt4xHb::returnNewObject(obj, true);
