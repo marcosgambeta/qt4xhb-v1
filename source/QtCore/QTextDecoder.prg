@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QTEXTDECODER_TOUNICODE)
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    QString toUnicode( const QByteArray & ba )
+    QString toUnicode( const QByteArray &ba )
     */
     QTextDecoder *obj = static_cast<QTextDecoder *>(Qt4xHb::itemGetPtrStackSelfItem());
 

@@ -294,7 +294,7 @@ HB_FUNC_STATIC(QOBJECT_BLOCKSIGNALS)
 }
 
 /*
-const QObjectList & children() const
+const QObjectList &children() const
 */
 HB_FUNC_STATIC(QOBJECT_CHILDREN)
 {
@@ -493,7 +493,7 @@ HB_FUNC_STATIC(QOBJECT_EVENTFILTER)
 }
 
 /*
-T findChild ( const QString & name = QString() ) const
+T findChild ( const QString &name = QString() ) const
 */
 HB_FUNC_STATIC(QOBJECT_FINDCHILD)
 {
@@ -518,7 +518,7 @@ HB_FUNC_STATIC(QOBJECT_FINDCHILD)
 }
 
 /*
-QList<T> findChildren ( const QString & name = QString() ) const
+QList<T> findChildren ( const QString &name = QString() ) const
 */
 void QObject_findChildren1()
 {
@@ -554,7 +554,7 @@ void QObject_findChildren1()
   }
 }
 /*
-QList<T> findChildren ( const QRegExp & regExp ) const
+QList<T> findChildren ( const QRegExp &regExp ) const
 */
 void QObject_findChildren2()
 {
@@ -858,7 +858,7 @@ HB_FUNC_STATIC(QOBJECT_REMOVEEVENTFILTER)
 }
 
 /*
-void setObjectName( const QString & name )
+void setObjectName( const QString &name )
 */
 HB_FUNC_STATIC(QOBJECT_SETOBJECTNAME)
 {
@@ -910,7 +910,7 @@ HB_FUNC_STATIC(QOBJECT_SETPARENT)
 }
 
 /*
-bool setProperty( const char * name, const QVariant & value )
+bool setProperty( const char * name, const QVariant &value )
 */
 HB_FUNC_STATIC(QOBJECT_SETPROPERTY)
 {

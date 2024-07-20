@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QMODELINDEX_NEW)
   else if (ISNUMPAR(1) && ISQMODELINDEX(1))
   {
     /*
-    QModelIndex( const QModelIndex & other )
+    QModelIndex( const QModelIndex &other )
     */
     QModelIndex *obj = new QModelIndex(*PQMODELINDEX(1));
     Qt4xHb::returnNewObject(obj, true);

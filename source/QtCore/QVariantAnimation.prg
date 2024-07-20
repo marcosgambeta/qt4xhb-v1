@@ -198,7 +198,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_SETDURATION)
 }
 
 /*
-void setEasingCurve( const QEasingCurve & easing )
+void setEasingCurve( const QEasingCurve &easing )
 */
 HB_FUNC_STATIC(QVARIANTANIMATION_SETEASINGCURVE)
 {
@@ -224,7 +224,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_SETEASINGCURVE)
 }
 
 /*
-void setEndValue( const QVariant & value )
+void setEndValue( const QVariant &value )
 */
 HB_FUNC_STATIC(QVARIANTANIMATION_SETENDVALUE)
 {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_SETENDVALUE)
 }
 
 /*
-void setKeyValueAt( qreal step, const QVariant & value )
+void setKeyValueAt( qreal step, const QVariant &value )
 */
 HB_FUNC_STATIC(QVARIANTANIMATION_SETKEYVALUEAT)
 {
@@ -276,7 +276,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_SETKEYVALUEAT)
 }
 
 /*
-void setStartValue( const QVariant & value )
+void setStartValue( const QVariant &value )
 */
 HB_FUNC_STATIC(QVARIANTANIMATION_SETSTARTVALUE)
 {

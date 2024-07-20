@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QABSTRACTLISTMODEL_DROPMIMEDATA)
 }
 
 /*
-virtual QModelIndex index( int row, int column = 0, const QModelIndex & parent = QModelIndex() ) const
+virtual QModelIndex index( int row, int column = 0, const QModelIndex &parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC(QABSTRACTLISTMODEL_INDEX)
 {

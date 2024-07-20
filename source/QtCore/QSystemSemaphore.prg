@@ -54,7 +54,7 @@ RETURN
 #include "qt4xhb_utils.hpp"
 
     /*
-    QSystemSemaphore( const QString & key, int initialValue = 0, QSystemSemaphore::AccessMode mode =
+    QSystemSemaphore( const QString &key, int initialValue = 0, QSystemSemaphore::AccessMode mode =
     QSystemSemaphore::Open )
     */
 HB_FUNC_STATIC(QSYSTEMSEMAPHORE_NEW)
@@ -209,7 +209,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_RELEASE)
 }
 
 /*
-void setKey( const QString & key, int initialValue = 0, QSystemSemaphore::AccessMode mode = QSystemSemaphore::Open )
+void setKey( const QString &key, int initialValue = 0, QSystemSemaphore::AccessMode mode = QSystemSemaphore::Open )
 */
 HB_FUNC_STATIC(QSYSTEMSEMAPHORE_SETKEY)
 {

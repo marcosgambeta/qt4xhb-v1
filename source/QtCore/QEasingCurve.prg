@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QEASINGCURVE_NEW)
   else if (ISNUMPAR(1) && ISQEASINGCURVE(1))
   {
     /*
-    QEasingCurve( const QEasingCurve & other )
+    QEasingCurve( const QEasingCurve &other )
     */
     QEasingCurve *obj = new QEasingCurve(*PQEASINGCURVE(1));
     Qt4xHb::returnNewObject(obj, true);

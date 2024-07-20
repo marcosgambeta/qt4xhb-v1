@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QLINEF_NEW)
   else if (ISNUMPAR(2) && ISQPOINTF(1) && ISQPOINTF(2))
   {
     /*
-    QLineF( const QPointF & p1, const QPointF & p2 )
+    QLineF( const QPointF &p1, const QPointF &p2 )
     */
     QLineF *obj = new QLineF(*PQPOINTF(1), *PQPOINTF(2));
     Qt4xHb::returnNewObject(obj, true);
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QLINEF_NEW)
   else if (ISNUMPAR(1) && ISQLINE(1))
   {
     /*
-    QLineF( const QLine & line )
+    QLineF( const QLine &line )
     */
     QLineF *obj = new QLineF(*PQLINE(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -301,7 +301,7 @@ HB_FUNC_STATIC(QLINEF_ANGLE)
 }
 
 /*
-qreal angleTo( const QLineF & line ) const
+qreal angleTo( const QLineF &line ) const
 */
 HB_FUNC_STATIC(QLINEF_ANGLETO)
 {
@@ -471,7 +471,7 @@ HB_FUNC_STATIC(QLINEF_POINTAT)
 }
 
 /*
-void setP1( const QPointF & p1 )
+void setP1( const QPointF &p1 )
 */
 HB_FUNC_STATIC(QLINEF_SETP1)
 {
@@ -497,7 +497,7 @@ HB_FUNC_STATIC(QLINEF_SETP1)
 }
 
 /*
-void setP2( const QPointF & p2 )
+void setP2( const QPointF &p2 )
 */
 HB_FUNC_STATIC(QLINEF_SETP2)
 {
@@ -601,7 +601,7 @@ HB_FUNC_STATIC(QLINEF_SETLINE)
 }
 
 /*
-void setPoints( const QPointF & p1, const QPointF & p2 )
+void setPoints( const QPointF &p1, const QPointF &p2 )
 */
 HB_FUNC_STATIC(QLINEF_SETPOINTS)
 {
@@ -656,7 +656,7 @@ HB_FUNC_STATIC(QLINEF_TRANSLATE)
   if (ISNUMPAR(1) && ISQPOINTF(1))
   {
     /*
-    void translate( const QPointF & offset )
+    void translate( const QPointF &offset )
     */
     QLineF *obj = static_cast<QLineF *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -692,7 +692,7 @@ HB_FUNC_STATIC(QLINEF_TRANSLATED)
   if (ISNUMPAR(1) && ISQPOINTF(1))
   {
     /*
-    QLineF translated( const QPointF & offset ) const
+    QLineF translated( const QPointF &offset ) const
     */
     QLineF *obj = static_cast<QLineF *>(Qt4xHb::itemGetPtrStackSelfItem());
 

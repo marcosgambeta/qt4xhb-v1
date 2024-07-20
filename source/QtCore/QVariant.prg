@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QVARIANT_NEW17)
 }
 
 /*
-QVariant( const QList<QVariant> & val )
+QVariant( const QList<QVariant> &val )
 */
 HB_FUNC_STATIC(QVARIANT_NEW27)
 {
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QVariant( const QString & val )
+    QVariant( const QString &val )
     */
     QVariant *obj = new QVariant(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -264,7 +264,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
   else if (ISNUMPAR(1) && ISQLOCALE(1))
   {
     /*
-    QVariant( const QLocale & l )
+    QVariant( const QLocale &l )
     */
     QVariant *obj = new QVariant(*PQLOCALE(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -272,7 +272,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
   else if (ISNUMPAR(1) && ISQREGEXP(1))
   {
     /*
-    QVariant( const QRegExp & regExp )
+    QVariant( const QRegExp &regExp )
     */
     QVariant *obj = new QVariant(*PQREGEXP(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -280,7 +280,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
   else if (ISNUMPAR(1) && ISQEASINGCURVE(1))
   {
     /*
-    QVariant( const QEasingCurve & val )
+    QVariant( const QEasingCurve &val )
     */
     QVariant *obj = new QVariant(*PQEASINGCURVE(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -288,7 +288,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
   else if (ISNUMPAR(1) && ISQVARIANT(1))
   {
     /*
-    QVariant( const QVariant & p )
+    QVariant( const QVariant &p )
     */
     QVariant *obj = new QVariant(*PQVARIANT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -296,7 +296,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
   else if (ISNUMPAR(1) && ISQDATASTREAM(1))
   {
     /*
-    QVariant( QDataStream & s )
+    QVariant( QDataStream &s )
     */
     QVariant *obj = new QVariant(*PQDATASTREAM(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -304,7 +304,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    QVariant( const QByteArray & val )
+    QVariant( const QByteArray &val )
     */
     QVariant *obj = new QVariant(*PQBYTEARRAY(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -312,7 +312,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
   else if (ISNUMPAR(1) && ISQBITARRAY(1))
   {
     /*
-    QVariant( const QBitArray & val )
+    QVariant( const QBitArray &val )
     */
     QVariant *obj = new QVariant(*PQBITARRAY(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -320,7 +320,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
   else if (ISNUMPAR(1) && ISQCHAR(1))
   {
     /*
-    QVariant( const QChar & c )
+    QVariant( const QChar &c )
     */
     QVariant *obj = new QVariant(*PQCHAR(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -328,7 +328,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
   else if (ISNUMPAR(1) && ISQLATIN1STRING(1))
   {
     /*
-    QVariant( const QLatin1String & val )
+    QVariant( const QLatin1String &val )
     */
     QVariant *obj = new QVariant(*PQLATIN1STRING(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -336,7 +336,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
   else if (ISNUMPAR(1) && ISQDATE(1))
   {
     /*
-    QVariant( const QDate & val )
+    QVariant( const QDate &val )
     */
     QVariant *obj = new QVariant(*PQDATE(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -344,7 +344,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
   else if (ISNUMPAR(1) && ISQTIME(1))
   {
     /*
-    QVariant( const QTime & val )
+    QVariant( const QTime &val )
     */
     QVariant *obj = new QVariant(*PQTIME(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -352,7 +352,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
   else if (ISNUMPAR(1) && ISQDATETIME(1))
   {
     /*
-    QVariant( const QDateTime & val )
+    QVariant( const QDateTime &val )
     */
     QVariant *obj = new QVariant(*PQDATETIME(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -360,7 +360,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
   else if (ISNUMPAR(1) && ISQSIZE(1))
   {
     /*
-    QVariant( const QSize & val )
+    QVariant( const QSize &val )
     */
     QVariant *obj = new QVariant(*PQSIZE(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -368,7 +368,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
   else if (ISNUMPAR(1) && ISQSIZEF(1))
   {
     /*
-    QVariant( const QSizeF & val )
+    QVariant( const QSizeF &val )
     */
     QVariant *obj = new QVariant(*PQSIZEF(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -376,7 +376,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    QVariant( const QPoint & val )
+    QVariant( const QPoint &val )
     */
     QVariant *obj = new QVariant(*PQPOINT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -384,7 +384,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
   else if (ISNUMPAR(1) && ISQPOINTF(1))
   {
     /*
-    QVariant( const QPointF & val )
+    QVariant( const QPointF &val )
     */
     QVariant *obj = new QVariant(*PQPOINTF(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -392,7 +392,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
   else if (ISNUMPAR(1) && ISQLINE(1))
   {
     /*
-    QVariant( const QLine & val )
+    QVariant( const QLine &val )
     */
     QVariant *obj = new QVariant(*PQLINE(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -400,7 +400,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
   else if (ISNUMPAR(1) && ISQLINEF(1))
   {
     /*
-    QVariant( const QLineF & val )
+    QVariant( const QLineF &val )
     */
     QVariant *obj = new QVariant(*PQLINEF(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -408,7 +408,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
   else if (ISNUMPAR(1) && ISQRECT(1))
   {
     /*
-    QVariant( const QRect & val )
+    QVariant( const QRect &val )
     */
     QVariant *obj = new QVariant(*PQRECT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -416,7 +416,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
   else if (ISNUMPAR(1) && ISQRECTF(1))
   {
     /*
-    QVariant( const QRectF & val )
+    QVariant( const QRectF &val )
     */
     QVariant *obj = new QVariant(*PQRECTF(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -424,7 +424,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
   else if (ISNUMPAR(1) && ISQURL(1))
   {
     /*
-    QVariant( const QUrl & val )
+    QVariant( const QUrl &val )
     */
     QVariant *obj = new QVariant(*PQURL(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -433,7 +433,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
   else if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
-    QVariant( const QStringList & val )
+    QVariant( const QStringList &val )
     */
     QVariant *obj = new QVariant(PQSTRINGLIST(1));
     Qt4xHb::returnNewObject(obj, true);

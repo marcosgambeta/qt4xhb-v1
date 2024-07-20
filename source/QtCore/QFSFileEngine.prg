@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_NEW)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QFSFileEngine( const QString & file )
+    QFSFileEngine( const QString &file )
     */
     QFSFileEngine *obj = new QFSFileEngine(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -222,7 +222,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_CLOSE)
 }
 
 /*
-virtual bool copy( const QString & copyName )
+virtual bool copy( const QString &copyName )
 */
 HB_FUNC_STATIC(QFSFILEENGINE_COPY)
 {
@@ -415,7 +415,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_ISSEQUENTIAL)
 }
 
 /*
-virtual bool link( const QString & newName )
+virtual bool link( const QString &newName )
 */
 HB_FUNC_STATIC(QFSFILEENGINE_LINK)
 {
@@ -439,7 +439,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_LINK)
 }
 
 /*
-virtual bool mkdir( const QString & name, bool createParentDirectories ) const
+virtual bool mkdir( const QString &name, bool createParentDirectories ) const
 */
 HB_FUNC_STATIC(QFSFILEENGINE_MKDIR)
 {
@@ -607,7 +607,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_REMOVE)
 }
 
 /*
-virtual bool rename( const QString & newName )
+virtual bool rename( const QString &newName )
 */
 HB_FUNC_STATIC(QFSFILEENGINE_RENAME)
 {
@@ -631,7 +631,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_RENAME)
 }
 
 /*
-virtual bool rmdir( const QString & name, bool recurseParentDirectories ) const
+virtual bool rmdir( const QString &name, bool recurseParentDirectories ) const
 */
 HB_FUNC_STATIC(QFSFILEENGINE_RMDIR)
 {
@@ -679,7 +679,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_SEEK)
 }
 
 /*
-virtual void setFileName( const QString & file )
+virtual void setFileName( const QString &file )
 */
 HB_FUNC_STATIC(QFSFILEENGINE_SETFILENAME)
 {
@@ -825,7 +825,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_WRITE)
 }
 
 /*
-static QString currentPath( const QString & fileName = QString() )
+static QString currentPath( const QString &fileName = QString() )
 */
 HB_FUNC_STATIC(QFSFILEENGINE_CURRENTPATH)
 {
@@ -933,7 +933,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_ROOTPATH)
 }
 
 /*
-static bool setCurrentPath( const QString & path )
+static bool setCurrentPath( const QString &path )
 */
 HB_FUNC_STATIC(QFSFILEENGINE_SETCURRENTPATH)
 {

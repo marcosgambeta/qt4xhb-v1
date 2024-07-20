@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_APPEND)
   if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3))
   {
     /*
-    void append( const QString & namespaceUri, const QString & name, const QString & value )
+    void append( const QString &namespaceUri, const QString &name, const QString &value )
     */
     QXmlStreamAttributes *obj = static_cast<QXmlStreamAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_APPEND)
   else if (ISNUMPAR(1) && ISQXMLSTREAMATTRIBUTE(1))
   {
     /*
-    void append( const QXmlStreamAttribute & attribute )
+    void append( const QXmlStreamAttribute &attribute )
     */
     QXmlStreamAttributes *obj = static_cast<QXmlStreamAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_APPEND)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
-    void append( const QString & qualifiedName, const QString & value )
+    void append( const QString &qualifiedName, const QString &value )
     */
     QXmlStreamAttributes *obj = static_cast<QXmlStreamAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_HASATTRIBUTE)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    bool hasAttribute( const QString & qualifiedName ) const
+    bool hasAttribute( const QString &qualifiedName ) const
     */
     QXmlStreamAttributes *obj = static_cast<QXmlStreamAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_HASATTRIBUTE)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
-    bool hasAttribute( const QString & namespaceUri, const QString & name ) const
+    bool hasAttribute( const QString &namespaceUri, const QString &name ) const
     */
     QXmlStreamAttributes *obj = static_cast<QXmlStreamAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_VALUE)
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
-    QStringRef value( const QString & namespaceUri, const QString & name ) const
+    QStringRef value( const QString &namespaceUri, const QString &name ) const
     */
     QXmlStreamAttributes *obj = static_cast<QXmlStreamAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -195,7 +195,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_VALUE)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQLATIN1STRING(2))
   {
     /*
-    QStringRef value( const QString & namespaceUri, QLatin1String name ) const
+    QStringRef value( const QString &namespaceUri, QLatin1String name ) const
     */
     QXmlStreamAttributes *obj = static_cast<QXmlStreamAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_VALUE)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QStringRef value( const QString & qualifiedName ) const
+    QStringRef value( const QString &qualifiedName ) const
     */
     QXmlStreamAttributes *obj = static_cast<QXmlStreamAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
 

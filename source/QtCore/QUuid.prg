@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QUUID_NEW2)
 }
 
 /*
-QUuid( const QString & )
+QUuid( const QString &)
 */
 HB_FUNC_STATIC(QUUID_NEW3)
 {
@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QUUID_NEW4)
 }
 
 /*
-QUuid( const QByteArray & )
+QUuid( const QByteArray &)
 */
 HB_FUNC_STATIC(QUUID_NEW5)
 {
@@ -296,7 +296,7 @@ HB_FUNC_STATIC(QUUID_VERSION)
 }
 
 /*
-static QUuid fromRfc4122( const QByteArray & )
+static QUuid fromRfc4122( const QByteArray &)
 */
 HB_FUNC_STATIC(QUUID_FROMRFC4122)
 {

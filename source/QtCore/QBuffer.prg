@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QBUFFER_DELETE)
 }
 
 /*
-QByteArray & buffer()
+QByteArray &buffer()
 */
 HB_FUNC_STATIC(QBUFFER_BUFFER)
 {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QBUFFER_BUFFER)
 }
 
 /*
-const QByteArray & data() const
+const QByteArray &data() const
 */
 HB_FUNC_STATIC(QBUFFER_DATA)
 {
@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QBUFFER_SETDATA)
   if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    void setData( const QByteArray & data )
+    void setData( const QByteArray &data )
     */
     QBuffer *obj = qobject_cast<QBuffer *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

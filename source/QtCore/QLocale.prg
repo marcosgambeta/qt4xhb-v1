@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QLOCALE_NEW)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QLocale( const QString & name )
+    QLocale( const QString &name )
     */
     QLocale *obj = new QLocale(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QLOCALE_NEW)
   else if (ISNUMPAR(1) && ISQLOCALE(1))
   {
     /*
-    QLocale( const QLocale & other )
+    QLocale( const QLocale &other )
     */
     QLocale *obj = new QLocale(*PQLOCALE(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -252,7 +252,7 @@ HB_FUNC_STATIC(QLOCALE_COUNTRY)
 }
 
 /*
-QString createSeparatedList( const QStringList & list ) const
+QString createSeparatedList( const QStringList &list ) const
 */
 HB_FUNC_STATIC(QLOCALE_CREATESEPARATEDLIST)
 {
@@ -747,7 +747,7 @@ HB_FUNC_STATIC(QLOCALE_QUOTESTRING)
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QString quoteString( const QString & str, QLocale::QuotationStyle style = QLocale::StandardQuotation ) const
+    QString quoteString( const QString &str, QLocale::QuotationStyle style = QLocale::StandardQuotation ) const
     */
     QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -760,7 +760,7 @@ HB_FUNC_STATIC(QLOCALE_QUOTESTRING)
   else if (ISBETWEEN(1, 2) && ISQSTRINGREF(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QString quoteString( const QStringRef & str, QLocale::QuotationStyle style = QLocale::StandardQuotation ) const
+    QString quoteString( const QStringRef &str, QLocale::QuotationStyle style = QLocale::StandardQuotation ) const
     */
     QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -926,7 +926,7 @@ HB_FUNC_STATIC(QLOCALE_TIMEFORMAT)
 }
 
 /*
-QString toCurrencyString( qlonglong value, const QString & symbol = QString() ) const
+QString toCurrencyString( qlonglong value, const QString &symbol = QString() ) const
 */
 HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING1)
 {
@@ -950,7 +950,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING1)
 }
 
 /*
-QString toCurrencyString( short value, const QString & symbol = QString() ) const
+QString toCurrencyString( short value, const QString &symbol = QString() ) const
 */
 HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING2)
 {
@@ -974,7 +974,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING2)
 }
 
 /*
-QString toCurrencyString( ushort value, const QString & symbol = QString() ) const
+QString toCurrencyString( ushort value, const QString &symbol = QString() ) const
 */
 HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING3)
 {
@@ -998,7 +998,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING3)
 }
 
 /*
-QString toCurrencyString( int value, const QString & symbol = QString() ) const
+QString toCurrencyString( int value, const QString &symbol = QString() ) const
 */
 HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING4)
 {
@@ -1022,7 +1022,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING4)
 }
 
 /*
-QString toCurrencyString( uint value, const QString & symbol = QString() ) const
+QString toCurrencyString( uint value, const QString &symbol = QString() ) const
 */
 HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING5)
 {
@@ -1046,7 +1046,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING5)
 }
 
 /*
-QString toCurrencyString( float value, const QString & symbol = QString() ) const
+QString toCurrencyString( float value, const QString &symbol = QString() ) const
 */
 HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING6)
 {
@@ -1070,7 +1070,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING6)
 }
 
 /*
-QString toCurrencyString( qulonglong value, const QString & symbol = QString() ) const
+QString toCurrencyString( qulonglong value, const QString &symbol = QString() ) const
 */
 HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING7)
 {
@@ -1094,7 +1094,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING7)
 }
 
 /*
-QString toCurrencyString( double value, const QString & symbol = QString() ) const
+QString toCurrencyString( double value, const QString &symbol = QString() ) const
 */
 HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING8)
 {
@@ -1126,7 +1126,7 @@ HB_FUNC_STATIC(QLOCALE_TODATE)
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QDate toDate( const QString & string, QLocale::FormatType format = QLocale::LongFormat ) const
+    QDate toDate( const QString &string, QLocale::FormatType format = QLocale::LongFormat ) const
     */
     QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1140,7 +1140,7 @@ HB_FUNC_STATIC(QLOCALE_TODATE)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
-    QDate toDate( const QString & string, const QString & format ) const
+    QDate toDate( const QString &string, const QString &format ) const
     */
     QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1161,7 +1161,7 @@ HB_FUNC_STATIC(QLOCALE_TODATETIME)
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QDateTime toDateTime( const QString & string, QLocale::FormatType format = QLocale::LongFormat ) const
+    QDateTime toDateTime( const QString &string, QLocale::FormatType format = QLocale::LongFormat ) const
     */
     QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1175,7 +1175,7 @@ HB_FUNC_STATIC(QLOCALE_TODATETIME)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
-    QDateTime toDateTime( const QString & string, const QString & format ) const
+    QDateTime toDateTime( const QString &string, const QString &format ) const
     */
     QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1192,7 +1192,7 @@ HB_FUNC_STATIC(QLOCALE_TODATETIME)
 }
 
 /*
-double toDouble( const QString & s, bool * ok = 0 ) const
+double toDouble( const QString &s, bool * ok = 0 ) const
 */
 HB_FUNC_STATIC(QLOCALE_TODOUBLE)
 {
@@ -1218,7 +1218,7 @@ HB_FUNC_STATIC(QLOCALE_TODOUBLE)
 }
 
 /*
-float toFloat( const QString & s, bool * ok = 0 ) const
+float toFloat( const QString &s, bool * ok = 0 ) const
 */
 HB_FUNC_STATIC(QLOCALE_TOFLOAT)
 {
@@ -1244,7 +1244,7 @@ HB_FUNC_STATIC(QLOCALE_TOFLOAT)
 }
 
 /*
-int toInt( const QString & s, bool * ok = 0, int base = 0 ) const
+int toInt( const QString &s, bool * ok = 0, int base = 0 ) const
 */
 HB_FUNC_STATIC(QLOCALE_TOINT)
 {
@@ -1270,7 +1270,7 @@ HB_FUNC_STATIC(QLOCALE_TOINT)
 }
 
 /*
-qlonglong toLongLong( const QString & s, bool * ok = 0, int base = 0 ) const
+qlonglong toLongLong( const QString &s, bool * ok = 0, int base = 0 ) const
 */
 HB_FUNC_STATIC(QLOCALE_TOLONGLONG)
 {
@@ -1296,7 +1296,7 @@ HB_FUNC_STATIC(QLOCALE_TOLONGLONG)
 }
 
 /*
-QString toLower( const QString & str ) const
+QString toLower( const QString &str ) const
 */
 HB_FUNC_STATIC(QLOCALE_TOLOWER)
 {
@@ -1320,7 +1320,7 @@ HB_FUNC_STATIC(QLOCALE_TOLOWER)
 }
 
 /*
-short toShort( const QString & s, bool * ok = 0, int base = 0 ) const
+short toShort( const QString &s, bool * ok = 0, int base = 0 ) const
 */
 HB_FUNC_STATIC(QLOCALE_TOSHORT)
 {
@@ -1370,7 +1370,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING1)
 }
 
 /*
-QString toString( const QDate & date, const QString & format ) const
+QString toString( const QDate &date, const QString &format ) const
 */
 HB_FUNC_STATIC(QLOCALE_TOSTRING2)
 {
@@ -1394,7 +1394,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING2)
 }
 
 /*
-QString toString( const QDate & date, QLocale::FormatType format = QLocale::LongFormat ) const
+QString toString( const QDate &date, QLocale::FormatType format = QLocale::LongFormat ) const
 */
 HB_FUNC_STATIC(QLOCALE_TOSTRING3)
 {
@@ -1419,7 +1419,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING3)
 }
 
 /*
-QString toString( const QTime & time, const QString & format ) const
+QString toString( const QTime &time, const QString &format ) const
 */
 HB_FUNC_STATIC(QLOCALE_TOSTRING4)
 {
@@ -1443,7 +1443,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING4)
 }
 
 /*
-QString toString( const QTime & time, QLocale::FormatType format = QLocale::LongFormat ) const
+QString toString( const QTime &time, QLocale::FormatType format = QLocale::LongFormat ) const
 */
 HB_FUNC_STATIC(QLOCALE_TOSTRING5)
 {
@@ -1468,7 +1468,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING5)
 }
 
 /*
-QString toString( const QDateTime & dateTime, QLocale::FormatType format = QLocale::LongFormat ) const
+QString toString( const QDateTime &dateTime, QLocale::FormatType format = QLocale::LongFormat ) const
 */
 HB_FUNC_STATIC(QLOCALE_TOSTRING6)
 {
@@ -1493,7 +1493,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING6)
 }
 
 /*
-QString toString( const QDateTime & dateTime, const QString & format ) const
+QString toString( const QDateTime &dateTime, const QString &format ) const
 */
 HB_FUNC_STATIC(QLOCALE_TOSTRING7)
 {
@@ -1693,7 +1693,7 @@ HB_FUNC_STATIC(QLOCALE_TOTIME)
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QTime toTime( const QString & string, QLocale::FormatType format = QLocale::LongFormat ) const
+    QTime toTime( const QString &string, QLocale::FormatType format = QLocale::LongFormat ) const
     */
     QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1707,7 +1707,7 @@ HB_FUNC_STATIC(QLOCALE_TOTIME)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
-    QTime toTime( const QString & string, const QString & format ) const
+    QTime toTime( const QString &string, const QString &format ) const
     */
     QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1724,7 +1724,7 @@ HB_FUNC_STATIC(QLOCALE_TOTIME)
 }
 
 /*
-uint toUInt( const QString & s, bool * ok = 0, int base = 0 ) const
+uint toUInt( const QString &s, bool * ok = 0, int base = 0 ) const
 */
 HB_FUNC_STATIC(QLOCALE_TOUINT)
 {
@@ -1750,7 +1750,7 @@ HB_FUNC_STATIC(QLOCALE_TOUINT)
 }
 
 /*
-qlonglong toULongLong( const QString & s, bool * ok = 0, int base = 0 ) const
+qlonglong toULongLong( const QString &s, bool * ok = 0, int base = 0 ) const
 */
 HB_FUNC_STATIC(QLOCALE_TOULONGLONG)
 {
@@ -1776,7 +1776,7 @@ HB_FUNC_STATIC(QLOCALE_TOULONGLONG)
 }
 
 /*
-ushort toUShort( const QString & s, bool * ok = 0, int base = 0 ) const
+ushort toUShort( const QString &s, bool * ok = 0, int base = 0 ) const
 */
 HB_FUNC_STATIC(QLOCALE_TOUSHORT)
 {
@@ -1802,7 +1802,7 @@ HB_FUNC_STATIC(QLOCALE_TOUSHORT)
 }
 
 /*
-QString toUpper( const QString & str ) const
+QString toUpper( const QString &str ) const
 */
 HB_FUNC_STATIC(QLOCALE_TOUPPER)
 {
@@ -2007,7 +2007,7 @@ HB_FUNC_STATIC(QLOCALE_SCRIPTTOSTRING)
 }
 
 /*
-static void setDefault( const QLocale & locale )
+static void setDefault( const QLocale &locale )
 */
 HB_FUNC_STATIC(QLOCALE_SETDEFAULT)
 {

@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QSETTINGS_NEW)
   if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
-    QSettings( const QString & organization, const QString & application = QString(), QObject * parent = 0 )
+    QSettings( const QString &organization, const QString &application = QString(), QObject * parent = 0 )
     */
     QSettings *obj = new QSettings(PQSTRING(1), OPQSTRING(2, QString()), OPQOBJECT(3, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QSETTINGS_NEW)
            (ISQOBJECT(4) || HB_ISNIL(4)))
   {
     /*
-    QSettings( QSettings::Scope scope, const QString & organization, const QString & application = QString(), QObject *
+    QSettings( QSettings::Scope scope, const QString &organization, const QString &application = QString(), QObject *
     parent = 0 )
     */
     QSettings *obj =
@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QSETTINGS_NEW)
            (ISQOBJECT(5) || HB_ISNIL(5)))
   {
     /*
-    QSettings( QSettings::Format format, QSettings::Scope scope, const QString & organization, const QString &
+    QSettings( QSettings::Format format, QSettings::Scope scope, const QString &organization, const QString &
     application = QString(), QObject * parent = 0 )
     */
     QSettings *obj = new QSettings((QSettings::Format)hb_parni(1), (QSettings::Scope)hb_parni(2), PQSTRING(3),
@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QSETTINGS_NEW)
   else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
-    QSettings( const QString & fileName, QSettings::Format format, QObject * parent = 0 )
+    QSettings( const QString &fileName, QSettings::Format format, QObject * parent = 0 )
     */
     QSettings *obj = new QSettings(PQSTRING(1), (QSettings::Format)hb_parni(2), OPQOBJECT(3, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -195,7 +195,7 @@ HB_FUNC_STATIC(QSETTINGS_APPLICATIONNAME)
 }
 
 /*
-void beginGroup( const QString & prefix )
+void beginGroup( const QString &prefix )
 */
 HB_FUNC_STATIC(QSETTINGS_BEGINGROUP)
 {
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QSETTINGS_BEGINGROUP)
 }
 
 /*
-int beginReadArray( const QString & prefix )
+int beginReadArray( const QString &prefix )
 */
 HB_FUNC_STATIC(QSETTINGS_BEGINREADARRAY)
 {
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QSETTINGS_BEGINREADARRAY)
 }
 
 /*
-void beginWriteArray( const QString & prefix, int size = -1 )
+void beginWriteArray( const QString &prefix, int size = -1 )
 */
 HB_FUNC_STATIC(QSETTINGS_BEGINWRITEARRAY)
 {
@@ -345,7 +345,7 @@ HB_FUNC_STATIC(QSETTINGS_CLEAR)
 }
 
 /*
-bool contains( const QString & key ) const
+bool contains( const QString &key ) const
 */
 HB_FUNC_STATIC(QSETTINGS_CONTAINS)
 {
@@ -590,7 +590,7 @@ HB_FUNC_STATIC(QSETTINGS_ORGANIZATIONNAME)
 }
 
 /*
-void remove( const QString & key )
+void remove( const QString &key )
 */
 HB_FUNC_STATIC(QSETTINGS_REMOVE)
 {
@@ -728,7 +728,7 @@ HB_FUNC_STATIC(QSETTINGS_SETINICODEC)
 }
 
 /*
-void setValue( const QString & key, const QVariant & value )
+void setValue( const QString &key, const QVariant &value )
 */
 HB_FUNC_STATIC(QSETTINGS_SETVALUE)
 {
@@ -804,7 +804,7 @@ HB_FUNC_STATIC(QSETTINGS_SYNC)
 }
 
 /*
-QVariant value( const QString & key, const QVariant & defaultValue = QVariant() ) const
+QVariant value( const QString &key, const QVariant &defaultValue = QVariant() ) const
 */
 HB_FUNC_STATIC(QSETTINGS_VALUE)
 {
@@ -870,7 +870,7 @@ HB_FUNC_STATIC(QSETTINGS_SETDEFAULTFORMAT)
 }
 
 /*
-static void setPath( QSettings::Format format, QSettings::Scope scope, const QString & path )
+static void setPath( QSettings::Format format, QSettings::Scope scope, const QString &path )
 */
 HB_FUNC_STATIC(QSETTINGS_SETPATH)
 {

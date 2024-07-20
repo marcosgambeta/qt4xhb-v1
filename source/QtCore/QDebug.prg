@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QDEBUG_NEW)
   else if (ISNUMPAR(1) && ISQDEBUG(1))
   {
     /*
-    QDebug( const QDebug & other )
+    QDebug( const QDebug &other )
     */
     QDebug *obj = new QDebug(*PQDEBUG(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QDEBUG_DELETE)
 }
 
 /*
-QDebug & maybeSpace()
+QDebug &maybeSpace()
 */
 HB_FUNC_STATIC(QDEBUG_MAYBESPACE)
 {
@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QDEBUG_MAYBESPACE)
 }
 
 /*
-QDebug & nospace()
+QDebug &nospace()
 */
 HB_FUNC_STATIC(QDEBUG_NOSPACE)
 {
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QDEBUG_NOSPACE)
 }
 
 /*
-QDebug & space()
+QDebug &space()
 */
 HB_FUNC_STATIC(QDEBUG_SPACE)
 {

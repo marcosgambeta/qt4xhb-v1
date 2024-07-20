@@ -81,7 +81,7 @@ RETURN
 #include <QtCore/QStringList>
 
     /*
-    QCoreApplication ( int & argc, char ** argv )
+    QCoreApplication ( int &argc, char ** argv )
     */
 HB_FUNC_STATIC(QCOREAPPLICATION_NEW)
 {
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_QUIT)
 }
 
 /*
-static void addLibraryPath( const QString & path )
+static void addLibraryPath( const QString &path )
 */
 HB_FUNC_STATIC(QCOREAPPLICATION_ADDLIBRARYPATH)
 {
@@ -577,7 +577,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_PROCESSEVENTS)
 }
 
 /*
-static void removeLibraryPath( const QString & path )
+static void removeLibraryPath( const QString &path )
 */
 HB_FUNC_STATIC(QCOREAPPLICATION_REMOVELIBRARYPATH)
 {
@@ -694,7 +694,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_SENDPOSTEDEVENTS)
 }
 
 /*
-static void setApplicationName( const QString & application )
+static void setApplicationName( const QString &application )
 */
 HB_FUNC_STATIC(QCOREAPPLICATION_SETAPPLICATIONNAME)
 {
@@ -715,7 +715,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_SETAPPLICATIONNAME)
 }
 
 /*
-static void setApplicationVersion( const QString & version )
+static void setApplicationVersion( const QString &version )
 */
 HB_FUNC_STATIC(QCOREAPPLICATION_SETAPPLICATIONVERSION)
 {
@@ -757,7 +757,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_SETATTRIBUTE)
 }
 
 /*
-static void setLibraryPaths( const QStringList & paths )
+static void setLibraryPaths( const QStringList &paths )
 */
 HB_FUNC_STATIC(QCOREAPPLICATION_SETLIBRARYPATHS)
 {
@@ -778,7 +778,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_SETLIBRARYPATHS)
 }
 
 /*
-static void setOrganizationDomain( const QString & orgDomain )
+static void setOrganizationDomain( const QString &orgDomain )
 */
 HB_FUNC_STATIC(QCOREAPPLICATION_SETORGANIZATIONDOMAIN)
 {
@@ -799,7 +799,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_SETORGANIZATIONDOMAIN)
 }
 
 /*
-static void setOrganizationName( const QString & orgName )
+static void setOrganizationName( const QString &orgName )
 */
 HB_FUNC_STATIC(QCOREAPPLICATION_SETORGANIZATIONNAME)
 {

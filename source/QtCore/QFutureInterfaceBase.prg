@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_NEW)
   else if (ISNUMPAR(1) && ISQFUTUREINTERFACEBASE(1))
   {
     /*
-    QFutureInterfaceBase( const QFutureInterfaceBase & other )
+    QFutureInterfaceBase( const QFutureInterfaceBase &other )
     */
     QFutureInterfaceBase *obj = new QFutureInterfaceBase(*PQFUTUREINTERFACEBASE(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -429,7 +429,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_PROGRESSVALUE)
 }
 
 /*
-void setProgressValueAndText( int progressValue, const QString & progressText )
+void setProgressValueAndText( int progressValue, const QString &progressText )
 */
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_SETPROGRESSVALUEANDTEXT)
 {

@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QABSTRACTFILEENGINE_CLOSE)
 }
 
 /*
-virtual bool copy( const QString & newName )
+virtual bool copy( const QString &newName )
 */
 HB_FUNC_STATIC(QABSTRACTFILEENGINE_COPY)
 {
@@ -194,7 +194,7 @@ HB_FUNC_STATIC(QABSTRACTFILEENGINE_COPY)
 }
 
 /*
-virtual QStringList entryList( QDir::Filters filters, const QStringList & filterNames ) const
+virtual QStringList entryList( QDir::Filters filters, const QStringList &filterNames ) const
 */
 HB_FUNC_STATIC(QABSTRACTFILEENGINE_ENTRYLIST)
 {
@@ -438,7 +438,7 @@ HB_FUNC_STATIC(QABSTRACTFILEENGINE_ISSEQUENTIAL)
 }
 
 /*
-virtual bool link( const QString & newName )
+virtual bool link( const QString &newName )
 */
 HB_FUNC_STATIC(QABSTRACTFILEENGINE_LINK)
 {
@@ -462,7 +462,7 @@ HB_FUNC_STATIC(QABSTRACTFILEENGINE_LINK)
 }
 
 /*
-virtual bool mkdir( const QString & dirName, bool createParentDirectories ) const
+virtual bool mkdir( const QString &dirName, bool createParentDirectories ) const
 */
 HB_FUNC_STATIC(QABSTRACTFILEENGINE_MKDIR)
 {
@@ -630,7 +630,7 @@ HB_FUNC_STATIC(QABSTRACTFILEENGINE_REMOVE)
 }
 
 /*
-virtual bool rename( const QString & newName )
+virtual bool rename( const QString &newName )
 */
 HB_FUNC_STATIC(QABSTRACTFILEENGINE_RENAME)
 {
@@ -654,7 +654,7 @@ HB_FUNC_STATIC(QABSTRACTFILEENGINE_RENAME)
 }
 
 /*
-virtual bool rmdir( const QString & dirName, bool recurseParentDirectories ) const
+virtual bool rmdir( const QString &dirName, bool recurseParentDirectories ) const
 */
 HB_FUNC_STATIC(QABSTRACTFILEENGINE_RMDIR)
 {
@@ -702,7 +702,7 @@ HB_FUNC_STATIC(QABSTRACTFILEENGINE_SEEK)
 }
 
 /*
-virtual void setFileName( const QString & file )
+virtual void setFileName( const QString &file )
 */
 HB_FUNC_STATIC(QABSTRACTFILEENGINE_SETFILENAME)
 {
@@ -848,7 +848,7 @@ HB_FUNC_STATIC(QABSTRACTFILEENGINE_WRITE)
 }
 
 /*
-static QAbstractFileEngine * create( const QString & fileName )
+static QAbstractFileEngine * create( const QString &fileName )
 */
 HB_FUNC_STATIC(QABSTRACTFILEENGINE_CREATE)
 {

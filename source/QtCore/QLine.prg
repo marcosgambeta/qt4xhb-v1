@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QLINE_NEW)
   else if (ISNUMPAR(2) && ISQPOINT(1) && ISQPOINT(2))
   {
     /*
-    QLine( const QPoint & p1, const QPoint & p2 )
+    QLine( const QPoint &p1, const QPoint &p2 )
     */
     QLine *obj = new QLine(*PQPOINT(1), *PQPOINT(2));
     Qt4xHb::returnNewObject(obj, true);
@@ -330,7 +330,7 @@ HB_FUNC_STATIC(QLINE_ISNULL)
 }
 
 /*
-void setP1( const QPoint & p1 )
+void setP1( const QPoint &p1 )
 */
 HB_FUNC_STATIC(QLINE_SETP1)
 {
@@ -356,7 +356,7 @@ HB_FUNC_STATIC(QLINE_SETP1)
 }
 
 /*
-void setP2( const QPoint & p2 )
+void setP2( const QPoint &p2 )
 */
 HB_FUNC_STATIC(QLINE_SETP2)
 {
@@ -408,7 +408,7 @@ HB_FUNC_STATIC(QLINE_SETLINE)
 }
 
 /*
-void setPoints( const QPoint & p1, const QPoint & p2 )
+void setPoints( const QPoint &p1, const QPoint &p2 )
 */
 HB_FUNC_STATIC(QLINE_SETPOINTS)
 {
@@ -438,7 +438,7 @@ HB_FUNC_STATIC(QLINE_TRANSLATE)
   if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    void translate( const QPoint & offset )
+    void translate( const QPoint &offset )
     */
     QLine *obj = static_cast<QLine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -474,7 +474,7 @@ HB_FUNC_STATIC(QLINE_TRANSLATED)
   if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    QLine translated( const QPoint & offset ) const
+    QLine translated( const QPoint &offset ) const
     */
     QLine *obj = static_cast<QLine *>(Qt4xHb::itemGetPtrStackSelfItem());
 

@@ -109,8 +109,8 @@ HB_FUNC_STATIC(QTRANSLATOR_LOAD)
       (HB_ISCHAR(4) || HB_ISNIL(4)))
   {
     /*
-    bool load( const QString & filename, const QString & directory = QString(), const QString & search_delimiters =
-    QString(), const QString & suffix = QString() )
+    bool load( const QString &filename, const QString &directory = QString(), const QString &search_delimiters =
+    QString(), const QString &suffix = QString() )
     */
     QTranslator *obj = qobject_cast<QTranslator *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -123,8 +123,8 @@ HB_FUNC_STATIC(QTRANSLATOR_LOAD)
            (HB_ISCHAR(4) || HB_ISNIL(4)) && (HB_ISCHAR(5) || HB_ISNIL(5)))
   {
     /*
-    bool load( const QLocale & locale, const QString & filename, const QString & prefix = QString(), const QString &
-    directory = QString(), const QString & suffix = QString() )
+    bool load( const QLocale &locale, const QString &filename, const QString &prefix = QString(), const QString &
+    directory = QString(), const QString &suffix = QString() )
     */
     QTranslator *obj = qobject_cast<QTranslator *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

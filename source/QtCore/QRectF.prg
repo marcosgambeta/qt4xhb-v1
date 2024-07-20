@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QRECTF_NEW)
   else if (ISNUMPAR(2) && ISQPOINTF(1) && ISQSIZEF(2))
   {
     /*
-    QRectF( const QPointF & topLeft, const QSizeF & size )
+    QRectF( const QPointF &topLeft, const QSizeF &size )
     */
     QRectF *obj = new QRectF(*PQPOINTF(1), *PQSIZEF(2));
     Qt4xHb::returnNewObject(obj, true);
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QRECTF_NEW)
   else if (ISNUMPAR(2) && ISQPOINTF(1) && ISQPOINTF(2))
   {
     /*
-    QRectF( const QPointF & topLeft, const QPointF & bottomRight )
+    QRectF( const QPointF &topLeft, const QPointF &bottomRight )
     */
     QRectF *obj = new QRectF(*PQPOINTF(1), *PQPOINTF(2));
     Qt4xHb::returnNewObject(obj, true);
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QRECTF_NEW)
   else if (ISNUMPAR(1) && ISQRECT(1))
   {
     /*
-    QRectF( const QRect & rectangle )
+    QRectF( const QRect &rectangle )
     */
     QRectF *obj = new QRectF(*PQRECT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -324,7 +324,7 @@ HB_FUNC_STATIC(QRECTF_CONTAINS)
   if (ISNUMPAR(1) && ISQPOINTF(1))
   {
     /*
-    bool contains( const QPointF & point ) const
+    bool contains( const QPointF &point ) const
     */
     QRectF *obj = static_cast<QRectF *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -348,7 +348,7 @@ HB_FUNC_STATIC(QRECTF_CONTAINS)
   else if (ISNUMPAR(1) && ISQRECTF(1))
   {
     /*
-    bool contains( const QRectF & rectangle ) const
+    bool contains( const QRectF &rectangle ) const
     */
     QRectF *obj = static_cast<QRectF *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -456,7 +456,7 @@ HB_FUNC_STATIC(QRECTF_HEIGHT)
 }
 
 /*
-QRectF intersected( const QRectF & rectangle ) const
+QRectF intersected( const QRectF &rectangle ) const
 */
 HB_FUNC_STATIC(QRECTF_INTERSECTED)
 {
@@ -481,7 +481,7 @@ HB_FUNC_STATIC(QRECTF_INTERSECTED)
 }
 
 /*
-bool intersects( const QRectF & rectangle ) const
+bool intersects( const QRectF &rectangle ) const
 */
 HB_FUNC_STATIC(QRECTF_INTERSECTS)
 {
@@ -627,7 +627,7 @@ HB_FUNC_STATIC(QRECTF_MOVEBOTTOM)
 }
 
 /*
-void moveBottomLeft( const QPointF & position )
+void moveBottomLeft( const QPointF &position )
 */
 HB_FUNC_STATIC(QRECTF_MOVEBOTTOMLEFT)
 {
@@ -653,7 +653,7 @@ HB_FUNC_STATIC(QRECTF_MOVEBOTTOMLEFT)
 }
 
 /*
-void moveBottomRight( const QPointF & position )
+void moveBottomRight( const QPointF &position )
 */
 HB_FUNC_STATIC(QRECTF_MOVEBOTTOMRIGHT)
 {
@@ -679,7 +679,7 @@ HB_FUNC_STATIC(QRECTF_MOVEBOTTOMRIGHT)
 }
 
 /*
-void moveCenter( const QPointF & position )
+void moveCenter( const QPointF &position )
 */
 HB_FUNC_STATIC(QRECTF_MOVECENTER)
 {
@@ -775,7 +775,7 @@ HB_FUNC_STATIC(QRECTF_MOVETO)
   else if (ISNUMPAR(1) && ISQPOINTF(1))
   {
     /*
-    void moveTo( const QPointF & position )
+    void moveTo( const QPointF &position )
     */
     QRectF *obj = static_cast<QRectF *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -819,7 +819,7 @@ HB_FUNC_STATIC(QRECTF_MOVETOP)
 }
 
 /*
-void moveTopLeft( const QPointF & position )
+void moveTopLeft( const QPointF &position )
 */
 HB_FUNC_STATIC(QRECTF_MOVETOPLEFT)
 {
@@ -845,7 +845,7 @@ HB_FUNC_STATIC(QRECTF_MOVETOPLEFT)
 }
 
 /*
-void moveTopRight( const QPointF & position )
+void moveTopRight( const QPointF &position )
 */
 HB_FUNC_STATIC(QRECTF_MOVETOPRIGHT)
 {
@@ -946,7 +946,7 @@ HB_FUNC_STATIC(QRECTF_SETBOTTOM)
 }
 
 /*
-void setBottomLeft( const QPointF & position )
+void setBottomLeft( const QPointF &position )
 */
 HB_FUNC_STATIC(QRECTF_SETBOTTOMLEFT)
 {
@@ -972,7 +972,7 @@ HB_FUNC_STATIC(QRECTF_SETBOTTOMLEFT)
 }
 
 /*
-void setBottomRight( const QPointF & position )
+void setBottomRight( const QPointF &position )
 */
 HB_FUNC_STATIC(QRECTF_SETBOTTOMRIGHT)
 {
@@ -1128,7 +1128,7 @@ HB_FUNC_STATIC(QRECTF_SETRIGHT)
 }
 
 /*
-void setSize( const QSizeF & size )
+void setSize( const QSizeF &size )
 */
 HB_FUNC_STATIC(QRECTF_SETSIZE)
 {
@@ -1180,7 +1180,7 @@ HB_FUNC_STATIC(QRECTF_SETTOP)
 }
 
 /*
-void setTopLeft( const QPointF & position )
+void setTopLeft( const QPointF &position )
 */
 HB_FUNC_STATIC(QRECTF_SETTOPLEFT)
 {
@@ -1206,7 +1206,7 @@ HB_FUNC_STATIC(QRECTF_SETTOPLEFT)
 }
 
 /*
-void setTopRight( const QPointF & position )
+void setTopRight( const QPointF &position )
 */
 HB_FUNC_STATIC(QRECTF_SETTOPRIGHT)
 {
@@ -1477,7 +1477,7 @@ HB_FUNC_STATIC(QRECTF_TRANSLATE)
   else if (ISNUMPAR(1) && ISQPOINTF(1))
   {
     /*
-    void translate( const QPointF & offset )
+    void translate( const QPointF &offset )
     */
     QRectF *obj = static_cast<QRectF *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1512,7 +1512,7 @@ HB_FUNC_STATIC(QRECTF_TRANSLATED)
   else if (ISNUMPAR(1) && ISQPOINTF(1))
   {
     /*
-    QRectF translated( const QPointF & offset ) const
+    QRectF translated( const QPointF &offset ) const
     */
     QRectF *obj = static_cast<QRectF *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1529,7 +1529,7 @@ HB_FUNC_STATIC(QRECTF_TRANSLATED)
 }
 
 /*
-QRectF united( const QRectF & rectangle ) const
+QRectF united( const QRectF &rectangle ) const
 */
 HB_FUNC_STATIC(QRECTF_UNITED)
 {

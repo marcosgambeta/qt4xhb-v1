@@ -802,7 +802,7 @@ HB_FUNC_STATIC(QIODEVICE_WRITE)
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    qint64 write( const QByteArray & byteArray )
+    qint64 write( const QByteArray &byteArray )
     */
     QIODevice *obj = qobject_cast<QIODevice *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
