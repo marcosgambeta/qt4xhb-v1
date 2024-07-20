@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_NEW)
   else if (ISNUMPAR(1) && ISQWEBHITTESTRESULT(1))
   {
     /*
-    QWebHitTestResult( const QWebHitTestResult & other )
+    QWebHitTestResult( const QWebHitTestResult &other )
     */
     QWebHitTestResult *obj = new QWebHitTestResult(*PQWEBHITTESTRESULT(1));
     Qt4xHb::returnNewObject(obj, true);

@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_DELETE)
 }
 
 /*
-bool findText( const QString & subString, QWebPage::FindFlags options = 0 )
+bool findText( const QString &subString, QWebPage::FindFlags options = 0 )
 */
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_FINDTEXT)
 {
@@ -243,7 +243,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_LOAD)
   if (ISNUMPAR(1) && ISQURL(1))
   {
     /*
-    void load( const QUrl & url )
+    void load( const QUrl &url )
     */
     QGraphicsWebView *obj = qobject_cast<QGraphicsWebView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -257,8 +257,8 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_LOAD)
   else if (ISBETWEEN(1, 3) && ISQNETWORKREQUEST(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (ISQBYTEARRAY(3) || HB_ISNIL(3)))
   {
     /*
-    void load( const QNetworkRequest & request, QNetworkAccessManager::Operation operation =
-    QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
+    void load( const QNetworkRequest &request, QNetworkAccessManager::Operation operation =
+    QNetworkAccessManager::GetOperation, const QByteArray &body = QByteArray() )
     */
     QGraphicsWebView *obj = qobject_cast<QGraphicsWebView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -353,7 +353,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_RESIZESTOCONTENTS)
 }
 
 /*
-void setContent( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
+void setContent( const QByteArray &data, const QString &mimeType = QString(), const QUrl &baseUrl = QUrl() )
 */
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETCONTENT)
 {
@@ -380,7 +380,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETCONTENT)
 }
 
 /*
-void setHtml( const QString & html, const QUrl & baseUrl = QUrl() )
+void setHtml( const QString &html, const QUrl &baseUrl = QUrl() )
 */
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETHTML)
 {
@@ -484,7 +484,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETTILEDBACKINGSTOREFROZEN)
 }
 
 /*
-void setUrl( const QUrl & )
+void setUrl( const QUrl &)
 */
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETURL)
 {

@@ -63,7 +63,7 @@ RETURN
 #include <QtWebKit/QWebDatabase>
 
     /*
-    QWebSecurityOrigin( const QWebSecurityOrigin & other )
+    QWebSecurityOrigin( const QWebSecurityOrigin &other )
     */
 HB_FUNC_STATIC(QWEBSECURITYORIGIN_NEW)
 {
@@ -292,7 +292,7 @@ HB_FUNC_STATIC(QWEBSECURITYORIGIN_SETDATABASEQUOTA)
 }
 
 /*
-static void addLocalScheme( const QString & scheme )
+static void addLocalScheme( const QString &scheme )
 */
 HB_FUNC_STATIC(QWEBSECURITYORIGIN_ADDLOCALSCHEME)
 {
@@ -383,7 +383,7 @@ HB_FUNC_STATIC(QWEBSECURITYORIGIN_LOCALSCHEMES)
 }
 
 /*
-static void removeLocalScheme( const QString & scheme )
+static void removeLocalScheme( const QString &scheme )
 */
 HB_FUNC_STATIC(QWEBSECURITYORIGIN_REMOVELOCALSCHEME)
 {

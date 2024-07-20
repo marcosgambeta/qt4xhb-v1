@@ -256,7 +256,7 @@ HB_FUNC_STATIC(QWEBPAGE_CURRENTFRAME)
 }
 
 /*
-bool findText( const QString & subString, QWebPage::FindFlags options = 0 )
+bool findText( const QString &subString, QWebPage::FindFlags options = 0 )
 */
 HB_FUNC_STATIC(QWEBPAGE_FINDTEXT)
 {
@@ -328,7 +328,7 @@ HB_FUNC_STATIC(QWEBPAGE_FORWARDUNSUPPORTEDCONTENT)
 }
 
 /*
-QWebFrame * frameAt( const QPoint & pos ) const
+QWebFrame * frameAt( const QPoint &pos ) const
 */
 HB_FUNC_STATIC(QWEBPAGE_FRAMEAT)
 {
@@ -728,7 +728,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETNETWORKACCESSMANAGER)
 }
 
 /*
-void setPalette( const QPalette & palette )
+void setPalette( const QPalette &palette )
 */
 HB_FUNC_STATIC(QWEBPAGE_SETPALETTE)
 {
@@ -780,7 +780,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETPLUGINFACTORY)
 }
 
 /*
-void setPreferredContentsSize( const QSize & size ) const
+void setPreferredContentsSize( const QSize &size ) const
 */
 HB_FUNC_STATIC(QWEBPAGE_SETPREFERREDCONTENTSSIZE)
 {
@@ -832,7 +832,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETVIEW)
 }
 
 /*
-void setViewportSize( const QSize & size ) const
+void setViewportSize( const QSize &size ) const
 */
 HB_FUNC_STATIC(QWEBPAGE_SETVIEWPORTSIZE)
 {
@@ -1006,7 +1006,7 @@ HB_FUNC_STATIC(QWEBPAGE_UNDOSTACK)
 }
 
 /*
-void updatePositionDependentActions( const QPoint & pos )
+void updatePositionDependentActions( const QPoint &pos )
 */
 HB_FUNC_STATIC(QWEBPAGE_UPDATEPOSITIONDEPENDENTACTIONS)
 {

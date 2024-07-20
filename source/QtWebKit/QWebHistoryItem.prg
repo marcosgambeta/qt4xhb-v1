@@ -62,7 +62,7 @@ RETURN
 #include <QtCore/QVariant>
 
     /*
-    QWebHistoryItem( const QWebHistoryItem & other )
+    QWebHistoryItem( const QWebHistoryItem &other )
     */
 HB_FUNC_STATIC(QWEBHISTORYITEM_NEW)
 {
@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QWEBHISTORYITEM_ORIGINALURL)
 }
 
 /*
-void setUserData( const QVariant & userData )
+void setUserData( const QVariant &userData )
 */
 HB_FUNC_STATIC(QWEBHISTORYITEM_SETUSERDATA)
 {

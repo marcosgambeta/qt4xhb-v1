@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT)
   if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2))
   {
     /*
-    void addToJavaScriptWindowObject( const QString & name, QObject * object )
+    void addToJavaScriptWindowObject( const QString &name, QObject * object )
     */
     QWebFrame *obj = qobject_cast<QWebFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT)
   else if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQOBJECT(2) && HB_ISNUM(3))
   {
     /*
-    void addToJavaScriptWindowObject( const QString & name, QObject * object, QScriptEngine::ValueOwnership own )
+    void addToJavaScriptWindowObject( const QString &name, QObject * object, QScriptEngine::ValueOwnership own )
     */
     QWebFrame *obj = qobject_cast<QWebFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -268,7 +268,7 @@ HB_FUNC_STATIC(QWEBFRAME_DOCUMENTELEMENT)
 }
 
 /*
-QWebElementCollection findAllElements( const QString & selectorQuery ) const
+QWebElementCollection findAllElements( const QString &selectorQuery ) const
 */
 HB_FUNC_STATIC(QWEBFRAME_FINDALLELEMENTS)
 {
@@ -293,7 +293,7 @@ HB_FUNC_STATIC(QWEBFRAME_FINDALLELEMENTS)
 }
 
 /*
-QWebElement findFirstElement( const QString & selectorQuery ) const
+QWebElement findFirstElement( const QString &selectorQuery ) const
 */
 HB_FUNC_STATIC(QWEBFRAME_FINDFIRSTELEMENT)
 {
@@ -391,7 +391,7 @@ HB_FUNC_STATIC(QWEBFRAME_HASFOCUS)
 }
 
 /*
-QWebHitTestResult hitTestContent( const QPoint & pos ) const
+QWebHitTestResult hitTestContent( const QPoint &pos ) const
 */
 HB_FUNC_STATIC(QWEBFRAME_HITTESTCONTENT)
 {
@@ -445,7 +445,7 @@ HB_FUNC_STATIC(QWEBFRAME_LOAD)
   if (ISNUMPAR(1) && ISQURL(1))
   {
     /*
-    void load( const QUrl & url )
+    void load( const QUrl &url )
     */
     QWebFrame *obj = qobject_cast<QWebFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -459,8 +459,8 @@ HB_FUNC_STATIC(QWEBFRAME_LOAD)
   else if (ISBETWEEN(1, 3) && ISQNETWORKREQUEST(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (ISQBYTEARRAY(3) || HB_ISNIL(3)))
   {
     /*
-    void load( const QNetworkRequest & req, QNetworkAccessManager::Operation operation =
-    QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
+    void load( const QNetworkRequest &req, QNetworkAccessManager::Operation operation =
+    QNetworkAccessManager::GetOperation, const QByteArray &body = QByteArray() )
     */
     QWebFrame *obj = qobject_cast<QWebFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -574,7 +574,7 @@ HB_FUNC_STATIC(QWEBFRAME_RENDER)
   else if (ISNUMPAR(2) && ISQPAINTER(1) && ISQREGION(2))
   {
     /*
-    void render( QPainter * painter, const QRegion & clip )
+    void render( QPainter * painter, const QRegion &clip )
     */
     QWebFrame *obj = qobject_cast<QWebFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -588,7 +588,7 @@ HB_FUNC_STATIC(QWEBFRAME_RENDER)
   else if (ISBETWEEN(2, 3) && ISQPAINTER(1) && HB_ISNUM(2) && (ISQREGION(3) || HB_ISNIL(3)))
   {
     /*
-    void render( QPainter * painter, QWebFrame::RenderLayer layer, const QRegion & clip = QRegion() )
+    void render( QPainter * painter, QWebFrame::RenderLayer layer, const QRegion &clip = QRegion() )
     */
     QWebFrame *obj = qobject_cast<QWebFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -828,7 +828,7 @@ HB_FUNC_STATIC(QWEBFRAME_SCROLLPOSITION)
 }
 
 /*
-void scrollToAnchor( const QString & anchor )
+void scrollToAnchor( const QString &anchor )
 */
 HB_FUNC_STATIC(QWEBFRAME_SCROLLTOANCHOR)
 {
@@ -879,7 +879,7 @@ HB_FUNC_STATIC(QWEBFRAME_SECURITYORIGIN)
 }
 
 /*
-void setContent( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
+void setContent( const QByteArray &data, const QString &mimeType = QString(), const QUrl &baseUrl = QUrl() )
 */
 HB_FUNC_STATIC(QWEBFRAME_SETCONTENT)
 {
@@ -932,7 +932,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETFOCUS)
 }
 
 /*
-void setHtml( const QString & html, const QUrl & baseUrl = QUrl() )
+void setHtml( const QString &html, const QUrl &baseUrl = QUrl() )
 */
 HB_FUNC_STATIC(QWEBFRAME_SETHTML)
 {
@@ -1010,7 +1010,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETSCROLLBARVALUE)
 }
 
 /*
-void setScrollPosition( const QPoint & pos )
+void setScrollPosition( const QPoint &pos )
 */
 HB_FUNC_STATIC(QWEBFRAME_SETSCROLLPOSITION)
 {
@@ -1062,7 +1062,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETTEXTSIZEMULTIPLIER)
 }
 
 /*
-void setUrl( const QUrl & url )
+void setUrl( const QUrl &url )
 */
 HB_FUNC_STATIC(QWEBFRAME_SETURL)
 {
@@ -1259,7 +1259,7 @@ HB_FUNC_STATIC(QWEBFRAME_ZOOMFACTOR)
 }
 
 /*
-QVariant evaluateJavaScript( const QString & scriptSource )
+QVariant evaluateJavaScript( const QString &scriptSource )
 */
 HB_FUNC_STATIC(QWEBFRAME_EVALUATEJAVASCRIPT)
 {
