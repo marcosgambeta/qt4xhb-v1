@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_ABSOLUTEDIR)
 }
 
 /*
-virtual void addResourceFile( const QString & path ) = 0
+virtual void addResourceFile( const QString &path ) = 0
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_ADDRESOURCEFILE)
 {
@@ -610,7 +610,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_PIXMAPFUNCTION)
 }
 
 /*
-virtual void removeResourceFile( const QString & path ) = 0
+virtual void removeResourceFile( const QString &path ) = 0
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_REMOVERESOURCEFILE)
 {
@@ -662,7 +662,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_RESOURCEFILES)
 }
 
 /*
-virtual void setAuthor( const QString & author ) = 0
+virtual void setAuthor( const QString &author ) = 0
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETAUTHOR)
 {
@@ -689,7 +689,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETAUTHOR)
 }
 
 /*
-virtual void setComment( const QString & comment ) = 0
+virtual void setComment( const QString &comment ) = 0
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETCOMMENT)
 {
@@ -716,7 +716,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETCOMMENT)
 }
 
 /*
-virtual void setExportMacro( const QString & exportMacro ) = 0
+virtual void setExportMacro( const QString &exportMacro ) = 0
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETEXPORTMACRO)
 {
@@ -743,7 +743,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETEXPORTMACRO)
 }
 
 /*
-virtual void setIncludeHints( const QStringList & includeHints ) = 0
+virtual void setIncludeHints( const QStringList &includeHints ) = 0
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETINCLUDEHINTS)
 {
@@ -797,7 +797,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETLAYOUTDEFAULT)
 }
 
 /*
-virtual void setLayoutFunction( const QString & margin, const QString & spacing ) = 0
+virtual void setLayoutFunction( const QString &margin, const QString &spacing ) = 0
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETLAYOUTFUNCTION)
 {
@@ -851,7 +851,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETMAINCONTAINER)
 }
 
 /*
-virtual void setPixmapFunction( const QString & pixmapFunction ) = 0
+virtual void setPixmapFunction( const QString &pixmapFunction ) = 0
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETPIXMAPFUNCTION)
 {
@@ -978,7 +978,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETCONTENTS)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    virtual void setContents( const QString & contents ) = 0
+    virtual void setContents( const QString &contents ) = 0
     */
     QDesignerFormWindowInterface *obj =
         qobject_cast<QDesignerFormWindowInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1051,7 +1051,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETFEATURES)
 }
 
 /*
-virtual void setFileName( const QString & fileName ) = 0
+virtual void setFileName( const QString &fileName ) = 0
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETFILENAME)
 {
@@ -1078,7 +1078,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETFILENAME)
 }
 
 /*
-virtual void setGrid( const QPoint & grid ) = 0
+virtual void setGrid( const QPoint &grid ) = 0
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETGRID)
 {

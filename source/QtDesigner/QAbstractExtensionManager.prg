@@ -67,7 +67,7 @@ HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_DELETE)
 }
 
 /*
-virtual QObject * extension( QObject * object, const QString & iid ) const = 0
+virtual QObject * extension( QObject * object, const QString &iid ) const = 0
 */
 HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_EXTENSION)
 {
@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_EXTENSION)
 }
 
 /*
-virtual void registerExtensions( QAbstractExtensionFactory * factory, const QString & iid ) = 0
+virtual void registerExtensions( QAbstractExtensionFactory * factory, const QString &iid ) = 0
 */
 HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_REGISTEREXTENSIONS)
 {
@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_REGISTEREXTENSIONS)
 }
 
 /*
-virtual void unregisterExtensions( QAbstractExtensionFactory * factory, const QString & iid ) = 0
+virtual void unregisterExtensions( QAbstractExtensionFactory * factory, const QString &iid ) = 0
 */
 HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_UNREGISTEREXTENSIONS)
 {

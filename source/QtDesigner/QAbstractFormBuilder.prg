@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QABSTRACTFORMBUILDER_SAVE)
 }
 
 /*
-void setWorkingDirectory( const QDir & directory )
+void setWorkingDirectory( const QDir &directory )
 */
 HB_FUNC_STATIC(QABSTRACTFORMBUILDER_SETWORKINGDIRECTORY)
 {
