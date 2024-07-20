@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_ABORT)
 }
 
 /*
-void connectToServer( const QString & name, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
+void connectToServer( const QString &name, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
 */
 HB_FUNC_STATIC(QLOCALSOCKET_CONNECTTOSERVER)
 {

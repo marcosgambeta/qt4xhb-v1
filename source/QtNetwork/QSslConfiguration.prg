@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_NEW)
   if (ISNUMPAR(1) && ISQSSLCONFIGURATION(1))
   {
     /*
-    QSslConfiguration( const QSslConfiguration & other )
+    QSslConfiguration( const QSslConfiguration &other )
     */
     QSslConfiguration *obj = new QSslConfiguration(*PQSSLCONFIGURATION(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -463,7 +463,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SESSIONCIPHER)
 }
 
 /*
-void setCaCertificates( const QList<QSslCertificate> & certificates )
+void setCaCertificates( const QList<QSslCertificate> &certificates )
 */
 HB_FUNC_STATIC(QSSLCONFIGURATION_SETCACERTIFICATES)
 {
@@ -497,7 +497,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SETCACERTIFICATES)
 }
 
 /*
-void setCiphers( const QList<QSslCipher> & ciphers )
+void setCiphers( const QList<QSslCipher> &ciphers )
 */
 HB_FUNC_STATIC(QSSLCONFIGURATION_SETCIPHERS)
 {
@@ -531,7 +531,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SETCIPHERS)
 }
 
 /*
-void setLocalCertificate( const QSslCertificate & certificate )
+void setLocalCertificate( const QSslCertificate &certificate )
 */
 HB_FUNC_STATIC(QSSLCONFIGURATION_SETLOCALCERTIFICATE)
 {
@@ -609,7 +609,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SETPEERVERIFYMODE)
 }
 
 /*
-void setPrivateKey( const QSslKey & key )
+void setPrivateKey( const QSslKey &key )
 */
 HB_FUNC_STATIC(QSSLCONFIGURATION_SETPRIVATEKEY)
 {
@@ -681,7 +681,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_DEFAULTCONFIGURATION)
 }
 
 /*
-static void setDefaultConfiguration( const QSslConfiguration & configuration )
+static void setDefaultConfiguration( const QSslConfiguration &configuration )
 */
 HB_FUNC_STATIC(QSSLCONFIGURATION_SETDEFAULTCONFIGURATION)
 {

@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_NEW)
   else if (ISBETWEEN(0, 2) && (ISQBYTEARRAY(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QSslCertificate( const QByteArray & data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem )
+    QSslCertificate( const QByteArray &data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem )
     */
     QSslCertificate *obj =
         new QSslCertificate(HB_ISNIL(1) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(1)),
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_NEW)
   else if (ISNUMPAR(1) && ISQSSLCERTIFICATE(1))
   {
     /*
-    QSslCertificate( const QSslCertificate & other )
+    QSslCertificate( const QSslCertificate &other )
     */
     QSslCertificate *obj = new QSslCertificate(*PQSSLCERTIFICATE(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -287,7 +287,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_ISSUERINFO)
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    QString issuerInfo( const QByteArray & tag ) const
+    QString issuerInfo( const QByteArray &tag ) const
     */
     QSslCertificate *obj = static_cast<QSslCertificate *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -369,7 +369,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_SUBJECTINFO)
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    QString subjectInfo( const QByteArray & tag ) const
+    QString subjectInfo( const QByteArray &tag ) const
     */
     QSslCertificate *obj = static_cast<QSslCertificate *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -460,7 +460,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_VERSION)
 }
 
 /*
-QList<QSslCertificate> fromData( const QByteArray & data, QSsl::EncodingFormat format = QSsl::Pem )
+QList<QSslCertificate> fromData( const QByteArray &data, QSsl::EncodingFormat format = QSsl::Pem )
 */
 HB_FUNC_STATIC(QSSLCERTIFICATE_FROMDATA)
 {
@@ -564,7 +564,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_FROMDEVICE)
 }
 
 /*
-QList<QSslCertificate> fromPath( const QString & path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax
+QList<QSslCertificate> fromPath( const QString &path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax
 syntax = QRegExp::FixedString )
 */
 HB_FUNC_STATIC(QSSLCERTIFICATE_FROMPATH)

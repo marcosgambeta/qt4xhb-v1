@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_CACHEDIRECTORY)
 }
 
 /*
-QNetworkCacheMetaData fileMetaData( const QString & fileName ) const
+QNetworkCacheMetaData fileMetaData( const QString &fileName ) const
 */
 HB_FUNC_STATIC(QNETWORKDISKCACHE_FILEMETADATA)
 {
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_MAXIMUMCACHESIZE)
 }
 
 /*
-void setCacheDirectory( const QString & cacheDir )
+void setCacheDirectory( const QString &cacheDir )
 */
 HB_FUNC_STATIC(QNETWORKDISKCACHE_SETCACHEDIRECTORY)
 {
@@ -239,7 +239,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_CACHESIZE)
 }
 
 /*
-virtual QIODevice * data( const QUrl & url )
+virtual QIODevice * data( const QUrl &url )
 */
 HB_FUNC_STATIC(QNETWORKDISKCACHE_DATA)
 {
@@ -290,7 +290,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_INSERT)
 }
 
 /*
-virtual QNetworkCacheMetaData metaData( const QUrl & url )
+virtual QNetworkCacheMetaData metaData( const QUrl &url )
 */
 HB_FUNC_STATIC(QNETWORKDISKCACHE_METADATA)
 {
@@ -315,7 +315,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_METADATA)
 }
 
 /*
-virtual QIODevice * prepare( const QNetworkCacheMetaData & metaData )
+virtual QIODevice * prepare( const QNetworkCacheMetaData &metaData )
 */
 HB_FUNC_STATIC(QNETWORKDISKCACHE_PREPARE)
 {
@@ -340,7 +340,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_PREPARE)
 }
 
 /*
-virtual bool remove( const QUrl & url )
+virtual bool remove( const QUrl &url )
 */
 HB_FUNC_STATIC(QNETWORKDISKCACHE_REMOVE)
 {
@@ -364,7 +364,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_REMOVE)
 }
 
 /*
-virtual void updateMetaData( const QNetworkCacheMetaData & metaData )
+virtual void updateMetaData( const QNetworkCacheMetaData &metaData )
 */
 HB_FUNC_STATIC(QNETWORKDISKCACHE_UPDATEMETADATA)
 {

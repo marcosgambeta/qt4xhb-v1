@@ -215,7 +215,7 @@ HB_FUNC_STATIC(QLOCALSERVER_ISLISTENING)
 }
 
 /*
-bool listen( const QString & name )
+bool listen( const QString &name )
 */
 HB_FUNC_STATIC(QLOCALSERVER_LISTEN)
 {
@@ -388,7 +388,7 @@ HB_FUNC_STATIC(QLOCALSERVER_WAITFORNEWCONNECTION)
 }
 
 /*
-static bool removeServer( const QString & name )
+static bool removeServer( const QString &name )
 */
 HB_FUNC_STATIC(QLOCALSERVER_REMOVESERVER)
 {

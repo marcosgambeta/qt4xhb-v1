@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QNETWORKCACHEMETADATA_NEW)
   else if (ISNUMPAR(1) && ISQNETWORKCACHEMETADATA(1))
   {
     /*
-    QNetworkCacheMetaData( const QNetworkCacheMetaData & other )
+    QNetworkCacheMetaData( const QNetworkCacheMetaData &other )
     */
     QNetworkCacheMetaData *obj = new QNetworkCacheMetaData(*PQNETWORKCACHEMETADATA(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -199,7 +199,7 @@ HB_FUNC_STATIC(QNETWORKCACHEMETADATA_SAVETODISK)
 }
 
 /*
-void setExpirationDate( const QDateTime & dateTime )
+void setExpirationDate( const QDateTime &dateTime )
 */
 HB_FUNC_STATIC(QNETWORKCACHEMETADATA_SETEXPIRATIONDATE)
 {
@@ -225,7 +225,7 @@ HB_FUNC_STATIC(QNETWORKCACHEMETADATA_SETEXPIRATIONDATE)
 }
 
 /*
-void setLastModified( const QDateTime & dateTime )
+void setLastModified( const QDateTime &dateTime )
 */
 HB_FUNC_STATIC(QNETWORKCACHEMETADATA_SETLASTMODIFIED)
 {
@@ -277,7 +277,7 @@ HB_FUNC_STATIC(QNETWORKCACHEMETADATA_SETSAVETODISK)
 }
 
 /*
-void setUrl( const QUrl & url )
+void setUrl( const QUrl &url )
 */
 HB_FUNC_STATIC(QNETWORKCACHEMETADATA_SETURL)
 {

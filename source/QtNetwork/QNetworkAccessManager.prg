@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_COOKIEJAR)
 }
 
 /*
-QNetworkReply * deleteResource( const QNetworkRequest & request )
+QNetworkReply * deleteResource( const QNetworkRequest &request )
 */
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_DELETERESOURCE)
 {
@@ -237,7 +237,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_DELETERESOURCE)
 }
 
 /*
-QNetworkReply * get( const QNetworkRequest & request )
+QNetworkReply * get( const QNetworkRequest &request )
 */
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_GET)
 {
@@ -262,7 +262,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_GET)
 }
 
 /*
-QNetworkReply * head( const QNetworkRequest & request )
+QNetworkReply * head( const QNetworkRequest &request )
 */
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_HEAD)
 {
@@ -315,7 +315,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_POST)
   if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQIODEVICE(2))
   {
     /*
-    QNetworkReply * post( const QNetworkRequest & request, QIODevice * data )
+    QNetworkReply * post( const QNetworkRequest &request, QIODevice * data )
     */
     QNetworkAccessManager *obj = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -328,7 +328,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_POST)
   else if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2))
   {
     /*
-    QNetworkReply * post( const QNetworkRequest & request, const QByteArray & data )
+    QNetworkReply * post( const QNetworkRequest &request, const QByteArray &data )
     */
     QNetworkAccessManager *obj = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -399,7 +399,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_PUT)
   if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQIODEVICE(2))
   {
     /*
-    QNetworkReply * put( const QNetworkRequest & request, QIODevice * data )
+    QNetworkReply * put( const QNetworkRequest &request, QIODevice * data )
     */
     QNetworkAccessManager *obj = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -412,7 +412,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_PUT)
   else if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2))
   {
     /*
-    QNetworkReply * put( const QNetworkRequest & request, const QByteArray & data )
+    QNetworkReply * put( const QNetworkRequest &request, const QByteArray &data )
     */
     QNetworkAccessManager *obj = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -429,7 +429,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_PUT)
 }
 
 /*
-QNetworkReply * sendCustomRequest( const QNetworkRequest & request, const QByteArray & verb, QIODevice * data = 0 )
+QNetworkReply * sendCustomRequest( const QNetworkRequest &request, const QByteArray &verb, QIODevice * data = 0 )
 */
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST)
 {
@@ -480,7 +480,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETCACHE)
 }
 
 /*
-void setConfiguration( const QNetworkConfiguration & config )
+void setConfiguration( const QNetworkConfiguration &config )
 */
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETCONFIGURATION)
 {
@@ -558,7 +558,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETNETWORKACCESSIBLE)
 }
 
 /*
-void setProxy( const QNetworkProxy & proxy )
+void setProxy( const QNetworkProxy &proxy )
 */
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETPROXY)
 {

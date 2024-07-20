@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_NEW)
   else if (ISNUMPAR(1) && ISQNETWORKADDRESSENTRY(1))
   {
     /*
-    QNetworkAddressEntry( const QNetworkAddressEntry & other )
+    QNetworkAddressEntry( const QNetworkAddressEntry &other )
     */
     QNetworkAddressEntry *obj = new QNetworkAddressEntry(*PQNETWORKADDRESSENTRY(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -196,7 +196,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_PREFIXLENGTH)
 }
 
 /*
-void setBroadcast( const QHostAddress & newBroadcast )
+void setBroadcast( const QHostAddress &newBroadcast )
 */
 HB_FUNC_STATIC(QNETWORKADDRESSENTRY_SETBROADCAST)
 {
@@ -222,7 +222,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_SETBROADCAST)
 }
 
 /*
-void setIp( const QHostAddress & newIp )
+void setIp( const QHostAddress &newIp )
 */
 HB_FUNC_STATIC(QNETWORKADDRESSENTRY_SETIP)
 {
@@ -248,7 +248,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_SETIP)
 }
 
 /*
-void setNetmask( const QHostAddress & newNetmask )
+void setNetmask( const QHostAddress &newNetmask )
 */
 HB_FUNC_STATIC(QNETWORKADDRESSENTRY_SETNETMASK)
 {

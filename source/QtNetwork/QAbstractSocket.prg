@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_CONNECTTOHOST)
   if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    void connectToHost( const QString & hostName, quint16 port, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
+    void connectToHost( const QString &hostName, quint16 port, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
     */
     QAbstractSocket *obj = qobject_cast<QAbstractSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_CONNECTTOHOST)
   else if (ISBETWEEN(2, 3) && ISQHOSTADDRESS(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    void connectToHost( const QHostAddress & address, quint16 port, QIODevice::OpenMode openMode = QIODevice::ReadWrite
+    void connectToHost( const QHostAddress &address, quint16 port, QIODevice::OpenMode openMode = QIODevice::ReadWrite
     )
     */
     QAbstractSocket *obj = qobject_cast<QAbstractSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -453,7 +453,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_READBUFFERSIZE)
 }
 
 /*
-void setProxy( const QNetworkProxy & networkProxy )
+void setProxy( const QNetworkProxy &networkProxy )
 */
 HB_FUNC_STATIC(QABSTRACTSOCKET_SETPROXY)
 {
@@ -534,7 +534,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_SETSOCKETDESCRIPTOR)
 }
 
 /*
-void setSocketOption( QAbstractSocket::SocketOption option, const QVariant & value )
+void setSocketOption( QAbstractSocket::SocketOption option, const QVariant &value )
 */
 HB_FUNC_STATIC(QABSTRACTSOCKET_SETSOCKETOPTION)
 {

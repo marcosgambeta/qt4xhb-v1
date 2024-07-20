@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QTCPSERVER_ISLISTENING)
 }
 
 /*
-bool listen( const QHostAddress & address = QHostAddress::Any, quint16 port = 0 )
+bool listen( const QHostAddress &address = QHostAddress::Any, quint16 port = 0 )
 */
 HB_FUNC_STATIC(QTCPSERVER_LISTEN)
 {
@@ -395,7 +395,7 @@ HB_FUNC_STATIC(QTCPSERVER_SETMAXPENDINGCONNECTIONS)
 }
 
 /*
-void setProxy( const QNetworkProxy & networkProxy )
+void setProxy( const QNetworkProxy &networkProxy )
 */
 HB_FUNC_STATIC(QTCPSERVER_SETPROXY)
 {
