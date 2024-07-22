@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_DELETE)
 }
 
 /*
-QAbstractMessageHandler * messageHandler() const
+QAbstractMessageHandler *messageHandler() const
 */
 HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_MESSAGEHANDLER)
 {
@@ -158,7 +158,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_NAMEPOOL)
 }
 
 /*
-QNetworkAccessManager * networkAccessManager() const
+QNetworkAccessManager *networkAccessManager() const
 */
 HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_NETWORKACCESSMANAGER)
 {
@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_SCHEMA)
 }
 
 /*
-void setMessageHandler( QAbstractMessageHandler * handler )
+void setMessageHandler( QAbstractMessageHandler *handler )
 */
 HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_SETMESSAGEHANDLER)
 {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_SETMESSAGEHANDLER)
 }
 
 /*
-void setNetworkAccessManager( QNetworkAccessManager * manager )
+void setNetworkAccessManager( QNetworkAccessManager *manager )
 */
 HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_SETNETWORKACCESSMANAGER)
 {
@@ -286,7 +286,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_SETSCHEMA)
 }
 
 /*
-void setUriResolver( const QAbstractUriResolver * resolver )
+void setUriResolver( const QAbstractUriResolver *resolver )
 */
 HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_SETURIRESOLVER)
 {
@@ -312,7 +312,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_SETURIRESOLVER)
 }
 
 /*
-const QAbstractUriResolver * uriResolver() const
+const QAbstractUriResolver *uriResolver() const
 */
 HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_URIRESOLVER)
 {
@@ -353,7 +353,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_VALIDATE)
   else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (ISQURL(2) || HB_ISNIL(2)))
   {
     /*
-    bool validate( QIODevice * source, const QUrl &documentUri = QUrl() ) const
+    bool validate( QIODevice *source, const QUrl &documentUri = QUrl() ) const
     */
     QXmlSchemaValidator *obj = static_cast<QXmlSchemaValidator *>(Qt4xHb::itemGetPtrStackSelfItem());
 

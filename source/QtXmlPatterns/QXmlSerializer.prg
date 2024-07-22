@@ -55,7 +55,7 @@ RETURN
 #include "qt4xhb_utils.hpp"
 
     /*
-    QXmlSerializer( const QXmlQuery &query, QIODevice * outputDevice )
+    QXmlSerializer( const QXmlQuery &query, QIODevice *outputDevice )
     */
 HB_FUNC_STATIC(QXMLSERIALIZER_NEW)
 {
@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_NEW)
 }
 
 /*
-const QTextCodec * codec() const
+const QTextCodec *codec() const
 */
 HB_FUNC_STATIC(QXMLSERIALIZER_CODEC)
 {
@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_CODEC)
 }
 
 /*
-QIODevice * outputDevice() const
+QIODevice *outputDevice() const
 */
 HB_FUNC_STATIC(QXMLSERIALIZER_OUTPUTDEVICE)
 {
@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_OUTPUTDEVICE)
 }
 
 /*
-void setCodec( const QTextCodec * outputCodec )
+void setCodec( const QTextCodec *outputCodec )
 */
 HB_FUNC_STATIC(QXMLSERIALIZER_SETCODEC)
 {

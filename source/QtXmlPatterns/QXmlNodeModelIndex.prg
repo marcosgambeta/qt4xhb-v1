@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QXMLNODEMODELINDEX_DATA)
 }
 
 /*
-void * internalPointer() const
+void *internalPointer() const
 */
 HB_FUNC_STATIC(QXMLNODEMODELINDEX_INTERNALPOINTER)
 {
@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QXMLNODEMODELINDEX_ISNULL)
 }
 
 /*
-const QAbstractXmlNodeModel * model() const
+const QAbstractXmlNodeModel *model() const
 */
 HB_FUNC_STATIC(QXMLNODEMODELINDEX_MODEL)
 {

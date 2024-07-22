@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_LOAD)
   else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (ISQURL(2) || HB_ISNIL(2)))
   {
     /*
-    bool load( QIODevice * source, const QUrl &documentUri = QUrl() )
+    bool load( QIODevice *source, const QUrl &documentUri = QUrl() )
     */
     QXmlSchema *obj = static_cast<QXmlSchema *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -200,7 +200,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_LOAD)
 }
 
 /*
-QAbstractMessageHandler * messageHandler() const
+QAbstractMessageHandler *messageHandler() const
 */
 HB_FUNC_STATIC(QXMLSCHEMA_MESSAGEHANDLER)
 {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_NAMEPOOL)
 }
 
 /*
-QNetworkAccessManager * networkAccessManager() const
+QNetworkAccessManager *networkAccessManager() const
 */
 HB_FUNC_STATIC(QXMLSCHEMA_NETWORKACCESSMANAGER)
 {
@@ -275,7 +275,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_NETWORKACCESSMANAGER)
 }
 
 /*
-void setMessageHandler( QAbstractMessageHandler * handler )
+void setMessageHandler( QAbstractMessageHandler *handler )
 */
 HB_FUNC_STATIC(QXMLSCHEMA_SETMESSAGEHANDLER)
 {
@@ -301,7 +301,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_SETMESSAGEHANDLER)
 }
 
 /*
-void setNetworkAccessManager( QNetworkAccessManager * manager )
+void setNetworkAccessManager( QNetworkAccessManager *manager )
 */
 HB_FUNC_STATIC(QXMLSCHEMA_SETNETWORKACCESSMANAGER)
 {
@@ -327,7 +327,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_SETNETWORKACCESSMANAGER)
 }
 
 /*
-void setUriResolver( const QAbstractUriResolver * resolver )
+void setUriResolver( const QAbstractUriResolver *resolver )
 */
 HB_FUNC_STATIC(QXMLSCHEMA_SETURIRESOLVER)
 {
@@ -353,7 +353,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_SETURIRESOLVER)
 }
 
 /*
-const QAbstractUriResolver * uriResolver() const
+const QAbstractUriResolver *uriResolver() const
 */
 HB_FUNC_STATIC(QXMLSCHEMA_URIRESOLVER)
 {

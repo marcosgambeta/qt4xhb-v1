@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QXMLQUERY_BINDVARIABLE)
   else if (ISNUMPAR(2) && ISQXMLNAME(1) && ISQIODEVICE(2))
   {
     /*
-    void bindVariable( const QXmlName &name, QIODevice * device )
+    void bindVariable( const QXmlName &name, QIODevice *device )
     */
     QXmlQuery *obj = static_cast<QXmlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QXMLQUERY_BINDVARIABLE)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQIODEVICE(2))
   {
     /*
-    void bindVariable( const QString &localName, QIODevice * device )
+    void bindVariable( const QString &localName, QIODevice *device )
     */
     QXmlQuery *obj = static_cast<QXmlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -225,7 +225,7 @@ HB_FUNC_STATIC(QXMLQUERY_EVALUATETO)
   if (ISNUMPAR(1) && ISQXMLRESULTITEMS(1))
   {
     /*
-    void evaluateTo( QXmlResultItems * result ) const
+    void evaluateTo( QXmlResultItems *result ) const
     */
     QXmlQuery *obj = static_cast<QXmlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -239,7 +239,7 @@ HB_FUNC_STATIC(QXMLQUERY_EVALUATETO)
   else if (ISNUMPAR(1) && ISQABSTRACTXMLRECEIVER(1))
   {
     /*
-    bool evaluateTo( QAbstractXmlReceiver * callback ) const
+    bool evaluateTo( QAbstractXmlReceiver *callback ) const
     */
     QXmlQuery *obj = static_cast<QXmlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -251,7 +251,7 @@ HB_FUNC_STATIC(QXMLQUERY_EVALUATETO)
   else if (ISNUMPAR(1) && ISQIODEVICE(1))
   {
     /*
-    bool evaluateTo( QIODevice * target ) const
+    bool evaluateTo( QIODevice *target ) const
     */
     QXmlQuery *obj = static_cast<QXmlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -316,7 +316,7 @@ HB_FUNC_STATIC(QXMLQUERY_ISVALID)
 }
 
 /*
-QAbstractMessageHandler * messageHandler() const
+QAbstractMessageHandler *messageHandler() const
 */
 HB_FUNC_STATIC(QXMLQUERY_MESSAGEHANDLER)
 {
@@ -366,7 +366,7 @@ HB_FUNC_STATIC(QXMLQUERY_NAMEPOOL)
 }
 
 /*
-QNetworkAccessManager * networkAccessManager() const
+QNetworkAccessManager *networkAccessManager() const
 */
 HB_FUNC_STATIC(QXMLQUERY_NETWORKACCESSMANAGER)
 {
@@ -445,7 +445,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETFOCUS)
   else if (ISNUMPAR(1) && ISQIODEVICE(1))
   {
     /*
-    bool setFocus( QIODevice * document )
+    bool setFocus( QIODevice *document )
     */
     QXmlQuery *obj = static_cast<QXmlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -509,7 +509,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETINITIALTEMPLATENAME)
 }
 
 /*
-void setMessageHandler( QAbstractMessageHandler * aMessageHandler )
+void setMessageHandler( QAbstractMessageHandler *aMessageHandler )
 */
 HB_FUNC_STATIC(QXMLQUERY_SETMESSAGEHANDLER)
 {
@@ -535,7 +535,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETMESSAGEHANDLER)
 }
 
 /*
-void setNetworkAccessManager( QNetworkAccessManager * newManager )
+void setNetworkAccessManager( QNetworkAccessManager *newManager )
 */
 HB_FUNC_STATIC(QXMLQUERY_SETNETWORKACCESSMANAGER)
 {
@@ -565,7 +565,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETQUERY)
   if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (ISQURL(2) || HB_ISNIL(2)))
   {
     /*
-    void setQuery( QIODevice * sourceCode, const QUrl &documentURI = QUrl() )
+    void setQuery( QIODevice *sourceCode, const QUrl &documentURI = QUrl() )
     */
     QXmlQuery *obj = static_cast<QXmlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -611,7 +611,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETQUERY)
 }
 
 /*
-void setUriResolver( const QAbstractUriResolver * resolver )
+void setUriResolver( const QAbstractUriResolver *resolver )
 */
 HB_FUNC_STATIC(QXMLQUERY_SETURIRESOLVER)
 {
@@ -637,7 +637,7 @@ HB_FUNC_STATIC(QXMLQUERY_SETURIRESOLVER)
 }
 
 /*
-const QAbstractUriResolver * uriResolver() const
+const QAbstractUriResolver *uriResolver() const
 */
 HB_FUNC_STATIC(QXMLQUERY_URIRESOLVER)
 {
