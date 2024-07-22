@@ -69,8 +69,8 @@ HB_FUNC_STATIC(QXMLNAME_NEW)
            (HB_ISCHAR(4) || HB_ISNIL(4)))
   {
     /*
-    QXmlName( QXmlNamePool &namePool, const QString &localName, const QString &namespaceURI = QString(), const
-    QString &prefix = QString() )
+    QXmlName(QXmlNamePool &namePool, const QString &localName, const QString &namespaceURI = QString(), const
+    QString &prefix = QString())
     */
     QXmlName *obj = new QXmlName(*PQXMLNAMEPOOL(1), PQSTRING(2), OPQSTRING(3, QString()), OPQSTRING(4, QString()));
     Qt4xHb::returnNewObject(obj, true);
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QXMLNAME_ISNULL)
 }
 
 /*
-QString localName( const QXmlNamePool &namePool ) const
+QString localName(const QXmlNamePool &namePool) const
 */
 HB_FUNC_STATIC(QXMLNAME_LOCALNAME)
 {
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QXMLNAME_LOCALNAME)
 }
 
 /*
-QString namespaceUri( const QXmlNamePool &namePool ) const
+QString namespaceUri(const QXmlNamePool &namePool) const
 */
 HB_FUNC_STATIC(QXMLNAME_NAMESPACEURI)
 {
@@ -154,7 +154,7 @@ HB_FUNC_STATIC(QXMLNAME_NAMESPACEURI)
 }
 
 /*
-QString prefix( const QXmlNamePool &namePool ) const
+QString prefix(const QXmlNamePool &namePool) const
 */
 HB_FUNC_STATIC(QXMLNAME_PREFIX)
 {
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QXMLNAME_PREFIX)
 }
 
 /*
-QString toClarkName( const QXmlNamePool &namePool ) const
+QString toClarkName(const QXmlNamePool &namePool) const
 */
 HB_FUNC_STATIC(QXMLNAME_TOCLARKNAME)
 {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QXMLNAME_TOCLARKNAME)
 }
 
 /*
-static QXmlName fromClarkName( const QString &clarkName, const QXmlNamePool &namePool )
+static QXmlName fromClarkName(const QString &clarkName, const QXmlNamePool &namePool)
 */
 HB_FUNC_STATIC(QXMLNAME_FROMCLARKNAME)
 {
@@ -222,7 +222,7 @@ HB_FUNC_STATIC(QXMLNAME_FROMCLARKNAME)
 }
 
 /*
-static bool isNCName( const QString &candidate )
+static bool isNCName(const QString &candidate)
 */
 HB_FUNC_STATIC(QXMLNAME_ISNCNAME)
 {

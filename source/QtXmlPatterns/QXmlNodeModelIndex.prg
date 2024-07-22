@@ -65,7 +65,7 @@ HB_FUNC_STATIC(QXMLNODEMODELINDEX_NEW)
   else if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
   {
     /*
-    QXmlNodeModelIndex( const QXmlNodeModelIndex &other )
+    QXmlNodeModelIndex(const QXmlNodeModelIndex &other)
     */
     QXmlNodeModelIndex *obj = new QXmlNodeModelIndex(*PQXMLNODEMODELINDEX(1));
     Qt4xHb::returnNewObject(obj, true);
