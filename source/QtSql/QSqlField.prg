@@ -77,7 +77,7 @@ HB_FUNC_STATIC(QSQLFIELD_NEW)
   if (ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
     /*
-    QSqlField( const QString &fieldName = QString(), QVariant::Type type = QVariant::Invalid )
+    QSqlField(const QString &fieldName = QString(), QVariant::Type type = QVariant::Invalid)
     */
     QSqlField *obj = new QSqlField(OPQSTRING(1, QString()),
                                    HB_ISNIL(2) ? (QVariant::Type)QVariant::Invalid : (QVariant::Type)hb_parni(2));
@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QSQLFIELD_NEW)
   else if (ISNUMPAR(1) && ISQSQLFIELD(1))
   {
     /*
-    QSqlField( const QSqlField &other )
+    QSqlField(const QSqlField &other)
     */
     QSqlField *obj = new QSqlField(*PQSQLFIELD(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -381,7 +381,7 @@ HB_FUNC_STATIC(QSQLFIELD_REQUIREDSTATUS)
 }
 
 /*
-void setAutoValue( bool autoVal )
+void setAutoValue(bool autoVal)
 */
 HB_FUNC_STATIC(QSQLFIELD_SETAUTOVALUE)
 {
@@ -407,7 +407,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETAUTOVALUE)
 }
 
 /*
-void setDefaultValue( const QVariant &value )
+void setDefaultValue(const QVariant &value)
 */
 HB_FUNC_STATIC(QSQLFIELD_SETDEFAULTVALUE)
 {
@@ -433,7 +433,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETDEFAULTVALUE)
 }
 
 /*
-void setGenerated( bool gen )
+void setGenerated(bool gen)
 */
 HB_FUNC_STATIC(QSQLFIELD_SETGENERATED)
 {
@@ -459,7 +459,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETGENERATED)
 }
 
 /*
-void setLength( int fieldLength )
+void setLength(int fieldLength)
 */
 HB_FUNC_STATIC(QSQLFIELD_SETLENGTH)
 {
@@ -485,7 +485,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETLENGTH)
 }
 
 /*
-void setName( const QString &name )
+void setName(const QString &name)
 */
 HB_FUNC_STATIC(QSQLFIELD_SETNAME)
 {
@@ -511,7 +511,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETNAME)
 }
 
 /*
-void setPrecision( int precision )
+void setPrecision(int precision)
 */
 HB_FUNC_STATIC(QSQLFIELD_SETPRECISION)
 {
@@ -537,7 +537,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETPRECISION)
 }
 
 /*
-void setReadOnly( bool readOnly )
+void setReadOnly(bool readOnly)
 */
 HB_FUNC_STATIC(QSQLFIELD_SETREADONLY)
 {
@@ -563,7 +563,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETREADONLY)
 }
 
 /*
-void setRequired( bool required )
+void setRequired(bool required)
 */
 HB_FUNC_STATIC(QSQLFIELD_SETREQUIRED)
 {
@@ -589,7 +589,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETREQUIRED)
 }
 
 /*
-void setRequiredStatus( QSqlField::RequiredStatus required )
+void setRequiredStatus(QSqlField::RequiredStatus required)
 */
 HB_FUNC_STATIC(QSQLFIELD_SETREQUIREDSTATUS)
 {
@@ -615,7 +615,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETREQUIREDSTATUS)
 }
 
 /*
-void setType( QVariant::Type type )
+void setType(QVariant::Type type)
 */
 HB_FUNC_STATIC(QSQLFIELD_SETTYPE)
 {
@@ -641,7 +641,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETTYPE)
 }
 
 /*
-void setValue( const QVariant &value )
+void setValue(const QVariant &value)
 */
 HB_FUNC_STATIC(QSQLFIELD_SETVALUE)
 {

@@ -54,7 +54,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QSqlRelationalTableModel( QObject *parent = 0, QSqlDatabase db = QSqlDatabase() )
+    QSqlRelationalTableModel(QObject *parent = 0, QSqlDatabase db = QSqlDatabase())
     */
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_NEW)
 {
@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_DELETE)
 }
 
 /*
-QSqlRelation relation( int column ) const
+QSqlRelation relation(int column) const
 */
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_RELATION)
 {
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_RELATION)
 }
 
 /*
-virtual QSqlTableModel *relationModel( int column ) const
+virtual QSqlTableModel *relationModel(int column) const
 */
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_RELATIONMODEL)
 {
@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_RELATIONMODEL)
 }
 
 /*
-virtual void setRelation( int column, const QSqlRelation &relation )
+virtual void setRelation(int column, const QSqlRelation &relation)
 */
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETRELATION)
 {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_CLEAR)
 }
 
 /*
-virtual QVariant data( const QModelIndex &index, int role = Qt::DisplayRole ) const
+virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
 */
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_DATA)
 {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_DATA)
 }
 
 /*
-virtual bool removeColumns( int column, int count, const QModelIndex &parent = QModelIndex() )
+virtual bool removeColumns(int column, int count, const QModelIndex &parent = QModelIndex())
 */
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_REMOVECOLUMNS)
 {
@@ -265,7 +265,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SELECT)
 }
 
 /*
-virtual bool setData( const QModelIndex &index, const QVariant &value, int role = Qt::EditRole )
+virtual bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole)
 */
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETDATA)
 {
@@ -289,7 +289,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETDATA)
 }
 
 /*
-virtual void setTable( const QString &table )
+virtual void setTable(const QString &table)
 */
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETTABLE)
 {
@@ -315,7 +315,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETTABLE)
 }
 
 /*
-virtual void revertRow( int row )
+virtual void revertRow(int row)
 */
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_REVERTROW)
 {

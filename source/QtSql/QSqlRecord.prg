@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QSQLRECORD_NEW)
   else if (ISNUMPAR(1) && ISQSQLRECORD(1))
   {
     /*
-    QSqlRecord( const QSqlRecord &other )
+    QSqlRecord(const QSqlRecord &other)
     */
     QSqlRecord *obj = new QSqlRecord(*PQSQLRECORD(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QSQLRECORD_DELETE)
 }
 
 /*
-void append( const QSqlField &field )
+void append(const QSqlField &field)
 */
 HB_FUNC_STATIC(QSQLRECORD_APPEND)
 {
@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QSQLRECORD_CLEARVALUES)
 }
 
 /*
-bool contains( const QString &name ) const
+bool contains(const QString &name) const
 */
 HB_FUNC_STATIC(QSQLRECORD_CONTAINS)
 {
@@ -241,7 +241,7 @@ HB_FUNC_STATIC(QSQLRECORD_FIELD)
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    QSqlField field( int index ) const
+    QSqlField field(int index) const
     */
     QSqlRecord *obj = static_cast<QSqlRecord *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -254,7 +254,7 @@ HB_FUNC_STATIC(QSQLRECORD_FIELD)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QSqlField field( const QString &name ) const
+    QSqlField field(const QString &name) const
     */
     QSqlRecord *obj = static_cast<QSqlRecord *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -271,7 +271,7 @@ HB_FUNC_STATIC(QSQLRECORD_FIELD)
 }
 
 /*
-QString fieldName( int index ) const
+QString fieldName(int index) const
 */
 HB_FUNC_STATIC(QSQLRECORD_FIELDNAME)
 {
@@ -295,7 +295,7 @@ HB_FUNC_STATIC(QSQLRECORD_FIELDNAME)
 }
 
 /*
-int indexOf( const QString &name ) const
+int indexOf(const QString &name) const
 */
 HB_FUNC_STATIC(QSQLRECORD_INDEXOF)
 {
@@ -319,7 +319,7 @@ HB_FUNC_STATIC(QSQLRECORD_INDEXOF)
 }
 
 /*
-void insert( int pos, const QSqlField &field )
+void insert(int pos, const QSqlField &field)
 */
 HB_FUNC_STATIC(QSQLRECORD_INSERT)
 {
@@ -373,7 +373,7 @@ HB_FUNC_STATIC(QSQLRECORD_ISGENERATED)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    bool isGenerated( const QString &name ) const
+    bool isGenerated(const QString &name) const
     */
     QSqlRecord *obj = static_cast<QSqlRecord *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -385,7 +385,7 @@ HB_FUNC_STATIC(QSQLRECORD_ISGENERATED)
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    bool isGenerated( int index ) const
+    bool isGenerated(int index) const
     */
     QSqlRecord *obj = static_cast<QSqlRecord *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -405,7 +405,7 @@ HB_FUNC_STATIC(QSQLRECORD_ISNULL)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    bool isNull( const QString &name ) const
+    bool isNull(const QString &name) const
     */
     QSqlRecord *obj = static_cast<QSqlRecord *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -417,7 +417,7 @@ HB_FUNC_STATIC(QSQLRECORD_ISNULL)
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    bool isNull( int index ) const
+    bool isNull(int index) const
     */
     QSqlRecord *obj = static_cast<QSqlRecord *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -433,7 +433,7 @@ HB_FUNC_STATIC(QSQLRECORD_ISNULL)
 }
 
 /*
-void remove( int pos )
+void remove(int pos)
 */
 HB_FUNC_STATIC(QSQLRECORD_REMOVE)
 {
@@ -459,7 +459,7 @@ HB_FUNC_STATIC(QSQLRECORD_REMOVE)
 }
 
 /*
-void replace( int pos, const QSqlField &field )
+void replace(int pos, const QSqlField &field)
 */
 HB_FUNC_STATIC(QSQLRECORD_REPLACE)
 {
@@ -489,7 +489,7 @@ HB_FUNC_STATIC(QSQLRECORD_SETGENERATED)
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISLOG(2))
   {
     /*
-    void setGenerated( const QString &name, bool generated )
+    void setGenerated(const QString &name, bool generated)
     */
     QSqlRecord *obj = static_cast<QSqlRecord *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -503,7 +503,7 @@ HB_FUNC_STATIC(QSQLRECORD_SETGENERATED)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2))
   {
     /*
-    void setGenerated( int index, bool generated )
+    void setGenerated(int index, bool generated)
     */
     QSqlRecord *obj = static_cast<QSqlRecord *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -525,7 +525,7 @@ HB_FUNC_STATIC(QSQLRECORD_SETNULL)
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    void setNull( int index )
+    void setNull(int index)
     */
     QSqlRecord *obj = static_cast<QSqlRecord *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -539,7 +539,7 @@ HB_FUNC_STATIC(QSQLRECORD_SETNULL)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    void setNull( const QString &name )
+    void setNull(const QString &name)
     */
     QSqlRecord *obj = static_cast<QSqlRecord *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -561,7 +561,7 @@ HB_FUNC_STATIC(QSQLRECORD_SETVALUE)
   if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2))
   {
     /*
-    void setValue( int index, const QVariant &val )
+    void setValue(int index, const QVariant &val)
     */
     QSqlRecord *obj = static_cast<QSqlRecord *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -575,7 +575,7 @@ HB_FUNC_STATIC(QSQLRECORD_SETVALUE)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2))
   {
     /*
-    void setValue( const QString &name, const QVariant &val )
+    void setValue(const QString &name, const QVariant &val)
     */
     QSqlRecord *obj = static_cast<QSqlRecord *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -597,7 +597,7 @@ HB_FUNC_STATIC(QSQLRECORD_VALUE)
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    QVariant value( int index ) const
+    QVariant value(int index) const
     */
     QSqlRecord *obj = static_cast<QSqlRecord *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -610,7 +610,7 @@ HB_FUNC_STATIC(QSQLRECORD_VALUE)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QVariant value( const QString &name ) const
+    QVariant value(const QString &name) const
     */
     QSqlRecord *obj = static_cast<QSqlRecord *>(Qt4xHb::itemGetPtrStackSelfItem());
 
