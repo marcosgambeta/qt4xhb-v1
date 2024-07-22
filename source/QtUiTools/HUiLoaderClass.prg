@@ -85,19 +85,19 @@ HB_FUNC_STATIC(HUILOADER_DELETE)
 }
 
 /*
-QAction * createAction( QObject *parent = 0, const QString &name = QString() )
+QAction *createAction( QObject *parent = 0, const QString &name = QString() )
 */
 
 /*
-QActionGroup * createActionGroup( QObject *parent = 0, const QString &name = QString() )
+QActionGroup *createActionGroup( QObject *parent = 0, const QString &name = QString() )
 */
 
 /*
-QLayout * createLayout( const QString &className, QObject *parent = 0, const QString &name = QString() )
+QLayout *createLayout( const QString &className, QObject *parent = 0, const QString &name = QString() )
 */
 
 /*
-QWidget * createWidget( const QString &className, QWidget *parent = 0, const QString &name = QString() )
+QWidget *createWidget( const QString &className, QWidget *parent = 0, const QString &name = QString() )
 */
 
 /*
