@@ -58,7 +58,7 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_NEW)
   if (ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)))
   {
     /*
-    QGraphicsSvgItem( QGraphicsItem *parent = 0 )
+    QGraphicsSvgItem(QGraphicsItem *parent = 0)
     */
     QGraphicsSvgItem *obj = new QGraphicsSvgItem(HB_ISNIL(1) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(1)));
     Qt4xHb::returnNewObject(obj, false);
@@ -66,7 +66,7 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2)))
   {
     /*
-    QGraphicsSvgItem( const QString &fileName, QGraphicsItem *parent = 0 )
+    QGraphicsSvgItem(const QString &fileName, QGraphicsItem *parent = 0)
     */
     QGraphicsSvgItem *obj =
         new QGraphicsSvgItem(PQSTRING(1), HB_ISNIL(2) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(2)));
@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_RENDERER)
 }
 
 /*
-void setElementId( const QString &id )
+void setElementId(const QString &id)
 */
 HB_FUNC_STATIC(QGRAPHICSSVGITEM_SETELEMENTID)
 {
@@ -179,7 +179,7 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_SETELEMENTID)
 }
 
 /*
-void setMaximumCacheSize( const QSize &size )
+void setMaximumCacheSize(const QSize &size)
 */
 HB_FUNC_STATIC(QGRAPHICSSVGITEM_SETMAXIMUMCACHESIZE)
 {
@@ -205,7 +205,7 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_SETMAXIMUMCACHESIZE)
 }
 
 /*
-void setSharedRenderer( QSvgRenderer *renderer )
+void setSharedRenderer(QSvgRenderer *renderer)
 */
 HB_FUNC_STATIC(QGRAPHICSSVGITEM_SETSHAREDRENDERER)
 {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_BOUNDINGRECT)
 }
 
 /*
-virtual void paint( QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0 )
+virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0)
 */
 HB_FUNC_STATIC(QGRAPHICSSVGITEM_PAINT)
 {
