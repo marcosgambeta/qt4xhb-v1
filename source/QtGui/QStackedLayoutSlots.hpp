@@ -33,4 +33,4 @@ public slots:
   void setCurrentWidget(QWidget *widget);
 };
 
-#endif /* QSTACKEDLAYOUTSLOTS_H */
+#endif // QSTACKEDLAYOUTSLOTS_H

@@ -32,4 +32,4 @@ public slots:
   void tabMoved(int from, int to);
 };
 
-#endif /* QSTYLESLOTS_H */
+#endif // QSTYLESLOTS_H

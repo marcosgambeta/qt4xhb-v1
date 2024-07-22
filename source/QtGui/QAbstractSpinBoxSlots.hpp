@@ -30,4 +30,4 @@ public slots:
   void editingFinished();
 };
 
-#endif /* QABSTRACTSPINBOXSLOTS_H */
+#endif // QABSTRACTSPINBOXSLOTS_H

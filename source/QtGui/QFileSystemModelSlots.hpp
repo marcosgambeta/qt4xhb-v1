@@ -32,4 +32,4 @@ public slots:
   void rootPathChanged(const QString &newPath);
 };
 
-#endif /* QFILESYSTEMMODELSLOTS_H */
+#endif // QFILESYSTEMMODELSLOTS_H

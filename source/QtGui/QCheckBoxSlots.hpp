@@ -30,4 +30,4 @@ public slots:
   void stateChanged(int state);
 };
 
-#endif /* QCHECKBOXSLOTS_H */
+#endif // QCHECKBOXSLOTS_H

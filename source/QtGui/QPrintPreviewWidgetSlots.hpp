@@ -31,4 +31,4 @@ public slots:
   void previewChanged();
 };
 
-#endif /* QPRINTPREVIEWWIDGETSLOTS_H */
+#endif // QPRINTPREVIEWWIDGETSLOTS_H

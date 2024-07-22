@@ -31,4 +31,4 @@ public slots:
   void triggered(QAction *action);
 };
 
-#endif /* QACTIONGROUPSLOTS_H */
+#endif // QACTIONGROUPSLOTS_H

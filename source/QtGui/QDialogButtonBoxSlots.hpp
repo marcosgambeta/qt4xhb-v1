@@ -35,4 +35,4 @@ public slots:
   void rejected();
 };
 
-#endif /* QDIALOGBUTTONBOXSLOTS_H */
+#endif // QDIALOGBUTTONBOXSLOTS_H

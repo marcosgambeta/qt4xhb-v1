@@ -33,4 +33,4 @@ public slots:
   void highlighted(const QModelIndex &index);
 };
 
-#endif /* QCOMPLETERSLOTS_H */
+#endif // QCOMPLETERSLOTS_H

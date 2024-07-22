@@ -30,4 +30,4 @@ public slots:
   void windowActivated(QWidget *w);
 };
 
-#endif /* QWORKSPACESLOTS_H */
+#endif // QWORKSPACESLOTS_H

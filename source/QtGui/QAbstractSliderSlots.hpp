@@ -35,4 +35,4 @@ public slots:
   void valueChanged(int value);
 };
 
-#endif /* QABSTRACTSLIDERSLOTS_H */
+#endif // QABSTRACTSLIDERSLOTS_H

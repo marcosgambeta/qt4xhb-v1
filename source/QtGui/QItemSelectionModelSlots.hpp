@@ -33,4 +33,4 @@ public slots:
   void selectionChanged(const QItemSelection &selected, const QItemSelection &deselected);
 };
 
-#endif /* QITEMSELECTIONMODELSLOTS_H */
+#endif // QITEMSELECTIONMODELSLOTS_H

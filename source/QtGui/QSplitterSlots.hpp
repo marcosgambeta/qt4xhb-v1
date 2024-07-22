@@ -30,4 +30,4 @@ public slots:
   void splitterMoved(int pos, int index);
 };
 
-#endif /* QSPLITTERSLOTS_H */
+#endif // QSPLITTERSLOTS_H

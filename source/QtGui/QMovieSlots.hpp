@@ -36,4 +36,4 @@ public slots:
   void updated(const QRect &rect);
 };
 
-#endif /* QMOVIESLOTS_H */
+#endif // QMOVIESLOTS_H

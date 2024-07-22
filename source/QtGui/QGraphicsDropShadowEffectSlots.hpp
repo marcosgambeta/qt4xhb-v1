@@ -32,4 +32,4 @@ public slots:
   void offsetChanged(const QPointF &offset);
 };
 
-#endif /* QGRAPHICSDROPSHADOWEFFECTSLOTS_H */
+#endif // QGRAPHICSDROPSHADOWEFFECTSLOTS_H

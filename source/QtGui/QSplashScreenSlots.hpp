@@ -30,4 +30,4 @@ public slots:
   void messageChanged(const QString &message);
 };
 
-#endif /* QSPLASHSCREENSLOTS_H */
+#endif // QSPLASHSCREENSLOTS_H

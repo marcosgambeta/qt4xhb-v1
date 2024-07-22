@@ -30,4 +30,4 @@ public slots:
   void accepted(QPrinter *printer);
 };
 
-#endif /* QPRINTDIALOGSLOTS_H */
+#endif // QPRINTDIALOGSLOTS_H

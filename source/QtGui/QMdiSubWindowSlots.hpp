@@ -31,4 +31,4 @@ public slots:
   void windowStateChanged(Qt::WindowStates oldState, Qt::WindowStates newState);
 };
 
-#endif /* QMDISUBWINDOWSLOTS_H */
+#endif // QMDISUBWINDOWSLOTS_H

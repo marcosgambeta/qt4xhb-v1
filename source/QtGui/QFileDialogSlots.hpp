@@ -34,4 +34,4 @@ public slots:
   void filterSelected(const QString &filter);
 };
 
-#endif /* QFILEDIALOGSLOTS_H */
+#endif // QFILEDIALOGSLOTS_H

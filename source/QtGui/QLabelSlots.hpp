@@ -31,4 +31,4 @@ public slots:
   void linkHovered(const QString &link);
 };
 
-#endif /* QLABELSLOTS_H */
+#endif // QLABELSLOTS_H

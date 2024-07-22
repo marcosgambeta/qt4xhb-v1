@@ -30,4 +30,4 @@ public slots:
   void enabledChanged(bool enabled);
 };
 
-#endif /* QGRAPHICSEFFECTSLOTS_H */
+#endif // QGRAPHICSEFFECTSLOTS_H

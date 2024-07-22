@@ -36,4 +36,4 @@ public slots:
   void sourceChanged(const QUrl &src);
 };
 
-#endif /* QTEXTBROWSERSLOTS_H */
+#endif // QTEXTBROWSERSLOTS_H

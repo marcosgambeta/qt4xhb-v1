@@ -30,4 +30,4 @@ public slots:
   void currentIndexChanged(int index);
 };
 
-#endif /* QDATAWIDGETMAPPERSLOTS_H */
+#endif // QDATAWIDGETMAPPERSLOTS_H

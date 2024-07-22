@@ -40,4 +40,4 @@ public slots:
   void sortIndicatorChanged(int logicalIndex, Qt::SortOrder order);
 };
 
-#endif /* QHEADERVIEWSLOTS_H */
+#endif // QHEADERVIEWSLOTS_H

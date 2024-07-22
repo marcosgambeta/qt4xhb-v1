@@ -30,4 +30,4 @@ public slots:
   void completeChanged();
 };
 
-#endif /* QWIZARDPAGESLOTS_H */
+#endif // QWIZARDPAGESLOTS_H

@@ -31,4 +31,4 @@ public slots:
   void linkHovered(const QString &link);
 };
 
-#endif /* QGRAPHICSTEXTITEMSLOTS_H */
+#endif // QGRAPHICSTEXTITEMSLOTS_H

@@ -30,4 +30,4 @@ public slots:
   void messageChanged(const QString &message);
 };
 
-#endif /* QSTATUSBARSLOTS_H */
+#endif // QSTATUSBARSLOTS_H

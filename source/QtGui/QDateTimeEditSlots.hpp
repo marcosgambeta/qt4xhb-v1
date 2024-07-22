@@ -32,4 +32,4 @@ public slots:
   void timeChanged(const QTime &time);
 };
 
-#endif /* QDATETIMEEDITSLOTS_H */
+#endif // QDATETIMEEDITSLOTS_H

@@ -30,4 +30,4 @@ public slots:
   void updatePreviewWidget(const QModelIndex &index);
 };
 
-#endif /* QCOLUMNVIEWSLOTS_H */
+#endif // QCOLUMNVIEWSLOTS_H

@@ -36,4 +36,4 @@ public slots:
   void highlighted(const QString &text);
 };
 
-#endif /* QCOMBOBOXSLOTS_H */
+#endif // QCOMBOBOXSLOTS_H

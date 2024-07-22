@@ -39,4 +39,4 @@ public slots:
   void itemSelectionChanged();
 };
 
-#endif /* QLISTWIDGETSLOTS_H */
+#endif // QLISTWIDGETSLOTS_H

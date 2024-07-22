@@ -33,4 +33,4 @@ public slots:
   void selectionChanged();
 };
 
-#endif /* QCLIPBOARDSLOTS_H */
+#endif // QCLIPBOARDSLOTS_H

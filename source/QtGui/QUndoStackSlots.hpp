@@ -35,4 +35,4 @@ public slots:
   void undoTextChanged(const QString &undoText);
 };
 
-#endif /* QUNDOSTACKSLOTS_H */
+#endif // QUNDOSTACKSLOTS_H

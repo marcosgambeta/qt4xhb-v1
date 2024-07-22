@@ -33,4 +33,4 @@ public slots:
   void updateBlock(const QTextBlock &block);
 };
 
-#endif /* QABSTRACTTEXTDOCUMENTLAYOUTSLOTS_H */
+#endif // QABSTRACTTEXTDOCUMENTLAYOUTSLOTS_H

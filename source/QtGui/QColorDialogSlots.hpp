@@ -31,4 +31,4 @@ public slots:
   void currentColorChanged(const QColor &color);
 };
 
-#endif /* QCOLORDIALOGSLOTS_H */
+#endif // QCOLORDIALOGSLOTS_H

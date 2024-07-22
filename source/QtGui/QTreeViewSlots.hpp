@@ -31,4 +31,4 @@ public slots:
   void expanded(const QModelIndex &index);
 };
 
-#endif /* QTREEVIEWSLOTS_H */
+#endif // QTREEVIEWSLOTS_H

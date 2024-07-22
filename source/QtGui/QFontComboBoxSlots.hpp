@@ -30,4 +30,4 @@ public slots:
   void currentFontChanged(const QFont &font);
 };
 
-#endif /* QFONTCOMBOBOXSLOTS_H */
+#endif // QFONTCOMBOBOXSLOTS_H

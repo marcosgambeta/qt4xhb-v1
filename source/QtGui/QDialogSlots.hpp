@@ -32,4 +32,4 @@ public slots:
   void rejected();
 };
 
-#endif /* QDIALOGSLOTS_H */
+#endif // QDIALOGSLOTS_H

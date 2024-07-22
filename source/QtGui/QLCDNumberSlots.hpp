@@ -30,4 +30,4 @@ public slots:
   void overflow();
 };
 
-#endif /* QLCDNUMBERSLOTS_H */
+#endif // QLCDNUMBERSLOTS_H

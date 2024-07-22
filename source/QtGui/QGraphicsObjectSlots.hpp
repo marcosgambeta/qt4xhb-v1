@@ -38,4 +38,4 @@ public slots:
   void zChanged();
 };
 
-#endif /* QGRAPHICSOBJECTSLOTS_H */
+#endif // QGRAPHICSOBJECTSLOTS_H

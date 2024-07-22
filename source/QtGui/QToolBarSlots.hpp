@@ -39,4 +39,4 @@ public slots:
   void visibilityChanged(bool visible);
 };
 
-#endif /* QTOOLBARSLOTS_H */
+#endif // QTOOLBARSLOTS_H

@@ -31,4 +31,4 @@ public slots:
   void messageClicked();
 };
 
-#endif /* QSYSTEMTRAYICONSLOTS_H */
+#endif // QSYSTEMTRAYICONSLOTS_H

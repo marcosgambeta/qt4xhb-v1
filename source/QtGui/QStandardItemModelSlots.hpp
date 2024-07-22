@@ -30,4 +30,4 @@ public slots:
   void itemChanged(QStandardItem *item);
 };
 
-#endif /* QSTANDARDITEMMODELSLOTS_H */
+#endif // QSTANDARDITEMMODELSLOTS_H

@@ -32,4 +32,4 @@ public slots:
   void workAreaResized(int screen);
 };
 
-#endif /* QDESKTOPWIDGETSLOTS_H */
+#endif // QDESKTOPWIDGETSLOTS_H

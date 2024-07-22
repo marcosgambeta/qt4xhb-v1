@@ -33,4 +33,4 @@ public slots:
   void triggered(bool checked = false);
 };
 
-#endif /* QACTIONSLOTS_H */
+#endif // QACTIONSLOTS_H

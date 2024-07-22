@@ -33,4 +33,4 @@ public slots:
   void triggered(QAction *action);
 };
 
-#endif /* QMENUSLOTS_H */
+#endif // QMENUSLOTS_H

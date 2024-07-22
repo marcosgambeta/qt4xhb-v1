@@ -37,4 +37,4 @@ public slots:
   void buttonReleased(int id);
 };
 
-#endif /* QBUTTONGROUPSLOTS_H */
+#endif // QBUTTONGROUPSLOTS_H

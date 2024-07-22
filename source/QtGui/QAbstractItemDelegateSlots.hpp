@@ -32,4 +32,4 @@ public slots:
   void sizeHintChanged(const QModelIndex &index);
 };
 
-#endif /* QABSTRACTITEMDELEGATESLOTS_H */
+#endif // QABSTRACTITEMDELEGATESLOTS_H

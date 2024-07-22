@@ -34,4 +34,4 @@ public slots:
   void visibilityChanged(bool visible);
 };
 
-#endif /* QDOCKWIDGETSLOTS_H */
+#endif // QDOCKWIDGETSLOTS_H

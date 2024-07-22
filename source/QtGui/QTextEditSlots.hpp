@@ -36,4 +36,4 @@ public slots:
   void undoAvailable(bool available);
 };
 
-#endif /* QTEXTEDITSLOTS_H */
+#endif // QTEXTEDITSLOTS_H

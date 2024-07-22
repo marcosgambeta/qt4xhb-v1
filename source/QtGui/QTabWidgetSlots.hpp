@@ -31,4 +31,4 @@ public slots:
   void tabCloseRequested(int index);
 };
 
-#endif /* QTABWIDGETSLOTS_H */
+#endif // QTABWIDGETSLOTS_H

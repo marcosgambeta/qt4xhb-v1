@@ -30,4 +30,4 @@ public slots:
   void indexesMoved(const QModelIndexList &indexes);
 };
 
-#endif /* QLISTVIEWSLOTS_H */
+#endif // QLISTVIEWSLOTS_H

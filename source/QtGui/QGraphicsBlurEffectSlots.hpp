@@ -31,4 +31,4 @@ public slots:
   void blurRadiusChanged(qreal radius);
 };
 
-#endif /* QGRAPHICSBLUREFFECTSLOTS_H */
+#endif // QGRAPHICSBLUREFFECTSLOTS_H

@@ -33,4 +33,4 @@ public slots:
   void selectionChanged();
 };
 
-#endif /* QCALENDARWIDGETSLOTS_H */
+#endif // QCALENDARWIDGETSLOTS_H

@@ -31,4 +31,4 @@ public slots:
   void toggled(bool on);
 };
 
-#endif /* QGROUPBOXSLOTS_H */
+#endif // QGROUPBOXSLOTS_H

@@ -38,4 +38,4 @@ public slots:
   void updateRequest(const QRect &rect, int dy);
 };
 
-#endif /* QPLAINTEXTEDITSLOTS_H */
+#endif // QPLAINTEXTEDITSLOTS_H

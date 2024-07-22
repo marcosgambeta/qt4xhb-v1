@@ -34,4 +34,4 @@ public slots:
   void pageRemoved(int id);
 };
 
-#endif /* QWIZARDSLOTS_H */
+#endif // QWIZARDSLOTS_H

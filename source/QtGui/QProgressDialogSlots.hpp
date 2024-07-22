@@ -30,4 +30,4 @@ public slots:
   void canceled();
 };
 
-#endif /* QPROGRESSDIALOGSLOTS_H */
+#endif // QPROGRESSDIALOGSLOTS_H

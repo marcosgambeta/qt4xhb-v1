@@ -31,4 +31,4 @@ public slots:
   void strengthChanged(qreal strength);
 };
 
-#endif /* QGRAPHICSCOLORIZEEFFECTSLOTS_H */
+#endif // QGRAPHICSCOLORIZEEFFECTSLOTS_H

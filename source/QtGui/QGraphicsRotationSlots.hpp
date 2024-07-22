@@ -32,4 +32,4 @@ public slots:
   void originChanged();
 };
 
-#endif /* QGRAPHICSROTATIONSLOTS_H */
+#endif // QGRAPHICSROTATIONSLOTS_H

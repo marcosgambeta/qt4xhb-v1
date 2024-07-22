@@ -44,4 +44,4 @@ public slots:
   void itemSelectionChanged();
 };
 
-#endif /* QTABLEWIDGETSLOTS_H */
+#endif // QTABLEWIDGETSLOTS_H

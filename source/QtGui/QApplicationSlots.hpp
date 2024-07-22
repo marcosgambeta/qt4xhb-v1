@@ -39,4 +39,4 @@ public slots:
   void saveStateRequest(QSessionManager &manager);
 };
 
-#endif /* QAPPLICATIONSLOTS_H */
+#endif // QAPPLICATIONSLOTS_H

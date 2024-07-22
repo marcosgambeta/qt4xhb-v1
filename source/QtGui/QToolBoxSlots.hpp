@@ -30,4 +30,4 @@ public slots:
   void currentChanged(int index);
 };
 
-#endif /* QTOOLBOXSLOTS_H */
+#endif // QTOOLBOXSLOTS_H

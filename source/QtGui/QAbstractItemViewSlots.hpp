@@ -35,4 +35,4 @@ public slots:
   void viewportEntered();
 };
 
-#endif /* QABSTRACTITEMVIEWSLOTS_H */
+#endif // QABSTRACTITEMVIEWSLOTS_H

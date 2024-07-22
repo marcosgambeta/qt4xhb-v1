@@ -30,4 +30,4 @@ public slots:
   void geometryChanged();
 };
 
-#endif /* QGRAPHICSWIDGETSLOTS_H */
+#endif // QGRAPHICSWIDGETSLOTS_H

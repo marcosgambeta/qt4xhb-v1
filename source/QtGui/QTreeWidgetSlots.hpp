@@ -39,4 +39,4 @@ public slots:
   void itemSelectionChanged();
 };
 
-#endif /* QTREEWIDGETSLOTS_H */
+#endif // QTREEWIDGETSLOTS_H

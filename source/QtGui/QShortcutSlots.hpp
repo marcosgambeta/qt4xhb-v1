@@ -31,4 +31,4 @@ public slots:
   void activatedAmbiguously();
 };
 
-#endif /* QSHORTCUTSLOTS_H */
+#endif // QSHORTCUTSLOTS_H

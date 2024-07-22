@@ -30,4 +30,4 @@ public slots:
   void valueChanged(int value);
 };
 
-#endif /* QPROGRESSBARSLOTS_H */
+#endif // QPROGRESSBARSLOTS_H

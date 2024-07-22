@@ -31,4 +31,4 @@ public slots:
   void toolButtonStyleChanged(Qt::ToolButtonStyle toolButtonStyle);
 };
 
-#endif /* QMAINWINDOWSLOTS_H */
+#endif // QMAINWINDOWSLOTS_H

@@ -31,4 +31,4 @@ public slots:
   void widgetRemoved(int index);
 };
 
-#endif /* QSTACKEDWIDGETSLOTS_H */
+#endif // QSTACKEDWIDGETSLOTS_H

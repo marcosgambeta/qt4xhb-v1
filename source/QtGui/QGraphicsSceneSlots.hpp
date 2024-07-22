@@ -32,4 +32,4 @@ public slots:
   void selectionChanged();
 };
 
-#endif /* QGRAPHICSSCENESLOTS_H */
+#endif // QGRAPHICSSCENESLOTS_H

@@ -35,4 +35,4 @@ public slots:
   void textEdited(const QString &text);
 };
 
-#endif /* QLINEEDITSLOTS_H */
+#endif // QLINEEDITSLOTS_H

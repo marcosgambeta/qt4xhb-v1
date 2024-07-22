@@ -35,4 +35,4 @@ public slots:
   void textValueSelected(const QString &text);
 };
 
-#endif /* QINPUTDIALOGSLOTS_H */
+#endif // QINPUTDIALOGSLOTS_H

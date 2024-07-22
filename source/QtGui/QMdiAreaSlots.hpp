@@ -32,4 +32,4 @@ public slots:
   void subWindowActivated(QMdiSubWindow *window);
 };
 
-#endif /* QMDIAREASLOTS_H */
+#endif // QMDIAREASLOTS_H

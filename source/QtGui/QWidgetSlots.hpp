@@ -30,4 +30,4 @@ public slots:
   void customContextMenuRequested(const QPoint &pos);
 };
 
-#endif /* QWIDGETSLOTS_H */
+#endif // QWIDGETSLOTS_H

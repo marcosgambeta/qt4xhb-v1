@@ -33,4 +33,4 @@ public slots:
   void targetChanged(QWidget *newTarget);
 };
 
-#endif /* QDRAGSLOTS_H */
+#endif // QDRAGSLOTS_H

@@ -30,4 +30,4 @@ public slots:
   void paintRequested(QPrinter *printer);
 };
 
-#endif /* QPRINTPREVIEWDIALOGSLOTS_H */
+#endif // QPRINTPREVIEWDIALOGSLOTS_H

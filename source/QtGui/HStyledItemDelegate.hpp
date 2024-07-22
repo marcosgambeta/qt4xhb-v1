@@ -50,4 +50,4 @@ public:
   void setUpdateEditorGeometryCB(PHB_ITEM block);
 };
 
-#endif /* HSTYLEDITEMDELEGATE_H */
+#endif // HSTYLEDITEMDELEGATE_H */

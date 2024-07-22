@@ -31,4 +31,4 @@ public slots:
   void valueChanged(const QString &text);
 };
 
-#endif /* QDOUBLESPINBOXSLOTS_H */
+#endif // QDOUBLESPINBOXSLOTS_H

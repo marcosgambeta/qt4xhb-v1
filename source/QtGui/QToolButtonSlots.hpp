@@ -32,4 +32,4 @@ public slots:
   void triggered(QAction *action);
 };
 
-#endif /* QTOOLBUTTONSLOTS_H */
+#endif // QTOOLBUTTONSLOTS_H

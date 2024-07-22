@@ -33,4 +33,4 @@ public slots:
   void toggled(bool checked);
 };
 
-#endif /* QABSTRACTBUTTONSLOTS_H */
+#endif // QABSTRACTBUTTONSLOTS_H

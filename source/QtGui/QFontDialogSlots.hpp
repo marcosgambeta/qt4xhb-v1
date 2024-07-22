@@ -31,4 +31,4 @@ public slots:
   void fontSelected(const QFont &font);
 };
 
-#endif /* QFONTDIALOGSLOTS_H */
+#endif // QFONTDIALOGSLOTS_H

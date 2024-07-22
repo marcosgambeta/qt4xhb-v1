@@ -38,4 +38,4 @@ public slots:
   void undoCommandAdded();
 };
 
-#endif /* QTEXTDOCUMENTSLOTS_H */
+#endif // QTEXTDOCUMENTSLOTS_H

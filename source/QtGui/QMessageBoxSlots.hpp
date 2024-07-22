@@ -32,4 +32,4 @@ public slots:
   void buttonClicked(QAbstractButton *button);
 };
 
-#endif /* QMESSAGEBOXSLOTS_H */
+#endif // QMESSAGEBOXSLOTS_H

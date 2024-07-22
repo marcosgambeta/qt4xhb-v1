@@ -34,4 +34,4 @@ public slots:
   void zScaleChanged();
 };
 
-#endif /* QGRAPHICSSCALESLOTS_H */
+#endif // QGRAPHICSSCALESLOTS_H

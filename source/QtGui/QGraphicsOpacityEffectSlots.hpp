@@ -31,4 +31,4 @@ public slots:
   void opacityMaskChanged(const QBrush &mask);
 };
 
-#endif /* QGRAPHICSOPACITYEFFECTSLOTS_H */
+#endif // QGRAPHICSOPACITYEFFECTSLOTS_H
