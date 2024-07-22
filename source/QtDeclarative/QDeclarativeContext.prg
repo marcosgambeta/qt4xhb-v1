@@ -61,7 +61,7 @@ HB_FUNC_STATIC(QDECLARATIVECONTEXT_NEW)
   if (ISBETWEEN(1, 2) && ISQDECLARATIVEENGINE(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QDeclarativeContext( QDeclarativeEngine *engine, QObject *parent = 0 )
+    QDeclarativeContext(QDeclarativeEngine *engine, QObject *parent = 0)
     */
     QDeclarativeContext *obj = new QDeclarativeContext(PQDECLARATIVEENGINE(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QDECLARATIVECONTEXT_NEW)
   else if (ISBETWEEN(1, 2) && ISQDECLARATIVECONTEXT(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QDeclarativeContext( QDeclarativeContext *parentContext, QObject *parent = 0 )
+    QDeclarativeContext(QDeclarativeContext *parentContext, QObject *parent = 0)
     */
     QDeclarativeContext *obj = new QDeclarativeContext(PQDECLARATIVECONTEXT(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QDECLARATIVECONTEXT_CONTEXTOBJECT)
 }
 
 /*
-QVariant contextProperty( const QString &name ) const
+QVariant contextProperty(const QString &name) const
 */
 HB_FUNC_STATIC(QDECLARATIVECONTEXT_CONTEXTPROPERTY)
 {
@@ -248,7 +248,7 @@ HB_FUNC_STATIC(QDECLARATIVECONTEXT_PARENTCONTEXT)
 }
 
 /*
-QUrl resolvedUrl( const QUrl &src )
+QUrl resolvedUrl(const QUrl &src)
 */
 HB_FUNC_STATIC(QDECLARATIVECONTEXT_RESOLVEDURL)
 {
@@ -273,7 +273,7 @@ HB_FUNC_STATIC(QDECLARATIVECONTEXT_RESOLVEDURL)
 }
 
 /*
-void setBaseUrl( const QUrl &baseUrl )
+void setBaseUrl(const QUrl &baseUrl)
 */
 HB_FUNC_STATIC(QDECLARATIVECONTEXT_SETBASEURL)
 {
@@ -299,7 +299,7 @@ HB_FUNC_STATIC(QDECLARATIVECONTEXT_SETBASEURL)
 }
 
 /*
-void setContextObject( QObject *object )
+void setContextObject(QObject *object)
 */
 HB_FUNC_STATIC(QDECLARATIVECONTEXT_SETCONTEXTOBJECT)
 {
@@ -329,7 +329,7 @@ HB_FUNC_STATIC(QDECLARATIVECONTEXT_SETCONTEXTPROPERTY)
   if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2))
   {
     /*
-    void setContextProperty( const QString &name, QObject *value )
+    void setContextProperty(const QString &name, QObject *value)
     */
     QDeclarativeContext *obj = qobject_cast<QDeclarativeContext *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -343,7 +343,7 @@ HB_FUNC_STATIC(QDECLARATIVECONTEXT_SETCONTEXTPROPERTY)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2))
   {
     /*
-    void setContextProperty( const QString &name, const QVariant &value )
+    void setContextProperty(const QString &name, const QVariant &value)
     */
     QDeclarativeContext *obj = qobject_cast<QDeclarativeContext *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

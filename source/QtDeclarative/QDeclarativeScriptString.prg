@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_NEW)
   else if (ISNUMPAR(1) && ISQDECLARATIVESCRIPTSTRING(1))
   {
     /*
-    QDeclarativeScriptString( const QDeclarativeScriptString &other )
+    QDeclarativeScriptString(const QDeclarativeScriptString &other)
     */
     QDeclarativeScriptString *obj = new QDeclarativeScriptString(*PQDECLARATIVESCRIPTSTRING(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SCRIPT)
 }
 
 /*
-void setContext( QDeclarativeContext *context )
+void setContext(QDeclarativeContext *context)
 */
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETCONTEXT)
 {
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETCONTEXT)
 }
 
 /*
-void setScopeObject( QObject *object )
+void setScopeObject(QObject *object)
 */
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETSCOPEOBJECT)
 {
@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETSCOPEOBJECT)
 }
 
 /*
-void setScript( const QString &script )
+void setScript(const QString &script)
 */
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETSCRIPT)
 {

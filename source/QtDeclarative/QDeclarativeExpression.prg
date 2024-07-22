@@ -77,8 +77,8 @@ HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_NEW)
   else if (ISBETWEEN(3, 4) && ISQDECLARATIVECONTEXT(1) && ISQOBJECT(2) && HB_ISCHAR(3) && (ISQOBJECT(4) || HB_ISNIL(4)))
   {
     /*
-    QDeclarativeExpression( QDeclarativeContext *ctxt, QObject *scope, const QString &expression, QObject *parent =
-    0 )
+    QDeclarativeExpression(QDeclarativeContext *ctxt, QObject *scope, const QString &expression, QObject *parent =
+    0)
     */
     QDeclarativeExpression *obj =
         new QDeclarativeExpression(PQDECLARATIVECONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4, 0));
@@ -210,7 +210,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_ERROR)
 }
 
 /*
-QVariant evaluate( bool *valueIsUndefined = 0 )
+QVariant evaluate(bool *valueIsUndefined = 0)
 */
 HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_EVALUATE)
 {
@@ -358,7 +358,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_SCOPEOBJECT)
 }
 
 /*
-void setExpression( const QString &expression )
+void setExpression(const QString &expression)
 */
 HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_SETEXPRESSION)
 {
@@ -384,7 +384,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_SETEXPRESSION)
 }
 
 /*
-void setNotifyOnValueChanged( bool notifyOnChange )
+void setNotifyOnValueChanged(bool notifyOnChange)
 */
 HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_SETNOTIFYONVALUECHANGED)
 {
@@ -410,7 +410,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_SETNOTIFYONVALUECHANGED)
 }
 
 /*
-void setSourceLocation( const QString &url, int line )
+void setSourceLocation(const QString &url, int line)
 */
 HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_SETSOURCELOCATION)
 {

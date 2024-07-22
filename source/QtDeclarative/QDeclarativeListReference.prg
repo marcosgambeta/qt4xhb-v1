@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_NEW)
   else if (ISBETWEEN(2, 3) && ISQOBJECT(1) && HB_ISCHAR(2) && (ISQDECLARATIVEENGINE(3) || HB_ISNIL(3)))
   {
     /*
-    QDeclarativeListReference( QObject *object, const char *property, QDeclarativeEngine *engine = 0 )
+    QDeclarativeListReference(QObject *object, const char *property, QDeclarativeEngine *engine = 0)
     */
     QDeclarativeListReference *obj =
         new QDeclarativeListReference(PQOBJECT(1), PCONSTCHAR(2), OPQDECLARATIVEENGINE(3, 0));
@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_NEW)
 }
 
 /*
-bool append( QObject *object ) const
+bool append(QObject *object) const
 */
 HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_APPEND)
 {
@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_APPEND)
 }
 
 /*
-QObject *at( int index ) const
+QObject *at(int index) const
 */
 HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_AT)
 {
