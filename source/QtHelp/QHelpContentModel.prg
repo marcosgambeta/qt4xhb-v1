@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_DELETE)
 }
 
 /*
-QHelpContentItem *contentItemAt( const QModelIndex &index ) const
+QHelpContentItem *contentItemAt(const QModelIndex &index) const
 */
 HB_FUNC_STATIC(QHELPCONTENTMODEL_CONTENTITEMAT)
 {
@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_CONTENTITEMAT)
 }
 
 /*
-void createContents( const QString &customFilterName )
+void createContents(const QString &customFilterName)
 */
 HB_FUNC_STATIC(QHELPCONTENTMODEL_CREATECONTENTS)
 {
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_ISCREATINGCONTENTS)
 }
 
 /*
-virtual int columnCount( const QModelIndex &parent = QModelIndex() ) const
+virtual int columnCount(const QModelIndex &parent = QModelIndex()) const
 */
 HB_FUNC_STATIC(QHELPCONTENTMODEL_COLUMNCOUNT)
 {
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_COLUMNCOUNT)
 }
 
 /*
-virtual QVariant data( const QModelIndex &index, int role ) const
+virtual QVariant data(const QModelIndex &index, int role) const
 */
 HB_FUNC_STATIC(QHELPCONTENTMODEL_DATA)
 {
@@ -196,7 +196,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_DATA)
 }
 
 /*
-virtual QModelIndex index( int row, int column, const QModelIndex &parent = QModelIndex() ) const
+virtual QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
 */
 HB_FUNC_STATIC(QHELPCONTENTMODEL_INDEX)
 {
@@ -222,7 +222,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_INDEX)
 }
 
 /*
-virtual QModelIndex parent( const QModelIndex &index ) const
+virtual QModelIndex parent(const QModelIndex &index) const
 */
 HB_FUNC_STATIC(QHELPCONTENTMODEL_PARENT)
 {
@@ -247,7 +247,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_PARENT)
 }
 
 /*
-virtual int rowCount( const QModelIndex &parent = QModelIndex() ) const
+virtual int rowCount(const QModelIndex &parent = QModelIndex()) const
 */
 HB_FUNC_STATIC(QHELPCONTENTMODEL_ROWCOUNT)
 {

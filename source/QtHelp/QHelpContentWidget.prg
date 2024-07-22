@@ -43,7 +43,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QModelIndex indexOf( const QUrl &link )
+    QModelIndex indexOf(const QUrl &link)
     */
 HB_FUNC_STATIC(QHELPCONTENTWIDGET_INDEXOF)
 {
