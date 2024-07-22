@@ -615,7 +615,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_CORE)
 }
 
 /*
-virtual QDesignerFormWindowInterface *createFormWindow( QWidget *parent = 0, Qt::WindowFlags flags = 0 )
+virtual QDesignerFormWindowInterface *createFormWindow(QWidget *parent = 0, Qt::WindowFlags flags = 0)
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_CREATEFORMWINDOW)
 {
@@ -642,7 +642,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_CREATEFORMWINDOW)
 }
 
 /*
-virtual QDesignerFormWindowInterface *formWindow( int index ) const
+virtual QDesignerFormWindowInterface *formWindow(int index) const
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_FORMWINDOW)
 {
@@ -693,7 +693,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_FORMWINDOWCOUNT)
 }
 
 /*
-virtual void addFormWindow( QDesignerFormWindowInterface *formWindow )
+virtual void addFormWindow(QDesignerFormWindowInterface *formWindow)
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ADDFORMWINDOW)
 {
@@ -720,7 +720,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ADDFORMWINDOW)
 }
 
 /*
-virtual void removeFormWindow( QDesignerFormWindowInterface *formWindow )
+virtual void removeFormWindow(QDesignerFormWindowInterface *formWindow)
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_REMOVEFORMWINDOW)
 {
@@ -747,7 +747,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_REMOVEFORMWINDOW)
 }
 
 /*
-virtual void setActiveFormWindow( QDesignerFormWindowInterface *formWindow )
+virtual void setActiveFormWindow(QDesignerFormWindowInterface *formWindow)
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_SETACTIVEFORMWINDOW)
 {

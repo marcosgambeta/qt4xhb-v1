@@ -156,7 +156,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_HASSELECTION)
 }
 
 /*
-bool isWidgetSelected( QWidget *widget ) const
+bool isWidgetSelected(QWidget *widget) const
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_ISWIDGETSELECTED)
 {
@@ -181,8 +181,8 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_ISWIDGETSELECTED)
 }
 
 /*
-virtual bool movePosition( QDesignerFormWindowCursorInterface::MoveOperation operation,
-QDesignerFormWindowCursorInterface::MoveMode mode = QDesignerFormWindowCursorInterface::MoveAnchor ) = 0
+virtual bool movePosition(QDesignerFormWindowCursorInterface::MoveOperation operation,
+QDesignerFormWindowCursorInterface::MoveMode mode = QDesignerFormWindowCursorInterface::MoveAnchor) = 0
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_MOVEPOSITION)
 {
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_POSITION)
 }
 
 /*
-virtual QWidget *selectedWidget( int index ) const = 0
+virtual QWidget *selectedWidget(int index) const = 0
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_SELECTEDWIDGET)
 {
@@ -286,8 +286,8 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_SELECTEDWIDGETCOUNT)
 }
 
 /*
-virtual void setPosition( int position, QDesignerFormWindowCursorInterface::MoveMode mode =
-QDesignerFormWindowCursorInterface::MoveAnchor ) = 0
+virtual void setPosition(int position, QDesignerFormWindowCursorInterface::MoveMode mode =
+QDesignerFormWindowCursorInterface::MoveAnchor) = 0
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_SETPOSITION)
 {
@@ -317,7 +317,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_SETPOSITION)
 }
 
 /*
-virtual QWidget *widget( int index ) const = 0
+virtual QWidget *widget(int index) const = 0
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_WIDGET)
 {

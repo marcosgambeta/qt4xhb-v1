@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QDESIGNERCONTAINEREXTENSION_DELETE)
 }
 
 /*
-virtual void addWidget( QWidget *page ) = 0
+virtual void addWidget(QWidget *page) = 0
 */
 HB_FUNC_STATIC(QDESIGNERCONTAINEREXTENSION_ADDWIDGET)
 {
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QDESIGNERCONTAINEREXTENSION_CURRENTINDEX)
 }
 
 /*
-virtual void insertWidget( int index, QWidget *page ) = 0
+virtual void insertWidget(int index, QWidget *page) = 0
 */
 HB_FUNC_STATIC(QDESIGNERCONTAINEREXTENSION_INSERTWIDGET)
 {
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QDESIGNERCONTAINEREXTENSION_INSERTWIDGET)
 }
 
 /*
-virtual void remove( int index ) = 0
+virtual void remove(int index) = 0
 */
 HB_FUNC_STATIC(QDESIGNERCONTAINEREXTENSION_REMOVE)
 {
@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QDESIGNERCONTAINEREXTENSION_REMOVE)
 }
 
 /*
-virtual void setCurrentIndex( int index ) = 0
+virtual void setCurrentIndex(int index) = 0
 */
 HB_FUNC_STATIC(QDESIGNERCONTAINEREXTENSION_SETCURRENTINDEX)
 {
@@ -223,7 +223,7 @@ HB_FUNC_STATIC(QDESIGNERCONTAINEREXTENSION_SETCURRENTINDEX)
 }
 
 /*
-virtual QWidget *widget( int index ) const = 0
+virtual QWidget *widget(int index) const = 0
 */
 HB_FUNC_STATIC(QDESIGNERCONTAINEREXTENSION_WIDGET)
 {

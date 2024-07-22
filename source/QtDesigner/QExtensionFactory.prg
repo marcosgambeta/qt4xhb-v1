@@ -47,7 +47,7 @@ RETURN
 #include <QtDesigner/QExtensionManager>
 
     /*
-    QExtensionFactory( QExtensionManager *parent = 0 )
+    QExtensionFactory(QExtensionManager *parent = 0)
     */
 HB_FUNC_STATIC(QEXTENSIONFACTORY_NEW)
 {
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QEXTENSIONFACTORY_EXTENSIONMANAGER)
 }
 
 /*
-virtual QObject *extension( QObject *object, const QString &iid ) const
+virtual QObject *extension(QObject *object, const QString &iid) const
 */
 HB_FUNC_STATIC(QEXTENSIONFACTORY_EXTENSION)
 {

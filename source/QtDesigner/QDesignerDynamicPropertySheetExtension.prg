@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_DELETE)
 }
 
 /*
-virtual int addDynamicProperty( const QString &propertyName, const QVariant &value ) = 0
+virtual int addDynamicProperty(const QString &propertyName, const QVariant &value) = 0
 */
 HB_FUNC_STATIC(QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ADDDYNAMICPROPERTY)
 {
@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ADDDYNAMICPROPERTY)
 }
 
 /*
-virtual bool canAddDynamicProperty( const QString &propertyName ) const = 0
+virtual bool canAddDynamicProperty(const QString &propertyName) const = 0
 */
 HB_FUNC_STATIC(QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_CANADDDYNAMICPROPERTY)
 {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_DYNAMICPROPERTIESALLOWED)
 }
 
 /*
-virtual bool isDynamicProperty( int index ) const = 0
+virtual bool isDynamicProperty(int index) const = 0
 */
 HB_FUNC_STATIC(QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ISDYNAMICPROPERTY)
 {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ISDYNAMICPROPERTY)
 }
 
 /*
-virtual bool removeDynamicProperty( int index ) = 0
+virtual bool removeDynamicProperty(int index) = 0
 */
 HB_FUNC_STATIC(QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_REMOVEDYNAMICPROPERTY)
 {
