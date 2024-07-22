@@ -223,7 +223,7 @@ HB_FUNC_STATIC(QMODELINDEX_INTERNALID)
 }
 
 /*
-void * internalPointer() const
+void *internalPointer() const
 */
 HB_FUNC_STATIC(QMODELINDEX_INTERNALPOINTER)
 {
@@ -271,7 +271,7 @@ HB_FUNC_STATIC(QMODELINDEX_ISVALID)
 }
 
 /*
-const QAbstractItemModel * model() const
+const QAbstractItemModel *model() const
 */
 HB_FUNC_STATIC(QMODELINDEX_MODEL)
 {

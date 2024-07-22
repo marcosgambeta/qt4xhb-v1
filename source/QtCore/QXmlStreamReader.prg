@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_NEW)
   else if (ISNUMPAR(1) && ISQIODEVICE(1))
   {
     /*
-    QXmlStreamReader( QIODevice * device )
+    QXmlStreamReader( QIODevice *device )
     */
     QXmlStreamReader *obj = new QXmlStreamReader(PQIODEVICE(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_NEW)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QXmlStreamReader( const char * data )
+    QXmlStreamReader( const char *data )
     */
     QXmlStreamReader *obj = new QXmlStreamReader(PCONSTCHAR(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -390,7 +390,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_COLUMNNUMBER)
 }
 
 /*
-QIODevice * device() const
+QIODevice *device() const
 */
 HB_FUNC_STATIC(QXMLSTREAMREADER_DEVICE)
 {
@@ -591,7 +591,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ENTITYDECLARATIONS)
 }
 
 /*
-QXmlStreamEntityResolver * entityResolver() const
+QXmlStreamEntityResolver *entityResolver() const
 */
 HB_FUNC_STATIC(QXMLSTREAMREADER_ENTITYRESOLVER)
 {
@@ -1377,7 +1377,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_READNEXTSTARTELEMENT)
 }
 
 /*
-void setDevice( QIODevice * device )
+void setDevice( QIODevice *device )
 */
 HB_FUNC_STATIC(QXMLSTREAMREADER_SETDEVICE)
 {
@@ -1403,7 +1403,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_SETDEVICE)
 }
 
 /*
-void setEntityResolver( QXmlStreamEntityResolver * resolver )
+void setEntityResolver( QXmlStreamEntityResolver *resolver )
 */
 HB_FUNC_STATIC(QXMLSTREAMREADER_SETENTITYRESOLVER)
 {

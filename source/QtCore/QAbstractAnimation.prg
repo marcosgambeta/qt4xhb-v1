@@ -203,7 +203,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_DURATION)
 }
 
 /*
-QAnimationGroup * group() const
+QAnimationGroup *group() const
 */
 HB_FUNC_STATIC(QABSTRACTANIMATION_GROUP)
 {

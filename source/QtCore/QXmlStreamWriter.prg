@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QXMLSTREAMWRITER_NEW)
   else if (ISNUMPAR(1) && ISQIODEVICE(1))
   {
     /*
-    QXmlStreamWriter( QIODevice * device )
+    QXmlStreamWriter( QIODevice *device )
     */
     QXmlStreamWriter *obj = new QXmlStreamWriter(PQIODEVICE(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QXMLSTREAMWRITER_NEW)
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    QXmlStreamWriter( QByteArray * array )
+    QXmlStreamWriter( QByteArray *array )
     */
     QXmlStreamWriter *obj = new QXmlStreamWriter(PQBYTEARRAY(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QXMLSTREAMWRITER_AUTOFORMATTINGINDENT)
 }
 
 /*
-QTextCodec * codec() const
+QTextCodec *codec() const
 */
 HB_FUNC_STATIC(QXMLSTREAMWRITER_CODEC)
 {
@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QXMLSTREAMWRITER_CODEC)
 }
 
 /*
-QIODevice * device() const
+QIODevice *device() const
 */
 HB_FUNC_STATIC(QXMLSTREAMWRITER_DEVICE)
 {
@@ -302,7 +302,7 @@ HB_FUNC_STATIC(QXMLSTREAMWRITER_SETCODEC)
   if (ISNUMPAR(1) && ISQTEXTCODEC(1))
   {
     /*
-    void setCodec( QTextCodec * codec )
+    void setCodec( QTextCodec *codec )
     */
     QXmlStreamWriter *obj = static_cast<QXmlStreamWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -316,7 +316,7 @@ HB_FUNC_STATIC(QXMLSTREAMWRITER_SETCODEC)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    void setCodec( const char * codecName )
+    void setCodec( const char *codecName )
     */
     QXmlStreamWriter *obj = static_cast<QXmlStreamWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -334,7 +334,7 @@ HB_FUNC_STATIC(QXMLSTREAMWRITER_SETCODEC)
 }
 
 /*
-void setDevice( QIODevice * device )
+void setDevice( QIODevice *device )
 */
 HB_FUNC_STATIC(QXMLSTREAMWRITER_SETDEVICE)
 {

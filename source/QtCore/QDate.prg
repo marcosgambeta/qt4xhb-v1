@@ -333,7 +333,7 @@ HB_FUNC_STATIC(QDATE_DAYSTO)
 }
 
 /*
-void getDate( int * year, int * month, int * day )
+void getDate( int *year, int *month, int *day )
 */
 HB_FUNC_STATIC(QDATE_GETDATE)
 {
@@ -493,7 +493,7 @@ HB_FUNC_STATIC(QDATE_TOSTRING)
 }
 
 /*
-int weekNumber( int * yearNumber = 0 ) const
+int weekNumber( int *yearNumber = 0 ) const
 */
 HB_FUNC_STATIC(QDATE_WEEKNUMBER)
 {

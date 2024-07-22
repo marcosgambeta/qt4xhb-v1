@@ -50,7 +50,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    HAbstractTableModelV2( QObject * parent = 0 )
+    HAbstractTableModelV2( QObject *parent = 0 )
     */
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_NEW)
 {

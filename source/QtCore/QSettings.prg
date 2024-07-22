@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QSETTINGS_NEW)
   if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
-    QSettings( const QString &organization, const QString &application = QString(), QObject * parent = 0 )
+    QSettings( const QString &organization, const QString &application = QString(), QObject *parent = 0 )
     */
     QSettings *obj = new QSettings(PQSTRING(1), OPQSTRING(2, QString()), OPQOBJECT(3, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QSETTINGS_NEW)
   {
     /*
     QSettings( QSettings::Format format, QSettings::Scope scope, const QString &organization, const QString &
-    application = QString(), QObject * parent = 0 )
+    application = QString(), QObject *parent = 0 )
     */
     QSettings *obj = new QSettings((QSettings::Format)hb_parni(1), (QSettings::Scope)hb_parni(2), PQSTRING(3),
                                    OPQSTRING(4, QString()), OPQOBJECT(5, 0));
@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QSETTINGS_NEW)
   else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
-    QSettings( const QString &fileName, QSettings::Format format, QObject * parent = 0 )
+    QSettings( const QString &fileName, QSettings::Format format, QObject *parent = 0 )
     */
     QSettings *obj = new QSettings(PQSTRING(1), (QSettings::Format)hb_parni(2), OPQOBJECT(3, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QSETTINGS_NEW)
   else if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
-    QSettings( QObject * parent = 0 )
+    QSettings( QObject *parent = 0 )
     */
     QSettings *obj = new QSettings(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -517,7 +517,7 @@ HB_FUNC_STATIC(QSETTINGS_GROUP)
 }
 
 /*
-QTextCodec * iniCodec() const
+QTextCodec *iniCodec() const
 */
 HB_FUNC_STATIC(QSETTINGS_INICODEC)
 {
@@ -696,7 +696,7 @@ HB_FUNC_STATIC(QSETTINGS_SETINICODEC)
   if (ISNUMPAR(1) && ISQTEXTCODEC(1))
   {
     /*
-    void setIniCodec( QTextCodec * codec )
+    void setIniCodec( QTextCodec *codec )
     */
     QSettings *obj = qobject_cast<QSettings *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -710,7 +710,7 @@ HB_FUNC_STATIC(QSETTINGS_SETINICODEC)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    void setIniCodec( const char * codecName )
+    void setIniCodec( const char *codecName )
     */
     QSettings *obj = qobject_cast<QSettings *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

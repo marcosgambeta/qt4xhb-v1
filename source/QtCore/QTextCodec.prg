@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QTEXTCODEC_CANENCODE)
 }
 
 /*
-QString toUnicode( const char * in, int length, QTextCodec::ConverterState * state = 0 ) const
+QString toUnicode( const char *in, int length, QTextCodec::ConverterState *state = 0 ) const
 */
 
 HB_FUNC_STATIC(QTEXTCODEC_TOUNICODE)
@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QTEXTCODEC_TOUNICODE)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QString toUnicode( const char * chars ) const
+    QString toUnicode( const char *chars ) const
     */
     QTextCodec *obj = static_cast<QTextCodec *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QTEXTCODEC_MAKEDECODER)
   if (ISNUMPAR(0))
   {
     /*
-    QTextDecoder * makeDecoder() const
+    QTextDecoder *makeDecoder() const
     */
     QTextCodec *obj = static_cast<QTextCodec *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -179,7 +179,7 @@ HB_FUNC_STATIC(QTEXTCODEC_MAKEDECODER)
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    QTextDecoder * makeDecoder( QTextCodec::ConversionFlags flags ) const
+    QTextDecoder *makeDecoder( QTextCodec::ConversionFlags flags ) const
     */
     QTextCodec *obj = static_cast<QTextCodec *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -200,7 +200,7 @@ HB_FUNC_STATIC(QTEXTCODEC_MAKEENCODER)
   if (ISNUMPAR(0))
   {
     /*
-    QTextEncoder * makeEncoder() const
+    QTextEncoder *makeEncoder() const
     */
     QTextCodec *obj = static_cast<QTextCodec *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QTEXTCODEC_MAKEENCODER)
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    QTextEncoder * makeEncoder( QTextCodec::ConversionFlags flags ) const
+    QTextEncoder *makeEncoder( QTextCodec::ConversionFlags flags ) const
     */
     QTextCodec *obj = static_cast<QTextCodec *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -334,7 +334,7 @@ HB_FUNC_STATIC(QTEXTCODEC_CODECFORNAME)
   if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    static QTextCodec * codecForName( const QByteArray &name )
+    static QTextCodec *codecForName( const QByteArray &name )
     */
 
     QTextCodec *ptr = QTextCodec::codecForName(*PQBYTEARRAY(1));
@@ -343,7 +343,7 @@ HB_FUNC_STATIC(QTEXTCODEC_CODECFORNAME)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    static QTextCodec * codecForName( const char * name )
+    static QTextCodec *codecForName( const char *name )
     */
 
     QTextCodec *ptr = QTextCodec::codecForName(PCONSTCHAR(1));
@@ -356,7 +356,7 @@ HB_FUNC_STATIC(QTEXTCODEC_CODECFORNAME)
 }
 
 /*
-static QTextCodec * codecForMib( int mib )
+static QTextCodec *codecForMib( int mib )
 */
 HB_FUNC_STATIC(QTEXTCODEC_CODECFORMIB)
 {
@@ -442,7 +442,7 @@ HB_FUNC_STATIC(QTEXTCODEC_AVAILABLEMIBS)
 }
 
 /*
-static QTextCodec * codecForLocale()
+static QTextCodec *codecForLocale()
 */
 HB_FUNC_STATIC(QTEXTCODEC_CODECFORLOCALE)
 {
@@ -462,7 +462,7 @@ HB_FUNC_STATIC(QTEXTCODEC_CODECFORLOCALE)
 }
 
 /*
-static void setCodecForLocale( QTextCodec * c )
+static void setCodecForLocale( QTextCodec *c )
 */
 HB_FUNC_STATIC(QTEXTCODEC_SETCODECFORLOCALE)
 {
@@ -483,7 +483,7 @@ HB_FUNC_STATIC(QTEXTCODEC_SETCODECFORLOCALE)
 }
 
 /*
-static QTextCodec * codecForTr()
+static QTextCodec *codecForTr()
 */
 HB_FUNC_STATIC(QTEXTCODEC_CODECFORTR)
 {
@@ -503,7 +503,7 @@ HB_FUNC_STATIC(QTEXTCODEC_CODECFORTR)
 }
 
 /*
-static void setCodecForTr( QTextCodec * c )
+static void setCodecForTr( QTextCodec *c )
 */
 HB_FUNC_STATIC(QTEXTCODEC_SETCODECFORTR)
 {
@@ -524,7 +524,7 @@ HB_FUNC_STATIC(QTEXTCODEC_SETCODECFORTR)
 }
 
 /*
-static QTextCodec * codecForCStrings()
+static QTextCodec *codecForCStrings()
 */
 HB_FUNC_STATIC(QTEXTCODEC_CODECFORCSTRINGS)
 {
@@ -544,7 +544,7 @@ HB_FUNC_STATIC(QTEXTCODEC_CODECFORCSTRINGS)
 }
 
 /*
-static void setCodecForCStrings( QTextCodec * c )
+static void setCodecForCStrings( QTextCodec *c )
 */
 HB_FUNC_STATIC(QTEXTCODEC_SETCODECFORCSTRINGS)
 {
@@ -569,7 +569,7 @@ HB_FUNC_STATIC(QTEXTCODEC_CODECFORHTML)
   if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    static QTextCodec * codecForHtml( const QByteArray &ba )
+    static QTextCodec *codecForHtml( const QByteArray &ba )
     */
 
     QTextCodec *ptr = QTextCodec::codecForHtml(*PQBYTEARRAY(1));
@@ -578,7 +578,7 @@ HB_FUNC_STATIC(QTEXTCODEC_CODECFORHTML)
   else if (ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQTEXTCODEC(2))
   {
     /*
-    static QTextCodec * codecForHtml( const QByteArray &ba, QTextCodec * defaultCodec )
+    static QTextCodec *codecForHtml( const QByteArray &ba, QTextCodec *defaultCodec )
     */
 
     QTextCodec *ptr = QTextCodec::codecForHtml(*PQBYTEARRAY(1), PQTEXTCODEC(2));
@@ -595,7 +595,7 @@ HB_FUNC_STATIC(QTEXTCODEC_CODECFORUTFTEXT)
   if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    static QTextCodec * codecForUtfText( const QByteArray &ba )
+    static QTextCodec *codecForUtfText( const QByteArray &ba )
     */
 
     QTextCodec *ptr = QTextCodec::codecForUtfText(*PQBYTEARRAY(1));
@@ -604,7 +604,7 @@ HB_FUNC_STATIC(QTEXTCODEC_CODECFORUTFTEXT)
   else if (ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQTEXTCODEC(2))
   {
     /*
-    static QTextCodec * codecForUtfText( const QByteArray &ba, QTextCodec * defaultCodec )
+    static QTextCodec *codecForUtfText( const QByteArray &ba, QTextCodec *defaultCodec )
     */
 
     QTextCodec *ptr = QTextCodec::codecForUtfText(*PQBYTEARRAY(1), PQTEXTCODEC(2));

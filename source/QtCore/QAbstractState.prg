@@ -68,7 +68,7 @@ HB_FUNC_STATIC(QABSTRACTSTATE_DELETE)
 }
 
 /*
-QStateMachine * machine() const
+QStateMachine *machine() const
 */
 HB_FUNC_STATIC(QABSTRACTSTATE_MACHINE)
 {
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QABSTRACTSTATE_MACHINE)
 }
 
 /*
-QState * parentState() const
+QState *parentState() const
 */
 HB_FUNC_STATIC(QABSTRACTSTATE_PARENTSTATE)
 {

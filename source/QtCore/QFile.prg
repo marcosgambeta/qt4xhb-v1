@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QFILE_NEW)
   else if (ISNUMPAR(1) && ISQOBJECT(1))
   {
     /*
-    QFile( QObject * parent )
+    QFile( QObject *parent )
     */
     QFile *obj = new QFile(PQOBJECT(1));
     Qt4xHb::returnNewObject(obj, false);
@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QFILE_NEW)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2))
   {
     /*
-    QFile( const QString &name, QObject * parent )
+    QFile( const QString &name, QObject *parent )
     */
     QFile *obj = new QFile(PQSTRING(1), PQOBJECT(2));
     Qt4xHb::returnNewObject(obj, false);
@@ -239,7 +239,7 @@ HB_FUNC_STATIC(QFILE_SETFILENAME)
 }
 
 /*
-bool unmap( uchar * address )
+bool unmap( uchar *address )
 */
 HB_FUNC_STATIC(QFILE_UNMAP)
 {
@@ -367,7 +367,7 @@ HB_FUNC_STATIC(QFILE_OPEN)
   if (ISNUMPAR(2) && HB_ISPOINTER(1) && HB_ISNUM(2))
   {
     /*
-    bool open( FILE * fh, QIODevice::OpenMode mode )
+    bool open( FILE *fh, QIODevice::OpenMode mode )
     */
     QFile *obj = qobject_cast<QFile *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -379,7 +379,7 @@ HB_FUNC_STATIC(QFILE_OPEN)
   else if (ISNUMPAR(3) && HB_ISPOINTER(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
     /*
-    bool open( FILE * fh, QIODevice::OpenMode mode, QFile::FileHandleFlags handleFlags )
+    bool open( FILE *fh, QIODevice::OpenMode mode, QFile::FileHandleFlags handleFlags )
     */
     QFile *obj = qobject_cast<QFile *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -544,7 +544,7 @@ HB_FUNC_STATIC(QFILE_DECODENAME)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    static QString decodeName( const char * localFileName )
+    static QString decodeName( const char *localFileName )
     */
 
     RQSTRING(QFile::decodeName(PCONSTCHAR(1)));

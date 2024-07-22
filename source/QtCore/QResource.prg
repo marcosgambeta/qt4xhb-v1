@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QRESOURCE_ABSOLUTEFILEPATH)
 }
 
 /*
-const uchar * data() const
+const uchar *data() const
 */
 HB_FUNC_STATIC(QRESOURCE_DATA)
 {

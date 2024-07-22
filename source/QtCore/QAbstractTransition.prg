@@ -77,7 +77,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_DELETE)
 }
 
 /*
-void addAnimation( QAbstractAnimation * animation )
+void addAnimation( QAbstractAnimation *animation )
 */
 HB_FUNC_STATIC(QABSTRACTTRANSITION_ADDANIMATION)
 {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_ANIMATIONS)
 }
 
 /*
-QStateMachine * machine() const
+QStateMachine *machine() const
 */
 HB_FUNC_STATIC(QABSTRACTTRANSITION_MACHINE)
 {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_MACHINE)
 }
 
 /*
-void removeAnimation( QAbstractAnimation * animation )
+void removeAnimation( QAbstractAnimation *animation )
 */
 HB_FUNC_STATIC(QABSTRACTTRANSITION_REMOVEANIMATION)
 {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_REMOVEANIMATION)
 }
 
 /*
-void setTargetState( QAbstractState * target )
+void setTargetState( QAbstractState *target )
 */
 HB_FUNC_STATIC(QABSTRACTTRANSITION_SETTARGETSTATE)
 {
@@ -262,7 +262,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_SETTARGETSTATES)
 }
 
 /*
-QState * sourceState() const
+QState *sourceState() const
 */
 HB_FUNC_STATIC(QABSTRACTTRANSITION_SOURCESTATE)
 {
@@ -287,7 +287,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_SOURCESTATE)
 }
 
 /*
-QAbstractState * targetState() const
+QAbstractState *targetState() const
 */
 HB_FUNC_STATIC(QABSTRACTTRANSITION_TARGETSTATE)
 {

@@ -90,7 +90,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QProcess( QObject * parent = 0 )
+    QProcess( QObject *parent = 0 )
     */
 HB_FUNC_STATIC(QPROCESS_NEW)
 {
@@ -631,7 +631,7 @@ HB_FUNC_STATIC(QPROCESS_SETSTANDARDOUTPUTFILE)
 }
 
 /*
-void setStandardOutputProcess( QProcess * destination )
+void setStandardOutputProcess( QProcess *destination )
 */
 HB_FUNC_STATIC(QPROCESS_SETSTANDARDOUTPUTPROCESS)
 {

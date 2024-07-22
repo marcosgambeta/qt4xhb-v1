@@ -75,7 +75,7 @@ END CLASS
 #include "qt4xhb_signals.hpp"
 
     /*
-    HAbstractTableModel( QObject * parent = 0 )
+    HAbstractTableModel( QObject *parent = 0 )
     */
     HB_FUNC(HABSTRACTTABLEMODEL_NEW)
 {
@@ -816,10 +816,10 @@ HB_FUNC(HABSTRACTTABLEMODEL_RELOADDATA)
 // */
 // HB_FUNC( HABSTRACTTABLEMODEL_CREATEINDEX )
 // {
-//   HAbstractTableModel * obj = (HAbstractTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0
+//   HAbstractTableModel *obj = (HAbstractTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0
 //   ) ); if( obj != NULL )
 //   {
-//     QModelIndex * ptr = new QModelIndex( obj->createIndex ( hb_parni(1), hb_parni(2)) );
+//     QModelIndex *ptr = new QModelIndex( obj->createIndex ( hb_parni(1), hb_parni(2)) );
 //     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX");  }
 // }
 

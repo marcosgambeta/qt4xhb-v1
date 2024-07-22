@@ -52,7 +52,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QTimer( QObject * parent = 0 )
+    QTimer( QObject *parent = 0 )
     */
 HB_FUNC_STATIC(QTIMER_NEW)
 {
@@ -296,7 +296,7 @@ HB_FUNC_STATIC(QTIMER_STOP)
 }
 
 /*
-static void singleShot( int msec, QObject * receiver, const char * member )
+static void singleShot( int msec, QObject *receiver, const char *member )
 */
 HB_FUNC_STATIC(QTIMER_SINGLESHOT)
 {

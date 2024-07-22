@@ -365,7 +365,7 @@ HB_FUNC_STATIC(QRECT_CONTAINS)
 }
 
 /*
-void getCoords( int * x1, int * y1, int * x2, int * y2 ) const
+void getCoords( int *x1, int *y1, int *x2, int *y2 ) const
 */
 HB_FUNC_STATIC(QRECT_GETCOORDS)
 {
@@ -399,7 +399,7 @@ HB_FUNC_STATIC(QRECT_GETCOORDS)
 }
 
 /*
-void getRect( int * x, int * y, int * width, int * height ) const
+void getRect( int *x, int *y, int *width, int *height ) const
 */
 HB_FUNC_STATIC(QRECT_GETRECT)
 {

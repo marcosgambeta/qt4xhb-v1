@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_DELETE)
 }
 
 /*
-bool filterEvent( void * message, long * result )
+bool filterEvent( void *message, long *result )
 */
 HB_FUNC_STATIC(QCOREAPPLICATION_FILTEREVENT)
 {
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_FILTEREVENT)
 }
 
 /*
-virtual bool notify( QObject * receiver, QEvent * event )
+virtual bool notify( QObject *receiver, QEvent *event )
 */
 HB_FUNC_STATIC(QCOREAPPLICATION_NOTIFY)
 {
@@ -422,7 +422,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_HASPENDINGEVENTS)
 }
 
 /*
-static void installTranslator( QTranslator * translationFile )
+static void installTranslator( QTranslator *translationFile )
 */
 HB_FUNC_STATIC(QCOREAPPLICATION_INSTALLTRANSLATOR)
 {
@@ -443,7 +443,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_INSTALLTRANSLATOR)
 }
 
 /*
-static QCoreApplication * instance()
+static QCoreApplication *instance()
 */
 HB_FUNC_STATIC(QCOREAPPLICATION_INSTANCE)
 {
@@ -524,7 +524,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_POSTEVENT)
   if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISOBJECT(2))
   {
     /*
-    static void postEvent( QObject * receiver, QEvent * event )
+    static void postEvent( QObject *receiver, QEvent *event )
     */
 
     QCoreApplication::postEvent(PQOBJECT(1), PQEVENT(2));
@@ -534,7 +534,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_POSTEVENT)
   else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISOBJECT(2) && HB_ISNUM(3))
   {
     /*
-    static void postEvent( QObject * receiver, QEvent * event, int priority )
+    static void postEvent( QObject *receiver, QEvent *event, int priority )
     */
 
     QCoreApplication::postEvent(PQOBJECT(1), PQEVENT(2), PINT(3));
@@ -602,7 +602,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_REMOVEPOSTEDEVENTS)
   if (ISNUMPAR(1) && ISQOBJECT(1))
   {
     /*
-    static void removePostedEvents( QObject * receiver )
+    static void removePostedEvents( QObject *receiver )
     */
 
     QCoreApplication::removePostedEvents(PQOBJECT(1));
@@ -612,7 +612,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_REMOVEPOSTEDEVENTS)
   else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2))
   {
     /*
-    static void removePostedEvents( QObject * receiver, int eventType )
+    static void removePostedEvents( QObject *receiver, int eventType )
     */
 
     QCoreApplication::removePostedEvents(PQOBJECT(1), PINT(2));
@@ -626,7 +626,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_REMOVEPOSTEDEVENTS)
 }
 
 /*
-static void removeTranslator( QTranslator * translationFile )
+static void removeTranslator( QTranslator *translationFile )
 */
 HB_FUNC_STATIC(QCOREAPPLICATION_REMOVETRANSLATOR)
 {
@@ -647,7 +647,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_REMOVETRANSLATOR)
 }
 
 /*
-static bool sendEvent( QObject * receiver, QEvent * event )
+static bool sendEvent( QObject *receiver, QEvent *event )
 */
 HB_FUNC_STATIC(QCOREAPPLICATION_SENDEVENT)
 {
@@ -670,7 +670,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_SENDPOSTEDEVENTS)
   if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2))
   {
     /*
-    static void sendPostedEvents( QObject * receiver, int event_type )
+    static void sendPostedEvents( QObject *receiver, int event_type )
     */
 
     QCoreApplication::sendPostedEvents(PQOBJECT(1), PINT(2));
@@ -862,7 +862,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_TRANSLATE)
   if (ISNUMPAR(5) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISNUM(4) && HB_ISNUM(5))
   {
     /*
-    static QString translate( const char * context, const char * sourceText, const char * disambiguation,
+    static QString translate( const char *context, const char *sourceText, const char *disambiguation,
     QCoreApplication::Encoding encoding, int n )
     */
 
@@ -872,7 +872,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_TRANSLATE)
   else if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISNUM(4))
   {
     /*
-    static QString translate( const char * context, const char * sourceText, const char * disambiguation = 0,
+    static QString translate( const char *context, const char *sourceText, const char *disambiguation = 0,
     QCoreApplication::Encoding encoding = QCoreApplication::CodecForTr )
     */
 

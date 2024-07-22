@@ -582,7 +582,7 @@ HB_FUNC_STATIC(QABSTRACTFILEENGINE_POS)
 }
 
 /*
-virtual qint64 readLine( char * data, qint64 maxlen )
+virtual qint64 readLine( char *data, qint64 maxlen )
 */
 HB_FUNC_STATIC(QABSTRACTFILEENGINE_READLINE)
 {
@@ -824,7 +824,7 @@ HB_FUNC_STATIC(QABSTRACTFILEENGINE_SUPPORTSEXTENSION)
 }
 
 /*
-virtual qint64 write( const char * data, qint64 len )
+virtual qint64 write( const char *data, qint64 len )
 */
 HB_FUNC_STATIC(QABSTRACTFILEENGINE_WRITE)
 {
@@ -848,7 +848,7 @@ HB_FUNC_STATIC(QABSTRACTFILEENGINE_WRITE)
 }
 
 /*
-static QAbstractFileEngine * create( const QString &fileName )
+static QAbstractFileEngine *create( const QString &fileName )
 */
 HB_FUNC_STATIC(QABSTRACTFILEENGINE_CREATE)
 {

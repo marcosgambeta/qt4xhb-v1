@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_OPEN)
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISPOINTER(2))
   {
     /*
-    bool open( QIODevice::OpenMode openMode, FILE * fh )
+    bool open( QIODevice::OpenMode openMode, FILE *fh )
     */
     QFSFileEngine *obj = static_cast<QFSFileEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -157,7 +157,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_OPEN)
   else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISPOINTER(2) && HB_ISNUM(3))
   {
     /*
-    bool open( QIODevice::OpenMode openMode, FILE * fh, QFile::FileHandleFlags handleFlags )
+    bool open( QIODevice::OpenMode openMode, FILE *fh, QFile::FileHandleFlags handleFlags )
     */
     QFSFileEngine *obj = static_cast<QFSFileEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -535,7 +535,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_POS)
 }
 
 /*
-virtual qint64 read( char * data, qint64 maxlen )
+virtual qint64 read( char *data, qint64 maxlen )
 */
 HB_FUNC_STATIC(QFSFILEENGINE_READ)
 {
@@ -559,7 +559,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_READ)
 }
 
 /*
-virtual qint64 readLine( char * data, qint64 maxlen )
+virtual qint64 readLine( char *data, qint64 maxlen )
 */
 HB_FUNC_STATIC(QFSFILEENGINE_READLINE)
 {
@@ -801,7 +801,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_SUPPORTSEXTENSION)
 }
 
 /*
-virtual qint64 write( const char * data, qint64 len )
+virtual qint64 write( const char *data, qint64 len )
 */
 HB_FUNC_STATIC(QFSFILEENGINE_WRITE)
 {

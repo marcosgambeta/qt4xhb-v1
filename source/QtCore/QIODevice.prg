@@ -238,7 +238,7 @@ HB_FUNC_STATIC(QIODEVICE_ERRORSTRING)
 }
 
 /*
-bool getChar( char * c )
+bool getChar( char *c )
 */
 HB_FUNC_STATIC(QIODEVICE_GETCHAR)
 {
@@ -434,7 +434,7 @@ HB_FUNC_STATIC(QIODEVICE_PEEK)
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
     /*
-    qint64 peek( char * data, qint64 maxSize )
+    qint64 peek( char *data, qint64 maxSize )
     */
     QIODevice *obj = qobject_cast<QIODevice *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -515,7 +515,7 @@ HB_FUNC_STATIC(QIODEVICE_READ)
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
     /*
-    qint64 read( char * data, qint64 maxSize )
+    qint64 read( char *data, qint64 maxSize )
     */
     QIODevice *obj = qobject_cast<QIODevice *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -573,7 +573,7 @@ HB_FUNC_STATIC(QIODEVICE_READLINE)
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
     /*
-    qint64 readLine( char * data, qint64 maxSize )
+    qint64 readLine( char *data, qint64 maxSize )
     */
     QIODevice *obj = qobject_cast<QIODevice *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -778,7 +778,7 @@ HB_FUNC_STATIC(QIODEVICE_WRITE)
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
     /*
-    qint64 write( const char * data, qint64 maxSize )
+    qint64 write( const char *data, qint64 maxSize )
     */
     QIODevice *obj = qobject_cast<QIODevice *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -790,7 +790,7 @@ HB_FUNC_STATIC(QIODEVICE_WRITE)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    qint64 write( const char * data )
+    qint64 write( const char *data )
     */
     QIODevice *obj = qobject_cast<QIODevice *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

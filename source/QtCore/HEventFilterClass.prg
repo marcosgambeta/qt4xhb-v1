@@ -4,7 +4,6 @@
 // Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 //
 
-
 // clang-format off
 
 #include "hbclass.ch"

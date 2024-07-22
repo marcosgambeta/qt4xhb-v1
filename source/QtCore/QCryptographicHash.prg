@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_ADDDATA)
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
     /*
-    void addData( const char * data, int length )
+    void addData( const char *data, int length )
     */
     QCryptographicHash *obj = static_cast<QCryptographicHash *>(Qt4xHb::itemGetPtrStackSelfItem());
 

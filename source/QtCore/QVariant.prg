@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QVARIANT_NEW6)
 }
 
 /*
-QVariant( int typeOrUserType, const void * copy )
+QVariant( int typeOrUserType, const void *copy )
 */
 HB_FUNC_STATIC(QVARIANT_NEW7)
 {
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QVARIANT_NEW16)
 }
 
 /*
-QVariant( const char * val )
+QVariant( const char *val )
 */
 HB_FUNC_STATIC(QVARIANT_NEW17)
 {
@@ -907,7 +907,7 @@ HB_FUNC_STATIC(QVARIANT_TOPOINTF)
 }
 
 /*
-qreal toReal( bool * ok = 0 ) const
+qreal toReal( bool *ok = 0 ) const
 */
 HB_FUNC_STATIC(QVARIANT_TOREAL)
 {
@@ -1180,7 +1180,7 @@ HB_FUNC_STATIC(QVARIANT_TYPE)
 }
 
 /*
-const char * typeName() const
+const char *typeName() const
 */
 HB_FUNC_STATIC(QVARIANT_TYPENAME)
 {
@@ -1228,7 +1228,7 @@ HB_FUNC_STATIC(QVARIANT_USERTYPE)
 }
 
 /*
-static QVariant::Type nameToType( const char * name )
+static QVariant::Type nameToType( const char *name )
 */
 HB_FUNC_STATIC(QVARIANT_NAMETOTYPE)
 {
@@ -1247,7 +1247,7 @@ HB_FUNC_STATIC(QVARIANT_NAMETOTYPE)
 }
 
 /*
-static const char * typeToName( QVariant::Type typ )
+static const char *typeToName( QVariant::Type typ )
 */
 HB_FUNC_STATIC(QVARIANT_TYPETONAME)
 {

@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QUUID_NEW3)
 }
 
 /*
-QUuid( const char * )
+QUuid( const char *)
 */
 HB_FUNC_STATIC(QUUID_NEW4)
 {

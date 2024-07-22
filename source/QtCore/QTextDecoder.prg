@@ -53,7 +53,7 @@ HB_FUNC_STATIC(QTEXTDECODER_NEW)
   if (ISNUMPAR(1) && ISQTEXTCODEC(1))
   {
     /*
-    QTextDecoder( const QTextCodec * codec )
+    QTextDecoder( const QTextCodec *codec )
     */
     QTextDecoder *obj = new QTextDecoder(PQTEXTCODEC(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -61,7 +61,7 @@ HB_FUNC_STATIC(QTEXTDECODER_NEW)
   else if (ISNUMPAR(2) && ISQTEXTCODEC(1) && HB_ISNUM(2))
   {
     /*
-    QTextDecoder( const QTextCodec * codec, QTextCodec::ConversionFlags flags )
+    QTextDecoder( const QTextCodec *codec, QTextCodec::ConversionFlags flags )
     */
     QTextDecoder *obj = new QTextDecoder(PQTEXTCODEC(1), (QTextCodec::ConversionFlags)hb_parni(2));
     Qt4xHb::returnNewObject(obj, true);
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QTEXTDECODER_TOUNICODE)
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
     /*
-    QString toUnicode( const char * chars, int len )
+    QString toUnicode( const char *chars, int len )
     */
     QTextDecoder *obj = static_cast<QTextDecoder *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QTEXTDECODER_TOUNICODE)
   else if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3))
   {
     /*
-    void toUnicode( QString * target, const char * chars, int len )
+    void toUnicode( QString *target, const char *chars, int len )
     */
     QTextDecoder *obj = static_cast<QTextDecoder *>(Qt4xHb::itemGetPtrStackSelfItem());
 

@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_NEW)
   else if (ISNUMPAR(1) && ISQIODEVICE(1))
   {
     /*
-    QTextStream( QIODevice * device )
+    QTextStream( QIODevice *device )
     */
     QTextStream *obj = new QTextStream(PQIODEVICE(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISPOINTER(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QTextStream( FILE * fileHandle, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
+    QTextStream( FILE *fileHandle, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
     */
     QTextStream *obj =
         new QTextStream(static_cast<FILE *>(hb_parptr(1)),
@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_NEW)
   else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QTextStream( QByteArray * array, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
+    QTextStream( QByteArray *array, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
     */
     QTextStream *obj = new QTextStream(PQBYTEARRAY(1), HB_ISNIL(2) ? (QIODevice::OpenMode)QIODevice::ReadWrite
                                                                    : (QIODevice::OpenMode)hb_parni(2));
@@ -160,7 +160,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETCODEC)
   if (ISNUMPAR(1) && ISQTEXTCODEC(1))
   {
     /*
-    void setCodec( QTextCodec * codec )
+    void setCodec( QTextCodec *codec )
     */
     QTextStream *obj = static_cast<QTextStream *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -174,7 +174,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETCODEC)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    void setCodec( const char * codecName )
+    void setCodec( const char *codecName )
     */
     QTextStream *obj = static_cast<QTextStream *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETCODEC)
 }
 
 /*
-QTextCodec * codec() const
+QTextCodec *codec() const
 */
 HB_FUNC_STATIC(QTEXTSTREAM_CODEC)
 {
@@ -368,7 +368,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_LOCALE)
 }
 
 /*
-void setDevice( QIODevice * device )
+void setDevice( QIODevice *device )
 */
 HB_FUNC_STATIC(QTEXTSTREAM_SETDEVICE)
 {
@@ -394,7 +394,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETDEVICE)
 }
 
 /*
-QIODevice * device() const
+QIODevice *device() const
 */
 HB_FUNC_STATIC(QTEXTSTREAM_DEVICE)
 {

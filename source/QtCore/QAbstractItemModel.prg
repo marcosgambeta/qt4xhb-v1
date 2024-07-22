@@ -217,7 +217,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_DATA)
 }
 
 /*
-virtual bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex &
+virtual bool dropMimeData( const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &
 parent )
 */
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_DROPMIMEDATA)
@@ -547,7 +547,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_MATCH)
 }
 
 /*
-virtual QMimeData * mimeData( const QModelIndexList &indexes ) const
+virtual QMimeData *mimeData( const QModelIndexList &indexes ) const
 */
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_MIMEDATA)
 {

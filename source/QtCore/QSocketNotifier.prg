@@ -47,7 +47,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QSocketNotifier( int socket, QSocketNotifier::Type, QObject * parent = 0 )
+    QSocketNotifier( int socket, QSocketNotifier::Type, QObject *parent = 0 )
     */
 HB_FUNC_STATIC(QSOCKETNOTIFIER_NEW)
 {

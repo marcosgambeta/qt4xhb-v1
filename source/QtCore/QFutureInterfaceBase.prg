@@ -229,7 +229,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_REPORTRESULTSREADY)
 }
 
 /*
-void setRunnable( QRunnable * runnable )
+void setRunnable( QRunnable *runnable )
 */
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_SETRUNNABLE)
 {
@@ -951,7 +951,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_WAITFORRESUME)
 }
 
 /*
-QMutex * mutex() const
+QMutex *mutex() const
 */
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_MUTEX)
 {

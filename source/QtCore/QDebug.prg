@@ -55,7 +55,7 @@ HB_FUNC_STATIC(QDEBUG_NEW)
   if (ISNUMPAR(1) && ISQIODEVICE(1))
   {
     /*
-    QDebug( QIODevice * device )
+    QDebug( QIODevice *device )
     */
     QDebug *obj = new QDebug(PQIODEVICE(1));
     Qt4xHb::returnNewObject(obj, true);

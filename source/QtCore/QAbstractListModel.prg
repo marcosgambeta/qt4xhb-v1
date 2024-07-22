@@ -61,7 +61,7 @@ HB_FUNC_STATIC(QABSTRACTLISTMODEL_DELETE)
 }
 
 /*
-virtual bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex &
+virtual bool dropMimeData( const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &
 parent )
 */
 HB_FUNC_STATIC(QABSTRACTLISTMODEL_DROPMIMEDATA)

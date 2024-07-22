@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QMETAOBJECT_CLASSINFOOFFSET)
 }
 
 /*
-const char * className() const
+const char *className() const
 */
 HB_FUNC_STATIC(QMETAOBJECT_CLASSNAME)
 {
@@ -322,7 +322,7 @@ HB_FUNC_STATIC(QMETAOBJECT_ENUMERATOROFFSET)
 }
 
 /*
-int indexOfClassInfo( const char * name ) const
+int indexOfClassInfo( const char *name ) const
 */
 HB_FUNC_STATIC(QMETAOBJECT_INDEXOFCLASSINFO)
 {
@@ -346,7 +346,7 @@ HB_FUNC_STATIC(QMETAOBJECT_INDEXOFCLASSINFO)
 }
 
 /*
-int indexOfConstructor( const char * constructor ) const
+int indexOfConstructor( const char *constructor ) const
 */
 HB_FUNC_STATIC(QMETAOBJECT_INDEXOFCONSTRUCTOR)
 {
@@ -370,7 +370,7 @@ HB_FUNC_STATIC(QMETAOBJECT_INDEXOFCONSTRUCTOR)
 }
 
 /*
-int indexOfEnumerator( const char * name ) const
+int indexOfEnumerator( const char *name ) const
 */
 HB_FUNC_STATIC(QMETAOBJECT_INDEXOFENUMERATOR)
 {
@@ -394,7 +394,7 @@ HB_FUNC_STATIC(QMETAOBJECT_INDEXOFENUMERATOR)
 }
 
 /*
-int indexOfMethod( const char * method ) const
+int indexOfMethod( const char *method ) const
 */
 HB_FUNC_STATIC(QMETAOBJECT_INDEXOFMETHOD)
 {
@@ -418,7 +418,7 @@ HB_FUNC_STATIC(QMETAOBJECT_INDEXOFMETHOD)
 }
 
 /*
-int indexOfProperty( const char * name ) const
+int indexOfProperty( const char *name ) const
 */
 HB_FUNC_STATIC(QMETAOBJECT_INDEXOFPROPERTY)
 {
@@ -442,7 +442,7 @@ HB_FUNC_STATIC(QMETAOBJECT_INDEXOFPROPERTY)
 }
 
 /*
-int indexOfSignal( const char * signal ) const
+int indexOfSignal( const char *signal ) const
 */
 HB_FUNC_STATIC(QMETAOBJECT_INDEXOFSIGNAL)
 {
@@ -466,7 +466,7 @@ HB_FUNC_STATIC(QMETAOBJECT_INDEXOFSIGNAL)
 }
 
 /*
-int indexOfSlot( const char * slot ) const
+int indexOfSlot( const char *slot ) const
 */
 HB_FUNC_STATIC(QMETAOBJECT_INDEXOFSLOT)
 {
@@ -636,7 +636,7 @@ HB_FUNC_STATIC(QMETAOBJECT_PROPERTYOFFSET)
 }
 
 /*
-const QMetaObject * superClass() const
+const QMetaObject *superClass() const
 */
 HB_FUNC_STATIC(QMETAOBJECT_SUPERCLASS)
 {
@@ -686,7 +686,7 @@ HB_FUNC_STATIC(QMETAOBJECT_USERPROPERTY)
 }
 
 /*
-static bool checkConnectArgs( const char * signal, const char * method )
+static bool checkConnectArgs( const char *signal, const char *method )
 */
 HB_FUNC_STATIC(QMETAOBJECT_CHECKCONNECTARGS)
 {
@@ -705,7 +705,7 @@ HB_FUNC_STATIC(QMETAOBJECT_CHECKCONNECTARGS)
 }
 
 /*
-static void connectSlotsByName( QObject * object )
+static void connectSlotsByName( QObject *object )
 */
 HB_FUNC_STATIC(QMETAOBJECT_CONNECTSLOTSBYNAME)
 {
@@ -731,7 +731,7 @@ HB_FUNC_STATIC(QMETAOBJECT_INVOKEMETHOD)
 }
 
 /*
-static QByteArray normalizedSignature( const char * method )
+static QByteArray normalizedSignature( const char *method )
 */
 HB_FUNC_STATIC(QMETAOBJECT_NORMALIZEDSIGNATURE)
 {
@@ -751,7 +751,7 @@ HB_FUNC_STATIC(QMETAOBJECT_NORMALIZEDSIGNATURE)
 }
 
 /*
-static QByteArray normalizedType( const char * type )
+static QByteArray normalizedType( const char *type )
 */
 HB_FUNC_STATIC(QMETAOBJECT_NORMALIZEDTYPE)
 {

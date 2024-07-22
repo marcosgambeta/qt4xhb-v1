@@ -41,7 +41,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QFinalState( QState * parent = 0 )
+    QFinalState( QState *parent = 0 )
     */
 HB_FUNC_STATIC(QFINALSTATE_NEW)
 {

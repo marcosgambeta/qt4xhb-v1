@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_DELETE)
 }
 
 /*
-QObject * add( QObject * object )
+QObject *add( QObject *object )
 */
 HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_ADD)
 {
@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_ADD)
 }
 
 /*
-void remove( QObject * object )
+void remove( QObject *object )
 */
 HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_REMOVE)
 {

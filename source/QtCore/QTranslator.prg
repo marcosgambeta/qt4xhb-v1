@@ -46,7 +46,7 @@ RETURN
 #include <QtCore/QLocale>
 
     /*
-    QTranslator( QObject * parent = 0 )
+    QTranslator( QObject *parent = 0 )
     */
 HB_FUNC_STATIC(QTRANSLATOR_NEW)
 {
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QTRANSLATOR_LOAD)
 }
 
 /*
-virtual QString translate( const char * context, const char * sourceText, const char * disambiguation = 0, int n = -1 )
+virtual QString translate( const char *context, const char *sourceText, const char *disambiguation = 0, int n = -1 )
 const
 */
 HB_FUNC_STATIC(QTRANSLATOR_TRANSLATE)

@@ -1192,7 +1192,7 @@ HB_FUNC_STATIC(QLOCALE_TODATETIME)
 }
 
 /*
-double toDouble( const QString &s, bool * ok = 0 ) const
+double toDouble( const QString &s, bool *ok = 0 ) const
 */
 HB_FUNC_STATIC(QLOCALE_TODOUBLE)
 {
@@ -1218,7 +1218,7 @@ HB_FUNC_STATIC(QLOCALE_TODOUBLE)
 }
 
 /*
-float toFloat( const QString &s, bool * ok = 0 ) const
+float toFloat( const QString &s, bool *ok = 0 ) const
 */
 HB_FUNC_STATIC(QLOCALE_TOFLOAT)
 {
@@ -1244,7 +1244,7 @@ HB_FUNC_STATIC(QLOCALE_TOFLOAT)
 }
 
 /*
-int toInt( const QString &s, bool * ok = 0, int base = 0 ) const
+int toInt( const QString &s, bool *ok = 0, int base = 0 ) const
 */
 HB_FUNC_STATIC(QLOCALE_TOINT)
 {
@@ -1270,7 +1270,7 @@ HB_FUNC_STATIC(QLOCALE_TOINT)
 }
 
 /*
-qlonglong toLongLong( const QString &s, bool * ok = 0, int base = 0 ) const
+qlonglong toLongLong( const QString &s, bool *ok = 0, int base = 0 ) const
 */
 HB_FUNC_STATIC(QLOCALE_TOLONGLONG)
 {
@@ -1320,7 +1320,7 @@ HB_FUNC_STATIC(QLOCALE_TOLOWER)
 }
 
 /*
-short toShort( const QString &s, bool * ok = 0, int base = 0 ) const
+short toShort( const QString &s, bool *ok = 0, int base = 0 ) const
 */
 HB_FUNC_STATIC(QLOCALE_TOSHORT)
 {
@@ -1724,7 +1724,7 @@ HB_FUNC_STATIC(QLOCALE_TOTIME)
 }
 
 /*
-uint toUInt( const QString &s, bool * ok = 0, int base = 0 ) const
+uint toUInt( const QString &s, bool *ok = 0, int base = 0 ) const
 */
 HB_FUNC_STATIC(QLOCALE_TOUINT)
 {
@@ -1750,7 +1750,7 @@ HB_FUNC_STATIC(QLOCALE_TOUINT)
 }
 
 /*
-qlonglong toULongLong( const QString &s, bool * ok = 0, int base = 0 ) const
+qlonglong toULongLong( const QString &s, bool *ok = 0, int base = 0 ) const
 */
 HB_FUNC_STATIC(QLOCALE_TOULONGLONG)
 {
@@ -1776,7 +1776,7 @@ HB_FUNC_STATIC(QLOCALE_TOULONGLONG)
 }
 
 /*
-ushort toUShort( const QString &s, bool * ok = 0, int base = 0 ) const
+ushort toUShort( const QString &s, bool *ok = 0, int base = 0 ) const
 */
 HB_FUNC_STATIC(QLOCALE_TOUSHORT)
 {

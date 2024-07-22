@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QDATASTREAM_NEW)
   else if (ISNUMPAR(1) && ISQIODEVICE(1))
   {
     /*
-    QDataStream( QIODevice * d )
+    QDataStream( QIODevice *d )
     */
     QDataStream *obj = new QDataStream(PQIODEVICE(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QDATASTREAM_NEW)
   else if (ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISNUM(2))
   {
     /*
-    QDataStream( QByteArray * a, QIODevice::OpenMode mode )
+    QDataStream( QByteArray *a, QIODevice::OpenMode mode )
     */
     QDataStream *obj = new QDataStream(PQBYTEARRAY(1), (QIODevice::OpenMode)hb_parni(2));
     Qt4xHb::returnNewObject(obj, true);
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QDATASTREAM_BYTEORDER)
 }
 
 /*
-QIODevice * device() const
+QIODevice *device() const
 */
 HB_FUNC_STATIC(QDATASTREAM_DEVICE)
 {
@@ -217,7 +217,7 @@ HB_FUNC_STATIC(QDATASTREAM_FLOATINGPOINTPRECISION)
 }
 
 /*
-int readRawData( char * s, int len )
+int readRawData( char *s, int len )
 */
 HB_FUNC_STATIC(QDATASTREAM_READRAWDATA)
 {
@@ -293,7 +293,7 @@ HB_FUNC_STATIC(QDATASTREAM_SETBYTEORDER)
 }
 
 /*
-void setDevice( QIODevice * d )
+void setDevice( QIODevice *d )
 */
 HB_FUNC_STATIC(QDATASTREAM_SETDEVICE)
 {
@@ -469,7 +469,7 @@ HB_FUNC_STATIC(QDATASTREAM_VERSION)
 }
 
 /*
-int writeRawData( const char * s, int len )
+int writeRawData( const char *s, int len )
 */
 HB_FUNC_STATIC(QDATASTREAM_WRITERAWDATA)
 {
