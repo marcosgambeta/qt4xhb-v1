@@ -38,4 +38,4 @@ public slots:
   void urlChanged(const QUrl &url);
 };
 
-#endif /* QWEBVIEWSLOTS_H */
+#endif // QWEBVIEWSLOTS_H

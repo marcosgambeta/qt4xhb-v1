@@ -37,4 +37,4 @@ public slots:
   void urlChanged(const QUrl &url);
 };
 
-#endif /* QGRAPHICSWEBVIEWSLOTS_H */
+#endif // QGRAPHICSWEBVIEWSLOTS_H

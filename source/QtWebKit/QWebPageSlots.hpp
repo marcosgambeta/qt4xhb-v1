@@ -55,4 +55,4 @@ public slots:
   void windowCloseRequested();
 };
 
-#endif /* QWEBPAGESLOTS_H */
+#endif // QWEBPAGESLOTS_H

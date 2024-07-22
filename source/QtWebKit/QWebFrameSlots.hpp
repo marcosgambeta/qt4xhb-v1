@@ -38,4 +38,4 @@ public slots:
   void urlChanged(const QUrl &url);
 };
 
-#endif /* QWEBFRAMESLOTS_H */
+#endif // QWEBFRAMESLOTS_H
