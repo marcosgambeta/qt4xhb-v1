@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QHELPCONTENTITEM_DELETE)
 }
 
 /*
-QHelpContentItem * child( int row ) const
+QHelpContentItem *child( int row ) const
 */
 HB_FUNC_STATIC(QHELPCONTENTITEM_CHILD)
 {
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QHELPCONTENTITEM_CHILDCOUNT)
 }
 
 /*
-int childPosition( QHelpContentItem * child ) const
+int childPosition( QHelpContentItem *child ) const
 */
 HB_FUNC_STATIC(QHELPCONTENTITEM_CHILDPOSITION)
 {
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QHELPCONTENTITEM_CHILDPOSITION)
 }
 
 /*
-QHelpContentItem * parent() const
+QHelpContentItem *parent() const
 */
 HB_FUNC_STATIC(QHELPCONTENTITEM_PARENT)
 {

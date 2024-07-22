@@ -60,7 +60,7 @@ RETURN
 #include <QtHelp/QHelpSearchResultWidget>
 
     /*
-    QHelpSearchEngine( QHelpEngineCore * helpEngine, QObject * parent = 0 )
+    QHelpSearchEngine( QHelpEngineCore *helpEngine, QObject *parent = 0 )
     */
 HB_FUNC_STATIC(QHELPSEARCHENGINE_NEW)
 {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_QUERY)
 }
 
 /*
-QHelpSearchQueryWidget * queryWidget()
+QHelpSearchQueryWidget *queryWidget()
 */
 HB_FUNC_STATIC(QHELPSEARCHENGINE_QUERYWIDGET)
 {
@@ -194,7 +194,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_QUERYWIDGET)
 }
 
 /*
-QHelpSearchResultWidget * resultWidget()
+QHelpSearchResultWidget *resultWidget()
 */
 HB_FUNC_STATIC(QHELPSEARCHENGINE_RESULTWIDGET)
 {

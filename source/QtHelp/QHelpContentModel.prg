@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_DELETE)
 }
 
 /*
-QHelpContentItem * contentItemAt( const QModelIndex &index ) const
+QHelpContentItem *contentItemAt( const QModelIndex &index ) const
 */
 HB_FUNC_STATIC(QHELPCONTENTMODEL_CONTENTITEMAT)
 {
