@@ -30,4 +30,4 @@ public slots:
   void destroyed(QObject *obj = 0);
 };
 
-#endif /* QOBJECTSLOTS_H */
+#endif // QOBJECTSLOTS_H

@@ -35,4 +35,4 @@ public slots:
   void mapped(QObject *o);
 };
 
-#endif /* QSIGNALMAPPERSLOTS_H */
+#endif // QSIGNALMAPPERSLOTS_H

@@ -31,4 +31,4 @@ public slots:
   void stopped();
 };
 
-#endif /* QSTATEMACHINESLOTS_H */
+#endif // QSTATEMACHINESLOTS_H

@@ -30,4 +30,4 @@ public slots:
   void currentAnimationChanged(QAbstractAnimation *current);
 };
 
-#endif /* QSEQUENTIALANIMATIONGROUPSLOTS_H */
+#endif // QSEQUENTIALANIMATIONGROUPSLOTS_H

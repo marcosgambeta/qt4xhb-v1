@@ -30,4 +30,4 @@ public slots:
   void activated(int socket);
 };
 
-#endif /* QSOCKETNOTIFIERSLOTS_H */
+#endif // QSOCKETNOTIFIERSLOTS_H

@@ -30,4 +30,4 @@ public slots:
   void triggered();
 };
 
-#endif /* QABSTRACTTRANSITIONSLOTS_H */
+#endif // QABSTRACTTRANSITIONSLOTS_H

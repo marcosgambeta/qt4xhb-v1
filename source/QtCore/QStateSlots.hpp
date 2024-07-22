@@ -31,4 +31,4 @@ public slots:
   void propertiesAssigned();
 };
 
-#endif /* QSTATESLOTS_H */
+#endif // QSTATESLOTS_H

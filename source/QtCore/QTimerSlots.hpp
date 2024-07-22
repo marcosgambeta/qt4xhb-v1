@@ -30,4 +30,4 @@ public slots:
   void timeout();
 };
 
-#endif /* QTIMERSLOTS_H */
+#endif // QTIMERSLOTS_H

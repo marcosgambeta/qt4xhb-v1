@@ -35,4 +35,4 @@ public slots:
   void stateChanged(QProcess::ProcessState newState);
 };
 
-#endif /* QPROCESSSLOTS_H */
+#endif // QPROCESSSLOTS_H

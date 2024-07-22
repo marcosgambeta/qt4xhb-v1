@@ -33,4 +33,4 @@ public slots:
   void stateChanged(QAbstractAnimation::State newState, QAbstractAnimation::State oldState);
 };
 
-#endif /* QABSTRACTANIMATIONSLOTS_H */
+#endif // QABSTRACTANIMATIONSLOTS_H

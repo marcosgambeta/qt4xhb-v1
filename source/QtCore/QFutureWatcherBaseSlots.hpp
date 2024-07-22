@@ -39,4 +39,4 @@ public slots:
   void progressTextChanged(const QString &progressText);
 };
 
-#endif /* QFUTUREWATCHERBASESLOTS_H */
+#endif // QFUTUREWATCHERBASESLOTS_H

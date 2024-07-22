@@ -51,4 +51,4 @@ public slots:
   void rowsRemoved(const QModelIndex &parent, int start, int end);
 };
 
-#endif /* QABSTRACTITEMMODELSLOTS_H */
+#endif // QABSTRACTITEMMODELSLOTS_H

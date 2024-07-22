@@ -33,4 +33,4 @@ public slots:
   void readyRead();
 };
 
-#endif /* QIODEVICESLOTS_H */
+#endif // QIODEVICESLOTS_H

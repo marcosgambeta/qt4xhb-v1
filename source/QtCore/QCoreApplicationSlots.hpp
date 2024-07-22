@@ -30,4 +30,4 @@ public slots:
   void aboutToQuit();
 };
 
-#endif /* QCOREAPPLICATIONSLOTS_H */
+#endif // QCOREAPPLICATIONSLOTS_H

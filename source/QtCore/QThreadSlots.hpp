@@ -31,4 +31,4 @@ public slots:
   void started();
 };
 
-#endif /* QTHREADSLOTS_H */
+#endif // QTHREADSLOTS_H

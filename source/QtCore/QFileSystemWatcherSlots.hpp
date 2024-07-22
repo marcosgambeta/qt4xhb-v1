@@ -31,4 +31,4 @@ public slots:
   void fileChanged(const QString &path);
 };
 
-#endif /* QFILESYSTEMWATCHERSLOTS_H */
+#endif // QFILESYSTEMWATCHERSLOTS_H

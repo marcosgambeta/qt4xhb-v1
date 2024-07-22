@@ -31,4 +31,4 @@ public slots:
   void exited();
 };
 
-#endif /* QABSTRACTSTATESLOTS_H */
+#endif // QABSTRACTSTATESLOTS_H

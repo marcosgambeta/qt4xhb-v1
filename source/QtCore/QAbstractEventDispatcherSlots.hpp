@@ -31,4 +31,4 @@ public slots:
   void awake();
 };
 
-#endif /* QABSTRACTEVENTDISPATCHERSLOTS_H */
+#endif // QABSTRACTEVENTDISPATCHERSLOTS_H

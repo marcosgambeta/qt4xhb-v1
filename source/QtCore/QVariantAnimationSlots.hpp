@@ -30,4 +30,4 @@ public slots:
   void valueChanged(const QVariant &value);
 };
 
-#endif /* QVARIANTANIMATIONSLOTS_H */
+#endif // QVARIANTANIMATIONSLOTS_H

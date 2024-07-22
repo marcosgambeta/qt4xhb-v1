@@ -33,4 +33,4 @@ public slots:
   void valueChanged(qreal value);
 };
 
-#endif /* QTIMELINESLOTS_H */
+#endif // QTIMELINESLOTS_H
