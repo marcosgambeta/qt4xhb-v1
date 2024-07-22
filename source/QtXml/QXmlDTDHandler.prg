@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QXMLDTDHANDLER_ERRORSTRING)
 }
 
 /*
-virtual bool notationDecl( const QString &name, const QString &publicId, const QString &systemId ) = 0
+virtual bool notationDecl(const QString &name, const QString &publicId, const QString &systemId) = 0
 */
 HB_FUNC_STATIC(QXMLDTDHANDLER_NOTATIONDECL)
 {
@@ -114,8 +114,8 @@ HB_FUNC_STATIC(QXMLDTDHANDLER_NOTATIONDECL)
 }
 
 /*
-virtual bool unparsedEntityDecl( const QString &name, const QString &publicId, const QString &systemId, const QString
-& notationName ) = 0
+virtual bool unparsedEntityDecl(const QString &name, const QString &publicId, const QString &systemId, const QString
+& notationName) = 0
 */
 HB_FUNC_STATIC(QXMLDTDHANDLER_UNPARSEDENTITYDECL)
 {

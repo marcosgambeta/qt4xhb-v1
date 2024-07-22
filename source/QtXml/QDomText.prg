@@ -52,7 +52,7 @@ HB_FUNC_STATIC(QDOMTEXT_NEW)
   else if (ISNUMPAR(1) && ISQDOMTEXT(1))
   {
     /*
-    QDomText( const QDomText &x )
+    QDomText(const QDomText &x)
     */
     QDomText *obj = new QDomText(*PQDOMTEXT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QDOMTEXT_NODETYPE)
 }
 
 /*
-QDomText splitText( int offset )
+QDomText splitText(int offset)
 */
 HB_FUNC_STATIC(QDOMTEXT_SPLITTEXT)
 {

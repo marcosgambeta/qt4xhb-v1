@@ -54,7 +54,7 @@ HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_NEW)
   else if (ISNUMPAR(1) && ISQDOMPROCESSINGINSTRUCTION(1))
   {
     /*
-    QDomProcessingInstruction( const QDomProcessingInstruction &x )
+    QDomProcessingInstruction(const QDomProcessingInstruction &x)
     */
     QDomProcessingInstruction *obj = new QDomProcessingInstruction(*PQDOMPROCESSINGINSTRUCTION(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_NODETYPE)
 }
 
 /*
-void setData( const QString &d )
+void setData(const QString &d)
 */
 HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_SETDATA)
 {
