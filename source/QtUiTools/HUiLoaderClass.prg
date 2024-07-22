@@ -48,7 +48,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    HUiLoader( QObject *parent = 0 )
+    HUiLoader(QObject *parent = 0)
     */
 HB_FUNC_STATIC(HUILOADER_NEW)
 {
@@ -85,23 +85,23 @@ HB_FUNC_STATIC(HUILOADER_DELETE)
 }
 
 /*
-QAction *createAction( QObject *parent = 0, const QString &name = QString() )
+QAction *createAction(QObject *parent = 0, const QString &name = QString())
 */
 
 /*
-QActionGroup *createActionGroup( QObject *parent = 0, const QString &name = QString() )
+QActionGroup *createActionGroup(QObject *parent = 0, const QString &name = QString())
 */
 
 /*
-QLayout *createLayout( const QString &className, QObject *parent = 0, const QString &name = QString() )
+QLayout *createLayout(const QString &className, QObject *parent = 0, const QString &name = QString())
 */
 
 /*
-QWidget *createWidget( const QString &className, QWidget *parent = 0, const QString &name = QString() )
+QWidget *createWidget(const QString &className, QWidget *parent = 0, const QString &name = QString())
 */
 
 /*
-void setCreateActionCB ( PHB_ITEM block )
+void setCreateActionCB (PHB_ITEM block)
 */
 HB_FUNC_STATIC(HUILOADER_SETCREATEACTIONCB)
 {
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(HUILOADER_SETCREATEACTIONCB)
 }
 
 /*
-void setCreateActionGroupCB ( PHB_ITEM block )
+void setCreateActionGroupCB (PHB_ITEM block)
 */
 HB_FUNC_STATIC(HUILOADER_SETCREATEACTIONGROUPCB)
 {
@@ -153,7 +153,7 @@ HB_FUNC_STATIC(HUILOADER_SETCREATEACTIONGROUPCB)
 }
 
 /*
-void setCreateLayoutCB ( PHB_ITEM block )
+void setCreateLayoutCB (PHB_ITEM block)
 */
 HB_FUNC_STATIC(HUILOADER_SETCREATELAYOUTCB)
 {
@@ -179,7 +179,7 @@ HB_FUNC_STATIC(HUILOADER_SETCREATELAYOUTCB)
 }
 
 /*
-void setCreateWidgetCB ( PHB_ITEM block )
+void setCreateWidgetCB (PHB_ITEM block)
 */
 HB_FUNC_STATIC(HUILOADER_SETCREATEWIDGETCB)
 {
