@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QLIBRARYINFO_BUILDDATE)
 }
 
 /*
-static QString location( QLibraryInfo::LibraryLocation )
+static QString location(QLibraryInfo::LibraryLocation)
 */
 HB_FUNC_STATIC(QLIBRARYINFO_LOCATION)
 {

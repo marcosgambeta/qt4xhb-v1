@@ -64,7 +64,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QStateMachine( QObject *parent = 0 )
+    QStateMachine(QObject *parent = 0)
     */
 HB_FUNC_STATIC(QSTATEMACHINE_NEW)
 {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_DELETE)
 }
 
 /*
-void addDefaultAnimation( QAbstractAnimation *animation )
+void addDefaultAnimation(QAbstractAnimation *animation)
 */
 HB_FUNC_STATIC(QSTATEMACHINE_ADDDEFAULTANIMATION)
 {
@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_ADDDEFAULTANIMATION)
 }
 
 /*
-void addState( QAbstractState *state )
+void addState(QAbstractState *state)
 */
 HB_FUNC_STATIC(QSTATEMACHINE_ADDSTATE)
 {
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_ADDSTATE)
 }
 
 /*
-bool cancelDelayedEvent( int id )
+bool cancelDelayedEvent(int id)
 */
 HB_FUNC_STATIC(QSTATEMACHINE_CANCELDELAYEDEVENT)
 {
@@ -368,7 +368,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_ISRUNNING)
 }
 
 /*
-int postDelayedEvent( QEvent *event, int delay )
+int postDelayedEvent(QEvent *event, int delay)
 */
 HB_FUNC_STATIC(QSTATEMACHINE_POSTDELAYEDEVENT)
 {
@@ -392,7 +392,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_POSTDELAYEDEVENT)
 }
 
 /*
-void postEvent( QEvent *event, QStateMachine::EventPriority priority = QStateMachine::NormalPriority )
+void postEvent(QEvent *event, QStateMachine::EventPriority priority = QStateMachine::NormalPriority)
 */
 HB_FUNC_STATIC(QSTATEMACHINE_POSTEVENT)
 {
@@ -419,7 +419,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_POSTEVENT)
 }
 
 /*
-void removeDefaultAnimation( QAbstractAnimation *animation )
+void removeDefaultAnimation(QAbstractAnimation *animation)
 */
 HB_FUNC_STATIC(QSTATEMACHINE_REMOVEDEFAULTANIMATION)
 {
@@ -445,7 +445,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_REMOVEDEFAULTANIMATION)
 }
 
 /*
-void removeState( QAbstractState *state )
+void removeState(QAbstractState *state)
 */
 HB_FUNC_STATIC(QSTATEMACHINE_REMOVESTATE)
 {
@@ -471,7 +471,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_REMOVESTATE)
 }
 
 /*
-void setAnimated( bool enabled )
+void setAnimated(bool enabled)
 */
 HB_FUNC_STATIC(QSTATEMACHINE_SETANIMATED)
 {
@@ -497,7 +497,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_SETANIMATED)
 }
 
 /*
-void setGlobalRestorePolicy( QStateMachine::RestorePolicy restorePolicy )
+void setGlobalRestorePolicy(QStateMachine::RestorePolicy restorePolicy)
 */
 HB_FUNC_STATIC(QSTATEMACHINE_SETGLOBALRESTOREPOLICY)
 {
@@ -523,7 +523,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_SETGLOBALRESTOREPOLICY)
 }
 
 /*
-virtual bool eventFilter( QObject *watched, QEvent *event )
+virtual bool eventFilter(QObject *watched, QEvent *event)
 */
 HB_FUNC_STATIC(QSTATEMACHINE_EVENTFILTER)
 {

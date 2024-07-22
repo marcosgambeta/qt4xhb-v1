@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QBITARRAY_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
   {
     /*
-    QBitArray( int size, bool value = false )
+    QBitArray(int size, bool value = false)
     */
     QBitArray *obj = new QBitArray(PINT(1), OPBOOL(2, false));
     Qt4xHb::returnNewObject(obj, true);
@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QBITARRAY_NEW)
   else if (ISNUMPAR(1) && ISQBITARRAY(1))
   {
     /*
-    QBitArray( const QBitArray &other )
+    QBitArray(const QBitArray &other)
     */
     QBitArray *obj = new QBitArray(*PQBITARRAY(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QBITARRAY_NEW)
 }
 
 /*
-bool at( int i ) const
+bool at(int i) const
 */
 HB_FUNC_STATIC(QBITARRAY_AT)
 {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QBITARRAY_CLEAR)
 }
 
 /*
-void clearBit( int i )
+void clearBit(int i)
 */
 HB_FUNC_STATIC(QBITARRAY_CLEARBIT)
 {
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QBITARRAY_COUNT)
   else if (ISNUMPAR(1) && HB_ISLOG(1))
   {
     /*
-    int count( bool on ) const
+    int count(bool on) const
     */
     QBitArray *obj = static_cast<QBitArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -204,7 +204,7 @@ HB_FUNC_STATIC(QBITARRAY_FILL)
   if (ISBETWEEN(1, 2) && HB_ISLOG(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    bool fill( bool value, int size = -1 )
+    bool fill(bool value, int size = -1)
     */
     QBitArray *obj = static_cast<QBitArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -216,7 +216,7 @@ HB_FUNC_STATIC(QBITARRAY_FILL)
   else if (ISNUMPAR(3) && HB_ISLOG(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
     /*
-    void fill( bool value, int begin, int end )
+    void fill(bool value, int begin, int end)
     */
     QBitArray *obj = static_cast<QBitArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -282,7 +282,7 @@ HB_FUNC_STATIC(QBITARRAY_ISNULL)
 }
 
 /*
-void resize( int size )
+void resize(int size)
 */
 HB_FUNC_STATIC(QBITARRAY_RESIZE)
 {
@@ -312,7 +312,7 @@ HB_FUNC_STATIC(QBITARRAY_SETBIT)
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    void setBit( int i )
+    void setBit(int i)
     */
     QBitArray *obj = static_cast<QBitArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -326,7 +326,7 @@ HB_FUNC_STATIC(QBITARRAY_SETBIT)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2))
   {
     /*
-    void setBit( int i, bool value )
+    void setBit(int i, bool value)
     */
     QBitArray *obj = static_cast<QBitArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -368,7 +368,7 @@ HB_FUNC_STATIC(QBITARRAY_SIZE)
 }
 
 /*
-bool testBit( int i ) const
+bool testBit(int i) const
 */
 HB_FUNC_STATIC(QBITARRAY_TESTBIT)
 {
@@ -392,7 +392,7 @@ HB_FUNC_STATIC(QBITARRAY_TESTBIT)
 }
 
 /*
-bool toggleBit( int i )
+bool toggleBit(int i)
 */
 HB_FUNC_STATIC(QBITARRAY_TOGGLEBIT)
 {
@@ -416,7 +416,7 @@ HB_FUNC_STATIC(QBITARRAY_TOGGLEBIT)
 }
 
 /*
-void truncate( int pos )
+void truncate(int pos)
 */
 HB_FUNC_STATIC(QBITARRAY_TRUNCATE)
 {

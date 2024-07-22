@@ -66,7 +66,7 @@ HB_FUNC_STATIC(QPOINT_NEW)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    QPoint( int xpos, int ypos )
+    QPoint(int xpos, int ypos)
     */
     QPoint *obj = new QPoint(PINT(1), PINT(2));
     Qt4xHb::returnNewObject(obj, true);
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QPOINT_MANHATTANLENGTH)
 }
 
 /*
-void setX( int x )
+void setX(int x)
 */
 HB_FUNC_STATIC(QPOINT_SETX)
 {
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QPOINT_SETX)
 }
 
 /*
-void setY( int y )
+void setY(int y)
 */
 HB_FUNC_STATIC(QPOINT_SETY)
 {

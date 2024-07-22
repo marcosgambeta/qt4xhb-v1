@@ -74,7 +74,7 @@ HB_FUNC_STATIC(QATOMICINT_NEW)
   if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
     /*
-    QAtomicInt( int value = 0 )
+    QAtomicInt(int value = 0)
     */
     QAtomicInt *obj = new QAtomicInt(OPINT(1, 0));
     Qt4xHb::returnNewObject(obj, true);
@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QATOMICINT_NEW)
   else if (ISNUMPAR(1) && ISQATOMICINT(1))
   {
     /*
-    QAtomicInt( const QAtomicInt &other )
+    QAtomicInt(const QAtomicInt &other)
     */
     QAtomicInt *obj = new QAtomicInt(*PQATOMICINT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QATOMICINT_DEREF)
 }
 
 /*
-int fetchAndAddAcquire( int valueToAdd )
+int fetchAndAddAcquire(int valueToAdd)
 */
 HB_FUNC_STATIC(QATOMICINT_FETCHANDADDACQUIRE)
 {
@@ -158,7 +158,7 @@ HB_FUNC_STATIC(QATOMICINT_FETCHANDADDACQUIRE)
 }
 
 /*
-int fetchAndAddOrdered( int valueToAdd )
+int fetchAndAddOrdered(int valueToAdd)
 */
 HB_FUNC_STATIC(QATOMICINT_FETCHANDADDORDERED)
 {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QATOMICINT_FETCHANDADDORDERED)
 }
 
 /*
-int fetchAndAddRelaxed( int valueToAdd )
+int fetchAndAddRelaxed(int valueToAdd)
 */
 HB_FUNC_STATIC(QATOMICINT_FETCHANDADDRELAXED)
 {
@@ -206,7 +206,7 @@ HB_FUNC_STATIC(QATOMICINT_FETCHANDADDRELAXED)
 }
 
 /*
-int fetchAndAddRelease( int valueToAdd )
+int fetchAndAddRelease(int valueToAdd)
 */
 HB_FUNC_STATIC(QATOMICINT_FETCHANDADDRELEASE)
 {
@@ -230,7 +230,7 @@ HB_FUNC_STATIC(QATOMICINT_FETCHANDADDRELEASE)
 }
 
 /*
-int fetchAndStoreAcquire( int newValue )
+int fetchAndStoreAcquire(int newValue)
 */
 HB_FUNC_STATIC(QATOMICINT_FETCHANDSTOREACQUIRE)
 {
@@ -254,7 +254,7 @@ HB_FUNC_STATIC(QATOMICINT_FETCHANDSTOREACQUIRE)
 }
 
 /*
-int fetchAndStoreOrdered( int newValue )
+int fetchAndStoreOrdered(int newValue)
 */
 HB_FUNC_STATIC(QATOMICINT_FETCHANDSTOREORDERED)
 {
@@ -278,7 +278,7 @@ HB_FUNC_STATIC(QATOMICINT_FETCHANDSTOREORDERED)
 }
 
 /*
-int fetchAndStoreRelaxed( int newValue )
+int fetchAndStoreRelaxed(int newValue)
 */
 HB_FUNC_STATIC(QATOMICINT_FETCHANDSTORERELAXED)
 {
@@ -302,7 +302,7 @@ HB_FUNC_STATIC(QATOMICINT_FETCHANDSTORERELAXED)
 }
 
 /*
-int fetchAndStoreRelease( int newValue )
+int fetchAndStoreRelease(int newValue)
 */
 HB_FUNC_STATIC(QATOMICINT_FETCHANDSTORERELEASE)
 {
@@ -350,7 +350,7 @@ HB_FUNC_STATIC(QATOMICINT_REF)
 }
 
 /*
-bool testAndSetAcquire( int expectedValue, int newValue )
+bool testAndSetAcquire(int expectedValue, int newValue)
 */
 HB_FUNC_STATIC(QATOMICINT_TESTANDSETACQUIRE)
 {
@@ -374,7 +374,7 @@ HB_FUNC_STATIC(QATOMICINT_TESTANDSETACQUIRE)
 }
 
 /*
-bool testAndSetOrdered( int expectedValue, int newValue )
+bool testAndSetOrdered(int expectedValue, int newValue)
 */
 HB_FUNC_STATIC(QATOMICINT_TESTANDSETORDERED)
 {
@@ -398,7 +398,7 @@ HB_FUNC_STATIC(QATOMICINT_TESTANDSETORDERED)
 }
 
 /*
-bool testAndSetRelaxed( int expectedValue, int newValue )
+bool testAndSetRelaxed(int expectedValue, int newValue)
 */
 HB_FUNC_STATIC(QATOMICINT_TESTANDSETRELAXED)
 {
@@ -422,7 +422,7 @@ HB_FUNC_STATIC(QATOMICINT_TESTANDSETRELAXED)
 }
 
 /*
-bool testAndSetRelease( int expectedValue, int newValue )
+bool testAndSetRelease(int expectedValue, int newValue)
 */
 HB_FUNC_STATIC(QATOMICINT_TESTANDSETRELEASE)
 {

@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QMARGINS_NEW)
   else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
-    QMargins( int left, int top, int right, int bottom )
+    QMargins(int left, int top, int right, int bottom)
     */
     QMargins *obj = new QMargins(PINT(1), PINT(2), PINT(3), PINT(4));
     Qt4xHb::returnNewObject(obj, true);
@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QMARGINS_RIGHT)
 }
 
 /*
-void setBottom( int bottom )
+void setBottom(int bottom)
 */
 HB_FUNC_STATIC(QMARGINS_SETBOTTOM)
 {
@@ -219,7 +219,7 @@ HB_FUNC_STATIC(QMARGINS_SETBOTTOM)
 }
 
 /*
-void setLeft( int left )
+void setLeft(int left)
 */
 HB_FUNC_STATIC(QMARGINS_SETLEFT)
 {
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QMARGINS_SETLEFT)
 }
 
 /*
-void setRight( int right )
+void setRight(int right)
 */
 HB_FUNC_STATIC(QMARGINS_SETRIGHT)
 {
@@ -271,7 +271,7 @@ HB_FUNC_STATIC(QMARGINS_SETRIGHT)
 }
 
 /*
-void setTop( int Top )
+void setTop(int Top)
 */
 HB_FUNC_STATIC(QMARGINS_SETTOP)
 {

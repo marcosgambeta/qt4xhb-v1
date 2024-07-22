@@ -55,7 +55,7 @@ RETURN
 #include "qt4xhb_utils.hpp"
 
     /*
-    QEvent( QEvent::Type type )
+    QEvent(QEvent::Type type)
     */
 HB_FUNC_STATIC(QEVENT_NEW)
 {
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QEVENT_ISACCEPTED)
 }
 
 /*
-void setAccepted( bool accepted )
+void setAccepted(bool accepted)
 */
 HB_FUNC_STATIC(QEVENT_SETACCEPTED)
 {
@@ -237,7 +237,7 @@ HB_FUNC_STATIC(QEVENT_TYPE)
 }
 
 /*
-static int registerEventType( int hint = -1 )
+static int registerEventType(int hint = -1)
 */
 HB_FUNC_STATIC(QEVENT_REGISTEREVENTTYPE)
 {

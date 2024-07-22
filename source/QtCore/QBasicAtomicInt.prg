@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QBASICATOMICINT_DEREF)
 }
 
 /*
-bool testAndSetRelaxed( int expectedValue, int newValue )
+bool testAndSetRelaxed(int expectedValue, int newValue)
 */
 HB_FUNC_STATIC(QBASICATOMICINT_TESTANDSETRELAXED)
 {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC(QBASICATOMICINT_TESTANDSETRELAXED)
 }
 
 /*
-bool testAndSetAcquire( int expectedValue, int newValue )
+bool testAndSetAcquire(int expectedValue, int newValue)
 */
 HB_FUNC_STATIC(QBASICATOMICINT_TESTANDSETACQUIRE)
 {
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QBASICATOMICINT_TESTANDSETACQUIRE)
 }
 
 /*
-bool testAndSetRelease( int expectedValue, int newValue )
+bool testAndSetRelease(int expectedValue, int newValue)
 */
 HB_FUNC_STATIC(QBASICATOMICINT_TESTANDSETRELEASE)
 {
@@ -205,7 +205,7 @@ HB_FUNC_STATIC(QBASICATOMICINT_TESTANDSETRELEASE)
 }
 
 /*
-bool testAndSetOrdered( int expectedValue, int newValue )
+bool testAndSetOrdered(int expectedValue, int newValue)
 */
 HB_FUNC_STATIC(QBASICATOMICINT_TESTANDSETORDERED)
 {
@@ -229,7 +229,7 @@ HB_FUNC_STATIC(QBASICATOMICINT_TESTANDSETORDERED)
 }
 
 /*
-int fetchAndStoreRelaxed( int newValue )
+int fetchAndStoreRelaxed(int newValue)
 */
 HB_FUNC_STATIC(QBASICATOMICINT_FETCHANDSTORERELAXED)
 {
@@ -253,7 +253,7 @@ HB_FUNC_STATIC(QBASICATOMICINT_FETCHANDSTORERELAXED)
 }
 
 /*
-int fetchAndStoreAcquire( int newValue )
+int fetchAndStoreAcquire(int newValue)
 */
 HB_FUNC_STATIC(QBASICATOMICINT_FETCHANDSTOREACQUIRE)
 {
@@ -277,7 +277,7 @@ HB_FUNC_STATIC(QBASICATOMICINT_FETCHANDSTOREACQUIRE)
 }
 
 /*
-int fetchAndStoreRelease( int newValue )
+int fetchAndStoreRelease(int newValue)
 */
 HB_FUNC_STATIC(QBASICATOMICINT_FETCHANDSTORERELEASE)
 {
@@ -301,7 +301,7 @@ HB_FUNC_STATIC(QBASICATOMICINT_FETCHANDSTORERELEASE)
 }
 
 /*
-int fetchAndStoreOrdered( int newValue )
+int fetchAndStoreOrdered(int newValue)
 */
 HB_FUNC_STATIC(QBASICATOMICINT_FETCHANDSTOREORDERED)
 {
@@ -325,7 +325,7 @@ HB_FUNC_STATIC(QBASICATOMICINT_FETCHANDSTOREORDERED)
 }
 
 /*
-int fetchAndAddRelaxed( int valueToAdd )
+int fetchAndAddRelaxed(int valueToAdd)
 */
 HB_FUNC_STATIC(QBASICATOMICINT_FETCHANDADDRELAXED)
 {
@@ -349,7 +349,7 @@ HB_FUNC_STATIC(QBASICATOMICINT_FETCHANDADDRELAXED)
 }
 
 /*
-int fetchAndAddAcquire( int valueToAdd )
+int fetchAndAddAcquire(int valueToAdd)
 */
 HB_FUNC_STATIC(QBASICATOMICINT_FETCHANDADDACQUIRE)
 {
@@ -373,7 +373,7 @@ HB_FUNC_STATIC(QBASICATOMICINT_FETCHANDADDACQUIRE)
 }
 
 /*
-int fetchAndAddRelease( int valueToAdd )
+int fetchAndAddRelease(int valueToAdd)
 */
 HB_FUNC_STATIC(QBASICATOMICINT_FETCHANDADDRELEASE)
 {
@@ -397,7 +397,7 @@ HB_FUNC_STATIC(QBASICATOMICINT_FETCHANDADDRELEASE)
 }
 
 /*
-int fetchAndAddOrdered( int valueToAdd )
+int fetchAndAddOrdered(int valueToAdd)
 */
 HB_FUNC_STATIC(QBASICATOMICINT_FETCHANDADDORDERED)
 {

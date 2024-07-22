@@ -52,7 +52,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QThreadPool( QObject *parent = 0 )
+    QThreadPool(QObject *parent = 0)
     */
 HB_FUNC_STATIC(QTHREADPOOL_NEW)
 {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC(QTHREADPOOL_RESERVETHREAD)
 }
 
 /*
-void setExpiryTimeout( int expiryTimeout )
+void setExpiryTimeout(int expiryTimeout)
 */
 HB_FUNC_STATIC(QTHREADPOOL_SETEXPIRYTIMEOUT)
 {
@@ -236,7 +236,7 @@ HB_FUNC_STATIC(QTHREADPOOL_SETEXPIRYTIMEOUT)
 }
 
 /*
-void setMaxThreadCount( int maxThreadCount )
+void setMaxThreadCount(int maxThreadCount)
 */
 HB_FUNC_STATIC(QTHREADPOOL_SETMAXTHREADCOUNT)
 {
@@ -262,7 +262,7 @@ HB_FUNC_STATIC(QTHREADPOOL_SETMAXTHREADCOUNT)
 }
 
 /*
-void start( QRunnable *runnable, int priority = 0 )
+void start(QRunnable *runnable, int priority = 0)
 */
 HB_FUNC_STATIC(QTHREADPOOL_START)
 {
@@ -288,7 +288,7 @@ HB_FUNC_STATIC(QTHREADPOOL_START)
 }
 
 /*
-bool tryStart( QRunnable *runnable )
+bool tryStart(QRunnable *runnable)
 */
 HB_FUNC_STATIC(QTHREADPOOL_TRYSTART)
 {
@@ -330,7 +330,7 @@ HB_FUNC_STATIC(QTHREADPOOL_WAITFORDONE)
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    bool waitForDone( int msecs )
+    bool waitForDone(int msecs)
     */
     QThreadPool *obj = qobject_cast<QThreadPool *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

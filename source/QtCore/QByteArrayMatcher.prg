@@ -64,7 +64,7 @@ HB_FUNC_STATIC(QBYTEARRAYMATCHER_NEW)
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    QByteArrayMatcher( const QByteArray &pattern )
+    QByteArrayMatcher(const QByteArray &pattern)
     */
     QByteArrayMatcher *obj = new QByteArrayMatcher(*PQBYTEARRAY(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QBYTEARRAYMATCHER_NEW)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
     /*
-    QByteArrayMatcher( const char *pattern, int length )
+    QByteArrayMatcher(const char *pattern, int length)
     */
     QByteArrayMatcher *obj = new QByteArrayMatcher(PCONSTCHAR(1), PINT(2));
     Qt4xHb::returnNewObject(obj, true);
@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QBYTEARRAYMATCHER_NEW)
   else if (ISNUMPAR(1) && ISQBYTEARRAYMATCHER(1))
   {
     /*
-    QByteArrayMatcher( const QByteArrayMatcher &other )
+    QByteArrayMatcher(const QByteArrayMatcher &other)
     */
     QByteArrayMatcher *obj = new QByteArrayMatcher(*PQBYTEARRAYMATCHER(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QBYTEARRAYMATCHER_INDEXIN)
   if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    int indexIn( const QByteArray &ba, int from = 0 ) const
+    int indexIn(const QByteArray &ba, int from = 0) const
     */
     QByteArrayMatcher *obj = static_cast<QByteArrayMatcher *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QBYTEARRAYMATCHER_INDEXIN)
   else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    int indexIn( const char *str, int len, int from = 0 ) const
+    int indexIn(const char *str, int len, int from = 0) const
     */
     QByteArrayMatcher *obj = static_cast<QByteArrayMatcher *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QBYTEARRAYMATCHER_PATTERN)
 }
 
 /*
-void setPattern( const QByteArray &pattern )
+void setPattern(const QByteArray &pattern)
 */
 HB_FUNC_STATIC(QBYTEARRAYMATCHER_SETPATTERN)
 {

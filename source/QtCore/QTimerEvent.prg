@@ -40,7 +40,7 @@ RETURN
 #include "qt4xhb_utils.hpp"
 
     /*
-    QTimerEvent( int timerId )
+    QTimerEvent(int timerId)
     */
 HB_FUNC_STATIC(QTIMEREVENT_NEW)
 {

@@ -58,7 +58,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QThread( QObject *parent = 0 )
+    QThread(QObject *parent = 0)
     */
 HB_FUNC_STATIC(QTHREAD_NEW)
 {
@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QTHREAD_DELETE)
 }
 
 /*
-void exit( int returnCode = 0 )
+void exit(int returnCode = 0)
 */
 HB_FUNC_STATIC(QTHREAD_EXIT)
 {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QTHREAD_PRIORITY)
 }
 
 /*
-void setPriority( QThread::Priority priority )
+void setPriority(QThread::Priority priority)
 */
 HB_FUNC_STATIC(QTHREAD_SETPRIORITY)
 {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC(QTHREAD_SETPRIORITY)
 }
 
 /*
-void setStackSize( uint stackSize )
+void setStackSize(uint stackSize)
 */
 HB_FUNC_STATIC(QTHREAD_SETSTACKSIZE)
 {
@@ -266,7 +266,7 @@ HB_FUNC_STATIC(QTHREAD_STACKSIZE)
 }
 
 /*
-virtual bool event( QEvent *event )
+virtual bool event(QEvent *event)
 */
 HB_FUNC_STATIC(QTHREAD_EVENT)
 {
@@ -316,7 +316,7 @@ HB_FUNC_STATIC(QTHREAD_QUIT)
 }
 
 /*
-void start( QThread::Priority priority = QThread::InheritPriority )
+void start(QThread::Priority priority = QThread::InheritPriority)
 */
 HB_FUNC_STATIC(QTHREAD_START)
 {

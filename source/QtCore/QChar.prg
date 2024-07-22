@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QCHAR_NEW1)
 }
 
 /*
-QChar( char ch )
+QChar(char ch)
 */
 HB_FUNC_STATIC(QCHAR_NEW2)
 {
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QCHAR_NEW2)
 }
 
 /*
-QChar( uchar ch )
+QChar(uchar ch)
 */
 HB_FUNC_STATIC(QCHAR_NEW3)
 {
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QCHAR_NEW3)
 }
 
 /*
-QChar( QLatin1Char ch )
+QChar(QLatin1Char ch)
 */
 HB_FUNC_STATIC(QCHAR_NEW4)
 {
@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QCHAR_NEW4)
 }
 
 /*
-QChar( uchar cell, uchar row )
+QChar(uchar cell, uchar row)
 */
 HB_FUNC_STATIC(QCHAR_NEW5)
 {
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QCHAR_NEW5)
 }
 
 /*
-QChar( ushort code )
+QChar(ushort code)
 */
 HB_FUNC_STATIC(QCHAR_NEW6)
 {
@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QCHAR_NEW6)
 }
 
 /*
-QChar( short code )
+QChar(short code)
 */
 HB_FUNC_STATIC(QCHAR_NEW7)
 {
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QCHAR_NEW7)
 }
 
 /*
-QChar( uint code )
+QChar(uint code)
 */
 HB_FUNC_STATIC(QCHAR_NEW8)
 {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC(QCHAR_NEW8)
 }
 
 /*
-QChar( int code )
+QChar(int code)
 */
 HB_FUNC_STATIC(QCHAR_NEW9)
 {
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QCHAR_NEW9)
 }
 
 /*
-QChar( QChar::SpecialCharacter ch )
+QChar(QChar::SpecialCharacter ch)
 */
 HB_FUNC_STATIC(QCHAR_NEW10)
 {

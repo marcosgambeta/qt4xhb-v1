@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QFILE_NEW)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QFile( const QString &name )
+    QFile(const QString &name)
     */
     QFile *obj = new QFile(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, false);
@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QFILE_NEW)
   else if (ISNUMPAR(1) && ISQOBJECT(1))
   {
     /*
-    QFile( QObject *parent )
+    QFile(QObject *parent)
     */
     QFile *obj = new QFile(PQOBJECT(1));
     Qt4xHb::returnNewObject(obj, false);
@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QFILE_NEW)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2))
   {
     /*
-    QFile( const QString &name, QObject *parent )
+    QFile(const QString &name, QObject *parent)
     */
     QFile *obj = new QFile(PQSTRING(1), PQOBJECT(2));
     Qt4xHb::returnNewObject(obj, false);
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QFILE_HANDLE)
 }
 
 /*
-void setFileName( const QString &name )
+void setFileName(const QString &name)
 */
 HB_FUNC_STATIC(QFILE_SETFILENAME)
 {
@@ -239,7 +239,7 @@ HB_FUNC_STATIC(QFILE_SETFILENAME)
 }
 
 /*
-bool unmap( uchar *address )
+bool unmap(uchar *address)
 */
 HB_FUNC_STATIC(QFILE_UNMAP)
 {
@@ -367,7 +367,7 @@ HB_FUNC_STATIC(QFILE_OPEN)
   if (ISNUMPAR(2) && HB_ISPOINTER(1) && HB_ISNUM(2))
   {
     /*
-    bool open( FILE *fh, QIODevice::OpenMode mode )
+    bool open(FILE *fh, QIODevice::OpenMode mode)
     */
     QFile *obj = qobject_cast<QFile *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -379,7 +379,7 @@ HB_FUNC_STATIC(QFILE_OPEN)
   else if (ISNUMPAR(3) && HB_ISPOINTER(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
     /*
-    bool open( FILE *fh, QIODevice::OpenMode mode, QFile::FileHandleFlags handleFlags )
+    bool open(FILE *fh, QIODevice::OpenMode mode, QFile::FileHandleFlags handleFlags)
     */
     QFile *obj = qobject_cast<QFile *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -392,7 +392,7 @@ HB_FUNC_STATIC(QFILE_OPEN)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    bool open( int fd, QIODevice::OpenMode mode )
+    bool open(int fd, QIODevice::OpenMode mode)
     */
     QFile *obj = qobject_cast<QFile *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -404,7 +404,7 @@ HB_FUNC_STATIC(QFILE_OPEN)
   else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
     /*
-    bool open( int fd, QIODevice::OpenMode mode, QFile::FileHandleFlags handleFlags )
+    bool open(int fd, QIODevice::OpenMode mode, QFile::FileHandleFlags handleFlags)
     */
     QFile *obj = qobject_cast<QFile *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -416,7 +416,7 @@ HB_FUNC_STATIC(QFILE_OPEN)
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    virtual bool open( QIODevice::OpenMode mode )
+    virtual bool open(QIODevice::OpenMode mode)
     */
     QFile *obj = qobject_cast<QFile *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -456,7 +456,7 @@ HB_FUNC_STATIC(QFILE_POS)
 }
 
 /*
-virtual bool seek( qint64 pos )
+virtual bool seek(qint64 pos)
 */
 HB_FUNC_STATIC(QFILE_SEEK)
 {
@@ -508,7 +508,7 @@ HB_FUNC_STATIC(QFILE_COPY)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    bool copy( const QString &newName )
+    bool copy(const QString &newName)
     */
     QFile *obj = qobject_cast<QFile *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -520,7 +520,7 @@ HB_FUNC_STATIC(QFILE_COPY)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
-    static bool copy( const QString &fileName, const QString &newName )
+    static bool copy(const QString &fileName, const QString &newName)
     */
 
     RBOOL(QFile::copy(PQSTRING(1), PQSTRING(2)));
@@ -536,7 +536,7 @@ HB_FUNC_STATIC(QFILE_DECODENAME)
   if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    static QString decodeName( const QByteArray &localFileName )
+    static QString decodeName(const QByteArray &localFileName)
     */
 
     RQSTRING(QFile::decodeName(*PQBYTEARRAY(1)));
@@ -544,7 +544,7 @@ HB_FUNC_STATIC(QFILE_DECODENAME)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    static QString decodeName( const char *localFileName )
+    static QString decodeName(const char *localFileName)
     */
 
     RQSTRING(QFile::decodeName(PCONSTCHAR(1)));
@@ -556,7 +556,7 @@ HB_FUNC_STATIC(QFILE_DECODENAME)
 }
 
 /*
-static QByteArray encodeName( const QString &fileName )
+static QByteArray encodeName(const QString &fileName)
 */
 HB_FUNC_STATIC(QFILE_ENCODENAME)
 {
@@ -592,7 +592,7 @@ HB_FUNC_STATIC(QFILE_EXISTS)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    static bool exists( const QString &fileName )
+    static bool exists(const QString &fileName)
     */
 
     RBOOL(QFile::exists(PQSTRING(1)));
@@ -608,7 +608,7 @@ HB_FUNC_STATIC(QFILE_LINK)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    bool link( const QString &linkName )
+    bool link(const QString &linkName)
     */
     QFile *obj = qobject_cast<QFile *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -620,7 +620,7 @@ HB_FUNC_STATIC(QFILE_LINK)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
-    static bool link( const QString &fileName, const QString &linkName )
+    static bool link(const QString &fileName, const QString &linkName)
     */
 
     RBOOL(QFile::link(PQSTRING(1), PQSTRING(2)));
@@ -648,7 +648,7 @@ HB_FUNC_STATIC(QFILE_PERMISSIONS)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    static QFile::Permissions permissions( const QString &fileName )
+    static QFile::Permissions permissions(const QString &fileName)
     */
 
     RENUM(QFile::permissions(PQSTRING(1)));
@@ -676,7 +676,7 @@ HB_FUNC_STATIC(QFILE_REMOVE)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    static bool remove( const QString &fileName )
+    static bool remove(const QString &fileName)
     */
 
     RBOOL(QFile::remove(PQSTRING(1)));
@@ -692,7 +692,7 @@ HB_FUNC_STATIC(QFILE_RENAME)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    bool rename( const QString &newName )
+    bool rename(const QString &newName)
     */
     QFile *obj = qobject_cast<QFile *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -704,7 +704,7 @@ HB_FUNC_STATIC(QFILE_RENAME)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
-    static bool rename( const QString &oldName, const QString &newName )
+    static bool rename(const QString &oldName, const QString &newName)
     */
 
     RBOOL(QFile::rename(PQSTRING(1), PQSTRING(2)));
@@ -720,7 +720,7 @@ HB_FUNC_STATIC(QFILE_RESIZE)
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    bool resize( qint64 sz )
+    bool resize(qint64 sz)
     */
     QFile *obj = qobject_cast<QFile *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -732,7 +732,7 @@ HB_FUNC_STATIC(QFILE_RESIZE)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
     /*
-    static bool resize( const QString &fileName, qint64 sz )
+    static bool resize(const QString &fileName, qint64 sz)
     */
 
     RBOOL(QFile::resize(PQSTRING(1), PQINT64(2)));
@@ -748,7 +748,7 @@ HB_FUNC_STATIC(QFILE_SETPERMISSIONS)
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    bool setPermissions( QFile::Permissions permissions )
+    bool setPermissions(QFile::Permissions permissions)
     */
     QFile *obj = qobject_cast<QFile *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -760,7 +760,7 @@ HB_FUNC_STATIC(QFILE_SETPERMISSIONS)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
     /*
-    static bool setPermissions( const QString &fileName, QFile::Permissions permissions )
+    static bool setPermissions(const QString &fileName, QFile::Permissions permissions)
     */
 
     RBOOL(QFile::setPermissions(PQSTRING(1), (QFile::Permissions)hb_parni(2)));
@@ -788,7 +788,7 @@ HB_FUNC_STATIC(QFILE_SYMLINKTARGET)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    static QString symLinkTarget( const QString &fileName )
+    static QString symLinkTarget(const QString &fileName)
     */
 
     RQSTRING(QFile::symLinkTarget(PQSTRING(1)));

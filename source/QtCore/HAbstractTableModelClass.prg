@@ -75,7 +75,7 @@ END CLASS
 #include "qt4xhb_signals.hpp"
 
     /*
-    HAbstractTableModel( QObject *parent = 0 )
+    HAbstractTableModel(QObject *parent = 0)
     */
     HB_FUNC(HABSTRACTTABLEMODEL_NEW)
 {
@@ -114,7 +114,7 @@ HB_FUNC(HABSTRACTTABLEMODEL_DELETE)
 // linhas e colunas
 
 /*
-void setRowCountCB( PHB_ITEM block )
+void setRowCountCB(PHB_ITEM block)
 */
 HB_FUNC(HABSTRACTTABLEMODEL_SETROWCOUNTCB)
 {
@@ -140,7 +140,7 @@ HB_FUNC(HABSTRACTTABLEMODEL_SETROWCOUNTCB)
 }
 
 /*
-void setColumnCountCB( PHB_ITEM block )
+void setColumnCountCB(PHB_ITEM block)
 */
 HB_FUNC(HABSTRACTTABLEMODEL_SETCOLUMNCOUNTCB)
 {
@@ -168,7 +168,7 @@ HB_FUNC(HABSTRACTTABLEMODEL_SETCOLUMNCOUNTCB)
 // células
 
 /*
-void setDisplayRoleCB( PHB_ITEM block )
+void setDisplayRoleCB(PHB_ITEM block)
 */
 HB_FUNC(HABSTRACTTABLEMODEL_SETDISPLAYROLECB)
 {
@@ -194,7 +194,7 @@ HB_FUNC(HABSTRACTTABLEMODEL_SETDISPLAYROLECB)
 }
 
 /*
-void setDecorationRoleCB( PHB_ITEM block )
+void setDecorationRoleCB(PHB_ITEM block)
 */
 HB_FUNC(HABSTRACTTABLEMODEL_SETDECORATIONROLECB)
 {
@@ -220,7 +220,7 @@ HB_FUNC(HABSTRACTTABLEMODEL_SETDECORATIONROLECB)
 }
 
 /*
-void setEditRoleCB( PHB_ITEM block )
+void setEditRoleCB(PHB_ITEM block)
 */
 HB_FUNC(HABSTRACTTABLEMODEL_SETEDITROLECB)
 {
@@ -246,7 +246,7 @@ HB_FUNC(HABSTRACTTABLEMODEL_SETEDITROLECB)
 }
 
 /*
-void setToolTipRoleCB( PHB_ITEM block )
+void setToolTipRoleCB(PHB_ITEM block)
 */
 HB_FUNC(HABSTRACTTABLEMODEL_SETTOOLTIPROLECB)
 {
@@ -272,7 +272,7 @@ HB_FUNC(HABSTRACTTABLEMODEL_SETTOOLTIPROLECB)
 }
 
 /*
-void setStatusTipRoleCB( PHB_ITEM block )
+void setStatusTipRoleCB(PHB_ITEM block)
 */
 HB_FUNC(HABSTRACTTABLEMODEL_SETSTATUSTIPROLECB)
 {
@@ -298,7 +298,7 @@ HB_FUNC(HABSTRACTTABLEMODEL_SETSTATUSTIPROLECB)
 }
 
 /*
-void setWhatsThisRoleCB( PHB_ITEM block )
+void setWhatsThisRoleCB(PHB_ITEM block)
 */
 HB_FUNC(HABSTRACTTABLEMODEL_SETWHATSTHISROLECB)
 {
@@ -324,7 +324,7 @@ HB_FUNC(HABSTRACTTABLEMODEL_SETWHATSTHISROLECB)
 }
 
 /*
-void setSizeHintRoleCB( PHB_ITEM block )
+void setSizeHintRoleCB(PHB_ITEM block)
 */
 HB_FUNC(HABSTRACTTABLEMODEL_SETSIZEHINTROLECB)
 {
@@ -350,7 +350,7 @@ HB_FUNC(HABSTRACTTABLEMODEL_SETSIZEHINTROLECB)
 }
 
 /*
-void setFontRoleCB( PHB_ITEM block )
+void setFontRoleCB(PHB_ITEM block)
 */
 HB_FUNC(HABSTRACTTABLEMODEL_SETFONTROLECB)
 {
@@ -376,7 +376,7 @@ HB_FUNC(HABSTRACTTABLEMODEL_SETFONTROLECB)
 }
 
 /*
-void setTextAlignmentRoleCB( PHB_ITEM block )
+void setTextAlignmentRoleCB(PHB_ITEM block)
 */
 HB_FUNC(HABSTRACTTABLEMODEL_SETTEXTALIGNMENTROLECB)
 {
@@ -402,7 +402,7 @@ HB_FUNC(HABSTRACTTABLEMODEL_SETTEXTALIGNMENTROLECB)
 }
 
 /*
-void setBackgroundRoleCB( PHB_ITEM block )
+void setBackgroundRoleCB(PHB_ITEM block)
 */
 HB_FUNC(HABSTRACTTABLEMODEL_SETBACKGROUNDROLECB)
 {
@@ -428,7 +428,7 @@ HB_FUNC(HABSTRACTTABLEMODEL_SETBACKGROUNDROLECB)
 }
 
 /*
-void setForegroundRoleCB( PHB_ITEM block )
+void setForegroundRoleCB(PHB_ITEM block)
 */
 HB_FUNC(HABSTRACTTABLEMODEL_SETFOREGROUNDROLECB)
 {
@@ -456,7 +456,7 @@ HB_FUNC(HABSTRACTTABLEMODEL_SETFOREGROUNDROLECB)
 // cabeçalho horizontal
 
 /*
-void setHorizontalHeaderDisplayRoleCB( PHB_ITEM block )
+void setHorizontalHeaderDisplayRoleCB(PHB_ITEM block)
 */
 HB_FUNC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERDISPLAYROLECB)
 {
@@ -482,7 +482,7 @@ HB_FUNC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERDISPLAYROLECB)
 }
 
 /*
-void setHorizontalHeaderDecorationRoleCB( PHB_ITEM block )
+void setHorizontalHeaderDecorationRoleCB(PHB_ITEM block)
 */
 HB_FUNC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERDECORATIONROLECB)
 {
@@ -508,7 +508,7 @@ HB_FUNC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERDECORATIONROLECB)
 }
 
 /*
-void setHorizontalHeaderFontRoleCB( PHB_ITEM block )
+void setHorizontalHeaderFontRoleCB(PHB_ITEM block)
 */
 HB_FUNC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERFONTROLECB)
 {
@@ -534,7 +534,7 @@ HB_FUNC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERFONTROLECB)
 }
 
 /*
-void setHorizontalHeaderTextAlignmentRoleCB( PHB_ITEM block )
+void setHorizontalHeaderTextAlignmentRoleCB(PHB_ITEM block)
 */
 HB_FUNC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERTEXTALIGNMENTROLECB)
 {
@@ -560,7 +560,7 @@ HB_FUNC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERTEXTALIGNMENTROLECB)
 }
 
 /*
-void setHorizontalHeaderBackgroundRoleCB( PHB_ITEM block )
+void setHorizontalHeaderBackgroundRoleCB(PHB_ITEM block)
 */
 HB_FUNC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERBACKGROUNDROLECB)
 {
@@ -586,7 +586,7 @@ HB_FUNC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERBACKGROUNDROLECB)
 }
 
 /*
-void setHorizontalHeaderForegroundRoleCB( PHB_ITEM block )
+void setHorizontalHeaderForegroundRoleCB(PHB_ITEM block)
 */
 HB_FUNC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERFOREGROUNDROLECB)
 {
@@ -614,7 +614,7 @@ HB_FUNC(HABSTRACTTABLEMODEL_SETHORIZONTALHEADERFOREGROUNDROLECB)
 // cabeçalho vertical
 
 /*
-void setVerticalHeaderDisplayRoleCB( PHB_ITEM block )
+void setVerticalHeaderDisplayRoleCB(PHB_ITEM block)
 */
 HB_FUNC(HABSTRACTTABLEMODEL_SETVERTICALHEADERDISPLAYROLECB)
 {
@@ -640,7 +640,7 @@ HB_FUNC(HABSTRACTTABLEMODEL_SETVERTICALHEADERDISPLAYROLECB)
 }
 
 /*
-void setVerticalHeaderDecorationRoleCB( PHB_ITEM block )
+void setVerticalHeaderDecorationRoleCB(PHB_ITEM block)
 */
 HB_FUNC(HABSTRACTTABLEMODEL_SETVERTICALHEADERDECORATIONROLECB)
 {
@@ -666,7 +666,7 @@ HB_FUNC(HABSTRACTTABLEMODEL_SETVERTICALHEADERDECORATIONROLECB)
 }
 
 /*
-void setVerticalHeaderFontRoleCB( PHB_ITEM block )
+void setVerticalHeaderFontRoleCB(PHB_ITEM block)
 */
 HB_FUNC(HABSTRACTTABLEMODEL_SETVERTICALHEADERFONTROLECB)
 {
@@ -692,7 +692,7 @@ HB_FUNC(HABSTRACTTABLEMODEL_SETVERTICALHEADERFONTROLECB)
 }
 
 /*
-void setVerticalHeaderTextAlignmentRoleCB( PHB_ITEM block )
+void setVerticalHeaderTextAlignmentRoleCB(PHB_ITEM block)
 */
 HB_FUNC(HABSTRACTTABLEMODEL_SETVERTICALHEADERTEXTALIGNMENTROLECB)
 {
@@ -718,7 +718,7 @@ HB_FUNC(HABSTRACTTABLEMODEL_SETVERTICALHEADERTEXTALIGNMENTROLECB)
 }
 
 /*
-void setVerticalHeaderBackgroundRoleCB( PHB_ITEM block )
+void setVerticalHeaderBackgroundRoleCB(PHB_ITEM block)
 */
 HB_FUNC(HABSTRACTTABLEMODEL_SETVERTICALHEADERBACKGROUNDROLECB)
 {
@@ -744,7 +744,7 @@ HB_FUNC(HABSTRACTTABLEMODEL_SETVERTICALHEADERBACKGROUNDROLECB)
 }
 
 /*
-void setVerticalHeaderForegroundRoleCB( PHB_ITEM block )
+void setVerticalHeaderForegroundRoleCB(PHB_ITEM block)
 */
 HB_FUNC(HABSTRACTTABLEMODEL_SETVERTICALHEADERFOREGROUNDROLECB)
 {
@@ -770,19 +770,19 @@ HB_FUNC(HABSTRACTTABLEMODEL_SETVERTICALHEADERFOREGROUNDROLECB)
 }
 
 /*
-QVariant data( const QModelIndex &index, int role = Qt::DisplayRole ) const
+QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
 */
 
 /*
-QVariant headerData( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
+QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const
 */
 
 /*
-int rowCount( const QModelIndex &parent = QModelIndex() ) const
+int rowCount(const QModelIndex &parent = QModelIndex()) const
 */
 
 /*
-int columnCount( const QModelIndex &parent = QModelIndex() ) const
+int columnCount(const QModelIndex &parent = QModelIndex()) const
 */
 
 /*
@@ -812,15 +812,15 @@ HB_FUNC(HABSTRACTTABLEMODEL_RELOADDATA)
 }
 
 // /*
-// QModelIndex createIndex ( int row, int column )
+// QModelIndex createIndex (int row, int column)
 // */
-// HB_FUNC( HABSTRACTTABLEMODEL_CREATEINDEX )
+// HB_FUNC(HABSTRACTTABLEMODEL_CREATEINDEX)
 // {
-//   HAbstractTableModel *obj = (HAbstractTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0
-//   ) ); if( obj != NULL )
+//   HAbstractTableModel *obj = (HAbstractTableModel *) hb_itemGetPtr(hb_objSendMsg(hb_stackSelfItem(), "POINTER", 0
+//  )); if(obj != NULL)
 //   {
-//     QModelIndex *ptr = new QModelIndex( obj->createIndex ( hb_parni(1), hb_parni(2)) );
-//     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX");  }
+//     QModelIndex *ptr = new QModelIndex(obj->createIndex (hb_parni(1), hb_parni(2)));
+//     _qt4xhb_createReturnClass (ptr, "QMODELINDEX");  }
 // }
 
 #pragma ENDDUMP

@@ -53,7 +53,7 @@ RETURN
 #include "qt4xhb_utils.hpp"
 
     /*
-    QCryptographicHash( QCryptographicHash::Algorithm method )
+    QCryptographicHash(QCryptographicHash::Algorithm method)
     */
 HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_NEW)
 {
@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_ADDDATA)
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
     /*
-    void addData( const char *data, int length )
+    void addData(const char *data, int length)
     */
     QCryptographicHash *obj = static_cast<QCryptographicHash *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_ADDDATA)
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    void addData( const QByteArray &data )
+    void addData(const QByteArray &data)
     */
     QCryptographicHash *obj = static_cast<QCryptographicHash *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_RESULT)
 }
 
 /*
-static QByteArray hash( const QByteArray &data, QCryptographicHash::Algorithm method )
+static QByteArray hash(const QByteArray &data, QCryptographicHash::Algorithm method)
 */
 HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_HASH)
 {

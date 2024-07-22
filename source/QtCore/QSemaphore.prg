@@ -52,7 +52,7 @@ RETURN
 #include "qt4xhb_utils.hpp"
 
     /*
-    QSemaphore( int n = 0 )
+    QSemaphore(int n = 0)
     */
 HB_FUNC_STATIC(QSEMAPHORE_NEW)
 {
@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QSEMAPHORE_DELETE)
 }
 
 /*
-void acquire( int n = 1 )
+void acquire(int n = 1)
 */
 HB_FUNC_STATIC(QSEMAPHORE_ACQUIRE)
 {
@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QSEMAPHORE_AVAILABLE)
 }
 
 /*
-void release( int n = 1 )
+void release(int n = 1)
 */
 HB_FUNC_STATIC(QSEMAPHORE_RELEASE)
 {
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QSEMAPHORE_TRYACQUIRE)
   if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
     /*
-    bool tryAcquire( int n = 1 )
+    bool tryAcquire(int n = 1)
     */
     QSemaphore *obj = static_cast<QSemaphore *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QSEMAPHORE_TRYACQUIRE)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    bool tryAcquire( int n, int timeout )
+    bool tryAcquire(int n, int timeout)
     */
     QSemaphore *obj = static_cast<QSemaphore *>(Qt4xHb::itemGetPtrStackSelfItem());
 

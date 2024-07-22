@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QSYSTEMLOCALE_FALLBACKLOCALE)
 }
 
 /*
-virtual QVariant query( QSystemLocale::QueryType type, QVariant in ) const
+virtual QVariant query(QSystemLocale::QueryType type, QVariant in) const
 */
 HB_FUNC_STATIC(QSYSTEMLOCALE_QUERY)
 {

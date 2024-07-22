@@ -65,7 +65,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QStringMatcher( const QString &pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive )
+    QStringMatcher(const QString &pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive)
     */
     QStringMatcher *obj = new QStringMatcher(PQSTRING(1), HB_ISNIL(2) ? (Qt::CaseSensitivity)Qt::CaseSensitive
                                                                       : (Qt::CaseSensitivity)hb_parni(2));
@@ -74,7 +74,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_NEW)
   else if (ISBETWEEN(2, 3) && ISQCHAR(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QStringMatcher( const QChar *uc, int len, Qt::CaseSensitivity cs = Qt::CaseSensitive )
+    QStringMatcher(const QChar *uc, int len, Qt::CaseSensitivity cs = Qt::CaseSensitive)
     */
     QStringMatcher *obj = new QStringMatcher(
         PQCHAR(1), PINT(2), HB_ISNIL(3) ? (Qt::CaseSensitivity)Qt::CaseSensitive : (Qt::CaseSensitivity)hb_parni(3));
@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_NEW)
   else if (ISNUMPAR(1) && ISQSTRINGMATCHER(1))
   {
     /*
-    QStringMatcher( const QStringMatcher &other )
+    QStringMatcher(const QStringMatcher &other)
     */
     QStringMatcher *obj = new QStringMatcher(*PQSTRINGMATCHER(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_DELETE)
 }
 
 /*
-void setPattern( const QString &pattern )
+void setPattern(const QString &pattern)
 */
 HB_FUNC_STATIC(QSTRINGMATCHER_SETPATTERN)
 {
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_SETPATTERN)
 }
 
 /*
-void setCaseSensitivity( Qt::CaseSensitivity cs )
+void setCaseSensitivity(Qt::CaseSensitivity cs)
 */
 HB_FUNC_STATIC(QSTRINGMATCHER_SETCASESENSITIVITY)
 {
@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_INDEXIN)
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    int indexIn( const QString &str, int from = 0 ) const
+    int indexIn(const QString &str, int from = 0) const
     */
     QStringMatcher *obj = static_cast<QStringMatcher *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -179,7 +179,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_INDEXIN)
   else if (ISBETWEEN(2, 3) && ISQCHAR(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    int indexIn( const QChar *str, int length, int from = 0 ) const
+    int indexIn(const QChar *str, int length, int from = 0) const
     */
     QStringMatcher *obj = static_cast<QStringMatcher *>(Qt4xHb::itemGetPtrStackSelfItem());
 

@@ -328,7 +328,7 @@ HB_FUNC_STATIC(QFUTUREWATCHERBASE_WAITFORFINISHED)
 }
 
 /*
-void setPendingResultsLimit( int limit )
+void setPendingResultsLimit(int limit)
 */
 HB_FUNC_STATIC(QFUTUREWATCHERBASE_SETPENDINGRESULTSLIMIT)
 {
@@ -354,7 +354,7 @@ HB_FUNC_STATIC(QFUTUREWATCHERBASE_SETPENDINGRESULTSLIMIT)
 }
 
 /*
-bool event( QEvent *event )
+bool event(QEvent *event)
 */
 HB_FUNC_STATIC(QFUTUREWATCHERBASE_EVENT)
 {
@@ -404,7 +404,7 @@ HB_FUNC_STATIC(QFUTUREWATCHERBASE_CANCEL)
 }
 
 /*
-void setPaused( bool paused )
+void setPaused(bool paused)
 */
 HB_FUNC_STATIC(QFUTUREWATCHERBASE_SETPAUSED)
 {

@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QUUID_NEW1)
 }
 
 /*
-QUuid( uint l, ushort w1, ushort w2, uchar b1, uchar b2, uchar b3, uchar b4, uchar b5, uchar b6, uchar b7, uchar b8 )
+QUuid(uint l, ushort w1, ushort w2, uchar b1, uchar b2, uchar b3, uchar b4, uchar b5, uchar b6, uchar b7, uchar b8)
 */
 HB_FUNC_STATIC(QUUID_NEW2)
 {
@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QUUID_NEW2)
 }
 
 /*
-QUuid( const QString &)
+QUuid(const QString &)
 */
 HB_FUNC_STATIC(QUUID_NEW3)
 {
@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QUUID_NEW3)
 }
 
 /*
-QUuid( const char *)
+QUuid(const char *)
 */
 HB_FUNC_STATIC(QUUID_NEW4)
 {
@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QUUID_NEW4)
 }
 
 /*
-QUuid( const QByteArray &)
+QUuid(const QByteArray &)
 */
 HB_FUNC_STATIC(QUUID_NEW5)
 {
@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QUUID_NEW)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     HB_FUNC_EXEC(QUUID_NEW3);
-    // HB_FUNC_EXEC( QUUID_NEW4 );
+    // HB_FUNC_EXEC(QUUID_NEW4);
   }
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
@@ -296,7 +296,7 @@ HB_FUNC_STATIC(QUUID_VERSION)
 }
 
 /*
-static QUuid fromRfc4122( const QByteArray &)
+static QUuid fromRfc4122(const QByteArray &)
 */
 HB_FUNC_STATIC(QUUID_FROMRFC4122)
 {

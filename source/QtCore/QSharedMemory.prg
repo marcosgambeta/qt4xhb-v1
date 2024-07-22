@@ -59,7 +59,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_NEW)
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
-    QSharedMemory( QObject *parent = 0 )
+    QSharedMemory(QObject *parent = 0)
     */
     QSharedMemory *obj = new QSharedMemory(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -67,7 +67,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QSharedMemory( const QString &key, QObject *parent = 0 )
+    QSharedMemory(const QString &key, QObject *parent = 0)
     */
     QSharedMemory *obj = new QSharedMemory(PQSTRING(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_DELETE)
 }
 
 /*
-void setKey( const QString &key )
+void setKey(const QString &key)
 */
 HB_FUNC_STATIC(QSHAREDMEMORY_SETKEY)
 {
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_KEY)
 }
 
 /*
-void setNativeKey( const QString &key )
+void setNativeKey(const QString &key)
 */
 HB_FUNC_STATIC(QSHAREDMEMORY_SETNATIVEKEY)
 {
@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_NATIVEKEY)
 }
 
 /*
-bool create( int size, QSharedMemory::AccessMode mode = QSharedMemory::ReadWrite )
+bool create(int size, QSharedMemory::AccessMode mode = QSharedMemory::ReadWrite)
 */
 HB_FUNC_STATIC(QSHAREDMEMORY_CREATE)
 {
@@ -246,7 +246,7 @@ HB_FUNC_STATIC(QSHAREDMEMORY_SIZE)
 }
 
 /*
-bool attach( QSharedMemory::AccessMode mode = QSharedMemory::ReadWrite )
+bool attach(QSharedMemory::AccessMode mode = QSharedMemory::ReadWrite)
 */
 HB_FUNC_STATIC(QSHAREDMEMORY_ATTACH)
 {

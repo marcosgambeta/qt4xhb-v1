@@ -44,7 +44,7 @@ RETURN
 #include "qt4xhb_utils.hpp"
 
     /*
-    QChildEvent( QEvent::Type type, QObject *child )
+    QChildEvent(QEvent::Type type, QObject *child)
     */
 HB_FUNC_STATIC(QCHILDEVENT_NEW)
 {

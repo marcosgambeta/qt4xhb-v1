@@ -60,7 +60,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_NEW)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QTemporaryFile( const QString &templateName )
+    QTemporaryFile(const QString &templateName)
     */
     QTemporaryFile *obj = new QTemporaryFile(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, false);
@@ -68,7 +68,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_NEW)
   else if (ISNUMPAR(1) && ISQOBJECT(1))
   {
     /*
-    QTemporaryFile( QObject *parent )
+    QTemporaryFile(QObject *parent)
     */
     QTemporaryFile *obj = new QTemporaryFile(PQOBJECT(1));
     Qt4xHb::returnNewObject(obj, false);
@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_NEW)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2))
   {
     /*
-    QTemporaryFile( const QString &templateName, QObject *parent )
+    QTemporaryFile(const QString &templateName, QObject *parent)
     */
     QTemporaryFile *obj = new QTemporaryFile(PQSTRING(1), PQOBJECT(2));
     Qt4xHb::returnNewObject(obj, false);
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_OPEN)
 }
 
 /*
-void setAutoRemove( bool b )
+void setAutoRemove(bool b)
 */
 HB_FUNC_STATIC(QTEMPORARYFILE_SETAUTOREMOVE)
 {
@@ -204,7 +204,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_SETAUTOREMOVE)
 }
 
 /*
-void setFileTemplate( const QString &name )
+void setFileTemplate(const QString &name)
 */
 HB_FUNC_STATIC(QTEMPORARYFILE_SETFILETEMPLATE)
 {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_CREATELOCALFILE)
   if (ISNUMPAR(1) && ISQFILE(1))
   {
     /*
-    static QTemporaryFile *createLocalFile( QFile &file )
+    static QTemporaryFile *createLocalFile(QFile &file)
     */
 
     QTemporaryFile *ptr = QTemporaryFile::createLocalFile(*PQFILE(1));
@@ -267,7 +267,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_CREATELOCALFILE)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    static QTemporaryFile *createLocalFile( const QString &fileName )
+    static QTemporaryFile *createLocalFile(const QString &fileName)
     */
 
     QTemporaryFile *ptr = QTemporaryFile::createLocalFile(PQSTRING(1));

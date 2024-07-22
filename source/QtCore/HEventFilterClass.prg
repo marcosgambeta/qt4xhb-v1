@@ -41,7 +41,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    HEventFilter( QObject *parent = NULL )
+    HEventFilter(QObject *parent = NULL)
     */
 HB_FUNC_STATIC(HEVENTFILTER_NEW)
 {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC(HEVENTFILTER_DELETE)
 }
 
 /*
-void setEventFilterCB ( PHB_ITEM block )
+void setEventFilterCB (PHB_ITEM block)
 */
 HB_FUNC_STATIC(HEVENTFILTER_SETEVENTFILTERCB)
 {

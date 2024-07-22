@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QSIZEF_NEW)
   else if (ISNUMPAR(1) && ISQSIZE(1))
   {
     /*
-    QSizeF( const QSize &size )
+    QSizeF(const QSize &size)
     */
     QSizeF *obj = new QSizeF(*PQSIZE(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QSIZEF_NEW)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    QSizeF( qreal width, qreal height )
+    QSizeF(qreal width, qreal height)
     */
     QSizeF *obj = new QSizeF(PQREAL(1), PQREAL(2));
     Qt4xHb::returnNewObject(obj, true);
@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QSIZEF_DELETE)
 }
 
 /*
-QSizeF boundedTo( const QSizeF &otherSize ) const
+QSizeF boundedTo(const QSizeF &otherSize) const
 */
 HB_FUNC_STATIC(QSIZEF_BOUNDEDTO)
 {
@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QSIZEF_BOUNDEDTO)
 }
 
 /*
-QSizeF expandedTo( const QSizeF &otherSize ) const
+QSizeF expandedTo(const QSizeF &otherSize) const
 */
 HB_FUNC_STATIC(QSIZEF_EXPANDEDTO)
 {
@@ -259,7 +259,7 @@ HB_FUNC_STATIC(QSIZEF_SCALE)
   if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
     /*
-    void scale( qreal width, qreal height, Qt::AspectRatioMode mode )
+    void scale(qreal width, qreal height, Qt::AspectRatioMode mode)
     */
     QSizeF *obj = static_cast<QSizeF *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -273,7 +273,7 @@ HB_FUNC_STATIC(QSIZEF_SCALE)
   else if (ISNUMPAR(2) && ISQSIZEF(1) && HB_ISNUM(2))
   {
     /*
-    void scale( const QSizeF &size, Qt::AspectRatioMode mode )
+    void scale(const QSizeF &size, Qt::AspectRatioMode mode)
     */
     QSizeF *obj = static_cast<QSizeF *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -291,7 +291,7 @@ HB_FUNC_STATIC(QSIZEF_SCALE)
 }
 
 /*
-void setHeight( qreal height )
+void setHeight(qreal height)
 */
 HB_FUNC_STATIC(QSIZEF_SETHEIGHT)
 {
@@ -317,7 +317,7 @@ HB_FUNC_STATIC(QSIZEF_SETHEIGHT)
 }
 
 /*
-void setWidth( qreal width )
+void setWidth(qreal width)
 */
 HB_FUNC_STATIC(QSIZEF_SETWIDTH)
 {

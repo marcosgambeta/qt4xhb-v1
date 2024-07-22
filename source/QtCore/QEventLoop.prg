@@ -47,7 +47,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QEventLoop( QObject *parent = 0 )
+    QEventLoop(QObject *parent = 0)
     */
 HB_FUNC_STATIC(QEVENTLOOP_NEW)
 {
@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QEVENTLOOP_DELETE)
 }
 
 /*
-int exec( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
+int exec(QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents)
 */
 HB_FUNC_STATIC(QEVENTLOOP_EXEC)
 {
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QEVENTLOOP_EXEC)
 }
 
 /*
-void exit( int returnCode = 0 )
+void exit(int returnCode = 0)
 */
 HB_FUNC_STATIC(QEVENTLOOP_EXIT)
 {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC(QEVENTLOOP_PROCESSEVENTS)
   if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
     /*
-    bool processEvents( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
+    bool processEvents(QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents)
     */
     QEventLoop *obj = qobject_cast<QEventLoop *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QEVENTLOOP_PROCESSEVENTS)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    void processEvents( QEventLoop::ProcessEventsFlags flags, int maxTime )
+    void processEvents(QEventLoop::ProcessEventsFlags flags, int maxTime)
     */
     QEventLoop *obj = qobject_cast<QEventLoop *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

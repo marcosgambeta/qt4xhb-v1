@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QMODELINDEX_NEW)
   else if (ISNUMPAR(1) && ISQMODELINDEX(1))
   {
     /*
-    QModelIndex( const QModelIndex &other )
+    QModelIndex(const QModelIndex &other)
     */
     QModelIndex *obj = new QModelIndex(*PQMODELINDEX(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QMODELINDEX_DELETE)
 }
 
 /*
-QModelIndex child( int row, int column ) const
+QModelIndex child(int row, int column) const
 */
 HB_FUNC_STATIC(QMODELINDEX_CHILD)
 {
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QMODELINDEX_COLUMN)
 }
 
 /*
-QVariant data( int role = Qt::DisplayRole ) const
+QVariant data(int role = Qt::DisplayRole) const
 */
 HB_FUNC_STATIC(QMODELINDEX_DATA)
 {
@@ -345,7 +345,7 @@ HB_FUNC_STATIC(QMODELINDEX_ROW)
 }
 
 /*
-QModelIndex sibling( int row, int column ) const
+QModelIndex sibling(int row, int column) const
 */
 HB_FUNC_STATIC(QMODELINDEX_SIBLING)
 {

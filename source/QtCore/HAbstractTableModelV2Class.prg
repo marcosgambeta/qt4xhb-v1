@@ -50,7 +50,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    HAbstractTableModelV2( QObject *parent = 0 )
+    HAbstractTableModelV2(QObject *parent = 0)
     */
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_NEW)
 {
@@ -87,7 +87,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_DELETE)
 }
 
 /*
-void setRowCountCB( PHB_ITEM block )
+void setRowCountCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETROWCOUNTCB)
 {
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETROWCOUNTCB)
 }
 
 /*
-void setColumnCountCB( PHB_ITEM block )
+void setColumnCountCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETCOLUMNCOUNTCB)
 {
@@ -139,7 +139,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETCOLUMNCOUNTCB)
 }
 
 /*
-void setDataCB( PHB_ITEM block )
+void setDataCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETDATACB)
 {
@@ -165,7 +165,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETDATACB)
 }
 
 /*
-void setHeaderDataCB( PHB_ITEM block )
+void setHeaderDataCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETHEADERDATACB)
 {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETHEADERDATACB)
 }
 
 /*
-void setFlagsCB( PHB_ITEM block )
+void setFlagsCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETFLAGSCB)
 {
@@ -217,7 +217,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETFLAGSCB)
 }
 
 /*
-void setSetDataCB( PHB_ITEM block )
+void setSetDataCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETSETDATACB)
 {
@@ -243,27 +243,27 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETSETDATACB)
 }
 
 /*
-int rowCount( const QModelIndex &parent = QModelIndex() ) const
+int rowCount(const QModelIndex &parent = QModelIndex()) const
 */
 
 /*
-int columnCount( const QModelIndex &parent = QModelIndex() ) const
+int columnCount(const QModelIndex &parent = QModelIndex()) const
 */
 
 /*
-QVariant data( const QModelIndex &index, int role = Qt::DisplayRole ) const
+QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
 */
 
 /*
-QVariant headerData( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
+QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const
 */
 
 /*
-Qt::ItemFlagsflags( const QModelIndex &index ) const
+Qt::ItemFlagsflags(const QModelIndex &index) const
 */
 
 /*
-bool setData( const QModelIndex &index, const QVariant &value, int role = Qt::EditRole )
+bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole)
 */
 
 /*
