@@ -30,4 +30,4 @@ public slots:
   void propertyChanged(const QString &name, const QVariant &value);
 };
 
-#endif /* QDESIGNERPROPERTYEDITORINTERFACESLOTS_H */
+#endif // QDESIGNERPROPERTYEDITORINTERFACESLOTS_H

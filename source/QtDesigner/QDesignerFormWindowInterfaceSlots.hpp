@@ -42,4 +42,4 @@ public slots:
   void widgetUnmanaged(QWidget *widget);
 };
 
-#endif /* QDESIGNERFORMWINDOWINTERFACESLOTS_H */
+#endif // QDESIGNERFORMWINDOWINTERFACESLOTS_H

@@ -32,4 +32,4 @@ public slots:
   void formWindowRemoved(QDesignerFormWindowInterface *formWindow);
 };
 
-#endif /* QDESIGNERFORMWINDOWMANAGERINTERFACESLOTS_H */
+#endif // QDESIGNERFORMWINDOWMANAGERINTERFACESLOTS_H
