@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_NEW)
   else if (ISNUMPAR(1) && ISQTESTEVENTLIST(1))
   {
     /*
-    QTestEventList( const QTestEventList &other )
+    QTestEventList(const QTestEventList &other)
     */
     QTestEventList *obj = new QTestEventList(*PQTESTEVENTLIST(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_DELETE)
 }
 
 /*
-void addDelay( int msecs )
+void addDelay(int msecs)
 */
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDDELAY)
 {
@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDDELAY)
 }
 
 /*
-void addKeyClick( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
+void addKeyClick(Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1)
 */
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYCLICK1)
 {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYCLICK1)
 }
 
 /*
-void addKeyClick( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
+void addKeyClick(char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1)
 */
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYCLICK2)
 {
@@ -204,7 +204,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYCLICK)
 }
 
 /*
-void addKeyClicks( const QString &keys, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
+void addKeyClicks(const QString &keys, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1)
 */
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYCLICKS)
 {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYCLICKS)
 }
 
 /*
-void addKeyPress( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
+void addKeyPress(Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1)
 */
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYPRESS1)
 {
@@ -260,7 +260,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYPRESS1)
 }
 
 /*
-void addKeyPress( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
+void addKeyPress(char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1)
 */
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYPRESS2)
 {
@@ -304,7 +304,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYPRESS)
 }
 
 /*
-void addKeyRelease( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
+void addKeyRelease(Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1)
 */
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYRELEASE1)
 {
@@ -332,7 +332,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYRELEASE1)
 }
 
 /*
-void addKeyRelease( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
+void addKeyRelease(char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1)
 */
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYRELEASE2)
 {
@@ -376,7 +376,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYRELEASE)
 }
 
 /*
-void addMouseClick( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
+void addMouseClick(Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1)
 */
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSECLICK)
 {
@@ -405,7 +405,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSECLICK)
 }
 
 /*
-void addMouseDClick( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1
+void addMouseDClick(Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1
 )
 */
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSEDCLICK)
@@ -435,7 +435,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSEDCLICK)
 }
 
 /*
-void addMouseMove( QPoint pos = QPoint(), int delay = -1 )
+void addMouseMove(QPoint pos = QPoint(), int delay = -1)
 */
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSEMOVE)
 {
@@ -461,7 +461,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSEMOVE)
 }
 
 /*
-void addMousePress( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
+void addMousePress(Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1)
 */
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSEPRESS)
 {
@@ -490,7 +490,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSEPRESS)
 }
 
 /*
-void addMouseRelease( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1
+void addMouseRelease(Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1
 )
 */
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSERELEASE)
@@ -546,7 +546,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_CLEAR)
 }
 
 /*
-void simulate( QWidget *w )
+void simulate(QWidget *w)
 */
 HB_FUNC_STATIC(QTESTEVENTLIST_SIMULATE)
 {
