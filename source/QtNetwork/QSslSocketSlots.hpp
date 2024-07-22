@@ -34,4 +34,4 @@ public slots:
   void sslErrors(const QList<QSslError> &errors);
 };
 
-#endif /* QSSLSOCKETSLOTS_H */
+#endif // QSSLSOCKETSLOTS_H

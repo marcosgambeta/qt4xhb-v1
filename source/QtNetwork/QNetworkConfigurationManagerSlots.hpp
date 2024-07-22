@@ -34,4 +34,4 @@ public slots:
   void updateCompleted();
 };
 
-#endif /* QNETWORKCONFIGURATIONMANAGERSLOTS_H */
+#endif // QNETWORKCONFIGURATIONMANAGERSLOTS_H

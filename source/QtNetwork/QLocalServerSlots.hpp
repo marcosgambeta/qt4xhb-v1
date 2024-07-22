@@ -30,4 +30,4 @@ public slots:
   void newConnection();
 };
 
-#endif /* QLOCALSERVERSLOTS_H */
+#endif // QLOCALSERVERSLOTS_H

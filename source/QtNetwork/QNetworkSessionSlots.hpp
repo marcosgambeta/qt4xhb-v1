@@ -35,4 +35,4 @@ public slots:
   void stateChanged(QNetworkSession::State state);
 };
 
-#endif /* QNETWORKSESSIONSLOTS_H */
+#endif // QNETWORKSESSIONSLOTS_H

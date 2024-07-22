@@ -35,4 +35,4 @@ public slots:
   void stateChanged(QAbstractSocket::SocketState socketState);
 };
 
-#endif /* QABSTRACTSOCKETSLOTS_H */
+#endif // QABSTRACTSOCKETSLOTS_H

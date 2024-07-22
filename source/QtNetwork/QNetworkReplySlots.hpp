@@ -37,4 +37,4 @@ public slots:
   void uploadProgress(qint64 bytesSent, qint64 bytesTotal);
 };
 
-#endif /* QNETWORKREPLYSLOTS_H */
+#endif // QNETWORKREPLYSLOTS_H

@@ -37,4 +37,4 @@ public slots:
   void stateChanged(int state);
 };
 
-#endif /* QFTPSLOTS_H */
+#endif // QFTPSLOTS_H

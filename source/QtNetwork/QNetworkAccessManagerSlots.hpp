@@ -37,4 +37,4 @@ public slots:
   void sslErrors(QNetworkReply *reply, const QList<QSslError> &errors);
 };
 
-#endif /* QNETWORKACCESSMANAGERSLOTS_H */
+#endif // QNETWORKACCESSMANAGERSLOTS_H

@@ -33,4 +33,4 @@ public slots:
   void stateChanged(QLocalSocket::LocalSocketState socketState);
 };
 
-#endif /* QLOCALSOCKETSLOTS_H */
+#endif // QLOCALSOCKETSLOTS_H

@@ -30,4 +30,4 @@ public slots:
   void newConnection();
 };
 
-#endif /* QTCPSERVERSLOTS_H */
+#endif // QTCPSERVERSLOTS_H
