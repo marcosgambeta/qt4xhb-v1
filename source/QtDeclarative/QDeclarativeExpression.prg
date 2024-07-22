@@ -77,7 +77,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_NEW)
   else if (ISBETWEEN(3, 4) && ISQDECLARATIVECONTEXT(1) && ISQOBJECT(2) && HB_ISCHAR(3) && (ISQOBJECT(4) || HB_ISNIL(4)))
   {
     /*
-    QDeclarativeExpression( QDeclarativeContext * ctxt, QObject * scope, const QString &expression, QObject * parent =
+    QDeclarativeExpression( QDeclarativeContext *ctxt, QObject *scope, const QString &expression, QObject *parent =
     0 )
     */
     QDeclarativeExpression *obj =
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_CLEARERROR)
 }
 
 /*
-QDeclarativeContext * context() const
+QDeclarativeContext *context() const
 */
 HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_CONTEXT)
 {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_CONTEXT)
 }
 
 /*
-QDeclarativeEngine * engine() const
+QDeclarativeEngine *engine() const
 */
 HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_ENGINE)
 {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_ERROR)
 }
 
 /*
-QVariant evaluate( bool * valueIsUndefined = 0 )
+QVariant evaluate( bool *valueIsUndefined = 0 )
 */
 HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_EVALUATE)
 {
@@ -333,7 +333,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_NOTIFYONVALUECHANGED)
 }
 
 /*
-QObject * scopeObject() const
+QObject *scopeObject() const
 */
 HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_SCOPEOBJECT)
 {

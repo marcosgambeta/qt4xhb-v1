@@ -78,7 +78,7 @@ RETURN
 #include <QtDeclarative/QDeclarativeContext>
 
     /*
-    QDeclarativeEngine( QObject * parent = 0 )
+    QDeclarativeEngine( QObject *parent = 0 )
     */
 HB_FUNC_STATIC(QDECLARATIVEENGINE_NEW)
 {
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_DELETE)
 }
 
 /*
-void addImageProvider( const QString &providerId, QDeclarativeImageProvider * provider )
+void addImageProvider( const QString &providerId, QDeclarativeImageProvider *provider )
 */
 HB_FUNC_STATIC(QDECLARATIVEENGINE_ADDIMAGEPROVIDER)
 {
@@ -241,7 +241,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_CLEARCOMPONENTCACHE)
 }
 
 /*
-QDeclarativeImageProvider * imageProvider( const QString &providerId ) const
+QDeclarativeImageProvider *imageProvider( const QString &providerId ) const
 */
 HB_FUNC_STATIC(QDECLARATIVEENGINE_IMAGEPROVIDER)
 {
@@ -290,7 +290,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_IMPORTPATHLIST)
 }
 
 /*
-bool importPlugin( const QString &filePath, const QString &uri, QString * errorString )
+bool importPlugin( const QString &filePath, const QString &uri, QString *errorString )
 */
 HB_FUNC_STATIC(QDECLARATIVEENGINE_IMPORTPLUGIN)
 {
@@ -314,7 +314,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_IMPORTPLUGIN)
 }
 
 /*
-QNetworkAccessManager * networkAccessManager() const
+QNetworkAccessManager *networkAccessManager() const
 */
 HB_FUNC_STATIC(QDECLARATIVEENGINE_NETWORKACCESSMANAGER)
 {
@@ -339,7 +339,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_NETWORKACCESSMANAGER)
 }
 
 /*
-QDeclarativeNetworkAccessManagerFactory * networkAccessManagerFactory() const
+QDeclarativeNetworkAccessManagerFactory *networkAccessManagerFactory() const
 */
 HB_FUNC_STATIC(QDECLARATIVEENGINE_NETWORKACCESSMANAGERFACTORY)
 {
@@ -462,7 +462,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_REMOVEIMAGEPROVIDER)
 }
 
 /*
-QDeclarativeContext * rootContext() const
+QDeclarativeContext *rootContext() const
 */
 HB_FUNC_STATIC(QDECLARATIVEENGINE_ROOTCONTEXT)
 {
@@ -539,7 +539,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_SETIMPORTPATHLIST)
 }
 
 /*
-void setNetworkAccessManagerFactory( QDeclarativeNetworkAccessManagerFactory * factory )
+void setNetworkAccessManagerFactory( QDeclarativeNetworkAccessManagerFactory *factory )
 */
 HB_FUNC_STATIC(QDECLARATIVEENGINE_SETNETWORKACCESSMANAGERFACTORY)
 {
@@ -643,7 +643,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_SETPLUGINPATHLIST)
 }
 
 /*
-static QDeclarativeContext * contextForObject( const QObject * object )
+static QDeclarativeContext *contextForObject( const QObject *object )
 */
 HB_FUNC_STATIC(QDECLARATIVEENGINE_CONTEXTFOROBJECT)
 {
@@ -663,7 +663,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_CONTEXTFOROBJECT)
 }
 
 /*
-static QDeclarativeEngine::ObjectOwnership objectOwnership( QObject * object )
+static QDeclarativeEngine::ObjectOwnership objectOwnership( QObject *object )
 */
 HB_FUNC_STATIC(QDECLARATIVEENGINE_OBJECTOWNERSHIP)
 {
@@ -682,7 +682,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_OBJECTOWNERSHIP)
 }
 
 /*
-static void setContextForObject( QObject * object, QDeclarativeContext * context )
+static void setContextForObject( QObject *object, QDeclarativeContext *context )
 */
 HB_FUNC_STATIC(QDECLARATIVEENGINE_SETCONTEXTFOROBJECT)
 {
@@ -703,7 +703,7 @@ HB_FUNC_STATIC(QDECLARATIVEENGINE_SETCONTEXTFOROBJECT)
 }
 
 /*
-static void setObjectOwnership( QObject * object, QDeclarativeEngine::ObjectOwnership ownership )
+static void setObjectOwnership( QObject *object, QDeclarativeEngine::ObjectOwnership ownership )
 */
 HB_FUNC_STATIC(QDECLARATIVEENGINE_SETOBJECTOWNERSHIP)
 {

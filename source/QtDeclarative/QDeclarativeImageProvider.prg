@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QDECLARATIVEIMAGEPROVIDER_IMAGETYPE)
 }
 
 /*
-virtual QImage requestImage( const QString &id, QSize * size, const QSize &requestedSize )
+virtual QImage requestImage( const QString &id, QSize *size, const QSize &requestedSize )
 */
 HB_FUNC_STATIC(QDECLARATIVEIMAGEPROVIDER_REQUESTIMAGE)
 {
@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QDECLARATIVEIMAGEPROVIDER_REQUESTIMAGE)
 }
 
 /*
-virtual QPixmap requestPixmap( const QString &id, QSize * size, const QSize &requestedSize )
+virtual QPixmap requestPixmap( const QString &id, QSize *size, const QSize &requestedSize )
 */
 HB_FUNC_STATIC(QDECLARATIVEIMAGEPROVIDER_REQUESTPIXMAP)
 {

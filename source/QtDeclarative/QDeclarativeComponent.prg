@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_NEW)
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
-    QDeclarativeComponent( QObject * parent = 0 )
+    QDeclarativeComponent( QObject *parent = 0 )
     */
     QDeclarativeComponent *obj = new QDeclarativeComponent(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -77,7 +77,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_NEW)
   else if (ISBETWEEN(1, 2) && ISQDECLARATIVEENGINE(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QDeclarativeComponent( QDeclarativeEngine *, QObject * parent = 0 )
+    QDeclarativeComponent( QDeclarativeEngine *, QObject *parent = 0 )
     */
     QDeclarativeComponent *obj = new QDeclarativeComponent(PQDECLARATIVEENGINE(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_NEW)
   else if (ISBETWEEN(2, 3) && ISQDECLARATIVEENGINE(1) && HB_ISCHAR(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
-    QDeclarativeComponent( QDeclarativeEngine *, const QString &fileName, QObject * parent = 0 )
+    QDeclarativeComponent( QDeclarativeEngine *, const QString &fileName, QObject *parent = 0 )
     */
     QDeclarativeComponent *obj = new QDeclarativeComponent(PQDECLARATIVEENGINE(1), PQSTRING(2), OPQOBJECT(3, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_NEW)
   else if (ISBETWEEN(2, 3) && ISQDECLARATIVEENGINE(1) && ISQURL(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
-    QDeclarativeComponent( QDeclarativeEngine *, const QUrl &url, QObject * parent = 0 )
+    QDeclarativeComponent( QDeclarativeEngine *, const QUrl &url, QObject *parent = 0 )
     */
     QDeclarativeComponent *obj = new QDeclarativeComponent(PQDECLARATIVEENGINE(1), *PQURL(2), OPQOBJECT(3, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_DELETE)
 }
 
 /*
-virtual QObject * beginCreate( QDeclarativeContext * context )
+virtual QObject *beginCreate( QDeclarativeContext *context )
 */
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_BEGINCREATE)
 {
@@ -174,7 +174,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_COMPLETECREATE)
 }
 
 /*
-virtual QObject * create( QDeclarativeContext * context = 0 )
+virtual QObject *create( QDeclarativeContext *context = 0 )
 */
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_CREATE)
 {
@@ -199,7 +199,7 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_CREATE)
 }
 
 /*
-QDeclarativeContext * creationContext() const
+QDeclarativeContext *creationContext() const
 */
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_CREATIONCONTEXT)
 {

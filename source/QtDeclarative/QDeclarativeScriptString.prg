@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_NEW)
 }
 
 /*
-QDeclarativeContext * context() const
+QDeclarativeContext *context() const
 */
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_CONTEXT)
 {
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_CONTEXT)
 }
 
 /*
-QObject * scopeObject() const
+QObject *scopeObject() const
 */
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SCOPEOBJECT)
 {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SCRIPT)
 }
 
 /*
-void setContext( QDeclarativeContext * context )
+void setContext( QDeclarativeContext *context )
 */
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETCONTEXT)
 {
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETCONTEXT)
 }
 
 /*
-void setScopeObject( QObject * object )
+void setScopeObject( QObject *object )
 */
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETSCOPEOBJECT)
 {
