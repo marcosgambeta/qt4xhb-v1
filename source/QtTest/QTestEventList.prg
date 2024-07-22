@@ -546,7 +546,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_CLEAR)
 }
 
 /*
-void simulate( QWidget * w )
+void simulate( QWidget *w )
 */
 HB_FUNC_STATIC(QTESTEVENTLIST_SIMULATE)
 {
