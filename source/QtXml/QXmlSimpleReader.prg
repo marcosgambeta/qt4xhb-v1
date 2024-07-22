@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QXMLSIMPLEREADER_DELETE)
 }
 
 /*
-virtual bool parse( const QXmlInputSource * input, bool incremental )
+virtual bool parse( const QXmlInputSource *input, bool incremental )
 */
 HB_FUNC_STATIC(QXMLSIMPLEREADER_PARSE)
 {

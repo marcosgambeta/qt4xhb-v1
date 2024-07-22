@@ -585,8 +585,8 @@ HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
       (HB_ISNUM(4) || HB_ISNIL(4)) && (HB_ISNUM(5) || HB_ISNIL(5)))
   {
     /*
-    bool setContent( const QByteArray &data, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int
-    * errorColumn = 0 )
+    bool setContent( const QByteArray &data, bool namespaceProcessing, QString *errorMsg = 0, int *errorLine = 0, int
+    *errorColumn = 0 )
     */
     QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -603,7 +603,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
            (HB_ISNUM(4) || HB_ISNIL(4)) && (HB_ISNUM(5) || HB_ISNIL(5)))
   {
     /*
-    bool setContent( const QString &text, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int *
+    bool setContent( const QString &text, bool namespaceProcessing, QString *errorMsg = 0, int *errorLine = 0, int *
     errorColumn = 0 )
     */
     QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -621,7 +621,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
            (HB_ISNUM(4) || HB_ISNIL(4)) && (HB_ISNUM(5) || HB_ISNIL(5)))
   {
     /*
-    bool setContent( QIODevice * dev, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int *
+    bool setContent( QIODevice *dev, bool namespaceProcessing, QString *errorMsg = 0, int *errorLine = 0, int *
     errorColumn = 0 )
     */
     QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -639,8 +639,8 @@ HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
            (HB_ISNUM(4) || HB_ISNIL(4)) && (HB_ISNUM(5) || HB_ISNIL(5)))
   {
     /*
-    bool setContent( QXmlInputSource * source, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0,
-    int * errorColumn = 0 )
+    bool setContent( QXmlInputSource *source, bool namespaceProcessing, QString *errorMsg = 0, int *errorLine = 0,
+    int *errorColumn = 0 )
     */
     QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -657,7 +657,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
            (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
-    bool setContent( const QString &text, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+    bool setContent( const QString &text, QString *errorMsg = 0, int *errorLine = 0, int *errorColumn = 0 )
     */
     QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -674,7 +674,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
            (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
-    bool setContent( const QByteArray &buffer, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+    bool setContent( const QByteArray &buffer, QString *errorMsg = 0, int *errorLine = 0, int *errorColumn = 0 )
     */
     QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -691,7 +691,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
            (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
-    bool setContent( QIODevice * dev, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+    bool setContent( QIODevice *dev, QString *errorMsg = 0, int *errorLine = 0, int *errorColumn = 0 )
     */
     QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -708,7 +708,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
            (HB_ISNUM(4) || HB_ISNIL(4)) && (HB_ISNUM(5) || HB_ISNIL(5)))
   {
     /*
-    bool setContent( QXmlInputSource * source, QXmlReader * reader, QString * errorMsg = 0, int * errorLine = 0, int *
+    bool setContent( QXmlInputSource *source, QXmlReader *reader, QString *errorMsg = 0, int *errorLine = 0, int *
     errorColumn = 0 )
     */
     QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());

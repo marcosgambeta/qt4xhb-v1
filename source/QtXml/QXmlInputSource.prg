@@ -66,7 +66,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_NEW)
   else if (ISNUMPAR(1) && ISQIODEVICE(1))
   {
     /*
-    QXmlInputSource( QIODevice * dev )
+    QXmlInputSource( QIODevice *dev )
     */
     QXmlInputSource *obj = new QXmlInputSource(PQIODEVICE(1));
     Qt4xHb::returnNewObject(obj, true);

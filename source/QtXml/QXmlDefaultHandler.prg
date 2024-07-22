@@ -507,7 +507,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_PROCESSINGINSTRUCTION)
 }
 
 /*
-virtual void setDocumentLocator( QXmlLocator * locator )
+virtual void setDocumentLocator( QXmlLocator *locator )
 */
 HB_FUNC_STATIC(QXMLDEFAULTHANDLER_SETDOCUMENTLOCATOR)
 {
