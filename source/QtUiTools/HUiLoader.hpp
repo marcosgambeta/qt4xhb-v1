@@ -40,4 +40,4 @@ public:
   void setCreateWidgetCB(PHB_ITEM block);
 };
 
-#endif /* HUILOADER_H */
+#endif // HUILOADER_H */
