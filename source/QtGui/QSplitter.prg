@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QSPLITTER_NEW)
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
-    QSplitter( QWidget * parent = 0 )
+    QSplitter( QWidget *parent = 0 )
     */
     QSplitter *obj = new QSplitter(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QSPLITTER_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QSplitter( Qt::Orientation orientation, QWidget * parent = 0 )
+    QSplitter( Qt::Orientation orientation, QWidget *parent = 0 )
     */
     QSplitter *obj = new QSplitter((Qt::Orientation)hb_parni(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QSPLITTER_DELETE)
 }
 
 /*
-void addWidget( QWidget * widget )
+void addWidget( QWidget *widget )
 */
 HB_FUNC_STATIC(QSPLITTER_ADDWIDGET)
 {
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QSPLITTER_COUNT)
 }
 
 /*
-void getRange( int index, int * min, int * max ) const
+void getRange( int index, int *min, int *max ) const
 */
 HB_FUNC_STATIC(QSPLITTER_GETRANGE)
 {
@@ -218,7 +218,7 @@ HB_FUNC_STATIC(QSPLITTER_GETRANGE)
 }
 
 /*
-QSplitterHandle * handle( int index ) const
+QSplitterHandle *handle( int index ) const
 */
 HB_FUNC_STATIC(QSPLITTER_HANDLE)
 {
@@ -267,7 +267,7 @@ HB_FUNC_STATIC(QSPLITTER_HANDLEWIDTH)
 }
 
 /*
-int indexOf( QWidget * widget ) const
+int indexOf( QWidget *widget ) const
 */
 HB_FUNC_STATIC(QSPLITTER_INDEXOF)
 {
@@ -291,7 +291,7 @@ HB_FUNC_STATIC(QSPLITTER_INDEXOF)
 }
 
 /*
-void insertWidget( int index, QWidget * widget )
+void insertWidget( int index, QWidget *widget )
 */
 HB_FUNC_STATIC(QSPLITTER_INSERTWIDGET)
 {
@@ -680,7 +680,7 @@ HB_FUNC_STATIC(QSPLITTER_SIZES)
 }
 
 /*
-QWidget * widget( int index ) const
+QWidget *widget( int index ) const
 */
 HB_FUNC_STATIC(QSPLITTER_WIDGET)
 {

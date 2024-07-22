@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_DELETE)
 }
 
 /*
-void addScrollBarWidget( QWidget * widget, Qt::Alignment alignment )
+void addScrollBarWidget( QWidget *widget, Qt::Alignment alignment )
 */
 HB_FUNC_STATIC(QABSTRACTSCROLLAREA_ADDSCROLLBARWIDGET)
 {
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_ADDSCROLLBARWIDGET)
 }
 
 /*
-QWidget * cornerWidget() const
+QWidget *cornerWidget() const
 */
 HB_FUNC_STATIC(QABSTRACTSCROLLAREA_CORNERWIDGET)
 {
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_CORNERWIDGET)
 }
 
 /*
-QScrollBar * horizontalScrollBar() const
+QScrollBar *horizontalScrollBar() const
 */
 HB_FUNC_STATIC(QABSTRACTSCROLLAREA_HORIZONTALSCROLLBAR)
 {
@@ -253,7 +253,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SCROLLBARWIDGETS)
 }
 
 /*
-void setCornerWidget( QWidget * widget )
+void setCornerWidget( QWidget *widget )
 */
 HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SETCORNERWIDGET)
 {
@@ -279,7 +279,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SETCORNERWIDGET)
 }
 
 /*
-void setHorizontalScrollBar( QScrollBar * scrollBar )
+void setHorizontalScrollBar( QScrollBar *scrollBar )
 */
 HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBAR)
 {
@@ -331,7 +331,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBARPOLICY)
 }
 
 /*
-void setVerticalScrollBar( QScrollBar * scrollBar )
+void setVerticalScrollBar( QScrollBar *scrollBar )
 */
 HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SETVERTICALSCROLLBAR)
 {
@@ -383,7 +383,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SETVERTICALSCROLLBARPOLICY)
 }
 
 /*
-void setViewport( QWidget * widget )
+void setViewport( QWidget *widget )
 */
 HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SETVIEWPORT)
 {
@@ -409,7 +409,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SETVIEWPORT)
 }
 
 /*
-QScrollBar * verticalScrollBar() const
+QScrollBar *verticalScrollBar() const
 */
 HB_FUNC_STATIC(QABSTRACTSCROLLAREA_VERTICALSCROLLBAR)
 {
@@ -458,7 +458,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_VERTICALSCROLLBARPOLICY)
 }
 
 /*
-QWidget * viewport() const
+QWidget *viewport() const
 */
 HB_FUNC_STATIC(QABSTRACTSCROLLAREA_VIEWPORT)
 {

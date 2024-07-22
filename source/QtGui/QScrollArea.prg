@@ -54,7 +54,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QScrollArea( QWidget * parent = 0 )
+    QScrollArea( QWidget *parent = 0 )
     */
 HB_FUNC_STATIC(QSCROLLAREA_NEW)
 {
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QSCROLLAREA_ENSUREVISIBLE)
 }
 
 /*
-void ensureWidgetVisible( QWidget * childWidget, int xmargin = 50, int ymargin = 50 )
+void ensureWidgetVisible( QWidget *childWidget, int xmargin = 50, int ymargin = 50 )
 */
 HB_FUNC_STATIC(QSCROLLAREA_ENSUREWIDGETVISIBLE)
 {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QSCROLLAREA_SETALIGNMENT)
 }
 
 /*
-void setWidget( QWidget * widget )
+void setWidget( QWidget *widget )
 */
 HB_FUNC_STATIC(QSCROLLAREA_SETWIDGET)
 {
@@ -242,7 +242,7 @@ HB_FUNC_STATIC(QSCROLLAREA_SETWIDGETRESIZABLE)
 }
 
 /*
-QWidget * takeWidget()
+QWidget *takeWidget()
 */
 HB_FUNC_STATIC(QSCROLLAREA_TAKEWIDGET)
 {
@@ -267,7 +267,7 @@ HB_FUNC_STATIC(QSCROLLAREA_TAKEWIDGET)
 }
 
 /*
-QWidget * widget() const
+QWidget *widget() const
 */
 HB_FUNC_STATIC(QSCROLLAREA_WIDGET)
 {

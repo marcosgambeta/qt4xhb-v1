@@ -66,7 +66,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_NEW)
   else if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
-    QStackedLayout( QWidget * parent )
+    QStackedLayout( QWidget *parent )
     */
     QStackedLayout *obj = new QStackedLayout(PQWIDGET(1));
     Qt4xHb::returnNewObject(obj, false);
@@ -74,7 +74,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_NEW)
   else if (ISNUMPAR(1) && ISQLAYOUT(1))
   {
     /*
-    QStackedLayout( QLayout * parentLayout )
+    QStackedLayout( QLayout *parentLayout )
     */
     QStackedLayout *obj = new QStackedLayout(PQLAYOUT(1));
     Qt4xHb::returnNewObject(obj, false);
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_DELETE)
 }
 
 /*
-int addWidget( QWidget * widget )
+int addWidget( QWidget *widget )
 */
 HB_FUNC_STATIC(QSTACKEDLAYOUT_ADDWIDGET)
 {
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_CURRENTINDEX)
 }
 
 /*
-QWidget * currentWidget() const
+QWidget *currentWidget() const
 */
 HB_FUNC_STATIC(QSTACKEDLAYOUT_CURRENTWIDGET)
 {
@@ -177,7 +177,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_CURRENTWIDGET)
 }
 
 /*
-int insertWidget( int index, QWidget * widget )
+int insertWidget( int index, QWidget *widget )
 */
 HB_FUNC_STATIC(QSTACKEDLAYOUT_INSERTWIDGET)
 {
@@ -251,7 +251,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_STACKINGMODE)
 }
 
 /*
-QWidget * widget( int index ) const
+QWidget *widget( int index ) const
 */
 HB_FUNC_STATIC(QSTACKEDLAYOUT_WIDGET)
 {
@@ -302,7 +302,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_SETCURRENTINDEX)
 }
 
 /*
-void setCurrentWidget( QWidget * widget )
+void setCurrentWidget( QWidget *widget )
 */
 HB_FUNC_STATIC(QSTACKEDLAYOUT_SETCURRENTWIDGET)
 {

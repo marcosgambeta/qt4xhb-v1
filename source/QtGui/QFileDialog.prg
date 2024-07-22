@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QFILEDIALOG_NEW)
   if (ISNUMPAR(2) && ISQWIDGET(1) && HB_ISNUM(2))
   {
     /*
-    QFileDialog( QWidget * parent, Qt::WindowFlags flags )
+    QFileDialog( QWidget *parent, Qt::WindowFlags flags )
     */
     QFileDialog *obj = new QFileDialog(PQWIDGET(1), (Qt::WindowFlags)hb_parni(2));
     Qt4xHb::returnNewObject(obj, false);
@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QFILEDIALOG_NEW)
            (HB_ISCHAR(3) || HB_ISNIL(3)) && (HB_ISCHAR(4) || HB_ISNIL(4)))
   {
     /*
-    QFileDialog( QWidget * parent = 0, const QString &caption = QString(), const QString &directory = QString(), const
+    QFileDialog( QWidget *parent = 0, const QString &caption = QString(), const QString &directory = QString(), const
     QString &filter = QString() )
     */
     QFileDialog *obj =
@@ -322,7 +322,7 @@ HB_FUNC_STATIC(QFILEDIALOG_HISTORY)
 }
 
 /*
-QFileIconProvider * iconProvider() const
+QFileIconProvider *iconProvider() const
 */
 HB_FUNC_STATIC(QFILEDIALOG_ICONPROVIDER)
 {
@@ -395,7 +395,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ISREADONLY)
 }
 
 /*
-QAbstractItemDelegate * itemDelegate() const
+QAbstractItemDelegate *itemDelegate() const
 */
 HB_FUNC_STATIC(QFILEDIALOG_ITEMDELEGATE)
 {
@@ -468,7 +468,7 @@ HB_FUNC_STATIC(QFILEDIALOG_NAMEFILTERS)
 }
 
 /*
-void open( QObject * receiver, const char * member )
+void open( QObject *receiver, const char *member )
 */
 HB_FUNC_STATIC(QFILEDIALOG_OPEN)
 {
@@ -518,7 +518,7 @@ HB_FUNC_STATIC(QFILEDIALOG_OPTIONS)
 }
 
 /*
-QAbstractProxyModel * proxyModel() const
+QAbstractProxyModel *proxyModel() const
 */
 HB_FUNC_STATIC(QFILEDIALOG_PROXYMODEL)
 {
@@ -908,7 +908,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETHISTORY)
 }
 
 /*
-void setIconProvider( QFileIconProvider * provider )
+void setIconProvider( QFileIconProvider *provider )
 */
 HB_FUNC_STATIC(QFILEDIALOG_SETICONPROVIDER)
 {
@@ -934,7 +934,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETICONPROVIDER)
 }
 
 /*
-void setItemDelegate( QAbstractItemDelegate * delegate )
+void setItemDelegate( QAbstractItemDelegate *delegate )
 */
 HB_FUNC_STATIC(QFILEDIALOG_SETITEMDELEGATE)
 {
@@ -1116,7 +1116,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETOPTIONS)
 }
 
 /*
-void setProxyModel( QAbstractProxyModel * proxyModel )
+void setProxyModel( QAbstractProxyModel *proxyModel )
 */
 HB_FUNC_STATIC(QFILEDIALOG_SETPROXYMODEL)
 {
@@ -1378,7 +1378,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETVISIBLE)
 }
 
 /*
-static QString getExistingDirectory( QWidget * parent = 0, const QString &caption = QString(), const QString &dir =
+static QString getExistingDirectory( QWidget *parent = 0, const QString &caption = QString(), const QString &dir =
 QString(), QFileDialog::Options options = QFileDialog::ShowDirsOnly )
 */
 HB_FUNC_STATIC(QFILEDIALOG_GETEXISTINGDIRECTORY)
@@ -1401,8 +1401,8 @@ HB_FUNC_STATIC(QFILEDIALOG_GETEXISTINGDIRECTORY)
 }
 
 /*
-static QString getOpenFileName( QWidget * parent = 0, const QString &caption = QString(), const QString &dir =
-QString(), const QString &filter = QString(), QString * selectedFilter = 0, QFileDialog::Options options = 0 )
+static QString getOpenFileName( QWidget *parent = 0, const QString &caption = QString(), const QString &dir =
+QString(), const QString &filter = QString(), QString *selectedFilter = 0, QFileDialog::Options options = 0 )
 */
 HB_FUNC_STATIC(QFILEDIALOG_GETOPENFILENAME)
 {
@@ -1425,8 +1425,8 @@ HB_FUNC_STATIC(QFILEDIALOG_GETOPENFILENAME)
 }
 
 /*
-static QStringList getOpenFileNames( QWidget * parent = 0, const QString &caption = QString(), const QString &dir =
-QString(), const QString &filter = QString(), QString * selectedFilter = 0, QFileDialog::Options options = 0 )
+static QStringList getOpenFileNames( QWidget *parent = 0, const QString &caption = QString(), const QString &dir =
+QString(), const QString &filter = QString(), QString *selectedFilter = 0, QFileDialog::Options options = 0 )
 */
 HB_FUNC_STATIC(QFILEDIALOG_GETOPENFILENAMES)
 {
@@ -1449,8 +1449,8 @@ HB_FUNC_STATIC(QFILEDIALOG_GETOPENFILENAMES)
 }
 
 /*
-static QString getSaveFileName( QWidget * parent = 0, const QString &caption = QString(), const QString &dir =
-QString(), const QString &filter = QString(), QString * selectedFilter = 0, QFileDialog::Options options = 0 )
+static QString getSaveFileName( QWidget *parent = 0, const QString &caption = QString(), const QString &dir =
+QString(), const QString &filter = QString(), QString *selectedFilter = 0, QFileDialog::Options options = 0 )
 */
 HB_FUNC_STATIC(QFILEDIALOG_GETSAVEFILENAME)
 {

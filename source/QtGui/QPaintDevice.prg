@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_NUMCOLORS)
 }
 
 /*
-virtual QPaintEngine * paintEngine() const = 0
+virtual QPaintEngine *paintEngine() const = 0
 */
 HB_FUNC_STATIC(QPAINTDEVICE_PAINTENGINE)
 {

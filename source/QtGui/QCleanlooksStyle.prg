@@ -96,8 +96,8 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_DELETE)
 }
 
 /*
-virtual void drawComplexControl( QStyle::ComplexControl control, const QStyleOptionComplex * option, QPainter * painter,
-const QWidget * widget ) const
+virtual void drawComplexControl( QStyle::ComplexControl control, const QStyleOptionComplex *option, QPainter *painter,
+const QWidget *widget ) const
 */
 HB_FUNC_STATIC(QCLEANLOOKSSTYLE_DRAWCOMPLEXCONTROL)
 {
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_DRAWCOMPLEXCONTROL)
 }
 
 /*
-virtual void drawControl( QStyle::ControlElement element, const QStyleOption * option, QPainter * painter, const QWidget
+virtual void drawControl( QStyle::ControlElement element, const QStyleOption *option, QPainter *painter, const QWidget
 * widget ) const
 */
 HB_FUNC_STATIC(QCLEANLOOKSSTYLE_DRAWCONTROL)
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_DRAWCONTROL)
 }
 
 /*
-virtual void drawItemPixmap( QPainter * painter, const QRect &rect, int alignment, const QPixmap &pixmap ) const
+virtual void drawItemPixmap( QPainter *painter, const QRect &rect, int alignment, const QPixmap &pixmap ) const
 */
 HB_FUNC_STATIC(QCLEANLOOKSSTYLE_DRAWITEMPIXMAP)
 {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_DRAWITEMPIXMAP)
 }
 
 /*
-virtual void drawItemText( QPainter * painter, const QRect &rectangle, int alignment, const QPalette &palette, bool
+virtual void drawItemText( QPainter *painter, const QRect &rectangle, int alignment, const QPalette &palette, bool
 enabled, const QString &text, QPalette::ColorRole textRole = QPalette::NoRole ) const
 */
 HB_FUNC_STATIC(QCLEANLOOKSSTYLE_DRAWITEMTEXT)
@@ -205,8 +205,8 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_DRAWITEMTEXT)
 }
 
 /*
-virtual void drawPrimitive( QStyle::PrimitiveElement elem, const QStyleOption * option, QPainter * painter, const
-QWidget * widget = 0 ) const
+virtual void drawPrimitive( QStyle::PrimitiveElement elem, const QStyleOption *option, QPainter *painter, const
+QWidget *widget = 0 ) const
 */
 HB_FUNC_STATIC(QCLEANLOOKSSTYLE_DRAWPRIMITIVE)
 {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_DRAWPRIMITIVE)
 }
 
 /*
-virtual QPixmap generatedIconPixmap( QIcon::Mode iconMode, const QPixmap &pixmap, const QStyleOption * opt ) const
+virtual QPixmap generatedIconPixmap( QIcon::Mode iconMode, const QPixmap &pixmap, const QStyleOption *opt ) const
 */
 HB_FUNC_STATIC(QCLEANLOOKSSTYLE_GENERATEDICONPIXMAP)
 {
@@ -257,8 +257,8 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_GENERATEDICONPIXMAP)
 }
 
 /*
-virtual QStyle::SubControl hitTestComplexControl( QStyle::ComplexControl cc, const QStyleOptionComplex * opt, const
-QPoint &pt, const QWidget * w = 0 ) const
+virtual QStyle::SubControl hitTestComplexControl( QStyle::ComplexControl cc, const QStyleOptionComplex *opt, const
+QPoint &pt, const QWidget *w = 0 ) const
 */
 HB_FUNC_STATIC(QCLEANLOOKSSTYLE_HITTESTCOMPLEXCONTROL)
 {
@@ -308,7 +308,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_ITEMPIXMAPRECT)
 }
 
 /*
-virtual int pixelMetric( QStyle::PixelMetric metric, const QStyleOption * option = 0, const QWidget * widget = 0 ) const
+virtual int pixelMetric( QStyle::PixelMetric metric, const QStyleOption *option = 0, const QWidget *widget = 0 ) const
 */
 HB_FUNC_STATIC(QCLEANLOOKSSTYLE_PIXELMETRIC)
 {
@@ -337,7 +337,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_POLISH)
   if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
-    virtual void polish( QWidget * widget )
+    virtual void polish( QWidget *widget )
     */
     QCleanlooksStyle *obj = qobject_cast<QCleanlooksStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -351,7 +351,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_POLISH)
   else if (ISNUMPAR(1) && ISQAPPLICATION(1))
   {
     /*
-    virtual void polish( QApplication * app )
+    virtual void polish( QApplication *app )
     */
     QCleanlooksStyle *obj = qobject_cast<QCleanlooksStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -383,8 +383,8 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_POLISH)
 }
 
 /*
-virtual QSize sizeFromContents( QStyle::ContentsType type, const QStyleOption * option, const QSize &size, const
-QWidget * widget ) const
+virtual QSize sizeFromContents( QStyle::ContentsType type, const QStyleOption *option, const QSize &size, const
+QWidget *widget ) const
 */
 HB_FUNC_STATIC(QCLEANLOOKSSTYLE_SIZEFROMCONTENTS)
 {
@@ -435,7 +435,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_STANDARDPALETTE)
 }
 
 /*
-virtual QPixmap standardPixmap( QStyle::StandardPixmap standardPixmap, const QStyleOption * opt, const QWidget * widget
+virtual QPixmap standardPixmap( QStyle::StandardPixmap standardPixmap, const QStyleOption *opt, const QWidget *widget
 = 0 ) const
 */
 HB_FUNC_STATIC(QCLEANLOOKSSTYLE_STANDARDPIXMAP)
@@ -462,8 +462,8 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_STANDARDPIXMAP)
 }
 
 /*
-virtual int styleHint( QStyle::StyleHint hint, const QStyleOption * option = 0, const QWidget * widget = 0,
-QStyleHintReturn * returnData = 0 ) const
+virtual int styleHint( QStyle::StyleHint hint, const QStyleOption *option = 0, const QWidget *widget = 0,
+QStyleHintReturn *returnData = 0 ) const
 */
 HB_FUNC_STATIC(QCLEANLOOKSSTYLE_STYLEHINT)
 {
@@ -490,8 +490,8 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_STYLEHINT)
 }
 
 /*
-virtual QRect subControlRect( QStyle::ComplexControl control, const QStyleOptionComplex * option, QStyle::SubControl
-subControl, const QWidget * widget ) const
+virtual QRect subControlRect( QStyle::ComplexControl control, const QStyleOptionComplex *option, QStyle::SubControl
+subControl, const QWidget *widget ) const
 */
 HB_FUNC_STATIC(QCLEANLOOKSSTYLE_SUBCONTROLRECT)
 {
@@ -517,7 +517,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_SUBCONTROLRECT)
 }
 
 /*
-virtual QRect subElementRect( QStyle::SubElement sr, const QStyleOption * opt, const QWidget * w = 0 ) const
+virtual QRect subElementRect( QStyle::SubElement sr, const QStyleOption *opt, const QWidget *w = 0 ) const
 */
 HB_FUNC_STATIC(QCLEANLOOKSSTYLE_SUBELEMENTRECT)
 {
@@ -546,7 +546,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_UNPOLISH)
   if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
-    virtual void unpolish( QWidget * widget )
+    virtual void unpolish( QWidget *widget )
     */
     QCleanlooksStyle *obj = qobject_cast<QCleanlooksStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -560,7 +560,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_UNPOLISH)
   else if (ISNUMPAR(1) && ISQAPPLICATION(1))
   {
     /*
-    virtual void unpolish( QApplication * app )
+    virtual void unpolish( QApplication *app )
     */
     QCleanlooksStyle *obj = qobject_cast<QCleanlooksStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

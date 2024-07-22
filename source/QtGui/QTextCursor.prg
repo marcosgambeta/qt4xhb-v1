@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_NEW)
   else if (ISNUMPAR(1) && ISQTEXTDOCUMENT(1))
   {
     /*
-    QTextCursor( QTextDocument * document )
+    QTextCursor( QTextDocument *document )
     */
     QTextCursor *obj = new QTextCursor(PQTEXTDOCUMENT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_NEW)
   else if (ISNUMPAR(1) && ISQTEXTFRAME(1))
   {
     /*
-    QTextCursor( QTextFrame * frame )
+    QTextCursor( QTextFrame *frame )
     */
     QTextCursor *obj = new QTextCursor(PQTEXTFRAME(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -507,7 +507,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_CREATELIST)
   if (ISNUMPAR(1) && ISQTEXTLISTFORMAT(1))
   {
     /*
-    QTextList * createList( const QTextListFormat &format )
+    QTextList *createList( const QTextListFormat &format )
     */
     QTextCursor *obj = static_cast<QTextCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -520,7 +520,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_CREATELIST)
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    QTextList * createList( QTextListFormat::Style style )
+    QTextList *createList( QTextListFormat::Style style )
     */
     QTextCursor *obj = static_cast<QTextCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -537,7 +537,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_CREATELIST)
 }
 
 /*
-QTextFrame * currentFrame() const
+QTextFrame *currentFrame() const
 */
 HB_FUNC_STATIC(QTEXTCURSOR_CURRENTFRAME)
 {
@@ -562,7 +562,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_CURRENTFRAME)
 }
 
 /*
-QTextList * currentList() const
+QTextList *currentList() const
 */
 HB_FUNC_STATIC(QTEXTCURSOR_CURRENTLIST)
 {
@@ -587,7 +587,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_CURRENTLIST)
 }
 
 /*
-QTextTable * currentTable() const
+QTextTable *currentTable() const
 */
 HB_FUNC_STATIC(QTEXTCURSOR_CURRENTTABLE)
 {
@@ -664,7 +664,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_DELETEPREVIOUSCHAR)
 }
 
 /*
-QTextDocument * document() const
+QTextDocument *document() const
 */
 HB_FUNC_STATIC(QTEXTCURSOR_DOCUMENT)
 {
@@ -839,7 +839,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTFRAGMENT)
 }
 
 /*
-QTextFrame * insertFrame( const QTextFrameFormat &format )
+QTextFrame *insertFrame( const QTextFrameFormat &format )
 */
 HB_FUNC_STATIC(QTEXTCURSOR_INSERTFRAME)
 {
@@ -958,7 +958,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTLIST)
   if (ISNUMPAR(1) && ISQTEXTLISTFORMAT(1))
   {
     /*
-    QTextList * insertList( const QTextListFormat &format )
+    QTextList *insertList( const QTextListFormat &format )
     */
     QTextCursor *obj = static_cast<QTextCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -971,7 +971,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTLIST)
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    QTextList * insertList( QTextListFormat::Style style )
+    QTextList *insertList( QTextListFormat::Style style )
     */
     QTextCursor *obj = static_cast<QTextCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -992,7 +992,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTTABLE)
   if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQTEXTTABLEFORMAT(3))
   {
     /*
-    QTextTable * insertTable( int rows, int columns, const QTextTableFormat &format )
+    QTextTable *insertTable( int rows, int columns, const QTextTableFormat &format )
     */
     QTextCursor *obj = static_cast<QTextCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1005,7 +1005,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTTABLE)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    QTextTable * insertTable( int rows, int columns )
+    QTextTable *insertTable( int rows, int columns )
     */
     QTextCursor *obj = static_cast<QTextCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1362,7 +1362,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SELECT)
 }
 
 /*
-void selectedTableCells( int * firstRow, int * numRows, int * firstColumn, int * numColumns ) const
+void selectedTableCells( int *firstRow, int *numRows, int *firstColumn, int *numColumns ) const
 */
 HB_FUNC_STATIC(QTEXTCURSOR_SELECTEDTABLECELLS)
 {

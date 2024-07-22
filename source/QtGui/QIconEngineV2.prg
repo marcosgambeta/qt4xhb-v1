@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QICONENGINEV2_AVAILABLESIZES)
 }
 
 /*
-virtual QIconEngineV2 * clone() const
+virtual QIconEngineV2 *clone() const
 */
 HB_FUNC_STATIC(QICONENGINEV2_CLONE)
 {
@@ -211,7 +211,7 @@ HB_FUNC_STATIC(QICONENGINEV2_READ)
 }
 
 /*
-virtual void virtual_hook( int id, void * data )
+virtual void virtual_hook( int id, void *data )
 */
 HB_FUNC_STATIC(QICONENGINEV2_VIRTUAL_HOOK)
 {

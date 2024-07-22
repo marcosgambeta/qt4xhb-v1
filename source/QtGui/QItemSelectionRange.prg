@@ -399,7 +399,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_LEFT)
 }
 
 /*
-const QAbstractItemModel * model() const
+const QAbstractItemModel *model() const
 */
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_MODEL)
 {

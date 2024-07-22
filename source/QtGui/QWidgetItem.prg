@@ -52,7 +52,7 @@ RETURN
 #include "qt4xhb_utils.hpp"
 
     /*
-    QWidgetItem( QWidget * widget )
+    QWidgetItem( QWidget *widget )
     */
 HB_FUNC_STATIC(QWIDGETITEM_NEW)
 {
@@ -306,7 +306,7 @@ HB_FUNC_STATIC(QWIDGETITEM_SIZEHINT)
 }
 
 /*
-virtual QWidget * widget()
+virtual QWidget *widget()
 */
 HB_FUNC_STATIC(QWIDGETITEM_WIDGET)
 {

@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT)
 }
 
 /*
-QTextDocument * document() const
+QTextDocument *document() const
 */
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENT)
 {
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENTSIZE)
 }
 
 /*
-virtual QRectF frameBoundingRect( QTextFrame * frame ) const = 0
+virtual QRectF frameBoundingRect( QTextFrame *frame ) const = 0
 */
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT)
 {
@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT)
 }
 
 /*
-QTextObjectInterface * handlerForObject( int objectType ) const
+QTextObjectInterface *handlerForObject( int objectType ) const
 */
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_HANDLERFOROBJECT)
 {
@@ -265,7 +265,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_PAGECOUNT)
 }
 
 /*
-QPaintDevice * paintDevice() const
+QPaintDevice *paintDevice() const
 */
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_PAINTDEVICE)
 {
@@ -291,7 +291,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_PAINTDEVICE)
 }
 
 /*
-void registerHandler( int objectType, QObject * component )
+void registerHandler( int objectType, QObject *component )
 */
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_REGISTERHANDLER)
 {
@@ -318,7 +318,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_REGISTERHANDLER)
 }
 
 /*
-void setPaintDevice( QPaintDevice * device )
+void setPaintDevice( QPaintDevice *device )
 */
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_SETPAINTDEVICE)
 {

@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QCOMPLETER_NEW)
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
-    QCompleter( QObject * parent = 0 )
+    QCompleter( QObject *parent = 0 )
     */
     QCompleter *obj = new QCompleter(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QCOMPLETER_NEW)
   else if (ISBETWEEN(1, 2) && ISQABSTRACTITEMMODEL(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QCompleter( QAbstractItemModel * model, QObject * parent = 0 )
+    QCompleter( QAbstractItemModel *model, QObject *parent = 0 )
     */
     QCompleter *obj = new QCompleter(PQABSTRACTITEMMODEL(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QCOMPLETER_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISARRAY(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QCompleter( const QStringList &list, QObject * parent = 0 )
+    QCompleter( const QStringList &list, QObject *parent = 0 )
     */
     QCompleter *obj = new QCompleter(PQSTRINGLIST(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -230,7 +230,7 @@ HB_FUNC_STATIC(QCOMPLETER_COMPLETIONMODE)
 }
 
 /*
-QAbstractItemModel * completionModel() const
+QAbstractItemModel *completionModel() const
 */
 HB_FUNC_STATIC(QCOMPLETER_COMPLETIONMODEL)
 {
@@ -400,7 +400,7 @@ HB_FUNC_STATIC(QCOMPLETER_MAXVISIBLEITEMS)
 }
 
 /*
-QAbstractItemModel * model() const
+QAbstractItemModel *model() const
 */
 HB_FUNC_STATIC(QCOMPLETER_MODEL)
 {
@@ -473,7 +473,7 @@ HB_FUNC_STATIC(QCOMPLETER_PATHFROMINDEX)
 }
 
 /*
-QAbstractItemView * popup() const
+QAbstractItemView *popup() const
 */
 HB_FUNC_STATIC(QCOMPLETER_POPUP)
 {
@@ -652,7 +652,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETMAXVISIBLEITEMS)
 }
 
 /*
-void setModel( QAbstractItemModel * model )
+void setModel( QAbstractItemModel *model )
 */
 HB_FUNC_STATIC(QCOMPLETER_SETMODEL)
 {
@@ -704,7 +704,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETMODELSORTING)
 }
 
 /*
-void setPopup( QAbstractItemView * popup )
+void setPopup( QAbstractItemView *popup )
 */
 HB_FUNC_STATIC(QCOMPLETER_SETPOPUP)
 {
@@ -730,7 +730,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETPOPUP)
 }
 
 /*
-void setWidget( QWidget * widget )
+void setWidget( QWidget *widget )
 */
 HB_FUNC_STATIC(QCOMPLETER_SETWIDGET)
 {
@@ -780,7 +780,7 @@ HB_FUNC_STATIC(QCOMPLETER_SPLITPATH)
 }
 
 /*
-QWidget * widget() const
+QWidget *widget() const
 */
 HB_FUNC_STATIC(QCOMPLETER_WIDGET)
 {

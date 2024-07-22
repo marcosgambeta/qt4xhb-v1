@@ -271,7 +271,7 @@ HB_FUNC_STATIC(QSPACERITEM_SIZEHINT)
 }
 
 /*
-virtual QSpacerItem * spacerItem()
+virtual QSpacerItem *spacerItem()
 */
 HB_FUNC_STATIC(QSPACERITEM_SPACERITEM)
 {

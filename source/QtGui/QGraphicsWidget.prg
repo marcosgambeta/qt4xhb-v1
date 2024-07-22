@@ -106,7 +106,7 @@ RETURN
 #include <QtGui/QStyle>
 
     /*
-    QGraphicsWidget( QGraphicsItem * parent = 0, Qt::WindowFlags wFlags = 0 )
+    QGraphicsWidget( QGraphicsItem *parent = 0, Qt::WindowFlags wFlags = 0 )
     */
 HB_FUNC_STATIC(QGRAPHICSWIDGET_NEW)
 {
@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_ACTIONS)
 }
 
 /*
-void addAction( QAction * action )
+void addAction( QAction *action )
 */
 HB_FUNC_STATIC(QGRAPHICSWIDGET_ADDACTION)
 {
@@ -322,7 +322,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_FOCUSPOLICY)
 }
 
 /*
-QGraphicsWidget * focusWidget() const
+QGraphicsWidget *focusWidget() const
 */
 HB_FUNC_STATIC(QGRAPHICSWIDGET_FOCUSWIDGET)
 {
@@ -372,7 +372,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_FONT)
 }
 
 /*
-void getWindowFrameMargins( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
+void getWindowFrameMargins( qreal *left, qreal *top, qreal *right, qreal *bottom ) const
 */
 HB_FUNC_STATIC(QGRAPHICSWIDGET_GETWINDOWFRAMEMARGINS)
 {
@@ -431,7 +431,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_GRABSHORTCUT)
 }
 
 /*
-void insertAction( QAction * before, QAction * action )
+void insertAction( QAction *before, QAction *action )
 */
 HB_FUNC_STATIC(QGRAPHICSWIDGET_INSERTACTION)
 {
@@ -457,7 +457,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_INSERTACTION)
 }
 
 /*
-void insertActions( QAction * before, QList<QAction *> actions )
+void insertActions( QAction *before, QList<QAction *> actions )
 */
 HB_FUNC_STATIC(QGRAPHICSWIDGET_INSERTACTIONS)
 {
@@ -514,7 +514,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_ISACTIVEWINDOW)
 }
 
 /*
-QGraphicsLayout * layout() const
+QGraphicsLayout *layout() const
 */
 HB_FUNC_STATIC(QGRAPHICSWIDGET_LAYOUT)
 {
@@ -563,7 +563,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_LAYOUTDIRECTION)
 }
 
 /*
-virtual void paintWindowFrame( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
+virtual void paintWindowFrame( QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0 )
 */
 HB_FUNC_STATIC(QGRAPHICSWIDGET_PAINTWINDOWFRAME)
 {
@@ -665,7 +665,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_RELEASESHORTCUT)
 }
 
 /*
-void removeAction( QAction * action )
+void removeAction( QAction *action )
 */
 HB_FUNC_STATIC(QGRAPHICSWIDGET_REMOVEACTION)
 {
@@ -857,7 +857,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_SETFONT)
 }
 
 /*
-void setLayout( QGraphicsLayout * layout )
+void setLayout( QGraphicsLayout *layout )
 */
 HB_FUNC_STATIC(QGRAPHICSWIDGET_SETLAYOUT)
 {
@@ -987,7 +987,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_SETSHORTCUTENABLED)
 }
 
 /*
-void setStyle( QStyle * style )
+void setStyle( QStyle *style )
 */
 HB_FUNC_STATIC(QGRAPHICSWIDGET_SETSTYLE)
 {
@@ -1116,7 +1116,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_SIZE)
 }
 
 /*
-QStyle * style() const
+QStyle *style() const
 */
 HB_FUNC_STATIC(QGRAPHICSWIDGET_STYLE)
 {
@@ -1364,7 +1364,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_BOUNDINGRECT)
 }
 
 /*
-virtual void getContentsMargins( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
+virtual void getContentsMargins( qreal *left, qreal *top, qreal *right, qreal *bottom ) const
 */
 HB_FUNC_STATIC(QGRAPHICSWIDGET_GETCONTENTSMARGINS)
 {
@@ -1398,7 +1398,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_GETCONTENTSMARGINS)
 }
 
 /*
-virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
+virtual void paint( QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0 )
 */
 HB_FUNC_STATIC(QGRAPHICSWIDGET_PAINT)
 {
@@ -1533,7 +1533,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_CLOSE)
 }
 
 /*
-static void setTabOrder( QGraphicsWidget * first, QGraphicsWidget * second )
+static void setTabOrder( QGraphicsWidget *first, QGraphicsWidget *second )
 */
 HB_FUNC_STATIC(QGRAPHICSWIDGET_SETTABORDER)
 {

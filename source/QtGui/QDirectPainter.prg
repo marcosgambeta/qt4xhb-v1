@@ -60,7 +60,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QDirectPainter( QObject * parent = 0, QDirectPainter::SurfaceFlag flag = QDirectPainter::NonReserved )
+    QDirectPainter( QObject *parent = 0, QDirectPainter::SurfaceFlag flag = QDirectPainter::NonReserved )
     */
 HB_FUNC_STATIC(QDIRECTPAINTER_NEW)
 {

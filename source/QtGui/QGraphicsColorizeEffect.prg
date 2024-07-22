@@ -49,7 +49,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QGraphicsColorizeEffect( QObject * parent = 0 )
+    QGraphicsColorizeEffect( QObject *parent = 0 )
     */
 HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_NEW)
 {

@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QTEXTEDIT_NEW)
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
-    QTextEdit( QWidget * parent = 0 )
+    QTextEdit( QWidget *parent = 0 )
     */
     QTextEdit *obj = new QTextEdit(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QTEXTEDIT_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QTextEdit( const QString &text, QWidget * parent = 0 )
+    QTextEdit( const QString &text, QWidget *parent = 0 )
     */
     QTextEdit *obj = new QTextEdit(PQSTRING(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -304,7 +304,7 @@ HB_FUNC_STATIC(QTEXTEDIT_CREATESTANDARDCONTEXTMENU)
   if (ISNUMPAR(0))
   {
     /*
-    QMenu * createStandardContextMenu()
+    QMenu *createStandardContextMenu()
     */
     QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -317,7 +317,7 @@ HB_FUNC_STATIC(QTEXTEDIT_CREATESTANDARDCONTEXTMENU)
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    QMenu * createStandardContextMenu( const QPoint &position )
+    QMenu *createStandardContextMenu( const QPoint &position )
     */
     QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -467,7 +467,7 @@ HB_FUNC_STATIC(QTEXTEDIT_CURSORWIDTH)
 }
 
 /*
-QTextDocument * document() const
+QTextDocument *document() const
 */
 HB_FUNC_STATIC(QTEXTEDIT_DOCUMENT)
 {
@@ -885,7 +885,7 @@ HB_FUNC_STATIC(QTEXTEDIT_OVERWRITEMODE)
 }
 
 /*
-void print( QPrinter * printer ) const
+void print( QPrinter *printer ) const
 */
 HB_FUNC_STATIC(QTEXTEDIT_PRINT)
 {
@@ -1015,7 +1015,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETCURSORWIDTH)
 }
 
 /*
-void setDocument( QTextDocument * document )
+void setDocument( QTextDocument *document )
 */
 HB_FUNC_STATIC(QTEXTEDIT_SETDOCUMENT)
 {

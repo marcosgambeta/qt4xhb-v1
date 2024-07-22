@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QPAINTENGINE_DELETE)
 }
 
 /*
-virtual bool begin( QPaintDevice * pdev ) = 0
+virtual bool begin( QPaintDevice *pdev ) = 0
 */
 HB_FUNC_STATIC(QPAINTENGINE_BEGIN)
 {
@@ -364,7 +364,7 @@ HB_FUNC_STATIC(QPAINTENGINE_ISACTIVE)
 }
 
 /*
-QPaintDevice * paintDevice() const
+QPaintDevice *paintDevice() const
 */
 HB_FUNC_STATIC(QPAINTENGINE_PAINTDEVICE)
 {
@@ -389,7 +389,7 @@ HB_FUNC_STATIC(QPAINTENGINE_PAINTDEVICE)
 }
 
 /*
-QPainter * painter() const
+QPainter *painter() const
 */
 HB_FUNC_STATIC(QPAINTENGINE_PAINTER)
 {

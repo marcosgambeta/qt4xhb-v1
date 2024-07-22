@@ -59,7 +59,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QDialog( QWidget * parent = 0, Qt::WindowFlags f = 0 )
+    QDialog( QWidget *parent = 0, Qt::WindowFlags f = 0 )
     */
 HB_FUNC_STATIC(QDIALOG_NEW)
 {

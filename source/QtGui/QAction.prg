@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QACTION_NEW)
   if (ISNUMPAR(1) && ISQOBJECT(1))
   {
     /*
-    QAction( QObject * parent )
+    QAction( QObject *parent )
     */
     QAction *obj = new QAction(PQOBJECT(1));
     Qt4xHb::returnNewObject(obj, false);
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QACTION_NEW)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2))
   {
     /*
-    QAction( const QString &text, QObject * parent )
+    QAction( const QString &text, QObject *parent )
     */
     QAction *obj = new QAction(PQSTRING(1), PQOBJECT(2));
     Qt4xHb::returnNewObject(obj, false);
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QACTION_NEW)
   else if (ISNUMPAR(3) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && ISQOBJECT(3))
   {
     /*
-    QAction( const QIcon &icon, const QString &text, QObject * parent )
+    QAction( const QIcon &icon, const QString &text, QObject *parent )
     */
     QAction *obj = new QAction(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt4xHb::itemGetPtr(1)) : QIcon(hb_parc(1)),
                                PQSTRING(2), PQOBJECT(3));
@@ -162,7 +162,7 @@ HB_FUNC_STATIC(QACTION_DELETE)
 }
 
 /*
-QActionGroup * actionGroup() const
+QActionGroup *actionGroup() const
 */
 HB_FUNC_STATIC(QACTION_ACTIONGROUP)
 {
@@ -576,7 +576,7 @@ HB_FUNC_STATIC(QACTION_ISVISIBLE)
 }
 
 /*
-QMenu * menu() const
+QMenu *menu() const
 */
 HB_FUNC_STATIC(QACTION_MENU)
 {
@@ -625,7 +625,7 @@ HB_FUNC_STATIC(QACTION_MENUROLE)
 }
 
 /*
-QWidget * parentWidget() const
+QWidget *parentWidget() const
 */
 HB_FUNC_STATIC(QACTION_PARENTWIDGET)
 {
@@ -674,7 +674,7 @@ HB_FUNC_STATIC(QACTION_PRIORITY)
 }
 
 /*
-void setActionGroup( QActionGroup * group )
+void setActionGroup( QActionGroup *group )
 */
 HB_FUNC_STATIC(QACTION_SETACTIONGROUP)
 {
@@ -882,7 +882,7 @@ HB_FUNC_STATIC(QACTION_SETICONVISIBLEINMENU)
 }
 
 /*
-void setMenu( QMenu * menu )
+void setMenu( QMenu *menu )
 */
 HB_FUNC_STATIC(QACTION_SETMENU)
 {
@@ -1312,7 +1312,7 @@ HB_FUNC_STATIC(QACTION_SHORTCUTS)
 }
 
 /*
-bool showStatusText( QWidget * widget = 0 )
+bool showStatusText( QWidget *widget = 0 )
 */
 HB_FUNC_STATIC(QACTION_SHOWSTATUSTEXT)
 {

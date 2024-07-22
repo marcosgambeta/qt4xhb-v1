@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QMENU_NEW)
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
-    QMenu( QWidget * parent = 0 )
+    QMenu( QWidget *parent = 0 )
     */
     QMenu *obj = new QMenu(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QMENU_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QMenu( const QString &title, QWidget * parent = 0 )
+    QMenu( const QString &title, QWidget *parent = 0 )
     */
     QMenu *obj = new QMenu(PQSTRING(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QMENU_DELETE)
 }
 
 /*
-QAction * actionAt( const QPoint &pt ) const
+QAction *actionAt( const QPoint &pt ) const
 */
 HB_FUNC_STATIC(QMENU_ACTIONAT)
 {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QMENU_ACTIONAT)
 }
 
 /*
-QRect actionGeometry( QAction * act ) const
+QRect actionGeometry( QAction *act ) const
 */
 HB_FUNC_STATIC(QMENU_ACTIONGEOMETRY)
 {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QMENU_ACTIONGEOMETRY)
 }
 
 /*
-QAction * activeAction() const
+QAction *activeAction() const
 */
 HB_FUNC_STATIC(QMENU_ACTIVEACTION)
 {
@@ -198,7 +198,7 @@ HB_FUNC_STATIC(QMENU_ADDACTION)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QAction * addAction( const QString &text )
+    QAction *addAction( const QString &text )
     */
     QMenu *obj = qobject_cast<QMenu *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -211,7 +211,7 @@ HB_FUNC_STATIC(QMENU_ADDACTION)
   else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(2)) && HB_ISCHAR(2))
   {
     /*
-    QAction * addAction( const QIcon &icon, const QString &text )
+    QAction *addAction( const QIcon &icon, const QString &text )
     */
     QMenu *obj = qobject_cast<QMenu *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -225,7 +225,7 @@ HB_FUNC_STATIC(QMENU_ADDACTION)
   else if (ISBETWEEN(3, 4) && HB_ISCHAR(1) && ISQOBJECT(2) && HB_ISCHAR(3) && (ISQKEYSEQUENCE(4) || HB_ISNIL(4)))
   {
     /*
-    QAction * addAction( const QString &text, const QObject * receiver, const char * member, const QKeySequence &
+    QAction *addAction( const QString &text, const QObject *receiver, const char *member, const QKeySequence &
     shortcut = *(QKeySequence *) 0 )
     */
     QMenu *obj = qobject_cast<QMenu *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -242,7 +242,7 @@ HB_FUNC_STATIC(QMENU_ADDACTION)
            (ISQKEYSEQUENCE(5) || HB_ISNIL(5)))
   {
     /*
-    QAction * addAction( const QIcon &icon, const QString &text, const QObject * receiver, const char * member, const
+    QAction *addAction( const QIcon &icon, const QString &text, const QObject *receiver, const char *member, const
     QKeySequence &shortcut = *(QKeySequence *) 0 )
     */
     QMenu *obj = qobject_cast<QMenu *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -258,7 +258,7 @@ HB_FUNC_STATIC(QMENU_ADDACTION)
   else if (ISNUMPAR(1) && ISQACTION(1))
   {
     /*
-    void addAction( QAction * action )
+    void addAction( QAction *action )
     */
     QMenu *obj = qobject_cast<QMenu *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -280,7 +280,7 @@ HB_FUNC_STATIC(QMENU_ADDMENU)
   if (ISNUMPAR(1) && ISQMENU(1))
   {
     /*
-    QAction * addMenu( QMenu * menu )
+    QAction *addMenu( QMenu *menu )
     */
     QMenu *obj = qobject_cast<QMenu *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -293,7 +293,7 @@ HB_FUNC_STATIC(QMENU_ADDMENU)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QMenu * addMenu( const QString &title )
+    QMenu *addMenu( const QString &title )
     */
     QMenu *obj = qobject_cast<QMenu *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -306,7 +306,7 @@ HB_FUNC_STATIC(QMENU_ADDMENU)
   else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2))
   {
     /*
-    QMenu * addMenu( const QIcon &icon, const QString &title )
+    QMenu *addMenu( const QIcon &icon, const QString &title )
     */
     QMenu *obj = qobject_cast<QMenu *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -324,7 +324,7 @@ HB_FUNC_STATIC(QMENU_ADDMENU)
 }
 
 /*
-QAction * addSeparator()
+QAction *addSeparator()
 */
 HB_FUNC_STATIC(QMENU_ADDSEPARATOR)
 {
@@ -375,7 +375,7 @@ HB_FUNC_STATIC(QMENU_CLEAR)
 }
 
 /*
-QAction * defaultAction() const
+QAction *defaultAction() const
 */
 HB_FUNC_STATIC(QMENU_DEFAULTACTION)
 {
@@ -451,7 +451,7 @@ HB_FUNC_STATIC(QMENU_ICON)
 }
 
 /*
-QAction * insertMenu( QAction * before, QMenu * menu )
+QAction *insertMenu( QAction *before, QMenu *menu )
 */
 HB_FUNC_STATIC(QMENU_INSERTMENU)
 {
@@ -476,7 +476,7 @@ HB_FUNC_STATIC(QMENU_INSERTMENU)
 }
 
 /*
-QAction * insertSeparator( QAction * before )
+QAction *insertSeparator( QAction *before )
 */
 HB_FUNC_STATIC(QMENU_INSERTSEPARATOR)
 {
@@ -573,7 +573,7 @@ HB_FUNC_STATIC(QMENU_ISTEAROFFMENUVISIBLE)
 }
 
 /*
-QAction * menuAction() const
+QAction *menuAction() const
 */
 HB_FUNC_STATIC(QMENU_MENUACTION)
 {
@@ -598,7 +598,7 @@ HB_FUNC_STATIC(QMENU_MENUACTION)
 }
 
 /*
-void popup( const QPoint &p, QAction * atAction = 0 )
+void popup( const QPoint &p, QAction *atAction = 0 )
 */
 HB_FUNC_STATIC(QMENU_POPUP)
 {
@@ -648,7 +648,7 @@ HB_FUNC_STATIC(QMENU_SEPARATORSCOLLAPSIBLE)
 }
 
 /*
-void setActiveAction( QAction * act )
+void setActiveAction( QAction *act )
 */
 HB_FUNC_STATIC(QMENU_SETACTIVEACTION)
 {
@@ -674,7 +674,7 @@ HB_FUNC_STATIC(QMENU_SETACTIVEACTION)
 }
 
 /*
-void setDefaultAction( QAction * act )
+void setDefaultAction( QAction *act )
 */
 HB_FUNC_STATIC(QMENU_SETDEFAULTACTION)
 {
@@ -857,7 +857,7 @@ HB_FUNC_STATIC(QMENU_EXEC)
   if (ISNUMPAR(0))
   {
     /*
-    QAction * exec()
+    QAction *exec()
     */
     QMenu *obj = qobject_cast<QMenu *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -870,7 +870,7 @@ HB_FUNC_STATIC(QMENU_EXEC)
   else if (ISBETWEEN(1, 2) && ISQPOINT(1) && (ISQACTION(2) || HB_ISNIL(2)))
   {
     /*
-    QAction * exec( const QPoint &p, QAction * action = 0 )
+    QAction *exec( const QPoint &p, QAction *action = 0 )
     */
     QMenu *obj = qobject_cast<QMenu *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -883,7 +883,7 @@ HB_FUNC_STATIC(QMENU_EXEC)
   else if (ISNUMPAR(4) && HB_ISARRAY(1) && ISQPOINT(2) && ISQACTION(3) && ISQWIDGET(4))
   {
     /*
-    QAction * exec( QList<QAction *> actions, const QPoint &pos, QAction * at, QWidget * parent )
+    QAction *exec( QList<QAction *> actions, const QPoint &pos, QAction *at, QWidget *parent )
     */
     QMenu *obj = qobject_cast<QMenu *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -903,7 +903,7 @@ HB_FUNC_STATIC(QMENU_EXEC)
   else if (ISBETWEEN(2, 3) && HB_ISARRAY(1) && ISQPOINT(2) && (ISQACTION(3) || HB_ISNIL(3)))
   {
     /*
-    QAction * exec( QList<QAction *> actions, const QPoint &pos, QAction * at = 0 )
+    QAction *exec( QList<QAction *> actions, const QPoint &pos, QAction *at = 0 )
     */
     QMenu *obj = qobject_cast<QMenu *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

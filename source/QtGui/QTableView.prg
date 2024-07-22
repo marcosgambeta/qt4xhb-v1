@@ -90,7 +90,7 @@ RETURN
 #include <QtGui/QHeaderView>
 
     /*
-    QTableView( QWidget * parent = 0 )
+    QTableView( QWidget *parent = 0 )
     */
 HB_FUNC_STATIC(QTABLEVIEW_NEW)
 {
@@ -270,7 +270,7 @@ HB_FUNC_STATIC(QTABLEVIEW_GRIDSTYLE)
 }
 
 /*
-QHeaderView * horizontalHeader() const
+QHeaderView *horizontalHeader() const
 */
 HB_FUNC_STATIC(QTABLEVIEW_HORIZONTALHEADER)
 {
@@ -591,7 +591,7 @@ HB_FUNC_STATIC(QTABLEVIEW_SETGRIDSTYLE)
 }
 
 /*
-void setHorizontalHeader( QHeaderView * header )
+void setHorizontalHeader( QHeaderView *header )
 */
 HB_FUNC_STATIC(QTABLEVIEW_SETHORIZONTALHEADER)
 {
@@ -721,7 +721,7 @@ HB_FUNC_STATIC(QTABLEVIEW_SETSPAN)
 }
 
 /*
-void setVerticalHeader( QHeaderView * header )
+void setVerticalHeader( QHeaderView *header )
 */
 HB_FUNC_STATIC(QTABLEVIEW_SETVERTICALHEADER)
 {
@@ -823,7 +823,7 @@ HB_FUNC_STATIC(QTABLEVIEW_SORTBYCOLUMN)
 }
 
 /*
-QHeaderView * verticalHeader() const
+QHeaderView *verticalHeader() const
 */
 HB_FUNC_STATIC(QTABLEVIEW_VERTICALHEADER)
 {
@@ -897,7 +897,7 @@ HB_FUNC_STATIC(QTABLEVIEW_INDEXAT)
 }
 
 /*
-virtual void setModel( QAbstractItemModel * model )
+virtual void setModel( QAbstractItemModel *model )
 */
 HB_FUNC_STATIC(QTABLEVIEW_SETMODEL)
 {
@@ -949,7 +949,7 @@ HB_FUNC_STATIC(QTABLEVIEW_SETROOTINDEX)
 }
 
 /*
-virtual void setSelectionModel( QItemSelectionModel * selectionModel )
+virtual void setSelectionModel( QItemSelectionModel *selectionModel )
 */
 HB_FUNC_STATIC(QTABLEVIEW_SETSELECTIONMODEL)
 {

@@ -263,7 +263,7 @@ HB_FUNC_STATIC(QMATRIX4X4_FRUSTUM)
 }
 
 /*
-QMatrix4x4 inverted( bool * invertible = 0 ) const
+QMatrix4x4 inverted( bool *invertible = 0 ) const
 */
 HB_FUNC_STATIC(QMATRIX4X4_INVERTED)
 {

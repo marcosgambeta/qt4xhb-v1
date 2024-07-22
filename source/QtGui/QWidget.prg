@@ -331,7 +331,7 @@ RETURN
 #include <QtGui/QStyle>
 
     /*
-    QWidget( QWidget * parent = 0, Qt::WindowFlags f = 0 )
+    QWidget( QWidget *parent = 0, Qt::WindowFlags f = 0 )
     */
 HB_FUNC_STATIC(QWIDGET_NEW)
 {
@@ -511,7 +511,7 @@ HB_FUNC_STATIC(QWIDGET_ACTIVATEWINDOW)
 }
 
 /*
-void addAction( QAction * action )
+void addAction( QAction *action )
 */
 HB_FUNC_STATIC(QWIDGET_ADDACTION)
 {
@@ -673,7 +673,7 @@ HB_FUNC_STATIC(QWIDGET_CHILDAT)
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    QWidget * childAt( int x, int y ) const
+    QWidget *childAt( int x, int y ) const
     */
     QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -686,7 +686,7 @@ HB_FUNC_STATIC(QWIDGET_CHILDAT)
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    QWidget * childAt( const QPoint &p ) const
+    QWidget *childAt( const QPoint &p ) const
     */
     QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -979,7 +979,7 @@ HB_FUNC_STATIC(QWIDGET_FOCUSPOLICY)
 }
 
 /*
-QWidget * focusProxy() const
+QWidget *focusProxy() const
 */
 HB_FUNC_STATIC(QWIDGET_FOCUSPROXY)
 {
@@ -1004,7 +1004,7 @@ HB_FUNC_STATIC(QWIDGET_FOCUSPROXY)
 }
 
 /*
-QWidget * focusWidget() const
+QWidget *focusWidget() const
 */
 HB_FUNC_STATIC(QWIDGET_FOCUSWIDGET)
 {
@@ -1203,7 +1203,7 @@ HB_FUNC_STATIC(QWIDGET_GEOMETRY)
 }
 
 /*
-void getContentsMargins( int * left, int * top, int * right, int * bottom ) const
+void getContentsMargins( int *left, int *top, int *right, int *bottom ) const
 */
 HB_FUNC_STATIC(QWIDGET_GETCONTENTSMARGINS)
 {
@@ -1351,7 +1351,7 @@ HB_FUNC_STATIC(QWIDGET_GRABSHORTCUT)
 }
 
 /*
-QGraphicsEffect * graphicsEffect() const
+QGraphicsEffect *graphicsEffect() const
 */
 HB_FUNC_STATIC(QWIDGET_GRAPHICSEFFECT)
 {
@@ -1376,7 +1376,7 @@ HB_FUNC_STATIC(QWIDGET_GRAPHICSEFFECT)
 }
 
 /*
-QGraphicsProxyWidget * graphicsProxyWidget() const
+QGraphicsProxyWidget *graphicsProxyWidget() const
 */
 HB_FUNC_STATIC(QWIDGET_GRAPHICSPROXYWIDGET)
 {
@@ -1497,7 +1497,7 @@ HB_FUNC_STATIC(QWIDGET_HEIGHTFORWIDTH)
 }
 
 /*
-QInputContext * inputContext()
+QInputContext *inputContext()
 */
 HB_FUNC_STATIC(QWIDGET_INPUTCONTEXT)
 {
@@ -1571,7 +1571,7 @@ HB_FUNC_STATIC(QWIDGET_INPUTMETHODQUERY)
 }
 
 /*
-void insertAction( QAction * before, QAction * action )
+void insertAction( QAction *before, QAction *action )
 */
 HB_FUNC_STATIC(QWIDGET_INSERTACTION)
 {
@@ -1597,7 +1597,7 @@ HB_FUNC_STATIC(QWIDGET_INSERTACTION)
 }
 
 /*
-void insertActions( QAction * before, QList<QAction *> actions )
+void insertActions( QAction *before, QList<QAction *> actions )
 */
 HB_FUNC_STATIC(QWIDGET_INSERTACTIONS)
 {
@@ -1654,7 +1654,7 @@ HB_FUNC_STATIC(QWIDGET_ISACTIVEWINDOW)
 }
 
 /*
-bool isAncestorOf( const QWidget * child ) const
+bool isAncestorOf( const QWidget *child ) const
 */
 HB_FUNC_STATIC(QWIDGET_ISANCESTOROF)
 {
@@ -1702,7 +1702,7 @@ HB_FUNC_STATIC(QWIDGET_ISENABLED)
 }
 
 /*
-bool isEnabledTo( QWidget * ancestor ) const
+bool isEnabledTo( QWidget *ancestor ) const
 */
 HB_FUNC_STATIC(QWIDGET_ISENABLEDTO)
 {
@@ -1870,7 +1870,7 @@ HB_FUNC_STATIC(QWIDGET_ISVISIBLE)
 }
 
 /*
-bool isVisibleTo( QWidget * ancestor ) const
+bool isVisibleTo( QWidget *ancestor ) const
 */
 HB_FUNC_STATIC(QWIDGET_ISVISIBLETO)
 {
@@ -1942,7 +1942,7 @@ HB_FUNC_STATIC(QWIDGET_ISWINDOWMODIFIED)
 }
 
 /*
-QLayout * layout() const
+QLayout *layout() const
 */
 HB_FUNC_STATIC(QWIDGET_LAYOUT)
 {
@@ -2016,7 +2016,7 @@ HB_FUNC_STATIC(QWIDGET_LOCALE)
 }
 
 /*
-QPoint mapFrom( QWidget * parent, const QPoint &pos ) const
+QPoint mapFrom( QWidget *parent, const QPoint &pos ) const
 */
 HB_FUNC_STATIC(QWIDGET_MAPFROM)
 {
@@ -2091,7 +2091,7 @@ HB_FUNC_STATIC(QWIDGET_MAPFROMPARENT)
 }
 
 /*
-QPoint mapTo( QWidget * parent, const QPoint &pos ) const
+QPoint mapTo( QWidget *parent, const QPoint &pos ) const
 */
 HB_FUNC_STATIC(QWIDGET_MAPTO)
 {
@@ -2398,7 +2398,7 @@ HB_FUNC_STATIC(QWIDGET_MOVE)
 }
 
 /*
-QWidget * nativeParentWidget() const
+QWidget *nativeParentWidget() const
 */
 HB_FUNC_STATIC(QWIDGET_NATIVEPARENTWIDGET)
 {
@@ -2423,7 +2423,7 @@ HB_FUNC_STATIC(QWIDGET_NATIVEPARENTWIDGET)
 }
 
 /*
-QWidget * nextInFocusChain() const
+QWidget *nextInFocusChain() const
 */
 HB_FUNC_STATIC(QWIDGET_NEXTINFOCUSCHAIN)
 {
@@ -2524,7 +2524,7 @@ HB_FUNC_STATIC(QWIDGET_PALETTE)
 }
 
 /*
-QWidget * parentWidget() const
+QWidget *parentWidget() const
 */
 HB_FUNC_STATIC(QWIDGET_PARENTWIDGET)
 {
@@ -2574,7 +2574,7 @@ HB_FUNC_STATIC(QWIDGET_POS)
 }
 
 /*
-QWidget * previousInFocusChain() const
+QWidget *previousInFocusChain() const
 */
 HB_FUNC_STATIC(QWIDGET_PREVIOUSINFOCUSCHAIN)
 {
@@ -2702,7 +2702,7 @@ HB_FUNC_STATIC(QWIDGET_RELEASESHORTCUT)
 }
 
 /*
-void removeAction( QAction * action )
+void removeAction( QAction *action )
 */
 HB_FUNC_STATIC(QWIDGET_REMOVEACTION)
 {
@@ -2733,7 +2733,7 @@ HB_FUNC_STATIC(QWIDGET_RENDER)
       (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
-    void render( QPaintDevice * target, const QPoint &targetOffset = QPoint(), const QRegion &sourceRegion =
+    void render( QPaintDevice *target, const QPoint &targetOffset = QPoint(), const QRegion &sourceRegion =
     QRegion(), QWidget::RenderFlags renderFlags = QWidget::RenderFlags( QWidget::DrawWindowBackground |
     QWidget::DrawChildren ) )
     */
@@ -2754,7 +2754,7 @@ HB_FUNC_STATIC(QWIDGET_RENDER)
            (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
-    void render( QPainter * painter, const QPoint &targetOffset = QPoint(), const QRegion &sourceRegion = QRegion(),
+    void render( QPainter *painter, const QPoint &targetOffset = QPoint(), const QRegion &sourceRegion = QRegion(),
     QWidget::RenderFlags renderFlags = QWidget::RenderFlags( QWidget::DrawWindowBackground | QWidget::DrawChildren ) )
     */
     QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -3378,7 +3378,7 @@ HB_FUNC_STATIC(QWIDGET_SETFOCUSPOLICY)
 }
 
 /*
-void setFocusProxy( QWidget * w )
+void setFocusProxy( QWidget *w )
 */
 HB_FUNC_STATIC(QWIDGET_SETFOCUSPROXY)
 {
@@ -3492,7 +3492,7 @@ HB_FUNC_STATIC(QWIDGET_SETGEOMETRY)
 }
 
 /*
-void setGraphicsEffect( QGraphicsEffect * effect )
+void setGraphicsEffect( QGraphicsEffect *effect )
 */
 HB_FUNC_STATIC(QWIDGET_SETGRAPHICSEFFECT)
 {
@@ -3518,7 +3518,7 @@ HB_FUNC_STATIC(QWIDGET_SETGRAPHICSEFFECT)
 }
 
 /*
-void setInputContext( QInputContext * context )
+void setInputContext( QInputContext *context )
 */
 HB_FUNC_STATIC(QWIDGET_SETINPUTCONTEXT)
 {
@@ -3570,7 +3570,7 @@ HB_FUNC_STATIC(QWIDGET_SETINPUTMETHODHINTS)
 }
 
 /*
-void setLayout( QLayout * layout )
+void setLayout( QLayout *layout )
 */
 HB_FUNC_STATIC(QWIDGET_SETLAYOUT)
 {
@@ -3916,7 +3916,7 @@ HB_FUNC_STATIC(QWIDGET_SETPARENT)
   if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
-    void setParent( QWidget * parent )
+    void setParent( QWidget *parent )
     */
     QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -3930,7 +3930,7 @@ HB_FUNC_STATIC(QWIDGET_SETPARENT)
   else if (ISNUMPAR(2) && ISQWIDGET(1) && HB_ISNUM(2))
   {
     /*
-    void setParent( QWidget * parent, Qt::WindowFlags f )
+    void setParent( QWidget *parent, Qt::WindowFlags f )
     */
     QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -4098,7 +4098,7 @@ HB_FUNC_STATIC(QWIDGET_SETSTATUSTIP)
 }
 
 /*
-void setStyle( QStyle * style )
+void setStyle( QStyle *style )
 */
 HB_FUNC_STATIC(QWIDGET_SETSTYLE)
 {
@@ -4510,7 +4510,7 @@ HB_FUNC_STATIC(QWIDGET_SIZEPOLICY)
 }
 
 /*
-void stackUnder( QWidget * w )
+void stackUnder( QWidget *w )
 */
 HB_FUNC_STATIC(QWIDGET_STACKUNDER)
 {
@@ -4560,7 +4560,7 @@ HB_FUNC_STATIC(QWIDGET_STATUSTIP)
 }
 
 /*
-QStyle * style() const
+QStyle *style() const
 */
 HB_FUNC_STATIC(QWIDGET_STYLE)
 {
@@ -4997,7 +4997,7 @@ HB_FUNC_STATIC(QWIDGET_WINID)
 #endif
 }
 /*
-QWidget * window() const
+QWidget *window() const
 */
 HB_FUNC_STATIC(QWIDGET_WINDOW)
 {
@@ -5311,7 +5311,7 @@ HB_FUNC_STATIC(QWIDGET_Y)
 }
 
 /*
-virtual QPaintEngine * paintEngine() const
+virtual QPaintEngine *paintEngine() const
 */
 HB_FUNC_STATIC(QWIDGET_PAINTENGINE)
 {
@@ -5998,7 +5998,7 @@ HB_FUNC_STATIC(QWIDGET_WIDTHMM)
 //=============================================================================
 
 /*
-static QWidget * find ( WId id )
+static QWidget *find ( WId id )
 */
 HB_FUNC_STATIC(QWIDGET_FIND)
 {
@@ -6019,7 +6019,7 @@ HB_FUNC_STATIC(QWIDGET_FIND)
 #endif
 }
 /*
-static QWidget * keyboardGrabber()
+static QWidget *keyboardGrabber()
 */
 HB_FUNC_STATIC(QWIDGET_KEYBOARDGRABBER)
 {
@@ -6039,7 +6039,7 @@ HB_FUNC_STATIC(QWIDGET_KEYBOARDGRABBER)
 }
 
 /*
-static QWidget * mouseGrabber()
+static QWidget *mouseGrabber()
 */
 HB_FUNC_STATIC(QWIDGET_MOUSEGRABBER)
 {
@@ -6059,7 +6059,7 @@ HB_FUNC_STATIC(QWIDGET_MOUSEGRABBER)
 }
 
 /*
-static void setTabOrder( QWidget * first, QWidget * second )
+static void setTabOrder( QWidget *first, QWidget *second )
 */
 HB_FUNC_STATIC(QWIDGET_SETTABORDER)
 {

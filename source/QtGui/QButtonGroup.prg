@@ -61,7 +61,7 @@ RETURN
 #include <QtGui/QAbstractButton>
 
     /*
-    QButtonGroup( QObject * parent = 0 )
+    QButtonGroup( QObject *parent = 0 )
     */
 HB_FUNC_STATIC(QBUTTONGROUP_NEW)
 {
@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ADDBUTTON)
   if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1))
   {
     /*
-    void addButton( QAbstractButton * button )
+    void addButton( QAbstractButton *button )
     */
     QButtonGroup *obj = qobject_cast<QButtonGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ADDBUTTON)
   else if (ISNUMPAR(2) && ISQABSTRACTBUTTON(1) && HB_ISNUM(2))
   {
     /*
-    void addButton( QAbstractButton * button, int id )
+    void addButton( QAbstractButton *button, int id )
     */
     QButtonGroup *obj = qobject_cast<QButtonGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ADDBUTTON)
 }
 
 /*
-QAbstractButton * button( int id ) const
+QAbstractButton *button( int id ) const
 */
 HB_FUNC_STATIC(QBUTTONGROUP_BUTTON)
 {
@@ -204,7 +204,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_BUTTONS)
 }
 
 /*
-QAbstractButton * checkedButton() const
+QAbstractButton *checkedButton() const
 */
 HB_FUNC_STATIC(QBUTTONGROUP_CHECKEDBUTTON)
 {
@@ -277,7 +277,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_EXCLUSIVE)
 }
 
 /*
-int id( QAbstractButton * button ) const
+int id( QAbstractButton *button ) const
 */
 HB_FUNC_STATIC(QBUTTONGROUP_ID)
 {
@@ -301,7 +301,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ID)
 }
 
 /*
-void removeButton( QAbstractButton * button )
+void removeButton( QAbstractButton *button )
 */
 HB_FUNC_STATIC(QBUTTONGROUP_REMOVEBUTTON)
 {
@@ -353,7 +353,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_SETEXCLUSIVE)
 }
 
 /*
-void setId( QAbstractButton * button, int id )
+void setId( QAbstractButton *button, int id )
 */
 HB_FUNC_STATIC(QBUTTONGROUP_SETID)
 {

@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_MAPTOSOURCE)
 }
 
 /*
-virtual void setSourceModel( QAbstractItemModel * sourceModel )
+virtual void setSourceModel( QAbstractItemModel *sourceModel )
 */
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SETSOURCEMODEL)
 {
@@ -217,7 +217,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SETSOURCEMODEL)
 }
 
 /*
-QAbstractItemModel * sourceModel() const
+QAbstractItemModel *sourceModel() const
 */
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SOURCEMODEL)
 {
@@ -415,7 +415,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_HEADERDATA)
 }
 
 /*
-virtual QMimeData * mimeData( const QModelIndexList &indexes ) const
+virtual QMimeData *mimeData( const QModelIndexList &indexes ) const
 */
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_MIMEDATA)
 {

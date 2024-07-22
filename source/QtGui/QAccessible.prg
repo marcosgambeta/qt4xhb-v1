@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QACCESSIBLE_ISACTIVE)
 }
 
 /*
-static QAccessibleInterface * queryAccessibleInterface( QObject * object )
+static QAccessibleInterface *queryAccessibleInterface( QObject *object )
 */
 HB_FUNC_STATIC(QACCESSIBLE_QUERYACCESSIBLEINTERFACE)
 {
@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QACCESSIBLE_QUERYACCESSIBLEINTERFACE)
 }
 
 /*
-static void setRootObject( QObject * object )
+static void setRootObject( QObject *object )
 */
 HB_FUNC_STATIC(QACCESSIBLE_SETROOTOBJECT)
 {
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QACCESSIBLE_SETROOTOBJECT)
 }
 
 /*
-static void updateAccessibility( QObject * object, int child, QAccessible::Event reason )
+static void updateAccessibility( QObject *object, int child, QAccessible::Event reason )
 */
 HB_FUNC_STATIC(QACCESSIBLE_UPDATEACCESSIBILITY)
 {

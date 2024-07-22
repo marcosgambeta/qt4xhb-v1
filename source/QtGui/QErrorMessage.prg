@@ -43,7 +43,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QErrorMessage( QWidget * parent = 0 )
+    QErrorMessage( QWidget *parent = 0 )
     */
 HB_FUNC_STATIC(QERRORMESSAGE_NEW)
 {
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QERRORMESSAGE_SHOWMESSAGE)
 }
 
 /*
-QErrorMessage * qtHandler()
+QErrorMessage *qtHandler()
 */
 HB_FUNC_STATIC(QERRORMESSAGE_QTHANDLER)
 {

@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_ISACTIVATED)
 }
 
 /*
-virtual QGraphicsLayoutItem * itemAt( int i ) const = 0
+virtual QGraphicsLayoutItem *itemAt( int i ) const = 0
 */
 HB_FUNC_STATIC(QGRAPHICSLAYOUT_ITEMAT)
 {
@@ -244,7 +244,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_SETCONTENTSMARGINS)
 }
 
 /*
-virtual void widgetEvent( QEvent * e )
+virtual void widgetEvent( QEvent *e )
 */
 HB_FUNC_STATIC(QGRAPHICSLAYOUT_WIDGETEVENT)
 {
@@ -270,7 +270,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_WIDGETEVENT)
 }
 
 /*
-virtual void getContentsMargins( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
+virtual void getContentsMargins( qreal *left, qreal *top, qreal *right, qreal *bottom ) const
 */
 HB_FUNC_STATIC(QGRAPHICSLAYOUT_GETCONTENTSMARGINS)
 {

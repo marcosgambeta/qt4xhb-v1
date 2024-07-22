@@ -77,7 +77,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QAbstractSpinBox( QWidget * parent = 0 )
+    QAbstractSpinBox( QWidget *parent = 0 )
     */
 HB_FUNC_STATIC(QABSTRACTSPINBOX_NEW)
 {
@@ -717,7 +717,7 @@ HB_FUNC_STATIC(QABSTRACTSPINBOX_WRAPPING)
 }
 
 /*
-virtual bool event( QEvent * event )
+virtual bool event( QEvent *event )
 */
 HB_FUNC_STATIC(QABSTRACTSPINBOX_EVENT)
 {

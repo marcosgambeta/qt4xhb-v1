@@ -70,7 +70,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QTextBrowser( QWidget * parent = 0 )
+    QTextBrowser( QWidget *parent = 0 )
     */
 HB_FUNC_STATIC(QTEXTBROWSER_NEW)
 {

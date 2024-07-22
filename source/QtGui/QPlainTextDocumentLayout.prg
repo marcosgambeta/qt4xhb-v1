@@ -52,7 +52,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QPlainTextDocumentLayout( QTextDocument * document )
+    QPlainTextDocumentLayout( QTextDocument *document )
     */
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_NEW)
 {
@@ -238,7 +238,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_DOCUMENTSIZE)
 }
 
 /*
-virtual QRectF frameBoundingRect( QTextFrame * ) const
+virtual QRectF frameBoundingRect( QTextFrame *) const
 */
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT)
 {

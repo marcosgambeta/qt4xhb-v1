@@ -45,7 +45,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QRubberBand( QRubberBand::Shape s, QWidget * p = 0 )
+    QRubberBand( QRubberBand::Shape s, QWidget *p = 0 )
     */
 HB_FUNC_STATIC(QRUBBERBAND_NEW)
 {

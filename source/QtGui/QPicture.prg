@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QPICTURE_BOUNDINGRECT)
 }
 
 /*
-const char * data() const
+const char *data() const
 */
 HB_FUNC_STATIC(QPICTURE_DATA)
 {
@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QPICTURE_LOAD)
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
-    bool load( const QString &fileName, const char * format = 0 )
+    bool load( const QString &fileName, const char *format = 0 )
     */
     QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -179,7 +179,7 @@ HB_FUNC_STATIC(QPICTURE_LOAD)
   else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
-    bool load( QIODevice * dev, const char * format = 0 )
+    bool load( QIODevice *dev, const char *format = 0 )
     */
     QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -195,7 +195,7 @@ HB_FUNC_STATIC(QPICTURE_LOAD)
 }
 
 /*
-bool play( QPainter * painter )
+bool play( QPainter *painter )
 */
 HB_FUNC_STATIC(QPICTURE_PLAY)
 {
@@ -223,7 +223,7 @@ HB_FUNC_STATIC(QPICTURE_SAVE)
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
-    bool save( const QString &fileName, const char * format = 0 )
+    bool save( const QString &fileName, const char *format = 0 )
     */
     QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QPICTURE_SAVE)
   else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
-    bool save( QIODevice * dev, const char * format = 0 )
+    bool save( QIODevice *dev, const char *format = 0 )
     */
     QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -277,7 +277,7 @@ HB_FUNC_STATIC(QPICTURE_SETBOUNDINGRECT)
 }
 
 /*
-virtual void setData( const char * data, uint size )
+virtual void setData( const char *data, uint size )
 */
 HB_FUNC_STATIC(QPICTURE_SETDATA)
 {

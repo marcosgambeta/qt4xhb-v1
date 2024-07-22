@@ -100,7 +100,7 @@ RETURN
 #include <QtCore/QMimeData>
 
     /*
-    QFileSystemModel( QObject * parent = 0 )
+    QFileSystemModel( QObject *parent = 0 )
     */
 HB_FUNC_STATIC(QFILESYSTEMMODEL_NEW)
 {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_FILTER)
 }
 
 /*
-QFileIconProvider * iconProvider() const
+QFileIconProvider *iconProvider() const
 */
 HB_FUNC_STATIC(QFILESYSTEMMODEL_ICONPROVIDER)
 {
@@ -623,7 +623,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETFILTER)
 }
 
 /*
-void setIconProvider( QFileIconProvider * provider )
+void setIconProvider( QFileIconProvider *provider )
 */
 HB_FUNC_STATIC(QFILESYSTEMMODEL_SETICONPROVIDER)
 {
@@ -899,7 +899,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_DATA)
 }
 
 /*
-virtual bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex &
+virtual bool dropMimeData( const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &
 parent )
 */
 HB_FUNC_STATIC(QFILESYSTEMMODEL_DROPMIMEDATA)
@@ -1058,7 +1058,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_INDEX)
 }
 
 /*
-virtual QMimeData * mimeData( const QModelIndexList &indexes ) const
+virtual QMimeData *mimeData( const QModelIndexList &indexes ) const
 */
 HB_FUNC_STATIC(QFILESYSTEMMODEL_MIMEDATA)
 {

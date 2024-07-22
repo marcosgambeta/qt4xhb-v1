@@ -65,7 +65,7 @@ HB_FUNC_STATIC(QACCESSIBLEBRIDGE_DELETE)
 }
 
 /*
-virtual void notifyAccessibilityUpdate( int reason, QAccessibleInterface * interface, int child ) = 0
+virtual void notifyAccessibilityUpdate( int reason, QAccessibleInterface *interface, int child ) = 0
 */
 HB_FUNC_STATIC(QACCESSIBLEBRIDGE_NOTIFYACCESSIBILITYUPDATE)
 {
@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QACCESSIBLEBRIDGE_NOTIFYACCESSIBILITYUPDATE)
 }
 
 /*
-virtual void setRootObject( QAccessibleInterface * object ) = 0
+virtual void setRootObject( QAccessibleInterface *object ) = 0
 */
 HB_FUNC_STATIC(QACCESSIBLEBRIDGE_SETROOTOBJECT)
 {

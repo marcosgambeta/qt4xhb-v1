@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QDESKTOPSERVICES_OPENURL)
 }
 
 /*
-static void setUrlHandler( const QString &scheme, QObject * receiver, const char * method )
+static void setUrlHandler( const QString &scheme, QObject *receiver, const char *method )
 */
 HB_FUNC_STATIC(QDESKTOPSERVICES_SETURLHANDLER)
 {

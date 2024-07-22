@@ -56,7 +56,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEEVENT_DELETE)
 }
 
 /*
-QWidget * widget() const
+QWidget *widget() const
 */
 HB_FUNC_STATIC(QGRAPHICSSCENEEVENT_WIDGET)
 {

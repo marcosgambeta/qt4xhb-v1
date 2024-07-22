@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_SETPEN)
 }
 
 /*
-virtual bool isObscuredBy( const QGraphicsItem * item ) const
+virtual bool isObscuredBy( const QGraphicsItem *item ) const
 */
 HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_ISOBSCUREDBY)
 {

@@ -59,7 +59,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_NEW)
   if (ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)))
   {
     /*
-    QGraphicsSimpleTextItem( QGraphicsItem * parent = 0 )
+    QGraphicsSimpleTextItem( QGraphicsItem *parent = 0 )
     */
     QGraphicsSimpleTextItem *obj =
         new QGraphicsSimpleTextItem(HB_ISNIL(1) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(1)));
@@ -68,7 +68,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2)))
   {
     /*
-    QGraphicsSimpleTextItem( const QString &text, QGraphicsItem * parent = 0 )
+    QGraphicsSimpleTextItem( const QString &text, QGraphicsItem *parent = 0 )
     */
     QGraphicsSimpleTextItem *obj =
         new QGraphicsSimpleTextItem(PQSTRING(1), HB_ISNIL(2) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(2)));
@@ -247,7 +247,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_CONTAINS)
 }
 
 /*
-virtual bool isObscuredBy( const QGraphicsItem * item ) const
+virtual bool isObscuredBy( const QGraphicsItem *item ) const
 */
 HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_ISOBSCUREDBY)
 {
@@ -296,7 +296,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_OPAQUEAREA)
 }
 
 /*
-virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
+virtual void paint( QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget )
 */
 HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_PAINT)
 {

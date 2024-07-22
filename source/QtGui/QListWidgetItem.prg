@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_NEW)
   if (ISBETWEEN(0, 2) && (ISQLISTWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QListWidgetItem( QListWidget * parent = 0, int type = QListWidgetItem::Type )
+    QListWidgetItem( QListWidget *parent = 0, int type = QListWidgetItem::Type )
     */
     QListWidgetItem *obj = new QListWidgetItem(OPQLISTWIDGET(1, 0), OPINT(2, QListWidgetItem::Type));
     Qt4xHb::returnNewObject(obj, false);
@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_NEW)
   else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQLISTWIDGET(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QListWidgetItem( const QString &text, QListWidget * parent = 0, int type = QListWidgetItem::Type )
+    QListWidgetItem( const QString &text, QListWidget *parent = 0, int type = QListWidgetItem::Type )
     */
     QListWidgetItem *obj = new QListWidgetItem(PQSTRING(1), OPQLISTWIDGET(2, 0), OPINT(3, QListWidgetItem::Type));
     Qt4xHb::returnNewObject(obj, false);
@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_NEW)
            (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
-    QListWidgetItem( const QIcon &icon, const QString &text, QListWidget * parent = 0, int type =
+    QListWidgetItem( const QIcon &icon, const QString &text, QListWidget *parent = 0, int type =
     QListWidgetItem::Type )
     */
     QListWidgetItem *obj =
@@ -198,7 +198,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_CHECKSTATE)
 }
 
 /*
-virtual QListWidgetItem * clone() const
+virtual QListWidgetItem *clone() const
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_CLONE)
 {
@@ -395,7 +395,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_ISSELECTED)
 }
 
 /*
-QListWidget * listWidget() const
+QListWidget *listWidget() const
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_LISTWIDGET)
 {

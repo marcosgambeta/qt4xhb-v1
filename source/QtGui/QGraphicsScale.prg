@@ -57,7 +57,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QGraphicsScale( QObject * parent = 0 )
+    QGraphicsScale( QObject *parent = 0 )
     */
 HB_FUNC_STATIC(QGRAPHICSSCALE_NEW)
 {
@@ -292,7 +292,7 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_ZSCALE)
 }
 
 /*
-virtual void applyTo( QMatrix4x4 * matrix ) const
+virtual void applyTo( QMatrix4x4 *matrix ) const
 */
 HB_FUNC_STATIC(QGRAPHICSSCALE_APPLYTO)
 {

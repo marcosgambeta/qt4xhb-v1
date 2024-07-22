@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_NEW)
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
-    QTableWidget( QWidget * parent = 0 )
+    QTableWidget( QWidget *parent = 0 )
     */
     QTableWidget *obj = new QTableWidget(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_NEW)
   else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQWIDGET(3) || HB_ISNIL(3)))
   {
     /*
-    QTableWidget( int rows, int columns, QWidget * parent = 0 )
+    QTableWidget( int rows, int columns, QWidget *parent = 0 )
     */
     QTableWidget *obj = new QTableWidget(PINT(1), PINT(2), OPQWIDGET(3, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_DELETE)
 }
 
 /*
-QWidget * cellWidget( int row, int column ) const
+QWidget *cellWidget( int row, int column ) const
 */
 HB_FUNC_STATIC(QTABLEWIDGET_CELLWIDGET)
 {
@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_CELLWIDGET)
 }
 
 /*
-void closePersistentEditor( QTableWidgetItem * item )
+void closePersistentEditor( QTableWidgetItem *item )
 */
 HB_FUNC_STATIC(QTABLEWIDGET_CLOSEPERSISTENTEDITOR)
 {
@@ -199,7 +199,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_CLOSEPERSISTENTEDITOR)
 }
 
 /*
-int column( const QTableWidgetItem * item ) const
+int column( const QTableWidgetItem *item ) const
 */
 HB_FUNC_STATIC(QTABLEWIDGET_COLUMN)
 {
@@ -271,7 +271,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_CURRENTCOLUMN)
 }
 
 /*
-QTableWidgetItem * currentItem() const
+QTableWidgetItem *currentItem() const
 */
 HB_FUNC_STATIC(QTABLEWIDGET_CURRENTITEM)
 {
@@ -320,7 +320,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_CURRENTROW)
 }
 
 /*
-void editItem( QTableWidgetItem * item )
+void editItem( QTableWidgetItem *item )
 */
 HB_FUNC_STATIC(QTABLEWIDGET_EDITITEM)
 {
@@ -394,7 +394,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_FINDITEMS)
 }
 
 /*
-QTableWidgetItem * horizontalHeaderItem( int column ) const
+QTableWidgetItem *horizontalHeaderItem( int column ) const
 */
 HB_FUNC_STATIC(QTABLEWIDGET_HORIZONTALHEADERITEM)
 {
@@ -419,7 +419,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_HORIZONTALHEADERITEM)
 }
 
 /*
-QTableWidgetItem * item( int row, int column ) const
+QTableWidgetItem *item( int row, int column ) const
 */
 HB_FUNC_STATIC(QTABLEWIDGET_ITEM)
 {
@@ -448,7 +448,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_ITEMAT)
   if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    QTableWidgetItem * itemAt( const QPoint &point ) const
+    QTableWidgetItem *itemAt( const QPoint &point ) const
     */
     QTableWidget *obj = qobject_cast<QTableWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -461,7 +461,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_ITEMAT)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    QTableWidgetItem * itemAt( int ax, int ay ) const
+    QTableWidgetItem *itemAt( int ax, int ay ) const
     */
     QTableWidget *obj = qobject_cast<QTableWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -478,7 +478,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_ITEMAT)
 }
 
 /*
-void openPersistentEditor( QTableWidgetItem * item )
+void openPersistentEditor( QTableWidgetItem *item )
 */
 HB_FUNC_STATIC(QTABLEWIDGET_OPENPERSISTENTEDITOR)
 {
@@ -530,7 +530,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_REMOVECELLWIDGET)
 }
 
 /*
-int row( const QTableWidgetItem * item ) const
+int row( const QTableWidgetItem *item ) const
 */
 HB_FUNC_STATIC(QTABLEWIDGET_ROW)
 {
@@ -677,7 +677,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SELECTEDRANGES)
 }
 
 /*
-void setCellWidget( int row, int column, QWidget * widget )
+void setCellWidget( int row, int column, QWidget *widget )
 */
 HB_FUNC_STATIC(QTABLEWIDGET_SETCELLWIDGET)
 {
@@ -769,7 +769,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SETCURRENTITEM)
   if (ISNUMPAR(1) && ISQTABLEWIDGETITEM(1))
   {
     /*
-    void setCurrentItem( QTableWidgetItem * item )
+    void setCurrentItem( QTableWidgetItem *item )
     */
     QTableWidget *obj = qobject_cast<QTableWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -783,7 +783,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SETCURRENTITEM)
   else if (ISNUMPAR(2) && ISQTABLEWIDGETITEM(1) && HB_ISNUM(2))
   {
     /*
-    void setCurrentItem( QTableWidgetItem * item, QItemSelectionModel::SelectionFlags command )
+    void setCurrentItem( QTableWidgetItem *item, QItemSelectionModel::SelectionFlags command )
     */
     QTableWidget *obj = qobject_cast<QTableWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -801,7 +801,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SETCURRENTITEM)
 }
 
 /*
-void setHorizontalHeaderItem( int column, QTableWidgetItem * item )
+void setHorizontalHeaderItem( int column, QTableWidgetItem *item )
 */
 HB_FUNC_STATIC(QTABLEWIDGET_SETHORIZONTALHEADERITEM)
 {
@@ -853,7 +853,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SETHORIZONTALHEADERLABELS)
 }
 
 /*
-void setItem( int row, int column, QTableWidgetItem * item )
+void setItem( int row, int column, QTableWidgetItem *item )
 */
 HB_FUNC_STATIC(QTABLEWIDGET_SETITEM)
 {
@@ -879,7 +879,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SETITEM)
 }
 
 /*
-void setItemPrototype( const QTableWidgetItem * item )
+void setItemPrototype( const QTableWidgetItem *item )
 */
 HB_FUNC_STATIC(QTABLEWIDGET_SETITEMPROTOTYPE)
 {
@@ -957,7 +957,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SETROWCOUNT)
 }
 
 /*
-void setVerticalHeaderItem( int row, QTableWidgetItem * item )
+void setVerticalHeaderItem( int row, QTableWidgetItem *item )
 */
 HB_FUNC_STATIC(QTABLEWIDGET_SETVERTICALHEADERITEM)
 {
@@ -1035,7 +1035,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SORTITEMS)
 }
 
 /*
-QTableWidgetItem * takeHorizontalHeaderItem( int column )
+QTableWidgetItem *takeHorizontalHeaderItem( int column )
 */
 HB_FUNC_STATIC(QTABLEWIDGET_TAKEHORIZONTALHEADERITEM)
 {
@@ -1060,7 +1060,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_TAKEHORIZONTALHEADERITEM)
 }
 
 /*
-QTableWidgetItem * takeItem( int row, int column )
+QTableWidgetItem *takeItem( int row, int column )
 */
 HB_FUNC_STATIC(QTABLEWIDGET_TAKEITEM)
 {
@@ -1085,7 +1085,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_TAKEITEM)
 }
 
 /*
-QTableWidgetItem * takeVerticalHeaderItem( int row )
+QTableWidgetItem *takeVerticalHeaderItem( int row )
 */
 HB_FUNC_STATIC(QTABLEWIDGET_TAKEVERTICALHEADERITEM)
 {
@@ -1110,7 +1110,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_TAKEVERTICALHEADERITEM)
 }
 
 /*
-QTableWidgetItem * verticalHeaderItem( int row ) const
+QTableWidgetItem *verticalHeaderItem( int row ) const
 */
 HB_FUNC_STATIC(QTABLEWIDGET_VERTICALHEADERITEM)
 {
@@ -1159,7 +1159,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_VISUALCOLUMN)
 }
 
 /*
-QRect visualItemRect( const QTableWidgetItem * item ) const
+QRect visualItemRect( const QTableWidgetItem *item ) const
 */
 HB_FUNC_STATIC(QTABLEWIDGET_VISUALITEMRECT)
 {
@@ -1364,7 +1364,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_REMOVEROW)
 }
 
 /*
-void scrollToItem( const QTableWidgetItem * item, QAbstractItemView::ScrollHint hint = QAbstractItemView::EnsureVisible
+void scrollToItem( const QTableWidgetItem *item, QAbstractItemView::ScrollHint hint = QAbstractItemView::EnsureVisible
 )
 */
 HB_FUNC_STATIC(QTABLEWIDGET_SCROLLTOITEM)

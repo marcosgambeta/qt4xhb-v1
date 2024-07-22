@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QMOVIE_NEW)
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
-    QMovie( QObject * parent = 0 )
+    QMovie( QObject *parent = 0 )
     */
     QMovie *obj = new QMovie(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QMOVIE_NEW)
   else if (ISBETWEEN(1, 3) && ISQIODEVICE(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
-    QMovie( QIODevice * device, const QByteArray &format = QByteArray(), QObject * parent = 0 )
+    QMovie( QIODevice *device, const QByteArray &format = QByteArray(), QObject *parent = 0 )
     */
     QMovie *obj = new QMovie(
         PQIODEVICE(1), HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(2)), OPQOBJECT(3, 0));
@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QMOVIE_NEW)
   else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
-    QMovie( const QString &fileName, const QByteArray &format = QByteArray(), QObject * parent = 0 )
+    QMovie( const QString &fileName, const QByteArray &format = QByteArray(), QObject *parent = 0 )
     */
     QMovie *obj = new QMovie(
         PQSTRING(1), HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(2)), OPQOBJECT(3, 0));
@@ -263,7 +263,7 @@ HB_FUNC_STATIC(QMOVIE_CURRENTPIXMAP)
 }
 
 /*
-QIODevice * device() const
+QIODevice *device() const
 */
 HB_FUNC_STATIC(QMOVIE_DEVICE)
 {
@@ -559,7 +559,7 @@ HB_FUNC_STATIC(QMOVIE_SETCACHEMODE)
 }
 
 /*
-void setDevice( QIODevice * device )
+void setDevice( QIODevice *device )
 */
 HB_FUNC_STATIC(QMOVIE_SETDEVICE)
 {

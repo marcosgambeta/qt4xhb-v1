@@ -61,7 +61,7 @@ HB_FUNC_STATIC(QDECORATIONPLUGIN_DELETE)
 }
 
 /*
-virtual QDecoration * create( const QString &key ) = 0
+virtual QDecoration *create( const QString &key ) = 0
 */
 HB_FUNC_STATIC(QDECORATIONPLUGIN_CREATE)
 {

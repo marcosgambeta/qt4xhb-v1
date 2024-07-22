@@ -210,7 +210,7 @@ HB_FUNC_STATIC(QPOLYGON_POINT)
   if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
     /*
-    void point( int index, int * x, int * y ) const
+    void point( int index, int *x, int *y ) const
     */
     QPolygon *obj = static_cast<QPolygon *>(Qt4xHb::itemGetPtrStackSelfItem());
 

@@ -179,7 +179,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_DOACTION)
 }
 
 /*
-virtual int indexOfChild( const QAccessibleInterface * child ) const = 0
+virtual int indexOfChild( const QAccessibleInterface *child ) const = 0
 */
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_INDEXOFCHILD)
 {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_ISVALID)
 }
 
 /*
-virtual QObject * object() const = 0
+virtual QObject *object() const = 0
 */
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_OBJECT)
 {
@@ -313,7 +313,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_RECT)
 }
 
 /*
-virtual QAccessible::Relation relationTo( int child, const QAccessibleInterface * other, int otherChild ) const = 0
+virtual QAccessible::Relation relationTo( int child, const QAccessibleInterface *other, int otherChild ) const = 0
 */
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_RELATIONTO)
 {

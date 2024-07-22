@@ -340,7 +340,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_POSF)
 }
 
 /*
-static QMouseEvent * createExtendedMouseEvent( QEvent::Type type, const QPointF &pos, const QPoint &globalPos,
+static QMouseEvent *createExtendedMouseEvent( QEvent::Type type, const QPointF &pos, const QPoint &globalPos,
 Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers )
 */
 HB_FUNC_STATIC(QMOUSEEVENT_CREATEEXTENDEDMOUSEEVENT)

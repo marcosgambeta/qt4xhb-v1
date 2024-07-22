@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QITEMSELECTION_SELECT)
 }
 
 /*
-static void split( const QItemSelectionRange &range, const QItemSelectionRange &other, QItemSelection * result )
+static void split( const QItemSelectionRange &range, const QItemSelectionRange &other, QItemSelection *result )
 */
 HB_FUNC_STATIC(QITEMSELECTION_SPLIT)
 {

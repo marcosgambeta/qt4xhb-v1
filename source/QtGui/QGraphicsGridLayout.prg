@@ -84,7 +84,7 @@ RETURN
 #include "qt4xhb_utils.hpp"
 
     /*
-    QGraphicsGridLayout( QGraphicsLayoutItem * parent = 0 )
+    QGraphicsGridLayout( QGraphicsLayoutItem *parent = 0 )
     */
 HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_NEW)
 {
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ADDITEM)
       (HB_ISNUM(6) || HB_ISNIL(6)))
   {
     /*
-    void addItem( QGraphicsLayoutItem * item, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment
+    void addItem( QGraphicsLayoutItem *item, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment
     = 0 )
     */
     QGraphicsGridLayout *obj = static_cast<QGraphicsGridLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ADDITEM)
   else if (ISBETWEEN(3, 4) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    void addItem( QGraphicsLayoutItem * item, int row, int column, Qt::Alignment alignment = 0 )
+    void addItem( QGraphicsLayoutItem *item, int row, int column, Qt::Alignment alignment = 0 )
     */
     QGraphicsGridLayout *obj = static_cast<QGraphicsGridLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -157,7 +157,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ADDITEM)
 }
 
 /*
-Qt::Alignment alignment( QGraphicsLayoutItem * item ) const
+Qt::Alignment alignment( QGraphicsLayoutItem *item ) const
 */
 HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ALIGNMENT)
 {
@@ -377,7 +377,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ITEMAT)
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    QGraphicsLayoutItem * itemAt( int row, int column ) const
+    QGraphicsLayoutItem *itemAt( int row, int column ) const
     */
     QGraphicsGridLayout *obj = static_cast<QGraphicsGridLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -390,7 +390,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ITEMAT)
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    virtual QGraphicsLayoutItem * itemAt( int index ) const
+    virtual QGraphicsLayoutItem *itemAt( int index ) const
     */
     QGraphicsGridLayout *obj = static_cast<QGraphicsGridLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -407,7 +407,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ITEMAT)
 }
 
 /*
-void removeItem( QGraphicsLayoutItem * item )
+void removeItem( QGraphicsLayoutItem *item )
 */
 HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_REMOVEITEM)
 {
@@ -601,7 +601,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ROWSTRETCHFACTOR)
 }
 
 /*
-void setAlignment( QGraphicsLayoutItem * item, Qt::Alignment alignment )
+void setAlignment( QGraphicsLayoutItem *item, Qt::Alignment alignment )
 */
 HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETALIGNMENT)
 {

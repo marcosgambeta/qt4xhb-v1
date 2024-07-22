@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_AUTOREPEATINTERVAL)
 }
 
 /*
-QButtonGroup * group() const
+QButtonGroup *group() const
 */
 HB_FUNC_STATIC(QABSTRACTBUTTON_GROUP)
 {

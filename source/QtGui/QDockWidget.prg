@@ -67,7 +67,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_NEW)
   if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QDockWidget( const QString &title, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
+    QDockWidget( const QString &title, QWidget *parent = 0, Qt::WindowFlags flags = 0 )
     */
     QDockWidget *obj =
         new QDockWidget(PQSTRING(1), OPQWIDGET(2, 0), HB_ISNIL(3) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(3));
@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_NEW)
   else if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QDockWidget( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
+    QDockWidget( QWidget *parent = 0, Qt::WindowFlags flags = 0 )
     */
     QDockWidget *obj =
         new QDockWidget(OPQWIDGET(1, 0), HB_ISNIL(2) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(2));
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_SETFLOATING)
 }
 
 /*
-void setTitleBarWidget( QWidget * widget )
+void setTitleBarWidget( QWidget *widget )
 */
 HB_FUNC_STATIC(QDOCKWIDGET_SETTITLEBARWIDGET)
 {
@@ -307,7 +307,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_SETTITLEBARWIDGET)
 }
 
 /*
-void setWidget( QWidget * widget )
+void setWidget( QWidget *widget )
 */
 HB_FUNC_STATIC(QDOCKWIDGET_SETWIDGET)
 {
@@ -333,7 +333,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_SETWIDGET)
 }
 
 /*
-QWidget * titleBarWidget() const
+QWidget *titleBarWidget() const
 */
 HB_FUNC_STATIC(QDOCKWIDGET_TITLEBARWIDGET)
 {
@@ -358,7 +358,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_TITLEBARWIDGET)
 }
 
 /*
-QAction * toggleViewAction() const
+QAction *toggleViewAction() const
 */
 HB_FUNC_STATIC(QDOCKWIDGET_TOGGLEVIEWACTION)
 {
@@ -383,7 +383,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_TOGGLEVIEWACTION)
 }
 
 /*
-QWidget * widget() const
+QWidget *widget() const
 */
 HB_FUNC_STATIC(QDOCKWIDGET_WIDGET)
 {

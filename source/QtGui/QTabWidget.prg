@@ -88,7 +88,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QTabWidget( QWidget * parent = 0 )
+    QTabWidget( QWidget *parent = 0 )
     */
 HB_FUNC_STATIC(QTABWIDGET_NEW)
 {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QTABWIDGET_ADDTAB)
   if (ISNUMPAR(2) && ISQWIDGET(1) && HB_ISCHAR(2))
   {
     /*
-    int addTab( QWidget * page, const QString &label )
+    int addTab( QWidget *page, const QString &label )
     */
     QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QTABWIDGET_ADDTAB)
   else if (ISNUMPAR(3) && ISQWIDGET(1) && (ISQICON(2) || HB_ISCHAR(2)) && HB_ISCHAR(3))
   {
     /*
-    int addTab( QWidget * page, const QIcon &icon, const QString &label )
+    int addTab( QWidget *page, const QIcon &icon, const QString &label )
     */
     QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QTABWIDGET_CLEAR)
 }
 
 /*
-QWidget * cornerWidget( Qt::Corner corner = Qt::TopRightCorner ) const
+QWidget *cornerWidget( Qt::Corner corner = Qt::TopRightCorner ) const
 */
 HB_FUNC_STATIC(QTABWIDGET_CORNERWIDGET)
 {
@@ -254,7 +254,7 @@ HB_FUNC_STATIC(QTABWIDGET_CURRENTINDEX)
 }
 
 /*
-QWidget * currentWidget() const
+QWidget *currentWidget() const
 */
 HB_FUNC_STATIC(QTABWIDGET_CURRENTWIDGET)
 {
@@ -352,7 +352,7 @@ HB_FUNC_STATIC(QTABWIDGET_ICONSIZE)
 }
 
 /*
-int indexOf( QWidget * w ) const
+int indexOf( QWidget *w ) const
 */
 HB_FUNC_STATIC(QTABWIDGET_INDEXOF)
 {
@@ -380,7 +380,7 @@ HB_FUNC_STATIC(QTABWIDGET_INSERTTAB)
   if (ISNUMPAR(3) && HB_ISNUM(1) && ISQWIDGET(2) && HB_ISCHAR(3))
   {
     /*
-    int insertTab( int index, QWidget * page, const QString &label )
+    int insertTab( int index, QWidget *page, const QString &label )
     */
     QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -392,7 +392,7 @@ HB_FUNC_STATIC(QTABWIDGET_INSERTTAB)
   else if (ISNUMPAR(4) && HB_ISNUM(1) && ISQWIDGET(2) && (ISQICON(3) || HB_ISCHAR(3)) && HB_ISCHAR(4))
   {
     /*
-    int insertTab( int index, QWidget * page, const QIcon &icon, const QString &label )
+    int insertTab( int index, QWidget *page, const QIcon &icon, const QString &label )
     */
     QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -484,7 +484,7 @@ HB_FUNC_STATIC(QTABWIDGET_REMOVETAB)
 }
 
 /*
-void setCornerWidget( QWidget * widget, Qt::Corner corner = Qt::TopRightCorner )
+void setCornerWidget( QWidget *widget, Qt::Corner corner = Qt::TopRightCorner )
 */
 HB_FUNC_STATIC(QTABWIDGET_SETCORNERWIDGET)
 {
@@ -1041,7 +1041,7 @@ HB_FUNC_STATIC(QTABWIDGET_USESSCROLLBUTTONS)
 }
 
 /*
-QWidget * widget( int index ) const
+QWidget *widget( int index ) const
 */
 HB_FUNC_STATIC(QTABWIDGET_WIDGET)
 {
@@ -1142,7 +1142,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETCURRENTINDEX)
 }
 
 /*
-void setCurrentWidget( QWidget * widget )
+void setCurrentWidget( QWidget *widget )
 */
 HB_FUNC_STATIC(QTABWIDGET_SETCURRENTWIDGET)
 {

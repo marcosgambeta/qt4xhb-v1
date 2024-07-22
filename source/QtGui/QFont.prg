@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QFONT_NEW)
   else if (ISNUMPAR(2) && ISQFONT(1) && HB_ISOBJECT(2))
   {
     /*
-    QFont( const QFont &font, QPaintDevice * pd )
+    QFont( const QFont &font, QPaintDevice *pd )
     */
     QFont *obj = new QFont(*PQFONT(1), PQPAINTDEVICE(2));
     Qt4xHb::returnNewObject(obj, true);

@@ -130,7 +130,7 @@ RETURN
 #include <QtGui/QAbstractItemView>
 
     /*
-    QComboBox( QWidget * parent = 0 )
+    QComboBox( QWidget *parent = 0 )
     */
 HB_FUNC_STATIC(QCOMBOBOX_NEW)
 {
@@ -227,7 +227,7 @@ HB_FUNC_STATIC(QCOMBOBOX_ADDITEMS)
 }
 
 /*
-QCompleter * completer() const
+QCompleter *completer() const
 */
 HB_FUNC_STATIC(QCOMBOBOX_COMPLETER)
 {
@@ -638,7 +638,7 @@ HB_FUNC_STATIC(QCOMBOBOX_ITEMDATA)
 }
 
 /*
-QAbstractItemDelegate * itemDelegate() const
+QAbstractItemDelegate *itemDelegate() const
 */
 HB_FUNC_STATIC(QCOMBOBOX_ITEMDELEGATE)
 {
@@ -712,7 +712,7 @@ HB_FUNC_STATIC(QCOMBOBOX_ITEMTEXT)
 }
 
 /*
-QLineEdit * lineEdit() const
+QLineEdit *lineEdit() const
 */
 HB_FUNC_STATIC(QCOMBOBOX_LINEEDIT)
 {
@@ -809,7 +809,7 @@ HB_FUNC_STATIC(QCOMBOBOX_MINIMUMCONTENTSLENGTH)
 }
 
 /*
-QAbstractItemModel * model() const
+QAbstractItemModel *model() const
 */
 HB_FUNC_STATIC(QCOMBOBOX_MODEL)
 {
@@ -909,7 +909,7 @@ HB_FUNC_STATIC(QCOMBOBOX_ROOTMODELINDEX)
 }
 
 /*
-void setCompleter( QCompleter * completer )
+void setCompleter( QCompleter *completer )
 */
 HB_FUNC_STATIC(QCOMBOBOX_SETCOMPLETER)
 {
@@ -1091,7 +1091,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETITEMDATA)
 }
 
 /*
-void setItemDelegate( QAbstractItemDelegate * delegate )
+void setItemDelegate( QAbstractItemDelegate *delegate )
 */
 HB_FUNC_STATIC(QCOMBOBOX_SETITEMDELEGATE)
 {
@@ -1169,7 +1169,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETITEMTEXT)
 }
 
 /*
-void setLineEdit( QLineEdit * edit )
+void setLineEdit( QLineEdit *edit )
 */
 HB_FUNC_STATIC(QCOMBOBOX_SETLINEEDIT)
 {
@@ -1273,7 +1273,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETMINIMUMCONTENTSLENGTH)
 }
 
 /*
-void setModel( QAbstractItemModel * model )
+void setModel( QAbstractItemModel *model )
 */
 HB_FUNC_STATIC(QCOMBOBOX_SETMODEL)
 {
@@ -1377,7 +1377,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETSIZEADJUSTPOLICY)
 }
 
 /*
-void setValidator( const QValidator * validator )
+void setValidator( const QValidator *validator )
 */
 HB_FUNC_STATIC(QCOMBOBOX_SETVALIDATOR)
 {
@@ -1403,7 +1403,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETVALIDATOR)
 }
 
 /*
-void setView( QAbstractItemView * itemView )
+void setView( QAbstractItemView *itemView )
 */
 HB_FUNC_STATIC(QCOMBOBOX_SETVIEW)
 {
@@ -1479,7 +1479,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SIZEADJUSTPOLICY)
 }
 
 /*
-const QValidator * validator() const
+const QValidator *validator() const
 */
 HB_FUNC_STATIC(QCOMBOBOX_VALIDATOR)
 {
@@ -1504,7 +1504,7 @@ HB_FUNC_STATIC(QCOMBOBOX_VALIDATOR)
 }
 
 /*
-QAbstractItemView * view() const
+QAbstractItemView *view() const
 */
 HB_FUNC_STATIC(QCOMBOBOX_VIEW)
 {
@@ -1529,7 +1529,7 @@ HB_FUNC_STATIC(QCOMBOBOX_VIEW)
 }
 
 /*
-virtual bool event( QEvent * event )
+virtual bool event( QEvent *event )
 */
 HB_FUNC_STATIC(QCOMBOBOX_EVENT)
 {

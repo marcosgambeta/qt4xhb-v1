@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_NEW)
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
-    QTextDocument( QObject * parent = 0 )
+    QTextDocument( QObject *parent = 0 )
     */
     QTextDocument *obj = new QTextDocument(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QTextDocument( const QString &text, QObject * parent = 0 )
+    QTextDocument( const QString &text, QObject *parent = 0 )
     */
     QTextDocument *obj = new QTextDocument(PQSTRING(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -480,7 +480,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_CLEARUNDOREDOSTACKS)
 }
 
 /*
-QTextDocument * clone( QObject * parent = 0 ) const
+QTextDocument *clone( QObject *parent = 0 ) const
 */
 HB_FUNC_STATIC(QTEXTDOCUMENT_CLONE)
 {
@@ -603,7 +603,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_DEFAULTTEXTOPTION)
 }
 
 /*
-QAbstractTextDocumentLayout * documentLayout() const
+QAbstractTextDocumentLayout *documentLayout() const
 */
 HB_FUNC_STATIC(QTEXTDOCUMENT_DOCUMENTLAYOUT)
 {
@@ -652,7 +652,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_DOCUMENTMARGIN)
 }
 
 /*
-void drawContents( QPainter * p, const QRectF &rect = QRectF() )
+void drawContents( QPainter *p, const QRectF &rect = QRectF() )
 */
 HB_FUNC_STATIC(QTEXTDOCUMENT_DRAWCONTENTS)
 {
@@ -1162,7 +1162,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_METAINFORMATION)
 }
 
 /*
-QTextObject * object( int objectIndex ) const
+QTextObject *object( int objectIndex ) const
 */
 HB_FUNC_STATIC(QTEXTDOCUMENT_OBJECT)
 {
@@ -1187,7 +1187,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_OBJECT)
 }
 
 /*
-QTextObject * objectForFormat( const QTextFormat &f ) const
+QTextObject *objectForFormat( const QTextFormat &f ) const
 */
 HB_FUNC_STATIC(QTEXTDOCUMENT_OBJECTFORFORMAT)
 {
@@ -1261,7 +1261,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_PAGESIZE)
 }
 
 /*
-void print( QPrinter * printer ) const
+void print( QPrinter *printer ) const
 */
 HB_FUNC_STATIC(QTEXTDOCUMENT_PRINT)
 {
@@ -1336,7 +1336,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_REVISION)
 }
 
 /*
-QTextFrame * rootFrame() const
+QTextFrame *rootFrame() const
 */
 HB_FUNC_STATIC(QTEXTDOCUMENT_ROOTFRAME)
 {
@@ -1465,7 +1465,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETDEFAULTTEXTOPTION)
 }
 
 /*
-void setDocumentLayout( QAbstractTextDocumentLayout * layout )
+void setDocumentLayout( QAbstractTextDocumentLayout *layout )
 */
 HB_FUNC_STATIC(QTEXTDOCUMENT_SETDOCUMENTLAYOUT)
 {
@@ -1876,7 +1876,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_REDO)
   if (ISNUMPAR(1) && ISQTEXTCURSOR(1))
   {
     /*
-    void redo( QTextCursor * cursor )
+    void redo( QTextCursor *cursor )
     */
     QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -1938,7 +1938,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_UNDO)
   if (ISNUMPAR(1) && ISQTEXTCURSOR(1))
   {
     /*
-    void undo( QTextCursor * cursor )
+    void undo( QTextCursor *cursor )
     */
     QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

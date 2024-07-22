@@ -196,7 +196,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_CHECKSTATE)
 }
 
 /*
-virtual QTableWidgetItem * clone() const
+virtual QTableWidgetItem *clone() const
 */
 HB_FUNC_STATIC(QTABLEWIDGETITEM_CLONE)
 {
@@ -856,7 +856,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_STATUSTIP)
 }
 
 /*
-QTableWidget * tableWidget() const
+QTableWidget *tableWidget() const
 */
 HB_FUNC_STATIC(QTABLEWIDGETITEM_TABLEWIDGET)
 {

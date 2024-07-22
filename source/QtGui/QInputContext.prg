@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_ACTIONS)
 }
 
 /*
-virtual bool filterEvent( const QEvent * event )
+virtual bool filterEvent( const QEvent *event )
 */
 HB_FUNC_STATIC(QINPUTCONTEXT_FILTEREVENT)
 {
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_FILTEREVENT)
 }
 
 /*
-QWidget * focusWidget() const
+QWidget *focusWidget() const
 */
 HB_FUNC_STATIC(QINPUTCONTEXT_FOCUSWIDGET)
 {
@@ -272,7 +272,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_LANGUAGE)
 }
 
 /*
-virtual void mouseHandler( int x, QMouseEvent * event )
+virtual void mouseHandler( int x, QMouseEvent *event )
 */
 HB_FUNC_STATIC(QINPUTCONTEXT_MOUSEHANDLER)
 {
@@ -350,7 +350,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_SENDEVENT)
 }
 
 /*
-virtual void setFocusWidget( QWidget * widget )
+virtual void setFocusWidget( QWidget *widget )
 */
 HB_FUNC_STATIC(QINPUTCONTEXT_SETFOCUSWIDGET)
 {
@@ -427,7 +427,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_UPDATE)
 }
 
 /*
-virtual void widgetDestroyed( QWidget * widget )
+virtual void widgetDestroyed( QWidget *widget )
 */
 HB_FUNC_STATIC(QINPUTCONTEXT_WIDGETDESTROYED)
 {

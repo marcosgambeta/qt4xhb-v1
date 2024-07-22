@@ -102,7 +102,7 @@ RETURN
 #include <QtCore/QMimeData>
 
     /*
-    QSortFilterProxyModel( QObject * parent = 0 )
+    QSortFilterProxyModel( QObject *parent = 0 )
     */
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_NEW)
 {
@@ -657,7 +657,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_DATA)
 }
 
 /*
-virtual bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex &
+virtual bool dropMimeData( const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &
 parent )
 */
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_DROPMIMEDATA)
@@ -1013,7 +1013,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MATCH)
 }
 
 /*
-virtual QMimeData * mimeData( const QModelIndexList &indexes ) const
+virtual QMimeData *mimeData( const QModelIndexList &indexes ) const
 */
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MIMEDATA)
 {
@@ -1217,7 +1217,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETHEADERDATA)
 }
 
 /*
-virtual void setSourceModel( QAbstractItemModel * sourceModel )
+virtual void setSourceModel( QAbstractItemModel *sourceModel )
 */
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETSOURCEMODEL)
 {

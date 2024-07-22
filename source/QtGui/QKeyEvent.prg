@@ -300,7 +300,7 @@ HB_FUNC_STATIC(QKEYEVENT_TEXT)
 }
 
 /*
-static QKeyEvent * createExtendedKeyEvent( QEvent::Type type, int key, Qt::KeyboardModifiers modifiers, quint32
+static QKeyEvent *createExtendedKeyEvent( QEvent::Type type, int key, Qt::KeyboardModifiers modifiers, quint32
 nativeScanCode, quint32 nativeVirtualKey, quint32 nativeModifiers, const QString &text = QString(), bool autorep =
 false, ushort count = 1 )
 */

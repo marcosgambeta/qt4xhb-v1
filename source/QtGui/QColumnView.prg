@@ -61,7 +61,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QColumnView( QWidget * parent = 0 )
+    QColumnView( QWidget *parent = 0 )
     */
 HB_FUNC_STATIC(QCOLUMNVIEW_NEW)
 {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_COLUMNWIDTHS)
 }
 
 /*
-QWidget * previewWidget() const
+QWidget *previewWidget() const
 */
 HB_FUNC_STATIC(QCOLUMNVIEW_PREVIEWWIDGET)
 {
@@ -204,7 +204,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETCOLUMNWIDTHS)
 }
 
 /*
-void setPreviewWidget( QWidget * widget )
+void setPreviewWidget( QWidget *widget )
 */
 HB_FUNC_STATIC(QCOLUMNVIEW_SETPREVIEWWIDGET)
 {
@@ -334,7 +334,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SELECTALL)
 }
 
 /*
-virtual void setModel( QAbstractItemModel * model )
+virtual void setModel( QAbstractItemModel *model )
 */
 HB_FUNC_STATIC(QCOLUMNVIEW_SETMODEL)
 {
@@ -386,7 +386,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETROOTINDEX)
 }
 
 /*
-virtual void setSelectionModel( QItemSelectionModel * newSelectionModel )
+virtual void setSelectionModel( QItemSelectionModel *newSelectionModel )
 */
 HB_FUNC_STATIC(QCOLUMNVIEW_SETSELECTIONMODEL)
 {

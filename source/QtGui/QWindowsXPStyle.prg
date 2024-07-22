@@ -91,8 +91,8 @@ HB_FUNC_STATIC(QWINDOWSXPSTYLE_DELETE)
 }
 
 /*
-virtual void drawComplexControl( QStyle::ComplexControl cc, const QStyleOptionComplex * option, QPainter * p, const
-QWidget * widget = 0 ) const
+virtual void drawComplexControl( QStyle::ComplexControl cc, const QStyleOptionComplex *option, QPainter *p, const
+QWidget *widget = 0 ) const
 */
 HB_FUNC_STATIC(QWINDOWSXPSTYLE_DRAWCOMPLEXCONTROL)
 {
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QWINDOWSXPSTYLE_DRAWCOMPLEXCONTROL)
 }
 
 /*
-virtual void drawControl( QStyle::ControlElement element, const QStyleOption * option, QPainter * p, const QWidget *
+virtual void drawControl( QStyle::ControlElement element, const QStyleOption *option, QPainter *p, const QWidget *
 widget = 0 ) const
 */
 HB_FUNC_STATIC(QWINDOWSXPSTYLE_DRAWCONTROL)
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QWINDOWSXPSTYLE_DRAWCONTROL)
 }
 
 /*
-virtual void drawPrimitive( QStyle::PrimitiveElement pe, const QStyleOption * option, QPainter * p, const QWidget *
+virtual void drawPrimitive( QStyle::PrimitiveElement pe, const QStyleOption *option, QPainter *p, const QWidget *
 widget = 0 ) const
 */
 HB_FUNC_STATIC(QWINDOWSXPSTYLE_DRAWPRIMITIVE)
@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QWINDOWSXPSTYLE_DRAWPRIMITIVE)
 }
 
 /*
-virtual int pixelMetric( QStyle::PixelMetric pm, const QStyleOption * option = 0, const QWidget * widget = 0 ) const
+virtual int pixelMetric( QStyle::PixelMetric pm, const QStyleOption *option = 0, const QWidget *widget = 0 ) const
 */
 HB_FUNC_STATIC(QWINDOWSXPSTYLE_PIXELMETRIC)
 {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QWINDOWSXPSTYLE_POLISH)
   if (ISNUMPAR(1) && ISQAPPLICATION(1))
   {
     /*
-    virtual void polish( QApplication * app )
+    virtual void polish( QApplication *app )
     */
     QWindowsXPStyle *obj = qobject_cast<QWindowsXPStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -216,7 +216,7 @@ HB_FUNC_STATIC(QWINDOWSXPSTYLE_POLISH)
   else if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
-    virtual void polish( QWidget * widget )
+    virtual void polish( QWidget *widget )
     */
     QWindowsXPStyle *obj = qobject_cast<QWindowsXPStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -248,8 +248,8 @@ HB_FUNC_STATIC(QWINDOWSXPSTYLE_POLISH)
 }
 
 /*
-virtual QSize sizeFromContents( QStyle::ContentsType ct, const QStyleOption * option, const QSize &contentsSize, const
-QWidget * widget = 0 ) const
+virtual QSize sizeFromContents( QStyle::ContentsType ct, const QStyleOption *option, const QSize &contentsSize, const
+QWidget *widget = 0 ) const
 */
 HB_FUNC_STATIC(QWINDOWSXPSTYLE_SIZEFROMCONTENTS)
 {
@@ -300,7 +300,7 @@ HB_FUNC_STATIC(QWINDOWSXPSTYLE_STANDARDPALETTE)
 }
 
 /*
-virtual QPixmap standardPixmap( QStyle::StandardPixmap standardPixmap, const QStyleOption * option, const QWidget *
+virtual QPixmap standardPixmap( QStyle::StandardPixmap standardPixmap, const QStyleOption *option, const QWidget *
 widget = 0 ) const
 */
 HB_FUNC_STATIC(QWINDOWSXPSTYLE_STANDARDPIXMAP)
@@ -327,8 +327,8 @@ HB_FUNC_STATIC(QWINDOWSXPSTYLE_STANDARDPIXMAP)
 }
 
 /*
-virtual int styleHint( QStyle::StyleHint hint, const QStyleOption * option = 0, const QWidget * widget = 0,
-QStyleHintReturn * returnData = 0 ) const
+virtual int styleHint( QStyle::StyleHint hint, const QStyleOption *option = 0, const QWidget *widget = 0,
+QStyleHintReturn *returnData = 0 ) const
 */
 HB_FUNC_STATIC(QWINDOWSXPSTYLE_STYLEHINT)
 {
@@ -355,8 +355,8 @@ HB_FUNC_STATIC(QWINDOWSXPSTYLE_STYLEHINT)
 }
 
 /*
-virtual QRect subControlRect( QStyle::ComplexControl cc, const QStyleOptionComplex * option, QStyle::SubControl
-subControl, const QWidget * widget = 0 ) const
+virtual QRect subControlRect( QStyle::ComplexControl cc, const QStyleOptionComplex *option, QStyle::SubControl
+subControl, const QWidget *widget = 0 ) const
 */
 HB_FUNC_STATIC(QWINDOWSXPSTYLE_SUBCONTROLRECT)
 {
@@ -382,7 +382,7 @@ HB_FUNC_STATIC(QWINDOWSXPSTYLE_SUBCONTROLRECT)
 }
 
 /*
-virtual QRect subElementRect( QStyle::SubElement sr, const QStyleOption * option, const QWidget * widget = 0 ) const
+virtual QRect subElementRect( QStyle::SubElement sr, const QStyleOption *option, const QWidget *widget = 0 ) const
 */
 HB_FUNC_STATIC(QWINDOWSXPSTYLE_SUBELEMENTRECT)
 {
@@ -411,7 +411,7 @@ HB_FUNC_STATIC(QWINDOWSXPSTYLE_UNPOLISH)
   if (ISNUMPAR(1) && ISQAPPLICATION(1))
   {
     /*
-    virtual void unpolish( QApplication * app )
+    virtual void unpolish( QApplication *app )
     */
     QWindowsXPStyle *obj = qobject_cast<QWindowsXPStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -425,7 +425,7 @@ HB_FUNC_STATIC(QWINDOWSXPSTYLE_UNPOLISH)
   else if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
-    virtual void unpolish( QWidget * widget )
+    virtual void unpolish( QWidget *widget )
     */
     QWindowsXPStyle *obj = qobject_cast<QWindowsXPStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

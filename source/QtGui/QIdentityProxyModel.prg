@@ -60,7 +60,7 @@ RETURN
 #include <QtGui/QItemSelection>
 
     /*
-    QIdentityProxyModel( QObject * parent = 0 )
+    QIdentityProxyModel( QObject *parent = 0 )
     */
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_NEW)
 {
@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_COLUMNCOUNT)
 }
 
 /*
-virtual bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex &
+virtual bool dropMimeData( const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &
 parent )
 */
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_DROPMIMEDATA)
@@ -474,7 +474,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_ROWCOUNT)
 }
 
 /*
-virtual void setSourceModel( QAbstractItemModel * newSourceModel )
+virtual void setSourceModel( QAbstractItemModel *newSourceModel )
 */
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_SETSOURCEMODEL)
 {

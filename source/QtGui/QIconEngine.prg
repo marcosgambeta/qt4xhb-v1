@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QICONENGINE_ADDPIXMAP)
 }
 
 /*
-virtual void paint( QPainter * painter, const QRect &rect, QIcon::Mode mode, QIcon::State state ) = 0
+virtual void paint( QPainter *painter, const QRect &rect, QIcon::Mode mode, QIcon::State state ) = 0
 */
 HB_FUNC_STATIC(QICONENGINE_PAINT)
 {

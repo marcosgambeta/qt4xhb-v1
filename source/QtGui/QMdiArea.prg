@@ -76,7 +76,7 @@ RETURN
 #include <QtGui/QMdiSubWindow>
 
     /*
-    QMdiArea( QWidget * parent = 0 )
+    QMdiArea( QWidget *parent = 0 )
     */
 HB_FUNC_STATIC(QMDIAREA_NEW)
 {
@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QMDIAREA_ACTIVATIONORDER)
 }
 
 /*
-QMdiSubWindow * activeSubWindow() const
+QMdiSubWindow *activeSubWindow() const
 */
 HB_FUNC_STATIC(QMDIAREA_ACTIVESUBWINDOW)
 {
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QMDIAREA_ACTIVESUBWINDOW)
 }
 
 /*
-QMdiSubWindow * addSubWindow( QWidget * widget, Qt::WindowFlags windowFlags = 0 )
+QMdiSubWindow *addSubWindow( QWidget *widget, Qt::WindowFlags windowFlags = 0 )
 */
 HB_FUNC_STATIC(QMDIAREA_ADDSUBWINDOW)
 {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC(QMDIAREA_BACKGROUND)
 }
 
 /*
-QMdiSubWindow * currentSubWindow() const
+QMdiSubWindow *currentSubWindow() const
 */
 HB_FUNC_STATIC(QMDIAREA_CURRENTSUBWINDOW)
 {
@@ -259,7 +259,7 @@ HB_FUNC_STATIC(QMDIAREA_DOCUMENTMODE)
 }
 
 /*
-void removeSubWindow( QWidget * widget )
+void removeSubWindow( QWidget *widget )
 */
 HB_FUNC_STATIC(QMDIAREA_REMOVESUBWINDOW)
 {
@@ -792,7 +792,7 @@ HB_FUNC_STATIC(QMDIAREA_CLOSEALLSUBWINDOWS)
 }
 
 /*
-void setActiveSubWindow( QMdiSubWindow * window )
+void setActiveSubWindow( QMdiSubWindow *window )
 */
 HB_FUNC_STATIC(QMDIAREA_SETACTIVESUBWINDOW)
 {

@@ -53,7 +53,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QGraphicsRotation( QObject * parent = 0 )
+    QGraphicsRotation( QObject *parent = 0 )
     */
 HB_FUNC_STATIC(QGRAPHICSROTATION_NEW)
 {
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_SETORIGIN)
 }
 
 /*
-virtual void applyTo( QMatrix4x4 * matrix ) const
+virtual void applyTo( QMatrix4x4 *matrix ) const
 */
 HB_FUNC_STATIC(QGRAPHICSROTATION_APPLYTO)
 {

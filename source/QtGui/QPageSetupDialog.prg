@@ -48,7 +48,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QPageSetupDialog( QPrinter * printer, QWidget * parent = 0 )
+    QPageSetupDialog( QPrinter *printer, QWidget *parent = 0 )
     */
 HB_FUNC_STATIC(QPAGESETUPDIALOG_NEW)
 {
@@ -64,7 +64,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_NEW)
 }
 
 /*
-void open( QObject * receiver, const char * member )
+void open( QObject *receiver, const char *member )
 */
 HB_FUNC_STATIC(QPAGESETUPDIALOG_OPEN)
 {
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_OPTIONS)
 }
 
 /*
-QPrinter * printer()
+QPrinter *printer()
 */
 HB_FUNC_STATIC(QPAGESETUPDIALOG_PRINTER)
 {

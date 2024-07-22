@@ -91,7 +91,7 @@ RETURN
 #include <QtGui/QTextCharFormat>
 
     /*
-    QCalendarWidget( QWidget * parent = 0 )
+    QCalendarWidget( QWidget *parent = 0 )
     */
 HB_FUNC_STATIC(QCALENDARWIDGET_NEW)
 {

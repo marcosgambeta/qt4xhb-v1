@@ -282,7 +282,7 @@ HB_FUNC_STATIC(QLAYOUTITEM_ISEMPTY)
 }
 
 /*
-virtual QLayout * layout()
+virtual QLayout *layout()
 */
 HB_FUNC_STATIC(QLAYOUTITEM_LAYOUT)
 {
@@ -458,7 +458,7 @@ HB_FUNC_STATIC(QLAYOUTITEM_SIZEHINT)
 }
 
 /*
-virtual QSpacerItem * spacerItem()
+virtual QSpacerItem *spacerItem()
 */
 HB_FUNC_STATIC(QLAYOUTITEM_SPACERITEM)
 {
@@ -483,7 +483,7 @@ HB_FUNC_STATIC(QLAYOUTITEM_SPACERITEM)
 }
 
 /*
-virtual QWidget * widget()
+virtual QWidget *widget()
 */
 HB_FUNC_STATIC(QLAYOUTITEM_WIDGET)
 {

@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QTOOLBAR_NEW)
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QToolBar( const QString &title, QWidget * parent = 0 )
+    QToolBar( const QString &title, QWidget *parent = 0 )
     */
     QToolBar *obj = new QToolBar(PQSTRING(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QTOOLBAR_NEW)
   else if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
-    QToolBar( QWidget * parent = 0 )
+    QToolBar( QWidget *parent = 0 )
     */
     QToolBar *obj = new QToolBar(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QTOOLBAR_ACTIONAT)
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    QAction * actionAt( int x, int y ) const
+    QAction *actionAt( int x, int y ) const
     */
     QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QTOOLBAR_ACTIONAT)
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    QAction * actionAt( const QPoint &p ) const
+    QAction *actionAt( const QPoint &p ) const
     */
     QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDACTION)
   if (ISNUMPAR(1) && ISQACTION(1))
   {
     /*
-    void addAction( QAction * action )
+    void addAction( QAction *action )
     */
     QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDACTION)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QAction * addAction( const QString &text )
+    QAction *addAction( const QString &text )
     */
     QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDACTION)
   else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2))
   {
     /*
-    QAction * addAction( const QIcon &icon, const QString &text )
+    QAction *addAction( const QIcon &icon, const QString &text )
     */
     QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -200,7 +200,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDACTION)
   else if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQOBJECT(2) && HB_ISCHAR(3))
   {
     /*
-    QAction * addAction( const QString &text, const QObject * receiver, const char * member )
+    QAction *addAction( const QString &text, const QObject *receiver, const char *member )
     */
     QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDACTION)
   else if (ISNUMPAR(4) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && ISQOBJECT(3) && HB_ISCHAR(4))
   {
     /*
-    QAction * addAction( const QIcon &icon, const QString &text, const QObject * receiver, const char * member )
+    QAction *addAction( const QIcon &icon, const QString &text, const QObject *receiver, const char *member )
     */
     QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -231,7 +231,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDACTION)
 }
 
 /*
-QAction * addSeparator()
+QAction *addSeparator()
 */
 HB_FUNC_STATIC(QTOOLBAR_ADDSEPARATOR)
 {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDSEPARATOR)
 }
 
 /*
-QAction * addWidget( QWidget * widget )
+QAction *addWidget( QWidget *widget )
 */
 HB_FUNC_STATIC(QTOOLBAR_ADDWIDGET)
 {
@@ -356,7 +356,7 @@ HB_FUNC_STATIC(QTOOLBAR_ICONSIZE)
 }
 
 /*
-QAction * insertSeparator( QAction * before )
+QAction *insertSeparator( QAction *before )
 */
 HB_FUNC_STATIC(QTOOLBAR_INSERTSEPARATOR)
 {
@@ -381,7 +381,7 @@ HB_FUNC_STATIC(QTOOLBAR_INSERTSEPARATOR)
 }
 
 /*
-QAction * insertWidget( QAction * before, QWidget * widget )
+QAction *insertWidget( QAction *before, QWidget *widget )
 */
 HB_FUNC_STATIC(QTOOLBAR_INSERTWIDGET)
 {
@@ -630,7 +630,7 @@ HB_FUNC_STATIC(QTOOLBAR_SETORIENTATION)
 }
 
 /*
-QAction * toggleViewAction() const
+QAction *toggleViewAction() const
 */
 HB_FUNC_STATIC(QTOOLBAR_TOGGLEVIEWACTION)
 {
@@ -679,7 +679,7 @@ HB_FUNC_STATIC(QTOOLBAR_TOOLBUTTONSTYLE)
 }
 
 /*
-QWidget * widgetForAction( QAction * action ) const
+QWidget *widgetForAction( QAction *action ) const
 */
 HB_FUNC_STATIC(QTOOLBAR_WIDGETFORACTION)
 {

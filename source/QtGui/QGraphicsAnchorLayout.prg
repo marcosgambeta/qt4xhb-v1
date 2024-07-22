@@ -55,7 +55,7 @@ RETURN
 #include "qt4xhb_utils.hpp"
 
     /*
-    QGraphicsAnchorLayout( QGraphicsLayoutItem * parent = 0 )
+    QGraphicsAnchorLayout( QGraphicsLayoutItem *parent = 0 )
     */
 HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_NEW)
 {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_DELETE)
 }
 
 /*
-QGraphicsAnchor * addAnchor( QGraphicsLayoutItem * firstItem, Qt::AnchorPoint firstEdge, QGraphicsLayoutItem *
+QGraphicsAnchor *addAnchor( QGraphicsLayoutItem *firstItem, Qt::AnchorPoint firstEdge, QGraphicsLayoutItem *
 secondItem, Qt::AnchorPoint secondEdge )
 */
 HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_ADDANCHOR)
@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_ADDANCHOR)
 }
 
 /*
-void addAnchors( QGraphicsLayoutItem * firstItem, QGraphicsLayoutItem * secondItem, Qt::Orientations orientations =
+void addAnchors( QGraphicsLayoutItem *firstItem, QGraphicsLayoutItem *secondItem, Qt::Orientations orientations =
 Qt::Horizontal | Qt::Vertical )
 */
 HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_ADDANCHORS)
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_ADDANCHORS)
 }
 
 /*
-void addCornerAnchors( QGraphicsLayoutItem * firstItem, Qt::Corner firstCorner, QGraphicsLayoutItem * secondItem,
+void addCornerAnchors( QGraphicsLayoutItem *firstItem, Qt::Corner firstCorner, QGraphicsLayoutItem *secondItem,
 Qt::Corner secondCorner )
 */
 HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_ADDCORNERANCHORS)
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_ADDCORNERANCHORS)
 }
 
 /*
-QGraphicsAnchor * anchor( QGraphicsLayoutItem * firstItem, Qt::AnchorPoint firstEdge, QGraphicsLayoutItem * secondItem,
+QGraphicsAnchor *anchor( QGraphicsLayoutItem *firstItem, Qt::AnchorPoint firstEdge, QGraphicsLayoutItem *secondItem,
 Qt::AnchorPoint secondEdge )
 */
 HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_ANCHOR)
@@ -374,7 +374,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_INVALIDATE)
 }
 
 /*
-virtual QGraphicsLayoutItem * itemAt( int index ) const
+virtual QGraphicsLayoutItem *itemAt( int index ) const
 */
 HB_FUNC_STATIC(QGRAPHICSANCHORLAYOUT_ITEMAT)
 {

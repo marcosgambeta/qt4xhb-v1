@@ -65,7 +65,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_NEW)
   else if (ISNUMPAR(1) && ISQTEXTDOCUMENT(1))
   {
     /*
-    QTextDocumentFragment( const QTextDocument * document )
+    QTextDocumentFragment( const QTextDocument *document )
     */
     QTextDocumentFragment *obj = new QTextDocumentFragment(PQTEXTDOCUMENT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_FROMHTML)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQTEXTDOCUMENT(2))
   {
     /*
-    static QTextDocumentFragment fromHtml( const QString &text, const QTextDocument * resourceProvider )
+    static QTextDocumentFragment fromHtml( const QString &text, const QTextDocument *resourceProvider )
     */
 
     QTextDocumentFragment *ptr =

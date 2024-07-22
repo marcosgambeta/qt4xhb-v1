@@ -66,7 +66,7 @@ RETURN
 #include <QtGui/QMenu>
 
     /*
-    QMdiSubWindow( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
+    QMdiSubWindow( QWidget *parent = 0, Qt::WindowFlags flags = 0 )
     */
 HB_FUNC_STATIC(QMDISUBWINDOW_NEW)
 {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_KEYBOARDSINGLESTEP)
 }
 
 /*
-QMdiArea * mdiArea() const
+QMdiArea *mdiArea() const
 */
 HB_FUNC_STATIC(QMDISUBWINDOW_MDIAREA)
 {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_SETOPTION)
 }
 
 /*
-void setSystemMenu( QMenu * systemMenu )
+void setSystemMenu( QMenu *systemMenu )
 */
 HB_FUNC_STATIC(QMDISUBWINDOW_SETSYSTEMMENU)
 {
@@ -284,7 +284,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_SETSYSTEMMENU)
 }
 
 /*
-void setWidget( QWidget * widget )
+void setWidget( QWidget *widget )
 */
 HB_FUNC_STATIC(QMDISUBWINDOW_SETWIDGET)
 {
@@ -310,7 +310,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_SETWIDGET)
 }
 
 /*
-QMenu * systemMenu() const
+QMenu *systemMenu() const
 */
 HB_FUNC_STATIC(QMDISUBWINDOW_SYSTEMMENU)
 {
@@ -359,7 +359,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_TESTOPTION)
 }
 
 /*
-QWidget * widget() const
+QWidget *widget() const
 */
 HB_FUNC_STATIC(QMDISUBWINDOW_WIDGET)
 {

@@ -96,7 +96,7 @@ RETURN
 #include <QtGui/QAbstractButton>
 
     /*
-    QWizard( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
+    QWizard( QWidget *parent = 0, Qt::WindowFlags flags = 0 )
     */
 HB_FUNC_STATIC(QWIZARD_NEW)
 {
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QWIZARD_DELETE)
 }
 
 /*
-int addPage( QWizardPage * page )
+int addPage( QWizardPage *page )
 */
 HB_FUNC_STATIC(QWIZARD_ADDPAGE)
 {
@@ -154,7 +154,7 @@ HB_FUNC_STATIC(QWIZARD_ADDPAGE)
 }
 
 /*
-QAbstractButton * button( QWizard::WizardButton which ) const
+QAbstractButton *button( QWizard::WizardButton which ) const
 */
 HB_FUNC_STATIC(QWIZARD_BUTTON)
 {
@@ -227,7 +227,7 @@ HB_FUNC_STATIC(QWIZARD_CURRENTID)
 }
 
 /*
-QWizardPage * currentPage() const
+QWizardPage *currentPage() const
 */
 HB_FUNC_STATIC(QWIZARD_CURRENTPAGE)
 {
@@ -349,7 +349,7 @@ HB_FUNC_STATIC(QWIZARD_OPTIONS)
 }
 
 /*
-QWizardPage * page( int id ) const
+QWizardPage *page( int id ) const
 */
 HB_FUNC_STATIC(QWIZARD_PAGE)
 {
@@ -450,7 +450,7 @@ HB_FUNC_STATIC(QWIZARD_REMOVEPAGE)
 }
 
 /*
-void setButton( QWizard::WizardButton which, QAbstractButton * button )
+void setButton( QWizard::WizardButton which, QAbstractButton *button )
 */
 HB_FUNC_STATIC(QWIZARD_SETBUTTON)
 {
@@ -535,7 +535,7 @@ HB_FUNC_STATIC(QWIZARD_SETBUTTONTEXT)
 }
 
 /*
-void setDefaultProperty( const char * className, const char * property, const char * changedSignal )
+void setDefaultProperty( const char *className, const char *property, const char *changedSignal )
 */
 HB_FUNC_STATIC(QWIZARD_SETDEFAULTPROPERTY)
 {
@@ -639,7 +639,7 @@ HB_FUNC_STATIC(QWIZARD_SETOPTIONS)
 }
 
 /*
-void setPage( int id, QWizardPage * page )
+void setPage( int id, QWizardPage *page )
 */
 HB_FUNC_STATIC(QWIZARD_SETPAGE)
 {
@@ -691,7 +691,7 @@ HB_FUNC_STATIC(QWIZARD_SETPIXMAP)
 }
 
 /*
-void setSideWidget( QWidget * widget )
+void setSideWidget( QWidget *widget )
 */
 HB_FUNC_STATIC(QWIZARD_SETSIDEWIDGET)
 {
@@ -821,7 +821,7 @@ HB_FUNC_STATIC(QWIZARD_SETWIZARDSTYLE)
 }
 
 /*
-QWidget * sideWidget() const
+QWidget *sideWidget() const
 */
 HB_FUNC_STATIC(QWIZARD_SIDEWIDGET)
 {

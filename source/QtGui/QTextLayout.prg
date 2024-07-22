@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_NEW)
   else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQFONT(2) && (HB_ISOBJECT(3) || HB_ISNIL(3)))
   {
     /*
-    QTextLayout( const QString &text, const QFont &font, QPaintDevice * paintdevice = 0 )
+    QTextLayout( const QString &text, const QFont &font, QPaintDevice *paintdevice = 0 )
     */
     QTextLayout *obj =
         new QTextLayout(PQSTRING(1), *PQFONT(2), HB_ISNIL(3) ? 0 : static_cast<QPaintDevice *>(Qt4xHb::itemGetPtr(3)));
@@ -316,7 +316,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_DRAWCURSOR)
   if (ISNUMPAR(4) && ISQPAINTER(1) && ISQPOINTF(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
-    void drawCursor( QPainter * painter, const QPointF &position, int cursorPosition, int width ) const
+    void drawCursor( QPainter *painter, const QPointF &position, int cursorPosition, int width ) const
     */
     QTextLayout *obj = static_cast<QTextLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -330,7 +330,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_DRAWCURSOR)
   else if (ISNUMPAR(3) && ISQPAINTER(1) && ISQPOINTF(2) && HB_ISNUM(3))
   {
     /*
-    void drawCursor( QPainter * painter, const QPointF &position, int cursorPosition ) const
+    void drawCursor( QPainter *painter, const QPointF &position, int cursorPosition ) const
     */
     QTextLayout *obj = static_cast<QTextLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
 

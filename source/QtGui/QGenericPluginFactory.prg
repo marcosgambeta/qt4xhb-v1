@@ -49,7 +49,7 @@ RETURN
 #include "qt4xhb_utils.hpp"
 
     /*
-    QObject * create( const QString &key, const QString &specification )
+    QObject *create( const QString &key, const QString &specification )
     */
 HB_FUNC_STATIC(QGENERICPLUGINFACTORY_CREATE)
 {

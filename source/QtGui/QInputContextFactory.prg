@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_DELETE)
 }
 
 /*
-QInputContext * create( const QString &key, QObject * parent )
+QInputContext *create( const QString &key, QObject *parent )
 */
 HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_CREATE)
 {

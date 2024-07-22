@@ -289,7 +289,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_CONTAINS)
 }
 
 /*
-const QTextDocument * document() const
+const QTextDocument *document() const
 */
 HB_FUNC_STATIC(QTEXTBLOCK_DOCUMENT)
 {
@@ -386,7 +386,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_ISVISIBLE)
 }
 
 /*
-QTextLayout * layout() const
+QTextLayout *layout() const
 */
 HB_FUNC_STATIC(QTEXTBLOCK_LAYOUT)
 {
@@ -609,7 +609,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_SETREVISION)
 }
 
 /*
-void setUserData( QTextBlockUserData * data )
+void setUserData( QTextBlockUserData *data )
 */
 HB_FUNC_STATIC(QTEXTBLOCK_SETUSERDATA)
 {
@@ -735,7 +735,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_TEXTDIRECTION)
 }
 
 /*
-QTextList * textList() const
+QTextList *textList() const
 */
 HB_FUNC_STATIC(QTEXTBLOCK_TEXTLIST)
 {
@@ -760,7 +760,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_TEXTLIST)
 }
 
 /*
-QTextBlockUserData * userData() const
+QTextBlockUserData *userData() const
 */
 HB_FUNC_STATIC(QTEXTBLOCK_USERDATA)
 {

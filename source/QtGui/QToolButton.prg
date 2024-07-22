@@ -64,7 +64,7 @@ RETURN
 #include <QtGui/QMenu>
 
     /*
-    QToolButton( QWidget * parent = 0 )
+    QToolButton( QWidget *parent = 0 )
     */
 HB_FUNC_STATIC(QTOOLBUTTON_NEW)
 {
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_AUTORAISE)
 }
 
 /*
-QAction * defaultAction() const
+QAction *defaultAction() const
 */
 HB_FUNC_STATIC(QTOOLBUTTON_DEFAULTACTION)
 {
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_DEFAULTACTION)
 }
 
 /*
-QMenu * menu() const
+QMenu *menu() const
 */
 HB_FUNC_STATIC(QTOOLBUTTON_MENU)
 {
@@ -272,7 +272,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SETAUTORAISE)
 }
 
 /*
-void setMenu( QMenu * menu )
+void setMenu( QMenu *menu )
 */
 HB_FUNC_STATIC(QTOOLBUTTON_SETMENU)
 {
@@ -398,7 +398,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SIZEHINT)
 }
 
 /*
-void setDefaultAction( QAction * action )
+void setDefaultAction( QAction *action )
 */
 HB_FUNC_STATIC(QTOOLBUTTON_SETDEFAULTACTION)
 {

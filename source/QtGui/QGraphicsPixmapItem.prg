@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QGRAPHICSPIXMAPITEM_NEW)
   if (ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)))
   {
     /*
-    QGraphicsPixmapItem( QGraphicsItem * parent = 0 )
+    QGraphicsPixmapItem( QGraphicsItem *parent = 0 )
     */
     QGraphicsPixmapItem *obj =
         new QGraphicsPixmapItem(HB_ISNIL(1) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(1)));
@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QGRAPHICSPIXMAPITEM_NEW)
   else if (ISBETWEEN(1, 2) && ISQPIXMAP(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2)))
   {
     /*
-    QGraphicsPixmapItem( const QPixmap &pixmap, QGraphicsItem * parent = 0 )
+    QGraphicsPixmapItem( const QPixmap &pixmap, QGraphicsItem *parent = 0 )
     */
     QGraphicsPixmapItem *obj =
         new QGraphicsPixmapItem(*PQPIXMAP(1), HB_ISNIL(2) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(2)));
@@ -361,7 +361,7 @@ HB_FUNC_STATIC(QGRAPHICSPIXMAPITEM_CONTAINS)
 }
 
 /*
-virtual bool isObscuredBy( const QGraphicsItem * item ) const
+virtual bool isObscuredBy( const QGraphicsItem *item ) const
 */
 HB_FUNC_STATIC(QGRAPHICSPIXMAPITEM_ISOBSCUREDBY)
 {
@@ -410,7 +410,7 @@ HB_FUNC_STATIC(QGRAPHICSPIXMAPITEM_OPAQUEAREA)
 }
 
 /*
-virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
+virtual void paint( QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget )
 */
 HB_FUNC_STATIC(QGRAPHICSPIXMAPITEM_PAINT)
 {

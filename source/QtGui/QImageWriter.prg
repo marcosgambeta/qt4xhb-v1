@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_NEW)
   else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)))
   {
     /*
-    QImageWriter( QIODevice * device, const QByteArray &format )
+    QImageWriter( QIODevice *device, const QByteArray &format )
     */
     QImageWriter *obj = new QImageWriter(PQIODEVICE(1), *PQBYTEARRAY(2));
     Qt4xHb::returnNewObject(obj, true);
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_COMPRESSION)
 }
 
 /*
-QIODevice * device() const
+QIODevice *device() const
 */
 HB_FUNC_STATIC(QIMAGEWRITER_DEVICE)
 {
@@ -362,7 +362,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_SETCOMPRESSION)
 }
 
 /*
-void setDevice( QIODevice * device )
+void setDevice( QIODevice *device )
 */
 HB_FUNC_STATIC(QIMAGEWRITER_SETDEVICE)
 {

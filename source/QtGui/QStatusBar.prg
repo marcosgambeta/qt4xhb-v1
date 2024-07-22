@@ -53,7 +53,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QStatusBar( QWidget * parent = 0 )
+    QStatusBar( QWidget *parent = 0 )
     */
 HB_FUNC_STATIC(QSTATUSBAR_NEW)
 {
@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QSTATUSBAR_DELETE)
 }
 
 /*
-void addPermanentWidget( QWidget * widget, int stretch = 0 )
+void addPermanentWidget( QWidget *widget, int stretch = 0 )
 */
 HB_FUNC_STATIC(QSTATUSBAR_ADDPERMANENTWIDGET)
 {
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QSTATUSBAR_ADDPERMANENTWIDGET)
 }
 
 /*
-void addWidget( QWidget * widget, int stretch = 0 )
+void addWidget( QWidget *widget, int stretch = 0 )
 */
 HB_FUNC_STATIC(QSTATUSBAR_ADDWIDGET)
 {
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QSTATUSBAR_CURRENTMESSAGE)
 }
 
 /*
-int insertPermanentWidget( int index, QWidget * widget, int stretch = 0 )
+int insertPermanentWidget( int index, QWidget *widget, int stretch = 0 )
 */
 HB_FUNC_STATIC(QSTATUSBAR_INSERTPERMANENTWIDGET)
 {
@@ -187,7 +187,7 @@ HB_FUNC_STATIC(QSTATUSBAR_INSERTPERMANENTWIDGET)
 }
 
 /*
-int insertWidget( int index, QWidget * widget, int stretch = 0 )
+int insertWidget( int index, QWidget *widget, int stretch = 0 )
 */
 HB_FUNC_STATIC(QSTATUSBAR_INSERTWIDGET)
 {
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QSTATUSBAR_ISSIZEGRIPENABLED)
 }
 
 /*
-void removeWidget( QWidget * widget )
+void removeWidget( QWidget *widget )
 */
 HB_FUNC_STATIC(QSTATUSBAR_REMOVEWIDGET)
 {

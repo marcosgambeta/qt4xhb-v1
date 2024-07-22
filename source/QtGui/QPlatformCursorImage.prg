@@ -53,7 +53,7 @@ RETURN
 #include "qt4xhb_utils.hpp"
 
     /*
-    QPlatformCursorImage( const uchar * data, const uchar * mask, int width, int height, int hotX, int hotY )
+    QPlatformCursorImage( const uchar *data, const uchar *mask, int width, int height, int hotX, int hotY )
     */
 HB_FUNC_STATIC(QPLATFORMCURSORIMAGE_NEW)
 {
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QPLATFORMCURSORIMAGE_HOTSPOT)
 }
 
 /*
-QImage * image()
+QImage *image()
 */
 HB_FUNC_STATIC(QPLATFORMCURSORIMAGE_IMAGE)
 {
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QPLATFORMCURSORIMAGE_SET)
   if (ISNUMPAR(6) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6))
   {
     /*
-    void set( const uchar * data, const uchar * mask, int width, int height, int hx, int hy )
+    void set( const uchar *data, const uchar *mask, int width, int height, int hx, int hy )
     */
     QPlatformCursorImage *obj = static_cast<QPlatformCursorImage *>(Qt4xHb::itemGetPtrStackSelfItem());
 

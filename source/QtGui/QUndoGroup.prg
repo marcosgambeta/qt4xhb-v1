@@ -68,7 +68,7 @@ RETURN
 #include <QtGui/QAction>
 
     /*
-    QUndoGroup( QObject * parent = 0 )
+    QUndoGroup( QObject *parent = 0 )
     */
 HB_FUNC_STATIC(QUNDOGROUP_NEW)
 {
@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QUNDOGROUP_DELETE)
 }
 
 /*
-QUndoStack * activeStack() const
+QUndoStack *activeStack() const
 */
 HB_FUNC_STATIC(QUNDOGROUP_ACTIVESTACK)
 {
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QUNDOGROUP_ACTIVESTACK)
 }
 
 /*
-void addStack( QUndoStack * stack )
+void addStack( QUndoStack *stack )
 */
 HB_FUNC_STATIC(QUNDOGROUP_ADDSTACK)
 {
@@ -201,7 +201,7 @@ HB_FUNC_STATIC(QUNDOGROUP_CANUNDO)
 }
 
 /*
-QAction * createRedoAction( QObject * parent, const QString &prefix = QString() ) const
+QAction *createRedoAction( QObject *parent, const QString &prefix = QString() ) const
 */
 HB_FUNC_STATIC(QUNDOGROUP_CREATEREDOACTION)
 {
@@ -226,7 +226,7 @@ HB_FUNC_STATIC(QUNDOGROUP_CREATEREDOACTION)
 }
 
 /*
-QAction * createUndoAction( QObject * parent, const QString &prefix = QString() ) const
+QAction *createUndoAction( QObject *parent, const QString &prefix = QString() ) const
 */
 HB_FUNC_STATIC(QUNDOGROUP_CREATEUNDOACTION)
 {
@@ -299,7 +299,7 @@ HB_FUNC_STATIC(QUNDOGROUP_REDOTEXT)
 }
 
 /*
-void removeStack( QUndoStack * stack )
+void removeStack( QUndoStack *stack )
 */
 HB_FUNC_STATIC(QUNDOGROUP_REMOVESTACK)
 {
@@ -423,7 +423,7 @@ HB_FUNC_STATIC(QUNDOGROUP_REDO)
 }
 
 /*
-void setActiveStack( QUndoStack * stack )
+void setActiveStack( QUndoStack *stack )
 */
 HB_FUNC_STATIC(QUNDOGROUP_SETACTIVESTACK)
 {

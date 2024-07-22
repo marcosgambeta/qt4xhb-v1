@@ -83,7 +83,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QListWidget( QWidget * parent = 0 )
+    QListWidget( QWidget *parent = 0 )
     */
 HB_FUNC_STATIC(QLISTWIDGET_NEW)
 {
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QLISTWIDGET_ADDITEM)
   else if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1))
   {
     /*
-    void addItem( QListWidgetItem * item )
+    void addItem( QListWidgetItem *item )
     */
     QListWidget *obj = qobject_cast<QListWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -179,7 +179,7 @@ HB_FUNC_STATIC(QLISTWIDGET_ADDITEMS)
 }
 
 /*
-void closePersistentEditor( QListWidgetItem * item )
+void closePersistentEditor( QListWidgetItem *item )
 */
 HB_FUNC_STATIC(QLISTWIDGET_CLOSEPERSISTENTEDITOR)
 {
@@ -229,7 +229,7 @@ HB_FUNC_STATIC(QLISTWIDGET_COUNT)
 }
 
 /*
-QListWidgetItem * currentItem() const
+QListWidgetItem *currentItem() const
 */
 HB_FUNC_STATIC(QLISTWIDGET_CURRENTITEM)
 {
@@ -278,7 +278,7 @@ HB_FUNC_STATIC(QLISTWIDGET_CURRENTROW)
 }
 
 /*
-void editItem( QListWidgetItem * item )
+void editItem( QListWidgetItem *item )
 */
 HB_FUNC_STATIC(QLISTWIDGET_EDITITEM)
 {
@@ -356,7 +356,7 @@ HB_FUNC_STATIC(QLISTWIDGET_INSERTITEM)
   if (ISNUMPAR(2) && HB_ISNUM(1) && ISQLISTWIDGETITEM(2))
   {
     /*
-    void insertItem( int row, QListWidgetItem * item )
+    void insertItem( int row, QListWidgetItem *item )
     */
     QListWidget *obj = qobject_cast<QListWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -438,7 +438,7 @@ HB_FUNC_STATIC(QLISTWIDGET_ISSORTINGENABLED)
 }
 
 /*
-QListWidgetItem * item( int row ) const
+QListWidgetItem *item( int row ) const
 */
 HB_FUNC_STATIC(QLISTWIDGET_ITEM)
 {
@@ -467,7 +467,7 @@ HB_FUNC_STATIC(QLISTWIDGET_ITEMAT)
   if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    QListWidgetItem * itemAt( const QPoint &p ) const
+    QListWidgetItem *itemAt( const QPoint &p ) const
     */
     QListWidget *obj = qobject_cast<QListWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -480,7 +480,7 @@ HB_FUNC_STATIC(QLISTWIDGET_ITEMAT)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    QListWidgetItem * itemAt( int x, int y ) const
+    QListWidgetItem *itemAt( int x, int y ) const
     */
     QListWidget *obj = qobject_cast<QListWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -497,7 +497,7 @@ HB_FUNC_STATIC(QLISTWIDGET_ITEMAT)
 }
 
 /*
-QWidget * itemWidget( QListWidgetItem * item ) const
+QWidget *itemWidget( QListWidgetItem *item ) const
 */
 HB_FUNC_STATIC(QLISTWIDGET_ITEMWIDGET)
 {
@@ -522,7 +522,7 @@ HB_FUNC_STATIC(QLISTWIDGET_ITEMWIDGET)
 }
 
 /*
-void openPersistentEditor( QListWidgetItem * item )
+void openPersistentEditor( QListWidgetItem *item )
 */
 HB_FUNC_STATIC(QLISTWIDGET_OPENPERSISTENTEDITOR)
 {
@@ -548,7 +548,7 @@ HB_FUNC_STATIC(QLISTWIDGET_OPENPERSISTENTEDITOR)
 }
 
 /*
-void removeItemWidget( QListWidgetItem * item )
+void removeItemWidget( QListWidgetItem *item )
 */
 HB_FUNC_STATIC(QLISTWIDGET_REMOVEITEMWIDGET)
 {
@@ -574,7 +574,7 @@ HB_FUNC_STATIC(QLISTWIDGET_REMOVEITEMWIDGET)
 }
 
 /*
-int row( const QListWidgetItem * item ) const
+int row( const QListWidgetItem *item ) const
 */
 HB_FUNC_STATIC(QLISTWIDGET_ROW)
 {
@@ -650,7 +650,7 @@ HB_FUNC_STATIC(QLISTWIDGET_SETCURRENTITEM)
   if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1))
   {
     /*
-    void setCurrentItem( QListWidgetItem * item )
+    void setCurrentItem( QListWidgetItem *item )
     */
     QListWidget *obj = qobject_cast<QListWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -664,7 +664,7 @@ HB_FUNC_STATIC(QLISTWIDGET_SETCURRENTITEM)
   else if (ISNUMPAR(2) && ISQLISTWIDGETITEM(1) && HB_ISNUM(2))
   {
     /*
-    void setCurrentItem( QListWidgetItem * item, QItemSelectionModel::SelectionFlags command )
+    void setCurrentItem( QListWidgetItem *item, QItemSelectionModel::SelectionFlags command )
     */
     QListWidget *obj = qobject_cast<QListWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -718,7 +718,7 @@ HB_FUNC_STATIC(QLISTWIDGET_SETCURRENTROW)
 }
 
 /*
-void setItemWidget( QListWidgetItem * item, QWidget * widget )
+void setItemWidget( QListWidgetItem *item, QWidget *widget )
 */
 HB_FUNC_STATIC(QLISTWIDGET_SETITEMWIDGET)
 {
@@ -796,7 +796,7 @@ HB_FUNC_STATIC(QLISTWIDGET_SORTITEMS)
 }
 
 /*
-QListWidgetItem * takeItem( int row )
+QListWidgetItem *takeItem( int row )
 */
 HB_FUNC_STATIC(QLISTWIDGET_TAKEITEM)
 {
@@ -821,7 +821,7 @@ HB_FUNC_STATIC(QLISTWIDGET_TAKEITEM)
 }
 
 /*
-QRect visualItemRect( const QListWidgetItem * item ) const
+QRect visualItemRect( const QListWidgetItem *item ) const
 */
 HB_FUNC_STATIC(QLISTWIDGET_VISUALITEMRECT)
 {
@@ -846,7 +846,7 @@ HB_FUNC_STATIC(QLISTWIDGET_VISUALITEMRECT)
 }
 
 /*
-virtual void dropEvent( QDropEvent * event )
+virtual void dropEvent( QDropEvent *event )
 */
 HB_FUNC_STATIC(QLISTWIDGET_DROPEVENT)
 {
@@ -898,7 +898,7 @@ HB_FUNC_STATIC(QLISTWIDGET_CLEAR)
 }
 
 /*
-void scrollToItem( const QListWidgetItem * item, QAbstractItemView::ScrollHint hint = QAbstractItemView::EnsureVisible )
+void scrollToItem( const QListWidgetItem *item, QAbstractItemView::ScrollHint hint = QAbstractItemView::EnsureVisible )
 */
 HB_FUNC_STATIC(QLISTWIDGET_SCROLLTOITEM)
 {

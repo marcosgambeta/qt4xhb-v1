@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QPAINTER_NEW)
   else if (ISNUMPAR(1) && HB_ISOBJECT(1))
   {
     /*
-    QPainter( QPaintDevice * device )
+    QPainter( QPaintDevice *device )
     */
     QPainter *obj = new QPainter(PQPAINTDEVICE(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QPAINTER_BACKGROUNDMODE)
 }
 
 /*
-bool begin( QPaintDevice * device )
+bool begin( QPaintDevice *device )
 */
 HB_FUNC_STATIC(QPAINTER_BEGIN)
 {
@@ -505,7 +505,7 @@ HB_FUNC_STATIC(QPAINTER_COMPOSITIONMODE)
 }
 
 /*
-QPaintDevice * device() const
+QPaintDevice *device() const
 */
 HB_FUNC_STATIC(QPAINTER_DEVICE)
 {
@@ -1764,7 +1764,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWTEXT)
   else if (ISBETWEEN(3, 4) && ISQRECTF(1) && HB_ISNUM(2) && HB_ISCHAR(3) && (ISQRECTF(4) || HB_ISNIL(4)))
   {
     /*
-    void drawText( const QRectF &rectangle, int flags, const QString &text, QRectF * boundingRect = 0 )
+    void drawText( const QRectF &rectangle, int flags, const QString &text, QRectF *boundingRect = 0 )
     */
     QPainter *obj = static_cast<QPainter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1778,7 +1778,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWTEXT)
   else if (ISBETWEEN(3, 4) && ISQRECT(1) && HB_ISNUM(2) && HB_ISCHAR(3) && (ISQRECT(4) || HB_ISNIL(4)))
   {
     /*
-    void drawText( const QRect &rectangle, int flags, const QString &text, QRect * boundingRect = 0 )
+    void drawText( const QRect &rectangle, int flags, const QString &text, QRect *boundingRect = 0 )
     */
     QPainter *obj = static_cast<QPainter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1807,7 +1807,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWTEXT)
            (ISQRECT(7) || HB_ISNUM(7)))
   {
     /*
-    void drawText( int x, int y, int width, int height, int flags, const QString &text, QRect * boundingRect = 0 )
+    void drawText( int x, int y, int width, int height, int flags, const QString &text, QRect *boundingRect = 0 )
     */
     QPainter *obj = static_cast<QPainter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -2392,7 +2392,7 @@ HB_FUNC_STATIC(QPAINTER_HASCLIPPING)
 }
 
 /*
-void initFrom( const QWidget * widget )
+void initFrom( const QWidget *widget )
 */
 HB_FUNC_STATIC(QPAINTER_INITFROM)
 {
@@ -2490,7 +2490,7 @@ HB_FUNC_STATIC(QPAINTER_OPACITY)
 }
 
 /*
-QPaintEngine * paintEngine() const
+QPaintEngine *paintEngine() const
 */
 HB_FUNC_STATIC(QPAINTER_PAINTENGINE)
 {

@@ -39,7 +39,7 @@ RETURN
 #include "qt4xhb_utils.hpp"
 
     /*
-    QDragEnterEvent( const QPoint &point, Qt::DropActions actions, const QMimeData * data, Qt::MouseButtons buttons,
+    QDragEnterEvent( const QPoint &point, Qt::DropActions actions, const QMimeData *data, Qt::MouseButtons buttons,
     Qt::KeyboardModifiers modifiers )
     */
 HB_FUNC_STATIC(QDRAGENTEREVENT_NEW)

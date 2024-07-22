@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QDECORATION_DELETE)
 }
 
 /*
-virtual void buildSysMenu( QWidget * widget, QMenu * menu )
+virtual void buildSysMenu( QWidget *widget, QMenu *menu )
 */
 HB_FUNC_STATIC(QDECORATION_BUILDSYSMENU)
 {
@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QDECORATION_BUILDSYSMENU)
 }
 
 /*
-void menuTriggered( QWidget * widget, QAction * action )
+void menuTriggered( QWidget *widget, QAction *action )
 */
 HB_FUNC_STATIC(QDECORATION_MENUTRIGGERED)
 {
@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QDECORATION_MENUTRIGGERED)
 }
 
 /*
-virtual bool paint( QPainter * painter, const QWidget * widget, int decorationRegion = QDecoration::All,
+virtual bool paint( QPainter *painter, const QWidget *widget, int decorationRegion = QDecoration::All,
 QDecoration::DecorationState state = QDecoration::Normal ) = 0
 */
 HB_FUNC_STATIC(QDECORATION_PAINT)
@@ -157,7 +157,7 @@ HB_FUNC_STATIC(QDECORATION_REGION)
   if (ISBETWEEN(2, 3) && ISQWIDGET(1) && ISQRECT(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    virtual QRegion region( const QWidget * widget, const QRect &rectangle, int decorationRegion = QDecoration::All ) =
+    virtual QRegion region( const QWidget *widget, const QRect &rectangle, int decorationRegion = QDecoration::All ) =
     0
     */
     QDecoration *obj = static_cast<QDecoration *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QDECORATION_REGION)
   else if (ISBETWEEN(1, 2) && ISQWIDGET(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QRegion region( const QWidget * widget, int decorationRegion = QDecoration::All )
+    QRegion region( const QWidget *widget, int decorationRegion = QDecoration::All )
     */
     QDecoration *obj = static_cast<QDecoration *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QDECORATION_REGION)
 }
 
 /*
-virtual int regionAt( const QWidget * widget, const QPoint &point )
+virtual int regionAt( const QWidget *widget, const QPoint &point )
 */
 HB_FUNC_STATIC(QDECORATION_REGIONAT)
 {
@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QDECORATION_REGIONAT)
 }
 
 /*
-virtual void regionClicked( QWidget * widget, int region )
+virtual void regionClicked( QWidget *widget, int region )
 */
 HB_FUNC_STATIC(QDECORATION_REGIONCLICKED)
 {
@@ -238,7 +238,7 @@ HB_FUNC_STATIC(QDECORATION_REGIONCLICKED)
 }
 
 /*
-virtual void regionDoubleClicked( QWidget * widget, int region )
+virtual void regionDoubleClicked( QWidget *widget, int region )
 */
 HB_FUNC_STATIC(QDECORATION_REGIONDOUBLECLICKED)
 {
@@ -264,7 +264,7 @@ HB_FUNC_STATIC(QDECORATION_REGIONDOUBLECLICKED)
 }
 
 /*
-static void startMove( QWidget * widget )
+static void startMove( QWidget *widget )
 */
 HB_FUNC_STATIC(QDECORATION_STARTMOVE)
 {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC(QDECORATION_STARTMOVE)
 }
 
 /*
-static void startResize( QWidget * widget )
+static void startResize( QWidget *widget )
 */
 HB_FUNC_STATIC(QDECORATION_STARTRESIZE)
 {

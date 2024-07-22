@@ -106,7 +106,7 @@ RETURN
 #include <QtGui/QHeaderView>
 
     /*
-    QTreeView( QWidget * parent = 0 )
+    QTreeView( QWidget *parent = 0 )
     */
 HB_FUNC_STATIC(QTREEVIEW_NEW)
 {
@@ -284,7 +284,7 @@ HB_FUNC_STATIC(QTREEVIEW_EXPANDSONDOUBLECLICK)
 }
 
 /*
-QHeaderView * header() const
+QHeaderView *header() const
 */
 HB_FUNC_STATIC(QTREEVIEW_HEADER)
 {
@@ -807,7 +807,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETFIRSTCOLUMNSPANNED)
 }
 
 /*
-void setHeader( QHeaderView * header )
+void setHeader( QHeaderView *header )
 */
 HB_FUNC_STATIC(QTREEVIEW_SETHEADER)
 {
@@ -1271,7 +1271,7 @@ HB_FUNC_STATIC(QTREEVIEW_SELECTALL)
 }
 
 /*
-virtual void setModel( QAbstractItemModel * model )
+virtual void setModel( QAbstractItemModel *model )
 */
 HB_FUNC_STATIC(QTREEVIEW_SETMODEL)
 {
@@ -1323,7 +1323,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETROOTINDEX)
 }
 
 /*
-virtual void setSelectionModel( QItemSelectionModel * selectionModel )
+virtual void setSelectionModel( QItemSelectionModel *selectionModel )
 */
 HB_FUNC_STATIC(QTREEVIEW_SETSELECTIONMODEL)
 {

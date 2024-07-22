@@ -76,7 +76,7 @@ RETURN
 #include <QtGui/QAction>
 
     /*
-    QUndoStack( QObject * parent = 0 )
+    QUndoStack( QObject *parent = 0 )
     */
 HB_FUNC_STATIC(QUNDOSTACK_NEW)
 {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC(QUNDOSTACK_CLEAR)
 }
 
 /*
-const QUndoCommand * command( int index ) const
+const QUndoCommand *command( int index ) const
 */
 HB_FUNC_STATIC(QUNDOSTACK_COMMAND)
 {
@@ -283,7 +283,7 @@ HB_FUNC_STATIC(QUNDOSTACK_COUNT)
 }
 
 /*
-QAction * createRedoAction( QObject * parent, const QString &prefix = QString() ) const
+QAction *createRedoAction( QObject *parent, const QString &prefix = QString() ) const
 */
 HB_FUNC_STATIC(QUNDOSTACK_CREATEREDOACTION)
 {
@@ -308,7 +308,7 @@ HB_FUNC_STATIC(QUNDOSTACK_CREATEREDOACTION)
 }
 
 /*
-QAction * createUndoAction( QObject * parent, const QString &prefix = QString() ) const
+QAction *createUndoAction( QObject *parent, const QString &prefix = QString() ) const
 */
 HB_FUNC_STATIC(QUNDOSTACK_CREATEUNDOACTION)
 {
@@ -431,7 +431,7 @@ HB_FUNC_STATIC(QUNDOSTACK_ISCLEAN)
 }
 
 /*
-void push( QUndoCommand * cmd )
+void push( QUndoCommand *cmd )
 */
 HB_FUNC_STATIC(QUNDOSTACK_PUSH)
 {

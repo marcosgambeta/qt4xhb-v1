@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QAPPLICATION_COMMITDATA)
 }
 
 /*
-QInputContext * inputContext() const
+QInputContext *inputContext() const
 */
 HB_FUNC_STATIC(QAPPLICATION_INPUTCONTEXT)
 {
@@ -325,7 +325,7 @@ HB_FUNC_STATIC(QAPPLICATION_SESSIONKEY)
 }
 
 /*
-void setInputContext( QInputContext * inputContext )
+void setInputContext( QInputContext *inputContext )
 */
 HB_FUNC_STATIC(QAPPLICATION_SETINPUTCONTEXT)
 {
@@ -375,7 +375,7 @@ HB_FUNC_STATIC(QAPPLICATION_STYLESHEET)
 }
 
 /*
-virtual bool notify( QObject * receiver, QEvent * e )
+virtual bool notify( QObject *receiver, QEvent *e )
 */
 HB_FUNC_STATIC(QAPPLICATION_NOTIFY)
 {
@@ -477,7 +477,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETSTYLESHEET)
 }
 
 /*
-static QWidget * activeModalWidget()
+static QWidget *activeModalWidget()
 */
 HB_FUNC_STATIC(QAPPLICATION_ACTIVEMODALWIDGET)
 {
@@ -497,7 +497,7 @@ HB_FUNC_STATIC(QAPPLICATION_ACTIVEMODALWIDGET)
 }
 
 /*
-static QWidget * activePopupWidget()
+static QWidget *activePopupWidget()
 */
 HB_FUNC_STATIC(QAPPLICATION_ACTIVEPOPUPWIDGET)
 {
@@ -517,7 +517,7 @@ HB_FUNC_STATIC(QAPPLICATION_ACTIVEPOPUPWIDGET)
 }
 
 /*
-static QWidget * activeWindow()
+static QWidget *activeWindow()
 */
 HB_FUNC_STATIC(QAPPLICATION_ACTIVEWINDOW)
 {
@@ -537,7 +537,7 @@ HB_FUNC_STATIC(QAPPLICATION_ACTIVEWINDOW)
 }
 
 /*
-static void alert( QWidget * widget, int msec = 0 )
+static void alert( QWidget *widget, int msec = 0 )
 */
 HB_FUNC_STATIC(QAPPLICATION_ALERT)
 {
@@ -643,7 +643,7 @@ HB_FUNC_STATIC(QAPPLICATION_CHANGEOVERRIDECURSOR)
 }
 
 /*
-static QClipboard * clipboard()
+static QClipboard *clipboard()
 */
 HB_FUNC_STATIC(QAPPLICATION_CLIPBOARD)
 {
@@ -701,7 +701,7 @@ HB_FUNC_STATIC(QAPPLICATION_CURSORFLASHTIME)
 }
 
 /*
-static QDesktopWidget * desktop()
+static QDesktopWidget *desktop()
 */
 HB_FUNC_STATIC(QAPPLICATION_DESKTOP)
 {
@@ -778,7 +778,7 @@ HB_FUNC_STATIC(QAPPLICATION_EXEC)
 }
 
 /*
-static QWidget * focusWidget()
+static QWidget *focusWidget()
 */
 HB_FUNC_STATIC(QAPPLICATION_FOCUSWIDGET)
 {
@@ -811,7 +811,7 @@ HB_FUNC_STATIC(QAPPLICATION_FONT)
   else if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
-    static QFont font( const QWidget * widget )
+    static QFont font( const QWidget *widget )
     */
 
     QFont *ptr = new QFont(QApplication::font(PQWIDGET(1)));
@@ -820,7 +820,7 @@ HB_FUNC_STATIC(QAPPLICATION_FONT)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    static QFont font( const char * className )
+    static QFont font( const char *className )
     */
 
     QFont *ptr = new QFont(QApplication::font(PCONSTCHAR(1)));
@@ -1045,7 +1045,7 @@ HB_FUNC_STATIC(QAPPLICATION_MOUSEBUTTONS)
 }
 
 /*
-static QCursor * overrideCursor()
+static QCursor *overrideCursor()
 */
 HB_FUNC_STATIC(QAPPLICATION_OVERRIDECURSOR)
 {
@@ -1078,7 +1078,7 @@ HB_FUNC_STATIC(QAPPLICATION_PALETTE)
   else if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
-    static QPalette palette( const QWidget * widget )
+    static QPalette palette( const QWidget *widget )
     */
 
     QPalette *ptr = new QPalette(QApplication::palette(PQWIDGET(1)));
@@ -1087,7 +1087,7 @@ HB_FUNC_STATIC(QAPPLICATION_PALETTE)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    static QPalette palette( const char * className )
+    static QPalette palette( const char *className )
     */
 
     QPalette *ptr = new QPalette(QApplication::palette(PCONSTCHAR(1)));
@@ -1159,7 +1159,7 @@ HB_FUNC_STATIC(QAPPLICATION_RESTOREOVERRIDECURSOR)
 }
 
 /*
-static void setActiveWindow( QWidget * active )
+static void setActiveWindow( QWidget *active )
 */
 HB_FUNC_STATIC(QAPPLICATION_SETACTIVEWINDOW)
 {
@@ -1285,7 +1285,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETEFFECTENABLED)
 }
 
 /*
-static void setFont( const QFont &font, const char * className = 0 )
+static void setFont( const QFont &font, const char *className = 0 )
 */
 HB_FUNC_STATIC(QAPPLICATION_SETFONT)
 {
@@ -1411,7 +1411,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETOVERRIDECURSOR)
 }
 
 /*
-static void setPalette( const QPalette &palette, const char * className = 0 )
+static void setPalette( const QPalette &palette, const char *className = 0 )
 */
 HB_FUNC_STATIC(QAPPLICATION_SETPALETTE)
 {
@@ -1499,7 +1499,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETSTYLE)
   if (ISNUMPAR(1) && ISQSTYLE(1))
   {
     /*
-    static void setStyle( QStyle * style )
+    static void setStyle( QStyle *style )
     */
 
     QApplication::setStyle(PQSTYLE(1));
@@ -1509,7 +1509,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETSTYLE)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    static QStyle * setStyle( const QString &style )
+    static QStyle *setStyle( const QString &style )
     */
 
     QStyle *ptr = QApplication::setStyle(PQSTRING(1));
@@ -1602,7 +1602,7 @@ HB_FUNC_STATIC(QAPPLICATION_STARTDRAGTIME)
 }
 
 /*
-static QStyle * style()
+static QStyle *style()
 */
 HB_FUNC_STATIC(QAPPLICATION_STYLE)
 {
@@ -1647,7 +1647,7 @@ HB_FUNC_STATIC(QAPPLICATION_TOPLEVELAT)
   if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    static QWidget * topLevelAt( const QPoint &point )
+    static QWidget *topLevelAt( const QPoint &point )
     */
 
     QWidget *ptr = QApplication::topLevelAt(*PQPOINT(1));
@@ -1656,7 +1656,7 @@ HB_FUNC_STATIC(QAPPLICATION_TOPLEVELAT)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    static QWidget * topLevelAt( int x, int y )
+    static QWidget *topLevelAt( int x, int y )
     */
 
     QWidget *ptr = QApplication::topLevelAt(PINT(1), PINT(2));
@@ -1754,7 +1754,7 @@ HB_FUNC_STATIC(QAPPLICATION_WIDGETAT)
   if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    static QWidget * widgetAt( const QPoint &point )
+    static QWidget *widgetAt( const QPoint &point )
     */
 
     QWidget *ptr = QApplication::widgetAt(*PQPOINT(1));
@@ -1763,7 +1763,7 @@ HB_FUNC_STATIC(QAPPLICATION_WIDGETAT)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    static QWidget * widgetAt( int x, int y )
+    static QWidget *widgetAt( int x, int y )
     */
 
     QWidget *ptr = QApplication::widgetAt(PINT(1), PINT(2));

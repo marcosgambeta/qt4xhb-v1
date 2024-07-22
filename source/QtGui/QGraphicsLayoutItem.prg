@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_GEOMETRY)
 }
 
 /*
-virtual void getContentsMargins( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
+virtual void getContentsMargins( qreal *left, qreal *top, qreal *right, qreal *bottom ) const
 */
 HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_GETCONTENTSMARGINS)
 {
@@ -199,7 +199,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_GETCONTENTSMARGINS)
 }
 
 /*
-QGraphicsItem * graphicsItem() const
+QGraphicsItem *graphicsItem() const
 */
 HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_GRAPHICSITEM)
 {
@@ -418,7 +418,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_OWNEDBYLAYOUT)
 }
 
 /*
-QGraphicsLayoutItem * parentLayoutItem() const
+QGraphicsLayoutItem *parentLayoutItem() const
 */
 HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_PARENTLAYOUTITEM)
 {
@@ -718,7 +718,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETMINIMUMWIDTH)
 }
 
 /*
-void setParentLayoutItem( QGraphicsLayoutItem * parent )
+void setParentLayoutItem( QGraphicsLayoutItem *parent )
 */
 HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETPARENTLAYOUTITEM)
 {

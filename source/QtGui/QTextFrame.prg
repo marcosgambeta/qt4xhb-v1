@@ -53,7 +53,7 @@ RETURN
 #include <QtGui/QTextCursor>
 
     /*
-    QTextFrame( QTextDocument * document )
+    QTextFrame( QTextDocument *document )
     */
 HB_FUNC_STATIC(QTEXTFRAME_NEW)
 {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC(QTEXTFRAME_LASTPOSITION)
 }
 
 /*
-QTextFrame * parentFrame() const
+QTextFrame *parentFrame() const
 */
 HB_FUNC_STATIC(QTEXTFRAME_PARENTFRAME)
 {

@@ -893,7 +893,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSAMPLES)
 }
 
 /*
-void setSharedContext( QPlatformGLContext * context )
+void setSharedContext( QPlatformGLContext *context )
 */
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSHAREDCONTEXT)
 {
@@ -1075,7 +1075,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETWINDOWSURFACE)
 }
 
 /*
-QPlatformGLContext * sharedGLContext() const
+QPlatformGLContext *sharedGLContext() const
 */
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SHAREDGLCONTEXT)
 {

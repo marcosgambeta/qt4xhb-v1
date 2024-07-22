@@ -327,7 +327,7 @@ HB_FUNC_STATIC(QRAWFONT_FAMILYNAME)
 }
 
 /*
-QByteArray fontTable( const char * tagName ) const
+QByteArray fontTable( const char *tagName ) const
 */
 HB_FUNC_STATIC(QRAWFONT_FONTTABLE)
 {

@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_NEW)
   else if (ISNUMPAR(2) && ISQIODEVICE(1) && ISQBYTEARRAY(2))
   {
     /*
-    QTextDocumentWriter( QIODevice * device, const QByteArray &format )
+    QTextDocumentWriter( QIODevice *device, const QByteArray &format )
     */
     QTextDocumentWriter *obj = new QTextDocumentWriter(PQIODEVICE(1), *PQBYTEARRAY(2));
     Qt4xHb::returnNewObject(obj, true);
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_DELETE)
 }
 
 /*
-QTextCodec * codec() const
+QTextCodec *codec() const
 */
 HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_CODEC)
 {
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_CODEC)
 }
 
 /*
-QIODevice * device() const
+QIODevice *device() const
 */
 HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_DEVICE)
 {
@@ -211,7 +211,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_FORMAT)
 }
 
 /*
-void setCodec( QTextCodec * codec )
+void setCodec( QTextCodec *codec )
 */
 HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_SETCODEC)
 {
@@ -237,7 +237,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_SETCODEC)
 }
 
 /*
-void setDevice( QIODevice * device )
+void setDevice( QIODevice *device )
 */
 HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_SETDEVICE)
 {
@@ -319,7 +319,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_WRITE)
   if (ISNUMPAR(1) && ISQTEXTDOCUMENT(1))
   {
     /*
-    bool write( const QTextDocument * document )
+    bool write( const QTextDocument *document )
     */
     QTextDocumentWriter *obj = static_cast<QTextDocumentWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
 

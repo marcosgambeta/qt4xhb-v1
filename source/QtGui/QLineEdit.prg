@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QLINEEDIT_NEW)
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
-    QLineEdit( QWidget * parent = 0 )
+    QLineEdit( QWidget *parent = 0 )
     */
     QLineEdit *obj = new QLineEdit(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QLINEEDIT_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QLineEdit( const QString &contents, QWidget * parent = 0 )
+    QLineEdit( const QString &contents, QWidget *parent = 0 )
     */
     QLineEdit *obj = new QLineEdit(PQSTRING(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -210,7 +210,7 @@ HB_FUNC_STATIC(QLINEEDIT_BACKSPACE)
 }
 
 /*
-QCompleter * completer() const
+QCompleter *completer() const
 */
 HB_FUNC_STATIC(QLINEEDIT_COMPLETER)
 {
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QLINEEDIT_COMPLETER)
 }
 
 /*
-QMenu * createStandardContextMenu()
+QMenu *createStandardContextMenu()
 */
 HB_FUNC_STATIC(QLINEEDIT_CREATESTANDARDCONTEXTMENU)
 {
@@ -562,7 +562,7 @@ HB_FUNC_STATIC(QLINEEDIT_END)
 }
 
 /*
-void getTextMargins( int * left, int * top, int * right, int * bottom ) const
+void getTextMargins( int *left, int *top, int *right, int *bottom ) const
 */
 HB_FUNC_STATIC(QLINEEDIT_GETTEXTMARGINS)
 {
@@ -987,7 +987,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETALIGNMENT)
 }
 
 /*
-void setCompleter( QCompleter * c )
+void setCompleter( QCompleter *c )
 */
 HB_FUNC_STATIC(QLINEEDIT_SETCOMPLETER)
 {
@@ -1309,7 +1309,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETTEXTMARGINS)
 }
 
 /*
-void setValidator( const QValidator * v )
+void setValidator( const QValidator *v )
 */
 HB_FUNC_STATIC(QLINEEDIT_SETVALIDATOR)
 {
@@ -1409,7 +1409,7 @@ HB_FUNC_STATIC(QLINEEDIT_TEXTMARGINS)
 }
 
 /*
-const QValidator * validator() const
+const QValidator *validator() const
 */
 HB_FUNC_STATIC(QLINEEDIT_VALIDATOR)
 {
@@ -1434,7 +1434,7 @@ HB_FUNC_STATIC(QLINEEDIT_VALIDATOR)
 }
 
 /*
-virtual bool event( QEvent * e )
+virtual bool event( QEvent *e )
 */
 HB_FUNC_STATIC(QLINEEDIT_EVENT)
 {

@@ -111,7 +111,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QHeaderView( Qt::Orientation orientation, QWidget * parent = 0 )
+    QHeaderView( Qt::Orientation orientation, QWidget *parent = 0 )
     */
 HB_FUNC_STATIC(QHEADERVIEW_NEW)
 {
@@ -1414,7 +1414,7 @@ HB_FUNC_STATIC(QHEADERVIEW_RESET)
 }
 
 /*
-virtual void setModel( QAbstractItemModel * model )
+virtual void setModel( QAbstractItemModel *model )
 */
 HB_FUNC_STATIC(QHEADERVIEW_SETMODEL)
 {

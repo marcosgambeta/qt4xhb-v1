@@ -58,7 +58,7 @@ HB_FUNC_STATIC(QFONTDIALOG_NEW)
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
-    QFontDialog( QWidget * parent = 0 )
+    QFontDialog( QWidget *parent = 0 )
     */
     QFontDialog *obj = new QFontDialog(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -66,7 +66,7 @@ HB_FUNC_STATIC(QFONTDIALOG_NEW)
   else if (ISBETWEEN(1, 2) && ISQFONT(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QFontDialog( const QFont &initial, QWidget * parent = 0 )
+    QFontDialog( const QFont &initial, QWidget *parent = 0 )
     */
     QFontDialog *obj = new QFontDialog(*PQFONT(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QFONTDIALOG_CURRENTFONT)
 }
 
 /*
-void open( QObject * receiver, const char * member )
+void open( QObject *receiver, const char *member )
 */
 HB_FUNC_STATIC(QFONTDIALOG_OPEN)
 {
@@ -310,7 +310,7 @@ HB_FUNC_STATIC(QFONTDIALOG_GETFONT)
   if (ISNUMPAR(5) && HB_ISLOG(1) && ISQFONT(2) && ISQWIDGET(3) && HB_ISCHAR(4) && HB_ISNUM(5))
   {
     /*
-    static QFont getFont( bool * ok, const QFont &initial, QWidget * parent, const QString &title,
+    static QFont getFont( bool *ok, const QFont &initial, QWidget *parent, const QString &title,
     QFontDialog::FontDialogOptions options )
     */
 
@@ -323,7 +323,7 @@ HB_FUNC_STATIC(QFONTDIALOG_GETFONT)
   else if (ISNUMPAR(4) && HB_ISLOG(1) && ISQFONT(2) && ISQWIDGET(3) && HB_ISCHAR(4))
   {
     /*
-    static QFont getFont( bool * ok, const QFont &initial, QWidget * parent, const QString &title )
+    static QFont getFont( bool *ok, const QFont &initial, QWidget *parent, const QString &title )
     */
 
     bool par1;
@@ -334,7 +334,7 @@ HB_FUNC_STATIC(QFONTDIALOG_GETFONT)
   else if (ISBETWEEN(2, 3) && HB_ISLOG(1) && ISQFONT(2) && (ISQWIDGET(3) || HB_ISNIL(3)))
   {
     /*
-    static QFont getFont( bool * ok, const QFont &initial, QWidget * parent = 0 )
+    static QFont getFont( bool *ok, const QFont &initial, QWidget *parent = 0 )
     */
 
     bool par1;
@@ -345,7 +345,7 @@ HB_FUNC_STATIC(QFONTDIALOG_GETFONT)
   else if (ISBETWEEN(1, 2) && HB_ISLOG(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    static QFont getFont( bool * ok, QWidget * parent = 0 )
+    static QFont getFont( bool *ok, QWidget *parent = 0 )
     */
 
     bool par1;

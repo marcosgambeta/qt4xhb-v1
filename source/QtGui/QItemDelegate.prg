@@ -46,7 +46,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QItemDelegate( QObject * parent = 0 )
+    QItemDelegate( QObject *parent = 0 )
     */
 HB_FUNC_STATIC(QITEMDELEGATE_NEW)
 {
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QITEMDELEGATE_HASCLIPPING)
 }
 
 /*
-QItemEditorFactory * itemEditorFactory() const
+QItemEditorFactory *itemEditorFactory() const
 */
 HB_FUNC_STATIC(QITEMDELEGATE_ITEMEDITORFACTORY)
 {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QITEMDELEGATE_SETCLIPPING)
 }
 
 /*
-void setItemEditorFactory( QItemEditorFactory * factory )
+void setItemEditorFactory( QItemEditorFactory *factory )
 */
 HB_FUNC_STATIC(QITEMDELEGATE_SETITEMEDITORFACTORY)
 {

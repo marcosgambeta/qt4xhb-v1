@@ -62,7 +62,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QWorkspace( QWidget * parent = 0 )
+    QWorkspace( QWidget *parent = 0 )
     */
 HB_FUNC_STATIC(QWORKSPACE_NEW)
 {
@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QWORKSPACE_DELETE)
 }
 
 /*
-QWidget * activeWindow() const
+QWidget *activeWindow() const
 */
 HB_FUNC_STATIC(QWORKSPACE_ACTIVEWINDOW)
 {
@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QWORKSPACE_ACTIVEWINDOW)
 }
 
 /*
-QWidget * addWindow( QWidget * w, Qt::WindowFlags flags = 0 )
+QWidget *addWindow( QWidget *w, Qt::WindowFlags flags = 0 )
 */
 HB_FUNC_STATIC(QWORKSPACE_ADDWINDOW)
 {
@@ -477,7 +477,7 @@ HB_FUNC_STATIC(QWORKSPACE_CLOSEALLWINDOWS)
 }
 
 /*
-void setActiveWindow( QWidget * w )
+void setActiveWindow( QWidget *w )
 */
 HB_FUNC_STATIC(QWORKSPACE_SETACTIVEWINDOW)
 {

@@ -1293,7 +1293,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETDROPENABLED)
 }
 
 /*
-QStandardItem * parent() const
+QStandardItem *parent() const
 */
 HB_FUNC_STATIC(QSTANDARDITEM_PARENT)
 {
@@ -1391,7 +1391,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_INDEX)
 }
 
 /*
-QStandardItemModel * model() const
+QStandardItemModel *model() const
 */
 HB_FUNC_STATIC(QSTANDARDITEM_MODEL)
 {
@@ -1540,7 +1540,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_HASCHILDREN)
 }
 
 /*
-QStandardItem * child( int row, int column = 0 ) const
+QStandardItem *child( int row, int column = 0 ) const
 */
 HB_FUNC_STATIC(QSTANDARDITEM_CHILD)
 {
@@ -1569,7 +1569,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETCHILD)
   if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQSTANDARDITEM(3))
   {
     /*
-    void setChild( int row, int column, QStandardItem * item )
+    void setChild( int row, int column, QStandardItem *item )
     */
     QStandardItem *obj = static_cast<QStandardItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1583,7 +1583,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETCHILD)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTANDARDITEM(2))
   {
     /*
-    void setChild( int row, QStandardItem * item )
+    void setChild( int row, QStandardItem *item )
     */
     QStandardItem *obj = static_cast<QStandardItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1627,7 +1627,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_INSERTROW)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTANDARDITEM(2))
   {
     /*
-    void insertRow( int row, QStandardItem * item )
+    void insertRow( int row, QStandardItem *item )
     */
     QStandardItem *obj = static_cast<QStandardItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1879,7 +1879,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_APPENDROW)
   else if (ISNUMPAR(1) && ISQSTANDARDITEM(1))
   {
     /*
-    void appendRow( QStandardItem * item )
+    void appendRow( QStandardItem *item )
     */
     QStandardItem *obj = static_cast<QStandardItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1965,7 +1965,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_APPENDCOLUMN)
 }
 
 /*
-QStandardItem * takeChild( int row, int column = 0 )
+QStandardItem *takeChild( int row, int column = 0 )
 */
 HB_FUNC_STATIC(QSTANDARDITEM_TAKECHILD)
 {
@@ -2112,7 +2112,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SORTCHILDREN)
 }
 
 /*
-QStandardItem * clone() const
+QStandardItem *clone() const
 */
 HB_FUNC_STATIC(QSTANDARDITEM_CLONE)
 {

@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QIMAGEREADER_NEW)
   else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)))
   {
     /*
-    QImageReader( QIODevice * device, const QByteArray &format = QByteArray() )
+    QImageReader( QIODevice *device, const QByteArray &format = QByteArray() )
     */
     QImageReader *obj =
         new QImageReader(PQIODEVICE(1), HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(2)));
@@ -315,7 +315,7 @@ HB_FUNC_STATIC(QIMAGEREADER_DECIDEFORMATFROMCONTENT)
 }
 
 /*
-QIODevice * device() const
+QIODevice *device() const
 */
 HB_FUNC_STATIC(QIMAGEREADER_DEVICE)
 {
@@ -598,7 +598,7 @@ HB_FUNC_STATIC(QIMAGEREADER_READ)
   else if (ISNUMPAR(1) && ISQIMAGE(1))
   {
     /*
-    bool read( QImage * image )
+    bool read( QImage *image )
     */
     QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -768,7 +768,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETDECIDEFORMATFROMCONTENT)
 }
 
 /*
-void setDevice( QIODevice * device )
+void setDevice( QIODevice *device )
 */
 HB_FUNC_STATIC(QIMAGEREADER_SETDEVICE)
 {
@@ -1070,7 +1070,7 @@ HB_FUNC_STATIC(QIMAGEREADER_IMAGEFORMAT)
   else if (ISNUMPAR(1) && ISQIODEVICE(1))
   {
     /*
-    static QByteArray imageFormat( QIODevice * device )
+    static QByteArray imageFormat( QIODevice *device )
     */
 
     QByteArray *ptr = new QByteArray(QImageReader::imageFormat(PQIODEVICE(1)));

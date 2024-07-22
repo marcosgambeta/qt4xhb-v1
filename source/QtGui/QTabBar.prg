@@ -102,7 +102,7 @@ RETURN
 #include <QtGui/QIcon>
 
     /*
-    QTabBar( QWidget * parent = 0 )
+    QTabBar( QWidget *parent = 0 )
     */
 HB_FUNC_STATIC(QTABBAR_NEW)
 {
@@ -702,7 +702,7 @@ HB_FUNC_STATIC(QTABBAR_SETSHAPE)
 }
 
 /*
-void setTabButton( int index, QTabBar::ButtonPosition position, QWidget * widget )
+void setTabButton( int index, QTabBar::ButtonPosition position, QWidget *widget )
 */
 HB_FUNC_STATIC(QTABBAR_SETTABBUTTON)
 {
@@ -1011,7 +1011,7 @@ HB_FUNC_STATIC(QTABBAR_TABAT)
 }
 
 /*
-QWidget * tabButton( int index, QTabBar::ButtonPosition position ) const
+QWidget *tabButton( int index, QTabBar::ButtonPosition position ) const
 */
 HB_FUNC_STATIC(QTABBAR_TABBUTTON)
 {

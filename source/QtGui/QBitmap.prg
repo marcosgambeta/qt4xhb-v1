@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QBITMAP_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
-    QBitmap( const QString &fileName, const char * format = 0 )
+    QBitmap( const QString &fileName, const char *format = 0 )
     */
     QBitmap *obj = new QBitmap(PQSTRING(1), OPCONSTCHAR(2, 0));
     Qt4xHb::returnNewObject(obj, true);
@@ -162,7 +162,7 @@ HB_FUNC_STATIC(QBITMAP_TRANSFORMED)
 }
 
 /*
-static QBitmap fromData( const QSize &size, const uchar * bits, QImage::Format monoFormat = QImage::Format_MonoLSB )
+static QBitmap fromData( const QSize &size, const uchar *bits, QImage::Format monoFormat = QImage::Format_MonoLSB )
 */
 HB_FUNC_STATIC(QBITMAP_FROMDATA)
 {

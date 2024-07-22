@@ -204,7 +204,7 @@ HB_FUNC_STATIC(QBRUSH_COLOR)
 }
 
 /*
-const QGradient * gradient() const
+const QGradient *gradient() const
 */
 HB_FUNC_STATIC(QBRUSH_GRADIENT)
 {

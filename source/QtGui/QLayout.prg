@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QLAYOUT_ACTIVATE)
 }
 
 /*
-virtual void addItem( QLayoutItem * item ) = 0
+virtual void addItem( QLayoutItem *item ) = 0
 */
 HB_FUNC_STATIC(QLAYOUT_ADDITEM)
 {
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QLAYOUT_ADDITEM)
 }
 
 /*
-void addWidget( QWidget * w )
+void addWidget( QWidget *w )
 */
 HB_FUNC_STATIC(QLAYOUT_ADDWIDGET)
 {
@@ -251,7 +251,7 @@ HB_FUNC_STATIC(QLAYOUT_EXPANDINGDIRECTIONS)
 }
 
 /*
-void getContentsMargins( int * left, int * top, int * right, int * bottom ) const
+void getContentsMargins( int *left, int *top, int *right, int *bottom ) const
 */
 HB_FUNC_STATIC(QLAYOUT_GETCONTENTSMARGINS)
 {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC(QLAYOUT_GETCONTENTSMARGINS)
 }
 
 /*
-virtual int indexOf( QWidget * widget ) const
+virtual int indexOf( QWidget *widget ) const
 */
 HB_FUNC_STATIC(QLAYOUT_INDEXOF)
 {
@@ -333,7 +333,7 @@ HB_FUNC_STATIC(QLAYOUT_ISENABLED)
 }
 
 /*
-virtual QLayoutItem * itemAt( int index ) const = 0
+virtual QLayoutItem *itemAt( int index ) const = 0
 */
 HB_FUNC_STATIC(QLAYOUT_ITEMAT)
 {
@@ -383,7 +383,7 @@ HB_FUNC_STATIC(QLAYOUT_MAXIMUMSIZE)
 }
 
 /*
-QWidget * menuBar() const
+QWidget *menuBar() const
 */
 HB_FUNC_STATIC(QLAYOUT_MENUBAR)
 {
@@ -433,7 +433,7 @@ HB_FUNC_STATIC(QLAYOUT_MINIMUMSIZE)
 }
 
 /*
-QWidget * parentWidget() const
+QWidget *parentWidget() const
 */
 HB_FUNC_STATIC(QLAYOUT_PARENTWIDGET)
 {
@@ -458,7 +458,7 @@ HB_FUNC_STATIC(QLAYOUT_PARENTWIDGET)
 }
 
 /*
-void removeItem( QLayoutItem * item )
+void removeItem( QLayoutItem *item )
 */
 HB_FUNC_STATIC(QLAYOUT_REMOVEITEM)
 {
@@ -484,7 +484,7 @@ HB_FUNC_STATIC(QLAYOUT_REMOVEITEM)
 }
 
 /*
-void removeWidget( QWidget * widget )
+void removeWidget( QWidget *widget )
 */
 HB_FUNC_STATIC(QLAYOUT_REMOVEWIDGET)
 {
@@ -514,7 +514,7 @@ HB_FUNC_STATIC(QLAYOUT_SETALIGNMENT)
   if (ISNUMPAR(2) && ISQWIDGET(1) && HB_ISNUM(2))
   {
     /*
-    bool setAlignment( QWidget * w, Qt::Alignment alignment )
+    bool setAlignment( QWidget *w, Qt::Alignment alignment )
     */
     QLayout *obj = qobject_cast<QLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -540,7 +540,7 @@ HB_FUNC_STATIC(QLAYOUT_SETALIGNMENT)
   else if (ISNUMPAR(2) && ISQLAYOUT(1) && HB_ISNUM(2))
   {
     /*
-    bool setAlignment( QLayout * l, Qt::Alignment alignment )
+    bool setAlignment( QLayout *l, Qt::Alignment alignment )
     */
     QLayout *obj = qobject_cast<QLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -618,7 +618,7 @@ HB_FUNC_STATIC(QLAYOUT_SETENABLED)
 }
 
 /*
-void setMenuBar( QWidget * widget )
+void setMenuBar( QWidget *widget )
 */
 HB_FUNC_STATIC(QLAYOUT_SETMENUBAR)
 {
@@ -744,7 +744,7 @@ HB_FUNC_STATIC(QLAYOUT_SPACING)
 }
 
 /*
-virtual QLayoutItem * takeAt( int index ) = 0
+virtual QLayoutItem *takeAt( int index ) = 0
 */
 HB_FUNC_STATIC(QLAYOUT_TAKEAT)
 {
@@ -870,7 +870,7 @@ HB_FUNC_STATIC(QLAYOUT_ISEMPTY)
 }
 
 /*
-virtual QLayout * layout()
+virtual QLayout *layout()
 */
 HB_FUNC_STATIC(QLAYOUT_LAYOUT)
 {
@@ -921,7 +921,7 @@ HB_FUNC_STATIC(QLAYOUT_SETGEOMETRY)
 }
 
 /*
-static QSize closestAcceptableSize( const QWidget * widget, const QSize &size )
+static QSize closestAcceptableSize( const QWidget *widget, const QSize &size )
 */
 HB_FUNC_STATIC(QLAYOUT_CLOSESTACCEPTABLESIZE)
 {

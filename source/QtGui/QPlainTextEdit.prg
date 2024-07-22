@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_NEW)
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
-    QPlainTextEdit( QWidget * parent = 0 )
+    QPlainTextEdit( QWidget *parent = 0 )
     */
     QPlainTextEdit *obj = new QPlainTextEdit(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QPlainTextEdit( const QString &text, QWidget * parent = 0 )
+    QPlainTextEdit( const QString &text, QWidget *parent = 0 )
     */
     QPlainTextEdit *obj = new QPlainTextEdit(PQSTRING(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -278,7 +278,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_CENTERONSCROLL)
 }
 
 /*
-QMenu * createStandardContextMenu()
+QMenu *createStandardContextMenu()
 */
 HB_FUNC_STATIC(QPLAINTEXTEDIT_CREATESTANDARDCONTEXTMENU)
 {
@@ -411,7 +411,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_CURSORWIDTH)
 }
 
 /*
-QTextDocument * document() const
+QTextDocument *document() const
 */
 HB_FUNC_STATIC(QPLAINTEXTEDIT_DOCUMENT)
 {
@@ -709,7 +709,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_OVERWRITEMODE)
 }
 
 /*
-void print( QPrinter * printer ) const
+void print( QPrinter *printer ) const
 */
 HB_FUNC_STATIC(QPLAINTEXTEDIT_PRINT)
 {
@@ -839,7 +839,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_SETCURSORWIDTH)
 }
 
 /*
-void setDocument( QTextDocument * document )
+void setDocument( QTextDocument *document )
 */
 HB_FUNC_STATIC(QPLAINTEXTEDIT_SETDOCUMENT)
 {

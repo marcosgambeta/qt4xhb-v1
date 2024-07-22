@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_DELETE)
 }
 
 /*
-void init( const QWidget * w )
+void init( const QWidget *w )
 */
 HB_FUNC_STATIC(QSTYLEOPTION_INIT)
 {
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_INIT)
 }
 
 /*
-void initFrom( const QWidget * w )
+void initFrom( const QWidget *w )
 */
 HB_FUNC_STATIC(QSTYLEOPTION_INITFROM)
 {

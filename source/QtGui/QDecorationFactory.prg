@@ -49,7 +49,7 @@ RETURN
 #include "qt4xhb_utils.hpp"
 
     /*
-    static QDecoration * create( const QString &key )
+    static QDecoration *create( const QString &key )
     */
 HB_FUNC_STATIC(QDECORATIONFACTORY_CREATE)
 {

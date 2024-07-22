@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_NEW)
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
-    QGraphicsScene( QObject * parent = 0 )
+    QGraphicsScene( QObject *parent = 0 )
     */
     QGraphicsScene *obj = new QGraphicsScene(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_NEW)
   else if (ISBETWEEN(1, 2) && ISQRECTF(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QGraphicsScene( const QRectF &sceneRect, QObject * parent = 0 )
+    QGraphicsScene( const QRectF &sceneRect, QObject *parent = 0 )
     */
     QGraphicsScene *obj = new QGraphicsScene(*PQRECTF(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -154,7 +154,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_NEW)
   else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISQOBJECT(5) || HB_ISNIL(5)))
   {
     /*
-    QGraphicsScene( qreal x, qreal y, qreal width, qreal height, QObject * parent = 0 )
+    QGraphicsScene( qreal x, qreal y, qreal width, qreal height, QObject *parent = 0 )
     */
     QGraphicsScene *obj = new QGraphicsScene(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQOBJECT(5, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_DELETE)
 }
 
 /*
-QGraphicsItem * activePanel() const
+QGraphicsItem *activePanel() const
 */
 HB_FUNC_STATIC(QGRAPHICSSCENE_ACTIVEPANEL)
 {
@@ -209,7 +209,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ACTIVEPANEL)
 }
 
 /*
-QGraphicsWidget * activeWindow() const
+QGraphicsWidget *activeWindow() const
 */
 HB_FUNC_STATIC(QGRAPHICSSCENE_ACTIVEWINDOW)
 {
@@ -238,7 +238,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDELLIPSE)
   if (ISBETWEEN(1, 3) && ISQRECTF(1) && (ISQPEN(2) || HB_ISNIL(2)) && (ISQBRUSH(3) || HB_ISNIL(3)))
   {
     /*
-    QGraphicsEllipseItem * addEllipse( const QRectF &rect, const QPen &pen = QPen(), const QBrush &brush = QBrush() )
+    QGraphicsEllipseItem *addEllipse( const QRectF &rect, const QPen &pen = QPen(), const QBrush &brush = QBrush() )
     */
     QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -254,7 +254,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDELLIPSE)
            (ISQBRUSH(6) || HB_ISNIL(6)))
   {
     /*
-    QGraphicsEllipseItem * addEllipse( qreal x, qreal y, qreal w, qreal h, const QPen &pen = QPen(), const QBrush &
+    QGraphicsEllipseItem *addEllipse( qreal x, qreal y, qreal w, qreal h, const QPen &pen = QPen(), const QBrush &
     brush = QBrush() )
     */
     QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -275,7 +275,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDELLIPSE)
 }
 
 /*
-void addItem( QGraphicsItem * item )
+void addItem( QGraphicsItem *item )
 */
 HB_FUNC_STATIC(QGRAPHICSSCENE_ADDITEM)
 {
@@ -305,7 +305,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDLINE)
   if (ISBETWEEN(1, 2) && ISQLINEF(1) && (ISQPEN(2) || HB_ISNIL(2)))
   {
     /*
-    QGraphicsLineItem * addLine( const QLineF &line, const QPen &pen = QPen() )
+    QGraphicsLineItem *addLine( const QLineF &line, const QPen &pen = QPen() )
     */
     QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -319,7 +319,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDLINE)
   else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISQPEN(5) || HB_ISNIL(5)))
   {
     /*
-    QGraphicsLineItem * addLine( qreal x1, qreal y1, qreal x2, qreal y2, const QPen &pen = QPen() )
+    QGraphicsLineItem *addLine( qreal x1, qreal y1, qreal x2, qreal y2, const QPen &pen = QPen() )
     */
     QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -337,7 +337,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDLINE)
 }
 
 /*
-QGraphicsPathItem * addPath( const QPainterPath &path, const QPen &pen = QPen(), const QBrush &brush = QBrush() )
+QGraphicsPathItem *addPath( const QPainterPath &path, const QPen &pen = QPen(), const QBrush &brush = QBrush() )
 */
 HB_FUNC_STATIC(QGRAPHICSSCENE_ADDPATH)
 {
@@ -364,7 +364,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDPATH)
 }
 
 /*
-QGraphicsPixmapItem * addPixmap( const QPixmap &pixmap )
+QGraphicsPixmapItem *addPixmap( const QPixmap &pixmap )
 */
 HB_FUNC_STATIC(QGRAPHICSSCENE_ADDPIXMAP)
 {
@@ -389,7 +389,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDPIXMAP)
 }
 
 /*
-QGraphicsPolygonItem * addPolygon( const QPolygonF &polygon, const QPen &pen = QPen(), const QBrush &brush = QBrush()
+QGraphicsPolygonItem *addPolygon( const QPolygonF &polygon, const QPen &pen = QPen(), const QBrush &brush = QBrush()
 )
 */
 HB_FUNC_STATIC(QGRAPHICSSCENE_ADDPOLYGON)
@@ -421,7 +421,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDRECT)
   if (ISBETWEEN(1, 3) && ISQRECTF(1) && (ISQPEN(2) || HB_ISNIL(2)) && (ISQBRUSH(3) || HB_ISNIL(3)))
   {
     /*
-    QGraphicsRectItem * addRect( const QRectF &rect, const QPen &pen = QPen(), const QBrush &brush = QBrush() )
+    QGraphicsRectItem *addRect( const QRectF &rect, const QPen &pen = QPen(), const QBrush &brush = QBrush() )
     */
     QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -437,7 +437,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDRECT)
            (ISQBRUSH(6) || HB_ISNIL(6)))
   {
     /*
-    QGraphicsRectItem * addRect( qreal x, qreal y, qreal w, qreal h, const QPen &pen = QPen(), const QBrush &brush =
+    QGraphicsRectItem *addRect( qreal x, qreal y, qreal w, qreal h, const QPen &pen = QPen(), const QBrush &brush =
     QBrush() )
     */
     QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -457,7 +457,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDRECT)
 }
 
 /*
-QGraphicsSimpleTextItem * addSimpleText( const QString &text, const QFont &font = QFont() )
+QGraphicsSimpleTextItem *addSimpleText( const QString &text, const QFont &font = QFont() )
 */
 HB_FUNC_STATIC(QGRAPHICSSCENE_ADDSIMPLETEXT)
 {
@@ -483,7 +483,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDSIMPLETEXT)
 }
 
 /*
-QGraphicsTextItem * addText( const QString &text, const QFont &font = QFont() )
+QGraphicsTextItem *addText( const QString &text, const QFont &font = QFont() )
 */
 HB_FUNC_STATIC(QGRAPHICSSCENE_ADDTEXT)
 {
@@ -509,7 +509,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDTEXT)
 }
 
 /*
-QGraphicsProxyWidget * addWidget( QWidget * widget, Qt::WindowFlags wFlags = 0 )
+QGraphicsProxyWidget *addWidget( QWidget *widget, Qt::WindowFlags wFlags = 0 )
 */
 HB_FUNC_STATIC(QGRAPHICSSCENE_ADDWIDGET)
 {
@@ -610,7 +610,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_CLEARFOCUS)
 }
 
 /*
-QList<QGraphicsItem *> collidingItems( const QGraphicsItem * item, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape
+QList<QGraphicsItem *> collidingItems( const QGraphicsItem *item, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape
 ) const
 */
 HB_FUNC_STATIC(QGRAPHICSSCENE_COLLIDINGITEMS)
@@ -661,7 +661,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_COLLIDINGITEMS)
 }
 
 /*
-QGraphicsItemGroup * createItemGroup( const QList<QGraphicsItem *> &items )
+QGraphicsItemGroup *createItemGroup( const QList<QGraphicsItem *> &items )
 */
 HB_FUNC_STATIC(QGRAPHICSSCENE_CREATEITEMGROUP)
 {
@@ -694,7 +694,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_CREATEITEMGROUP)
 }
 
 /*
-void destroyItemGroup( QGraphicsItemGroup * group )
+void destroyItemGroup( QGraphicsItemGroup *group )
 */
 HB_FUNC_STATIC(QGRAPHICSSCENE_DESTROYITEMGROUP)
 {
@@ -720,7 +720,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_DESTROYITEMGROUP)
 }
 
 /*
-QGraphicsItem * focusItem() const
+QGraphicsItem *focusItem() const
 */
 HB_FUNC_STATIC(QGRAPHICSSCENE_FOCUSITEM)
 {
@@ -961,7 +961,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ITEMAT)
   if (ISNUMPAR(2) && ISQPOINTF(1) && ISQTRANSFORM(2))
   {
     /*
-    QGraphicsItem * itemAt( const QPointF &position, const QTransform &deviceTransform ) const
+    QGraphicsItem *itemAt( const QPointF &position, const QTransform &deviceTransform ) const
     */
     QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -974,7 +974,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ITEMAT)
   else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQTRANSFORM(3))
   {
     /*
-    QGraphicsItem * itemAt( qreal x, qreal y, const QTransform &deviceTransform ) const
+    QGraphicsItem *itemAt( qreal x, qreal y, const QTransform &deviceTransform ) const
     */
     QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -1316,7 +1316,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ITEMSBOUNDINGRECT)
 }
 
 /*
-QGraphicsItem * mouseGrabberItem() const
+QGraphicsItem *mouseGrabberItem() const
 */
 HB_FUNC_STATIC(QGRAPHICSSCENE_MOUSEGRABBERITEM)
 {
@@ -1366,7 +1366,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_PALETTE)
 }
 
 /*
-void removeItem( QGraphicsItem * item )
+void removeItem( QGraphicsItem *item )
 */
 HB_FUNC_STATIC(QGRAPHICSSCENE_REMOVEITEM)
 {
@@ -1392,7 +1392,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_REMOVEITEM)
 }
 
 /*
-void render( QPainter * painter, const QRectF &target = QRectF(), const QRectF &source = QRectF(), Qt::AspectRatioMode
+void render( QPainter *painter, const QRectF &target = QRectF(), const QRectF &source = QRectF(), Qt::AspectRatioMode
 aspectRatioMode = Qt::KeepAspectRatio )
 */
 HB_FUNC_STATIC(QGRAPHICSSCENE_RENDER)
@@ -1520,7 +1520,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SELECTIONAREA)
 }
 
 /*
-bool sendEvent( QGraphicsItem * item, QEvent * event )
+bool sendEvent( QGraphicsItem *item, QEvent *event )
 */
 HB_FUNC_STATIC(QGRAPHICSSCENE_SENDEVENT)
 {
@@ -1544,7 +1544,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SENDEVENT)
 }
 
 /*
-void setActivePanel( QGraphicsItem * item )
+void setActivePanel( QGraphicsItem *item )
 */
 HB_FUNC_STATIC(QGRAPHICSSCENE_SETACTIVEPANEL)
 {
@@ -1570,7 +1570,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETACTIVEPANEL)
 }
 
 /*
-void setActiveWindow( QGraphicsWidget * widget )
+void setActiveWindow( QGraphicsWidget *widget )
 */
 HB_FUNC_STATIC(QGRAPHICSSCENE_SETACTIVEWINDOW)
 {
@@ -1674,7 +1674,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETFOCUS)
 }
 
 /*
-void setFocusItem( QGraphicsItem * item, Qt::FocusReason focusReason = Qt::OtherFocusReason )
+void setFocusItem( QGraphicsItem *item, Qt::FocusReason focusReason = Qt::OtherFocusReason )
 */
 HB_FUNC_STATIC(QGRAPHICSSCENE_SETFOCUSITEM)
 {
@@ -1929,7 +1929,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SETSTICKYFOCUS)
 }
 
 /*
-void setStyle( QStyle * style )
+void setStyle( QStyle *style )
 */
 HB_FUNC_STATIC(QGRAPHICSSCENE_SETSTYLE)
 {
@@ -1979,7 +1979,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_STICKYFOCUS)
 }
 
 /*
-QStyle * style() const
+QStyle *style() const
 */
 HB_FUNC_STATIC(QGRAPHICSSCENE_STYLE)
 {

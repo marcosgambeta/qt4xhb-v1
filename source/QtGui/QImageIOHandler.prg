@@ -160,7 +160,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_CURRENTIMAGERECT)
 }
 
 /*
-QIODevice * device() const
+QIODevice *device() const
 */
 HB_FUNC_STATIC(QIMAGEIOHANDLER_DEVICE)
 {
@@ -355,7 +355,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_OPTION)
 }
 
 /*
-virtual bool read( QImage * image ) = 0
+virtual bool read( QImage *image ) = 0
 */
 HB_FUNC_STATIC(QIMAGEIOHANDLER_READ)
 {
@@ -379,7 +379,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_READ)
 }
 
 /*
-void setDevice( QIODevice * device )
+void setDevice( QIODevice *device )
 */
 HB_FUNC_STATIC(QIMAGEIOHANDLER_SETDEVICE)
 {

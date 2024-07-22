@@ -383,7 +383,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_OPACITY)
 }
 
 /*
-QPainter * painter() const
+QPainter *painter() const
 */
 HB_FUNC_STATIC(QPAINTENGINESTATE_PAINTER)
 {

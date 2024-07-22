@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QTEXTLINE_ASCENT)
 }
 
 /*
-qreal cursorToX( int * cursorPos, QTextLine::Edge edge = QTextLine::Leading ) const
+qreal cursorToX( int *cursorPos, QTextLine::Edge edge = QTextLine::Leading ) const
 */
 HB_FUNC_STATIC(QTEXTLINE_CURSORTOX1)
 {

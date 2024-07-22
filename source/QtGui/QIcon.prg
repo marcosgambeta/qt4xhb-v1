@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QICON_NEW)
   else if (ISNUMPAR(1) && ISQICONENGINE(1))
   {
     /*
-    QIcon( QIconEngine * engine )
+    QIcon( QIconEngine *engine )
     */
     QIcon *obj = new QIcon(PQICONENGINE(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QICON_NEW)
   else if (ISNUMPAR(1) && ISQICONENGINEV2(1))
   {
     /*
-    QIcon( QIconEngineV2 * engine )
+    QIcon( QIconEngineV2 *engine )
     */
     QIcon *obj = new QIcon(PQICONENGINEV2(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -354,7 +354,7 @@ HB_FUNC_STATIC(QICON_PAINT)
       (HB_ISNUM(5) || HB_ISNIL(5)))
   {
     /*
-    void paint( QPainter * painter, const QRect &rect, Qt::Alignment alignment = Qt::AlignCenter, QIcon::Mode mode =
+    void paint( QPainter *painter, const QRect &rect, Qt::Alignment alignment = Qt::AlignCenter, QIcon::Mode mode =
     QIcon::Normal, QIcon::State state = QIcon::Off ) const
     */
     QIcon *obj = static_cast<QIcon *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -372,7 +372,7 @@ HB_FUNC_STATIC(QICON_PAINT)
            (HB_ISNUM(6) || HB_ISNIL(6)) && (HB_ISNUM(7) || HB_ISNIL(7)) && (HB_ISNUM(8) || HB_ISNIL(8)))
   {
     /*
-    void paint( QPainter * painter, int x, int y, int w, int h, Qt::Alignment alignment = Qt::AlignCenter, QIcon::Mode
+    void paint( QPainter *painter, int x, int y, int w, int h, Qt::Alignment alignment = Qt::AlignCenter, QIcon::Mode
     mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
     */
     QIcon *obj = static_cast<QIcon *>(Qt4xHb::itemGetPtrStackSelfItem());

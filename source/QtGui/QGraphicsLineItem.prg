@@ -60,7 +60,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_NEW)
   if (ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)))
   {
     /*
-    QGraphicsLineItem( QGraphicsItem * parent = 0 )
+    QGraphicsLineItem( QGraphicsItem *parent = 0 )
     */
     QGraphicsLineItem *obj =
         new QGraphicsLineItem(HB_ISNIL(1) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(1)));
@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_NEW)
   else if (ISBETWEEN(1, 2) && ISQLINEF(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2)))
   {
     /*
-    QGraphicsLineItem( const QLineF &line, QGraphicsItem * parent = 0 )
+    QGraphicsLineItem( const QLineF &line, QGraphicsItem *parent = 0 )
     */
     QGraphicsLineItem *obj =
         new QGraphicsLineItem(*PQLINEF(1), HB_ISNIL(2) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(2)));
@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_NEW)
            (ISQGRAPHICSITEM(5) || HB_ISNIL(5)))
   {
     /*
-    QGraphicsLineItem( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent = 0 )
+    QGraphicsLineItem( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem *parent = 0 )
     */
     QGraphicsLineItem *obj =
         new QGraphicsLineItem(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4),
@@ -270,7 +270,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_CONTAINS)
 }
 
 /*
-virtual bool isObscuredBy( const QGraphicsItem * item ) const
+virtual bool isObscuredBy( const QGraphicsItem *item ) const
 */
 HB_FUNC_STATIC(QGRAPHICSLINEITEM_ISOBSCUREDBY)
 {
@@ -319,7 +319,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_OPAQUEAREA)
 }
 
 /*
-virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
+virtual void paint( QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0 )
 */
 HB_FUNC_STATIC(QGRAPHICSLINEITEM_PAINT)
 {

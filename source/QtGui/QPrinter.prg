@@ -676,7 +676,7 @@ HB_FUNC_STATIC(QPRINTER_PAPERSOURCE)
 }
 
 /*
-QPrintEngine * printEngine() const
+QPrintEngine *printEngine() const
 */
 HB_FUNC_STATIC(QPRINTER_PRINTENGINE)
 {
@@ -1536,7 +1536,7 @@ HB_FUNC_STATIC(QPRINTER_WINPAGESIZE)
 #endif
 }
 /*
-virtual QPaintEngine * paintEngine() const
+virtual QPaintEngine *paintEngine() const
 */
 HB_FUNC_STATIC(QPRINTER_PAINTENGINE)
 {

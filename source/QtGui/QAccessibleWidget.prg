@@ -50,7 +50,7 @@ RETURN
 #include "qt4xhb_utils.hpp"
 
     /*
-    QAccessibleWidget( QWidget * w, QAccessible::Role role = QAccessible::Client, const QString &name = QString() )
+    QAccessibleWidget( QWidget *w, QAccessible::Role role = QAccessible::Client, const QString &name = QString() )
     */
 HB_FUNC_STATIC(QACCESSIBLEWIDGET_NEW)
 {
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QACCESSIBLEWIDGET_DOACTION)
 }
 
 /*
-virtual int indexOfChild( const QAccessibleInterface * child ) const
+virtual int indexOfChild( const QAccessibleInterface *child ) const
 */
 HB_FUNC_STATIC(QACCESSIBLEWIDGET_INDEXOFCHILD)
 {
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QACCESSIBLEWIDGET_RECT)
 }
 
 /*
-virtual QAccessible::Relation relationTo( int child, const QAccessibleInterface * other, int otherChild ) const
+virtual QAccessible::Relation relationTo( int child, const QAccessibleInterface *other, int otherChild ) const
 */
 HB_FUNC_STATIC(QACCESSIBLEWIDGET_RELATIONTO)
 {

@@ -58,7 +58,7 @@ HB_FUNC_STATIC(QTOUCHEVENT_DELETE)
 }
 
 /*
-QWidget * widget() const
+QWidget *widget() const
 */
 HB_FUNC_STATIC(QTOUCHEVENT_WIDGET)
 {

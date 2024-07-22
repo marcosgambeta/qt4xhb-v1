@@ -69,7 +69,7 @@ RETURN
 #include <QtCore/QTimeLine>
 
     /*
-    QGraphicsItemAnimation( QObject * parent = 0 )
+    QGraphicsItemAnimation( QObject *parent = 0 )
     */
 HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_NEW)
 {
@@ -177,7 +177,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_HORIZONTALSHEARAT)
 }
 
 /*
-QGraphicsItem * item() const
+QGraphicsItem *item() const
 */
 HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_ITEM)
 {
@@ -276,7 +276,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_ROTATIONAT)
 }
 
 /*
-void setItem( QGraphicsItem * item )
+void setItem( QGraphicsItem *item )
 */
 HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETITEM)
 {
@@ -406,7 +406,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETSHEARAT)
 }
 
 /*
-void setTimeLine( QTimeLine * timeLine )
+void setTimeLine( QTimeLine *timeLine )
 */
 HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETTIMELINE)
 {
@@ -458,7 +458,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETTRANSLATIONAT)
 }
 
 /*
-QTimeLine * timeLine() const
+QTimeLine *timeLine() const
 */
 HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_TIMELINE)
 {

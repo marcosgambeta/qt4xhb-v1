@@ -66,7 +66,7 @@ HB_FUNC_STATIC(QINPUTCONTEXTPLUGIN_DELETE)
 }
 
 /*
-virtual QInputContext * create( const QString &key ) = 0
+virtual QInputContext *create( const QString &key ) = 0
 */
 HB_FUNC_STATIC(QINPUTCONTEXTPLUGIN_CREATE)
 {

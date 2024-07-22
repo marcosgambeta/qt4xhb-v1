@@ -65,7 +65,7 @@ HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_DELETE)
 }
 
 /*
-QTextDocument * document() const
+QTextDocument *document() const
 */
 HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_DOCUMENT)
 {
@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_DOCUMENT)
 }
 
 /*
-void setDocument( QTextDocument * doc )
+void setDocument( QTextDocument *doc )
 */
 HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_SETDOCUMENT)
 {

@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QCLIPBOARD_IMAGE)
 }
 
 /*
-const QMimeData * mimeData( QClipboard::Mode mode = QClipboard::Clipboard ) const
+const QMimeData *mimeData( QClipboard::Mode mode = QClipboard::Clipboard ) const
 */
 HB_FUNC_STATIC(QCLIPBOARD_MIMEDATA)
 {
@@ -267,7 +267,7 @@ HB_FUNC_STATIC(QCLIPBOARD_SETIMAGE)
 }
 
 /*
-void setMimeData( QMimeData * src, QClipboard::Mode mode = QClipboard::Clipboard )
+void setMimeData( QMimeData *src, QClipboard::Mode mode = QClipboard::Clipboard )
 */
 HB_FUNC_STATIC(QCLIPBOARD_SETMIMEDATA)
 {

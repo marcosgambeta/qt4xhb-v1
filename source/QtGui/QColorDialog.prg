@@ -63,7 +63,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_NEW)
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
-    QColorDialog( QWidget * parent = 0 )
+    QColorDialog( QWidget *parent = 0 )
     */
     QColorDialog *obj = new QColorDialog(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_NEW)
   else if (ISBETWEEN(1, 2) && (ISQCOLOR(1) || HB_ISCHAR(1)) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QColorDialog( const QColor &initial, QWidget * parent = 0 )
+    QColorDialog( const QColor &initial, QWidget *parent = 0 )
     */
     QColorDialog *obj = new QColorDialog(
         HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(1)) : QColor(hb_parc(1)), OPQWIDGET(2, 0));
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_OPEN)
   else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
   {
     /*
-    void open( QObject * receiver, const char * member )
+    void open( QObject *receiver, const char *member )
     */
     QColorDialog *obj = qobject_cast<QColorDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -382,7 +382,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_GETCOLOR)
   if (ISBETWEEN(3, 4) && (ISQCOLOR(1) || HB_ISCHAR(1)) && ISQWIDGET(2) && HB_ISCHAR(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
-    static QColor getColor( const QColor &initial, QWidget * parent, const QString &title,
+    static QColor getColor( const QColor &initial, QWidget *parent, const QString &title,
     QColorDialog::ColorDialogOptions options = 0 )
     */
 
@@ -394,7 +394,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_GETCOLOR)
   else if (ISBETWEEN(0, 2) && (ISQCOLOR(1) || HB_ISCHAR(1) || HB_ISNIL(1)) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    static QColor getColor( const QColor &initial = Qt::white, QWidget * parent = 0 )
+    static QColor getColor( const QColor &initial = Qt::white, QWidget *parent = 0 )
     */
 
     QColor *ptr = new QColor(QColorDialog::getColor(

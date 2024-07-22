@@ -464,7 +464,7 @@ HB_FUNC_STATIC(QTRANSFORM_DY)
 }
 
 /*
-QTransform inverted( bool * invertible = 0 ) const
+QTransform inverted( bool *invertible = 0 ) const
 */
 HB_FUNC_STATIC(QTRANSFORM_INVERTED)
 {
@@ -635,7 +635,7 @@ HB_FUNC_STATIC(QTRANSFORM_ISTRANSLATING)
 }
 
 /*
-void map( qreal x, qreal y, qreal * tx, qreal * ty ) const
+void map( qreal x, qreal y, qreal *tx, qreal *ty ) const
 */
 HB_FUNC_STATIC(QTRANSFORM_MAP1)
 {
@@ -665,7 +665,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP1)
 }
 
 /*
-void map( int x, int y, int * tx, int * ty ) const
+void map( int x, int y, int *tx, int *ty ) const
 */
 HB_FUNC_STATIC(QTRANSFORM_MAP10)
 {

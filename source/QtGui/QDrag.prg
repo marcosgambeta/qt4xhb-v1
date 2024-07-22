@@ -62,7 +62,7 @@ RETURN
 #include <QtCore/QMimeData>
 
     /*
-    QDrag( QWidget * dragSource )
+    QDrag( QWidget *dragSource )
     */
 HB_FUNC_STATIC(QDRAG_NEW)
 {
@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QDRAG_HOTSPOT)
 }
 
 /*
-QMimeData * mimeData() const
+QMimeData *mimeData() const
 */
 HB_FUNC_STATIC(QDRAG_MIMEDATA)
 {
@@ -255,7 +255,7 @@ HB_FUNC_STATIC(QDRAG_SETHOTSPOT)
 }
 
 /*
-void setMimeData( QMimeData * data )
+void setMimeData( QMimeData *data )
 */
 HB_FUNC_STATIC(QDRAG_SETMIMEDATA)
 {
@@ -307,7 +307,7 @@ HB_FUNC_STATIC(QDRAG_SETPIXMAP)
 }
 
 /*
-QWidget * source() const
+QWidget *source() const
 */
 HB_FUNC_STATIC(QDRAG_SOURCE)
 {
@@ -332,7 +332,7 @@ HB_FUNC_STATIC(QDRAG_SOURCE)
 }
 
 /*
-QWidget * target() const
+QWidget *target() const
 */
 HB_FUNC_STATIC(QDRAG_TARGET)
 {

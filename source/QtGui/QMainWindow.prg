@@ -101,7 +101,7 @@ RETURN
 #include <QtGui/QStatusBar>
 
     /*
-    QMainWindow( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
+    QMainWindow( QWidget *parent = 0, Qt::WindowFlags flags = 0 )
     */
 HB_FUNC_STATIC(QMAINWINDOW_NEW)
 {
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDDOCKWIDGET)
   if (ISNUMPAR(2) && HB_ISNUM(1) && ISQDOCKWIDGET(2))
   {
     /*
-    void addDockWidget( Qt::DockWidgetArea area, QDockWidget * dockwidget )
+    void addDockWidget( Qt::DockWidgetArea area, QDockWidget *dockwidget )
     */
     QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -154,7 +154,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDDOCKWIDGET)
   else if (ISNUMPAR(3) && HB_ISNUM(1) && ISQDOCKWIDGET(2) && HB_ISNUM(3))
   {
     /*
-    void addDockWidget( Qt::DockWidgetArea area, QDockWidget * dockwidget, Qt::Orientation orientation )
+    void addDockWidget( Qt::DockWidgetArea area, QDockWidget *dockwidget, Qt::Orientation orientation )
     */
     QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDTOOLBAR)
   if (ISNUMPAR(2) && HB_ISNUM(1) && ISQTOOLBAR(2))
   {
     /*
-    void addToolBar( Qt::ToolBarArea area, QToolBar * toolbar )
+    void addToolBar( Qt::ToolBarArea area, QToolBar *toolbar )
     */
     QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDTOOLBAR)
   else if (ISNUMPAR(1) && ISQTOOLBAR(1))
   {
     /*
-    void addToolBar( QToolBar * toolbar )
+    void addToolBar( QToolBar *toolbar )
     */
     QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -204,7 +204,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDTOOLBAR)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QToolBar * addToolBar( const QString &title )
+    QToolBar *addToolBar( const QString &title )
     */
     QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -247,7 +247,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDTOOLBARBREAK)
 }
 
 /*
-QWidget * centralWidget() const
+QWidget *centralWidget() const
 */
 HB_FUNC_STATIC(QMAINWINDOW_CENTRALWIDGET)
 {
@@ -296,7 +296,7 @@ HB_FUNC_STATIC(QMAINWINDOW_CORNER)
 }
 
 /*
-virtual QMenu * createPopupMenu()
+virtual QMenu *createPopupMenu()
 */
 HB_FUNC_STATIC(QMAINWINDOW_CREATEPOPUPMENU)
 {
@@ -345,7 +345,7 @@ HB_FUNC_STATIC(QMAINWINDOW_DOCKOPTIONS)
 }
 
 /*
-Qt::DockWidgetArea dockWidgetArea( QDockWidget * dockwidget ) const
+Qt::DockWidgetArea dockWidgetArea( QDockWidget *dockwidget ) const
 */
 HB_FUNC_STATIC(QMAINWINDOW_DOCKWIDGETAREA)
 {
@@ -418,7 +418,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ICONSIZE)
 }
 
 /*
-void insertToolBar( QToolBar * before, QToolBar * toolbar )
+void insertToolBar( QToolBar *before, QToolBar *toolbar )
 */
 HB_FUNC_STATIC(QMAINWINDOW_INSERTTOOLBAR)
 {
@@ -444,7 +444,7 @@ HB_FUNC_STATIC(QMAINWINDOW_INSERTTOOLBAR)
 }
 
 /*
-void insertToolBarBreak( QToolBar * before )
+void insertToolBarBreak( QToolBar *before )
 */
 HB_FUNC_STATIC(QMAINWINDOW_INSERTTOOLBARBREAK)
 {
@@ -518,7 +518,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ISDOCKNESTINGENABLED)
 }
 
 /*
-QMenuBar * menuBar() const
+QMenuBar *menuBar() const
 */
 HB_FUNC_STATIC(QMAINWINDOW_MENUBAR)
 {
@@ -543,7 +543,7 @@ HB_FUNC_STATIC(QMAINWINDOW_MENUBAR)
 }
 
 /*
-QWidget * menuWidget() const
+QWidget *menuWidget() const
 */
 HB_FUNC_STATIC(QMAINWINDOW_MENUWIDGET)
 {
@@ -568,7 +568,7 @@ HB_FUNC_STATIC(QMAINWINDOW_MENUWIDGET)
 }
 
 /*
-void removeDockWidget( QDockWidget * dockwidget )
+void removeDockWidget( QDockWidget *dockwidget )
 */
 HB_FUNC_STATIC(QMAINWINDOW_REMOVEDOCKWIDGET)
 {
@@ -594,7 +594,7 @@ HB_FUNC_STATIC(QMAINWINDOW_REMOVEDOCKWIDGET)
 }
 
 /*
-void removeToolBar( QToolBar * toolbar )
+void removeToolBar( QToolBar *toolbar )
 */
 HB_FUNC_STATIC(QMAINWINDOW_REMOVETOOLBAR)
 {
@@ -620,7 +620,7 @@ HB_FUNC_STATIC(QMAINWINDOW_REMOVETOOLBAR)
 }
 
 /*
-void removeToolBarBreak( QToolBar * before )
+void removeToolBarBreak( QToolBar *before )
 */
 HB_FUNC_STATIC(QMAINWINDOW_REMOVETOOLBARBREAK)
 {
@@ -646,7 +646,7 @@ HB_FUNC_STATIC(QMAINWINDOW_REMOVETOOLBARBREAK)
 }
 
 /*
-bool restoreDockWidget( QDockWidget * dockwidget )
+bool restoreDockWidget( QDockWidget *dockwidget )
 */
 HB_FUNC_STATIC(QMAINWINDOW_RESTOREDOCKWIDGET)
 {
@@ -719,7 +719,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SAVESTATE)
 }
 
 /*
-void setCentralWidget( QWidget * widget )
+void setCentralWidget( QWidget *widget )
 */
 HB_FUNC_STATIC(QMAINWINDOW_SETCENTRALWIDGET)
 {
@@ -849,7 +849,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SETICONSIZE)
 }
 
 /*
-void setMenuBar( QMenuBar * menuBar )
+void setMenuBar( QMenuBar *menuBar )
 */
 HB_FUNC_STATIC(QMAINWINDOW_SETMENUBAR)
 {
@@ -875,7 +875,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SETMENUBAR)
 }
 
 /*
-void setMenuWidget( QWidget * menuBar )
+void setMenuWidget( QWidget *menuBar )
 */
 HB_FUNC_STATIC(QMAINWINDOW_SETMENUWIDGET)
 {
@@ -901,7 +901,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SETMENUWIDGET)
 }
 
 /*
-void setStatusBar( QStatusBar * statusbar )
+void setStatusBar( QStatusBar *statusbar )
 */
 HB_FUNC_STATIC(QMAINWINDOW_SETSTATUSBAR)
 {
@@ -1005,7 +1005,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SETTOOLBUTTONSTYLE)
 }
 
 /*
-void splitDockWidget( QDockWidget * first, QDockWidget * second, Qt::Orientation orientation )
+void splitDockWidget( QDockWidget *first, QDockWidget *second, Qt::Orientation orientation )
 */
 HB_FUNC_STATIC(QMAINWINDOW_SPLITDOCKWIDGET)
 {
@@ -1031,7 +1031,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SPLITDOCKWIDGET)
 }
 
 /*
-QStatusBar * statusBar() const
+QStatusBar *statusBar() const
 */
 HB_FUNC_STATIC(QMAINWINDOW_STATUSBAR)
 {
@@ -1104,7 +1104,7 @@ HB_FUNC_STATIC(QMAINWINDOW_TABSHAPE)
 }
 
 /*
-QList<QDockWidget *> tabifiedDockWidgets( QDockWidget * dockwidget ) const
+QList<QDockWidget *> tabifiedDockWidgets( QDockWidget *dockwidget ) const
 */
 HB_FUNC_STATIC(QMAINWINDOW_TABIFIEDDOCKWIDGETS)
 {
@@ -1152,7 +1152,7 @@ HB_FUNC_STATIC(QMAINWINDOW_TABIFIEDDOCKWIDGETS)
 }
 
 /*
-void tabifyDockWidget( QDockWidget * first, QDockWidget * second )
+void tabifyDockWidget( QDockWidget *first, QDockWidget *second )
 */
 HB_FUNC_STATIC(QMAINWINDOW_TABIFYDOCKWIDGET)
 {
@@ -1178,7 +1178,7 @@ HB_FUNC_STATIC(QMAINWINDOW_TABIFYDOCKWIDGET)
 }
 
 /*
-Qt::ToolBarArea toolBarArea( QToolBar * toolbar ) const
+Qt::ToolBarArea toolBarArea( QToolBar *toolbar ) const
 */
 HB_FUNC_STATIC(QMAINWINDOW_TOOLBARAREA)
 {
@@ -1202,7 +1202,7 @@ HB_FUNC_STATIC(QMAINWINDOW_TOOLBARAREA)
 }
 
 /*
-bool toolBarBreak( QToolBar * toolbar ) const
+bool toolBarBreak( QToolBar *toolbar ) const
 */
 HB_FUNC_STATIC(QMAINWINDOW_TOOLBARBREAK)
 {

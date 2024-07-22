@@ -53,7 +53,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QStyledItemDelegate( QObject * parent = 0 )
+    QStyledItemDelegate( QObject *parent = 0 )
     */
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_NEW)
 {
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_DISPLAYTEXT)
 }
 
 /*
-QItemEditorFactory * itemEditorFactory() const
+QItemEditorFactory *itemEditorFactory() const
 */
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_ITEMEDITORFACTORY)
 {
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_ITEMEDITORFACTORY)
 }
 
 /*
-void setItemEditorFactory( QItemEditorFactory * factory )
+void setItemEditorFactory( QItemEditorFactory *factory )
 */
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_SETITEMEDITORFACTORY)
 {
@@ -162,7 +162,7 @@ HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_SETITEMEDITORFACTORY)
 }
 
 /*
-virtual QWidget * createEditor( QWidget * parent, const QStyleOptionViewItem &option, const QModelIndex &index ) const
+virtual QWidget *createEditor( QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index ) const
 */
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_CREATEEDITOR)
 {
@@ -187,7 +187,7 @@ HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_CREATEEDITOR)
 }
 
 /*
-virtual void paint( QPainter * painter, const QStyleOptionViewItem &option, const QModelIndex &index ) const
+virtual void paint( QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index ) const
 */
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_PAINT)
 {
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_PAINT)
 }
 
 /*
-virtual void setEditorData( QWidget * editor, const QModelIndex &index ) const
+virtual void setEditorData( QWidget *editor, const QModelIndex &index ) const
 */
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_SETEDITORDATA)
 {
@@ -239,7 +239,7 @@ HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_SETEDITORDATA)
 }
 
 /*
-virtual void setModelData( QWidget * editor, QAbstractItemModel * model, const QModelIndex &index ) const
+virtual void setModelData( QWidget *editor, QAbstractItemModel *model, const QModelIndex &index ) const
 */
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_SETMODELDATA)
 {
@@ -290,7 +290,7 @@ HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_SIZEHINT)
 }
 
 /*
-virtual void updateEditorGeometry( QWidget * editor, const QStyleOptionViewItem &option, const QModelIndex &index )
+virtual void updateEditorGeometry( QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index )
 const
 */
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_UPDATEEDITORGEOMETRY)

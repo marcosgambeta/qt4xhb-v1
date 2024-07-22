@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QCOMMONSTYLE_DELETE)
 }
 
 /*
-virtual void drawComplexControl( QStyle::ComplexControl cc, const QStyleOptionComplex * opt, QPainter * p, const QWidget
+virtual void drawComplexControl( QStyle::ComplexControl cc, const QStyleOptionComplex *opt, QPainter *p, const QWidget
 * widget = 0 ) const
 */
 HB_FUNC_STATIC(QCOMMONSTYLE_DRAWCOMPLEXCONTROL)
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QCOMMONSTYLE_DRAWCOMPLEXCONTROL)
 }
 
 /*
-virtual void drawControl( QStyle::ControlElement element, const QStyleOption * opt, QPainter * p, const QWidget * widget
+virtual void drawControl( QStyle::ControlElement element, const QStyleOption *opt, QPainter *p, const QWidget *widget
 = 0 ) const
 */
 HB_FUNC_STATIC(QCOMMONSTYLE_DRAWCONTROL)
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QCOMMONSTYLE_DRAWCONTROL)
 }
 
 /*
-virtual void drawPrimitive( QStyle::PrimitiveElement pe, const QStyleOption * opt, QPainter * p, const QWidget * widget
+virtual void drawPrimitive( QStyle::PrimitiveElement pe, const QStyleOption *opt, QPainter *p, const QWidget *widget
 = 0 ) const
 */
 HB_FUNC_STATIC(QCOMMONSTYLE_DRAWPRIMITIVE)
@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QCOMMONSTYLE_DRAWPRIMITIVE)
 }
 
 /*
-virtual QPixmap generatedIconPixmap( QIcon::Mode iconMode, const QPixmap &pixmap, const QStyleOption * opt ) const
+virtual QPixmap generatedIconPixmap( QIcon::Mode iconMode, const QPixmap &pixmap, const QStyleOption *opt ) const
 */
 HB_FUNC_STATIC(QCOMMONSTYLE_GENERATEDICONPIXMAP)
 {
@@ -198,8 +198,8 @@ HB_FUNC_STATIC(QCOMMONSTYLE_GENERATEDICONPIXMAP)
 }
 
 /*
-virtual QStyle::SubControl hitTestComplexControl( QStyle::ComplexControl cc, const QStyleOptionComplex * opt, const
-QPoint &pt, const QWidget * widget = 0 ) const
+virtual QStyle::SubControl hitTestComplexControl( QStyle::ComplexControl cc, const QStyleOptionComplex *opt, const
+QPoint &pt, const QWidget *widget = 0 ) const
 */
 HB_FUNC_STATIC(QCOMMONSTYLE_HITTESTCOMPLEXCONTROL)
 {
@@ -224,7 +224,7 @@ HB_FUNC_STATIC(QCOMMONSTYLE_HITTESTCOMPLEXCONTROL)
 }
 
 /*
-virtual int pixelMetric( QStyle::PixelMetric m, const QStyleOption * opt = 0, const QWidget * widget = 0 ) const
+virtual int pixelMetric( QStyle::PixelMetric m, const QStyleOption *opt = 0, const QWidget *widget = 0 ) const
 */
 HB_FUNC_STATIC(QCOMMONSTYLE_PIXELMETRIC)
 {
@@ -267,7 +267,7 @@ HB_FUNC_STATIC(QCOMMONSTYLE_POLISH)
   else if (ISNUMPAR(1) && ISQAPPLICATION(1))
   {
     /*
-    virtual void polish( QApplication * app )
+    virtual void polish( QApplication *app )
     */
     QCommonStyle *obj = qobject_cast<QCommonStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QCOMMONSTYLE_POLISH)
   else if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
-    virtual void polish( QWidget * widget )
+    virtual void polish( QWidget *widget )
     */
     QCommonStyle *obj = qobject_cast<QCommonStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -299,7 +299,7 @@ HB_FUNC_STATIC(QCOMMONSTYLE_POLISH)
 }
 
 /*
-virtual QSize sizeFromContents( QStyle::ContentsType ct, const QStyleOption * opt, const QSize &csz, const QWidget *
+virtual QSize sizeFromContents( QStyle::ContentsType ct, const QStyleOption *opt, const QSize &csz, const QWidget *
 widget = 0 ) const
 */
 HB_FUNC_STATIC(QCOMMONSTYLE_SIZEFROMCONTENTS)
@@ -326,7 +326,7 @@ HB_FUNC_STATIC(QCOMMONSTYLE_SIZEFROMCONTENTS)
 }
 
 /*
-virtual QPixmap standardPixmap( QStyle::StandardPixmap sp, const QStyleOption * option = 0, const QWidget * widget = 0 )
+virtual QPixmap standardPixmap( QStyle::StandardPixmap sp, const QStyleOption *option = 0, const QWidget *widget = 0 )
 const
 */
 HB_FUNC_STATIC(QCOMMONSTYLE_STANDARDPIXMAP)
@@ -354,7 +354,7 @@ HB_FUNC_STATIC(QCOMMONSTYLE_STANDARDPIXMAP)
 }
 
 /*
-virtual int styleHint( QStyle::StyleHint sh, const QStyleOption * opt = 0, const QWidget * widget = 0, QStyleHintReturn
+virtual int styleHint( QStyle::StyleHint sh, const QStyleOption *opt = 0, const QWidget *widget = 0, QStyleHintReturn
 * hret = 0 ) const
 */
 HB_FUNC_STATIC(QCOMMONSTYLE_STYLEHINT)
@@ -382,8 +382,8 @@ HB_FUNC_STATIC(QCOMMONSTYLE_STYLEHINT)
 }
 
 /*
-virtual QRect subControlRect( QStyle::ComplexControl cc, const QStyleOptionComplex * opt, QStyle::SubControl sc, const
-QWidget * widget = 0 ) const
+virtual QRect subControlRect( QStyle::ComplexControl cc, const QStyleOptionComplex *opt, QStyle::SubControl sc, const
+QWidget *widget = 0 ) const
 */
 HB_FUNC_STATIC(QCOMMONSTYLE_SUBCONTROLRECT)
 {
@@ -409,7 +409,7 @@ HB_FUNC_STATIC(QCOMMONSTYLE_SUBCONTROLRECT)
 }
 
 /*
-virtual QRect subElementRect( QStyle::SubElement sr, const QStyleOption * opt, const QWidget * widget = 0 ) const
+virtual QRect subElementRect( QStyle::SubElement sr, const QStyleOption *opt, const QWidget *widget = 0 ) const
 */
 HB_FUNC_STATIC(QCOMMONSTYLE_SUBELEMENTRECT)
 {
@@ -438,7 +438,7 @@ HB_FUNC_STATIC(QCOMMONSTYLE_UNPOLISH)
   if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
-    virtual void unpolish( QWidget * widget )
+    virtual void unpolish( QWidget *widget )
     */
     QCommonStyle *obj = qobject_cast<QCommonStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -452,7 +452,7 @@ HB_FUNC_STATIC(QCOMMONSTYLE_UNPOLISH)
   else if (ISNUMPAR(1) && ISQAPPLICATION(1))
   {
     /*
-    virtual void unpolish( QApplication * application )
+    virtual void unpolish( QApplication *application )
     */
     QCommonStyle *obj = qobject_cast<QCommonStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

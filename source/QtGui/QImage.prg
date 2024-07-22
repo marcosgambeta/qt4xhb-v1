@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QIMAGE_NEW)
   else if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
-    QImage( uchar * data, int width, int height, QImage::Format format )
+    QImage( uchar *data, int width, int height, QImage::Format format )
     */
     QImage *obj = new QImage((uchar *)hb_parc(1), PINT(2), PINT(3), (QImage::Format)hb_parni(4));
     Qt4xHb::returnNewObject(obj, true);
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QIMAGE_NEW)
   else if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
-    QImage( const uchar * data, int width, int height, QImage::Format format )
+    QImage( const uchar *data, int width, int height, QImage::Format format )
     */
     QImage *obj = new QImage(PCONSTUCHAR(1), PINT(2), PINT(3), (QImage::Format)hb_parni(4));
     Qt4xHb::returnNewObject(obj, true);
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QIMAGE_NEW)
   else if (ISNUMPAR(5) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5))
   {
     /*
-    QImage( uchar * data, int width, int height, int bytesPerLine, QImage::Format format )
+    QImage( uchar *data, int width, int height, int bytesPerLine, QImage::Format format )
     */
     QImage *obj = new QImage((uchar *)hb_parc(1), PINT(2), PINT(3), PINT(4), (QImage::Format)hb_parni(5));
     Qt4xHb::returnNewObject(obj, true);
@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QIMAGE_NEW)
   else if (ISNUMPAR(5) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5))
   {
     /*
-    QImage( const uchar * data, int width, int height, int bytesPerLine, QImage::Format format )
+    QImage( const uchar *data, int width, int height, int bytesPerLine, QImage::Format format )
     */
     QImage *obj = new QImage(PCONSTUCHAR(1), PINT(2), PINT(3), PINT(4), (QImage::Format)hb_parni(5));
     Qt4xHb::returnNewObject(obj, true);
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QIMAGE_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
-    QImage( const QString &fileName, const char * format = 0 )
+    QImage( const QString &fileName, const char *format = 0 )
     */
     QImage *obj = new QImage(PQSTRING(1), OPCONSTCHAR(2, 0));
     Qt4xHb::returnNewObject(obj, true);
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QIMAGE_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
-    QImage( const char * fileName, const char * format = 0 )
+    QImage( const char *fileName, const char *format = 0 )
     */
     QImage *obj = new QImage(PCONSTCHAR(1), OPCONSTCHAR(2, 0));
     Qt4xHb::returnNewObject(obj, true);
@@ -837,7 +837,7 @@ HB_FUNC_STATIC(QIMAGE_LOAD)
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
-    bool load( const QString &fileName, const char * format = 0 )
+    bool load( const QString &fileName, const char *format = 0 )
     */
     QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -849,7 +849,7 @@ HB_FUNC_STATIC(QIMAGE_LOAD)
   else if (ISNUMPAR(2) && ISQIODEVICE(1) && HB_ISCHAR(2))
   {
     /*
-    bool load( QIODevice * device, const char * format )
+    bool load( QIODevice *device, const char *format )
     */
     QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -869,7 +869,7 @@ HB_FUNC_STATIC(QIMAGE_LOADFROMDATA)
   if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (HB_ISCHAR(3) || HB_ISNIL(3)))
   {
     /*
-    bool loadFromData( const uchar * data, int len, const char * format = 0 )
+    bool loadFromData( const uchar *data, int len, const char *format = 0 )
     */
     QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -881,7 +881,7 @@ HB_FUNC_STATIC(QIMAGE_LOADFROMDATA)
   else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
-    bool loadFromData( const QByteArray &data, const char * format = 0 )
+    bool loadFromData( const QByteArray &data, const char *format = 0 )
     */
     QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1065,7 +1065,7 @@ HB_FUNC_STATIC(QIMAGE_SAVE)
   if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    bool save( const QString &fileName, const char * format = 0, int quality = -1 ) const
+    bool save( const QString &fileName, const char *format = 0, int quality = -1 ) const
     */
     QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1077,7 +1077,7 @@ HB_FUNC_STATIC(QIMAGE_SAVE)
   else if (ISBETWEEN(1, 3) && ISQIODEVICE(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    bool save( QIODevice * device, const char * format = 0, int quality = -1 ) const
+    bool save( QIODevice *device, const char *format = 0, int quality = -1 ) const
     */
     QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1610,7 +1610,7 @@ HB_FUNC_STATIC(QIMAGE_FROMDATA)
   if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (HB_ISCHAR(3) || HB_ISNIL(3)))
   {
     /*
-    static QImage fromData( const uchar * data, int size, const char * format = 0 )
+    static QImage fromData( const uchar *data, int size, const char *format = 0 )
     */
 
     QImage *ptr = new QImage(QImage::fromData(PCONSTUCHAR(1), PINT(2), OPCONSTCHAR(3, 0)));
@@ -1619,7 +1619,7 @@ HB_FUNC_STATIC(QIMAGE_FROMDATA)
   else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
-    static QImage fromData( const QByteArray &data, const char * format = 0 )
+    static QImage fromData( const QByteArray &data, const char *format = 0 )
     */
 
     QImage *ptr = new QImage(QImage::fromData(*PQBYTEARRAY(1), OPCONSTCHAR(2, 0)));
