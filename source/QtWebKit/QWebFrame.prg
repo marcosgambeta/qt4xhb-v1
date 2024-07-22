@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT)
   if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2))
   {
     /*
-    void addToJavaScriptWindowObject( const QString &name, QObject * object )
+    void addToJavaScriptWindowObject( const QString &name, QObject *object )
     */
     QWebFrame *obj = qobject_cast<QWebFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT)
   else if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQOBJECT(2) && HB_ISNUM(3))
   {
     /*
-    void addToJavaScriptWindowObject( const QString &name, QObject * object, QScriptEngine::ValueOwnership own )
+    void addToJavaScriptWindowObject( const QString &name, QObject *object, QScriptEngine::ValueOwnership own )
     */
     QWebFrame *obj = qobject_cast<QWebFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -481,7 +481,7 @@ HB_FUNC_STATIC(QWEBFRAME_LOAD)
 }
 
 /*
-QWebPage * page() const
+QWebPage *page() const
 */
 HB_FUNC_STATIC(QWEBFRAME_PAGE)
 {
@@ -506,7 +506,7 @@ HB_FUNC_STATIC(QWEBFRAME_PAGE)
 }
 
 /*
-QWebFrame * parentFrame() const
+QWebFrame *parentFrame() const
 */
 HB_FUNC_STATIC(QWEBFRAME_PARENTFRAME)
 {
@@ -560,7 +560,7 @@ HB_FUNC_STATIC(QWEBFRAME_RENDER)
   if (ISNUMPAR(1) && ISQPAINTER(1))
   {
     /*
-    void render( QPainter * painter )
+    void render( QPainter *painter )
     */
     QWebFrame *obj = qobject_cast<QWebFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -574,7 +574,7 @@ HB_FUNC_STATIC(QWEBFRAME_RENDER)
   else if (ISNUMPAR(2) && ISQPAINTER(1) && ISQREGION(2))
   {
     /*
-    void render( QPainter * painter, const QRegion &clip )
+    void render( QPainter *painter, const QRegion &clip )
     */
     QWebFrame *obj = qobject_cast<QWebFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -588,7 +588,7 @@ HB_FUNC_STATIC(QWEBFRAME_RENDER)
   else if (ISBETWEEN(2, 3) && ISQPAINTER(1) && HB_ISNUM(2) && (ISQREGION(3) || HB_ISNIL(3)))
   {
     /*
-    void render( QPainter * painter, QWebFrame::RenderLayer layer, const QRegion &clip = QRegion() )
+    void render( QPainter *painter, QWebFrame::RenderLayer layer, const QRegion &clip = QRegion() )
     */
     QWebFrame *obj = qobject_cast<QWebFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -1284,7 +1284,7 @@ HB_FUNC_STATIC(QWEBFRAME_EVALUATEJAVASCRIPT)
 }
 
 /*
-void print( QPrinter * printer ) const
+void print( QPrinter *printer ) const
 */
 HB_FUNC_STATIC(QWEBFRAME_PRINT)
 {

@@ -89,7 +89,7 @@ RETURN
 #include <QtGui/QAction>
 
     /*
-    QWebView( QWidget * parent = 0 )
+    QWebView( QWidget *parent = 0 )
     */
 HB_FUNC_STATIC(QWEBVIEW_NEW)
 {
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QWEBVIEW_FINDTEXT)
 }
 
 /*
-QWebHistory * history() const
+QWebHistory *history() const
 */
 HB_FUNC_STATIC(QWEBVIEW_HISTORY)
 {
@@ -261,7 +261,7 @@ HB_FUNC_STATIC(QWEBVIEW_LOAD)
 }
 
 /*
-QWebPage * page() const
+QWebPage *page() const
 */
 HB_FUNC_STATIC(QWEBVIEW_PAGE)
 {
@@ -286,7 +286,7 @@ HB_FUNC_STATIC(QWEBVIEW_PAGE)
 }
 
 /*
-QAction * pageAction( QWebPage::WebAction action ) const
+QAction *pageAction( QWebPage::WebAction action ) const
 */
 HB_FUNC_STATIC(QWEBVIEW_PAGEACTION)
 {
@@ -412,7 +412,7 @@ HB_FUNC_STATIC(QWEBVIEW_SETHTML)
 }
 
 /*
-void setPage( QWebPage * page )
+void setPage( QWebPage *page )
 */
 HB_FUNC_STATIC(QWEBVIEW_SETPAGE)
 {
@@ -568,7 +568,7 @@ HB_FUNC_STATIC(QWEBVIEW_SETZOOMFACTOR)
 }
 
 /*
-QWebSettings * settings() const
+QWebSettings *settings() const
 */
 HB_FUNC_STATIC(QWEBVIEW_SETTINGS)
 {
@@ -768,7 +768,7 @@ HB_FUNC_STATIC(QWEBVIEW_FORWARD)
 }
 
 /*
-void print( QPrinter * printer ) const
+void print( QPrinter *printer ) const
 */
 HB_FUNC_STATIC(QWEBVIEW_PRINT)
 {

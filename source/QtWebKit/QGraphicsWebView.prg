@@ -83,7 +83,7 @@ RETURN
 #include <QtGui/QAction>
 
     /*
-    QGraphicsWebView( QGraphicsItem * parent = 0 )
+    QGraphicsWebView( QGraphicsItem *parent = 0 )
     */
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_NEW)
 {
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_FINDTEXT)
 }
 
 /*
-QWebHistory * history() const
+QWebHistory *history() const
 */
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_HISTORY)
 {
@@ -279,7 +279,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_LOAD)
 }
 
 /*
-QWebPage * page() const
+QWebPage *page() const
 */
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_PAGE)
 {
@@ -304,7 +304,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_PAGE)
 }
 
 /*
-QAction * pageAction( QWebPage::WebAction action ) const
+QAction *pageAction( QWebPage::WebAction action ) const
 */
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_PAGEACTION)
 {
@@ -406,7 +406,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETHTML)
 }
 
 /*
-void setPage( QWebPage * page )
+void setPage( QWebPage *page )
 */
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETPAGE)
 {
@@ -536,7 +536,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETZOOMFACTOR)
 }
 
 /*
-QWebSettings * settings() const
+QWebSettings *settings() const
 */
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETTINGS)
 {

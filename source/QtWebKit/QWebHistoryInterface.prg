@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QWEBHISTORYINTERFACE_HISTORYCONTAINS)
 }
 
 /*
-static QWebHistoryInterface * defaultInterface()
+static QWebHistoryInterface *defaultInterface()
 */
 HB_FUNC_STATIC(QWEBHISTORYINTERFACE_DEFAULTINTERFACE)
 {
@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QWEBHISTORYINTERFACE_DEFAULTINTERFACE)
 }
 
 /*
-static void setDefaultInterface( QWebHistoryInterface * defaultInterface )
+static void setDefaultInterface( QWebHistoryInterface *defaultInterface )
 */
 HB_FUNC_STATIC(QWEBHISTORYINTERFACE_SETDEFAULTINTERFACE)
 {

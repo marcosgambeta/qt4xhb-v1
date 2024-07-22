@@ -528,7 +528,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_ENABLEPERSISTENTSTORAGE)
 }
 
 /*
-static QWebSettings * globalSettings()
+static QWebSettings *globalSettings()
 */
 HB_FUNC_STATIC(QWEBSETTINGS_GLOBALSETTINGS)
 {

@@ -1111,7 +1111,7 @@ HB_FUNC_STATIC(QWEBELEMENT_RENDER)
   if (ISNUMPAR(1) && ISQPAINTER(1))
   {
     /*
-    void render( QPainter * painter )
+    void render( QPainter *painter )
     */
     QWebElement *obj = static_cast<QWebElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1125,7 +1125,7 @@ HB_FUNC_STATIC(QWEBELEMENT_RENDER)
   else if (ISNUMPAR(2) && ISQPAINTER(1) && ISQRECT(2))
   {
     /*
-    void render( QPainter * painter, const QRect &clip )
+    void render( QPainter *painter, const QRect &clip )
     */
     QWebElement *obj = static_cast<QWebElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1532,7 +1532,7 @@ HB_FUNC_STATIC(QWEBELEMENT_TOGGLECLASS)
 }
 
 /*
-QWebFrame * webFrame() const
+QWebFrame *webFrame() const
 */
 HB_FUNC_STATIC(QWEBELEMENT_WEBFRAME)
 {
