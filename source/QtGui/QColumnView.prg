@@ -61,7 +61,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QColumnView( QWidget *parent = 0 )
+    QColumnView(QWidget *parent = 0)
     */
 HB_FUNC_STATIC(QCOLUMNVIEW_NEW)
 {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_RESIZEGRIPSVISIBLE)
 }
 
 /*
-void setColumnWidths( const QList<int> &list )
+void setColumnWidths(const QList<int> &list)
 */
 HB_FUNC_STATIC(QCOLUMNVIEW_SETCOLUMNWIDTHS)
 {
@@ -204,7 +204,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETCOLUMNWIDTHS)
 }
 
 /*
-void setPreviewWidget( QWidget *widget )
+void setPreviewWidget(QWidget *widget)
 */
 HB_FUNC_STATIC(QCOLUMNVIEW_SETPREVIEWWIDGET)
 {
@@ -230,7 +230,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETPREVIEWWIDGET)
 }
 
 /*
-void setResizeGripsVisible( bool visible )
+void setResizeGripsVisible(bool visible)
 */
 HB_FUNC_STATIC(QCOLUMNVIEW_SETRESIZEGRIPSVISIBLE)
 {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETRESIZEGRIPSVISIBLE)
 }
 
 /*
-virtual QModelIndex indexAt( const QPoint &point ) const
+virtual QModelIndex indexAt(const QPoint &point) const
 */
 HB_FUNC_STATIC(QCOLUMNVIEW_INDEXAT)
 {
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_INDEXAT)
 }
 
 /*
-virtual void scrollTo( const QModelIndex &index, QColumnView::ScrollHint hint = QColumnView::EnsureVisible )
+virtual void scrollTo(const QModelIndex &index, QColumnView::ScrollHint hint = QColumnView::EnsureVisible)
 */
 HB_FUNC_STATIC(QCOLUMNVIEW_SCROLLTO)
 {
@@ -334,7 +334,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SELECTALL)
 }
 
 /*
-virtual void setModel( QAbstractItemModel *model )
+virtual void setModel(QAbstractItemModel *model)
 */
 HB_FUNC_STATIC(QCOLUMNVIEW_SETMODEL)
 {
@@ -360,7 +360,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETMODEL)
 }
 
 /*
-virtual void setRootIndex( const QModelIndex &index )
+virtual void setRootIndex(const QModelIndex &index)
 */
 HB_FUNC_STATIC(QCOLUMNVIEW_SETROOTINDEX)
 {
@@ -386,7 +386,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETROOTINDEX)
 }
 
 /*
-virtual void setSelectionModel( QItemSelectionModel *newSelectionModel )
+virtual void setSelectionModel(QItemSelectionModel *newSelectionModel)
 */
 HB_FUNC_STATIC(QCOLUMNVIEW_SETSELECTIONMODEL)
 {
@@ -437,7 +437,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SIZEHINT)
 }
 
 /*
-virtual QRect visualRect( const QModelIndex &index ) const
+virtual QRect visualRect(const QModelIndex &index) const
 */
 HB_FUNC_STATIC(QCOLUMNVIEW_VISUALRECT)
 {

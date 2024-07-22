@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QPRINTER_NEW)
   if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
     /*
-    QPrinter( QPrinter::PrinterMode mode = QPrinter::ScreenResolution )
+    QPrinter(QPrinter::PrinterMode mode = QPrinter::ScreenResolution)
     */
     QPrinter *obj = new QPrinter(HB_ISNIL(1) ? (QPrinter::PrinterMode)QPrinter::ScreenResolution
                                              : (QPrinter::PrinterMode)hb_parni(1));
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QPRINTER_NEW)
   else if (ISBETWEEN(1, 2) && ISQPRINTERINFO(1) && HB_ISNUM(2))
   {
     /*
-    QPrinter( const QPrinterInfo &printer, QPrinter::PrinterMode mode = QPrinter::ScreenResolution )
+    QPrinter(const QPrinterInfo &printer, QPrinter::PrinterMode mode = QPrinter::ScreenResolution)
     */
     QPrinter *obj = new QPrinter(*PQPRINTERINFO(1), HB_ISNIL(2) ? (QPrinter::PrinterMode)QPrinter::ScreenResolution
                                                                 : (QPrinter::PrinterMode)hb_parni(2));
@@ -568,7 +568,7 @@ HB_FUNC_STATIC(QPRINTER_PAGERECT)
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    QRectF pageRect( QPrinter::Unit unit ) const
+    QRectF pageRect(QPrinter::Unit unit) const
     */
     QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -602,7 +602,7 @@ HB_FUNC_STATIC(QPRINTER_PAPERRECT)
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    QRectF paperRect( QPrinter::Unit unit ) const
+    QRectF paperRect(QPrinter::Unit unit) const
     */
     QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -635,7 +635,7 @@ HB_FUNC_STATIC(QPRINTER_PAPERSIZE)
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    QSizeF paperSize( QPrinter::Unit unit ) const
+    QSizeF paperSize(QPrinter::Unit unit) const
     */
     QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -821,7 +821,7 @@ HB_FUNC_STATIC(QPRINTER_RESOLUTION)
 }
 
 /*
-void setCollateCopies( bool collate )
+void setCollateCopies(bool collate)
 */
 HB_FUNC_STATIC(QPRINTER_SETCOLLATECOPIES)
 {
@@ -847,7 +847,7 @@ HB_FUNC_STATIC(QPRINTER_SETCOLLATECOPIES)
 }
 
 /*
-void setColorMode( QPrinter::ColorMode newColorMode )
+void setColorMode(QPrinter::ColorMode newColorMode)
 */
 HB_FUNC_STATIC(QPRINTER_SETCOLORMODE)
 {
@@ -873,7 +873,7 @@ HB_FUNC_STATIC(QPRINTER_SETCOLORMODE)
 }
 
 /*
-void setCopyCount( int count )
+void setCopyCount(int count)
 */
 HB_FUNC_STATIC(QPRINTER_SETCOPYCOUNT)
 {
@@ -899,7 +899,7 @@ HB_FUNC_STATIC(QPRINTER_SETCOPYCOUNT)
 }
 
 /*
-void setCreator( const QString &creator )
+void setCreator(const QString &creator)
 */
 HB_FUNC_STATIC(QPRINTER_SETCREATOR)
 {
@@ -925,7 +925,7 @@ HB_FUNC_STATIC(QPRINTER_SETCREATOR)
 }
 
 /*
-void setDocName( const QString &name )
+void setDocName(const QString &name)
 */
 HB_FUNC_STATIC(QPRINTER_SETDOCNAME)
 {
@@ -951,7 +951,7 @@ HB_FUNC_STATIC(QPRINTER_SETDOCNAME)
 }
 
 /*
-void setDoubleSidedPrinting( bool doubleSided )
+void setDoubleSidedPrinting(bool doubleSided)
 */
 HB_FUNC_STATIC(QPRINTER_SETDOUBLESIDEDPRINTING)
 {
@@ -977,7 +977,7 @@ HB_FUNC_STATIC(QPRINTER_SETDOUBLESIDEDPRINTING)
 }
 
 /*
-void setDuplex( QPrinter::DuplexMode duplex )
+void setDuplex(QPrinter::DuplexMode duplex)
 */
 HB_FUNC_STATIC(QPRINTER_SETDUPLEX)
 {
@@ -1003,7 +1003,7 @@ HB_FUNC_STATIC(QPRINTER_SETDUPLEX)
 }
 
 /*
-void setFontEmbeddingEnabled( bool enable )
+void setFontEmbeddingEnabled(bool enable)
 */
 HB_FUNC_STATIC(QPRINTER_SETFONTEMBEDDINGENABLED)
 {
@@ -1029,7 +1029,7 @@ HB_FUNC_STATIC(QPRINTER_SETFONTEMBEDDINGENABLED)
 }
 
 /*
-void setFromTo( int from, int to )
+void setFromTo(int from, int to)
 */
 HB_FUNC_STATIC(QPRINTER_SETFROMTO)
 {
@@ -1055,7 +1055,7 @@ HB_FUNC_STATIC(QPRINTER_SETFROMTO)
 }
 
 /*
-void setFullPage( bool fp )
+void setFullPage(bool fp)
 */
 HB_FUNC_STATIC(QPRINTER_SETFULLPAGE)
 {
@@ -1081,7 +1081,7 @@ HB_FUNC_STATIC(QPRINTER_SETFULLPAGE)
 }
 
 /*
-void setOrientation( QPrinter::Orientation orientation )
+void setOrientation(QPrinter::Orientation orientation)
 */
 HB_FUNC_STATIC(QPRINTER_SETORIENTATION)
 {
@@ -1107,7 +1107,7 @@ HB_FUNC_STATIC(QPRINTER_SETORIENTATION)
 }
 
 /*
-void setOutputFileName( const QString &fileName )
+void setOutputFileName(const QString &fileName)
 */
 HB_FUNC_STATIC(QPRINTER_SETOUTPUTFILENAME)
 {
@@ -1133,7 +1133,7 @@ HB_FUNC_STATIC(QPRINTER_SETOUTPUTFILENAME)
 }
 
 /*
-void setOutputFormat( QPrinter::OutputFormat format )
+void setOutputFormat(QPrinter::OutputFormat format)
 */
 HB_FUNC_STATIC(QPRINTER_SETOUTPUTFORMAT)
 {
@@ -1159,7 +1159,7 @@ HB_FUNC_STATIC(QPRINTER_SETOUTPUTFORMAT)
 }
 
 /*
-void setPageMargins( qreal left, qreal top, qreal right, qreal bottom, QPrinter::Unit unit )
+void setPageMargins(qreal left, qreal top, qreal right, qreal bottom, QPrinter::Unit unit)
 */
 HB_FUNC_STATIC(QPRINTER_SETPAGEMARGINS)
 {
@@ -1185,7 +1185,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAGEMARGINS)
 }
 
 /*
-void setPageOrder( QPrinter::PageOrder pageOrder )
+void setPageOrder(QPrinter::PageOrder pageOrder)
 */
 HB_FUNC_STATIC(QPRINTER_SETPAGEORDER)
 {
@@ -1215,7 +1215,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAPERSIZE)
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    void setPaperSize( QPrinter::PaperSize newPaperSize )
+    void setPaperSize(QPrinter::PaperSize newPaperSize)
     */
     QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1229,7 +1229,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAPERSIZE)
   else if (ISNUMPAR(2) && ISQSIZEF(1) && HB_ISNUM(2))
   {
     /*
-    void setPaperSize( const QSizeF &paperSize, QPrinter::Unit unit )
+    void setPaperSize(const QSizeF &paperSize, QPrinter::Unit unit)
     */
     QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1247,7 +1247,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAPERSIZE)
 }
 
 /*
-void setPaperSource( QPrinter::PaperSource source )
+void setPaperSource(QPrinter::PaperSource source)
 */
 HB_FUNC_STATIC(QPRINTER_SETPAPERSOURCE)
 {
@@ -1273,7 +1273,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAPERSOURCE)
 }
 
 /*
-void setPrintProgram( const QString &printProg )
+void setPrintProgram(const QString &printProg)
 */
 HB_FUNC_STATIC(QPRINTER_SETPRINTPROGRAM)
 {
@@ -1299,7 +1299,7 @@ HB_FUNC_STATIC(QPRINTER_SETPRINTPROGRAM)
 }
 
 /*
-void setPrintRange( QPrinter::PrintRange range )
+void setPrintRange(QPrinter::PrintRange range)
 */
 HB_FUNC_STATIC(QPRINTER_SETPRINTRANGE)
 {
@@ -1325,7 +1325,7 @@ HB_FUNC_STATIC(QPRINTER_SETPRINTRANGE)
 }
 
 /*
-void setPrinterName( const QString &name )
+void setPrinterName(const QString &name)
 */
 HB_FUNC_STATIC(QPRINTER_SETPRINTERNAME)
 {
@@ -1351,7 +1351,7 @@ HB_FUNC_STATIC(QPRINTER_SETPRINTERNAME)
 }
 
 /*
-void setResolution( int dpi )
+void setResolution(int dpi)
 */
 HB_FUNC_STATIC(QPRINTER_SETRESOLUTION)
 {
@@ -1377,7 +1377,7 @@ HB_FUNC_STATIC(QPRINTER_SETRESOLUTION)
 }
 
 /*
-void setWinPageSize ( int pageSize )
+void setWinPageSize (int pageSize)
 */
 HB_FUNC_STATIC(QPRINTER_SETWINPAGESIZE)
 {

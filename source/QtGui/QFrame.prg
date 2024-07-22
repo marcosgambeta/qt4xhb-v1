@@ -57,7 +57,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QFrame( QWidget *parent = 0, Qt::WindowFlags f = 0 )
+    QFrame(QWidget *parent = 0, Qt::WindowFlags f = 0)
     */
 HB_FUNC_STATIC(QFRAME_NEW)
 {
@@ -260,7 +260,7 @@ HB_FUNC_STATIC(QFRAME_MIDLINEWIDTH)
 }
 
 /*
-void setFrameRect( const QRect &)
+void setFrameRect(const QRect &)
 */
 HB_FUNC_STATIC(QFRAME_SETFRAMERECT)
 {
@@ -286,7 +286,7 @@ HB_FUNC_STATIC(QFRAME_SETFRAMERECT)
 }
 
 /*
-void setFrameShadow( QFrame::Shadow )
+void setFrameShadow(QFrame::Shadow)
 */
 HB_FUNC_STATIC(QFRAME_SETFRAMESHADOW)
 {
@@ -312,7 +312,7 @@ HB_FUNC_STATIC(QFRAME_SETFRAMESHADOW)
 }
 
 /*
-void setFrameShape( QFrame::Shape )
+void setFrameShape(QFrame::Shape)
 */
 HB_FUNC_STATIC(QFRAME_SETFRAMESHAPE)
 {
@@ -338,7 +338,7 @@ HB_FUNC_STATIC(QFRAME_SETFRAMESHAPE)
 }
 
 /*
-void setFrameStyle( int style )
+void setFrameStyle(int style)
 */
 HB_FUNC_STATIC(QFRAME_SETFRAMESTYLE)
 {
@@ -364,7 +364,7 @@ HB_FUNC_STATIC(QFRAME_SETFRAMESTYLE)
 }
 
 /*
-void setLineWidth( int )
+void setLineWidth(int)
 */
 HB_FUNC_STATIC(QFRAME_SETLINEWIDTH)
 {
@@ -390,7 +390,7 @@ HB_FUNC_STATIC(QFRAME_SETLINEWIDTH)
 }
 
 /*
-void setMidLineWidth( int )
+void setMidLineWidth(int)
 */
 HB_FUNC_STATIC(QFRAME_SETMIDLINEWIDTH)
 {

@@ -50,7 +50,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QGraphicsBlurEffect( QObject *parent = 0 )
+    QGraphicsBlurEffect(QObject *parent = 0)
     */
 HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_NEW)
 {
@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_BLURRADIUS)
 }
 
 /*
-virtual QRectF boundingRectFor( const QRectF &rect ) const
+virtual QRectF boundingRectFor(const QRectF &rect) const
 */
 HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_BOUNDINGRECTFOR)
 {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_BOUNDINGRECTFOR)
 }
 
 /*
-void setBlurHints( QGraphicsBlurEffect::BlurHints hints )
+void setBlurHints(QGraphicsBlurEffect::BlurHints hints)
 */
 HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_SETBLURHINTS)
 {
@@ -183,7 +183,7 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_SETBLURHINTS)
 }
 
 /*
-void setBlurRadius( qreal blurRadius )
+void setBlurRadius(qreal blurRadius)
 */
 HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_SETBLURRADIUS)
 {

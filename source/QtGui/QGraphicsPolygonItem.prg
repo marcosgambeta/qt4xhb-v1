@@ -57,7 +57,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_NEW)
   if (ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)))
   {
     /*
-    QGraphicsPolygonItem( QGraphicsItem *parent = 0 )
+    QGraphicsPolygonItem(QGraphicsItem *parent = 0)
     */
     QGraphicsPolygonItem *obj =
         new QGraphicsPolygonItem(HB_ISNIL(1) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(1)));
@@ -66,7 +66,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_NEW)
   else if (ISBETWEEN(1, 2) && ISQPOLYGONF(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2)))
   {
     /*
-    QGraphicsPolygonItem( const QPolygonF &polygon, QGraphicsItem *parent = 0 )
+    QGraphicsPolygonItem(const QPolygonF &polygon, QGraphicsItem *parent = 0)
     */
     QGraphicsPolygonItem *obj =
         new QGraphicsPolygonItem(*PQPOLYGONF(1), HB_ISNIL(2) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(2)));
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_POLYGON)
 }
 
 /*
-void setFillRule( Qt::FillRule rule )
+void setFillRule(Qt::FillRule rule)
 */
 HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_SETFILLRULE)
 {
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_SETFILLRULE)
 }
 
 /*
-void setPolygon( const QPolygonF &polygon )
+void setPolygon(const QPolygonF &polygon)
 */
 HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_SETPOLYGON)
 {
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_BOUNDINGRECT)
 }
 
 /*
-virtual bool contains( const QPointF &point ) const
+virtual bool contains(const QPointF &point) const
 */
 HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_CONTAINS)
 {
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_CONTAINS)
 }
 
 /*
-virtual bool isObscuredBy( const QGraphicsItem *item ) const
+virtual bool isObscuredBy(const QGraphicsItem *item) const
 */
 HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_ISOBSCUREDBY)
 {
@@ -294,7 +294,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_OPAQUEAREA)
 }
 
 /*
-virtual void paint( QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0 )
+virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0)
 */
 HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_PAINT)
 {

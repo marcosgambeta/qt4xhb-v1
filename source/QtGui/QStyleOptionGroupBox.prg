@@ -63,7 +63,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_NEW)
   else if (ISNUMPAR(1) && ISQSTYLEOPTIONGROUPBOX(1))
   {
     /*
-    QStyleOptionGroupBox( const QStyleOptionGroupBox &other )
+    QStyleOptionGroupBox(const QStyleOptionGroupBox &other)
     */
     QStyleOptionGroupBox *obj = new QStyleOptionGroupBox(*PQSTYLEOPTIONGROUPBOX(1));
     Qt4xHb::returnNewObject(obj, true);

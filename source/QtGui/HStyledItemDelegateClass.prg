@@ -48,7 +48,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    explicit HStyledItemDelegate( QObject *parent = 0 )
+    explicit HStyledItemDelegate(QObject *parent = 0)
     */
     void HStyledItemDelegate_new1()
 {
@@ -57,7 +57,7 @@ RETURN
 }
 
 /*
-HStyledItemDelegate( PHB_ITEM paintBlock, QObject *parent = 0 )
+HStyledItemDelegate(PHB_ITEM paintBlock, QObject *parent = 0)
 */
 void HStyledItemDelegate_new2()
 {
@@ -66,7 +66,7 @@ void HStyledItemDelegate_new2()
 }
 
 /*
-HStyledItemDelegate( PHB_ITEM paintBlock, PHB_ITEM sizeHintBlock, QObject *parent = 0 )
+HStyledItemDelegate(PHB_ITEM paintBlock, PHB_ITEM sizeHintBlock, QObject *parent = 0)
 */
 void HStyledItemDelegate_new3()
 {
@@ -75,9 +75,9 @@ void HStyledItemDelegate_new3()
 }
 
 /*
-[1]explicit HStyledItemDelegate( QObject *parent = 0 )
-[2]HStyledItemDelegate( PHB_ITEM paintBlock, QObject *parent = 0 )
-[3]HStyledItemDelegate( PHB_ITEM paintBlock, PHB_ITEM sizeHintBlock, QObject *parent = 0 )
+[1]explicit HStyledItemDelegate(QObject *parent = 0)
+[2]HStyledItemDelegate(PHB_ITEM paintBlock, QObject *parent = 0)
+[3]HStyledItemDelegate(PHB_ITEM paintBlock, PHB_ITEM sizeHintBlock, QObject *parent = 0)
 */
 
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_NEW)
@@ -122,14 +122,14 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_DELETE)
 }
 
 /*
-void paint( QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index ) const
+void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
 */
-// HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_PAINT )
+// HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_PAINT)
 // {
 // }
 
 /*
-void defaultPaint( QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index ) const
+void defaultPaint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
 */
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_DEFAULTPAINT)
 {
@@ -155,34 +155,34 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_DEFAULTPAINT)
 }
 
 /*
-QSize sizeHint( const QStyleOptionViewItem &option, const QModelIndex &index ) const
+QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const
 */
-// HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SIZEHINT )
+// HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SIZEHINT)
 // {
 // }
 
 /*
-QString displayText( const QVariant &value, const QLocale &locale ) const
+QString displayText(const QVariant &value, const QLocale &locale) const
 */
 
 /*
-QWidget *createEditor( QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index ) const
+QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
 */
 
 /*
-void setEditorData( QWidget *editor, const QModelIndex &index ) const
+void setEditorData(QWidget *editor, const QModelIndex &index) const
 */
 
 /*
-void setModelData( QWidget *editor, QAbstractItemModel *model, const QModelIndex &index ) const
+void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
 */
 
 /*
-void updateEditorGeometry( QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index ) const
+void updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index) const
 */
 
 /*
-void setPaintCB( PHB_ITEM block )
+void setPaintCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETPAINTCB)
 {
@@ -208,7 +208,7 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETPAINTCB)
 }
 
 /*
-void setSizeHintCB( PHB_ITEM block )
+void setSizeHintCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETSIZEHINTCB)
 {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETSIZEHINTCB)
 }
 
 /*
-void setDisplayTextCB( PHB_ITEM block )
+void setDisplayTextCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETDISPLAYTEXTCB)
 {
@@ -260,7 +260,7 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETDISPLAYTEXTCB)
 }
 
 /*
-void setCreateEditorCB( PHB_ITEM block )
+void setCreateEditorCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETCREATEEDITORCB)
 {
@@ -286,7 +286,7 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETCREATEEDITORCB)
 }
 
 /*
-void setEditorDataCB( PHB_ITEM block )
+void setEditorDataCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETEDITORDATACB)
 {
@@ -312,7 +312,7 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETEDITORDATACB)
 }
 
 /*
-void setModelDataCB( PHB_ITEM block )
+void setModelDataCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETMODELDATACB)
 {
@@ -338,7 +338,7 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETMODELDATACB)
 }
 
 /*
-void setUpdateEditorGeometryCB( PHB_ITEM block )
+void setUpdateEditorGeometryCB(PHB_ITEM block)
 */
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETUPDATEEDITORGEOMETRYCB)
 {

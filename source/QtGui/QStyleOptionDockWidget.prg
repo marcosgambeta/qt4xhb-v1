@@ -58,7 +58,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_NEW)
   else if (ISNUMPAR(1) && ISQSTYLEOPTIONDOCKWIDGET(1))
   {
     /*
-    QStyleOptionDockWidget( const QStyleOptionDockWidget &other )
+    QStyleOptionDockWidget(const QStyleOptionDockWidget &other)
     */
     QStyleOptionDockWidget *obj = new QStyleOptionDockWidget(*PQSTYLEOPTIONDOCKWIDGET(1));
     Qt4xHb::returnNewObject(obj, true);

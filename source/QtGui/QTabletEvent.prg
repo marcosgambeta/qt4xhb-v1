@@ -59,9 +59,9 @@ RETURN
 #include "qt4xhb_utils.hpp"
 
     /*
-    QTabletEvent( QEvent::Type t, const QPoint &pos, const QPoint &globalPos, const QPointF &hiResGlobalPos, int
+    QTabletEvent(QEvent::Type t, const QPoint &pos, const QPoint &globalPos, const QPointF &hiResGlobalPos, int
     device, int pointerType, qreal pressure, int xTilt, int yTilt, qreal tangentialPressure, qreal rotation, int z,
-    Qt::KeyboardModifiers keyState, qint64 uniqueID )
+    Qt::KeyboardModifiers keyState, qint64 uniqueID)
     */
 HB_FUNC_STATIC(QTABLETEVENT_NEW)
 {

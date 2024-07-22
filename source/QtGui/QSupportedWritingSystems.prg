@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QSUPPORTEDWRITINGSYSTEMS_NEW)
   else if (ISNUMPAR(1) && ISQSUPPORTEDWRITINGSYSTEMS(1))
   {
     /*
-    QSupportedWritingSystems( const QSupportedWritingSystems &other )
+    QSupportedWritingSystems(const QSupportedWritingSystems &other)
     */
     QSupportedWritingSystems *obj = new QSupportedWritingSystems(*PQSUPPORTEDWRITINGSYSTEMS(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QSUPPORTEDWRITINGSYSTEMS_DELETE)
 }
 
 /*
-void setSupported( QFontDatabase::WritingSystem writingSystem, bool support = true )
+void setSupported(QFontDatabase::WritingSystem writingSystem, bool support = true)
 */
 HB_FUNC_STATIC(QSUPPORTEDWRITINGSYSTEMS_SETSUPPORTED)
 {
@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QSUPPORTEDWRITINGSYSTEMS_SETSUPPORTED)
 }
 
 /*
-bool supported( QFontDatabase::WritingSystem writingSystem ) const
+bool supported(QFontDatabase::WritingSystem writingSystem) const
 */
 HB_FUNC_STATIC(QSUPPORTEDWRITINGSYSTEMS_SUPPORTED)
 {

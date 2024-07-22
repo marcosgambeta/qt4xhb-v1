@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QTEXTLINE_ASCENT)
 }
 
 /*
-qreal cursorToX( int *cursorPos, QTextLine::Edge edge = QTextLine::Leading ) const
+qreal cursorToX(int *cursorPos, QTextLine::Edge edge = QTextLine::Leading) const
 */
 HB_FUNC_STATIC(QTEXTLINE_CURSORTOX1)
 {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC(QTEXTLINE_CURSORTOX1)
 }
 
 /*
-qreal cursorToX( int cursorPos, QTextLine::Edge edge = QTextLine::Leading ) const
+qreal cursorToX(int cursorPos, QTextLine::Edge edge = QTextLine::Leading) const
 */
 HB_FUNC_STATIC(QTEXTLINE_CURSORTOX2)
 {
@@ -464,7 +464,7 @@ HB_FUNC_STATIC(QTEXTLINE_RECT)
 }
 
 /*
-void setLeadingIncluded( bool included )
+void setLeadingIncluded(bool included)
 */
 HB_FUNC_STATIC(QTEXTLINE_SETLEADINGINCLUDED)
 {
@@ -490,7 +490,7 @@ HB_FUNC_STATIC(QTEXTLINE_SETLEADINGINCLUDED)
 }
 
 /*
-void setLineWidth( qreal width )
+void setLineWidth(qreal width)
 */
 HB_FUNC_STATIC(QTEXTLINE_SETLINEWIDTH)
 {
@@ -520,7 +520,7 @@ HB_FUNC_STATIC(QTEXTLINE_SETNUMCOLUMNS)
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    void setNumColumns( int numColumns )
+    void setNumColumns(int numColumns)
     */
     QTextLine *obj = static_cast<QTextLine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -534,7 +534,7 @@ HB_FUNC_STATIC(QTEXTLINE_SETNUMCOLUMNS)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    void setNumColumns( int numColumns, qreal alignmentWidth )
+    void setNumColumns(int numColumns, qreal alignmentWidth)
     */
     QTextLine *obj = static_cast<QTextLine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -552,7 +552,7 @@ HB_FUNC_STATIC(QTEXTLINE_SETNUMCOLUMNS)
 }
 
 /*
-void setPosition( const QPointF &pos )
+void setPosition(const QPointF &pos)
 */
 HB_FUNC_STATIC(QTEXTLINE_SETPOSITION)
 {
@@ -674,7 +674,7 @@ HB_FUNC_STATIC(QTEXTLINE_X)
 }
 
 /*
-int xToCursor( qreal x, QTextLine::CursorPosition cpos = QTextLine::CursorBetweenCharacters ) const
+int xToCursor(qreal x, QTextLine::CursorPosition cpos = QTextLine::CursorBetweenCharacters) const
 */
 HB_FUNC_STATIC(QTEXTLINE_XTOCURSOR)
 {

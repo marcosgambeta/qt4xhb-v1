@@ -60,7 +60,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_NEW)
   if (ISBETWEEN(0, 1) && (ISQUNDOCOMMAND(1) || HB_ISNIL(1)))
   {
     /*
-    QUndoCommand( QUndoCommand *parent = 0 )
+    QUndoCommand(QUndoCommand *parent = 0)
     */
     QUndoCommand *obj = new QUndoCommand(HB_ISNIL(1) ? 0 : static_cast<QUndoCommand *>(Qt4xHb::itemGetPtr(1)));
     Qt4xHb::returnNewObject(obj, true);
@@ -68,7 +68,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQUNDOCOMMAND(2) || HB_ISNIL(2)))
   {
     /*
-    QUndoCommand( const QString &text, QUndoCommand *parent = 0 )
+    QUndoCommand(const QString &text, QUndoCommand *parent = 0)
     */
     QUndoCommand *obj =
         new QUndoCommand(PQSTRING(1), HB_ISNIL(2) ? 0 : static_cast<QUndoCommand *>(Qt4xHb::itemGetPtr(2)));
@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_DELETE)
 }
 
 /*
-const QUndoCommand *child( int index ) const
+const QUndoCommand *child(int index) const
 */
 HB_FUNC_STATIC(QUNDOCOMMAND_CHILD)
 {
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_ID)
 }
 
 /*
-virtual bool mergeWith( const QUndoCommand *command )
+virtual bool mergeWith(const QUndoCommand *command)
 */
 HB_FUNC_STATIC(QUNDOCOMMAND_MERGEWITH)
 {
@@ -220,7 +220,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_REDO)
 }
 
 /*
-void setText( const QString &text )
+void setText(const QString &text)
 */
 HB_FUNC_STATIC(QUNDOCOMMAND_SETTEXT)
 {

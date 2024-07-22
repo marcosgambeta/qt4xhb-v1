@@ -50,7 +50,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QGraphicsProxyWidget( QGraphicsItem *parent = 0, Qt::WindowFlags wFlags = 0 )
+    QGraphicsProxyWidget(QGraphicsItem *parent = 0, Qt::WindowFlags wFlags = 0)
     */
 HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_NEW)
 {
@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_DELETE)
 }
 
 /*
-QGraphicsProxyWidget *createProxyForChildWidget( QWidget *child )
+QGraphicsProxyWidget *createProxyForChildWidget(QWidget *child)
 */
 HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_CREATEPROXYFORCHILDWIDGET)
 {
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_CREATEPROXYFORCHILDWIDGET)
 }
 
 /*
-void setWidget( QWidget *widget )
+void setWidget(QWidget *widget)
 */
 HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_SETWIDGET)
 {
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_SETWIDGET)
 }
 
 /*
-QRectF subWidgetRect( const QWidget *widget ) const
+QRectF subWidgetRect(const QWidget *widget) const
 */
 HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_SUBWIDGETRECT)
 {
@@ -187,7 +187,7 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_WIDGET)
 }
 
 /*
-virtual void paint( QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget )
+virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 */
 HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_PAINT)
 {
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_PAINT)
 }
 
 /*
-virtual void setGeometry( const QRectF &rect )
+virtual void setGeometry(const QRectF &rect)
 */
 HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_SETGEOMETRY)
 {

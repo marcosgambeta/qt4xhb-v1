@@ -52,7 +52,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QPlainTextDocumentLayout( QTextDocument *document )
+    QPlainTextDocumentLayout(QTextDocument *document)
     */
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_NEW)
 {
@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_CURSORWIDTH)
 }
 
 /*
-void ensureBlockLayout( const QTextBlock &block ) const
+void ensureBlockLayout(const QTextBlock &block) const
 */
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_ENSUREBLOCKLAYOUT)
 {
@@ -162,7 +162,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_REQUESTUPDATE)
 }
 
 /*
-void setCursorWidth( int width )
+void setCursorWidth(int width)
 */
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_SETCURSORWIDTH)
 {
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_SETCURSORWIDTH)
 }
 
 /*
-virtual QRectF blockBoundingRect( const QTextBlock &block ) const
+virtual QRectF blockBoundingRect(const QTextBlock &block) const
 */
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT)
 {
@@ -238,7 +238,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_DOCUMENTSIZE)
 }
 
 /*
-virtual QRectF frameBoundingRect( QTextFrame *) const
+virtual QRectF frameBoundingRect(QTextFrame *) const
 */
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT)
 {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT)
 }
 
 /*
-virtual int hitTest( const QPointF &, Qt::HitTestAccuracy ) const
+virtual int hitTest(const QPointF &, Qt::HitTestAccuracy) const
 */
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_HITTEST)
 {

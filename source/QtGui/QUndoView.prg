@@ -59,7 +59,7 @@ HB_FUNC_STATIC(QUNDOVIEW_NEW)
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
-    QUndoView( QWidget *parent = 0 )
+    QUndoView(QWidget *parent = 0)
     */
     QUndoView *obj = new QUndoView(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -67,7 +67,7 @@ HB_FUNC_STATIC(QUNDOVIEW_NEW)
   else if (ISBETWEEN(1, 2) && ISQUNDOSTACK(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QUndoView( QUndoStack *stack, QWidget *parent = 0 )
+    QUndoView(QUndoStack *stack, QWidget *parent = 0)
     */
     QUndoView *obj = new QUndoView(PQUNDOSTACK(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QUNDOVIEW_NEW)
   else if (ISBETWEEN(1, 2) && ISQUNDOGROUP(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QUndoView( QUndoGroup *group, QWidget *parent = 0 )
+    QUndoView(QUndoGroup *group, QWidget *parent = 0)
     */
     QUndoView *obj = new QUndoView(PQUNDOGROUP(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -179,7 +179,7 @@ HB_FUNC_STATIC(QUNDOVIEW_GROUP)
 }
 
 /*
-void setCleanIcon( const QIcon &icon )
+void setCleanIcon(const QIcon &icon)
 */
 HB_FUNC_STATIC(QUNDOVIEW_SETCLEANICON)
 {
@@ -205,7 +205,7 @@ HB_FUNC_STATIC(QUNDOVIEW_SETCLEANICON)
 }
 
 /*
-void setEmptyLabel( const QString &label )
+void setEmptyLabel(const QString &label)
 */
 HB_FUNC_STATIC(QUNDOVIEW_SETEMPTYLABEL)
 {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC(QUNDOVIEW_STACK)
 }
 
 /*
-void setGroup( QUndoGroup *group )
+void setGroup(QUndoGroup *group)
 */
 HB_FUNC_STATIC(QUNDOVIEW_SETGROUP)
 {
@@ -282,7 +282,7 @@ HB_FUNC_STATIC(QUNDOVIEW_SETGROUP)
 }
 
 /*
-void setStack( QUndoStack *stack )
+void setStack(QUndoStack *stack)
 */
 HB_FUNC_STATIC(QUNDOVIEW_SETSTACK)
 {

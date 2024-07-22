@@ -67,7 +67,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_NEW)
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
-    QDialogButtonBox( QWidget *parent = 0 )
+    QDialogButtonBox(QWidget *parent = 0)
     */
     QDialogButtonBox *obj = new QDialogButtonBox(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QDialogButtonBox( Qt::Orientation orientation, QWidget *parent = 0 )
+    QDialogButtonBox(Qt::Orientation orientation, QWidget *parent = 0)
     */
     QDialogButtonBox *obj = new QDialogButtonBox((Qt::Orientation)hb_parni(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -83,8 +83,8 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_NEW)
   else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (ISQWIDGET(3) || HB_ISNIL(3)))
   {
     /*
-    QDialogButtonBox( QDialogButtonBox::StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget *
-    parent = 0 )
+    QDialogButtonBox(QDialogButtonBox::StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget *
+    parent = 0)
     */
     QDialogButtonBox *obj = new QDialogButtonBox(
         (QDialogButtonBox::StandardButtons)hb_parni(1),
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_ADDBUTTON)
   if (ISNUMPAR(2) && ISQABSTRACTBUTTON(1) && HB_ISNUM(2))
   {
     /*
-    void addButton( QAbstractButton *button, QDialogButtonBox::ButtonRole role )
+    void addButton(QAbstractButton *button, QDialogButtonBox::ButtonRole role)
     */
     QDialogButtonBox *obj = qobject_cast<QDialogButtonBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_ADDBUTTON)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
     /*
-    QPushButton *addButton( const QString &text, QDialogButtonBox::ButtonRole role )
+    QPushButton *addButton(const QString &text, QDialogButtonBox::ButtonRole role)
     */
     QDialogButtonBox *obj = qobject_cast<QDialogButtonBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_ADDBUTTON)
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    QPushButton *addButton( QDialogButtonBox::StandardButton button )
+    QPushButton *addButton(QDialogButtonBox::StandardButton button)
     */
     QDialogButtonBox *obj = qobject_cast<QDialogButtonBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_ADDBUTTON)
 }
 
 /*
-QPushButton *button( QDialogButtonBox::StandardButton which ) const
+QPushButton *button(QDialogButtonBox::StandardButton which) const
 */
 HB_FUNC_STATIC(QDIALOGBUTTONBOX_BUTTON)
 {
@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_BUTTON)
 }
 
 /*
-QDialogButtonBox::ButtonRole buttonRole( QAbstractButton *button ) const
+QDialogButtonBox::ButtonRole buttonRole(QAbstractButton *button) const
 */
 HB_FUNC_STATIC(QDIALOGBUTTONBOX_BUTTONROLE)
 {
@@ -335,7 +335,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_ORIENTATION)
 }
 
 /*
-void removeButton( QAbstractButton *button )
+void removeButton(QAbstractButton *button)
 */
 HB_FUNC_STATIC(QDIALOGBUTTONBOX_REMOVEBUTTON)
 {
@@ -361,7 +361,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_REMOVEBUTTON)
 }
 
 /*
-void setCenterButtons( bool center )
+void setCenterButtons(bool center)
 */
 HB_FUNC_STATIC(QDIALOGBUTTONBOX_SETCENTERBUTTONS)
 {
@@ -387,7 +387,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_SETCENTERBUTTONS)
 }
 
 /*
-void setOrientation( Qt::Orientation orientation )
+void setOrientation(Qt::Orientation orientation)
 */
 HB_FUNC_STATIC(QDIALOGBUTTONBOX_SETORIENTATION)
 {
@@ -413,7 +413,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_SETORIENTATION)
 }
 
 /*
-void setStandardButtons( QDialogButtonBox::StandardButtons buttons )
+void setStandardButtons(QDialogButtonBox::StandardButtons buttons)
 */
 HB_FUNC_STATIC(QDIALOGBUTTONBOX_SETSTANDARDBUTTONS)
 {
@@ -439,7 +439,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_SETSTANDARDBUTTONS)
 }
 
 /*
-QDialogButtonBox::StandardButton standardButton( QAbstractButton *button ) const
+QDialogButtonBox::StandardButton standardButton(QAbstractButton *button) const
 */
 HB_FUNC_STATIC(QDIALOGBUTTONBOX_STANDARDBUTTON)
 {

@@ -49,8 +49,8 @@ RETURN
 #include "qt4xhb_utils.hpp"
 
     /*
-    QSpacerItem( int w, int h, QSizePolicy::Policy hPolicy = QSizePolicy::Minimum, QSizePolicy::Policy vPolicy =
-    QSizePolicy::Minimum )
+    QSpacerItem(int w, int h, QSizePolicy::Policy hPolicy = QSizePolicy::Minimum, QSizePolicy::Policy vPolicy =
+    QSizePolicy::Minimum)
     */
 HB_FUNC_STATIC(QSPACERITEM_NEW)
 {
@@ -68,8 +68,8 @@ HB_FUNC_STATIC(QSPACERITEM_NEW)
 }
 
 /*
-void changeSize( int w, int h, QSizePolicy::Policy hPolicy = QSizePolicy::Minimum, QSizePolicy::Policy vPolicy =
-QSizePolicy::Minimum )
+void changeSize(int w, int h, QSizePolicy::Policy hPolicy = QSizePolicy::Minimum, QSizePolicy::Policy vPolicy =
+QSizePolicy::Minimum)
 */
 HB_FUNC_STATIC(QSPACERITEM_CHANGESIZE)
 {
@@ -220,7 +220,7 @@ HB_FUNC_STATIC(QSPACERITEM_MINIMUMSIZE)
 }
 
 /*
-virtual void setGeometry( const QRect &r )
+virtual void setGeometry(const QRect &r)
 */
 HB_FUNC_STATIC(QSPACERITEM_SETGEOMETRY)
 {

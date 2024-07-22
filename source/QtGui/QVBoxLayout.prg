@@ -53,7 +53,7 @@ HB_FUNC_STATIC(QVBOXLAYOUT_NEW)
   else if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
-    QVBoxLayout( QWidget *parent )
+    QVBoxLayout(QWidget *parent)
     */
     QVBoxLayout *obj = new QVBoxLayout(PQWIDGET(1));
     Qt4xHb::returnNewObject(obj, false);

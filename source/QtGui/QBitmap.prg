@@ -59,7 +59,7 @@ HB_FUNC_STATIC(QBITMAP_NEW)
   else if (ISNUMPAR(1) && ISQPIXMAP(1))
   {
     /*
-    QBitmap( const QPixmap &pixmap )
+    QBitmap(const QPixmap &pixmap)
     */
     QBitmap *obj = new QBitmap(*PQPIXMAP(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -67,7 +67,7 @@ HB_FUNC_STATIC(QBITMAP_NEW)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    QBitmap( int width, int height )
+    QBitmap(int width, int height)
     */
     QBitmap *obj = new QBitmap(PINT(1), PINT(2));
     Qt4xHb::returnNewObject(obj, true);
@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QBITMAP_NEW)
   else if (ISNUMPAR(1) && ISQSIZE(1))
   {
     /*
-    QBitmap( const QSize &size )
+    QBitmap(const QSize &size)
     */
     QBitmap *obj = new QBitmap(*PQSIZE(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QBITMAP_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
-    QBitmap( const QString &fileName, const char *format = 0 )
+    QBitmap(const QString &fileName, const char *format = 0)
     */
     QBitmap *obj = new QBitmap(PQSTRING(1), OPCONSTCHAR(2, 0));
     Qt4xHb::returnNewObject(obj, true);
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QBITMAP_CLEAR)
 }
 
 /*
-QBitmap transformed( const QTransform &matrix ) const
+QBitmap transformed(const QTransform &matrix) const
 */
 HB_FUNC_STATIC(QBITMAP_TRANSFORMED)
 {
@@ -162,7 +162,7 @@ HB_FUNC_STATIC(QBITMAP_TRANSFORMED)
 }
 
 /*
-static QBitmap fromData( const QSize &size, const uchar *bits, QImage::Format monoFormat = QImage::Format_MonoLSB )
+static QBitmap fromData(const QSize &size, const uchar *bits, QImage::Format monoFormat = QImage::Format_MonoLSB)
 */
 HB_FUNC_STATIC(QBITMAP_FROMDATA)
 {
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QBITMAP_FROMDATA)
 }
 
 /*
-static QBitmap fromImage( const QImage &image, Qt::ImageConversionFlags flags = Qt::AutoColor )
+static QBitmap fromImage(const QImage &image, Qt::ImageConversionFlags flags = Qt::AutoColor)
 */
 HB_FUNC_STATIC(QBITMAP_FROMIMAGE)
 {
@@ -220,7 +220,7 @@ void QBitmap_toVariant1()
 }
 
 /*
-static QVariant toVariant( const QBitmap &)
+static QVariant toVariant(const QBitmap &)
 */
 void QBitmap_toVariant2()
 {
@@ -231,7 +231,7 @@ void QBitmap_toVariant2()
 }
 
 //[1]QVariant toVariant()
-//[2]static QVariant toVariant( const QBitmap &)
+//[2]static QVariant toVariant(const QBitmap &)
 
 HB_FUNC_STATIC(QBITMAP_TOVARIANT)
 {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC(QBITMAP_TOVARIANT)
 }
 
 /*
-static QBitmap fromVariant( const QVariant &)
+static QBitmap fromVariant(const QVariant &)
 */
 HB_FUNC_STATIC(QBITMAP_FROMVARIANT)
 {

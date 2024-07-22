@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QFILEICONPROVIDER_ICON)
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    virtual QIcon icon( QFileIconProvider::IconType type ) const
+    virtual QIcon icon(QFileIconProvider::IconType type) const
     */
     QFileIconProvider *obj = static_cast<QFileIconProvider *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QFILEICONPROVIDER_ICON)
   else if (ISNUMPAR(1) && ISQFILEINFO(1))
   {
     /*
-    virtual QIcon icon( const QFileInfo &info ) const
+    virtual QIcon icon(const QFileInfo &info) const
     */
     QFileIconProvider *obj = static_cast<QFileIconProvider *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QFILEICONPROVIDER_ICON)
 }
 
 /*
-virtual QString type( const QFileInfo &info ) const
+virtual QString type(const QFileInfo &info) const
 */
 HB_FUNC_STATIC(QFILEICONPROVIDER_TYPE)
 {

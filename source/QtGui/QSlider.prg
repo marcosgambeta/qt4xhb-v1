@@ -53,7 +53,7 @@ HB_FUNC_STATIC(QSLIDER_NEW)
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
-    QSlider( QWidget *parent = 0 )
+    QSlider(QWidget *parent = 0)
     */
     QSlider *obj = new QSlider(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -61,7 +61,7 @@ HB_FUNC_STATIC(QSLIDER_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QSlider( Qt::Orientation orientation, QWidget *parent = 0 )
+    QSlider(Qt::Orientation orientation, QWidget *parent = 0)
     */
     QSlider *obj = new QSlider((Qt::Orientation)hb_parni(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QSLIDER_DELETE)
 }
 
 /*
-void setTickInterval( int ti )
+void setTickInterval(int ti)
 */
 HB_FUNC_STATIC(QSLIDER_SETTICKINTERVAL)
 {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QSLIDER_SETTICKINTERVAL)
 }
 
 /*
-void setTickPosition( QSlider::TickPosition position )
+void setTickPosition(QSlider::TickPosition position)
 */
 HB_FUNC_STATIC(QSLIDER_SETTICKPOSITION)
 {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QSLIDER_TICKPOSITION)
 }
 
 /*
-virtual bool event( QEvent *event )
+virtual bool event(QEvent *event)
 */
 HB_FUNC_STATIC(QSLIDER_EVENT)
 {

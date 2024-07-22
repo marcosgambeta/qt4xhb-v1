@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_AUTOSCROLLMARGIN)
 }
 
 /*
-void closePersistentEditor( const QModelIndex &index )
+void closePersistentEditor(const QModelIndex &index)
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_CLOSEPERSISTENTEDITOR)
 {
@@ -430,7 +430,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ICONSIZE)
 }
 
 /*
-virtual QModelIndex indexAt( const QPoint &point ) const = 0
+virtual QModelIndex indexAt(const QPoint &point) const = 0
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_INDEXAT)
 {
@@ -455,7 +455,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_INDEXAT)
 }
 
 /*
-QWidget *indexWidget( const QModelIndex &index ) const
+QWidget *indexWidget(const QModelIndex &index) const
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_INDEXWIDGET)
 {
@@ -497,7 +497,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ITEMDELEGATE)
   else if (ISNUMPAR(1) && ISQMODELINDEX(1))
   {
     /*
-    QAbstractItemDelegate *itemDelegate( const QModelIndex &index ) const
+    QAbstractItemDelegate *itemDelegate(const QModelIndex &index) const
     */
     QAbstractItemView *obj = qobject_cast<QAbstractItemView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -514,7 +514,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ITEMDELEGATE)
 }
 
 /*
-QAbstractItemDelegate *itemDelegateForColumn( int column ) const
+QAbstractItemDelegate *itemDelegateForColumn(int column) const
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_ITEMDELEGATEFORCOLUMN)
 {
@@ -539,7 +539,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ITEMDELEGATEFORCOLUMN)
 }
 
 /*
-QAbstractItemDelegate *itemDelegateForRow( int row ) const
+QAbstractItemDelegate *itemDelegateForRow(int row) const
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_ITEMDELEGATEFORROW)
 {
@@ -564,7 +564,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ITEMDELEGATEFORROW)
 }
 
 /*
-virtual void keyboardSearch( const QString &search )
+virtual void keyboardSearch(const QString &search)
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_KEYBOARDSEARCH)
 {
@@ -615,7 +615,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_MODEL)
 }
 
 /*
-void openPersistentEditor( const QModelIndex &index )
+void openPersistentEditor(const QModelIndex &index)
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_OPENPERSISTENTEDITOR)
 {
@@ -666,7 +666,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ROOTINDEX)
 }
 
 /*
-virtual void scrollTo( const QModelIndex &index, QAbstractItemView::ScrollHint hint = QAbstractItemView::EnsureVisible
+virtual void scrollTo(const QModelIndex &index, QAbstractItemView::ScrollHint hint = QAbstractItemView::EnsureVisible
 ) = 0
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SCROLLTO)
@@ -767,7 +767,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SELECTIONMODEL)
 }
 
 /*
-void setAlternatingRowColors( bool enable )
+void setAlternatingRowColors(bool enable)
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETALTERNATINGROWCOLORS)
 {
@@ -793,7 +793,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETALTERNATINGROWCOLORS)
 }
 
 /*
-void setAutoScroll( bool enable )
+void setAutoScroll(bool enable)
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETAUTOSCROLL)
 {
@@ -819,7 +819,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETAUTOSCROLL)
 }
 
 /*
-void setAutoScrollMargin( int margin )
+void setAutoScrollMargin(int margin)
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETAUTOSCROLLMARGIN)
 {
@@ -845,7 +845,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETAUTOSCROLLMARGIN)
 }
 
 /*
-void setDefaultDropAction( Qt::DropAction dropAction )
+void setDefaultDropAction(Qt::DropAction dropAction)
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETDEFAULTDROPACTION)
 {
@@ -871,7 +871,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETDEFAULTDROPACTION)
 }
 
 /*
-void setDragDropMode( QAbstractItemView::DragDropMode behavior )
+void setDragDropMode(QAbstractItemView::DragDropMode behavior)
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETDRAGDROPMODE)
 {
@@ -897,7 +897,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETDRAGDROPMODE)
 }
 
 /*
-void setDragDropOverwriteMode( bool overwrite )
+void setDragDropOverwriteMode(bool overwrite)
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETDRAGDROPOVERWRITEMODE)
 {
@@ -923,7 +923,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETDRAGDROPOVERWRITEMODE)
 }
 
 /*
-void setDragEnabled( bool enable )
+void setDragEnabled(bool enable)
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETDRAGENABLED)
 {
@@ -949,7 +949,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETDRAGENABLED)
 }
 
 /*
-void setDropIndicatorShown( bool enable )
+void setDropIndicatorShown(bool enable)
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETDROPINDICATORSHOWN)
 {
@@ -975,7 +975,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETDROPINDICATORSHOWN)
 }
 
 /*
-void setEditTriggers( QAbstractItemView::EditTriggers triggers )
+void setEditTriggers(QAbstractItemView::EditTriggers triggers)
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETEDITTRIGGERS)
 {
@@ -1001,7 +1001,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETEDITTRIGGERS)
 }
 
 /*
-void setHorizontalScrollMode( QAbstractItemView::ScrollMode mode )
+void setHorizontalScrollMode(QAbstractItemView::ScrollMode mode)
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETHORIZONTALSCROLLMODE)
 {
@@ -1027,7 +1027,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETHORIZONTALSCROLLMODE)
 }
 
 /*
-void setIconSize( const QSize &size )
+void setIconSize(const QSize &size)
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETICONSIZE)
 {
@@ -1053,7 +1053,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETICONSIZE)
 }
 
 /*
-void setIndexWidget( const QModelIndex &index, QWidget *widget )
+void setIndexWidget(const QModelIndex &index, QWidget *widget)
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETINDEXWIDGET)
 {
@@ -1079,7 +1079,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETINDEXWIDGET)
 }
 
 /*
-void setItemDelegate( QAbstractItemDelegate *delegate )
+void setItemDelegate(QAbstractItemDelegate *delegate)
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETITEMDELEGATE)
 {
@@ -1105,7 +1105,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETITEMDELEGATE)
 }
 
 /*
-void setItemDelegateForColumn( int column, QAbstractItemDelegate *delegate )
+void setItemDelegateForColumn(int column, QAbstractItemDelegate *delegate)
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETITEMDELEGATEFORCOLUMN)
 {
@@ -1131,7 +1131,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETITEMDELEGATEFORCOLUMN)
 }
 
 /*
-void setItemDelegateForRow( int row, QAbstractItemDelegate *delegate )
+void setItemDelegateForRow(int row, QAbstractItemDelegate *delegate)
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETITEMDELEGATEFORROW)
 {
@@ -1157,7 +1157,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETITEMDELEGATEFORROW)
 }
 
 /*
-virtual void setModel( QAbstractItemModel *model )
+virtual void setModel(QAbstractItemModel *model)
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETMODEL)
 {
@@ -1183,7 +1183,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETMODEL)
 }
 
 /*
-void setSelectionBehavior( QAbstractItemView::SelectionBehavior behavior )
+void setSelectionBehavior(QAbstractItemView::SelectionBehavior behavior)
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETSELECTIONBEHAVIOR)
 {
@@ -1209,7 +1209,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETSELECTIONBEHAVIOR)
 }
 
 /*
-void setSelectionMode( QAbstractItemView::SelectionMode mode )
+void setSelectionMode(QAbstractItemView::SelectionMode mode)
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETSELECTIONMODE)
 {
@@ -1235,7 +1235,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETSELECTIONMODE)
 }
 
 /*
-virtual void setSelectionModel( QItemSelectionModel *selectionModel )
+virtual void setSelectionModel(QItemSelectionModel *selectionModel)
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETSELECTIONMODEL)
 {
@@ -1261,7 +1261,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETSELECTIONMODEL)
 }
 
 /*
-void setTabKeyNavigation( bool enable )
+void setTabKeyNavigation(bool enable)
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETTABKEYNAVIGATION)
 {
@@ -1287,7 +1287,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETTABKEYNAVIGATION)
 }
 
 /*
-void setTextElideMode( Qt::TextElideMode mode )
+void setTextElideMode(Qt::TextElideMode mode)
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETTEXTELIDEMODE)
 {
@@ -1313,7 +1313,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETTEXTELIDEMODE)
 }
 
 /*
-void setVerticalScrollMode( QAbstractItemView::ScrollMode mode )
+void setVerticalScrollMode(QAbstractItemView::ScrollMode mode)
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETVERTICALSCROLLMODE)
 {
@@ -1363,7 +1363,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SHOWDROPINDICATOR)
 }
 
 /*
-virtual int sizeHintForColumn( int column ) const
+virtual int sizeHintForColumn(int column) const
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SIZEHINTFORCOLUMN)
 {
@@ -1387,7 +1387,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SIZEHINTFORCOLUMN)
 }
 
 /*
-QSize sizeHintForIndex( const QModelIndex &index ) const
+QSize sizeHintForIndex(const QModelIndex &index) const
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SIZEHINTFORINDEX)
 {
@@ -1412,7 +1412,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SIZEHINTFORINDEX)
 }
 
 /*
-virtual int sizeHintForRow( int row ) const
+virtual int sizeHintForRow(int row) const
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SIZEHINTFORROW)
 {
@@ -1508,7 +1508,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_VERTICALSCROLLMODE)
 }
 
 /*
-virtual QRect visualRect( const QModelIndex &index ) const = 0
+virtual QRect visualRect(const QModelIndex &index) const = 0
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_VISUALRECT)
 {
@@ -1533,7 +1533,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_VISUALRECT)
 }
 
 /*
-virtual QVariant inputMethodQuery( Qt::InputMethodQuery query ) const
+virtual QVariant inputMethodQuery(Qt::InputMethodQuery query) const
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_INPUTMETHODQUERY)
 {
@@ -1584,7 +1584,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_CLEARSELECTION)
 }
 
 /*
-void edit( const QModelIndex &index )
+void edit(const QModelIndex &index)
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_EDIT)
 {
@@ -1714,7 +1714,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SELECTALL)
 }
 
 /*
-void setCurrentIndex( const QModelIndex &index )
+void setCurrentIndex(const QModelIndex &index)
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETCURRENTINDEX)
 {
@@ -1740,7 +1740,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETCURRENTINDEX)
 }
 
 /*
-virtual void setRootIndex( const QModelIndex &index )
+virtual void setRootIndex(const QModelIndex &index)
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETROOTINDEX)
 {
@@ -1766,7 +1766,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETROOTINDEX)
 }
 
 /*
-void update( const QModelIndex &index )
+void update(const QModelIndex &index)
 */
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_UPDATE)
 {

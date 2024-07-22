@@ -65,7 +65,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_NEW)
   else if (ISNUMPAR(1) && ISQTEXTDOCUMENT(1))
   {
     /*
-    QTextDocumentFragment( const QTextDocument *document )
+    QTextDocumentFragment(const QTextDocument *document)
     */
     QTextDocumentFragment *obj = new QTextDocumentFragment(PQTEXTDOCUMENT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_NEW)
   else if (ISNUMPAR(1) && ISQTEXTCURSOR(1))
   {
     /*
-    QTextDocumentFragment( const QTextCursor &cursor )
+    QTextDocumentFragment(const QTextCursor &cursor)
     */
     QTextDocumentFragment *obj = new QTextDocumentFragment(*PQTEXTCURSOR(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_NEW)
   else if (ISNUMPAR(1) && ISQTEXTDOCUMENTFRAGMENT(1))
   {
     /*
-    QTextDocumentFragment( const QTextDocumentFragment &other )
+    QTextDocumentFragment(const QTextDocumentFragment &other)
     */
     QTextDocumentFragment *obj = new QTextDocumentFragment(*PQTEXTDOCUMENTFRAGMENT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_TOHTML)
   if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
     /*
-    QString toHtml( const QByteArray &encoding ) const
+    QString toHtml(const QByteArray &encoding) const
     */
     QTextDocumentFragment *obj = static_cast<QTextDocumentFragment *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_FROMHTML)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    static QTextDocumentFragment fromHtml( const QString &text )
+    static QTextDocumentFragment fromHtml(const QString &text)
     */
 
     QTextDocumentFragment *ptr = new QTextDocumentFragment(QTextDocumentFragment::fromHtml(PQSTRING(1)));
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_FROMHTML)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQTEXTDOCUMENT(2))
   {
     /*
-    static QTextDocumentFragment fromHtml( const QString &text, const QTextDocument *resourceProvider )
+    static QTextDocumentFragment fromHtml(const QString &text, const QTextDocument *resourceProvider)
     */
 
     QTextDocumentFragment *ptr =
@@ -216,7 +216,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_FROMHTML)
 }
 
 /*
-static QTextDocumentFragment fromPlainText( const QString &plainText )
+static QTextDocumentFragment fromPlainText(const QString &plainText)
 */
 HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_FROMPLAINTEXT)
 {

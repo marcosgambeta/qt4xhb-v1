@@ -52,7 +52,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_NEW)
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
-    QIntValidator( QObject *parent = 0 )
+    QIntValidator(QObject *parent = 0)
     */
     QIntValidator *obj = new QIntValidator(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -60,7 +60,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_NEW)
   else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQOBJECT(3))
   {
     /*
-    QIntValidator( int minimum, int maximum, QObject *parent )
+    QIntValidator(int minimum, int maximum, QObject *parent)
     */
     QIntValidator *obj = new QIntValidator(PINT(1), PINT(2), PQOBJECT(3));
     Qt4xHb::returnNewObject(obj, false);
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_BOTTOM)
 }
 
 /*
-void setBottom( int )
+void setBottom(int)
 */
 HB_FUNC_STATIC(QINTVALIDATOR_SETBOTTOM)
 {
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_SETBOTTOM)
 }
 
 /*
-virtual void setRange( int bottom, int top )
+virtual void setRange(int bottom, int top)
 */
 HB_FUNC_STATIC(QINTVALIDATOR_SETRANGE)
 {
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_SETRANGE)
 }
 
 /*
-void setTop( int )
+void setTop(int)
 */
 HB_FUNC_STATIC(QINTVALIDATOR_SETTOP)
 {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_TOP)
 }
 
 /*
-virtual void fixup( QString &input ) const
+virtual void fixup(QString &input) const
 */
 HB_FUNC_STATIC(QINTVALIDATOR_FIXUP)
 {
@@ -244,7 +244,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_FIXUP)
 }
 
 /*
-virtual QValidator::State validate( QString &input, int &pos ) const
+virtual QValidator::State validate(QString &input, int &pos) const
 */
 HB_FUNC_STATIC(QINTVALIDATOR_VALIDATE)
 {

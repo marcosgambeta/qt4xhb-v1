@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QVECTOR2D_NEW)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    QVector2D( qreal xpos, qreal ypos )
+    QVector2D(qreal xpos, qreal ypos)
     */
     QVector2D *obj = new QVector2D(PQREAL(1), PQREAL(2));
     Qt4xHb::returnNewObject(obj, true);
@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QVECTOR2D_NEW)
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    QVector2D( const QPoint &point )
+    QVector2D(const QPoint &point)
     */
     QVector2D *obj = new QVector2D(*PQPOINT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QVECTOR2D_NEW)
   else if (ISNUMPAR(1) && ISQPOINTF(1))
   {
     /*
-    QVector2D( const QPointF &point )
+    QVector2D(const QPointF &point)
     */
     QVector2D *obj = new QVector2D(*PQPOINTF(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QVECTOR2D_NEW)
   else if (ISNUMPAR(1) && ISQVECTOR3D(1))
   {
     /*
-    QVector2D( const QVector3D &vector )
+    QVector2D(const QVector3D &vector)
     */
     QVector2D *obj = new QVector2D(*PQVECTOR3D(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QVECTOR2D_NEW)
   else if (ISNUMPAR(1) && ISQVECTOR4D(1))
   {
     /*
-    QVector2D( const QVector4D &vector )
+    QVector2D(const QVector4D &vector)
     */
     QVector2D *obj = new QVector2D(*PQVECTOR4D(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -264,7 +264,7 @@ HB_FUNC_STATIC(QVECTOR2D_NORMALIZED)
 }
 
 /*
-void setX( qreal x )
+void setX(qreal x)
 */
 HB_FUNC_STATIC(QVECTOR2D_SETX)
 {
@@ -290,7 +290,7 @@ HB_FUNC_STATIC(QVECTOR2D_SETX)
 }
 
 /*
-void setY( qreal y )
+void setY(qreal y)
 */
 HB_FUNC_STATIC(QVECTOR2D_SETY)
 {
@@ -464,7 +464,7 @@ HB_FUNC_STATIC(QVECTOR2D_Y)
 }
 
 /*
-static qreal dotProduct( const QVector2D &v1, const QVector2D &v2 )
+static qreal dotProduct(const QVector2D &v1, const QVector2D &v2)
 */
 HB_FUNC_STATIC(QVECTOR2D_DOTPRODUCT)
 {

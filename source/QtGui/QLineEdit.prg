@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QLINEEDIT_NEW)
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
-    QLineEdit( QWidget *parent = 0 )
+    QLineEdit(QWidget *parent = 0)
     */
     QLineEdit *obj = new QLineEdit(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QLINEEDIT_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QLineEdit( const QString &contents, QWidget *parent = 0 )
+    QLineEdit(const QString &contents, QWidget *parent = 0)
     */
     QLineEdit *obj = new QLineEdit(PQSTRING(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -260,7 +260,7 @@ HB_FUNC_STATIC(QLINEEDIT_CREATESTANDARDCONTEXTMENU)
 }
 
 /*
-void cursorBackward( bool mark, int steps = 1 )
+void cursorBackward(bool mark, int steps = 1)
 */
 HB_FUNC_STATIC(QLINEEDIT_CURSORBACKWARD)
 {
@@ -286,7 +286,7 @@ HB_FUNC_STATIC(QLINEEDIT_CURSORBACKWARD)
 }
 
 /*
-void cursorForward( bool mark, int steps = 1 )
+void cursorForward(bool mark, int steps = 1)
 */
 HB_FUNC_STATIC(QLINEEDIT_CURSORFORWARD)
 {
@@ -336,7 +336,7 @@ HB_FUNC_STATIC(QLINEEDIT_CURSORPOSITION)
 }
 
 /*
-int cursorPositionAt( const QPoint &pos )
+int cursorPositionAt(const QPoint &pos)
 */
 HB_FUNC_STATIC(QLINEEDIT_CURSORPOSITIONAT)
 {
@@ -360,7 +360,7 @@ HB_FUNC_STATIC(QLINEEDIT_CURSORPOSITIONAT)
 }
 
 /*
-void cursorWordBackward( bool mark )
+void cursorWordBackward(bool mark)
 */
 HB_FUNC_STATIC(QLINEEDIT_CURSORWORDBACKWARD)
 {
@@ -386,7 +386,7 @@ HB_FUNC_STATIC(QLINEEDIT_CURSORWORDBACKWARD)
 }
 
 /*
-void cursorWordForward( bool mark )
+void cursorWordForward(bool mark)
 */
 HB_FUNC_STATIC(QLINEEDIT_CURSORWORDFORWARD)
 {
@@ -536,7 +536,7 @@ HB_FUNC_STATIC(QLINEEDIT_ECHOMODE)
 }
 
 /*
-void end( bool mark )
+void end(bool mark)
 */
 HB_FUNC_STATIC(QLINEEDIT_END)
 {
@@ -562,7 +562,7 @@ HB_FUNC_STATIC(QLINEEDIT_END)
 }
 
 /*
-void getTextMargins( int *left, int *top, int *right, int *bottom ) const
+void getTextMargins(int *left, int *top, int *right, int *bottom) const
 */
 HB_FUNC_STATIC(QLINEEDIT_GETTEXTMARGINS)
 {
@@ -668,7 +668,7 @@ HB_FUNC_STATIC(QLINEEDIT_HASSELECTEDTEXT)
 }
 
 /*
-void home( bool mark )
+void home(bool mark)
 */
 HB_FUNC_STATIC(QLINEEDIT_HOME)
 {
@@ -718,7 +718,7 @@ HB_FUNC_STATIC(QLINEEDIT_INPUTMASK)
 }
 
 /*
-void insert( const QString &newText )
+void insert(const QString &newText)
 */
 HB_FUNC_STATIC(QLINEEDIT_INSERT)
 {
@@ -961,7 +961,7 @@ HB_FUNC_STATIC(QLINEEDIT_SELECTIONSTART)
 }
 
 /*
-void setAlignment( Qt::Alignment flag )
+void setAlignment(Qt::Alignment flag)
 */
 HB_FUNC_STATIC(QLINEEDIT_SETALIGNMENT)
 {
@@ -987,7 +987,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETALIGNMENT)
 }
 
 /*
-void setCompleter( QCompleter *c )
+void setCompleter(QCompleter *c)
 */
 HB_FUNC_STATIC(QLINEEDIT_SETCOMPLETER)
 {
@@ -1013,7 +1013,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETCOMPLETER)
 }
 
 /*
-void setCursorPosition( int )
+void setCursorPosition(int)
 */
 HB_FUNC_STATIC(QLINEEDIT_SETCURSORPOSITION)
 {
@@ -1039,7 +1039,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETCURSORPOSITION)
 }
 
 /*
-void setDragEnabled( bool b )
+void setDragEnabled(bool b)
 */
 HB_FUNC_STATIC(QLINEEDIT_SETDRAGENABLED)
 {
@@ -1065,7 +1065,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETDRAGENABLED)
 }
 
 /*
-void setEchoMode( QLineEdit::EchoMode )
+void setEchoMode(QLineEdit::EchoMode)
 */
 HB_FUNC_STATIC(QLINEEDIT_SETECHOMODE)
 {
@@ -1091,7 +1091,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETECHOMODE)
 }
 
 /*
-void setFrame( bool )
+void setFrame(bool)
 */
 HB_FUNC_STATIC(QLINEEDIT_SETFRAME)
 {
@@ -1117,7 +1117,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETFRAME)
 }
 
 /*
-void setInputMask( const QString &inputMask )
+void setInputMask(const QString &inputMask)
 */
 HB_FUNC_STATIC(QLINEEDIT_SETINPUTMASK)
 {
@@ -1143,7 +1143,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETINPUTMASK)
 }
 
 /*
-void setMaxLength( int )
+void setMaxLength(int)
 */
 HB_FUNC_STATIC(QLINEEDIT_SETMAXLENGTH)
 {
@@ -1169,7 +1169,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETMAXLENGTH)
 }
 
 /*
-void setModified( bool )
+void setModified(bool)
 */
 HB_FUNC_STATIC(QLINEEDIT_SETMODIFIED)
 {
@@ -1195,7 +1195,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETMODIFIED)
 }
 
 /*
-void setPlaceholderText( const QString &)
+void setPlaceholderText(const QString &)
 */
 HB_FUNC_STATIC(QLINEEDIT_SETPLACEHOLDERTEXT)
 {
@@ -1221,7 +1221,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETPLACEHOLDERTEXT)
 }
 
 /*
-void setReadOnly( bool )
+void setReadOnly(bool)
 */
 HB_FUNC_STATIC(QLINEEDIT_SETREADONLY)
 {
@@ -1247,7 +1247,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETREADONLY)
 }
 
 /*
-void setSelection( int start, int length )
+void setSelection(int start, int length)
 */
 HB_FUNC_STATIC(QLINEEDIT_SETSELECTION)
 {
@@ -1277,7 +1277,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETTEXTMARGINS)
   if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
-    void setTextMargins( int left, int top, int right, int bottom )
+    void setTextMargins(int left, int top, int right, int bottom)
     */
     QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -1291,7 +1291,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETTEXTMARGINS)
   else if (ISNUMPAR(1) && ISQMARGINS(1))
   {
     /*
-    void setTextMargins( const QMargins &margins )
+    void setTextMargins(const QMargins &margins)
     */
     QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -1309,7 +1309,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETTEXTMARGINS)
 }
 
 /*
-void setValidator( const QValidator *v )
+void setValidator(const QValidator *v)
 */
 HB_FUNC_STATIC(QLINEEDIT_SETVALIDATOR)
 {
@@ -1434,7 +1434,7 @@ HB_FUNC_STATIC(QLINEEDIT_VALIDATOR)
 }
 
 /*
-virtual bool event( QEvent *e )
+virtual bool event(QEvent *e)
 */
 HB_FUNC_STATIC(QLINEEDIT_EVENT)
 {
@@ -1458,7 +1458,7 @@ HB_FUNC_STATIC(QLINEEDIT_EVENT)
 }
 
 /*
-virtual QVariant inputMethodQuery( Qt::InputMethodQuery property ) const
+virtual QVariant inputMethodQuery(Qt::InputMethodQuery property) const
 */
 HB_FUNC_STATIC(QLINEEDIT_INPUTMETHODQUERY)
 {
@@ -1613,7 +1613,7 @@ HB_FUNC_STATIC(QLINEEDIT_SELECTALL)
 }
 
 /*
-void setText( const QString &)
+void setText(const QString &)
 */
 HB_FUNC_STATIC(QLINEEDIT_SETTEXT)
 {

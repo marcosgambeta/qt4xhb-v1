@@ -44,7 +44,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QSizeGrip( QWidget *parent )
+    QSizeGrip(QWidget *parent)
     */
 HB_FUNC_STATIC(QSIZEGRIP_NEW)
 {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QSIZEGRIP_DELETE)
 }
 
 /*
-virtual void setVisible( bool visible )
+virtual void setVisible(bool visible)
 */
 HB_FUNC_STATIC(QSIZEGRIP_SETVISIBLE)
 {

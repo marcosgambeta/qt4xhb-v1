@@ -58,7 +58,7 @@ RETURN
 #include <QtGui/QColor>
 
     /*
-    QColormap( const QColormap &colormap )
+    QColormap(const QColormap &colormap)
     */
 HB_FUNC_STATIC(QCOLORMAP_NEW)
 {
@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QCOLORMAP_DELETE)
 }
 
 /*
-const QColor colorAt( uint pixel ) const
+const QColor colorAt(uint pixel) const
 */
 HB_FUNC_STATIC(QCOLORMAP_COLORAT)
 {
@@ -214,7 +214,7 @@ HB_FUNC_STATIC(QCOLORMAP_MODE)
 }
 
 /*
-uint pixel( const QColor &color ) const
+uint pixel(const QColor &color) const
 */
 HB_FUNC_STATIC(QCOLORMAP_PIXEL)
 {
@@ -262,7 +262,7 @@ HB_FUNC_STATIC(QCOLORMAP_SIZE)
 }
 
 /*
-static QColormap instance( int screen = -1 )
+static QColormap instance(int screen = -1)
 */
 HB_FUNC_STATIC(QCOLORMAP_INSTANCE)
 {

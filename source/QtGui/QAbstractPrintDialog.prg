@@ -195,7 +195,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_PRINTER)
 }
 
 /*
-void setFromTo( int from, int to )
+void setFromTo(int from, int to)
 */
 HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_SETFROMTO)
 {
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_SETFROMTO)
 }
 
 /*
-void setMinMax( int min, int max )
+void setMinMax(int min, int max)
 */
 HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_SETMINMAX)
 {
@@ -247,7 +247,7 @@ HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_SETMINMAX)
 }
 
 /*
-void setPrintRange( QAbstractPrintDialog::PrintRange range )
+void setPrintRange(QAbstractPrintDialog::PrintRange range)
 */
 HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_SETPRINTRANGE)
 {

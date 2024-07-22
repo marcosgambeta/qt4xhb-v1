@@ -85,7 +85,7 @@ RETURN
 #include <QtGui/QTextList>
 
     /*
-    QTextBlock( const QTextBlock &other )
+    QTextBlock(const QTextBlock &other)
     */
 HB_FUNC_STATIC(QTEXTBLOCK_NEW)
 {
@@ -265,7 +265,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_CLEARLAYOUT)
 }
 
 /*
-bool contains( int position ) const
+bool contains(int position) const
 */
 HB_FUNC_STATIC(QTEXTBLOCK_CONTAINS)
 {
@@ -557,7 +557,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_REVISION)
 }
 
 /*
-void setLineCount( int count )
+void setLineCount(int count)
 */
 HB_FUNC_STATIC(QTEXTBLOCK_SETLINECOUNT)
 {
@@ -583,7 +583,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_SETLINECOUNT)
 }
 
 /*
-void setRevision( int rev )
+void setRevision(int rev)
 */
 HB_FUNC_STATIC(QTEXTBLOCK_SETREVISION)
 {
@@ -609,7 +609,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_SETREVISION)
 }
 
 /*
-void setUserData( QTextBlockUserData *data )
+void setUserData(QTextBlockUserData *data)
 */
 HB_FUNC_STATIC(QTEXTBLOCK_SETUSERDATA)
 {
@@ -635,7 +635,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_SETUSERDATA)
 }
 
 /*
-void setUserState( int state )
+void setUserState(int state)
 */
 HB_FUNC_STATIC(QTEXTBLOCK_SETUSERSTATE)
 {
@@ -661,7 +661,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_SETUSERSTATE)
 }
 
 /*
-void setVisible( bool visible )
+void setVisible(bool visible)
 */
 HB_FUNC_STATIC(QTEXTBLOCK_SETVISIBLE)
 {

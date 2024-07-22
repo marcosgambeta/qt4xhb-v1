@@ -102,7 +102,7 @@ RETURN
 #include <QtGui/QIcon>
 
     /*
-    QTabBar( QWidget *parent = 0 )
+    QTabBar(QWidget *parent = 0)
     */
 HB_FUNC_STATIC(QTABBAR_NEW)
 {
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QTABBAR_ADDTAB)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    int addTab( const QString &text )
+    int addTab(const QString &text)
     */
     QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QTABBAR_ADDTAB)
   else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2))
   {
     /*
-    int addTab( const QIcon &icon, const QString &text )
+    int addTab(const QIcon &icon, const QString &text)
     */
     QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -341,7 +341,7 @@ HB_FUNC_STATIC(QTABBAR_INSERTTAB)
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(1))
   {
     /*
-    int insertTab( int index, const QString &text )
+    int insertTab(int index, const QString &text)
     */
     QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -353,7 +353,7 @@ HB_FUNC_STATIC(QTABBAR_INSERTTAB)
   else if (ISNUMPAR(3) && HB_ISNUM(1) && (ISQICON(2) || HB_ISCHAR(2)) && HB_ISCHAR(3))
   {
     /*
-    int insertTab( int index, const QIcon &icon, const QString &text )
+    int insertTab(int index, const QIcon &icon, const QString &text)
     */
     QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -394,7 +394,7 @@ HB_FUNC_STATIC(QTABBAR_ISMOVABLE)
 }
 
 /*
-bool isTabEnabled( int index ) const
+bool isTabEnabled(int index) const
 */
 HB_FUNC_STATIC(QTABBAR_ISTABENABLED)
 {
@@ -418,7 +418,7 @@ HB_FUNC_STATIC(QTABBAR_ISTABENABLED)
 }
 
 /*
-void moveTab( int from, int to )
+void moveTab(int from, int to)
 */
 HB_FUNC_STATIC(QTABBAR_MOVETAB)
 {
@@ -444,7 +444,7 @@ HB_FUNC_STATIC(QTABBAR_MOVETAB)
 }
 
 /*
-void removeTab( int index )
+void removeTab(int index)
 */
 HB_FUNC_STATIC(QTABBAR_REMOVETAB)
 {
@@ -494,7 +494,7 @@ HB_FUNC_STATIC(QTABBAR_SELECTIONBEHAVIORONREMOVE)
 }
 
 /*
-void setDocumentMode( bool set )
+void setDocumentMode(bool set)
 */
 HB_FUNC_STATIC(QTABBAR_SETDOCUMENTMODE)
 {
@@ -520,7 +520,7 @@ HB_FUNC_STATIC(QTABBAR_SETDOCUMENTMODE)
 }
 
 /*
-void setDrawBase( bool drawTheBase )
+void setDrawBase(bool drawTheBase)
 */
 HB_FUNC_STATIC(QTABBAR_SETDRAWBASE)
 {
@@ -546,7 +546,7 @@ HB_FUNC_STATIC(QTABBAR_SETDRAWBASE)
 }
 
 /*
-void setElideMode( Qt::TextElideMode )
+void setElideMode(Qt::TextElideMode)
 */
 HB_FUNC_STATIC(QTABBAR_SETELIDEMODE)
 {
@@ -572,7 +572,7 @@ HB_FUNC_STATIC(QTABBAR_SETELIDEMODE)
 }
 
 /*
-void setExpanding( bool enabled )
+void setExpanding(bool enabled)
 */
 HB_FUNC_STATIC(QTABBAR_SETEXPANDING)
 {
@@ -598,7 +598,7 @@ HB_FUNC_STATIC(QTABBAR_SETEXPANDING)
 }
 
 /*
-void setIconSize( const QSize &size )
+void setIconSize(const QSize &size)
 */
 HB_FUNC_STATIC(QTABBAR_SETICONSIZE)
 {
@@ -624,7 +624,7 @@ HB_FUNC_STATIC(QTABBAR_SETICONSIZE)
 }
 
 /*
-void setMovable( bool movable )
+void setMovable(bool movable)
 */
 HB_FUNC_STATIC(QTABBAR_SETMOVABLE)
 {
@@ -650,7 +650,7 @@ HB_FUNC_STATIC(QTABBAR_SETMOVABLE)
 }
 
 /*
-void setSelectionBehaviorOnRemove( QTabBar::SelectionBehavior behavior )
+void setSelectionBehaviorOnRemove(QTabBar::SelectionBehavior behavior)
 */
 HB_FUNC_STATIC(QTABBAR_SETSELECTIONBEHAVIORONREMOVE)
 {
@@ -676,7 +676,7 @@ HB_FUNC_STATIC(QTABBAR_SETSELECTIONBEHAVIORONREMOVE)
 }
 
 /*
-void setShape( QTabBar::Shape shape )
+void setShape(QTabBar::Shape shape)
 */
 HB_FUNC_STATIC(QTABBAR_SETSHAPE)
 {
@@ -702,7 +702,7 @@ HB_FUNC_STATIC(QTABBAR_SETSHAPE)
 }
 
 /*
-void setTabButton( int index, QTabBar::ButtonPosition position, QWidget *widget )
+void setTabButton(int index, QTabBar::ButtonPosition position, QWidget *widget)
 */
 HB_FUNC_STATIC(QTABBAR_SETTABBUTTON)
 {
@@ -728,7 +728,7 @@ HB_FUNC_STATIC(QTABBAR_SETTABBUTTON)
 }
 
 /*
-void setTabData( int index, const QVariant &data )
+void setTabData(int index, const QVariant &data)
 */
 HB_FUNC_STATIC(QTABBAR_SETTABDATA)
 {
@@ -754,7 +754,7 @@ HB_FUNC_STATIC(QTABBAR_SETTABDATA)
 }
 
 /*
-void setTabEnabled( int index, bool enabled )
+void setTabEnabled(int index, bool enabled)
 */
 HB_FUNC_STATIC(QTABBAR_SETTABENABLED)
 {
@@ -780,7 +780,7 @@ HB_FUNC_STATIC(QTABBAR_SETTABENABLED)
 }
 
 /*
-void setTabIcon( int index, const QIcon &icon )
+void setTabIcon(int index, const QIcon &icon)
 */
 HB_FUNC_STATIC(QTABBAR_SETTABICON)
 {
@@ -806,7 +806,7 @@ HB_FUNC_STATIC(QTABBAR_SETTABICON)
 }
 
 /*
-void setTabText( int index, const QString &text )
+void setTabText(int index, const QString &text)
 */
 HB_FUNC_STATIC(QTABBAR_SETTABTEXT)
 {
@@ -832,7 +832,7 @@ HB_FUNC_STATIC(QTABBAR_SETTABTEXT)
 }
 
 /*
-void setTabTextColor( int index, const QColor &color )
+void setTabTextColor(int index, const QColor &color)
 */
 HB_FUNC_STATIC(QTABBAR_SETTABTEXTCOLOR)
 {
@@ -859,7 +859,7 @@ HB_FUNC_STATIC(QTABBAR_SETTABTEXTCOLOR)
 }
 
 /*
-void setTabToolTip( int index, const QString &tip )
+void setTabToolTip(int index, const QString &tip)
 */
 HB_FUNC_STATIC(QTABBAR_SETTABTOOLTIP)
 {
@@ -885,7 +885,7 @@ HB_FUNC_STATIC(QTABBAR_SETTABTOOLTIP)
 }
 
 /*
-void setTabWhatsThis( int index, const QString &text )
+void setTabWhatsThis(int index, const QString &text)
 */
 HB_FUNC_STATIC(QTABBAR_SETTABWHATSTHIS)
 {
@@ -911,7 +911,7 @@ HB_FUNC_STATIC(QTABBAR_SETTABWHATSTHIS)
 }
 
 /*
-void setTabsClosable( bool closable )
+void setTabsClosable(bool closable)
 */
 HB_FUNC_STATIC(QTABBAR_SETTABSCLOSABLE)
 {
@@ -937,7 +937,7 @@ HB_FUNC_STATIC(QTABBAR_SETTABSCLOSABLE)
 }
 
 /*
-void setUsesScrollButtons( bool useButtons )
+void setUsesScrollButtons(bool useButtons)
 */
 HB_FUNC_STATIC(QTABBAR_SETUSESSCROLLBUTTONS)
 {
@@ -987,7 +987,7 @@ HB_FUNC_STATIC(QTABBAR_SHAPE)
 }
 
 /*
-int tabAt( const QPoint &position ) const
+int tabAt(const QPoint &position) const
 */
 HB_FUNC_STATIC(QTABBAR_TABAT)
 {
@@ -1011,7 +1011,7 @@ HB_FUNC_STATIC(QTABBAR_TABAT)
 }
 
 /*
-QWidget *tabButton( int index, QTabBar::ButtonPosition position ) const
+QWidget *tabButton(int index, QTabBar::ButtonPosition position) const
 */
 HB_FUNC_STATIC(QTABBAR_TABBUTTON)
 {
@@ -1036,7 +1036,7 @@ HB_FUNC_STATIC(QTABBAR_TABBUTTON)
 }
 
 /*
-QVariant tabData( int index ) const
+QVariant tabData(int index) const
 */
 HB_FUNC_STATIC(QTABBAR_TABDATA)
 {
@@ -1061,7 +1061,7 @@ HB_FUNC_STATIC(QTABBAR_TABDATA)
 }
 
 /*
-QIcon tabIcon( int index ) const
+QIcon tabIcon(int index) const
 */
 HB_FUNC_STATIC(QTABBAR_TABICON)
 {
@@ -1086,7 +1086,7 @@ HB_FUNC_STATIC(QTABBAR_TABICON)
 }
 
 /*
-QRect tabRect( int index ) const
+QRect tabRect(int index) const
 */
 HB_FUNC_STATIC(QTABBAR_TABRECT)
 {
@@ -1111,7 +1111,7 @@ HB_FUNC_STATIC(QTABBAR_TABRECT)
 }
 
 /*
-QString tabText( int index ) const
+QString tabText(int index) const
 */
 HB_FUNC_STATIC(QTABBAR_TABTEXT)
 {
@@ -1135,7 +1135,7 @@ HB_FUNC_STATIC(QTABBAR_TABTEXT)
 }
 
 /*
-QColor tabTextColor( int index ) const
+QColor tabTextColor(int index) const
 */
 HB_FUNC_STATIC(QTABBAR_TABTEXTCOLOR)
 {
@@ -1160,7 +1160,7 @@ HB_FUNC_STATIC(QTABBAR_TABTEXTCOLOR)
 }
 
 /*
-QString tabToolTip( int index ) const
+QString tabToolTip(int index) const
 */
 HB_FUNC_STATIC(QTABBAR_TABTOOLTIP)
 {
@@ -1184,7 +1184,7 @@ HB_FUNC_STATIC(QTABBAR_TABTOOLTIP)
 }
 
 /*
-QString tabWhatsThis( int index ) const
+QString tabWhatsThis(int index) const
 */
 HB_FUNC_STATIC(QTABBAR_TABWHATSTHIS)
 {
@@ -1306,7 +1306,7 @@ HB_FUNC_STATIC(QTABBAR_SIZEHINT)
 }
 
 /*
-void setCurrentIndex( int index )
+void setCurrentIndex(int index)
 */
 HB_FUNC_STATIC(QTABBAR_SETCURRENTINDEX)
 {

@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QLCDNUMBER_NEW)
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
-    QLCDNumber( QWidget *parent = 0 )
+    QLCDNumber(QWidget *parent = 0)
     */
     QLCDNumber *obj = new QLCDNumber(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QLCDNUMBER_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QLCDNumber( uint numDigits, QWidget *parent = 0 )
+    QLCDNumber(uint numDigits, QWidget *parent = 0)
     */
     QLCDNumber *obj = new QLCDNumber(PUINT(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QLCDNUMBER_DELETE)
 }
 
 /*
-bool checkOverflow( double num ) const
+bool checkOverflow(double num) const
 */
 HB_FUNC_STATIC(QLCDNUMBER_CHECKOVERFLOW1)
 {
@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QLCDNUMBER_CHECKOVERFLOW1)
 }
 
 /*
-bool checkOverflow( int num ) const
+bool checkOverflow(int num) const
 */
 HB_FUNC_STATIC(QLCDNUMBER_CHECKOVERFLOW2)
 {
@@ -264,7 +264,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SEGMENTSTYLE)
 }
 
 /*
-void setDigitCount( int numDigits )
+void setDigitCount(int numDigits)
 */
 HB_FUNC_STATIC(QLCDNUMBER_SETDIGITCOUNT)
 {
@@ -290,7 +290,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETDIGITCOUNT)
 }
 
 /*
-void setMode( QLCDNumber::Mode )
+void setMode(QLCDNumber::Mode)
 */
 HB_FUNC_STATIC(QLCDNUMBER_SETMODE)
 {
@@ -316,7 +316,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETMODE)
 }
 
 /*
-void setSegmentStyle( QLCDNumber::SegmentStyle )
+void setSegmentStyle(QLCDNumber::SegmentStyle)
 */
 HB_FUNC_STATIC(QLCDNUMBER_SETSEGMENTSTYLE)
 {
@@ -415,7 +415,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SIZEHINT)
 }
 
 /*
-void display( const QString &s )
+void display(const QString &s)
 */
 HB_FUNC_STATIC(QLCDNUMBER_DISPLAY1)
 {
@@ -441,7 +441,7 @@ HB_FUNC_STATIC(QLCDNUMBER_DISPLAY1)
 }
 
 /*
-void display( double num )
+void display(double num)
 */
 HB_FUNC_STATIC(QLCDNUMBER_DISPLAY2)
 {
@@ -467,7 +467,7 @@ HB_FUNC_STATIC(QLCDNUMBER_DISPLAY2)
 }
 
 /*
-void display( int num )
+void display(int num)
 */
 HB_FUNC_STATIC(QLCDNUMBER_DISPLAY3)
 {
@@ -613,7 +613,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETOCTMODE)
 }
 
 /*
-void setSmallDecimalPoint( bool )
+void setSmallDecimalPoint(bool)
 */
 HB_FUNC_STATIC(QLCDNUMBER_SETSMALLDECIMALPOINT)
 {

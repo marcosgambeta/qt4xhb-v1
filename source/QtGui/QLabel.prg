@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QLABEL_NEW)
   if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QLabel( QWidget *parent = 0, Qt::WindowFlags f = 0 )
+    QLabel(QWidget *parent = 0, Qt::WindowFlags f = 0)
     */
     QLabel *obj = new QLabel(OPQWIDGET(1, 0), HB_ISNIL(2) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(2));
     Qt4xHb::returnNewObject(obj, false);
@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QLABEL_NEW)
   else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QLabel( const QString &text, QWidget *parent = 0, Qt::WindowFlags f = 0 )
+    QLabel(const QString &text, QWidget *parent = 0, Qt::WindowFlags f = 0)
     */
     QLabel *obj =
         new QLabel(PQSTRING(1), OPQWIDGET(2, 0), HB_ISNIL(3) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(3));
@@ -398,7 +398,7 @@ HB_FUNC_STATIC(QLABEL_SELECTEDTEXT)
 }
 
 /*
-void setAlignment( Qt::Alignment )
+void setAlignment(Qt::Alignment)
 */
 HB_FUNC_STATIC(QLABEL_SETALIGNMENT)
 {
@@ -424,7 +424,7 @@ HB_FUNC_STATIC(QLABEL_SETALIGNMENT)
 }
 
 /*
-void setBuddy( QWidget *buddy )
+void setBuddy(QWidget *buddy)
 */
 HB_FUNC_STATIC(QLABEL_SETBUDDY)
 {
@@ -450,7 +450,7 @@ HB_FUNC_STATIC(QLABEL_SETBUDDY)
 }
 
 /*
-void setIndent( int )
+void setIndent(int)
 */
 HB_FUNC_STATIC(QLABEL_SETINDENT)
 {
@@ -476,7 +476,7 @@ HB_FUNC_STATIC(QLABEL_SETINDENT)
 }
 
 /*
-void setMargin( int )
+void setMargin(int)
 */
 HB_FUNC_STATIC(QLABEL_SETMARGIN)
 {
@@ -502,7 +502,7 @@ HB_FUNC_STATIC(QLABEL_SETMARGIN)
 }
 
 /*
-void setOpenExternalLinks( bool open )
+void setOpenExternalLinks(bool open)
 */
 HB_FUNC_STATIC(QLABEL_SETOPENEXTERNALLINKS)
 {
@@ -528,7 +528,7 @@ HB_FUNC_STATIC(QLABEL_SETOPENEXTERNALLINKS)
 }
 
 /*
-void setScaledContents( bool )
+void setScaledContents(bool)
 */
 HB_FUNC_STATIC(QLABEL_SETSCALEDCONTENTS)
 {
@@ -554,7 +554,7 @@ HB_FUNC_STATIC(QLABEL_SETSCALEDCONTENTS)
 }
 
 /*
-void setSelection( int start, int length )
+void setSelection(int start, int length)
 */
 HB_FUNC_STATIC(QLABEL_SETSELECTION)
 {
@@ -580,7 +580,7 @@ HB_FUNC_STATIC(QLABEL_SETSELECTION)
 }
 
 /*
-void setTextFormat( Qt::TextFormat )
+void setTextFormat(Qt::TextFormat)
 */
 HB_FUNC_STATIC(QLABEL_SETTEXTFORMAT)
 {
@@ -606,7 +606,7 @@ HB_FUNC_STATIC(QLABEL_SETTEXTFORMAT)
 }
 
 /*
-void setTextInteractionFlags( Qt::TextInteractionFlags flags )
+void setTextInteractionFlags(Qt::TextInteractionFlags flags)
 */
 HB_FUNC_STATIC(QLABEL_SETTEXTINTERACTIONFLAGS)
 {
@@ -632,7 +632,7 @@ HB_FUNC_STATIC(QLABEL_SETTEXTINTERACTIONFLAGS)
 }
 
 /*
-void setWordWrap( bool on )
+void setWordWrap(bool on)
 */
 HB_FUNC_STATIC(QLABEL_SETWORDWRAP)
 {
@@ -754,7 +754,7 @@ HB_FUNC_STATIC(QLABEL_WORDWRAP)
 }
 
 /*
-virtual int heightForWidth( int w ) const
+virtual int heightForWidth(int w) const
 */
 HB_FUNC_STATIC(QLABEL_HEIGHTFORWIDTH)
 {
@@ -854,7 +854,7 @@ HB_FUNC_STATIC(QLABEL_CLEAR)
 }
 
 /*
-void setMovie( QMovie *movie )
+void setMovie(QMovie *movie)
 */
 HB_FUNC_STATIC(QLABEL_SETMOVIE)
 {
@@ -880,7 +880,7 @@ HB_FUNC_STATIC(QLABEL_SETMOVIE)
 }
 
 /*
-void setNum( int num )
+void setNum(int num)
 */
 HB_FUNC_STATIC(QLABEL_SETNUM1)
 {
@@ -906,7 +906,7 @@ HB_FUNC_STATIC(QLABEL_SETNUM1)
 }
 
 /*
-void setNum( double num )
+void setNum(double num)
 */
 HB_FUNC_STATIC(QLABEL_SETNUM2)
 {
@@ -944,7 +944,7 @@ HB_FUNC_STATIC(QLABEL_SETNUM)
 }
 
 /*
-void setPicture( const QPicture &picture )
+void setPicture(const QPicture &picture)
 */
 HB_FUNC_STATIC(QLABEL_SETPICTURE)
 {
@@ -970,7 +970,7 @@ HB_FUNC_STATIC(QLABEL_SETPICTURE)
 }
 
 /*
-void setPixmap( const QPixmap &)
+void setPixmap(const QPixmap &)
 */
 HB_FUNC_STATIC(QLABEL_SETPIXMAP)
 {
@@ -996,7 +996,7 @@ HB_FUNC_STATIC(QLABEL_SETPIXMAP)
 }
 
 /*
-void setText( const QString &)
+void setText(const QString &)
 */
 HB_FUNC_STATIC(QLABEL_SETTEXT)
 {

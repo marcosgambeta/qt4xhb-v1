@@ -63,7 +63,7 @@ HB_FUNC_STATIC(QTEXTLENGTH_NEW)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    QTextLength( QTextLength::Type type, qreal value )
+    QTextLength(QTextLength::Type type, qreal value)
     */
     QTextLength *obj = new QTextLength((QTextLength::Type)hb_parni(1), PQREAL(2));
     Qt4xHb::returnNewObject(obj, true);
@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QTEXTLENGTH_TYPE)
 }
 
 /*
-qreal value( qreal maximumLength ) const
+qreal value(qreal maximumLength) const
 */
 HB_FUNC_STATIC(QTEXTLENGTH_VALUE)
 {

@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QTEXTIMAGEFORMAT_NAME)
 }
 
 /*
-void setHeight( qreal height )
+void setHeight(qreal height)
 */
 HB_FUNC_STATIC(QTEXTIMAGEFORMAT_SETHEIGHT)
 {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QTEXTIMAGEFORMAT_SETHEIGHT)
 }
 
 /*
-void setName( const QString &name )
+void setName(const QString &name)
 */
 HB_FUNC_STATIC(QTEXTIMAGEFORMAT_SETNAME)
 {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QTEXTIMAGEFORMAT_SETNAME)
 }
 
 /*
-void setWidth( qreal width )
+void setWidth(qreal width)
 */
 HB_FUNC_STATIC(QTEXTIMAGEFORMAT_SETWIDTH)
 {

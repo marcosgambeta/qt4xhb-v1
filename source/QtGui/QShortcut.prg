@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QSHORTCUT_NEW)
   if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
-    QShortcut( QWidget *parent )
+    QShortcut(QWidget *parent)
     */
     QShortcut *obj = new QShortcut(PQWIDGET(1));
     Qt4xHb::returnNewObject(obj, false);
@@ -71,8 +71,8 @@ HB_FUNC_STATIC(QSHORTCUT_NEW)
            (HB_ISCHAR(4) || HB_ISNIL(4)) && (HB_ISNUM(5) || HB_ISNIL(5)))
   {
     /*
-    QShortcut( const QKeySequence &key, QWidget *parent, const char *member = 0, const char *ambiguousMember = 0,
-    Qt::ShortcutContext context = Qt::WindowShortcut )
+    QShortcut(const QKeySequence &key, QWidget *parent, const char *member = 0, const char *ambiguousMember = 0,
+    Qt::ShortcutContext context = Qt::WindowShortcut)
     */
     QShortcut *obj =
         new QShortcut(*PQKEYSEQUENCE(1), PQWIDGET(2), OPCONSTCHAR(3, 0), OPCONSTCHAR(4, 0),
@@ -250,7 +250,7 @@ HB_FUNC_STATIC(QSHORTCUT_PARENTWIDGET)
 }
 
 /*
-void setAutoRepeat( bool on )
+void setAutoRepeat(bool on)
 */
 HB_FUNC_STATIC(QSHORTCUT_SETAUTOREPEAT)
 {
@@ -276,7 +276,7 @@ HB_FUNC_STATIC(QSHORTCUT_SETAUTOREPEAT)
 }
 
 /*
-void setContext( Qt::ShortcutContext context )
+void setContext(Qt::ShortcutContext context)
 */
 HB_FUNC_STATIC(QSHORTCUT_SETCONTEXT)
 {
@@ -302,7 +302,7 @@ HB_FUNC_STATIC(QSHORTCUT_SETCONTEXT)
 }
 
 /*
-void setEnabled( bool enable )
+void setEnabled(bool enable)
 */
 HB_FUNC_STATIC(QSHORTCUT_SETENABLED)
 {
@@ -328,7 +328,7 @@ HB_FUNC_STATIC(QSHORTCUT_SETENABLED)
 }
 
 /*
-void setKey( const QKeySequence &key )
+void setKey(const QKeySequence &key)
 */
 HB_FUNC_STATIC(QSHORTCUT_SETKEY)
 {
@@ -354,7 +354,7 @@ HB_FUNC_STATIC(QSHORTCUT_SETKEY)
 }
 
 /*
-void setWhatsThis( const QString &text )
+void setWhatsThis(const QString &text)
 */
 HB_FUNC_STATIC(QSHORTCUT_SETWHATSTHIS)
 {

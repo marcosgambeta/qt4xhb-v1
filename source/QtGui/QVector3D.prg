@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QVECTOR3D_NEW)
   else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
     /*
-    QVector3D( qreal xpos, qreal ypos, qreal zpos )
+    QVector3D(qreal xpos, qreal ypos, qreal zpos)
     */
     QVector3D *obj = new QVector3D(PQREAL(1), PQREAL(2), PQREAL(3));
     Qt4xHb::returnNewObject(obj, true);
@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QVECTOR3D_NEW)
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    QVector3D( const QPoint &point )
+    QVector3D(const QPoint &point)
     */
     QVector3D *obj = new QVector3D(*PQPOINT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QVECTOR3D_NEW)
   else if (ISNUMPAR(1) && ISQPOINTF(1))
   {
     /*
-    QVector3D( const QPointF &point )
+    QVector3D(const QPointF &point)
     */
     QVector3D *obj = new QVector3D(*PQPOINTF(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QVECTOR3D_NEW)
   else if (ISNUMPAR(1) && ISQVECTOR2D(1))
   {
     /*
-    QVector3D( const QVector2D &vector )
+    QVector3D(const QVector2D &vector)
     */
     QVector3D *obj = new QVector3D(*PQVECTOR2D(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QVECTOR3D_NEW)
   else if (ISNUMPAR(2) && ISQVECTOR2D(1) && HB_ISNUM(2))
   {
     /*
-    QVector3D( const QVector2D &vector, qreal zpos )
+    QVector3D(const QVector2D &vector, qreal zpos)
     */
     QVector3D *obj = new QVector3D(*PQVECTOR2D(1), PQREAL(2));
     Qt4xHb::returnNewObject(obj, true);
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QVECTOR3D_NEW)
   else if (ISNUMPAR(1) && ISQVECTOR4D(1))
   {
     /*
-    QVector3D( const QVector4D &vector )
+    QVector3D(const QVector4D &vector)
     */
     QVector3D *obj = new QVector3D(*PQVECTOR4D(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QVECTOR3D_DELETE)
 }
 
 /*
-qreal distanceToLine( const QVector3D &point, const QVector3D &direction ) const
+qreal distanceToLine(const QVector3D &point, const QVector3D &direction) const
 */
 HB_FUNC_STATIC(QVECTOR3D_DISTANCETOLINE)
 {
@@ -183,7 +183,7 @@ HB_FUNC_STATIC(QVECTOR3D_DISTANCETOPLANE)
   if (ISNUMPAR(2) && ISQVECTOR3D(1) && ISQVECTOR3D(2))
   {
     /*
-    qreal distanceToPlane( const QVector3D &plane, const QVector3D &normal ) const
+    qreal distanceToPlane(const QVector3D &plane, const QVector3D &normal) const
     */
     QVector3D *obj = static_cast<QVector3D *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -195,7 +195,7 @@ HB_FUNC_STATIC(QVECTOR3D_DISTANCETOPLANE)
   else if (ISNUMPAR(3) && ISQVECTOR3D(1) && ISQVECTOR3D(2) && ISQVECTOR3D(3))
   {
     /*
-    qreal distanceToPlane( const QVector3D &plane1, const QVector3D &plane2, const QVector3D &plane3 ) const
+    qreal distanceToPlane(const QVector3D &plane1, const QVector3D &plane2, const QVector3D &plane3) const
     */
     QVector3D *obj = static_cast<QVector3D *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -334,7 +334,7 @@ HB_FUNC_STATIC(QVECTOR3D_NORMALIZED)
 }
 
 /*
-void setX( qreal x )
+void setX(qreal x)
 */
 HB_FUNC_STATIC(QVECTOR3D_SETX)
 {
@@ -360,7 +360,7 @@ HB_FUNC_STATIC(QVECTOR3D_SETX)
 }
 
 /*
-void setY( qreal y )
+void setY(qreal y)
 */
 HB_FUNC_STATIC(QVECTOR3D_SETY)
 {
@@ -386,7 +386,7 @@ HB_FUNC_STATIC(QVECTOR3D_SETY)
 }
 
 /*
-void setZ( qreal z )
+void setZ(qreal z)
 */
 HB_FUNC_STATIC(QVECTOR3D_SETZ)
 {
@@ -584,7 +584,7 @@ HB_FUNC_STATIC(QVECTOR3D_Z)
 }
 
 /*
-static QVector3D crossProduct( const QVector3D &v1, const QVector3D &v2 )
+static QVector3D crossProduct(const QVector3D &v1, const QVector3D &v2)
 */
 HB_FUNC_STATIC(QVECTOR3D_CROSSPRODUCT)
 {
@@ -604,7 +604,7 @@ HB_FUNC_STATIC(QVECTOR3D_CROSSPRODUCT)
 }
 
 /*
-static qreal dotProduct( const QVector3D &v1, const QVector3D &v2 )
+static qreal dotProduct(const QVector3D &v1, const QVector3D &v2)
 */
 HB_FUNC_STATIC(QVECTOR3D_DOTPRODUCT)
 {
@@ -627,7 +627,7 @@ HB_FUNC_STATIC(QVECTOR3D_NORMAL)
   if (ISNUMPAR(2) && ISQVECTOR3D(1) && ISQVECTOR3D(2))
   {
     /*
-    static QVector3D normal( const QVector3D &v1, const QVector3D &v2 )
+    static QVector3D normal(const QVector3D &v1, const QVector3D &v2)
     */
 
     QVector3D *ptr = new QVector3D(QVector3D::normal(*PQVECTOR3D(1), *PQVECTOR3D(2)));
@@ -636,7 +636,7 @@ HB_FUNC_STATIC(QVECTOR3D_NORMAL)
   else if (ISNUMPAR(3) && ISQVECTOR3D(1) && ISQVECTOR3D(2) && ISQVECTOR3D(3))
   {
     /*
-    static QVector3D normal( const QVector3D &v1, const QVector3D &v2, const QVector3D &v3 )
+    static QVector3D normal(const QVector3D &v1, const QVector3D &v2, const QVector3D &v3)
     */
 
     QVector3D *ptr = new QVector3D(QVector3D::normal(*PQVECTOR3D(1), *PQVECTOR3D(2), *PQVECTOR3D(3)));

@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_NEW)
   if (ISBETWEEN(1, 3) && ISQPRINTER(1) && (ISQWIDGET(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QPrintPreviewWidget( QPrinter *printer, QWidget *parent = 0, Qt::WindowFlags flags = 0 )
+    QPrintPreviewWidget(QPrinter *printer, QWidget *parent = 0, Qt::WindowFlags flags = 0)
     */
     QPrintPreviewWidget *obj = new QPrintPreviewWidget(PQPRINTER(1), OPQWIDGET(2, 0),
                                                        HB_ISNIL(3) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(3));
@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_NEW)
   else if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QPrintPreviewWidget( QWidget *parent = 0, Qt::WindowFlags flags = 0 )
+    QPrintPreviewWidget(QWidget *parent = 0, Qt::WindowFlags flags = 0)
     */
     QPrintPreviewWidget *obj =
         new QPrintPreviewWidget(OPQWIDGET(1, 0), HB_ISNIL(2) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(2));
@@ -255,7 +255,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_ZOOMMODE)
 }
 
 /*
-virtual void setVisible( bool visible )
+virtual void setVisible(bool visible)
 */
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETVISIBLE)
 {
@@ -385,7 +385,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETALLPAGESVIEWMODE)
 }
 
 /*
-void setCurrentPage( int page )
+void setCurrentPage(int page)
 */
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETCURRENTPAGE)
 {
@@ -463,7 +463,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETLANDSCAPEORIENTATION)
 }
 
 /*
-void setOrientation( QPrinter::Orientation orientation )
+void setOrientation(QPrinter::Orientation orientation)
 */
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETORIENTATION)
 {
@@ -541,7 +541,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETSINGLEPAGEVIEWMODE)
 }
 
 /*
-void setViewMode( QPrintPreviewWidget::ViewMode mode )
+void setViewMode(QPrintPreviewWidget::ViewMode mode)
 */
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETVIEWMODE)
 {
@@ -567,7 +567,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETVIEWMODE)
 }
 
 /*
-void setZoomFactor( qreal factor )
+void setZoomFactor(qreal factor)
 */
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETZOOMFACTOR)
 {
@@ -593,7 +593,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETZOOMFACTOR)
 }
 
 /*
-void setZoomMode( QPrintPreviewWidget::ZoomMode zoomMode )
+void setZoomMode(QPrintPreviewWidget::ZoomMode zoomMode)
 */
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETZOOMMODE)
 {
@@ -645,7 +645,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_UPDATEPREVIEW)
 }
 
 /*
-void zoomIn( qreal factor = 1.1 )
+void zoomIn(qreal factor = 1.1)
 */
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_ZOOMIN)
 {
@@ -671,7 +671,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_ZOOMIN)
 }
 
 /*
-void zoomOut( qreal factor = 1.1 )
+void zoomOut(qreal factor = 1.1)
 */
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_ZOOMOUT)
 {

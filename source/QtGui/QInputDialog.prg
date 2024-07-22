@@ -96,7 +96,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QInputDialog( QWidget *parent = 0, Qt::WindowFlags flags = 0 )
+    QInputDialog(QWidget *parent = 0, Qt::WindowFlags flags = 0)
     */
 HB_FUNC_STATIC(QINPUTDIALOG_NEW)
 {
@@ -467,7 +467,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_OKBUTTONTEXT)
 }
 
 /*
-void open( QObject *receiver, const char *member )
+void open(QObject *receiver, const char *member)
 */
 HB_FUNC_STATIC(QINPUTDIALOG_OPEN)
 {
@@ -517,7 +517,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_OPTIONS)
 }
 
 /*
-void setCancelButtonText( const QString &text )
+void setCancelButtonText(const QString &text)
 */
 HB_FUNC_STATIC(QINPUTDIALOG_SETCANCELBUTTONTEXT)
 {
@@ -543,7 +543,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETCANCELBUTTONTEXT)
 }
 
 /*
-void setComboBoxEditable( bool editable )
+void setComboBoxEditable(bool editable)
 */
 HB_FUNC_STATIC(QINPUTDIALOG_SETCOMBOBOXEDITABLE)
 {
@@ -569,7 +569,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETCOMBOBOXEDITABLE)
 }
 
 /*
-void setComboBoxItems( const QStringList &items )
+void setComboBoxItems(const QStringList &items)
 */
 HB_FUNC_STATIC(QINPUTDIALOG_SETCOMBOBOXITEMS)
 {
@@ -595,7 +595,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETCOMBOBOXITEMS)
 }
 
 /*
-void setDoubleDecimals( int decimals )
+void setDoubleDecimals(int decimals)
 */
 HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEDECIMALS)
 {
@@ -621,7 +621,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEDECIMALS)
 }
 
 /*
-void setDoubleMaximum( double max )
+void setDoubleMaximum(double max)
 */
 HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEMAXIMUM)
 {
@@ -647,7 +647,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEMAXIMUM)
 }
 
 /*
-void setDoubleMinimum( double min )
+void setDoubleMinimum(double min)
 */
 HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEMINIMUM)
 {
@@ -673,7 +673,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEMINIMUM)
 }
 
 /*
-void setDoubleRange( double min, double max )
+void setDoubleRange(double min, double max)
 */
 HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLERANGE)
 {
@@ -699,7 +699,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLERANGE)
 }
 
 /*
-void setDoubleValue( double value )
+void setDoubleValue(double value)
 */
 HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEVALUE)
 {
@@ -725,7 +725,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEVALUE)
 }
 
 /*
-void setInputMode( QInputDialog::InputMode mode )
+void setInputMode(QInputDialog::InputMode mode)
 */
 HB_FUNC_STATIC(QINPUTDIALOG_SETINPUTMODE)
 {
@@ -751,7 +751,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINPUTMODE)
 }
 
 /*
-void setIntMaximum( int max )
+void setIntMaximum(int max)
 */
 HB_FUNC_STATIC(QINPUTDIALOG_SETINTMAXIMUM)
 {
@@ -777,7 +777,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINTMAXIMUM)
 }
 
 /*
-void setIntMinimum( int min )
+void setIntMinimum(int min)
 */
 HB_FUNC_STATIC(QINPUTDIALOG_SETINTMINIMUM)
 {
@@ -803,7 +803,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINTMINIMUM)
 }
 
 /*
-void setIntRange( int min, int max )
+void setIntRange(int min, int max)
 */
 HB_FUNC_STATIC(QINPUTDIALOG_SETINTRANGE)
 {
@@ -829,7 +829,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINTRANGE)
 }
 
 /*
-void setIntStep( int step )
+void setIntStep(int step)
 */
 HB_FUNC_STATIC(QINPUTDIALOG_SETINTSTEP)
 {
@@ -855,7 +855,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINTSTEP)
 }
 
 /*
-void setIntValue( int value )
+void setIntValue(int value)
 */
 HB_FUNC_STATIC(QINPUTDIALOG_SETINTVALUE)
 {
@@ -881,7 +881,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINTVALUE)
 }
 
 /*
-void setLabelText( const QString &text )
+void setLabelText(const QString &text)
 */
 HB_FUNC_STATIC(QINPUTDIALOG_SETLABELTEXT)
 {
@@ -907,7 +907,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETLABELTEXT)
 }
 
 /*
-void setOkButtonText( const QString &text )
+void setOkButtonText(const QString &text)
 */
 HB_FUNC_STATIC(QINPUTDIALOG_SETOKBUTTONTEXT)
 {
@@ -933,7 +933,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETOKBUTTONTEXT)
 }
 
 /*
-void setOption( QInputDialog::InputDialogOption option, bool on = true )
+void setOption(QInputDialog::InputDialogOption option, bool on = true)
 */
 HB_FUNC_STATIC(QINPUTDIALOG_SETOPTION)
 {
@@ -959,7 +959,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETOPTION)
 }
 
 /*
-void setOptions( QInputDialog::InputDialogOptions options )
+void setOptions(QInputDialog::InputDialogOptions options)
 */
 HB_FUNC_STATIC(QINPUTDIALOG_SETOPTIONS)
 {
@@ -985,7 +985,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETOPTIONS)
 }
 
 /*
-void setTextEchoMode( QLineEdit::EchoMode mode )
+void setTextEchoMode(QLineEdit::EchoMode mode)
 */
 HB_FUNC_STATIC(QINPUTDIALOG_SETTEXTECHOMODE)
 {
@@ -1011,7 +1011,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETTEXTECHOMODE)
 }
 
 /*
-void setTextValue( const QString &text )
+void setTextValue(const QString &text)
 */
 HB_FUNC_STATIC(QINPUTDIALOG_SETTEXTVALUE)
 {
@@ -1037,7 +1037,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETTEXTVALUE)
 }
 
 /*
-bool testOption( QInputDialog::InputDialogOption option ) const
+bool testOption(QInputDialog::InputDialogOption option) const
 */
 HB_FUNC_STATIC(QINPUTDIALOG_TESTOPTION)
 {
@@ -1109,7 +1109,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_TEXTVALUE)
 }
 
 /*
-virtual void done( int result )
+virtual void done(int result)
 */
 HB_FUNC_STATIC(QINPUTDIALOG_DONE)
 {
@@ -1160,7 +1160,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_MINIMUMSIZEHINT)
 }
 
 /*
-virtual void setVisible( bool visible )
+virtual void setVisible(bool visible)
 */
 HB_FUNC_STATIC(QINPUTDIALOG_SETVISIBLE)
 {
@@ -1211,8 +1211,8 @@ HB_FUNC_STATIC(QINPUTDIALOG_SIZEHINT)
 }
 
 /*
-static double getDouble( QWidget *parent, const QString &title, const QString &label, double value = 0, double min =
--2147483647, double max = 2147483647, int decimals = 1, bool *ok = 0, Qt::WindowFlags flags = 0 )
+static double getDouble(QWidget *parent, const QString &title, const QString &label, double value = 0, double min =
+-2147483647, double max = 2147483647, int decimals = 1, bool *ok = 0, Qt::WindowFlags flags = 0)
 */
 HB_FUNC_STATIC(QINPUTDIALOG_GETDOUBLE)
 {
@@ -1237,8 +1237,8 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETDOUBLE)
 }
 
 /*
-static int getInt( QWidget *parent, const QString &title, const QString &label, int value = 0, int min = -2147483647,
-int max = 2147483647, int step = 1, bool *ok = 0, Qt::WindowFlags flags = 0 )
+static int getInt(QWidget *parent, const QString &title, const QString &label, int value = 0, int min = -2147483647,
+int max = 2147483647, int step = 1, bool *ok = 0, Qt::WindowFlags flags = 0)
 */
 HB_FUNC_STATIC(QINPUTDIALOG_GETINT)
 {
@@ -1263,8 +1263,8 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETINT)
 }
 
 /*
-static QString getItem( QWidget *parent, const QString &title, const QString &label, const QStringList &items, int
-current = 0, bool editable = true, bool *ok = 0, Qt::WindowFlags flags = 0 )
+static QString getItem(QWidget *parent, const QString &title, const QString &label, const QStringList &items, int
+current = 0, bool editable = true, bool *ok = 0, Qt::WindowFlags flags = 0)
 */
 HB_FUNC_STATIC(QINPUTDIALOG_GETITEM)
 {
@@ -1288,8 +1288,8 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETITEM)
 }
 
 /*
-static QString getText( QWidget *parent, const QString &title, const QString &label, QLineEdit::EchoMode mode =
-QLineEdit::Normal, const QString &text = QString(), bool *ok = 0, Qt::WindowFlags flags = 0 )
+static QString getText(QWidget *parent, const QString &title, const QString &label, QLineEdit::EchoMode mode =
+QLineEdit::Normal, const QString &text = QString(), bool *ok = 0, Qt::WindowFlags flags = 0)
 */
 HB_FUNC_STATIC(QINPUTDIALOG_GETTEXT)
 {

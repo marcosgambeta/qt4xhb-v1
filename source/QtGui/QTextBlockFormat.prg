@@ -217,7 +217,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_LINEHEIGHT)
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    qreal lineHeight( qreal scriptLineHeight, qreal scaling ) const
+    qreal lineHeight(qreal scriptLineHeight, qreal scaling) const
     */
     QTextBlockFormat *obj = static_cast<QTextBlockFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -341,7 +341,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_RIGHTMARGIN)
 }
 
 /*
-void setAlignment( Qt::Alignment alignment )
+void setAlignment(Qt::Alignment alignment)
 */
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETALIGNMENT)
 {
@@ -367,7 +367,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETALIGNMENT)
 }
 
 /*
-void setBottomMargin( qreal margin )
+void setBottomMargin(qreal margin)
 */
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETBOTTOMMARGIN)
 {
@@ -393,7 +393,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETBOTTOMMARGIN)
 }
 
 /*
-void setIndent( int indentation )
+void setIndent(int indentation)
 */
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETINDENT)
 {
@@ -419,7 +419,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETINDENT)
 }
 
 /*
-void setLeftMargin( qreal margin )
+void setLeftMargin(qreal margin)
 */
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETLEFTMARGIN)
 {
@@ -445,7 +445,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETLEFTMARGIN)
 }
 
 /*
-void setLineHeight( qreal height, int heightType )
+void setLineHeight(qreal height, int heightType)
 */
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETLINEHEIGHT)
 {
@@ -471,7 +471,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETLINEHEIGHT)
 }
 
 /*
-void setNonBreakableLines( bool b )
+void setNonBreakableLines(bool b)
 */
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETNONBREAKABLELINES)
 {
@@ -497,7 +497,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETNONBREAKABLELINES)
 }
 
 /*
-void setPageBreakPolicy( QTextFormat::PageBreakFlags policy )
+void setPageBreakPolicy(QTextFormat::PageBreakFlags policy)
 */
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETPAGEBREAKPOLICY)
 {
@@ -523,7 +523,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETPAGEBREAKPOLICY)
 }
 
 /*
-void setRightMargin( qreal margin )
+void setRightMargin(qreal margin)
 */
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETRIGHTMARGIN)
 {
@@ -549,7 +549,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETRIGHTMARGIN)
 }
 
 /*
-void setTextIndent( qreal indent )
+void setTextIndent(qreal indent)
 */
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETTEXTINDENT)
 {
@@ -575,7 +575,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETTEXTINDENT)
 }
 
 /*
-void setTopMargin( qreal margin )
+void setTopMargin(qreal margin)
 */
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETTOPMARGIN)
 {

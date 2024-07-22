@@ -130,7 +130,7 @@ RETURN
 #include <QtGui/QAbstractItemView>
 
     /*
-    QComboBox( QWidget *parent = 0 )
+    QComboBox(QWidget *parent = 0)
     */
 HB_FUNC_STATIC(QCOMBOBOX_NEW)
 {
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QCOMBOBOX_ADDITEM)
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQVARIANT(2) || HB_ISNIL(2)))
   {
     /*
-    void addItem( const QString &text, const QVariant &userData = QVariant() )
+    void addItem(const QString &text, const QVariant &userData = QVariant())
     */
     QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QCOMBOBOX_ADDITEM)
   else if (ISBETWEEN(2, 3) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && (ISQVARIANT(3) || HB_ISNIL(3)))
   {
     /*
-    void addItem( const QIcon &icon, const QString &text, const QVariant &userData = QVariant() )
+    void addItem(const QIcon &icon, const QString &text, const QVariant &userData = QVariant())
     */
     QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -201,7 +201,7 @@ HB_FUNC_STATIC(QCOMBOBOX_ADDITEM)
 }
 
 /*
-void addItems( const QStringList &texts )
+void addItems(const QStringList &texts)
 */
 HB_FUNC_STATIC(QCOMBOBOX_ADDITEMS)
 {
@@ -348,8 +348,8 @@ HB_FUNC_STATIC(QCOMBOBOX_DUPLICATESENABLED)
 }
 
 /*
-int findData( const QVariant &data, int role = Qt::UserRole, Qt::MatchFlags flags = Qt::MatchExactly |
-Qt::MatchCaseSensitive ) const
+int findData(const QVariant &data, int role = Qt::UserRole, Qt::MatchFlags flags = Qt::MatchExactly |
+Qt::MatchCaseSensitive) const
 */
 HB_FUNC_STATIC(QCOMBOBOX_FINDDATA)
 {
@@ -375,7 +375,7 @@ HB_FUNC_STATIC(QCOMBOBOX_FINDDATA)
 }
 
 /*
-int findText( const QString &text, Qt::MatchFlags flags = Qt::MatchExactly | Qt::MatchCaseSensitive ) const
+int findText(const QString &text, Qt::MatchFlags flags = Qt::MatchExactly | Qt::MatchCaseSensitive) const
 */
 HB_FUNC_STATIC(QCOMBOBOX_FINDTEXT)
 {
@@ -479,7 +479,7 @@ HB_FUNC_STATIC(QCOMBOBOX_INSERTITEM)
   if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && (ISQVARIANT(3) || HB_ISNIL(3)))
   {
     /*
-    void insertItem( int index, const QString &text, const QVariant &userData = QVariant() )
+    void insertItem(int index, const QString &text, const QVariant &userData = QVariant())
     */
     QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -494,7 +494,7 @@ HB_FUNC_STATIC(QCOMBOBOX_INSERTITEM)
            (ISQVARIANT(4) || HB_ISNIL(4)))
   {
     /*
-    void insertItem( int index, const QIcon &icon, const QString &text, const QVariant &userData = QVariant() )
+    void insertItem(int index, const QIcon &icon, const QString &text, const QVariant &userData = QVariant())
     */
     QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -513,7 +513,7 @@ HB_FUNC_STATIC(QCOMBOBOX_INSERTITEM)
 }
 
 /*
-void insertItems( int index, const QStringList &list )
+void insertItems(int index, const QStringList &list)
 */
 HB_FUNC_STATIC(QCOMBOBOX_INSERTITEMS)
 {
@@ -563,7 +563,7 @@ HB_FUNC_STATIC(QCOMBOBOX_INSERTPOLICY)
 }
 
 /*
-void insertSeparator( int index )
+void insertSeparator(int index)
 */
 HB_FUNC_STATIC(QCOMBOBOX_INSERTSEPARATOR)
 {
@@ -613,7 +613,7 @@ HB_FUNC_STATIC(QCOMBOBOX_ISEDITABLE)
 }
 
 /*
-QVariant itemData( int index, int role = Qt::UserRole ) const
+QVariant itemData(int index, int role = Qt::UserRole) const
 */
 HB_FUNC_STATIC(QCOMBOBOX_ITEMDATA)
 {
@@ -663,7 +663,7 @@ HB_FUNC_STATIC(QCOMBOBOX_ITEMDELEGATE)
 }
 
 /*
-QIcon itemIcon( int index ) const
+QIcon itemIcon(int index) const
 */
 HB_FUNC_STATIC(QCOMBOBOX_ITEMICON)
 {
@@ -688,7 +688,7 @@ HB_FUNC_STATIC(QCOMBOBOX_ITEMICON)
 }
 
 /*
-QString itemText( int index ) const
+QString itemText(int index) const
 */
 HB_FUNC_STATIC(QCOMBOBOX_ITEMTEXT)
 {
@@ -858,7 +858,7 @@ HB_FUNC_STATIC(QCOMBOBOX_MODELCOLUMN)
 }
 
 /*
-void removeItem( int index )
+void removeItem(int index)
 */
 HB_FUNC_STATIC(QCOMBOBOX_REMOVEITEM)
 {
@@ -909,7 +909,7 @@ HB_FUNC_STATIC(QCOMBOBOX_ROOTMODELINDEX)
 }
 
 /*
-void setCompleter( QCompleter *completer )
+void setCompleter(QCompleter *completer)
 */
 HB_FUNC_STATIC(QCOMBOBOX_SETCOMPLETER)
 {
@@ -935,7 +935,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETCOMPLETER)
 }
 
 /*
-void setDuplicatesEnabled( bool enable )
+void setDuplicatesEnabled(bool enable)
 */
 HB_FUNC_STATIC(QCOMBOBOX_SETDUPLICATESENABLED)
 {
@@ -961,7 +961,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETDUPLICATESENABLED)
 }
 
 /*
-void setEditable( bool editable )
+void setEditable(bool editable)
 */
 HB_FUNC_STATIC(QCOMBOBOX_SETEDITABLE)
 {
@@ -987,7 +987,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETEDITABLE)
 }
 
 /*
-void setFrame( bool )
+void setFrame(bool)
 */
 HB_FUNC_STATIC(QCOMBOBOX_SETFRAME)
 {
@@ -1013,7 +1013,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETFRAME)
 }
 
 /*
-void setIconSize( const QSize &size )
+void setIconSize(const QSize &size)
 */
 HB_FUNC_STATIC(QCOMBOBOX_SETICONSIZE)
 {
@@ -1039,7 +1039,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETICONSIZE)
 }
 
 /*
-void setInsertPolicy( QComboBox::InsertPolicy policy )
+void setInsertPolicy(QComboBox::InsertPolicy policy)
 */
 HB_FUNC_STATIC(QCOMBOBOX_SETINSERTPOLICY)
 {
@@ -1065,7 +1065,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETINSERTPOLICY)
 }
 
 /*
-void setItemData( int index, const QVariant &value, int role = Qt::UserRole )
+void setItemData(int index, const QVariant &value, int role = Qt::UserRole)
 */
 HB_FUNC_STATIC(QCOMBOBOX_SETITEMDATA)
 {
@@ -1091,7 +1091,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETITEMDATA)
 }
 
 /*
-void setItemDelegate( QAbstractItemDelegate *delegate )
+void setItemDelegate(QAbstractItemDelegate *delegate)
 */
 HB_FUNC_STATIC(QCOMBOBOX_SETITEMDELEGATE)
 {
@@ -1117,7 +1117,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETITEMDELEGATE)
 }
 
 /*
-void setItemIcon( int index, const QIcon &icon )
+void setItemIcon(int index, const QIcon &icon)
 */
 HB_FUNC_STATIC(QCOMBOBOX_SETITEMICON)
 {
@@ -1143,7 +1143,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETITEMICON)
 }
 
 /*
-void setItemText( int index, const QString &text )
+void setItemText(int index, const QString &text)
 */
 HB_FUNC_STATIC(QCOMBOBOX_SETITEMTEXT)
 {
@@ -1169,7 +1169,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETITEMTEXT)
 }
 
 /*
-void setLineEdit( QLineEdit *edit )
+void setLineEdit(QLineEdit *edit)
 */
 HB_FUNC_STATIC(QCOMBOBOX_SETLINEEDIT)
 {
@@ -1195,7 +1195,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETLINEEDIT)
 }
 
 /*
-void setMaxCount( int max )
+void setMaxCount(int max)
 */
 HB_FUNC_STATIC(QCOMBOBOX_SETMAXCOUNT)
 {
@@ -1221,7 +1221,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETMAXCOUNT)
 }
 
 /*
-void setMaxVisibleItems( int maxItems )
+void setMaxVisibleItems(int maxItems)
 */
 HB_FUNC_STATIC(QCOMBOBOX_SETMAXVISIBLEITEMS)
 {
@@ -1247,7 +1247,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETMAXVISIBLEITEMS)
 }
 
 /*
-void setMinimumContentsLength( int characters )
+void setMinimumContentsLength(int characters)
 */
 HB_FUNC_STATIC(QCOMBOBOX_SETMINIMUMCONTENTSLENGTH)
 {
@@ -1273,7 +1273,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETMINIMUMCONTENTSLENGTH)
 }
 
 /*
-void setModel( QAbstractItemModel *model )
+void setModel(QAbstractItemModel *model)
 */
 HB_FUNC_STATIC(QCOMBOBOX_SETMODEL)
 {
@@ -1299,7 +1299,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETMODEL)
 }
 
 /*
-void setModelColumn( int visibleColumn )
+void setModelColumn(int visibleColumn)
 */
 HB_FUNC_STATIC(QCOMBOBOX_SETMODELCOLUMN)
 {
@@ -1325,7 +1325,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETMODELCOLUMN)
 }
 
 /*
-void setRootModelIndex( const QModelIndex &index )
+void setRootModelIndex(const QModelIndex &index)
 */
 HB_FUNC_STATIC(QCOMBOBOX_SETROOTMODELINDEX)
 {
@@ -1351,7 +1351,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETROOTMODELINDEX)
 }
 
 /*
-void setSizeAdjustPolicy( QComboBox::SizeAdjustPolicy policy )
+void setSizeAdjustPolicy(QComboBox::SizeAdjustPolicy policy)
 */
 HB_FUNC_STATIC(QCOMBOBOX_SETSIZEADJUSTPOLICY)
 {
@@ -1377,7 +1377,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETSIZEADJUSTPOLICY)
 }
 
 /*
-void setValidator( const QValidator *validator )
+void setValidator(const QValidator *validator)
 */
 HB_FUNC_STATIC(QCOMBOBOX_SETVALIDATOR)
 {
@@ -1403,7 +1403,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETVALIDATOR)
 }
 
 /*
-void setView( QAbstractItemView *itemView )
+void setView(QAbstractItemView *itemView)
 */
 HB_FUNC_STATIC(QCOMBOBOX_SETVIEW)
 {
@@ -1529,7 +1529,7 @@ HB_FUNC_STATIC(QCOMBOBOX_VIEW)
 }
 
 /*
-virtual bool event( QEvent *event )
+virtual bool event(QEvent *event)
 */
 HB_FUNC_STATIC(QCOMBOBOX_EVENT)
 {
@@ -1655,7 +1655,7 @@ HB_FUNC_STATIC(QCOMBOBOX_CLEAREDITTEXT)
 }
 
 /*
-void setCurrentIndex( int index )
+void setCurrentIndex(int index)
 */
 HB_FUNC_STATIC(QCOMBOBOX_SETCURRENTINDEX)
 {
@@ -1681,7 +1681,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETCURRENTINDEX)
 }
 
 /*
-void setEditText( const QString &text )
+void setEditText(const QString &text)
 */
 HB_FUNC_STATIC(QCOMBOBOX_SETEDITTEXT)
 {

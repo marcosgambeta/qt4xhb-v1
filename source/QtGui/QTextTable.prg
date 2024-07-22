@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QTEXTTABLE_DELETE)
 }
 
 /*
-void appendColumns( int count )
+void appendColumns(int count)
 */
 HB_FUNC_STATIC(QTEXTTABLE_APPENDCOLUMNS)
 {
@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QTEXTTABLE_APPENDCOLUMNS)
 }
 
 /*
-void appendRows( int count )
+void appendRows(int count)
 */
 HB_FUNC_STATIC(QTEXTTABLE_APPENDROWS)
 {
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QTEXTTABLE_CELLAT)
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    QTextTableCell cellAt( int row, int column ) const
+    QTextTableCell cellAt(int row, int column) const
     */
     QTextTable *obj = qobject_cast<QTextTable *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QTEXTTABLE_CELLAT)
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    QTextTableCell cellAt( int position ) const
+    QTextTableCell cellAt(int position) const
     */
     QTextTable *obj = qobject_cast<QTextTable *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QTEXTTABLE_CELLAT)
   else if (ISNUMPAR(1) && ISQTEXTCURSOR(1))
   {
     /*
-    QTextTableCell cellAt( const QTextCursor &cursor ) const
+    QTextTableCell cellAt(const QTextCursor &cursor) const
     */
     QTextTable *obj = qobject_cast<QTextTable *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -227,7 +227,7 @@ HB_FUNC_STATIC(QTEXTTABLE_FORMAT)
 }
 
 /*
-void insertColumns( int index, int columns )
+void insertColumns(int index, int columns)
 */
 HB_FUNC_STATIC(QTEXTTABLE_INSERTCOLUMNS)
 {
@@ -253,7 +253,7 @@ HB_FUNC_STATIC(QTEXTTABLE_INSERTCOLUMNS)
 }
 
 /*
-void insertRows( int index, int rows )
+void insertRows(int index, int rows)
 */
 HB_FUNC_STATIC(QTEXTTABLE_INSERTROWS)
 {
@@ -283,7 +283,7 @@ HB_FUNC_STATIC(QTEXTTABLE_MERGECELLS)
   if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
-    void mergeCells( int row, int column, int numRows, int numCols )
+    void mergeCells(int row, int column, int numRows, int numCols)
     */
     QTextTable *obj = qobject_cast<QTextTable *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -297,7 +297,7 @@ HB_FUNC_STATIC(QTEXTTABLE_MERGECELLS)
   else if (ISNUMPAR(1) && ISQTEXTCURSOR(1))
   {
     /*
-    void mergeCells( const QTextCursor &cursor )
+    void mergeCells(const QTextCursor &cursor)
     */
     QTextTable *obj = qobject_cast<QTextTable *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -315,7 +315,7 @@ HB_FUNC_STATIC(QTEXTTABLE_MERGECELLS)
 }
 
 /*
-void removeColumns( int index, int columns )
+void removeColumns(int index, int columns)
 */
 HB_FUNC_STATIC(QTEXTTABLE_REMOVECOLUMNS)
 {
@@ -341,7 +341,7 @@ HB_FUNC_STATIC(QTEXTTABLE_REMOVECOLUMNS)
 }
 
 /*
-void removeRows( int index, int rows )
+void removeRows(int index, int rows)
 */
 HB_FUNC_STATIC(QTEXTTABLE_REMOVEROWS)
 {
@@ -367,7 +367,7 @@ HB_FUNC_STATIC(QTEXTTABLE_REMOVEROWS)
 }
 
 /*
-void resize( int rows, int columns )
+void resize(int rows, int columns)
 */
 HB_FUNC_STATIC(QTEXTTABLE_RESIZE)
 {
@@ -393,7 +393,7 @@ HB_FUNC_STATIC(QTEXTTABLE_RESIZE)
 }
 
 /*
-QTextCursor rowEnd( const QTextCursor &cursor ) const
+QTextCursor rowEnd(const QTextCursor &cursor) const
 */
 HB_FUNC_STATIC(QTEXTTABLE_ROWEND)
 {
@@ -418,7 +418,7 @@ HB_FUNC_STATIC(QTEXTTABLE_ROWEND)
 }
 
 /*
-QTextCursor rowStart( const QTextCursor &cursor ) const
+QTextCursor rowStart(const QTextCursor &cursor) const
 */
 HB_FUNC_STATIC(QTEXTTABLE_ROWSTART)
 {
@@ -467,7 +467,7 @@ HB_FUNC_STATIC(QTEXTTABLE_ROWS)
 }
 
 /*
-void setFormat( const QTextTableFormat &format )
+void setFormat(const QTextTableFormat &format)
 */
 HB_FUNC_STATIC(QTEXTTABLE_SETFORMAT)
 {
@@ -493,7 +493,7 @@ HB_FUNC_STATIC(QTEXTTABLE_SETFORMAT)
 }
 
 /*
-void splitCell( int row, int column, int numRows, int numCols )
+void splitCell(int row, int column, int numRows, int numCols)
 */
 HB_FUNC_STATIC(QTEXTTABLE_SPLITCELL)
 {

@@ -56,8 +56,8 @@ RETURN
 #include "qt4xhb_utils.hpp"
 
     /*
-    QDropEvent( const QPoint &pos, Qt::DropActions actions, const QMimeData *data, Qt::MouseButtons buttons,
-    Qt::KeyboardModifiers modifiers, QEvent::Type type = QEvent::Drop )
+    QDropEvent(const QPoint &pos, Qt::DropActions actions, const QMimeData *data, Qt::MouseButtons buttons,
+    Qt::KeyboardModifiers modifiers, QEvent::Type type = QEvent::Drop)
     */
 HB_FUNC_STATIC(QDROPEVENT_NEW)
 {
@@ -288,7 +288,7 @@ HB_FUNC_STATIC(QDROPEVENT_PROPOSEDACTION)
 }
 
 /*
-void setDropAction( Qt::DropAction action )
+void setDropAction(Qt::DropAction action)
 */
 HB_FUNC_STATIC(QDROPEVENT_SETDROPACTION)
 {
@@ -339,7 +339,7 @@ HB_FUNC_STATIC(QDROPEVENT_SOURCE)
 }
 
 /*
-virtual QByteArray encodedData( const char *format ) const
+virtual QByteArray encodedData(const char *format) const
 */
 HB_FUNC_STATIC(QDROPEVENT_ENCODEDDATA)
 {
@@ -364,7 +364,7 @@ HB_FUNC_STATIC(QDROPEVENT_ENCODEDDATA)
 }
 
 /*
-virtual const char *format( int n = 0 ) const
+virtual const char *format(int n = 0) const
 */
 HB_FUNC_STATIC(QDROPEVENT_FORMAT)
 {
@@ -388,7 +388,7 @@ HB_FUNC_STATIC(QDROPEVENT_FORMAT)
 }
 
 /*
-virtual bool provides( const char *mimeType ) const
+virtual bool provides(const char *mimeType) const
 */
 HB_FUNC_STATIC(QDROPEVENT_PROVIDES)
 {

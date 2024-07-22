@@ -52,7 +52,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QFontComboBox( QWidget *parent = 0 )
+    QFontComboBox(QWidget *parent = 0)
     */
 HB_FUNC_STATIC(QFONTCOMBOBOX_NEW)
 {
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_FONTFILTERS)
 }
 
 /*
-void setFontFilters( QFontComboBox::FontFilters filters )
+void setFontFilters(QFontComboBox::FontFilters filters)
 */
 HB_FUNC_STATIC(QFONTCOMBOBOX_SETFONTFILTERS)
 {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_SETFONTFILTERS)
 }
 
 /*
-void setWritingSystem( QFontDatabase::WritingSystem script )
+void setWritingSystem(QFontDatabase::WritingSystem script)
 */
 HB_FUNC_STATIC(QFONTCOMBOBOX_SETWRITINGSYSTEM)
 {
@@ -236,7 +236,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_SIZEHINT)
 }
 
 /*
-void setCurrentFont( const QFont &font )
+void setCurrentFont(const QFont &font)
 */
 HB_FUNC_STATIC(QFONTCOMBOBOX_SETCURRENTFONT)
 {

@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_NEW)
   if (ISBETWEEN(0, 2) && (ISQLISTWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QListWidgetItem( QListWidget *parent = 0, int type = QListWidgetItem::Type )
+    QListWidgetItem(QListWidget *parent = 0, int type = QListWidgetItem::Type)
     */
     QListWidgetItem *obj = new QListWidgetItem(OPQLISTWIDGET(1, 0), OPINT(2, QListWidgetItem::Type));
     Qt4xHb::returnNewObject(obj, false);
@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_NEW)
   else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQLISTWIDGET(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QListWidgetItem( const QString &text, QListWidget *parent = 0, int type = QListWidgetItem::Type )
+    QListWidgetItem(const QString &text, QListWidget *parent = 0, int type = QListWidgetItem::Type)
     */
     QListWidgetItem *obj = new QListWidgetItem(PQSTRING(1), OPQLISTWIDGET(2, 0), OPINT(3, QListWidgetItem::Type));
     Qt4xHb::returnNewObject(obj, false);
@@ -110,8 +110,8 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_NEW)
            (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
-    QListWidgetItem( const QIcon &icon, const QString &text, QListWidget *parent = 0, int type =
-    QListWidgetItem::Type )
+    QListWidgetItem(const QIcon &icon, const QString &text, QListWidget *parent = 0, int type =
+    QListWidgetItem::Type)
     */
     QListWidgetItem *obj =
         new QListWidgetItem(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt4xHb::itemGetPtr(1)) : QIcon(hb_parc(1)),
@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_NEW)
   else if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1))
   {
     /*
-    QListWidgetItem( const QListWidgetItem &other )
+    QListWidgetItem(const QListWidgetItem &other)
     */
     QListWidgetItem *obj = new QListWidgetItem(*PQLISTWIDGETITEM(1));
     Qt4xHb::returnNewObject(obj, false);
@@ -223,7 +223,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_CLONE)
 }
 
 /*
-virtual QVariant data( int role ) const
+virtual QVariant data(int role) const
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_DATA)
 {
@@ -420,7 +420,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_LISTWIDGET)
 }
 
 /*
-virtual void read( QDataStream &in )
+virtual void read(QDataStream &in)
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_READ)
 {
@@ -446,7 +446,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_READ)
 }
 
 /*
-void setBackground( const QBrush &brush )
+void setBackground(const QBrush &brush)
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETBACKGROUND)
 {
@@ -472,7 +472,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETBACKGROUND)
 }
 
 /*
-void setCheckState( Qt::CheckState state )
+void setCheckState(Qt::CheckState state)
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETCHECKSTATE)
 {
@@ -498,7 +498,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETCHECKSTATE)
 }
 
 /*
-virtual void setData( int role, const QVariant &value )
+virtual void setData(int role, const QVariant &value)
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETDATA)
 {
@@ -524,7 +524,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETDATA)
 }
 
 /*
-void setFlags( Qt::ItemFlags flags )
+void setFlags(Qt::ItemFlags flags)
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETFLAGS)
 {
@@ -550,7 +550,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETFLAGS)
 }
 
 /*
-void setFont( const QFont &font )
+void setFont(const QFont &font)
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETFONT)
 {
@@ -576,7 +576,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETFONT)
 }
 
 /*
-void setForeground( const QBrush &brush )
+void setForeground(const QBrush &brush)
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETFOREGROUND)
 {
@@ -602,7 +602,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETFOREGROUND)
 }
 
 /*
-void setHidden( bool hide )
+void setHidden(bool hide)
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETHIDDEN)
 {
@@ -628,7 +628,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETHIDDEN)
 }
 
 /*
-void setIcon( const QIcon &icon )
+void setIcon(const QIcon &icon)
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETICON)
 {
@@ -654,7 +654,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETICON)
 }
 
 /*
-void setSelected( bool select )
+void setSelected(bool select)
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETSELECTED)
 {
@@ -680,7 +680,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETSELECTED)
 }
 
 /*
-void setSizeHint( const QSize &size )
+void setSizeHint(const QSize &size)
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETSIZEHINT)
 {
@@ -706,7 +706,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETSIZEHINT)
 }
 
 /*
-void setStatusTip( const QString &statusTip )
+void setStatusTip(const QString &statusTip)
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETSTATUSTIP)
 {
@@ -732,7 +732,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETSTATUSTIP)
 }
 
 /*
-void setText( const QString &text )
+void setText(const QString &text)
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETTEXT)
 {
@@ -758,7 +758,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETTEXT)
 }
 
 /*
-void setTextAlignment( int alignment )
+void setTextAlignment(int alignment)
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETTEXTALIGNMENT)
 {
@@ -784,7 +784,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETTEXTALIGNMENT)
 }
 
 /*
-void setToolTip( const QString &toolTip )
+void setToolTip(const QString &toolTip)
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETTOOLTIP)
 {
@@ -810,7 +810,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETTOOLTIP)
 }
 
 /*
-void setWhatsThis( const QString &whatsThis )
+void setWhatsThis(const QString &whatsThis)
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_SETWHATSTHIS)
 {
@@ -1005,7 +1005,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_WHATSTHIS)
 }
 
 /*
-virtual void write( QDataStream &out ) const
+virtual void write(QDataStream &out) const
 */
 HB_FUNC_STATIC(QLISTWIDGETITEM_WRITE)
 {

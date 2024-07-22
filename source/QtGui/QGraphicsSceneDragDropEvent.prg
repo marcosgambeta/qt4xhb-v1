@@ -318,7 +318,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_SCREENPOS)
 }
 
 /*
-void setDropAction( Qt::DropAction action )
+void setDropAction(Qt::DropAction action)
 */
 HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_SETDROPACTION)
 {

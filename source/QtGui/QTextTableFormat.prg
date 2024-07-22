@@ -306,7 +306,7 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_ISVALID)
 }
 
 /*
-void setAlignment( Qt::Alignment alignment )
+void setAlignment(Qt::Alignment alignment)
 */
 HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETALIGNMENT)
 {
@@ -332,7 +332,7 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETALIGNMENT)
 }
 
 /*
-void setCellPadding( qreal padding )
+void setCellPadding(qreal padding)
 */
 HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETCELLPADDING)
 {
@@ -358,7 +358,7 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETCELLPADDING)
 }
 
 /*
-void setCellSpacing( qreal spacing )
+void setCellSpacing(qreal spacing)
 */
 HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETCELLSPACING)
 {
@@ -384,7 +384,7 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETCELLSPACING)
 }
 
 /*
-void setColumnWidthConstraints( const QVector<QTextLength> &constraints )
+void setColumnWidthConstraints(const QVector<QTextLength> &constraints)
 */
 HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETCOLUMNWIDTHCONSTRAINTS)
 {
@@ -418,7 +418,7 @@ HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETCOLUMNWIDTHCONSTRAINTS)
 }
 
 /*
-void setHeaderRowCount( int count )
+void setHeaderRowCount(int count)
 */
 HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETHEADERROWCOUNT)
 {

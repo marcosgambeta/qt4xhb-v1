@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_CAPSTYLE)
 }
 
 /*
-QPainterPath createStroke( const QPainterPath &path ) const
+QPainterPath createStroke(const QPainterPath &path) const
 */
 HB_FUNC_STATIC(QPAINTERPATHSTROKER_CREATESTROKE)
 {
@@ -274,7 +274,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_MITERLIMIT)
 }
 
 /*
-void setCapStyle( Qt::PenCapStyle style )
+void setCapStyle(Qt::PenCapStyle style)
 */
 HB_FUNC_STATIC(QPAINTERPATHSTROKER_SETCAPSTYLE)
 {
@@ -300,7 +300,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_SETCAPSTYLE)
 }
 
 /*
-void setCurveThreshold( qreal threshold )
+void setCurveThreshold(qreal threshold)
 */
 HB_FUNC_STATIC(QPAINTERPATHSTROKER_SETCURVETHRESHOLD)
 {
@@ -326,7 +326,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_SETCURVETHRESHOLD)
 }
 
 /*
-void setDashOffset( qreal offset )
+void setDashOffset(qreal offset)
 */
 HB_FUNC_STATIC(QPAINTERPATHSTROKER_SETDASHOFFSET)
 {
@@ -356,7 +356,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_SETDASHPATTERN)
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    void setDashPattern( Qt::PenStyle style )
+    void setDashPattern(Qt::PenStyle style)
     */
     QPainterPathStroker *obj = static_cast<QPainterPathStroker *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -370,7 +370,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_SETDASHPATTERN)
   else if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
     /*
-    void setDashPattern( const QVector<qreal> &dashPattern )
+    void setDashPattern(const QVector<qreal> &dashPattern)
     */
     QPainterPathStroker *obj = static_cast<QPainterPathStroker *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -397,7 +397,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_SETDASHPATTERN)
 }
 
 /*
-void setJoinStyle( Qt::PenJoinStyle style )
+void setJoinStyle(Qt::PenJoinStyle style)
 */
 HB_FUNC_STATIC(QPAINTERPATHSTROKER_SETJOINSTYLE)
 {
@@ -423,7 +423,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_SETJOINSTYLE)
 }
 
 /*
-void setMiterLimit( qreal limit )
+void setMiterLimit(qreal limit)
 */
 HB_FUNC_STATIC(QPAINTERPATHSTROKER_SETMITERLIMIT)
 {
@@ -449,7 +449,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_SETMITERLIMIT)
 }
 
 /*
-void setWidth( qreal width )
+void setWidth(qreal width)
 */
 HB_FUNC_STATIC(QPAINTERPATHSTROKER_SETWIDTH)
 {

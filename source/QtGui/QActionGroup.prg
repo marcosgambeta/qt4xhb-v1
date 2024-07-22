@@ -56,7 +56,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QActionGroup( QObject *parent )
+    QActionGroup(QObject *parent)
     */
 HB_FUNC_STATIC(QACTIONGROUP_NEW)
 {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QACTIONGROUP_ADDACTION)
   if (ISNUMPAR(1) && ISQACTION(1))
   {
     /*
-    QAction *addAction( QAction *action )
+    QAction *addAction(QAction *action)
     */
     QActionGroup *obj = qobject_cast<QActionGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QACTIONGROUP_ADDACTION)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QAction *addAction( const QString &text )
+    QAction *addAction(const QString &text)
     */
     QActionGroup *obj = qobject_cast<QActionGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QACTIONGROUP_ADDACTION)
   else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2))
   {
     /*
-    QAction *addAction( const QIcon &icon, const QString &text )
+    QAction *addAction(const QIcon &icon, const QString &text)
     */
     QActionGroup *obj = qobject_cast<QActionGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -283,7 +283,7 @@ HB_FUNC_STATIC(QACTIONGROUP_ISVISIBLE)
 }
 
 /*
-void removeAction( QAction *action )
+void removeAction(QAction *action)
 */
 HB_FUNC_STATIC(QACTIONGROUP_REMOVEACTION)
 {
@@ -309,7 +309,7 @@ HB_FUNC_STATIC(QACTIONGROUP_REMOVEACTION)
 }
 
 /*
-void setDisabled( bool b )
+void setDisabled(bool b)
 */
 HB_FUNC_STATIC(QACTIONGROUP_SETDISABLED)
 {
@@ -335,7 +335,7 @@ HB_FUNC_STATIC(QACTIONGROUP_SETDISABLED)
 }
 
 /*
-void setEnabled( bool )
+void setEnabled(bool)
 */
 HB_FUNC_STATIC(QACTIONGROUP_SETENABLED)
 {
@@ -361,7 +361,7 @@ HB_FUNC_STATIC(QACTIONGROUP_SETENABLED)
 }
 
 /*
-void setExclusive( bool )
+void setExclusive(bool)
 */
 HB_FUNC_STATIC(QACTIONGROUP_SETEXCLUSIVE)
 {
@@ -387,7 +387,7 @@ HB_FUNC_STATIC(QACTIONGROUP_SETEXCLUSIVE)
 }
 
 /*
-void setVisible( bool )
+void setVisible(bool)
 */
 HB_FUNC_STATIC(QACTIONGROUP_SETVISIBLE)
 {

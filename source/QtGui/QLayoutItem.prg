@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QLAYOUTITEM_HASHEIGHTFORWIDTH)
 }
 
 /*
-virtual int heightForWidth( int w ) const
+virtual int heightForWidth(int w) const
 */
 HB_FUNC_STATIC(QLAYOUTITEM_HEIGHTFORWIDTH)
 {
@@ -332,7 +332,7 @@ HB_FUNC_STATIC(QLAYOUTITEM_MAXIMUMSIZE)
 }
 
 /*
-virtual int minimumHeightForWidth( int w ) const
+virtual int minimumHeightForWidth(int w) const
 */
 HB_FUNC_STATIC(QLAYOUTITEM_MINIMUMHEIGHTFORWIDTH)
 {
@@ -381,7 +381,7 @@ HB_FUNC_STATIC(QLAYOUTITEM_MINIMUMSIZE)
 }
 
 /*
-void setAlignment( Qt::Alignment alignment )
+void setAlignment(Qt::Alignment alignment)
 */
 HB_FUNC_STATIC(QLAYOUTITEM_SETALIGNMENT)
 {
@@ -407,7 +407,7 @@ HB_FUNC_STATIC(QLAYOUTITEM_SETALIGNMENT)
 }
 
 /*
-virtual void setGeometry( const QRect &r ) = 0
+virtual void setGeometry(const QRect &r) = 0
 */
 HB_FUNC_STATIC(QLAYOUTITEM_SETGEOMETRY)
 {

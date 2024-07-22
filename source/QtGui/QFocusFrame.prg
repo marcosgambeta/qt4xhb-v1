@@ -43,7 +43,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QFocusFrame( QWidget *parent = 0 )
+    QFocusFrame(QWidget *parent = 0)
     */
 HB_FUNC_STATIC(QFOCUSFRAME_NEW)
 {
@@ -59,7 +59,7 @@ HB_FUNC_STATIC(QFOCUSFRAME_NEW)
 }
 
 /*
-void setWidget( QWidget *widget )
+void setWidget(QWidget *widget)
 */
 HB_FUNC_STATIC(QFOCUSFRAME_SETWIDGET)
 {

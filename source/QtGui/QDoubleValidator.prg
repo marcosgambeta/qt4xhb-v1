@@ -55,7 +55,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_NEW)
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
-    QDoubleValidator( QObject *parent = 0 )
+    QDoubleValidator(QObject *parent = 0)
     */
     QDoubleValidator *obj = new QDoubleValidator(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -63,7 +63,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_NEW)
   else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISQOBJECT(4) || HB_ISNIL(4)))
   {
     /*
-    QDoubleValidator( double bottom, double top, int decimals, QObject *parent = 0 )
+    QDoubleValidator(double bottom, double top, int decimals, QObject *parent = 0)
     */
     QDoubleValidator *obj = new QDoubleValidator(PDOUBLE(1), PDOUBLE(2), PINT(3), OPQOBJECT(4, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_NOTATION)
 }
 
 /*
-void setBottom( double )
+void setBottom(double)
 */
 HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETBOTTOM)
 {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETBOTTOM)
 }
 
 /*
-void setDecimals( int )
+void setDecimals(int)
 */
 HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETDECIMALS)
 {
@@ -217,7 +217,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETDECIMALS)
 }
 
 /*
-void setNotation( QDoubleValidator::Notation )
+void setNotation(QDoubleValidator::Notation)
 */
 HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETNOTATION)
 {
@@ -243,7 +243,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETNOTATION)
 }
 
 /*
-virtual void setRange( double minimum, double maximum, int decimals = 0 )
+virtual void setRange(double minimum, double maximum, int decimals = 0)
 */
 HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETRANGE)
 {
@@ -269,7 +269,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETRANGE)
 }
 
 /*
-void setTop( double )
+void setTop(double)
 */
 HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETTOP)
 {
@@ -319,7 +319,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_TOP)
 }
 
 /*
-virtual QValidator::State validate( QString &input, int &pos ) const
+virtual QValidator::State validate(QString &input, int &pos) const
 */
 HB_FUNC_STATIC(QDOUBLEVALIDATOR_VALIDATE)
 {

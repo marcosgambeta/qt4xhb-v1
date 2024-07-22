@@ -76,7 +76,7 @@ RETURN
 #include <QtGui/QAbstractItemDelegate>
 
     /*
-    QDataWidgetMapper( QObject *parent = 0 )
+    QDataWidgetMapper(QObject *parent = 0)
     */
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_NEW)
 {
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_ADDMAPPING)
   if (ISNUMPAR(2) && ISQWIDGET(1) && HB_ISNUM(2))
   {
     /*
-    void addMapping( QWidget *widget, int section )
+    void addMapping(QWidget *widget, int section)
     */
     QDataWidgetMapper *obj = qobject_cast<QDataWidgetMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_ADDMAPPING)
   else if (ISNUMPAR(3) && ISQWIDGET(1) && HB_ISNUM(2) && ISQBYTEARRAY(3))
   {
     /*
-    void addMapping( QWidget *widget, int section, const QByteArray &propertyName )
+    void addMapping(QWidget *widget, int section, const QByteArray &propertyName)
     */
     QDataWidgetMapper *obj = qobject_cast<QDataWidgetMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_ITEMDELEGATE)
 }
 
 /*
-QByteArray mappedPropertyName( QWidget *widget ) const
+QByteArray mappedPropertyName(QWidget *widget) const
 */
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_MAPPEDPROPERTYNAME)
 {
@@ -246,7 +246,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_MAPPEDPROPERTYNAME)
 }
 
 /*
-int mappedSection( QWidget *widget ) const
+int mappedSection(QWidget *widget) const
 */
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_MAPPEDSECTION)
 {
@@ -270,7 +270,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_MAPPEDSECTION)
 }
 
 /*
-QWidget *mappedWidgetAt( int section ) const
+QWidget *mappedWidgetAt(int section) const
 */
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_MAPPEDWIDGETAT)
 {
@@ -344,7 +344,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_ORIENTATION)
 }
 
 /*
-void removeMapping( QWidget *widget )
+void removeMapping(QWidget *widget)
 */
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_REMOVEMAPPING)
 {
@@ -395,7 +395,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_ROOTINDEX)
 }
 
 /*
-void setItemDelegate( QAbstractItemDelegate *delegate )
+void setItemDelegate(QAbstractItemDelegate *delegate)
 */
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETITEMDELEGATE)
 {
@@ -421,7 +421,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETITEMDELEGATE)
 }
 
 /*
-void setModel( QAbstractItemModel *model )
+void setModel(QAbstractItemModel *model)
 */
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETMODEL)
 {
@@ -447,7 +447,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETMODEL)
 }
 
 /*
-void setOrientation( Qt::Orientation aOrientation )
+void setOrientation(Qt::Orientation aOrientation)
 */
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETORIENTATION)
 {
@@ -473,7 +473,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETORIENTATION)
 }
 
 /*
-void setRootIndex( const QModelIndex &index )
+void setRootIndex(const QModelIndex &index)
 */
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETROOTINDEX)
 {
@@ -499,7 +499,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETROOTINDEX)
 }
 
 /*
-void setSubmitPolicy( QDataWidgetMapper::SubmitPolicy policy )
+void setSubmitPolicy(QDataWidgetMapper::SubmitPolicy policy)
 */
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETSUBMITPOLICY)
 {
@@ -575,7 +575,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_REVERT)
 }
 
 /*
-virtual void setCurrentIndex( int index )
+virtual void setCurrentIndex(int index)
 */
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETCURRENTINDEX)
 {
@@ -601,7 +601,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETCURRENTINDEX)
 }
 
 /*
-void setCurrentModelIndex( const QModelIndex &index )
+void setCurrentModelIndex(const QModelIndex &index)
 */
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETCURRENTMODELINDEX)
 {

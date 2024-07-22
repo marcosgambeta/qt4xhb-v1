@@ -56,7 +56,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_AVAILABLEGEOMETRY)
   if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
     /*
-    const QRect availableGeometry( int screen = -1 ) const
+    const QRect availableGeometry(int screen = -1) const
     */
     QDesktopWidget *obj = qobject_cast<QDesktopWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_AVAILABLEGEOMETRY)
   else if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
-    const QRect availableGeometry( const QWidget *widget ) const
+    const QRect availableGeometry(const QWidget *widget) const
     */
     QDesktopWidget *obj = qobject_cast<QDesktopWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_AVAILABLEGEOMETRY)
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    const QRect availableGeometry( const QPoint &p ) const
+    const QRect availableGeometry(const QPoint &p) const
     */
     QDesktopWidget *obj = qobject_cast<QDesktopWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_PRIMARYSCREEN)
 }
 
 /*
-QWidget *screen( int screen = -1 )
+QWidget *screen(int screen = -1)
 */
 HB_FUNC_STATIC(QDESKTOPWIDGET_SCREEN)
 {
@@ -200,7 +200,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENGEOMETRY)
   if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
     /*
-    const QRect screenGeometry( int screen = -1 ) const
+    const QRect screenGeometry(int screen = -1) const
     */
     QDesktopWidget *obj = qobject_cast<QDesktopWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENGEOMETRY)
   else if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
-    const QRect screenGeometry( const QWidget *widget ) const
+    const QRect screenGeometry(const QWidget *widget) const
     */
     QDesktopWidget *obj = qobject_cast<QDesktopWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -226,7 +226,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENGEOMETRY)
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    const QRect screenGeometry( const QPoint &p ) const
+    const QRect screenGeometry(const QPoint &p) const
     */
     QDesktopWidget *obj = qobject_cast<QDesktopWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -247,7 +247,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENNUMBER)
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
-    int screenNumber( const QWidget *widget = 0 ) const
+    int screenNumber(const QWidget *widget = 0) const
     */
     QDesktopWidget *obj = qobject_cast<QDesktopWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -259,7 +259,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENNUMBER)
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
-    int screenNumber( const QPoint &point ) const
+    int screenNumber(const QPoint &point) const
     */
     QDesktopWidget *obj = qobject_cast<QDesktopWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

@@ -76,7 +76,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QFormLayout( QWidget *parent = 0 )
+    QFormLayout(QWidget *parent = 0)
     */
 HB_FUNC_STATIC(QFORMLAYOUT_NEW)
 {
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_ADDROW)
   if (ISNUMPAR(2) && ISQWIDGET(1) && ISQWIDGET(2))
   {
     /*
-    void addRow( QWidget *label, QWidget *field )
+    void addRow(QWidget *label, QWidget *field)
     */
     QFormLayout *obj = qobject_cast<QFormLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_ADDROW)
   else if (ISNUMPAR(2) && ISQWIDGET(1) && ISQLAYOUT(2))
   {
     /*
-    void addRow( QWidget *label, QLayout *field )
+    void addRow(QWidget *label, QLayout *field)
     */
     QFormLayout *obj = qobject_cast<QFormLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_ADDROW)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQWIDGET(2))
   {
     /*
-    void addRow( const QString &labelText, QWidget *field )
+    void addRow(const QString &labelText, QWidget *field)
     */
     QFormLayout *obj = qobject_cast<QFormLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -156,7 +156,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_ADDROW)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQLAYOUT(2))
   {
     /*
-    void addRow( const QString &labelText, QLayout *field )
+    void addRow(const QString &labelText, QLayout *field)
     */
     QFormLayout *obj = qobject_cast<QFormLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_ADDROW)
   else if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
-    void addRow( QWidget *widget )
+    void addRow(QWidget *widget)
     */
     QFormLayout *obj = qobject_cast<QFormLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_ADDROW)
   else if (ISNUMPAR(1) && ISQLAYOUT(1))
   {
     /*
-    void addRow( QLayout *layout )
+    void addRow(QLayout *layout)
     */
     QFormLayout *obj = qobject_cast<QFormLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -278,7 +278,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_INSERTROW)
   if (ISNUMPAR(3) && HB_ISNUM(1) && ISQWIDGET(2) && ISQWIDGET(3))
   {
     /*
-    void insertRow( int row, QWidget *label, QWidget *field )
+    void insertRow(int row, QWidget *label, QWidget *field)
     */
     QFormLayout *obj = qobject_cast<QFormLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -292,7 +292,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_INSERTROW)
   else if (ISNUMPAR(3) && HB_ISNUM(1) && ISQWIDGET(2) && ISQLAYOUT(3))
   {
     /*
-    void insertRow( int row, QWidget *label, QLayout *field )
+    void insertRow(int row, QWidget *label, QLayout *field)
     */
     QFormLayout *obj = qobject_cast<QFormLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -306,7 +306,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_INSERTROW)
   else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQWIDGET(3))
   {
     /*
-    void insertRow( int row, const QString &labelText, QWidget *field )
+    void insertRow(int row, const QString &labelText, QWidget *field)
     */
     QFormLayout *obj = qobject_cast<QFormLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -320,7 +320,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_INSERTROW)
   else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQLAYOUT(3))
   {
     /*
-    void insertRow( int row, const QString &labelText, QLayout *field )
+    void insertRow(int row, const QString &labelText, QLayout *field)
     */
     QFormLayout *obj = qobject_cast<QFormLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -334,7 +334,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_INSERTROW)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQWIDGET(2))
   {
     /*
-    void insertRow( int row, QWidget *widget )
+    void insertRow(int row, QWidget *widget)
     */
     QFormLayout *obj = qobject_cast<QFormLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -348,7 +348,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_INSERTROW)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQLAYOUT(2))
   {
     /*
-    void insertRow( int row, QLayout *layout )
+    void insertRow(int row, QLayout *layout)
     */
     QFormLayout *obj = qobject_cast<QFormLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -394,7 +394,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_LABELFORFIELD)
   if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
-    QWidget *labelForField( QWidget *field ) const
+    QWidget *labelForField(QWidget *field) const
     */
     QFormLayout *obj = qobject_cast<QFormLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -407,7 +407,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_LABELFORFIELD)
   else if (ISNUMPAR(1) && ISQLAYOUT(1))
   {
     /*
-    QWidget *labelForField( QLayout *field ) const
+    QWidget *labelForField(QLayout *field) const
     */
     QFormLayout *obj = qobject_cast<QFormLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -472,7 +472,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_ROWWRAPPOLICY)
 }
 
 /*
-void setFieldGrowthPolicy( QFormLayout::FieldGrowthPolicy policy )
+void setFieldGrowthPolicy(QFormLayout::FieldGrowthPolicy policy)
 */
 HB_FUNC_STATIC(QFORMLAYOUT_SETFIELDGROWTHPOLICY)
 {
@@ -498,7 +498,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_SETFIELDGROWTHPOLICY)
 }
 
 /*
-void setFormAlignment( Qt::Alignment alignment )
+void setFormAlignment(Qt::Alignment alignment)
 */
 HB_FUNC_STATIC(QFORMLAYOUT_SETFORMALIGNMENT)
 {
@@ -524,7 +524,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_SETFORMALIGNMENT)
 }
 
 /*
-void setHorizontalSpacing( int spacing )
+void setHorizontalSpacing(int spacing)
 */
 HB_FUNC_STATIC(QFORMLAYOUT_SETHORIZONTALSPACING)
 {
@@ -550,7 +550,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_SETHORIZONTALSPACING)
 }
 
 /*
-void setItem( int row, QFormLayout::ItemRole role, QLayoutItem *item )
+void setItem(int row, QFormLayout::ItemRole role, QLayoutItem *item)
 */
 HB_FUNC_STATIC(QFORMLAYOUT_SETITEM)
 {
@@ -576,7 +576,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_SETITEM)
 }
 
 /*
-void setLabelAlignment( Qt::Alignment alignment )
+void setLabelAlignment(Qt::Alignment alignment)
 */
 HB_FUNC_STATIC(QFORMLAYOUT_SETLABELALIGNMENT)
 {
@@ -602,7 +602,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_SETLABELALIGNMENT)
 }
 
 /*
-void setLayout( int row, QFormLayout::ItemRole role, QLayout *layout )
+void setLayout(int row, QFormLayout::ItemRole role, QLayout *layout)
 */
 HB_FUNC_STATIC(QFORMLAYOUT_SETLAYOUT)
 {
@@ -628,7 +628,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_SETLAYOUT)
 }
 
 /*
-void setRowWrapPolicy( QFormLayout::RowWrapPolicy policy )
+void setRowWrapPolicy(QFormLayout::RowWrapPolicy policy)
 */
 HB_FUNC_STATIC(QFORMLAYOUT_SETROWWRAPPOLICY)
 {
@@ -654,7 +654,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_SETROWWRAPPOLICY)
 }
 
 /*
-void setSpacing( int spacing )
+void setSpacing(int spacing)
 */
 HB_FUNC_STATIC(QFORMLAYOUT_SETSPACING)
 {
@@ -680,7 +680,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_SETSPACING)
 }
 
 /*
-void setVerticalSpacing( int spacing )
+void setVerticalSpacing(int spacing)
 */
 HB_FUNC_STATIC(QFORMLAYOUT_SETVERTICALSPACING)
 {
@@ -706,7 +706,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_SETVERTICALSPACING)
 }
 
 /*
-void setWidget( int row, QFormLayout::ItemRole role, QWidget *widget )
+void setWidget(int row, QFormLayout::ItemRole role, QWidget *widget)
 */
 HB_FUNC_STATIC(QFORMLAYOUT_SETWIDGET)
 {
@@ -780,7 +780,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_VERTICALSPACING)
 }
 
 /*
-virtual void addItem( QLayoutItem *item )
+virtual void addItem(QLayoutItem *item)
 */
 HB_FUNC_STATIC(QFORMLAYOUT_ADDITEM)
 {
@@ -878,7 +878,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_HASHEIGHTFORWIDTH)
 }
 
 /*
-virtual int heightForWidth( int width ) const
+virtual int heightForWidth(int width) const
 */
 HB_FUNC_STATIC(QFORMLAYOUT_HEIGHTFORWIDTH)
 {
@@ -932,7 +932,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_ITEMAT)
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    QLayoutItem *itemAt( int row, QFormLayout::ItemRole role ) const
+    QLayoutItem *itemAt(int row, QFormLayout::ItemRole role) const
     */
     QFormLayout *obj = qobject_cast<QFormLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -945,7 +945,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_ITEMAT)
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    virtual QLayoutItem *itemAt( int index ) const
+    virtual QLayoutItem *itemAt(int index) const
     */
     QFormLayout *obj = qobject_cast<QFormLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -987,7 +987,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_MINIMUMSIZE)
 }
 
 /*
-virtual void setGeometry( const QRect &rect )
+virtual void setGeometry(const QRect &rect)
 */
 HB_FUNC_STATIC(QFORMLAYOUT_SETGEOMETRY)
 {
@@ -1038,7 +1038,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_SIZEHINT)
 }
 
 /*
-virtual QLayoutItem *takeAt( int index )
+virtual QLayoutItem *takeAt(int index)
 */
 HB_FUNC_STATIC(QFORMLAYOUT_TAKEAT)
 {

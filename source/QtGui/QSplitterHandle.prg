@@ -47,7 +47,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QSplitterHandle( Qt::Orientation orientation, QSplitter *parent )
+    QSplitterHandle(Qt::Orientation orientation, QSplitter *parent)
     */
 HB_FUNC_STATIC(QSPLITTERHANDLE_NEW)
 {
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QSPLITTERHANDLE_ORIENTATION)
 }
 
 /*
-void setOrientation( Qt::Orientation orientation )
+void setOrientation(Qt::Orientation orientation)
 */
 HB_FUNC_STATIC(QSPLITTERHANDLE_SETORIENTATION)
 {

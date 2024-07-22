@@ -56,7 +56,7 @@ HB_FUNC_STATIC(QLINEARGRADIENT_NEW)
   else if (ISNUMPAR(2) && ISQPOINTF(1) && ISQPOINTF(2))
   {
     /*
-    QLinearGradient( const QPointF &start, const QPointF &finalStop )
+    QLinearGradient(const QPointF &start, const QPointF &finalStop)
     */
     QLinearGradient *obj = new QLinearGradient(*PQPOINTF(1), *PQPOINTF(2));
     Qt4xHb::returnNewObject(obj, true);
@@ -64,7 +64,7 @@ HB_FUNC_STATIC(QLINEARGRADIENT_NEW)
   else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
-    QLinearGradient( qreal xStart, qreal yStart, qreal xFinalStop, qreal yFinalStop )
+    QLinearGradient(qreal xStart, qreal yStart, qreal xFinalStop, qreal yFinalStop)
     */
     QLinearGradient *obj = new QLinearGradient(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4));
     Qt4xHb::returnNewObject(obj, true);
@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QLINEARGRADIENT_SETFINALSTOP)
   if (ISNUMPAR(1) && ISQPOINTF(1))
   {
     /*
-    void setFinalStop( const QPointF &stop )
+    void setFinalStop(const QPointF &stop)
     */
     QLinearGradient *obj = static_cast<QLinearGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QLINEARGRADIENT_SETFINALSTOP)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    void setFinalStop( qreal x, qreal y )
+    void setFinalStop(qreal x, qreal y)
     */
     QLinearGradient *obj = static_cast<QLinearGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -157,7 +157,7 @@ HB_FUNC_STATIC(QLINEARGRADIENT_SETSTART)
   if (ISNUMPAR(1) && ISQPOINTF(1))
   {
     /*
-    void setStart( const QPointF &start )
+    void setStart(const QPointF &start)
     */
     QLinearGradient *obj = static_cast<QLinearGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QLINEARGRADIENT_SETSTART)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    void setStart( qreal x, qreal y )
+    void setStart(qreal x, qreal y)
     */
     QLinearGradient *obj = static_cast<QLinearGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
 

@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_PEN)
 }
 
 /*
-void setBrush( const QBrush &brush )
+void setBrush(const QBrush &brush)
 */
 HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_SETBRUSH)
 {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_SETBRUSH)
 }
 
 /*
-void setPen( const QPen &pen )
+void setPen(const QPen &pen)
 */
 HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_SETPEN)
 {
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_SETPEN)
 }
 
 /*
-virtual bool isObscuredBy( const QGraphicsItem *item ) const
+virtual bool isObscuredBy(const QGraphicsItem *item) const
 */
 HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_ISOBSCUREDBY)
 {

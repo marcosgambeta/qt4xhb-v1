@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QGRAPHICSEFFECT_BOUNDINGRECT)
 }
 
 /*
-virtual QRectF boundingRectFor( const QRectF &rect ) const
+virtual QRectF boundingRectFor(const QRectF &rect) const
 */
 HB_FUNC_STATIC(QGRAPHICSEFFECT_BOUNDINGRECTFOR)
 {
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QGRAPHICSEFFECT_ISENABLED)
 }
 
 /*
-void setEnabled( bool enable )
+void setEnabled(bool enable)
 */
 HB_FUNC_STATIC(QGRAPHICSEFFECT_SETENABLED)
 {

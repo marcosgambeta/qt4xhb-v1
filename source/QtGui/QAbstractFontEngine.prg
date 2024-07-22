@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QABSTRACTFONTENGINE_CAPABILITIES)
 }
 
 /*
-virtual QVariant fontProperty( QAbstractFontEngine::FontProperty property ) const = 0
+virtual QVariant fontProperty(QAbstractFontEngine::FontProperty property) const = 0
 */
 HB_FUNC_STATIC(QABSTRACTFONTENGINE_FONTPROPERTY)
 {
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QABSTRACTFONTENGINE_FONTPROPERTY)
 }
 
 /*
-virtual bool renderGlyph( uint glyph, int depth, int bytesPerLine, int height, uchar *buffer )
+virtual bool renderGlyph(uint glyph, int depth, int bytesPerLine, int height, uchar *buffer)
 */
 HB_FUNC_STATIC(QABSTRACTFONTENGINE_RENDERGLYPH)
 {

@@ -43,7 +43,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QErrorMessage( QWidget *parent = 0 )
+    QErrorMessage(QWidget *parent = 0)
     */
 HB_FUNC_STATIC(QERRORMESSAGE_NEW)
 {
@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QERRORMESSAGE_SHOWMESSAGE)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    void showMessage( const QString &message )
+    void showMessage(const QString &message)
     */
     QErrorMessage *obj = qobject_cast<QErrorMessage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QERRORMESSAGE_SHOWMESSAGE)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
-    void showMessage( const QString &message, const QString &type )
+    void showMessage(const QString &message, const QString &type)
     */
     QErrorMessage *obj = qobject_cast<QErrorMessage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

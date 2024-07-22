@@ -76,7 +76,7 @@ RETURN
 #include <QtGui/QMdiSubWindow>
 
     /*
-    QMdiArea( QWidget *parent = 0 )
+    QMdiArea(QWidget *parent = 0)
     */
 HB_FUNC_STATIC(QMDIAREA_NEW)
 {
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QMDIAREA_ACTIVESUBWINDOW)
 }
 
 /*
-QMdiSubWindow *addSubWindow( QWidget *widget, Qt::WindowFlags windowFlags = 0 )
+QMdiSubWindow *addSubWindow(QWidget *widget, Qt::WindowFlags windowFlags = 0)
 */
 HB_FUNC_STATIC(QMDIAREA_ADDSUBWINDOW)
 {
@@ -259,7 +259,7 @@ HB_FUNC_STATIC(QMDIAREA_DOCUMENTMODE)
 }
 
 /*
-void removeSubWindow( QWidget *widget )
+void removeSubWindow(QWidget *widget)
 */
 HB_FUNC_STATIC(QMDIAREA_REMOVESUBWINDOW)
 {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC(QMDIAREA_REMOVESUBWINDOW)
 }
 
 /*
-void setActivationOrder( QMdiArea::WindowOrder order )
+void setActivationOrder(QMdiArea::WindowOrder order)
 */
 HB_FUNC_STATIC(QMDIAREA_SETACTIVATIONORDER)
 {
@@ -311,7 +311,7 @@ HB_FUNC_STATIC(QMDIAREA_SETACTIVATIONORDER)
 }
 
 /*
-void setBackground( const QBrush &background )
+void setBackground(const QBrush &background)
 */
 HB_FUNC_STATIC(QMDIAREA_SETBACKGROUND)
 {
@@ -337,7 +337,7 @@ HB_FUNC_STATIC(QMDIAREA_SETBACKGROUND)
 }
 
 /*
-void setDocumentMode( bool enabled )
+void setDocumentMode(bool enabled)
 */
 HB_FUNC_STATIC(QMDIAREA_SETDOCUMENTMODE)
 {
@@ -363,7 +363,7 @@ HB_FUNC_STATIC(QMDIAREA_SETDOCUMENTMODE)
 }
 
 /*
-void setOption( QMdiArea::AreaOption option, bool on = true )
+void setOption(QMdiArea::AreaOption option, bool on = true)
 */
 HB_FUNC_STATIC(QMDIAREA_SETOPTION)
 {
@@ -389,7 +389,7 @@ HB_FUNC_STATIC(QMDIAREA_SETOPTION)
 }
 
 /*
-void setTabPosition( QTabWidget::TabPosition position )
+void setTabPosition(QTabWidget::TabPosition position)
 */
 HB_FUNC_STATIC(QMDIAREA_SETTABPOSITION)
 {
@@ -415,7 +415,7 @@ HB_FUNC_STATIC(QMDIAREA_SETTABPOSITION)
 }
 
 /*
-void setTabShape( QTabWidget::TabShape shape )
+void setTabShape(QTabWidget::TabShape shape)
 */
 HB_FUNC_STATIC(QMDIAREA_SETTABSHAPE)
 {
@@ -441,7 +441,7 @@ HB_FUNC_STATIC(QMDIAREA_SETTABSHAPE)
 }
 
 /*
-void setViewMode( QMdiArea::ViewMode mode )
+void setViewMode(QMdiArea::ViewMode mode)
 */
 HB_FUNC_STATIC(QMDIAREA_SETVIEWMODE)
 {
@@ -467,7 +467,7 @@ HB_FUNC_STATIC(QMDIAREA_SETVIEWMODE)
 }
 
 /*
-QList<QMdiSubWindow *> subWindowList( QMdiArea::WindowOrder order = QMdiArea::CreationOrder ) const
+QList<QMdiSubWindow *> subWindowList(QMdiArea::WindowOrder order = QMdiArea::CreationOrder) const
 */
 HB_FUNC_STATIC(QMDIAREA_SUBWINDOWLIST)
 {
@@ -564,7 +564,7 @@ HB_FUNC_STATIC(QMDIAREA_TABSHAPE)
 }
 
 /*
-bool testOption( QMdiArea::AreaOption option ) const
+bool testOption(QMdiArea::AreaOption option) const
 */
 HB_FUNC_STATIC(QMDIAREA_TESTOPTION)
 {
@@ -792,7 +792,7 @@ HB_FUNC_STATIC(QMDIAREA_CLOSEALLSUBWINDOWS)
 }
 
 /*
-void setActiveSubWindow( QMdiSubWindow *window )
+void setActiveSubWindow(QMdiSubWindow *window)
 */
 HB_FUNC_STATIC(QMDIAREA_SETACTIVESUBWINDOW)
 {

@@ -74,7 +74,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QBoxLayout( QBoxLayout::Direction dir, QWidget *parent = 0 )
+    QBoxLayout(QBoxLayout::Direction dir, QWidget *parent = 0)
     */
 HB_FUNC_STATIC(QBOXLAYOUT_NEW)
 {
@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_DELETE)
 }
 
 /*
-void addLayout( QLayout *layout, int stretch = 0 )
+void addLayout(QLayout *layout, int stretch = 0)
 */
 HB_FUNC_STATIC(QBOXLAYOUT_ADDLAYOUT)
 {
@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_ADDLAYOUT)
 }
 
 /*
-void addSpacerItem( QSpacerItem *spacerItem )
+void addSpacerItem(QSpacerItem *spacerItem)
 */
 HB_FUNC_STATIC(QBOXLAYOUT_ADDSPACERITEM)
 {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_ADDSPACERITEM)
 }
 
 /*
-void addSpacing( int size )
+void addSpacing(int size)
 */
 HB_FUNC_STATIC(QBOXLAYOUT_ADDSPACING)
 {
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_ADDSPACING)
 }
 
 /*
-void addStretch( int stretch = 0 )
+void addStretch(int stretch = 0)
 */
 HB_FUNC_STATIC(QBOXLAYOUT_ADDSTRETCH)
 {
@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_ADDSTRETCH)
 }
 
 /*
-void addStrut( int size )
+void addStrut(int size)
 */
 HB_FUNC_STATIC(QBOXLAYOUT_ADDSTRUT)
 {
@@ -238,7 +238,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_ADDSTRUT)
 }
 
 /*
-void addWidget( QWidget *widget, int stretch = 0, Qt::Alignment alignment = 0 )
+void addWidget(QWidget *widget, int stretch = 0, Qt::Alignment alignment = 0)
 */
 HB_FUNC_STATIC(QBOXLAYOUT_ADDWIDGET)
 {
@@ -288,7 +288,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_DIRECTION)
 }
 
 /*
-void insertLayout( int index, QLayout *layout, int stretch = 0 )
+void insertLayout(int index, QLayout *layout, int stretch = 0)
 */
 HB_FUNC_STATIC(QBOXLAYOUT_INSERTLAYOUT)
 {
@@ -314,7 +314,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_INSERTLAYOUT)
 }
 
 /*
-void insertSpacerItem( int index, QSpacerItem *spacerItem )
+void insertSpacerItem(int index, QSpacerItem *spacerItem)
 */
 HB_FUNC_STATIC(QBOXLAYOUT_INSERTSPACERITEM)
 {
@@ -340,7 +340,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_INSERTSPACERITEM)
 }
 
 /*
-void insertSpacing( int index, int size )
+void insertSpacing(int index, int size)
 */
 HB_FUNC_STATIC(QBOXLAYOUT_INSERTSPACING)
 {
@@ -366,7 +366,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_INSERTSPACING)
 }
 
 /*
-void insertStretch( int index, int stretch = 0 )
+void insertStretch(int index, int stretch = 0)
 */
 HB_FUNC_STATIC(QBOXLAYOUT_INSERTSTRETCH)
 {
@@ -392,7 +392,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_INSERTSTRETCH)
 }
 
 /*
-void insertWidget( int index, QWidget *widget, int stretch = 0, Qt::Alignment alignment = 0 )
+void insertWidget(int index, QWidget *widget, int stretch = 0, Qt::Alignment alignment = 0)
 */
 HB_FUNC_STATIC(QBOXLAYOUT_INSERTWIDGET)
 {
@@ -418,7 +418,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_INSERTWIDGET)
 }
 
 /*
-void setDirection( QBoxLayout::Direction direction )
+void setDirection(QBoxLayout::Direction direction)
 */
 HB_FUNC_STATIC(QBOXLAYOUT_SETDIRECTION)
 {
@@ -444,7 +444,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_SETDIRECTION)
 }
 
 /*
-void setSpacing( int spacing )
+void setSpacing(int spacing)
 */
 HB_FUNC_STATIC(QBOXLAYOUT_SETSPACING)
 {
@@ -470,7 +470,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_SETSPACING)
 }
 
 /*
-void setStretch( int index, int stretch )
+void setStretch(int index, int stretch)
 */
 HB_FUNC_STATIC(QBOXLAYOUT_SETSTRETCH)
 {
@@ -500,7 +500,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_SETSTRETCHFACTOR)
   if (ISNUMPAR(2) && ISQWIDGET(1) && HB_ISNUM(2))
   {
     /*
-    bool setStretchFactor( QWidget *widget, int stretch )
+    bool setStretchFactor(QWidget *widget, int stretch)
     */
     QBoxLayout *obj = qobject_cast<QBoxLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -512,7 +512,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_SETSTRETCHFACTOR)
   else if (ISNUMPAR(2) && ISQLAYOUT(1) && HB_ISNUM(2))
   {
     /*
-    bool setStretchFactor( QLayout *layout, int stretch )
+    bool setStretchFactor(QLayout *layout, int stretch)
     */
     QBoxLayout *obj = qobject_cast<QBoxLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -552,7 +552,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_SPACING)
 }
 
 /*
-int stretch( int index ) const
+int stretch(int index) const
 */
 HB_FUNC_STATIC(QBOXLAYOUT_STRETCH)
 {
@@ -576,7 +576,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_STRETCH)
 }
 
 /*
-virtual void addItem( QLayoutItem *item )
+virtual void addItem(QLayoutItem *item)
 */
 HB_FUNC_STATIC(QBOXLAYOUT_ADDITEM)
 {
@@ -674,7 +674,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_HASHEIGHTFORWIDTH)
 }
 
 /*
-virtual int heightForWidth( int w ) const
+virtual int heightForWidth(int w) const
 */
 HB_FUNC_STATIC(QBOXLAYOUT_HEIGHTFORWIDTH)
 {
@@ -724,7 +724,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_INVALIDATE)
 }
 
 /*
-virtual QLayoutItem *itemAt( int index ) const
+virtual QLayoutItem *itemAt(int index) const
 */
 HB_FUNC_STATIC(QBOXLAYOUT_ITEMAT)
 {
@@ -774,7 +774,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_MAXIMUMSIZE)
 }
 
 /*
-virtual int minimumHeightForWidth( int w ) const
+virtual int minimumHeightForWidth(int w) const
 */
 HB_FUNC_STATIC(QBOXLAYOUT_MINIMUMHEIGHTFORWIDTH)
 {
@@ -823,7 +823,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_MINIMUMSIZE)
 }
 
 /*
-virtual void setGeometry( const QRect &r )
+virtual void setGeometry(const QRect &r)
 */
 HB_FUNC_STATIC(QBOXLAYOUT_SETGEOMETRY)
 {
@@ -874,7 +874,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_SIZEHINT)
 }
 
 /*
-virtual QLayoutItem *takeAt( int index )
+virtual QLayoutItem *takeAt(int index)
 */
 HB_FUNC_STATIC(QBOXLAYOUT_TAKEAT)
 {

@@ -53,7 +53,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QGraphicsRotation( QObject *parent = 0 )
+    QGraphicsRotation(QObject *parent = 0)
     */
 HB_FUNC_STATIC(QGRAPHICSROTATION_NEW)
 {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_ORIGIN)
 }
 
 /*
-void setAngle( qreal )
+void setAngle(qreal)
 */
 HB_FUNC_STATIC(QGRAPHICSROTATION_SETANGLE)
 {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_SETAXIS)
   if (ISNUMPAR(1) && ISQVECTOR3D(1))
   {
     /*
-    void setAxis( const QVector3D &axis )
+    void setAxis(const QVector3D &axis)
     */
     QGraphicsRotation *obj = qobject_cast<QGraphicsRotation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -205,7 +205,7 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_SETAXIS)
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    void setAxis( Qt::Axis axis )
+    void setAxis(Qt::Axis axis)
     */
     QGraphicsRotation *obj = qobject_cast<QGraphicsRotation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -223,7 +223,7 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_SETAXIS)
 }
 
 /*
-void setOrigin( const QVector3D &point )
+void setOrigin(const QVector3D &point)
 */
 HB_FUNC_STATIC(QGRAPHICSROTATION_SETORIGIN)
 {
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_SETORIGIN)
 }
 
 /*
-virtual void applyTo( QMatrix4x4 *matrix ) const
+virtual void applyTo(QMatrix4x4 *matrix) const
 */
 HB_FUNC_STATIC(QGRAPHICSROTATION_APPLYTO)
 {

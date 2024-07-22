@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QFILEDIALOG_NEW)
   if (ISNUMPAR(2) && ISQWIDGET(1) && HB_ISNUM(2))
   {
     /*
-    QFileDialog( QWidget *parent, Qt::WindowFlags flags )
+    QFileDialog(QWidget *parent, Qt::WindowFlags flags)
     */
     QFileDialog *obj = new QFileDialog(PQWIDGET(1), (Qt::WindowFlags)hb_parni(2));
     Qt4xHb::returnNewObject(obj, false);
@@ -121,8 +121,8 @@ HB_FUNC_STATIC(QFILEDIALOG_NEW)
            (HB_ISCHAR(3) || HB_ISNIL(3)) && (HB_ISCHAR(4) || HB_ISNIL(4)))
   {
     /*
-    QFileDialog( QWidget *parent = 0, const QString &caption = QString(), const QString &directory = QString(), const
-    QString &filter = QString() )
+    QFileDialog(QWidget *parent = 0, const QString &caption = QString(), const QString &directory = QString(), const
+    QString &filter = QString())
     */
     QFileDialog *obj =
         new QFileDialog(OPQWIDGET(1, 0), OPQSTRING(2, QString()), OPQSTRING(3, QString()), OPQSTRING(4, QString()));
@@ -420,7 +420,7 @@ HB_FUNC_STATIC(QFILEDIALOG_ITEMDELEGATE)
 }
 
 /*
-QString labelText( QFileDialog::DialogLabel label ) const
+QString labelText(QFileDialog::DialogLabel label) const
 */
 HB_FUNC_STATIC(QFILEDIALOG_LABELTEXT)
 {
@@ -468,7 +468,7 @@ HB_FUNC_STATIC(QFILEDIALOG_NAMEFILTERS)
 }
 
 /*
-void open( QObject *receiver, const char *member )
+void open(QObject *receiver, const char *member)
 */
 HB_FUNC_STATIC(QFILEDIALOG_OPEN)
 {
@@ -567,7 +567,7 @@ HB_FUNC_STATIC(QFILEDIALOG_RESOLVESYMLINKS)
 }
 
 /*
-bool restoreState( const QByteArray &state )
+bool restoreState(const QByteArray &state)
 */
 HB_FUNC_STATIC(QFILEDIALOG_RESTORESTATE)
 {
@@ -616,7 +616,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SAVESTATE)
 }
 
 /*
-void selectFile( const QString &filename )
+void selectFile(const QString &filename)
 */
 HB_FUNC_STATIC(QFILEDIALOG_SELECTFILE)
 {
@@ -642,7 +642,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SELECTFILE)
 }
 
 /*
-void selectNameFilter( const QString &filter )
+void selectNameFilter(const QString &filter)
 */
 HB_FUNC_STATIC(QFILEDIALOG_SELECTNAMEFILTER)
 {
@@ -716,7 +716,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SELECTEDNAMEFILTER)
 }
 
 /*
-void setAcceptMode( QFileDialog::AcceptMode mode )
+void setAcceptMode(QFileDialog::AcceptMode mode)
 */
 HB_FUNC_STATIC(QFILEDIALOG_SETACCEPTMODE)
 {
@@ -742,7 +742,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETACCEPTMODE)
 }
 
 /*
-void setConfirmOverwrite( bool enabled )
+void setConfirmOverwrite(bool enabled)
 */
 HB_FUNC_STATIC(QFILEDIALOG_SETCONFIRMOVERWRITE)
 {
@@ -768,7 +768,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETCONFIRMOVERWRITE)
 }
 
 /*
-void setDefaultSuffix( const QString &suffix )
+void setDefaultSuffix(const QString &suffix)
 */
 HB_FUNC_STATIC(QFILEDIALOG_SETDEFAULTSUFFIX)
 {
@@ -798,7 +798,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETDIRECTORY)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    void setDirectory( const QString &directory )
+    void setDirectory(const QString &directory)
     */
     QFileDialog *obj = qobject_cast<QFileDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -812,7 +812,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETDIRECTORY)
   else if (ISNUMPAR(1) && ISQDIR(1))
   {
     /*
-    void setDirectory( const QDir &directory )
+    void setDirectory(const QDir &directory)
     */
     QFileDialog *obj = qobject_cast<QFileDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -830,7 +830,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETDIRECTORY)
 }
 
 /*
-void setFileMode( QFileDialog::FileMode mode )
+void setFileMode(QFileDialog::FileMode mode)
 */
 HB_FUNC_STATIC(QFILEDIALOG_SETFILEMODE)
 {
@@ -856,7 +856,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETFILEMODE)
 }
 
 /*
-void setFilter( QDir::Filters filters )
+void setFilter(QDir::Filters filters)
 */
 HB_FUNC_STATIC(QFILEDIALOG_SETFILTER)
 {
@@ -882,7 +882,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETFILTER)
 }
 
 /*
-void setHistory( const QStringList &paths )
+void setHistory(const QStringList &paths)
 */
 HB_FUNC_STATIC(QFILEDIALOG_SETHISTORY)
 {
@@ -908,7 +908,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETHISTORY)
 }
 
 /*
-void setIconProvider( QFileIconProvider *provider )
+void setIconProvider(QFileIconProvider *provider)
 */
 HB_FUNC_STATIC(QFILEDIALOG_SETICONPROVIDER)
 {
@@ -934,7 +934,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETICONPROVIDER)
 }
 
 /*
-void setItemDelegate( QAbstractItemDelegate *delegate )
+void setItemDelegate(QAbstractItemDelegate *delegate)
 */
 HB_FUNC_STATIC(QFILEDIALOG_SETITEMDELEGATE)
 {
@@ -960,7 +960,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETITEMDELEGATE)
 }
 
 /*
-void setLabelText( QFileDialog::DialogLabel label, const QString &text )
+void setLabelText(QFileDialog::DialogLabel label, const QString &text)
 */
 HB_FUNC_STATIC(QFILEDIALOG_SETLABELTEXT)
 {
@@ -986,7 +986,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETLABELTEXT)
 }
 
 /*
-void setNameFilter( const QString &filter )
+void setNameFilter(const QString &filter)
 */
 HB_FUNC_STATIC(QFILEDIALOG_SETNAMEFILTER)
 {
@@ -1012,7 +1012,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETNAMEFILTER)
 }
 
 /*
-void setNameFilterDetailsVisible( bool enabled )
+void setNameFilterDetailsVisible(bool enabled)
 */
 HB_FUNC_STATIC(QFILEDIALOG_SETNAMEFILTERDETAILSVISIBLE)
 {
@@ -1038,7 +1038,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETNAMEFILTERDETAILSVISIBLE)
 }
 
 /*
-void setNameFilters( const QStringList &filters )
+void setNameFilters(const QStringList &filters)
 */
 HB_FUNC_STATIC(QFILEDIALOG_SETNAMEFILTERS)
 {
@@ -1064,7 +1064,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETNAMEFILTERS)
 }
 
 /*
-void setOption( QFileDialog::Option option, bool on = true )
+void setOption(QFileDialog::Option option, bool on = true)
 */
 HB_FUNC_STATIC(QFILEDIALOG_SETOPTION)
 {
@@ -1090,7 +1090,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETOPTION)
 }
 
 /*
-void setOptions( QFileDialog::Options options )
+void setOptions(QFileDialog::Options options)
 */
 HB_FUNC_STATIC(QFILEDIALOG_SETOPTIONS)
 {
@@ -1116,7 +1116,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETOPTIONS)
 }
 
 /*
-void setProxyModel( QAbstractProxyModel *proxyModel )
+void setProxyModel(QAbstractProxyModel *proxyModel)
 */
 HB_FUNC_STATIC(QFILEDIALOG_SETPROXYMODEL)
 {
@@ -1142,7 +1142,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETPROXYMODEL)
 }
 
 /*
-void setReadOnly( bool enabled )
+void setReadOnly(bool enabled)
 */
 HB_FUNC_STATIC(QFILEDIALOG_SETREADONLY)
 {
@@ -1168,7 +1168,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETREADONLY)
 }
 
 /*
-void setResolveSymlinks( bool enabled )
+void setResolveSymlinks(bool enabled)
 */
 HB_FUNC_STATIC(QFILEDIALOG_SETRESOLVESYMLINKS)
 {
@@ -1194,7 +1194,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETRESOLVESYMLINKS)
 }
 
 /*
-void setSidebarUrls( const QList<QUrl> &urls )
+void setSidebarUrls(const QList<QUrl> &urls)
 */
 HB_FUNC_STATIC(QFILEDIALOG_SETSIDEBARURLS)
 {
@@ -1227,7 +1227,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETSIDEBARURLS)
 }
 
 /*
-void setViewMode( QFileDialog::ViewMode mode )
+void setViewMode(QFileDialog::ViewMode mode)
 */
 HB_FUNC_STATIC(QFILEDIALOG_SETVIEWMODE)
 {
@@ -1304,7 +1304,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SIDEBARURLS)
 }
 
 /*
-bool testOption( QFileDialog::Option option ) const
+bool testOption(QFileDialog::Option option) const
 */
 HB_FUNC_STATIC(QFILEDIALOG_TESTOPTION)
 {
@@ -1352,7 +1352,7 @@ HB_FUNC_STATIC(QFILEDIALOG_VIEWMODE)
 }
 
 /*
-virtual void setVisible( bool visible )
+virtual void setVisible(bool visible)
 */
 HB_FUNC_STATIC(QFILEDIALOG_SETVISIBLE)
 {
@@ -1378,8 +1378,8 @@ HB_FUNC_STATIC(QFILEDIALOG_SETVISIBLE)
 }
 
 /*
-static QString getExistingDirectory( QWidget *parent = 0, const QString &caption = QString(), const QString &dir =
-QString(), QFileDialog::Options options = QFileDialog::ShowDirsOnly )
+static QString getExistingDirectory(QWidget *parent = 0, const QString &caption = QString(), const QString &dir =
+QString(), QFileDialog::Options options = QFileDialog::ShowDirsOnly)
 */
 HB_FUNC_STATIC(QFILEDIALOG_GETEXISTINGDIRECTORY)
 {
@@ -1401,8 +1401,8 @@ HB_FUNC_STATIC(QFILEDIALOG_GETEXISTINGDIRECTORY)
 }
 
 /*
-static QString getOpenFileName( QWidget *parent = 0, const QString &caption = QString(), const QString &dir =
-QString(), const QString &filter = QString(), QString *selectedFilter = 0, QFileDialog::Options options = 0 )
+static QString getOpenFileName(QWidget *parent = 0, const QString &caption = QString(), const QString &dir =
+QString(), const QString &filter = QString(), QString *selectedFilter = 0, QFileDialog::Options options = 0)
 */
 HB_FUNC_STATIC(QFILEDIALOG_GETOPENFILENAME)
 {
@@ -1425,8 +1425,8 @@ HB_FUNC_STATIC(QFILEDIALOG_GETOPENFILENAME)
 }
 
 /*
-static QStringList getOpenFileNames( QWidget *parent = 0, const QString &caption = QString(), const QString &dir =
-QString(), const QString &filter = QString(), QString *selectedFilter = 0, QFileDialog::Options options = 0 )
+static QStringList getOpenFileNames(QWidget *parent = 0, const QString &caption = QString(), const QString &dir =
+QString(), const QString &filter = QString(), QString *selectedFilter = 0, QFileDialog::Options options = 0)
 */
 HB_FUNC_STATIC(QFILEDIALOG_GETOPENFILENAMES)
 {
@@ -1449,8 +1449,8 @@ HB_FUNC_STATIC(QFILEDIALOG_GETOPENFILENAMES)
 }
 
 /*
-static QString getSaveFileName( QWidget *parent = 0, const QString &caption = QString(), const QString &dir =
-QString(), const QString &filter = QString(), QString *selectedFilter = 0, QFileDialog::Options options = 0 )
+static QString getSaveFileName(QWidget *parent = 0, const QString &caption = QString(), const QString &dir =
+QString(), const QString &filter = QString(), QString *selectedFilter = 0, QFileDialog::Options options = 0)
 */
 HB_FUNC_STATIC(QFILEDIALOG_GETSAVEFILENAME)
 {

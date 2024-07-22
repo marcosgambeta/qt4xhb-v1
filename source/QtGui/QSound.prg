@@ -49,7 +49,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QSound( const QString &filename, QObject *parent = 0 )
+    QSound(const QString &filename, QObject *parent = 0)
     */
 HB_FUNC_STATIC(QSOUND_NEW)
 {
@@ -179,7 +179,7 @@ HB_FUNC_STATIC(QSOUND_LOOPSREMAINING)
 }
 
 /*
-void setLoops( int number )
+void setLoops(int number)
 */
 HB_FUNC_STATIC(QSOUND_SETLOOPS)
 {
@@ -268,7 +268,7 @@ HB_FUNC_STATIC(QSOUND_PLAY)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    static void play( const QString &filename )
+    static void play(const QString &filename)
     */
 
     QSound::play(PQSTRING(1));

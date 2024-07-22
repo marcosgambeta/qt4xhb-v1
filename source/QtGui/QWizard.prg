@@ -96,7 +96,7 @@ RETURN
 #include <QtGui/QAbstractButton>
 
     /*
-    QWizard( QWidget *parent = 0, Qt::WindowFlags flags = 0 )
+    QWizard(QWidget *parent = 0, Qt::WindowFlags flags = 0)
     */
 HB_FUNC_STATIC(QWIZARD_NEW)
 {
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QWIZARD_DELETE)
 }
 
 /*
-int addPage( QWizardPage *page )
+int addPage(QWizardPage *page)
 */
 HB_FUNC_STATIC(QWIZARD_ADDPAGE)
 {
@@ -154,7 +154,7 @@ HB_FUNC_STATIC(QWIZARD_ADDPAGE)
 }
 
 /*
-QAbstractButton *button( QWizard::WizardButton which ) const
+QAbstractButton *button(QWizard::WizardButton which) const
 */
 HB_FUNC_STATIC(QWIZARD_BUTTON)
 {
@@ -179,7 +179,7 @@ HB_FUNC_STATIC(QWIZARD_BUTTON)
 }
 
 /*
-QString buttonText( QWizard::WizardButton which ) const
+QString buttonText(QWizard::WizardButton which) const
 */
 HB_FUNC_STATIC(QWIZARD_BUTTONTEXT)
 {
@@ -252,7 +252,7 @@ HB_FUNC_STATIC(QWIZARD_CURRENTPAGE)
 }
 
 /*
-QVariant field( const QString &name ) const
+QVariant field(const QString &name) const
 */
 HB_FUNC_STATIC(QWIZARD_FIELD)
 {
@@ -277,7 +277,7 @@ HB_FUNC_STATIC(QWIZARD_FIELD)
 }
 
 /*
-bool hasVisitedPage( int id ) const
+bool hasVisitedPage(int id) const
 */
 HB_FUNC_STATIC(QWIZARD_HASVISITEDPAGE)
 {
@@ -349,7 +349,7 @@ HB_FUNC_STATIC(QWIZARD_OPTIONS)
 }
 
 /*
-QWizardPage *page( int id ) const
+QWizardPage *page(int id) const
 */
 HB_FUNC_STATIC(QWIZARD_PAGE)
 {
@@ -399,7 +399,7 @@ HB_FUNC_STATIC(QWIZARD_PAGEIDS)
 }
 
 /*
-QPixmap pixmap( QWizard::WizardPixmap which ) const
+QPixmap pixmap(QWizard::WizardPixmap which) const
 */
 HB_FUNC_STATIC(QWIZARD_PIXMAP)
 {
@@ -424,7 +424,7 @@ HB_FUNC_STATIC(QWIZARD_PIXMAP)
 }
 
 /*
-void removePage( int id )
+void removePage(int id)
 */
 HB_FUNC_STATIC(QWIZARD_REMOVEPAGE)
 {
@@ -450,7 +450,7 @@ HB_FUNC_STATIC(QWIZARD_REMOVEPAGE)
 }
 
 /*
-void setButton( QWizard::WizardButton which, QAbstractButton *button )
+void setButton(QWizard::WizardButton which, QAbstractButton *button)
 */
 HB_FUNC_STATIC(QWIZARD_SETBUTTON)
 {
@@ -476,7 +476,7 @@ HB_FUNC_STATIC(QWIZARD_SETBUTTON)
 }
 
 /*
-void setButtonLayout( const QList<QWizard::WizardButton> &layout )
+void setButtonLayout(const QList<QWizard::WizardButton> &layout)
 */
 HB_FUNC_STATIC(QWIZARD_SETBUTTONLAYOUT)
 {
@@ -509,7 +509,7 @@ HB_FUNC_STATIC(QWIZARD_SETBUTTONLAYOUT)
 }
 
 /*
-void setButtonText( QWizard::WizardButton which, const QString &text )
+void setButtonText(QWizard::WizardButton which, const QString &text)
 */
 HB_FUNC_STATIC(QWIZARD_SETBUTTONTEXT)
 {
@@ -535,7 +535,7 @@ HB_FUNC_STATIC(QWIZARD_SETBUTTONTEXT)
 }
 
 /*
-void setDefaultProperty( const char *className, const char *property, const char *changedSignal )
+void setDefaultProperty(const char *className, const char *property, const char *changedSignal)
 */
 HB_FUNC_STATIC(QWIZARD_SETDEFAULTPROPERTY)
 {
@@ -561,7 +561,7 @@ HB_FUNC_STATIC(QWIZARD_SETDEFAULTPROPERTY)
 }
 
 /*
-void setField( const QString &name, const QVariant &value )
+void setField(const QString &name, const QVariant &value)
 */
 HB_FUNC_STATIC(QWIZARD_SETFIELD)
 {
@@ -587,7 +587,7 @@ HB_FUNC_STATIC(QWIZARD_SETFIELD)
 }
 
 /*
-void setOption( QWizard::WizardOption option, bool on = true )
+void setOption(QWizard::WizardOption option, bool on = true)
 */
 HB_FUNC_STATIC(QWIZARD_SETOPTION)
 {
@@ -613,7 +613,7 @@ HB_FUNC_STATIC(QWIZARD_SETOPTION)
 }
 
 /*
-void setOptions( QWizard::WizardOptions options )
+void setOptions(QWizard::WizardOptions options)
 */
 HB_FUNC_STATIC(QWIZARD_SETOPTIONS)
 {
@@ -639,7 +639,7 @@ HB_FUNC_STATIC(QWIZARD_SETOPTIONS)
 }
 
 /*
-void setPage( int id, QWizardPage *page )
+void setPage(int id, QWizardPage *page)
 */
 HB_FUNC_STATIC(QWIZARD_SETPAGE)
 {
@@ -665,7 +665,7 @@ HB_FUNC_STATIC(QWIZARD_SETPAGE)
 }
 
 /*
-void setPixmap( QWizard::WizardPixmap which, const QPixmap &pixmap )
+void setPixmap(QWizard::WizardPixmap which, const QPixmap &pixmap)
 */
 HB_FUNC_STATIC(QWIZARD_SETPIXMAP)
 {
@@ -691,7 +691,7 @@ HB_FUNC_STATIC(QWIZARD_SETPIXMAP)
 }
 
 /*
-void setSideWidget( QWidget *widget )
+void setSideWidget(QWidget *widget)
 */
 HB_FUNC_STATIC(QWIZARD_SETSIDEWIDGET)
 {
@@ -717,7 +717,7 @@ HB_FUNC_STATIC(QWIZARD_SETSIDEWIDGET)
 }
 
 /*
-void setStartId( int id )
+void setStartId(int id)
 */
 HB_FUNC_STATIC(QWIZARD_SETSTARTID)
 {
@@ -743,7 +743,7 @@ HB_FUNC_STATIC(QWIZARD_SETSTARTID)
 }
 
 /*
-void setSubTitleFormat( Qt::TextFormat format )
+void setSubTitleFormat(Qt::TextFormat format)
 */
 HB_FUNC_STATIC(QWIZARD_SETSUBTITLEFORMAT)
 {
@@ -769,7 +769,7 @@ HB_FUNC_STATIC(QWIZARD_SETSUBTITLEFORMAT)
 }
 
 /*
-void setTitleFormat( Qt::TextFormat format )
+void setTitleFormat(Qt::TextFormat format)
 */
 HB_FUNC_STATIC(QWIZARD_SETTITLEFORMAT)
 {
@@ -795,7 +795,7 @@ HB_FUNC_STATIC(QWIZARD_SETTITLEFORMAT)
 }
 
 /*
-void setWizardStyle( QWizard::WizardStyle style )
+void setWizardStyle(QWizard::WizardStyle style)
 */
 HB_FUNC_STATIC(QWIZARD_SETWIZARDSTYLE)
 {
@@ -894,7 +894,7 @@ HB_FUNC_STATIC(QWIZARD_SUBTITLEFORMAT)
 }
 
 /*
-bool testOption( QWizard::WizardOption option ) const
+bool testOption(QWizard::WizardOption option) const
 */
 HB_FUNC_STATIC(QWIZARD_TESTOPTION)
 {
@@ -1015,7 +1015,7 @@ HB_FUNC_STATIC(QWIZARD_WIZARDSTYLE)
 }
 
 /*
-virtual void setVisible( bool visible )
+virtual void setVisible(bool visible)
 */
 HB_FUNC_STATIC(QWIZARD_SETVISIBLE)
 {

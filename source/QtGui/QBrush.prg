@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QBRUSH_NEW)
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    QBrush( Qt::BrushStyle style )
+    QBrush(Qt::BrushStyle style)
     */
     QBrush *obj = new QBrush((Qt::BrushStyle)hb_parni(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QBRUSH_NEW)
   else if (ISBETWEEN(1, 2) && (ISQCOLOR(1) || HB_ISCHAR(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QBrush( const QColor &color, Qt::BrushStyle style = Qt::SolidPattern )
+    QBrush(const QColor &color, Qt::BrushStyle style = Qt::SolidPattern)
     */
     QBrush *obj = new QBrush(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(1)) : QColor(hb_parc(1)),
                              HB_ISNIL(2) ? (Qt::BrushStyle)Qt::SolidPattern : (Qt::BrushStyle)hb_parni(2));
@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QBRUSH_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QBrush( Qt::GlobalColor color, Qt::BrushStyle style = Qt::SolidPattern )
+    QBrush(Qt::GlobalColor color, Qt::BrushStyle style = Qt::SolidPattern)
     */
     QBrush *obj = new QBrush((Qt::GlobalColor)hb_parni(1),
                              HB_ISNIL(2) ? (Qt::BrushStyle)Qt::SolidPattern : (Qt::BrushStyle)hb_parni(2));
@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QBRUSH_NEW)
   else if (ISNUMPAR(2) && (ISQCOLOR(1) || HB_ISCHAR(1)) && ISQPIXMAP(2))
   {
     /*
-    QBrush( const QColor &color, const QPixmap &pixmap )
+    QBrush(const QColor &color, const QPixmap &pixmap)
     */
     QBrush *obj =
         new QBrush(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(1)) : QColor(hb_parc(1)), *PQPIXMAP(2));
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QBRUSH_NEW)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPIXMAP(2))
   {
     /*
-    QBrush( Qt::GlobalColor color, const QPixmap &pixmap )
+    QBrush(Qt::GlobalColor color, const QPixmap &pixmap)
     */
     QBrush *obj = new QBrush((Qt::GlobalColor)hb_parni(1), *PQPIXMAP(2));
     Qt4xHb::returnNewObject(obj, true);
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QBRUSH_NEW)
   else if (ISNUMPAR(1) && ISQPIXMAP(1))
   {
     /*
-    QBrush( const QPixmap &pixmap )
+    QBrush(const QPixmap &pixmap)
     */
     QBrush *obj = new QBrush(*PQPIXMAP(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QBRUSH_NEW)
   else if (ISNUMPAR(1) && ISQIMAGE(1))
   {
     /*
-    QBrush( const QImage &image )
+    QBrush(const QImage &image)
     */
     QBrush *obj = new QBrush(*PQIMAGE(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QBRUSH_NEW)
   else if (ISNUMPAR(1) && ISQBRUSH(1))
   {
     /*
-    QBrush( const QBrush &other )
+    QBrush(const QBrush &other)
     */
     QBrush *obj = new QBrush(*PQBRUSH(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QBRUSH_NEW)
   else if (ISNUMPAR(1) && ISQGRADIENT(1))
   {
     /*
-    QBrush( const QGradient &gradient )
+    QBrush(const QGradient &gradient)
     */
     QBrush *obj = new QBrush(*PQGRADIENT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -282,7 +282,7 @@ HB_FUNC_STATIC(QBRUSH_SETCOLOR)
   if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
   {
     /*
-    void setColor( const QColor &color )
+    void setColor(const QColor &color)
     */
     QBrush *obj = static_cast<QBrush *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -296,7 +296,7 @@ HB_FUNC_STATIC(QBRUSH_SETCOLOR)
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    void setColor( Qt::GlobalColor color )
+    void setColor(Qt::GlobalColor color)
     */
     QBrush *obj = static_cast<QBrush *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -314,7 +314,7 @@ HB_FUNC_STATIC(QBRUSH_SETCOLOR)
 }
 
 /*
-void setMatrix( const QMatrix &matrix )
+void setMatrix(const QMatrix &matrix)
 */
 HB_FUNC_STATIC(QBRUSH_SETMATRIX)
 {
@@ -340,7 +340,7 @@ HB_FUNC_STATIC(QBRUSH_SETMATRIX)
 }
 
 /*
-void setStyle( Qt::BrushStyle style )
+void setStyle(Qt::BrushStyle style)
 */
 HB_FUNC_STATIC(QBRUSH_SETSTYLE)
 {
@@ -366,7 +366,7 @@ HB_FUNC_STATIC(QBRUSH_SETSTYLE)
 }
 
 /*
-void setTexture( const QPixmap &pixmap )
+void setTexture(const QPixmap &pixmap)
 */
 HB_FUNC_STATIC(QBRUSH_SETTEXTURE)
 {
@@ -392,7 +392,7 @@ HB_FUNC_STATIC(QBRUSH_SETTEXTURE)
 }
 
 /*
-void setTextureImage( const QImage &image )
+void setTextureImage(const QImage &image)
 */
 HB_FUNC_STATIC(QBRUSH_SETTEXTUREIMAGE)
 {
@@ -418,7 +418,7 @@ HB_FUNC_STATIC(QBRUSH_SETTEXTUREIMAGE)
 }
 
 /*
-void setTransform( const QTransform &matrix )
+void setTransform(const QTransform &matrix)
 */
 HB_FUNC_STATIC(QBRUSH_SETTRANSFORM)
 {
@@ -558,7 +558,7 @@ void QBrush_toVariant1()
 }
 
 /*
-static QVariant toVariant( const QBrush &)
+static QVariant toVariant(const QBrush &)
 */
 void QBrush_toVariant2()
 {
@@ -569,7 +569,7 @@ void QBrush_toVariant2()
 }
 
 //[1]QVariant toVariant()
-//[2]static QVariant toVariant( const QBrush &)
+//[2]static QVariant toVariant(const QBrush &)
 
 HB_FUNC_STATIC(QBRUSH_TOVARIANT)
 {
@@ -588,7 +588,7 @@ HB_FUNC_STATIC(QBRUSH_TOVARIANT)
 }
 
 /*
-static QBrush fromVariant( const QVariant &)
+static QBrush fromVariant(const QVariant &)
 */
 HB_FUNC_STATIC(QBRUSH_FROMVARIANT)
 {

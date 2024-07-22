@@ -67,7 +67,7 @@ HB_FUNC_STATIC(QMIMESOURCE_DELETE)
 }
 
 /*
-virtual QByteArray encodedData( const char *format ) const = 0
+virtual QByteArray encodedData(const char *format) const = 0
 */
 HB_FUNC_STATIC(QMIMESOURCE_ENCODEDDATA)
 {
@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QMIMESOURCE_ENCODEDDATA)
 }
 
 /*
-virtual const char *format( int i = 0 ) const = 0
+virtual const char *format(int i = 0) const = 0
 */
 HB_FUNC_STATIC(QMIMESOURCE_FORMAT)
 {
@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QMIMESOURCE_FORMAT)
 }
 
 /*
-virtual bool provides( const char *mimeType ) const
+virtual bool provides(const char *mimeType) const
 */
 HB_FUNC_STATIC(QMIMESOURCE_PROVIDES)
 {

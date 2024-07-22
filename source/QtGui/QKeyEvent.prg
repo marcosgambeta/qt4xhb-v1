@@ -49,8 +49,8 @@ RETURN
 #include "qt4xhb_utils.hpp"
 
     /*
-    QKeyEvent( QEvent::Type type, int key, Qt::KeyboardModifiers modifiers, const QString &text = QString(), bool
-    autorep = false, ushort count = 1 )
+    QKeyEvent(QEvent::Type type, int key, Qt::KeyboardModifiers modifiers, const QString &text = QString(), bool
+    autorep = false, ushort count = 1)
     */
 HB_FUNC_STATIC(QKEYEVENT_NEW)
 {
@@ -156,7 +156,7 @@ HB_FUNC_STATIC(QKEYEVENT_KEY)
 }
 
 /*
-bool matches( QKeySequence::StandardKey key ) const
+bool matches(QKeySequence::StandardKey key) const
 */
 HB_FUNC_STATIC(QKEYEVENT_MATCHES)
 {
@@ -300,9 +300,9 @@ HB_FUNC_STATIC(QKEYEVENT_TEXT)
 }
 
 /*
-static QKeyEvent *createExtendedKeyEvent( QEvent::Type type, int key, Qt::KeyboardModifiers modifiers, quint32
+static QKeyEvent *createExtendedKeyEvent(QEvent::Type type, int key, Qt::KeyboardModifiers modifiers, quint32
 nativeScanCode, quint32 nativeVirtualKey, quint32 nativeModifiers, const QString &text = QString(), bool autorep =
-false, ushort count = 1 )
+false, ushort count = 1)
 */
 HB_FUNC_STATIC(QKEYEVENT_CREATEEXTENDEDKEYEVENT)
 {

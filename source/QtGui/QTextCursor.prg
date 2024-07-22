@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_NEW)
   else if (ISNUMPAR(1) && ISQTEXTDOCUMENT(1))
   {
     /*
-    QTextCursor( QTextDocument *document )
+    QTextCursor(QTextDocument *document)
     */
     QTextCursor *obj = new QTextCursor(PQTEXTDOCUMENT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_NEW)
   else if (ISNUMPAR(1) && ISQTEXTFRAME(1))
   {
     /*
-    QTextCursor( QTextFrame *frame )
+    QTextCursor(QTextFrame *frame)
     */
     QTextCursor *obj = new QTextCursor(PQTEXTFRAME(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_NEW)
   else if (ISNUMPAR(1) && ISQTEXTBLOCK(1))
   {
     /*
-    QTextCursor( const QTextBlock &block )
+    QTextCursor(const QTextBlock &block)
     */
     QTextCursor *obj = new QTextCursor(*PQTEXTBLOCK(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_NEW)
   else if (ISNUMPAR(1) && ISQTEXTCURSOR(1))
   {
     /*
-    QTextCursor( const QTextCursor &cursor )
+    QTextCursor(const QTextCursor &cursor)
     */
     QTextCursor *obj = new QTextCursor(*PQTEXTCURSOR(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -507,7 +507,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_CREATELIST)
   if (ISNUMPAR(1) && ISQTEXTLISTFORMAT(1))
   {
     /*
-    QTextList *createList( const QTextListFormat &format )
+    QTextList *createList(const QTextListFormat &format)
     */
     QTextCursor *obj = static_cast<QTextCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -520,7 +520,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_CREATELIST)
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    QTextList *createList( QTextListFormat::Style style )
+    QTextList *createList(QTextListFormat::Style style)
     */
     QTextCursor *obj = static_cast<QTextCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -781,7 +781,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTBLOCK)
   else if (ISNUMPAR(1) && ISQTEXTBLOCKFORMAT(1))
   {
     /*
-    void insertBlock( const QTextBlockFormat &format )
+    void insertBlock(const QTextBlockFormat &format)
     */
     QTextCursor *obj = static_cast<QTextCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -795,7 +795,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTBLOCK)
   else if (ISNUMPAR(2) && ISQTEXTBLOCKFORMAT(1) && ISQTEXTCHARFORMAT(2))
   {
     /*
-    void insertBlock( const QTextBlockFormat &format, const QTextCharFormat &charFormat )
+    void insertBlock(const QTextBlockFormat &format, const QTextCharFormat &charFormat)
     */
     QTextCursor *obj = static_cast<QTextCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -813,7 +813,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTBLOCK)
 }
 
 /*
-void insertFragment( const QTextDocumentFragment &fragment )
+void insertFragment(const QTextDocumentFragment &fragment)
 */
 HB_FUNC_STATIC(QTEXTCURSOR_INSERTFRAGMENT)
 {
@@ -839,7 +839,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTFRAGMENT)
 }
 
 /*
-QTextFrame *insertFrame( const QTextFrameFormat &format )
+QTextFrame *insertFrame(const QTextFrameFormat &format)
 */
 HB_FUNC_STATIC(QTEXTCURSOR_INSERTFRAME)
 {
@@ -864,7 +864,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTFRAME)
 }
 
 /*
-void insertHtml( const QString &html )
+void insertHtml(const QString &html)
 */
 HB_FUNC_STATIC(QTEXTCURSOR_INSERTHTML)
 {
@@ -894,7 +894,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTIMAGE)
   if (ISNUMPAR(1) && ISQTEXTIMAGEFORMAT(1))
   {
     /*
-    void insertImage( const QTextImageFormat &format )
+    void insertImage(const QTextImageFormat &format)
     */
     QTextCursor *obj = static_cast<QTextCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -908,7 +908,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTIMAGE)
   else if (ISNUMPAR(2) && ISQTEXTIMAGEFORMAT(1) && HB_ISNUM(2))
   {
     /*
-    void insertImage( const QTextImageFormat &format, QTextFrameFormat::Position alignment )
+    void insertImage(const QTextImageFormat &format, QTextFrameFormat::Position alignment)
     */
     QTextCursor *obj = static_cast<QTextCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -922,7 +922,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTIMAGE)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    void insertImage( const QString &name )
+    void insertImage(const QString &name)
     */
     QTextCursor *obj = static_cast<QTextCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -936,7 +936,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTIMAGE)
   else if (ISBETWEEN(1, 2) && ISQIMAGE(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
-    void insertImage( const QImage &image, const QString &name = QString() )
+    void insertImage(const QImage &image, const QString &name = QString())
     */
     QTextCursor *obj = static_cast<QTextCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -958,7 +958,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTLIST)
   if (ISNUMPAR(1) && ISQTEXTLISTFORMAT(1))
   {
     /*
-    QTextList *insertList( const QTextListFormat &format )
+    QTextList *insertList(const QTextListFormat &format)
     */
     QTextCursor *obj = static_cast<QTextCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -971,7 +971,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTLIST)
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    QTextList *insertList( QTextListFormat::Style style )
+    QTextList *insertList(QTextListFormat::Style style)
     */
     QTextCursor *obj = static_cast<QTextCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -992,7 +992,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTTABLE)
   if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQTEXTTABLEFORMAT(3))
   {
     /*
-    QTextTable *insertTable( int rows, int columns, const QTextTableFormat &format )
+    QTextTable *insertTable(int rows, int columns, const QTextTableFormat &format)
     */
     QTextCursor *obj = static_cast<QTextCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1005,7 +1005,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTTABLE)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    QTextTable *insertTable( int rows, int columns )
+    QTextTable *insertTable(int rows, int columns)
     */
     QTextCursor *obj = static_cast<QTextCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1026,7 +1026,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTTEXT)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    void insertText( const QString &text )
+    void insertText(const QString &text)
     */
     QTextCursor *obj = static_cast<QTextCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1040,7 +1040,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTTEXT)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQTEXTCHARFORMAT(2))
   {
     /*
-    void insertText( const QString &text, const QTextCharFormat &format )
+    void insertText(const QString &text, const QTextCharFormat &format)
     */
     QTextCursor *obj = static_cast<QTextCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1058,7 +1058,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTTEXT)
 }
 
 /*
-bool isCopyOf( const QTextCursor &other ) const
+bool isCopyOf(const QTextCursor &other) const
 */
 HB_FUNC_STATIC(QTEXTCURSOR_ISCOPYOF)
 {
@@ -1156,7 +1156,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_KEEPPOSITIONONINSERT)
 }
 
 /*
-void mergeBlockCharFormat( const QTextCharFormat &modifier )
+void mergeBlockCharFormat(const QTextCharFormat &modifier)
 */
 HB_FUNC_STATIC(QTEXTCURSOR_MERGEBLOCKCHARFORMAT)
 {
@@ -1182,7 +1182,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_MERGEBLOCKCHARFORMAT)
 }
 
 /*
-void mergeBlockFormat( const QTextBlockFormat &modifier )
+void mergeBlockFormat(const QTextBlockFormat &modifier)
 */
 HB_FUNC_STATIC(QTEXTCURSOR_MERGEBLOCKFORMAT)
 {
@@ -1208,7 +1208,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_MERGEBLOCKFORMAT)
 }
 
 /*
-void mergeCharFormat( const QTextCharFormat &modifier )
+void mergeCharFormat(const QTextCharFormat &modifier)
 */
 HB_FUNC_STATIC(QTEXTCURSOR_MERGECHARFORMAT)
 {
@@ -1234,7 +1234,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_MERGECHARFORMAT)
 }
 
 /*
-bool movePosition( QTextCursor::MoveOperation operation, QTextCursor::MoveMode mode = QTextCursor::MoveAnchor, int n = 1
+bool movePosition(QTextCursor::MoveOperation operation, QTextCursor::MoveMode mode = QTextCursor::MoveAnchor, int n = 1
 )
 */
 HB_FUNC_STATIC(QTEXTCURSOR_MOVEPOSITION)
@@ -1336,7 +1336,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_REMOVESELECTEDTEXT)
 }
 
 /*
-void select( QTextCursor::SelectionType selection )
+void select(QTextCursor::SelectionType selection)
 */
 HB_FUNC_STATIC(QTEXTCURSOR_SELECT)
 {
@@ -1362,7 +1362,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SELECT)
 }
 
 /*
-void selectedTableCells( int *firstRow, int *numRows, int *firstColumn, int *numColumns ) const
+void selectedTableCells(int *firstRow, int *numRows, int *firstColumn, int *numColumns) const
 */
 HB_FUNC_STATIC(QTEXTCURSOR_SELECTEDTABLECELLS)
 {
@@ -1493,7 +1493,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SELECTIONSTART)
 }
 
 /*
-void setBlockCharFormat( const QTextCharFormat &format )
+void setBlockCharFormat(const QTextCharFormat &format)
 */
 HB_FUNC_STATIC(QTEXTCURSOR_SETBLOCKCHARFORMAT)
 {
@@ -1519,7 +1519,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SETBLOCKCHARFORMAT)
 }
 
 /*
-void setBlockFormat( const QTextBlockFormat &format )
+void setBlockFormat(const QTextBlockFormat &format)
 */
 HB_FUNC_STATIC(QTEXTCURSOR_SETBLOCKFORMAT)
 {
@@ -1545,7 +1545,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SETBLOCKFORMAT)
 }
 
 /*
-void setCharFormat( const QTextCharFormat &format )
+void setCharFormat(const QTextCharFormat &format)
 */
 HB_FUNC_STATIC(QTEXTCURSOR_SETCHARFORMAT)
 {
@@ -1571,7 +1571,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SETCHARFORMAT)
 }
 
 /*
-void setKeepPositionOnInsert( bool b )
+void setKeepPositionOnInsert(bool b)
 */
 HB_FUNC_STATIC(QTEXTCURSOR_SETKEEPPOSITIONONINSERT)
 {
@@ -1597,7 +1597,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SETKEEPPOSITIONONINSERT)
 }
 
 /*
-void setPosition( int pos, QTextCursor::MoveMode m = QTextCursor::MoveAnchor )
+void setPosition(int pos, QTextCursor::MoveMode m = QTextCursor::MoveAnchor)
 */
 HB_FUNC_STATIC(QTEXTCURSOR_SETPOSITION)
 {
@@ -1624,7 +1624,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SETPOSITION)
 }
 
 /*
-void setVerticalMovementX( int x )
+void setVerticalMovementX(int x)
 */
 HB_FUNC_STATIC(QTEXTCURSOR_SETVERTICALMOVEMENTX)
 {
@@ -1650,7 +1650,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SETVERTICALMOVEMENTX)
 }
 
 /*
-void setVisualNavigation( bool b )
+void setVisualNavigation(bool b)
 */
 HB_FUNC_STATIC(QTEXTCURSOR_SETVISUALNAVIGATION)
 {

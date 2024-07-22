@@ -95,8 +95,8 @@ HB_FUNC_STATIC(QSTYLE_DELETE)
 }
 
 /*
-int combinedLayoutSpacing( QSizePolicy::ControlTypes controls1, QSizePolicy::ControlTypes controls2, Qt::Orientation
-orientation, QStyleOption *option = 0, QWidget *widget = 0 ) const
+int combinedLayoutSpacing(QSizePolicy::ControlTypes controls1, QSizePolicy::ControlTypes controls2, Qt::Orientation
+orientation, QStyleOption *option = 0, QWidget *widget = 0) const
 */
 HB_FUNC_STATIC(QSTYLE_COMBINEDLAYOUTSPACING)
 {
@@ -123,8 +123,8 @@ HB_FUNC_STATIC(QSTYLE_COMBINEDLAYOUTSPACING)
 }
 
 /*
-virtual void drawComplexControl( QStyle::ComplexControl control, const QStyleOptionComplex *option, QPainter *painter,
-const QWidget *widget = 0 ) const = 0
+virtual void drawComplexControl(QStyle::ComplexControl control, const QStyleOptionComplex *option, QPainter *painter,
+const QWidget *widget = 0) const = 0
 */
 HB_FUNC_STATIC(QSTYLE_DRAWCOMPLEXCONTROL)
 {
@@ -151,8 +151,8 @@ HB_FUNC_STATIC(QSTYLE_DRAWCOMPLEXCONTROL)
 }
 
 /*
-virtual void drawControl( QStyle::ControlElement element, const QStyleOption *option, QPainter *painter, const QWidget
-* widget = 0 ) const = 0
+virtual void drawControl(QStyle::ControlElement element, const QStyleOption *option, QPainter *painter, const QWidget
+* widget = 0) const = 0
 */
 HB_FUNC_STATIC(QSTYLE_DRAWCONTROL)
 {
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QSTYLE_DRAWCONTROL)
 }
 
 /*
-virtual void drawItemPixmap( QPainter *painter, const QRect &rectangle, int alignment, const QPixmap &pixmap ) const
+virtual void drawItemPixmap(QPainter *painter, const QRect &rectangle, int alignment, const QPixmap &pixmap) const
 */
 HB_FUNC_STATIC(QSTYLE_DRAWITEMPIXMAP)
 {
@@ -204,8 +204,8 @@ HB_FUNC_STATIC(QSTYLE_DRAWITEMPIXMAP)
 }
 
 /*
-virtual void drawItemText( QPainter *painter, const QRect &rectangle, int alignment, const QPalette &palette, bool
-enabled, const QString &text, QPalette::ColorRole textRole = QPalette::NoRole ) const
+virtual void drawItemText(QPainter *painter, const QRect &rectangle, int alignment, const QPalette &palette, bool
+enabled, const QString &text, QPalette::ColorRole textRole = QPalette::NoRole) const
 */
 HB_FUNC_STATIC(QSTYLE_DRAWITEMTEXT)
 {
@@ -233,8 +233,8 @@ HB_FUNC_STATIC(QSTYLE_DRAWITEMTEXT)
 }
 
 /*
-virtual void drawPrimitive( QStyle::PrimitiveElement element, const QStyleOption *option, QPainter *painter, const
-QWidget *widget = 0 ) const = 0
+virtual void drawPrimitive(QStyle::PrimitiveElement element, const QStyleOption *option, QPainter *painter, const
+QWidget *widget = 0) const = 0
 */
 HB_FUNC_STATIC(QSTYLE_DRAWPRIMITIVE)
 {
@@ -260,7 +260,7 @@ HB_FUNC_STATIC(QSTYLE_DRAWPRIMITIVE)
 }
 
 /*
-virtual QPixmap generatedIconPixmap( QIcon::Mode iconMode, const QPixmap &pixmap, const QStyleOption *option ) const =
+virtual QPixmap generatedIconPixmap(QIcon::Mode iconMode, const QPixmap &pixmap, const QStyleOption *option) const =
 0
 */
 HB_FUNC_STATIC(QSTYLE_GENERATEDICONPIXMAP)
@@ -286,8 +286,8 @@ HB_FUNC_STATIC(QSTYLE_GENERATEDICONPIXMAP)
 }
 
 /*
-virtual QStyle::SubControl hitTestComplexControl( QStyle::ComplexControl control, const QStyleOptionComplex *option,
-const QPoint &position, const QWidget *widget = 0 ) const = 0
+virtual QStyle::SubControl hitTestComplexControl(QStyle::ComplexControl control, const QStyleOptionComplex *option,
+const QPoint &position, const QWidget *widget = 0) const = 0
 */
 HB_FUNC_STATIC(QSTYLE_HITTESTCOMPLEXCONTROL)
 {
@@ -312,7 +312,7 @@ HB_FUNC_STATIC(QSTYLE_HITTESTCOMPLEXCONTROL)
 }
 
 /*
-virtual QRect itemPixmapRect( const QRect &rectangle, int alignment, const QPixmap &pixmap ) const
+virtual QRect itemPixmapRect(const QRect &rectangle, int alignment, const QPixmap &pixmap) const
 */
 HB_FUNC_STATIC(QSTYLE_ITEMPIXMAPRECT)
 {
@@ -337,8 +337,8 @@ HB_FUNC_STATIC(QSTYLE_ITEMPIXMAPRECT)
 }
 
 /*
-virtual QRect itemTextRect( const QFontMetrics &metrics, const QRect &rectangle, int alignment, bool enabled, const
-QString &text ) const
+virtual QRect itemTextRect(const QFontMetrics &metrics, const QRect &rectangle, int alignment, bool enabled, const
+QString &text) const
 */
 HB_FUNC_STATIC(QSTYLE_ITEMTEXTRECT)
 {
@@ -363,8 +363,8 @@ HB_FUNC_STATIC(QSTYLE_ITEMTEXTRECT)
 }
 
 /*
-int layoutSpacing( QSizePolicy::ControlType control1, QSizePolicy::ControlType control2, Qt::Orientation orientation,
-const QStyleOption *option = 0, const QWidget *widget = 0 ) const
+int layoutSpacing(QSizePolicy::ControlType control1, QSizePolicy::ControlType control2, Qt::Orientation orientation,
+const QStyleOption *option = 0, const QWidget *widget = 0) const
 */
 HB_FUNC_STATIC(QSTYLE_LAYOUTSPACING)
 {
@@ -391,7 +391,7 @@ HB_FUNC_STATIC(QSTYLE_LAYOUTSPACING)
 }
 
 /*
-virtual int pixelMetric( QStyle::PixelMetric metric, const QStyleOption *option = 0, const QWidget *widget = 0 ) const
+virtual int pixelMetric(QStyle::PixelMetric metric, const QStyleOption *option = 0, const QWidget *widget = 0) const
 = 0
 */
 HB_FUNC_STATIC(QSTYLE_PIXELMETRIC)
@@ -421,7 +421,7 @@ HB_FUNC_STATIC(QSTYLE_POLISH)
   if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
-    virtual void polish( QWidget *widget )
+    virtual void polish(QWidget *widget)
     */
     QStyle *obj = qobject_cast<QStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -435,7 +435,7 @@ HB_FUNC_STATIC(QSTYLE_POLISH)
   else if (ISNUMPAR(1) && ISQAPPLICATION(1))
   {
     /*
-    virtual void polish( QApplication *application )
+    virtual void polish(QApplication *application)
     */
     QStyle *obj = qobject_cast<QStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -449,7 +449,7 @@ HB_FUNC_STATIC(QSTYLE_POLISH)
   else if (ISNUMPAR(1) && ISQPALETTE(1))
   {
     /*
-    virtual void polish( QPalette &palette )
+    virtual void polish(QPalette &palette)
     */
     QStyle *obj = qobject_cast<QStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -492,8 +492,8 @@ HB_FUNC_STATIC(QSTYLE_PROXY)
 }
 
 /*
-virtual QSize sizeFromContents( QStyle::ContentsType type, const QStyleOption *option, const QSize &contentsSize,
-const QWidget *widget = 0 ) const = 0
+virtual QSize sizeFromContents(QStyle::ContentsType type, const QStyleOption *option, const QSize &contentsSize,
+const QWidget *widget = 0) const = 0
 */
 HB_FUNC_STATIC(QSTYLE_SIZEFROMCONTENTS)
 {
@@ -519,7 +519,7 @@ HB_FUNC_STATIC(QSTYLE_SIZEFROMCONTENTS)
 }
 
 /*
-QIcon standardIcon( QStyle::StandardPixmap standardIcon, const QStyleOption *option = 0, const QWidget *widget = 0 )
+QIcon standardIcon(QStyle::StandardPixmap standardIcon, const QStyleOption *option = 0, const QWidget *widget = 0)
 const
 */
 HB_FUNC_STATIC(QSTYLE_STANDARDICON)
@@ -572,8 +572,8 @@ HB_FUNC_STATIC(QSTYLE_STANDARDPALETTE)
 }
 
 /*
-virtual int styleHint( QStyle::StyleHint hint, const QStyleOption *option = 0, const QWidget *widget = 0,
-QStyleHintReturn *returnData = 0 ) const = 0
+virtual int styleHint(QStyle::StyleHint hint, const QStyleOption *option = 0, const QWidget *widget = 0,
+QStyleHintReturn *returnData = 0) const = 0
 */
 HB_FUNC_STATIC(QSTYLE_STYLEHINT)
 {
@@ -600,8 +600,8 @@ HB_FUNC_STATIC(QSTYLE_STYLEHINT)
 }
 
 /*
-virtual QRect subControlRect( QStyle::ComplexControl control, const QStyleOptionComplex *option, QStyle::SubControl
-subControl, const QWidget *widget = 0 ) const = 0
+virtual QRect subControlRect(QStyle::ComplexControl control, const QStyleOptionComplex *option, QStyle::SubControl
+subControl, const QWidget *widget = 0) const = 0
 */
 HB_FUNC_STATIC(QSTYLE_SUBCONTROLRECT)
 {
@@ -627,7 +627,7 @@ HB_FUNC_STATIC(QSTYLE_SUBCONTROLRECT)
 }
 
 /*
-virtual QRect subElementRect( QStyle::SubElement element, const QStyleOption *option, const QWidget *widget = 0 )
+virtual QRect subElementRect(QStyle::SubElement element, const QStyleOption *option, const QWidget *widget = 0)
 const = 0
 */
 HB_FUNC_STATIC(QSTYLE_SUBELEMENTRECT)
@@ -657,7 +657,7 @@ HB_FUNC_STATIC(QSTYLE_UNPOLISH)
   if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
-    virtual void unpolish( QWidget *widget )
+    virtual void unpolish(QWidget *widget)
     */
     QStyle *obj = qobject_cast<QStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -671,7 +671,7 @@ HB_FUNC_STATIC(QSTYLE_UNPOLISH)
   else if (ISNUMPAR(1) && ISQAPPLICATION(1))
   {
     /*
-    virtual void unpolish( QApplication *application )
+    virtual void unpolish(QApplication *application)
     */
     QStyle *obj = qobject_cast<QStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -689,7 +689,7 @@ HB_FUNC_STATIC(QSTYLE_UNPOLISH)
 }
 
 /*
-QRect alignedRect( Qt::LayoutDirection direction, Qt::Alignment alignment, const QSize &size, const QRect &rectangle )
+QRect alignedRect(Qt::LayoutDirection direction, Qt::Alignment alignment, const QSize &size, const QRect &rectangle)
 */
 HB_FUNC_STATIC(QSTYLE_ALIGNEDRECT)
 {
@@ -715,7 +715,7 @@ HB_FUNC_STATIC(QSTYLE_ALIGNEDRECT)
 }
 
 /*
-static int sliderPositionFromValue( int min, int max, int logicalValue, int span, bool upsideDown = false )
+static int sliderPositionFromValue(int min, int max, int logicalValue, int span, bool upsideDown = false)
 */
 HB_FUNC_STATIC(QSTYLE_SLIDERPOSITIONFROMVALUE)
 {
@@ -734,7 +734,7 @@ HB_FUNC_STATIC(QSTYLE_SLIDERPOSITIONFROMVALUE)
 }
 
 /*
-static int sliderValueFromPosition( int min, int max, int position, int span, bool upsideDown = false )
+static int sliderValueFromPosition(int min, int max, int position, int span, bool upsideDown = false)
 */
 HB_FUNC_STATIC(QSTYLE_SLIDERVALUEFROMPOSITION)
 {
@@ -753,7 +753,7 @@ HB_FUNC_STATIC(QSTYLE_SLIDERVALUEFROMPOSITION)
 }
 
 /*
-static Qt::Alignment visualAlignment( Qt::LayoutDirection direction, Qt::Alignment alignment )
+static Qt::Alignment visualAlignment(Qt::LayoutDirection direction, Qt::Alignment alignment)
 */
 HB_FUNC_STATIC(QSTYLE_VISUALALIGNMENT)
 {
@@ -772,7 +772,7 @@ HB_FUNC_STATIC(QSTYLE_VISUALALIGNMENT)
 }
 
 /*
-static QPoint visualPos( Qt::LayoutDirection direction, const QRect &boundingRectangle, const QPoint &logicalPosition
+static QPoint visualPos(Qt::LayoutDirection direction, const QRect &boundingRectangle, const QPoint &logicalPosition
 )
 */
 HB_FUNC_STATIC(QSTYLE_VISUALPOS)
@@ -793,7 +793,7 @@ HB_FUNC_STATIC(QSTYLE_VISUALPOS)
 }
 
 /*
-static QRect visualRect( Qt::LayoutDirection direction, const QRect &boundingRectangle, const QRect &logicalRectangle
+static QRect visualRect(Qt::LayoutDirection direction, const QRect &boundingRectangle, const QRect &logicalRectangle
 )
 */
 HB_FUNC_STATIC(QSTYLE_VISUALRECT)

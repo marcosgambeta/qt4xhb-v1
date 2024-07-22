@@ -50,7 +50,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QGesture( QObject *parent = 0 )
+    QGesture(QObject *parent = 0)
     */
 HB_FUNC_STATIC(QGESTURE_NEW)
 {
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QGESTURE_HOTSPOT)
 }
 
 /*
-void setGestureCancelPolicy( QGesture::GestureCancelPolicy policy )
+void setGestureCancelPolicy(QGesture::GestureCancelPolicy policy)
 */
 HB_FUNC_STATIC(QGESTURE_SETGESTURECANCELPOLICY)
 {
@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QGESTURE_SETGESTURECANCELPOLICY)
 }
 
 /*
-void setHotSpot( const QPointF &value )
+void setHotSpot(const QPointF &value)
 */
 HB_FUNC_STATIC(QGESTURE_SETHOTSPOT)
 {

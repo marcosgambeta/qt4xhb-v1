@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QMOVIE_NEW)
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
-    QMovie( QObject *parent = 0 )
+    QMovie(QObject *parent = 0)
     */
     QMovie *obj = new QMovie(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QMOVIE_NEW)
   else if (ISBETWEEN(1, 3) && ISQIODEVICE(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
-    QMovie( QIODevice *device, const QByteArray &format = QByteArray(), QObject *parent = 0 )
+    QMovie(QIODevice *device, const QByteArray &format = QByteArray(), QObject *parent = 0)
     */
     QMovie *obj = new QMovie(
         PQIODEVICE(1), HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(2)), OPQOBJECT(3, 0));
@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QMOVIE_NEW)
   else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
-    QMovie( const QString &fileName, const QByteArray &format = QByteArray(), QObject *parent = 0 )
+    QMovie(const QString &fileName, const QByteArray &format = QByteArray(), QObject *parent = 0)
     */
     QMovie *obj = new QMovie(
         PQSTRING(1), HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(2)), OPQOBJECT(3, 0));
@@ -410,7 +410,7 @@ HB_FUNC_STATIC(QMOVIE_ISVALID)
 }
 
 /*
-bool jumpToFrame( int frameNumber )
+bool jumpToFrame(int frameNumber)
 */
 HB_FUNC_STATIC(QMOVIE_JUMPTOFRAME)
 {
@@ -507,7 +507,7 @@ HB_FUNC_STATIC(QMOVIE_SCALEDSIZE)
 }
 
 /*
-void setBackgroundColor( const QColor &color )
+void setBackgroundColor(const QColor &color)
 */
 HB_FUNC_STATIC(QMOVIE_SETBACKGROUNDCOLOR)
 {
@@ -533,7 +533,7 @@ HB_FUNC_STATIC(QMOVIE_SETBACKGROUNDCOLOR)
 }
 
 /*
-void setCacheMode( QMovie::CacheMode mode )
+void setCacheMode(QMovie::CacheMode mode)
 */
 HB_FUNC_STATIC(QMOVIE_SETCACHEMODE)
 {
@@ -559,7 +559,7 @@ HB_FUNC_STATIC(QMOVIE_SETCACHEMODE)
 }
 
 /*
-void setDevice( QIODevice *device )
+void setDevice(QIODevice *device)
 */
 HB_FUNC_STATIC(QMOVIE_SETDEVICE)
 {
@@ -585,7 +585,7 @@ HB_FUNC_STATIC(QMOVIE_SETDEVICE)
 }
 
 /*
-void setFileName( const QString &fileName )
+void setFileName(const QString &fileName)
 */
 HB_FUNC_STATIC(QMOVIE_SETFILENAME)
 {
@@ -611,7 +611,7 @@ HB_FUNC_STATIC(QMOVIE_SETFILENAME)
 }
 
 /*
-void setFormat( const QByteArray &format )
+void setFormat(const QByteArray &format)
 */
 HB_FUNC_STATIC(QMOVIE_SETFORMAT)
 {
@@ -637,7 +637,7 @@ HB_FUNC_STATIC(QMOVIE_SETFORMAT)
 }
 
 /*
-void setScaledSize( const QSize &size )
+void setScaledSize(const QSize &size)
 */
 HB_FUNC_STATIC(QMOVIE_SETSCALEDSIZE)
 {
@@ -735,7 +735,7 @@ HB_FUNC_STATIC(QMOVIE_JUMPTONEXTFRAME)
 }
 
 /*
-void setPaused( bool paused )
+void setPaused(bool paused)
 */
 HB_FUNC_STATIC(QMOVIE_SETPAUSED)
 {
@@ -761,7 +761,7 @@ HB_FUNC_STATIC(QMOVIE_SETPAUSED)
 }
 
 /*
-void setSpeed( int percentSpeed )
+void setSpeed(int percentSpeed)
 */
 HB_FUNC_STATIC(QMOVIE_SETSPEED)
 {

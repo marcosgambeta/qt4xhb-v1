@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_DOCUMENT)
 }
 
 /*
-void setDocument( QTextDocument *doc )
+void setDocument(QTextDocument *doc)
 */
 HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_SETDOCUMENT)
 {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_REHIGHLIGHT)
 }
 
 /*
-void rehighlightBlock( const QTextBlock &block )
+void rehighlightBlock(const QTextBlock &block)
 */
 HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_REHIGHLIGHTBLOCK)
 {

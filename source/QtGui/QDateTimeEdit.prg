@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_NEW)
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
-    QDateTimeEdit( QWidget *parent = 0 )
+    QDateTimeEdit(QWidget *parent = 0)
     */
     QDateTimeEdit *obj = new QDateTimeEdit(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_NEW)
   else if (ISBETWEEN(1, 2) && ISQDATETIME(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QDateTimeEdit( const QDateTime &datetime, QWidget *parent = 0 )
+    QDateTimeEdit(const QDateTime &datetime, QWidget *parent = 0)
     */
     QDateTimeEdit *obj = new QDateTimeEdit(*PQDATETIME(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_NEW)
   else if (ISBETWEEN(1, 2) && ISQDATE(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QDateTimeEdit( const QDate &date, QWidget *parent = 0 )
+    QDateTimeEdit(const QDate &date, QWidget *parent = 0)
     */
     QDateTimeEdit *obj = new QDateTimeEdit(*PQDATE(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_NEW)
   else if (ISBETWEEN(1, 2) && ISQTIME(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
-    QDateTimeEdit( const QTime &time, QWidget *parent = 0 )
+    QDateTimeEdit(const QTime &time, QWidget *parent = 0)
     */
     QDateTimeEdit *obj = new QDateTimeEdit(*PQTIME(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -659,7 +659,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_MINIMUMTIME)
 }
 
 /*
-QDateTimeEdit::Section sectionAt( int index ) const
+QDateTimeEdit::Section sectionAt(int index) const
 */
 HB_FUNC_STATIC(QDATETIMEEDIT_SECTIONAT)
 {
@@ -707,7 +707,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SECTIONCOUNT)
 }
 
 /*
-QString sectionText( QDateTimeEdit::Section section ) const
+QString sectionText(QDateTimeEdit::Section section) const
 */
 HB_FUNC_STATIC(QDATETIMEEDIT_SECTIONTEXT)
 {
@@ -731,7 +731,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SECTIONTEXT)
 }
 
 /*
-void setCalendarPopup( bool enable )
+void setCalendarPopup(bool enable)
 */
 HB_FUNC_STATIC(QDATETIMEEDIT_SETCALENDARPOPUP)
 {
@@ -757,7 +757,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETCALENDARPOPUP)
 }
 
 /*
-void setCalendarWidget( QCalendarWidget *calendarWidget )
+void setCalendarWidget(QCalendarWidget *calendarWidget)
 */
 HB_FUNC_STATIC(QDATETIMEEDIT_SETCALENDARWIDGET)
 {
@@ -783,7 +783,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETCALENDARWIDGET)
 }
 
 /*
-void setCurrentSection( QDateTimeEdit::Section section )
+void setCurrentSection(QDateTimeEdit::Section section)
 */
 HB_FUNC_STATIC(QDATETIMEEDIT_SETCURRENTSECTION)
 {
@@ -809,7 +809,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETCURRENTSECTION)
 }
 
 /*
-void setCurrentSectionIndex( int index )
+void setCurrentSectionIndex(int index)
 */
 HB_FUNC_STATIC(QDATETIMEEDIT_SETCURRENTSECTIONINDEX)
 {
@@ -835,7 +835,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETCURRENTSECTIONINDEX)
 }
 
 /*
-void setDateRange( const QDate &min, const QDate &max )
+void setDateRange(const QDate &min, const QDate &max)
 */
 HB_FUNC_STATIC(QDATETIMEEDIT_SETDATERANGE)
 {
@@ -861,7 +861,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETDATERANGE)
 }
 
 /*
-void setDateTimeRange( const QDateTime &min, const QDateTime &max )
+void setDateTimeRange(const QDateTime &min, const QDateTime &max)
 */
 HB_FUNC_STATIC(QDATETIMEEDIT_SETDATETIMERANGE)
 {
@@ -887,7 +887,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETDATETIMERANGE)
 }
 
 /*
-void setDisplayFormat( const QString &format )
+void setDisplayFormat(const QString &format)
 */
 HB_FUNC_STATIC(QDATETIMEEDIT_SETDISPLAYFORMAT)
 {
@@ -913,7 +913,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETDISPLAYFORMAT)
 }
 
 /*
-void setMaximumDate( const QDate &max )
+void setMaximumDate(const QDate &max)
 */
 HB_FUNC_STATIC(QDATETIMEEDIT_SETMAXIMUMDATE)
 {
@@ -939,7 +939,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETMAXIMUMDATE)
 }
 
 /*
-void setMaximumDateTime( const QDateTime &dt )
+void setMaximumDateTime(const QDateTime &dt)
 */
 HB_FUNC_STATIC(QDATETIMEEDIT_SETMAXIMUMDATETIME)
 {
@@ -965,7 +965,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETMAXIMUMDATETIME)
 }
 
 /*
-void setMaximumTime( const QTime &max )
+void setMaximumTime(const QTime &max)
 */
 HB_FUNC_STATIC(QDATETIMEEDIT_SETMAXIMUMTIME)
 {
@@ -991,7 +991,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETMAXIMUMTIME)
 }
 
 /*
-void setMinimumDate( const QDate &min )
+void setMinimumDate(const QDate &min)
 */
 HB_FUNC_STATIC(QDATETIMEEDIT_SETMINIMUMDATE)
 {
@@ -1017,7 +1017,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETMINIMUMDATE)
 }
 
 /*
-void setMinimumDateTime( const QDateTime &dt )
+void setMinimumDateTime(const QDateTime &dt)
 */
 HB_FUNC_STATIC(QDATETIMEEDIT_SETMINIMUMDATETIME)
 {
@@ -1043,7 +1043,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETMINIMUMDATETIME)
 }
 
 /*
-void setMinimumTime( const QTime &min )
+void setMinimumTime(const QTime &min)
 */
 HB_FUNC_STATIC(QDATETIMEEDIT_SETMINIMUMTIME)
 {
@@ -1069,7 +1069,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETMINIMUMTIME)
 }
 
 /*
-void setSelectedSection( QDateTimeEdit::Section section )
+void setSelectedSection(QDateTimeEdit::Section section)
 */
 HB_FUNC_STATIC(QDATETIMEEDIT_SETSELECTEDSECTION)
 {
@@ -1095,7 +1095,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETSELECTEDSECTION)
 }
 
 /*
-void setTimeRange( const QTime &min, const QTime &max )
+void setTimeRange(const QTime &min, const QTime &max)
 */
 HB_FUNC_STATIC(QDATETIMEEDIT_SETTIMERANGE)
 {
@@ -1121,7 +1121,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETTIMERANGE)
 }
 
 /*
-void setTimeSpec( Qt::TimeSpec spec )
+void setTimeSpec(Qt::TimeSpec spec)
 */
 HB_FUNC_STATIC(QDATETIMEEDIT_SETTIMESPEC)
 {
@@ -1222,7 +1222,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CLEAR)
 }
 
 /*
-virtual bool event( QEvent *event )
+virtual bool event(QEvent *event)
 */
 HB_FUNC_STATIC(QDATETIMEEDIT_EVENT)
 {
@@ -1271,7 +1271,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SIZEHINT)
 }
 
 /*
-virtual void stepBy( int steps )
+virtual void stepBy(int steps)
 */
 HB_FUNC_STATIC(QDATETIMEEDIT_STEPBY)
 {
@@ -1297,7 +1297,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_STEPBY)
 }
 
 /*
-void setDate( const QDate &date )
+void setDate(const QDate &date)
 */
 HB_FUNC_STATIC(QDATETIMEEDIT_SETDATE)
 {
@@ -1323,7 +1323,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETDATE)
 }
 
 /*
-void setDateTime( const QDateTime &dateTime )
+void setDateTime(const QDateTime &dateTime)
 */
 HB_FUNC_STATIC(QDATETIMEEDIT_SETDATETIME)
 {
@@ -1349,7 +1349,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETDATETIME)
 }
 
 /*
-void setTime( const QTime &time )
+void setTime(const QTime &time)
 */
 HB_FUNC_STATIC(QDATETIMEEDIT_SETTIME)
 {

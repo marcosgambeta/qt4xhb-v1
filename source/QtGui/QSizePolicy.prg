@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_NEW)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    QSizePolicy( QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical )
+    QSizePolicy(QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical)
     */
     QSizePolicy *obj = new QSizePolicy((QSizePolicy::Policy)hb_parni(1), (QSizePolicy::Policy)hb_parni(2));
     Qt4xHb::returnNewObject(obj, true);
@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_NEW)
   else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
     /*
-    QSizePolicy( QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical, QSizePolicy::ControlType type )
+    QSizePolicy(QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical, QSizePolicy::ControlType type)
     */
     QSizePolicy *obj = new QSizePolicy((QSizePolicy::Policy)hb_parni(1), (QSizePolicy::Policy)hb_parni(2),
                                        (QSizePolicy::ControlType)hb_parni(3));
@@ -257,7 +257,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_HORIZONTALSTRETCH)
 }
 
 /*
-void setControlType( QSizePolicy::ControlType type )
+void setControlType(QSizePolicy::ControlType type)
 */
 HB_FUNC_STATIC(QSIZEPOLICY_SETCONTROLTYPE)
 {
@@ -283,7 +283,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETCONTROLTYPE)
 }
 
 /*
-void setHeightForWidth( bool dependent )
+void setHeightForWidth(bool dependent)
 */
 HB_FUNC_STATIC(QSIZEPOLICY_SETHEIGHTFORWIDTH)
 {
@@ -309,7 +309,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETHEIGHTFORWIDTH)
 }
 
 /*
-void setHorizontalPolicy( QSizePolicy::Policy policy )
+void setHorizontalPolicy(QSizePolicy::Policy policy)
 */
 HB_FUNC_STATIC(QSIZEPOLICY_SETHORIZONTALPOLICY)
 {
@@ -335,7 +335,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETHORIZONTALPOLICY)
 }
 
 /*
-void setHorizontalStretch( uchar stretchFactor )
+void setHorizontalStretch(uchar stretchFactor)
 */
 HB_FUNC_STATIC(QSIZEPOLICY_SETHORIZONTALSTRETCH)
 {
@@ -361,7 +361,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETHORIZONTALSTRETCH)
 }
 
 /*
-void setVerticalPolicy( QSizePolicy::Policy policy )
+void setVerticalPolicy(QSizePolicy::Policy policy)
 */
 HB_FUNC_STATIC(QSIZEPOLICY_SETVERTICALPOLICY)
 {
@@ -387,7 +387,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETVERTICALPOLICY)
 }
 
 /*
-void setVerticalStretch( uchar stretchFactor )
+void setVerticalStretch(uchar stretchFactor)
 */
 HB_FUNC_STATIC(QSIZEPOLICY_SETVERTICALSTRETCH)
 {
@@ -413,7 +413,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETVERTICALSTRETCH)
 }
 
 /*
-void setWidthForHeight( bool dependent )
+void setWidthForHeight(bool dependent)
 */
 HB_FUNC_STATIC(QSIZEPOLICY_SETWIDTHFORHEIGHT)
 {

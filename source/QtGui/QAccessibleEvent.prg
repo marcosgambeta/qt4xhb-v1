@@ -41,7 +41,7 @@ RETURN
 #include "qt4xhb_utils.hpp"
 
     /*
-    QAccessibleEvent( QAccessibleEvent::Type type, int child )
+    QAccessibleEvent(QAccessibleEvent::Type type, int child)
     */
 HB_FUNC_STATIC(QACCESSIBLEEVENT_NEW)
 {
@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QACCESSIBLEEVENT_CHILD)
 }
 
 /*
-void setValue( const QString &text )
+void setValue(const QString &text)
 */
 HB_FUNC_STATIC(QACCESSIBLEEVENT_SETVALUE)
 {

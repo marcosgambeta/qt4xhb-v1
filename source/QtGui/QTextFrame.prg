@@ -53,7 +53,7 @@ RETURN
 #include <QtGui/QTextCursor>
 
     /*
-    QTextFrame( QTextDocument *document )
+    QTextFrame(QTextDocument *document)
     */
 HB_FUNC_STATIC(QTEXTFRAME_NEW)
 {
@@ -283,7 +283,7 @@ HB_FUNC_STATIC(QTEXTFRAME_PARENTFRAME)
 }
 
 /*
-void setFrameFormat( const QTextFrameFormat &format )
+void setFrameFormat(const QTextFrameFormat &format)
 */
 HB_FUNC_STATIC(QTEXTFRAME_SETFRAMEFORMAT)
 {

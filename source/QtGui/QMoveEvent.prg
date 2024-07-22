@@ -42,7 +42,7 @@ RETURN
 #include "qt4xhb_utils.hpp"
 
     /*
-    QMoveEvent( const QPoint &pos, const QPoint &oldPos )
+    QMoveEvent(const QPoint &pos, const QPoint &oldPos)
     */
 HB_FUNC_STATIC(QMOVEEVENT_NEW)
 {

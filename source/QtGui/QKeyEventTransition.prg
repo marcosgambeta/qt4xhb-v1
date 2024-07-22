@@ -49,7 +49,7 @@ HB_FUNC_STATIC(QKEYEVENTTRANSITION_NEW)
   if (ISBETWEEN(0, 1) && (ISQSTATE(1) || HB_ISNIL(1)))
   {
     /*
-    QKeyEventTransition( QState *sourceState = 0 )
+    QKeyEventTransition(QState *sourceState = 0)
     */
     QKeyEventTransition *obj = new QKeyEventTransition(OPQSTATE(1, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -57,7 +57,7 @@ HB_FUNC_STATIC(QKEYEVENTTRANSITION_NEW)
   else if (ISBETWEEN(3, 4) && ISQOBJECT(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISQSTATE(4) || HB_ISNIL(4)))
   {
     /*
-    QKeyEventTransition( QObject *object, QEvent::Type type, int key, QState *sourceState = 0 )
+    QKeyEventTransition(QObject *object, QEvent::Type type, int key, QState *sourceState = 0)
     */
     QKeyEventTransition *obj = new QKeyEventTransition(PQOBJECT(1), (QEvent::Type)hb_parni(2), PINT(3), OPQSTATE(4, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QKEYEVENTTRANSITION_MODIFIERMASK)
 }
 
 /*
-void setKey( int key )
+void setKey(int key)
 */
 HB_FUNC_STATIC(QKEYEVENTTRANSITION_SETKEY)
 {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QKEYEVENTTRANSITION_SETKEY)
 }
 
 /*
-void setModifierMask( Qt::KeyboardModifiers modifierMask )
+void setModifierMask(Qt::KeyboardModifiers modifierMask)
 */
 HB_FUNC_STATIC(QKEYEVENTTRANSITION_SETMODIFIERMASK)
 {

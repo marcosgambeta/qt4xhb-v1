@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_NEW)
   if (ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)))
   {
     /*
-    QGraphicsTextItem( QGraphicsItem *parent = 0 )
+    QGraphicsTextItem(QGraphicsItem *parent = 0)
     */
     QGraphicsTextItem *obj =
         new QGraphicsTextItem(HB_ISNIL(1) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(1)));
@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_NEW)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2)))
   {
     /*
-    QGraphicsTextItem( const QString &text, QGraphicsItem *parent = 0 )
+    QGraphicsTextItem(const QString &text, QGraphicsItem *parent = 0)
     */
     QGraphicsTextItem *obj =
         new QGraphicsTextItem(PQSTRING(1), HB_ISNIL(2) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(2)));
@@ -251,7 +251,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_OPENEXTERNALLINKS)
 }
 
 /*
-void setDefaultTextColor( const QColor &col )
+void setDefaultTextColor(const QColor &col)
 */
 HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETDEFAULTTEXTCOLOR)
 {
@@ -277,7 +277,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETDEFAULTTEXTCOLOR)
 }
 
 /*
-void setDocument( QTextDocument *document )
+void setDocument(QTextDocument *document)
 */
 HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETDOCUMENT)
 {
@@ -303,7 +303,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETDOCUMENT)
 }
 
 /*
-void setFont( const QFont &font )
+void setFont(const QFont &font)
 */
 HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETFONT)
 {
@@ -329,7 +329,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETFONT)
 }
 
 /*
-void setHtml( const QString &text )
+void setHtml(const QString &text)
 */
 HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETHTML)
 {
@@ -355,7 +355,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETHTML)
 }
 
 /*
-void setOpenExternalLinks( bool open )
+void setOpenExternalLinks(bool open)
 */
 HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETOPENEXTERNALLINKS)
 {
@@ -381,7 +381,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETOPENEXTERNALLINKS)
 }
 
 /*
-void setPlainText( const QString &text )
+void setPlainText(const QString &text)
 */
 HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETPLAINTEXT)
 {
@@ -407,7 +407,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETPLAINTEXT)
 }
 
 /*
-void setTabChangesFocus( bool b )
+void setTabChangesFocus(bool b)
 */
 HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETTABCHANGESFOCUS)
 {
@@ -433,7 +433,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETTABCHANGESFOCUS)
 }
 
 /*
-void setTextCursor( const QTextCursor &cursor )
+void setTextCursor(const QTextCursor &cursor)
 */
 HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETTEXTCURSOR)
 {
@@ -459,7 +459,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETTEXTCURSOR)
 }
 
 /*
-void setTextInteractionFlags( Qt::TextInteractionFlags flags )
+void setTextInteractionFlags(Qt::TextInteractionFlags flags)
 */
 HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETTEXTINTERACTIONFLAGS)
 {
@@ -485,7 +485,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETTEXTINTERACTIONFLAGS)
 }
 
 /*
-void setTextWidth( qreal width )
+void setTextWidth(qreal width)
 */
 HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETTEXTWIDTH)
 {
@@ -681,7 +681,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_BOUNDINGRECT)
 }
 
 /*
-virtual bool contains( const QPointF &point ) const
+virtual bool contains(const QPointF &point) const
 */
 HB_FUNC_STATIC(QGRAPHICSTEXTITEM_CONTAINS)
 {
@@ -705,7 +705,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_CONTAINS)
 }
 
 /*
-virtual bool isObscuredBy( const QGraphicsItem *item ) const
+virtual bool isObscuredBy(const QGraphicsItem *item) const
 */
 HB_FUNC_STATIC(QGRAPHICSTEXTITEM_ISOBSCUREDBY)
 {
@@ -754,7 +754,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_OPAQUEAREA)
 }
 
 /*
-virtual void paint( QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget )
+virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 */
 HB_FUNC_STATIC(QGRAPHICSTEXTITEM_PAINT)
 {

@@ -67,7 +67,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QProgressBar( QWidget *parent = 0 )
+    QProgressBar(QWidget *parent = 0)
     */
 HB_FUNC_STATIC(QPROGRESSBAR_NEW)
 {
@@ -269,7 +269,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_ORIENTATION)
 }
 
 /*
-void setAlignment( Qt::Alignment alignment )
+void setAlignment(Qt::Alignment alignment)
 */
 HB_FUNC_STATIC(QPROGRESSBAR_SETALIGNMENT)
 {
@@ -295,7 +295,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_SETALIGNMENT)
 }
 
 /*
-void setFormat( const QString &format )
+void setFormat(const QString &format)
 */
 HB_FUNC_STATIC(QPROGRESSBAR_SETFORMAT)
 {
@@ -321,7 +321,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_SETFORMAT)
 }
 
 /*
-void setInvertedAppearance( bool invert )
+void setInvertedAppearance(bool invert)
 */
 HB_FUNC_STATIC(QPROGRESSBAR_SETINVERTEDAPPEARANCE)
 {
@@ -347,7 +347,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_SETINVERTEDAPPEARANCE)
 }
 
 /*
-void setTextDirection( QProgressBar::Direction textDirection )
+void setTextDirection(QProgressBar::Direction textDirection)
 */
 HB_FUNC_STATIC(QPROGRESSBAR_SETTEXTDIRECTION)
 {
@@ -373,7 +373,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_SETTEXTDIRECTION)
 }
 
 /*
-void setTextVisible( bool visible )
+void setTextVisible(bool visible)
 */
 HB_FUNC_STATIC(QPROGRESSBAR_SETTEXTVISIBLE)
 {
@@ -547,7 +547,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_RESET)
 }
 
 /*
-void setMaximum( int maximum )
+void setMaximum(int maximum)
 */
 HB_FUNC_STATIC(QPROGRESSBAR_SETMAXIMUM)
 {
@@ -573,7 +573,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_SETMAXIMUM)
 }
 
 /*
-void setMinimum( int minimum )
+void setMinimum(int minimum)
 */
 HB_FUNC_STATIC(QPROGRESSBAR_SETMINIMUM)
 {
@@ -599,7 +599,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_SETMINIMUM)
 }
 
 /*
-void setOrientation( Qt::Orientation )
+void setOrientation(Qt::Orientation)
 */
 HB_FUNC_STATIC(QPROGRESSBAR_SETORIENTATION)
 {
@@ -625,7 +625,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_SETORIENTATION)
 }
 
 /*
-void setRange( int minimum, int maximum )
+void setRange(int minimum, int maximum)
 */
 HB_FUNC_STATIC(QPROGRESSBAR_SETRANGE)
 {
@@ -651,7 +651,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_SETRANGE)
 }
 
 /*
-void setValue( int value )
+void setValue(int value)
 */
 HB_FUNC_STATIC(QPROGRESSBAR_SETVALUE)
 {

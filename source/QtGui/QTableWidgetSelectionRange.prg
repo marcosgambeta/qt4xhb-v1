@@ -66,7 +66,7 @@ HB_FUNC_STATIC(QTABLEWIDGETSELECTIONRANGE_NEW)
   else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
-    QTableWidgetSelectionRange( int top, int left, int bottom, int right )
+    QTableWidgetSelectionRange(int top, int left, int bottom, int right)
     */
     QTableWidgetSelectionRange *obj = new QTableWidgetSelectionRange(PINT(1), PINT(2), PINT(3), PINT(4));
     Qt4xHb::returnNewObject(obj, true);
@@ -74,7 +74,7 @@ HB_FUNC_STATIC(QTABLEWIDGETSELECTIONRANGE_NEW)
   else if (ISNUMPAR(1) && ISQTABLEWIDGETSELECTIONRANGE(1))
   {
     /*
-    QTableWidgetSelectionRange( const QTableWidgetSelectionRange &other )
+    QTableWidgetSelectionRange(const QTableWidgetSelectionRange &other)
     */
     QTableWidgetSelectionRange *obj = new QTableWidgetSelectionRange(*PQTABLEWIDGETSELECTIONRANGE(1));
     Qt4xHb::returnNewObject(obj, true);

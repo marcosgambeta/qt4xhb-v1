@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_NEW)
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    QPlatformWindowFormat( QPlatformWindowFormat::FormatOptions options )
+    QPlatformWindowFormat(QPlatformWindowFormat::FormatOptions options)
     */
     QPlatformWindowFormat *obj = new QPlatformWindowFormat((QPlatformWindowFormat::FormatOptions)hb_parni(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_NEW)
   else if (ISNUMPAR(1) && ISQPLATFORMWINDOWFORMAT(1))
   {
     /*
-    QPlatformWindowFormat( const QPlatformWindowFormat &other )
+    QPlatformWindowFormat(const QPlatformWindowFormat &other)
     */
     QPlatformWindowFormat *obj = new QPlatformWindowFormat(*PQPLATFORMWINDOWFORMAT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -503,7 +503,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SAMPLES)
 }
 
 /*
-void setAccum( bool enable )
+void setAccum(bool enable)
 */
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETACCUM)
 {
@@ -529,7 +529,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETACCUM)
 }
 
 /*
-void setAccumBufferSize( int size )
+void setAccumBufferSize(int size)
 */
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETACCUMBUFFERSIZE)
 {
@@ -555,7 +555,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETACCUMBUFFERSIZE)
 }
 
 /*
-void setAlpha( bool enable )
+void setAlpha(bool enable)
 */
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETALPHA)
 {
@@ -581,7 +581,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETALPHA)
 }
 
 /*
-void setAlphaBufferSize( int size )
+void setAlphaBufferSize(int size)
 */
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETALPHABUFFERSIZE)
 {
@@ -607,7 +607,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETALPHABUFFERSIZE)
 }
 
 /*
-void setBlueBufferSize( int size )
+void setBlueBufferSize(int size)
 */
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETBLUEBUFFERSIZE)
 {
@@ -633,7 +633,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETBLUEBUFFERSIZE)
 }
 
 /*
-void setDepth( bool enable )
+void setDepth(bool enable)
 */
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETDEPTH)
 {
@@ -659,7 +659,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETDEPTH)
 }
 
 /*
-void setDepthBufferSize( int size )
+void setDepthBufferSize(int size)
 */
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETDEPTHBUFFERSIZE)
 {
@@ -685,7 +685,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETDEPTHBUFFERSIZE)
 }
 
 /*
-void setDirectRendering( bool enable )
+void setDirectRendering(bool enable)
 */
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETDIRECTRENDERING)
 {
@@ -711,7 +711,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETDIRECTRENDERING)
 }
 
 /*
-void setDoubleBuffer( bool enable )
+void setDoubleBuffer(bool enable)
 */
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETDOUBLEBUFFER)
 {
@@ -737,7 +737,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETDOUBLEBUFFER)
 }
 
 /*
-void setGreenBufferSize( int size )
+void setGreenBufferSize(int size)
 */
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETGREENBUFFERSIZE)
 {
@@ -763,7 +763,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETGREENBUFFERSIZE)
 }
 
 /*
-void setOption( QPlatformWindowFormat::FormatOptions opt )
+void setOption(QPlatformWindowFormat::FormatOptions opt)
 */
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETOPTION)
 {
@@ -789,7 +789,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETOPTION)
 }
 
 /*
-void setRedBufferSize( int size )
+void setRedBufferSize(int size)
 */
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETREDBUFFERSIZE)
 {
@@ -815,7 +815,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETREDBUFFERSIZE)
 }
 
 /*
-void setRgba( bool enable )
+void setRgba(bool enable)
 */
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETRGBA)
 {
@@ -841,7 +841,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETRGBA)
 }
 
 /*
-void setSampleBuffers( bool enable )
+void setSampleBuffers(bool enable)
 */
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSAMPLEBUFFERS)
 {
@@ -867,7 +867,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSAMPLEBUFFERS)
 }
 
 /*
-void setSamples( int numSamples )
+void setSamples(int numSamples)
 */
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSAMPLES)
 {
@@ -893,7 +893,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSAMPLES)
 }
 
 /*
-void setSharedContext( QPlatformGLContext *context )
+void setSharedContext(QPlatformGLContext *context)
 */
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSHAREDCONTEXT)
 {
@@ -919,7 +919,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSHAREDCONTEXT)
 }
 
 /*
-void setStencil( bool enable )
+void setStencil(bool enable)
 */
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSTENCIL)
 {
@@ -945,7 +945,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSTENCIL)
 }
 
 /*
-void setStencilBufferSize( int size )
+void setStencilBufferSize(int size)
 */
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSTENCILBUFFERSIZE)
 {
@@ -971,7 +971,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSTENCILBUFFERSIZE)
 }
 
 /*
-void setStereo( bool enable )
+void setStereo(bool enable)
 */
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSTEREO)
 {
@@ -997,7 +997,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSTEREO)
 }
 
 /*
-void setSwapInterval( int interval )
+void setSwapInterval(int interval)
 */
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSWAPINTERVAL)
 {
@@ -1023,7 +1023,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSWAPINTERVAL)
 }
 
 /*
-void setWindowApi( QPlatformWindowFormat::WindowApi api )
+void setWindowApi(QPlatformWindowFormat::WindowApi api)
 */
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETWINDOWAPI)
 {
@@ -1049,7 +1049,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETWINDOWAPI)
 }
 
 /*
-void setWindowSurface( bool enable )
+void setWindowSurface(bool enable)
 */
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETWINDOWSURFACE)
 {
@@ -1196,7 +1196,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SWAPINTERVAL)
 }
 
 /*
-bool testOption( QPlatformWindowFormat::FormatOptions opt ) const
+bool testOption(QPlatformWindowFormat::FormatOptions opt) const
 */
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_TESTOPTION)
 {
@@ -1264,7 +1264,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_DEFAULTFORMAT)
 }
 
 /*
-static void setDefaultFormat( const QPlatformWindowFormat &f )
+static void setDefaultFormat(const QPlatformWindowFormat &f)
 */
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETDEFAULTFORMAT)
 {

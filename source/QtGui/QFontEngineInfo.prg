@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QFONTENGINEINFO_NEW)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QFontEngineInfo( const QString &family )
+    QFontEngineInfo(const QString &family)
     */
     QFontEngineInfo *obj = new QFontEngineInfo(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QFONTENGINEINFO_NEW)
   else if (ISNUMPAR(1) && ISQFONTENGINEINFO(1))
   {
     /*
-    QFontEngineInfo( const QFontEngineInfo &other )
+    QFontEngineInfo(const QFontEngineInfo &other)
     */
     QFontEngineInfo *obj = new QFontEngineInfo(*PQFONTENGINEINFO(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -154,7 +154,7 @@ HB_FUNC_STATIC(QFONTENGINEINFO_PIXELSIZE)
 }
 
 /*
-void setFamily( const QString &name )
+void setFamily(const QString &name)
 */
 HB_FUNC_STATIC(QFONTENGINEINFO_SETFAMILY)
 {
@@ -180,7 +180,7 @@ HB_FUNC_STATIC(QFONTENGINEINFO_SETFAMILY)
 }
 
 /*
-void setPixelSize( qreal size )
+void setPixelSize(qreal size)
 */
 HB_FUNC_STATIC(QFONTENGINEINFO_SETPIXELSIZE)
 {
@@ -206,7 +206,7 @@ HB_FUNC_STATIC(QFONTENGINEINFO_SETPIXELSIZE)
 }
 
 /*
-void setStyle( QFont::Style style )
+void setStyle(QFont::Style style)
 */
 HB_FUNC_STATIC(QFONTENGINEINFO_SETSTYLE)
 {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC(QFONTENGINEINFO_SETSTYLE)
 }
 
 /*
-void setWeight( int weight )
+void setWeight(int weight)
 */
 HB_FUNC_STATIC(QFONTENGINEINFO_SETWEIGHT)
 {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC(QFONTENGINEINFO_SETWEIGHT)
 }
 
 /*
-void setWritingSystems( const QList<QFontDatabase::WritingSystem> &writingSystems )
+void setWritingSystems(const QList<QFontDatabase::WritingSystem> &writingSystems)
 */
 HB_FUNC_STATIC(QFONTENGINEINFO_SETWRITINGSYSTEMS)
 {

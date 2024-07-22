@@ -52,7 +52,7 @@ RETURN
 #include "qt4xhb_utils.hpp"
 
     /*
-    QWidgetItem( QWidget *widget )
+    QWidgetItem(QWidget *widget)
     */
 HB_FUNC_STATIC(QWIDGETITEM_NEW)
 {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC(QWIDGETITEM_HASHEIGHTFORWIDTH)
 }
 
 /*
-virtual int heightForWidth( int w ) const
+virtual int heightForWidth(int w) const
 */
 HB_FUNC_STATIC(QWIDGETITEM_HEIGHTFORWIDTH)
 {
@@ -255,7 +255,7 @@ HB_FUNC_STATIC(QWIDGETITEM_MINIMUMSIZE)
 }
 
 /*
-virtual void setGeometry( const QRect &rect )
+virtual void setGeometry(const QRect &rect)
 */
 HB_FUNC_STATIC(QWIDGETITEM_SETGEOMETRY)
 {

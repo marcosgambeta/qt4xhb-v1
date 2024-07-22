@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QITEMEDITORFACTORY_DELETE)
 }
 
 /*
-virtual QWidget *createEditor( QVariant::Type type, QWidget *parent ) const
+virtual QWidget *createEditor(QVariant::Type type, QWidget *parent) const
 */
 HB_FUNC_STATIC(QITEMEDITORFACTORY_CREATEEDITOR)
 {
@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QITEMEDITORFACTORY_CREATEEDITOR)
 }
 
 /*
-void registerEditor( QVariant::Type type, QItemEditorCreatorBase *creator )
+void registerEditor(QVariant::Type type, QItemEditorCreatorBase *creator)
 */
 HB_FUNC_STATIC(QITEMEDITORFACTORY_REGISTEREDITOR)
 {
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QITEMEDITORFACTORY_REGISTEREDITOR)
 }
 
 /*
-virtual QByteArray valuePropertyName( QVariant::Type type ) const
+virtual QByteArray valuePropertyName(QVariant::Type type) const
 */
 HB_FUNC_STATIC(QITEMEDITORFACTORY_VALUEPROPERTYNAME)
 {
@@ -183,7 +183,7 @@ HB_FUNC_STATIC(QITEMEDITORFACTORY_DEFAULTFACTORY)
 }
 
 /*
-static void setDefaultFactory( QItemEditorFactory *factory )
+static void setDefaultFactory(QItemEditorFactory *factory)
 */
 HB_FUNC_STATIC(QITEMEDITORFACTORY_SETDEFAULTFACTORY)
 {

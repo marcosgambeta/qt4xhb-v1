@@ -65,7 +65,7 @@ RETURN
 #include <QtGui/QPixmap>
 
     /*
-    void clear( QClipboard::Mode mode = QClipboard::Clipboard )
+    void clear(QClipboard::Mode mode = QClipboard::Clipboard)
     */
 HB_FUNC_STATIC(QCLIPBOARD_CLEAR)
 {
@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QCLIPBOARD_CLEAR)
 }
 
 /*
-QImage image( QClipboard::Mode mode = QClipboard::Clipboard ) const
+QImage image(QClipboard::Mode mode = QClipboard::Clipboard) const
 */
 HB_FUNC_STATIC(QCLIPBOARD_IMAGE)
 {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QCLIPBOARD_IMAGE)
 }
 
 /*
-const QMimeData *mimeData( QClipboard::Mode mode = QClipboard::Clipboard ) const
+const QMimeData *mimeData(QClipboard::Mode mode = QClipboard::Clipboard) const
 */
 HB_FUNC_STATIC(QCLIPBOARD_MIMEDATA)
 {
@@ -215,7 +215,7 @@ HB_FUNC_STATIC(QCLIPBOARD_OWNSSELECTION)
 }
 
 /*
-QPixmap pixmap( QClipboard::Mode mode = QClipboard::Clipboard ) const
+QPixmap pixmap(QClipboard::Mode mode = QClipboard::Clipboard) const
 */
 HB_FUNC_STATIC(QCLIPBOARD_PIXMAP)
 {
@@ -241,7 +241,7 @@ HB_FUNC_STATIC(QCLIPBOARD_PIXMAP)
 }
 
 /*
-void setImage( const QImage &image, QClipboard::Mode mode = QClipboard::Clipboard )
+void setImage(const QImage &image, QClipboard::Mode mode = QClipboard::Clipboard)
 */
 HB_FUNC_STATIC(QCLIPBOARD_SETIMAGE)
 {
@@ -267,7 +267,7 @@ HB_FUNC_STATIC(QCLIPBOARD_SETIMAGE)
 }
 
 /*
-void setMimeData( QMimeData *src, QClipboard::Mode mode = QClipboard::Clipboard )
+void setMimeData(QMimeData *src, QClipboard::Mode mode = QClipboard::Clipboard)
 */
 HB_FUNC_STATIC(QCLIPBOARD_SETMIMEDATA)
 {
@@ -294,7 +294,7 @@ HB_FUNC_STATIC(QCLIPBOARD_SETMIMEDATA)
 }
 
 /*
-void setPixmap( const QPixmap &pixmap, QClipboard::Mode mode = QClipboard::Clipboard )
+void setPixmap(const QPixmap &pixmap, QClipboard::Mode mode = QClipboard::Clipboard)
 */
 HB_FUNC_STATIC(QCLIPBOARD_SETPIXMAP)
 {
@@ -321,7 +321,7 @@ HB_FUNC_STATIC(QCLIPBOARD_SETPIXMAP)
 }
 
 /*
-void setText( const QString &text, QClipboard::Mode mode = QClipboard::Clipboard )
+void setText(const QString &text, QClipboard::Mode mode = QClipboard::Clipboard)
 */
 HB_FUNC_STATIC(QCLIPBOARD_SETTEXT)
 {
@@ -399,7 +399,7 @@ HB_FUNC_STATIC(QCLIPBOARD_TEXT)
   if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
     /*
-    QString text( QClipboard::Mode mode = QClipboard::Clipboard ) const
+    QString text(QClipboard::Mode mode = QClipboard::Clipboard) const
     */
     QClipboard *obj = qobject_cast<QClipboard *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -411,7 +411,7 @@ HB_FUNC_STATIC(QCLIPBOARD_TEXT)
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QString text( QString &subtype, QClipboard::Mode mode = QClipboard::Clipboard ) const
+    QString text(QString &subtype, QClipboard::Mode mode = QClipboard::Clipboard) const
     */
     QClipboard *obj = qobject_cast<QClipboard *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

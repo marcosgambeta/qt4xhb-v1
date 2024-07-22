@@ -248,7 +248,7 @@ HB_FUNC_STATIC(QTEXTINLINEOBJECT_RECT)
 }
 
 /*
-void setAscent( qreal a )
+void setAscent(qreal a)
 */
 HB_FUNC_STATIC(QTEXTINLINEOBJECT_SETASCENT)
 {
@@ -274,7 +274,7 @@ HB_FUNC_STATIC(QTEXTINLINEOBJECT_SETASCENT)
 }
 
 /*
-void setDescent( qreal d )
+void setDescent(qreal d)
 */
 HB_FUNC_STATIC(QTEXTINLINEOBJECT_SETDESCENT)
 {
@@ -300,7 +300,7 @@ HB_FUNC_STATIC(QTEXTINLINEOBJECT_SETDESCENT)
 }
 
 /*
-void setWidth( qreal w )
+void setWidth(qreal w)
 */
 HB_FUNC_STATIC(QTEXTINLINEOBJECT_SETWIDTH)
 {

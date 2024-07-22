@@ -41,7 +41,7 @@ RETURN
 #include "qt4xhb_utils.hpp"
 
     /*
-    QInputEvent( QEvent::Type type, Qt::KeyboardModifiers modifiers = Qt::NoModifier )
+    QInputEvent(QEvent::Type type, Qt::KeyboardModifiers modifiers = Qt::NoModifier)
     */
 HB_FUNC_STATIC(QINPUTEVENT_NEW)
 {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QINPUTEVENT_MODIFIERS)
 }
 
 /*
-void setModifiers( Qt::KeyboardModifiers amodifiers )
+void setModifiers(Qt::KeyboardModifiers amodifiers)
 */
 HB_FUNC_STATIC(QINPUTEVENT_SETMODIFIERS)
 {

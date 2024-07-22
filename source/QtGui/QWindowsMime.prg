@@ -47,7 +47,7 @@ RETURN
 #include "qt4xhb_utils.hpp"
 
     /*
-    static int registerMimeType( const QString &mime )
+    static int registerMimeType(const QString &mime)
     */
 HB_FUNC_STATIC(QWINDOWSMIME_REGISTERMIMETYPE)
 {
