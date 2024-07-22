@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_NEW)
   else if (ISNUMPAR(1) && ISQGLCONTEXT(1))
   {
     /*
-    QGLFunctions( const QGLContext * context )
+    QGLFunctions( const QGLContext *context )
     */
     QGLFunctions *obj = new QGLFunctions(PQGLCONTEXT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -198,7 +198,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLATTACHSHADER)
 }
 
 /*
-void glBindAttribLocation( GLuint program, GLuint index, const char * name )
+void glBindAttribLocation( GLuint program, GLuint index, const char *name )
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLBINDATTRIBLOCATION)
 {
@@ -483,7 +483,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLCOMPILESHADER)
 
 /*
 void glCompressedTexImage2D( GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint
-border, GLsizei imageSize, const void * data )
+border, GLsizei imageSize, const void *data )
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLCOMPRESSEDTEXIMAGE2D)
 {
@@ -512,7 +512,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLCOMPRESSEDTEXIMAGE2D)
 
 /*
 void glCompressedTexSubImage2D( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height,
-GLenum format, GLsizei imageSize, const void * data )
+GLenum format, GLsizei imageSize, const void *data )
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLCOMPRESSEDTEXSUBIMAGE2D)
 {
@@ -822,7 +822,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLGENERATEMIPMAP)
 }
 
 /*
-int glGetAttribLocation( GLuint program, const char * name )
+int glGetAttribLocation( GLuint program, const char *name )
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLGETATTRIBLOCATION)
 {
@@ -846,7 +846,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLGETATTRIBLOCATION)
 }
 
 /*
-int glGetUniformLocation( GLuint program, const char * name )
+int glGetUniformLocation( GLuint program, const char *name )
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLGETUNIFORMLOCATION)
 {
@@ -1536,7 +1536,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIB4F)
 }
 
 /*
-void glVertexAttribPointer( GLuint indx, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const void * ptr
+void glVertexAttribPointer( GLuint indx, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const void *ptr
 )
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIBPOINTER)
@@ -1588,7 +1588,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_HASOPENGLFEATURE)
 }
 
 /*
-void initializeGLFunctions( const QGLContext * context = 0 )
+void initializeGLFunctions( const QGLContext *context = 0 )
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_INITIALIZEGLFUNCTIONS)
 {

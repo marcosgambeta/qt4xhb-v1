@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_NEW)
   if (ISBETWEEN(1, 3) && ISQSIZE(1) && (ISQGLFORMAT(2) || HB_ISNIL(2)) && (ISQGLWIDGET(3) || HB_ISNIL(3)))
   {
     /*
-    QGLPixelBuffer( const QSize &size, const QGLFormat &format = QGLFormat::defaultFormat(), QGLWidget * shareWidget =
+    QGLPixelBuffer( const QSize &size, const QGLFormat &format = QGLFormat::defaultFormat(), QGLWidget *shareWidget =
     0 )
     */
     QGLPixelBuffer *obj = new QGLPixelBuffer(
@@ -458,7 +458,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_UPDATEDYNAMICTEXTURE)
 }
 
 /*
-virtual QPaintEngine * paintEngine() const
+virtual QPaintEngine *paintEngine() const
 */
 HB_FUNC_STATIC(QGLPIXELBUFFER_PAINTENGINE)
 {

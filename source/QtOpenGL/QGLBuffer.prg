@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QGLBUFFER_ALLOCATE)
   if (ISNUMPAR(2) && HB_ISPOINTER(1) && HB_ISNUM(2))
   {
     /*
-    void allocate( const void * data, int count )
+    void allocate( const void *data, int count )
     */
     QGLBuffer *obj = static_cast<QGLBuffer *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -268,7 +268,7 @@ HB_FUNC_STATIC(QGLBUFFER_ISCREATED)
 }
 
 /*
-void * map( QGLBuffer::Access access )
+void *map( QGLBuffer::Access access )
 */
 HB_FUNC_STATIC(QGLBUFFER_MAP)
 {
@@ -292,7 +292,7 @@ HB_FUNC_STATIC(QGLBUFFER_MAP)
 }
 
 /*
-bool read( int offset, void * data, int count )
+bool read( int offset, void *data, int count )
 */
 HB_FUNC_STATIC(QGLBUFFER_READ)
 {

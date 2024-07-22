@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QGLWIDGET_NEW)
       (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QGLWidget( QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
+    QGLWidget( QWidget *parent = 0, const QGLWidget *shareWidget = 0, Qt::WindowFlags f = 0 )
     */
     QGLWidget *obj = new QGLWidget(OPQWIDGET(1, 0), OPQGLWIDGET(2, 0),
                                    HB_ISNIL(3) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(3));
@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QGLWIDGET_NEW)
            (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
-    QGLWidget( QGLContext * context, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
+    QGLWidget( QGLContext *context, QWidget *parent = 0, const QGLWidget *shareWidget = 0, Qt::WindowFlags f = 0 )
     */
     QGLWidget *obj = new QGLWidget(PQGLCONTEXT(1), OPQWIDGET(2, 0), OPQGLWIDGET(3, 0),
                                    HB_ISNIL(4) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(4));
@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QGLWIDGET_NEW)
            (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     /*
-    QGLWidget( const QGLFormat &format, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0
+    QGLWidget( const QGLFormat &format, QWidget *parent = 0, const QGLWidget *shareWidget = 0, Qt::WindowFlags f = 0
     )
     */
     QGLWidget *obj = new QGLWidget(*PQGLFORMAT(1), OPQWIDGET(2, 0), OPQGLWIDGET(3, 0),
@@ -220,7 +220,7 @@ HB_FUNC_STATIC(QGLWIDGET_COLORMAP)
 }
 
 /*
-const QGLContext * context() const
+const QGLContext *context() const
 */
 HB_FUNC_STATIC(QGLWIDGET_CONTEXT)
 {
@@ -507,7 +507,7 @@ HB_FUNC_STATIC(QGLWIDGET_MAKEOVERLAYCURRENT)
 }
 
 /*
-const QGLContext * overlayContext() const
+const QGLContext *overlayContext() const
 */
 HB_FUNC_STATIC(QGLWIDGET_OVERLAYCONTEXT)
 {

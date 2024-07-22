@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QGLCONTEXT_BINDTEXTURE)
 }
 
 /*
-virtual bool create( const QGLContext * shareContext = 0 )
+virtual bool create( const QGLContext *shareContext = 0 )
 */
 HB_FUNC_STATIC(QGLCONTEXT_CREATE)
 {
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QGLCONTEXT_DELETETEXTURE)
 }
 
 /*
-QPaintDevice * device() const
+QPaintDevice *device() const
 */
 HB_FUNC_STATIC(QGLCONTEXT_DEVICE)
 {
@@ -333,7 +333,7 @@ HB_FUNC_STATIC(QGLCONTEXT_FORMAT)
 }
 
 /*
-void * getProcAddress( const QString &proc ) const
+void *getProcAddress( const QString &proc ) const
 */
 HB_FUNC_STATIC(QGLCONTEXT_GETPROCADDRESS)
 {
@@ -559,7 +559,7 @@ HB_FUNC_STATIC(QGLCONTEXT_SWAPBUFFERS)
 }
 
 /*
-static bool areSharing( const QGLContext * context1, const QGLContext * context2 )
+static bool areSharing( const QGLContext *context1, const QGLContext *context2 )
 */
 HB_FUNC_STATIC(QGLCONTEXT_ARESHARING)
 {
@@ -578,7 +578,7 @@ HB_FUNC_STATIC(QGLCONTEXT_ARESHARING)
 }
 
 /*
-static const QGLContext * currentContext()
+static const QGLContext *currentContext()
 */
 HB_FUNC_STATIC(QGLCONTEXT_CURRENTCONTEXT)
 {
