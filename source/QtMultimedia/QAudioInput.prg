@@ -66,7 +66,7 @@ HB_FUNC_STATIC(QAUDIOINPUT_NEW)
   if (ISBETWEEN(0, 2) && (ISQAUDIOFORMAT(1) || HB_ISNIL(1)) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QAudioInput( const QAudioFormat &format = QAudioFormat(), QObject *parent = 0 )
+    QAudioInput(const QAudioFormat &format = QAudioFormat(), QObject *parent = 0)
     */
     QAudioInput *obj = new QAudioInput(
         HB_ISNIL(1) ? QAudioFormat() : *static_cast<QAudioFormat *>(Qt4xHb::itemGetPtr(1)), OPQOBJECT(2, 0));
@@ -76,8 +76,8 @@ HB_FUNC_STATIC(QAUDIOINPUT_NEW)
            (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
-    QAudioInput( const QAudioDeviceInfo &audioDevice, const QAudioFormat &format = QAudioFormat(), QObject *parent =
-    0 )
+    QAudioInput(const QAudioDeviceInfo &audioDevice, const QAudioFormat &format = QAudioFormat(), QObject *parent =
+    0)
     */
     QAudioInput *obj = new QAudioInput(
         *PQAUDIODEVICEINFO(1), HB_ISNIL(2) ? QAudioFormat() : *static_cast<QAudioFormat *>(Qt4xHb::itemGetPtr(2)),
@@ -354,7 +354,7 @@ HB_FUNC_STATIC(QAUDIOINPUT_RESUME)
 }
 
 /*
-void setBufferSize( int value )
+void setBufferSize(int value)
 */
 HB_FUNC_STATIC(QAUDIOINPUT_SETBUFFERSIZE)
 {
@@ -380,7 +380,7 @@ HB_FUNC_STATIC(QAUDIOINPUT_SETBUFFERSIZE)
 }
 
 /*
-void setNotifyInterval( int ms )
+void setNotifyInterval(int ms)
 */
 HB_FUNC_STATIC(QAUDIOINPUT_SETNOTIFYINTERVAL)
 {
@@ -410,7 +410,7 @@ HB_FUNC_STATIC(QAUDIOINPUT_START)
   if (ISNUMPAR(1) && ISQIODEVICE(1))
   {
     /*
-    void start( QIODevice *device )
+    void start(QIODevice *device)
     */
     QAudioInput *obj = qobject_cast<QAudioInput *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

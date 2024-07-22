@@ -77,7 +77,7 @@ HB_FUNC_STATIC(QAUDIODEVICEINFO_NEW)
   else if (ISNUMPAR(1) && ISQAUDIODEVICEINFO(1))
   {
     /*
-    QAudioDeviceInfo( const QAudioDeviceInfo &other )
+    QAudioDeviceInfo(const QAudioDeviceInfo &other)
     */
     QAudioDeviceInfo *obj = new QAudioDeviceInfo(*PQAUDIODEVICEINFO(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QAUDIODEVICEINFO_DEVICENAME)
 }
 
 /*
-bool isFormatSupported( const QAudioFormat &settings ) const
+bool isFormatSupported(const QAudioFormat &settings) const
 */
 HB_FUNC_STATIC(QAUDIODEVICEINFO_ISFORMATSUPPORTED)
 {
@@ -177,7 +177,7 @@ HB_FUNC_STATIC(QAUDIODEVICEINFO_ISNULL)
 }
 
 /*
-QAudioFormat nearestFormat( const QAudioFormat &settings ) const
+QAudioFormat nearestFormat(const QAudioFormat &settings) const
 */
 HB_FUNC_STATIC(QAUDIODEVICEINFO_NEARESTFORMAT)
 {
@@ -442,7 +442,7 @@ HB_FUNC_STATIC(QAUDIODEVICEINFO_SUPPORTEDCODECS)
 }
 
 /*
-static QList<QAudioDeviceInfo> availableDevices( QAudio::Mode mode )
+static QList<QAudioDeviceInfo> availableDevices(QAudio::Mode mode)
 */
 HB_FUNC_STATIC(QAUDIODEVICEINFO_AVAILABLEDEVICES)
 {

@@ -87,8 +87,8 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_NEW)
   else if (ISBETWEEN(2, 3) && ISQSIZE(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    QVideoSurfaceFormat( const QSize &size, QVideoFrame::PixelFormat format, QAbstractVideoBuffer::HandleType type =
-    QAbstractVideoBuffer::NoHandle )
+    QVideoSurfaceFormat(const QSize &size, QVideoFrame::PixelFormat format, QAbstractVideoBuffer::HandleType type =
+    QAbstractVideoBuffer::NoHandle)
     */
     QVideoSurfaceFormat *obj =
         new QVideoSurfaceFormat(*PQSIZE(1), (QVideoFrame::PixelFormat)hb_parni(2),
@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_NEW)
   else if (ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1))
   {
     /*
-    QVideoSurfaceFormat( const QVideoSurfaceFormat &other )
+    QVideoSurfaceFormat(const QVideoSurfaceFormat &other)
     */
     QVideoSurfaceFormat *obj = new QVideoSurfaceFormat(*PQVIDEOSURFACEFORMAT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -321,7 +321,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_PIXELFORMAT)
 }
 
 /*
-QVariant property( const char *name ) const
+QVariant property(const char *name) const
 */
 HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_PROPERTY)
 {
@@ -421,7 +421,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SCANLINEDIRECTION)
 }
 
 /*
-void setFrameRate( qreal rate )
+void setFrameRate(qreal rate)
 */
 HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETFRAMERATE)
 {
@@ -451,7 +451,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETFRAMESIZE)
   if (ISNUMPAR(1) && ISQSIZE(1))
   {
     /*
-    void setFrameSize( const QSize &size )
+    void setFrameSize(const QSize &size)
     */
     QVideoSurfaceFormat *obj = static_cast<QVideoSurfaceFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -465,7 +465,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETFRAMESIZE)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    void setFrameSize( int width, int height )
+    void setFrameSize(int width, int height)
     */
     QVideoSurfaceFormat *obj = static_cast<QVideoSurfaceFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -487,7 +487,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETPIXELASPECTRATIO)
   if (ISNUMPAR(1) && ISQSIZE(1))
   {
     /*
-    void setPixelAspectRatio( const QSize &ratio )
+    void setPixelAspectRatio(const QSize &ratio)
     */
     QVideoSurfaceFormat *obj = static_cast<QVideoSurfaceFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -501,7 +501,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETPIXELASPECTRATIO)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    void setPixelAspectRatio( int horizontal, int vertical )
+    void setPixelAspectRatio(int horizontal, int vertical)
     */
     QVideoSurfaceFormat *obj = static_cast<QVideoSurfaceFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -519,7 +519,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETPIXELASPECTRATIO)
 }
 
 /*
-void setProperty( const char *name, const QVariant &value )
+void setProperty(const char *name, const QVariant &value)
 */
 HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETPROPERTY)
 {
@@ -545,7 +545,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETPROPERTY)
 }
 
 /*
-void setScanLineDirection( QVideoSurfaceFormat::Direction direction )
+void setScanLineDirection(QVideoSurfaceFormat::Direction direction)
 */
 HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETSCANLINEDIRECTION)
 {
@@ -571,7 +571,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETSCANLINEDIRECTION)
 }
 
 /*
-void setViewport( const QRect &viewport )
+void setViewport(const QRect &viewport)
 */
 HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETVIEWPORT)
 {
@@ -597,7 +597,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETVIEWPORT)
 }
 
 /*
-void setYCbCrColorSpace( QVideoSurfaceFormat::YCbCrColorSpace space )
+void setYCbCrColorSpace(QVideoSurfaceFormat::YCbCrColorSpace space)
 */
 HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETYCBCRCOLORSPACE)
 {

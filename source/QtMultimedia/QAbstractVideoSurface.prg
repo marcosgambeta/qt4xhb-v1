@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ISACTIVE)
 }
 
 /*
-virtual bool isFormatSupported( const QVideoSurfaceFormat &format ) const
+virtual bool isFormatSupported(const QVideoSurfaceFormat &format) const
 */
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ISFORMATSUPPORTED)
 {
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ISFORMATSUPPORTED)
 }
 
 /*
-virtual QVideoSurfaceFormat nearestFormat( const QVideoSurfaceFormat &format ) const
+virtual QVideoSurfaceFormat nearestFormat(const QVideoSurfaceFormat &format) const
 */
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_NEARESTFORMAT)
 {
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_NEARESTFORMAT)
 }
 
 /*
-virtual bool present( const QVideoFrame &frame ) = 0
+virtual bool present(const QVideoFrame &frame) = 0
 */
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_PRESENT)
 {
@@ -195,7 +195,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_PRESENT)
 }
 
 /*
-virtual bool start( const QVideoSurfaceFormat &format )
+virtual bool start(const QVideoSurfaceFormat &format)
 */
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_START)
 {
@@ -245,8 +245,8 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_STOP)
 }
 
 /*
-virtual QList<QVideoFrame::PixelFormat> supportedPixelFormats( QAbstractVideoBuffer::HandleType type =
-QAbstractVideoBuffer::NoHandle ) const = 0
+virtual QList<QVideoFrame::PixelFormat> supportedPixelFormats(QAbstractVideoBuffer::HandleType type =
+QAbstractVideoBuffer::NoHandle) const = 0
 */
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_SUPPORTEDPIXELFORMATS)
 {
