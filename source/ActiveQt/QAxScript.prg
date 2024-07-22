@@ -58,7 +58,7 @@ RETURN
 #include <QtCore/QStringList>
 
     /*
-    QAxScript( const QString &name, QAxScriptManager * manager )
+    QAxScript( const QString &name, QAxScriptManager *manager )
     */
 HB_FUNC_STATIC(QAXSCRIPT_NEW)
 {
@@ -211,7 +211,7 @@ HB_FUNC_STATIC(QAXSCRIPT_SCRIPTCODE)
 }
 
 /*
-QAxScriptEngine * scriptEngine() const
+QAxScriptEngine *scriptEngine() const
 */
 HB_FUNC_STATIC(QAXSCRIPT_SCRIPTENGINE)
 {

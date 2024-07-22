@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QAXFACTORY_CLASSID)
 }
 
 /*
-virtual QObject * createObject( const QString &key ) = 0
+virtual QObject *createObject( const QString &key ) = 0
 */
 HB_FUNC_STATIC(QAXFACTORY_CREATEOBJECT)
 {
@@ -303,7 +303,7 @@ HB_FUNC_STATIC(QAXFACTORY_ISSERVICE)
 }
 
 /*
-virtual const QMetaObject * metaObject( const QString &key ) const = 0
+virtual const QMetaObject *metaObject( const QString &key ) const = 0
 */
 HB_FUNC_STATIC(QAXFACTORY_METAOBJECT)
 {
@@ -328,7 +328,7 @@ HB_FUNC_STATIC(QAXFACTORY_METAOBJECT)
 }
 
 /*
-virtual void registerClass( const QString &key, QSettings * settings ) const
+virtual void registerClass( const QString &key, QSettings *settings ) const
 */
 HB_FUNC_STATIC(QAXFACTORY_REGISTERCLASS)
 {
@@ -403,7 +403,7 @@ HB_FUNC_STATIC(QAXFACTORY_TYPELIBID)
 }
 
 /*
-virtual void unregisterClass( const QString &key, QSettings * settings ) const
+virtual void unregisterClass( const QString &key, QSettings *settings ) const
 */
 HB_FUNC_STATIC(QAXFACTORY_UNREGISTERCLASS)
 {
@@ -472,7 +472,7 @@ HB_FUNC_STATIC(QAXFACTORY_ISSERVER)
 }
 
 /*
-static bool registerActiveObject( QObject * object )
+static bool registerActiveObject( QObject *object )
 */
 HB_FUNC_STATIC(QAXFACTORY_REGISTERACTIVEOBJECT)
 {
