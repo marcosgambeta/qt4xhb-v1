@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_NEW)
   else if (ISNUMPAR(3) && ISQABSTRACTVIDEOBUFFER(1) && ISQSIZE(2) && HB_ISNUM(3))
   {
     /*
-    QVideoFrame( QAbstractVideoBuffer * buffer, const QSize &size, QVideoFrame::PixelFormat format )
+    QVideoFrame( QAbstractVideoBuffer *buffer, const QSize &size, QVideoFrame::PixelFormat format )
     */
     QVideoFrame *obj = new QVideoFrame(PQABSTRACTVIDEOBUFFER(1), *PQSIZE(2), (QVideoFrame::PixelFormat)hb_parni(3));
     Qt4xHb::returnNewObject(obj, true);

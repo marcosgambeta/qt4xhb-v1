@@ -321,7 +321,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_PIXELFORMAT)
 }
 
 /*
-QVariant property( const char * name ) const
+QVariant property( const char *name ) const
 */
 HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_PROPERTY)
 {
@@ -519,7 +519,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETPIXELASPECTRATIO)
 }
 
 /*
-void setProperty( const char * name, const QVariant &value )
+void setProperty( const char *name, const QVariant &value )
 */
 HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETPROPERTY)
 {
