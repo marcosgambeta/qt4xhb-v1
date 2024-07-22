@@ -241,9 +241,9 @@ HB_FUNC_STATIC(QAXBASE_DYNAMICCALL)
       (ISQVARIANT(7) || HB_ISNIL(7)) && (ISQVARIANT(8) || HB_ISNIL(8)) && (ISQVARIANT(9) || HB_ISNIL(9)))
   {
     /*
-    QVariant dynamicCall( const char *function, const QVariant &var1 = QVariant(), const QVariant &var2 = QVariant(),
+    QVariant dynamicCall(const char *function, const QVariant &var1 = QVariant(), const QVariant &var2 = QVariant(),
     const QVariant &var3 = QVariant(), const QVariant &var4 = QVariant(), const QVariant &var5 = QVariant(), const
-    QVariant &var6 = QVariant(), const QVariant &var7 = QVariant(), const QVariant &var8 = QVariant() )
+    QVariant &var6 = QVariant(), const QVariant &var7 = QVariant(), const QVariant &var8 = QVariant())
     */
     QAxBase *obj = static_cast<QAxBase *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -264,7 +264,7 @@ HB_FUNC_STATIC(QAXBASE_DYNAMICCALL)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2))
   {
     /*
-    QVariant dynamicCall( const char *function, QList<QVariant> &vars )
+    QVariant dynamicCall(const char *function, QList<QVariant> &vars)
     */
     QAxBase *obj = static_cast<QAxBase *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -329,7 +329,7 @@ HB_FUNC_STATIC(QAXBASE_ISNULL)
 }
 
 /*
-virtual bool propertyWritable( const char *prop ) const
+virtual bool propertyWritable(const char *prop) const
 */
 HB_FUNC_STATIC(QAXBASE_PROPERTYWRITABLE)
 {
@@ -359,10 +359,10 @@ HB_FUNC_STATIC(QAXBASE_QUERYSUBOBJECT)
       (ISQVARIANT(7) || HB_ISNIL(7)) && (ISQVARIANT(8) || HB_ISNIL(8)) && (ISQVARIANT(9) || HB_ISNIL(9)))
   {
     /*
-    QAxObject *querySubObject( const char *name, const QVariant &var1 = QVariant(), const QVariant &var2 =
+    QAxObject *querySubObject(const char *name, const QVariant &var1 = QVariant(), const QVariant &var2 =
     QVariant(), const QVariant &var3 = QVariant(), const QVariant &var4 = QVariant(), const QVariant &var5 =
     QVariant(), const QVariant &var6 = QVariant(), const QVariant &var7 = QVariant(), const QVariant &var8 =
-    QVariant() )
+    QVariant())
     */
     QAxBase *obj = static_cast<QAxBase *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -383,7 +383,7 @@ HB_FUNC_STATIC(QAXBASE_QUERYSUBOBJECT)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2))
   {
     /*
-    QAxObject *querySubObject( const char *name, QList<QVariant> &vars )
+    QAxObject *querySubObject(const char *name, QList<QVariant> &vars)
     */
     QAxBase *obj = static_cast<QAxBase *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -400,7 +400,7 @@ HB_FUNC_STATIC(QAXBASE_QUERYSUBOBJECT)
 }
 
 /*
-bool setControl( const QString &)
+bool setControl(const QString &)
 */
 HB_FUNC_STATIC(QAXBASE_SETCONTROL)
 {
@@ -424,7 +424,7 @@ HB_FUNC_STATIC(QAXBASE_SETCONTROL)
 }
 
 /*
-virtual void setPropertyWritable( const char *prop, bool ok )
+virtual void setPropertyWritable(const char *prop, bool ok)
 */
 HB_FUNC_STATIC(QAXBASE_SETPROPERTYWRITABLE)
 {

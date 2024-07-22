@@ -58,7 +58,7 @@ RETURN
 #include <QtCore/QStringList>
 
     /*
-    QAxScript( const QString &name, QAxScriptManager *manager )
+    QAxScript(const QString &name, QAxScriptManager *manager)
     */
 HB_FUNC_STATIC(QAXSCRIPT_NEW)
 {
@@ -98,9 +98,9 @@ HB_FUNC_STATIC(QAXSCRIPT_CALL)
       (ISQVARIANT(7) || HB_ISNIL(7)) && (ISQVARIANT(8) || HB_ISNIL(8)) && (ISQVARIANT(9) || HB_ISNIL(9)))
   {
     /*
-    QVariant call( const QString &function, const QVariant &var1 = QVariant(), const QVariant &var2 = QVariant(),
+    QVariant call(const QString &function, const QVariant &var1 = QVariant(), const QVariant &var2 = QVariant(),
     const QVariant &var3 = QVariant(), const QVariant &var4 = QVariant(), const QVariant &var5 = QVariant(), const
-    QVariant &var6 = QVariant(), const QVariant &var7 = QVariant(), const QVariant &var8 = QVariant() )
+    QVariant &var6 = QVariant(), const QVariant &var7 = QVariant(), const QVariant &var8 = QVariant())
     */
     QAxScript *obj = static_cast<QAxScript *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QAXSCRIPT_CALL)
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2))
   {
     /*
-    QVariant call( const QString &function, QList<QVariant> &arguments )
+    QVariant call(const QString &function, QList<QVariant> &arguments)
     */
     QAxScript *obj = static_cast<QAxScript *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QAXSCRIPT_CALL)
 }
 
 /*
-QStringList functions( QAxScript::FunctionFlags flags = QAxScript::FunctionNames ) const
+QStringList functions(QAxScript::FunctionFlags flags = QAxScript::FunctionNames) const
 */
 HB_FUNC_STATIC(QAXSCRIPT_FUNCTIONS)
 {
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QAXSCRIPT_FUNCTIONS)
 }
 
 /*
-bool load( const QString &code, const QString &language = QString() )
+bool load(const QString &code, const QString &language = QString())
 */
 HB_FUNC_STATIC(QAXSCRIPT_LOAD)
 {
