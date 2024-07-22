@@ -30,4 +30,4 @@ public slots:
   void error(QAxScript *script, int code, const QString &description, int sourcePosition, const QString &sourceText);
 };
 
-#endif /* QAXSCRIPTMANAGERSLOTS_H */
+#endif // QAXSCRIPTMANAGERSLOTS_H

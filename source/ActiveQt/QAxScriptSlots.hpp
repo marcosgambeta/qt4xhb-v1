@@ -35,4 +35,4 @@ public slots:
   void stateChanged(int state);
 };
 
-#endif /* QAXSCRIPTSLOTS_H */
+#endif // QAXSCRIPTSLOTS_H

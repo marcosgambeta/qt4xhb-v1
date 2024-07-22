@@ -32,4 +32,4 @@ public slots:
   void signal(const QString &name, int argc, void *argv);
 };
 
-#endif /* QAXWIDGETSLOTS_H */
+#endif // QAXWIDGETSLOTS_H

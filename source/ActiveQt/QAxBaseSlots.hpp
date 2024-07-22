@@ -9,4 +9,4 @@
 #ifndef QAXBASESLOTS_H
 #define QAXBASESLOTS_H
 
-#endif /* QAXBASESLOTS_H */
+#endif // QAXBASESLOTS_H
