@@ -31,4 +31,4 @@ public slots:
   void indexCreationStarted();
 };
 
-#endif /* QHELPINDEXMODELSLOTS_H */
+#endif // QHELPINDEXMODELSLOTS_H

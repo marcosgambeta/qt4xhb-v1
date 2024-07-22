@@ -30,4 +30,4 @@ public slots:
   void search();
 };
 
-#endif /* QHELPSEARCHQUERYWIDGETSLOTS_H */
+#endif // QHELPSEARCHQUERYWIDGETSLOTS_H

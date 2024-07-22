@@ -31,4 +31,4 @@ public slots:
   void contentsCreationStarted();
 };
 
-#endif /* QHELPCONTENTMODELSLOTS_H */
+#endif // QHELPCONTENTMODELSLOTS_H

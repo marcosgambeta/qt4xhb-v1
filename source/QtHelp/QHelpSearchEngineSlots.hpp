@@ -33,4 +33,4 @@ public slots:
   void searchingStarted();
 };
 
-#endif /* QHELPSEARCHENGINESLOTS_H */
+#endif // QHELPSEARCHENGINESLOTS_H

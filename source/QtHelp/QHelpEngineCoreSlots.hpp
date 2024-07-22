@@ -33,4 +33,4 @@ public slots:
   void warning(const QString &msg);
 };
 
-#endif /* QHELPENGINECORESLOTS_H */
+#endif // QHELPENGINECORESLOTS_H

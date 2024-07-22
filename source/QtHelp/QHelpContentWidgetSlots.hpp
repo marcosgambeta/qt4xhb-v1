@@ -30,4 +30,4 @@ public slots:
   void linkActivated(const QUrl &link);
 };
 
-#endif /* QHELPCONTENTWIDGETSLOTS_H */
+#endif // QHELPCONTENTWIDGETSLOTS_H
