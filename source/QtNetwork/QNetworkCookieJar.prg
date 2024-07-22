@@ -44,7 +44,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QNetworkCookieJar( QObject *parent = 0 )
+    QNetworkCookieJar(QObject *parent = 0)
     */
 HB_FUNC_STATIC(QNETWORKCOOKIEJAR_NEW)
 {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIEJAR_DELETE)
 }
 
 /*
-virtual QList<QNetworkCookie> cookiesForUrl( const QUrl &url ) const
+virtual QList<QNetworkCookie> cookiesForUrl(const QUrl &url) const
 */
 HB_FUNC_STATIC(QNETWORKCOOKIEJAR_COOKIESFORURL)
 {
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIEJAR_COOKIESFORURL)
 }
 
 /*
-virtual bool setCookiesFromUrl( const QList<QNetworkCookie> &cookieList, const QUrl &url )
+virtual bool setCookiesFromUrl(const QList<QNetworkCookie> &cookieList, const QUrl &url)
 */
 HB_FUNC_STATIC(QNETWORKCOOKIEJAR_SETCOOKIESFROMURL)
 {

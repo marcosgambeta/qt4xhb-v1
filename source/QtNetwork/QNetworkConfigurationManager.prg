@@ -54,7 +54,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QNetworkConfigurationManager( QObject *parent = 0 )
+    QNetworkConfigurationManager(QObject *parent = 0)
     */
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_NEW)
 {
@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_DELETE)
 }
 
 /*
-QList<QNetworkConfiguration> allConfigurations( QNetworkConfiguration::StateFlags filter = 0 ) const
+QList<QNetworkConfiguration> allConfigurations(QNetworkConfiguration::StateFlags filter = 0) const
 */
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS)
 {
@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_CAPABILITIES)
 }
 
 /*
-QNetworkConfiguration configurationFromIdentifier( const QString &identifier ) const
+QNetworkConfiguration configurationFromIdentifier(const QString &identifier) const
 */
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_CONFIGURATIONFROMIDENTIFIER)
 {

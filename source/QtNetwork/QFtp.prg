@@ -78,7 +78,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QFtp( QObject *parent = 0 )
+    QFtp(QObject *parent = 0)
     */
 HB_FUNC_STATIC(QFTP_NEW)
 {
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QFTP_BYTESAVAILABLE)
 }
 
 /*
-int cd( const QString &dir )
+int cd(const QString &dir)
 */
 HB_FUNC_STATIC(QFTP_CD)
 {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC(QFTP_CLOSE)
 }
 
 /*
-int connectToHost( const QString &host, quint16 port = 21 )
+int connectToHost(const QString &host, quint16 port = 21)
 */
 HB_FUNC_STATIC(QFTP_CONNECTTOHOST)
 {
@@ -355,7 +355,7 @@ HB_FUNC_STATIC(QFTP_ERRORSTRING)
 }
 
 /*
-int get( const QString &file, QIODevice *dev = 0, QFtp::TransferType type = QFtp::Binary )
+int get(const QString &file, QIODevice *dev = 0, QFtp::TransferType type = QFtp::Binary)
 */
 HB_FUNC_STATIC(QFTP_GET)
 {
@@ -404,7 +404,7 @@ HB_FUNC_STATIC(QFTP_HASPENDINGCOMMANDS)
 }
 
 /*
-int list( const QString &dir = QString() )
+int list(const QString &dir = QString())
 */
 HB_FUNC_STATIC(QFTP_LIST)
 {
@@ -428,7 +428,7 @@ HB_FUNC_STATIC(QFTP_LIST)
 }
 
 /*
-int login( const QString &user = QString(), const QString &password = QString() )
+int login(const QString &user = QString(), const QString &password = QString())
 */
 HB_FUNC_STATIC(QFTP_LOGIN)
 {
@@ -452,7 +452,7 @@ HB_FUNC_STATIC(QFTP_LOGIN)
 }
 
 /*
-int mkdir( const QString &dir )
+int mkdir(const QString &dir)
 */
 HB_FUNC_STATIC(QFTP_MKDIR)
 {
@@ -480,7 +480,7 @@ HB_FUNC_STATIC(QFTP_PUT)
   if (ISBETWEEN(2, 3) && ISQIODEVICE(1) && HB_ISCHAR(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    int put( QIODevice *dev, const QString &file, QFtp::TransferType type = QFtp::Binary )
+    int put(QIODevice *dev, const QString &file, QFtp::TransferType type = QFtp::Binary)
     */
     QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -493,7 +493,7 @@ HB_FUNC_STATIC(QFTP_PUT)
   else if (ISBETWEEN(2, 3) && ISQBYTEARRAY(1) && HB_ISCHAR(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    int put( const QByteArray &data, const QString &file, QFtp::TransferType type = QFtp::Binary )
+    int put(const QByteArray &data, const QString &file, QFtp::TransferType type = QFtp::Binary)
     */
     QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -510,7 +510,7 @@ HB_FUNC_STATIC(QFTP_PUT)
 }
 
 /*
-int rawCommand( const QString &command )
+int rawCommand(const QString &command)
 */
 HB_FUNC_STATIC(QFTP_RAWCOMMAND)
 {
@@ -534,7 +534,7 @@ HB_FUNC_STATIC(QFTP_RAWCOMMAND)
 }
 
 /*
-qint64 read( char *data, qint64 maxlen )
+qint64 read(char *data, qint64 maxlen)
 */
 HB_FUNC_STATIC(QFTP_READ)
 {
@@ -583,7 +583,7 @@ HB_FUNC_STATIC(QFTP_READALL)
 }
 
 /*
-int remove( const QString &file )
+int remove(const QString &file)
 */
 HB_FUNC_STATIC(QFTP_REMOVE)
 {
@@ -607,7 +607,7 @@ HB_FUNC_STATIC(QFTP_REMOVE)
 }
 
 /*
-int rename( const QString &oldname, const QString &newname )
+int rename(const QString &oldname, const QString &newname)
 */
 HB_FUNC_STATIC(QFTP_RENAME)
 {
@@ -631,7 +631,7 @@ HB_FUNC_STATIC(QFTP_RENAME)
 }
 
 /*
-int rmdir( const QString &dir )
+int rmdir(const QString &dir)
 */
 HB_FUNC_STATIC(QFTP_RMDIR)
 {
@@ -655,7 +655,7 @@ HB_FUNC_STATIC(QFTP_RMDIR)
 }
 
 /*
-int setProxy( const QString &host, quint16 port )
+int setProxy(const QString &host, quint16 port)
 */
 HB_FUNC_STATIC(QFTP_SETPROXY)
 {
@@ -679,7 +679,7 @@ HB_FUNC_STATIC(QFTP_SETPROXY)
 }
 
 /*
-int setTransferMode( QFtp::TransferMode mode )
+int setTransferMode(QFtp::TransferMode mode)
 */
 HB_FUNC_STATIC(QFTP_SETTRANSFERMODE)
 {

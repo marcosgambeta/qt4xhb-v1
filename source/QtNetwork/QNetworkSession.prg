@@ -70,7 +70,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QNetworkSession( const QNetworkConfiguration &connectionConfig, QObject *parent = 0 )
+    QNetworkSession(const QNetworkConfiguration &connectionConfig, QObject *parent = 0)
     */
 HB_FUNC_STATIC(QNETWORKSESSION_NEW)
 {
@@ -298,7 +298,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_ISOPEN)
 }
 
 /*
-QVariant sessionProperty( const QString &key ) const
+QVariant sessionProperty(const QString &key) const
 */
 HB_FUNC_STATIC(QNETWORKSESSION_SESSIONPROPERTY)
 {
@@ -323,7 +323,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_SESSIONPROPERTY)
 }
 
 /*
-void setSessionProperty( const QString &key, const QVariant &value )
+void setSessionProperty(const QString &key, const QVariant &value)
 */
 HB_FUNC_STATIC(QNETWORKSESSION_SETSESSIONPROPERTY)
 {
@@ -373,7 +373,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_STATE)
 }
 
 /*
-bool waitForOpened( int msecs = 30000 )
+bool waitForOpened(int msecs = 30000)
 */
 HB_FUNC_STATIC(QNETWORKSESSION_WAITFOROPENED)
 {

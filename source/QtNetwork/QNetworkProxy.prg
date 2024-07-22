@@ -77,8 +77,8 @@ HB_FUNC_STATIC(QNETWORKPROXY_NEW)
            (HB_ISCHAR(4) || HB_ISNIL(4)) && (HB_ISCHAR(5) || HB_ISNIL(5)))
   {
     /*
-    QNetworkProxy( QNetworkProxy::ProxyType type, const QString &hostName = QString(), quint16 port = 0, const QString
-    &user = QString(), const QString &password = QString() )
+    QNetworkProxy(QNetworkProxy::ProxyType type, const QString &hostName = QString(), quint16 port = 0, const QString
+    &user = QString(), const QString &password = QString())
     */
     QNetworkProxy *obj = new QNetworkProxy((QNetworkProxy::ProxyType)hb_parni(1), OPQSTRING(2, QString()),
                                            OPQUINT16(3, 0), OPQSTRING(4, QString()), OPQSTRING(5, QString()));
@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_NEW)
   else if (ISNUMPAR(1) && ISQNETWORKPROXY(1))
   {
     /*
-    QNetworkProxy( const QNetworkProxy &other )
+    QNetworkProxy(const QNetworkProxy &other)
     */
     QNetworkProxy *obj = new QNetworkProxy(*PQNETWORKPROXY(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -259,7 +259,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_PORT)
 }
 
 /*
-void setCapabilities( QNetworkProxy::Capabilities capabilities )
+void setCapabilities(QNetworkProxy::Capabilities capabilities)
 */
 HB_FUNC_STATIC(QNETWORKPROXY_SETCAPABILITIES)
 {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_SETCAPABILITIES)
 }
 
 /*
-void setHostName( const QString &hostName )
+void setHostName(const QString &hostName)
 */
 HB_FUNC_STATIC(QNETWORKPROXY_SETHOSTNAME)
 {
@@ -311,7 +311,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_SETHOSTNAME)
 }
 
 /*
-void setPassword( const QString &password )
+void setPassword(const QString &password)
 */
 HB_FUNC_STATIC(QNETWORKPROXY_SETPASSWORD)
 {
@@ -337,7 +337,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_SETPASSWORD)
 }
 
 /*
-void setPort( quint16 port )
+void setPort(quint16 port)
 */
 HB_FUNC_STATIC(QNETWORKPROXY_SETPORT)
 {
@@ -363,7 +363,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_SETPORT)
 }
 
 /*
-void setType( QNetworkProxy::ProxyType type )
+void setType(QNetworkProxy::ProxyType type)
 */
 HB_FUNC_STATIC(QNETWORKPROXY_SETTYPE)
 {
@@ -389,7 +389,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_SETTYPE)
 }
 
 /*
-void setUser( const QString &user )
+void setUser(const QString &user)
 */
 HB_FUNC_STATIC(QNETWORKPROXY_SETUSER)
 {
@@ -483,7 +483,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_APPLICATIONPROXY)
 }
 
 /*
-static void setApplicationProxy( const QNetworkProxy &networkProxy )
+static void setApplicationProxy(const QNetworkProxy &networkProxy)
 */
 HB_FUNC_STATIC(QNETWORKPROXY_SETAPPLICATIONPROXY)
 {

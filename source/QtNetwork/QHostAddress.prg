@@ -59,7 +59,7 @@ RETURN
 #include "qt4xhb_utils.hpp"
 
     /*
-    QHostAddress( quint32 ip4Addr )
+    QHostAddress(quint32 ip4Addr)
     */
 HB_FUNC_STATIC(QHOSTADDRESS_NEW2)
 {
@@ -68,7 +68,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_NEW2)
 }
 
 /*
-QHostAddress( QHostAddress::SpecialAddress address )
+QHostAddress(QHostAddress::SpecialAddress address)
 */
 HB_FUNC_STATIC(QHOSTADDRESS_NEW8)
 {
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_NEW)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    QHostAddress( const QString &address )
+    QHostAddress(const QString &address)
     */
     QHostAddress *obj = new QHostAddress(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_NEW)
   else if (ISNUMPAR(1) && ISQHOSTADDRESS(1))
   {
     /*
-    QHostAddress( const QHostAddress &address )
+    QHostAddress(const QHostAddress &address)
     */
     QHostAddress *obj = new QHostAddress(*PQHOSTADDRESS(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_CLEAR)
 }
 
 /*
-bool isInSubnet( const QHostAddress &subnet, int netmask ) const
+bool isInSubnet(const QHostAddress &subnet, int netmask) const
 */
 HB_FUNC_STATIC(QHOSTADDRESS_ISINSUBNET)
 {
@@ -259,7 +259,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SETADDRESS)
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    void setAddress( quint32 ip4Addr )
+    void setAddress(quint32 ip4Addr)
     */
     QHostAddress *obj = static_cast<QHostAddress *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -273,7 +273,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SETADDRESS)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    bool setAddress( const QString &address )
+    bool setAddress(const QString &address)
     */
     QHostAddress *obj = static_cast<QHostAddress *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -289,7 +289,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SETADDRESS)
 }
 
 /*
-void setScopeId( const QString &id )
+void setScopeId(const QString &id)
 */
 HB_FUNC_STATIC(QHOSTADDRESS_SETSCOPEID)
 {

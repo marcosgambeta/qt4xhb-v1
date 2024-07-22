@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_NEW)
   else if (ISNUMPAR(1) && ISQNETWORKINTERFACE(1))
   {
     /*
-    QNetworkInterface( const QNetworkInterface &other )
+    QNetworkInterface(const QNetworkInterface &other)
     */
     QNetworkInterface *obj = new QNetworkInterface(*PQNETWORKINTERFACE(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -398,7 +398,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_ALLINTERFACES)
 }
 
 /*
-static QNetworkInterface interfaceFromIndex( int index )
+static QNetworkInterface interfaceFromIndex(int index)
 */
 HB_FUNC_STATIC(QNETWORKINTERFACE_INTERFACEFROMINDEX)
 {
@@ -418,7 +418,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_INTERFACEFROMINDEX)
 }
 
 /*
-static QNetworkInterface interfaceFromName( const QString &name )
+static QNetworkInterface interfaceFromName(const QString &name)
 */
 HB_FUNC_STATIC(QNETWORKINTERFACE_INTERFACEFROMNAME)
 {

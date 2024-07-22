@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_NEW)
   if (ISBETWEEN(0, 2) && (ISQBYTEARRAY(1) || HB_ISNIL(1)) && (ISQBYTEARRAY(2) || HB_ISNIL(2)))
   {
     /*
-    QNetworkCookie( const QByteArray &name = QByteArray(), const QByteArray &value = QByteArray() )
+    QNetworkCookie(const QByteArray &name = QByteArray(), const QByteArray &value = QByteArray())
     */
     QNetworkCookie *obj =
         new QNetworkCookie(HB_ISNIL(1) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(1)),
@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_NEW)
   else if (ISNUMPAR(1) && ISQNETWORKCOOKIE(1))
   {
     /*
-    QNetworkCookie( const QNetworkCookie &other )
+    QNetworkCookie(const QNetworkCookie &other)
     */
     QNetworkCookie *obj = new QNetworkCookie(*PQNETWORKCOOKIE(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_PATH)
 }
 
 /*
-void setDomain( const QString &domain )
+void setDomain(const QString &domain)
 */
 HB_FUNC_STATIC(QNETWORKCOOKIE_SETDOMAIN)
 {
@@ -307,7 +307,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETDOMAIN)
 }
 
 /*
-void setExpirationDate( const QDateTime &date )
+void setExpirationDate(const QDateTime &date)
 */
 HB_FUNC_STATIC(QNETWORKCOOKIE_SETEXPIRATIONDATE)
 {
@@ -333,7 +333,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETEXPIRATIONDATE)
 }
 
 /*
-void setHttpOnly( bool enable )
+void setHttpOnly(bool enable)
 */
 HB_FUNC_STATIC(QNETWORKCOOKIE_SETHTTPONLY)
 {
@@ -359,7 +359,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETHTTPONLY)
 }
 
 /*
-void setName( const QByteArray &cookieName )
+void setName(const QByteArray &cookieName)
 */
 HB_FUNC_STATIC(QNETWORKCOOKIE_SETNAME)
 {
@@ -385,7 +385,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETNAME)
 }
 
 /*
-void setPath( const QString &path )
+void setPath(const QString &path)
 */
 HB_FUNC_STATIC(QNETWORKCOOKIE_SETPATH)
 {
@@ -411,7 +411,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETPATH)
 }
 
 /*
-void setSecure( bool enable )
+void setSecure(bool enable)
 */
 HB_FUNC_STATIC(QNETWORKCOOKIE_SETSECURE)
 {
@@ -437,7 +437,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETSECURE)
 }
 
 /*
-void setValue( const QByteArray &value )
+void setValue(const QByteArray &value)
 */
 HB_FUNC_STATIC(QNETWORKCOOKIE_SETVALUE)
 {
@@ -463,7 +463,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETVALUE)
 }
 
 /*
-QByteArray toRawForm( QNetworkCookie::RawForm form = QNetworkCookie::Full ) const
+QByteArray toRawForm(QNetworkCookie::RawForm form = QNetworkCookie::Full) const
 */
 HB_FUNC_STATIC(QNETWORKCOOKIE_TORAWFORM)
 {
@@ -514,7 +514,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_VALUE)
 }
 
 /*
-QList<QNetworkCookie> parseCookies( const QByteArray &cookieString )
+QList<QNetworkCookie> parseCookies(const QByteArray &cookieString)
 */
 HB_FUNC_STATIC(QNETWORKCOOKIE_PARSECOOKIES)
 {

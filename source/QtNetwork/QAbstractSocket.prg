@@ -85,7 +85,7 @@ RETURN
 #include <QtNetwork/QNetworkProxy>
 
     /*
-    QAbstractSocket( QAbstractSocket::SocketType socketType, QObject *parent )
+    QAbstractSocket(QAbstractSocket::SocketType socketType, QObject *parent)
     */
 HB_FUNC_STATIC(QABSTRACTSOCKET_NEW)
 {
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_CONNECTTOHOST)
   if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    void connectToHost( const QString &hostName, quint16 port, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
+    void connectToHost(const QString &hostName, quint16 port, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
     */
     QAbstractSocket *obj = qobject_cast<QAbstractSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -164,8 +164,8 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_CONNECTTOHOST)
   else if (ISBETWEEN(2, 3) && ISQHOSTADDRESS(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    void connectToHost( const QHostAddress &address, quint16 port, QIODevice::OpenMode openMode = QIODevice::ReadWrite
-    )
+    void connectToHost(const QHostAddress &address, quint16 port, QIODevice::OpenMode openMode = QIODevice::ReadWrite
+   )
     */
     QAbstractSocket *obj = qobject_cast<QAbstractSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -453,7 +453,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_READBUFFERSIZE)
 }
 
 /*
-void setProxy( const QNetworkProxy &networkProxy )
+void setProxy(const QNetworkProxy &networkProxy)
 */
 HB_FUNC_STATIC(QABSTRACTSOCKET_SETPROXY)
 {
@@ -479,7 +479,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_SETPROXY)
 }
 
 /*
-void setReadBufferSize( qint64 size )
+void setReadBufferSize(qint64 size)
 */
 HB_FUNC_STATIC(QABSTRACTSOCKET_SETREADBUFFERSIZE)
 {
@@ -505,8 +505,8 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_SETREADBUFFERSIZE)
 }
 
 /*
-bool setSocketDescriptor( int socketDescriptor, QAbstractSocket::SocketState socketState =
-QAbstractSocket::ConnectedState, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
+bool setSocketDescriptor(int socketDescriptor, QAbstractSocket::SocketState socketState =
+QAbstractSocket::ConnectedState, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
 */
 HB_FUNC_STATIC(QABSTRACTSOCKET_SETSOCKETDESCRIPTOR)
 {
@@ -534,7 +534,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_SETSOCKETDESCRIPTOR)
 }
 
 /*
-void setSocketOption( QAbstractSocket::SocketOption option, const QVariant &value )
+void setSocketOption(QAbstractSocket::SocketOption option, const QVariant &value)
 */
 HB_FUNC_STATIC(QABSTRACTSOCKET_SETSOCKETOPTION)
 {
@@ -584,7 +584,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_SOCKETDESCRIPTOR)
 }
 
 /*
-QVariant socketOption( QAbstractSocket::SocketOption option )
+QVariant socketOption(QAbstractSocket::SocketOption option)
 */
 HB_FUNC_STATIC(QABSTRACTSOCKET_SOCKETOPTION)
 {
@@ -657,7 +657,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_STATE)
 }
 
 /*
-bool waitForConnected( int msecs = 30000 )
+bool waitForConnected(int msecs = 30000)
 */
 HB_FUNC_STATIC(QABSTRACTSOCKET_WAITFORCONNECTED)
 {
@@ -681,7 +681,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_WAITFORCONNECTED)
 }
 
 /*
-bool waitForDisconnected( int msecs = 30000 )
+bool waitForDisconnected(int msecs = 30000)
 */
 HB_FUNC_STATIC(QABSTRACTSOCKET_WAITFORDISCONNECTED)
 {
@@ -851,7 +851,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_ISSEQUENTIAL)
 }
 
 /*
-virtual bool waitForBytesWritten( int msecs = 30000 )
+virtual bool waitForBytesWritten(int msecs = 30000)
 */
 HB_FUNC_STATIC(QABSTRACTSOCKET_WAITFORBYTESWRITTEN)
 {
@@ -875,7 +875,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_WAITFORBYTESWRITTEN)
 }
 
 /*
-virtual bool waitForReadyRead( int msecs = 30000 )
+virtual bool waitForReadyRead(int msecs = 30000)
 */
 HB_FUNC_STATIC(QABSTRACTSOCKET_WAITFORREADYREAD)
 {

@@ -65,7 +65,7 @@ RETURN
 #include <QtNetwork/QTcpSocket>
 
     /*
-    QTcpServer( QObject *parent = 0 )
+    QTcpServer(QObject *parent = 0)
     */
 HB_FUNC_STATIC(QTCPSERVER_NEW)
 {
@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QTCPSERVER_ISLISTENING)
 }
 
 /*
-bool listen( const QHostAddress &address = QHostAddress::Any, quint16 port = 0 )
+bool listen(const QHostAddress &address = QHostAddress::Any, quint16 port = 0)
 */
 HB_FUNC_STATIC(QTCPSERVER_LISTEN)
 {
@@ -369,7 +369,7 @@ HB_FUNC_STATIC(QTCPSERVER_SERVERPORT)
 }
 
 /*
-void setMaxPendingConnections( int numConnections )
+void setMaxPendingConnections(int numConnections)
 */
 HB_FUNC_STATIC(QTCPSERVER_SETMAXPENDINGCONNECTIONS)
 {
@@ -395,7 +395,7 @@ HB_FUNC_STATIC(QTCPSERVER_SETMAXPENDINGCONNECTIONS)
 }
 
 /*
-void setProxy( const QNetworkProxy &networkProxy )
+void setProxy(const QNetworkProxy &networkProxy)
 */
 HB_FUNC_STATIC(QTCPSERVER_SETPROXY)
 {
@@ -421,7 +421,7 @@ HB_FUNC_STATIC(QTCPSERVER_SETPROXY)
 }
 
 /*
-bool setSocketDescriptor( int socketDescriptor )
+bool setSocketDescriptor(int socketDescriptor)
 */
 HB_FUNC_STATIC(QTCPSERVER_SETSOCKETDESCRIPTOR)
 {
@@ -469,7 +469,7 @@ HB_FUNC_STATIC(QTCPSERVER_SOCKETDESCRIPTOR)
 }
 
 /*
-bool waitForNewConnection( int msec = 0, bool *timedOut = 0 )
+bool waitForNewConnection(int msec = 0, bool *timedOut = 0)
 */
 HB_FUNC_STATIC(QTCPSERVER_WAITFORNEWCONNECTION)
 {
