@@ -65,7 +65,7 @@ RETURN
 #include <QtNetwork/QTcpSocket>
 
     /*
-    QTcpServer( QObject * parent = 0 )
+    QTcpServer( QObject *parent = 0 )
     */
 HB_FUNC_STATIC(QTCPSERVER_NEW)
 {
@@ -246,7 +246,7 @@ HB_FUNC_STATIC(QTCPSERVER_MAXPENDINGCONNECTIONS)
 }
 
 /*
-virtual QTcpSocket * nextPendingConnection()
+virtual QTcpSocket *nextPendingConnection()
 */
 HB_FUNC_STATIC(QTCPSERVER_NEXTPENDINGCONNECTION)
 {
@@ -469,7 +469,7 @@ HB_FUNC_STATIC(QTCPSERVER_SOCKETDESCRIPTOR)
 }
 
 /*
-bool waitForNewConnection( int msec = 0, bool * timedOut = 0 )
+bool waitForNewConnection( int msec = 0, bool *timedOut = 0 )
 */
 HB_FUNC_STATIC(QTCPSERVER_WAITFORNEWCONNECTION)
 {

@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QHTTPPART_SETBODY)
 }
 
 /*
-void setBodyDevice( QIODevice * device )
+void setBodyDevice( QIODevice *device )
 */
 HB_FUNC_STATIC(QHTTPPART_SETBODYDEVICE)
 {

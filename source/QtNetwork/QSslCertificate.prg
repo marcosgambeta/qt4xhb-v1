@@ -74,7 +74,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_NEW)
   if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
-    QSslCertificate( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
+    QSslCertificate( QIODevice *device, QSsl::EncodingFormat format = QSsl::Pem )
     */
     QSslCertificate *obj = new QSslCertificate(PQIODEVICE(1), HB_ISNIL(2) ? (QSsl::EncodingFormat)QSsl::Pem
                                                                           : (QSsl::EncodingFormat)hb_parni(2));
@@ -512,7 +512,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_FROMDATA)
 }
 
 /*
-QList<QSslCertificate> fromDevice( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
+QList<QSslCertificate> fromDevice( QIODevice *device, QSsl::EncodingFormat format = QSsl::Pem )
 */
 HB_FUNC_STATIC(QSSLCERTIFICATE_FROMDEVICE)
 {

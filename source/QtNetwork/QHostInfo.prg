@@ -468,7 +468,7 @@ HB_FUNC_STATIC(QHOSTINFO_LOCALHOSTNAME)
 }
 
 /*
-static int lookupHost( const QString &name, QObject * receiver, const char * member )
+static int lookupHost( const QString &name, QObject *receiver, const char *member )
 */
 HB_FUNC_STATIC(QHOSTINFO_LOOKUPHOST)
 {

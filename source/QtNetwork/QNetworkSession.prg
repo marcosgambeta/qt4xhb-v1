@@ -70,7 +70,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QNetworkSession( const QNetworkConfiguration &connectionConfig, QObject * parent = 0 )
+    QNetworkSession( const QNetworkConfiguration &connectionConfig, QObject *parent = 0 )
     */
 HB_FUNC_STATIC(QNETWORKSESSION_NEW)
 {

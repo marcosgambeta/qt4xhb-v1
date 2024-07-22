@@ -45,7 +45,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QUdpSocket( QObject * parent = 0 )
+    QUdpSocket( QObject *parent = 0 )
     */
 HB_FUNC_STATIC(QUDPSOCKET_NEW)
 {
@@ -187,7 +187,7 @@ HB_FUNC_STATIC(QUDPSOCKET_WRITEDATAGRAM)
   if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISNUM(2) && ISQHOSTADDRESS(3) && HB_ISNUM(4))
   {
     /*
-    qint64 writeDatagram( const char * data, qint64 size, const QHostAddress &address, quint16 port )
+    qint64 writeDatagram( const char *data, qint64 size, const QHostAddress &address, quint16 port )
     */
     QUdpSocket *obj = qobject_cast<QUdpSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

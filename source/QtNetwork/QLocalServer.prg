@@ -59,7 +59,7 @@ RETURN
 #include <QtNetwork/QLocalSocket>
 
     /*
-    QLocalServer( QObject * parent = 0 )
+    QLocalServer( QObject *parent = 0 )
     */
 HB_FUNC_STATIC(QLOCALSERVER_NEW)
 {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC(QLOCALSERVER_MAXPENDINGCONNECTIONS)
 }
 
 /*
-virtual QLocalSocket * nextPendingConnection()
+virtual QLocalSocket *nextPendingConnection()
 */
 HB_FUNC_STATIC(QLOCALSERVER_NEXTPENDINGCONNECTION)
 {
@@ -362,7 +362,7 @@ HB_FUNC_STATIC(QLOCALSERVER_SETMAXPENDINGCONNECTIONS)
 }
 
 /*
-bool waitForNewConnection( int msec = 0, bool * timedOut = 0 )
+bool waitForNewConnection( int msec = 0, bool *timedOut = 0 )
 */
 HB_FUNC_STATIC(QLOCALSERVER_WAITFORNEWCONNECTION)
 {

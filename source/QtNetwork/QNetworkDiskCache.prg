@@ -56,7 +56,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QNetworkDiskCache( QObject * parent = 0 )
+    QNetworkDiskCache( QObject *parent = 0 )
     */
 HB_FUNC_STATIC(QNETWORKDISKCACHE_NEW)
 {
@@ -239,7 +239,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_CACHESIZE)
 }
 
 /*
-virtual QIODevice * data( const QUrl &url )
+virtual QIODevice *data( const QUrl &url )
 */
 HB_FUNC_STATIC(QNETWORKDISKCACHE_DATA)
 {
@@ -264,7 +264,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_DATA)
 }
 
 /*
-virtual void insert( QIODevice * device )
+virtual void insert( QIODevice *device )
 */
 HB_FUNC_STATIC(QNETWORKDISKCACHE_INSERT)
 {
@@ -315,7 +315,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_METADATA)
 }
 
 /*
-virtual QIODevice * prepare( const QNetworkCacheMetaData &metaData )
+virtual QIODevice *prepare( const QNetworkCacheMetaData &metaData )
 */
 HB_FUNC_STATIC(QNETWORKDISKCACHE_PREPARE)
 {

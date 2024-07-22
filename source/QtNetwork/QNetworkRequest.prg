@@ -187,7 +187,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_HEADER)
 }
 
 /*
-QObject * originatingObject() const
+QObject *originatingObject() const
 */
 HB_FUNC_STATIC(QNETWORKREQUEST_ORIGINATINGOBJECT)
 {
@@ -364,7 +364,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETHEADER)
 }
 
 /*
-void setOriginatingObject( QObject * object )
+void setOriginatingObject( QObject *object )
 */
 HB_FUNC_STATIC(QNETWORKREQUEST_SETORIGINATINGOBJECT)
 {

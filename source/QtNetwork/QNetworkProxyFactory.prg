@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QNETWORKPROXYFACTORY_PROXYFORQUERY)
 }
 
 /*
-static void setApplicationProxyFactory( QNetworkProxyFactory * factory )
+static void setApplicationProxyFactory( QNetworkProxyFactory *factory )
 */
 HB_FUNC_STATIC(QNETWORKPROXYFACTORY_SETAPPLICATIONPROXYFACTORY)
 {

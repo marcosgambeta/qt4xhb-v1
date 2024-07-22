@@ -308,7 +308,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_ISRUNNING)
 }
 
 /*
-QNetworkAccessManager * manager() const
+QNetworkAccessManager *manager() const
 */
 HB_FUNC_STATIC(QNETWORKREPLY_MANAGER)
 {

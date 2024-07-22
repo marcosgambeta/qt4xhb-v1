@@ -78,7 +78,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QFtp( QObject * parent = 0 )
+    QFtp( QObject *parent = 0 )
     */
 HB_FUNC_STATIC(QFTP_NEW)
 {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC(QFTP_CURRENTCOMMAND)
 }
 
 /*
-QIODevice * currentDevice() const
+QIODevice *currentDevice() const
 */
 HB_FUNC_STATIC(QFTP_CURRENTDEVICE)
 {
@@ -355,7 +355,7 @@ HB_FUNC_STATIC(QFTP_ERRORSTRING)
 }
 
 /*
-int get( const QString &file, QIODevice * dev = 0, QFtp::TransferType type = QFtp::Binary )
+int get( const QString &file, QIODevice *dev = 0, QFtp::TransferType type = QFtp::Binary )
 */
 HB_FUNC_STATIC(QFTP_GET)
 {
@@ -480,7 +480,7 @@ HB_FUNC_STATIC(QFTP_PUT)
   if (ISBETWEEN(2, 3) && ISQIODEVICE(1) && HB_ISCHAR(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     /*
-    int put( QIODevice * dev, const QString &file, QFtp::TransferType type = QFtp::Binary )
+    int put( QIODevice *dev, const QString &file, QFtp::TransferType type = QFtp::Binary )
     */
     QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -534,7 +534,7 @@ HB_FUNC_STATIC(QFTP_RAWCOMMAND)
 }
 
 /*
-qint64 read( char * data, qint64 maxlen )
+qint64 read( char *data, qint64 maxlen )
 */
 HB_FUNC_STATIC(QFTP_READ)
 {
