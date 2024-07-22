@@ -30,4 +30,4 @@ public slots:
   void signalHandlerException(const QScriptValue &exception);
 };
 
-#endif /* QSCRIPTENGINESLOTS_H */
+#endif // QSCRIPTENGINESLOTS_H
