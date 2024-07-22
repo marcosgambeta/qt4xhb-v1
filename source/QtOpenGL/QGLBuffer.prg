@@ -74,7 +74,7 @@ HB_FUNC_STATIC(QGLBUFFER_NEW)
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    QGLBuffer( QGLBuffer::Type type )
+    QGLBuffer(QGLBuffer::Type type)
     */
     QGLBuffer *obj = new QGLBuffer((QGLBuffer::Type)hb_parni(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QGLBUFFER_NEW)
   else if (ISNUMPAR(1) && ISQGLBUFFER(1))
   {
     /*
-    QGLBuffer( const QGLBuffer &other )
+    QGLBuffer(const QGLBuffer &other)
     */
     QGLBuffer *obj = new QGLBuffer(*PQGLBUFFER(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QGLBUFFER_ALLOCATE)
   if (ISNUMPAR(2) && HB_ISPOINTER(1) && HB_ISNUM(2))
   {
     /*
-    void allocate( const void *data, int count )
+    void allocate(const void *data, int count)
     */
     QGLBuffer *obj = static_cast<QGLBuffer *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QGLBUFFER_ALLOCATE)
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    void allocate( int count )
+    void allocate(int count)
     */
     QGLBuffer *obj = static_cast<QGLBuffer *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -268,7 +268,7 @@ HB_FUNC_STATIC(QGLBUFFER_ISCREATED)
 }
 
 /*
-void *map( QGLBuffer::Access access )
+void *map(QGLBuffer::Access access)
 */
 HB_FUNC_STATIC(QGLBUFFER_MAP)
 {
@@ -292,7 +292,7 @@ HB_FUNC_STATIC(QGLBUFFER_MAP)
 }
 
 /*
-bool read( int offset, void *data, int count )
+bool read(int offset, void *data, int count)
 */
 HB_FUNC_STATIC(QGLBUFFER_READ)
 {
@@ -316,7 +316,7 @@ HB_FUNC_STATIC(QGLBUFFER_READ)
 }
 
 /*
-void setUsagePattern( QGLBuffer::UsagePattern value )
+void setUsagePattern(QGLBuffer::UsagePattern value)
 */
 HB_FUNC_STATIC(QGLBUFFER_SETUSAGEPATTERN)
 {
@@ -456,7 +456,7 @@ HB_FUNC_STATIC(QGLBUFFER_RELEASE)
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    static void release( QGLBuffer::Type type )
+    static void release(QGLBuffer::Type type)
     */
 
     QGLBuffer::release((QGLBuffer::Type)hb_parni(1));

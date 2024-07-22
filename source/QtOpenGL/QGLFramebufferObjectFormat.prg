@@ -59,7 +59,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_NEW)
   else if (ISNUMPAR(1) && ISQGLFRAMEBUFFEROBJECTFORMAT(1))
   {
     /*
-    QGLFramebufferObjectFormat( const QGLFramebufferObjectFormat &other )
+    QGLFramebufferObjectFormat(const QGLFramebufferObjectFormat &other)
     */
     QGLFramebufferObjectFormat *obj = new QGLFramebufferObjectFormat(*PQGLFRAMEBUFFEROBJECTFORMAT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_SAMPLES)
 }
 
 /*
-void setAttachment( QGLFramebufferObject::Attachment attachment )
+void setAttachment(QGLFramebufferObject::Attachment attachment)
 */
 HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_SETATTACHMENT)
 {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_SETATTACHMENT)
 }
 
 /*
-void setInternalTextureFormat( GLenum internalTextureFormat )
+void setInternalTextureFormat(GLenum internalTextureFormat)
 */
 HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_SETINTERNALTEXTUREFORMAT)
 {
@@ -211,7 +211,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_SETINTERNALTEXTUREFORMAT)
 }
 
 /*
-void setSamples( int samples )
+void setSamples(int samples)
 */
 HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_SETSAMPLES)
 {
@@ -237,7 +237,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_SETSAMPLES)
 }
 
 /*
-void setTextureTarget( GLenum target )
+void setTextureTarget(GLenum target)
 */
 HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_SETTEXTURETARGET)
 {

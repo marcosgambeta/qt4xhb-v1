@@ -68,7 +68,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_NEW)
   else if (ISNUMPAR(1) && ISQGLCOLORMAP(1))
   {
     /*
-    QGLColormap( const QGLColormap &map )
+    QGLColormap(const QGLColormap &map)
     */
     QGLColormap *obj = new QGLColormap(*PQGLCOLORMAP(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_DELETE)
 }
 
 /*
-QColor entryColor( int idx ) const
+QColor entryColor(int idx) const
 */
 HB_FUNC_STATIC(QGLCOLORMAP_ENTRYCOLOR)
 {
@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_ENTRYCOLOR)
 }
 
 /*
-QRgb entryRgb( int idx ) const
+QRgb entryRgb(int idx) const
 */
 HB_FUNC_STATIC(QGLCOLORMAP_ENTRYRGB)
 {
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_ENTRYRGB)
 }
 
 /*
-int find( QRgb color ) const
+int find(QRgb color) const
 */
 HB_FUNC_STATIC(QGLCOLORMAP_FIND)
 {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_FIND)
 }
 
 /*
-int findNearest( QRgb color ) const
+int findNearest(QRgb color) const
 */
 HB_FUNC_STATIC(QGLCOLORMAP_FINDNEAREST)
 {
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_SETENTRY)
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
-    void setEntry( int idx, QRgb color )
+    void setEntry(int idx, QRgb color)
     */
     QGLColormap *obj = static_cast<QGLColormap *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_SETENTRY)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2) || HB_ISCHAR(2)))
   {
     /*
-    void setEntry( int idx, const QColor &color )
+    void setEntry(int idx, const QColor &color)
     */
     QGLColormap *obj = static_cast<QGLColormap *>(Qt4xHb::itemGetPtrStackSelfItem());
 

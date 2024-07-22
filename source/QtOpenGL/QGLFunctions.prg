@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_NEW)
   else if (ISNUMPAR(1) && ISQGLCONTEXT(1))
   {
     /*
-    QGLFunctions( const QGLContext *context )
+    QGLFunctions(const QGLContext *context)
     */
     QGLFunctions *obj = new QGLFunctions(PQGLCONTEXT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_DELETE)
 }
 
 /*
-void glActiveTexture( GLenum texture )
+void glActiveTexture(GLenum texture)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLACTIVETEXTURE)
 {
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLACTIVETEXTURE)
 }
 
 /*
-void glAttachShader( GLuint program, GLuint shader )
+void glAttachShader(GLuint program, GLuint shader)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLATTACHSHADER)
 {
@@ -198,7 +198,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLATTACHSHADER)
 }
 
 /*
-void glBindAttribLocation( GLuint program, GLuint index, const char *name )
+void glBindAttribLocation(GLuint program, GLuint index, const char *name)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLBINDATTRIBLOCATION)
 {
@@ -224,7 +224,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBINDATTRIBLOCATION)
 }
 
 /*
-void glBindBuffer( GLenum target, GLuint buffer )
+void glBindBuffer(GLenum target, GLuint buffer)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLBINDBUFFER)
 {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBINDBUFFER)
 }
 
 /*
-void glBindFramebuffer( GLenum target, GLuint framebuffer )
+void glBindFramebuffer(GLenum target, GLuint framebuffer)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLBINDFRAMEBUFFER)
 {
@@ -276,7 +276,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBINDFRAMEBUFFER)
 }
 
 /*
-void glBindRenderbuffer( GLenum target, GLuint renderbuffer )
+void glBindRenderbuffer(GLenum target, GLuint renderbuffer)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLBINDRENDERBUFFER)
 {
@@ -302,7 +302,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBINDRENDERBUFFER)
 }
 
 /*
-void glBlendColor( GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha )
+void glBlendColor(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLBLENDCOLOR)
 {
@@ -328,7 +328,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBLENDCOLOR)
 }
 
 /*
-void glBlendEquation( GLenum mode )
+void glBlendEquation(GLenum mode)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLBLENDEQUATION)
 {
@@ -354,7 +354,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBLENDEQUATION)
 }
 
 /*
-void glBlendEquationSeparate( GLenum modeRGB, GLenum modeAlpha )
+void glBlendEquationSeparate(GLenum modeRGB, GLenum modeAlpha)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLBLENDEQUATIONSEPARATE)
 {
@@ -380,7 +380,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBLENDEQUATIONSEPARATE)
 }
 
 /*
-void glBlendFuncSeparate( GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha )
+void glBlendFuncSeparate(GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLBLENDFUNCSEPARATE)
 {
@@ -406,7 +406,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBLENDFUNCSEPARATE)
 }
 
 /*
-GLenum glCheckFramebufferStatus( GLenum target )
+GLenum glCheckFramebufferStatus(GLenum target)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLCHECKFRAMEBUFFERSTATUS)
 {
@@ -430,7 +430,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLCHECKFRAMEBUFFERSTATUS)
 }
 
 /*
-void glClearDepthf( GLclampf depth )
+void glClearDepthf(GLclampf depth)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLCLEARDEPTHF)
 {
@@ -456,7 +456,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLCLEARDEPTHF)
 }
 
 /*
-void glCompileShader( GLuint shader )
+void glCompileShader(GLuint shader)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLCOMPILESHADER)
 {
@@ -482,8 +482,8 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLCOMPILESHADER)
 }
 
 /*
-void glCompressedTexImage2D( GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint
-border, GLsizei imageSize, const void *data )
+void glCompressedTexImage2D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint
+border, GLsizei imageSize, const void *data)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLCOMPRESSEDTEXIMAGE2D)
 {
@@ -511,8 +511,8 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLCOMPRESSEDTEXIMAGE2D)
 }
 
 /*
-void glCompressedTexSubImage2D( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height,
-GLenum format, GLsizei imageSize, const void *data )
+void glCompressedTexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height,
+GLenum format, GLsizei imageSize, const void *data)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLCOMPRESSEDTEXSUBIMAGE2D)
 {
@@ -564,7 +564,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLCREATEPROGRAM)
 }
 
 /*
-GLuint glCreateShader( GLenum type )
+GLuint glCreateShader(GLenum type)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLCREATESHADER)
 {
@@ -588,7 +588,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLCREATESHADER)
 }
 
 /*
-void glDeleteProgram( GLuint program )
+void glDeleteProgram(GLuint program)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLDELETEPROGRAM)
 {
@@ -614,7 +614,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLDELETEPROGRAM)
 }
 
 /*
-void glDeleteShader( GLuint shader )
+void glDeleteShader(GLuint shader)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLDELETESHADER)
 {
@@ -640,7 +640,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLDELETESHADER)
 }
 
 /*
-void glDepthRangef( GLclampf zNear, GLclampf zFar )
+void glDepthRangef(GLclampf zNear, GLclampf zFar)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLDEPTHRANGEF)
 {
@@ -666,7 +666,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLDEPTHRANGEF)
 }
 
 /*
-void glDetachShader( GLuint program, GLuint shader )
+void glDetachShader(GLuint program, GLuint shader)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLDETACHSHADER)
 {
@@ -692,7 +692,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLDETACHSHADER)
 }
 
 /*
-void glDisableVertexAttribArray( GLuint index )
+void glDisableVertexAttribArray(GLuint index)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLDISABLEVERTEXATTRIBARRAY)
 {
@@ -718,7 +718,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLDISABLEVERTEXATTRIBARRAY)
 }
 
 /*
-void glEnableVertexAttribArray( GLuint index )
+void glEnableVertexAttribArray(GLuint index)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLENABLEVERTEXATTRIBARRAY)
 {
@@ -744,7 +744,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLENABLEVERTEXATTRIBARRAY)
 }
 
 /*
-void glFramebufferRenderbuffer( GLenum target, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer )
+void glFramebufferRenderbuffer(GLenum target, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLFRAMEBUFFERRENDERBUFFER)
 {
@@ -770,7 +770,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLFRAMEBUFFERRENDERBUFFER)
 }
 
 /*
-void glFramebufferTexture2D( GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level )
+void glFramebufferTexture2D(GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLFRAMEBUFFERTEXTURE2D)
 {
@@ -796,7 +796,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLFRAMEBUFFERTEXTURE2D)
 }
 
 /*
-void glGenerateMipmap( GLenum target )
+void glGenerateMipmap(GLenum target)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLGENERATEMIPMAP)
 {
@@ -822,7 +822,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLGENERATEMIPMAP)
 }
 
 /*
-int glGetAttribLocation( GLuint program, const char *name )
+int glGetAttribLocation(GLuint program, const char *name)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLGETATTRIBLOCATION)
 {
@@ -846,7 +846,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLGETATTRIBLOCATION)
 }
 
 /*
-int glGetUniformLocation( GLuint program, const char *name )
+int glGetUniformLocation(GLuint program, const char *name)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLGETUNIFORMLOCATION)
 {
@@ -870,7 +870,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLGETUNIFORMLOCATION)
 }
 
 /*
-GLboolean glIsBuffer( GLuint buffer )
+GLboolean glIsBuffer(GLuint buffer)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLISBUFFER)
 {
@@ -894,7 +894,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLISBUFFER)
 }
 
 /*
-GLboolean glIsFramebuffer( GLuint framebuffer )
+GLboolean glIsFramebuffer(GLuint framebuffer)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLISFRAMEBUFFER)
 {
@@ -918,7 +918,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLISFRAMEBUFFER)
 }
 
 /*
-GLboolean glIsProgram( GLuint program )
+GLboolean glIsProgram(GLuint program)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLISPROGRAM)
 {
@@ -942,7 +942,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLISPROGRAM)
 }
 
 /*
-GLboolean glIsRenderbuffer( GLuint renderbuffer )
+GLboolean glIsRenderbuffer(GLuint renderbuffer)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLISRENDERBUFFER)
 {
@@ -966,7 +966,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLISRENDERBUFFER)
 }
 
 /*
-GLboolean glIsShader( GLuint shader )
+GLboolean glIsShader(GLuint shader)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLISSHADER)
 {
@@ -990,7 +990,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLISSHADER)
 }
 
 /*
-void glLinkProgram( GLuint program )
+void glLinkProgram(GLuint program)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLLINKPROGRAM)
 {
@@ -1042,7 +1042,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLRELEASESHADERCOMPILER)
 }
 
 /*
-void glRenderbufferStorage( GLenum target, GLenum internalformat, GLsizei width, GLsizei height )
+void glRenderbufferStorage(GLenum target, GLenum internalformat, GLsizei width, GLsizei height)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLRENDERBUFFERSTORAGE)
 {
@@ -1068,7 +1068,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLRENDERBUFFERSTORAGE)
 }
 
 /*
-void glSampleCoverage( GLclampf value, GLboolean invert )
+void glSampleCoverage(GLclampf value, GLboolean invert)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLSAMPLECOVERAGE)
 {
@@ -1094,7 +1094,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLSAMPLECOVERAGE)
 }
 
 /*
-void glStencilFuncSeparate( GLenum face, GLenum func, GLint ref, GLuint mask )
+void glStencilFuncSeparate(GLenum face, GLenum func, GLint ref, GLuint mask)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLSTENCILFUNCSEPARATE)
 {
@@ -1120,7 +1120,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLSTENCILFUNCSEPARATE)
 }
 
 /*
-void glStencilMaskSeparate( GLenum face, GLuint mask )
+void glStencilMaskSeparate(GLenum face, GLuint mask)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLSTENCILMASKSEPARATE)
 {
@@ -1146,7 +1146,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLSTENCILMASKSEPARATE)
 }
 
 /*
-void glStencilOpSeparate( GLenum face, GLenum fail, GLenum zfail, GLenum zpass )
+void glStencilOpSeparate(GLenum face, GLenum fail, GLenum zfail, GLenum zpass)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLSTENCILOPSEPARATE)
 {
@@ -1172,7 +1172,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLSTENCILOPSEPARATE)
 }
 
 /*
-void glUniform1f( GLint location, GLfloat x )
+void glUniform1f(GLint location, GLfloat x)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM1F)
 {
@@ -1198,7 +1198,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM1F)
 }
 
 /*
-void glUniform1i( GLint location, GLint x )
+void glUniform1i(GLint location, GLint x)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM1I)
 {
@@ -1224,7 +1224,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM1I)
 }
 
 /*
-void glUniform2f( GLint location, GLfloat x, GLfloat y )
+void glUniform2f(GLint location, GLfloat x, GLfloat y)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM2F)
 {
@@ -1250,7 +1250,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM2F)
 }
 
 /*
-void glUniform2i( GLint location, GLint x, GLint y )
+void glUniform2i(GLint location, GLint x, GLint y)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM2I)
 {
@@ -1276,7 +1276,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM2I)
 }
 
 /*
-void glUniform3f( GLint location, GLfloat x, GLfloat y, GLfloat z )
+void glUniform3f(GLint location, GLfloat x, GLfloat y, GLfloat z)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM3F)
 {
@@ -1302,7 +1302,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM3F)
 }
 
 /*
-void glUniform3i( GLint location, GLint x, GLint y, GLint z )
+void glUniform3i(GLint location, GLint x, GLint y, GLint z)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM3I)
 {
@@ -1328,7 +1328,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM3I)
 }
 
 /*
-void glUniform4f( GLint location, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
+void glUniform4f(GLint location, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM4F)
 {
@@ -1354,7 +1354,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM4F)
 }
 
 /*
-void glUniform4i( GLint location, GLint x, GLint y, GLint z, GLint w )
+void glUniform4i(GLint location, GLint x, GLint y, GLint z, GLint w)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM4I)
 {
@@ -1380,7 +1380,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM4I)
 }
 
 /*
-void glUseProgram( GLuint program )
+void glUseProgram(GLuint program)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLUSEPROGRAM)
 {
@@ -1406,7 +1406,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUSEPROGRAM)
 }
 
 /*
-void glValidateProgram( GLuint program )
+void glValidateProgram(GLuint program)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLVALIDATEPROGRAM)
 {
@@ -1432,7 +1432,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLVALIDATEPROGRAM)
 }
 
 /*
-void glVertexAttrib1f( GLuint indx, GLfloat x )
+void glVertexAttrib1f(GLuint indx, GLfloat x)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIB1F)
 {
@@ -1458,7 +1458,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIB1F)
 }
 
 /*
-void glVertexAttrib2f( GLuint indx, GLfloat x, GLfloat y )
+void glVertexAttrib2f(GLuint indx, GLfloat x, GLfloat y)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIB2F)
 {
@@ -1484,7 +1484,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIB2F)
 }
 
 /*
-void glVertexAttrib3f( GLuint indx, GLfloat x, GLfloat y, GLfloat z )
+void glVertexAttrib3f(GLuint indx, GLfloat x, GLfloat y, GLfloat z)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIB3F)
 {
@@ -1510,7 +1510,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIB3F)
 }
 
 /*
-void glVertexAttrib4f( GLuint indx, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
+void glVertexAttrib4f(GLuint indx, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIB4F)
 {
@@ -1536,7 +1536,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIB4F)
 }
 
 /*
-void glVertexAttribPointer( GLuint indx, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const void *ptr
+void glVertexAttribPointer(GLuint indx, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const void *ptr
 )
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIBPOINTER)
@@ -1564,7 +1564,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIBPOINTER)
 }
 
 /*
-bool hasOpenGLFeature( QGLFunctions::OpenGLFeature feature ) const
+bool hasOpenGLFeature(QGLFunctions::OpenGLFeature feature) const
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_HASOPENGLFEATURE)
 {
@@ -1588,7 +1588,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_HASOPENGLFEATURE)
 }
 
 /*
-void initializeGLFunctions( const QGLContext *context = 0 )
+void initializeGLFunctions(const QGLContext *context = 0)
 */
 HB_FUNC_STATIC(QGLFUNCTIONS_INITIALIZEGLFUNCTIONS)
 {

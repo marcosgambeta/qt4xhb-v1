@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QGLFORMAT_NEW)
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
-    QGLFormat( QGL::FormatOptions options, int plane = 0 )
+    QGLFormat(QGL::FormatOptions options, int plane = 0)
     */
     QGLFormat *obj = new QGLFormat((QGL::FormatOptions)hb_parni(1), OPINT(2, 0));
     Qt4xHb::returnNewObject(obj, true);
@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QGLFORMAT_NEW)
   else if (ISNUMPAR(1) && ISQGLFORMAT(1))
   {
     /*
-    QGLFormat( const QGLFormat &other )
+    QGLFormat(const QGLFormat &other)
     */
     QGLFormat *obj = new QGLFormat(*PQGLFORMAT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -612,7 +612,7 @@ HB_FUNC_STATIC(QGLFORMAT_SAMPLES)
 }
 
 /*
-void setAccum( bool enable )
+void setAccum(bool enable)
 */
 HB_FUNC_STATIC(QGLFORMAT_SETACCUM)
 {
@@ -638,7 +638,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETACCUM)
 }
 
 /*
-void setAccumBufferSize( int size )
+void setAccumBufferSize(int size)
 */
 HB_FUNC_STATIC(QGLFORMAT_SETACCUMBUFFERSIZE)
 {
@@ -664,7 +664,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETACCUMBUFFERSIZE)
 }
 
 /*
-void setAlpha( bool enable )
+void setAlpha(bool enable)
 */
 HB_FUNC_STATIC(QGLFORMAT_SETALPHA)
 {
@@ -690,7 +690,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETALPHA)
 }
 
 /*
-void setAlphaBufferSize( int size )
+void setAlphaBufferSize(int size)
 */
 HB_FUNC_STATIC(QGLFORMAT_SETALPHABUFFERSIZE)
 {
@@ -716,7 +716,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETALPHABUFFERSIZE)
 }
 
 /*
-void setBlueBufferSize( int size )
+void setBlueBufferSize(int size)
 */
 HB_FUNC_STATIC(QGLFORMAT_SETBLUEBUFFERSIZE)
 {
@@ -742,7 +742,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETBLUEBUFFERSIZE)
 }
 
 /*
-void setDepth( bool enable )
+void setDepth(bool enable)
 */
 HB_FUNC_STATIC(QGLFORMAT_SETDEPTH)
 {
@@ -768,7 +768,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETDEPTH)
 }
 
 /*
-void setDepthBufferSize( int size )
+void setDepthBufferSize(int size)
 */
 HB_FUNC_STATIC(QGLFORMAT_SETDEPTHBUFFERSIZE)
 {
@@ -794,7 +794,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETDEPTHBUFFERSIZE)
 }
 
 /*
-void setDirectRendering( bool enable )
+void setDirectRendering(bool enable)
 */
 HB_FUNC_STATIC(QGLFORMAT_SETDIRECTRENDERING)
 {
@@ -820,7 +820,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETDIRECTRENDERING)
 }
 
 /*
-void setDoubleBuffer( bool enable )
+void setDoubleBuffer(bool enable)
 */
 HB_FUNC_STATIC(QGLFORMAT_SETDOUBLEBUFFER)
 {
@@ -846,7 +846,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETDOUBLEBUFFER)
 }
 
 /*
-void setGreenBufferSize( int size )
+void setGreenBufferSize(int size)
 */
 HB_FUNC_STATIC(QGLFORMAT_SETGREENBUFFERSIZE)
 {
@@ -872,7 +872,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETGREENBUFFERSIZE)
 }
 
 /*
-void setOption( QGL::FormatOptions opt )
+void setOption(QGL::FormatOptions opt)
 */
 HB_FUNC_STATIC(QGLFORMAT_SETOPTION)
 {
@@ -898,7 +898,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETOPTION)
 }
 
 /*
-void setOverlay( bool enable )
+void setOverlay(bool enable)
 */
 HB_FUNC_STATIC(QGLFORMAT_SETOVERLAY)
 {
@@ -924,7 +924,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETOVERLAY)
 }
 
 /*
-void setPlane( int plane )
+void setPlane(int plane)
 */
 HB_FUNC_STATIC(QGLFORMAT_SETPLANE)
 {
@@ -950,7 +950,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETPLANE)
 }
 
 /*
-void setProfile( QGLFormat::OpenGLContextProfile profile )
+void setProfile(QGLFormat::OpenGLContextProfile profile)
 */
 HB_FUNC_STATIC(QGLFORMAT_SETPROFILE)
 {
@@ -976,7 +976,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETPROFILE)
 }
 
 /*
-void setRedBufferSize( int size )
+void setRedBufferSize(int size)
 */
 HB_FUNC_STATIC(QGLFORMAT_SETREDBUFFERSIZE)
 {
@@ -1002,7 +1002,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETREDBUFFERSIZE)
 }
 
 /*
-void setRgba( bool enable )
+void setRgba(bool enable)
 */
 HB_FUNC_STATIC(QGLFORMAT_SETRGBA)
 {
@@ -1028,7 +1028,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETRGBA)
 }
 
 /*
-void setSampleBuffers( bool enable )
+void setSampleBuffers(bool enable)
 */
 HB_FUNC_STATIC(QGLFORMAT_SETSAMPLEBUFFERS)
 {
@@ -1054,7 +1054,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSAMPLEBUFFERS)
 }
 
 /*
-void setSamples( int numSamples )
+void setSamples(int numSamples)
 */
 HB_FUNC_STATIC(QGLFORMAT_SETSAMPLES)
 {
@@ -1080,7 +1080,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSAMPLES)
 }
 
 /*
-void setStencil( bool enable )
+void setStencil(bool enable)
 */
 HB_FUNC_STATIC(QGLFORMAT_SETSTENCIL)
 {
@@ -1106,7 +1106,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSTENCIL)
 }
 
 /*
-void setStencilBufferSize( int size )
+void setStencilBufferSize(int size)
 */
 HB_FUNC_STATIC(QGLFORMAT_SETSTENCILBUFFERSIZE)
 {
@@ -1132,7 +1132,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSTENCILBUFFERSIZE)
 }
 
 /*
-void setStereo( bool enable )
+void setStereo(bool enable)
 */
 HB_FUNC_STATIC(QGLFORMAT_SETSTEREO)
 {
@@ -1158,7 +1158,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSTEREO)
 }
 
 /*
-void setSwapInterval( int interval )
+void setSwapInterval(int interval)
 */
 HB_FUNC_STATIC(QGLFORMAT_SETSWAPINTERVAL)
 {
@@ -1184,7 +1184,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSWAPINTERVAL)
 }
 
 /*
-void setVersion( int major, int minor )
+void setVersion(int major, int minor)
 */
 HB_FUNC_STATIC(QGLFORMAT_SETVERSION)
 {
@@ -1306,7 +1306,7 @@ HB_FUNC_STATIC(QGLFORMAT_SWAPINTERVAL)
 }
 
 /*
-bool testOption( QGL::FormatOptions opt ) const
+bool testOption(QGL::FormatOptions opt) const
 */
 HB_FUNC_STATIC(QGLFORMAT_TESTOPTION)
 {
@@ -1427,7 +1427,7 @@ HB_FUNC_STATIC(QGLFORMAT_OPENGLVERSIONFLAGS)
 }
 
 /*
-static void setDefaultFormat( const QGLFormat &f )
+static void setDefaultFormat(const QGLFormat &f)
 */
 HB_FUNC_STATIC(QGLFORMAT_SETDEFAULTFORMAT)
 {
@@ -1448,7 +1448,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETDEFAULTFORMAT)
 }
 
 /*
-static void setDefaultOverlayFormat( const QGLFormat &f )
+static void setDefaultOverlayFormat(const QGLFormat &f)
 */
 HB_FUNC_STATIC(QGLFORMAT_SETDEFAULTOVERLAYFORMAT)
 {

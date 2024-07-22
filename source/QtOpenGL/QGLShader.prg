@@ -57,7 +57,7 @@ HB_FUNC_STATIC(QGLSHADER_NEW)
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
-    QGLShader( QGLShader::ShaderType type, QObject *parent = 0 )
+    QGLShader(QGLShader::ShaderType type, QObject *parent = 0)
     */
     QGLShader *obj = new QGLShader((QGLShader::ShaderType)hb_parni(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -65,7 +65,7 @@ HB_FUNC_STATIC(QGLSHADER_NEW)
   else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQGLCONTEXT(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     /*
-    QGLShader( QGLShader::ShaderType type, const QGLContext *context, QObject *parent = 0 )
+    QGLShader(QGLShader::ShaderType type, const QGLContext *context, QObject *parent = 0)
     */
     QGLShader *obj = new QGLShader((QGLShader::ShaderType)hb_parni(1), PQGLCONTEXT(2), OPQOBJECT(3, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QGLSHADER_DELETE)
 }
 
 /*
-bool compileSourceCode( const char *source )
+bool compileSourceCode(const char *source)
 */
 HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE1)
 {
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE1)
 }
 
 /*
-bool compileSourceCode( const QByteArray &source )
+bool compileSourceCode(const QByteArray &source)
 */
 HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE2)
 {
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE2)
 }
 
 /*
-bool compileSourceCode( const QString &source )
+bool compileSourceCode(const QString &source)
 */
 HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE3)
 {
@@ -187,7 +187,7 @@ HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE)
 }
 
 /*
-bool compileSourceFile( const QString &fileName )
+bool compileSourceFile(const QString &fileName)
 */
 HB_FUNC_STATIC(QGLSHADER_COMPILESOURCEFILE)
 {
@@ -332,7 +332,7 @@ HB_FUNC_STATIC(QGLSHADER_SOURCECODE)
 }
 
 /*
-static bool hasOpenGLShaders( QGLShader::ShaderType type, const QGLContext *context = 0 )
+static bool hasOpenGLShaders(QGLShader::ShaderType type, const QGLContext *context = 0)
 */
 HB_FUNC_STATIC(QGLSHADER_HASOPENGLSHADERS)
 {
