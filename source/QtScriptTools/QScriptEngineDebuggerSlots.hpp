@@ -31,4 +31,4 @@ public slots:
   void evaluationSuspended();
 };
 
-#endif /* QSCRIPTENGINEDEBUGGERSLOTS_H */
+#endif // QSCRIPTENGINEDEBUGGERSLOTS_H
