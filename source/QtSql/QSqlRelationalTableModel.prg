@@ -54,7 +54,7 @@ RETURN
 #include "qt4xhb_signals.hpp"
 
     /*
-    QSqlRelationalTableModel( QObject * parent = 0, QSqlDatabase db = QSqlDatabase() )
+    QSqlRelationalTableModel( QObject *parent = 0, QSqlDatabase db = QSqlDatabase() )
     */
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_NEW)
 {
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_RELATION)
 }
 
 /*
-virtual QSqlTableModel * relationModel( int column ) const
+virtual QSqlTableModel *relationModel( int column ) const
 */
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_RELATIONMODEL)
 {

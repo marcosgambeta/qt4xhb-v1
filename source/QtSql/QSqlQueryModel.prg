@@ -63,7 +63,7 @@ RETURN
 #include <QtSql/QSqlRecord>
 
     /*
-    QSqlQueryModel( QObject * parent = 0 )
+    QSqlQueryModel( QObject *parent = 0 )
     */
 HB_FUNC_STATIC(QSQLQUERYMODEL_NEW)
 {

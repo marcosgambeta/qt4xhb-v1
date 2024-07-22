@@ -80,7 +80,7 @@ RETURN
 #include <QtSql/QSqlIndex>
 
     /*
-    QSqlTableModel( QObject * parent = 0, QSqlDatabase db = QSqlDatabase() )
+    QSqlTableModel( QObject *parent = 0, QSqlDatabase db = QSqlDatabase() )
     */
 HB_FUNC_STATIC(QSQLTABLEMODEL_NEW)
 {

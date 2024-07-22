@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QSQLDRIVER_COMMITTRANSACTION)
 }
 
 /*
-virtual QSqlResult * createResult() const = 0
+virtual QSqlResult *createResult() const = 0
 */
 HB_FUNC_STATIC(QSQLDRIVER_CREATERESULT)
 {

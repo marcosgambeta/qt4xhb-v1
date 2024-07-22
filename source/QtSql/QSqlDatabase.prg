@@ -261,7 +261,7 @@ HB_FUNC_STATIC(QSQLDATABASE_DATABASENAME)
 }
 
 /*
-QSqlDriver * driver() const
+QSqlDriver *driver() const
 */
 HB_FUNC_STATIC(QSQLDATABASE_DRIVER)
 {
@@ -903,7 +903,7 @@ HB_FUNC_STATIC(QSQLDATABASE_ADDDATABASE)
   else if (ISBETWEEN(1, 2) && ISQSQLDRIVER(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
-    static QSqlDatabase addDatabase( QSqlDriver * driver, const QString &connectionName = QLatin1String(
+    static QSqlDatabase addDatabase( QSqlDriver *driver, const QString &connectionName = QLatin1String(
     QSqlDatabase::defaultConnection ) )
     */
 
@@ -1036,7 +1036,7 @@ HB_FUNC_STATIC(QSQLDATABASE_ISDRIVERAVAILABLE)
 }
 
 /*
-static void registerSqlDriver( const QString &name, QSqlDriverCreatorBase * creator )
+static void registerSqlDriver( const QString &name, QSqlDriverCreatorBase *creator )
 */
 HB_FUNC_STATIC(QSQLDATABASE_REGISTERSQLDRIVER)
 {

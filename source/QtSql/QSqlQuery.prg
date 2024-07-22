@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QSQLQUERY_NEW)
   if (ISNUMPAR(1) && ISQSQLRESULT(1))
   {
     /*
-    QSqlQuery( QSqlResult * result )
+    QSqlQuery( QSqlResult *result )
     */
     QSqlQuery *obj = new QSqlQuery(PQSQLRESULT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -295,7 +295,7 @@ HB_FUNC_STATIC(QSQLQUERY_CLEAR)
 }
 
 /*
-const QSqlDriver * driver() const
+const QSqlDriver *driver() const
 */
 HB_FUNC_STATIC(QSQLQUERY_DRIVER)
 {
@@ -838,7 +838,7 @@ HB_FUNC_STATIC(QSQLQUERY_RECORD)
 }
 
 /*
-const QSqlResult * result() const
+const QSqlResult *result() const
 */
 HB_FUNC_STATIC(QSQLQUERY_RESULT)
 {
