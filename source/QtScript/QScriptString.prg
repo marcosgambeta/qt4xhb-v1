@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QSCRIPTSTRING_NEW)
   else if (ISNUMPAR(1) && ISQSCRIPTSTRING(1))
   {
     /*
-    QScriptString( const QScriptString &other )
+    QScriptString(const QScriptString &other)
     */
     QScriptString *obj = new QScriptString(*PQSCRIPTSTRING(1));
     Qt4xHb::returnNewObject(obj, true);
