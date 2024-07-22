@@ -31,4 +31,4 @@ public slots:
   void stateChanged(QAudio::State state);
 };
 
-#endif /* QAUDIOOUTPUTSLOTS_H */
+#endif // QAUDIOOUTPUTSLOTS_H

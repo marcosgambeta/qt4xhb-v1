@@ -32,4 +32,4 @@ public slots:
   void supportedFormatsChanged();
 };
 
-#endif /* QABSTRACTVIDEOSURFACESLOTS_H */
+#endif // QABSTRACTVIDEOSURFACESLOTS_H

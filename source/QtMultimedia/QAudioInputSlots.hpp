@@ -31,4 +31,4 @@ public slots:
   void notify();
 };
 
-#endif /* QAUDIOINPUTSLOTS_H */
+#endif // QAUDIOINPUTSLOTS_H
