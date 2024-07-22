@@ -31,4 +31,4 @@ public slots:
   void statusChanged(QDeclarativeView::Status status);
 };
 
-#endif /* QDECLARATIVEVIEWSLOTS_H */
+#endif // QDECLARATIVEVIEWSLOTS_H

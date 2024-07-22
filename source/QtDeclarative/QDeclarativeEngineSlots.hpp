@@ -31,4 +31,4 @@ public slots:
   void warnings(const QList<QDeclarativeError> &warnings);
 };
 
-#endif /* QDECLARATIVEENGINESLOTS_H */
+#endif // QDECLARATIVEENGINESLOTS_H

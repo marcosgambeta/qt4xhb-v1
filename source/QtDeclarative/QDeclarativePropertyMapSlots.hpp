@@ -30,4 +30,4 @@ public slots:
   void valueChanged(const QString &key, const QVariant &value);
 };
 
-#endif /* QDECLARATIVEPROPERTYMAPSLOTS_H */
+#endif // QDECLARATIVEPROPERTYMAPSLOTS_H

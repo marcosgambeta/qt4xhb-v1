@@ -31,4 +31,4 @@ public slots:
   void statusChanged(QDeclarativeComponent::Status status);
 };
 
-#endif /* QDECLARATIVECOMPONENTSLOTS_H */
+#endif // QDECLARATIVECOMPONENTSLOTS_H

@@ -30,4 +30,4 @@ public slots:
   void valueChanged();
 };
 
-#endif /* QDECLARATIVEEXPRESSIONSLOTS_H */
+#endif // QDECLARATIVEEXPRESSIONSLOTS_H
