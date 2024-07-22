@@ -30,4 +30,4 @@ public slots:
   void repaintNeeded();
 };
 
-#endif /* QSVGRENDERERSLOTS_H */
+#endif // QSVGRENDERERSLOTS_H
