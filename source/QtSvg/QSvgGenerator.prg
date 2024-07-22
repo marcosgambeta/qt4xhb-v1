@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_FILENAME)
 }
 
 /*
-QIODevice * outputDevice() const
+QIODevice *outputDevice() const
 */
 HB_FUNC_STATIC(QSVGGENERATOR_OUTPUTDEVICE)
 {
@@ -239,7 +239,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETFILENAME)
 }
 
 /*
-void setOutputDevice( QIODevice * outputDevice )
+void setOutputDevice( QIODevice *outputDevice )
 */
 HB_FUNC_STATIC(QSVGGENERATOR_SETOUTPUTDEVICE)
 {
