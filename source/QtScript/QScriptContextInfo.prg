@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_NEW)
   if (ISNUMPAR(1) && ISQSCRIPTCONTEXT(1))
   {
     /*
-    QScriptContextInfo( const QScriptContext * context )
+    QScriptContextInfo( const QScriptContext *context )
     */
     QScriptContextInfo *obj = new QScriptContextInfo(PQSCRIPTCONTEXT(1));
     Qt4xHb::returnNewObject(obj, true);

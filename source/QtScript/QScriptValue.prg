@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_NEW6)
 }
 
 /*
-QScriptValue( const char * value )
+QScriptValue( const char *value )
 */
 HB_FUNC_STATIC(QSCRIPTVALUE_NEW10)
 {
@@ -813,7 +813,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_PROTOTYPE)
 }
 
 /*
-QScriptClass * scriptClass() const
+QScriptClass *scriptClass() const
 */
 HB_FUNC_STATIC(QSCRIPTVALUE_SCRIPTCLASS)
 {
@@ -890,7 +890,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_SETPROTOTYPE)
 }
 
 /*
-void setScriptClass( QScriptClass * scriptClass )
+void setScriptClass( QScriptClass *scriptClass )
 */
 HB_FUNC_STATIC(QSCRIPTVALUE_SETSCRIPTCLASS)
 {
@@ -1013,7 +1013,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_TOINT32)
 }
 
 /*
-QObject * toQObject() const
+QObject *toQObject() const
 */
 HB_FUNC_STATIC(QSCRIPTVALUE_TOQOBJECT)
 {

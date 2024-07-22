@@ -59,7 +59,7 @@ RETURN
 #include "qt4xhb_utils.hpp"
 
     /*
-    QScriptClass( QScriptEngine * engine )
+    QScriptClass( QScriptEngine *engine )
     */
 HB_FUNC_STATIC(QSCRIPTCLASS_NEW)
 {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_NAME)
 }
 
 /*
-virtual QScriptClassPropertyIterator * newIterator( const QScriptValue &object )
+virtual QScriptClassPropertyIterator *newIterator( const QScriptValue &object )
 */
 HB_FUNC_STATIC(QSCRIPTCLASS_NEWITERATOR)
 {

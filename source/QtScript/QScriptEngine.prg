@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEW)
   else if (ISNUMPAR(1) && ISQOBJECT(1))
   {
     /*
-    QScriptEngine( QObject * parent )
+    QScriptEngine( QObject *parent )
     */
     QScriptEngine *obj = new QScriptEngine(PQOBJECT(1));
     Qt4xHb::returnNewObject(obj, false);
@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_ABORTEVALUATION)
 }
 
 /*
-QScriptEngineAgent * agent() const
+QScriptEngineAgent *agent() const
 */
 HB_FUNC_STATIC(QSCRIPTENGINE_AGENT)
 {
@@ -252,7 +252,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_COLLECTGARBAGE)
 }
 
 /*
-QScriptContext * currentContext() const
+QScriptContext *currentContext() const
 */
 HB_FUNC_STATIC(QSCRIPTENGINE_CURRENTCONTEXT)
 {
@@ -653,7 +653,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_PROCESSEVENTSINTERVAL)
 }
 
 /*
-QScriptContext * pushContext()
+QScriptContext *pushContext()
 */
 HB_FUNC_STATIC(QSCRIPTENGINE_PUSHCONTEXT)
 {
@@ -704,7 +704,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_REPORTADDITIONALMEMORYCOST)
 }
 
 /*
-void setAgent( QScriptEngineAgent * agent )
+void setAgent( QScriptEngineAgent *agent )
 */
 HB_FUNC_STATIC(QSCRIPTENGINE_SETAGENT)
 {

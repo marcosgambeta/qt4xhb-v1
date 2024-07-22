@@ -232,7 +232,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_CALLEE)
 }
 
 /*
-QScriptEngine * engine() const
+QScriptEngine *engine() const
 */
 HB_FUNC_STATIC(QSCRIPTCONTEXT_ENGINE)
 {
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_ISCALLEDASCONSTRUCTOR)
 }
 
 /*
-QScriptContext * parentContext() const
+QScriptContext *parentContext() const
 */
 HB_FUNC_STATIC(QSCRIPTCONTEXT_PARENTCONTEXT)
 {
