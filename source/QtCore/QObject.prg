@@ -232,7 +232,7 @@ RETURN
 #include <QtCore/QEvent>
 #include <QtCore/QThread>
 
-    void _qtxhb_processOnEventMethod(QEvent::Type event);
+void _qtxhb_processOnEventMethod(QEvent::Type event);
 void _qtxhb_processOnEventMethod2(QEvent::Type event);
 
 /*
