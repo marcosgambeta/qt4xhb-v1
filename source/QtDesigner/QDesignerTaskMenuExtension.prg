@@ -68,7 +68,7 @@ HB_FUNC_STATIC(QDESIGNERTASKMENUEXTENSION_DELETE)
 }
 
 /*
-virtual QAction * preferredEditAction() const
+virtual QAction *preferredEditAction() const
 */
 HB_FUNC_STATIC(QDESIGNERTASKMENUEXTENSION_PREFERREDEDITACTION)
 {

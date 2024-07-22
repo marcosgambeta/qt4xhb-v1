@@ -64,7 +64,7 @@ HB_FUNC_STATIC(QDESIGNEROBJECTINSPECTORINTERFACE_DELETE)
 }
 
 /*
-virtual QDesignerFormEditorInterface * core() const
+virtual QDesignerFormEditorInterface *core() const
 */
 HB_FUNC_STATIC(QDESIGNEROBJECTINSPECTORINTERFACE_CORE)
 {
@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QDESIGNEROBJECTINSPECTORINTERFACE_CORE)
 }
 
 /*
-virtual void setFormWindow( QDesignerFormWindowInterface * formWindow ) = 0
+virtual void setFormWindow( QDesignerFormWindowInterface *formWindow ) = 0
 */
 HB_FUNC_STATIC(QDESIGNEROBJECTINSPECTORINTERFACE_SETFORMWINDOW)
 {

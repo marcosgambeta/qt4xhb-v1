@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_DELETE)
 }
 
 /*
-virtual QWidget * current() const = 0
+virtual QWidget *current() const = 0
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_CURRENT)
 {
@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_CURRENT)
 }
 
 /*
-virtual QDesignerFormWindowInterface * formWindow() const = 0
+virtual QDesignerFormWindowInterface *formWindow() const = 0
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_FORMWINDOW)
 {
@@ -156,7 +156,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_HASSELECTION)
 }
 
 /*
-bool isWidgetSelected( QWidget * widget ) const
+bool isWidgetSelected( QWidget *widget ) const
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_ISWIDGETSELECTED)
 {
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_POSITION)
 }
 
 /*
-virtual QWidget * selectedWidget( int index ) const = 0
+virtual QWidget *selectedWidget( int index ) const = 0
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_SELECTEDWIDGET)
 {
@@ -317,7 +317,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_SETPOSITION)
 }
 
 /*
-virtual QWidget * widget( int index ) const = 0
+virtual QWidget *widget( int index ) const = 0
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_WIDGET)
 {

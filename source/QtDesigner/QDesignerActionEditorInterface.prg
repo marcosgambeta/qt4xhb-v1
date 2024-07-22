@@ -65,7 +65,7 @@ HB_FUNC_STATIC(QDESIGNERACTIONEDITORINTERFACE_DELETE)
 }
 
 /*
-virtual QDesignerFormEditorInterface * core() const
+virtual QDesignerFormEditorInterface *core() const
 */
 HB_FUNC_STATIC(QDESIGNERACTIONEDITORINTERFACE_CORE)
 {
@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QDESIGNERACTIONEDITORINTERFACE_CORE)
 }
 
 /*
-virtual void manageAction( QAction * action ) = 0
+virtual void manageAction( QAction *action ) = 0
 */
 HB_FUNC_STATIC(QDESIGNERACTIONEDITORINTERFACE_MANAGEACTION)
 {
@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QDESIGNERACTIONEDITORINTERFACE_MANAGEACTION)
 }
 
 /*
-virtual void setFormWindow( QDesignerFormWindowInterface * formWindow ) = 0
+virtual void setFormWindow( QDesignerFormWindowInterface *formWindow ) = 0
 */
 HB_FUNC_STATIC(QDESIGNERACTIONEDITORINTERFACE_SETFORMWINDOW)
 {

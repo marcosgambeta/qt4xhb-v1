@@ -248,7 +248,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_CONTENTS)
 }
 
 /*
-virtual QDesignerFormEditorInterface * core() const
+virtual QDesignerFormEditorInterface *core() const
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_CORE)
 {
@@ -274,7 +274,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_CORE)
 }
 
 /*
-virtual QDesignerFormWindowCursorInterface * cursor() const = 0
+virtual QDesignerFormWindowCursorInterface *cursor() const = 0
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_CURSOR)
 {
@@ -503,7 +503,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_ISDIRTY)
 }
 
 /*
-virtual bool isManaged( QWidget * widget ) const = 0
+virtual bool isManaged( QWidget *widget ) const = 0
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_ISMANAGED)
 {
@@ -528,7 +528,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_ISMANAGED)
 }
 
 /*
-virtual void layoutDefault( int * margin, int * spacing ) = 0
+virtual void layoutDefault( int *margin, int *spacing ) = 0
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_LAYOUTDEFAULT)
 {
@@ -559,7 +559,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_LAYOUTDEFAULT)
 }
 
 /*
-virtual QWidget * mainContainer() const = 0
+virtual QWidget *mainContainer() const = 0
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_MAINCONTAINER)
 {
@@ -824,7 +824,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETLAYOUTFUNCTION)
 }
 
 /*
-virtual void setMainContainer( QWidget * mainContainer ) = 0
+virtual void setMainContainer( QWidget *mainContainer ) = 0
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETMAINCONTAINER)
 {
@@ -905,7 +905,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_CLEARSELECTION)
 }
 
 /*
-virtual void manageWidget( QWidget * widget ) = 0
+virtual void manageWidget( QWidget *widget ) = 0
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_MANAGEWIDGET)
 {
@@ -932,7 +932,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_MANAGEWIDGET)
 }
 
 /*
-virtual void selectWidget( QWidget * widget, bool select = true ) = 0
+virtual void selectWidget( QWidget *widget, bool select = true ) = 0
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SELECTWIDGET)
 {
@@ -963,7 +963,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETCONTENTS)
   if (ISNUMPAR(1) && ISQIODEVICE(1))
   {
     /*
-    virtual void setContents( QIODevice * device ) = 0
+    virtual void setContents( QIODevice *device ) = 0
     */
     QDesignerFormWindowInterface *obj =
         qobject_cast<QDesignerFormWindowInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1105,7 +1105,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETGRID)
 }
 
 /*
-virtual void unmanageWidget( QWidget * widget ) = 0
+virtual void unmanageWidget( QWidget *widget ) = 0
 */
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_UNMANAGEWIDGET)
 {
@@ -1136,7 +1136,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW)
   if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
-    static QDesignerFormWindowInterface * findFormWindow( QWidget * widget )
+    static QDesignerFormWindowInterface *findFormWindow( QWidget *widget )
     */
 
     QDesignerFormWindowInterface *ptr = QDesignerFormWindowInterface::findFormWindow(PQWIDGET(1));
@@ -1145,7 +1145,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW)
   else if (ISNUMPAR(1) && ISQOBJECT(1))
   {
     /*
-    static QDesignerFormWindowInterface * findFormWindow( QObject * object )
+    static QDesignerFormWindowInterface *findFormWindow( QObject *object )
     */
 
     QDesignerFormWindowInterface *ptr = QDesignerFormWindowInterface::findFormWindow(PQOBJECT(1));
