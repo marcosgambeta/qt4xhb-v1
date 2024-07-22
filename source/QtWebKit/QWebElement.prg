@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QWEBELEMENT_NEW)
   else if (ISNUMPAR(1) && ISQWEBELEMENT(1))
   {
     /*
-    QWebElement( const QWebElement &other )
+    QWebElement(const QWebElement &other)
     */
     QWebElement *obj = new QWebElement(*PQWEBELEMENT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QWEBELEMENT_DELETE)
 }
 
 /*
-void addClass( const QString &name )
+void addClass(const QString &name)
 */
 HB_FUNC_STATIC(QWEBELEMENT_ADDCLASS)
 {
@@ -177,7 +177,7 @@ HB_FUNC_STATIC(QWEBELEMENT_APPENDINSIDE)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    void appendInside( const QString &markup )
+    void appendInside(const QString &markup)
     */
     QWebElement *obj = static_cast<QWebElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QWEBELEMENT_APPENDINSIDE)
   else if (ISNUMPAR(1) && ISQWEBELEMENT(1))
   {
     /*
-    void appendInside( const QWebElement &element )
+    void appendInside(const QWebElement &element)
     */
     QWebElement *obj = static_cast<QWebElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QWEBELEMENT_APPENDOUTSIDE)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    void appendOutside( const QString &markup )
+    void appendOutside(const QString &markup)
     */
     QWebElement *obj = static_cast<QWebElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -227,7 +227,7 @@ HB_FUNC_STATIC(QWEBELEMENT_APPENDOUTSIDE)
   else if (ISNUMPAR(1) && ISQWEBELEMENT(1))
   {
     /*
-    void appendOutside( const QWebElement &element )
+    void appendOutside(const QWebElement &element)
     */
     QWebElement *obj = static_cast<QWebElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QWEBELEMENT_APPENDOUTSIDE)
 }
 
 /*
-QString attribute( const QString &name, const QString &defaultValue = QString() ) const
+QString attribute(const QString &name, const QString &defaultValue = QString()) const
 */
 HB_FUNC_STATIC(QWEBELEMENT_ATTRIBUTE)
 {
@@ -269,7 +269,7 @@ HB_FUNC_STATIC(QWEBELEMENT_ATTRIBUTE)
 }
 
 /*
-QString attributeNS( const QString &namespaceUri, const QString &name, const QString &defaultValue = QString() )
+QString attributeNS(const QString &namespaceUri, const QString &name, const QString &defaultValue = QString())
 const
 */
 HB_FUNC_STATIC(QWEBELEMENT_ATTRIBUTENS)
@@ -294,7 +294,7 @@ HB_FUNC_STATIC(QWEBELEMENT_ATTRIBUTENS)
 }
 
 /*
-QStringList attributeNames( const QString &namespaceUri = QString() ) const
+QStringList attributeNames(const QString &namespaceUri = QString()) const
 */
 HB_FUNC_STATIC(QWEBELEMENT_ATTRIBUTENAMES)
 {
@@ -396,7 +396,7 @@ HB_FUNC_STATIC(QWEBELEMENT_ENCLOSECONTENTSWITH)
   if (ISNUMPAR(1) && ISQWEBELEMENT(1))
   {
     /*
-    void encloseContentsWith( const QWebElement &element )
+    void encloseContentsWith(const QWebElement &element)
     */
     QWebElement *obj = static_cast<QWebElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -410,7 +410,7 @@ HB_FUNC_STATIC(QWEBELEMENT_ENCLOSECONTENTSWITH)
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    void encloseContentsWith( const QString &markup )
+    void encloseContentsWith(const QString &markup)
     */
     QWebElement *obj = static_cast<QWebElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -432,7 +432,7 @@ HB_FUNC_STATIC(QWEBELEMENT_ENCLOSEWITH)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    void encloseWith( const QString &markup )
+    void encloseWith(const QString &markup)
     */
     QWebElement *obj = static_cast<QWebElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -446,7 +446,7 @@ HB_FUNC_STATIC(QWEBELEMENT_ENCLOSEWITH)
   else if (ISNUMPAR(1) && ISQWEBELEMENT(1))
   {
     /*
-    void encloseWith( const QWebElement &element )
+    void encloseWith(const QWebElement &element)
     */
     QWebElement *obj = static_cast<QWebElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -464,7 +464,7 @@ HB_FUNC_STATIC(QWEBELEMENT_ENCLOSEWITH)
 }
 
 /*
-QVariant evaluateJavaScript( const QString &scriptSource )
+QVariant evaluateJavaScript(const QString &scriptSource)
 */
 HB_FUNC_STATIC(QWEBELEMENT_EVALUATEJAVASCRIPT)
 {
@@ -489,7 +489,7 @@ HB_FUNC_STATIC(QWEBELEMENT_EVALUATEJAVASCRIPT)
 }
 
 /*
-QWebElementCollection findAll( const QString &selectorQuery ) const
+QWebElementCollection findAll(const QString &selectorQuery) const
 */
 HB_FUNC_STATIC(QWEBELEMENT_FINDALL)
 {
@@ -514,7 +514,7 @@ HB_FUNC_STATIC(QWEBELEMENT_FINDALL)
 }
 
 /*
-QWebElement findFirst( const QString &selectorQuery ) const
+QWebElement findFirst(const QString &selectorQuery) const
 */
 HB_FUNC_STATIC(QWEBELEMENT_FINDFIRST)
 {
@@ -589,7 +589,7 @@ HB_FUNC_STATIC(QWEBELEMENT_GEOMETRY)
 }
 
 /*
-bool hasAttribute( const QString &name ) const
+bool hasAttribute(const QString &name) const
 */
 HB_FUNC_STATIC(QWEBELEMENT_HASATTRIBUTE)
 {
@@ -613,7 +613,7 @@ HB_FUNC_STATIC(QWEBELEMENT_HASATTRIBUTE)
 }
 
 /*
-bool hasAttributeNS( const QString &namespaceUri, const QString &name ) const
+bool hasAttributeNS(const QString &namespaceUri, const QString &name) const
 */
 HB_FUNC_STATIC(QWEBELEMENT_HASATTRIBUTENS)
 {
@@ -661,7 +661,7 @@ HB_FUNC_STATIC(QWEBELEMENT_HASATTRIBUTES)
 }
 
 /*
-bool hasClass( const QString &name ) const
+bool hasClass(const QString &name) const
 */
 HB_FUNC_STATIC(QWEBELEMENT_HASCLASS)
 {
@@ -884,7 +884,7 @@ HB_FUNC_STATIC(QWEBELEMENT_PREPENDINSIDE)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    void prependInside( const QString &markup )
+    void prependInside(const QString &markup)
     */
     QWebElement *obj = static_cast<QWebElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -898,7 +898,7 @@ HB_FUNC_STATIC(QWEBELEMENT_PREPENDINSIDE)
   else if (ISNUMPAR(1) && ISQWEBELEMENT(1))
   {
     /*
-    void prependInside( const QWebElement &element )
+    void prependInside(const QWebElement &element)
     */
     QWebElement *obj = static_cast<QWebElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -920,7 +920,7 @@ HB_FUNC_STATIC(QWEBELEMENT_PREPENDOUTSIDE)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    void prependOutside( const QString &markup )
+    void prependOutside(const QString &markup)
     */
     QWebElement *obj = static_cast<QWebElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -934,7 +934,7 @@ HB_FUNC_STATIC(QWEBELEMENT_PREPENDOUTSIDE)
   else if (ISNUMPAR(1) && ISQWEBELEMENT(1))
   {
     /*
-    void prependOutside( const QWebElement &element )
+    void prependOutside(const QWebElement &element)
     */
     QWebElement *obj = static_cast<QWebElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1003,7 +1003,7 @@ HB_FUNC_STATIC(QWEBELEMENT_REMOVEALLCHILDREN)
 }
 
 /*
-void removeAttribute( const QString &name )
+void removeAttribute(const QString &name)
 */
 HB_FUNC_STATIC(QWEBELEMENT_REMOVEATTRIBUTE)
 {
@@ -1029,7 +1029,7 @@ HB_FUNC_STATIC(QWEBELEMENT_REMOVEATTRIBUTE)
 }
 
 /*
-void removeAttributeNS( const QString &namespaceUri, const QString &name )
+void removeAttributeNS(const QString &namespaceUri, const QString &name)
 */
 HB_FUNC_STATIC(QWEBELEMENT_REMOVEATTRIBUTENS)
 {
@@ -1055,7 +1055,7 @@ HB_FUNC_STATIC(QWEBELEMENT_REMOVEATTRIBUTENS)
 }
 
 /*
-void removeClass( const QString &name )
+void removeClass(const QString &name)
 */
 HB_FUNC_STATIC(QWEBELEMENT_REMOVECLASS)
 {
@@ -1111,7 +1111,7 @@ HB_FUNC_STATIC(QWEBELEMENT_RENDER)
   if (ISNUMPAR(1) && ISQPAINTER(1))
   {
     /*
-    void render( QPainter *painter )
+    void render(QPainter *painter)
     */
     QWebElement *obj = static_cast<QWebElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1125,7 +1125,7 @@ HB_FUNC_STATIC(QWEBELEMENT_RENDER)
   else if (ISNUMPAR(2) && ISQPAINTER(1) && ISQRECT(2))
   {
     /*
-    void render( QPainter *painter, const QRect &clip )
+    void render(QPainter *painter, const QRect &clip)
     */
     QWebElement *obj = static_cast<QWebElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1147,7 +1147,7 @@ HB_FUNC_STATIC(QWEBELEMENT_REPLACE)
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
-    void replace( const QString &markup )
+    void replace(const QString &markup)
     */
     QWebElement *obj = static_cast<QWebElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1161,7 +1161,7 @@ HB_FUNC_STATIC(QWEBELEMENT_REPLACE)
   else if (ISNUMPAR(1) && ISQWEBELEMENT(1))
   {
     /*
-    void replace( const QWebElement &element )
+    void replace(const QWebElement &element)
     */
     QWebElement *obj = static_cast<QWebElement *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1179,7 +1179,7 @@ HB_FUNC_STATIC(QWEBELEMENT_REPLACE)
 }
 
 /*
-void setAttribute( const QString &name, const QString &value )
+void setAttribute(const QString &name, const QString &value)
 */
 HB_FUNC_STATIC(QWEBELEMENT_SETATTRIBUTE)
 {
@@ -1205,7 +1205,7 @@ HB_FUNC_STATIC(QWEBELEMENT_SETATTRIBUTE)
 }
 
 /*
-void setAttributeNS( const QString &namespaceUri, const QString &name, const QString &value )
+void setAttributeNS(const QString &namespaceUri, const QString &name, const QString &value)
 */
 HB_FUNC_STATIC(QWEBELEMENT_SETATTRIBUTENS)
 {
@@ -1257,7 +1257,7 @@ HB_FUNC_STATIC(QWEBELEMENT_SETFOCUS)
 }
 
 /*
-void setInnerXml( const QString &markup )
+void setInnerXml(const QString &markup)
 */
 HB_FUNC_STATIC(QWEBELEMENT_SETINNERXML)
 {
@@ -1283,7 +1283,7 @@ HB_FUNC_STATIC(QWEBELEMENT_SETINNERXML)
 }
 
 /*
-void setOuterXml( const QString &markup )
+void setOuterXml(const QString &markup)
 */
 HB_FUNC_STATIC(QWEBELEMENT_SETOUTERXML)
 {
@@ -1309,7 +1309,7 @@ HB_FUNC_STATIC(QWEBELEMENT_SETOUTERXML)
 }
 
 /*
-void setPlainText( const QString &text )
+void setPlainText(const QString &text)
 */
 HB_FUNC_STATIC(QWEBELEMENT_SETPLAINTEXT)
 {
@@ -1335,7 +1335,7 @@ HB_FUNC_STATIC(QWEBELEMENT_SETPLAINTEXT)
 }
 
 /*
-void setStyleProperty( const QString &name, const QString &value )
+void setStyleProperty(const QString &name, const QString &value)
 */
 HB_FUNC_STATIC(QWEBELEMENT_SETSTYLEPROPERTY)
 {
@@ -1361,7 +1361,7 @@ HB_FUNC_STATIC(QWEBELEMENT_SETSTYLEPROPERTY)
 }
 
 /*
-QString styleProperty( const QString &name, QWebElement::StyleResolveStrategy strategy ) const
+QString styleProperty(const QString &name, QWebElement::StyleResolveStrategy strategy) const
 */
 HB_FUNC_STATIC(QWEBELEMENT_STYLEPROPERTY)
 {
@@ -1506,7 +1506,7 @@ HB_FUNC_STATIC(QWEBELEMENT_TOPLAINTEXT)
 }
 
 /*
-void toggleClass( const QString &name )
+void toggleClass(const QString &name)
 */
 HB_FUNC_STATIC(QWEBELEMENT_TOGGLECLASS)
 {

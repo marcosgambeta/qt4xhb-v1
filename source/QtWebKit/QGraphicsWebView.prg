@@ -83,7 +83,7 @@ RETURN
 #include <QtGui/QAction>
 
     /*
-    QGraphicsWebView( QGraphicsItem *parent = 0 )
+    QGraphicsWebView(QGraphicsItem *parent = 0)
     */
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_NEW)
 {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_DELETE)
 }
 
 /*
-bool findText( const QString &subString, QWebPage::FindFlags options = 0 )
+bool findText(const QString &subString, QWebPage::FindFlags options = 0)
 */
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_FINDTEXT)
 {
@@ -243,7 +243,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_LOAD)
   if (ISNUMPAR(1) && ISQURL(1))
   {
     /*
-    void load( const QUrl &url )
+    void load(const QUrl &url)
     */
     QGraphicsWebView *obj = qobject_cast<QGraphicsWebView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -257,8 +257,8 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_LOAD)
   else if (ISBETWEEN(1, 3) && ISQNETWORKREQUEST(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (ISQBYTEARRAY(3) || HB_ISNIL(3)))
   {
     /*
-    void load( const QNetworkRequest &request, QNetworkAccessManager::Operation operation =
-    QNetworkAccessManager::GetOperation, const QByteArray &body = QByteArray() )
+    void load(const QNetworkRequest &request, QNetworkAccessManager::Operation operation =
+    QNetworkAccessManager::GetOperation, const QByteArray &body = QByteArray())
     */
     QGraphicsWebView *obj = qobject_cast<QGraphicsWebView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -304,7 +304,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_PAGE)
 }
 
 /*
-QAction *pageAction( QWebPage::WebAction action ) const
+QAction *pageAction(QWebPage::WebAction action) const
 */
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_PAGEACTION)
 {
@@ -353,7 +353,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_RESIZESTOCONTENTS)
 }
 
 /*
-void setContent( const QByteArray &data, const QString &mimeType = QString(), const QUrl &baseUrl = QUrl() )
+void setContent(const QByteArray &data, const QString &mimeType = QString(), const QUrl &baseUrl = QUrl())
 */
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETCONTENT)
 {
@@ -380,7 +380,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETCONTENT)
 }
 
 /*
-void setHtml( const QString &html, const QUrl &baseUrl = QUrl() )
+void setHtml(const QString &html, const QUrl &baseUrl = QUrl())
 */
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETHTML)
 {
@@ -406,7 +406,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETHTML)
 }
 
 /*
-void setPage( QWebPage *page )
+void setPage(QWebPage *page)
 */
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETPAGE)
 {
@@ -432,7 +432,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETPAGE)
 }
 
 /*
-void setResizesToContents( bool enabled )
+void setResizesToContents(bool enabled)
 */
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETRESIZESTOCONTENTS)
 {
@@ -458,7 +458,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETRESIZESTOCONTENTS)
 }
 
 /*
-void setTiledBackingStoreFrozen( bool frozen )
+void setTiledBackingStoreFrozen(bool frozen)
 */
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETTILEDBACKINGSTOREFROZEN)
 {
@@ -484,7 +484,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETTILEDBACKINGSTOREFROZEN)
 }
 
 /*
-void setUrl( const QUrl &)
+void setUrl(const QUrl &)
 */
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETURL)
 {
@@ -510,7 +510,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETURL)
 }
 
 /*
-void setZoomFactor( qreal )
+void setZoomFactor(qreal)
 */
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETZOOMFACTOR)
 {
@@ -585,7 +585,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_TITLE)
 }
 
 /*
-void triggerPageAction( QWebPage::WebAction action, bool checked = false )
+void triggerPageAction(QWebPage::WebAction action, bool checked = false)
 */
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_TRIGGERPAGEACTION)
 {

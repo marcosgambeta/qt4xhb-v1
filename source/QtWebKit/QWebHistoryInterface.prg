@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QWEBHISTORYINTERFACE_DELETE)
 }
 
 /*
-virtual void addHistoryEntry( const QString &url ) = 0
+virtual void addHistoryEntry(const QString &url) = 0
 */
 HB_FUNC_STATIC(QWEBHISTORYINTERFACE_ADDHISTORYENTRY)
 {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QWEBHISTORYINTERFACE_ADDHISTORYENTRY)
 }
 
 /*
-virtual bool historyContains( const QString &url ) const = 0
+virtual bool historyContains(const QString &url) const = 0
 */
 HB_FUNC_STATIC(QWEBHISTORYINTERFACE_HISTORYCONTAINS)
 {
@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QWEBHISTORYINTERFACE_DEFAULTINTERFACE)
 }
 
 /*
-static void setDefaultInterface( QWebHistoryInterface *defaultInterface )
+static void setDefaultInterface(QWebHistoryInterface *defaultInterface)
 */
 HB_FUNC_STATIC(QWEBHISTORYINTERFACE_SETDEFAULTINTERFACE)
 {
