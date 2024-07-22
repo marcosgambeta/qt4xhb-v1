@@ -33,4 +33,4 @@ public slots:
   void primeInsert(int row, QSqlRecord &record);
 };
 
-#endif /* QSQLTABLEMODELSLOTS_H */
+#endif // QSQLTABLEMODELSLOTS_H

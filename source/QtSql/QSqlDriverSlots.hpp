@@ -30,4 +30,4 @@ public slots:
   void notification(const QString &name);
 };
 
-#endif /* QSQLDRIVERSLOTS_H */
+#endif // QSQLDRIVERSLOTS_H
