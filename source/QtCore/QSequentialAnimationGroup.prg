@@ -50,9 +50,7 @@ RETURN
 
 #include <QtCore/QPauseAnimation>
 
-    /*
-    QSequentialAnimationGroup(QObject *parent = 0)
-    */
+// QSequentialAnimationGroup(QObject *parent = 0)
 HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))

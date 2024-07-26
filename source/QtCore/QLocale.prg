@@ -133,43 +133,33 @@ HB_FUNC_STATIC(QLOCALE_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QLocale()
-    */
+    // QLocale()
     QLocale *obj = new QLocale();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    QLocale(const QString &name)
-    */
+    // QLocale(const QString &name)
     QLocale *obj = new QLocale(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    /*
-    QLocale(QLocale::Language language, QLocale::Country country = QLocale::AnyCountry)
-    */
+    // QLocale(QLocale::Language language, QLocale::Country country = QLocale::AnyCountry)
     QLocale *obj = new QLocale((QLocale::Language)hb_parni(1),
                                HB_ISNIL(2) ? (QLocale::Country)QLocale::AnyCountry : (QLocale::Country)hb_parni(2));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
-    /*
-    QLocale(QLocale::Language language, QLocale::Script script, QLocale::Country country)
-    */
+    // QLocale(QLocale::Language language, QLocale::Script script, QLocale::Country country)
     QLocale *obj =
         new QLocale((QLocale::Language)hb_parni(1), (QLocale::Script)hb_parni(2), (QLocale::Country)hb_parni(3));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQLOCALE(1))
   {
-    /*
-    QLocale(const QLocale &other)
-    */
+    // QLocale(const QLocale &other)
     QLocale *obj = new QLocale(*PQLOCALE(1));
     Qt4xHb::returnNewObject(obj, true);
   }

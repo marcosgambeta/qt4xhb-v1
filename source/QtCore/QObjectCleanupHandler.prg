@@ -45,9 +45,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    /*
-    QObjectCleanupHandler()
-    */
+// QObjectCleanupHandler()
 HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_NEW)
 {
   if (ISNUMPAR(0))

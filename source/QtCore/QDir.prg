@@ -105,17 +105,13 @@ HB_FUNC_STATIC(QDIR_NEW)
 {
   if (ISNUMPAR(1) && ISQDIR(1))
   {
-    /*
-    QDir(const QDir &dir)
-    */
+    // QDir(const QDir &dir)
     QDir *obj = new QDir(*PQDIR(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)))
   {
-    /*
-    QDir(const QString &path = QString())
-    */
+    // QDir(const QString &path = QString())
     QDir *obj = new QDir(OPQSTRING(1, QString()));
     Qt4xHb::returnNewObject(obj, true);
   }

@@ -98,41 +98,31 @@ HB_FUNC_STATIC(QFILEINFO_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QFileInfo()
-    */
+    // QFileInfo()
     QFileInfo *obj = new QFileInfo();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    QFileInfo(const QString &file)
-    */
+    // QFileInfo(const QString &file)
     QFileInfo *obj = new QFileInfo(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQFILE(1))
   {
-    /*
-    QFileInfo(const QFile &file)
-    */
+    // QFileInfo(const QFile &file)
     QFileInfo *obj = new QFileInfo(*PQFILE(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && ISQDIR(1) && HB_ISCHAR(2))
   {
-    /*
-    QFileInfo(const QDir &dir, const QString &file)
-    */
+    // QFileInfo(const QDir &dir, const QString &file)
     QFileInfo *obj = new QFileInfo(*PQDIR(1), PQSTRING(2));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQFILEINFO(1))
   {
-    /*
-    QFileInfo(const QFileInfo &fileinfo)
-    */
+    // QFileInfo(const QFileInfo &fileinfo)
     QFileInfo *obj = new QFileInfo(*PQFILEINFO(1));
     Qt4xHb::returnNewObject(obj, true);
   }

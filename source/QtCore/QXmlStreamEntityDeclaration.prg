@@ -57,17 +57,13 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QXmlStreamEntityDeclaration()
-    */
+    // QXmlStreamEntityDeclaration()
     QXmlStreamEntityDeclaration *obj = new QXmlStreamEntityDeclaration();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQXMLSTREAMENTITYDECLARATION(1))
   {
-    /*
-    QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration &other)
-    */
+    // QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration &other)
     QXmlStreamEntityDeclaration *obj = new QXmlStreamEntityDeclaration(*PQXMLSTREAMENTITYDECLARATION(1));
     Qt4xHb::returnNewObject(obj, true);
   }

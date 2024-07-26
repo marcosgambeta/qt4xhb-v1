@@ -57,17 +57,13 @@ HB_FUNC_STATIC(QPOINT_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QPoint()
-    */
+    // QPoint()
     QPoint *obj = new QPoint();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
-    /*
-    QPoint(int xpos, int ypos)
-    */
+    // QPoint(int xpos, int ypos)
     QPoint *obj = new QPoint(PINT(1), PINT(2));
     Qt4xHb::returnNewObject(obj, true);
   }

@@ -109,41 +109,31 @@ HB_FUNC_STATIC(QRECTF_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QRectF()
-    */
+    // QRectF()
     QRectF *obj = new QRectF();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && ISQPOINTF(1) && ISQSIZEF(2))
   {
-    /*
-    QRectF(const QPointF &topLeft, const QSizeF &size)
-    */
+    // QRectF(const QPointF &topLeft, const QSizeF &size)
     QRectF *obj = new QRectF(*PQPOINTF(1), *PQSIZEF(2));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && ISQPOINTF(1) && ISQPOINTF(2))
   {
-    /*
-    QRectF(const QPointF &topLeft, const QPointF &bottomRight)
-    */
+    // QRectF(const QPointF &topLeft, const QPointF &bottomRight)
     QRectF *obj = new QRectF(*PQPOINTF(1), *PQPOINTF(2));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
-    /*
-    QRectF(qreal x, qreal y, qreal width, qreal height)
-    */
+    // QRectF(qreal x, qreal y, qreal width, qreal height)
     QRectF *obj = new QRectF(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQRECT(1))
   {
-    /*
-    QRectF(const QRect &rectangle)
-    */
+    // QRectF(const QRect &rectangle)
     QRectF *obj = new QRectF(*PQRECT(1));
     Qt4xHb::returnNewObject(obj, true);
   }

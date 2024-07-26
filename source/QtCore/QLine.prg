@@ -67,25 +67,19 @@ HB_FUNC_STATIC(QLINE_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QLine()
-    */
+    // QLine()
     QLine *obj = new QLine();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && ISQPOINT(1) && ISQPOINT(2))
   {
-    /*
-    QLine(const QPoint &p1, const QPoint &p2)
-    */
+    // QLine(const QPoint &p1, const QPoint &p2)
     QLine *obj = new QLine(*PQPOINT(1), *PQPOINT(2));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
-    /*
-    QLine(int x1, int y1, int x2, int y2)
-    */
+    // QLine(int x1, int y1, int x2, int y2)
     QLine *obj = new QLine(PINT(1), PINT(2), PINT(3), PINT(4));
     Qt4xHb::returnNewObject(obj, true);
   }

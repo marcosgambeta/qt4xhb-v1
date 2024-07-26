@@ -60,17 +60,13 @@ HB_FUNC_STATIC(QMARGINS_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QMargins()
-    */
+    // QMargins()
     QMargins *obj = new QMargins();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
-    /*
-    QMargins(int left, int top, int right, int bottom)
-    */
+    // QMargins(int left, int top, int right, int bottom)
     QMargins *obj = new QMargins(PINT(1), PINT(2), PINT(3), PINT(4));
     Qt4xHb::returnNewObject(obj, true);
   }

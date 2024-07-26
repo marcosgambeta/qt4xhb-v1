@@ -55,33 +55,25 @@ HB_FUNC_STATIC(QBYTEARRAYMATCHER_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QByteArrayMatcher()
-    */
+    // QByteArrayMatcher()
     QByteArrayMatcher *obj = new QByteArrayMatcher();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
-    /*
-    QByteArrayMatcher(const QByteArray &pattern)
-    */
+    // QByteArrayMatcher(const QByteArray &pattern)
     QByteArrayMatcher *obj = new QByteArrayMatcher(*PQBYTEARRAY(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
-    /*
-    QByteArrayMatcher(const char *pattern, int length)
-    */
+    // QByteArrayMatcher(const char *pattern, int length)
     QByteArrayMatcher *obj = new QByteArrayMatcher(PCONSTCHAR(1), PINT(2));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQBYTEARRAYMATCHER(1))
   {
-    /*
-    QByteArrayMatcher(const QByteArrayMatcher &other)
-    */
+    // QByteArrayMatcher(const QByteArrayMatcher &other)
     QByteArrayMatcher *obj = new QByteArrayMatcher(*PQBYTEARRAYMATCHER(1));
     Qt4xHb::returnNewObject(obj, true);
   }

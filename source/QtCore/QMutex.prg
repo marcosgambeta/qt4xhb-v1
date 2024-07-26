@@ -50,9 +50,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    QMutex(QMutex::RecursionMode mode = QMutex::NonRecursive)
-    */
+// QMutex(QMutex::RecursionMode mode = QMutex::NonRecursive)
 HB_FUNC_STATIC(QMUTEX_NEW)
 {
   if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))

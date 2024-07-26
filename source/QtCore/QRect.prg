@@ -106,33 +106,25 @@ HB_FUNC_STATIC(QRECT_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QRect()
-    */
+    // QRect()
     QRect *obj = new QRect();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && ISQPOINT(1) && ISQPOINT(2))
   {
-    /*
-    QRect(const QPoint &topLeft, const QPoint &bottomRight)
-    */
+    // QRect(const QPoint &topLeft, const QPoint &bottomRight)
     QRect *obj = new QRect(*PQPOINT(1), *PQPOINT(2));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && ISQPOINT(1) && ISQSIZE(2))
   {
-    /*
-    QRect(const QPoint &topLeft, const QSize &size)
-    */
+    // QRect(const QPoint &topLeft, const QSize &size)
     QRect *obj = new QRect(*PQPOINT(1), *PQSIZE(2));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
-    /*
-    QRect(int x, int y, int width, int height)
-    */
+    // QRect(int x, int y, int width, int height)
     QRect *obj = new QRect(PINT(1), PINT(2), PINT(3), PINT(4));
     Qt4xHb::returnNewObject(obj, true);
   }

@@ -54,25 +54,19 @@ HB_FUNC_STATIC(QDEBUG_NEW)
 {
   if (ISNUMPAR(1) && ISQIODEVICE(1))
   {
-    /*
-    QDebug(QIODevice *device)
-    */
+    // QDebug(QIODevice *device)
     QDebug *obj = new QDebug(PQIODEVICE(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    /*
-    QDebug(QtMsgType type)
-    */
+    // QDebug(QtMsgType type)
     QDebug *obj = new QDebug((QtMsgType)hb_parni(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQDEBUG(1))
   {
-    /*
-    QDebug(const QDebug &other)
-    */
+    // QDebug(const QDebug &other)
     QDebug *obj = new QDebug(*PQDEBUG(1));
     Qt4xHb::returnNewObject(obj, true);
   }

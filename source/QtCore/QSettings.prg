@@ -78,9 +78,7 @@ HB_FUNC_STATIC(QSETTINGS_NEW)
 {
   if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
-    /*
-    QSettings(const QString &organization, const QString &application = QString(), QObject *parent = 0)
-    */
+    // QSettings(const QString &organization, const QString &application = QString(), QObject *parent = 0)
     QSettings *obj = new QSettings(PQSTRING(1), OPQSTRING(2, QString()), OPQOBJECT(3, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
@@ -108,17 +106,13 @@ HB_FUNC_STATIC(QSETTINGS_NEW)
   }
   else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
-    /*
-    QSettings(const QString &fileName, QSettings::Format format, QObject *parent = 0)
-    */
+    // QSettings(const QString &fileName, QSettings::Format format, QObject *parent = 0)
     QSettings *obj = new QSettings(PQSTRING(1), (QSettings::Format)hb_parni(2), OPQOBJECT(3, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    /*
-    QSettings(QObject *parent = 0)
-    */
+    // QSettings(QObject *parent = 0)
     QSettings *obj = new QSettings(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }

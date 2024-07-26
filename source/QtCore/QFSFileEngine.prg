@@ -80,17 +80,13 @@ HB_FUNC_STATIC(QFSFILEENGINE_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QFSFileEngine()
-    */
+    // QFSFileEngine()
     QFSFileEngine *obj = new QFSFileEngine();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    QFSFileEngine(const QString &file)
-    */
+    // QFSFileEngine(const QString &file)
     QFSFileEngine *obj = new QFSFileEngine(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, true);
   }

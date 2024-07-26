@@ -110,41 +110,31 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QXmlStreamReader()
-    */
+    // QXmlStreamReader()
     QXmlStreamReader *obj = new QXmlStreamReader();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQIODEVICE(1))
   {
-    /*
-    QXmlStreamReader(QIODevice *device)
-    */
+    // QXmlStreamReader(QIODevice *device)
     QXmlStreamReader *obj = new QXmlStreamReader(PQIODEVICE(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
-    /*
-    QXmlStreamReader(const QByteArray &data)
-    */
+    // QXmlStreamReader(const QByteArray &data)
     QXmlStreamReader *obj = new QXmlStreamReader(*PQBYTEARRAY(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    QXmlStreamReader(const QString &data)
-    */
+    // QXmlStreamReader(const QString &data)
     QXmlStreamReader *obj = new QXmlStreamReader(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    QXmlStreamReader(const char *data)
-    */
+    // QXmlStreamReader(const char *data)
     QXmlStreamReader *obj = new QXmlStreamReader(PCONSTCHAR(1));
     Qt4xHb::returnNewObject(obj, true);
   }

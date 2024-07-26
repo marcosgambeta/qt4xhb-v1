@@ -62,17 +62,13 @@ HB_FUNC_STATIC(QSIZE_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QSize()
-    */
+    // QSize()
     QSize *obj = new QSize();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
-    /*
-    QSize(int width, int height)
-    */
+    // QSize(int width, int height)
     QSize *obj = new QSize(PINT(1), PINT(2));
     Qt4xHb::returnNewObject(obj, true);
   }

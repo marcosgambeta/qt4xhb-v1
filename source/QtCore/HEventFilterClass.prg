@@ -40,9 +40,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    /*
-    HEventFilter(QObject *parent = NULL)
-    */
+// HEventFilter(QObject *parent = NULL)
 HB_FUNC_STATIC(HEVENTFILTER_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))

@@ -73,9 +73,7 @@ HB_FUNC_STATIC(QREGEXP_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QRegExp()
-    */
+    // QRegExp()
     QRegExp *obj = new QRegExp();
     Qt4xHb::returnNewObject(obj, true);
   }
@@ -92,9 +90,7 @@ HB_FUNC_STATIC(QREGEXP_NEW)
   }
   else if (ISNUMPAR(1) && ISQREGEXP(1))
   {
-    /*
-    QRegExp(const QRegExp &rx)
-    */
+    // QRegExp(const QRegExp &rx)
     QRegExp *obj = new QRegExp(*PQREGEXP(1));
     Qt4xHb::returnNewObject(obj, true);
   }

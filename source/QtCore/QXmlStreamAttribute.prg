@@ -58,33 +58,25 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTE_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QXmlStreamAttribute()
-    */
+    // QXmlStreamAttribute()
     QXmlStreamAttribute *obj = new QXmlStreamAttribute();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
-    /*
-    QXmlStreamAttribute(const QString &qualifiedName, const QString &value)
-    */
+    // QXmlStreamAttribute(const QString &qualifiedName, const QString &value)
     QXmlStreamAttribute *obj = new QXmlStreamAttribute(PQSTRING(1), PQSTRING(2));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3))
   {
-    /*
-    QXmlStreamAttribute(const QString &namespaceUri, const QString &name, const QString &value)
-    */
+    // QXmlStreamAttribute(const QString &namespaceUri, const QString &name, const QString &value)
     QXmlStreamAttribute *obj = new QXmlStreamAttribute(PQSTRING(1), PQSTRING(2), PQSTRING(3));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQXMLSTREAMATTRIBUTE(1))
   {
-    /*
-    QXmlStreamAttribute(const QXmlStreamAttribute &other)
-    */
+    // QXmlStreamAttribute(const QXmlStreamAttribute &other)
     QXmlStreamAttribute *obj = new QXmlStreamAttribute(*PQXMLSTREAMATTRIBUTE(1));
     Qt4xHb::returnNewObject(obj, true);
   }

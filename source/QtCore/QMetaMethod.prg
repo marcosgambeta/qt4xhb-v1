@@ -61,9 +61,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    QMetaMethod()
-    */
+// QMetaMethod()
 HB_FUNC_STATIC(QMETAMETHOD_NEW)
 {
   if (ISNUMPAR(0))

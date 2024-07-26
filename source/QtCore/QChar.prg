@@ -84,90 +84,70 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    QChar()
-    */
+// QChar()
 HB_FUNC_STATIC(QCHAR_NEW1)
 {
   QChar *obj = new QChar();
   Qt4xHb::returnNewObject(obj, true);
 }
 
-/*
-QChar(char ch)
-*/
+// QChar(char ch)
 HB_FUNC_STATIC(QCHAR_NEW2)
 {
   QChar *obj = new QChar(PCHAR(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 
-/*
-QChar(uchar ch)
-*/
+// QChar(uchar ch)
 HB_FUNC_STATIC(QCHAR_NEW3)
 {
   QChar *obj = new QChar(PUCHAR(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 
-/*
-QChar(QLatin1Char ch)
-*/
+// QChar(QLatin1Char ch)
 HB_FUNC_STATIC(QCHAR_NEW4)
 {
   QChar *obj = new QChar(*PQLATIN1CHAR(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 
-/*
-QChar(uchar cell, uchar row)
-*/
+// QChar(uchar cell, uchar row)
 HB_FUNC_STATIC(QCHAR_NEW5)
 {
   QChar *obj = new QChar(PUCHAR(1), PUCHAR(2));
   Qt4xHb::returnNewObject(obj, true);
 }
 
-/*
-QChar(ushort code)
-*/
+// QChar(ushort code)
 HB_FUNC_STATIC(QCHAR_NEW6)
 {
   QChar *obj = new QChar(PUSHORT(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 
-/*
-QChar(short code)
-*/
+// QChar(short code)
 HB_FUNC_STATIC(QCHAR_NEW7)
 {
   QChar *obj = new QChar(PSHORT(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 
-/*
-QChar(uint code)
-*/
+// QChar(uint code)
 HB_FUNC_STATIC(QCHAR_NEW8)
 {
   QChar *obj = new QChar(PUINT(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 
-/*
-QChar(int code)
-*/
+// QChar(int code)
 HB_FUNC_STATIC(QCHAR_NEW9)
 {
   QChar *obj = new QChar(PINT(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 
-/*
-QChar(QChar::SpecialCharacter ch)
-*/
+// QChar(QChar::SpecialCharacter ch)
 HB_FUNC_STATIC(QCHAR_NEW10)
 {
   QChar *obj = new QChar((QChar::SpecialCharacter)hb_parni(1));

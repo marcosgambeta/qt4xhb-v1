@@ -56,17 +56,13 @@ HB_FUNC_STATIC(QREADWRITELOCK_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QReadWriteLock()
-    */
+    // QReadWriteLock()
     QReadWriteLock *obj = new QReadWriteLock();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    /*
-    QReadWriteLock(QReadWriteLock::RecursionMode recursionMode)
-    */
+    // QReadWriteLock(QReadWriteLock::RecursionMode recursionMode)
     QReadWriteLock *obj = new QReadWriteLock((QReadWriteLock::RecursionMode)hb_parni(1));
     Qt4xHb::returnNewObject(obj, true);
   }

@@ -59,18 +59,14 @@ HB_FUNC_STATIC(QEASINGCURVE_NEW)
 {
   if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
-    /*
-    QEasingCurve(QEasingCurve::Type type = QEasingCurve::Linear)
-    */
+    // QEasingCurve(QEasingCurve::Type type = QEasingCurve::Linear)
     QEasingCurve *obj =
         new QEasingCurve(HB_ISNIL(1) ? (QEasingCurve::Type)QEasingCurve::Linear : (QEasingCurve::Type)hb_parni(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQEASINGCURVE(1))
   {
-    /*
-    QEasingCurve(const QEasingCurve &other)
-    */
+    // QEasingCurve(const QEasingCurve &other)
     QEasingCurve *obj = new QEasingCurve(*PQEASINGCURVE(1));
     Qt4xHb::returnNewObject(obj, true);
   }

@@ -67,9 +67,7 @@ RETURN
 #include <QtCore/QStringList>
 #include <QtCore/QUrl>
 
-    /*
-    QMimeData()
-    */
+// QMimeData()
 HB_FUNC_STATIC(QMIMEDATA_NEW)
 {
   if (ISNUMPAR(0))

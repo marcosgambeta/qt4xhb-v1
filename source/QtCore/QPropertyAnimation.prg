@@ -50,17 +50,13 @@ HB_FUNC_STATIC(QPROPERTYANIMATION_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    /*
-    QPropertyAnimation(QObject *parent = 0)
-    */
+    // QPropertyAnimation(QObject *parent = 0)
     QPropertyAnimation *obj = new QPropertyAnimation(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else if (ISBETWEEN(2, 3) && ISQOBJECT(1) && ISQBYTEARRAY(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
-    /*
-    QPropertyAnimation(QObject *target, const QByteArray &propertyName, QObject *parent = 0)
-    */
+    // QPropertyAnimation(QObject *target, const QByteArray &propertyName, QObject *parent = 0)
     QPropertyAnimation *obj = new QPropertyAnimation(PQOBJECT(1), *PQBYTEARRAY(2), OPQOBJECT(3, 0));
     Qt4xHb::returnNewObject(obj, false);
   }

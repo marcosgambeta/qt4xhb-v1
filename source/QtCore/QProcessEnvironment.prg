@@ -60,17 +60,13 @@ HB_FUNC_STATIC(QPROCESSENVIRONMENT_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QProcessEnvironment()
-    */
+    // QProcessEnvironment()
     QProcessEnvironment *obj = new QProcessEnvironment();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQPROCESSENVIRONMENT(1))
   {
-    /*
-    QProcessEnvironment(const QProcessEnvironment &other)
-    */
+    // QProcessEnvironment(const QProcessEnvironment &other)
     QProcessEnvironment *obj = new QProcessEnvironment(*PQPROCESSENVIRONMENT(1));
     Qt4xHb::returnNewObject(obj, true);
   }

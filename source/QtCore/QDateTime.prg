@@ -83,34 +83,26 @@ HB_FUNC_STATIC(QDATETIME_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QDateTime()
-    */
+    // QDateTime()
     QDateTime *obj = new QDateTime();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQDATE(1))
   {
-    /*
-    QDateTime(const QDate &date)
-    */
+    // QDateTime(const QDate &date)
     QDateTime *obj = new QDateTime(*PQDATE(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISBETWEEN(2, 3) && ISQDATE(1) && ISQTIME(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
-    /*
-    QDateTime(const QDate &date, const QTime &time, Qt::TimeSpec spec = Qt::LocalTime)
-    */
+    // QDateTime(const QDate &date, const QTime &time, Qt::TimeSpec spec = Qt::LocalTime)
     QDateTime *obj =
         new QDateTime(*PQDATE(1), *PQTIME(2), HB_ISNIL(3) ? (Qt::TimeSpec)Qt::LocalTime : (Qt::TimeSpec)hb_parni(3));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQDATETIME(1))
   {
-    /*
-    QDateTime(const QDateTime &other)
-    */
+    // QDateTime(const QDateTime &other)
     QDateTime *obj = new QDateTime(*PQDATETIME(1));
     Qt4xHb::returnNewObject(obj, true);
   }

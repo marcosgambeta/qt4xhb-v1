@@ -91,25 +91,19 @@ HB_FUNC_STATIC(QTEXTSTREAM_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QTextStream()
-    */
+    // QTextStream()
     QTextStream *obj = new QTextStream();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQIODEVICE(1))
   {
-    /*
-    QTextStream(QIODevice *device)
-    */
+    // QTextStream(QIODevice *device)
     QTextStream *obj = new QTextStream(PQIODEVICE(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISBETWEEN(1, 2) && HB_ISPOINTER(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    /*
-    QTextStream(FILE *fileHandle, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
-    */
+    // QTextStream(FILE *fileHandle, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
     QTextStream *obj =
         new QTextStream(static_cast<FILE *>(hb_parptr(1)),
                         HB_ISNIL(2) ? (QIODevice::OpenMode)QIODevice::ReadWrite : (QIODevice::OpenMode)hb_parni(2));
@@ -117,18 +111,14 @@ HB_FUNC_STATIC(QTEXTSTREAM_NEW)
   }
   else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    /*
-    QTextStream(QByteArray *array, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
-    */
+    // QTextStream(QByteArray *array, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
     QTextStream *obj = new QTextStream(PQBYTEARRAY(1), HB_ISNIL(2) ? (QIODevice::OpenMode)QIODevice::ReadWrite
                                                                    : (QIODevice::OpenMode)hb_parni(2));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    /*
-    QTextStream(const QByteArray &array, QIODevice::OpenMode openMode = QIODevice::ReadOnly)
-    */
+    // QTextStream(const QByteArray &array, QIODevice::OpenMode openMode = QIODevice::ReadOnly)
     QTextStream *obj = new QTextStream(*PQBYTEARRAY(1), HB_ISNIL(2) ? (QIODevice::OpenMode)QIODevice::ReadOnly
                                                                     : (QIODevice::OpenMode)hb_parni(2));
     Qt4xHb::returnNewObject(obj, true);

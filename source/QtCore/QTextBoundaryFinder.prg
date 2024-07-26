@@ -62,25 +62,19 @@ HB_FUNC_STATIC(QTEXTBOUNDARYFINDER_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QTextBoundaryFinder()
-    */
+    // QTextBoundaryFinder()
     QTextBoundaryFinder *obj = new QTextBoundaryFinder();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQTEXTBOUNDARYFINDER(1))
   {
-    /*
-    QTextBoundaryFinder(const QTextBoundaryFinder &other)
-    */
+    // QTextBoundaryFinder(const QTextBoundaryFinder &other)
     QTextBoundaryFinder *obj = new QTextBoundaryFinder(*PQTEXTBOUNDARYFINDER(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
   {
-    /*
-    QTextBoundaryFinder(QTextBoundaryFinder::BoundaryType type, const QString &string)
-    */
+    // QTextBoundaryFinder(QTextBoundaryFinder::BoundaryType type, const QString &string)
     QTextBoundaryFinder *obj = new QTextBoundaryFinder((QTextBoundaryFinder::BoundaryType)hb_parni(1), PQSTRING(2));
     Qt4xHb::returnNewObject(obj, true);
   }

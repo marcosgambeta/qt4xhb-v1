@@ -123,33 +123,25 @@ HB_FUNC_STATIC(QURL_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QUrl()
-    */
+    // QUrl()
     QUrl *obj = new QUrl();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    QUrl(const QString &url)
-    */
+    // QUrl(const QString &url)
     QUrl *obj = new QUrl(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQURL(1))
   {
-    /*
-    QUrl(const QUrl &other)
-    */
+    // QUrl(const QUrl &other)
     QUrl *obj = new QUrl(*PQURL(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
-    /*
-    QUrl(const QString &url, QUrl::ParsingMode parsingMode)
-    */
+    // QUrl(const QString &url, QUrl::ParsingMode parsingMode)
     QUrl *obj = new QUrl(PQSTRING(1), (QUrl::ParsingMode)hb_parni(2));
     Qt4xHb::returnNewObject(obj, true);
   }

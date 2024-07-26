@@ -77,17 +77,13 @@ HB_FUNC_STATIC(QDATE_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QDate()
-    */
+    // QDate()
     QDate *obj = new QDate();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
-    /*
-    QDate(int y, int m, int d)
-    */
+    // QDate(int y, int m, int d)
     QDate *obj = new QDate(PINT(1), PINT(2), PINT(3));
     Qt4xHb::returnNewObject(obj, true);
   }

@@ -51,9 +51,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    QSemaphore(int n = 0)
-    */
+// QSemaphore(int n = 0)
 HB_FUNC_STATIC(QSEMAPHORE_NEW)
 {
   if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))

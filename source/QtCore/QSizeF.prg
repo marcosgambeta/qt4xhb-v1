@@ -64,25 +64,19 @@ HB_FUNC_STATIC(QSIZEF_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QSizeF()
-    */
+    // QSizeF()
     QSizeF *obj = new QSizeF();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQSIZE(1))
   {
-    /*
-    QSizeF(const QSize &size)
-    */
+    // QSizeF(const QSize &size)
     QSizeF *obj = new QSizeF(*PQSIZE(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
-    /*
-    QSizeF(qreal width, qreal height)
-    */
+    // QSizeF(qreal width, qreal height)
     QSizeF *obj = new QSizeF(PQREAL(1), PQREAL(2));
     Qt4xHb::returnNewObject(obj, true);
   }

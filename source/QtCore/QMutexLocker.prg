@@ -51,9 +51,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    QMutexLocker(QMutex *mutex)
-    */
+// QMutexLocker(QMutex *mutex)
 HB_FUNC_STATIC(QMUTEXLOCKER_NEW)
 {
   if (ISNUMPAR(1) && ISQMUTEX(1))

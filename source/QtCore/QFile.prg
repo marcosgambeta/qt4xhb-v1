@@ -70,25 +70,19 @@ HB_FUNC_STATIC(QFILE_NEW)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    QFile(const QString &name)
-    */
+    // QFile(const QString &name)
     QFile *obj = new QFile(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, false);
   }
   else if (ISNUMPAR(1) && ISQOBJECT(1))
   {
-    /*
-    QFile(QObject *parent)
-    */
+    // QFile(QObject *parent)
     QFile *obj = new QFile(PQOBJECT(1));
     Qt4xHb::returnNewObject(obj, false);
   }
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2))
   {
-    /*
-    QFile(const QString &name, QObject *parent)
-    */
+    // QFile(const QString &name, QObject *parent)
     QFile *obj = new QFile(PQSTRING(1), PQOBJECT(2));
     Qt4xHb::returnNewObject(obj, false);
   }

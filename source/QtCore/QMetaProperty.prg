@@ -79,9 +79,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    QMetaProperty()
-    */
+// QMetaProperty()
 HB_FUNC_STATIC(QMETAPROPERTY_NEW)
 {
   if (ISNUMPAR(0))

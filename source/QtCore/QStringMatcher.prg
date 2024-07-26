@@ -56,35 +56,27 @@ HB_FUNC_STATIC(QSTRINGMATCHER_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QStringMatcher()
-    */
+    // QStringMatcher()
     QStringMatcher *obj = new QStringMatcher();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    /*
-    QStringMatcher(const QString &pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive)
-    */
+    // QStringMatcher(const QString &pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive)
     QStringMatcher *obj = new QStringMatcher(PQSTRING(1), HB_ISNIL(2) ? (Qt::CaseSensitivity)Qt::CaseSensitive
                                                                       : (Qt::CaseSensitivity)hb_parni(2));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISBETWEEN(2, 3) && ISQCHAR(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
-    /*
-    QStringMatcher(const QChar *uc, int len, Qt::CaseSensitivity cs = Qt::CaseSensitive)
-    */
+    // QStringMatcher(const QChar *uc, int len, Qt::CaseSensitivity cs = Qt::CaseSensitive)
     QStringMatcher *obj = new QStringMatcher(
         PQCHAR(1), PINT(2), HB_ISNIL(3) ? (Qt::CaseSensitivity)Qt::CaseSensitive : (Qt::CaseSensitivity)hb_parni(3));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQSTRINGMATCHER(1))
   {
-    /*
-    QStringMatcher(const QStringMatcher &other)
-    */
+    // QStringMatcher(const QStringMatcher &other)
     QStringMatcher *obj = new QStringMatcher(*PQSTRINGMATCHER(1));
     Qt4xHb::returnNewObject(obj, true);
   }

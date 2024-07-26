@@ -58,9 +58,7 @@ HB_FUNC_STATIC(QDIRITERATOR_NEW)
 {
   if (ISBETWEEN(1, 2) && ISQDIR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    /*
-    QDirIterator(const QDir &dir, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags)
-    */
+    // QDirIterator(const QDir &dir, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags)
     QDirIterator *obj =
         new QDirIterator(*PQDIR(1), HB_ISNIL(2) ? (QDirIterator::IteratorFlags)QDirIterator::NoIteratorFlags
                                                 : (QDirIterator::IteratorFlags)hb_parni(2));
@@ -68,9 +66,7 @@ HB_FUNC_STATIC(QDIRITERATOR_NEW)
   }
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    /*
-    QDirIterator(const QString &path, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags)
-    */
+    // QDirIterator(const QString &path, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags)
     QDirIterator *obj =
         new QDirIterator(PQSTRING(1), HB_ISNIL(2) ? (QDirIterator::IteratorFlags)QDirIterator::NoIteratorFlags
                                                   : (QDirIterator::IteratorFlags)hb_parni(2));

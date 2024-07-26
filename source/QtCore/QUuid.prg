@@ -61,18 +61,14 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    QUuid()
-    */
+// QUuid()
 HB_FUNC_STATIC(QUUID_NEW1)
 {
   QUuid *obj = new QUuid();
   Qt4xHb::returnNewObject(obj, true);
 }
 
-/*
-QUuid(uint l, ushort w1, ushort w2, uchar b1, uchar b2, uchar b3, uchar b4, uchar b5, uchar b6, uchar b7, uchar b8)
-*/
+// QUuid(uint l, ushort w1, ushort w2, uchar b1, uchar b2, uchar b3, uchar b4, uchar b5, uchar b6, uchar b7, uchar b8)
 HB_FUNC_STATIC(QUUID_NEW2)
 {
   QUuid *obj = new QUuid(PUINT(1), PUSHORT(2), PUSHORT(3), PUCHAR(4), PUCHAR(5), PUCHAR(6), PUCHAR(7), PUCHAR(8),
@@ -80,27 +76,21 @@ HB_FUNC_STATIC(QUUID_NEW2)
   Qt4xHb::returnNewObject(obj, true);
 }
 
-/*
-QUuid(const QString &)
-*/
+// QUuid(const QString &)
 HB_FUNC_STATIC(QUUID_NEW3)
 {
   QUuid *obj = new QUuid(PQSTRING(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 
-/*
-QUuid(const char *)
-*/
+// QUuid(const char *)
 HB_FUNC_STATIC(QUUID_NEW4)
 {
   QUuid *obj = new QUuid(PCONSTCHAR(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 
-/*
-QUuid(const QByteArray &)
-*/
+// QUuid(const QByteArray &)
 HB_FUNC_STATIC(QUUID_NEW5)
 {
   QUuid *obj = new QUuid(*PQBYTEARRAY(1));

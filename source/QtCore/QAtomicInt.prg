@@ -73,17 +73,13 @@ HB_FUNC_STATIC(QATOMICINT_NEW)
 {
   if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
-    /*
-    QAtomicInt(int value = 0)
-    */
+    // QAtomicInt(int value = 0)
     QAtomicInt *obj = new QAtomicInt(OPINT(1, 0));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQATOMICINT(1))
   {
-    /*
-    QAtomicInt(const QAtomicInt &other)
-    */
+    // QAtomicInt(const QAtomicInt &other)
     QAtomicInt *obj = new QAtomicInt(*PQATOMICINT(1));
     Qt4xHb::returnNewObject(obj, true);
   }

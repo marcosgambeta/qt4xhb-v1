@@ -59,9 +59,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    QElapsedTimer()
-    */
+// QElapsedTimer()
 HB_FUNC_STATIC(QELAPSEDTIMER_NEW)
 {
   if (ISNUMPAR(0))

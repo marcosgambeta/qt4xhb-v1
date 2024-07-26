@@ -67,33 +67,25 @@ HB_FUNC_STATIC(QDATASTREAM_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QDataStream()
-    */
+    // QDataStream()
     QDataStream *obj = new QDataStream();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQIODEVICE(1))
   {
-    /*
-    QDataStream(QIODevice *d)
-    */
+    // QDataStream(QIODevice *d)
     QDataStream *obj = new QDataStream(PQIODEVICE(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISNUM(2))
   {
-    /*
-    QDataStream(QByteArray *a, QIODevice::OpenMode mode)
-    */
+    // QDataStream(QByteArray *a, QIODevice::OpenMode mode)
     QDataStream *obj = new QDataStream(PQBYTEARRAY(1), (QIODevice::OpenMode)hb_parni(2));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
-    /*
-    QDataStream(const QByteArray &a)
-    */
+    // QDataStream(const QByteArray &a)
     QDataStream *obj = new QDataStream(*PQBYTEARRAY(1));
     Qt4xHb::returnNewObject(obj, true);
   }

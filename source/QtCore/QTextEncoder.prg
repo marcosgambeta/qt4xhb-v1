@@ -53,17 +53,13 @@ HB_FUNC_STATIC(QTEXTENCODER_NEW)
 {
   if (ISNUMPAR(1) && ISQTEXTCODEC(1))
   {
-    /*
-    QTextEncoder(const QTextCodec *codec)
-    */
+    // QTextEncoder(const QTextCodec *codec)
     QTextEncoder *obj = new QTextEncoder(PQTEXTCODEC(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && ISQTEXTCODEC(1) && HB_ISNUM(2))
   {
-    /*
-    QTextEncoder(const QTextCodec *codec, QTextCodec::ConversionFlags flags)
-    */
+    // QTextEncoder(const QTextCodec *codec, QTextCodec::ConversionFlags flags)
     QTextEncoder *obj = new QTextEncoder(PQTEXTCODEC(1), (QTextCodec::ConversionFlags)hb_parni(2));
     Qt4xHb::returnNewObject(obj, true);
   }

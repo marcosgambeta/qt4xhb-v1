@@ -55,17 +55,13 @@ HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QXmlStreamNotationDeclaration()
-    */
+    // QXmlStreamNotationDeclaration()
     QXmlStreamNotationDeclaration *obj = new QXmlStreamNotationDeclaration();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQXMLSTREAMNOTATIONDECLARATION(1))
   {
-    /*
-    QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration &other)
-    */
+    // QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration &other)
     QXmlStreamNotationDeclaration *obj = new QXmlStreamNotationDeclaration(*PQXMLSTREAMNOTATIONDECLARATION(1));
     Qt4xHb::returnNewObject(obj, true);
   }

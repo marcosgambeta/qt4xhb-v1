@@ -59,9 +59,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    QResource(const QString &file = QString(), const QLocale &locale = QLocale())
-    */
+// QResource(const QString &file = QString(), const QLocale &locale = QLocale())
 HB_FUNC_STATIC(QRESOURCE_NEW)
 {
   if (ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (ISQLOCALE(2) || HB_ISNIL(2)))

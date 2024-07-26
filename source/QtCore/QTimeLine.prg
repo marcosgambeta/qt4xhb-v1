@@ -73,9 +73,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    /*
-    QTimeLine(int duration = 1000, QObject *parent = 0)
-    */
+// QTimeLine(int duration = 1000, QObject *parent = 0)
 HB_FUNC_STATIC(QTIMELINE_NEW)
 {
   if (ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (ISQOBJECT(2) || HB_ISNIL(2)))

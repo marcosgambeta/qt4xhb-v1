@@ -59,25 +59,19 @@ HB_FUNC_STATIC(QPOINTF_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QPointF()
-    */
+    // QPointF()
     QPointF *obj = new QPointF();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
-    /*
-    QPointF(const QPoint &point)
-    */
+    // QPointF(const QPoint &point)
     QPointF *obj = new QPointF(*PQPOINT(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
-    /*
-    QPointF(qreal xpos, qreal ypos)
-    */
+    // QPointF(qreal xpos, qreal ypos)
     QPointF *obj = new QPointF(PQREAL(1), PQREAL(2));
     Qt4xHb::returnNewObject(obj, true);
   }

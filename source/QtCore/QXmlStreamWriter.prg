@@ -79,25 +79,19 @@ HB_FUNC_STATIC(QXMLSTREAMWRITER_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QXmlStreamWriter()
-    */
+    // QXmlStreamWriter()
     QXmlStreamWriter *obj = new QXmlStreamWriter();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQIODEVICE(1))
   {
-    /*
-    QXmlStreamWriter(QIODevice *device)
-    */
+    // QXmlStreamWriter(QIODevice *device)
     QXmlStreamWriter *obj = new QXmlStreamWriter(PQIODEVICE(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
-    /*
-    QXmlStreamWriter(QByteArray *array)
-    */
+    // QXmlStreamWriter(QByteArray *array)
     QXmlStreamWriter *obj = new QXmlStreamWriter(PQBYTEARRAY(1));
     Qt4xHb::returnNewObject(obj, true);
   }

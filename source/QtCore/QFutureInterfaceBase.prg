@@ -86,9 +86,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_NEW)
 {
   if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
-    /*
-    QFutureInterfaceBase(QFutureInterfaceBase::State initialState = QFutureInterfaceBase::NoState)
-    */
+    // QFutureInterfaceBase(QFutureInterfaceBase::State initialState = QFutureInterfaceBase::NoState)
     QFutureInterfaceBase *obj =
         new QFutureInterfaceBase(HB_ISNIL(1) ? (QFutureInterfaceBase::State)QFutureInterfaceBase::NoState
                                              : (QFutureInterfaceBase::State)hb_parni(1));
@@ -96,9 +94,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_NEW)
   }
   else if (ISNUMPAR(1) && ISQFUTUREINTERFACEBASE(1))
   {
-    /*
-    QFutureInterfaceBase(const QFutureInterfaceBase &other)
-    */
+    // QFutureInterfaceBase(const QFutureInterfaceBase &other)
     QFutureInterfaceBase *obj = new QFutureInterfaceBase(*PQFUTUREINTERFACEBASE(1));
     Qt4xHb::returnNewObject(obj, true);
   }

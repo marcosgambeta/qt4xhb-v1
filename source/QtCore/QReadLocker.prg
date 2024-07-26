@@ -51,9 +51,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    QReadLocker(QReadWriteLock *lock)
-    */
+// QReadLocker(QReadWriteLock *lock)
 HB_FUNC_STATIC(QREADLOCKER_NEW)
 {
   if (ISNUMPAR(1) && ISQREADWRITELOCK(1))
