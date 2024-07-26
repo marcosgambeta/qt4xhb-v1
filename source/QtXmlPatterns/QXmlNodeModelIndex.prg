@@ -56,17 +56,13 @@ HB_FUNC_STATIC(QXMLNODEMODELINDEX_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QXmlNodeModelIndex()
-    */
+    // QXmlNodeModelIndex()
     QXmlNodeModelIndex *obj = new QXmlNodeModelIndex();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
   {
-    /*
-    QXmlNodeModelIndex(const QXmlNodeModelIndex &other)
-    */
+    // QXmlNodeModelIndex(const QXmlNodeModelIndex &other)
     QXmlNodeModelIndex *obj = new QXmlNodeModelIndex(*PQXMLNODEMODELINDEX(1));
     Qt4xHb::returnNewObject(obj, true);
   }

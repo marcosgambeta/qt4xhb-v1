@@ -59,9 +59,7 @@ HB_FUNC_STATIC(QXMLNAME_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QXmlName()
-    */
+    // QXmlName()
     QXmlName *obj = new QXmlName();
     Qt4xHb::returnNewObject(obj, true);
   }

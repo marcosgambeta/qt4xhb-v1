@@ -54,9 +54,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    QXmlSerializer(const QXmlQuery &query, QIODevice *outputDevice)
-    */
+// QXmlSerializer(const QXmlQuery &query, QIODevice *outputDevice)
 HB_FUNC_STATIC(QXMLSERIALIZER_NEW)
 {
   if (ISNUMPAR(2) && ISQXMLQUERY(1) && ISQIODEVICE(2))

@@ -71,17 +71,13 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QXmlSchemaValidator()
-    */
+    // QXmlSchemaValidator()
     QXmlSchemaValidator *obj = new QXmlSchemaValidator();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQXMLSCHEMA(1))
   {
-    /*
-    QXmlSchemaValidator(const QXmlSchema &schema)
-    */
+    // QXmlSchemaValidator(const QXmlSchema &schema)
     QXmlSchemaValidator *obj = new QXmlSchemaValidator(*PQXMLSCHEMA(1));
     Qt4xHb::returnNewObject(obj, true);
   }

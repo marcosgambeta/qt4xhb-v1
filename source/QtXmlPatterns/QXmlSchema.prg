@@ -70,17 +70,13 @@ HB_FUNC_STATIC(QXMLSCHEMA_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QXmlSchema()
-    */
+    // QXmlSchema()
     QXmlSchema *obj = new QXmlSchema();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQXMLSCHEMA(1))
   {
-    /*
-    QXmlSchema(const QXmlSchema &other)
-    */
+    // QXmlSchema(const QXmlSchema &other)
     QXmlSchema *obj = new QXmlSchema(*PQXMLSCHEMA(1));
     Qt4xHb::returnNewObject(obj, true);
   }

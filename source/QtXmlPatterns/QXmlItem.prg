@@ -60,33 +60,25 @@ HB_FUNC_STATIC(QXMLITEM_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QXmlItem()
-    */
+    // QXmlItem()
     QXmlItem *obj = new QXmlItem();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQXMLITEM(1))
   {
-    /*
-    QXmlItem(const QXmlItem &other)
-    */
+    // QXmlItem(const QXmlItem &other)
     QXmlItem *obj = new QXmlItem(*PQXMLITEM(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
   {
-    /*
-    QXmlItem(const QXmlNodeModelIndex &node)
-    */
+    // QXmlItem(const QXmlNodeModelIndex &node)
     QXmlItem *obj = new QXmlItem(*PQXMLNODEMODELINDEX(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQVARIANT(1))
   {
-    /*
-    QXmlItem(const QVariant &atomicValue)
-    */
+    // QXmlItem(const QVariant &atomicValue)
     QXmlItem *obj = new QXmlItem(*PQVARIANT(1));
     Qt4xHb::returnNewObject(obj, true);
   }

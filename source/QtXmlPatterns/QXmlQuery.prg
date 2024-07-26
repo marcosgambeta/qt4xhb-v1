@@ -75,33 +75,25 @@ HB_FUNC_STATIC(QXMLQUERY_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QXmlQuery()
-    */
+    // QXmlQuery()
     QXmlQuery *obj = new QXmlQuery();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQXMLQUERY(1))
   {
-    /*
-    QXmlQuery(const QXmlQuery &other)
-    */
+    // QXmlQuery(const QXmlQuery &other)
     QXmlQuery *obj = new QXmlQuery(*PQXMLQUERY(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQXMLNAMEPOOL(1))
   {
-    /*
-    QXmlQuery(const QXmlNamePool &np)
-    */
+    // QXmlQuery(const QXmlNamePool &np)
     QXmlQuery *obj = new QXmlQuery(*PQXMLNAMEPOOL(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQXMLNAMEPOOL(2) || HB_ISNIL(2)))
   {
-    /*
-    QXmlQuery(QXmlQuery::QueryLanguage, QXmlNamePool &np = QXmlNamePool())
-    */
+    // QXmlQuery(QXmlQuery::QueryLanguage, QXmlNamePool &np = QXmlNamePool())
     QXmlQuery *obj = new QXmlQuery((QXmlQuery::QueryLanguage)hb_parni(1),
                                    HB_ISNIL(2) ? QXmlNamePool() : *static_cast<QXmlNamePool *>(Qt4xHb::itemGetPtr(2)));
     Qt4xHb::returnNewObject(obj, true);
