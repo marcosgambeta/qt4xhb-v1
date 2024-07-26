@@ -75,65 +75,49 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QDeclarativeProperty()
-    */
+    // QDeclarativeProperty()
     QDeclarativeProperty *obj = new QDeclarativeProperty();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQOBJECT(1))
   {
-    /*
-    QDeclarativeProperty(QObject *obj)
-    */
+    // QDeclarativeProperty(QObject *obj)
     QDeclarativeProperty *obj = new QDeclarativeProperty(PQOBJECT(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && ISQOBJECT(1) && ISQDECLARATIVECONTEXT(2))
   {
-    /*
-    QDeclarativeProperty(QObject *obj, QDeclarativeContext *ctxt)
-    */
+    // QDeclarativeProperty(QObject *obj, QDeclarativeContext *ctxt)
     QDeclarativeProperty *obj = new QDeclarativeProperty(PQOBJECT(1), PQDECLARATIVECONTEXT(2));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && ISQOBJECT(1) && ISQDECLARATIVEENGINE(2))
   {
-    /*
-    QDeclarativeProperty(QObject *obj, QDeclarativeEngine *engine)
-    */
+    // QDeclarativeProperty(QObject *obj, QDeclarativeEngine *engine)
     QDeclarativeProperty *obj = new QDeclarativeProperty(PQOBJECT(1), PQDECLARATIVEENGINE(2));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
   {
-    /*
-    QDeclarativeProperty(QObject *obj, const QString &name)
-    */
+    // QDeclarativeProperty(QObject *obj, const QString &name)
     QDeclarativeProperty *obj = new QDeclarativeProperty(PQOBJECT(1), PQSTRING(2));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQDECLARATIVECONTEXT(3))
   {
-    /*
-    QDeclarativeProperty(QObject *obj, const QString &name, QDeclarativeContext *ctxt)
-    */
+    // QDeclarativeProperty(QObject *obj, const QString &name, QDeclarativeContext *ctxt)
     QDeclarativeProperty *obj = new QDeclarativeProperty(PQOBJECT(1), PQSTRING(2), PQDECLARATIVECONTEXT(3));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQDECLARATIVEENGINE(3))
   {
-    /*
-    QDeclarativeProperty(QObject *obj, const QString &name, QDeclarativeEngine *engine)
-    */
+    // QDeclarativeProperty(QObject *obj, const QString &name, QDeclarativeEngine *engine)
     QDeclarativeProperty *obj = new QDeclarativeProperty(PQOBJECT(1), PQSTRING(2), PQDECLARATIVEENGINE(3));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQDECLARATIVEPROPERTY(1))
   {
-    /*
-    QDeclarativeProperty(const QDeclarativeProperty &other)
-    */
+    // QDeclarativeProperty(const QDeclarativeProperty &other)
     QDeclarativeProperty *obj = new QDeclarativeProperty(*PQDECLARATIVEPROPERTY(1));
     Qt4xHb::returnNewObject(obj, true);
   }

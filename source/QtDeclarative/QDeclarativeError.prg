@@ -62,17 +62,13 @@ HB_FUNC_STATIC(QDECLARATIVEERROR_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QDeclarativeError()
-    */
+    // QDeclarativeError()
     QDeclarativeError *obj = new QDeclarativeError();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQDECLARATIVEERROR(1))
   {
-    /*
-    QDeclarativeError(const QDeclarativeError &other)
-    */
+    // QDeclarativeError(const QDeclarativeError &other)
     QDeclarativeError *obj = new QDeclarativeError(*PQDECLARATIVEERROR(1));
     Qt4xHb::returnNewObject(obj, true);
   }

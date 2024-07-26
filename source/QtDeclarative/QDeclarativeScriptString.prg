@@ -60,17 +60,13 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QDeclarativeScriptString()
-    */
+    // QDeclarativeScriptString()
     QDeclarativeScriptString *obj = new QDeclarativeScriptString();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQDECLARATIVESCRIPTSTRING(1))
   {
-    /*
-    QDeclarativeScriptString(const QDeclarativeScriptString &other)
-    */
+    // QDeclarativeScriptString(const QDeclarativeScriptString &other)
     QDeclarativeScriptString *obj = new QDeclarativeScriptString(*PQDECLARATIVESCRIPTSTRING(1));
     Qt4xHb::returnNewObject(obj, true);
   }

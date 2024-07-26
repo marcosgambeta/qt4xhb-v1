@@ -77,9 +77,7 @@ RETURN
 #include <QtNetwork/QNetworkAccessManager>
 #include <QtDeclarative/QDeclarativeContext>
 
-    /*
-    QDeclarativeEngine(QObject *parent = 0)
-    */
+// QDeclarativeEngine(QObject *parent = 0)
 HB_FUNC_STATIC(QDECLARATIVEENGINE_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))

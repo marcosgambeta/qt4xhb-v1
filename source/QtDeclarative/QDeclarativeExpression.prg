@@ -68,9 +68,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QDeclarativeExpression()
-    */
+    // QDeclarativeExpression()
     QDeclarativeExpression *obj = new QDeclarativeExpression();
     Qt4xHb::returnNewObject(obj, false);
   }
