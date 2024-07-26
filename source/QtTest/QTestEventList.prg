@@ -69,17 +69,13 @@ HB_FUNC_STATIC(QTESTEVENTLIST_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QTestEventList()
-    */
+    // QTestEventList()
     QTestEventList *obj = new QTestEventList();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQTESTEVENTLIST(1))
   {
-    /*
-    QTestEventList(const QTestEventList &other)
-    */
+    // QTestEventList(const QTestEventList &other)
     QTestEventList *obj = new QTestEventList(*PQTESTEVENTLIST(1));
     Qt4xHb::returnNewObject(obj, true);
   }
