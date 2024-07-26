@@ -84,9 +84,7 @@ RETURN
 #include <QtNetwork/QHostAddress>
 #include <QtNetwork/QNetworkProxy>
 
-    /*
-    QAbstractSocket(QAbstractSocket::SocketType socketType, QObject *parent)
-    */
+// QAbstractSocket(QAbstractSocket::SocketType socketType, QObject *parent)
 HB_FUNC_STATIC(QABSTRACTSOCKET_NEW)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && ISQOBJECT(2))

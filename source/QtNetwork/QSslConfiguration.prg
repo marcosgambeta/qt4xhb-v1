@@ -77,17 +77,13 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QSslConfiguration()
-    */
+    // QSslConfiguration()
     QSslConfiguration *obj = new QSslConfiguration();
     Qt4xHb::returnNewObject(obj, true);
   }
   if (ISNUMPAR(1) && ISQSSLCONFIGURATION(1))
   {
-    /*
-    QSslConfiguration(const QSslConfiguration &other)
-    */
+    // QSslConfiguration(const QSslConfiguration &other)
     QSslConfiguration *obj = new QSslConfiguration(*PQSSLCONFIGURATION(1));
     Qt4xHb::returnNewObject(obj, true);
   }

@@ -58,18 +58,14 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    QHostAddress(quint32 ip4Addr)
-    */
+// QHostAddress(quint32 ip4Addr)
 HB_FUNC_STATIC(QHOSTADDRESS_NEW2)
 {
   QHostAddress *obj = new QHostAddress(PQUINT32(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 
-/*
-QHostAddress(QHostAddress::SpecialAddress address)
-*/
+// QHostAddress(QHostAddress::SpecialAddress address)
 HB_FUNC_STATIC(QHOSTADDRESS_NEW8)
 {
   QHostAddress *obj = new QHostAddress((QHostAddress::SpecialAddress)hb_parni(1));
@@ -80,9 +76,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QHostAddress()
-    */
+    // QHostAddress()
     QHostAddress *obj = new QHostAddress();
     Qt4xHb::returnNewObject(obj, true);
   }
@@ -92,17 +86,13 @@ HB_FUNC_STATIC(QHOSTADDRESS_NEW)
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    QHostAddress(const QString &address)
-    */
+    // QHostAddress(const QString &address)
     QHostAddress *obj = new QHostAddress(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQHOSTADDRESS(1))
   {
-    /*
-    QHostAddress(const QHostAddress &address)
-    */
+    // QHostAddress(const QHostAddress &address)
     QHostAddress *obj = new QHostAddress(*PQHOSTADDRESS(1));
     Qt4xHb::returnNewObject(obj, true);
   }

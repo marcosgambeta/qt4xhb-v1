@@ -67,17 +67,13 @@ HB_FUNC_STATIC(QHOSTINFO_NEW)
 {
   if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
-    /*
-    QHostInfo(int id = -1)
-    */
+    // QHostInfo(int id = -1)
     QHostInfo *obj = new QHostInfo(OPINT(1, -1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQHOSTINFO(1))
   {
-    /*
-    QHostInfo(const QHostInfo &other)
-    */
+    // QHostInfo(const QHostInfo &other)
     QHostInfo *obj = new QHostInfo(*PQHOSTINFO(1));
     Qt4xHb::returnNewObject(obj, true);
   }

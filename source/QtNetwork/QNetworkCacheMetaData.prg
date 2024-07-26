@@ -64,17 +64,13 @@ HB_FUNC_STATIC(QNETWORKCACHEMETADATA_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QNetworkCacheMetaData()
-    */
+    // QNetworkCacheMetaData()
     QNetworkCacheMetaData *obj = new QNetworkCacheMetaData();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQNETWORKCACHEMETADATA(1))
   {
-    /*
-    QNetworkCacheMetaData(const QNetworkCacheMetaData &other)
-    */
+    // QNetworkCacheMetaData(const QNetworkCacheMetaData &other)
     QNetworkCacheMetaData *obj = new QNetworkCacheMetaData(*PQNETWORKCACHEMETADATA(1));
     Qt4xHb::returnNewObject(obj, true);
   }

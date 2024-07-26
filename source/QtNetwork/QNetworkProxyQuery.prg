@@ -66,9 +66,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QNetworkProxyQuery()
-    */
+    // QNetworkProxyQuery()
     QNetworkProxyQuery *obj = new QNetworkProxyQuery();
     Qt4xHb::returnNewObject(obj, true);
   }
@@ -109,9 +107,7 @@ HB_FUNC_STATIC(QNETWORKPROXYQUERY_NEW)
   }
   else if (ISNUMPAR(1) && ISQNETWORKPROXYQUERY(1))
   {
-    /*
-    QNetworkProxyQuery(const QNetworkProxyQuery &other)
-    */
+    // QNetworkProxyQuery(const QNetworkProxyQuery &other)
     QNetworkProxyQuery *obj = new QNetworkProxyQuery(*PQNETWORKPROXYQUERY(1));
     Qt4xHb::returnNewObject(obj, true);
   }

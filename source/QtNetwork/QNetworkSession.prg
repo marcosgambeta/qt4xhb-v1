@@ -69,9 +69,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    /*
-    QNetworkSession(const QNetworkConfiguration &connectionConfig, QObject *parent = 0)
-    */
+// QNetworkSession(const QNetworkConfiguration &connectionConfig, QObject *parent = 0)
 HB_FUNC_STATIC(QNETWORKSESSION_NEW)
 {
   if (ISBETWEEN(1, 2) && ISQNETWORKCONFIGURATION(1) && (ISQOBJECT(2) || HB_ISNIL(2)))

@@ -62,17 +62,13 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QNetworkConfiguration()
-    */
+    // QNetworkConfiguration()
     QNetworkConfiguration *obj = new QNetworkConfiguration();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQNETWORKCONFIGURATION(1))
   {
-    /*
-    QNetworkConfiguration(const QNetworkConfiguration &other)
-    */
+    // QNetworkConfiguration(const QNetworkConfiguration &other)
     QNetworkConfiguration *obj = new QNetworkConfiguration(*PQNETWORKCONFIGURATION(1));
     Qt4xHb::returnNewObject(obj, true);
   }

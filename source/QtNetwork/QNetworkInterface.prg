@@ -64,17 +64,13 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QNetworkInterface()
-    */
+    // QNetworkInterface()
     QNetworkInterface *obj = new QNetworkInterface();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQNETWORKINTERFACE(1))
   {
-    /*
-    QNetworkInterface(const QNetworkInterface &other)
-    */
+    // QNetworkInterface(const QNetworkInterface &other)
     QNetworkInterface *obj = new QNetworkInterface(*PQNETWORKINTERFACE(1));
     Qt4xHb::returnNewObject(obj, true);
   }

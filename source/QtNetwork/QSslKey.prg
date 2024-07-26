@@ -59,9 +59,7 @@ HB_FUNC_STATIC(QSSLKEY_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QSslKey()
-    */
+    // QSslKey()
     QSslKey *obj = new QSslKey();
     Qt4xHb::returnNewObject(obj, true);
   }
@@ -93,9 +91,7 @@ HB_FUNC_STATIC(QSSLKEY_NEW)
   }
   else if (ISNUMPAR(1) && ISQSSLKEY(1))
   {
-    /*
-    QSslKey(const QSslKey &other)
-    */
+    // QSslKey(const QSslKey &other)
     QSslKey *obj = new QSslKey(*PQSSLKEY(1));
     Qt4xHb::returnNewObject(obj, true);
   }

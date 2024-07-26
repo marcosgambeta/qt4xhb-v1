@@ -67,9 +67,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QNetworkProxy()
-    */
+    // QNetworkProxy()
     QNetworkProxy *obj = new QNetworkProxy();
     Qt4xHb::returnNewObject(obj, true);
   }
@@ -86,9 +84,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_NEW)
   }
   else if (ISNUMPAR(1) && ISQNETWORKPROXY(1))
   {
-    /*
-    QNetworkProxy(const QNetworkProxy &other)
-    */
+    // QNetworkProxy(const QNetworkProxy &other)
     QNetworkProxy *obj = new QNetworkProxy(*PQNETWORKPROXY(1));
     Qt4xHb::returnNewObject(obj, true);
   }

@@ -81,17 +81,13 @@ HB_FUNC_STATIC(QURLINFO_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QUrlInfo()
-    */
+    // QUrlInfo()
     QUrlInfo *obj = new QUrlInfo();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQURLINFO(1))
   {
-    /*
-    QUrlInfo(const QUrlInfo &ui)
-    */
+    // QUrlInfo(const QUrlInfo &ui)
     QUrlInfo *obj = new QUrlInfo(*PQURLINFO(1));
     Qt4xHb::returnNewObject(obj, true);
   }

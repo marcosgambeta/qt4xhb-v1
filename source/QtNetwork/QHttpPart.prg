@@ -55,17 +55,13 @@ HB_FUNC_STATIC(QHTTPPART_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QHttpPart()
-    */
+    // QHttpPart()
     QHttpPart *obj = new QHttpPart();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQHTTPPART(1))
   {
-    /*
-    QHttpPart(const QHttpPart &other)
-    */
+    // QHttpPart(const QHttpPart &other)
     QHttpPart *obj = new QHttpPart(*PQHTTPPART(1));
     Qt4xHb::returnNewObject(obj, true);
   }

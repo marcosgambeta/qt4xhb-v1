@@ -72,9 +72,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_NEW)
 {
   if (ISBETWEEN(0, 2) && (ISQBYTEARRAY(1) || HB_ISNIL(1)) && (ISQBYTEARRAY(2) || HB_ISNIL(2)))
   {
-    /*
-    QNetworkCookie(const QByteArray &name = QByteArray(), const QByteArray &value = QByteArray())
-    */
+    // QNetworkCookie(const QByteArray &name = QByteArray(), const QByteArray &value = QByteArray())
     QNetworkCookie *obj =
         new QNetworkCookie(HB_ISNIL(1) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(1)),
                            HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(2)));
@@ -82,9 +80,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_NEW)
   }
   else if (ISNUMPAR(1) && ISQNETWORKCOOKIE(1))
   {
-    /*
-    QNetworkCookie(const QNetworkCookie &other)
-    */
+    // QNetworkCookie(const QNetworkCookie &other)
     QNetworkCookie *obj = new QNetworkCookie(*PQNETWORKCOOKIE(1));
     Qt4xHb::returnNewObject(obj, true);
   }

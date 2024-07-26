@@ -60,17 +60,13 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QNetworkAddressEntry()
-    */
+    // QNetworkAddressEntry()
     QNetworkAddressEntry *obj = new QNetworkAddressEntry();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQNETWORKADDRESSENTRY(1))
   {
-    /*
-    QNetworkAddressEntry(const QNetworkAddressEntry &other)
-    */
+    // QNetworkAddressEntry(const QNetworkAddressEntry &other)
     QNetworkAddressEntry *obj = new QNetworkAddressEntry(*PQNETWORKADDRESSENTRY(1));
     Qt4xHb::returnNewObject(obj, true);
   }

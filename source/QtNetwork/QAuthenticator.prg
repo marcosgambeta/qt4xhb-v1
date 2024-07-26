@@ -60,17 +60,13 @@ HB_FUNC_STATIC(QAUTHENTICATOR_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QAuthenticator()
-    */
+    // QAuthenticator()
     QAuthenticator *obj = new QAuthenticator();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQAUTHENTICATOR(1))
   {
-    /*
-    QAuthenticator(const QAuthenticator &other)
-    */
+    // QAuthenticator(const QAuthenticator &other)
     QAuthenticator *obj = new QAuthenticator(*PQAUTHENTICATOR(1));
     Qt4xHb::returnNewObject(obj, true);
   }
