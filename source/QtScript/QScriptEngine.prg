@@ -86,17 +86,13 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QScriptEngine()
-    */
+    // QScriptEngine()
     QScriptEngine *obj = new QScriptEngine();
     Qt4xHb::returnNewObject(obj, false);
   }
   else if (ISNUMPAR(1) && ISQOBJECT(1))
   {
-    /*
-    QScriptEngine(QObject *parent)
-    */
+    // QScriptEngine(QObject *parent)
     QScriptEngine *obj = new QScriptEngine(PQOBJECT(1));
     Qt4xHb::returnNewObject(obj, false);
   }

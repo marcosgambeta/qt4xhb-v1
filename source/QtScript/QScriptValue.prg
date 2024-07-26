@@ -100,36 +100,28 @@ RETURN
 #include <QtCore/QRegExp>
 #include <QtCore/QVariant>
 
-    /*
-    QScriptValue(QScriptValue::SpecialValue value)
-    */
+// QScriptValue(QScriptValue::SpecialValue value)
 HB_FUNC_STATIC(QSCRIPTVALUE_NEW3)
 {
   QScriptValue *obj = new QScriptValue((QScriptValue::SpecialValue)hb_parni(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 
-/*
-QScriptValue(int value)
-*/
+// QScriptValue(int value)
 HB_FUNC_STATIC(QSCRIPTVALUE_NEW5)
 {
   QScriptValue *obj = new QScriptValue(PINT(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 
-/*
-QScriptValue(uint value)
-*/
+// QScriptValue(uint value)
 HB_FUNC_STATIC(QSCRIPTVALUE_NEW6)
 {
   QScriptValue *obj = new QScriptValue(PUINT(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 
-/*
-QScriptValue(const char *value)
-*/
+// QScriptValue(const char *value)
 HB_FUNC_STATIC(QSCRIPTVALUE_NEW10)
 {
   QScriptValue *obj = new QScriptValue(PCONSTCHAR(1));
@@ -140,17 +132,13 @@ HB_FUNC_STATIC(QSCRIPTVALUE_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QScriptValue()
-    */
+    // QScriptValue()
     QScriptValue *obj = new QScriptValue();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQSCRIPTVALUE(1))
   {
-    /*
-    QScriptValue(const QScriptValue &other)
-    */
+    // QScriptValue(const QScriptValue &other)
     QScriptValue *obj = new QScriptValue(*PQSCRIPTVALUE(1));
     Qt4xHb::returnNewObject(obj, true);
   }
@@ -163,17 +151,13 @@ HB_FUNC_STATIC(QSCRIPTVALUE_NEW)
   }
   else if (ISNUMPAR(1) && HB_ISLOG(1))
   {
-    /*
-    QScriptValue(bool value)
-    */
+    // QScriptValue(bool value)
     QScriptValue *obj = new QScriptValue(PBOOL(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    QScriptValue(const QString &value)
-    */
+    // QScriptValue(const QString &value)
     QScriptValue *obj = new QScriptValue(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, true);
     // HB_FUNC_EXEC(QSCRIPTVALUE_NEW10);

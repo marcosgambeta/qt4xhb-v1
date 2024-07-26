@@ -63,9 +63,7 @@ RETURN
 
 #include <QtScript/QScriptEngine>
 
-    /*
-    QScriptEngineAgent(QScriptEngine *engine)
-    */
+// QScriptEngineAgent(QScriptEngine *engine)
 HB_FUNC_STATIC(QSCRIPTENGINEAGENT_NEW)
 {
   if (ISNUMPAR(1) && ISQSCRIPTENGINE(1))
