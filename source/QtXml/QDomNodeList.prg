@@ -58,17 +58,13 @@ HB_FUNC_STATIC(QDOMNODELIST_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QDomNodeList()
-    */
+    // QDomNodeList()
     QDomNodeList *obj = new QDomNodeList();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQDOMNODELIST(1))
   {
-    /*
-    QDomNodeList(const QDomNodeList &n)
-    */
+    // QDomNodeList(const QDomNodeList &n)
     QDomNodeList *obj = new QDomNodeList(*PQDOMNODELIST(1));
     Qt4xHb::returnNewObject(obj, true);
   }

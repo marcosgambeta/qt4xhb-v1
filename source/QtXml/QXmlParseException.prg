@@ -67,9 +67,7 @@ HB_FUNC_STATIC(QXMLPARSEEXCEPTION_NEW)
   }
   else if (ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1))
   {
-    /*
-    QXmlParseException(const QXmlParseException &other)
-    */
+    // QXmlParseException(const QXmlParseException &other)
     QXmlParseException *obj = new QXmlParseException(*PQXMLPARSEEXCEPTION(1));
     Qt4xHb::returnNewObject(obj, true);
   }

@@ -128,17 +128,13 @@ HB_FUNC_STATIC(QDOMNODE_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QDomNode()
-    */
+    // QDomNode()
     QDomNode *obj = new QDomNode();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQDOMNODE(1))
   {
-    /*
-    QDomNode(const QDomNode &n)
-    */
+    // QDomNode(const QDomNode &n)
     QDomNode *obj = new QDomNode(*PQDOMNODE(1));
     Qt4xHb::returnNewObject(obj, true);
   }

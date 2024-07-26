@@ -44,17 +44,13 @@ HB_FUNC_STATIC(QDOMNOTATION_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QDomNotation()
-    */
+    // QDomNotation()
     QDomNotation *obj = new QDomNotation();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQDOMNOTATION(1))
   {
-    /*
-    QDomNotation(const QDomNotation &x)
-    */
+    // QDomNotation(const QDomNotation &x)
     QDomNotation *obj = new QDomNotation(*PQDOMNOTATION(1));
     Qt4xHb::returnNewObject(obj, true);
   }

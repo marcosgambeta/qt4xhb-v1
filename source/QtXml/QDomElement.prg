@@ -77,17 +77,13 @@ HB_FUNC_STATIC(QDOMELEMENT_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QDomElement()
-    */
+    // QDomElement()
     QDomElement *obj = new QDomElement();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQDOMELEMENT(1))
   {
-    /*
-    QDomElement(const QDomElement &x)
-    */
+    // QDomElement(const QDomElement &x)
     QDomElement *obj = new QDomElement(*PQDOMELEMENT(1));
     Qt4xHb::returnNewObject(obj, true);
   }

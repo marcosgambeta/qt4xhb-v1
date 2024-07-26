@@ -57,17 +57,13 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QXmlInputSource()
-    */
+    // QXmlInputSource()
     QXmlInputSource *obj = new QXmlInputSource();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQIODEVICE(1))
   {
-    /*
-    QXmlInputSource(QIODevice *dev)
-    */
+    // QXmlInputSource(QIODevice *dev)
     QXmlInputSource *obj = new QXmlInputSource(PQIODEVICE(1));
     Qt4xHb::returnNewObject(obj, true);
   }

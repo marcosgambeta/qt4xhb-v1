@@ -64,17 +64,13 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QDomNamedNodeMap()
-    */
+    // QDomNamedNodeMap()
     QDomNamedNodeMap *obj = new QDomNamedNodeMap();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQDOMNAMEDNODEMAP(1))
   {
-    /*
-    QDomNamedNodeMap(const QDomNamedNodeMap &n)
-    */
+    // QDomNamedNodeMap(const QDomNamedNodeMap &n)
     QDomNamedNodeMap *obj = new QDomNamedNodeMap(*PQDOMNAMEDNODEMAP(1));
     Qt4xHb::returnNewObject(obj, true);
   }

@@ -59,17 +59,13 @@ HB_FUNC_STATIC(QDOMIMPLEMENTATION_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QDomImplementation()
-    */
+    // QDomImplementation()
     QDomImplementation *obj = new QDomImplementation();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQDOMIMPLEMENTATION(1))
   {
-    /*
-    QDomImplementation(const QDomImplementation &x)
-    */
+    // QDomImplementation(const QDomImplementation &x)
     QDomImplementation *obj = new QDomImplementation(*PQDOMIMPLEMENTATION(1));
     Qt4xHb::returnNewObject(obj, true);
   }

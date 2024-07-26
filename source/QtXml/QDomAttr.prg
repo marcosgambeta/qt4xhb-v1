@@ -48,17 +48,13 @@ HB_FUNC_STATIC(QDOMATTR_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QDomAttr()
-    */
+    // QDomAttr()
     QDomAttr *obj = new QDomAttr();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQDOMATTR(1))
   {
-    /*
-    QDomAttr(const QDomAttr &x)
-    */
+    // QDomAttr(const QDomAttr &x)
     QDomAttr *obj = new QDomAttr(*PQDOMATTR(1));
     Qt4xHb::returnNewObject(obj, true);
   }

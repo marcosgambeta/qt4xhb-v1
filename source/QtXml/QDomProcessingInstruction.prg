@@ -45,17 +45,13 @@ HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QDomProcessingInstruction()
-    */
+    // QDomProcessingInstruction()
     QDomProcessingInstruction *obj = new QDomProcessingInstruction();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQDOMPROCESSINGINSTRUCTION(1))
   {
-    /*
-    QDomProcessingInstruction(const QDomProcessingInstruction &x)
-    */
+    // QDomProcessingInstruction(const QDomProcessingInstruction &x)
     QDomProcessingInstruction *obj = new QDomProcessingInstruction(*PQDOMPROCESSINGINSTRUCTION(1));
     Qt4xHb::returnNewObject(obj, true);
   }

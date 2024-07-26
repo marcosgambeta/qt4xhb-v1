@@ -42,17 +42,13 @@ HB_FUNC_STATIC(QDOMDOCUMENTFRAGMENT_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QDomDocumentFragment()
-    */
+    // QDomDocumentFragment()
     QDomDocumentFragment *obj = new QDomDocumentFragment();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQDOMDOCUMENTFRAGMENT(1))
   {
-    /*
-    QDomDocumentFragment(const QDomDocumentFragment &x)
-    */
+    // QDomDocumentFragment(const QDomDocumentFragment &x)
     QDomDocumentFragment *obj = new QDomDocumentFragment(*PQDOMDOCUMENTFRAGMENT(1));
     Qt4xHb::returnNewObject(obj, true);
   }

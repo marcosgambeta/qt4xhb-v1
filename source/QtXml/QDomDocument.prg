@@ -77,33 +77,25 @@ HB_FUNC_STATIC(QDOMDOCUMENT_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QDomDocument()
-    */
+    // QDomDocument()
     QDomDocument *obj = new QDomDocument();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    QDomDocument(const QString &name)
-    */
+    // QDomDocument(const QString &name)
     QDomDocument *obj = new QDomDocument(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQDOMDOCUMENTTYPE(1))
   {
-    /*
-    QDomDocument(const QDomDocumentType &doctype)
-    */
+    // QDomDocument(const QDomDocumentType &doctype)
     QDomDocument *obj = new QDomDocument(*PQDOMDOCUMENTTYPE(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQDOMDOCUMENT(1))
   {
-    /*
-    QDomDocument(const QDomDocument &x)
-    */
+    // QDomDocument(const QDomDocument &x)
     QDomDocument *obj = new QDomDocument(*PQDOMDOCUMENT(1));
     Qt4xHb::returnNewObject(obj, true);
   }

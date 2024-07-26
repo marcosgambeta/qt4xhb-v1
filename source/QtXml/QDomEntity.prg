@@ -45,17 +45,13 @@ HB_FUNC_STATIC(QDOMENTITY_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QDomEntity()
-    */
+    // QDomEntity()
     QDomEntity *obj = new QDomEntity();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQDOMENTITY(1))
   {
-    /*
-    QDomEntity(const QDomEntity &x)
-    */
+    // QDomEntity(const QDomEntity &x)
     QDomEntity *obj = new QDomEntity(*PQDOMENTITY(1));
     Qt4xHb::returnNewObject(obj, true);
   }
