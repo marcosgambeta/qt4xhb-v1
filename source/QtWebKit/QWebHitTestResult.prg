@@ -76,17 +76,13 @@ HB_FUNC_STATIC(QWEBHITTESTRESULT_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QWebHitTestResult()
-    */
+    // QWebHitTestResult()
     QWebHitTestResult *obj = new QWebHitTestResult();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQWEBHITTESTRESULT(1))
   {
-    /*
-    QWebHitTestResult(const QWebHitTestResult &other)
-    */
+    // QWebHitTestResult(const QWebHitTestResult &other)
     QWebHitTestResult *obj = new QWebHitTestResult(*PQWEBHITTESTRESULT(1));
     Qt4xHb::returnNewObject(obj, true);
   }

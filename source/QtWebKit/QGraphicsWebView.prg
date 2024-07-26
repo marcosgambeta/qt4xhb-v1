@@ -82,9 +82,7 @@ RETURN
 
 #include <QtGui/QAction>
 
-    /*
-    QGraphicsWebView(QGraphicsItem *parent = 0)
-    */
+// QGraphicsWebView(QGraphicsItem *parent = 0)
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)))

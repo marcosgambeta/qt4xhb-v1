@@ -61,9 +61,7 @@ RETURN
 
 #include <QtCore/QVariant>
 
-    /*
-    QWebHistoryItem(const QWebHistoryItem &other)
-    */
+// QWebHistoryItem(const QWebHistoryItem &other)
 HB_FUNC_STATIC(QWEBHISTORYITEM_NEW)
 {
   if (ISNUMPAR(1) && ISQWEBHISTORYITEM(1))

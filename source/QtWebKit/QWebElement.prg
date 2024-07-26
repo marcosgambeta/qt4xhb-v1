@@ -110,17 +110,13 @@ HB_FUNC_STATIC(QWEBELEMENT_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QWebElement()
-    */
+    // QWebElement()
     QWebElement *obj = new QWebElement();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQWEBELEMENT(1))
   {
-    /*
-    QWebElement(const QWebElement &other)
-    */
+    // QWebElement(const QWebElement &other)
     QWebElement *obj = new QWebElement(*PQWEBELEMENT(1));
     Qt4xHb::returnNewObject(obj, true);
   }
