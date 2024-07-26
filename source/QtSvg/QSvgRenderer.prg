@@ -63,33 +63,25 @@ HB_FUNC_STATIC(QSVGRENDERER_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    /*
-    QSvgRenderer(QObject *parent = 0)
-    */
+    // QSvgRenderer(QObject *parent = 0)
     QSvgRenderer *obj = new QSvgRenderer(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
-    /*
-    QSvgRenderer(const QString &filename, QObject *parent = 0)
-    */
+    // QSvgRenderer(const QString &filename, QObject *parent = 0)
     QSvgRenderer *obj = new QSvgRenderer(PQSTRING(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
-    /*
-    QSvgRenderer(const QByteArray &contents, QObject *parent = 0)
-    */
+    // QSvgRenderer(const QByteArray &contents, QObject *parent = 0)
     QSvgRenderer *obj = new QSvgRenderer(*PQBYTEARRAY(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else if (ISBETWEEN(1, 2) && ISQXMLSTREAMREADER(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
-    /*
-    QSvgRenderer(QXmlStreamReader *contents, QObject *parent = 0)
-    */
+    // QSvgRenderer(QXmlStreamReader *contents, QObject *parent = 0)
     QSvgRenderer *obj = new QSvgRenderer(PQXMLSTREAMREADER(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
