@@ -78,9 +78,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QVideoSurfaceFormat()
-    */
+    // QVideoSurfaceFormat()
     QVideoSurfaceFormat *obj = new QVideoSurfaceFormat();
     Qt4xHb::returnNewObject(obj, true);
   }
@@ -98,9 +96,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_NEW)
   }
   else if (ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1))
   {
-    /*
-    QVideoSurfaceFormat(const QVideoSurfaceFormat &other)
-    */
+    // QVideoSurfaceFormat(const QVideoSurfaceFormat &other)
     QVideoSurfaceFormat *obj = new QVideoSurfaceFormat(*PQVIDEOSURFACEFORMAT(1));
     Qt4xHb::returnNewObject(obj, true);
   }

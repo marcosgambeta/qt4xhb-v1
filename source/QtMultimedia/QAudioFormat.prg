@@ -68,17 +68,13 @@ HB_FUNC_STATIC(QAUDIOFORMAT_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QAudioFormat()
-    */
+    // QAudioFormat()
     QAudioFormat *obj = new QAudioFormat();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQAUDIOFORMAT(1))
   {
-    /*
-    QAudioFormat(const QAudioFormat &other)
-    */
+    // QAudioFormat(const QAudioFormat &other)
     QAudioFormat *obj = new QAudioFormat(*PQAUDIOFORMAT(1));
     Qt4xHb::returnNewObject(obj, true);
   }
