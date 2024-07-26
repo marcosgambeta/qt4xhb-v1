@@ -46,9 +46,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    /*
-    QAxScriptEngine(const QString &language, QAxScript *script)
-    */
+// QAxScriptEngine(const QString &language, QAxScript *script)
 HB_FUNC_STATIC(QAXSCRIPTENGINE_NEW)
 {
   if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQAXSCRIPT(2))
