@@ -53,9 +53,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    QAbstractFormBuilder()
-    */
+// QAbstractFormBuilder()
 HB_FUNC_STATIC(QABSTRACTFORMBUILDER_NEW)
 {
   if (ISNUMPAR(0))
