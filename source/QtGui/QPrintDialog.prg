@@ -56,17 +56,13 @@ HB_FUNC_STATIC(QPRINTDIALOG_NEW)
 {
   if (ISBETWEEN(1, 2) && ISQPRINTER(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
-    /*
-    QPrintDialog(QPrinter *printer, QWidget *parent = 0)
-    */
+    // QPrintDialog(QPrinter *printer, QWidget *parent = 0)
     QPrintDialog *obj = new QPrintDialog(PQPRINTER(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
-    /*
-    QPrintDialog(QWidget *parent = 0)
-    */
+    // QPrintDialog(QWidget *parent = 0)
     QPrintDialog *obj = new QPrintDialog(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }

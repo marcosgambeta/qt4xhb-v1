@@ -80,17 +80,13 @@ HB_FUNC_STATIC(QMENU_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
-    /*
-    QMenu(QWidget *parent = 0)
-    */
+    // QMenu(QWidget *parent = 0)
     QMenu *obj = new QMenu(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
-    /*
-    QMenu(const QString &title, QWidget *parent = 0)
-    */
+    // QMenu(const QString &title, QWidget *parent = 0)
     QMenu *obj = new QMenu(PQSTRING(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   }

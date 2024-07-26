@@ -114,34 +114,26 @@ HB_FUNC_STATIC(QFONT_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QFont()
-    */
+    // QFont()
     QFont *obj = new QFont();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)) &&
            (HB_ISNUM(4) || HB_ISNIL(4)))
   {
-    /*
-    QFont(const QString &family, int pointSize = -1, int weight = -1, bool italic = false)
-    */
+    // QFont(const QString &family, int pointSize = -1, int weight = -1, bool italic = false)
     QFont *obj = new QFont(PQSTRING(1), OPINT(2, -1), OPINT(3, -1), OPBOOL(4, false));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && ISQFONT(1) && HB_ISOBJECT(2))
   {
-    /*
-    QFont(const QFont &font, QPaintDevice *pd)
-    */
+    // QFont(const QFont &font, QPaintDevice *pd)
     QFont *obj = new QFont(*PQFONT(1), PQPAINTDEVICE(2));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQFONT(1))
   {
-    /*
-    QFont(const QFont &font)
-    */
+    // QFont(const QFont &font)
     QFont *obj = new QFont(*PQFONT(1));
     Qt4xHb::returnNewObject(obj, true);
   }

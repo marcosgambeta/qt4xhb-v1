@@ -66,17 +66,13 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    /*
-    QSystemTrayIcon(QObject *parent = 0)
-    */
+    // QSystemTrayIcon(QObject *parent = 0)
     QSystemTrayIcon *obj = new QSystemTrayIcon(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else if (ISBETWEEN(1, 2) && (ISQICON(1) || HB_ISCHAR(1)) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
-    /*
-    QSystemTrayIcon(const QIcon &icon, QObject *parent = 0)
-    */
+    // QSystemTrayIcon(const QIcon &icon, QObject *parent = 0)
     QSystemTrayIcon *obj = new QSystemTrayIcon(
         HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt4xHb::itemGetPtr(1)) : QIcon(hb_parc(1)), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);

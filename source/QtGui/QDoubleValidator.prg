@@ -54,17 +54,13 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    /*
-    QDoubleValidator(QObject *parent = 0)
-    */
+    // QDoubleValidator(QObject *parent = 0)
     QDoubleValidator *obj = new QDoubleValidator(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISQOBJECT(4) || HB_ISNIL(4)))
   {
-    /*
-    QDoubleValidator(double bottom, double top, int decimals, QObject *parent = 0)
-    */
+    // QDoubleValidator(double bottom, double top, int decimals, QObject *parent = 0)
     QDoubleValidator *obj = new QDoubleValidator(PDOUBLE(1), PDOUBLE(2), PINT(3), OPQOBJECT(4, 0));
     Qt4xHb::returnNewObject(obj, false);
   }

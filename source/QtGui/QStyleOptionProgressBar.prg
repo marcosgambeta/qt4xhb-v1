@@ -53,17 +53,13 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QStyleOptionProgressBar()
-    */
+    // QStyleOptionProgressBar()
     QStyleOptionProgressBar *obj = new QStyleOptionProgressBar();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQSTYLEOPTIONPROGRESSBAR(1))
   {
-    /*
-    QStyleOptionProgressBar(const QStyleOptionProgressBar &other)
-    */
+    // QStyleOptionProgressBar(const QStyleOptionProgressBar &other)
     QStyleOptionProgressBar *obj = new QStyleOptionProgressBar(*PQSTYLEOPTIONPROGRESSBAR(1));
     Qt4xHb::returnNewObject(obj, true);
   }

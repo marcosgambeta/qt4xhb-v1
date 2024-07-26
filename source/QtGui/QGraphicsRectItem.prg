@@ -53,18 +53,14 @@ HB_FUNC_STATIC(QGRAPHICSRECTITEM_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)))
   {
-    /*
-    QGraphicsRectItem(QGraphicsItem *parent = 0)
-    */
+    // QGraphicsRectItem(QGraphicsItem *parent = 0)
     QGraphicsRectItem *obj =
         new QGraphicsRectItem(HB_ISNIL(1) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(1)));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISBETWEEN(1, 2) && ISQRECTF(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2)))
   {
-    /*
-    QGraphicsRectItem(const QRectF &rect, QGraphicsItem *parent = 0)
-    */
+    // QGraphicsRectItem(const QRectF &rect, QGraphicsItem *parent = 0)
     QGraphicsRectItem *obj =
         new QGraphicsRectItem(*PQRECTF(1), HB_ISNIL(2) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(2)));
     Qt4xHb::returnNewObject(obj, true);
@@ -72,9 +68,7 @@ HB_FUNC_STATIC(QGRAPHICSRECTITEM_NEW)
   else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) &&
            (ISQGRAPHICSITEM(5) || HB_ISNIL(5)))
   {
-    /*
-    QGraphicsRectItem(qreal x, qreal y, qreal width, qreal height, QGraphicsItem *parent = 0)
-    */
+    // QGraphicsRectItem(qreal x, qreal y, qreal width, qreal height, QGraphicsItem *parent = 0)
     QGraphicsRectItem *obj =
         new QGraphicsRectItem(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4),
                               HB_ISNIL(5) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(5)));

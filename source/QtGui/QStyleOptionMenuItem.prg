@@ -64,17 +64,13 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QStyleOptionMenuItem()
-    */
+    // QStyleOptionMenuItem()
     QStyleOptionMenuItem *obj = new QStyleOptionMenuItem();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQSTYLEOPTIONMENUITEM(1))
   {
-    /*
-    QStyleOptionMenuItem(const QStyleOptionMenuItem &other)
-    */
+    // QStyleOptionMenuItem(const QStyleOptionMenuItem &other)
     QStyleOptionMenuItem *obj = new QStyleOptionMenuItem(*PQSTYLEOPTIONMENUITEM(1));
     Qt4xHb::returnNewObject(obj, true);
   }

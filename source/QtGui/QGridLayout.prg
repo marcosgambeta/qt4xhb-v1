@@ -83,17 +83,13 @@ HB_FUNC_STATIC(QGRIDLAYOUT_NEW)
 {
   if (ISNUMPAR(1) && ISQWIDGET(1))
   {
-    /*
-    QGridLayout(QWidget *parent)
-    */
+    // QGridLayout(QWidget *parent)
     QGridLayout *obj = new QGridLayout(PQWIDGET(1));
     Qt4xHb::returnNewObject(obj, false);
   }
   else if (ISNUMPAR(0))
   {
-    /*
-    QGridLayout()
-    */
+    // QGridLayout()
     QGridLayout *obj = new QGridLayout();
     Qt4xHb::returnNewObject(obj, false);
   }

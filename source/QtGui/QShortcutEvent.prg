@@ -42,9 +42,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    QShortcutEvent(const QKeySequence &key, int id, bool ambiguous = false)
-    */
+// QShortcutEvent(const QKeySequence &key, int id, bool ambiguous = false)
 HB_FUNC_STATIC(QSHORTCUTEVENT_NEW)
 {
   if (ISBETWEEN(2, 3) && ISQKEYSEQUENCE(1) && HB_ISNUM(2) && (HB_ISLOG(3) || HB_ISNIL(3)))

@@ -111,9 +111,7 @@ HB_FUNC_STATIC(QFILEDIALOG_NEW)
 {
   if (ISNUMPAR(2) && ISQWIDGET(1) && HB_ISNUM(2))
   {
-    /*
-    QFileDialog(QWidget *parent, Qt::WindowFlags flags)
-    */
+    // QFileDialog(QWidget *parent, Qt::WindowFlags flags)
     QFileDialog *obj = new QFileDialog(PQWIDGET(1), (Qt::WindowFlags)hb_parni(2));
     Qt4xHb::returnNewObject(obj, false);
   }

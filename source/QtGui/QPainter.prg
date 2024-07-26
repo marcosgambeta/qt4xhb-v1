@@ -159,17 +159,13 @@ HB_FUNC_STATIC(QPAINTER_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QPainter()
-    */
+    // QPainter()
     QPainter *obj = new QPainter();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && HB_ISOBJECT(1))
   {
-    /*
-    QPainter(QPaintDevice *device)
-    */
+    // QPainter(QPaintDevice *device)
     QPainter *obj = new QPainter(PQPAINTDEVICE(1));
     Qt4xHb::returnNewObject(obj, true);
   }

@@ -61,17 +61,13 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QTextFragment()
-    */
+    // QTextFragment()
     QTextFragment *obj = new QTextFragment();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQTEXTFRAGMENT(1))
   {
-    /*
-    QTextFragment(const QTextFragment &other)
-    */
+    // QTextFragment(const QTextFragment &other)
     QTextFragment *obj = new QTextFragment(*PQTEXTFRAGMENT(1));
     Qt4xHb::returnNewObject(obj, true);
   }

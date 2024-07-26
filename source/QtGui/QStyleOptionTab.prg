@@ -56,17 +56,13 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QStyleOptionTab()
-    */
+    // QStyleOptionTab()
     QStyleOptionTab *obj = new QStyleOptionTab();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQSTYLEOPTIONTAB(1))
   {
-    /*
-    QStyleOptionTab(const QStyleOptionTab &other)
-    */
+    // QStyleOptionTab(const QStyleOptionTab &other)
     QStyleOptionTab *obj = new QStyleOptionTab(*PQSTYLEOPTIONTAB(1));
     Qt4xHb::returnNewObject(obj, true);
   }

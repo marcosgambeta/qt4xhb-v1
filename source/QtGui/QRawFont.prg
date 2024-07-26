@@ -82,9 +82,7 @@ HB_FUNC_STATIC(QRAWFONT_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QRawFont()
-    */
+    // QRawFont()
     QRawFont *obj = new QRawFont();
     Qt4xHb::returnNewObject(obj, true);
   }
@@ -112,9 +110,7 @@ HB_FUNC_STATIC(QRAWFONT_NEW)
   }
   else if (ISNUMPAR(1) && ISQRAWFONT(1))
   {
-    /*
-    QRawFont(const QRawFont &other)
-    */
+    // QRawFont(const QRawFont &other)
     QRawFont *obj = new QRawFont(*PQRAWFONT(1));
     Qt4xHb::returnNewObject(obj, true);
   }

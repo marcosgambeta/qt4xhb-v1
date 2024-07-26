@@ -56,17 +56,13 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QStyleOptionComboBox()
-    */
+    // QStyleOptionComboBox()
     QStyleOptionComboBox *obj = new QStyleOptionComboBox();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQSTYLEOPTIONCOMBOBOX(1))
   {
-    /*
-    QStyleOptionComboBox(const QStyleOptionComboBox &other)
-    */
+    // QStyleOptionComboBox(const QStyleOptionComboBox &other)
     QStyleOptionComboBox *obj = new QStyleOptionComboBox(*PQSTYLEOPTIONCOMBOBOX(1));
     Qt4xHb::returnNewObject(obj, true);
   }

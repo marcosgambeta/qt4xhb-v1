@@ -76,25 +76,19 @@ HB_FUNC_STATIC(QFONTMETRICS_NEW)
 {
   if (ISNUMPAR(1) && ISQFONT(1))
   {
-    /*
-    QFontMetrics(const QFont &font)
-    */
+    // QFontMetrics(const QFont &font)
     QFontMetrics *obj = new QFontMetrics(*PQFONT(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && ISQFONT(1) && HB_ISOBJECT(2))
   {
-    /*
-    QFontMetrics(const QFont &font, QPaintDevice *paintdevice)
-    */
+    // QFontMetrics(const QFont &font, QPaintDevice *paintdevice)
     QFontMetrics *obj = new QFontMetrics(*PQFONT(1), PQPAINTDEVICE(2));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQFONTMETRICS(1))
   {
-    /*
-    QFontMetrics(const QFontMetrics &fm)
-    */
+    // QFontMetrics(const QFontMetrics &fm)
     QFontMetrics *obj = new QFontMetrics(*PQFONTMETRICS(1));
     Qt4xHb::returnNewObject(obj, true);
   }

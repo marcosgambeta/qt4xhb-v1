@@ -60,17 +60,13 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QStyleOptionHeader()
-    */
+    // QStyleOptionHeader()
     QStyleOptionHeader *obj = new QStyleOptionHeader();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQSTYLEOPTIONHEADER(1))
   {
-    /*
-    QStyleOptionHeader(const QStyleOptionHeader &other)
-    */
+    // QStyleOptionHeader(const QStyleOptionHeader &other)
     QStyleOptionHeader *obj = new QStyleOptionHeader(*PQSTYLEOPTIONHEADER(1));
     Qt4xHb::returnNewObject(obj, true);
   }

@@ -105,9 +105,7 @@ RETURN
 
 #include <QtGui/QStyle>
 
-    /*
-    QGraphicsWidget(QGraphicsItem *parent = 0, Qt::WindowFlags wFlags = 0)
-    */
+// QGraphicsWidget(QGraphicsItem *parent = 0, Qt::WindowFlags wFlags = 0)
 HB_FUNC_STATIC(QGRAPHICSWIDGET_NEW)
 {
   if (ISBETWEEN(0, 2) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))

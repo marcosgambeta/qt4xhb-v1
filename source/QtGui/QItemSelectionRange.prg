@@ -69,33 +69,25 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QItemSelectionRange()
-    */
+    // QItemSelectionRange()
     QItemSelectionRange *obj = new QItemSelectionRange();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQITEMSELECTIONRANGE(1))
   {
-    /*
-    QItemSelectionRange(const QItemSelectionRange &other)
-    */
+    // QItemSelectionRange(const QItemSelectionRange &other)
     QItemSelectionRange *obj = new QItemSelectionRange(*PQITEMSELECTIONRANGE(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && ISQMODELINDEX(1) && ISQMODELINDEX(2))
   {
-    /*
-    QItemSelectionRange(const QModelIndex &topLeft, const QModelIndex &bottomRight)
-    */
+    // QItemSelectionRange(const QModelIndex &topLeft, const QModelIndex &bottomRight)
     QItemSelectionRange *obj = new QItemSelectionRange(*PQMODELINDEX(1), *PQMODELINDEX(2));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQMODELINDEX(1))
   {
-    /*
-    QItemSelectionRange(const QModelIndex &index)
-    */
+    // QItemSelectionRange(const QModelIndex &index)
     QItemSelectionRange *obj = new QItemSelectionRange(*PQMODELINDEX(1));
     Qt4xHb::returnNewObject(obj, true);
   }

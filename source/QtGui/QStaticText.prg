@@ -65,25 +65,19 @@ HB_FUNC_STATIC(QSTATICTEXT_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QStaticText()
-    */
+    // QStaticText()
     QStaticText *obj = new QStaticText();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    QStaticText(const QString &text)
-    */
+    // QStaticText(const QString &text)
     QStaticText *obj = new QStaticText(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQSTATICTEXT(1))
   {
-    /*
-    QStaticText(const QStaticText &other)
-    */
+    // QStaticText(const QStaticText &other)
     QStaticText *obj = new QStaticText(*PQSTATICTEXT(1));
     Qt4xHb::returnNewObject(obj, true);
   }

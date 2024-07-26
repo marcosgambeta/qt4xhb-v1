@@ -40,9 +40,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    QInputEvent(QEvent::Type type, Qt::KeyboardModifiers modifiers = Qt::NoModifier)
-    */
+// QInputEvent(QEvent::Type type, Qt::KeyboardModifiers modifiers = Qt::NoModifier)
 HB_FUNC_STATIC(QINPUTEVENT_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))

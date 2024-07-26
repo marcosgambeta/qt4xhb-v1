@@ -38,9 +38,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    QStyleHintReturnVariant()
-    */
+// QStyleHintReturnVariant()
 HB_FUNC_STATIC(QSTYLEHINTRETURNVARIANT_NEW)
 {
   if (ISNUMPAR(0))

@@ -57,17 +57,13 @@ HB_FUNC_STATIC(QFONTDIALOG_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
-    /*
-    QFontDialog(QWidget *parent = 0)
-    */
+    // QFontDialog(QWidget *parent = 0)
     QFontDialog *obj = new QFontDialog(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else if (ISBETWEEN(1, 2) && ISQFONT(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
-    /*
-    QFontDialog(const QFont &initial, QWidget *parent = 0)
-    */
+    // QFontDialog(const QFont &initial, QWidget *parent = 0)
     QFontDialog *obj = new QFontDialog(*PQFONT(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   }

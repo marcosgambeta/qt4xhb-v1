@@ -57,17 +57,13 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QStyleOptionViewItem()
-    */
+    // QStyleOptionViewItem()
     QStyleOptionViewItem *obj = new QStyleOptionViewItem();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQSTYLEOPTIONVIEWITEM(1))
   {
-    /*
-    QStyleOptionViewItem(const QStyleOptionViewItem &other)
-    */
+    // QStyleOptionViewItem(const QStyleOptionViewItem &other)
     QStyleOptionViewItem *obj = new QStyleOptionViewItem(*PQSTYLEOPTIONVIEWITEM(1));
     Qt4xHb::returnNewObject(obj, true);
   }

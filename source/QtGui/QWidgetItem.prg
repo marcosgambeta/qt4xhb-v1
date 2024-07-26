@@ -51,9 +51,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    QWidgetItem(QWidget *widget)
-    */
+// QWidgetItem(QWidget *widget)
 HB_FUNC_STATIC(QWIDGETITEM_NEW)
 {
   if (ISNUMPAR(1) && ISQWIDGET(1))

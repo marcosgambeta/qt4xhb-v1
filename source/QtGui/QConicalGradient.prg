@@ -46,25 +46,19 @@ HB_FUNC_STATIC(QCONICALGRADIENT_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QConicalGradient()
-    */
+    // QConicalGradient()
     QConicalGradient *obj = new QConicalGradient();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && ISQPOINTF(1) && HB_ISNUM(2))
   {
-    /*
-    QConicalGradient(const QPointF &center, qreal startAngle)
-    */
+    // QConicalGradient(const QPointF &center, qreal startAngle)
     QConicalGradient *obj = new QConicalGradient(*PQPOINTF(1), PQREAL(2));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
-    /*
-    QConicalGradient(qreal cx, qreal cy, qreal startAngle)
-    */
+    // QConicalGradient(qreal cx, qreal cy, qreal startAngle)
     QConicalGradient *obj = new QConicalGradient(PQREAL(1), PQREAL(2), PQREAL(3));
     Qt4xHb::returnNewObject(obj, true);
   }

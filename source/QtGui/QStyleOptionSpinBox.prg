@@ -47,17 +47,13 @@ HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QStyleOptionSpinBox()
-    */
+    // QStyleOptionSpinBox()
     QStyleOptionSpinBox *obj = new QStyleOptionSpinBox();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQSTYLEOPTIONSPINBOX(1))
   {
-    /*
-    QStyleOptionSpinBox(const QStyleOptionSpinBox &other)
-    */
+    // QStyleOptionSpinBox(const QStyleOptionSpinBox &other)
     QStyleOptionSpinBox *obj = new QStyleOptionSpinBox(*PQSTYLEOPTIONSPINBOX(1));
     Qt4xHb::returnNewObject(obj, true);
   }

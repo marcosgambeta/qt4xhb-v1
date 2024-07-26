@@ -42,10 +42,10 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    QDragMoveEvent(const QPoint &pos, Qt::DropActions actions, const QMimeData *data, Qt::MouseButtons buttons,
-    Qt::KeyboardModifiers modifiers, QEvent::Type type = QEvent::DragMove)
-    */
+/*
+QDragMoveEvent(const QPoint &pos, Qt::DropActions actions, const QMimeData *data, Qt::MouseButtons buttons,
+Qt::KeyboardModifiers modifiers, QEvent::Type type = QEvent::DragMove)
+*/
 HB_FUNC_STATIC(QDRAGMOVEEVENT_NEW)
 {
   if (ISBETWEEN(5, 6) && ISQPOINT(1) && HB_ISNUM(2) && ISQMIMEDATA(3) && HB_ISNUM(4) && HB_ISNUM(5) &&

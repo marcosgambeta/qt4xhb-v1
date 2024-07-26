@@ -45,9 +45,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    /*
-    QCDEStyle(bool useHighlightCols = false)
-    */
+// QCDEStyle(bool useHighlightCols = false)
 HB_FUNC_STATIC(QCDESTYLE_NEW)
 {
   if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))

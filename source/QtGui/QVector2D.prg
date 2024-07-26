@@ -72,49 +72,37 @@ HB_FUNC_STATIC(QVECTOR2D_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QVector2D()
-    */
+    // QVector2D()
     QVector2D *obj = new QVector2D();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
-    /*
-    QVector2D(qreal xpos, qreal ypos)
-    */
+    // QVector2D(qreal xpos, qreal ypos)
     QVector2D *obj = new QVector2D(PQREAL(1), PQREAL(2));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
-    /*
-    QVector2D(const QPoint &point)
-    */
+    // QVector2D(const QPoint &point)
     QVector2D *obj = new QVector2D(*PQPOINT(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQPOINTF(1))
   {
-    /*
-    QVector2D(const QPointF &point)
-    */
+    // QVector2D(const QPointF &point)
     QVector2D *obj = new QVector2D(*PQPOINTF(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQVECTOR3D(1))
   {
-    /*
-    QVector2D(const QVector3D &vector)
-    */
+    // QVector2D(const QVector3D &vector)
     QVector2D *obj = new QVector2D(*PQVECTOR3D(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQVECTOR4D(1))
   {
-    /*
-    QVector2D(const QVector4D &vector)
-    */
+    // QVector2D(const QVector4D &vector)
     QVector2D *obj = new QVector2D(*PQVECTOR4D(1));
     Qt4xHb::returnNewObject(obj, true);
   }

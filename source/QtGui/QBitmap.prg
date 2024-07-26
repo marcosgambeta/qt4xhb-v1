@@ -50,41 +50,31 @@ HB_FUNC_STATIC(QBITMAP_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QBitmap()
-    */
+    // QBitmap()
     QBitmap *obj = new QBitmap();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQPIXMAP(1))
   {
-    /*
-    QBitmap(const QPixmap &pixmap)
-    */
+    // QBitmap(const QPixmap &pixmap)
     QBitmap *obj = new QBitmap(*PQPIXMAP(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
-    /*
-    QBitmap(int width, int height)
-    */
+    // QBitmap(int width, int height)
     QBitmap *obj = new QBitmap(PINT(1), PINT(2));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQSIZE(1))
   {
-    /*
-    QBitmap(const QSize &size)
-    */
+    // QBitmap(const QSize &size)
     QBitmap *obj = new QBitmap(*PQSIZE(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
-    /*
-    QBitmap(const QString &fileName, const char *format = 0)
-    */
+    // QBitmap(const QString &fileName, const char *format = 0)
     QBitmap *obj = new QBitmap(PQSTRING(1), OPCONSTCHAR(2, 0));
     Qt4xHb::returnNewObject(obj, true);
   }

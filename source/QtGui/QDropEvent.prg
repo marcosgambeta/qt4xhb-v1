@@ -55,10 +55,10 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    QDropEvent(const QPoint &pos, Qt::DropActions actions, const QMimeData *data, Qt::MouseButtons buttons,
-    Qt::KeyboardModifiers modifiers, QEvent::Type type = QEvent::Drop)
-    */
+/*
+QDropEvent(const QPoint &pos, Qt::DropActions actions, const QMimeData *data, Qt::MouseButtons buttons,
+Qt::KeyboardModifiers modifiers, QEvent::Type type = QEvent::Drop)
+*/
 HB_FUNC_STATIC(QDROPEVENT_NEW)
 {
   if (ISBETWEEN(5, 6) && ISQPOINT(1) && HB_ISNUM(2) && ISQMIMEDATA(3) && HB_ISNUM(4) && HB_ISNUM(5) &&

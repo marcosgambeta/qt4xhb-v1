@@ -90,9 +90,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    QTextCharFormat()
-    */
+// QTextCharFormat()
 HB_FUNC_STATIC(QTEXTCHARFORMAT_NEW)
 {
   if (ISNUMPAR(0))

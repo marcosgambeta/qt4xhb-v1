@@ -129,9 +129,7 @@ RETURN
 #include <QtGui/QLineEdit>
 #include <QtGui/QAbstractItemView>
 
-    /*
-    QComboBox(QWidget *parent = 0)
-    */
+// QComboBox(QWidget *parent = 0)
 HB_FUNC_STATIC(QCOMBOBOX_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))

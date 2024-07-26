@@ -71,9 +71,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_NEW)
 {
   if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    /*
-    QProgressDialog(QWidget *parent = 0, Qt::WindowFlags f = 0)
-    */
+    // QProgressDialog(QWidget *parent = 0, Qt::WindowFlags f = 0)
     QProgressDialog *obj =
         new QProgressDialog(OPQWIDGET(1, 0), HB_ISNIL(2) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(2));
     Qt4xHb::returnNewObject(obj, false);

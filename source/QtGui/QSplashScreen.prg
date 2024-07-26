@@ -53,18 +53,14 @@ HB_FUNC_STATIC(QSPLASHSCREEN_NEW)
 {
   if (ISBETWEEN(0, 2) && (ISQPIXMAP(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    /*
-    QSplashScreen(const QPixmap &pixmap = QPixmap(), Qt::WindowFlags f = 0)
-    */
+    // QSplashScreen(const QPixmap &pixmap = QPixmap(), Qt::WindowFlags f = 0)
     QSplashScreen *obj = new QSplashScreen(HB_ISNIL(1) ? QPixmap() : *static_cast<QPixmap *>(Qt4xHb::itemGetPtr(1)),
                                            HB_ISNIL(2) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(2));
     Qt4xHb::returnNewObject(obj, false);
   }
   else if (ISBETWEEN(1, 3) && ISQWIDGET(1) && (ISQPIXMAP(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
-    /*
-    QSplashScreen(QWidget *parent, const QPixmap &pixmap = QPixmap(), Qt::WindowFlags f = 0)
-    */
+    // QSplashScreen(QWidget *parent, const QPixmap &pixmap = QPixmap(), Qt::WindowFlags f = 0)
     QSplashScreen *obj =
         new QSplashScreen(PQWIDGET(1), HB_ISNIL(2) ? QPixmap() : *static_cast<QPixmap *>(Qt4xHb::itemGetPtr(2)),
                           HB_ISNIL(3) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(3));

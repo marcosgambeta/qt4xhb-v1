@@ -44,17 +44,13 @@ HB_FUNC_STATIC(QSTYLEOPTIONFOCUSRECT_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QStyleOptionFocusRect()
-    */
+    // QStyleOptionFocusRect()
     QStyleOptionFocusRect *obj = new QStyleOptionFocusRect();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQSTYLEOPTIONFOCUSRECT(1))
   {
-    /*
-    QStyleOptionFocusRect(const QStyleOptionFocusRect &other)
-    */
+    // QStyleOptionFocusRect(const QStyleOptionFocusRect &other)
     QStyleOptionFocusRect *obj = new QStyleOptionFocusRect(*PQSTYLEOPTIONFOCUSRECT(1));
     Qt4xHb::returnNewObject(obj, true);
   }

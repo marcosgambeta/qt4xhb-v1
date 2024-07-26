@@ -90,25 +90,19 @@ HB_FUNC_STATIC(QTEXTLAYOUT_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QTextLayout()
-    */
+    // QTextLayout()
     QTextLayout *obj = new QTextLayout();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    QTextLayout(const QString &text)
-    */
+    // QTextLayout(const QString &text)
     QTextLayout *obj = new QTextLayout(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQFONT(2) && (HB_ISOBJECT(3) || HB_ISNIL(3)))
   {
-    /*
-    QTextLayout(const QString &text, const QFont &font, QPaintDevice *paintdevice = 0)
-    */
+    // QTextLayout(const QString &text, const QFont &font, QPaintDevice *paintdevice = 0)
     QTextLayout *obj =
         new QTextLayout(PQSTRING(1), *PQFONT(2), HB_ISNIL(3) ? 0 : static_cast<QPaintDevice *>(Qt4xHb::itemGetPtr(3)));
     Qt4xHb::returnNewObject(obj, true);

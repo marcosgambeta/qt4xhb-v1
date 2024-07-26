@@ -48,17 +48,13 @@ HB_FUNC_STATIC(QFILEOPENEVENT_NEW)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    QFileOpenEvent(const QString &file)
-    */
+    // QFileOpenEvent(const QString &file)
     QFileOpenEvent *obj = new QFileOpenEvent(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, false);
   }
   else if (ISNUMPAR(1) && ISQURL(1))
   {
-    /*
-    QFileOpenEvent(const QUrl &url)
-    */
+    // QFileOpenEvent(const QUrl &url)
     QFileOpenEvent *obj = new QFileOpenEvent(*PQURL(1));
     Qt4xHb::returnNewObject(obj, false);
   }

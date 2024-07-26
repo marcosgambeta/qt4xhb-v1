@@ -82,17 +82,13 @@ HB_FUNC_STATIC(QTOOLBAR_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
-    /*
-    QToolBar(const QString &title, QWidget *parent = 0)
-    */
+    // QToolBar(const QString &title, QWidget *parent = 0)
     QToolBar *obj = new QToolBar(PQSTRING(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
-    /*
-    QToolBar(QWidget *parent = 0)
-    */
+    // QToolBar(QWidget *parent = 0)
     QToolBar *obj = new QToolBar(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }

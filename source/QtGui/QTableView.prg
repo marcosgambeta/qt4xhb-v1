@@ -89,9 +89,7 @@ RETURN
 
 #include <QtGui/QHeaderView>
 
-    /*
-    QTableView(QWidget *parent = 0)
-    */
+// QTableView(QWidget *parent = 0)
 HB_FUNC_STATIC(QTABLEVIEW_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))

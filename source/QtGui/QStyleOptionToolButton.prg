@@ -61,17 +61,13 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBUTTON_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QStyleOptionToolButton()
-    */
+    // QStyleOptionToolButton()
     QStyleOptionToolButton *obj = new QStyleOptionToolButton();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQSTYLEOPTIONTOOLBUTTON(1))
   {
-    /*
-    QStyleOptionToolButton(const QStyleOptionToolButton &other)
-    */
+    // QStyleOptionToolButton(const QStyleOptionToolButton &other)
     QStyleOptionToolButton *obj = new QStyleOptionToolButton(*PQSTYLEOPTIONTOOLBUTTON(1));
     Qt4xHb::returnNewObject(obj, true);
   }

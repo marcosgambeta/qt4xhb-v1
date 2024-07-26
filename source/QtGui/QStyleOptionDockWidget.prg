@@ -49,17 +49,13 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QStyleOptionDockWidget()
-    */
+    // QStyleOptionDockWidget()
     QStyleOptionDockWidget *obj = new QStyleOptionDockWidget();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQSTYLEOPTIONDOCKWIDGET(1))
   {
-    /*
-    QStyleOptionDockWidget(const QStyleOptionDockWidget &other)
-    */
+    // QStyleOptionDockWidget(const QStyleOptionDockWidget &other)
     QStyleOptionDockWidget *obj = new QStyleOptionDockWidget(*PQSTYLEOPTIONDOCKWIDGET(1));
     Qt4xHb::returnNewObject(obj, true);
   }

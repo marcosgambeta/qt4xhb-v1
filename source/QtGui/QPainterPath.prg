@@ -95,25 +95,19 @@ HB_FUNC_STATIC(QPAINTERPATH_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QPainterPath()
-    */
+    // QPainterPath()
     QPainterPath *obj = new QPainterPath();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQPOINTF(1))
   {
-    /*
-    QPainterPath(const QPointF &startPoint)
-    */
+    // QPainterPath(const QPointF &startPoint)
     QPainterPath *obj = new QPainterPath(*PQPOINTF(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQPAINTERPATH(1))
   {
-    /*
-    QPainterPath(const QPainterPath &path)
-    */
+    // QPainterPath(const QPainterPath &path)
     QPainterPath *obj = new QPainterPath(*PQPAINTERPATH(1));
     Qt4xHb::returnNewObject(obj, true);
   }

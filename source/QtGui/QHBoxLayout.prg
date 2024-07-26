@@ -44,17 +44,13 @@ HB_FUNC_STATIC(QHBOXLAYOUT_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QHBoxLayout()
-    */
+    // QHBoxLayout()
     QHBoxLayout *obj = new QHBoxLayout();
     Qt4xHb::returnNewObject(obj, false);
   }
   else if (ISNUMPAR(1) && ISQWIDGET(1))
   {
-    /*
-    QHBoxLayout(QWidget *parent)
-    */
+    // QHBoxLayout(QWidget *parent)
     QHBoxLayout *obj = new QHBoxLayout(PQWIDGET(1));
     Qt4xHb::returnNewObject(obj, false);
   }

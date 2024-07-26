@@ -63,9 +63,7 @@ RETURN
 #include <QtGui/QAction>
 #include <QtGui/QMenu>
 
-    /*
-    QToolButton(QWidget *parent = 0)
-    */
+// QToolButton(QWidget *parent = 0)
 HB_FUNC_STATIC(QTOOLBUTTON_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))

@@ -53,9 +53,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    /*
-    QWindowsStyle()
-    */
+// QWindowsStyle()
 HB_FUNC_STATIC(QWINDOWSSTYLE_NEW)
 {
   if (ISNUMPAR(0))

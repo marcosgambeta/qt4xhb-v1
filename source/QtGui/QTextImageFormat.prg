@@ -45,9 +45,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    QTextImageFormat()
-    */
+// QTextImageFormat()
 HB_FUNC_STATIC(QTEXTIMAGEFORMAT_NEW)
 {
   if (ISNUMPAR(0))

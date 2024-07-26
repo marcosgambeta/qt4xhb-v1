@@ -65,25 +65,19 @@ HB_FUNC_STATIC(QTEXTOPTION_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QTextOption()
-    */
+    // QTextOption()
     QTextOption *obj = new QTextOption();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    /*
-    QTextOption(Qt::Alignment alignment)
-    */
+    // QTextOption(Qt::Alignment alignment)
     QTextOption *obj = new QTextOption((Qt::Alignment)hb_parni(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQTEXTOPTION(1))
   {
-    /*
-    QTextOption(const QTextOption &other)
-    */
+    // QTextOption(const QTextOption &other)
     QTextOption *obj = new QTextOption(*PQTEXTOPTION(1));
     Qt4xHb::returnNewObject(obj, true);
   }

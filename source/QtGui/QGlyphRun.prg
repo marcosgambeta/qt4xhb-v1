@@ -66,17 +66,13 @@ HB_FUNC_STATIC(QGLYPHRUN_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QGlyphRun()
-    */
+    // QGlyphRun()
     QGlyphRun *obj = new QGlyphRun();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQGLYPHRUN(1))
   {
-    /*
-    QGlyphRun(const QGlyphRun &other)
-    */
+    // QGlyphRun(const QGlyphRun &other)
     QGlyphRun *obj = new QGlyphRun(*PQGLYPHRUN(1));
     Qt4xHb::returnNewObject(obj, true);
   }

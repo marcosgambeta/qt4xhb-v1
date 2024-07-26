@@ -133,34 +133,26 @@ HB_FUNC_STATIC(QSTANDARDITEM_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QStandardItem()
-    */
+    // QStandardItem()
     QStandardItem *obj = new QStandardItem();
     Qt4xHb::returnNewObject(obj, false);
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    QStandardItem(const QString &text)
-    */
+    // QStandardItem(const QString &text)
     QStandardItem *obj = new QStandardItem(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, false);
   }
   else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2))
   {
-    /*
-    QStandardItem(const QIcon &icon, const QString &text)
-    */
+    // QStandardItem(const QIcon &icon, const QString &text)
     QStandardItem *obj = new QStandardItem(
         HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt4xHb::itemGetPtr(1)) : QIcon(hb_parc(1)), PQSTRING(2));
     Qt4xHb::returnNewObject(obj, false);
   }
   else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    /*
-    QStandardItem(int rows, int columns = 1)
-    */
+    // QStandardItem(int rows, int columns = 1)
     QStandardItem *obj = new QStandardItem(PINT(1), OPINT(2, 1));
     Qt4xHb::returnNewObject(obj, false);
   }

@@ -65,17 +65,13 @@ HB_FUNC_STATIC(QTEXTTABLECELL_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QTextTableCell()
-    */
+    // QTextTableCell()
     QTextTableCell *obj = new QTextTableCell();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQTEXTTABLECELL(1))
   {
-    /*
-    QTextTableCell(const QTextTableCell &other)
-    */
+    // QTextTableCell(const QTextTableCell &other)
     QTextTableCell *obj = new QTextTableCell(*PQTEXTTABLECELL(1));
     Qt4xHb::returnNewObject(obj, true);
   }

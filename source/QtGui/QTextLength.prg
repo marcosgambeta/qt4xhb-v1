@@ -54,17 +54,13 @@ HB_FUNC_STATIC(QTEXTLENGTH_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QTextLength()
-    */
+    // QTextLength()
     QTextLength *obj = new QTextLength();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
-    /*
-    QTextLength(QTextLength::Type type, qreal value)
-    */
+    // QTextLength(QTextLength::Type type, qreal value)
     QTextLength *obj = new QTextLength((QTextLength::Type)hb_parni(1), PQREAL(2));
     Qt4xHb::returnNewObject(obj, true);
   }

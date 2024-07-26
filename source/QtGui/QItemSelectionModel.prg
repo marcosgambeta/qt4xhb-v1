@@ -69,17 +69,13 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_NEW)
 {
   if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1))
   {
-    /*
-    QItemSelectionModel(QAbstractItemModel *model)
-    */
+    // QItemSelectionModel(QAbstractItemModel *model)
     QItemSelectionModel *obj = new QItemSelectionModel(PQABSTRACTITEMMODEL(1));
     Qt4xHb::returnNewObject(obj, false);
   }
   else if (ISNUMPAR(2) && ISQABSTRACTITEMMODEL(1) && ISQOBJECT(2))
   {
-    /*
-    QItemSelectionModel(QAbstractItemModel *model, QObject *parent)
-    */
+    // QItemSelectionModel(QAbstractItemModel *model, QObject *parent)
     QItemSelectionModel *obj = new QItemSelectionModel(PQABSTRACTITEMMODEL(1), PQOBJECT(2));
     Qt4xHb::returnNewObject(obj, false);
   }

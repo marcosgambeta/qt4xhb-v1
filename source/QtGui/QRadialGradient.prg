@@ -53,57 +53,43 @@ HB_FUNC_STATIC(QRADIALGRADIENT_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QRadialGradient()
-    */
+    // QRadialGradient()
     QRadialGradient *obj = new QRadialGradient();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(3) && ISQPOINTF(1) && HB_ISNUM(2) && ISQPOINTF(3))
   {
-    /*
-    QRadialGradient(const QPointF &center, qreal radius, const QPointF &focalPoint)
-    */
+    // QRadialGradient(const QPointF &center, qreal radius, const QPointF &focalPoint)
     QRadialGradient *obj = new QRadialGradient(*PQPOINTF(1), PQREAL(2), *PQPOINTF(3));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5))
   {
-    /*
-    QRadialGradient(qreal cx, qreal cy, qreal radius, qreal fx, qreal fy)
-    */
+    // QRadialGradient(qreal cx, qreal cy, qreal radius, qreal fx, qreal fy)
     QRadialGradient *obj = new QRadialGradient(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && ISQPOINTF(1) && HB_ISNUM(2))
   {
-    /*
-    QRadialGradient(const QPointF &center, qreal radius)
-    */
+    // QRadialGradient(const QPointF &center, qreal radius)
     QRadialGradient *obj = new QRadialGradient(*PQPOINTF(1), PQREAL(2));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
-    /*
-    QRadialGradient(qreal cx, qreal cy, qreal radius)
-    */
+    // QRadialGradient(qreal cx, qreal cy, qreal radius)
     QRadialGradient *obj = new QRadialGradient(PQREAL(1), PQREAL(2), PQREAL(3));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(4) && ISQPOINTF(1) && HB_ISNUM(2) && ISQPOINTF(3) && HB_ISNUM(4))
   {
-    /*
-    QRadialGradient(const QPointF &center, qreal centerRadius, const QPointF &focalPoint, qreal focalRadius)
-    */
+    // QRadialGradient(const QPointF &center, qreal centerRadius, const QPointF &focalPoint, qreal focalRadius)
     QRadialGradient *obj = new QRadialGradient(*PQPOINTF(1), PQREAL(2), *PQPOINTF(3), PQREAL(4));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6))
   {
-    /*
-    QRadialGradient(qreal cx, qreal cy, qreal centerRadius, qreal fx, qreal fy, qreal focalRadius)
-    */
+    // QRadialGradient(qreal cx, qreal cy, qreal centerRadius, qreal fx, qreal fy, qreal focalRadius)
     QRadialGradient *obj = new QRadialGradient(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6));
     Qt4xHb::returnNewObject(obj, true);
   }

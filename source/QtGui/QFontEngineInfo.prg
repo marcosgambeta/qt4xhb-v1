@@ -61,25 +61,19 @@ HB_FUNC_STATIC(QFONTENGINEINFO_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QFontEngineInfo()
-    */
+    // QFontEngineInfo()
     QFontEngineInfo *obj = new QFontEngineInfo();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    QFontEngineInfo(const QString &family)
-    */
+    // QFontEngineInfo(const QString &family)
     QFontEngineInfo *obj = new QFontEngineInfo(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQFONTENGINEINFO(1))
   {
-    /*
-    QFontEngineInfo(const QFontEngineInfo &other)
-    */
+    // QFontEngineInfo(const QFontEngineInfo &other)
     QFontEngineInfo *obj = new QFontEngineInfo(*PQFONTENGINEINFO(1));
     Qt4xHb::returnNewObject(obj, true);
   }

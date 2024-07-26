@@ -67,25 +67,19 @@ HB_FUNC_STATIC(QSIZEPOLICY_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QSizePolicy()
-    */
+    // QSizePolicy()
     QSizePolicy *obj = new QSizePolicy();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
-    /*
-    QSizePolicy(QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical)
-    */
+    // QSizePolicy(QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical)
     QSizePolicy *obj = new QSizePolicy((QSizePolicy::Policy)hb_parni(1), (QSizePolicy::Policy)hb_parni(2));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
-    /*
-    QSizePolicy(QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical, QSizePolicy::ControlType type)
-    */
+    // QSizePolicy(QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical, QSizePolicy::ControlType type)
     QSizePolicy *obj = new QSizePolicy((QSizePolicy::Policy)hb_parni(1), (QSizePolicy::Policy)hb_parni(2),
                                        (QSizePolicy::ControlType)hb_parni(3));
     Qt4xHb::returnNewObject(obj, true);

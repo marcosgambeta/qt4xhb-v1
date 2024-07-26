@@ -50,9 +50,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    QFileIconProvider()
-    */
+// QFileIconProvider()
 HB_FUNC_STATIC(QFILEICONPROVIDER_NEW)
 {
   if (ISNUMPAR(0))

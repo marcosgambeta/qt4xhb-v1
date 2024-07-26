@@ -67,17 +67,13 @@ HB_FUNC_STATIC(QREGION_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QRegion()
-    */
+    // QRegion()
     QRegion *obj = new QRegion();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5) || HB_ISNIL(5)))
   {
-    /*
-    QRegion(int x, int y, int w, int h, QRegion::RegionType t = QRegion::Rectangle)
-    */
+    // QRegion(int x, int y, int w, int h, QRegion::RegionType t = QRegion::Rectangle)
     QRegion *obj =
         new QRegion(PINT(1), PINT(2), PINT(3), PINT(4),
                     HB_ISNIL(5) ? (QRegion::RegionType)QRegion::Rectangle : (QRegion::RegionType)hb_parni(5));
@@ -85,33 +81,25 @@ HB_FUNC_STATIC(QREGION_NEW)
   }
   else if (ISBETWEEN(1, 2) && ISQPOLYGON(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    /*
-    QRegion(const QPolygon &a, Qt::FillRule fillRule = Qt::OddEvenFill)
-    */
+    // QRegion(const QPolygon &a, Qt::FillRule fillRule = Qt::OddEvenFill)
     QRegion *obj = new QRegion(*PQPOLYGON(1), HB_ISNIL(2) ? (Qt::FillRule)Qt::OddEvenFill : (Qt::FillRule)hb_parni(2));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQREGION(1))
   {
-    /*
-    QRegion(const QRegion &r)
-    */
+    // QRegion(const QRegion &r)
     QRegion *obj = new QRegion(*PQREGION(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQBITMAP(1))
   {
-    /*
-    QRegion(const QBitmap &bm)
-    */
+    // QRegion(const QBitmap &bm)
     QRegion *obj = new QRegion(*PQBITMAP(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISBETWEEN(1, 2) && ISQRECT(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    /*
-    QRegion(const QRect &r, QRegion::RegionType t = QRegion::Rectangle)
-    */
+    // QRegion(const QRect &r, QRegion::RegionType t = QRegion::Rectangle)
     QRegion *obj = new QRegion(*PQRECT(1), HB_ISNIL(2) ? (QRegion::RegionType)QRegion::Rectangle
                                                        : (QRegion::RegionType)hb_parni(2));
     Qt4xHb::returnNewObject(obj, true);

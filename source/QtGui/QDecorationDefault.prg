@@ -41,9 +41,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    QDecorationDefault()
-    */
+// QDecorationDefault()
 HB_FUNC_STATIC(QDECORATIONDEFAULT_NEW)
 {
   if (ISNUMPAR(0))

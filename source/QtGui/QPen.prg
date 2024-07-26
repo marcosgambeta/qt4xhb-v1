@@ -76,25 +76,19 @@ HB_FUNC_STATIC(QPEN_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QPen()
-    */
+    // QPen()
     QPen *obj = new QPen();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    /*
-    QPen(Qt::PenStyle style)
-    */
+    // QPen(Qt::PenStyle style)
     QPen *obj = new QPen((Qt::PenStyle)hb_parni(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
   {
-    /*
-    QPen(const QColor &color)
-    */
+    // QPen(const QColor &color)
     QPen *obj = new QPen(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
     Qt4xHb::returnNewObject(obj, true);
   }
@@ -112,9 +106,7 @@ HB_FUNC_STATIC(QPEN_NEW)
   }
   else if (ISNUMPAR(1) && ISQPEN(1))
   {
-    /*
-    QPen(const QPen &pen)
-    */
+    // QPen(const QPen &pen)
     QPen *obj = new QPen(*PQPEN(1));
     Qt4xHb::returnNewObject(obj, true);
   }

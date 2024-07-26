@@ -54,17 +54,13 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABWIDGETFRAME_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QStyleOptionTabWidgetFrame()
-    */
+    // QStyleOptionTabWidgetFrame()
     QStyleOptionTabWidgetFrame *obj = new QStyleOptionTabWidgetFrame();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQSTYLEOPTIONTABWIDGETFRAME(1))
   {
-    /*
-    QStyleOptionTabWidgetFrame(const QStyleOptionTabWidgetFrame &other)
-    */
+    // QStyleOptionTabWidgetFrame(const QStyleOptionTabWidgetFrame &other)
     QStyleOptionTabWidgetFrame *obj = new QStyleOptionTabWidgetFrame(*PQSTYLEOPTIONTABWIDGETFRAME(1));
     Qt4xHb::returnNewObject(obj, true);
   }

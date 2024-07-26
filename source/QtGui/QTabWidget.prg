@@ -87,9 +87,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    /*
-    QTabWidget(QWidget *parent = 0)
-    */
+// QTabWidget(QWidget *parent = 0)
 HB_FUNC_STATIC(QTABWIDGET_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))

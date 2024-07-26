@@ -106,25 +106,19 @@ HB_FUNC_STATIC(QTEXTFORMAT_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QTextFormat()
-    */
+    // QTextFormat()
     QTextFormat *obj = new QTextFormat();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    /*
-    QTextFormat(int type)
-    */
+    // QTextFormat(int type)
     QTextFormat *obj = new QTextFormat(PINT(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQTEXTFORMAT(1))
   {
-    /*
-    QTextFormat(const QTextFormat &other)
-    */
+    // QTextFormat(const QTextFormat &other)
     QTextFormat *obj = new QTextFormat(*PQTEXTFORMAT(1));
     Qt4xHb::returnNewObject(obj, true);
   }

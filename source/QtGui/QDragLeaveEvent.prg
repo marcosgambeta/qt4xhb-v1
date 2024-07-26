@@ -38,9 +38,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    QDragLeaveEvent()
-    */
+// QDragLeaveEvent()
 HB_FUNC_STATIC(QDRAGLEAVEEVENT_NEW)
 {
   if (ISNUMPAR(0))

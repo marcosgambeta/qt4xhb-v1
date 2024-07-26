@@ -47,9 +47,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    QTextListFormat()
-    */
+// QTextListFormat()
 HB_FUNC_STATIC(QTEXTLISTFORMAT_NEW)
 {
   if (ISNUMPAR(0))

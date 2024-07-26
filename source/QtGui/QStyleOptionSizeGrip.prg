@@ -43,17 +43,13 @@ HB_FUNC_STATIC(QSTYLEOPTIONSIZEGRIP_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QStyleOptionSizeGrip()
-    */
+    // QStyleOptionSizeGrip()
     QStyleOptionSizeGrip *obj = new QStyleOptionSizeGrip();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQSTYLEOPTIONSIZEGRIP(1))
   {
-    /*
-    QStyleOptionSizeGrip(const QStyleOptionSizeGrip &other)
-    */
+    // QStyleOptionSizeGrip(const QStyleOptionSizeGrip &other)
     QStyleOptionSizeGrip *obj = new QStyleOptionSizeGrip(*PQSTYLEOPTIONSIZEGRIP(1));
     Qt4xHb::returnNewObject(obj, true);
   }

@@ -135,27 +135,21 @@ RETURN
 
 #include <QtCore/QVariant>
 
-    /*
-    QColor(QRgb color)
-    */
+// QColor(QRgb color)
 HB_FUNC_STATIC(QCOLOR_NEW3)
 {
   QColor *obj = new QColor(PQRGB(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 
-/*
-QColor(const char *name)
-*/
+// QColor(const char *name)
 HB_FUNC_STATIC(QCOLOR_NEW5)
 {
   QColor *obj = new QColor(PCONSTCHAR(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 
-/*
-QColor(Qt::GlobalColor color)
-*/
+// QColor(Qt::GlobalColor color)
 HB_FUNC_STATIC(QCOLOR_NEW7)
 {
   QColor *obj = new QColor((Qt::GlobalColor)hb_parni(1));
@@ -166,17 +160,13 @@ HB_FUNC_STATIC(QCOLOR_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QColor()
-    */
+    // QColor()
     QColor *obj = new QColor();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
-    /*
-    QColor(int r, int g, int b, int a = 255)
-    */
+    // QColor(int r, int g, int b, int a = 255)
     QColor *obj = new QColor(PINT(1), PINT(2), PINT(3), OPINT(4, 255));
     Qt4xHb::returnNewObject(obj, true);
   }
@@ -186,9 +176,7 @@ HB_FUNC_STATIC(QCOLOR_NEW)
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    QColor(const QString &name)
-    */
+    // QColor(const QString &name)
     QColor *obj = new QColor(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, true);
   }
@@ -198,9 +186,7 @@ HB_FUNC_STATIC(QCOLOR_NEW)
   }
   else if (ISNUMPAR(1) && ISQCOLOR(1))
   {
-    /*
-    QColor(const QColor &color)
-    */
+    // QColor(const QColor &color)
     QColor *obj = new QColor(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
     Qt4xHb::returnNewObject(obj, true);
   }

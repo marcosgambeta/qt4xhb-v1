@@ -110,9 +110,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    /*
-    QHeaderView(Qt::Orientation orientation, QWidget *parent = 0)
-    */
+// QHeaderView(Qt::Orientation orientation, QWidget *parent = 0)
 HB_FUNC_STATIC(QHEADERVIEW_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQWIDGET(2) || HB_ISNIL(2)))

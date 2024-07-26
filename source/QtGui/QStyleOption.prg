@@ -70,17 +70,13 @@ HB_FUNC_STATIC(QSTYLEOPTION_NEW)
 {
   if (ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    /*
-    QStyleOption(int version = QStyleOption::Version, int type = QStyleOption::SO_Default)
-    */
+    // QStyleOption(int version = QStyleOption::Version, int type = QStyleOption::SO_Default)
     QStyleOption *obj = new QStyleOption(OPINT(1, QStyleOption::Version), OPINT(2, QStyleOption::SO_Default));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQSTYLEOPTION(1))
   {
-    /*
-    QStyleOption(const QStyleOption &other)
-    */
+    // QStyleOption(const QStyleOption &other)
     QStyleOption *obj = new QStyleOption(*PQSTYLEOPTION(1));
     Qt4xHb::returnNewObject(obj, true);
   }

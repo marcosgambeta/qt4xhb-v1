@@ -141,17 +141,13 @@ HB_FUNC_STATIC(QTEXTEDIT_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
-    /*
-    QTextEdit(QWidget *parent = 0)
-    */
+    // QTextEdit(QWidget *parent = 0)
     QTextEdit *obj = new QTextEdit(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
-    /*
-    QTextEdit(const QString &text, QWidget *parent = 0)
-    */
+    // QTextEdit(const QString &text, QWidget *parent = 0)
     QTextEdit *obj = new QTextEdit(PQSTRING(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   }

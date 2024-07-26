@@ -45,17 +45,13 @@ HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QStyleOptionRubberBand()
-    */
+    // QStyleOptionRubberBand()
     QStyleOptionRubberBand *obj = new QStyleOptionRubberBand();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQSTYLEOPTIONRUBBERBAND(1))
   {
-    /*
-    QStyleOptionRubberBand(const QStyleOptionRubberBand &other)
-    */
+    // QStyleOptionRubberBand(const QStyleOptionRubberBand &other)
     QStyleOptionRubberBand *obj = new QStyleOptionRubberBand(*PQSTYLEOPTIONRUBBERBAND(1));
     Qt4xHb::returnNewObject(obj, true);
   }

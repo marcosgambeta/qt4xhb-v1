@@ -86,9 +86,7 @@ HB_FUNC_STATIC(QMATRIX4X4_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QMatrix4x4()
-    */
+    // QMatrix4x4()
     QMatrix4x4 *obj = new QMatrix4x4();
     Qt4xHb::returnNewObject(obj, true);
   }
@@ -107,9 +105,7 @@ HB_FUNC_STATIC(QMATRIX4X4_NEW)
   }
   else if (ISNUMPAR(1) && ISQTRANSFORM(1))
   {
-    /*
-    QMatrix4x4(const QTransform &transform)
-    */
+    // QMatrix4x4(const QTransform &transform)
     QMatrix4x4 *obj = new QMatrix4x4(*PQTRANSFORM(1));
     Qt4xHb::returnNewObject(obj, true);
   }

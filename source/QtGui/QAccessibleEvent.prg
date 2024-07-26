@@ -40,9 +40,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    QAccessibleEvent(QAccessibleEvent::Type type, int child)
-    */
+// QAccessibleEvent(QAccessibleEvent::Type type, int child)
 HB_FUNC_STATIC(QACCESSIBLEEVENT_NEW)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))

@@ -144,9 +144,7 @@ RETURN
 #include <QtGui/QDesktopWidget>
 #include <QtGui/QStyle>
 
-    /*
-    QApplication(int &argc, char ** argv)
-    */
+// QApplication(int &argc, char ** argv)
 HB_FUNC_STATIC(QAPPLICATION_NEW)
 {
   int argc;

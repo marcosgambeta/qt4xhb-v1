@@ -98,25 +98,19 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QPlatformWindowFormat()
-    */
+    // QPlatformWindowFormat()
     QPlatformWindowFormat *obj = new QPlatformWindowFormat();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    /*
-    QPlatformWindowFormat(QPlatformWindowFormat::FormatOptions options)
-    */
+    // QPlatformWindowFormat(QPlatformWindowFormat::FormatOptions options)
     QPlatformWindowFormat *obj = new QPlatformWindowFormat((QPlatformWindowFormat::FormatOptions)hb_parni(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQPLATFORMWINDOWFORMAT(1))
   {
-    /*
-    QPlatformWindowFormat(const QPlatformWindowFormat &other)
-    */
+    // QPlatformWindowFormat(const QPlatformWindowFormat &other)
     QPlatformWindowFormat *obj = new QPlatformWindowFormat(*PQPLATFORMWINDOWFORMAT(1));
     Qt4xHb::returnNewObject(obj, true);
   }

@@ -74,9 +74,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    QTextLine()
-    */
+// QTextLine()
 HB_FUNC_STATIC(QTEXTLINE_NEW)
 {
   if (ISNUMPAR(0))

@@ -72,25 +72,19 @@ HB_FUNC_STATIC(QIMAGEWRITER_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QImageWriter()
-    */
+    // QImageWriter()
     QImageWriter *obj = new QImageWriter();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)))
   {
-    /*
-    QImageWriter(QIODevice *device, const QByteArray &format)
-    */
+    // QImageWriter(QIODevice *device, const QByteArray &format)
     QImageWriter *obj = new QImageWriter(PQIODEVICE(1), *PQBYTEARRAY(2));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)))
   {
-    /*
-    QImageWriter(const QString &fileName, const QByteArray &format = QByteArray())
-    */
+    // QImageWriter(const QString &fileName, const QByteArray &format = QByteArray())
     QImageWriter *obj =
         new QImageWriter(PQSTRING(1), HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(2)));
     Qt4xHb::returnNewObject(obj, true);

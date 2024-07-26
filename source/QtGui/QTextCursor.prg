@@ -122,41 +122,31 @@ HB_FUNC_STATIC(QTEXTCURSOR_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QTextCursor()
-    */
+    // QTextCursor()
     QTextCursor *obj = new QTextCursor();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQTEXTDOCUMENT(1))
   {
-    /*
-    QTextCursor(QTextDocument *document)
-    */
+    // QTextCursor(QTextDocument *document)
     QTextCursor *obj = new QTextCursor(PQTEXTDOCUMENT(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQTEXTFRAME(1))
   {
-    /*
-    QTextCursor(QTextFrame *frame)
-    */
+    // QTextCursor(QTextFrame *frame)
     QTextCursor *obj = new QTextCursor(PQTEXTFRAME(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQTEXTBLOCK(1))
   {
-    /*
-    QTextCursor(const QTextBlock &block)
-    */
+    // QTextCursor(const QTextBlock &block)
     QTextCursor *obj = new QTextCursor(*PQTEXTBLOCK(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQTEXTCURSOR(1))
   {
-    /*
-    QTextCursor(const QTextCursor &cursor)
-    */
+    // QTextCursor(const QTextCursor &cursor)
     QTextCursor *obj = new QTextCursor(*PQTEXTCURSOR(1));
     Qt4xHb::returnNewObject(obj, true);
   }

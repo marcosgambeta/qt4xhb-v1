@@ -48,9 +48,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    QTextTableCellFormat()
-    */
+// QTextTableCellFormat()
 HB_FUNC_STATIC(QTEXTTABLECELLFORMAT_NEW)
 {
   if (ISNUMPAR(0))

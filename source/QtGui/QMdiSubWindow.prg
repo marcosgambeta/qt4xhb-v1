@@ -65,9 +65,7 @@ RETURN
 #include <QtGui/QMdiArea>
 #include <QtGui/QMenu>
 
-    /*
-    QMdiSubWindow(QWidget *parent = 0, Qt::WindowFlags flags = 0)
-    */
+// QMdiSubWindow(QWidget *parent = 0, Qt::WindowFlags flags = 0)
 HB_FUNC_STATIC(QMDISUBWINDOW_NEW)
 {
   if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))

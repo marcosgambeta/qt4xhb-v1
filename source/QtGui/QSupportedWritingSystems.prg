@@ -53,17 +53,13 @@ HB_FUNC_STATIC(QSUPPORTEDWRITINGSYSTEMS_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QSupportedWritingSystems()
-    */
+    // QSupportedWritingSystems()
     QSupportedWritingSystems *obj = new QSupportedWritingSystems();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQSUPPORTEDWRITINGSYSTEMS(1))
   {
-    /*
-    QSupportedWritingSystems(const QSupportedWritingSystems &other)
-    */
+    // QSupportedWritingSystems(const QSupportedWritingSystems &other)
     QSupportedWritingSystems *obj = new QSupportedWritingSystems(*PQSUPPORTEDWRITINGSYSTEMS(1));
     Qt4xHb::returnNewObject(obj, true);
   }

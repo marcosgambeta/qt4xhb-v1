@@ -46,18 +46,14 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_NEW)
 {
   if (ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    /*
-    QStyleOptionComplex(int version = QStyleOptionComplex::Version, int type = QStyleOptionComplex::SO_Complex)
-    */
+    // QStyleOptionComplex(int version = QStyleOptionComplex::Version, int type = QStyleOptionComplex::SO_Complex)
     QStyleOptionComplex *obj =
         new QStyleOptionComplex(OPINT(1, QStyleOptionComplex::Version), OPINT(2, QStyleOptionComplex::SO_Complex));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQSTYLEOPTIONCOMPLEX(1))
   {
-    /*
-    QStyleOptionComplex(const QStyleOptionComplex &other)
-    */
+    // QStyleOptionComplex(const QStyleOptionComplex &other)
     QStyleOptionComplex *obj = new QStyleOptionComplex(*PQSTYLEOPTIONCOMPLEX(1));
     Qt4xHb::returnNewObject(obj, true);
   }

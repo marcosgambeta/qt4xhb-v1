@@ -57,17 +57,13 @@ HB_FUNC_STATIC(QITEMSELECTION_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QItemSelection()
-    */
+    // QItemSelection()
     QItemSelection *obj = new QItemSelection();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && ISQMODELINDEX(1) && ISQMODELINDEX(2))
   {
-    /*
-    QItemSelection(const QModelIndex &topLeft, const QModelIndex &bottomRight)
-    */
+    // QItemSelection(const QModelIndex &topLeft, const QModelIndex &bottomRight)
     QItemSelection *obj = new QItemSelection(*PQMODELINDEX(1), *PQMODELINDEX(2));
     Qt4xHb::returnNewObject(obj, true);
   }

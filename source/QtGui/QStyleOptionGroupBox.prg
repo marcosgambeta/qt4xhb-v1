@@ -54,17 +54,13 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QStyleOptionGroupBox()
-    */
+    // QStyleOptionGroupBox()
     QStyleOptionGroupBox *obj = new QStyleOptionGroupBox();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQSTYLEOPTIONGROUPBOX(1))
   {
-    /*
-    QStyleOptionGroupBox(const QStyleOptionGroupBox &other)
-    */
+    // QStyleOptionGroupBox(const QStyleOptionGroupBox &other)
     QStyleOptionGroupBox *obj = new QStyleOptionGroupBox(*PQSTYLEOPTIONGROUPBOX(1));
     Qt4xHb::returnNewObject(obj, true);
   }

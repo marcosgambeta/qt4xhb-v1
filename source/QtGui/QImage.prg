@@ -104,81 +104,61 @@ HB_FUNC_STATIC(QIMAGE_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QImage()
-    */
+    // QImage()
     QImage *obj = new QImage();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && ISQSIZE(1) && HB_ISNUM(2))
   {
-    /*
-    QImage(const QSize &size, QImage::Format format)
-    */
+    // QImage(const QSize &size, QImage::Format format)
     QImage *obj = new QImage(*PQSIZE(1), (QImage::Format)hb_parni(2));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
-    /*
-    QImage(int width, int height, QImage::Format format)
-    */
+    // QImage(int width, int height, QImage::Format format)
     QImage *obj = new QImage(PINT(1), PINT(2), (QImage::Format)hb_parni(3));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
-    /*
-    QImage(uchar *data, int width, int height, QImage::Format format)
-    */
+    // QImage(uchar *data, int width, int height, QImage::Format format)
     QImage *obj = new QImage((uchar *)hb_parc(1), PINT(2), PINT(3), (QImage::Format)hb_parni(4));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
-    /*
-    QImage(const uchar *data, int width, int height, QImage::Format format)
-    */
+    // QImage(const uchar *data, int width, int height, QImage::Format format)
     QImage *obj = new QImage(PCONSTUCHAR(1), PINT(2), PINT(3), (QImage::Format)hb_parni(4));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(5) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5))
   {
-    /*
-    QImage(uchar *data, int width, int height, int bytesPerLine, QImage::Format format)
-    */
+    // QImage(uchar *data, int width, int height, int bytesPerLine, QImage::Format format)
     QImage *obj = new QImage((uchar *)hb_parc(1), PINT(2), PINT(3), PINT(4), (QImage::Format)hb_parni(5));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(5) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5))
   {
-    /*
-    QImage(const uchar *data, int width, int height, int bytesPerLine, QImage::Format format)
-    */
+    // QImage(const uchar *data, int width, int height, int bytesPerLine, QImage::Format format)
     QImage *obj = new QImage(PCONSTUCHAR(1), PINT(2), PINT(3), PINT(4), (QImage::Format)hb_parni(5));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
-    /*
-    QImage(const QString &fileName, const char *format = 0)
-    */
+    // QImage(const QString &fileName, const char *format = 0)
     QImage *obj = new QImage(PQSTRING(1), OPCONSTCHAR(2, 0));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
-    /*
-    QImage(const char *fileName, const char *format = 0)
-    */
+    // QImage(const char *fileName, const char *format = 0)
     QImage *obj = new QImage(PCONSTCHAR(1), OPCONSTCHAR(2, 0));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQIMAGE(1))
   {
-    /*
-    QImage(const QImage &image)
-    */
+    // QImage(const QImage &image)
     QImage *obj = new QImage(*PQIMAGE(1));
     Qt4xHb::returnNewObject(obj, true);
   }

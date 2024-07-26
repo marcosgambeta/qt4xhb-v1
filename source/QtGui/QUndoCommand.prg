@@ -59,17 +59,13 @@ HB_FUNC_STATIC(QUNDOCOMMAND_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQUNDOCOMMAND(1) || HB_ISNIL(1)))
   {
-    /*
-    QUndoCommand(QUndoCommand *parent = 0)
-    */
+    // QUndoCommand(QUndoCommand *parent = 0)
     QUndoCommand *obj = new QUndoCommand(HB_ISNIL(1) ? 0 : static_cast<QUndoCommand *>(Qt4xHb::itemGetPtr(1)));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQUNDOCOMMAND(2) || HB_ISNIL(2)))
   {
-    /*
-    QUndoCommand(const QString &text, QUndoCommand *parent = 0)
-    */
+    // QUndoCommand(const QString &text, QUndoCommand *parent = 0)
     QUndoCommand *obj =
         new QUndoCommand(PQSTRING(1), HB_ISNIL(2) ? 0 : static_cast<QUndoCommand *>(Qt4xHb::itemGetPtr(2)));
     Qt4xHb::returnNewObject(obj, true);

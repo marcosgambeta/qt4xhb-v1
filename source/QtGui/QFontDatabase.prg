@@ -72,9 +72,7 @@ RETURN
 
 #include <QtCore/QStringList>
 
-    /*
-    QFontDatabase()
-    */
+// QFontDatabase()
 HB_FUNC_STATIC(QFONTDATABASE_NEW)
 {
   if (ISNUMPAR(0))

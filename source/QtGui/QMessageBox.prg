@@ -88,9 +88,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
-    /*
-    QMessageBox(QWidget *parent = 0)
-    */
+    // QMessageBox(QWidget *parent = 0)
     QMessageBox *obj = new QMessageBox(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }

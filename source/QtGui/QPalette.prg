@@ -84,33 +84,25 @@ HB_FUNC_STATIC(QPALETTE_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QPalette()
-    */
+    // QPalette()
     QPalette *obj = new QPalette();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
   {
-    /*
-    QPalette(const QColor &button)
-    */
+    // QPalette(const QColor &button)
     QPalette *obj = new QPalette(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    /*
-    QPalette(Qt::GlobalColor button)
-    */
+    // QPalette(Qt::GlobalColor button)
     QPalette *obj = new QPalette((Qt::GlobalColor)hb_parni(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && (ISQCOLOR(1) || HB_ISCHAR(1)) && (ISQCOLOR(2) || HB_ISCHAR(2)))
   {
-    /*
-    QPalette(const QColor &button, const QColor &window)
-    */
+    // QPalette(const QColor &button, const QColor &window)
     QPalette *obj = new QPalette(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(1)) : QColor(hb_parc(1)),
                                  HB_ISOBJECT(2) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(2)) : QColor(hb_parc(2)));
     Qt4xHb::returnNewObject(obj, true);
@@ -128,9 +120,7 @@ HB_FUNC_STATIC(QPALETTE_NEW)
   }
   else if (ISNUMPAR(1) && ISQPALETTE(1))
   {
-    /*
-    QPalette(const QPalette &p)
-    */
+    // QPalette(const QPalette &p)
     QPalette *obj = new QPalette(*PQPALETTE(1));
     Qt4xHb::returnNewObject(obj, true);
   }

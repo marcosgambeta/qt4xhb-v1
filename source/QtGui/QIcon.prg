@@ -72,49 +72,37 @@ HB_FUNC_STATIC(QICON_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QIcon()
-    */
+    // QIcon()
     QIcon *obj = new QIcon();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQPIXMAP(1))
   {
-    /*
-    QIcon(const QPixmap &pixmap)
-    */
+    // QIcon(const QPixmap &pixmap)
     QIcon *obj = new QIcon(*PQPIXMAP(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQICON(1))
   {
-    /*
-    QIcon(const QIcon &other)
-    */
+    // QIcon(const QIcon &other)
     QIcon *obj = new QIcon(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt4xHb::itemGetPtr(1)) : QIcon(hb_parc(1)));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    QIcon(const QString &fileName)
-    */
+    // QIcon(const QString &fileName)
     QIcon *obj = new QIcon(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQICONENGINE(1))
   {
-    /*
-    QIcon(QIconEngine *engine)
-    */
+    // QIcon(QIconEngine *engine)
     QIcon *obj = new QIcon(PQICONENGINE(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQICONENGINEV2(1))
   {
-    /*
-    QIcon(QIconEngineV2 *engine)
-    */
+    // QIcon(QIconEngineV2 *engine)
     QIcon *obj = new QIcon(PQICONENGINEV2(1));
     Qt4xHb::returnNewObject(obj, true);
   }

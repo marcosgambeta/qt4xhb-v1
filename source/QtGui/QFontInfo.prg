@@ -64,17 +64,13 @@ HB_FUNC_STATIC(QFONTINFO_NEW)
 {
   if (ISNUMPAR(1) && ISQFONT(1))
   {
-    /*
-    QFontInfo(const QFont &font)
-    */
+    // QFontInfo(const QFont &font)
     QFontInfo *obj = new QFontInfo(*PQFONT(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQFONTINFO(1))
   {
-    /*
-    QFontInfo(const QFontInfo &fi)
-    */
+    // QFontInfo(const QFontInfo &fi)
     QFontInfo *obj = new QFontInfo(*PQFONTINFO(1));
     Qt4xHb::returnNewObject(obj, true);
   }

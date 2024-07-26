@@ -57,25 +57,19 @@ HB_FUNC_STATIC(QPRINTERINFO_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QPrinterInfo()
-    */
+    // QPrinterInfo()
     QPrinterInfo *obj = new QPrinterInfo();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQPRINTERINFO(1))
   {
-    /*
-    QPrinterInfo(const QPrinterInfo &src)
-    */
+    // QPrinterInfo(const QPrinterInfo &src)
     QPrinterInfo *obj = new QPrinterInfo(*PQPRINTERINFO(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQPRINTER(1))
   {
-    /*
-    QPrinterInfo(const QPrinter &printer)
-    */
+    // QPrinterInfo(const QPrinter &printer)
     QPrinterInfo *obj = new QPrinterInfo(*PQPRINTER(1));
     Qt4xHb::returnNewObject(obj, true);
   }

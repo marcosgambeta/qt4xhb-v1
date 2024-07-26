@@ -61,9 +61,7 @@ HB_FUNC_STATIC(QSHORTCUT_NEW)
 {
   if (ISNUMPAR(1) && ISQWIDGET(1))
   {
-    /*
-    QShortcut(QWidget *parent)
-    */
+    // QShortcut(QWidget *parent)
     QShortcut *obj = new QShortcut(PQWIDGET(1));
     Qt4xHb::returnNewObject(obj, false);
   }

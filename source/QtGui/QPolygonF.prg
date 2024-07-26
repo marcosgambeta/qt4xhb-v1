@@ -63,33 +63,25 @@ HB_FUNC_STATIC(QPOLYGONF_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QPolygonF()
-    */
+    // QPolygonF()
     QPolygonF *obj = new QPolygonF();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    /*
-    QPolygonF(int size)
-    */
+    // QPolygonF(int size)
     QPolygonF *obj = new QPolygonF(PINT(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQPOLYGONF(1))
   {
-    /*
-    QPolygonF(const QPolygonF &polygon)
-    */
+    // QPolygonF(const QPolygonF &polygon)
     QPolygonF *obj = new QPolygonF(*PQPOLYGONF(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
-    /*
-    QPolygonF(const QVector<QPointF> &points)
-    */
+    // QPolygonF(const QVector<QPointF> &points)
     QVector<QPointF> par1;
     PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
     const int nLen1 = hb_arrayLen(aList1);
@@ -102,17 +94,13 @@ HB_FUNC_STATIC(QPOLYGONF_NEW)
   }
   else if (ISNUMPAR(1) && ISQRECTF(1))
   {
-    /*
-    QPolygonF(const QRectF &rectangle)
-    */
+    // QPolygonF(const QRectF &rectangle)
     QPolygonF *obj = new QPolygonF(*PQRECTF(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQPOLYGON(1))
   {
-    /*
-    QPolygonF(const QPolygon &polygon)
-    */
+    // QPolygonF(const QPolygon &polygon)
     QPolygonF *obj = new QPolygonF(*PQPOLYGON(1));
     Qt4xHb::returnNewObject(obj, true);
   }

@@ -41,9 +41,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    QFocusEvent(QEvent::Type type, Qt::FocusReason reason = Qt::OtherFocusReason)
-    */
+// QFocusEvent(QEvent::Type type, Qt::FocusReason reason = Qt::OtherFocusReason)
 HB_FUNC_STATIC(QFOCUSEVENT_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))

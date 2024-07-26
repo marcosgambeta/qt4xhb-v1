@@ -90,9 +90,7 @@ RETURN
 
 #include <QtGui/QTextCharFormat>
 
-    /*
-    QCalendarWidget(QWidget *parent = 0)
-    */
+// QCalendarWidget(QWidget *parent = 0)
 HB_FUNC_STATIC(QCALENDARWIDGET_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))

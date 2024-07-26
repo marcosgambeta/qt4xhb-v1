@@ -101,9 +101,7 @@ RETURN
 #include <QtCore/QSize>
 #include <QtCore/QMimeData>
 
-    /*
-    QSortFilterProxyModel(QObject *parent = 0)
-    */
+// QSortFilterProxyModel(QObject *parent = 0)
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))

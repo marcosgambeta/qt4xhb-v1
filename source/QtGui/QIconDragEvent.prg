@@ -38,9 +38,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    QIconDragEvent()
-    */
+// QIconDragEvent()
 HB_FUNC_STATIC(QICONDRAGEVENT_NEW)
 {
   if (ISNUMPAR(0))
