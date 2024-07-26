@@ -94,34 +94,26 @@ HB_FUNC_STATIC(QSQLQUERY_NEW)
 {
   if (ISNUMPAR(1) && ISQSQLRESULT(1))
   {
-    /*
-    QSqlQuery(QSqlResult *result)
-    */
+    // QSqlQuery(QSqlResult *result)
     QSqlQuery *obj = new QSqlQuery(PQSQLRESULT(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (ISQSQLDATABASE(2) || HB_ISNIL(2)))
   {
-    /*
-    QSqlQuery(const QString &query = QString(), QSqlDatabase db = QSqlDatabase())
-    */
+    // QSqlQuery(const QString &query = QString(), QSqlDatabase db = QSqlDatabase())
     QSqlQuery *obj = new QSqlQuery(OPQSTRING(1, QString()),
                                    HB_ISNIL(2) ? QSqlDatabase() : *static_cast<QSqlDatabase *>(Qt4xHb::itemGetPtr(2)));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQSQLDATABASE(1))
   {
-    /*
-    QSqlQuery(QSqlDatabase db)
-    */
+    // QSqlQuery(QSqlDatabase db)
     QSqlQuery *obj = new QSqlQuery(*PQSQLDATABASE(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQSQLQUERY(1))
   {
-    /*
-    QSqlQuery(const QSqlQuery &other)
-    */
+    // QSqlQuery(const QSqlQuery &other)
     QSqlQuery *obj = new QSqlQuery(*PQSQLQUERY(1));
     Qt4xHb::returnNewObject(obj, true);
   }

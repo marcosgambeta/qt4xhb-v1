@@ -79,9 +79,7 @@ RETURN
 
 #include <QtSql/QSqlIndex>
 
-    /*
-    QSqlTableModel(QObject *parent = 0, QSqlDatabase db = QSqlDatabase())
-    */
+// QSqlTableModel(QObject *parent = 0, QSqlDatabase db = QSqlDatabase())
 HB_FUNC_STATIC(QSQLTABLEMODEL_NEW)
 {
   if (ISBETWEEN(0, 2) && (ISQOBJECT(1) || HB_ISNIL(1)) && (ISQSQLDATABASE(2) || HB_ISNIL(2)))

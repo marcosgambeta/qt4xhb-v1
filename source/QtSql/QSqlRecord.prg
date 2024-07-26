@@ -74,17 +74,13 @@ HB_FUNC_STATIC(QSQLRECORD_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QSqlRecord()
-    */
+    // QSqlRecord()
     QSqlRecord *obj = new QSqlRecord();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQSQLRECORD(1))
   {
-    /*
-    QSqlRecord(const QSqlRecord &other)
-    */
+    // QSqlRecord(const QSqlRecord &other)
     QSqlRecord *obj = new QSqlRecord(*PQSQLRECORD(1));
     Qt4xHb::returnNewObject(obj, true);
   }

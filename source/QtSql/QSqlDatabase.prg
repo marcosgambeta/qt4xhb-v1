@@ -102,17 +102,13 @@ HB_FUNC_STATIC(QSQLDATABASE_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QSqlDatabase()
-    */
+    // QSqlDatabase()
     QSqlDatabase *obj = new QSqlDatabase();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQSQLDATABASE(1))
   {
-    /*
-    QSqlDatabase(const QSqlDatabase &other)
-    */
+    // QSqlDatabase(const QSqlDatabase &other)
     QSqlDatabase *obj = new QSqlDatabase(*PQSQLDATABASE(1));
     Qt4xHb::returnNewObject(obj, true);
   }

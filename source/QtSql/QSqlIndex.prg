@@ -49,17 +49,13 @@ HB_FUNC_STATIC(QSQLINDEX_NEW)
 {
   if (ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (HB_ISCHAR(1) || HB_ISNIL(1)))
   {
-    /*
-    QSqlIndex(const QString &cursorname = QString(), const QString &name = QString())
-    */
+    // QSqlIndex(const QString &cursorname = QString(), const QString &name = QString())
     QSqlIndex *obj = new QSqlIndex(OPQSTRING(1, QString()), OPQSTRING(2, QString()));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQSQLINDEX(1))
   {
-    /*
-    QSqlIndex(const QSqlIndex &other)
-    */
+    // QSqlIndex(const QSqlIndex &other)
     QSqlIndex *obj = new QSqlIndex(*PQSQLINDEX(1));
     Qt4xHb::returnNewObject(obj, true);
   }

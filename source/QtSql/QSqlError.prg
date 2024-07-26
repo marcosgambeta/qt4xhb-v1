@@ -73,9 +73,7 @@ HB_FUNC_STATIC(QSQLERROR_NEW)
   }
   else if (ISNUMPAR(1) && ISQSQLERROR(1))
   {
-    /*
-    QSqlError(const QSqlError &other)
-    */
+    // QSqlError(const QSqlError &other)
     QSqlError *obj = new QSqlError(*PQSQLERROR(1));
     Qt4xHb::returnNewObject(obj, true);
   }
