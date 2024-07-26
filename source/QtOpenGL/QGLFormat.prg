@@ -108,25 +108,19 @@ HB_FUNC_STATIC(QGLFORMAT_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QGLFormat()
-    */
+    // QGLFormat()
     QGLFormat *obj = new QGLFormat();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    /*
-    QGLFormat(QGL::FormatOptions options, int plane = 0)
-    */
+    // QGLFormat(QGL::FormatOptions options, int plane = 0)
     QGLFormat *obj = new QGLFormat((QGL::FormatOptions)hb_parni(1), OPINT(2, 0));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQGLFORMAT(1))
   {
-    /*
-    QGLFormat(const QGLFormat &other)
-    */
+    // QGLFormat(const QGLFormat &other)
     QGLFormat *obj = new QGLFormat(*PQGLFORMAT(1));
     Qt4xHb::returnNewObject(obj, true);
   }

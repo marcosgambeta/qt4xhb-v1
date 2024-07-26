@@ -109,17 +109,13 @@ HB_FUNC_STATIC(QGLFUNCTIONS_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QGLFunctions()
-    */
+    // QGLFunctions()
     QGLFunctions *obj = new QGLFunctions();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQGLCONTEXT(1))
   {
-    /*
-    QGLFunctions(const QGLContext *context)
-    */
+    // QGLFunctions(const QGLContext *context)
     QGLFunctions *obj = new QGLFunctions(PQGLCONTEXT(1));
     Qt4xHb::returnNewObject(obj, true);
   }

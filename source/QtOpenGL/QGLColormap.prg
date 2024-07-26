@@ -59,17 +59,13 @@ HB_FUNC_STATIC(QGLCOLORMAP_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QGLColormap()
-    */
+    // QGLColormap()
     QGLColormap *obj = new QGLColormap();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQGLCOLORMAP(1))
   {
-    /*
-    QGLColormap(const QGLColormap &map)
-    */
+    // QGLColormap(const QGLColormap &map)
     QGLColormap *obj = new QGLColormap(*PQGLCOLORMAP(1));
     Qt4xHb::returnNewObject(obj, true);
   }

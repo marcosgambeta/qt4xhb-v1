@@ -65,25 +65,19 @@ HB_FUNC_STATIC(QGLBUFFER_NEW)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QGLBuffer()
-    */
+    // QGLBuffer()
     QGLBuffer *obj = new QGLBuffer();
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    /*
-    QGLBuffer(QGLBuffer::Type type)
-    */
+    // QGLBuffer(QGLBuffer::Type type)
     QGLBuffer *obj = new QGLBuffer((QGLBuffer::Type)hb_parni(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQGLBUFFER(1))
   {
-    /*
-    QGLBuffer(const QGLBuffer &other)
-    */
+    // QGLBuffer(const QGLBuffer &other)
     QGLBuffer *obj = new QGLBuffer(*PQGLBUFFER(1));
     Qt4xHb::returnNewObject(obj, true);
   }

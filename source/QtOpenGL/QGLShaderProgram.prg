@@ -119,17 +119,13 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    /*
-    QGLShaderProgram(QObject *parent = 0)
-    */
+    // QGLShaderProgram(QObject *parent = 0)
     QGLShaderProgram *obj = new QGLShaderProgram(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else if (ISBETWEEN(1, 2) && ISQGLCONTEXT(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
-    /*
-    QGLShaderProgram(const QGLContext *context, QObject *parent = 0)
-    */
+    // QGLShaderProgram(const QGLContext *context, QObject *parent = 0)
     QGLShaderProgram *obj = new QGLShaderProgram(PQGLCONTEXT(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
