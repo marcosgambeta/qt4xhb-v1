@@ -63,7 +63,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_NEW)
   }
   else if (ISNUMPAR(1) && ISQXMLSTREAMENTITYDECLARATION(1))
   {
-    // QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration &other)
+    // QXmlStreamEntityDeclaration( const QXmlStreamEntityDeclaration & other )
     QXmlStreamEntityDeclaration *obj = new QXmlStreamEntityDeclaration(*PQXMLSTREAMENTITYDECLARATION(1));
     Qt4xHb::returnNewObject(obj, true);
   }
@@ -89,9 +89,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStringRef name() const
-*/
+// QStringRef name() const
 HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_NAME)
 {
   QXmlStreamEntityDeclaration *obj = static_cast<QXmlStreamEntityDeclaration *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -114,9 +112,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_NAME)
   }
 }
 
-/*
-QStringRef notationName() const
-*/
+// QStringRef notationName() const
 HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_NOTATIONNAME)
 {
   QXmlStreamEntityDeclaration *obj = static_cast<QXmlStreamEntityDeclaration *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -139,9 +135,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_NOTATIONNAME)
   }
 }
 
-/*
-QStringRef publicId() const
-*/
+// QStringRef publicId() const
 HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_PUBLICID)
 {
   QXmlStreamEntityDeclaration *obj = static_cast<QXmlStreamEntityDeclaration *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -164,9 +158,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_PUBLICID)
   }
 }
 
-/*
-QStringRef systemId() const
-*/
+// QStringRef systemId() const
 HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_SYSTEMID)
 {
   QXmlStreamEntityDeclaration *obj = static_cast<QXmlStreamEntityDeclaration *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -189,9 +181,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_SYSTEMID)
   }
 }
 
-/*
-QStringRef value() const
-*/
+// QStringRef value() const
 HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_VALUE)
 {
   QXmlStreamEntityDeclaration *obj = static_cast<QXmlStreamEntityDeclaration *>(Qt4xHb::itemGetPtrStackSelfItem());

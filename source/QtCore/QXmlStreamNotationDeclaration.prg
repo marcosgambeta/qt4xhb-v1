@@ -61,7 +61,7 @@ HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_NEW)
   }
   else if (ISNUMPAR(1) && ISQXMLSTREAMNOTATIONDECLARATION(1))
   {
-    // QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration &other)
+    // QXmlStreamNotationDeclaration( const QXmlStreamNotationDeclaration & other )
     QXmlStreamNotationDeclaration *obj = new QXmlStreamNotationDeclaration(*PQXMLSTREAMNOTATIONDECLARATION(1));
     Qt4xHb::returnNewObject(obj, true);
   }
@@ -87,9 +87,7 @@ HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStringRef name() const
-*/
+// QStringRef name() const
 HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_NAME)
 {
   QXmlStreamNotationDeclaration *obj = static_cast<QXmlStreamNotationDeclaration *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -112,9 +110,7 @@ HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_NAME)
   }
 }
 
-/*
-QStringRef publicId() const
-*/
+// QStringRef publicId() const
 HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_PUBLICID)
 {
   QXmlStreamNotationDeclaration *obj = static_cast<QXmlStreamNotationDeclaration *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -137,9 +133,7 @@ HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_PUBLICID)
   }
 }
 
-/*
-QStringRef systemId() const
-*/
+// QStringRef systemId() const
 HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_SYSTEMID)
 {
   QXmlStreamNotationDeclaration *obj = static_cast<QXmlStreamNotationDeclaration *>(Qt4xHb::itemGetPtrStackSelfItem());

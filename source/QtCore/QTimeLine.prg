@@ -73,7 +73,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QTimeLine(int duration = 1000, QObject *parent = 0)
+    // QTimeLine( int duration = 1000, QObject * parent = 0 )
 HB_FUNC_STATIC(QTIMELINE_NEW)
 {
   if (ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (ISQOBJECT(2) || HB_ISNIL(2)))
@@ -105,9 +105,7 @@ HB_FUNC_STATIC(QTIMELINE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int currentFrame() const
-*/
+// int currentFrame() const
 HB_FUNC_STATIC(QTIMELINE_CURRENTFRAME)
 {
   QTimeLine *obj = qobject_cast<QTimeLine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -129,9 +127,7 @@ HB_FUNC_STATIC(QTIMELINE_CURRENTFRAME)
   }
 }
 
-/*
-int currentTime() const
-*/
+// int currentTime() const
 HB_FUNC_STATIC(QTIMELINE_CURRENTTIME)
 {
   QTimeLine *obj = qobject_cast<QTimeLine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -153,9 +149,7 @@ HB_FUNC_STATIC(QTIMELINE_CURRENTTIME)
   }
 }
 
-/*
-qreal currentValue() const
-*/
+// qreal currentValue() const
 HB_FUNC_STATIC(QTIMELINE_CURRENTVALUE)
 {
   QTimeLine *obj = qobject_cast<QTimeLine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -177,9 +171,7 @@ HB_FUNC_STATIC(QTIMELINE_CURRENTVALUE)
   }
 }
 
-/*
-QTimeLine::CurveShape curveShape() const
-*/
+// QTimeLine::CurveShape curveShape() const
 HB_FUNC_STATIC(QTIMELINE_CURVESHAPE)
 {
   QTimeLine *obj = qobject_cast<QTimeLine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -201,9 +193,7 @@ HB_FUNC_STATIC(QTIMELINE_CURVESHAPE)
   }
 }
 
-/*
-QTimeLine::Direction direction() const
-*/
+// QTimeLine::Direction direction() const
 HB_FUNC_STATIC(QTIMELINE_DIRECTION)
 {
   QTimeLine *obj = qobject_cast<QTimeLine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -225,9 +215,7 @@ HB_FUNC_STATIC(QTIMELINE_DIRECTION)
   }
 }
 
-/*
-int duration() const
-*/
+// int duration() const
 HB_FUNC_STATIC(QTIMELINE_DURATION)
 {
   QTimeLine *obj = qobject_cast<QTimeLine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -249,9 +237,7 @@ HB_FUNC_STATIC(QTIMELINE_DURATION)
   }
 }
 
-/*
-int endFrame() const
-*/
+// int endFrame() const
 HB_FUNC_STATIC(QTIMELINE_ENDFRAME)
 {
   QTimeLine *obj = qobject_cast<QTimeLine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -273,9 +259,7 @@ HB_FUNC_STATIC(QTIMELINE_ENDFRAME)
   }
 }
 
-/*
-int frameForTime(int msec) const
-*/
+// int frameForTime( int msec ) const
 HB_FUNC_STATIC(QTIMELINE_FRAMEFORTIME)
 {
   QTimeLine *obj = qobject_cast<QTimeLine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -297,9 +281,7 @@ HB_FUNC_STATIC(QTIMELINE_FRAMEFORTIME)
   }
 }
 
-/*
-int loopCount() const
-*/
+// int loopCount() const
 HB_FUNC_STATIC(QTIMELINE_LOOPCOUNT)
 {
   QTimeLine *obj = qobject_cast<QTimeLine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -321,9 +303,7 @@ HB_FUNC_STATIC(QTIMELINE_LOOPCOUNT)
   }
 }
 
-/*
-void setCurveShape(QTimeLine::CurveShape shape)
-*/
+// void setCurveShape( QTimeLine::CurveShape shape )
 HB_FUNC_STATIC(QTIMELINE_SETCURVESHAPE)
 {
   QTimeLine *obj = qobject_cast<QTimeLine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -347,9 +327,7 @@ HB_FUNC_STATIC(QTIMELINE_SETCURVESHAPE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDirection(QTimeLine::Direction direction)
-*/
+// void setDirection( QTimeLine::Direction direction )
 HB_FUNC_STATIC(QTIMELINE_SETDIRECTION)
 {
   QTimeLine *obj = qobject_cast<QTimeLine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -373,9 +351,7 @@ HB_FUNC_STATIC(QTIMELINE_SETDIRECTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDuration(int duration)
-*/
+// void setDuration( int duration )
 HB_FUNC_STATIC(QTIMELINE_SETDURATION)
 {
   QTimeLine *obj = qobject_cast<QTimeLine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -399,9 +375,7 @@ HB_FUNC_STATIC(QTIMELINE_SETDURATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setEasingCurve(const QEasingCurve &curve)
-*/
+// void setEasingCurve( const QEasingCurve & curve )
 HB_FUNC_STATIC(QTIMELINE_SETEASINGCURVE)
 {
   QTimeLine *obj = qobject_cast<QTimeLine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -425,9 +399,7 @@ HB_FUNC_STATIC(QTIMELINE_SETEASINGCURVE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setEndFrame(int frame)
-*/
+// void setEndFrame( int frame )
 HB_FUNC_STATIC(QTIMELINE_SETENDFRAME)
 {
   QTimeLine *obj = qobject_cast<QTimeLine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -451,9 +423,7 @@ HB_FUNC_STATIC(QTIMELINE_SETENDFRAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFrameRange(int startFrame, int endFrame)
-*/
+// void setFrameRange( int startFrame, int endFrame )
 HB_FUNC_STATIC(QTIMELINE_SETFRAMERANGE)
 {
   QTimeLine *obj = qobject_cast<QTimeLine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -477,9 +447,7 @@ HB_FUNC_STATIC(QTIMELINE_SETFRAMERANGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setLoopCount(int count)
-*/
+// void setLoopCount( int count )
 HB_FUNC_STATIC(QTIMELINE_SETLOOPCOUNT)
 {
   QTimeLine *obj = qobject_cast<QTimeLine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -503,9 +471,7 @@ HB_FUNC_STATIC(QTIMELINE_SETLOOPCOUNT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setStartFrame(int frame)
-*/
+// void setStartFrame( int frame )
 HB_FUNC_STATIC(QTIMELINE_SETSTARTFRAME)
 {
   QTimeLine *obj = qobject_cast<QTimeLine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -529,9 +495,7 @@ HB_FUNC_STATIC(QTIMELINE_SETSTARTFRAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setUpdateInterval(int interval)
-*/
+// void setUpdateInterval( int interval )
 HB_FUNC_STATIC(QTIMELINE_SETUPDATEINTERVAL)
 {
   QTimeLine *obj = qobject_cast<QTimeLine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -555,9 +519,7 @@ HB_FUNC_STATIC(QTIMELINE_SETUPDATEINTERVAL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int startFrame() const
-*/
+// int startFrame() const
 HB_FUNC_STATIC(QTIMELINE_STARTFRAME)
 {
   QTimeLine *obj = qobject_cast<QTimeLine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -579,9 +541,7 @@ HB_FUNC_STATIC(QTIMELINE_STARTFRAME)
   }
 }
 
-/*
-QTimeLine::State state() const
-*/
+// QTimeLine::State state() const
 HB_FUNC_STATIC(QTIMELINE_STATE)
 {
   QTimeLine *obj = qobject_cast<QTimeLine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -603,9 +563,7 @@ HB_FUNC_STATIC(QTIMELINE_STATE)
   }
 }
 
-/*
-int updateInterval() const
-*/
+// int updateInterval() const
 HB_FUNC_STATIC(QTIMELINE_UPDATEINTERVAL)
 {
   QTimeLine *obj = qobject_cast<QTimeLine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -627,9 +585,7 @@ HB_FUNC_STATIC(QTIMELINE_UPDATEINTERVAL)
   }
 }
 
-/*
-virtual qreal valueForTime(int msec) const
-*/
+// virtual qreal valueForTime( int msec ) const
 HB_FUNC_STATIC(QTIMELINE_VALUEFORTIME)
 {
   QTimeLine *obj = qobject_cast<QTimeLine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -651,9 +607,7 @@ HB_FUNC_STATIC(QTIMELINE_VALUEFORTIME)
   }
 }
 
-/*
-void resume()
-*/
+// void resume()
 HB_FUNC_STATIC(QTIMELINE_RESUME)
 {
   QTimeLine *obj = qobject_cast<QTimeLine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -677,9 +631,7 @@ HB_FUNC_STATIC(QTIMELINE_RESUME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCurrentTime(int msec)
-*/
+// void setCurrentTime( int msec )
 HB_FUNC_STATIC(QTIMELINE_SETCURRENTTIME)
 {
   QTimeLine *obj = qobject_cast<QTimeLine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -703,9 +655,7 @@ HB_FUNC_STATIC(QTIMELINE_SETCURRENTTIME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPaused(bool paused)
-*/
+// void setPaused( bool paused )
 HB_FUNC_STATIC(QTIMELINE_SETPAUSED)
 {
   QTimeLine *obj = qobject_cast<QTimeLine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -729,9 +679,7 @@ HB_FUNC_STATIC(QTIMELINE_SETPAUSED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void start()
-*/
+// void start()
 HB_FUNC_STATIC(QTIMELINE_START)
 {
   QTimeLine *obj = qobject_cast<QTimeLine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -755,9 +703,7 @@ HB_FUNC_STATIC(QTIMELINE_START)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void stop()
-*/
+// void stop()
 HB_FUNC_STATIC(QTIMELINE_STOP)
 {
   QTimeLine *obj = qobject_cast<QTimeLine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -781,9 +727,7 @@ HB_FUNC_STATIC(QTIMELINE_STOP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void toggleDirection()
-*/
+// void toggleDirection()
 HB_FUNC_STATIC(QTIMELINE_TOGGLEDIRECTION)
 {
   QTimeLine *obj = qobject_cast<QTimeLine *>(Qt4xHb::getQObjectPointerFromSelfItem());

@@ -61,14 +61,14 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-// QUuid()
+    // QUuid()
 HB_FUNC_STATIC(QUUID_NEW1)
 {
   QUuid *obj = new QUuid();
   Qt4xHb::returnNewObject(obj, true);
 }
 
-// QUuid(uint l, ushort w1, ushort w2, uchar b1, uchar b2, uchar b3, uchar b4, uchar b5, uchar b6, uchar b7, uchar b8)
+// QUuid( uint l, ushort w1, ushort w2, uchar b1, uchar b2, uchar b3, uchar b4, uchar b5, uchar b6, uchar b7, uchar b8 )
 HB_FUNC_STATIC(QUUID_NEW2)
 {
   QUuid *obj = new QUuid(PUINT(1), PUSHORT(2), PUSHORT(3), PUCHAR(4), PUCHAR(5), PUCHAR(6), PUCHAR(7), PUCHAR(8),
@@ -76,21 +76,21 @@ HB_FUNC_STATIC(QUUID_NEW2)
   Qt4xHb::returnNewObject(obj, true);
 }
 
-// QUuid(const QString &)
+// QUuid( const QString & )
 HB_FUNC_STATIC(QUUID_NEW3)
 {
   QUuid *obj = new QUuid(PQSTRING(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 
-// QUuid(const char *)
+// QUuid( const char * )
 HB_FUNC_STATIC(QUUID_NEW4)
 {
   QUuid *obj = new QUuid(PCONSTCHAR(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 
-// QUuid(const QByteArray &)
+// QUuid( const QByteArray & )
 HB_FUNC_STATIC(QUUID_NEW5)
 {
   QUuid *obj = new QUuid(*PQBYTEARRAY(1));
@@ -139,9 +139,7 @@ HB_FUNC_STATIC(QUUID_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString toString() const
-*/
+// QString toString() const
 HB_FUNC_STATIC(QUUID_TOSTRING)
 {
   QUuid *obj = static_cast<QUuid *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -163,9 +161,7 @@ HB_FUNC_STATIC(QUUID_TOSTRING)
   }
 }
 
-/*
-QByteArray toByteArray() const
-*/
+// QByteArray toByteArray() const
 HB_FUNC_STATIC(QUUID_TOBYTEARRAY)
 {
   QUuid *obj = static_cast<QUuid *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -188,9 +184,7 @@ HB_FUNC_STATIC(QUUID_TOBYTEARRAY)
   }
 }
 
-/*
-QByteArray toRfc4122() const
-*/
+// QByteArray toRfc4122() const
 HB_FUNC_STATIC(QUUID_TORFC4122)
 {
   QUuid *obj = static_cast<QUuid *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -213,9 +207,7 @@ HB_FUNC_STATIC(QUUID_TORFC4122)
   }
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QUUID_ISNULL)
 {
   QUuid *obj = static_cast<QUuid *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -237,9 +229,7 @@ HB_FUNC_STATIC(QUUID_ISNULL)
   }
 }
 
-/*
-QUuid::Variant variant() const
-*/
+// QUuid::Variant variant() const
 HB_FUNC_STATIC(QUUID_VARIANT)
 {
   QUuid *obj = static_cast<QUuid *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -261,9 +251,7 @@ HB_FUNC_STATIC(QUUID_VARIANT)
   }
 }
 
-/*
-QUuid::Version version() const
-*/
+// QUuid::Version version() const
 HB_FUNC_STATIC(QUUID_VERSION)
 {
   QUuid *obj = static_cast<QUuid *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -285,9 +273,7 @@ HB_FUNC_STATIC(QUUID_VERSION)
   }
 }
 
-/*
-static QUuid fromRfc4122(const QByteArray &)
-*/
+// static QUuid fromRfc4122( const QByteArray & )
 HB_FUNC_STATIC(QUUID_FROMRFC4122)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -305,9 +291,7 @@ HB_FUNC_STATIC(QUUID_FROMRFC4122)
 #endif
 }
 
-/*
-static QUuid createUuid()
-*/
+// static QUuid createUuid()
 HB_FUNC_STATIC(QUUID_CREATEUUID)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

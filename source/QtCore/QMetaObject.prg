@@ -102,9 +102,7 @@ HB_FUNC_STATIC(QMETAOBJECT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QMetaClassInfo classInfo(int index) const
-*/
+// QMetaClassInfo classInfo( int index ) const
 HB_FUNC_STATIC(QMETAOBJECT_CLASSINFO)
 {
   QMetaObject *obj = static_cast<QMetaObject *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -127,9 +125,7 @@ HB_FUNC_STATIC(QMETAOBJECT_CLASSINFO)
   }
 }
 
-/*
-int classInfoCount() const
-*/
+// int classInfoCount() const
 HB_FUNC_STATIC(QMETAOBJECT_CLASSINFOCOUNT)
 {
   QMetaObject *obj = static_cast<QMetaObject *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -151,9 +147,7 @@ HB_FUNC_STATIC(QMETAOBJECT_CLASSINFOCOUNT)
   }
 }
 
-/*
-int classInfoOffset() const
-*/
+// int classInfoOffset() const
 HB_FUNC_STATIC(QMETAOBJECT_CLASSINFOOFFSET)
 {
   QMetaObject *obj = static_cast<QMetaObject *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -175,9 +169,7 @@ HB_FUNC_STATIC(QMETAOBJECT_CLASSINFOOFFSET)
   }
 }
 
-/*
-const char *className() const
-*/
+// const char * className() const
 HB_FUNC_STATIC(QMETAOBJECT_CLASSNAME)
 {
   QMetaObject *obj = static_cast<QMetaObject *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -199,9 +191,7 @@ HB_FUNC_STATIC(QMETAOBJECT_CLASSNAME)
   }
 }
 
-/*
-QMetaMethod constructor(int index) const
-*/
+// QMetaMethod constructor( int index ) const
 HB_FUNC_STATIC(QMETAOBJECT_CONSTRUCTOR)
 {
   QMetaObject *obj = static_cast<QMetaObject *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -224,9 +214,7 @@ HB_FUNC_STATIC(QMETAOBJECT_CONSTRUCTOR)
   }
 }
 
-/*
-int constructorCount() const
-*/
+// int constructorCount() const
 HB_FUNC_STATIC(QMETAOBJECT_CONSTRUCTORCOUNT)
 {
   QMetaObject *obj = static_cast<QMetaObject *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -248,9 +236,7 @@ HB_FUNC_STATIC(QMETAOBJECT_CONSTRUCTORCOUNT)
   }
 }
 
-/*
-QMetaEnum enumerator(int index) const
-*/
+// QMetaEnum enumerator( int index ) const
 HB_FUNC_STATIC(QMETAOBJECT_ENUMERATOR)
 {
   QMetaObject *obj = static_cast<QMetaObject *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -273,9 +259,7 @@ HB_FUNC_STATIC(QMETAOBJECT_ENUMERATOR)
   }
 }
 
-/*
-int enumeratorCount() const
-*/
+// int enumeratorCount() const
 HB_FUNC_STATIC(QMETAOBJECT_ENUMERATORCOUNT)
 {
   QMetaObject *obj = static_cast<QMetaObject *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -297,9 +281,7 @@ HB_FUNC_STATIC(QMETAOBJECT_ENUMERATORCOUNT)
   }
 }
 
-/*
-int enumeratorOffset() const
-*/
+// int enumeratorOffset() const
 HB_FUNC_STATIC(QMETAOBJECT_ENUMERATOROFFSET)
 {
   QMetaObject *obj = static_cast<QMetaObject *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -321,9 +303,7 @@ HB_FUNC_STATIC(QMETAOBJECT_ENUMERATOROFFSET)
   }
 }
 
-/*
-int indexOfClassInfo(const char *name) const
-*/
+// int indexOfClassInfo( const char * name ) const
 HB_FUNC_STATIC(QMETAOBJECT_INDEXOFCLASSINFO)
 {
   QMetaObject *obj = static_cast<QMetaObject *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -345,9 +325,7 @@ HB_FUNC_STATIC(QMETAOBJECT_INDEXOFCLASSINFO)
   }
 }
 
-/*
-int indexOfConstructor(const char *constructor) const
-*/
+// int indexOfConstructor( const char * constructor ) const
 HB_FUNC_STATIC(QMETAOBJECT_INDEXOFCONSTRUCTOR)
 {
   QMetaObject *obj = static_cast<QMetaObject *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -369,9 +347,7 @@ HB_FUNC_STATIC(QMETAOBJECT_INDEXOFCONSTRUCTOR)
   }
 }
 
-/*
-int indexOfEnumerator(const char *name) const
-*/
+// int indexOfEnumerator( const char * name ) const
 HB_FUNC_STATIC(QMETAOBJECT_INDEXOFENUMERATOR)
 {
   QMetaObject *obj = static_cast<QMetaObject *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -393,9 +369,7 @@ HB_FUNC_STATIC(QMETAOBJECT_INDEXOFENUMERATOR)
   }
 }
 
-/*
-int indexOfMethod(const char *method) const
-*/
+// int indexOfMethod( const char * method ) const
 HB_FUNC_STATIC(QMETAOBJECT_INDEXOFMETHOD)
 {
   QMetaObject *obj = static_cast<QMetaObject *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -417,9 +391,7 @@ HB_FUNC_STATIC(QMETAOBJECT_INDEXOFMETHOD)
   }
 }
 
-/*
-int indexOfProperty(const char *name) const
-*/
+// int indexOfProperty( const char * name ) const
 HB_FUNC_STATIC(QMETAOBJECT_INDEXOFPROPERTY)
 {
   QMetaObject *obj = static_cast<QMetaObject *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -441,9 +413,7 @@ HB_FUNC_STATIC(QMETAOBJECT_INDEXOFPROPERTY)
   }
 }
 
-/*
-int indexOfSignal(const char *signal) const
-*/
+// int indexOfSignal( const char * signal ) const
 HB_FUNC_STATIC(QMETAOBJECT_INDEXOFSIGNAL)
 {
   QMetaObject *obj = static_cast<QMetaObject *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -465,9 +435,7 @@ HB_FUNC_STATIC(QMETAOBJECT_INDEXOFSIGNAL)
   }
 }
 
-/*
-int indexOfSlot(const char *slot) const
-*/
+// int indexOfSlot( const char * slot ) const
 HB_FUNC_STATIC(QMETAOBJECT_INDEXOFSLOT)
 {
   QMetaObject *obj = static_cast<QMetaObject *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -489,9 +457,7 @@ HB_FUNC_STATIC(QMETAOBJECT_INDEXOFSLOT)
   }
 }
 
-/*
-QMetaMethod method(int index) const
-*/
+// QMetaMethod method( int index ) const
 HB_FUNC_STATIC(QMETAOBJECT_METHOD)
 {
   QMetaObject *obj = static_cast<QMetaObject *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -514,9 +480,7 @@ HB_FUNC_STATIC(QMETAOBJECT_METHOD)
   }
 }
 
-/*
-int methodCount() const
-*/
+// int methodCount() const
 HB_FUNC_STATIC(QMETAOBJECT_METHODCOUNT)
 {
   QMetaObject *obj = static_cast<QMetaObject *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -538,9 +502,7 @@ HB_FUNC_STATIC(QMETAOBJECT_METHODCOUNT)
   }
 }
 
-/*
-int methodOffset() const
-*/
+// int methodOffset() const
 HB_FUNC_STATIC(QMETAOBJECT_METHODOFFSET)
 {
   QMetaObject *obj = static_cast<QMetaObject *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -562,9 +524,7 @@ HB_FUNC_STATIC(QMETAOBJECT_METHODOFFSET)
   }
 }
 
-/*
-QMetaProperty property(int index) const
-*/
+// QMetaProperty property( int index ) const
 HB_FUNC_STATIC(QMETAOBJECT_PROPERTY)
 {
   QMetaObject *obj = static_cast<QMetaObject *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -587,9 +547,7 @@ HB_FUNC_STATIC(QMETAOBJECT_PROPERTY)
   }
 }
 
-/*
-int propertyCount() const
-*/
+// int propertyCount() const
 HB_FUNC_STATIC(QMETAOBJECT_PROPERTYCOUNT)
 {
   QMetaObject *obj = static_cast<QMetaObject *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -611,9 +569,7 @@ HB_FUNC_STATIC(QMETAOBJECT_PROPERTYCOUNT)
   }
 }
 
-/*
-int propertyOffset() const
-*/
+// int propertyOffset() const
 HB_FUNC_STATIC(QMETAOBJECT_PROPERTYOFFSET)
 {
   QMetaObject *obj = static_cast<QMetaObject *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -635,9 +591,7 @@ HB_FUNC_STATIC(QMETAOBJECT_PROPERTYOFFSET)
   }
 }
 
-/*
-const QMetaObject *superClass() const
-*/
+// const QMetaObject * superClass() const
 HB_FUNC_STATIC(QMETAOBJECT_SUPERCLASS)
 {
   QMetaObject *obj = static_cast<QMetaObject *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -660,9 +614,7 @@ HB_FUNC_STATIC(QMETAOBJECT_SUPERCLASS)
   }
 }
 
-/*
-QMetaProperty userProperty() const
-*/
+// QMetaProperty userProperty() const
 HB_FUNC_STATIC(QMETAOBJECT_USERPROPERTY)
 {
   QMetaObject *obj = static_cast<QMetaObject *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -685,9 +637,7 @@ HB_FUNC_STATIC(QMETAOBJECT_USERPROPERTY)
   }
 }
 
-/*
-static bool checkConnectArgs(const char *signal, const char *method)
-*/
+// static bool checkConnectArgs( const char * signal, const char * method )
 HB_FUNC_STATIC(QMETAOBJECT_CHECKCONNECTARGS)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -704,9 +654,7 @@ HB_FUNC_STATIC(QMETAOBJECT_CHECKCONNECTARGS)
 #endif
 }
 
-/*
-static void connectSlotsByName(QObject *object)
-*/
+// static void connectSlotsByName( QObject * object )
 HB_FUNC_STATIC(QMETAOBJECT_CONNECTSLOTSBYNAME)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -730,9 +678,7 @@ HB_FUNC_STATIC(QMETAOBJECT_INVOKEMETHOD)
   hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
 }
 
-/*
-static QByteArray normalizedSignature(const char *method)
-*/
+// static QByteArray normalizedSignature( const char * method )
 HB_FUNC_STATIC(QMETAOBJECT_NORMALIZEDSIGNATURE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -750,9 +696,7 @@ HB_FUNC_STATIC(QMETAOBJECT_NORMALIZEDSIGNATURE)
 #endif
 }
 
-/*
-static QByteArray normalizedType(const char *type)
-*/
+// static QByteArray normalizedType( const char * type )
 HB_FUNC_STATIC(QMETAOBJECT_NORMALIZEDTYPE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

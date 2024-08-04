@@ -70,13 +70,13 @@ HB_FUNC_STATIC(QSIZEF_NEW)
   }
   else if (ISNUMPAR(1) && ISQSIZE(1))
   {
-    // QSizeF(const QSize &size)
+    // QSizeF( const QSize & size )
     QSizeF *obj = new QSizeF(*PQSIZE(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
-    // QSizeF(qreal width, qreal height)
+    // QSizeF( qreal width, qreal height )
     QSizeF *obj = new QSizeF(PQREAL(1), PQREAL(2));
     Qt4xHb::returnNewObject(obj, true);
   }
@@ -102,9 +102,7 @@ HB_FUNC_STATIC(QSIZEF_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSizeF boundedTo(const QSizeF &otherSize) const
-*/
+// QSizeF boundedTo( const QSizeF & otherSize ) const
 HB_FUNC_STATIC(QSIZEF_BOUNDEDTO)
 {
   QSizeF *obj = static_cast<QSizeF *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -127,9 +125,7 @@ HB_FUNC_STATIC(QSIZEF_BOUNDEDTO)
   }
 }
 
-/*
-QSizeF expandedTo(const QSizeF &otherSize) const
-*/
+// QSizeF expandedTo( const QSizeF & otherSize ) const
 HB_FUNC_STATIC(QSIZEF_EXPANDEDTO)
 {
   QSizeF *obj = static_cast<QSizeF *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -152,9 +148,7 @@ HB_FUNC_STATIC(QSIZEF_EXPANDEDTO)
   }
 }
 
-/*
-qreal height() const
-*/
+// qreal height() const
 HB_FUNC_STATIC(QSIZEF_HEIGHT)
 {
   QSizeF *obj = static_cast<QSizeF *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -176,9 +170,7 @@ HB_FUNC_STATIC(QSIZEF_HEIGHT)
   }
 }
 
-/*
-bool isEmpty() const
-*/
+// bool isEmpty() const
 HB_FUNC_STATIC(QSIZEF_ISEMPTY)
 {
   QSizeF *obj = static_cast<QSizeF *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -200,9 +192,7 @@ HB_FUNC_STATIC(QSIZEF_ISEMPTY)
   }
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QSIZEF_ISNULL)
 {
   QSizeF *obj = static_cast<QSizeF *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -224,9 +214,7 @@ HB_FUNC_STATIC(QSIZEF_ISNULL)
   }
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QSIZEF_ISVALID)
 {
   QSizeF *obj = static_cast<QSizeF *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -252,9 +240,7 @@ HB_FUNC_STATIC(QSIZEF_SCALE)
 {
   if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
-    /*
-    void scale(qreal width, qreal height, Qt::AspectRatioMode mode)
-    */
+    // void scale( qreal width, qreal height, Qt::AspectRatioMode mode )
     QSizeF *obj = static_cast<QSizeF *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -266,9 +252,7 @@ HB_FUNC_STATIC(QSIZEF_SCALE)
   }
   else if (ISNUMPAR(2) && ISQSIZEF(1) && HB_ISNUM(2))
   {
-    /*
-    void scale(const QSizeF &size, Qt::AspectRatioMode mode)
-    */
+    // void scale( const QSizeF & size, Qt::AspectRatioMode mode )
     QSizeF *obj = static_cast<QSizeF *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -284,9 +268,7 @@ HB_FUNC_STATIC(QSIZEF_SCALE)
   }
 }
 
-/*
-void setHeight(qreal height)
-*/
+// void setHeight( qreal height )
 HB_FUNC_STATIC(QSIZEF_SETHEIGHT)
 {
   QSizeF *obj = static_cast<QSizeF *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -310,9 +292,7 @@ HB_FUNC_STATIC(QSIZEF_SETHEIGHT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWidth(qreal width)
-*/
+// void setWidth( qreal width )
 HB_FUNC_STATIC(QSIZEF_SETWIDTH)
 {
   QSizeF *obj = static_cast<QSizeF *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -336,9 +316,7 @@ HB_FUNC_STATIC(QSIZEF_SETWIDTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSize toSize() const
-*/
+// QSize toSize() const
 HB_FUNC_STATIC(QSIZEF_TOSIZE)
 {
   QSizeF *obj = static_cast<QSizeF *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -361,9 +339,7 @@ HB_FUNC_STATIC(QSIZEF_TOSIZE)
   }
 }
 
-/*
-void transpose()
-*/
+// void transpose()
 HB_FUNC_STATIC(QSIZEF_TRANSPOSE)
 {
   QSizeF *obj = static_cast<QSizeF *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -387,9 +363,7 @@ HB_FUNC_STATIC(QSIZEF_TRANSPOSE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qreal width() const
-*/
+// qreal width() const
 HB_FUNC_STATIC(QSIZEF_WIDTH)
 {
   QSizeF *obj = static_cast<QSizeF *>(Qt4xHb::itemGetPtrStackSelfItem());

@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_NEW)
 {
   if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
-    // QFutureInterfaceBase(QFutureInterfaceBase::State initialState = QFutureInterfaceBase::NoState)
+    // QFutureInterfaceBase( QFutureInterfaceBase::State initialState = QFutureInterfaceBase::NoState )
     QFutureInterfaceBase *obj =
         new QFutureInterfaceBase(HB_ISNIL(1) ? (QFutureInterfaceBase::State)QFutureInterfaceBase::NoState
                                              : (QFutureInterfaceBase::State)hb_parni(1));
@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_NEW)
   }
   else if (ISNUMPAR(1) && ISQFUTUREINTERFACEBASE(1))
   {
-    // QFutureInterfaceBase(const QFutureInterfaceBase &other)
+    // QFutureInterfaceBase( const QFutureInterfaceBase & other )
     QFutureInterfaceBase *obj = new QFutureInterfaceBase(*PQFUTUREINTERFACEBASE(1));
     Qt4xHb::returnNewObject(obj, true);
   }
@@ -120,9 +120,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void reportStarted()
-*/
+// void reportStarted()
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_REPORTSTARTED)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -146,9 +144,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_REPORTSTARTED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void reportFinished()
-*/
+// void reportFinished()
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_REPORTFINISHED)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -172,9 +168,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_REPORTFINISHED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void reportCanceled()
-*/
+// void reportCanceled()
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_REPORTCANCELED)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -198,9 +192,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_REPORTCANCELED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void reportResultsReady(int beginIndex, int endIndex)
-*/
+// void reportResultsReady( int beginIndex, int endIndex )
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_REPORTRESULTSREADY)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -224,9 +216,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_REPORTRESULTSREADY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setRunnable(QRunnable *runnable)
-*/
+// void setRunnable( QRunnable * runnable )
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_SETRUNNABLE)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -250,9 +240,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_SETRUNNABLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFilterMode(bool enable)
-*/
+// void setFilterMode( bool enable )
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_SETFILTERMODE)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -276,9 +264,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_SETFILTERMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setProgressRange(int minimum, int maximum)
-*/
+// void setProgressRange( int minimum, int maximum )
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_SETPROGRESSRANGE)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -302,9 +288,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_SETPROGRESSRANGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int progressMinimum() const
-*/
+// int progressMinimum() const
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_PROGRESSMINIMUM)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -326,9 +310,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_PROGRESSMINIMUM)
   }
 }
 
-/*
-int progressMaximum() const
-*/
+// int progressMaximum() const
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_PROGRESSMAXIMUM)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -350,9 +332,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_PROGRESSMAXIMUM)
   }
 }
 
-/*
-bool isProgressUpdateNeeded() const
-*/
+// bool isProgressUpdateNeeded() const
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_ISPROGRESSUPDATENEEDED)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -374,9 +354,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_ISPROGRESSUPDATENEEDED)
   }
 }
 
-/*
-void setProgressValue(int progressValue)
-*/
+// void setProgressValue( int progressValue )
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_SETPROGRESSVALUE)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -400,9 +378,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_SETPROGRESSVALUE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int progressValue() const
-*/
+// int progressValue() const
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_PROGRESSVALUE)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -424,9 +400,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_PROGRESSVALUE)
   }
 }
 
-/*
-void setProgressValueAndText(int progressValue, const QString &progressText)
-*/
+// void setProgressValueAndText( int progressValue, const QString & progressText )
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_SETPROGRESSVALUEANDTEXT)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -450,9 +424,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_SETPROGRESSVALUEANDTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString progressText() const
-*/
+// QString progressText() const
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_PROGRESSTEXT)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -474,9 +446,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_PROGRESSTEXT)
   }
 }
 
-/*
-void setExpectedResultCount(int resultCount)
-*/
+// void setExpectedResultCount( int resultCount )
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_SETEXPECTEDRESULTCOUNT)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -500,9 +470,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_SETEXPECTEDRESULTCOUNT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int expectedResultCount()
-*/
+// int expectedResultCount()
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_EXPECTEDRESULTCOUNT)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -524,9 +492,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_EXPECTEDRESULTCOUNT)
   }
 }
 
-/*
-int resultCount() const
-*/
+// int resultCount() const
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_RESULTCOUNT)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -548,9 +514,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_RESULTCOUNT)
   }
 }
 
-/*
-bool queryState(QFutureInterfaceBase::State state) const
-*/
+// bool queryState( QFutureInterfaceBase::State state ) const
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_QUERYSTATE)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -572,9 +536,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_QUERYSTATE)
   }
 }
 
-/*
-bool isRunning() const
-*/
+// bool isRunning() const
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_ISRUNNING)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -596,9 +558,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_ISRUNNING)
   }
 }
 
-/*
-bool isStarted() const
-*/
+// bool isStarted() const
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_ISSTARTED)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -620,9 +580,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_ISSTARTED)
   }
 }
 
-/*
-bool isCanceled() const
-*/
+// bool isCanceled() const
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_ISCANCELED)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -644,9 +602,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_ISCANCELED)
   }
 }
 
-/*
-bool isFinished() const
-*/
+// bool isFinished() const
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_ISFINISHED)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -668,9 +624,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_ISFINISHED)
   }
 }
 
-/*
-bool isPaused() const
-*/
+// bool isPaused() const
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_ISPAUSED)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -692,9 +646,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_ISPAUSED)
   }
 }
 
-/*
-bool isThrottled() const
-*/
+// bool isThrottled() const
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_ISTHROTTLED)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -716,9 +668,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_ISTHROTTLED)
   }
 }
 
-/*
-bool isResultReadyAt(int index) const
-*/
+// bool isResultReadyAt( int index ) const
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_ISRESULTREADYAT)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -740,9 +690,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_ISRESULTREADYAT)
   }
 }
 
-/*
-void cancel()
-*/
+// void cancel()
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_CANCEL)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -766,9 +714,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_CANCEL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPaused(bool paused)
-*/
+// void setPaused( bool paused )
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_SETPAUSED)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -792,9 +738,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_SETPAUSED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void togglePaused()
-*/
+// void togglePaused()
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_TOGGLEPAUSED)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -818,9 +762,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_TOGGLEPAUSED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setThrottled(bool enable)
-*/
+// void setThrottled( bool enable )
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_SETTHROTTLED)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -844,9 +786,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_SETTHROTTLED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void waitForFinished()
-*/
+// void waitForFinished()
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_WAITFORFINISHED)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -870,9 +810,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_WAITFORFINISHED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool waitForNextResult()
-*/
+// bool waitForNextResult()
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_WAITFORNEXTRESULT)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -894,9 +832,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_WAITFORNEXTRESULT)
   }
 }
 
-/*
-void waitForResult(int resultIndex)
-*/
+// void waitForResult( int resultIndex )
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_WAITFORRESULT)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -920,9 +856,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_WAITFORRESULT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void waitForResume()
-*/
+// void waitForResume()
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_WAITFORRESUME)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -946,9 +880,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_WAITFORRESUME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QMutex *mutex() const
-*/
+// QMutex * mutex() const
 HB_FUNC_STATIC(QFUTUREINTERFACEBASE_MUTEX)
 {
   QFutureInterfaceBase *obj = static_cast<QFutureInterfaceBase *>(Qt4xHb::itemGetPtrStackSelfItem());

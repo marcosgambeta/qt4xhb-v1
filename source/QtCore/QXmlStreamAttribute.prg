@@ -64,19 +64,19 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTE_NEW)
   }
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
-    // QXmlStreamAttribute(const QString &qualifiedName, const QString &value)
+    // QXmlStreamAttribute( const QString & qualifiedName, const QString & value )
     QXmlStreamAttribute *obj = new QXmlStreamAttribute(PQSTRING(1), PQSTRING(2));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3))
   {
-    // QXmlStreamAttribute(const QString &namespaceUri, const QString &name, const QString &value)
+    // QXmlStreamAttribute( const QString & namespaceUri, const QString & name, const QString & value )
     QXmlStreamAttribute *obj = new QXmlStreamAttribute(PQSTRING(1), PQSTRING(2), PQSTRING(3));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQXMLSTREAMATTRIBUTE(1))
   {
-    // QXmlStreamAttribute(const QXmlStreamAttribute &other)
+    // QXmlStreamAttribute( const QXmlStreamAttribute & other )
     QXmlStreamAttribute *obj = new QXmlStreamAttribute(*PQXMLSTREAMATTRIBUTE(1));
     Qt4xHb::returnNewObject(obj, true);
   }
@@ -102,9 +102,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isDefault() const
-*/
+// bool isDefault() const
 HB_FUNC_STATIC(QXMLSTREAMATTRIBUTE_ISDEFAULT)
 {
   QXmlStreamAttribute *obj = static_cast<QXmlStreamAttribute *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -126,9 +124,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTE_ISDEFAULT)
   }
 }
 
-/*
-QStringRef name() const
-*/
+// QStringRef name() const
 HB_FUNC_STATIC(QXMLSTREAMATTRIBUTE_NAME)
 {
   QXmlStreamAttribute *obj = static_cast<QXmlStreamAttribute *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -151,9 +147,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTE_NAME)
   }
 }
 
-/*
-QStringRef namespaceUri() const
-*/
+// QStringRef namespaceUri() const
 HB_FUNC_STATIC(QXMLSTREAMATTRIBUTE_NAMESPACEURI)
 {
   QXmlStreamAttribute *obj = static_cast<QXmlStreamAttribute *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -176,9 +170,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTE_NAMESPACEURI)
   }
 }
 
-/*
-QStringRef prefix() const
-*/
+// QStringRef prefix() const
 HB_FUNC_STATIC(QXMLSTREAMATTRIBUTE_PREFIX)
 {
   QXmlStreamAttribute *obj = static_cast<QXmlStreamAttribute *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -201,9 +193,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTE_PREFIX)
   }
 }
 
-/*
-QStringRef qualifiedName() const
-*/
+// QStringRef qualifiedName() const
 HB_FUNC_STATIC(QXMLSTREAMATTRIBUTE_QUALIFIEDNAME)
 {
   QXmlStreamAttribute *obj = static_cast<QXmlStreamAttribute *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -226,9 +216,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTE_QUALIFIEDNAME)
   }
 }
 
-/*
-QStringRef value() const
-*/
+// QStringRef value() const
 HB_FUNC_STATIC(QXMLSTREAMATTRIBUTE_VALUE)
 {
   QXmlStreamAttribute *obj = static_cast<QXmlStreamAttribute *>(Qt4xHb::itemGetPtrStackSelfItem());

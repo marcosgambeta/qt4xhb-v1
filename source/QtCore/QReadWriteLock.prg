@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_NEW)
   }
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    // QReadWriteLock(QReadWriteLock::RecursionMode recursionMode)
+    // QReadWriteLock( QReadWriteLock::RecursionMode recursionMode )
     QReadWriteLock *obj = new QReadWriteLock((QReadWriteLock::RecursionMode)hb_parni(1));
     Qt4xHb::returnNewObject(obj, true);
   }
@@ -88,9 +88,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void lockForRead()
-*/
+// void lockForRead()
 HB_FUNC_STATIC(QREADWRITELOCK_LOCKFORREAD)
 {
   QReadWriteLock *obj = static_cast<QReadWriteLock *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -114,9 +112,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_LOCKFORREAD)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void lockForWrite()
-*/
+// void lockForWrite()
 HB_FUNC_STATIC(QREADWRITELOCK_LOCKFORWRITE)
 {
   QReadWriteLock *obj = static_cast<QReadWriteLock *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -144,9 +140,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_TRYLOCKFORREAD)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    bool tryLockForRead()
-    */
+    // bool tryLockForRead()
     QReadWriteLock *obj = static_cast<QReadWriteLock *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -156,9 +150,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_TRYLOCKFORREAD)
   }
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    /*
-    bool tryLockForRead(int timeout)
-    */
+    // bool tryLockForRead( int timeout )
     QReadWriteLock *obj = static_cast<QReadWriteLock *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -176,9 +168,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_TRYLOCKFORWRITE)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    bool tryLockForWrite()
-    */
+    // bool tryLockForWrite()
     QReadWriteLock *obj = static_cast<QReadWriteLock *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -188,9 +178,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_TRYLOCKFORWRITE)
   }
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    /*
-    bool tryLockForWrite(int timeout)
-    */
+    // bool tryLockForWrite( int timeout )
     QReadWriteLock *obj = static_cast<QReadWriteLock *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -204,9 +192,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_TRYLOCKFORWRITE)
   }
 }
 
-/*
-void unlock()
-*/
+// void unlock()
 HB_FUNC_STATIC(QREADWRITELOCK_UNLOCK)
 {
   QReadWriteLock *obj = static_cast<QReadWriteLock *>(Qt4xHb::itemGetPtrStackSelfItem());

@@ -64,9 +64,7 @@ HB_FUNC_STATIC(QABSTRACTFILEENGINEHANDLER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QAbstractFileEngine *create(const QString &fileName) const = 0
-*/
+// virtual QAbstractFileEngine * create( const QString & fileName ) const = 0
 HB_FUNC_STATIC(QABSTRACTFILEENGINEHANDLER_CREATE)
 {
   QAbstractFileEngineHandler *obj = static_cast<QAbstractFileEngineHandler *>(Qt4xHb::itemGetPtrStackSelfItem());

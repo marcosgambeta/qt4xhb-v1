@@ -57,7 +57,7 @@ HB_FUNC_STATIC(QSHAREDDATA_NEW)
   }
   else if (ISNUMPAR(1) && ISQSHAREDDATA(1))
   {
-    // QSharedData(const QSharedData &other)
+    // QSharedData( const QSharedData & other )
     QSharedData *obj = new QSharedData(*PQSHAREDDATA(1));
     Qt4xHb::returnNewObject(obj, true);
   }

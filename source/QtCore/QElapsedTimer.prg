@@ -59,7 +59,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-// QElapsedTimer()
+    // QElapsedTimer()
 HB_FUNC_STATIC(QELAPSEDTIMER_NEW)
 {
   if (ISNUMPAR(0))
@@ -89,9 +89,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qint64 elapsed() const
-*/
+// qint64 elapsed() const
 HB_FUNC_STATIC(QELAPSEDTIMER_ELAPSED)
 {
   QElapsedTimer *obj = static_cast<QElapsedTimer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -113,9 +111,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_ELAPSED)
   }
 }
 
-/*
-bool hasExpired(qint64 timeout) const
-*/
+// bool hasExpired( qint64 timeout ) const
 HB_FUNC_STATIC(QELAPSEDTIMER_HASEXPIRED)
 {
   QElapsedTimer *obj = static_cast<QElapsedTimer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -137,9 +133,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_HASEXPIRED)
   }
 }
 
-/*
-void invalidate()
-*/
+// void invalidate()
 HB_FUNC_STATIC(QELAPSEDTIMER_INVALIDATE)
 {
   QElapsedTimer *obj = static_cast<QElapsedTimer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -163,9 +157,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_INVALIDATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QELAPSEDTIMER_ISVALID)
 {
   QElapsedTimer *obj = static_cast<QElapsedTimer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -187,9 +179,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_ISVALID)
   }
 }
 
-/*
-qint64 msecsSinceReference() const
-*/
+// qint64 msecsSinceReference() const
 HB_FUNC_STATIC(QELAPSEDTIMER_MSECSSINCEREFERENCE)
 {
   QElapsedTimer *obj = static_cast<QElapsedTimer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -211,9 +201,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_MSECSSINCEREFERENCE)
   }
 }
 
-/*
-qint64 msecsTo(const QElapsedTimer &other) const
-*/
+// qint64 msecsTo( const QElapsedTimer & other ) const
 HB_FUNC_STATIC(QELAPSEDTIMER_MSECSTO)
 {
   QElapsedTimer *obj = static_cast<QElapsedTimer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -235,9 +223,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_MSECSTO)
   }
 }
 
-/*
-qint64 nsecsElapsed() const
-*/
+// qint64 nsecsElapsed() const
 HB_FUNC_STATIC(QELAPSEDTIMER_NSECSELAPSED)
 {
   QElapsedTimer *obj = static_cast<QElapsedTimer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -259,9 +245,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_NSECSELAPSED)
   }
 }
 
-/*
-qint64 restart()
-*/
+// qint64 restart()
 HB_FUNC_STATIC(QELAPSEDTIMER_RESTART)
 {
   QElapsedTimer *obj = static_cast<QElapsedTimer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -283,9 +267,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_RESTART)
   }
 }
 
-/*
-qint64 secsTo(const QElapsedTimer &other) const
-*/
+// qint64 secsTo( const QElapsedTimer & other ) const
 HB_FUNC_STATIC(QELAPSEDTIMER_SECSTO)
 {
   QElapsedTimer *obj = static_cast<QElapsedTimer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -307,9 +289,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_SECSTO)
   }
 }
 
-/*
-void start()
-*/
+// void start()
 HB_FUNC_STATIC(QELAPSEDTIMER_START)
 {
   QElapsedTimer *obj = static_cast<QElapsedTimer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -333,9 +313,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_START)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static QElapsedTimer::ClockType clockType()
-*/
+// static QElapsedTimer::ClockType clockType()
 HB_FUNC_STATIC(QELAPSEDTIMER_CLOCKTYPE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -352,9 +330,7 @@ HB_FUNC_STATIC(QELAPSEDTIMER_CLOCKTYPE)
 #endif
 }
 
-/*
-static bool isMonotonic()
-*/
+// static bool isMonotonic()
 HB_FUNC_STATIC(QELAPSEDTIMER_ISMONOTONIC)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

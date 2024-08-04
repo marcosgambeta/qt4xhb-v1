@@ -71,9 +71,7 @@ HB_FUNC_STATIC(QABSTRACTFILEENGINEITERATOR_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QFileInfo currentFileInfo() const
-*/
+// virtual QFileInfo currentFileInfo() const
 HB_FUNC_STATIC(QABSTRACTFILEENGINEITERATOR_CURRENTFILEINFO)
 {
   QAbstractFileEngineIterator *obj = static_cast<QAbstractFileEngineIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -96,9 +94,7 @@ HB_FUNC_STATIC(QABSTRACTFILEENGINEITERATOR_CURRENTFILEINFO)
   }
 }
 
-/*
-virtual QString currentFileName() const = 0
-*/
+// virtual QString currentFileName() const = 0
 HB_FUNC_STATIC(QABSTRACTFILEENGINEITERATOR_CURRENTFILENAME)
 {
   QAbstractFileEngineIterator *obj = static_cast<QAbstractFileEngineIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -120,9 +116,7 @@ HB_FUNC_STATIC(QABSTRACTFILEENGINEITERATOR_CURRENTFILENAME)
   }
 }
 
-/*
-QString currentFilePath() const
-*/
+// QString currentFilePath() const
 HB_FUNC_STATIC(QABSTRACTFILEENGINEITERATOR_CURRENTFILEPATH)
 {
   QAbstractFileEngineIterator *obj = static_cast<QAbstractFileEngineIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -144,9 +138,7 @@ HB_FUNC_STATIC(QABSTRACTFILEENGINEITERATOR_CURRENTFILEPATH)
   }
 }
 
-/*
-QDir::Filters filters() const
-*/
+// QDir::Filters filters() const
 HB_FUNC_STATIC(QABSTRACTFILEENGINEITERATOR_FILTERS)
 {
   QAbstractFileEngineIterator *obj = static_cast<QAbstractFileEngineIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -168,9 +160,7 @@ HB_FUNC_STATIC(QABSTRACTFILEENGINEITERATOR_FILTERS)
   }
 }
 
-/*
-virtual bool hasNext() const = 0
-*/
+// virtual bool hasNext() const = 0
 HB_FUNC_STATIC(QABSTRACTFILEENGINEITERATOR_HASNEXT)
 {
   QAbstractFileEngineIterator *obj = static_cast<QAbstractFileEngineIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -192,9 +182,7 @@ HB_FUNC_STATIC(QABSTRACTFILEENGINEITERATOR_HASNEXT)
   }
 }
 
-/*
-QStringList nameFilters() const
-*/
+// QStringList nameFilters() const
 HB_FUNC_STATIC(QABSTRACTFILEENGINEITERATOR_NAMEFILTERS)
 {
   QAbstractFileEngineIterator *obj = static_cast<QAbstractFileEngineIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -216,9 +204,7 @@ HB_FUNC_STATIC(QABSTRACTFILEENGINEITERATOR_NAMEFILTERS)
   }
 }
 
-/*
-virtual QString next() = 0
-*/
+// virtual QString next() = 0
 HB_FUNC_STATIC(QABSTRACTFILEENGINEITERATOR_NEXT)
 {
   QAbstractFileEngineIterator *obj = static_cast<QAbstractFileEngineIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -240,9 +226,7 @@ HB_FUNC_STATIC(QABSTRACTFILEENGINEITERATOR_NEXT)
   }
 }
 
-/*
-QString path() const
-*/
+// QString path() const
 HB_FUNC_STATIC(QABSTRACTFILEENGINEITERATOR_PATH)
 {
   QAbstractFileEngineIterator *obj = static_cast<QAbstractFileEngineIterator *>(Qt4xHb::itemGetPtrStackSelfItem());

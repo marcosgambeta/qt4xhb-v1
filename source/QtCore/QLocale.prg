@@ -139,27 +139,27 @@ HB_FUNC_STATIC(QLOCALE_NEW)
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    // QLocale(const QString &name)
+    // QLocale( const QString & name )
     QLocale *obj = new QLocale(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    // QLocale(QLocale::Language language, QLocale::Country country = QLocale::AnyCountry)
+    // QLocale( QLocale::Language language, QLocale::Country country = QLocale::AnyCountry )
     QLocale *obj = new QLocale((QLocale::Language)hb_parni(1),
                                HB_ISNIL(2) ? (QLocale::Country)QLocale::AnyCountry : (QLocale::Country)hb_parni(2));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
-    // QLocale(QLocale::Language language, QLocale::Script script, QLocale::Country country)
+    // QLocale( QLocale::Language language, QLocale::Script script, QLocale::Country country )
     QLocale *obj =
         new QLocale((QLocale::Language)hb_parni(1), (QLocale::Script)hb_parni(2), (QLocale::Country)hb_parni(3));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQLOCALE(1))
   {
-    // QLocale(const QLocale &other)
+    // QLocale( const QLocale & other )
     QLocale *obj = new QLocale(*PQLOCALE(1));
     Qt4xHb::returnNewObject(obj, true);
   }
@@ -169,9 +169,7 @@ HB_FUNC_STATIC(QLOCALE_NEW)
   }
 }
 
-/*
-QString amText() const
-*/
+// QString amText() const
 HB_FUNC_STATIC(QLOCALE_AMTEXT)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -193,9 +191,7 @@ HB_FUNC_STATIC(QLOCALE_AMTEXT)
   }
 }
 
-/*
-QString bcp47Name() const
-*/
+// QString bcp47Name() const
 HB_FUNC_STATIC(QLOCALE_BCP47NAME)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -217,9 +213,7 @@ HB_FUNC_STATIC(QLOCALE_BCP47NAME)
   }
 }
 
-/*
-QLocale::Country country() const
-*/
+// QLocale::Country country() const
 HB_FUNC_STATIC(QLOCALE_COUNTRY)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -241,9 +235,7 @@ HB_FUNC_STATIC(QLOCALE_COUNTRY)
   }
 }
 
-/*
-QString createSeparatedList(const QStringList &list) const
-*/
+// QString createSeparatedList( const QStringList & list ) const
 HB_FUNC_STATIC(QLOCALE_CREATESEPARATEDLIST)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -265,9 +257,7 @@ HB_FUNC_STATIC(QLOCALE_CREATESEPARATEDLIST)
   }
 }
 
-/*
-QString currencySymbol(QLocale::CurrencySymbolFormat format = QLocale::CurrencySymbol) const
-*/
+// QString currencySymbol( QLocale::CurrencySymbolFormat format = QLocale::CurrencySymbol ) const
 HB_FUNC_STATIC(QLOCALE_CURRENCYSYMBOL)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -290,9 +280,7 @@ HB_FUNC_STATIC(QLOCALE_CURRENCYSYMBOL)
   }
 }
 
-/*
-QString dateFormat(QLocale::FormatType format = QLocale::LongFormat) const
-*/
+// QString dateFormat( QLocale::FormatType format = QLocale::LongFormat ) const
 HB_FUNC_STATIC(QLOCALE_DATEFORMAT)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -315,9 +303,7 @@ HB_FUNC_STATIC(QLOCALE_DATEFORMAT)
   }
 }
 
-/*
-QString dateTimeFormat(QLocale::FormatType format = QLocale::LongFormat) const
-*/
+// QString dateTimeFormat( QLocale::FormatType format = QLocale::LongFormat ) const
 HB_FUNC_STATIC(QLOCALE_DATETIMEFORMAT)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -340,9 +326,7 @@ HB_FUNC_STATIC(QLOCALE_DATETIMEFORMAT)
   }
 }
 
-/*
-QString dayName(int day, QLocale::FormatType type = QLocale::LongFormat) const
-*/
+// QString dayName( int day, QLocale::FormatType type = QLocale::LongFormat ) const
 HB_FUNC_STATIC(QLOCALE_DAYNAME)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -365,9 +349,7 @@ HB_FUNC_STATIC(QLOCALE_DAYNAME)
   }
 }
 
-/*
-QChar decimalPoint() const
-*/
+// QChar decimalPoint() const
 HB_FUNC_STATIC(QLOCALE_DECIMALPOINT)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -390,9 +372,7 @@ HB_FUNC_STATIC(QLOCALE_DECIMALPOINT)
   }
 }
 
-/*
-QChar exponential() const
-*/
+// QChar exponential() const
 HB_FUNC_STATIC(QLOCALE_EXPONENTIAL)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -415,9 +395,7 @@ HB_FUNC_STATIC(QLOCALE_EXPONENTIAL)
   }
 }
 
-/*
-Qt::DayOfWeek firstDayOfWeek() const
-*/
+// Qt::DayOfWeek firstDayOfWeek() const
 HB_FUNC_STATIC(QLOCALE_FIRSTDAYOFWEEK)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -439,9 +417,7 @@ HB_FUNC_STATIC(QLOCALE_FIRSTDAYOFWEEK)
   }
 }
 
-/*
-QChar groupSeparator() const
-*/
+// QChar groupSeparator() const
 HB_FUNC_STATIC(QLOCALE_GROUPSEPARATOR)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -464,9 +440,7 @@ HB_FUNC_STATIC(QLOCALE_GROUPSEPARATOR)
   }
 }
 
-/*
-QLocale::Language language() const
-*/
+// QLocale::Language language() const
 HB_FUNC_STATIC(QLOCALE_LANGUAGE)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -488,9 +462,7 @@ HB_FUNC_STATIC(QLOCALE_LANGUAGE)
   }
 }
 
-/*
-QLocale::MeasurementSystem measurementSystem() const
-*/
+// QLocale::MeasurementSystem measurementSystem() const
 HB_FUNC_STATIC(QLOCALE_MEASUREMENTSYSTEM)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -512,9 +484,7 @@ HB_FUNC_STATIC(QLOCALE_MEASUREMENTSYSTEM)
   }
 }
 
-/*
-QString monthName(int month, QLocale::FormatType type = QLocale::LongFormat) const
-*/
+// QString monthName( int month, QLocale::FormatType type = QLocale::LongFormat ) const
 HB_FUNC_STATIC(QLOCALE_MONTHNAME)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -537,9 +507,7 @@ HB_FUNC_STATIC(QLOCALE_MONTHNAME)
   }
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QLOCALE_NAME)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -561,9 +529,7 @@ HB_FUNC_STATIC(QLOCALE_NAME)
   }
 }
 
-/*
-QString nativeCountryName() const
-*/
+// QString nativeCountryName() const
 HB_FUNC_STATIC(QLOCALE_NATIVECOUNTRYNAME)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -585,9 +551,7 @@ HB_FUNC_STATIC(QLOCALE_NATIVECOUNTRYNAME)
   }
 }
 
-/*
-QString nativeLanguageName() const
-*/
+// QString nativeLanguageName() const
 HB_FUNC_STATIC(QLOCALE_NATIVELANGUAGENAME)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -609,9 +573,7 @@ HB_FUNC_STATIC(QLOCALE_NATIVELANGUAGENAME)
   }
 }
 
-/*
-QChar negativeSign() const
-*/
+// QChar negativeSign() const
 HB_FUNC_STATIC(QLOCALE_NEGATIVESIGN)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -634,9 +596,7 @@ HB_FUNC_STATIC(QLOCALE_NEGATIVESIGN)
   }
 }
 
-/*
-QLocale::NumberOptions numberOptions() const
-*/
+// QLocale::NumberOptions numberOptions() const
 HB_FUNC_STATIC(QLOCALE_NUMBEROPTIONS)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -658,9 +618,7 @@ HB_FUNC_STATIC(QLOCALE_NUMBEROPTIONS)
   }
 }
 
-/*
-QChar percent() const
-*/
+// QChar percent() const
 HB_FUNC_STATIC(QLOCALE_PERCENT)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -683,9 +641,7 @@ HB_FUNC_STATIC(QLOCALE_PERCENT)
   }
 }
 
-/*
-QString pmText() const
-*/
+// QString pmText() const
 HB_FUNC_STATIC(QLOCALE_PMTEXT)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -707,9 +663,7 @@ HB_FUNC_STATIC(QLOCALE_PMTEXT)
   }
 }
 
-/*
-QChar positiveSign() const
-*/
+// QChar positiveSign() const
 HB_FUNC_STATIC(QLOCALE_POSITIVESIGN)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -736,9 +690,7 @@ HB_FUNC_STATIC(QLOCALE_QUOTESTRING)
 {
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    /*
-    QString quoteString(const QString &str, QLocale::QuotationStyle style = QLocale::StandardQuotation) const
-    */
+    // QString quoteString( const QString & str, QLocale::QuotationStyle style = QLocale::StandardQuotation ) const
     QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -749,9 +701,7 @@ HB_FUNC_STATIC(QLOCALE_QUOTESTRING)
   }
   else if (ISBETWEEN(1, 2) && ISQSTRINGREF(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    /*
-    QString quoteString(const QStringRef &str, QLocale::QuotationStyle style = QLocale::StandardQuotation) const
-    */
+    // QString quoteString( const QStringRef & str, QLocale::QuotationStyle style = QLocale::StandardQuotation ) const
     QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -766,9 +716,7 @@ HB_FUNC_STATIC(QLOCALE_QUOTESTRING)
   }
 }
 
-/*
-QLocale::Script script() const
-*/
+// QLocale::Script script() const
 HB_FUNC_STATIC(QLOCALE_SCRIPT)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -790,9 +738,7 @@ HB_FUNC_STATIC(QLOCALE_SCRIPT)
   }
 }
 
-/*
-void setNumberOptions(QLocale::NumberOptions options)
-*/
+// void setNumberOptions( QLocale::NumberOptions options )
 HB_FUNC_STATIC(QLOCALE_SETNUMBEROPTIONS)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -816,9 +762,7 @@ HB_FUNC_STATIC(QLOCALE_SETNUMBEROPTIONS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString standaloneDayName(int day, QLocale::FormatType type = QLocale::LongFormat) const
-*/
+// QString standaloneDayName( int day, QLocale::FormatType type = QLocale::LongFormat ) const
 HB_FUNC_STATIC(QLOCALE_STANDALONEDAYNAME)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -841,9 +785,7 @@ HB_FUNC_STATIC(QLOCALE_STANDALONEDAYNAME)
   }
 }
 
-/*
-QString standaloneMonthName(int month, QLocale::FormatType type = QLocale::LongFormat) const
-*/
+// QString standaloneMonthName( int month, QLocale::FormatType type = QLocale::LongFormat ) const
 HB_FUNC_STATIC(QLOCALE_STANDALONEMONTHNAME)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -866,9 +808,7 @@ HB_FUNC_STATIC(QLOCALE_STANDALONEMONTHNAME)
   }
 }
 
-/*
-Qt::LayoutDirection textDirection() const
-*/
+// Qt::LayoutDirection textDirection() const
 HB_FUNC_STATIC(QLOCALE_TEXTDIRECTION)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -890,9 +830,7 @@ HB_FUNC_STATIC(QLOCALE_TEXTDIRECTION)
   }
 }
 
-/*
-QString timeFormat(QLocale::FormatType format = QLocale::LongFormat) const
-*/
+// QString timeFormat( QLocale::FormatType format = QLocale::LongFormat ) const
 HB_FUNC_STATIC(QLOCALE_TIMEFORMAT)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -915,9 +853,7 @@ HB_FUNC_STATIC(QLOCALE_TIMEFORMAT)
   }
 }
 
-/*
-QString toCurrencyString(qlonglong value, const QString &symbol = QString()) const
-*/
+// QString toCurrencyString( qlonglong value, const QString & symbol = QString() ) const
 HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING1)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -939,9 +875,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING1)
   }
 }
 
-/*
-QString toCurrencyString(short value, const QString &symbol = QString()) const
-*/
+// QString toCurrencyString( short value, const QString & symbol = QString() ) const
 HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING2)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -963,9 +897,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING2)
   }
 }
 
-/*
-QString toCurrencyString(ushort value, const QString &symbol = QString()) const
-*/
+// QString toCurrencyString( ushort value, const QString & symbol = QString() ) const
 HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING3)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -987,9 +919,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING3)
   }
 }
 
-/*
-QString toCurrencyString(int value, const QString &symbol = QString()) const
-*/
+// QString toCurrencyString( int value, const QString & symbol = QString() ) const
 HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING4)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1011,9 +941,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING4)
   }
 }
 
-/*
-QString toCurrencyString(uint value, const QString &symbol = QString()) const
-*/
+// QString toCurrencyString( uint value, const QString & symbol = QString() ) const
 HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING5)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1035,9 +963,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING5)
   }
 }
 
-/*
-QString toCurrencyString(float value, const QString &symbol = QString()) const
-*/
+// QString toCurrencyString( float value, const QString & symbol = QString() ) const
 HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING6)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1059,9 +985,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING6)
   }
 }
 
-/*
-QString toCurrencyString(qulonglong value, const QString &symbol = QString()) const
-*/
+// QString toCurrencyString( qulonglong value, const QString & symbol = QString() ) const
 HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING7)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1083,9 +1007,7 @@ HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING7)
   }
 }
 
-/*
-QString toCurrencyString(double value, const QString &symbol = QString()) const
-*/
+// QString toCurrencyString( double value, const QString & symbol = QString() ) const
 HB_FUNC_STATIC(QLOCALE_TOCURRENCYSTRING8)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1115,9 +1037,7 @@ HB_FUNC_STATIC(QLOCALE_TODATE)
 {
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    /*
-    QDate toDate(const QString &string, QLocale::FormatType format = QLocale::LongFormat) const
-    */
+    // QDate toDate( const QString & string, QLocale::FormatType format = QLocale::LongFormat ) const
     QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -1129,9 +1049,7 @@ HB_FUNC_STATIC(QLOCALE_TODATE)
   }
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
-    /*
-    QDate toDate(const QString &string, const QString &format) const
-    */
+    // QDate toDate( const QString & string, const QString & format ) const
     QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -1150,9 +1068,7 @@ HB_FUNC_STATIC(QLOCALE_TODATETIME)
 {
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    /*
-    QDateTime toDateTime(const QString &string, QLocale::FormatType format = QLocale::LongFormat) const
-    */
+    // QDateTime toDateTime( const QString & string, QLocale::FormatType format = QLocale::LongFormat ) const
     QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -1164,9 +1080,7 @@ HB_FUNC_STATIC(QLOCALE_TODATETIME)
   }
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
-    /*
-    QDateTime toDateTime(const QString &string, const QString &format) const
-    */
+    // QDateTime toDateTime( const QString & string, const QString & format ) const
     QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -1181,9 +1095,7 @@ HB_FUNC_STATIC(QLOCALE_TODATETIME)
   }
 }
 
-/*
-double toDouble(const QString &s, bool *ok = 0) const
-*/
+// double toDouble( const QString & s, bool * ok = 0 ) const
 HB_FUNC_STATIC(QLOCALE_TODOUBLE)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1207,9 +1119,7 @@ HB_FUNC_STATIC(QLOCALE_TODOUBLE)
   }
 }
 
-/*
-float toFloat(const QString &s, bool *ok = 0) const
-*/
+// float toFloat( const QString & s, bool * ok = 0 ) const
 HB_FUNC_STATIC(QLOCALE_TOFLOAT)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1233,9 +1143,7 @@ HB_FUNC_STATIC(QLOCALE_TOFLOAT)
   }
 }
 
-/*
-int toInt(const QString &s, bool *ok = 0, int base = 0) const
-*/
+// int toInt( const QString & s, bool * ok = 0, int base = 0 ) const
 HB_FUNC_STATIC(QLOCALE_TOINT)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1259,9 +1167,7 @@ HB_FUNC_STATIC(QLOCALE_TOINT)
   }
 }
 
-/*
-qlonglong toLongLong(const QString &s, bool *ok = 0, int base = 0) const
-*/
+// qlonglong toLongLong( const QString & s, bool * ok = 0, int base = 0 ) const
 HB_FUNC_STATIC(QLOCALE_TOLONGLONG)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1285,9 +1191,7 @@ HB_FUNC_STATIC(QLOCALE_TOLONGLONG)
   }
 }
 
-/*
-QString toLower(const QString &str) const
-*/
+// QString toLower( const QString & str ) const
 HB_FUNC_STATIC(QLOCALE_TOLOWER)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1309,9 +1213,7 @@ HB_FUNC_STATIC(QLOCALE_TOLOWER)
   }
 }
 
-/*
-short toShort(const QString &s, bool *ok = 0, int base = 0) const
-*/
+// short toShort( const QString & s, bool * ok = 0, int base = 0 ) const
 HB_FUNC_STATIC(QLOCALE_TOSHORT)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1335,9 +1237,7 @@ HB_FUNC_STATIC(QLOCALE_TOSHORT)
   }
 }
 
-/*
-QString toString(qlonglong i) const
-*/
+// QString toString( qlonglong i ) const
 HB_FUNC_STATIC(QLOCALE_TOSTRING1)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1359,9 +1259,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING1)
   }
 }
 
-/*
-QString toString(const QDate &date, const QString &format) const
-*/
+// QString toString( const QDate & date, const QString & format ) const
 HB_FUNC_STATIC(QLOCALE_TOSTRING2)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1383,9 +1281,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING2)
   }
 }
 
-/*
-QString toString(const QDate &date, QLocale::FormatType format = QLocale::LongFormat) const
-*/
+// QString toString( const QDate & date, QLocale::FormatType format = QLocale::LongFormat ) const
 HB_FUNC_STATIC(QLOCALE_TOSTRING3)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1408,9 +1304,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING3)
   }
 }
 
-/*
-QString toString(const QTime &time, const QString &format) const
-*/
+// QString toString( const QTime & time, const QString & format ) const
 HB_FUNC_STATIC(QLOCALE_TOSTRING4)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1432,9 +1326,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING4)
   }
 }
 
-/*
-QString toString(const QTime &time, QLocale::FormatType format = QLocale::LongFormat) const
-*/
+// QString toString( const QTime & time, QLocale::FormatType format = QLocale::LongFormat ) const
 HB_FUNC_STATIC(QLOCALE_TOSTRING5)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1457,9 +1349,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING5)
   }
 }
 
-/*
-QString toString(const QDateTime &dateTime, QLocale::FormatType format = QLocale::LongFormat) const
-*/
+// QString toString( const QDateTime & dateTime, QLocale::FormatType format = QLocale::LongFormat ) const
 HB_FUNC_STATIC(QLOCALE_TOSTRING6)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1482,9 +1372,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING6)
   }
 }
 
-/*
-QString toString(const QDateTime &dateTime, const QString &format) const
-*/
+// QString toString( const QDateTime & dateTime, const QString & format ) const
 HB_FUNC_STATIC(QLOCALE_TOSTRING7)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1506,9 +1394,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING7)
   }
 }
 
-/*
-QString toString(short i) const
-*/
+// QString toString( short i ) const
 HB_FUNC_STATIC(QLOCALE_TOSTRING8)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1530,9 +1416,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING8)
   }
 }
 
-/*
-QString toString(ushort i) const
-*/
+// QString toString( ushort i ) const
 HB_FUNC_STATIC(QLOCALE_TOSTRING9)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1554,9 +1438,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING9)
   }
 }
 
-/*
-QString toString(int i) const
-*/
+// QString toString( int i ) const
 HB_FUNC_STATIC(QLOCALE_TOSTRING10)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1578,9 +1460,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING10)
   }
 }
 
-/*
-QString toString(uint i) const
-*/
+// QString toString( uint i ) const
 HB_FUNC_STATIC(QLOCALE_TOSTRING11)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1602,9 +1482,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING11)
   }
 }
 
-/*
-QString toString(float i, char f = 'g', int prec = 6) const
-*/
+// QString toString( float i, char f = 'g', int prec = 6 ) const
 HB_FUNC_STATIC(QLOCALE_TOSTRING12)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1626,9 +1504,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING12)
   }
 }
 
-/*
-QString toString(qulonglong i) const
-*/
+// QString toString( qulonglong i ) const
 HB_FUNC_STATIC(QLOCALE_TOSTRING13)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1650,9 +1526,7 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING13)
   }
 }
 
-/*
-QString toString(double i, char f = 'g', int prec = 6) const
-*/
+// QString toString( double i, char f = 'g', int prec = 6 ) const
 HB_FUNC_STATIC(QLOCALE_TOSTRING14)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1682,9 +1556,7 @@ HB_FUNC_STATIC(QLOCALE_TOTIME)
 {
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    /*
-    QTime toTime(const QString &string, QLocale::FormatType format = QLocale::LongFormat) const
-    */
+    // QTime toTime( const QString & string, QLocale::FormatType format = QLocale::LongFormat ) const
     QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -1696,9 +1568,7 @@ HB_FUNC_STATIC(QLOCALE_TOTIME)
   }
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
-    /*
-    QTime toTime(const QString &string, const QString &format) const
-    */
+    // QTime toTime( const QString & string, const QString & format ) const
     QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -1713,9 +1583,7 @@ HB_FUNC_STATIC(QLOCALE_TOTIME)
   }
 }
 
-/*
-uint toUInt(const QString &s, bool *ok = 0, int base = 0) const
-*/
+// uint toUInt( const QString & s, bool * ok = 0, int base = 0 ) const
 HB_FUNC_STATIC(QLOCALE_TOUINT)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1739,9 +1607,7 @@ HB_FUNC_STATIC(QLOCALE_TOUINT)
   }
 }
 
-/*
-qlonglong toULongLong(const QString &s, bool *ok = 0, int base = 0) const
-*/
+// qlonglong toULongLong( const QString & s, bool * ok = 0, int base = 0 ) const
 HB_FUNC_STATIC(QLOCALE_TOULONGLONG)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1765,9 +1631,7 @@ HB_FUNC_STATIC(QLOCALE_TOULONGLONG)
   }
 }
 
-/*
-ushort toUShort(const QString &s, bool *ok = 0, int base = 0) const
-*/
+// ushort toUShort( const QString & s, bool * ok = 0, int base = 0 ) const
 HB_FUNC_STATIC(QLOCALE_TOUSHORT)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1791,9 +1655,7 @@ HB_FUNC_STATIC(QLOCALE_TOUSHORT)
   }
 }
 
-/*
-QString toUpper(const QString &str) const
-*/
+// QString toUpper( const QString & str ) const
 HB_FUNC_STATIC(QLOCALE_TOUPPER)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1815,9 +1677,7 @@ HB_FUNC_STATIC(QLOCALE_TOUPPER)
   }
 }
 
-/*
-QStringList uiLanguages() const
-*/
+// QStringList uiLanguages() const
 HB_FUNC_STATIC(QLOCALE_UILANGUAGES)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1839,9 +1699,7 @@ HB_FUNC_STATIC(QLOCALE_UILANGUAGES)
   }
 }
 
-/*
-QList<Qt::DayOfWeek> weekdays() const
-*/
+// QList<Qt::DayOfWeek> weekdays() const
 HB_FUNC_STATIC(QLOCALE_WEEKDAYS)
 {
   QLocale *obj = static_cast<QLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1854,10 +1712,9 @@ HB_FUNC_STATIC(QLOCALE_WEEKDAYS)
 #endif
       QList<Qt::DayOfWeek> list = obj->weekdays();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      const int count = list.count();
-      for (int i = 0; i < count; i++)
+      for (int i = 0; i < list.count(); i++)
       {
-        PHB_ITEM pItem = hb_itemPutNI(NULL, static_cast<int>(list[i]));
+        PHB_ITEM pItem = hb_itemPutNI(NULL, (int)list[i]);
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }
@@ -1872,9 +1729,7 @@ HB_FUNC_STATIC(QLOCALE_WEEKDAYS)
   }
 }
 
-/*
-static QLocale c()
-*/
+// static QLocale c()
 HB_FUNC_STATIC(QLOCALE_C)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1892,9 +1747,7 @@ HB_FUNC_STATIC(QLOCALE_C)
 #endif
 }
 
-/*
-static QString countryToString(QLocale::Country country)
-*/
+// static QString countryToString( QLocale::Country country )
 HB_FUNC_STATIC(QLOCALE_COUNTRYTOSTRING)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1911,9 +1764,7 @@ HB_FUNC_STATIC(QLOCALE_COUNTRYTOSTRING)
 #endif
 }
 
-/*
-static QString languageToString(QLocale::Language language)
-*/
+// static QString languageToString( QLocale::Language language )
 HB_FUNC_STATIC(QLOCALE_LANGUAGETOSTRING)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1930,9 +1781,7 @@ HB_FUNC_STATIC(QLOCALE_LANGUAGETOSTRING)
 #endif
 }
 
-/*
-static QList<QLocale> matchingLocales(QLocale::Language language, QLocale::Script script, QLocale::Country country)
-*/
+// static QList<QLocale> matchingLocales( QLocale::Language language, QLocale::Script script, QLocale::Country country )
 HB_FUNC_STATIC(QLOCALE_MATCHINGLOCALES)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1945,18 +1794,19 @@ HB_FUNC_STATIC(QLOCALE_MATCHINGLOCALES)
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if (pDynSym != NULL)
     {
-      const int count = list.count();
-      for (int i = 0; i < count; i++)
+      for (int i = 0; i < list.count(); i++)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
         PHB_ITEM pObject = hb_itemNew(NULL);
         hb_itemCopy(pObject, hb_stackReturnItem());
-        PHB_ITEM pItem = hb_itemPutPtr(NULL, new QLocale(list[i]));
+        PHB_ITEM pItem = hb_itemNew(NULL);
+        hb_itemPutPtr(pItem, static_cast<QLocale *>(new QLocale(list[i])));
         hb_objSendMsg(pObject, "_POINTER", 1, pItem);
         hb_itemRelease(pItem);
-        PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+        PHB_ITEM pDestroy = hb_itemNew(NULL);
+        hb_itemPutL(pDestroy, true);
         hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
         hb_itemRelease(pDestroy);
         hb_arrayAddForward(pArray, pObject);
@@ -1977,9 +1827,7 @@ HB_FUNC_STATIC(QLOCALE_MATCHINGLOCALES)
 #endif
 }
 
-/*
-static QString scriptToString(QLocale::Script script)
-*/
+// static QString scriptToString( QLocale::Script script )
 HB_FUNC_STATIC(QLOCALE_SCRIPTTOSTRING)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1996,9 +1844,7 @@ HB_FUNC_STATIC(QLOCALE_SCRIPTTOSTRING)
 #endif
 }
 
-/*
-static void setDefault(const QLocale &locale)
-*/
+// static void setDefault( const QLocale & locale )
 HB_FUNC_STATIC(QLOCALE_SETDEFAULT)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2017,9 +1863,7 @@ HB_FUNC_STATIC(QLOCALE_SETDEFAULT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static QLocale system()
-*/
+// static QLocale system()
 HB_FUNC_STATIC(QLOCALE_SYSTEM)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

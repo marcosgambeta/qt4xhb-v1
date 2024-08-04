@@ -50,7 +50,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-// QSystemLocale()
+    // QSystemLocale()
 HB_FUNC_STATIC(QSYSTEMLOCALE_NEW)
 {
   if (ISNUMPAR(0))
@@ -64,9 +64,7 @@ HB_FUNC_STATIC(QSYSTEMLOCALE_NEW)
   }
 }
 
-/*
-virtual QLocale fallbackLocale() const
-*/
+// virtual QLocale fallbackLocale() const
 HB_FUNC_STATIC(QSYSTEMLOCALE_FALLBACKLOCALE)
 {
   QSystemLocale *obj = static_cast<QSystemLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -89,9 +87,7 @@ HB_FUNC_STATIC(QSYSTEMLOCALE_FALLBACKLOCALE)
   }
 }
 
-/*
-virtual QVariant query(QSystemLocale::QueryType type, QVariant in) const
-*/
+// virtual QVariant query( QSystemLocale::QueryType type, QVariant in ) const
 HB_FUNC_STATIC(QSYSTEMLOCALE_QUERY)
 {
   QSystemLocale *obj = static_cast<QSystemLocale *>(Qt4xHb::itemGetPtrStackSelfItem());

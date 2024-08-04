@@ -71,9 +71,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QVariant currentValue() const
-*/
+// QVariant currentValue() const
 HB_FUNC_STATIC(QVARIANTANIMATION_CURRENTVALUE)
 {
   QVariantAnimation *obj = qobject_cast<QVariantAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -96,9 +94,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_CURRENTVALUE)
   }
 }
 
-/*
-QEasingCurve easingCurve() const
-*/
+// QEasingCurve easingCurve() const
 HB_FUNC_STATIC(QVARIANTANIMATION_EASINGCURVE)
 {
   QVariantAnimation *obj = qobject_cast<QVariantAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -121,9 +117,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_EASINGCURVE)
   }
 }
 
-/*
-QVariant endValue() const
-*/
+// QVariant endValue() const
 HB_FUNC_STATIC(QVARIANTANIMATION_ENDVALUE)
 {
   QVariantAnimation *obj = qobject_cast<QVariantAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -146,9 +140,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_ENDVALUE)
   }
 }
 
-/*
-QVariant keyValueAt(qreal step) const
-*/
+// QVariant keyValueAt( qreal step ) const
 HB_FUNC_STATIC(QVARIANTANIMATION_KEYVALUEAT)
 {
   QVariantAnimation *obj = qobject_cast<QVariantAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -171,9 +163,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_KEYVALUEAT)
   }
 }
 
-/*
-void setDuration(int msecs)
-*/
+// void setDuration( int msecs )
 HB_FUNC_STATIC(QVARIANTANIMATION_SETDURATION)
 {
   QVariantAnimation *obj = qobject_cast<QVariantAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -197,9 +187,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_SETDURATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setEasingCurve(const QEasingCurve &easing)
-*/
+// void setEasingCurve( const QEasingCurve & easing )
 HB_FUNC_STATIC(QVARIANTANIMATION_SETEASINGCURVE)
 {
   QVariantAnimation *obj = qobject_cast<QVariantAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -223,9 +211,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_SETEASINGCURVE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setEndValue(const QVariant &value)
-*/
+// void setEndValue( const QVariant & value )
 HB_FUNC_STATIC(QVARIANTANIMATION_SETENDVALUE)
 {
   QVariantAnimation *obj = qobject_cast<QVariantAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -249,9 +235,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_SETENDVALUE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setKeyValueAt(qreal step, const QVariant &value)
-*/
+// void setKeyValueAt( qreal step, const QVariant & value )
 HB_FUNC_STATIC(QVARIANTANIMATION_SETKEYVALUEAT)
 {
   QVariantAnimation *obj = qobject_cast<QVariantAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -275,9 +259,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_SETKEYVALUEAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setStartValue(const QVariant &value)
-*/
+// void setStartValue( const QVariant & value )
 HB_FUNC_STATIC(QVARIANTANIMATION_SETSTARTVALUE)
 {
   QVariantAnimation *obj = qobject_cast<QVariantAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -301,9 +283,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_SETSTARTVALUE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QVariant startValue() const
-*/
+// QVariant startValue() const
 HB_FUNC_STATIC(QVARIANTANIMATION_STARTVALUE)
 {
   QVariantAnimation *obj = qobject_cast<QVariantAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());

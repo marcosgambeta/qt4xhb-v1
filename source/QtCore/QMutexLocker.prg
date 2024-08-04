@@ -51,7 +51,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-// QMutexLocker(QMutex *mutex)
+    // QMutexLocker( QMutex * mutex )
 HB_FUNC_STATIC(QMUTEXLOCKER_NEW)
 {
   if (ISNUMPAR(1) && ISQMUTEX(1))
@@ -81,9 +81,7 @@ HB_FUNC_STATIC(QMUTEXLOCKER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QMutex *mutex() const
-*/
+// QMutex * mutex() const
 HB_FUNC_STATIC(QMUTEXLOCKER_MUTEX)
 {
   QMutexLocker *obj = static_cast<QMutexLocker *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -106,9 +104,7 @@ HB_FUNC_STATIC(QMUTEXLOCKER_MUTEX)
   }
 }
 
-/*
-void relock()
-*/
+// void relock()
 HB_FUNC_STATIC(QMUTEXLOCKER_RELOCK)
 {
   QMutexLocker *obj = static_cast<QMutexLocker *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -132,9 +128,7 @@ HB_FUNC_STATIC(QMUTEXLOCKER_RELOCK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void unlock()
-*/
+// void unlock()
 HB_FUNC_STATIC(QMUTEXLOCKER_UNLOCK)
 {
   QMutexLocker *obj = static_cast<QMutexLocker *>(Qt4xHb::itemGetPtrStackSelfItem());

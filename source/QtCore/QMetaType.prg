@@ -54,9 +54,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    static int registerTypedef(const char *typeName, int aliasId)
-    */
+    // static int registerTypedef( const char * typeName, int aliasId )
 HB_FUNC_STATIC(QMETATYPE_REGISTERTYPEDEF)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -73,9 +71,7 @@ HB_FUNC_STATIC(QMETATYPE_REGISTERTYPEDEF)
 #endif
 }
 
-/*
-static int type(const char *typeName)
-*/
+// static int type( const char * typeName )
 HB_FUNC_STATIC(QMETATYPE_TYPE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -92,9 +88,7 @@ HB_FUNC_STATIC(QMETATYPE_TYPE)
 #endif
 }
 
-/*
-static const char *typeName(int type)
-*/
+// static const char * typeName( int type )
 HB_FUNC_STATIC(QMETATYPE_TYPENAME)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -111,9 +105,7 @@ HB_FUNC_STATIC(QMETATYPE_TYPENAME)
 #endif
 }
 
-/*
-static bool isRegistered(int type)
-*/
+// static bool isRegistered( int type )
 HB_FUNC_STATIC(QMETATYPE_ISREGISTERED)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -130,9 +122,7 @@ HB_FUNC_STATIC(QMETATYPE_ISREGISTERED)
 #endif
 }
 
-/*
-static void *construct(int type, const void *copy = 0)
-*/
+// static void * construct( int type, const void * copy = 0 )
 HB_FUNC_STATIC(QMETATYPE_CONSTRUCT)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -150,9 +140,7 @@ HB_FUNC_STATIC(QMETATYPE_CONSTRUCT)
 #endif
 }
 
-/*
-static void destroy(int type, void *data)
-*/
+// static void destroy( int type, void * data )
 HB_FUNC_STATIC(QMETATYPE_DESTROY)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -171,9 +159,7 @@ HB_FUNC_STATIC(QMETATYPE_DESTROY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void unregisterType(const char *typeName)
-*/
+// static void unregisterType( const char * typeName )
 HB_FUNC_STATIC(QMETATYPE_UNREGISTERTYPE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -192,9 +178,7 @@ HB_FUNC_STATIC(QMETATYPE_UNREGISTERTYPE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static bool save(QDataStream &stream, int type, const void *data)
-*/
+// static bool save( QDataStream & stream, int type, const void * data )
 HB_FUNC_STATIC(QMETATYPE_SAVE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -211,9 +195,7 @@ HB_FUNC_STATIC(QMETATYPE_SAVE)
 #endif
 }
 
-/*
-static bool load(QDataStream &stream, int type, void *data)
-*/
+// static bool load( QDataStream & stream, int type, void * data )
 HB_FUNC_STATIC(QMETATYPE_LOAD)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -49,7 +49,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-// QWaitCondition()
+    // QWaitCondition()
 HB_FUNC_STATIC(QWAITCONDITION_NEW)
 {
   if (ISNUMPAR(0))
@@ -79,9 +79,7 @@ HB_FUNC_STATIC(QWAITCONDITION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void wakeAll()
-*/
+// void wakeAll()
 HB_FUNC_STATIC(QWAITCONDITION_WAKEALL)
 {
   QWaitCondition *obj = static_cast<QWaitCondition *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -105,9 +103,7 @@ HB_FUNC_STATIC(QWAITCONDITION_WAKEALL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void wakeOne()
-*/
+// void wakeOne()
 HB_FUNC_STATIC(QWAITCONDITION_WAKEONE)
 {
   QWaitCondition *obj = static_cast<QWaitCondition *>(Qt4xHb::itemGetPtrStackSelfItem());

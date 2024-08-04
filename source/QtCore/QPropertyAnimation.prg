@@ -50,13 +50,13 @@ HB_FUNC_STATIC(QPROPERTYANIMATION_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    // QPropertyAnimation(QObject *parent = 0)
+    // QPropertyAnimation( QObject * parent = 0 )
     QPropertyAnimation *obj = new QPropertyAnimation(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else if (ISBETWEEN(2, 3) && ISQOBJECT(1) && ISQBYTEARRAY(2) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
-    // QPropertyAnimation(QObject *target, const QByteArray &propertyName, QObject *parent = 0)
+    // QPropertyAnimation( QObject * target, const QByteArray & propertyName, QObject * parent = 0 )
     QPropertyAnimation *obj = new QPropertyAnimation(PQOBJECT(1), *PQBYTEARRAY(2), OPQOBJECT(3, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
@@ -84,9 +84,7 @@ HB_FUNC_STATIC(QPROPERTYANIMATION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QByteArray propertyName() const
-*/
+// QByteArray propertyName() const
 HB_FUNC_STATIC(QPROPERTYANIMATION_PROPERTYNAME)
 {
   QPropertyAnimation *obj = qobject_cast<QPropertyAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -109,9 +107,7 @@ HB_FUNC_STATIC(QPROPERTYANIMATION_PROPERTYNAME)
   }
 }
 
-/*
-void setPropertyName(const QByteArray &propertyName)
-*/
+// void setPropertyName( const QByteArray & propertyName )
 HB_FUNC_STATIC(QPROPERTYANIMATION_SETPROPERTYNAME)
 {
   QPropertyAnimation *obj = qobject_cast<QPropertyAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -135,9 +131,7 @@ HB_FUNC_STATIC(QPROPERTYANIMATION_SETPROPERTYNAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTargetObject(QObject *target)
-*/
+// void setTargetObject( QObject * target )
 HB_FUNC_STATIC(QPROPERTYANIMATION_SETTARGETOBJECT)
 {
   QPropertyAnimation *obj = qobject_cast<QPropertyAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -161,9 +155,7 @@ HB_FUNC_STATIC(QPROPERTYANIMATION_SETTARGETOBJECT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QObject *targetObject() const
-*/
+// QObject * targetObject() const
 HB_FUNC_STATIC(QPROPERTYANIMATION_TARGETOBJECT)
 {
   QPropertyAnimation *obj = qobject_cast<QPropertyAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());

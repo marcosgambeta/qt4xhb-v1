@@ -89,7 +89,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QProcess(QObject *parent = 0)
+    // QProcess( QObject * parent = 0 )
 HB_FUNC_STATIC(QPROCESS_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
@@ -121,9 +121,7 @@ HB_FUNC_STATIC(QPROCESS_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void closeReadChannel(QProcess::ProcessChannel channel)
-*/
+// void closeReadChannel( QProcess::ProcessChannel channel )
 HB_FUNC_STATIC(QPROCESS_CLOSEREADCHANNEL)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -147,9 +145,7 @@ HB_FUNC_STATIC(QPROCESS_CLOSEREADCHANNEL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void closeWriteChannel()
-*/
+// void closeWriteChannel()
 HB_FUNC_STATIC(QPROCESS_CLOSEWRITECHANNEL)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -173,9 +169,7 @@ HB_FUNC_STATIC(QPROCESS_CLOSEWRITECHANNEL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStringList environment() const
-*/
+// QStringList environment() const
 HB_FUNC_STATIC(QPROCESS_ENVIRONMENT)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -197,9 +191,7 @@ HB_FUNC_STATIC(QPROCESS_ENVIRONMENT)
   }
 }
 
-/*
-QProcess::ProcessError error() const
-*/
+// QProcess::ProcessError error() const
 HB_FUNC_STATIC(QPROCESS_ERROR)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -221,9 +213,7 @@ HB_FUNC_STATIC(QPROCESS_ERROR)
   }
 }
 
-/*
-int exitCode() const
-*/
+// int exitCode() const
 HB_FUNC_STATIC(QPROCESS_EXITCODE)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -245,9 +235,7 @@ HB_FUNC_STATIC(QPROCESS_EXITCODE)
   }
 }
 
-/*
-QProcess::ExitStatus exitStatus() const
-*/
+// QProcess::ExitStatus exitStatus() const
 HB_FUNC_STATIC(QPROCESS_EXITSTATUS)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -269,9 +257,7 @@ HB_FUNC_STATIC(QPROCESS_EXITSTATUS)
   }
 }
 
-/*
-QString nativeArguments () const
-*/
+// QString nativeArguments () const
 HB_FUNC_STATIC(QPROCESS_NATIVEARGUMENTS)
 {
 #if defined(Q_OS_WIN)
@@ -294,9 +280,7 @@ HB_FUNC_STATIC(QPROCESS_NATIVEARGUMENTS)
   }
 #endif
 }
-/*
-QProcess::ProcessChannelMode processChannelMode() const
-*/
+// QProcess::ProcessChannelMode processChannelMode() const
 HB_FUNC_STATIC(QPROCESS_PROCESSCHANNELMODE)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -318,9 +302,7 @@ HB_FUNC_STATIC(QPROCESS_PROCESSCHANNELMODE)
   }
 }
 
-/*
-QProcessEnvironment processEnvironment() const
-*/
+// QProcessEnvironment processEnvironment() const
 HB_FUNC_STATIC(QPROCESS_PROCESSENVIRONMENT)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -343,9 +325,7 @@ HB_FUNC_STATIC(QPROCESS_PROCESSENVIRONMENT)
   }
 }
 
-/*
-QByteArray readAllStandardError()
-*/
+// QByteArray readAllStandardError()
 HB_FUNC_STATIC(QPROCESS_READALLSTANDARDERROR)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -368,9 +348,7 @@ HB_FUNC_STATIC(QPROCESS_READALLSTANDARDERROR)
   }
 }
 
-/*
-QByteArray readAllStandardOutput()
-*/
+// QByteArray readAllStandardOutput()
 HB_FUNC_STATIC(QPROCESS_READALLSTANDARDOUTPUT)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -393,9 +371,7 @@ HB_FUNC_STATIC(QPROCESS_READALLSTANDARDOUTPUT)
   }
 }
 
-/*
-QProcess::ProcessChannel readChannel() const
-*/
+// QProcess::ProcessChannel readChannel() const
 HB_FUNC_STATIC(QPROCESS_READCHANNEL)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -417,9 +393,7 @@ HB_FUNC_STATIC(QPROCESS_READCHANNEL)
   }
 }
 
-/*
-void setEnvironment(const QStringList &environment)
-*/
+// void setEnvironment( const QStringList & environment )
 HB_FUNC_STATIC(QPROCESS_SETENVIRONMENT)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -443,9 +417,7 @@ HB_FUNC_STATIC(QPROCESS_SETENVIRONMENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setNativeArguments (const QString &arguments)
-*/
+// void setNativeArguments ( const QString & arguments )
 HB_FUNC_STATIC(QPROCESS_SETNATIVEARGUMENTS)
 {
 #if defined(Q_OS_WIN)
@@ -470,9 +442,7 @@ HB_FUNC_STATIC(QPROCESS_SETNATIVEARGUMENTS)
   hb_itemReturn(hb_stackSelfItem());
 #endif
 }
-/*
-void setProcessChannelMode(QProcess::ProcessChannelMode mode)
-*/
+// void setProcessChannelMode( QProcess::ProcessChannelMode mode )
 HB_FUNC_STATIC(QPROCESS_SETPROCESSCHANNELMODE)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -496,9 +466,7 @@ HB_FUNC_STATIC(QPROCESS_SETPROCESSCHANNELMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setProcessEnvironment(const QProcessEnvironment &environment)
-*/
+// void setProcessEnvironment( const QProcessEnvironment & environment )
 HB_FUNC_STATIC(QPROCESS_SETPROCESSENVIRONMENT)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -522,9 +490,7 @@ HB_FUNC_STATIC(QPROCESS_SETPROCESSENVIRONMENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setReadChannel(QProcess::ProcessChannel channel)
-*/
+// void setReadChannel( QProcess::ProcessChannel channel )
 HB_FUNC_STATIC(QPROCESS_SETREADCHANNEL)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -548,9 +514,7 @@ HB_FUNC_STATIC(QPROCESS_SETREADCHANNEL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setStandardErrorFile(const QString &fileName, QIODevice::OpenMode mode = QIODevice::Truncate)
-*/
+// void setStandardErrorFile( const QString & fileName, QIODevice::OpenMode mode = QIODevice::Truncate )
 HB_FUNC_STATIC(QPROCESS_SETSTANDARDERRORFILE)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -575,9 +539,7 @@ HB_FUNC_STATIC(QPROCESS_SETSTANDARDERRORFILE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setStandardInputFile(const QString &fileName)
-*/
+// void setStandardInputFile( const QString & fileName )
 HB_FUNC_STATIC(QPROCESS_SETSTANDARDINPUTFILE)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -601,9 +563,7 @@ HB_FUNC_STATIC(QPROCESS_SETSTANDARDINPUTFILE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setStandardOutputFile(const QString &fileName, QIODevice::OpenMode mode = QIODevice::Truncate)
-*/
+// void setStandardOutputFile( const QString & fileName, QIODevice::OpenMode mode = QIODevice::Truncate )
 HB_FUNC_STATIC(QPROCESS_SETSTANDARDOUTPUTFILE)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -628,9 +588,7 @@ HB_FUNC_STATIC(QPROCESS_SETSTANDARDOUTPUTFILE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setStandardOutputProcess(QProcess *destination)
-*/
+// void setStandardOutputProcess( QProcess * destination )
 HB_FUNC_STATIC(QPROCESS_SETSTANDARDOUTPUTPROCESS)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -654,9 +612,7 @@ HB_FUNC_STATIC(QPROCESS_SETSTANDARDOUTPUTPROCESS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWorkingDirectory(const QString &dir)
-*/
+// void setWorkingDirectory( const QString & dir )
 HB_FUNC_STATIC(QPROCESS_SETWORKINGDIRECTORY)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -684,10 +640,8 @@ HB_FUNC_STATIC(QPROCESS_START)
 {
   if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISARRAY(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
-    /*
-    void start(const QString &program, const QStringList &arguments, QIODevice::OpenMode mode = QIODevice::ReadWrite
-   )
-    */
+    // void start( const QString & program, const QStringList & arguments, QIODevice::OpenMode mode =
+    // QIODevice::ReadWrite )
     QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -700,9 +654,7 @@ HB_FUNC_STATIC(QPROCESS_START)
   }
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    /*
-    void start(const QString &program, QIODevice::OpenMode mode = QIODevice::ReadWrite)
-    */
+    // void start( const QString & program, QIODevice::OpenMode mode = QIODevice::ReadWrite )
     QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -719,9 +671,7 @@ HB_FUNC_STATIC(QPROCESS_START)
   }
 }
 
-/*
-QProcess::ProcessState state() const
-*/
+// QProcess::ProcessState state() const
 HB_FUNC_STATIC(QPROCESS_STATE)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -743,9 +693,7 @@ HB_FUNC_STATIC(QPROCESS_STATE)
   }
 }
 
-/*
-bool waitForFinished(int msecs = 30000)
-*/
+// bool waitForFinished( int msecs = 30000 )
 HB_FUNC_STATIC(QPROCESS_WAITFORFINISHED)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -767,9 +715,7 @@ HB_FUNC_STATIC(QPROCESS_WAITFORFINISHED)
   }
 }
 
-/*
-bool waitForStarted(int msecs = 30000)
-*/
+// bool waitForStarted( int msecs = 30000 )
 HB_FUNC_STATIC(QPROCESS_WAITFORSTARTED)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -791,9 +737,7 @@ HB_FUNC_STATIC(QPROCESS_WAITFORSTARTED)
   }
 }
 
-/*
-QString workingDirectory() const
-*/
+// QString workingDirectory() const
 HB_FUNC_STATIC(QPROCESS_WORKINGDIRECTORY)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -815,9 +759,7 @@ HB_FUNC_STATIC(QPROCESS_WORKINGDIRECTORY)
   }
 }
 
-/*
-virtual bool atEnd() const
-*/
+// virtual bool atEnd() const
 HB_FUNC_STATIC(QPROCESS_ATEND)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -839,9 +781,7 @@ HB_FUNC_STATIC(QPROCESS_ATEND)
   }
 }
 
-/*
-virtual qint64 bytesAvailable() const
-*/
+// virtual qint64 bytesAvailable() const
 HB_FUNC_STATIC(QPROCESS_BYTESAVAILABLE)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -863,9 +803,7 @@ HB_FUNC_STATIC(QPROCESS_BYTESAVAILABLE)
   }
 }
 
-/*
-virtual qint64 bytesToWrite() const
-*/
+// virtual qint64 bytesToWrite() const
 HB_FUNC_STATIC(QPROCESS_BYTESTOWRITE)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -887,9 +825,7 @@ HB_FUNC_STATIC(QPROCESS_BYTESTOWRITE)
   }
 }
 
-/*
-virtual bool canReadLine() const
-*/
+// virtual bool canReadLine() const
 HB_FUNC_STATIC(QPROCESS_CANREADLINE)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -911,9 +847,7 @@ HB_FUNC_STATIC(QPROCESS_CANREADLINE)
   }
 }
 
-/*
-virtual void close()
-*/
+// virtual void close()
 HB_FUNC_STATIC(QPROCESS_CLOSE)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -937,9 +871,7 @@ HB_FUNC_STATIC(QPROCESS_CLOSE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool isSequential() const
-*/
+// virtual bool isSequential() const
 HB_FUNC_STATIC(QPROCESS_ISSEQUENTIAL)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -961,9 +893,7 @@ HB_FUNC_STATIC(QPROCESS_ISSEQUENTIAL)
   }
 }
 
-/*
-virtual bool waitForBytesWritten(int msecs = 30000)
-*/
+// virtual bool waitForBytesWritten( int msecs = 30000 )
 HB_FUNC_STATIC(QPROCESS_WAITFORBYTESWRITTEN)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -985,9 +915,7 @@ HB_FUNC_STATIC(QPROCESS_WAITFORBYTESWRITTEN)
   }
 }
 
-/*
-virtual bool waitForReadyRead(int msecs = 30000)
-*/
+// virtual bool waitForReadyRead( int msecs = 30000 )
 HB_FUNC_STATIC(QPROCESS_WAITFORREADYREAD)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1009,9 +937,7 @@ HB_FUNC_STATIC(QPROCESS_WAITFORREADYREAD)
   }
 }
 
-/*
-void kill()
-*/
+// void kill()
 HB_FUNC_STATIC(QPROCESS_KILL)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1035,9 +961,7 @@ HB_FUNC_STATIC(QPROCESS_KILL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void terminate()
-*/
+// void terminate()
 HB_FUNC_STATIC(QPROCESS_TERMINATE)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1065,17 +989,13 @@ HB_FUNC_STATIC(QPROCESS_EXECUTE)
 {
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2))
   {
-    /*
-    static int execute(const QString &program, const QStringList &arguments)
-    */
+    // static int execute( const QString & program, const QStringList & arguments )
 
     RINT(QProcess::execute(PQSTRING(1), PQSTRINGLIST(2)));
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    static int execute(const QString &program)
-    */
+    // static int execute( const QString & program )
 
     RINT(QProcess::execute(PQSTRING(1)));
   }
@@ -1089,26 +1009,20 @@ HB_FUNC_STATIC(QPROCESS_STARTDETACHED)
 {
   if (ISBETWEEN(3, 4) && HB_ISCHAR(1) && HB_ISARRAY(2) && HB_ISCHAR(3))
   {
-    /*
-    static bool startDetached(const QString &program, const QStringList &arguments, const QString &workingDirectory,
-    NULL)
-    */
+    // static bool startDetached( const QString & program, const QStringList & arguments, const QString &
+    // workingDirectory, NULL )
 
     RBOOL(QProcess::startDetached(PQSTRING(1), PQSTRINGLIST(2), PQSTRING(3), NULL));
   }
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2))
   {
-    /*
-    static bool startDetached(const QString &program, const QStringList &arguments)
-    */
+    // static bool startDetached( const QString & program, const QStringList & arguments )
 
     RBOOL(QProcess::startDetached(PQSTRING(1), PQSTRINGLIST(2)));
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    static bool startDetached(const QString &program)
-    */
+    // static bool startDetached( const QString & program )
 
     RBOOL(QProcess::startDetached(PQSTRING(1)));
   }
@@ -1118,9 +1032,7 @@ HB_FUNC_STATIC(QPROCESS_STARTDETACHED)
   }
 }
 
-/*
-static QStringList systemEnvironment()
-*/
+// static QStringList systemEnvironment()
 HB_FUNC_STATIC(QPROCESS_SYSTEMENVIRONMENT)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -73,19 +73,19 @@ HB_FUNC_STATIC(QDATASTREAM_NEW)
   }
   else if (ISNUMPAR(1) && ISQIODEVICE(1))
   {
-    // QDataStream(QIODevice *d)
+    // QDataStream( QIODevice * d )
     QDataStream *obj = new QDataStream(PQIODEVICE(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISNUM(2))
   {
-    // QDataStream(QByteArray *a, QIODevice::OpenMode mode)
+    // QDataStream( QByteArray * a, QIODevice::OpenMode mode )
     QDataStream *obj = new QDataStream(PQBYTEARRAY(1), (QIODevice::OpenMode)hb_parni(2));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
-    // QDataStream(const QByteArray &a)
+    // QDataStream( const QByteArray & a )
     QDataStream *obj = new QDataStream(*PQBYTEARRAY(1));
     Qt4xHb::returnNewObject(obj, true);
   }
@@ -111,9 +111,7 @@ HB_FUNC_STATIC(QDATASTREAM_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool atEnd() const
-*/
+// bool atEnd() const
 HB_FUNC_STATIC(QDATASTREAM_ATEND)
 {
   QDataStream *obj = static_cast<QDataStream *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -135,9 +133,7 @@ HB_FUNC_STATIC(QDATASTREAM_ATEND)
   }
 }
 
-/*
-QDataStream::ByteOrder byteOrder() const
-*/
+// QDataStream::ByteOrder byteOrder() const
 HB_FUNC_STATIC(QDATASTREAM_BYTEORDER)
 {
   QDataStream *obj = static_cast<QDataStream *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -159,9 +155,7 @@ HB_FUNC_STATIC(QDATASTREAM_BYTEORDER)
   }
 }
 
-/*
-QIODevice *device() const
-*/
+// QIODevice * device() const
 HB_FUNC_STATIC(QDATASTREAM_DEVICE)
 {
   QDataStream *obj = static_cast<QDataStream *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -184,9 +178,7 @@ HB_FUNC_STATIC(QDATASTREAM_DEVICE)
   }
 }
 
-/*
-QDataStream::FloatingPointPrecision floatingPointPrecision() const
-*/
+// QDataStream::FloatingPointPrecision floatingPointPrecision() const
 HB_FUNC_STATIC(QDATASTREAM_FLOATINGPOINTPRECISION)
 {
   QDataStream *obj = static_cast<QDataStream *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -208,9 +200,7 @@ HB_FUNC_STATIC(QDATASTREAM_FLOATINGPOINTPRECISION)
   }
 }
 
-/*
-int readRawData(char *s, int len)
-*/
+// int readRawData( char * s, int len )
 HB_FUNC_STATIC(QDATASTREAM_READRAWDATA)
 {
   QDataStream *obj = static_cast<QDataStream *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -232,9 +222,7 @@ HB_FUNC_STATIC(QDATASTREAM_READRAWDATA)
   }
 }
 
-/*
-void resetStatus()
-*/
+// void resetStatus()
 HB_FUNC_STATIC(QDATASTREAM_RESETSTATUS)
 {
   QDataStream *obj = static_cast<QDataStream *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -258,9 +246,7 @@ HB_FUNC_STATIC(QDATASTREAM_RESETSTATUS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setByteOrder(QDataStream::ByteOrder bo)
-*/
+// void setByteOrder( QDataStream::ByteOrder bo )
 HB_FUNC_STATIC(QDATASTREAM_SETBYTEORDER)
 {
   QDataStream *obj = static_cast<QDataStream *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -284,9 +270,7 @@ HB_FUNC_STATIC(QDATASTREAM_SETBYTEORDER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDevice(QIODevice *d)
-*/
+// void setDevice( QIODevice * d )
 HB_FUNC_STATIC(QDATASTREAM_SETDEVICE)
 {
   QDataStream *obj = static_cast<QDataStream *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -310,9 +294,7 @@ HB_FUNC_STATIC(QDATASTREAM_SETDEVICE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFloatingPointPrecision(QDataStream::FloatingPointPrecision precision)
-*/
+// void setFloatingPointPrecision( QDataStream::FloatingPointPrecision precision )
 HB_FUNC_STATIC(QDATASTREAM_SETFLOATINGPOINTPRECISION)
 {
   QDataStream *obj = static_cast<QDataStream *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -336,9 +318,7 @@ HB_FUNC_STATIC(QDATASTREAM_SETFLOATINGPOINTPRECISION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setStatus(QDataStream::Status status)
-*/
+// void setStatus( QDataStream::Status status )
 HB_FUNC_STATIC(QDATASTREAM_SETSTATUS)
 {
   QDataStream *obj = static_cast<QDataStream *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -362,9 +342,7 @@ HB_FUNC_STATIC(QDATASTREAM_SETSTATUS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setVersion(int v)
-*/
+// void setVersion( int v )
 HB_FUNC_STATIC(QDATASTREAM_SETVERSION)
 {
   QDataStream *obj = static_cast<QDataStream *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -388,9 +366,7 @@ HB_FUNC_STATIC(QDATASTREAM_SETVERSION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int skipRawData(int len)
-*/
+// int skipRawData( int len )
 HB_FUNC_STATIC(QDATASTREAM_SKIPRAWDATA)
 {
   QDataStream *obj = static_cast<QDataStream *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -412,9 +388,7 @@ HB_FUNC_STATIC(QDATASTREAM_SKIPRAWDATA)
   }
 }
 
-/*
-QDataStream::Status status() const
-*/
+// QDataStream::Status status() const
 HB_FUNC_STATIC(QDATASTREAM_STATUS)
 {
   QDataStream *obj = static_cast<QDataStream *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -436,9 +410,7 @@ HB_FUNC_STATIC(QDATASTREAM_STATUS)
   }
 }
 
-/*
-int version() const
-*/
+// int version() const
 HB_FUNC_STATIC(QDATASTREAM_VERSION)
 {
   QDataStream *obj = static_cast<QDataStream *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -460,9 +432,7 @@ HB_FUNC_STATIC(QDATASTREAM_VERSION)
   }
 }
 
-/*
-int writeRawData(const char *s, int len)
-*/
+// int writeRawData( const char * s, int len )
 HB_FUNC_STATIC(QDATASTREAM_WRITERAWDATA)
 {
   QDataStream *obj = static_cast<QDataStream *>(Qt4xHb::itemGetPtrStackSelfItem());

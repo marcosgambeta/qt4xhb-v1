@@ -118,9 +118,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QModelIndex buddy(const QModelIndex &index) const
-*/
+// virtual QModelIndex buddy( const QModelIndex & index ) const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_BUDDY)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -143,9 +141,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_BUDDY)
   }
 }
 
-/*
-virtual bool canFetchMore(const QModelIndex &parent) const
-*/
+// virtual bool canFetchMore( const QModelIndex & parent ) const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_CANFETCHMORE)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -167,9 +163,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_CANFETCHMORE)
   }
 }
 
-/*
-virtual int columnCount(const QModelIndex &parent = QModelIndex()) const = 0
-*/
+// virtual int columnCount( const QModelIndex & parent = QModelIndex() ) const = 0
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_COLUMNCOUNT)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -191,9 +185,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_COLUMNCOUNT)
   }
 }
 
-/*
-virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const = 0
-*/
+// virtual QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) const = 0
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_DATA)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -216,10 +208,8 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_DATA)
   }
 }
 
-/*
-virtual bool dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &
-parent)
-*/
+// virtual bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex &
+// parent )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_DROPMIMEDATA)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -241,9 +231,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_DROPMIMEDATA)
   }
 }
 
-/*
-virtual void fetchMore(const QModelIndex &parent)
-*/
+// virtual void fetchMore( const QModelIndex & parent )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_FETCHMORE)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -267,9 +255,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_FETCHMORE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual Qt::ItemFlags flags(const QModelIndex &index) const
-*/
+// virtual Qt::ItemFlags flags( const QModelIndex & index ) const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_FLAGS)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -291,9 +277,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_FLAGS)
   }
 }
 
-/*
-virtual bool hasChildren(const QModelIndex &parent = QModelIndex()) const
-*/
+// virtual bool hasChildren( const QModelIndex & parent = QModelIndex() ) const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_HASCHILDREN)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -315,9 +299,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_HASCHILDREN)
   }
 }
 
-/*
-bool hasIndex(int row, int column, const QModelIndex &parent = QModelIndex()) const
-*/
+// bool hasIndex( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_HASINDEX)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -340,9 +322,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_HASINDEX)
   }
 }
 
-/*
-virtual QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const
-*/
+// virtual QVariant headerData( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_HEADERDATA)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -365,9 +345,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_HEADERDATA)
   }
 }
 
-/*
-virtual QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const = 0
-*/
+// virtual QModelIndex index( int row, int column, const QModelIndex & parent = QModelIndex() ) const = 0
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_INDEX)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -391,9 +369,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_INDEX)
   }
 }
 
-/*
-bool insertColumn(int column, const QModelIndex &parent = QModelIndex())
-*/
+// bool insertColumn( int column, const QModelIndex & parent = QModelIndex() )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_INSERTCOLUMN)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -416,9 +392,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_INSERTCOLUMN)
   }
 }
 
-/*
-virtual bool insertColumns(int column, int count, const QModelIndex &parent = QModelIndex())
-*/
+// virtual bool insertColumns( int column, int count, const QModelIndex & parent = QModelIndex() )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_INSERTCOLUMNS)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -441,9 +415,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_INSERTCOLUMNS)
   }
 }
 
-/*
-bool insertRow(int row, const QModelIndex &parent = QModelIndex())
-*/
+// bool insertRow( int row, const QModelIndex & parent = QModelIndex() )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_INSERTROW)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -465,9 +437,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_INSERTROW)
   }
 }
 
-/*
-virtual bool insertRows(int row, int count, const QModelIndex &parent = QModelIndex())
-*/
+// virtual bool insertRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_INSERTROWS)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -490,10 +460,8 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_INSERTROWS)
   }
 }
 
-/*
-virtual QModelIndexList match(const QModelIndex &start, int role, const QVariant &value, int hits = 1, Qt::MatchFlags
-flags = Qt::MatchFlags(Qt::MatchStartsWith | Qt::MatchWrap)) const
-*/
+// virtual QModelIndexList match( const QModelIndex & start, int role, const QVariant & value, int hits = 1,
+// Qt::MatchFlags flags = Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) ) const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_MATCH)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -513,18 +481,19 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_MATCH)
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if (pDynSym != NULL)
       {
-        const int count = list.count();
-        for (int i = 0; i < count; i++)
+        for (int i = 0; i < list.count(); i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QModelIndex(list[i]));
+          PHB_ITEM pItem = hb_itemNew(NULL);
+          hb_itemPutPtr(pItem, static_cast<QModelIndex *>(new QModelIndex(list[i])));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          PHB_ITEM pDestroy = hb_itemNew(NULL);
+          hb_itemPutL(pDestroy, true);
           hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
           hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
@@ -546,9 +515,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_MATCH)
   }
 }
 
-/*
-virtual QMimeData *mimeData(const QModelIndexList &indexes) const
-*/
+// virtual QMimeData * mimeData( const QModelIndexList & indexes ) const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_MIMEDATA)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -561,7 +528,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_MIMEDATA)
 #endif
       QModelIndexList par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      const int nLen1 = hb_arrayLen(aList1);
+      int nLen1 = hb_arrayLen(aList1);
       for (int i1 = 0; i1 < nLen1; i1++)
       {
         par1 << *static_cast<QModelIndex *>(
@@ -579,9 +546,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_MIMEDATA)
   }
 }
 
-/*
-virtual QStringList mimeTypes() const
-*/
+// virtual QStringList mimeTypes() const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_MIMETYPES)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -603,9 +568,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_MIMETYPES)
   }
 }
 
-/*
-virtual QModelIndex parent(const QModelIndex &index) const = 0
-*/
+// virtual QModelIndex parent( const QModelIndex & index ) const = 0
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_PARENT)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -628,9 +591,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_PARENT)
   }
 }
 
-/*
-bool removeColumn(int column, const QModelIndex &parent = QModelIndex())
-*/
+// bool removeColumn( int column, const QModelIndex & parent = QModelIndex() )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_REMOVECOLUMN)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -653,9 +614,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_REMOVECOLUMN)
   }
 }
 
-/*
-virtual bool removeColumns(int column, int count, const QModelIndex &parent = QModelIndex())
-*/
+// virtual bool removeColumns( int column, int count, const QModelIndex & parent = QModelIndex() )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_REMOVECOLUMNS)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -678,9 +637,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_REMOVECOLUMNS)
   }
 }
 
-/*
-bool removeRow(int row, const QModelIndex &parent = QModelIndex())
-*/
+// bool removeRow( int row, const QModelIndex & parent = QModelIndex() )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_REMOVEROW)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -702,9 +659,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_REMOVEROW)
   }
 }
 
-/*
-virtual bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex())
-*/
+// virtual bool removeRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_REMOVEROWS)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -727,9 +682,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_REMOVEROWS)
   }
 }
 
-/*
-virtual int rowCount(const QModelIndex &parent = QModelIndex()) const = 0
-*/
+// virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const = 0
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ROWCOUNT)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -751,9 +704,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_ROWCOUNT)
   }
 }
 
-/*
-virtual bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole)
-*/
+// virtual bool setData( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_SETDATA)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -775,9 +726,8 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_SETDATA)
   }
 }
 
-/*
-virtual bool setHeaderData(int section, Qt::Orientation orientation, const QVariant &value, int role = Qt::EditRole)
-*/
+// virtual bool setHeaderData( int section, Qt::Orientation orientation, const QVariant & value, int role = Qt::EditRole
+// )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_SETHEADERDATA)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -799,9 +749,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_SETHEADERDATA)
   }
 }
 
-/*
-void setSupportedDragActions(Qt::DropActions actions)
-*/
+// void setSupportedDragActions( Qt::DropActions actions )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_SETSUPPORTEDDRAGACTIONS)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -825,9 +773,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_SETSUPPORTEDDRAGACTIONS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QModelIndex sibling(int row, int column, const QModelIndex &index) const
-*/
+// QModelIndex sibling( int row, int column, const QModelIndex & index ) const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_SIBLING)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -850,9 +796,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_SIBLING)
   }
 }
 
-/*
-virtual void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
-*/
+// virtual void sort( int column, Qt::SortOrder order = Qt::AscendingOrder )
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_SORT)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -876,9 +820,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_SORT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QSize span(const QModelIndex &index) const
-*/
+// virtual QSize span( const QModelIndex & index ) const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_SPAN)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -901,9 +843,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_SPAN)
   }
 }
 
-/*
-Qt::DropActions supportedDragActions() const
-*/
+// Qt::DropActions supportedDragActions() const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_SUPPORTEDDRAGACTIONS)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -925,9 +865,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_SUPPORTEDDRAGACTIONS)
   }
 }
 
-/*
-virtual Qt::DropActions supportedDropActions() const
-*/
+// virtual Qt::DropActions supportedDropActions() const
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_SUPPORTEDDROPACTIONS)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -949,9 +887,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_SUPPORTEDDROPACTIONS)
   }
 }
 
-/*
-virtual void revert()
-*/
+// virtual void revert()
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_REVERT)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -975,9 +911,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_REVERT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool submit()
-*/
+// virtual bool submit()
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_SUBMIT)
 {
   QAbstractItemModel *obj = qobject_cast<QAbstractItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());

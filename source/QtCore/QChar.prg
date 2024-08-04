@@ -84,70 +84,70 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-// QChar()
+    // QChar()
 HB_FUNC_STATIC(QCHAR_NEW1)
 {
   QChar *obj = new QChar();
   Qt4xHb::returnNewObject(obj, true);
 }
 
-// QChar(char ch)
+// QChar( char ch )
 HB_FUNC_STATIC(QCHAR_NEW2)
 {
   QChar *obj = new QChar(PCHAR(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 
-// QChar(uchar ch)
+// QChar( uchar ch )
 HB_FUNC_STATIC(QCHAR_NEW3)
 {
   QChar *obj = new QChar(PUCHAR(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 
-// QChar(QLatin1Char ch)
+// QChar( QLatin1Char ch )
 HB_FUNC_STATIC(QCHAR_NEW4)
 {
   QChar *obj = new QChar(*PQLATIN1CHAR(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 
-// QChar(uchar cell, uchar row)
+// QChar( uchar cell, uchar row )
 HB_FUNC_STATIC(QCHAR_NEW5)
 {
   QChar *obj = new QChar(PUCHAR(1), PUCHAR(2));
   Qt4xHb::returnNewObject(obj, true);
 }
 
-// QChar(ushort code)
+// QChar( ushort code )
 HB_FUNC_STATIC(QCHAR_NEW6)
 {
   QChar *obj = new QChar(PUSHORT(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 
-// QChar(short code)
+// QChar( short code )
 HB_FUNC_STATIC(QCHAR_NEW7)
 {
   QChar *obj = new QChar(PSHORT(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 
-// QChar(uint code)
+// QChar( uint code )
 HB_FUNC_STATIC(QCHAR_NEW8)
 {
   QChar *obj = new QChar(PUINT(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 
-// QChar(int code)
+// QChar( int code )
 HB_FUNC_STATIC(QCHAR_NEW9)
 {
   QChar *obj = new QChar(PINT(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 
-// QChar(QChar::SpecialCharacter ch)
+// QChar( QChar::SpecialCharacter ch )
 HB_FUNC_STATIC(QCHAR_NEW10)
 {
   QChar *obj = new QChar((QChar::SpecialCharacter)hb_parni(1));
@@ -182,9 +182,7 @@ HB_FUNC_STATIC(QCHAR_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QChar::Category category() const
-*/
+// QChar::Category category() const
 HB_FUNC_STATIC(QCHAR_CATEGORY)
 {
   QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -206,9 +204,7 @@ HB_FUNC_STATIC(QCHAR_CATEGORY)
   }
 }
 
-/*
-QChar::Decomposition decompositionTag() const
-*/
+// QChar::Decomposition decompositionTag() const
 HB_FUNC_STATIC(QCHAR_DECOMPOSITIONTAG)
 {
   QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -230,9 +226,7 @@ HB_FUNC_STATIC(QCHAR_DECOMPOSITIONTAG)
   }
 }
 
-/*
-int digitValue() const
-*/
+// int digitValue() const
 HB_FUNC_STATIC(QCHAR_DIGITVALUE)
 {
   QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -254,9 +248,7 @@ HB_FUNC_STATIC(QCHAR_DIGITVALUE)
   }
 }
 
-/*
-QChar::Direction direction() const
-*/
+// QChar::Direction direction() const
 HB_FUNC_STATIC(QCHAR_DIRECTION)
 {
   QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -278,9 +270,7 @@ HB_FUNC_STATIC(QCHAR_DIRECTION)
   }
 }
 
-/*
-bool hasMirrored() const
-*/
+// bool hasMirrored() const
 HB_FUNC_STATIC(QCHAR_HASMIRRORED)
 {
   QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -302,9 +292,7 @@ HB_FUNC_STATIC(QCHAR_HASMIRRORED)
   }
 }
 
-/*
-bool isDigit() const
-*/
+// bool isDigit() const
 HB_FUNC_STATIC(QCHAR_ISDIGIT)
 {
   QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -326,9 +314,7 @@ HB_FUNC_STATIC(QCHAR_ISDIGIT)
   }
 }
 
-/*
-bool isHighSurrogate() const
-*/
+// bool isHighSurrogate() const
 HB_FUNC_STATIC(QCHAR_ISHIGHSURROGATE)
 {
   QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -350,9 +336,7 @@ HB_FUNC_STATIC(QCHAR_ISHIGHSURROGATE)
   }
 }
 
-/*
-bool isLetter() const
-*/
+// bool isLetter() const
 HB_FUNC_STATIC(QCHAR_ISLETTER)
 {
   QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -374,9 +358,7 @@ HB_FUNC_STATIC(QCHAR_ISLETTER)
   }
 }
 
-/*
-bool isLetterOrNumber() const
-*/
+// bool isLetterOrNumber() const
 HB_FUNC_STATIC(QCHAR_ISLETTERORNUMBER)
 {
   QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -398,9 +380,7 @@ HB_FUNC_STATIC(QCHAR_ISLETTERORNUMBER)
   }
 }
 
-/*
-bool isLowSurrogate() const
-*/
+// bool isLowSurrogate() const
 HB_FUNC_STATIC(QCHAR_ISLOWSURROGATE)
 {
   QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -422,9 +402,7 @@ HB_FUNC_STATIC(QCHAR_ISLOWSURROGATE)
   }
 }
 
-/*
-bool isLower() const
-*/
+// bool isLower() const
 HB_FUNC_STATIC(QCHAR_ISLOWER)
 {
   QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -446,9 +424,7 @@ HB_FUNC_STATIC(QCHAR_ISLOWER)
   }
 }
 
-/*
-bool isMark() const
-*/
+// bool isMark() const
 HB_FUNC_STATIC(QCHAR_ISMARK)
 {
   QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -470,9 +446,7 @@ HB_FUNC_STATIC(QCHAR_ISMARK)
   }
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QCHAR_ISNULL)
 {
   QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -494,9 +468,7 @@ HB_FUNC_STATIC(QCHAR_ISNULL)
   }
 }
 
-/*
-bool isNumber() const
-*/
+// bool isNumber() const
 HB_FUNC_STATIC(QCHAR_ISNUMBER)
 {
   QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -518,9 +490,7 @@ HB_FUNC_STATIC(QCHAR_ISNUMBER)
   }
 }
 
-/*
-bool isPrint() const
-*/
+// bool isPrint() const
 HB_FUNC_STATIC(QCHAR_ISPRINT)
 {
   QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -542,9 +512,7 @@ HB_FUNC_STATIC(QCHAR_ISPRINT)
   }
 }
 
-/*
-bool isPunct() const
-*/
+// bool isPunct() const
 HB_FUNC_STATIC(QCHAR_ISPUNCT)
 {
   QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -566,9 +534,7 @@ HB_FUNC_STATIC(QCHAR_ISPUNCT)
   }
 }
 
-/*
-bool isSpace() const
-*/
+// bool isSpace() const
 HB_FUNC_STATIC(QCHAR_ISSPACE)
 {
   QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -590,9 +556,7 @@ HB_FUNC_STATIC(QCHAR_ISSPACE)
   }
 }
 
-/*
-bool isSymbol() const
-*/
+// bool isSymbol() const
 HB_FUNC_STATIC(QCHAR_ISSYMBOL)
 {
   QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -614,9 +578,7 @@ HB_FUNC_STATIC(QCHAR_ISSYMBOL)
   }
 }
 
-/*
-bool isTitleCase() const
-*/
+// bool isTitleCase() const
 HB_FUNC_STATIC(QCHAR_ISTITLECASE)
 {
   QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -638,9 +600,7 @@ HB_FUNC_STATIC(QCHAR_ISTITLECASE)
   }
 }
 
-/*
-bool isUpper() const
-*/
+// bool isUpper() const
 HB_FUNC_STATIC(QCHAR_ISUPPER)
 {
   QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -662,9 +622,7 @@ HB_FUNC_STATIC(QCHAR_ISUPPER)
   }
 }
 
-/*
-QChar::Joining joining() const
-*/
+// QChar::Joining joining() const
 HB_FUNC_STATIC(QCHAR_JOINING)
 {
   QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -686,9 +644,7 @@ HB_FUNC_STATIC(QCHAR_JOINING)
   }
 }
 
-/*
-QChar mirroredChar() const
-*/
+// QChar mirroredChar() const
 HB_FUNC_STATIC(QCHAR_MIRROREDCHAR)
 {
   QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -711,9 +667,7 @@ HB_FUNC_STATIC(QCHAR_MIRROREDCHAR)
   }
 }
 
-/*
-QChar toCaseFolded() const
-*/
+// QChar toCaseFolded() const
 HB_FUNC_STATIC(QCHAR_TOCASEFOLDED)
 {
   QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -736,9 +690,7 @@ HB_FUNC_STATIC(QCHAR_TOCASEFOLDED)
   }
 }
 
-/*
-QChar toLower() const
-*/
+// QChar toLower() const
 HB_FUNC_STATIC(QCHAR_TOLOWER)
 {
   QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -761,9 +713,7 @@ HB_FUNC_STATIC(QCHAR_TOLOWER)
   }
 }
 
-/*
-QChar toTitleCase() const
-*/
+// QChar toTitleCase() const
 HB_FUNC_STATIC(QCHAR_TOTITLECASE)
 {
   QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -786,9 +736,7 @@ HB_FUNC_STATIC(QCHAR_TOTITLECASE)
   }
 }
 
-/*
-QChar toUpper() const
-*/
+// QChar toUpper() const
 HB_FUNC_STATIC(QCHAR_TOUPPER)
 {
   QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -811,9 +759,7 @@ HB_FUNC_STATIC(QCHAR_TOUPPER)
   }
 }
 
-/*
-QChar::UnicodeVersion unicodeVersion() const
-*/
+// QChar::UnicodeVersion unicodeVersion() const
 HB_FUNC_STATIC(QCHAR_UNICODEVERSION)
 {
   QChar *obj = static_cast<QChar *>(Qt4xHb::itemGetPtrStackSelfItem());

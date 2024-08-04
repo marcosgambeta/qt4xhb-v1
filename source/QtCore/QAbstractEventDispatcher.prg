@@ -72,9 +72,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool filterEvent(void *message)
-*/
+// bool filterEvent( void * message )
 HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_FILTEREVENT)
 {
   QAbstractEventDispatcher *obj = qobject_cast<QAbstractEventDispatcher *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -96,9 +94,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_FILTEREVENT)
   }
 }
 
-/*
-virtual void flush() = 0
-*/
+// virtual void flush() = 0
 HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_FLUSH)
 {
   QAbstractEventDispatcher *obj = qobject_cast<QAbstractEventDispatcher *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -122,9 +118,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_FLUSH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool hasPendingEvents() = 0
-*/
+// virtual bool hasPendingEvents() = 0
 HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_HASPENDINGEVENTS)
 {
   QAbstractEventDispatcher *obj = qobject_cast<QAbstractEventDispatcher *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -146,9 +140,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_HASPENDINGEVENTS)
   }
 }
 
-/*
-virtual void interrupt() = 0
-*/
+// virtual void interrupt() = 0
 HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_INTERRUPT)
 {
   QAbstractEventDispatcher *obj = qobject_cast<QAbstractEventDispatcher *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -172,9 +164,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_INTERRUPT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool processEvents(QEventLoop::ProcessEventsFlags flags) = 0
-*/
+// virtual bool processEvents( QEventLoop::ProcessEventsFlags flags ) = 0
 HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_PROCESSEVENTS)
 {
   QAbstractEventDispatcher *obj = qobject_cast<QAbstractEventDispatcher *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -196,9 +186,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_PROCESSEVENTS)
   }
 }
 
-/*
-virtual void registerSocketNotifier(QSocketNotifier *notifier) = 0
-*/
+// virtual void registerSocketNotifier( QSocketNotifier * notifier ) = 0
 HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_REGISTERSOCKETNOTIFIER)
 {
   QAbstractEventDispatcher *obj = qobject_cast<QAbstractEventDispatcher *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -226,9 +214,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_REGISTERTIMER)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && ISQOBJECT(2))
   {
-    /*
-    int registerTimer(int interval, QObject *object)
-    */
+    // int registerTimer( int interval, QObject * object )
     QAbstractEventDispatcher *obj = qobject_cast<QAbstractEventDispatcher *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -238,9 +224,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_REGISTERTIMER)
   }
   else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQOBJECT(3))
   {
-    /*
-    virtual void registerTimer(int timerId, int interval, QObject *object) = 0
-    */
+    // virtual void registerTimer( int timerId, int interval, QObject * object ) = 0
     QAbstractEventDispatcher *obj = qobject_cast<QAbstractEventDispatcher *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -256,9 +240,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_REGISTERTIMER)
   }
 }
 
-/*
-virtual void unregisterSocketNotifier(QSocketNotifier *notifier) = 0
-*/
+// virtual void unregisterSocketNotifier( QSocketNotifier * notifier ) = 0
 HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_UNREGISTERSOCKETNOTIFIER)
 {
   QAbstractEventDispatcher *obj = qobject_cast<QAbstractEventDispatcher *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -282,9 +264,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_UNREGISTERSOCKETNOTIFIER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool unregisterTimer(int timerId) = 0
-*/
+// virtual bool unregisterTimer( int timerId ) = 0
 HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_UNREGISTERTIMER)
 {
   QAbstractEventDispatcher *obj = qobject_cast<QAbstractEventDispatcher *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -306,9 +286,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_UNREGISTERTIMER)
   }
 }
 
-/*
-virtual bool unregisterTimers(QObject *object) = 0
-*/
+// virtual bool unregisterTimers( QObject * object ) = 0
 HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_UNREGISTERTIMERS)
 {
   QAbstractEventDispatcher *obj = qobject_cast<QAbstractEventDispatcher *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -330,9 +308,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_UNREGISTERTIMERS)
   }
 }
 
-/*
-virtual void wakeUp() = 0
-*/
+// virtual void wakeUp() = 0
 HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_WAKEUP)
 {
   QAbstractEventDispatcher *obj = qobject_cast<QAbstractEventDispatcher *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -356,9 +332,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_WAKEUP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static QAbstractEventDispatcher *instance(QThread *thread = 0)
-*/
+// static QAbstractEventDispatcher * instance( QThread * thread = 0 )
 HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_INSTANCE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

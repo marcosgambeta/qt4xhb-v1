@@ -51,7 +51,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-// QReadLocker(QReadWriteLock *lock)
+    // QReadLocker( QReadWriteLock * lock )
 HB_FUNC_STATIC(QREADLOCKER_NEW)
 {
   if (ISNUMPAR(1) && ISQREADWRITELOCK(1))
@@ -81,9 +81,7 @@ HB_FUNC_STATIC(QREADLOCKER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QReadWriteLock *readWriteLock() const
-*/
+// QReadWriteLock * readWriteLock() const
 HB_FUNC_STATIC(QREADLOCKER_READWRITELOCK)
 {
   QReadLocker *obj = static_cast<QReadLocker *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -106,9 +104,7 @@ HB_FUNC_STATIC(QREADLOCKER_READWRITELOCK)
   }
 }
 
-/*
-void relock()
-*/
+// void relock()
 HB_FUNC_STATIC(QREADLOCKER_RELOCK)
 {
   QReadLocker *obj = static_cast<QReadLocker *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -132,9 +128,7 @@ HB_FUNC_STATIC(QREADLOCKER_RELOCK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void unlock()
-*/
+// void unlock()
 HB_FUNC_STATIC(QREADLOCKER_UNLOCK)
 {
   QReadLocker *obj = static_cast<QReadLocker *>(Qt4xHb::itemGetPtrStackSelfItem());

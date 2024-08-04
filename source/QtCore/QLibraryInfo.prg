@@ -51,9 +51,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    static QString licensee()
-    */
+    // static QString licensee()
 HB_FUNC_STATIC(QLIBRARYINFO_LICENSEE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -70,9 +68,7 @@ HB_FUNC_STATIC(QLIBRARYINFO_LICENSEE)
 #endif
 }
 
-/*
-static QString licensedProducts()
-*/
+// static QString licensedProducts()
 HB_FUNC_STATIC(QLIBRARYINFO_LICENSEDPRODUCTS)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -89,9 +85,7 @@ HB_FUNC_STATIC(QLIBRARYINFO_LICENSEDPRODUCTS)
 #endif
 }
 
-/*
-static QString buildKey()
-*/
+// static QString buildKey()
 HB_FUNC_STATIC(QLIBRARYINFO_BUILDKEY)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -108,9 +102,7 @@ HB_FUNC_STATIC(QLIBRARYINFO_BUILDKEY)
 #endif
 }
 
-/*
-static QDate buildDate()
-*/
+// static QDate buildDate()
 HB_FUNC_STATIC(QLIBRARYINFO_BUILDDATE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -128,9 +120,7 @@ HB_FUNC_STATIC(QLIBRARYINFO_BUILDDATE)
 #endif
 }
 
-/*
-static QString location(QLibraryInfo::LibraryLocation)
-*/
+// static QString location( QLibraryInfo::LibraryLocation )
 HB_FUNC_STATIC(QLIBRARYINFO_LOCATION)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
