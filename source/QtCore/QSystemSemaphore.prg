@@ -53,8 +53,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QSystemSemaphore( const QString & key, int initialValue = 0, QSystemSemaphore::AccessMode mode =
-    // QSystemSemaphore::Open )
+    // QSystemSemaphore(const QString &key, int initialValue = 0, QSystemSemaphore::AccessMode mode =
+    // QSystemSemaphore::Open)
 HB_FUNC_STATIC(QSYSTEMSEMAPHORE_NEW)
 {
   if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
@@ -174,7 +174,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_KEY)
   }
 }
 
-// bool release( int n = 1 )
+// bool release(int n = 1)
 HB_FUNC_STATIC(QSYSTEMSEMAPHORE_RELEASE)
 {
   QSystemSemaphore *obj = static_cast<QSystemSemaphore *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -196,7 +196,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_RELEASE)
   }
 }
 
-// void setKey( const QString & key, int initialValue = 0, QSystemSemaphore::AccessMode mode = QSystemSemaphore::Open )
+// void setKey(const QString &key, int initialValue = 0, QSystemSemaphore::AccessMode mode = QSystemSemaphore::Open)
 HB_FUNC_STATIC(QSYSTEMSEMAPHORE_SETKEY)
 {
   QSystemSemaphore *obj = static_cast<QSystemSemaphore *>(Qt4xHb::itemGetPtrStackSelfItem());

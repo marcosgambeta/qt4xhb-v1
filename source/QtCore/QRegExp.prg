@@ -79,8 +79,8 @@ HB_FUNC_STATIC(QREGEXP_NEW)
   }
   else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
-    // QRegExp( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, QRegExp::PatternSyntax syntax =
-    // QRegExp::RegExp )
+    // QRegExp(const QString &pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, QRegExp::PatternSyntax syntax =
+    // QRegExp::RegExp)
     QRegExp *obj = new QRegExp(
         PQSTRING(1), HB_ISNIL(2) ? (Qt::CaseSensitivity)Qt::CaseSensitive : (Qt::CaseSensitivity)hb_parni(2),
         HB_ISNIL(3) ? (QRegExp::PatternSyntax)QRegExp::RegExp : (QRegExp::PatternSyntax)hb_parni(3));
@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QREGEXP_NEW)
   }
   else if (ISNUMPAR(1) && ISQREGEXP(1))
   {
-    // QRegExp( const QRegExp & rx )
+    // QRegExp(const QRegExp &rx)
     QRegExp *obj = new QRegExp(*PQREGEXP(1));
     Qt4xHb::returnNewObject(obj, true);
   }
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QREGEXP_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// QString cap( int nth = 0 ) const
+// QString cap(int nth = 0) const
 HB_FUNC_STATIC(QREGEXP_CAP)
 {
   QRegExp *obj = static_cast<QRegExp *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -224,7 +224,7 @@ HB_FUNC_STATIC(QREGEXP_ERRORSTRING)
   }
 }
 
-// bool exactMatch( const QString & str ) const
+// bool exactMatch(const QString &str) const
 HB_FUNC_STATIC(QREGEXP_EXACTMATCH)
 {
   QRegExp *obj = static_cast<QRegExp *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -246,7 +246,7 @@ HB_FUNC_STATIC(QREGEXP_EXACTMATCH)
   }
 }
 
-// int indexIn( const QString & str, int offset = 0, QRegExp::CaretMode caretMode = QRegExp::CaretAtZero ) const
+// int indexIn(const QString &str, int offset = 0, QRegExp::CaretMode caretMode = QRegExp::CaretAtZero) const
 HB_FUNC_STATIC(QREGEXP_INDEXIN)
 {
   QRegExp *obj = static_cast<QRegExp *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -335,7 +335,7 @@ HB_FUNC_STATIC(QREGEXP_ISVALID)
   }
 }
 
-// int lastIndexIn( const QString & str, int offset = -1, QRegExp::CaretMode caretMode = QRegExp::CaretAtZero ) const
+// int lastIndexIn(const QString &str, int offset = -1, QRegExp::CaretMode caretMode = QRegExp::CaretAtZero) const
 HB_FUNC_STATIC(QREGEXP_LASTINDEXIN)
 {
   QRegExp *obj = static_cast<QRegExp *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -424,7 +424,7 @@ HB_FUNC_STATIC(QREGEXP_PATTERNSYNTAX)
   }
 }
 
-// int pos( int nth = 0 ) const
+// int pos(int nth = 0) const
 HB_FUNC_STATIC(QREGEXP_POS)
 {
   QRegExp *obj = static_cast<QRegExp *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -446,7 +446,7 @@ HB_FUNC_STATIC(QREGEXP_POS)
   }
 }
 
-// void setCaseSensitivity( Qt::CaseSensitivity cs )
+// void setCaseSensitivity(Qt::CaseSensitivity cs)
 HB_FUNC_STATIC(QREGEXP_SETCASESENSITIVITY)
 {
   QRegExp *obj = static_cast<QRegExp *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -470,7 +470,7 @@ HB_FUNC_STATIC(QREGEXP_SETCASESENSITIVITY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void setMinimal( bool minimal )
+// void setMinimal(bool minimal)
 HB_FUNC_STATIC(QREGEXP_SETMINIMAL)
 {
   QRegExp *obj = static_cast<QRegExp *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -494,7 +494,7 @@ HB_FUNC_STATIC(QREGEXP_SETMINIMAL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void setPattern( const QString & pattern )
+// void setPattern(const QString &pattern)
 HB_FUNC_STATIC(QREGEXP_SETPATTERN)
 {
   QRegExp *obj = static_cast<QRegExp *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -518,7 +518,7 @@ HB_FUNC_STATIC(QREGEXP_SETPATTERN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void setPatternSyntax( QRegExp::PatternSyntax syntax )
+// void setPatternSyntax(QRegExp::PatternSyntax syntax)
 HB_FUNC_STATIC(QREGEXP_SETPATTERNSYNTAX)
 {
   QRegExp *obj = static_cast<QRegExp *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -542,7 +542,7 @@ HB_FUNC_STATIC(QREGEXP_SETPATTERNSYNTAX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// static QString escape( const QString & str )
+// static QString escape(const QString &str)
 HB_FUNC_STATIC(QREGEXP_ESCAPE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

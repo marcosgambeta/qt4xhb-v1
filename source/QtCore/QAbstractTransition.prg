@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void addAnimation( QAbstractAnimation * animation )
+// void addAnimation(QAbstractAnimation *animation)
 HB_FUNC_STATIC(QABSTRACTTRANSITION_ADDANIMATION)
 {
   QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -116,15 +116,15 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_ANIMATIONS)
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if (pDynSym != NULL)
       {
-        for (int i = 0; i < list.count(); i++)
+        const int count = list.count();
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(NULL);
-          hb_itemPutPtr(pItem, static_cast<QAbstractAnimation *>(list[i]));
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, static_cast<QAbstractAnimation *>(list[i]));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_ANIMATIONS)
   }
 }
 
-// QStateMachine * machine() const
+// QStateMachine *machine() const
 HB_FUNC_STATIC(QABSTRACTTRANSITION_MACHINE)
 {
   QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_MACHINE)
   }
 }
 
-// void removeAnimation( QAbstractAnimation * animation )
+// void removeAnimation(QAbstractAnimation *animation)
 HB_FUNC_STATIC(QABSTRACTTRANSITION_REMOVEANIMATION)
 {
   QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_REMOVEANIMATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void setTargetState( QAbstractState * target )
+// void setTargetState(QAbstractState *target)
 HB_FUNC_STATIC(QABSTRACTTRANSITION_SETTARGETSTATE)
 {
   QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -217,7 +217,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_SETTARGETSTATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void setTargetStates( const QList<QAbstractState *> & targets )
+// void setTargetStates(const QList<QAbstractState *> &targets)
 HB_FUNC_STATIC(QABSTRACTTRANSITION_SETTARGETSTATES)
 {
   QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_SETTARGETSTATES)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// QState * sourceState() const
+// QState *sourceState() const
 HB_FUNC_STATIC(QABSTRACTTRANSITION_SOURCESTATE)
 {
   QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -272,7 +272,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_SOURCESTATE)
   }
 }
 
-// QAbstractState * targetState() const
+// QAbstractState *targetState() const
 HB_FUNC_STATIC(QABSTRACTTRANSITION_TARGETSTATE)
 {
   QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -311,15 +311,15 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_TARGETSTATES)
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if (pDynSym != NULL)
       {
-        for (int i = 0; i < list.count(); i++)
+        const int count = list.count();
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(NULL);
-          hb_itemPutPtr(pItem, static_cast<QAbstractState *>(list[i]));
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, static_cast<QAbstractState *>(list[i]));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);

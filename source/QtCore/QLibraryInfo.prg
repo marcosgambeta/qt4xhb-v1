@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QLIBRARYINFO_BUILDDATE)
 #endif
 }
 
-// static QString location( QLibraryInfo::LibraryLocation )
+// static QString location(QLibraryInfo::LibraryLocation)
 HB_FUNC_STATIC(QLIBRARYINFO_LOCATION)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

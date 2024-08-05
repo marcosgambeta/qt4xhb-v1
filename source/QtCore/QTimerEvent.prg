@@ -39,7 +39,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QTimerEvent( int timerId )
+    // QTimerEvent(int timerId)
 HB_FUNC_STATIC(QTIMEREVENT_NEW)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1))

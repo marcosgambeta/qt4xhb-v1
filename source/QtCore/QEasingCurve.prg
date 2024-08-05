@@ -59,14 +59,14 @@ HB_FUNC_STATIC(QEASINGCURVE_NEW)
 {
   if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
-    // QEasingCurve( QEasingCurve::Type type = QEasingCurve::Linear )
+    // QEasingCurve(QEasingCurve::Type type = QEasingCurve::Linear)
     QEasingCurve *obj =
         new QEasingCurve(HB_ISNIL(1) ? (QEasingCurve::Type)QEasingCurve::Linear : (QEasingCurve::Type)hb_parni(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQEASINGCURVE(1))
   {
-    // QEasingCurve( const QEasingCurve & other )
+    // QEasingCurve(const QEasingCurve &other)
     QEasingCurve *obj = new QEasingCurve(*PQEASINGCURVE(1));
     Qt4xHb::returnNewObject(obj, true);
   }
@@ -158,7 +158,7 @@ HB_FUNC_STATIC(QEASINGCURVE_PERIOD)
   }
 }
 
-// void setAmplitude( qreal amplitude )
+// void setAmplitude(qreal amplitude)
 HB_FUNC_STATIC(QEASINGCURVE_SETAMPLITUDE)
 {
   QEasingCurve *obj = static_cast<QEasingCurve *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QEASINGCURVE_SETAMPLITUDE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void setOvershoot( qreal overshoot )
+// void setOvershoot(qreal overshoot)
 HB_FUNC_STATIC(QEASINGCURVE_SETOVERSHOOT)
 {
   QEasingCurve *obj = static_cast<QEasingCurve *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -206,7 +206,7 @@ HB_FUNC_STATIC(QEASINGCURVE_SETOVERSHOOT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void setPeriod( qreal period )
+// void setPeriod(qreal period)
 HB_FUNC_STATIC(QEASINGCURVE_SETPERIOD)
 {
   QEasingCurve *obj = static_cast<QEasingCurve *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -230,7 +230,7 @@ HB_FUNC_STATIC(QEASINGCURVE_SETPERIOD)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void setType( QEasingCurve::Type type )
+// void setType(QEasingCurve::Type type)
 HB_FUNC_STATIC(QEASINGCURVE_SETTYPE)
 {
   QEasingCurve *obj = static_cast<QEasingCurve *>(Qt4xHb::itemGetPtrStackSelfItem());

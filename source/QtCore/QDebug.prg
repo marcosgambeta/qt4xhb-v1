@@ -54,19 +54,19 @@ HB_FUNC_STATIC(QDEBUG_NEW)
 {
   if (ISNUMPAR(1) && ISQIODEVICE(1))
   {
-    // QDebug( QIODevice * device )
+    // QDebug(QIODevice *device)
     QDebug *obj = new QDebug(PQIODEVICE(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    // QDebug( QtMsgType type )
+    // QDebug(QtMsgType type)
     QDebug *obj = new QDebug((QtMsgType)hb_parni(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQDEBUG(1))
   {
-    // QDebug( const QDebug & other )
+    // QDebug(const QDebug &other)
     QDebug *obj = new QDebug(*PQDEBUG(1));
     Qt4xHb::returnNewObject(obj, true);
   }
@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QDEBUG_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// QDebug & maybeSpace()
+// QDebug &maybeSpace()
 HB_FUNC_STATIC(QDEBUG_MAYBESPACE)
 {
   QDebug *obj = static_cast<QDebug *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QDEBUG_MAYBESPACE)
   }
 }
 
-// QDebug & nospace()
+// QDebug &nospace()
 HB_FUNC_STATIC(QDEBUG_NOSPACE)
 {
   QDebug *obj = static_cast<QDebug *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QDEBUG_NOSPACE)
   }
 }
 
-// QDebug & space()
+// QDebug &space()
 HB_FUNC_STATIC(QDEBUG_SPACE)
 {
   QDebug *obj = static_cast<QDebug *>(Qt4xHb::itemGetPtrStackSelfItem());

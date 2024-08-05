@@ -49,13 +49,13 @@ HB_FUNC_STATIC(QHISTORYSTATE_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQSTATE(1) || HB_ISNIL(1)))
   {
-    // QHistoryState( QState * parent = 0 )
+    // QHistoryState(QState *parent = 0)
     QHistoryState *obj = new QHistoryState(OPQSTATE(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQSTATE(2) || HB_ISNIL(2)))
   {
-    // QHistoryState( QHistoryState::HistoryType type, QState * parent = 0 )
+    // QHistoryState(QHistoryState::HistoryType type, QState *parent = 0)
     QHistoryState *obj = new QHistoryState((QHistoryState::HistoryType)hb_parni(1), OPQSTATE(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QHISTORYSTATE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// QAbstractState * defaultState() const
+// QAbstractState *defaultState() const
 HB_FUNC_STATIC(QHISTORYSTATE_DEFAULTSTATE)
 {
   QHistoryState *obj = qobject_cast<QHistoryState *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QHISTORYSTATE_DEFAULTSTATE)
   }
 }
 
-// void setDefaultState( QAbstractState * state )
+// void setDefaultState(QAbstractState *state)
 HB_FUNC_STATIC(QHISTORYSTATE_SETDEFAULTSTATE)
 {
   QHistoryState *obj = qobject_cast<QHistoryState *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QHISTORYSTATE_HISTORYTYPE)
   }
 }
 
-// void setHistoryType( QHistoryState::HistoryType type )
+// void setHistoryType(QHistoryState::HistoryType type)
 HB_FUNC_STATIC(QHISTORYSTATE_SETHISTORYTYPE)
 {
   QHistoryState *obj = qobject_cast<QHistoryState *>(Qt4xHb::getQObjectPointerFromSelfItem());

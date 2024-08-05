@@ -49,13 +49,13 @@ HB_FUNC_STATIC(QEVENTTRANSITION_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQSTATE(1) || HB_ISNIL(1)))
   {
-    // QEventTransition( QState * sourceState = 0 )
+    // QEventTransition(QState *sourceState = 0)
     QEventTransition *obj = new QEventTransition(OPQSTATE(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else if (ISBETWEEN(2, 3) && ISQOBJECT(1) && HB_ISNUM(2) && (ISQSTATE(3) || HB_ISNIL(3)))
   {
-    // QEventTransition( QObject * object, QEvent::Type type, QState * sourceState = 0 )
+    // QEventTransition(QObject *object, QEvent::Type type, QState *sourceState = 0)
     QEventTransition *obj = new QEventTransition(PQOBJECT(1), (QEvent::Type)hb_parni(2), OPQSTATE(3, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QEVENTTRANSITION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// QObject * eventSource() const
+// QObject *eventSource() const
 HB_FUNC_STATIC(QEVENTTRANSITION_EVENTSOURCE)
 {
   QEventTransition *obj = qobject_cast<QEventTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QEVENTTRANSITION_EVENTTYPE)
   }
 }
 
-// void setEventSource( QObject * object )
+// void setEventSource(QObject *object)
 HB_FUNC_STATIC(QEVENTTRANSITION_SETEVENTSOURCE)
 {
   QEventTransition *obj = qobject_cast<QEventTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QEVENTTRANSITION_SETEVENTSOURCE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void setEventType( QEvent::Type type )
+// void setEventType(QEvent::Type type)
 HB_FUNC_STATIC(QEVENTTRANSITION_SETEVENTTYPE)
 {
   QEventTransition *obj = qobject_cast<QEventTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());

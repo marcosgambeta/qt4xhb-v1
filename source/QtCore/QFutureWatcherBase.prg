@@ -307,7 +307,7 @@ HB_FUNC_STATIC(QFUTUREWATCHERBASE_WAITFORFINISHED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void setPendingResultsLimit( int limit )
+// void setPendingResultsLimit(int limit)
 HB_FUNC_STATIC(QFUTUREWATCHERBASE_SETPENDINGRESULTSLIMIT)
 {
   QFutureWatcherBase *obj = qobject_cast<QFutureWatcherBase *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -331,7 +331,7 @@ HB_FUNC_STATIC(QFUTUREWATCHERBASE_SETPENDINGRESULTSLIMIT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// bool event( QEvent * event )
+// bool event(QEvent *event)
 HB_FUNC_STATIC(QFUTUREWATCHERBASE_EVENT)
 {
   QFutureWatcherBase *obj = qobject_cast<QFutureWatcherBase *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -377,7 +377,7 @@ HB_FUNC_STATIC(QFUTUREWATCHERBASE_CANCEL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void setPaused( bool paused )
+// void setPaused(bool paused)
 HB_FUNC_STATIC(QFUTUREWATCHERBASE_SETPAUSED)
 {
   QFutureWatcherBase *obj = qobject_cast<QFutureWatcherBase *>(Qt4xHb::getQObjectPointerFromSelfItem());

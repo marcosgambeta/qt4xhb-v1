@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QTIME_NEW)
   else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) &&
            (HB_ISNUM(4) || HB_ISNIL(4)))
   {
-    // QTime( int h, int m, int s = 0, int ms = 0 )
+    // QTime(int h, int m, int s = 0, int ms = 0)
     QTime *obj = new QTime(PINT(1), PINT(2), OPINT(3, 0), OPINT(4, 0));
     Qt4xHb::returnNewObject(obj, true);
   }
@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QTIME_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// QTime addMSecs( int ms ) const
+// QTime addMSecs(int ms) const
 HB_FUNC_STATIC(QTIME_ADDMSECS)
 {
   QTime *obj = static_cast<QTime *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QTIME_ADDMSECS)
   }
 }
 
-// QTime addSecs( int s ) const
+// QTime addSecs(int s) const
 HB_FUNC_STATIC(QTIME_ADDSECS)
 {
   QTime *obj = static_cast<QTime *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -257,7 +257,7 @@ HB_FUNC_STATIC(QTIME_MSEC)
   }
 }
 
-// int msecsTo( const QTime & t ) const
+// int msecsTo(const QTime &t) const
 HB_FUNC_STATIC(QTIME_MSECSTO)
 {
   QTime *obj = static_cast<QTime *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -323,7 +323,7 @@ HB_FUNC_STATIC(QTIME_SECOND)
   }
 }
 
-// int secsTo( const QTime & t ) const
+// int secsTo(const QTime &t) const
 HB_FUNC_STATIC(QTIME_SECSTO)
 {
   QTime *obj = static_cast<QTime *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -345,7 +345,7 @@ HB_FUNC_STATIC(QTIME_SECSTO)
   }
 }
 
-// bool setHMS( int h, int m, int s, int ms = 0 )
+// bool setHMS(int h, int m, int s, int ms = 0)
 HB_FUNC_STATIC(QTIME_SETHMS)
 {
   QTime *obj = static_cast<QTime *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -395,7 +395,7 @@ HB_FUNC_STATIC(QTIME_TOSTRING)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    // QString toString( const QString & format ) const
+    // QString toString(const QString &format) const
     QTime *obj = static_cast<QTime *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -405,7 +405,7 @@ HB_FUNC_STATIC(QTIME_TOSTRING)
   }
   else if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
-    // QString toString( Qt::DateFormat format = Qt::TextDate ) const
+    // QString toString(Qt::DateFormat format = Qt::TextDate) const
     QTime *obj = static_cast<QTime *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -441,7 +441,7 @@ HB_FUNC_STATIC(QTIME_FROMSTRING)
 {
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    // static QTime fromString( const QString & string, Qt::DateFormat format = Qt::TextDate )
+    // static QTime fromString(const QString &string, Qt::DateFormat format = Qt::TextDate)
 
     QTime *ptr = new QTime(
         QTime::fromString(PQSTRING(1), HB_ISNIL(2) ? (Qt::DateFormat)Qt::TextDate : (Qt::DateFormat)hb_parni(2)));
@@ -449,7 +449,7 @@ HB_FUNC_STATIC(QTIME_FROMSTRING)
   }
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
-    // QTime fromString( const QString & string, const QString & format )
+    // QTime fromString(const QString &string, const QString &format)
     QTime *obj = static_cast<QTime *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -478,7 +478,7 @@ HB_FUNC_STATIC(QTIME_ISVALID)
   }
   else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
-    // static bool isValid( int h, int m, int s, int ms = 0 )
+    // static bool isValid(int h, int m, int s, int ms = 0)
 
     RBOOL(QTime::isValid(PINT(1), PINT(2), PINT(3), OPINT(4, 0)));
   }

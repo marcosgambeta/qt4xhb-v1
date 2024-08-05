@@ -51,7 +51,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    // QThreadPool( QObject * parent = 0 )
+    // QThreadPool(QObject *parent = 0)
 HB_FUNC_STATIC(QTHREADPOOL_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QTHREADPOOL_RESERVETHREAD)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void setExpiryTimeout( int expiryTimeout )
+// void setExpiryTimeout(int expiryTimeout)
 HB_FUNC_STATIC(QTHREADPOOL_SETEXPIRYTIMEOUT)
 {
   QThreadPool *obj = qobject_cast<QThreadPool *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QTHREADPOOL_SETEXPIRYTIMEOUT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void setMaxThreadCount( int maxThreadCount )
+// void setMaxThreadCount(int maxThreadCount)
 HB_FUNC_STATIC(QTHREADPOOL_SETMAXTHREADCOUNT)
 {
   QThreadPool *obj = qobject_cast<QThreadPool *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QTHREADPOOL_SETMAXTHREADCOUNT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void start( QRunnable * runnable, int priority = 0 )
+// void start(QRunnable *runnable, int priority = 0)
 HB_FUNC_STATIC(QTHREADPOOL_START)
 {
   QThreadPool *obj = qobject_cast<QThreadPool *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -269,7 +269,7 @@ HB_FUNC_STATIC(QTHREADPOOL_START)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// bool tryStart( QRunnable * runnable )
+// bool tryStart(QRunnable *runnable)
 HB_FUNC_STATIC(QTHREADPOOL_TRYSTART)
 {
   QThreadPool *obj = qobject_cast<QThreadPool *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -307,7 +307,7 @@ HB_FUNC_STATIC(QTHREADPOOL_WAITFORDONE)
   }
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    // bool waitForDone( int msecs )
+    // bool waitForDone(int msecs)
     QThreadPool *obj = qobject_cast<QThreadPool *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -321,7 +321,7 @@ HB_FUNC_STATIC(QTHREADPOOL_WAITFORDONE)
   }
 }
 
-// static QThreadPool * globalInstance()
+// static QThreadPool *globalInstance()
 HB_FUNC_STATIC(QTHREADPOOL_GLOBALINSTANCE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

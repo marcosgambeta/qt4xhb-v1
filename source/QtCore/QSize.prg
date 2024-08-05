@@ -68,7 +68,7 @@ HB_FUNC_STATIC(QSIZE_NEW)
   }
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
-    // QSize( int width, int height )
+    // QSize(int width, int height)
     QSize *obj = new QSize(PINT(1), PINT(2));
     Qt4xHb::returnNewObject(obj, true);
   }
@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QSIZE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// QSize boundedTo( const QSize & otherSize ) const
+// QSize boundedTo(const QSize &otherSize) const
 HB_FUNC_STATIC(QSIZE_BOUNDEDTO)
 {
   QSize *obj = static_cast<QSize *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QSIZE_BOUNDEDTO)
   }
 }
 
-// QSize expandedTo( const QSize & otherSize ) const
+// QSize expandedTo(const QSize &otherSize) const
 HB_FUNC_STATIC(QSIZE_EXPANDEDTO)
 {
   QSize *obj = static_cast<QSize *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -232,7 +232,7 @@ HB_FUNC_STATIC(QSIZE_SCALE)
 {
   if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
-    // void scale( int width, int height, Qt::AspectRatioMode mode )
+    // void scale(int width, int height, Qt::AspectRatioMode mode)
     QSize *obj = static_cast<QSize *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -244,7 +244,7 @@ HB_FUNC_STATIC(QSIZE_SCALE)
   }
   else if (ISNUMPAR(2) && ISQSIZE(1) && HB_ISNUM(2))
   {
-    // void scale( const QSize & size, Qt::AspectRatioMode mode )
+    // void scale(const QSize &size, Qt::AspectRatioMode mode)
     QSize *obj = static_cast<QSize *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -260,7 +260,7 @@ HB_FUNC_STATIC(QSIZE_SCALE)
   }
 }
 
-// void setHeight( int height )
+// void setHeight(int height)
 HB_FUNC_STATIC(QSIZE_SETHEIGHT)
 {
   QSize *obj = static_cast<QSize *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -284,7 +284,7 @@ HB_FUNC_STATIC(QSIZE_SETHEIGHT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void setWidth( int width )
+// void setWidth(int width)
 HB_FUNC_STATIC(QSIZE_SETWIDTH)
 {
   QSize *obj = static_cast<QSize *>(Qt4xHb::itemGetPtrStackSelfItem());

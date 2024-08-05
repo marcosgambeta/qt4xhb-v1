@@ -77,7 +77,7 @@ HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// QObject * add( QObject * object )
+// QObject *add(QObject *object)
 HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_ADD)
 {
   QObjectCleanupHandler *obj = qobject_cast<QObjectCleanupHandler *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_ADD)
   }
 }
 
-// void remove( QObject * object )
+// void remove(QObject *object)
 HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_REMOVE)
 {
   QObjectCleanupHandler *obj = qobject_cast<QObjectCleanupHandler *>(Qt4xHb::getQObjectPointerFromSelfItem());

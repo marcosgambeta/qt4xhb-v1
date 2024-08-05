@@ -66,7 +66,7 @@ HB_FUNC_STATIC(QANIMATIONGROUP_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void addAnimation( QAbstractAnimation * animation )
+// void addAnimation(QAbstractAnimation *animation)
 HB_FUNC_STATIC(QANIMATIONGROUP_ADDANIMATION)
 {
   QAnimationGroup *obj = qobject_cast<QAnimationGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QANIMATIONGROUP_ADDANIMATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// QAbstractAnimation * animationAt( int index ) const
+// QAbstractAnimation *animationAt(int index) const
 HB_FUNC_STATIC(QANIMATIONGROUP_ANIMATIONAT)
 {
   QAnimationGroup *obj = qobject_cast<QAnimationGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QANIMATIONGROUP_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// int indexOfAnimation( QAbstractAnimation * animation ) const
+// int indexOfAnimation(QAbstractAnimation *animation) const
 HB_FUNC_STATIC(QANIMATIONGROUP_INDEXOFANIMATION)
 {
   QAnimationGroup *obj = qobject_cast<QAnimationGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QANIMATIONGROUP_INDEXOFANIMATION)
   }
 }
 
-// void insertAnimation( int index, QAbstractAnimation * animation )
+// void insertAnimation(int index, QAbstractAnimation *animation)
 HB_FUNC_STATIC(QANIMATIONGROUP_INSERTANIMATION)
 {
   QAnimationGroup *obj = qobject_cast<QAnimationGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -205,7 +205,7 @@ HB_FUNC_STATIC(QANIMATIONGROUP_INSERTANIMATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void removeAnimation( QAbstractAnimation * animation )
+// void removeAnimation(QAbstractAnimation *animation)
 HB_FUNC_STATIC(QANIMATIONGROUP_REMOVEANIMATION)
 {
   QAnimationGroup *obj = qobject_cast<QAnimationGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -229,7 +229,7 @@ HB_FUNC_STATIC(QANIMATIONGROUP_REMOVEANIMATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// QAbstractAnimation * takeAnimation( int index )
+// QAbstractAnimation *takeAnimation(int index)
 HB_FUNC_STATIC(QANIMATIONGROUP_TAKEANIMATION)
 {
   QAnimationGroup *obj = qobject_cast<QAnimationGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());

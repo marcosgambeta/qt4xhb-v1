@@ -232,10 +232,10 @@ RETURN
 #include <QtCore/QEvent>
 #include <QtCore/QThread>
 
-void _qtxhb_processOnEventMethod(QEvent::Type event);
+    void _qtxhb_processOnEventMethod(QEvent::Type event);
 void _qtxhb_processOnEventMethod2(QEvent::Type event);
 
-// QObject( QObject * parent = 0 )
+// QObject(QObject *parent = 0)
 HB_FUNC_STATIC(QOBJECT_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
@@ -267,7 +267,7 @@ HB_FUNC_STATIC(QOBJECT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// bool blockSignals( bool block )
+// bool blockSignals(bool block)
 HB_FUNC_STATIC(QOBJECT_BLOCKSIGNALS)
 {
   QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -289,7 +289,7 @@ HB_FUNC_STATIC(QOBJECT_BLOCKSIGNALS)
   }
 }
 
-// const QObjectList & children() const
+// const QObjectList &children() const
 HB_FUNC_STATIC(QOBJECT_CHILDREN)
 {
   QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -305,15 +305,15 @@ HB_FUNC_STATIC(QOBJECT_CHILDREN)
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if (pDynSym != NULL)
       {
-        for (int i = 0; i < list.count(); i++)
+        const int count = list.count();
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(NULL);
-          hb_itemPutPtr(pItem, static_cast<QObject *>(list[i]));
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, static_cast<QObject *>(list[i]));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -399,19 +399,18 @@ HB_FUNC_STATIC(QOBJECT_DYNAMICPROPERTYNAMES)
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if (pDynSym != NULL)
       {
-        for (int i = 0; i < list.count(); i++)
+        const int count = list.count();
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(NULL);
-          hb_itemPutPtr(pItem, static_cast<QByteArray *>(new QByteArray(list[i])));
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QByteArray(list[i]));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemNew(NULL);
-          hb_itemPutL(pDestroy, true);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
           hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
           hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
@@ -433,7 +432,7 @@ HB_FUNC_STATIC(QOBJECT_DYNAMICPROPERTYNAMES)
   }
 }
 
-// virtual bool event( QEvent * e )
+// virtual bool event(QEvent *e)
 HB_FUNC_STATIC(QOBJECT_EVENT)
 {
   QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -455,7 +454,7 @@ HB_FUNC_STATIC(QOBJECT_EVENT)
   }
 }
 
-// virtual bool eventFilter( QObject * watched, QEvent * event )
+// virtual bool eventFilter(QObject *watched, QEvent *event)
 HB_FUNC_STATIC(QOBJECT_EVENTFILTER)
 {
   QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -512,15 +511,15 @@ void QObject_findChildren1()
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if (pDynSym != NULL)
     {
-      for (int i = 0; i < list.count(); i++)
+      const int count = list.count();
+      for (int i = 0; i < count; i++)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
         PHB_ITEM pObject = hb_itemNew(NULL);
         hb_itemCopy(pObject, hb_stackReturnItem());
-        PHB_ITEM pItem = hb_itemNew(NULL);
-        hb_itemPutPtr(pItem, static_cast<QObject *>(list[i]));
+        PHB_ITEM pItem = hb_itemPutPtr(NULL, static_cast<QObject *>(list[i]));
         hb_objSendMsg(pObject, "_POINTER", 1, pItem);
         hb_itemRelease(pItem);
         hb_arrayAddForward(pArray, pObject);
@@ -546,15 +545,15 @@ void QObject_findChildren2()
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if (pDynSym != NULL)
     {
-      for (int i = 0; i < list.count(); i++)
+      const int count = list.count();
+      for (int i = 0; i < count; i++)
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
         PHB_ITEM pObject = hb_itemNew(NULL);
         hb_itemCopy(pObject, hb_stackReturnItem());
-        PHB_ITEM pItem = hb_itemNew(NULL);
-        hb_itemPutPtr(pItem, static_cast<QObject *>(list[i]));
+        PHB_ITEM pItem = hb_itemPutPtr(NULL, static_cast<QObject *>(list[i]));
         hb_objSendMsg(pObject, "_POINTER", 1, pItem);
         hb_itemRelease(pItem);
         hb_arrayAddForward(pArray, pObject);
@@ -585,7 +584,7 @@ HB_FUNC_STATIC(QOBJECT_FINDCHILDREN)
   }
 }
 
-// bool inherits( const char * className ) const
+// bool inherits(const char *className) const
 HB_FUNC_STATIC(QOBJECT_INHERITS)
 {
   QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -607,7 +606,7 @@ HB_FUNC_STATIC(QOBJECT_INHERITS)
   }
 }
 
-// void installEventFilter( QObject * filterObj )
+// void installEventFilter(QObject *filterObj)
 HB_FUNC_STATIC(QOBJECT_INSTALLEVENTFILTER)
 {
   QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -653,7 +652,7 @@ HB_FUNC_STATIC(QOBJECT_ISWIDGETTYPE)
   }
 }
 
-// void killTimer( int id )
+// void killTimer(int id)
 HB_FUNC_STATIC(QOBJECT_KILLTIMER)
 {
   QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -677,7 +676,7 @@ HB_FUNC_STATIC(QOBJECT_KILLTIMER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// virtual const QMetaObject * metaObject() const
+// virtual const QMetaObject *metaObject() const
 HB_FUNC_STATIC(QOBJECT_METAOBJECT)
 {
   QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -700,7 +699,7 @@ HB_FUNC_STATIC(QOBJECT_METAOBJECT)
   }
 }
 
-// void moveToThread( QThread * targetThread )
+// void moveToThread(QThread *targetThread)
 HB_FUNC_STATIC(QOBJECT_MOVETOTHREAD)
 {
   QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -746,7 +745,7 @@ HB_FUNC_STATIC(QOBJECT_OBJECTNAME)
   }
 }
 
-// QObject * parent() const
+// QObject *parent() const
 HB_FUNC_STATIC(QOBJECT_PARENT)
 {
   QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -769,7 +768,7 @@ HB_FUNC_STATIC(QOBJECT_PARENT)
   }
 }
 
-// QVariant property( const char * name ) const
+// QVariant property(const char *name) const
 HB_FUNC_STATIC(QOBJECT_PROPERTY)
 {
   QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -792,7 +791,7 @@ HB_FUNC_STATIC(QOBJECT_PROPERTY)
   }
 }
 
-// void removeEventFilter( QObject * obj )
+// void removeEventFilter(QObject *obj)
 HB_FUNC_STATIC(QOBJECT_REMOVEEVENTFILTER)
 {
   QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -816,7 +815,7 @@ HB_FUNC_STATIC(QOBJECT_REMOVEEVENTFILTER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void setObjectName( const QString & name )
+// void setObjectName(const QString &name)
 HB_FUNC_STATIC(QOBJECT_SETOBJECTNAME)
 {
   QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -840,7 +839,7 @@ HB_FUNC_STATIC(QOBJECT_SETOBJECTNAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void setParent( QObject * parent )
+// void setParent(QObject *parent)
 HB_FUNC_STATIC(QOBJECT_SETPARENT)
 {
   QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -864,7 +863,7 @@ HB_FUNC_STATIC(QOBJECT_SETPARENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// bool setProperty( const char * name, const QVariant & value )
+// bool setProperty(const char *name, const QVariant &value)
 HB_FUNC_STATIC(QOBJECT_SETPROPERTY)
 {
   QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -908,7 +907,7 @@ HB_FUNC_STATIC(QOBJECT_SIGNALSBLOCKED)
   }
 }
 
-// int startTimer( int interval )
+// int startTimer(int interval)
 HB_FUNC_STATIC(QOBJECT_STARTTIMER)
 {
   QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -930,7 +929,7 @@ HB_FUNC_STATIC(QOBJECT_STARTTIMER)
   }
 }
 
-// QThread * thread() const
+// QThread *thread() const
 HB_FUNC_STATIC(QOBJECT_THREAD)
 {
   QObject *obj = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem());

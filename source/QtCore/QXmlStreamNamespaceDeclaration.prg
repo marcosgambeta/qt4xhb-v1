@@ -60,13 +60,13 @@ HB_FUNC_STATIC(QXMLSTREAMNAMESPACEDECLARATION_NEW)
   }
   else if (ISNUMPAR(1) && ISQXMLSTREAMNAMESPACEDECLARATION(1))
   {
-    // QXmlStreamNamespaceDeclaration( const QXmlStreamNamespaceDeclaration & other )
+    // QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration &other)
     QXmlStreamNamespaceDeclaration *obj = new QXmlStreamNamespaceDeclaration(*PQXMLSTREAMNAMESPACEDECLARATION(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
-    // QXmlStreamNamespaceDeclaration( const QString & prefix, const QString & namespaceUri )
+    // QXmlStreamNamespaceDeclaration(const QString &prefix, const QString &namespaceUri)
     QXmlStreamNamespaceDeclaration *obj = new QXmlStreamNamespaceDeclaration(PQSTRING(1), PQSTRING(2));
     Qt4xHb::returnNewObject(obj, true);
   }

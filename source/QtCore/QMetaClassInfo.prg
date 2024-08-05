@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QMETACLASSINFO_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// const char * name() const
+// const char *name() const
 HB_FUNC_STATIC(QMETACLASSINFO_NAME)
 {
   QMetaClassInfo *obj = static_cast<QMetaClassInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QMETACLASSINFO_NAME)
   }
 }
 
-// const char * value() const
+// const char *value() const
 HB_FUNC_STATIC(QMETACLASSINFO_VALUE)
 {
   QMetaClassInfo *obj = static_cast<QMetaClassInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QMETACLASSINFO_VALUE)
   }
 }
 
-// const QMetaObject * enclosingMetaObject() const
+// const QMetaObject *enclosingMetaObject() const
 HB_FUNC_STATIC(QMETACLASSINFO_ENCLOSINGMETAOBJECT)
 {
   QMetaClassInfo *obj = static_cast<QMetaClassInfo *>(Qt4xHb::itemGetPtrStackSelfItem());

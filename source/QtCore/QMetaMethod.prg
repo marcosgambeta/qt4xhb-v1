@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QMETAMETHOD_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// const char * signature() const
+// const char *signature() const
 HB_FUNC_STATIC(QMETAMETHOD_SIGNATURE)
 {
   QMetaMethod *obj = static_cast<QMetaMethod *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QMETAMETHOD_SIGNATURE)
   }
 }
 
-// const char * typeName() const
+// const char *typeName() const
 HB_FUNC_STATIC(QMETAMETHOD_TYPENAME)
 {
   QMetaMethod *obj = static_cast<QMetaMethod *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -151,19 +151,18 @@ HB_FUNC_STATIC(QMETAMETHOD_PARAMETERTYPES)
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if (pDynSym != NULL)
       {
-        for (int i = 0; i < list.count(); i++)
+        const int count = list.count();
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(NULL);
-          hb_itemPutPtr(pItem, static_cast<QByteArray *>(new QByteArray(list[i])));
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QByteArray(list[i]));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemNew(NULL);
-          hb_itemPutL(pDestroy, true);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
           hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
           hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
@@ -201,19 +200,18 @@ HB_FUNC_STATIC(QMETAMETHOD_PARAMETERNAMES)
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if (pDynSym != NULL)
       {
-        for (int i = 0; i < list.count(); i++)
+        const int count = list.count();
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(NULL);
-          hb_itemPutPtr(pItem, static_cast<QByteArray *>(new QByteArray(list[i])));
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QByteArray(list[i]));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemNew(NULL);
-          hb_itemPutL(pDestroy, true);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
           hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
           hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
@@ -235,7 +233,7 @@ HB_FUNC_STATIC(QMETAMETHOD_PARAMETERNAMES)
   }
 }
 
-// const char * tag() const
+// const char *tag() const
 HB_FUNC_STATIC(QMETAMETHOD_TAG)
 {
   QMetaMethod *obj = static_cast<QMetaMethod *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -367,7 +365,7 @@ HB_FUNC_STATIC(QMETAMETHOD_REVISION)
   }
 }
 
-// const QMetaObject * enclosingMetaObject() const
+// const QMetaObject *enclosingMetaObject() const
 HB_FUNC_STATIC(QMETAMETHOD_ENCLOSINGMETAOBJECT)
 {
   QMetaMethod *obj = static_cast<QMetaMethod *>(Qt4xHb::itemGetPtrStackSelfItem());

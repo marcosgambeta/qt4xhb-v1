@@ -54,7 +54,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QEvent( QEvent::Type type )
+    // QEvent(QEvent::Type type)
 HB_FUNC_STATIC(QEVENT_NEW)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1))
@@ -154,7 +154,7 @@ HB_FUNC_STATIC(QEVENT_ISACCEPTED)
   }
 }
 
-// void setAccepted( bool accepted )
+// void setAccepted(bool accepted)
 HB_FUNC_STATIC(QEVENT_SETACCEPTED)
 {
   QEvent *obj = static_cast<QEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -222,7 +222,7 @@ HB_FUNC_STATIC(QEVENT_TYPE)
   }
 }
 
-// static int registerEventType( int hint = -1 )
+// static int registerEventType(int hint = -1)
 HB_FUNC_STATIC(QEVENT_REGISTEREVENTTYPE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

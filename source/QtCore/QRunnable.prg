@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QRUNNABLE_RUN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void setAutoDelete( bool autoDelete )
+// void setAutoDelete(bool autoDelete)
 HB_FUNC_STATIC(QRUNNABLE_SETAUTODELETE)
 {
   QRunnable *obj = static_cast<QRunnable *>(Qt4xHb::itemGetPtrStackSelfItem());

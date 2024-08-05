@@ -67,7 +67,7 @@ HB_FUNC_STATIC(QABSTRACTSTATE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// QStateMachine * machine() const
+// QStateMachine *machine() const
 HB_FUNC_STATIC(QABSTRACTSTATE_MACHINE)
 {
   QAbstractState *obj = qobject_cast<QAbstractState *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QABSTRACTSTATE_MACHINE)
   }
 }
 
-// QState * parentState() const
+// QState *parentState() const
 HB_FUNC_STATIC(QABSTRACTSTATE_PARENTSTATE)
 {
   QAbstractState *obj = qobject_cast<QAbstractState *>(Qt4xHb::getQObjectPointerFromSelfItem());

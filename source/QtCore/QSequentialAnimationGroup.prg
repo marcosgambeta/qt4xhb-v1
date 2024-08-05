@@ -50,7 +50,7 @@ RETURN
 
 #include <QtCore/QPauseAnimation>
 
-    // QSequentialAnimationGroup( QObject * parent = 0 )
+    // QSequentialAnimationGroup(QObject *parent = 0)
 HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// QPauseAnimation * addPause( int msecs )
+// QPauseAnimation *addPause(int msecs)
 HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_ADDPAUSE)
 {
   QSequentialAnimationGroup *obj = qobject_cast<QSequentialAnimationGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_ADDPAUSE)
   }
 }
 
-// QAbstractAnimation * currentAnimation() const
+// QAbstractAnimation *currentAnimation() const
 HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_CURRENTANIMATION)
 {
   QSequentialAnimationGroup *obj = qobject_cast<QSequentialAnimationGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_CURRENTANIMATION)
   }
 }
 
-// QPauseAnimation * insertPause( int index, int msecs )
+// QPauseAnimation *insertPause(int index, int msecs)
 HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_INSERTPAUSE)
 {
   QSequentialAnimationGroup *obj = qobject_cast<QSequentialAnimationGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());

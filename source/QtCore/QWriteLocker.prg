@@ -51,7 +51,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QWriteLocker( QReadWriteLock * lock )
+    // QWriteLocker(QReadWriteLock *lock)
 HB_FUNC_STATIC(QWRITELOCKER_NEW)
 {
   if (ISNUMPAR(1) && ISQREADWRITELOCK(1))
@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QWRITELOCKER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// QReadWriteLock * readWriteLock() const
+// QReadWriteLock *readWriteLock() const
 HB_FUNC_STATIC(QWRITELOCKER_READWRITELOCK)
 {
   QWriteLocker *obj = static_cast<QWriteLocker *>(Qt4xHb::itemGetPtrStackSelfItem());

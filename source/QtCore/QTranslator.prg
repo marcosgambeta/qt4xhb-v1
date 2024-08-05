@@ -45,7 +45,7 @@ RETURN
 
 #include <QtCore/QLocale>
 
-    // QTranslator( QObject * parent = 0 )
+    // QTranslator(QObject *parent = 0)
 HB_FUNC_STATIC(QTRANSLATOR_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
@@ -104,8 +104,8 @@ HB_FUNC_STATIC(QTRANSLATOR_LOAD)
   if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (HB_ISCHAR(3) || HB_ISNIL(3)) &&
       (HB_ISCHAR(4) || HB_ISNIL(4)))
   {
-    // bool load( const QString & filename, const QString & directory = QString(), const QString & search_delimiters =
-    // QString(), const QString & suffix = QString() )
+    // bool load(const QString &filename, const QString &directory = QString(), const QString &search_delimiters =
+    // QString(), const QString &suffix = QString())
     QTranslator *obj = qobject_cast<QTranslator *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -116,8 +116,8 @@ HB_FUNC_STATIC(QTRANSLATOR_LOAD)
   else if (ISBETWEEN(2, 5) && ISQLOCALE(1) && HB_ISCHAR(2) && (HB_ISCHAR(3) || HB_ISNIL(3)) &&
            (HB_ISCHAR(4) || HB_ISNIL(4)) && (HB_ISCHAR(5) || HB_ISNIL(5)))
   {
-    // bool load( const QLocale & locale, const QString & filename, const QString & prefix = QString(), const QString &
-    // directory = QString(), const QString & suffix = QString() )
+    // bool load(const QLocale &locale, const QString &filename, const QString &prefix = QString(), const QString
+    // &directory = QString(), const QString &suffix = QString())
     QTranslator *obj = qobject_cast<QTranslator *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -132,8 +132,8 @@ HB_FUNC_STATIC(QTRANSLATOR_LOAD)
   }
 }
 
-// virtual QString translate( const char * context, const char * sourceText, const char * disambiguation = 0, int n = -1
-// ) const
+// virtual QString translate(const char *context, const char *sourceText, const char *disambiguation = 0, int n = -1)
+// const
 HB_FUNC_STATIC(QTRANSLATOR_TRANSLATE)
 {
   QTranslator *obj = qobject_cast<QTranslator *>(Qt4xHb::getQObjectPointerFromSelfItem());

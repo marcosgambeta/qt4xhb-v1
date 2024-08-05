@@ -116,25 +116,25 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_NEW)
   }
   else if (ISNUMPAR(1) && ISQIODEVICE(1))
   {
-    // QXmlStreamReader( QIODevice * device )
+    // QXmlStreamReader(QIODevice *device)
     QXmlStreamReader *obj = new QXmlStreamReader(PQIODEVICE(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
-    // QXmlStreamReader( const QByteArray & data )
+    // QXmlStreamReader(const QByteArray &data)
     QXmlStreamReader *obj = new QXmlStreamReader(*PQBYTEARRAY(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    // QXmlStreamReader( const QString & data )
+    // QXmlStreamReader(const QString &data)
     QXmlStreamReader *obj = new QXmlStreamReader(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    // QXmlStreamReader( const char * data )
+    // QXmlStreamReader(const char *data)
     QXmlStreamReader *obj = new QXmlStreamReader(PCONSTCHAR(1));
     Qt4xHb::returnNewObject(obj, true);
   }
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ADDDATA)
 {
   if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
-    // void addData( const QByteArray & data )
+    // void addData(const QByteArray &data)
     QXmlStreamReader *obj = static_cast<QXmlStreamReader *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ADDDATA)
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    // void addData( const QString & data )
+    // void addData(const QString &data)
     QXmlStreamReader *obj = static_cast<QXmlStreamReader *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ADDDATA)
   }
 }
 
-// void addExtraNamespaceDeclaration( const QXmlStreamNamespaceDeclaration & extraNamespaceDeclaration )
+// void addExtraNamespaceDeclaration(const QXmlStreamNamespaceDeclaration &extraNamespaceDeclaration)
 HB_FUNC_STATIC(QXMLSTREAMREADER_ADDEXTRANAMESPACEDECLARATION)
 {
   QXmlStreamReader *obj = static_cast<QXmlStreamReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -216,7 +216,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ADDEXTRANAMESPACEDECLARATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void addExtraNamespaceDeclarations( const QXmlStreamNamespaceDeclarations & extraNamespaceDeclarations )
+// void addExtraNamespaceDeclarations(const QXmlStreamNamespaceDeclarations &extraNamespaceDeclarations)
 HB_FUNC_STATIC(QXMLSTREAMREADER_ADDEXTRANAMESPACEDECLARATIONS)
 {
   QXmlStreamReader *obj = static_cast<QXmlStreamReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -361,7 +361,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_COLUMNNUMBER)
   }
 }
 
-// QIODevice * device() const
+// QIODevice *device() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_DEVICE)
 {
   QXmlStreamReader *obj = static_cast<QXmlStreamReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -515,19 +515,18 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ENTITYDECLARATIONS)
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if (pDynSym != NULL)
       {
-        for (int i = 0; i < list.count(); i++)
+        const int count = list.count();
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(NULL);
-          hb_itemPutPtr(pItem, static_cast<QXmlStreamEntityDeclaration *>(new QXmlStreamEntityDeclaration(list[i])));
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QXmlStreamEntityDeclaration(list[i]));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemNew(NULL);
-          hb_itemPutL(pDestroy, true);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
           hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
           hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
@@ -549,7 +548,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ENTITYDECLARATIONS)
   }
 }
 
-// QXmlStreamEntityResolver * entityResolver() const
+// QXmlStreamEntityResolver *entityResolver() const
 HB_FUNC_STATIC(QXMLSTREAMREADER_ENTITYRESOLVER)
 {
   QXmlStreamReader *obj = static_cast<QXmlStreamReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -963,20 +962,18 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_NAMESPACEDECLARATIONS)
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if (pDynSym != NULL)
       {
-        for (int i = 0; i < list.count(); i++)
+        const int count = list.count();
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(NULL);
-          hb_itemPutPtr(pItem,
-                        static_cast<QXmlStreamNamespaceDeclaration *>(new QXmlStreamNamespaceDeclaration(list[i])));
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QXmlStreamNamespaceDeclaration(list[i]));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemNew(NULL);
-          hb_itemPutL(pDestroy, true);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
           hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
           hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
@@ -1059,20 +1056,18 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_NOTATIONDECLARATIONS)
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if (pDynSym != NULL)
       {
-        for (int i = 0; i < list.count(); i++)
+        const int count = list.count();
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(NULL);
-          hb_itemPutPtr(pItem,
-                        static_cast<QXmlStreamNotationDeclaration *>(new QXmlStreamNotationDeclaration(list[i])));
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QXmlStreamNotationDeclaration(list[i]));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemNew(NULL);
-          hb_itemPutL(pDestroy, true);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
           hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
           hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
@@ -1186,7 +1181,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_QUALIFIEDNAME)
   }
 }
 
-// void raiseError( const QString & message = QString() )
+// void raiseError(const QString &message = QString())
 HB_FUNC_STATIC(QXMLSTREAMREADER_RAISEERROR)
 {
   QXmlStreamReader *obj = static_cast<QXmlStreamReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1210,8 +1205,8 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_RAISEERROR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// QString readElementText( QXmlStreamReader::ReadElementTextBehaviour behaviour =
-// QXmlStreamReader::ErrorOnUnexpectedElement )
+// QString readElementText(QXmlStreamReader::ReadElementTextBehaviour behaviour =
+// QXmlStreamReader::ErrorOnUnexpectedElement)
 HB_FUNC_STATIC(QXMLSTREAMREADER_READELEMENTTEXT)
 {
   QXmlStreamReader *obj = static_cast<QXmlStreamReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1279,7 +1274,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_READNEXTSTARTELEMENT)
   }
 }
 
-// void setDevice( QIODevice * device )
+// void setDevice(QIODevice *device)
 HB_FUNC_STATIC(QXMLSTREAMREADER_SETDEVICE)
 {
   QXmlStreamReader *obj = static_cast<QXmlStreamReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1303,7 +1298,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_SETDEVICE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void setEntityResolver( QXmlStreamEntityResolver * resolver )
+// void setEntityResolver(QXmlStreamEntityResolver *resolver)
 HB_FUNC_STATIC(QXMLSTREAMREADER_SETENTITYRESOLVER)
 {
   QXmlStreamReader *obj = static_cast<QXmlStreamReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1327,7 +1322,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_SETENTITYRESOLVER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void setNamespaceProcessing( bool )
+// void setNamespaceProcessing(bool)
 HB_FUNC_STATIC(QXMLSTREAMREADER_SETNAMESPACEPROCESSING)
 {
   QXmlStreamReader *obj = static_cast<QXmlStreamReader *>(Qt4xHb::itemGetPtrStackSelfItem());

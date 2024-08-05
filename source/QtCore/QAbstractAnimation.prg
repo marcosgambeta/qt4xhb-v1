@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_DURATION)
   }
 }
 
-// QAnimationGroup * group() const
+// QAnimationGroup *group() const
 HB_FUNC_STATIC(QABSTRACTANIMATION_GROUP)
 {
   QAbstractAnimation *obj = qobject_cast<QAbstractAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -237,7 +237,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_LOOPCOUNT)
   }
 }
 
-// void setDirection( QAbstractAnimation::Direction direction )
+// void setDirection(QAbstractAnimation::Direction direction)
 HB_FUNC_STATIC(QABSTRACTANIMATION_SETDIRECTION)
 {
   QAbstractAnimation *obj = qobject_cast<QAbstractAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -261,7 +261,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_SETDIRECTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void setLoopCount( int loopCount )
+// void setLoopCount(int loopCount)
 HB_FUNC_STATIC(QABSTRACTANIMATION_SETLOOPCOUNT)
 {
   QAbstractAnimation *obj = qobject_cast<QAbstractAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -377,7 +377,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_RESUME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void setCurrentTime( int msecs )
+// void setCurrentTime(int msecs)
 HB_FUNC_STATIC(QABSTRACTANIMATION_SETCURRENTTIME)
 {
   QAbstractAnimation *obj = qobject_cast<QAbstractAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -401,7 +401,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_SETCURRENTTIME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void setPaused( bool paused )
+// void setPaused(bool paused)
 HB_FUNC_STATIC(QABSTRACTANIMATION_SETPAUSED)
 {
   QAbstractAnimation *obj = qobject_cast<QAbstractAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -425,7 +425,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_SETPAUSED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void start( QAbstractAnimation::DeletionPolicy policy = QAbstractAnimation::KeepWhenStopped )
+// void start(QAbstractAnimation::DeletionPolicy policy = QAbstractAnimation::KeepWhenStopped)
 HB_FUNC_STATIC(QABSTRACTANIMATION_START)
 {
   QAbstractAnimation *obj = qobject_cast<QAbstractAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());

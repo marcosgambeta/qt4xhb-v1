@@ -40,7 +40,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    // QFinalState( QState * parent = 0 )
+    // QFinalState(QState *parent = 0)
 HB_FUNC_STATIC(QFINALSTATE_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQSTATE(1) || HB_ISNIL(1)))

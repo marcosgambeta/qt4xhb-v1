@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_NEW)
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    // QFSFileEngine( const QString & file )
+    // QFSFileEngine(const QString &file)
     QFSFileEngine *obj = new QFSFileEngine(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, true);
   }
@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_OPEN)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISPOINTER(2))
   {
-    // bool open( QIODevice::OpenMode openMode, FILE * fh )
+    // bool open(QIODevice::OpenMode openMode, FILE *fh)
     QFSFileEngine *obj = static_cast<QFSFileEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_OPEN)
   }
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
-    // bool open( QIODevice::OpenMode openMode, int fd )
+    // bool open(QIODevice::OpenMode openMode, int fd)
     QFSFileEngine *obj = static_cast<QFSFileEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_OPEN)
   }
   else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
-    // bool open( QIODevice::OpenMode openMode, int fd, QFile::FileHandleFlags handleFlags )
+    // bool open(QIODevice::OpenMode openMode, int fd, QFile::FileHandleFlags handleFlags)
     QFSFileEngine *obj = static_cast<QFSFileEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_OPEN)
   }
   else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISPOINTER(2) && HB_ISNUM(3))
   {
-    // bool open( QIODevice::OpenMode openMode, FILE * fh, QFile::FileHandleFlags handleFlags )
+    // bool open(QIODevice::OpenMode openMode, FILE *fh, QFile::FileHandleFlags handleFlags)
     QFSFileEngine *obj = static_cast<QFSFileEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -205,7 +205,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_CLOSE)
   }
 }
 
-// virtual bool copy( const QString & copyName )
+// virtual bool copy(const QString &copyName)
 HB_FUNC_STATIC(QFSFILEENGINE_COPY)
 {
   QFSFileEngine *obj = static_cast<QFSFileEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -227,7 +227,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_COPY)
   }
 }
 
-// virtual QAbstractFileEngine::FileFlags fileFlags( QAbstractFileEngine::FileFlags type ) const
+// virtual QAbstractFileEngine::FileFlags fileFlags(QAbstractFileEngine::FileFlags type) const
 HB_FUNC_STATIC(QFSFILEENGINE_FILEFLAGS)
 {
   QFSFileEngine *obj = static_cast<QFSFileEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_FILEFLAGS)
   }
 }
 
-// virtual QString fileName( QAbstractFileEngine::FileName file ) const
+// virtual QString fileName(QAbstractFileEngine::FileName file) const
 HB_FUNC_STATIC(QFSFILEENGINE_FILENAME)
 {
   QFSFileEngine *obj = static_cast<QFSFileEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -271,7 +271,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_FILENAME)
   }
 }
 
-// virtual QDateTime fileTime( QAbstractFileEngine::FileTime time ) const
+// virtual QDateTime fileTime(QAbstractFileEngine::FileTime time) const
 HB_FUNC_STATIC(QFSFILEENGINE_FILETIME)
 {
   QFSFileEngine *obj = static_cast<QFSFileEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -382,7 +382,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_ISSEQUENTIAL)
   }
 }
 
-// virtual bool link( const QString & newName )
+// virtual bool link(const QString &newName)
 HB_FUNC_STATIC(QFSFILEENGINE_LINK)
 {
   QFSFileEngine *obj = static_cast<QFSFileEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -404,7 +404,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_LINK)
   }
 }
 
-// virtual bool mkdir( const QString & name, bool createParentDirectories ) const
+// virtual bool mkdir(const QString &name, bool createParentDirectories) const
 HB_FUNC_STATIC(QFSFILEENGINE_MKDIR)
 {
   QFSFileEngine *obj = static_cast<QFSFileEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -426,7 +426,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_MKDIR)
   }
 }
 
-// virtual QString owner( QAbstractFileEngine::FileOwner own ) const
+// virtual QString owner(QAbstractFileEngine::FileOwner own) const
 HB_FUNC_STATIC(QFSFILEENGINE_OWNER)
 {
   QFSFileEngine *obj = static_cast<QFSFileEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -448,7 +448,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_OWNER)
   }
 }
 
-// virtual uint ownerId( QAbstractFileEngine::FileOwner own ) const
+// virtual uint ownerId(QAbstractFileEngine::FileOwner own) const
 HB_FUNC_STATIC(QFSFILEENGINE_OWNERID)
 {
   QFSFileEngine *obj = static_cast<QFSFileEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -492,7 +492,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_POS)
   }
 }
 
-// virtual qint64 read( char * data, qint64 maxlen )
+// virtual qint64 read(char *data, qint64 maxlen)
 HB_FUNC_STATIC(QFSFILEENGINE_READ)
 {
   QFSFileEngine *obj = static_cast<QFSFileEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -514,7 +514,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_READ)
   }
 }
 
-// virtual qint64 readLine( char * data, qint64 maxlen )
+// virtual qint64 readLine(char *data, qint64 maxlen)
 HB_FUNC_STATIC(QFSFILEENGINE_READLINE)
 {
   QFSFileEngine *obj = static_cast<QFSFileEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -558,7 +558,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_REMOVE)
   }
 }
 
-// virtual bool rename( const QString & newName )
+// virtual bool rename(const QString &newName)
 HB_FUNC_STATIC(QFSFILEENGINE_RENAME)
 {
   QFSFileEngine *obj = static_cast<QFSFileEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -580,7 +580,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_RENAME)
   }
 }
 
-// virtual bool rmdir( const QString & name, bool recurseParentDirectories ) const
+// virtual bool rmdir(const QString &name, bool recurseParentDirectories) const
 HB_FUNC_STATIC(QFSFILEENGINE_RMDIR)
 {
   QFSFileEngine *obj = static_cast<QFSFileEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -602,7 +602,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_RMDIR)
   }
 }
 
-// virtual bool seek( qint64 pos )
+// virtual bool seek(qint64 pos)
 HB_FUNC_STATIC(QFSFILEENGINE_SEEK)
 {
   QFSFileEngine *obj = static_cast<QFSFileEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -624,7 +624,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_SEEK)
   }
 }
 
-// virtual void setFileName( const QString & file )
+// virtual void setFileName(const QString &file)
 HB_FUNC_STATIC(QFSFILEENGINE_SETFILENAME)
 {
   QFSFileEngine *obj = static_cast<QFSFileEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -648,7 +648,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_SETFILENAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// virtual bool setPermissions( uint perms )
+// virtual bool setPermissions(uint perms)
 HB_FUNC_STATIC(QFSFILEENGINE_SETPERMISSIONS)
 {
   QFSFileEngine *obj = static_cast<QFSFileEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -670,7 +670,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_SETPERMISSIONS)
   }
 }
 
-// virtual bool setSize( qint64 size )
+// virtual bool setSize(qint64 size)
 HB_FUNC_STATIC(QFSFILEENGINE_SETSIZE)
 {
   QFSFileEngine *obj = static_cast<QFSFileEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -714,7 +714,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_SIZE)
   }
 }
 
-// virtual bool supportsExtension( QAbstractFileEngine::Extension extension ) const
+// virtual bool supportsExtension(QAbstractFileEngine::Extension extension) const
 HB_FUNC_STATIC(QFSFILEENGINE_SUPPORTSEXTENSION)
 {
   QFSFileEngine *obj = static_cast<QFSFileEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -736,7 +736,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_SUPPORTSEXTENSION)
   }
 }
 
-// virtual qint64 write( const char * data, qint64 len )
+// virtual qint64 write(const char *data, qint64 len)
 HB_FUNC_STATIC(QFSFILEENGINE_WRITE)
 {
   QFSFileEngine *obj = static_cast<QFSFileEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -758,7 +758,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_WRITE)
   }
 }
 
-// static QString currentPath( const QString & fileName = QString() )
+// static QString currentPath(const QString &fileName = QString())
 HB_FUNC_STATIC(QFSFILEENGINE_CURRENTPATH)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -791,19 +791,18 @@ HB_FUNC_STATIC(QFSFILEENGINE_DRIVES)
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if (pDynSym != NULL)
       {
-        for (int i = 0; i < list.count(); i++)
+        const int count = list.count();
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(NULL);
-          hb_itemPutPtr(pItem, static_cast<QFileInfo *>(new QFileInfo(list[i])));
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QFileInfo(list[i]));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemNew(NULL);
-          hb_itemPutL(pDestroy, true);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
           hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
           hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
@@ -859,7 +858,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_ROOTPATH)
 #endif
 }
 
-// static bool setCurrentPath( const QString & path )
+// static bool setCurrentPath(const QString &path)
 HB_FUNC_STATIC(QFSFILEENGINE_SETCURRENTPATH)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

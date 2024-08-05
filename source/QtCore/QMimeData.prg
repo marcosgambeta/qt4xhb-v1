@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QMIMEDATA_COLORDATA)
   }
 }
 
-// QByteArray data( const QString & mimeType ) const
+// QByteArray data(const QString &mimeType) const
 HB_FUNC_STATIC(QMIMEDATA_DATA)
 {
   QMimeData *obj = qobject_cast<QMimeData *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QMIMEDATA_HASCOLOR)
   }
 }
 
-// virtual bool hasFormat( const QString & mimeType ) const
+// virtual bool hasFormat(const QString &mimeType) const
 HB_FUNC_STATIC(QMIMEDATA_HASFORMAT)
 {
   QMimeData *obj = qobject_cast<QMimeData *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -368,7 +368,7 @@ HB_FUNC_STATIC(QMIMEDATA_IMAGEDATA)
   }
 }
 
-// void removeFormat( const QString & mimeType )
+// void removeFormat(const QString &mimeType)
 HB_FUNC_STATIC(QMIMEDATA_REMOVEFORMAT)
 {
   QMimeData *obj = qobject_cast<QMimeData *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -392,7 +392,7 @@ HB_FUNC_STATIC(QMIMEDATA_REMOVEFORMAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void setColorData( const QVariant & color )
+// void setColorData(const QVariant &color)
 HB_FUNC_STATIC(QMIMEDATA_SETCOLORDATA)
 {
   QMimeData *obj = qobject_cast<QMimeData *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -416,7 +416,7 @@ HB_FUNC_STATIC(QMIMEDATA_SETCOLORDATA)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void setData( const QString & mimeType, const QByteArray & data )
+// void setData(const QString &mimeType, const QByteArray &data)
 HB_FUNC_STATIC(QMIMEDATA_SETDATA)
 {
   QMimeData *obj = qobject_cast<QMimeData *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -440,7 +440,7 @@ HB_FUNC_STATIC(QMIMEDATA_SETDATA)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void setHtml( const QString & html )
+// void setHtml(const QString &html)
 HB_FUNC_STATIC(QMIMEDATA_SETHTML)
 {
   QMimeData *obj = qobject_cast<QMimeData *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -464,7 +464,7 @@ HB_FUNC_STATIC(QMIMEDATA_SETHTML)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void setImageData( const QVariant & image )
+// void setImageData(const QVariant &image)
 HB_FUNC_STATIC(QMIMEDATA_SETIMAGEDATA)
 {
   QMimeData *obj = qobject_cast<QMimeData *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -488,7 +488,7 @@ HB_FUNC_STATIC(QMIMEDATA_SETIMAGEDATA)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void setText( const QString & text )
+// void setText(const QString &text)
 HB_FUNC_STATIC(QMIMEDATA_SETTEXT)
 {
   QMimeData *obj = qobject_cast<QMimeData *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -512,7 +512,7 @@ HB_FUNC_STATIC(QMIMEDATA_SETTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// void setUrls( const QList<QUrl> & urls )
+// void setUrls(const QList<QUrl> &urls)
 HB_FUNC_STATIC(QMIMEDATA_SETURLS)
 {
   QMimeData *obj = qobject_cast<QMimeData *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -581,19 +581,18 @@ HB_FUNC_STATIC(QMIMEDATA_URLS)
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if (pDynSym != NULL)
       {
-        for (int i = 0; i < list.count(); i++)
+        const int count = list.count();
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemNew(NULL);
-          hb_itemPutPtr(pItem, static_cast<QUrl *>(new QUrl(list[i])));
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QUrl(list[i]));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
-          PHB_ITEM pDestroy = hb_itemNew(NULL);
-          hb_itemPutL(pDestroy, true);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
           hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
           hb_itemRelease(pDestroy);
           hb_arrayAddForward(pArray, pObject);
