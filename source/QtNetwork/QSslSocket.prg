@@ -111,7 +111,7 @@ RETURN
 #include <QtNetwork/QSslCipher>
 #include <QtNetwork/QSslConfiguration>
 
-// QSslSocket(QObject *parent = 0)
+    // QSslSocket(QObject *parent = 0)
 HB_FUNC_STATIC(QSSLSOCKET_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
@@ -143,9 +143,7 @@ HB_FUNC_STATIC(QSSLSOCKET_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void abort()
-*/
+// void abort()
 HB_FUNC_STATIC(QSSLSOCKET_ABORT)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -169,9 +167,7 @@ HB_FUNC_STATIC(QSSLSOCKET_ABORT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addCaCertificate(const QSslCertificate &certificate)
-*/
+// void addCaCertificate(const QSslCertificate &certificate)
 HB_FUNC_STATIC(QSSLSOCKET_ADDCACERTIFICATE)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -199,10 +195,8 @@ HB_FUNC_STATIC(QSSLSOCKET_ADDCACERTIFICATES)
 {
   if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
-    /*
-    bool addCaCertificates(const QString &path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax
-    = QRegExp::FixedString)
-    */
+    // bool addCaCertificates(const QString &path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax
+    // syntax = QRegExp::FixedString)
     QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -214,16 +208,14 @@ HB_FUNC_STATIC(QSSLSOCKET_ADDCACERTIFICATES)
   }
   else if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
-    /*
-    void addCaCertificates(const QList<QSslCertificate> &certificates)
-    */
+    // void addCaCertificates(const QList<QSslCertificate> &certificates)
     QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
     {
       QList<QSslCertificate> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      const int nLen1 = hb_arrayLen(aList1);
+      int nLen1 = hb_arrayLen(aList1);
       for (int i1 = 0; i1 < nLen1; i1++)
       {
         par1 << *static_cast<QSslCertificate *>(
@@ -240,9 +232,7 @@ HB_FUNC_STATIC(QSSLSOCKET_ADDCACERTIFICATES)
   }
 }
 
-/*
-QList<QSslCertificate> caCertificates() const
-*/
+// QList<QSslCertificate> caCertificates() const
 HB_FUNC_STATIC(QSSLSOCKET_CACERTIFICATES)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -291,9 +281,7 @@ HB_FUNC_STATIC(QSSLSOCKET_CACERTIFICATES)
   }
 }
 
-/*
-QList<QSslCipher> ciphers() const
-*/
+// QList<QSslCipher> ciphers() const
 HB_FUNC_STATIC(QSSLSOCKET_CIPHERS)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -346,10 +334,8 @@ HB_FUNC_STATIC(QSSLSOCKET_CONNECTTOHOSTENCRYPTED)
 {
   if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
-    /*
-    void connectToHostEncrypted(const QString &hostName, quint16 port, QIODevice::OpenMode mode = QIODevice::ReadWrite
-   )
-    */
+    // void connectToHostEncrypted(const QString &hostName, quint16 port, QIODevice::OpenMode mode =
+    // QIODevice::ReadWrite)
     QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -363,10 +349,8 @@ HB_FUNC_STATIC(QSSLSOCKET_CONNECTTOHOSTENCRYPTED)
   }
   else if (ISBETWEEN(3, 4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISCHAR(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
-    /*
-    void connectToHostEncrypted(const QString &hostName, quint16 port, const QString &sslPeerName,
-    QIODevice::OpenMode mode = QIODevice::ReadWrite)
-    */
+    // void connectToHostEncrypted(const QString &hostName, quint16 port, const QString &sslPeerName,
+    // QIODevice::OpenMode mode = QIODevice::ReadWrite)
     QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -384,9 +368,7 @@ HB_FUNC_STATIC(QSSLSOCKET_CONNECTTOHOSTENCRYPTED)
   }
 }
 
-/*
-qint64 encryptedBytesAvailable() const
-*/
+// qint64 encryptedBytesAvailable() const
 HB_FUNC_STATIC(QSSLSOCKET_ENCRYPTEDBYTESAVAILABLE)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -408,9 +390,7 @@ HB_FUNC_STATIC(QSSLSOCKET_ENCRYPTEDBYTESAVAILABLE)
   }
 }
 
-/*
-qint64 encryptedBytesToWrite() const
-*/
+// qint64 encryptedBytesToWrite() const
 HB_FUNC_STATIC(QSSLSOCKET_ENCRYPTEDBYTESTOWRITE)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -432,9 +412,7 @@ HB_FUNC_STATIC(QSSLSOCKET_ENCRYPTEDBYTESTOWRITE)
   }
 }
 
-/*
-bool flush()
-*/
+// bool flush()
 HB_FUNC_STATIC(QSSLSOCKET_FLUSH)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -460,16 +438,14 @@ HB_FUNC_STATIC(QSSLSOCKET_IGNORESSLERRORS)
 {
   if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
-    /*
-    void ignoreSslErrors(const QList<QSslError> &errors)
-    */
+    // void ignoreSslErrors(const QList<QSslError> &errors)
     QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
     {
       QList<QSslError> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      const int nLen1 = hb_arrayLen(aList1);
+      int nLen1 = hb_arrayLen(aList1);
       for (int i1 = 0; i1 < nLen1; i1++)
       {
         par1 << *static_cast<QSslError *>(
@@ -482,9 +458,7 @@ HB_FUNC_STATIC(QSSLSOCKET_IGNORESSLERRORS)
   }
   else if (ISNUMPAR(0))
   {
-    /*
-    void ignoreSslErrors()
-    */
+    // void ignoreSslErrors()
     QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -500,9 +474,7 @@ HB_FUNC_STATIC(QSSLSOCKET_IGNORESSLERRORS)
   }
 }
 
-/*
-bool isEncrypted() const
-*/
+// bool isEncrypted() const
 HB_FUNC_STATIC(QSSLSOCKET_ISENCRYPTED)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -524,9 +496,7 @@ HB_FUNC_STATIC(QSSLSOCKET_ISENCRYPTED)
   }
 }
 
-/*
-QSslCertificate localCertificate() const
-*/
+// QSslCertificate localCertificate() const
 HB_FUNC_STATIC(QSSLSOCKET_LOCALCERTIFICATE)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -549,9 +519,7 @@ HB_FUNC_STATIC(QSSLSOCKET_LOCALCERTIFICATE)
   }
 }
 
-/*
-QSslSocket::SslMode mode() const
-*/
+// QSslSocket::SslMode mode() const
 HB_FUNC_STATIC(QSSLSOCKET_MODE)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -573,9 +541,7 @@ HB_FUNC_STATIC(QSSLSOCKET_MODE)
   }
 }
 
-/*
-QSslCertificate peerCertificate() const
-*/
+// QSslCertificate peerCertificate() const
 HB_FUNC_STATIC(QSSLSOCKET_PEERCERTIFICATE)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -598,9 +564,7 @@ HB_FUNC_STATIC(QSSLSOCKET_PEERCERTIFICATE)
   }
 }
 
-/*
-QList<QSslCertificate> peerCertificateChain() const
-*/
+// QList<QSslCertificate> peerCertificateChain() const
 HB_FUNC_STATIC(QSSLSOCKET_PEERCERTIFICATECHAIN)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -649,9 +613,7 @@ HB_FUNC_STATIC(QSSLSOCKET_PEERCERTIFICATECHAIN)
   }
 }
 
-/*
-int peerVerifyDepth() const
-*/
+// int peerVerifyDepth() const
 HB_FUNC_STATIC(QSSLSOCKET_PEERVERIFYDEPTH)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -673,9 +635,7 @@ HB_FUNC_STATIC(QSSLSOCKET_PEERVERIFYDEPTH)
   }
 }
 
-/*
-QSslSocket::PeerVerifyMode peerVerifyMode() const
-*/
+// QSslSocket::PeerVerifyMode peerVerifyMode() const
 HB_FUNC_STATIC(QSSLSOCKET_PEERVERIFYMODE)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -697,9 +657,7 @@ HB_FUNC_STATIC(QSSLSOCKET_PEERVERIFYMODE)
   }
 }
 
-/*
-QSslKey privateKey() const
-*/
+// QSslKey privateKey() const
 HB_FUNC_STATIC(QSSLSOCKET_PRIVATEKEY)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -722,9 +680,7 @@ HB_FUNC_STATIC(QSSLSOCKET_PRIVATEKEY)
   }
 }
 
-/*
-QSsl::SslProtocol protocol() const
-*/
+// QSsl::SslProtocol protocol() const
 HB_FUNC_STATIC(QSSLSOCKET_PROTOCOL)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -746,9 +702,7 @@ HB_FUNC_STATIC(QSSLSOCKET_PROTOCOL)
   }
 }
 
-/*
-QSslCipher sessionCipher() const
-*/
+// QSslCipher sessionCipher() const
 HB_FUNC_STATIC(QSSLSOCKET_SESSIONCIPHER)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -771,9 +725,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SESSIONCIPHER)
   }
 }
 
-/*
-void setCaCertificates(const QList<QSslCertificate> &certificates)
-*/
+// void setCaCertificates(const QList<QSslCertificate> &certificates)
 HB_FUNC_STATIC(QSSLSOCKET_SETCACERTIFICATES)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -786,7 +738,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETCACERTIFICATES)
 #endif
       QList<QSslCertificate> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      const int nLen1 = hb_arrayLen(aList1);
+      int nLen1 = hb_arrayLen(aList1);
       for (int i1 = 0; i1 < nLen1; i1++)
       {
         par1 << *static_cast<QSslCertificate *>(
@@ -809,16 +761,14 @@ HB_FUNC_STATIC(QSSLSOCKET_SETCIPHERS)
 {
   if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
-    /*
-    void setCiphers(const QList<QSslCipher> &ciphers)
-    */
+    // void setCiphers(const QList<QSslCipher> &ciphers)
     QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
     {
       QList<QSslCipher> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      const int nLen1 = hb_arrayLen(aList1);
+      int nLen1 = hb_arrayLen(aList1);
       for (int i1 = 0; i1 < nLen1; i1++)
       {
         par1 << *static_cast<QSslCipher *>(
@@ -831,9 +781,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETCIPHERS)
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    void setCiphers(const QString &ciphers)
-    */
+    // void setCiphers(const QString &ciphers)
     QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -853,9 +801,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETLOCALCERTIFICATE)
 {
   if (ISNUMPAR(1) && ISQSSLCERTIFICATE(1))
   {
-    /*
-    void setLocalCertificate(const QSslCertificate &certificate)
-    */
+    // void setLocalCertificate(const QSslCertificate &certificate)
     QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -867,9 +813,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETLOCALCERTIFICATE)
   }
   else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    /*
-    void setLocalCertificate(const QString &path, QSsl::EncodingFormat format = QSsl::Pem)
-    */
+    // void setLocalCertificate(const QString &path, QSsl::EncodingFormat format = QSsl::Pem)
     QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -886,9 +830,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETLOCALCERTIFICATE)
   }
 }
 
-/*
-void setPeerVerifyDepth(int depth)
-*/
+// void setPeerVerifyDepth(int depth)
 HB_FUNC_STATIC(QSSLSOCKET_SETPEERVERIFYDEPTH)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -912,9 +854,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETPEERVERIFYDEPTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPeerVerifyMode(QSslSocket::PeerVerifyMode mode)
-*/
+// void setPeerVerifyMode(QSslSocket::PeerVerifyMode mode)
 HB_FUNC_STATIC(QSSLSOCKET_SETPEERVERIFYMODE)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -942,9 +882,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETPRIVATEKEY)
 {
   if (ISNUMPAR(1) && ISQSSLKEY(1))
   {
-    /*
-    void setPrivateKey(const QSslKey &key)
-    */
+    // void setPrivateKey(const QSslKey &key)
     QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -957,10 +895,8 @@ HB_FUNC_STATIC(QSSLSOCKET_SETPRIVATEKEY)
   else if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)) &&
            (ISQBYTEARRAY(4) || HB_ISNIL(4)))
   {
-    /*
-    void setPrivateKey(const QString &fileName, QSsl::KeyAlgorithm algorithm = QSsl::Rsa, QSsl::EncodingFormat format
-    = QSsl::Pem, const QByteArray &passPhrase = QByteArray())
-    */
+    // void setPrivateKey(const QString &fileName, QSsl::KeyAlgorithm algorithm = QSsl::Rsa, QSsl::EncodingFormat format
+    // = QSsl::Pem, const QByteArray &passPhrase = QByteArray())
     QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -978,9 +914,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETPRIVATEKEY)
   }
 }
 
-/*
-void setProtocol(QSsl::SslProtocol protocol)
-*/
+// void setProtocol(QSsl::SslProtocol protocol)
 HB_FUNC_STATIC(QSSLSOCKET_SETPROTOCOL)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1004,9 +938,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETPROTOCOL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setReadBufferSize(qint64 size)
-*/
+// void setReadBufferSize(qint64 size)
 HB_FUNC_STATIC(QSSLSOCKET_SETREADBUFFERSIZE)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1030,10 +962,8 @@ HB_FUNC_STATIC(QSSLSOCKET_SETREADBUFFERSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool setSocketDescriptor(int socketDescriptor, QAbstractSocket::SocketState state = QAbstractSocket::ConnectedState,
-QIODevice::OpenMode openMode = QIODevice::ReadWrite)
-*/
+// bool setSocketDescriptor(int socketDescriptor, QAbstractSocket::SocketState state = QAbstractSocket::ConnectedState,
+// QIODevice::OpenMode openMode = QIODevice::ReadWrite)
 HB_FUNC_STATIC(QSSLSOCKET_SETSOCKETDESCRIPTOR)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1059,9 +989,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETSOCKETDESCRIPTOR)
   }
 }
 
-/*
-void setSocketOption(QAbstractSocket::SocketOption option, const QVariant &value)
-*/
+// void setSocketOption(QAbstractSocket::SocketOption option, const QVariant &value)
 HB_FUNC_STATIC(QSSLSOCKET_SETSOCKETOPTION)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1085,9 +1013,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETSOCKETOPTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSslConfiguration(const QSslConfiguration &configuration)
-*/
+// void setSslConfiguration(const QSslConfiguration &configuration)
 HB_FUNC_STATIC(QSSLSOCKET_SETSSLCONFIGURATION)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1111,9 +1037,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETSSLCONFIGURATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QVariant socketOption(QAbstractSocket::SocketOption option)
-*/
+// QVariant socketOption(QAbstractSocket::SocketOption option)
 HB_FUNC_STATIC(QSSLSOCKET_SOCKETOPTION)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1136,9 +1060,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SOCKETOPTION)
   }
 }
 
-/*
-QSslConfiguration sslConfiguration() const
-*/
+// QSslConfiguration sslConfiguration() const
 HB_FUNC_STATIC(QSSLSOCKET_SSLCONFIGURATION)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1161,9 +1083,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SSLCONFIGURATION)
   }
 }
 
-/*
-QList<QSslError> sslErrors() const
-*/
+// QList<QSslError> sslErrors() const
 HB_FUNC_STATIC(QSSLSOCKET_SSLERRORS)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1212,9 +1132,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SSLERRORS)
   }
 }
 
-/*
-bool waitForConnected(int msecs = 30000)
-*/
+// bool waitForConnected(int msecs = 30000)
 HB_FUNC_STATIC(QSSLSOCKET_WAITFORCONNECTED)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1236,9 +1154,7 @@ HB_FUNC_STATIC(QSSLSOCKET_WAITFORCONNECTED)
   }
 }
 
-/*
-bool waitForDisconnected(int msecs = 30000)
-*/
+// bool waitForDisconnected(int msecs = 30000)
 HB_FUNC_STATIC(QSSLSOCKET_WAITFORDISCONNECTED)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1260,9 +1176,7 @@ HB_FUNC_STATIC(QSSLSOCKET_WAITFORDISCONNECTED)
   }
 }
 
-/*
-bool waitForEncrypted(int msecs = 30000)
-*/
+// bool waitForEncrypted(int msecs = 30000)
 HB_FUNC_STATIC(QSSLSOCKET_WAITFORENCRYPTED)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1284,9 +1198,7 @@ HB_FUNC_STATIC(QSSLSOCKET_WAITFORENCRYPTED)
   }
 }
 
-/*
-virtual bool atEnd() const
-*/
+// virtual bool atEnd() const
 HB_FUNC_STATIC(QSSLSOCKET_ATEND)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1308,9 +1220,7 @@ HB_FUNC_STATIC(QSSLSOCKET_ATEND)
   }
 }
 
-/*
-virtual qint64 bytesAvailable() const
-*/
+// virtual qint64 bytesAvailable() const
 HB_FUNC_STATIC(QSSLSOCKET_BYTESAVAILABLE)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1332,9 +1242,7 @@ HB_FUNC_STATIC(QSSLSOCKET_BYTESAVAILABLE)
   }
 }
 
-/*
-virtual qint64 bytesToWrite() const
-*/
+// virtual qint64 bytesToWrite() const
 HB_FUNC_STATIC(QSSLSOCKET_BYTESTOWRITE)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1356,9 +1264,7 @@ HB_FUNC_STATIC(QSSLSOCKET_BYTESTOWRITE)
   }
 }
 
-/*
-virtual bool canReadLine() const
-*/
+// virtual bool canReadLine() const
 HB_FUNC_STATIC(QSSLSOCKET_CANREADLINE)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1380,9 +1286,7 @@ HB_FUNC_STATIC(QSSLSOCKET_CANREADLINE)
   }
 }
 
-/*
-virtual void close()
-*/
+// virtual void close()
 HB_FUNC_STATIC(QSSLSOCKET_CLOSE)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1406,9 +1310,7 @@ HB_FUNC_STATIC(QSSLSOCKET_CLOSE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool waitForBytesWritten(int msecs = 30000)
-*/
+// virtual bool waitForBytesWritten(int msecs = 30000)
 HB_FUNC_STATIC(QSSLSOCKET_WAITFORBYTESWRITTEN)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1430,9 +1332,7 @@ HB_FUNC_STATIC(QSSLSOCKET_WAITFORBYTESWRITTEN)
   }
 }
 
-/*
-virtual bool waitForReadyRead(int msecs = 30000)
-*/
+// virtual bool waitForReadyRead(int msecs = 30000)
 HB_FUNC_STATIC(QSSLSOCKET_WAITFORREADYREAD)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1454,9 +1354,7 @@ HB_FUNC_STATIC(QSSLSOCKET_WAITFORREADYREAD)
   }
 }
 
-/*
-void startClientEncryption()
-*/
+// void startClientEncryption()
 HB_FUNC_STATIC(QSSLSOCKET_STARTCLIENTENCRYPTION)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1480,9 +1378,7 @@ HB_FUNC_STATIC(QSSLSOCKET_STARTCLIENTENCRYPTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void startServerEncryption()
-*/
+// void startServerEncryption()
 HB_FUNC_STATIC(QSSLSOCKET_STARTSERVERENCRYPTION)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1506,9 +1402,7 @@ HB_FUNC_STATIC(QSSLSOCKET_STARTSERVERENCRYPTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void addDefaultCaCertificate(const QSslCertificate &certificate)
-*/
+// static void addDefaultCaCertificate(const QSslCertificate &certificate)
 HB_FUNC_STATIC(QSSLSOCKET_ADDDEFAULTCACERTIFICATE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1531,10 +1425,8 @@ HB_FUNC_STATIC(QSSLSOCKET_ADDDEFAULTCACERTIFICATES)
 {
   if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
-    /*
-    static bool addDefaultCaCertificates(const QString &path, QSsl::EncodingFormat encoding = QSsl::Pem,
-    QRegExp::PatternSyntax syntax = QRegExp::FixedString)
-    */
+    // static bool addDefaultCaCertificates(const QString &path, QSsl::EncodingFormat encoding = QSsl::Pem,
+    // QRegExp::PatternSyntax syntax = QRegExp::FixedString)
 
     RBOOL(QSslSocket::addDefaultCaCertificates(
         PQSTRING(1), HB_ISNIL(2) ? (QSsl::EncodingFormat)QSsl::Pem : (QSsl::EncodingFormat)hb_parni(2),
@@ -1542,16 +1434,14 @@ HB_FUNC_STATIC(QSSLSOCKET_ADDDEFAULTCACERTIFICATES)
   }
   else if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
-    /*
-    void addDefaultCaCertificates(const QList<QSslCertificate> &certificates)
-    */
+    // void addDefaultCaCertificates(const QList<QSslCertificate> &certificates)
     QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
     {
       QList<QSslCertificate> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      const int nLen1 = hb_arrayLen(aList1);
+      int nLen1 = hb_arrayLen(aList1);
       for (int i1 = 0; i1 < nLen1; i1++)
       {
         par1 << *static_cast<QSslCertificate *>(
@@ -1568,9 +1458,7 @@ HB_FUNC_STATIC(QSSLSOCKET_ADDDEFAULTCACERTIFICATES)
   }
 }
 
-/*
-QList<QSslCertificate> defaultCaCertificates()
-*/
+// QList<QSslCertificate> defaultCaCertificates()
 HB_FUNC_STATIC(QSSLSOCKET_DEFAULTCACERTIFICATES)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1619,9 +1507,7 @@ HB_FUNC_STATIC(QSSLSOCKET_DEFAULTCACERTIFICATES)
   }
 }
 
-/*
-QList<QSslCipher> defaultCiphers()
-*/
+// QList<QSslCipher> defaultCiphers()
 HB_FUNC_STATIC(QSSLSOCKET_DEFAULTCIPHERS)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1670,9 +1556,7 @@ HB_FUNC_STATIC(QSSLSOCKET_DEFAULTCIPHERS)
   }
 }
 
-/*
-void setDefaultCaCertificates(const QList<QSslCertificate> &certificates)
-*/
+// void setDefaultCaCertificates(const QList<QSslCertificate> &certificates)
 HB_FUNC_STATIC(QSSLSOCKET_SETDEFAULTCACERTIFICATES)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1685,7 +1569,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETDEFAULTCACERTIFICATES)
 #endif
       QList<QSslCertificate> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      const int nLen1 = hb_arrayLen(aList1);
+      int nLen1 = hb_arrayLen(aList1);
       for (int i1 = 0; i1 < nLen1; i1++)
       {
         par1 << *static_cast<QSslCertificate *>(
@@ -1704,9 +1588,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETDEFAULTCACERTIFICATES)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDefaultCiphers(const QList<QSslCipher> &ciphers)
-*/
+// void setDefaultCiphers(const QList<QSslCipher> &ciphers)
 HB_FUNC_STATIC(QSSLSOCKET_SETDEFAULTCIPHERS)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1719,7 +1601,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETDEFAULTCIPHERS)
 #endif
       QList<QSslCipher> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      const int nLen1 = hb_arrayLen(aList1);
+      int nLen1 = hb_arrayLen(aList1);
       for (int i1 = 0; i1 < nLen1; i1++)
       {
         par1 << *static_cast<QSslCipher *>(
@@ -1738,9 +1620,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETDEFAULTCIPHERS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QList<QSslCipher> supportedCiphers()
-*/
+// QList<QSslCipher> supportedCiphers()
 HB_FUNC_STATIC(QSSLSOCKET_SUPPORTEDCIPHERS)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1789,9 +1669,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SUPPORTEDCIPHERS)
   }
 }
 
-/*
-static bool supportsSsl()
-*/
+// static bool supportsSsl()
 HB_FUNC_STATIC(QSSLSOCKET_SUPPORTSSSL)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1808,9 +1686,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SUPPORTSSSL)
 #endif
 }
 
-/*
-QList<QSslCertificate> systemCaCertificates()
-*/
+// QList<QSslCertificate> systemCaCertificates()
 HB_FUNC_STATIC(QSSLSOCKET_SYSTEMCACERTIFICATES)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());

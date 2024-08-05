@@ -106,9 +106,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QVariant attribute(QNetworkRequest::Attribute code, const QVariant &defaultValue = QVariant()) const
-*/
+// QVariant attribute(QNetworkRequest::Attribute code, const QVariant &defaultValue = QVariant()) const
 HB_FUNC_STATIC(QNETWORKREQUEST_ATTRIBUTE)
 {
   QNetworkRequest *obj = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -133,9 +131,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_ATTRIBUTE)
   }
 }
 
-/*
-bool hasRawHeader(const QByteArray &headerName) const
-*/
+// bool hasRawHeader(const QByteArray &headerName) const
 HB_FUNC_STATIC(QNETWORKREQUEST_HASRAWHEADER)
 {
   QNetworkRequest *obj = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -157,9 +153,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_HASRAWHEADER)
   }
 }
 
-/*
-QVariant header(QNetworkRequest::KnownHeaders header) const
-*/
+// QVariant header(QNetworkRequest::KnownHeaders header) const
 HB_FUNC_STATIC(QNETWORKREQUEST_HEADER)
 {
   QNetworkRequest *obj = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -182,9 +176,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_HEADER)
   }
 }
 
-/*
-QObject *originatingObject() const
-*/
+// QObject *originatingObject() const
 HB_FUNC_STATIC(QNETWORKREQUEST_ORIGINATINGOBJECT)
 {
   QNetworkRequest *obj = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -207,9 +199,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_ORIGINATINGOBJECT)
   }
 }
 
-/*
-QNetworkRequest::Priority priority() const
-*/
+// QNetworkRequest::Priority priority() const
 HB_FUNC_STATIC(QNETWORKREQUEST_PRIORITY)
 {
   QNetworkRequest *obj = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -231,9 +221,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_PRIORITY)
   }
 }
 
-/*
-QByteArray rawHeader(const QByteArray &headerName) const
-*/
+// QByteArray rawHeader(const QByteArray &headerName) const
 HB_FUNC_STATIC(QNETWORKREQUEST_RAWHEADER)
 {
   QNetworkRequest *obj = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -256,9 +244,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_RAWHEADER)
   }
 }
 
-/*
-QList<QByteArray> rawHeaderList() const
-*/
+// QList<QByteArray> rawHeaderList() const
 HB_FUNC_STATIC(QNETWORKREQUEST_RAWHEADERLIST)
 {
   QNetworkRequest *obj = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -307,9 +293,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_RAWHEADERLIST)
   }
 }
 
-/*
-void setAttribute(QNetworkRequest::Attribute code, const QVariant &value)
-*/
+// void setAttribute(QNetworkRequest::Attribute code, const QVariant &value)
 HB_FUNC_STATIC(QNETWORKREQUEST_SETATTRIBUTE)
 {
   QNetworkRequest *obj = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -333,9 +317,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETATTRIBUTE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setHeader(QNetworkRequest::KnownHeaders header, const QVariant &value)
-*/
+// void setHeader(QNetworkRequest::KnownHeaders header, const QVariant &value)
 HB_FUNC_STATIC(QNETWORKREQUEST_SETHEADER)
 {
   QNetworkRequest *obj = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -359,9 +341,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETHEADER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setOriginatingObject(QObject *object)
-*/
+// void setOriginatingObject(QObject *object)
 HB_FUNC_STATIC(QNETWORKREQUEST_SETORIGINATINGOBJECT)
 {
   QNetworkRequest *obj = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -385,9 +365,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETORIGINATINGOBJECT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPriority(QNetworkRequest::Priority priority)
-*/
+// void setPriority(QNetworkRequest::Priority priority)
 HB_FUNC_STATIC(QNETWORKREQUEST_SETPRIORITY)
 {
   QNetworkRequest *obj = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -411,9 +389,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETPRIORITY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setRawHeader(const QByteArray &headerName, const QByteArray &headerValue)
-*/
+// void setRawHeader(const QByteArray &headerName, const QByteArray &headerValue)
 HB_FUNC_STATIC(QNETWORKREQUEST_SETRAWHEADER)
 {
   QNetworkRequest *obj = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -437,9 +413,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETRAWHEADER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSslConfiguration(const QSslConfiguration &config)
-*/
+// void setSslConfiguration(const QSslConfiguration &config)
 HB_FUNC_STATIC(QNETWORKREQUEST_SETSSLCONFIGURATION)
 {
   QNetworkRequest *obj = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -463,9 +437,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETSSLCONFIGURATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setUrl(const QUrl &url)
-*/
+// void setUrl(const QUrl &url)
 HB_FUNC_STATIC(QNETWORKREQUEST_SETURL)
 {
   QNetworkRequest *obj = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -489,9 +461,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETURL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSslConfiguration sslConfiguration() const
-*/
+// QSslConfiguration sslConfiguration() const
 HB_FUNC_STATIC(QNETWORKREQUEST_SSLCONFIGURATION)
 {
   QNetworkRequest *obj = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -514,9 +484,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SSLCONFIGURATION)
   }
 }
 
-/*
-QUrl url() const
-*/
+// QUrl url() const
 HB_FUNC_STATIC(QNETWORKREQUEST_URL)
 {
   QNetworkRequest *obj = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem());

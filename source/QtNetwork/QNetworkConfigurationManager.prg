@@ -53,7 +53,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QNetworkConfigurationManager(QObject *parent = 0)
+    // QNetworkConfigurationManager(QObject *parent = 0)
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
@@ -86,9 +86,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QList<QNetworkConfiguration> allConfigurations(QNetworkConfiguration::StateFlags filter = 0) const
-*/
+// QList<QNetworkConfiguration> allConfigurations(QNetworkConfiguration::StateFlags filter = 0) const
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS)
 {
   QNetworkConfigurationManager *obj =
@@ -139,9 +137,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS)
   }
 }
 
-/*
-QNetworkConfigurationManager::Capabilities capabilities() const
-*/
+// QNetworkConfigurationManager::Capabilities capabilities() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_CAPABILITIES)
 {
   QNetworkConfigurationManager *obj =
@@ -164,9 +160,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_CAPABILITIES)
   }
 }
 
-/*
-QNetworkConfiguration configurationFromIdentifier(const QString &identifier) const
-*/
+// QNetworkConfiguration configurationFromIdentifier(const QString &identifier) const
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_CONFIGURATIONFROMIDENTIFIER)
 {
   QNetworkConfigurationManager *obj =
@@ -190,9 +184,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_CONFIGURATIONFROMIDENTIFIER)
   }
 }
 
-/*
-QNetworkConfiguration defaultConfiguration() const
-*/
+// QNetworkConfiguration defaultConfiguration() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_DEFAULTCONFIGURATION)
 {
   QNetworkConfigurationManager *obj =
@@ -216,9 +208,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_DEFAULTCONFIGURATION)
   }
 }
 
-/*
-bool isOnline() const
-*/
+// bool isOnline() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ISONLINE)
 {
   QNetworkConfigurationManager *obj =
@@ -241,9 +231,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ISONLINE)
   }
 }
 
-/*
-void updateConfigurations()
-*/
+// void updateConfigurations()
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_UPDATECONFIGURATIONS)
 {
   QNetworkConfigurationManager *obj =

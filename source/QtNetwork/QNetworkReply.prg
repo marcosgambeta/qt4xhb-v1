@@ -91,9 +91,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void abort() = 0
-*/
+// virtual void abort() = 0
 HB_FUNC_STATIC(QNETWORKREPLY_ABORT)
 {
   QNetworkReply *obj = qobject_cast<QNetworkReply *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -117,9 +115,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_ABORT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QVariant attribute(QNetworkRequest::Attribute code) const
-*/
+// QVariant attribute(QNetworkRequest::Attribute code) const
 HB_FUNC_STATIC(QNETWORKREPLY_ATTRIBUTE)
 {
   QNetworkReply *obj = qobject_cast<QNetworkReply *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -142,9 +138,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_ATTRIBUTE)
   }
 }
 
-/*
-QNetworkReply::NetworkError error() const
-*/
+// QNetworkReply::NetworkError error() const
 HB_FUNC_STATIC(QNETWORKREPLY_ERROR)
 {
   QNetworkReply *obj = qobject_cast<QNetworkReply *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -166,9 +160,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_ERROR)
   }
 }
 
-/*
-bool hasRawHeader(const QByteArray &headerName) const
-*/
+// bool hasRawHeader(const QByteArray &headerName) const
 HB_FUNC_STATIC(QNETWORKREPLY_HASRAWHEADER)
 {
   QNetworkReply *obj = qobject_cast<QNetworkReply *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -190,9 +182,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_HASRAWHEADER)
   }
 }
 
-/*
-QVariant header(QNetworkRequest::KnownHeaders header) const
-*/
+// QVariant header(QNetworkRequest::KnownHeaders header) const
 HB_FUNC_STATIC(QNETWORKREPLY_HEADER)
 {
   QNetworkReply *obj = qobject_cast<QNetworkReply *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -219,16 +209,14 @@ HB_FUNC_STATIC(QNETWORKREPLY_IGNORESSLERRORS)
 {
   if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
-    /*
-    void ignoreSslErrors(const QList<QSslError> &errors)
-    */
+    // void ignoreSslErrors(const QList<QSslError> &errors)
     QNetworkReply *obj = qobject_cast<QNetworkReply *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
     {
       QList<QSslError> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      const int nLen1 = hb_arrayLen(aList1);
+      int nLen1 = hb_arrayLen(aList1);
       for (int i1 = 0; i1 < nLen1; i1++)
       {
         par1 << *static_cast<QSslError *>(
@@ -241,9 +229,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_IGNORESSLERRORS)
   }
   else if (ISNUMPAR(0))
   {
-    /*
-    virtual void ignoreSslErrors()
-    */
+    // virtual void ignoreSslErrors()
     QNetworkReply *obj = qobject_cast<QNetworkReply *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -259,9 +245,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_IGNORESSLERRORS)
   }
 }
 
-/*
-bool isFinished() const
-*/
+// bool isFinished() const
 HB_FUNC_STATIC(QNETWORKREPLY_ISFINISHED)
 {
   QNetworkReply *obj = qobject_cast<QNetworkReply *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -283,9 +267,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_ISFINISHED)
   }
 }
 
-/*
-bool isRunning() const
-*/
+// bool isRunning() const
 HB_FUNC_STATIC(QNETWORKREPLY_ISRUNNING)
 {
   QNetworkReply *obj = qobject_cast<QNetworkReply *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -307,9 +289,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_ISRUNNING)
   }
 }
 
-/*
-QNetworkAccessManager *manager() const
-*/
+// QNetworkAccessManager *manager() const
 HB_FUNC_STATIC(QNETWORKREPLY_MANAGER)
 {
   QNetworkReply *obj = qobject_cast<QNetworkReply *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -332,9 +312,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_MANAGER)
   }
 }
 
-/*
-QNetworkAccessManager::Operation operation() const
-*/
+// QNetworkAccessManager::Operation operation() const
 HB_FUNC_STATIC(QNETWORKREPLY_OPERATION)
 {
   QNetworkReply *obj = qobject_cast<QNetworkReply *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -356,9 +334,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_OPERATION)
   }
 }
 
-/*
-QByteArray rawHeader(const QByteArray &headerName) const
-*/
+// QByteArray rawHeader(const QByteArray &headerName) const
 HB_FUNC_STATIC(QNETWORKREPLY_RAWHEADER)
 {
   QNetworkReply *obj = qobject_cast<QNetworkReply *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -381,9 +357,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_RAWHEADER)
   }
 }
 
-/*
-QList<QByteArray> rawHeaderList() const
-*/
+// QList<QByteArray> rawHeaderList() const
 HB_FUNC_STATIC(QNETWORKREPLY_RAWHEADERLIST)
 {
   QNetworkReply *obj = qobject_cast<QNetworkReply *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -432,9 +406,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_RAWHEADERLIST)
   }
 }
 
-/*
-qint64 readBufferSize() const
-*/
+// qint64 readBufferSize() const
 HB_FUNC_STATIC(QNETWORKREPLY_READBUFFERSIZE)
 {
   QNetworkReply *obj = qobject_cast<QNetworkReply *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -456,9 +428,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_READBUFFERSIZE)
   }
 }
 
-/*
-QNetworkRequest request() const
-*/
+// QNetworkRequest request() const
 HB_FUNC_STATIC(QNETWORKREPLY_REQUEST)
 {
   QNetworkReply *obj = qobject_cast<QNetworkReply *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -481,9 +451,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_REQUEST)
   }
 }
 
-/*
-virtual void setReadBufferSize(qint64 size)
-*/
+// virtual void setReadBufferSize(qint64 size)
 HB_FUNC_STATIC(QNETWORKREPLY_SETREADBUFFERSIZE)
 {
   QNetworkReply *obj = qobject_cast<QNetworkReply *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -507,9 +475,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_SETREADBUFFERSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSslConfiguration(const QSslConfiguration &config)
-*/
+// void setSslConfiguration(const QSslConfiguration &config)
 HB_FUNC_STATIC(QNETWORKREPLY_SETSSLCONFIGURATION)
 {
   QNetworkReply *obj = qobject_cast<QNetworkReply *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -533,9 +499,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_SETSSLCONFIGURATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSslConfiguration sslConfiguration() const
-*/
+// QSslConfiguration sslConfiguration() const
 HB_FUNC_STATIC(QNETWORKREPLY_SSLCONFIGURATION)
 {
   QNetworkReply *obj = qobject_cast<QNetworkReply *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -558,9 +522,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_SSLCONFIGURATION)
   }
 }
 
-/*
-QUrl url() const
-*/
+// QUrl url() const
 HB_FUNC_STATIC(QNETWORKREPLY_URL)
 {
   QNetworkReply *obj = qobject_cast<QNetworkReply *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -583,9 +545,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_URL)
   }
 }
 
-/*
-virtual void close()
-*/
+// virtual void close()
 HB_FUNC_STATIC(QNETWORKREPLY_CLOSE)
 {
   QNetworkReply *obj = qobject_cast<QNetworkReply *>(Qt4xHb::getQObjectPointerFromSelfItem());

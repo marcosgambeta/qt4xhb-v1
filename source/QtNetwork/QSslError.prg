@@ -99,9 +99,7 @@ HB_FUNC_STATIC(QSSLERROR_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSslCertificate certificate() const
-*/
+// QSslCertificate certificate() const
 HB_FUNC_STATIC(QSSLERROR_CERTIFICATE)
 {
   QSslError *obj = static_cast<QSslError *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -124,9 +122,7 @@ HB_FUNC_STATIC(QSSLERROR_CERTIFICATE)
   }
 }
 
-/*
-QSslError::SslError error() const
-*/
+// QSslError::SslError error() const
 HB_FUNC_STATIC(QSSLERROR_ERROR)
 {
   QSslError *obj = static_cast<QSslError *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -148,9 +144,7 @@ HB_FUNC_STATIC(QSSLERROR_ERROR)
   }
 }
 
-/*
-QString errorString() const
-*/
+// QString errorString() const
 HB_FUNC_STATIC(QSSLERROR_ERRORSTRING)
 {
   QSslError *obj = static_cast<QSslError *>(Qt4xHb::itemGetPtrStackSelfItem());

@@ -58,7 +58,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-// QHostAddress(quint32 ip4Addr)
+    // QHostAddress(quint32 ip4Addr)
 HB_FUNC_STATIC(QHOSTADDRESS_NEW2)
 {
   QHostAddress *obj = new QHostAddress(PQUINT32(1));
@@ -122,9 +122,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QHOSTADDRESS_CLEAR)
 {
   QHostAddress *obj = static_cast<QHostAddress *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -148,9 +146,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isInSubnet(const QHostAddress &subnet, int netmask) const
-*/
+// bool isInSubnet(const QHostAddress &subnet, int netmask) const
 HB_FUNC_STATIC(QHOSTADDRESS_ISINSUBNET)
 {
   QHostAddress *obj = static_cast<QHostAddress *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -172,9 +168,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_ISINSUBNET)
   }
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QHOSTADDRESS_ISNULL)
 {
   QHostAddress *obj = static_cast<QHostAddress *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -196,9 +190,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_ISNULL)
   }
 }
 
-/*
-QAbstractSocket::NetworkLayerProtocol protocol() const
-*/
+// QAbstractSocket::NetworkLayerProtocol protocol() const
 HB_FUNC_STATIC(QHOSTADDRESS_PROTOCOL)
 {
   QHostAddress *obj = static_cast<QHostAddress *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -220,9 +212,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_PROTOCOL)
   }
 }
 
-/*
-QString scopeId() const
-*/
+// QString scopeId() const
 HB_FUNC_STATIC(QHOSTADDRESS_SCOPEID)
 {
   QHostAddress *obj = static_cast<QHostAddress *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -248,9 +238,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SETADDRESS)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    /*
-    void setAddress(quint32 ip4Addr)
-    */
+    // void setAddress(quint32 ip4Addr)
     QHostAddress *obj = static_cast<QHostAddress *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -262,9 +250,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SETADDRESS)
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    bool setAddress(const QString &address)
-    */
+    // bool setAddress(const QString &address)
     QHostAddress *obj = static_cast<QHostAddress *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -278,9 +264,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SETADDRESS)
   }
 }
 
-/*
-void setScopeId(const QString &id)
-*/
+// void setScopeId(const QString &id)
 HB_FUNC_STATIC(QHOSTADDRESS_SETSCOPEID)
 {
   QHostAddress *obj = static_cast<QHostAddress *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -304,9 +288,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SETSCOPEID)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-quint32 toIPv4Address() const
-*/
+// quint32 toIPv4Address() const
 HB_FUNC_STATIC(QHOSTADDRESS_TOIPV4ADDRESS)
 {
   QHostAddress *obj = static_cast<QHostAddress *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -328,9 +310,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_TOIPV4ADDRESS)
   }
 }
 
-/*
-QString toString() const
-*/
+// QString toString() const
 HB_FUNC_STATIC(QHOSTADDRESS_TOSTRING)
 {
   QHostAddress *obj = static_cast<QHostAddress *>(Qt4xHb::itemGetPtrStackSelfItem());

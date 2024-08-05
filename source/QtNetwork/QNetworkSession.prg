@@ -69,7 +69,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QNetworkSession(const QNetworkConfiguration &connectionConfig, QObject *parent = 0)
+    // QNetworkSession(const QNetworkConfiguration &connectionConfig, QObject *parent = 0)
 HB_FUNC_STATIC(QNETWORKSESSION_NEW)
 {
   if (ISBETWEEN(1, 2) && ISQNETWORKCONFIGURATION(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
@@ -101,9 +101,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-quint64 activeTime() const
-*/
+// quint64 activeTime() const
 HB_FUNC_STATIC(QNETWORKSESSION_ACTIVETIME)
 {
   QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -125,9 +123,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_ACTIVETIME)
   }
 }
 
-/*
-quint64 bytesReceived() const
-*/
+// quint64 bytesReceived() const
 HB_FUNC_STATIC(QNETWORKSESSION_BYTESRECEIVED)
 {
   QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -149,9 +145,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_BYTESRECEIVED)
   }
 }
 
-/*
-quint64 bytesWritten() const
-*/
+// quint64 bytesWritten() const
 HB_FUNC_STATIC(QNETWORKSESSION_BYTESWRITTEN)
 {
   QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -173,9 +167,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_BYTESWRITTEN)
   }
 }
 
-/*
-QNetworkConfiguration configuration() const
-*/
+// QNetworkConfiguration configuration() const
 HB_FUNC_STATIC(QNETWORKSESSION_CONFIGURATION)
 {
   QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -198,9 +190,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_CONFIGURATION)
   }
 }
 
-/*
-QNetworkSession::SessionError error() const
-*/
+// QNetworkSession::SessionError error() const
 HB_FUNC_STATIC(QNETWORKSESSION_ERROR)
 {
   QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -222,9 +212,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_ERROR)
   }
 }
 
-/*
-QString errorString() const
-*/
+// QString errorString() const
 HB_FUNC_STATIC(QNETWORKSESSION_ERRORSTRING)
 {
   QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -246,9 +234,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_ERRORSTRING)
   }
 }
 
-/*
-QNetworkInterface interface() const
-*/
+// QNetworkInterface interface() const
 HB_FUNC_STATIC(QNETWORKSESSION_INTERFACE)
 {
   QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -271,9 +257,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_INTERFACE)
   }
 }
 
-/*
-bool isOpen() const
-*/
+// bool isOpen() const
 HB_FUNC_STATIC(QNETWORKSESSION_ISOPEN)
 {
   QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -295,9 +279,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_ISOPEN)
   }
 }
 
-/*
-QVariant sessionProperty(const QString &key) const
-*/
+// QVariant sessionProperty(const QString &key) const
 HB_FUNC_STATIC(QNETWORKSESSION_SESSIONPROPERTY)
 {
   QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -320,9 +302,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_SESSIONPROPERTY)
   }
 }
 
-/*
-void setSessionProperty(const QString &key, const QVariant &value)
-*/
+// void setSessionProperty(const QString &key, const QVariant &value)
 HB_FUNC_STATIC(QNETWORKSESSION_SETSESSIONPROPERTY)
 {
   QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -346,9 +326,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_SETSESSIONPROPERTY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QNetworkSession::State state() const
-*/
+// QNetworkSession::State state() const
 HB_FUNC_STATIC(QNETWORKSESSION_STATE)
 {
   QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -370,9 +348,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_STATE)
   }
 }
 
-/*
-bool waitForOpened(int msecs = 30000)
-*/
+// bool waitForOpened(int msecs = 30000)
 HB_FUNC_STATIC(QNETWORKSESSION_WAITFOROPENED)
 {
   QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -394,9 +370,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_WAITFOROPENED)
   }
 }
 
-/*
-void accept()
-*/
+// void accept()
 HB_FUNC_STATIC(QNETWORKSESSION_ACCEPT)
 {
   QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -420,9 +394,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_ACCEPT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void close()
-*/
+// void close()
 HB_FUNC_STATIC(QNETWORKSESSION_CLOSE)
 {
   QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -446,9 +418,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_CLOSE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void ignore()
-*/
+// void ignore()
 HB_FUNC_STATIC(QNETWORKSESSION_IGNORE)
 {
   QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -472,9 +442,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_IGNORE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void migrate()
-*/
+// void migrate()
 HB_FUNC_STATIC(QNETWORKSESSION_MIGRATE)
 {
   QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -498,9 +466,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_MIGRATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void open()
-*/
+// void open()
 HB_FUNC_STATIC(QNETWORKSESSION_OPEN)
 {
   QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -524,9 +490,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_OPEN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void reject()
-*/
+// void reject()
 HB_FUNC_STATIC(QNETWORKSESSION_REJECT)
 {
   QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -550,9 +514,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_REJECT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void stop()
-*/
+// void stop()
 HB_FUNC_STATIC(QNETWORKSESSION_STOP)
 {
   QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());

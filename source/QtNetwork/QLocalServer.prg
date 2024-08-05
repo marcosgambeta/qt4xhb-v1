@@ -58,7 +58,7 @@ RETURN
 
 #include <QtNetwork/QLocalSocket>
 
-// QLocalServer(QObject *parent = 0)
+    // QLocalServer(QObject *parent = 0)
 HB_FUNC_STATIC(QLOCALSERVER_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
@@ -90,9 +90,7 @@ HB_FUNC_STATIC(QLOCALSERVER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void close()
-*/
+// void close()
 HB_FUNC_STATIC(QLOCALSERVER_CLOSE)
 {
   QLocalServer *obj = qobject_cast<QLocalServer *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -116,9 +114,7 @@ HB_FUNC_STATIC(QLOCALSERVER_CLOSE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString errorString() const
-*/
+// QString errorString() const
 HB_FUNC_STATIC(QLOCALSERVER_ERRORSTRING)
 {
   QLocalServer *obj = qobject_cast<QLocalServer *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -140,9 +136,7 @@ HB_FUNC_STATIC(QLOCALSERVER_ERRORSTRING)
   }
 }
 
-/*
-QString fullServerName() const
-*/
+// QString fullServerName() const
 HB_FUNC_STATIC(QLOCALSERVER_FULLSERVERNAME)
 {
   QLocalServer *obj = qobject_cast<QLocalServer *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -164,9 +158,7 @@ HB_FUNC_STATIC(QLOCALSERVER_FULLSERVERNAME)
   }
 }
 
-/*
-virtual bool hasPendingConnections() const
-*/
+// virtual bool hasPendingConnections() const
 HB_FUNC_STATIC(QLOCALSERVER_HASPENDINGCONNECTIONS)
 {
   QLocalServer *obj = qobject_cast<QLocalServer *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -188,9 +180,7 @@ HB_FUNC_STATIC(QLOCALSERVER_HASPENDINGCONNECTIONS)
   }
 }
 
-/*
-bool isListening() const
-*/
+// bool isListening() const
 HB_FUNC_STATIC(QLOCALSERVER_ISLISTENING)
 {
   QLocalServer *obj = qobject_cast<QLocalServer *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -212,9 +202,7 @@ HB_FUNC_STATIC(QLOCALSERVER_ISLISTENING)
   }
 }
 
-/*
-bool listen(const QString &name)
-*/
+// bool listen(const QString &name)
 HB_FUNC_STATIC(QLOCALSERVER_LISTEN)
 {
   QLocalServer *obj = qobject_cast<QLocalServer *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -236,9 +224,7 @@ HB_FUNC_STATIC(QLOCALSERVER_LISTEN)
   }
 }
 
-/*
-int maxPendingConnections() const
-*/
+// int maxPendingConnections() const
 HB_FUNC_STATIC(QLOCALSERVER_MAXPENDINGCONNECTIONS)
 {
   QLocalServer *obj = qobject_cast<QLocalServer *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -260,9 +246,7 @@ HB_FUNC_STATIC(QLOCALSERVER_MAXPENDINGCONNECTIONS)
   }
 }
 
-/*
-virtual QLocalSocket *nextPendingConnection()
-*/
+// virtual QLocalSocket *nextPendingConnection()
 HB_FUNC_STATIC(QLOCALSERVER_NEXTPENDINGCONNECTION)
 {
   QLocalServer *obj = qobject_cast<QLocalServer *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -285,9 +269,7 @@ HB_FUNC_STATIC(QLOCALSERVER_NEXTPENDINGCONNECTION)
   }
 }
 
-/*
-QAbstractSocket::SocketError serverError() const
-*/
+// QAbstractSocket::SocketError serverError() const
 HB_FUNC_STATIC(QLOCALSERVER_SERVERERROR)
 {
   QLocalServer *obj = qobject_cast<QLocalServer *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -309,9 +291,7 @@ HB_FUNC_STATIC(QLOCALSERVER_SERVERERROR)
   }
 }
 
-/*
-QString serverName() const
-*/
+// QString serverName() const
 HB_FUNC_STATIC(QLOCALSERVER_SERVERNAME)
 {
   QLocalServer *obj = qobject_cast<QLocalServer *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -333,9 +313,7 @@ HB_FUNC_STATIC(QLOCALSERVER_SERVERNAME)
   }
 }
 
-/*
-void setMaxPendingConnections(int numConnections)
-*/
+// void setMaxPendingConnections(int numConnections)
 HB_FUNC_STATIC(QLOCALSERVER_SETMAXPENDINGCONNECTIONS)
 {
   QLocalServer *obj = qobject_cast<QLocalServer *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -359,9 +337,7 @@ HB_FUNC_STATIC(QLOCALSERVER_SETMAXPENDINGCONNECTIONS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool waitForNewConnection(int msec = 0, bool *timedOut = 0)
-*/
+// bool waitForNewConnection(int msec = 0, bool *timedOut = 0)
 HB_FUNC_STATIC(QLOCALSERVER_WAITFORNEWCONNECTION)
 {
   QLocalServer *obj = qobject_cast<QLocalServer *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -385,9 +361,7 @@ HB_FUNC_STATIC(QLOCALSERVER_WAITFORNEWCONNECTION)
   }
 }
 
-/*
-static bool removeServer(const QString &name)
-*/
+// static bool removeServer(const QString &name)
 HB_FUNC_STATIC(QLOCALSERVER_REMOVESERVER)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

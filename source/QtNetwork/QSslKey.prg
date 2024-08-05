@@ -66,10 +66,8 @@ HB_FUNC_STATIC(QSSLKEY_NEW)
   else if (ISBETWEEN(2, 5) && ISQBYTEARRAY(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) &&
            (HB_ISNUM(4) || HB_ISNIL(4)) && (ISQBYTEARRAY(5) || HB_ISNIL(5)))
   {
-    /*
-    QSslKey(const QByteArray &encoded, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem,
-    QSsl::KeyType type = QSsl::PrivateKey, const QByteArray &passPhrase = QByteArray())
-    */
+    // QSslKey(const QByteArray &encoded, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem,
+    // QSsl::KeyType type = QSsl::PrivateKey, const QByteArray &passPhrase = QByteArray())
     QSslKey *obj = new QSslKey(*PQBYTEARRAY(1), (QSsl::KeyAlgorithm)hb_parni(2),
                                HB_ISNIL(3) ? (QSsl::EncodingFormat)QSsl::Pem : (QSsl::EncodingFormat)hb_parni(3),
                                HB_ISNIL(4) ? (QSsl::KeyType)QSsl::PrivateKey : (QSsl::KeyType)hb_parni(4),
@@ -79,10 +77,8 @@ HB_FUNC_STATIC(QSSLKEY_NEW)
   else if (ISBETWEEN(2, 5) && ISQIODEVICE(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) &&
            (HB_ISNUM(4) || HB_ISNIL(4)) && (ISQBYTEARRAY(5) || HB_ISNIL(5)))
   {
-    /*
-    QSslKey(QIODevice *device, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType
-    type = QSsl::PrivateKey, const QByteArray &passPhrase = QByteArray())
-    */
+    // QSslKey(QIODevice *device, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType
+    // type = QSsl::PrivateKey, const QByteArray &passPhrase = QByteArray())
     QSslKey *obj = new QSslKey(PQIODEVICE(1), (QSsl::KeyAlgorithm)hb_parni(2),
                                HB_ISNIL(3) ? (QSsl::EncodingFormat)QSsl::Pem : (QSsl::EncodingFormat)hb_parni(3),
                                HB_ISNIL(4) ? (QSsl::KeyType)QSsl::PrivateKey : (QSsl::KeyType)hb_parni(4),
@@ -117,9 +113,7 @@ HB_FUNC_STATIC(QSSLKEY_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSsl::KeyAlgorithm algorithm() const
-*/
+// QSsl::KeyAlgorithm algorithm() const
 HB_FUNC_STATIC(QSSLKEY_ALGORITHM)
 {
   QSslKey *obj = static_cast<QSslKey *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -141,9 +135,7 @@ HB_FUNC_STATIC(QSSLKEY_ALGORITHM)
   }
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QSSLKEY_CLEAR)
 {
   QSslKey *obj = static_cast<QSslKey *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -167,9 +159,7 @@ HB_FUNC_STATIC(QSSLKEY_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QSSLKEY_ISNULL)
 {
   QSslKey *obj = static_cast<QSslKey *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -191,9 +181,7 @@ HB_FUNC_STATIC(QSSLKEY_ISNULL)
   }
 }
 
-/*
-int length() const
-*/
+// int length() const
 HB_FUNC_STATIC(QSSLKEY_LENGTH)
 {
   QSslKey *obj = static_cast<QSslKey *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -215,9 +203,7 @@ HB_FUNC_STATIC(QSSLKEY_LENGTH)
   }
 }
 
-/*
-QByteArray toDer(const QByteArray &passPhrase = QByteArray()) const
-*/
+// QByteArray toDer(const QByteArray &passPhrase = QByteArray()) const
 HB_FUNC_STATIC(QSSLKEY_TODER)
 {
   QSslKey *obj = static_cast<QSslKey *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -241,9 +227,7 @@ HB_FUNC_STATIC(QSSLKEY_TODER)
   }
 }
 
-/*
-QByteArray toPem(const QByteArray &passPhrase = QByteArray()) const
-*/
+// QByteArray toPem(const QByteArray &passPhrase = QByteArray()) const
 HB_FUNC_STATIC(QSSLKEY_TOPEM)
 {
   QSslKey *obj = static_cast<QSslKey *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -267,9 +251,7 @@ HB_FUNC_STATIC(QSSLKEY_TOPEM)
   }
 }
 
-/*
-QSsl::KeyType type() const
-*/
+// QSsl::KeyType type() const
 HB_FUNC_STATIC(QSSLKEY_TYPE)
 {
   QSslKey *obj = static_cast<QSslKey *>(Qt4xHb::itemGetPtrStackSelfItem());

@@ -44,7 +44,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QUdpSocket(QObject *parent = 0)
+    // QUdpSocket(QObject *parent = 0)
 HB_FUNC_STATIC(QUDPSOCKET_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
@@ -80,9 +80,7 @@ HB_FUNC_STATIC(QUDPSOCKET_BIND)
 {
   if (ISNUMPAR(2) && ISQHOSTADDRESS(1) && HB_ISNUM(2))
   {
-    /*
-    bool bind(const QHostAddress &address, quint16 port)
-    */
+    // bool bind(const QHostAddress &address, quint16 port)
     QUdpSocket *obj = qobject_cast<QUdpSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -92,9 +90,7 @@ HB_FUNC_STATIC(QUDPSOCKET_BIND)
   }
   else if (ISNUMPAR(3) && ISQHOSTADDRESS(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
-    /*
-    bool bind(const QHostAddress &address, quint16 port, QUdpSocket::BindMode mode)
-    */
+    // bool bind(const QHostAddress &address, quint16 port, QUdpSocket::BindMode mode)
     QUdpSocket *obj = qobject_cast<QUdpSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -104,9 +100,7 @@ HB_FUNC_STATIC(QUDPSOCKET_BIND)
   }
   else if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
-    /*
-    bool bind(quint16 port = 0)
-    */
+    // bool bind(quint16 port = 0)
     QUdpSocket *obj = qobject_cast<QUdpSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -116,9 +110,7 @@ HB_FUNC_STATIC(QUDPSOCKET_BIND)
   }
   else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2))
   {
-    /*
-    bool bind(quint16 port, QUdpSocket::BindMode mode)
-    */
+    // bool bind(quint16 port, QUdpSocket::BindMode mode)
     QUdpSocket *obj = qobject_cast<QUdpSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -132,9 +124,7 @@ HB_FUNC_STATIC(QUDPSOCKET_BIND)
   }
 }
 
-/*
-bool hasPendingDatagrams() const
-*/
+// bool hasPendingDatagrams() const
 HB_FUNC_STATIC(QUDPSOCKET_HASPENDINGDATAGRAMS)
 {
   QUdpSocket *obj = qobject_cast<QUdpSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -156,9 +146,7 @@ HB_FUNC_STATIC(QUDPSOCKET_HASPENDINGDATAGRAMS)
   }
 }
 
-/*
-qint64 pendingDatagramSize() const
-*/
+// qint64 pendingDatagramSize() const
 HB_FUNC_STATIC(QUDPSOCKET_PENDINGDATAGRAMSIZE)
 {
   QUdpSocket *obj = qobject_cast<QUdpSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -184,9 +172,7 @@ HB_FUNC_STATIC(QUDPSOCKET_WRITEDATAGRAM)
 {
   if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISNUM(2) && ISQHOSTADDRESS(3) && HB_ISNUM(4))
   {
-    /*
-    qint64 writeDatagram(const char *data, qint64 size, const QHostAddress &address, quint16 port)
-    */
+    // qint64 writeDatagram(const char *data, qint64 size, const QHostAddress &address, quint16 port)
     QUdpSocket *obj = qobject_cast<QUdpSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -196,9 +182,7 @@ HB_FUNC_STATIC(QUDPSOCKET_WRITEDATAGRAM)
   }
   else if (ISNUMPAR(3) && ISQBYTEARRAY(1) && ISQHOSTADDRESS(2) && HB_ISNUM(3))
   {
-    /*
-    qint64 writeDatagram(const QByteArray &datagram, const QHostAddress &host, quint16 port)
-    */
+    // qint64 writeDatagram(const QByteArray &datagram, const QHostAddress &host, quint16 port)
     QUdpSocket *obj = qobject_cast<QUdpSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)

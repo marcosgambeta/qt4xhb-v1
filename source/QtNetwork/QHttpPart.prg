@@ -87,9 +87,7 @@ HB_FUNC_STATIC(QHTTPPART_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setBody(const QByteArray &body)
-*/
+// void setBody(const QByteArray &body)
 HB_FUNC_STATIC(QHTTPPART_SETBODY)
 {
   QHttpPart *obj = static_cast<QHttpPart *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -113,9 +111,7 @@ HB_FUNC_STATIC(QHTTPPART_SETBODY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setBodyDevice(QIODevice *device)
-*/
+// void setBodyDevice(QIODevice *device)
 HB_FUNC_STATIC(QHTTPPART_SETBODYDEVICE)
 {
   QHttpPart *obj = static_cast<QHttpPart *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -139,9 +135,7 @@ HB_FUNC_STATIC(QHTTPPART_SETBODYDEVICE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setHeader(QNetworkRequest::KnownHeaders header, const QVariant &value)
-*/
+// void setHeader(QNetworkRequest::KnownHeaders header, const QVariant &value)
 HB_FUNC_STATIC(QHTTPPART_SETHEADER)
 {
   QHttpPart *obj = static_cast<QHttpPart *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -165,9 +159,7 @@ HB_FUNC_STATIC(QHTTPPART_SETHEADER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setRawHeader(const QByteArray &headerName, const QByteArray &headerValue)
-*/
+// void setRawHeader(const QByteArray &headerName, const QByteArray &headerValue)
 HB_FUNC_STATIC(QHTTPPART_SETRAWHEADER)
 {
   QHttpPart *obj = static_cast<QHttpPart *>(Qt4xHb::itemGetPtrStackSelfItem());

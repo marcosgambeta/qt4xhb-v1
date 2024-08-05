@@ -96,9 +96,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QList<QNetworkAddressEntry> addressEntries() const
-*/
+// QList<QNetworkAddressEntry> addressEntries() const
 HB_FUNC_STATIC(QNETWORKINTERFACE_ADDRESSENTRIES)
 {
   QNetworkInterface *obj = static_cast<QNetworkInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -147,9 +145,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_ADDRESSENTRIES)
   }
 }
 
-/*
-QNetworkInterface::InterfaceFlags flags() const
-*/
+// QNetworkInterface::InterfaceFlags flags() const
 HB_FUNC_STATIC(QNETWORKINTERFACE_FLAGS)
 {
   QNetworkInterface *obj = static_cast<QNetworkInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -171,9 +167,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_FLAGS)
   }
 }
 
-/*
-QString hardwareAddress() const
-*/
+// QString hardwareAddress() const
 HB_FUNC_STATIC(QNETWORKINTERFACE_HARDWAREADDRESS)
 {
   QNetworkInterface *obj = static_cast<QNetworkInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -195,9 +189,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_HARDWAREADDRESS)
   }
 }
 
-/*
-QString humanReadableName() const
-*/
+// QString humanReadableName() const
 HB_FUNC_STATIC(QNETWORKINTERFACE_HUMANREADABLENAME)
 {
   QNetworkInterface *obj = static_cast<QNetworkInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -219,9 +211,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_HUMANREADABLENAME)
   }
 }
 
-/*
-int index() const
-*/
+// int index() const
 HB_FUNC_STATIC(QNETWORKINTERFACE_INDEX)
 {
   QNetworkInterface *obj = static_cast<QNetworkInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -243,9 +233,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_INDEX)
   }
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QNETWORKINTERFACE_ISVALID)
 {
   QNetworkInterface *obj = static_cast<QNetworkInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -267,9 +255,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_ISVALID)
   }
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QNETWORKINTERFACE_NAME)
 {
   QNetworkInterface *obj = static_cast<QNetworkInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -291,9 +277,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_NAME)
   }
 }
 
-/*
-QList<QHostAddress> allAddresses()
-*/
+// QList<QHostAddress> allAddresses()
 HB_FUNC_STATIC(QNETWORKINTERFACE_ALLADDRESSES)
 {
   QNetworkInterface *obj = static_cast<QNetworkInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -342,9 +326,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_ALLADDRESSES)
   }
 }
 
-/*
-QList<QNetworkInterface> allInterfaces()
-*/
+// QList<QNetworkInterface> allInterfaces()
 HB_FUNC_STATIC(QNETWORKINTERFACE_ALLINTERFACES)
 {
   QNetworkInterface *obj = static_cast<QNetworkInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -393,9 +375,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_ALLINTERFACES)
   }
 }
 
-/*
-static QNetworkInterface interfaceFromIndex(int index)
-*/
+// static QNetworkInterface interfaceFromIndex(int index)
 HB_FUNC_STATIC(QNETWORKINTERFACE_INTERFACEFROMINDEX)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -413,9 +393,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_INTERFACEFROMINDEX)
 #endif
 }
 
-/*
-static QNetworkInterface interfaceFromName(const QString &name)
-*/
+// static QNetworkInterface interfaceFromName(const QString &name)
 HB_FUNC_STATIC(QNETWORKINTERFACE_INTERFACEFROMNAME)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

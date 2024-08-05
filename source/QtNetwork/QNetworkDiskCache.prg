@@ -55,7 +55,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QNetworkDiskCache(QObject *parent = 0)
+    // QNetworkDiskCache(QObject *parent = 0)
 HB_FUNC_STATIC(QNETWORKDISKCACHE_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
@@ -87,9 +87,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString cacheDirectory() const
-*/
+// QString cacheDirectory() const
 HB_FUNC_STATIC(QNETWORKDISKCACHE_CACHEDIRECTORY)
 {
   QNetworkDiskCache *obj = qobject_cast<QNetworkDiskCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -111,9 +109,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_CACHEDIRECTORY)
   }
 }
 
-/*
-QNetworkCacheMetaData fileMetaData(const QString &fileName) const
-*/
+// QNetworkCacheMetaData fileMetaData(const QString &fileName) const
 HB_FUNC_STATIC(QNETWORKDISKCACHE_FILEMETADATA)
 {
   QNetworkDiskCache *obj = qobject_cast<QNetworkDiskCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -136,9 +132,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_FILEMETADATA)
   }
 }
 
-/*
-qint64 maximumCacheSize() const
-*/
+// qint64 maximumCacheSize() const
 HB_FUNC_STATIC(QNETWORKDISKCACHE_MAXIMUMCACHESIZE)
 {
   QNetworkDiskCache *obj = qobject_cast<QNetworkDiskCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -160,9 +154,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_MAXIMUMCACHESIZE)
   }
 }
 
-/*
-void setCacheDirectory(const QString &cacheDir)
-*/
+// void setCacheDirectory(const QString &cacheDir)
 HB_FUNC_STATIC(QNETWORKDISKCACHE_SETCACHEDIRECTORY)
 {
   QNetworkDiskCache *obj = qobject_cast<QNetworkDiskCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -186,9 +178,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_SETCACHEDIRECTORY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setMaximumCacheSize(qint64 size)
-*/
+// void setMaximumCacheSize(qint64 size)
 HB_FUNC_STATIC(QNETWORKDISKCACHE_SETMAXIMUMCACHESIZE)
 {
   QNetworkDiskCache *obj = qobject_cast<QNetworkDiskCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -212,9 +202,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_SETMAXIMUMCACHESIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual qint64 cacheSize() const
-*/
+// virtual qint64 cacheSize() const
 HB_FUNC_STATIC(QNETWORKDISKCACHE_CACHESIZE)
 {
   QNetworkDiskCache *obj = qobject_cast<QNetworkDiskCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -236,9 +224,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_CACHESIZE)
   }
 }
 
-/*
-virtual QIODevice *data(const QUrl &url)
-*/
+// virtual QIODevice *data(const QUrl &url)
 HB_FUNC_STATIC(QNETWORKDISKCACHE_DATA)
 {
   QNetworkDiskCache *obj = qobject_cast<QNetworkDiskCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -261,9 +247,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_DATA)
   }
 }
 
-/*
-virtual void insert(QIODevice *device)
-*/
+// virtual void insert(QIODevice *device)
 HB_FUNC_STATIC(QNETWORKDISKCACHE_INSERT)
 {
   QNetworkDiskCache *obj = qobject_cast<QNetworkDiskCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -287,9 +271,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_INSERT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QNetworkCacheMetaData metaData(const QUrl &url)
-*/
+// virtual QNetworkCacheMetaData metaData(const QUrl &url)
 HB_FUNC_STATIC(QNETWORKDISKCACHE_METADATA)
 {
   QNetworkDiskCache *obj = qobject_cast<QNetworkDiskCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -312,9 +294,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_METADATA)
   }
 }
 
-/*
-virtual QIODevice *prepare(const QNetworkCacheMetaData &metaData)
-*/
+// virtual QIODevice *prepare(const QNetworkCacheMetaData &metaData)
 HB_FUNC_STATIC(QNETWORKDISKCACHE_PREPARE)
 {
   QNetworkDiskCache *obj = qobject_cast<QNetworkDiskCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -337,9 +317,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_PREPARE)
   }
 }
 
-/*
-virtual bool remove(const QUrl &url)
-*/
+// virtual bool remove(const QUrl &url)
 HB_FUNC_STATIC(QNETWORKDISKCACHE_REMOVE)
 {
   QNetworkDiskCache *obj = qobject_cast<QNetworkDiskCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -361,9 +339,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_REMOVE)
   }
 }
 
-/*
-virtual void updateMetaData(const QNetworkCacheMetaData &metaData)
-*/
+// virtual void updateMetaData(const QNetworkCacheMetaData &metaData)
 HB_FUNC_STATIC(QNETWORKDISKCACHE_UPDATEMETADATA)
 {
   QNetworkDiskCache *obj = qobject_cast<QNetworkDiskCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -387,9 +363,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_UPDATEMETADATA)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void clear()
-*/
+// virtual void clear()
 HB_FUNC_STATIC(QNETWORKDISKCACHE_CLEAR)
 {
   QNetworkDiskCache *obj = qobject_cast<QNetworkDiskCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
