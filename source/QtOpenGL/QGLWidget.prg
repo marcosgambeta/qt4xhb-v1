@@ -123,9 +123,7 @@ HB_FUNC_STATIC(QGLWIDGET_BINDTEXTURE)
 {
   if (ISBETWEEN(1, 3) && ISQIMAGE(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
-    /*
-    GLuint bindTexture(const QImage &image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA)
-    */
+    // GLuint bindTexture(const QImage &image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA)
     QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -135,9 +133,7 @@ HB_FUNC_STATIC(QGLWIDGET_BINDTEXTURE)
   }
   else if (ISBETWEEN(1, 3) && ISQPIXMAP(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
-    /*
-    GLuint bindTexture(const QPixmap &pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA)
-    */
+    // GLuint bindTexture(const QPixmap &pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA)
     QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -147,9 +143,7 @@ HB_FUNC_STATIC(QGLWIDGET_BINDTEXTURE)
   }
   else if (ISBETWEEN(3, 4) && ISQIMAGE(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
-    /*
-    GLuint bindTexture(const QImage &image, GLenum target, GLint format, QGLContext::BindOptions options)
-    */
+    // GLuint bindTexture(const QImage &image, GLenum target, GLint format, QGLContext::BindOptions options)
     QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -159,9 +153,7 @@ HB_FUNC_STATIC(QGLWIDGET_BINDTEXTURE)
   }
   else if (ISBETWEEN(3, 4) && ISQPIXMAP(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
-    /*
-    GLuint bindTexture(const QPixmap &pixmap, GLenum target, GLint format, QGLContext::BindOptions options)
-    */
+    // GLuint bindTexture(const QPixmap &pixmap, GLenum target, GLint format, QGLContext::BindOptions options)
     QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -171,9 +163,7 @@ HB_FUNC_STATIC(QGLWIDGET_BINDTEXTURE)
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    GLuint bindTexture(const QString &fileName)
-    */
+    // GLuint bindTexture(const QString &fileName)
     QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -187,9 +177,7 @@ HB_FUNC_STATIC(QGLWIDGET_BINDTEXTURE)
   }
 }
 
-/*
-const QGLColormap &colormap() const
-*/
+// const QGLColormap &colormap() const
 HB_FUNC_STATIC(QGLWIDGET_COLORMAP)
 {
   QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -212,9 +200,7 @@ HB_FUNC_STATIC(QGLWIDGET_COLORMAP)
   }
 }
 
-/*
-const QGLContext *context() const
-*/
+// const QGLContext *context() const
 HB_FUNC_STATIC(QGLWIDGET_CONTEXT)
 {
   QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -237,9 +223,7 @@ HB_FUNC_STATIC(QGLWIDGET_CONTEXT)
   }
 }
 
-/*
-void deleteTexture(GLuint id)
-*/
+// void deleteTexture(GLuint id)
 HB_FUNC_STATIC(QGLWIDGET_DELETETEXTURE)
 {
   QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -263,9 +247,7 @@ HB_FUNC_STATIC(QGLWIDGET_DELETETEXTURE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void doneCurrent()
-*/
+// void doneCurrent()
 HB_FUNC_STATIC(QGLWIDGET_DONECURRENT)
 {
   QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -289,9 +271,7 @@ HB_FUNC_STATIC(QGLWIDGET_DONECURRENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool doubleBuffer() const
-*/
+// bool doubleBuffer() const
 HB_FUNC_STATIC(QGLWIDGET_DOUBLEBUFFER)
 {
   QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -317,9 +297,7 @@ HB_FUNC_STATIC(QGLWIDGET_DRAWTEXTURE)
 {
   if (ISBETWEEN(2, 3) && ISQRECTF(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
-    /*
-    void drawTexture(const QRectF &target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D)
-    */
+    // void drawTexture(const QRectF &target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D)
     QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -331,9 +309,7 @@ HB_FUNC_STATIC(QGLWIDGET_DRAWTEXTURE)
   }
   else if (ISBETWEEN(2, 3) && ISQPOINTF(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
-    /*
-    void drawTexture(const QPointF &point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D)
-    */
+    // void drawTexture(const QPointF &point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D)
     QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -349,9 +325,7 @@ HB_FUNC_STATIC(QGLWIDGET_DRAWTEXTURE)
   }
 }
 
-/*
-QGLFormat format() const
-*/
+// QGLFormat format() const
 HB_FUNC_STATIC(QGLWIDGET_FORMAT)
 {
   QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -374,9 +348,7 @@ HB_FUNC_STATIC(QGLWIDGET_FORMAT)
   }
 }
 
-/*
-QImage grabFrameBuffer(bool withAlpha = false)
-*/
+// QImage grabFrameBuffer(bool withAlpha = false)
 HB_FUNC_STATIC(QGLWIDGET_GRABFRAMEBUFFER)
 {
   QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -399,9 +371,7 @@ HB_FUNC_STATIC(QGLWIDGET_GRABFRAMEBUFFER)
   }
 }
 
-/*
-bool isSharing() const
-*/
+// bool isSharing() const
 HB_FUNC_STATIC(QGLWIDGET_ISSHARING)
 {
   QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -423,9 +393,7 @@ HB_FUNC_STATIC(QGLWIDGET_ISSHARING)
   }
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QGLWIDGET_ISVALID)
 {
   QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -447,9 +415,7 @@ HB_FUNC_STATIC(QGLWIDGET_ISVALID)
   }
 }
 
-/*
-void makeCurrent()
-*/
+// void makeCurrent()
 HB_FUNC_STATIC(QGLWIDGET_MAKECURRENT)
 {
   QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -473,9 +439,7 @@ HB_FUNC_STATIC(QGLWIDGET_MAKECURRENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void makeOverlayCurrent()
-*/
+// void makeOverlayCurrent()
 HB_FUNC_STATIC(QGLWIDGET_MAKEOVERLAYCURRENT)
 {
   QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -499,9 +463,7 @@ HB_FUNC_STATIC(QGLWIDGET_MAKEOVERLAYCURRENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-const QGLContext *overlayContext() const
-*/
+// const QGLContext *overlayContext() const
 HB_FUNC_STATIC(QGLWIDGET_OVERLAYCONTEXT)
 {
   QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -524,9 +486,7 @@ HB_FUNC_STATIC(QGLWIDGET_OVERLAYCONTEXT)
   }
 }
 
-/*
-void qglClearColor(const QColor &c) const
-*/
+// void qglClearColor(const QColor &c) const
 HB_FUNC_STATIC(QGLWIDGET_QGLCLEARCOLOR)
 {
   QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -550,9 +510,7 @@ HB_FUNC_STATIC(QGLWIDGET_QGLCLEARCOLOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void qglColor(const QColor &c) const
-*/
+// void qglColor(const QColor &c) const
 HB_FUNC_STATIC(QGLWIDGET_QGLCOLOR)
 {
   QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -576,9 +534,7 @@ HB_FUNC_STATIC(QGLWIDGET_QGLCOLOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QPixmap renderPixmap(int w = 0, int h = 0, bool useContext = false)
-*/
+// QPixmap renderPixmap(int w = 0, int h = 0, bool useContext = false)
 HB_FUNC_STATIC(QGLWIDGET_RENDERPIXMAP)
 {
   QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -606,9 +562,7 @@ HB_FUNC_STATIC(QGLWIDGET_RENDERTEXT)
   if (ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3) && (ISQFONT(4) || HB_ISNIL(4)) &&
       (HB_ISNUM(5) || HB_ISNIL(5)))
   {
-    /*
-    void renderText(int x, int y, const QString &str, const QFont &font = QFont(), int listBase = 2000)
-    */
+    // void renderText(int x, int y, const QString &str, const QFont &font = QFont(), int listBase = 2000)
     QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -622,10 +576,8 @@ HB_FUNC_STATIC(QGLWIDGET_RENDERTEXT)
   else if (ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISCHAR(4) &&
            (ISQFONT(5) || HB_ISNIL(5)) && (HB_ISNUM(6) || HB_ISNIL(6)))
   {
-    /*
-    void renderText(double x, double y, double z, const QString &str, const QFont &font = QFont(), int listBase =
-    2000)
-    */
+    // void renderText(double x, double y, double z, const QString &str, const QFont &font = QFont(), int listBase =
+    // 2000)
     QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -642,9 +594,7 @@ HB_FUNC_STATIC(QGLWIDGET_RENDERTEXT)
   }
 }
 
-/*
-void setColormap(const QGLColormap &cmap)
-*/
+// void setColormap(const QGLColormap &cmap)
 HB_FUNC_STATIC(QGLWIDGET_SETCOLORMAP)
 {
   QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -668,9 +618,7 @@ HB_FUNC_STATIC(QGLWIDGET_SETCOLORMAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setMouseTracking(bool enable)
-*/
+// void setMouseTracking(bool enable)
 HB_FUNC_STATIC(QGLWIDGET_SETMOUSETRACKING)
 {
   QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -694,9 +642,7 @@ HB_FUNC_STATIC(QGLWIDGET_SETMOUSETRACKING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void swapBuffers()
-*/
+// void swapBuffers()
 HB_FUNC_STATIC(QGLWIDGET_SWAPBUFFERS)
 {
   QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -720,9 +666,7 @@ HB_FUNC_STATIC(QGLWIDGET_SWAPBUFFERS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void updateGL()
-*/
+// virtual void updateGL()
 HB_FUNC_STATIC(QGLWIDGET_UPDATEGL)
 {
   QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -746,9 +690,7 @@ HB_FUNC_STATIC(QGLWIDGET_UPDATEGL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void updateOverlayGL()
-*/
+// virtual void updateOverlayGL()
 HB_FUNC_STATIC(QGLWIDGET_UPDATEOVERLAYGL)
 {
   QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -772,9 +714,7 @@ HB_FUNC_STATIC(QGLWIDGET_UPDATEOVERLAYGL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static QImage convertToGLFormat(const QImage &img)
-*/
+// static QImage convertToGLFormat(const QImage &img)
 HB_FUNC_STATIC(QGLWIDGET_CONVERTTOGLFORMAT)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

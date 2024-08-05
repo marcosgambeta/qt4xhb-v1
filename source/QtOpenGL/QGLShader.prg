@@ -90,9 +90,7 @@ HB_FUNC_STATIC(QGLSHADER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool compileSourceCode(const char *source)
-*/
+// bool compileSourceCode(const char *source)
 HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE1)
 {
   QGLShader *obj = qobject_cast<QGLShader *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -114,9 +112,7 @@ HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE1)
   }
 }
 
-/*
-bool compileSourceCode(const QByteArray &source)
-*/
+// bool compileSourceCode(const QByteArray &source)
 HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE2)
 {
   QGLShader *obj = qobject_cast<QGLShader *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -138,9 +134,7 @@ HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE2)
   }
 }
 
-/*
-bool compileSourceCode(const QString &source)
-*/
+// bool compileSourceCode(const QString &source)
 HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE3)
 {
   QGLShader *obj = qobject_cast<QGLShader *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -182,9 +176,7 @@ HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE)
   }
 }
 
-/*
-bool compileSourceFile(const QString &fileName)
-*/
+// bool compileSourceFile(const QString &fileName)
 HB_FUNC_STATIC(QGLSHADER_COMPILESOURCEFILE)
 {
   QGLShader *obj = qobject_cast<QGLShader *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -206,9 +198,7 @@ HB_FUNC_STATIC(QGLSHADER_COMPILESOURCEFILE)
   }
 }
 
-/*
-bool isCompiled() const
-*/
+// bool isCompiled() const
 HB_FUNC_STATIC(QGLSHADER_ISCOMPILED)
 {
   QGLShader *obj = qobject_cast<QGLShader *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -230,9 +220,7 @@ HB_FUNC_STATIC(QGLSHADER_ISCOMPILED)
   }
 }
 
-/*
-QString log() const
-*/
+// QString log() const
 HB_FUNC_STATIC(QGLSHADER_LOG)
 {
   QGLShader *obj = qobject_cast<QGLShader *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -254,9 +242,7 @@ HB_FUNC_STATIC(QGLSHADER_LOG)
   }
 }
 
-/*
-GLuint shaderId() const
-*/
+// GLuint shaderId() const
 HB_FUNC_STATIC(QGLSHADER_SHADERID)
 {
   QGLShader *obj = qobject_cast<QGLShader *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -278,9 +264,7 @@ HB_FUNC_STATIC(QGLSHADER_SHADERID)
   }
 }
 
-/*
-QGLShader::ShaderType shaderType() const
-*/
+// QGLShader::ShaderType shaderType() const
 HB_FUNC_STATIC(QGLSHADER_SHADERTYPE)
 {
   QGLShader *obj = qobject_cast<QGLShader *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -302,9 +286,7 @@ HB_FUNC_STATIC(QGLSHADER_SHADERTYPE)
   }
 }
 
-/*
-QByteArray sourceCode() const
-*/
+// QByteArray sourceCode() const
 HB_FUNC_STATIC(QGLSHADER_SOURCECODE)
 {
   QGLShader *obj = qobject_cast<QGLShader *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -327,9 +309,7 @@ HB_FUNC_STATIC(QGLSHADER_SOURCECODE)
   }
 }
 
-/*
-static bool hasOpenGLShaders(QGLShader::ShaderType type, const QGLContext *context = 0)
-*/
+// static bool hasOpenGLShaders(QGLShader::ShaderType type, const QGLContext *context = 0)
 HB_FUNC_STATIC(QGLSHADER_HASOPENGLSHADERS)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

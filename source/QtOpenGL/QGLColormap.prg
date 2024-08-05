@@ -91,9 +91,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QColor entryColor(int idx) const
-*/
+// QColor entryColor(int idx) const
 HB_FUNC_STATIC(QGLCOLORMAP_ENTRYCOLOR)
 {
   QGLColormap *obj = static_cast<QGLColormap *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -116,9 +114,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_ENTRYCOLOR)
   }
 }
 
-/*
-QRgb entryRgb(int idx) const
-*/
+// QRgb entryRgb(int idx) const
 HB_FUNC_STATIC(QGLCOLORMAP_ENTRYRGB)
 {
   QGLColormap *obj = static_cast<QGLColormap *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -140,9 +136,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_ENTRYRGB)
   }
 }
 
-/*
-int find(QRgb color) const
-*/
+// int find(QRgb color) const
 HB_FUNC_STATIC(QGLCOLORMAP_FIND)
 {
   QGLColormap *obj = static_cast<QGLColormap *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -164,9 +158,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_FIND)
   }
 }
 
-/*
-int findNearest(QRgb color) const
-*/
+// int findNearest(QRgb color) const
 HB_FUNC_STATIC(QGLCOLORMAP_FINDNEAREST)
 {
   QGLColormap *obj = static_cast<QGLColormap *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -188,9 +180,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_FINDNEAREST)
   }
 }
 
-/*
-bool isEmpty() const
-*/
+// bool isEmpty() const
 HB_FUNC_STATIC(QGLCOLORMAP_ISEMPTY)
 {
   QGLColormap *obj = static_cast<QGLColormap *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -216,9 +206,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_SETENTRY)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
-    /*
-    void setEntry(int idx, QRgb color)
-    */
+    // void setEntry(int idx, QRgb color)
     QGLColormap *obj = static_cast<QGLColormap *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -230,9 +218,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_SETENTRY)
   }
   else if (ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2) || HB_ISCHAR(2)))
   {
-    /*
-    void setEntry(int idx, const QColor &color)
-    */
+    // void setEntry(int idx, const QColor &color)
     QGLColormap *obj = static_cast<QGLColormap *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -248,9 +234,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_SETENTRY)
   }
 }
 
-/*
-int size() const
-*/
+// int size() const
 HB_FUNC_STATIC(QGLCOLORMAP_SIZE)
 {
   QGLColormap *obj = static_cast<QGLColormap *>(Qt4xHb::itemGetPtrStackSelfItem());

@@ -82,9 +82,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QGLFramebufferObject::Attachment attachment() const
-*/
+// QGLFramebufferObject::Attachment attachment() const
 HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_ATTACHMENT)
 {
   QGLFramebufferObjectFormat *obj = static_cast<QGLFramebufferObjectFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -106,9 +104,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_ATTACHMENT)
   }
 }
 
-/*
-GLenum internalTextureFormat() const
-*/
+// GLenum internalTextureFormat() const
 HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_INTERNALTEXTUREFORMAT)
 {
   QGLFramebufferObjectFormat *obj = static_cast<QGLFramebufferObjectFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -130,9 +126,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_INTERNALTEXTUREFORMAT)
   }
 }
 
-/*
-int samples() const
-*/
+// int samples() const
 HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_SAMPLES)
 {
   QGLFramebufferObjectFormat *obj = static_cast<QGLFramebufferObjectFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -154,9 +148,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_SAMPLES)
   }
 }
 
-/*
-void setAttachment(QGLFramebufferObject::Attachment attachment)
-*/
+// void setAttachment(QGLFramebufferObject::Attachment attachment)
 HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_SETATTACHMENT)
 {
   QGLFramebufferObjectFormat *obj = static_cast<QGLFramebufferObjectFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -180,9 +172,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_SETATTACHMENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setInternalTextureFormat(GLenum internalTextureFormat)
-*/
+// void setInternalTextureFormat(GLenum internalTextureFormat)
 HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_SETINTERNALTEXTUREFORMAT)
 {
   QGLFramebufferObjectFormat *obj = static_cast<QGLFramebufferObjectFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -206,9 +196,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_SETINTERNALTEXTUREFORMAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSamples(int samples)
-*/
+// void setSamples(int samples)
 HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_SETSAMPLES)
 {
   QGLFramebufferObjectFormat *obj = static_cast<QGLFramebufferObjectFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -232,9 +220,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_SETSAMPLES)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTextureTarget(GLenum target)
-*/
+// void setTextureTarget(GLenum target)
 HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_SETTEXTURETARGET)
 {
   QGLFramebufferObjectFormat *obj = static_cast<QGLFramebufferObjectFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -258,9 +244,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_SETTEXTURETARGET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-GLenum textureTarget() const
-*/
+// GLenum textureTarget() const
 HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_TEXTURETARGET)
 {
   QGLFramebufferObjectFormat *obj = static_cast<QGLFramebufferObjectFormat *>(Qt4xHb::itemGetPtrStackSelfItem());

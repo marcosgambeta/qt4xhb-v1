@@ -107,9 +107,7 @@ HB_FUNC_STATIC(QGLBUFFER_ALLOCATE)
 {
   if (ISNUMPAR(2) && HB_ISPOINTER(1) && HB_ISNUM(2))
   {
-    /*
-    void allocate(const void *data, int count)
-    */
+    // void allocate(const void *data, int count)
     QGLBuffer *obj = static_cast<QGLBuffer *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -121,9 +119,7 @@ HB_FUNC_STATIC(QGLBUFFER_ALLOCATE)
   }
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    /*
-    void allocate(int count)
-    */
+    // void allocate(int count)
     QGLBuffer *obj = static_cast<QGLBuffer *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -139,9 +135,7 @@ HB_FUNC_STATIC(QGLBUFFER_ALLOCATE)
   }
 }
 
-/*
-bool bind()
-*/
+// bool bind()
 HB_FUNC_STATIC(QGLBUFFER_BIND)
 {
   QGLBuffer *obj = static_cast<QGLBuffer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -163,9 +157,7 @@ HB_FUNC_STATIC(QGLBUFFER_BIND)
   }
 }
 
-/*
-GLuint bufferId() const
-*/
+// GLuint bufferId() const
 HB_FUNC_STATIC(QGLBUFFER_BUFFERID)
 {
   QGLBuffer *obj = static_cast<QGLBuffer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -187,9 +179,7 @@ HB_FUNC_STATIC(QGLBUFFER_BUFFERID)
   }
 }
 
-/*
-bool create()
-*/
+// bool create()
 HB_FUNC_STATIC(QGLBUFFER_CREATE)
 {
   QGLBuffer *obj = static_cast<QGLBuffer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -211,9 +201,7 @@ HB_FUNC_STATIC(QGLBUFFER_CREATE)
   }
 }
 
-/*
-void destroy()
-*/
+// void destroy()
 HB_FUNC_STATIC(QGLBUFFER_DESTROY)
 {
   QGLBuffer *obj = static_cast<QGLBuffer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -237,9 +225,7 @@ HB_FUNC_STATIC(QGLBUFFER_DESTROY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isCreated() const
-*/
+// bool isCreated() const
 HB_FUNC_STATIC(QGLBUFFER_ISCREATED)
 {
   QGLBuffer *obj = static_cast<QGLBuffer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -261,9 +247,7 @@ HB_FUNC_STATIC(QGLBUFFER_ISCREATED)
   }
 }
 
-/*
-void *map(QGLBuffer::Access access)
-*/
+// void *map(QGLBuffer::Access access)
 HB_FUNC_STATIC(QGLBUFFER_MAP)
 {
   QGLBuffer *obj = static_cast<QGLBuffer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -285,9 +269,7 @@ HB_FUNC_STATIC(QGLBUFFER_MAP)
   }
 }
 
-/*
-bool read(int offset, void *data, int count)
-*/
+// bool read(int offset, void *data, int count)
 HB_FUNC_STATIC(QGLBUFFER_READ)
 {
   QGLBuffer *obj = static_cast<QGLBuffer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -309,9 +291,7 @@ HB_FUNC_STATIC(QGLBUFFER_READ)
   }
 }
 
-/*
-void setUsagePattern(QGLBuffer::UsagePattern value)
-*/
+// void setUsagePattern(QGLBuffer::UsagePattern value)
 HB_FUNC_STATIC(QGLBUFFER_SETUSAGEPATTERN)
 {
   QGLBuffer *obj = static_cast<QGLBuffer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -335,9 +315,7 @@ HB_FUNC_STATIC(QGLBUFFER_SETUSAGEPATTERN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int size() const
-*/
+// int size() const
 HB_FUNC_STATIC(QGLBUFFER_SIZE)
 {
   QGLBuffer *obj = static_cast<QGLBuffer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -359,9 +337,7 @@ HB_FUNC_STATIC(QGLBUFFER_SIZE)
   }
 }
 
-/*
-QGLBuffer::Type type() const
-*/
+// QGLBuffer::Type type() const
 HB_FUNC_STATIC(QGLBUFFER_TYPE)
 {
   QGLBuffer *obj = static_cast<QGLBuffer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -383,9 +359,7 @@ HB_FUNC_STATIC(QGLBUFFER_TYPE)
   }
 }
 
-/*
-bool unmap()
-*/
+// bool unmap()
 HB_FUNC_STATIC(QGLBUFFER_UNMAP)
 {
   QGLBuffer *obj = static_cast<QGLBuffer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -407,9 +381,7 @@ HB_FUNC_STATIC(QGLBUFFER_UNMAP)
   }
 }
 
-/*
-QGLBuffer::UsagePattern usagePattern() const
-*/
+// QGLBuffer::UsagePattern usagePattern() const
 HB_FUNC_STATIC(QGLBUFFER_USAGEPATTERN)
 {
   QGLBuffer *obj = static_cast<QGLBuffer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -435,9 +407,7 @@ HB_FUNC_STATIC(QGLBUFFER_RELEASE)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    void release()
-    */
+    // void release()
     QGLBuffer *obj = static_cast<QGLBuffer *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -449,9 +419,7 @@ HB_FUNC_STATIC(QGLBUFFER_RELEASE)
   }
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    /*
-    static void release(QGLBuffer::Type type)
-    */
+    // static void release(QGLBuffer::Type type)
 
     QGLBuffer::release((QGLBuffer::Type)hb_parni(1));
 
