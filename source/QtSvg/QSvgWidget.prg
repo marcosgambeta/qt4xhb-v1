@@ -85,9 +85,7 @@ HB_FUNC_STATIC(QSVGWIDGET_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSvgRenderer *renderer() const
-*/
+// QSvgRenderer *renderer() const
 HB_FUNC_STATIC(QSVGWIDGET_RENDERER)
 {
   QSvgWidget *obj = qobject_cast<QSvgWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -110,9 +108,7 @@ HB_FUNC_STATIC(QSVGWIDGET_RENDERER)
   }
 }
 
-/*
-virtual QSize sizeHint() const
-*/
+// virtual QSize sizeHint() const
 HB_FUNC_STATIC(QSVGWIDGET_SIZEHINT)
 {
   QSvgWidget *obj = qobject_cast<QSvgWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -139,9 +135,7 @@ HB_FUNC_STATIC(QSVGWIDGET_LOAD)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    void load(const QString &file)
-    */
+    // void load(const QString &file)
     QSvgWidget *obj = qobject_cast<QSvgWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -153,9 +147,7 @@ HB_FUNC_STATIC(QSVGWIDGET_LOAD)
   }
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
-    /*
-    void load(const QByteArray &contents)
-    */
+    // void load(const QByteArray &contents)
     QSvgWidget *obj = qobject_cast<QSvgWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)

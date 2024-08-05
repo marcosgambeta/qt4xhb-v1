@@ -109,9 +109,7 @@ HB_FUNC_STATIC(QSVGRENDERER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool animated() const
-*/
+// bool animated() const
 HB_FUNC_STATIC(QSVGRENDERER_ANIMATED)
 {
   QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -133,9 +131,7 @@ HB_FUNC_STATIC(QSVGRENDERER_ANIMATED)
   }
 }
 
-/*
-QRectF boundsOnElement(const QString &id) const
-*/
+// QRectF boundsOnElement(const QString &id) const
 HB_FUNC_STATIC(QSVGRENDERER_BOUNDSONELEMENT)
 {
   QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -158,9 +154,7 @@ HB_FUNC_STATIC(QSVGRENDERER_BOUNDSONELEMENT)
   }
 }
 
-/*
-QSize defaultSize() const
-*/
+// QSize defaultSize() const
 HB_FUNC_STATIC(QSVGRENDERER_DEFAULTSIZE)
 {
   QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -183,9 +177,7 @@ HB_FUNC_STATIC(QSVGRENDERER_DEFAULTSIZE)
   }
 }
 
-/*
-bool elementExists(const QString &id) const
-*/
+// bool elementExists(const QString &id) const
 HB_FUNC_STATIC(QSVGRENDERER_ELEMENTEXISTS)
 {
   QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -207,9 +199,7 @@ HB_FUNC_STATIC(QSVGRENDERER_ELEMENTEXISTS)
   }
 }
 
-/*
-int framesPerSecond() const
-*/
+// int framesPerSecond() const
 HB_FUNC_STATIC(QSVGRENDERER_FRAMESPERSECOND)
 {
   QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -231,9 +221,7 @@ HB_FUNC_STATIC(QSVGRENDERER_FRAMESPERSECOND)
   }
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QSVGRENDERER_ISVALID)
 {
   QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -255,9 +243,7 @@ HB_FUNC_STATIC(QSVGRENDERER_ISVALID)
   }
 }
 
-/*
-QMatrix matrixForElement(const QString &id) const
-*/
+// QMatrix matrixForElement(const QString &id) const
 HB_FUNC_STATIC(QSVGRENDERER_MATRIXFORELEMENT)
 {
   QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -280,9 +266,7 @@ HB_FUNC_STATIC(QSVGRENDERER_MATRIXFORELEMENT)
   }
 }
 
-/*
-void setFramesPerSecond(int num)
-*/
+// void setFramesPerSecond(int num)
 HB_FUNC_STATIC(QSVGRENDERER_SETFRAMESPERSECOND)
 {
   QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -310,9 +294,7 @@ HB_FUNC_STATIC(QSVGRENDERER_SETVIEWBOX)
 {
   if (ISNUMPAR(1) && ISQRECT(1))
   {
-    /*
-    void setViewBox(const QRect &viewbox)
-    */
+    // void setViewBox(const QRect &viewbox)
     QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -324,9 +306,7 @@ HB_FUNC_STATIC(QSVGRENDERER_SETVIEWBOX)
   }
   else if (ISNUMPAR(1) && ISQRECTF(1))
   {
-    /*
-    void setViewBox(const QRectF &viewbox)
-    */
+    // void setViewBox(const QRectF &viewbox)
     QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -342,9 +322,7 @@ HB_FUNC_STATIC(QSVGRENDERER_SETVIEWBOX)
   }
 }
 
-/*
-QRect viewBox() const
-*/
+// QRect viewBox() const
 HB_FUNC_STATIC(QSVGRENDERER_VIEWBOX)
 {
   QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -367,9 +345,7 @@ HB_FUNC_STATIC(QSVGRENDERER_VIEWBOX)
   }
 }
 
-/*
-QRectF viewBoxF() const
-*/
+// QRectF viewBoxF() const
 HB_FUNC_STATIC(QSVGRENDERER_VIEWBOXF)
 {
   QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -396,9 +372,7 @@ HB_FUNC_STATIC(QSVGRENDERER_LOAD)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    bool load(const QString &filename)
-    */
+    // bool load(const QString &filename)
     QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -408,9 +382,7 @@ HB_FUNC_STATIC(QSVGRENDERER_LOAD)
   }
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
-    /*
-    bool load(const QByteArray &contents)
-    */
+    // bool load(const QByteArray &contents)
     QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -420,9 +392,7 @@ HB_FUNC_STATIC(QSVGRENDERER_LOAD)
   }
   else if (ISNUMPAR(1) && ISQXMLSTREAMREADER(1))
   {
-    /*
-    bool load(QXmlStreamReader *contents)
-    */
+    // bool load(QXmlStreamReader *contents)
     QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -440,9 +410,7 @@ HB_FUNC_STATIC(QSVGRENDERER_RENDER)
 {
   if (ISNUMPAR(1) && ISQPAINTER(1))
   {
-    /*
-    void render(QPainter *painter)
-    */
+    // void render(QPainter *painter)
     QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -454,9 +422,7 @@ HB_FUNC_STATIC(QSVGRENDERER_RENDER)
   }
   else if (ISNUMPAR(2) && ISQPAINTER(1) && ISQRECTF(2))
   {
-    /*
-    void render(QPainter *painter, const QRectF &bounds)
-    */
+    // void render(QPainter *painter, const QRectF &bounds)
     QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -468,9 +434,7 @@ HB_FUNC_STATIC(QSVGRENDERER_RENDER)
   }
   else if (ISBETWEEN(2, 3) && ISQPAINTER(1) && HB_ISCHAR(2) && (ISQRECTF(3) || HB_ISNIL(3)))
   {
-    /*
-    void render(QPainter *painter, const QString &elementId, const QRectF &bounds = QRectF())
-    */
+    // void render(QPainter *painter, const QString &elementId, const QRectF &bounds = QRectF())
     QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)

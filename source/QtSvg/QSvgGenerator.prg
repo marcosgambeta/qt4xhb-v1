@@ -57,7 +57,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-// QSvgGenerator()
+    // QSvgGenerator()
 HB_FUNC_STATIC(QSVGGENERATOR_NEW)
 {
   if (ISNUMPAR(0))
@@ -87,9 +87,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString description() const
-*/
+// QString description() const
 HB_FUNC_STATIC(QSVGGENERATOR_DESCRIPTION)
 {
   QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -111,9 +109,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_DESCRIPTION)
   }
 }
 
-/*
-QString fileName() const
-*/
+// QString fileName() const
 HB_FUNC_STATIC(QSVGGENERATOR_FILENAME)
 {
   QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -135,9 +131,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_FILENAME)
   }
 }
 
-/*
-QIODevice *outputDevice() const
-*/
+// QIODevice *outputDevice() const
 HB_FUNC_STATIC(QSVGGENERATOR_OUTPUTDEVICE)
 {
   QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -160,9 +154,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_OUTPUTDEVICE)
   }
 }
 
-/*
-int resolution() const
-*/
+// int resolution() const
 HB_FUNC_STATIC(QSVGGENERATOR_RESOLUTION)
 {
   QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -184,9 +176,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_RESOLUTION)
   }
 }
 
-/*
-void setDescription(const QString &description)
-*/
+// void setDescription(const QString &description)
 HB_FUNC_STATIC(QSVGGENERATOR_SETDESCRIPTION)
 {
   QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -210,9 +200,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETDESCRIPTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFileName(const QString &fileName)
-*/
+// void setFileName(const QString &fileName)
 HB_FUNC_STATIC(QSVGGENERATOR_SETFILENAME)
 {
   QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -236,9 +224,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETFILENAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setOutputDevice(QIODevice *outputDevice)
-*/
+// void setOutputDevice(QIODevice *outputDevice)
 HB_FUNC_STATIC(QSVGGENERATOR_SETOUTPUTDEVICE)
 {
   QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -262,9 +248,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETOUTPUTDEVICE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setResolution(int dpi)
-*/
+// void setResolution(int dpi)
 HB_FUNC_STATIC(QSVGGENERATOR_SETRESOLUTION)
 {
   QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -288,9 +272,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETRESOLUTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSize(const QSize &size)
-*/
+// void setSize(const QSize &size)
 HB_FUNC_STATIC(QSVGGENERATOR_SETSIZE)
 {
   QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -314,9 +296,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTitle(const QString &title)
-*/
+// void setTitle(const QString &title)
 HB_FUNC_STATIC(QSVGGENERATOR_SETTITLE)
 {
   QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -344,9 +324,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETVIEWBOX)
 {
   if (ISNUMPAR(1) && ISQRECT(1))
   {
-    /*
-    void setViewBox(const QRect &viewBox)
-    */
+    // void setViewBox(const QRect &viewBox)
     QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -358,9 +336,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETVIEWBOX)
   }
   else if (ISNUMPAR(1) && ISQRECTF(1))
   {
-    /*
-    void setViewBox(const QRectF &viewBox)
-    */
+    // void setViewBox(const QRectF &viewBox)
     QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -376,9 +352,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETVIEWBOX)
   }
 }
 
-/*
-QSize size() const
-*/
+// QSize size() const
 HB_FUNC_STATIC(QSVGGENERATOR_SIZE)
 {
   QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -401,9 +375,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SIZE)
   }
 }
 
-/*
-QString title() const
-*/
+// QString title() const
 HB_FUNC_STATIC(QSVGGENERATOR_TITLE)
 {
   QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -425,9 +397,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_TITLE)
   }
 }
 
-/*
-QRect viewBox() const
-*/
+// QRect viewBox() const
 HB_FUNC_STATIC(QSVGGENERATOR_VIEWBOX)
 {
   QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -450,9 +420,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_VIEWBOX)
   }
 }
 
-/*
-QRectF viewBoxF() const
-*/
+// QRectF viewBoxF() const
 HB_FUNC_STATIC(QSVGGENERATOR_VIEWBOXF)
 {
   QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());

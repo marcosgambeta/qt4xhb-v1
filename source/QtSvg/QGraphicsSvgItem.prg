@@ -74,9 +74,7 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_NEW)
   }
 }
 
-/*
-QString elementId() const
-*/
+// QString elementId() const
 HB_FUNC_STATIC(QGRAPHICSSVGITEM_ELEMENTID)
 {
   QGraphicsSvgItem *obj = qobject_cast<QGraphicsSvgItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -98,9 +96,7 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_ELEMENTID)
   }
 }
 
-/*
-QSize maximumCacheSize() const
-*/
+// QSize maximumCacheSize() const
 HB_FUNC_STATIC(QGRAPHICSSVGITEM_MAXIMUMCACHESIZE)
 {
   QGraphicsSvgItem *obj = qobject_cast<QGraphicsSvgItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -123,9 +119,7 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_MAXIMUMCACHESIZE)
   }
 }
 
-/*
-QSvgRenderer *renderer() const
-*/
+// QSvgRenderer *renderer() const
 HB_FUNC_STATIC(QGRAPHICSSVGITEM_RENDERER)
 {
   QGraphicsSvgItem *obj = qobject_cast<QGraphicsSvgItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -148,9 +142,7 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_RENDERER)
   }
 }
 
-/*
-void setElementId(const QString &id)
-*/
+// void setElementId(const QString &id)
 HB_FUNC_STATIC(QGRAPHICSSVGITEM_SETELEMENTID)
 {
   QGraphicsSvgItem *obj = qobject_cast<QGraphicsSvgItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -174,9 +166,7 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_SETELEMENTID)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setMaximumCacheSize(const QSize &size)
-*/
+// void setMaximumCacheSize(const QSize &size)
 HB_FUNC_STATIC(QGRAPHICSSVGITEM_SETMAXIMUMCACHESIZE)
 {
   QGraphicsSvgItem *obj = qobject_cast<QGraphicsSvgItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -200,9 +190,7 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_SETMAXIMUMCACHESIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSharedRenderer(QSvgRenderer *renderer)
-*/
+// void setSharedRenderer(QSvgRenderer *renderer)
 HB_FUNC_STATIC(QGRAPHICSSVGITEM_SETSHAREDRENDERER)
 {
   QGraphicsSvgItem *obj = qobject_cast<QGraphicsSvgItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -226,9 +214,7 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_SETSHAREDRENDERER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QRectF boundingRect() const
-*/
+// virtual QRectF boundingRect() const
 HB_FUNC_STATIC(QGRAPHICSSVGITEM_BOUNDINGRECT)
 {
   QGraphicsSvgItem *obj = qobject_cast<QGraphicsSvgItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -251,9 +237,7 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_BOUNDINGRECT)
   }
 }
 
-/*
-virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0)
-*/
+// virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0)
 HB_FUNC_STATIC(QGRAPHICSSVGITEM_PAINT)
 {
   QGraphicsSvgItem *obj = qobject_cast<QGraphicsSvgItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -277,9 +261,7 @@ HB_FUNC_STATIC(QGRAPHICSSVGITEM_PAINT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual int type() const
-*/
+// virtual int type() const
 HB_FUNC_STATIC(QGRAPHICSSVGITEM_TYPE)
 {
   QGraphicsSvgItem *obj = qobject_cast<QGraphicsSvgItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
