@@ -56,7 +56,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-// QXmlNamespaceSupport()
+    // QXmlNamespaceSupport()
 HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_NEW)
 {
   if (ISNUMPAR(0))
@@ -86,9 +86,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void popContext()
-*/
+// void popContext()
 HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_POPCONTEXT)
 {
   QXmlNamespaceSupport *obj = static_cast<QXmlNamespaceSupport *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -112,9 +110,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_POPCONTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString prefix(const QString &uri) const
-*/
+// QString prefix(const QString &uri) const
 HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_PREFIX)
 {
   QXmlNamespaceSupport *obj = static_cast<QXmlNamespaceSupport *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -140,9 +136,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_PREFIXES)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QStringList prefixes() const
-    */
+    // QStringList prefixes() const
     QXmlNamespaceSupport *obj = static_cast<QXmlNamespaceSupport *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -152,9 +146,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_PREFIXES)
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    QStringList prefixes(const QString &uri) const
-    */
+    // QStringList prefixes(const QString &uri) const
     QXmlNamespaceSupport *obj = static_cast<QXmlNamespaceSupport *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -168,9 +160,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_PREFIXES)
   }
 }
 
-/*
-void processName(const QString &qname, bool isAttribute, QString &nsuri, QString &localname) const
-*/
+// void processName(const QString &qname, bool isAttribute, QString &nsuri, QString &localname) const
 HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_PROCESSNAME)
 {
   QXmlNamespaceSupport *obj = static_cast<QXmlNamespaceSupport *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -198,9 +188,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_PROCESSNAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void pushContext()
-*/
+// void pushContext()
 HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_PUSHCONTEXT)
 {
   QXmlNamespaceSupport *obj = static_cast<QXmlNamespaceSupport *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -224,9 +212,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_PUSHCONTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void reset()
-*/
+// void reset()
 HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_RESET)
 {
   QXmlNamespaceSupport *obj = static_cast<QXmlNamespaceSupport *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -250,9 +236,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_RESET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPrefix(const QString &pre, const QString &uri)
-*/
+// void setPrefix(const QString &pre, const QString &uri)
 HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_SETPREFIX)
 {
   QXmlNamespaceSupport *obj = static_cast<QXmlNamespaceSupport *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -276,9 +260,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_SETPREFIX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void splitName(const QString &qname, QString &prefix, QString &localname) const
-*/
+// void splitName(const QString &qname, QString &prefix, QString &localname) const
 HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_SPLITNAME)
 {
   QXmlNamespaceSupport *obj = static_cast<QXmlNamespaceSupport *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -306,9 +288,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_SPLITNAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString uri(const QString &prefix) const
-*/
+// QString uri(const QString &prefix) const
 HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_URI)
 {
   QXmlNamespaceSupport *obj = static_cast<QXmlNamespaceSupport *>(Qt4xHb::itemGetPtrStackSelfItem());

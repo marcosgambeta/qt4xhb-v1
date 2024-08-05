@@ -65,7 +65,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-// QXmlDefaultHandler()
+    // QXmlDefaultHandler()
 HB_FUNC_STATIC(QXMLDEFAULTHANDLER_NEW)
 {
   if (ISNUMPAR(0))
@@ -95,10 +95,8 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool attributeDecl(const QString &eName, const QString &aName, const QString &type, const QString &
-valueDefault, const QString &value)
-*/
+// virtual bool attributeDecl(const QString &eName, const QString &aName, const QString &type, const QString
+// &valueDefault, const QString &value)
 HB_FUNC_STATIC(QXMLDEFAULTHANDLER_ATTRIBUTEDECL)
 {
   QXmlDefaultHandler *obj = static_cast<QXmlDefaultHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -120,9 +118,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_ATTRIBUTEDECL)
   }
 }
 
-/*
-virtual bool characters(const QString &ch)
-*/
+// virtual bool characters(const QString &ch)
 HB_FUNC_STATIC(QXMLDEFAULTHANDLER_CHARACTERS)
 {
   QXmlDefaultHandler *obj = static_cast<QXmlDefaultHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -144,9 +140,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_CHARACTERS)
   }
 }
 
-/*
-virtual bool comment(const QString &ch)
-*/
+// virtual bool comment(const QString &ch)
 HB_FUNC_STATIC(QXMLDEFAULTHANDLER_COMMENT)
 {
   QXmlDefaultHandler *obj = static_cast<QXmlDefaultHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -168,9 +162,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_COMMENT)
   }
 }
 
-/*
-virtual bool endCDATA()
-*/
+// virtual bool endCDATA()
 HB_FUNC_STATIC(QXMLDEFAULTHANDLER_ENDCDATA)
 {
   QXmlDefaultHandler *obj = static_cast<QXmlDefaultHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -192,9 +184,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_ENDCDATA)
   }
 }
 
-/*
-virtual bool endDTD()
-*/
+// virtual bool endDTD()
 HB_FUNC_STATIC(QXMLDEFAULTHANDLER_ENDDTD)
 {
   QXmlDefaultHandler *obj = static_cast<QXmlDefaultHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -216,9 +206,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_ENDDTD)
   }
 }
 
-/*
-virtual bool endDocument()
-*/
+// virtual bool endDocument()
 HB_FUNC_STATIC(QXMLDEFAULTHANDLER_ENDDOCUMENT)
 {
   QXmlDefaultHandler *obj = static_cast<QXmlDefaultHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -240,9 +228,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_ENDDOCUMENT)
   }
 }
 
-/*
-virtual bool endElement(const QString &namespaceURI, const QString &localName, const QString &qName)
-*/
+// virtual bool endElement(const QString &namespaceURI, const QString &localName, const QString &qName)
 HB_FUNC_STATIC(QXMLDEFAULTHANDLER_ENDELEMENT)
 {
   QXmlDefaultHandler *obj = static_cast<QXmlDefaultHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -264,9 +250,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_ENDELEMENT)
   }
 }
 
-/*
-virtual bool endEntity(const QString &name)
-*/
+// virtual bool endEntity(const QString &name)
 HB_FUNC_STATIC(QXMLDEFAULTHANDLER_ENDENTITY)
 {
   QXmlDefaultHandler *obj = static_cast<QXmlDefaultHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -288,9 +272,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_ENDENTITY)
   }
 }
 
-/*
-virtual bool endPrefixMapping(const QString &prefix)
-*/
+// virtual bool endPrefixMapping(const QString &prefix)
 HB_FUNC_STATIC(QXMLDEFAULTHANDLER_ENDPREFIXMAPPING)
 {
   QXmlDefaultHandler *obj = static_cast<QXmlDefaultHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -312,9 +294,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_ENDPREFIXMAPPING)
   }
 }
 
-/*
-virtual bool error(const QXmlParseException &exception)
-*/
+// virtual bool error(const QXmlParseException &exception)
 HB_FUNC_STATIC(QXMLDEFAULTHANDLER_ERROR)
 {
   QXmlDefaultHandler *obj = static_cast<QXmlDefaultHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -336,9 +316,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_ERROR)
   }
 }
 
-/*
-virtual QString errorString() const
-*/
+// virtual QString errorString() const
 HB_FUNC_STATIC(QXMLDEFAULTHANDLER_ERRORSTRING)
 {
   QXmlDefaultHandler *obj = static_cast<QXmlDefaultHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -360,9 +338,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_ERRORSTRING)
   }
 }
 
-/*
-virtual bool externalEntityDecl(const QString &name, const QString &publicId, const QString &systemId)
-*/
+// virtual bool externalEntityDecl(const QString &name, const QString &publicId, const QString &systemId)
 HB_FUNC_STATIC(QXMLDEFAULTHANDLER_EXTERNALENTITYDECL)
 {
   QXmlDefaultHandler *obj = static_cast<QXmlDefaultHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -384,9 +360,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_EXTERNALENTITYDECL)
   }
 }
 
-/*
-virtual bool fatalError(const QXmlParseException &exception)
-*/
+// virtual bool fatalError(const QXmlParseException &exception)
 HB_FUNC_STATIC(QXMLDEFAULTHANDLER_FATALERROR)
 {
   QXmlDefaultHandler *obj = static_cast<QXmlDefaultHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -408,9 +382,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_FATALERROR)
   }
 }
 
-/*
-virtual bool ignorableWhitespace(const QString &ch)
-*/
+// virtual bool ignorableWhitespace(const QString &ch)
 HB_FUNC_STATIC(QXMLDEFAULTHANDLER_IGNORABLEWHITESPACE)
 {
   QXmlDefaultHandler *obj = static_cast<QXmlDefaultHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -432,9 +404,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_IGNORABLEWHITESPACE)
   }
 }
 
-/*
-virtual bool internalEntityDecl(const QString &name, const QString &value)
-*/
+// virtual bool internalEntityDecl(const QString &name, const QString &value)
 HB_FUNC_STATIC(QXMLDEFAULTHANDLER_INTERNALENTITYDECL)
 {
   QXmlDefaultHandler *obj = static_cast<QXmlDefaultHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -456,9 +426,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_INTERNALENTITYDECL)
   }
 }
 
-/*
-virtual bool notationDecl(const QString &name, const QString &publicId, const QString &systemId)
-*/
+// virtual bool notationDecl(const QString &name, const QString &publicId, const QString &systemId)
 HB_FUNC_STATIC(QXMLDEFAULTHANDLER_NOTATIONDECL)
 {
   QXmlDefaultHandler *obj = static_cast<QXmlDefaultHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -480,9 +448,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_NOTATIONDECL)
   }
 }
 
-/*
-virtual bool processingInstruction(const QString &target, const QString &data)
-*/
+// virtual bool processingInstruction(const QString &target, const QString &data)
 HB_FUNC_STATIC(QXMLDEFAULTHANDLER_PROCESSINGINSTRUCTION)
 {
   QXmlDefaultHandler *obj = static_cast<QXmlDefaultHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -504,9 +470,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_PROCESSINGINSTRUCTION)
   }
 }
 
-/*
-virtual void setDocumentLocator(QXmlLocator *locator)
-*/
+// virtual void setDocumentLocator(QXmlLocator *locator)
 HB_FUNC_STATIC(QXMLDEFAULTHANDLER_SETDOCUMENTLOCATOR)
 {
   QXmlDefaultHandler *obj = static_cast<QXmlDefaultHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -530,9 +494,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_SETDOCUMENTLOCATOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool skippedEntity(const QString &name)
-*/
+// virtual bool skippedEntity(const QString &name)
 HB_FUNC_STATIC(QXMLDEFAULTHANDLER_SKIPPEDENTITY)
 {
   QXmlDefaultHandler *obj = static_cast<QXmlDefaultHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -554,9 +516,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_SKIPPEDENTITY)
   }
 }
 
-/*
-virtual bool startCDATA()
-*/
+// virtual bool startCDATA()
 HB_FUNC_STATIC(QXMLDEFAULTHANDLER_STARTCDATA)
 {
   QXmlDefaultHandler *obj = static_cast<QXmlDefaultHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -578,9 +538,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_STARTCDATA)
   }
 }
 
-/*
-virtual bool startDTD(const QString &name, const QString &publicId, const QString &systemId)
-*/
+// virtual bool startDTD(const QString &name, const QString &publicId, const QString &systemId)
 HB_FUNC_STATIC(QXMLDEFAULTHANDLER_STARTDTD)
 {
   QXmlDefaultHandler *obj = static_cast<QXmlDefaultHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -602,9 +560,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_STARTDTD)
   }
 }
 
-/*
-virtual bool startDocument()
-*/
+// virtual bool startDocument()
 HB_FUNC_STATIC(QXMLDEFAULTHANDLER_STARTDOCUMENT)
 {
   QXmlDefaultHandler *obj = static_cast<QXmlDefaultHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -626,10 +582,8 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_STARTDOCUMENT)
   }
 }
 
-/*
-virtual bool startElement(const QString &namespaceURI, const QString &localName, const QString &qName, const
-QXmlAttributes &atts)
-*/
+// virtual bool startElement(const QString &namespaceURI, const QString &localName, const QString &qName, const
+// QXmlAttributes &atts)
 HB_FUNC_STATIC(QXMLDEFAULTHANDLER_STARTELEMENT)
 {
   QXmlDefaultHandler *obj = static_cast<QXmlDefaultHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -651,9 +605,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_STARTELEMENT)
   }
 }
 
-/*
-virtual bool startEntity(const QString &name)
-*/
+// virtual bool startEntity(const QString &name)
 HB_FUNC_STATIC(QXMLDEFAULTHANDLER_STARTENTITY)
 {
   QXmlDefaultHandler *obj = static_cast<QXmlDefaultHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -675,9 +627,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_STARTENTITY)
   }
 }
 
-/*
-virtual bool startPrefixMapping(const QString &prefix, const QString &uri)
-*/
+// virtual bool startPrefixMapping(const QString &prefix, const QString &uri)
 HB_FUNC_STATIC(QXMLDEFAULTHANDLER_STARTPREFIXMAPPING)
 {
   QXmlDefaultHandler *obj = static_cast<QXmlDefaultHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -699,10 +649,8 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_STARTPREFIXMAPPING)
   }
 }
 
-/*
-virtual bool unparsedEntityDecl(const QString &name, const QString &publicId, const QString &systemId, const QString
-& notationName)
-*/
+// virtual bool unparsedEntityDecl(const QString &name, const QString &publicId, const QString &systemId, const QString
+// &notationName)
 HB_FUNC_STATIC(QXMLDEFAULTHANDLER_UNPARSEDENTITYDECL)
 {
   QXmlDefaultHandler *obj = static_cast<QXmlDefaultHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -724,9 +672,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_UNPARSEDENTITYDECL)
   }
 }
 
-/*
-virtual bool warning(const QXmlParseException &exception)
-*/
+// virtual bool warning(const QXmlParseException &exception)
 HB_FUNC_STATIC(QXMLDEFAULTHANDLER_WARNING)
 {
   QXmlDefaultHandler *obj = static_cast<QXmlDefaultHandler *>(Qt4xHb::itemGetPtrStackSelfItem());

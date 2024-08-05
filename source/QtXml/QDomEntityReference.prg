@@ -58,9 +58,7 @@ HB_FUNC_STATIC(QDOMENTITYREFERENCE_NEW)
   }
 }
 
-/*
-QDomNode::NodeType nodeType() const
-*/
+// QDomNode::NodeType nodeType() const
 HB_FUNC_STATIC(QDOMENTITYREFERENCE_NODETYPE)
 {
   QDomEntityReference *obj = static_cast<QDomEntityReference *>(Qt4xHb::itemGetPtrStackSelfItem());

@@ -64,9 +64,7 @@ HB_FUNC_STATIC(QXMLLOCATOR_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual int columnNumber() const = 0
-*/
+// virtual int columnNumber() const = 0
 HB_FUNC_STATIC(QXMLLOCATOR_COLUMNNUMBER)
 {
   QXmlLocator *obj = static_cast<QXmlLocator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -88,9 +86,7 @@ HB_FUNC_STATIC(QXMLLOCATOR_COLUMNNUMBER)
   }
 }
 
-/*
-virtual int lineNumber() const = 0
-*/
+// virtual int lineNumber() const = 0
 HB_FUNC_STATIC(QXMLLOCATOR_LINENUMBER)
 {
   QXmlLocator *obj = static_cast<QXmlLocator *>(Qt4xHb::itemGetPtrStackSelfItem());

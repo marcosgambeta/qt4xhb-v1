@@ -57,7 +57,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-// QXmlAttributes()
+    // QXmlAttributes()
 HB_FUNC_STATIC(QXMLATTRIBUTES_NEW)
 {
   if (ISNUMPAR(0))
@@ -87,9 +87,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void append(const QString &qName, const QString &uri, const QString &localPart, const QString &value)
-*/
+// void append(const QString &qName, const QString &uri, const QString &localPart, const QString &value)
 HB_FUNC_STATIC(QXMLATTRIBUTES_APPEND)
 {
   QXmlAttributes *obj = static_cast<QXmlAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -113,9 +111,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_APPEND)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QXMLATTRIBUTES_CLEAR)
 {
   QXmlAttributes *obj = static_cast<QXmlAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -139,9 +135,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int count() const
-*/
+// int count() const
 HB_FUNC_STATIC(QXMLATTRIBUTES_COUNT)
 {
   QXmlAttributes *obj = static_cast<QXmlAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -167,9 +161,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_INDEX)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    int index(const QString &qName) const
-    */
+    // int index(const QString &qName) const
     QXmlAttributes *obj = static_cast<QXmlAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -179,9 +171,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_INDEX)
   }
   else if (ISNUMPAR(1) && ISQLATIN1STRING(1))
   {
-    /*
-    int index(const QLatin1String &qName) const
-    */
+    // int index(const QLatin1String &qName) const
     QXmlAttributes *obj = static_cast<QXmlAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -191,9 +181,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_INDEX)
   }
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
-    /*
-    int index(const QString &uri, const QString &localPart) const
-    */
+    // int index(const QString &uri, const QString &localPart) const
     QXmlAttributes *obj = static_cast<QXmlAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -207,9 +195,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_INDEX)
   }
 }
 
-/*
-int length() const
-*/
+// int length() const
 HB_FUNC_STATIC(QXMLATTRIBUTES_LENGTH)
 {
   QXmlAttributes *obj = static_cast<QXmlAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -231,9 +217,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_LENGTH)
   }
 }
 
-/*
-QString localName(int index) const
-*/
+// QString localName(int index) const
 HB_FUNC_STATIC(QXMLATTRIBUTES_LOCALNAME)
 {
   QXmlAttributes *obj = static_cast<QXmlAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -255,9 +239,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_LOCALNAME)
   }
 }
 
-/*
-QString qName(int index) const
-*/
+// QString qName(int index) const
 HB_FUNC_STATIC(QXMLATTRIBUTES_QNAME)
 {
   QXmlAttributes *obj = static_cast<QXmlAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -283,9 +265,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_TYPE)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    /*
-    QString type(int index) const
-    */
+    // QString type(int index) const
     QXmlAttributes *obj = static_cast<QXmlAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -295,9 +275,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_TYPE)
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    QString type(const QString &qName) const
-    */
+    // QString type(const QString &qName) const
     QXmlAttributes *obj = static_cast<QXmlAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -307,9 +285,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_TYPE)
   }
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
-    /*
-    QString type(const QString &uri, const QString &localName) const
-    */
+    // QString type(const QString &uri, const QString &localName) const
     QXmlAttributes *obj = static_cast<QXmlAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -323,9 +299,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_TYPE)
   }
 }
 
-/*
-QString uri(int index) const
-*/
+// QString uri(int index) const
 HB_FUNC_STATIC(QXMLATTRIBUTES_URI)
 {
   QXmlAttributes *obj = static_cast<QXmlAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -351,9 +325,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_VALUE)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    /*
-    QString value(int index) const
-    */
+    // QString value(int index) const
     QXmlAttributes *obj = static_cast<QXmlAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -363,9 +335,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_VALUE)
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    QString value(const QString &qName) const
-    */
+    // QString value(const QString &qName) const
     QXmlAttributes *obj = static_cast<QXmlAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -375,9 +345,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_VALUE)
   }
   else if (ISNUMPAR(1) && ISQLATIN1STRING(1))
   {
-    /*
-    QString value(const QLatin1String &qName) const
-    */
+    // QString value(const QLatin1String &qName) const
     QXmlAttributes *obj = static_cast<QXmlAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -387,9 +355,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_VALUE)
   }
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
-    /*
-    QString value(const QString &uri, const QString &localName) const
-    */
+    // QString value(const QString &uri, const QString &localName) const
     QXmlAttributes *obj = static_cast<QXmlAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)

@@ -91,9 +91,7 @@ HB_FUNC_STATIC(QDOMIMPLEMENTATION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QDomDocument createDocument(const QString &nsURI, const QString &qName, const QDomDocumentType &doctype)
-*/
+// QDomDocument createDocument(const QString &nsURI, const QString &qName, const QDomDocumentType &doctype)
 HB_FUNC_STATIC(QDOMIMPLEMENTATION_CREATEDOCUMENT)
 {
   QDomImplementation *obj = static_cast<QDomImplementation *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -116,9 +114,7 @@ HB_FUNC_STATIC(QDOMIMPLEMENTATION_CREATEDOCUMENT)
   }
 }
 
-/*
-QDomDocumentType createDocumentType(const QString &qName, const QString &publicId, const QString &systemId)
-*/
+// QDomDocumentType createDocumentType(const QString &qName, const QString &publicId, const QString &systemId)
 HB_FUNC_STATIC(QDOMIMPLEMENTATION_CREATEDOCUMENTTYPE)
 {
   QDomImplementation *obj = static_cast<QDomImplementation *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -141,9 +137,7 @@ HB_FUNC_STATIC(QDOMIMPLEMENTATION_CREATEDOCUMENTTYPE)
   }
 }
 
-/*
-bool hasFeature(const QString &feature, const QString &version) const
-*/
+// bool hasFeature(const QString &feature, const QString &version) const
 HB_FUNC_STATIC(QDOMIMPLEMENTATION_HASFEATURE)
 {
   QDomImplementation *obj = static_cast<QDomImplementation *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -165,9 +159,7 @@ HB_FUNC_STATIC(QDOMIMPLEMENTATION_HASFEATURE)
   }
 }
 
-/*
-bool isNull()
-*/
+// bool isNull()
 HB_FUNC_STATIC(QDOMIMPLEMENTATION_ISNULL)
 {
   QDomImplementation *obj = static_cast<QDomImplementation *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -189,9 +181,7 @@ HB_FUNC_STATIC(QDOMIMPLEMENTATION_ISNULL)
   }
 }
 
-/*
-static QDomImplementation::InvalidDataPolicy invalidDataPolicy()
-*/
+// static QDomImplementation::InvalidDataPolicy invalidDataPolicy()
 HB_FUNC_STATIC(QDOMIMPLEMENTATION_INVALIDDATAPOLICY)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -208,9 +198,7 @@ HB_FUNC_STATIC(QDOMIMPLEMENTATION_INVALIDDATAPOLICY)
 #endif
 }
 
-/*
-static void setInvalidDataPolicy(QDomImplementation::InvalidDataPolicy policy)
-*/
+// static void setInvalidDataPolicy(QDomImplementation::InvalidDataPolicy policy)
 HB_FUNC_STATIC(QDOMIMPLEMENTATION_SETINVALIDDATAPOLICY)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

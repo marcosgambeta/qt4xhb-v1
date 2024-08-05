@@ -58,9 +58,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTFRAGMENT_NEW)
   }
 }
 
-/*
-QDomNode::NodeType nodeType() const
-*/
+// QDomNode::NodeType nodeType() const
 HB_FUNC_STATIC(QDOMDOCUMENTFRAGMENT_NODETYPE)
 {
   QDomDocumentFragment *obj = static_cast<QDomDocumentFragment *>(Qt4xHb::itemGetPtrStackSelfItem());

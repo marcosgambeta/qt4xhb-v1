@@ -63,9 +63,7 @@ HB_FUNC_STATIC(QXMLENTITYRESOLVER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QString errorString() const = 0
-*/
+// virtual QString errorString() const = 0
 HB_FUNC_STATIC(QXMLENTITYRESOLVER_ERRORSTRING)
 {
   QXmlEntityResolver *obj = static_cast<QXmlEntityResolver *>(Qt4xHb::itemGetPtrStackSelfItem());

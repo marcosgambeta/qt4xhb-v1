@@ -65,9 +65,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NEW)
   }
 }
 
-/*
-QDomNamedNodeMap entities() const
-*/
+// QDomNamedNodeMap entities() const
 HB_FUNC_STATIC(QDOMDOCUMENTTYPE_ENTITIES)
 {
   QDomDocumentType *obj = static_cast<QDomDocumentType *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -90,9 +88,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_ENTITIES)
   }
 }
 
-/*
-QString internalSubset() const
-*/
+// QString internalSubset() const
 HB_FUNC_STATIC(QDOMDOCUMENTTYPE_INTERNALSUBSET)
 {
   QDomDocumentType *obj = static_cast<QDomDocumentType *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -114,9 +110,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_INTERNALSUBSET)
   }
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NAME)
 {
   QDomDocumentType *obj = static_cast<QDomDocumentType *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -138,9 +132,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NAME)
   }
 }
 
-/*
-QDomNode::NodeType nodeType() const
-*/
+// QDomNode::NodeType nodeType() const
 HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NODETYPE)
 {
   QDomDocumentType *obj = static_cast<QDomDocumentType *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -162,9 +154,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NODETYPE)
   }
 }
 
-/*
-QDomNamedNodeMap notations() const
-*/
+// QDomNamedNodeMap notations() const
 HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NOTATIONS)
 {
   QDomDocumentType *obj = static_cast<QDomDocumentType *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -187,9 +177,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NOTATIONS)
   }
 }
 
-/*
-QString publicId() const
-*/
+// QString publicId() const
 HB_FUNC_STATIC(QDOMDOCUMENTTYPE_PUBLICID)
 {
   QDomDocumentType *obj = static_cast<QDomDocumentType *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -211,9 +199,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_PUBLICID)
   }
 }
 
-/*
-QString systemId() const
-*/
+// QString systemId() const
 HB_FUNC_STATIC(QDOMDOCUMENTTYPE_SYSTEMID)
 {
   QDomDocumentType *obj = static_cast<QDomDocumentType *>(Qt4xHb::itemGetPtrStackSelfItem());

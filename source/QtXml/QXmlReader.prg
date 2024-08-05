@@ -87,9 +87,7 @@ HB_FUNC_STATIC(QXMLREADER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QXmlDTDHandler *DTDHandler() const = 0
-*/
+// virtual QXmlDTDHandler *DTDHandler() const = 0
 HB_FUNC_STATIC(QXMLREADER_DTDHANDLER)
 {
   QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -112,9 +110,7 @@ HB_FUNC_STATIC(QXMLREADER_DTDHANDLER)
   }
 }
 
-/*
-virtual QXmlContentHandler *contentHandler() const = 0
-*/
+// virtual QXmlContentHandler *contentHandler() const = 0
 HB_FUNC_STATIC(QXMLREADER_CONTENTHANDLER)
 {
   QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -137,9 +133,7 @@ HB_FUNC_STATIC(QXMLREADER_CONTENTHANDLER)
   }
 }
 
-/*
-virtual QXmlDeclHandler *declHandler() const = 0
-*/
+// virtual QXmlDeclHandler *declHandler() const = 0
 HB_FUNC_STATIC(QXMLREADER_DECLHANDLER)
 {
   QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -162,9 +156,7 @@ HB_FUNC_STATIC(QXMLREADER_DECLHANDLER)
   }
 }
 
-/*
-virtual QXmlEntityResolver *entityResolver() const = 0
-*/
+// virtual QXmlEntityResolver *entityResolver() const = 0
 HB_FUNC_STATIC(QXMLREADER_ENTITYRESOLVER)
 {
   QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -187,9 +179,7 @@ HB_FUNC_STATIC(QXMLREADER_ENTITYRESOLVER)
   }
 }
 
-/*
-virtual QXmlErrorHandler *errorHandler() const = 0
-*/
+// virtual QXmlErrorHandler *errorHandler() const = 0
 HB_FUNC_STATIC(QXMLREADER_ERRORHANDLER)
 {
   QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -212,9 +202,7 @@ HB_FUNC_STATIC(QXMLREADER_ERRORHANDLER)
   }
 }
 
-/*
-virtual bool feature(const QString &name, bool *ok = 0) const = 0
-*/
+// virtual bool feature(const QString &name, bool *ok = 0) const = 0
 HB_FUNC_STATIC(QXMLREADER_FEATURE)
 {
   QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -238,9 +226,7 @@ HB_FUNC_STATIC(QXMLREADER_FEATURE)
   }
 }
 
-/*
-virtual bool hasFeature(const QString &name) const = 0
-*/
+// virtual bool hasFeature(const QString &name) const = 0
 HB_FUNC_STATIC(QXMLREADER_HASFEATURE)
 {
   QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -262,9 +248,7 @@ HB_FUNC_STATIC(QXMLREADER_HASFEATURE)
   }
 }
 
-/*
-virtual bool hasProperty(const QString &name) const = 0
-*/
+// virtual bool hasProperty(const QString &name) const = 0
 HB_FUNC_STATIC(QXMLREADER_HASPROPERTY)
 {
   QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -286,9 +270,7 @@ HB_FUNC_STATIC(QXMLREADER_HASPROPERTY)
   }
 }
 
-/*
-virtual QXmlLexicalHandler *lexicalHandler() const = 0
-*/
+// virtual QXmlLexicalHandler *lexicalHandler() const = 0
 HB_FUNC_STATIC(QXMLREADER_LEXICALHANDLER)
 {
   QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -311,9 +293,7 @@ HB_FUNC_STATIC(QXMLREADER_LEXICALHANDLER)
   }
 }
 
-/*
-virtual bool parse(const QXmlInputSource *input) = 0
-*/
+// virtual bool parse(const QXmlInputSource *input) = 0
 HB_FUNC_STATIC(QXMLREADER_PARSE)
 {
   QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -335,9 +315,7 @@ HB_FUNC_STATIC(QXMLREADER_PARSE)
   }
 }
 
-/*
-virtual void *property(const QString &name, bool *ok = 0) const = 0
-*/
+// virtual void *property(const QString &name, bool *ok = 0) const = 0
 HB_FUNC_STATIC(QXMLREADER_PROPERTY)
 {
   QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -361,9 +339,7 @@ HB_FUNC_STATIC(QXMLREADER_PROPERTY)
   }
 }
 
-/*
-virtual void setContentHandler(QXmlContentHandler *handler) = 0
-*/
+// virtual void setContentHandler(QXmlContentHandler *handler) = 0
 HB_FUNC_STATIC(QXMLREADER_SETCONTENTHANDLER)
 {
   QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -387,9 +363,7 @@ HB_FUNC_STATIC(QXMLREADER_SETCONTENTHANDLER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setDTDHandler(QXmlDTDHandler *handler) = 0
-*/
+// virtual void setDTDHandler(QXmlDTDHandler *handler) = 0
 HB_FUNC_STATIC(QXMLREADER_SETDTDHANDLER)
 {
   QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -413,9 +387,7 @@ HB_FUNC_STATIC(QXMLREADER_SETDTDHANDLER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setDeclHandler(QXmlDeclHandler *handler) = 0
-*/
+// virtual void setDeclHandler(QXmlDeclHandler *handler) = 0
 HB_FUNC_STATIC(QXMLREADER_SETDECLHANDLER)
 {
   QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -439,9 +411,7 @@ HB_FUNC_STATIC(QXMLREADER_SETDECLHANDLER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setEntityResolver(QXmlEntityResolver *handler) = 0
-*/
+// virtual void setEntityResolver(QXmlEntityResolver *handler) = 0
 HB_FUNC_STATIC(QXMLREADER_SETENTITYRESOLVER)
 {
   QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -465,9 +435,7 @@ HB_FUNC_STATIC(QXMLREADER_SETENTITYRESOLVER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setErrorHandler(QXmlErrorHandler *handler) = 0
-*/
+// virtual void setErrorHandler(QXmlErrorHandler *handler) = 0
 HB_FUNC_STATIC(QXMLREADER_SETERRORHANDLER)
 {
   QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -491,9 +459,7 @@ HB_FUNC_STATIC(QXMLREADER_SETERRORHANDLER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setFeature(const QString &name, bool value) = 0
-*/
+// virtual void setFeature(const QString &name, bool value) = 0
 HB_FUNC_STATIC(QXMLREADER_SETFEATURE)
 {
   QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -517,9 +483,7 @@ HB_FUNC_STATIC(QXMLREADER_SETFEATURE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setLexicalHandler(QXmlLexicalHandler *handler) = 0
-*/
+// virtual void setLexicalHandler(QXmlLexicalHandler *handler) = 0
 HB_FUNC_STATIC(QXMLREADER_SETLEXICALHANDLER)
 {
   QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -543,9 +507,7 @@ HB_FUNC_STATIC(QXMLREADER_SETLEXICALHANDLER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setProperty(const QString &name, void *value) = 0
-*/
+// virtual void setProperty(const QString &name, void *value) = 0
 HB_FUNC_STATIC(QXMLREADER_SETPROPERTY)
 {
   QXmlReader *obj = static_cast<QXmlReader *>(Qt4xHb::itemGetPtrStackSelfItem());

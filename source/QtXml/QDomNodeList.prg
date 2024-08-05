@@ -90,9 +90,7 @@ HB_FUNC_STATIC(QDOMNODELIST_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QDomNode at(int index) const
-*/
+// QDomNode at(int index) const
 HB_FUNC_STATIC(QDOMNODELIST_AT)
 {
   QDomNodeList *obj = static_cast<QDomNodeList *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -115,9 +113,7 @@ HB_FUNC_STATIC(QDOMNODELIST_AT)
   }
 }
 
-/*
-int count() const
-*/
+// int count() const
 HB_FUNC_STATIC(QDOMNODELIST_COUNT)
 {
   QDomNodeList *obj = static_cast<QDomNodeList *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -139,9 +135,7 @@ HB_FUNC_STATIC(QDOMNODELIST_COUNT)
   }
 }
 
-/*
-bool isEmpty() const
-*/
+// bool isEmpty() const
 HB_FUNC_STATIC(QDOMNODELIST_ISEMPTY)
 {
   QDomNodeList *obj = static_cast<QDomNodeList *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -163,9 +157,7 @@ HB_FUNC_STATIC(QDOMNODELIST_ISEMPTY)
   }
 }
 
-/*
-QDomNode item(int index) const
-*/
+// QDomNode item(int index) const
 HB_FUNC_STATIC(QDOMNODELIST_ITEM)
 {
   QDomNodeList *obj = static_cast<QDomNodeList *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -188,9 +180,7 @@ HB_FUNC_STATIC(QDOMNODELIST_ITEM)
   }
 }
 
-/*
-uint length() const
-*/
+// uint length() const
 HB_FUNC_STATIC(QDOMNODELIST_LENGTH)
 {
   QDomNodeList *obj = static_cast<QDomNodeList *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -212,9 +202,7 @@ HB_FUNC_STATIC(QDOMNODELIST_LENGTH)
   }
 }
 
-/*
-int size() const
-*/
+// int size() const
 HB_FUNC_STATIC(QDOMNODELIST_SIZE)
 {
   QDomNodeList *obj = static_cast<QDomNodeList *>(Qt4xHb::itemGetPtrStackSelfItem());

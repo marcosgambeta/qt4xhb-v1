@@ -121,9 +121,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QDomAttr createAttribute(const QString &name)
-*/
+// QDomAttr createAttribute(const QString &name)
 HB_FUNC_STATIC(QDOMDOCUMENT_CREATEATTRIBUTE)
 {
   QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -146,9 +144,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_CREATEATTRIBUTE)
   }
 }
 
-/*
-QDomAttr createAttributeNS(const QString &nsURI, const QString &qName)
-*/
+// QDomAttr createAttributeNS(const QString &nsURI, const QString &qName)
 HB_FUNC_STATIC(QDOMDOCUMENT_CREATEATTRIBUTENS)
 {
   QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -171,9 +167,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_CREATEATTRIBUTENS)
   }
 }
 
-/*
-QDomCDATASection createCDATASection(const QString &value)
-*/
+// QDomCDATASection createCDATASection(const QString &value)
 HB_FUNC_STATIC(QDOMDOCUMENT_CREATECDATASECTION)
 {
   QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -196,9 +190,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_CREATECDATASECTION)
   }
 }
 
-/*
-QDomComment createComment(const QString &value)
-*/
+// QDomComment createComment(const QString &value)
 HB_FUNC_STATIC(QDOMDOCUMENT_CREATECOMMENT)
 {
   QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -221,9 +213,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_CREATECOMMENT)
   }
 }
 
-/*
-QDomDocumentFragment createDocumentFragment()
-*/
+// QDomDocumentFragment createDocumentFragment()
 HB_FUNC_STATIC(QDOMDOCUMENT_CREATEDOCUMENTFRAGMENT)
 {
   QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -246,9 +236,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_CREATEDOCUMENTFRAGMENT)
   }
 }
 
-/*
-QDomElement createElement(const QString &tagName)
-*/
+// QDomElement createElement(const QString &tagName)
 HB_FUNC_STATIC(QDOMDOCUMENT_CREATEELEMENT)
 {
   QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -271,9 +259,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_CREATEELEMENT)
   }
 }
 
-/*
-QDomElement createElementNS(const QString &nsURI, const QString &qName)
-*/
+// QDomElement createElementNS(const QString &nsURI, const QString &qName)
 HB_FUNC_STATIC(QDOMDOCUMENT_CREATEELEMENTNS)
 {
   QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -296,9 +282,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_CREATEELEMENTNS)
   }
 }
 
-/*
-QDomEntityReference createEntityReference(const QString &name)
-*/
+// QDomEntityReference createEntityReference(const QString &name)
 HB_FUNC_STATIC(QDOMDOCUMENT_CREATEENTITYREFERENCE)
 {
   QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -321,9 +305,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_CREATEENTITYREFERENCE)
   }
 }
 
-/*
-QDomProcessingInstruction createProcessingInstruction(const QString &target, const QString &data)
-*/
+// QDomProcessingInstruction createProcessingInstruction(const QString &target, const QString &data)
 HB_FUNC_STATIC(QDOMDOCUMENT_CREATEPROCESSINGINSTRUCTION)
 {
   QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -347,9 +329,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_CREATEPROCESSINGINSTRUCTION)
   }
 }
 
-/*
-QDomText createTextNode(const QString &value)
-*/
+// QDomText createTextNode(const QString &value)
 HB_FUNC_STATIC(QDOMDOCUMENT_CREATETEXTNODE)
 {
   QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -372,9 +352,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_CREATETEXTNODE)
   }
 }
 
-/*
-QDomDocumentType doctype() const
-*/
+// QDomDocumentType doctype() const
 HB_FUNC_STATIC(QDOMDOCUMENT_DOCTYPE)
 {
   QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -397,9 +375,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_DOCTYPE)
   }
 }
 
-/*
-QDomElement documentElement() const
-*/
+// QDomElement documentElement() const
 HB_FUNC_STATIC(QDOMDOCUMENT_DOCUMENTELEMENT)
 {
   QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -422,9 +398,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_DOCUMENTELEMENT)
   }
 }
 
-/*
-QDomElement elementById(const QString &elementId)
-*/
+// QDomElement elementById(const QString &elementId)
 HB_FUNC_STATIC(QDOMDOCUMENT_ELEMENTBYID)
 {
   QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -447,9 +421,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_ELEMENTBYID)
   }
 }
 
-/*
-QDomNodeList elementsByTagName(const QString &tagname) const
-*/
+// QDomNodeList elementsByTagName(const QString &tagname) const
 HB_FUNC_STATIC(QDOMDOCUMENT_ELEMENTSBYTAGNAME)
 {
   QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -472,9 +444,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_ELEMENTSBYTAGNAME)
   }
 }
 
-/*
-QDomNodeList elementsByTagNameNS(const QString &nsURI, const QString &localName)
-*/
+// QDomNodeList elementsByTagNameNS(const QString &nsURI, const QString &localName)
 HB_FUNC_STATIC(QDOMDOCUMENT_ELEMENTSBYTAGNAMENS)
 {
   QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -497,9 +467,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_ELEMENTSBYTAGNAMENS)
   }
 }
 
-/*
-QDomImplementation implementation() const
-*/
+// QDomImplementation implementation() const
 HB_FUNC_STATIC(QDOMDOCUMENT_IMPLEMENTATION)
 {
   QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -522,9 +490,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_IMPLEMENTATION)
   }
 }
 
-/*
-QDomNode importNode(const QDomNode &importedNode, bool deep)
-*/
+// QDomNode importNode(const QDomNode &importedNode, bool deep)
 HB_FUNC_STATIC(QDOMDOCUMENT_IMPORTNODE)
 {
   QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -547,9 +513,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_IMPORTNODE)
   }
 }
 
-/*
-QDomNode::NodeType nodeType() const
-*/
+// QDomNode::NodeType nodeType() const
 HB_FUNC_STATIC(QDOMDOCUMENT_NODETYPE)
 {
   QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -576,10 +540,8 @@ HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
   if (ISBETWEEN(2, 5) && ISQBYTEARRAY(1) && HB_ISLOG(2) && (HB_ISCHAR(3) || HB_ISNIL(3)) &&
       (HB_ISNUM(4) || HB_ISNIL(4)) && (HB_ISNUM(5) || HB_ISNIL(5)))
   {
-    /*
-    bool setContent(const QByteArray &data, bool namespaceProcessing, QString *errorMsg = 0, int *errorLine = 0, int
-    *errorColumn = 0)
-    */
+    // bool setContent(const QByteArray &data, bool namespaceProcessing, QString *errorMsg = 0, int *errorLine = 0, int
+    // *errorColumn = 0)
     QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -594,10 +556,8 @@ HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
   else if (ISBETWEEN(2, 5) && HB_ISCHAR(1) && HB_ISLOG(2) && (HB_ISCHAR(3) || HB_ISNIL(3)) &&
            (HB_ISNUM(4) || HB_ISNIL(4)) && (HB_ISNUM(5) || HB_ISNIL(5)))
   {
-    /*
-    bool setContent(const QString &text, bool namespaceProcessing, QString *errorMsg = 0, int *errorLine = 0, int *
-    errorColumn = 0)
-    */
+    // bool setContent(const QString &text, bool namespaceProcessing, QString *errorMsg = 0, int *errorLine = 0, int
+    // *errorColumn = 0)
     QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -612,10 +572,8 @@ HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
   else if (ISBETWEEN(2, 5) && ISQIODEVICE(1) && HB_ISLOG(2) && (HB_ISCHAR(3) || HB_ISNIL(3)) &&
            (HB_ISNUM(4) || HB_ISNIL(4)) && (HB_ISNUM(5) || HB_ISNIL(5)))
   {
-    /*
-    bool setContent(QIODevice *dev, bool namespaceProcessing, QString *errorMsg = 0, int *errorLine = 0, int *
-    errorColumn = 0)
-    */
+    // bool setContent(QIODevice *dev, bool namespaceProcessing, QString *errorMsg = 0, int *errorLine = 0, int
+    // *errorColumn = 0)
     QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -630,10 +588,8 @@ HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
   else if (ISBETWEEN(2, 5) && ISQXMLINPUTSOURCE(1) && HB_ISLOG(2) && (HB_ISCHAR(3) || HB_ISNIL(3)) &&
            (HB_ISNUM(4) || HB_ISNIL(4)) && (HB_ISNUM(5) || HB_ISNIL(5)))
   {
-    /*
-    bool setContent(QXmlInputSource *source, bool namespaceProcessing, QString *errorMsg = 0, int *errorLine = 0,
-    int *errorColumn = 0)
-    */
+    // bool setContent(QXmlInputSource *source, bool namespaceProcessing, QString *errorMsg = 0, int *errorLine = 0, int
+    // *errorColumn = 0)
     QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -648,9 +604,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
   else if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)) &&
            (HB_ISNUM(4) || HB_ISNIL(4)))
   {
-    /*
-    bool setContent(const QString &text, QString *errorMsg = 0, int *errorLine = 0, int *errorColumn = 0)
-    */
+    // bool setContent(const QString &text, QString *errorMsg = 0, int *errorLine = 0, int *errorColumn = 0)
     QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -665,9 +619,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
   else if (ISBETWEEN(1, 4) && ISQBYTEARRAY(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)) &&
            (HB_ISNUM(4) || HB_ISNIL(4)))
   {
-    /*
-    bool setContent(const QByteArray &buffer, QString *errorMsg = 0, int *errorLine = 0, int *errorColumn = 0)
-    */
+    // bool setContent(const QByteArray &buffer, QString *errorMsg = 0, int *errorLine = 0, int *errorColumn = 0)
     QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -682,9 +634,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
   else if (ISBETWEEN(1, 4) && ISQIODEVICE(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)) &&
            (HB_ISNUM(4) || HB_ISNIL(4)))
   {
-    /*
-    bool setContent(QIODevice *dev, QString *errorMsg = 0, int *errorLine = 0, int *errorColumn = 0)
-    */
+    // bool setContent(QIODevice *dev, QString *errorMsg = 0, int *errorLine = 0, int *errorColumn = 0)
     QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -699,10 +649,8 @@ HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
   else if (ISBETWEEN(2, 5) && ISQXMLINPUTSOURCE(1) && ISQXMLREADER(2) && (HB_ISCHAR(3) || HB_ISNIL(3)) &&
            (HB_ISNUM(4) || HB_ISNIL(4)) && (HB_ISNUM(5) || HB_ISNIL(5)))
   {
-    /*
-    bool setContent(QXmlInputSource *source, QXmlReader *reader, QString *errorMsg = 0, int *errorLine = 0, int *
-    errorColumn = 0)
-    */
+    // bool setContent(QXmlInputSource *source, QXmlReader *reader, QString *errorMsg = 0, int *errorLine = 0, int
+    // *errorColumn = 0)
     QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -720,9 +668,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_SETCONTENT)
   }
 }
 
-/*
-QByteArray toByteArray(int indent = 1) const
-*/
+// QByteArray toByteArray(int indent = 1) const
 HB_FUNC_STATIC(QDOMDOCUMENT_TOBYTEARRAY)
 {
   QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -745,9 +691,7 @@ HB_FUNC_STATIC(QDOMDOCUMENT_TOBYTEARRAY)
   }
 }
 
-/*
-QString toString(int indent = 1) const
-*/
+// QString toString(int indent = 1) const
 HB_FUNC_STATIC(QDOMDOCUMENT_TOSTRING)
 {
   QDomDocument *obj = static_cast<QDomDocument *>(Qt4xHb::itemGetPtrStackSelfItem());

@@ -64,9 +64,7 @@ HB_FUNC_STATIC(QDOMATTR_NEW)
   }
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QDOMATTR_NAME)
 {
   QDomAttr *obj = static_cast<QDomAttr *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -88,9 +86,7 @@ HB_FUNC_STATIC(QDOMATTR_NAME)
   }
 }
 
-/*
-QDomNode::NodeType nodeType() const
-*/
+// QDomNode::NodeType nodeType() const
 HB_FUNC_STATIC(QDOMATTR_NODETYPE)
 {
   QDomAttr *obj = static_cast<QDomAttr *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -112,9 +108,7 @@ HB_FUNC_STATIC(QDOMATTR_NODETYPE)
   }
 }
 
-/*
-QDomElement ownerElement() const
-*/
+// QDomElement ownerElement() const
 HB_FUNC_STATIC(QDOMATTR_OWNERELEMENT)
 {
   QDomAttr *obj = static_cast<QDomAttr *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -137,9 +131,7 @@ HB_FUNC_STATIC(QDOMATTR_OWNERELEMENT)
   }
 }
 
-/*
-void setValue(const QString &v)
-*/
+// void setValue(const QString &v)
 HB_FUNC_STATIC(QDOMATTR_SETVALUE)
 {
   QDomAttr *obj = static_cast<QDomAttr *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -163,9 +155,7 @@ HB_FUNC_STATIC(QDOMATTR_SETVALUE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool specified() const
-*/
+// bool specified() const
 HB_FUNC_STATIC(QDOMATTR_SPECIFIED)
 {
   QDomAttr *obj = static_cast<QDomAttr *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -187,9 +177,7 @@ HB_FUNC_STATIC(QDOMATTR_SPECIFIED)
   }
 }
 
-/*
-QString value() const
-*/
+// QString value() const
 HB_FUNC_STATIC(QDOMATTR_VALUE)
 {
   QDomAttr *obj = static_cast<QDomAttr *>(Qt4xHb::itemGetPtrStackSelfItem());

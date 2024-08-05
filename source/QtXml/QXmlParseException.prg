@@ -57,10 +57,8 @@ HB_FUNC_STATIC(QXMLPARSEEXCEPTION_NEW)
   if (ISBETWEEN(0, 5) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)) &&
       (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISCHAR(4) || HB_ISNIL(4)) && (HB_ISCHAR(5) || HB_ISNIL(5)))
   {
-    /*
-    QXmlParseException(const QString &name = QString(), int c = -1, int l = -1, const QString &p = QString(), const
-    QString &s = QString())
-    */
+    // QXmlParseException(const QString &name = QString(), int c = -1, int l = -1, const QString &p = QString(), const
+    // QString &s = QString())
     QXmlParseException *obj = new QXmlParseException(OPQSTRING(1, QString()), OPINT(2, -1), OPINT(3, -1),
                                                      OPQSTRING(4, QString()), OPQSTRING(5, QString()));
     Qt4xHb::returnNewObject(obj, true);
@@ -93,9 +91,7 @@ HB_FUNC_STATIC(QXMLPARSEEXCEPTION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int columnNumber() const
-*/
+// int columnNumber() const
 HB_FUNC_STATIC(QXMLPARSEEXCEPTION_COLUMNNUMBER)
 {
   QXmlParseException *obj = static_cast<QXmlParseException *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -117,9 +113,7 @@ HB_FUNC_STATIC(QXMLPARSEEXCEPTION_COLUMNNUMBER)
   }
 }
 
-/*
-int lineNumber() const
-*/
+// int lineNumber() const
 HB_FUNC_STATIC(QXMLPARSEEXCEPTION_LINENUMBER)
 {
   QXmlParseException *obj = static_cast<QXmlParseException *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -141,9 +135,7 @@ HB_FUNC_STATIC(QXMLPARSEEXCEPTION_LINENUMBER)
   }
 }
 
-/*
-QString message() const
-*/
+// QString message() const
 HB_FUNC_STATIC(QXMLPARSEEXCEPTION_MESSAGE)
 {
   QXmlParseException *obj = static_cast<QXmlParseException *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -165,9 +157,7 @@ HB_FUNC_STATIC(QXMLPARSEEXCEPTION_MESSAGE)
   }
 }
 
-/*
-QString publicId() const
-*/
+// QString publicId() const
 HB_FUNC_STATIC(QXMLPARSEEXCEPTION_PUBLICID)
 {
   QXmlParseException *obj = static_cast<QXmlParseException *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -189,9 +179,7 @@ HB_FUNC_STATIC(QXMLPARSEEXCEPTION_PUBLICID)
   }
 }
 
-/*
-QString systemId() const
-*/
+// QString systemId() const
 HB_FUNC_STATIC(QXMLPARSEEXCEPTION_SYSTEMID)
 {
   QXmlParseException *obj = static_cast<QXmlParseException *>(Qt4xHb::itemGetPtrStackSelfItem());

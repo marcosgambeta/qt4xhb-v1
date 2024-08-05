@@ -89,9 +89,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QString data() const
-*/
+// virtual QString data() const
 HB_FUNC_STATIC(QXMLINPUTSOURCE_DATA)
 {
   QXmlInputSource *obj = static_cast<QXmlInputSource *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -113,9 +111,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_DATA)
   }
 }
 
-/*
-virtual void fetchData()
-*/
+// virtual void fetchData()
 HB_FUNC_STATIC(QXMLINPUTSOURCE_FETCHDATA)
 {
   QXmlInputSource *obj = static_cast<QXmlInputSource *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -139,9 +135,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_FETCHDATA)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QChar next()
-*/
+// virtual QChar next()
 HB_FUNC_STATIC(QXMLINPUTSOURCE_NEXT)
 {
   QXmlInputSource *obj = static_cast<QXmlInputSource *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -164,9 +158,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_NEXT)
   }
 }
 
-/*
-virtual void reset()
-*/
+// virtual void reset()
 HB_FUNC_STATIC(QXMLINPUTSOURCE_RESET)
 {
   QXmlInputSource *obj = static_cast<QXmlInputSource *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -194,9 +186,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_SETDATA)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    virtual void setData(const QString &dat)
-    */
+    // virtual void setData(const QString &dat)
     QXmlInputSource *obj = static_cast<QXmlInputSource *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -208,9 +198,7 @@ HB_FUNC_STATIC(QXMLINPUTSOURCE_SETDATA)
   }
   else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
-    /*
-    virtual void setData(const QByteArray &dat)
-    */
+    // virtual void setData(const QByteArray &dat)
     QXmlInputSource *obj = static_cast<QXmlInputSource *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
