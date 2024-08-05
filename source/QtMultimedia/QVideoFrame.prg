@@ -128,9 +128,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int bytesPerLine() const
-*/
+// int bytesPerLine() const
 HB_FUNC_STATIC(QVIDEOFRAME_BYTESPERLINE)
 {
   QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -152,9 +150,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_BYTESPERLINE)
   }
 }
 
-/*
-qint64 endTime() const
-*/
+// qint64 endTime() const
 HB_FUNC_STATIC(QVIDEOFRAME_ENDTIME)
 {
   QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -176,9 +172,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_ENDTIME)
   }
 }
 
-/*
-QVideoFrame::FieldType fieldType() const
-*/
+// QVideoFrame::FieldType fieldType() const
 HB_FUNC_STATIC(QVIDEOFRAME_FIELDTYPE)
 {
   QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -200,9 +194,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_FIELDTYPE)
   }
 }
 
-/*
-QVariant handle() const
-*/
+// QVariant handle() const
 HB_FUNC_STATIC(QVIDEOFRAME_HANDLE)
 {
   QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -225,9 +217,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_HANDLE)
   }
 }
 
-/*
-QAbstractVideoBuffer::HandleType handleType() const
-*/
+// QAbstractVideoBuffer::HandleType handleType() const
 HB_FUNC_STATIC(QVIDEOFRAME_HANDLETYPE)
 {
   QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -249,9 +239,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_HANDLETYPE)
   }
 }
 
-/*
-int height() const
-*/
+// int height() const
 HB_FUNC_STATIC(QVIDEOFRAME_HEIGHT)
 {
   QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -273,9 +261,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_HEIGHT)
   }
 }
 
-/*
-bool isMapped() const
-*/
+// bool isMapped() const
 HB_FUNC_STATIC(QVIDEOFRAME_ISMAPPED)
 {
   QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -297,9 +283,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_ISMAPPED)
   }
 }
 
-/*
-bool isReadable() const
-*/
+// bool isReadable() const
 HB_FUNC_STATIC(QVIDEOFRAME_ISREADABLE)
 {
   QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -321,9 +305,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_ISREADABLE)
   }
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QVIDEOFRAME_ISVALID)
 {
   QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -345,9 +327,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_ISVALID)
   }
 }
 
-/*
-bool isWritable() const
-*/
+// bool isWritable() const
 HB_FUNC_STATIC(QVIDEOFRAME_ISWRITABLE)
 {
   QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -369,9 +349,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_ISWRITABLE)
   }
 }
 
-/*
-bool map(QAbstractVideoBuffer::MapMode mode)
-*/
+// bool map(QAbstractVideoBuffer::MapMode mode)
 HB_FUNC_STATIC(QVIDEOFRAME_MAP)
 {
   QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -393,9 +371,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_MAP)
   }
 }
 
-/*
-QAbstractVideoBuffer::MapMode mapMode() const
-*/
+// QAbstractVideoBuffer::MapMode mapMode() const
 HB_FUNC_STATIC(QVIDEOFRAME_MAPMODE)
 {
   QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -417,9 +393,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_MAPMODE)
   }
 }
 
-/*
-int mappedBytes() const
-*/
+// int mappedBytes() const
 HB_FUNC_STATIC(QVIDEOFRAME_MAPPEDBYTES)
 {
   QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -441,9 +415,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_MAPPEDBYTES)
   }
 }
 
-/*
-QVideoFrame::PixelFormat pixelFormat() const
-*/
+// QVideoFrame::PixelFormat pixelFormat() const
 HB_FUNC_STATIC(QVIDEOFRAME_PIXELFORMAT)
 {
   QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -465,9 +437,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_PIXELFORMAT)
   }
 }
 
-/*
-void setEndTime(qint64 time)
-*/
+// void setEndTime(qint64 time)
 HB_FUNC_STATIC(QVIDEOFRAME_SETENDTIME)
 {
   QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -491,9 +461,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_SETENDTIME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFieldType(QVideoFrame::FieldType field)
-*/
+// void setFieldType(QVideoFrame::FieldType field)
 HB_FUNC_STATIC(QVIDEOFRAME_SETFIELDTYPE)
 {
   QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -517,9 +485,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_SETFIELDTYPE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setStartTime(qint64 time)
-*/
+// void setStartTime(qint64 time)
 HB_FUNC_STATIC(QVIDEOFRAME_SETSTARTTIME)
 {
   QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -543,9 +509,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_SETSTARTTIME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSize size() const
-*/
+// QSize size() const
 HB_FUNC_STATIC(QVIDEOFRAME_SIZE)
 {
   QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -568,9 +532,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_SIZE)
   }
 }
 
-/*
-qint64 startTime() const
-*/
+// qint64 startTime() const
 HB_FUNC_STATIC(QVIDEOFRAME_STARTTIME)
 {
   QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -592,9 +554,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_STARTTIME)
   }
 }
 
-/*
-void unmap()
-*/
+// void unmap()
 HB_FUNC_STATIC(QVIDEOFRAME_UNMAP)
 {
   QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -618,9 +578,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_UNMAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int width() const
-*/
+// int width() const
 HB_FUNC_STATIC(QVIDEOFRAME_WIDTH)
 {
   QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -642,9 +600,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_WIDTH)
   }
 }
 
-/*
-static QImage::Format imageFormatFromPixelFormat(QVideoFrame::PixelFormat format)
-*/
+// static QImage::Format imageFormatFromPixelFormat(QVideoFrame::PixelFormat format)
 HB_FUNC_STATIC(QVIDEOFRAME_IMAGEFORMATFROMPIXELFORMAT)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -661,9 +617,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_IMAGEFORMATFROMPIXELFORMAT)
 #endif
 }
 
-/*
-static QVideoFrame::PixelFormat pixelFormatFromImageFormat(QImage::Format format)
-*/
+// static QVideoFrame::PixelFormat pixelFormatFromImageFormat(QImage::Format format)
 HB_FUNC_STATIC(QVIDEOFRAME_PIXELFORMATFROMIMAGEFORMAT)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

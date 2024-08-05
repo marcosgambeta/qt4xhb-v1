@@ -73,9 +73,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAbstractVideoSurface::Error error() const
-*/
+// QAbstractVideoSurface::Error error() const
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ERROR)
 {
   QAbstractVideoSurface *obj = qobject_cast<QAbstractVideoSurface *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -97,9 +95,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ERROR)
   }
 }
 
-/*
-bool isActive() const
-*/
+// bool isActive() const
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ISACTIVE)
 {
   QAbstractVideoSurface *obj = qobject_cast<QAbstractVideoSurface *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -121,9 +117,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ISACTIVE)
   }
 }
 
-/*
-virtual bool isFormatSupported(const QVideoSurfaceFormat &format) const
-*/
+// virtual bool isFormatSupported(const QVideoSurfaceFormat &format) const
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ISFORMATSUPPORTED)
 {
   QAbstractVideoSurface *obj = qobject_cast<QAbstractVideoSurface *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -145,9 +139,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ISFORMATSUPPORTED)
   }
 }
 
-/*
-virtual QVideoSurfaceFormat nearestFormat(const QVideoSurfaceFormat &format) const
-*/
+// virtual QVideoSurfaceFormat nearestFormat(const QVideoSurfaceFormat &format) const
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_NEARESTFORMAT)
 {
   QAbstractVideoSurface *obj = qobject_cast<QAbstractVideoSurface *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -170,9 +162,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_NEARESTFORMAT)
   }
 }
 
-/*
-virtual bool present(const QVideoFrame &frame) = 0
-*/
+// virtual bool present(const QVideoFrame &frame) = 0
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_PRESENT)
 {
   QAbstractVideoSurface *obj = qobject_cast<QAbstractVideoSurface *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -194,9 +184,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_PRESENT)
   }
 }
 
-/*
-virtual bool start(const QVideoSurfaceFormat &format)
-*/
+// virtual bool start(const QVideoSurfaceFormat &format)
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_START)
 {
   QAbstractVideoSurface *obj = qobject_cast<QAbstractVideoSurface *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -218,9 +206,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_START)
   }
 }
 
-/*
-virtual void stop()
-*/
+// virtual void stop()
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_STOP)
 {
   QAbstractVideoSurface *obj = qobject_cast<QAbstractVideoSurface *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -244,10 +230,8 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_STOP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QList<QVideoFrame::PixelFormat> supportedPixelFormats(QAbstractVideoBuffer::HandleType type =
-QAbstractVideoBuffer::NoHandle) const = 0
-*/
+// virtual QList<QVideoFrame::PixelFormat> supportedPixelFormats(QAbstractVideoBuffer::HandleType type =
+// QAbstractVideoBuffer::NoHandle) const = 0
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_SUPPORTEDPIXELFORMATS)
 {
   QAbstractVideoSurface *obj = qobject_cast<QAbstractVideoSurface *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -265,7 +249,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_SUPPORTEDPIXELFORMATS)
       const int count = list.count();
       for (int i = 0; i < count; i++)
       {
-        PHB_ITEM pItem = hb_itemPutNI(NULL, static_cast<int>(list[i]));
+        PHB_ITEM pItem = hb_itemPutNI(NULL, (int)list[i]);
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }
@@ -280,9 +264,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_SUPPORTEDPIXELFORMATS)
   }
 }
 
-/*
-QVideoSurfaceFormat surfaceFormat() const
-*/
+// QVideoSurfaceFormat surfaceFormat() const
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_SURFACEFORMAT)
 {
   QAbstractVideoSurface *obj = qobject_cast<QAbstractVideoSurface *>(Qt4xHb::getQObjectPointerFromSelfItem());

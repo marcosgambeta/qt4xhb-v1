@@ -73,10 +73,8 @@ HB_FUNC_STATIC(QAUDIOOUTPUT_NEW)
   else if (ISBETWEEN(1, 3) && ISQAUDIODEVICEINFO(1) && (ISQAUDIOFORMAT(2) || HB_ISNIL(2)) &&
            (ISQOBJECT(3) || HB_ISNIL(3)))
   {
-    /*
-    QAudioOutput(const QAudioDeviceInfo &audioDevice, const QAudioFormat &format = QAudioFormat(), QObject *parent =
-    0)
-    */
+    // QAudioOutput(const QAudioDeviceInfo &audioDevice, const QAudioFormat &format = QAudioFormat(), QObject *parent =
+    // 0)
     QAudioOutput *obj = new QAudioOutput(
         *PQAUDIODEVICEINFO(1), HB_ISNIL(2) ? QAudioFormat() : *static_cast<QAudioFormat *>(Qt4xHb::itemGetPtr(2)),
         OPQOBJECT(3, 0));
@@ -106,9 +104,7 @@ HB_FUNC_STATIC(QAUDIOOUTPUT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int bufferSize() const
-*/
+// int bufferSize() const
 HB_FUNC_STATIC(QAUDIOOUTPUT_BUFFERSIZE)
 {
   QAudioOutput *obj = qobject_cast<QAudioOutput *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -130,9 +126,7 @@ HB_FUNC_STATIC(QAUDIOOUTPUT_BUFFERSIZE)
   }
 }
 
-/*
-int bytesFree() const
-*/
+// int bytesFree() const
 HB_FUNC_STATIC(QAUDIOOUTPUT_BYTESFREE)
 {
   QAudioOutput *obj = qobject_cast<QAudioOutput *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -154,9 +148,7 @@ HB_FUNC_STATIC(QAUDIOOUTPUT_BYTESFREE)
   }
 }
 
-/*
-qint64 elapsedUSecs() const
-*/
+// qint64 elapsedUSecs() const
 HB_FUNC_STATIC(QAUDIOOUTPUT_ELAPSEDUSECS)
 {
   QAudioOutput *obj = qobject_cast<QAudioOutput *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -178,9 +170,7 @@ HB_FUNC_STATIC(QAUDIOOUTPUT_ELAPSEDUSECS)
   }
 }
 
-/*
-QAudio::Error error() const
-*/
+// QAudio::Error error() const
 HB_FUNC_STATIC(QAUDIOOUTPUT_ERROR)
 {
   QAudioOutput *obj = qobject_cast<QAudioOutput *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -202,9 +192,7 @@ HB_FUNC_STATIC(QAUDIOOUTPUT_ERROR)
   }
 }
 
-/*
-QAudioFormat format() const
-*/
+// QAudioFormat format() const
 HB_FUNC_STATIC(QAUDIOOUTPUT_FORMAT)
 {
   QAudioOutput *obj = qobject_cast<QAudioOutput *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -227,9 +215,7 @@ HB_FUNC_STATIC(QAUDIOOUTPUT_FORMAT)
   }
 }
 
-/*
-int notifyInterval() const
-*/
+// int notifyInterval() const
 HB_FUNC_STATIC(QAUDIOOUTPUT_NOTIFYINTERVAL)
 {
   QAudioOutput *obj = qobject_cast<QAudioOutput *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -251,9 +237,7 @@ HB_FUNC_STATIC(QAUDIOOUTPUT_NOTIFYINTERVAL)
   }
 }
 
-/*
-int periodSize() const
-*/
+// int periodSize() const
 HB_FUNC_STATIC(QAUDIOOUTPUT_PERIODSIZE)
 {
   QAudioOutput *obj = qobject_cast<QAudioOutput *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -275,9 +259,7 @@ HB_FUNC_STATIC(QAUDIOOUTPUT_PERIODSIZE)
   }
 }
 
-/*
-qint64 processedUSecs() const
-*/
+// qint64 processedUSecs() const
 HB_FUNC_STATIC(QAUDIOOUTPUT_PROCESSEDUSECS)
 {
   QAudioOutput *obj = qobject_cast<QAudioOutput *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -299,9 +281,7 @@ HB_FUNC_STATIC(QAUDIOOUTPUT_PROCESSEDUSECS)
   }
 }
 
-/*
-void reset()
-*/
+// void reset()
 HB_FUNC_STATIC(QAUDIOOUTPUT_RESET)
 {
   QAudioOutput *obj = qobject_cast<QAudioOutput *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -325,9 +305,7 @@ HB_FUNC_STATIC(QAUDIOOUTPUT_RESET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void resume()
-*/
+// void resume()
 HB_FUNC_STATIC(QAUDIOOUTPUT_RESUME)
 {
   QAudioOutput *obj = qobject_cast<QAudioOutput *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -351,9 +329,7 @@ HB_FUNC_STATIC(QAUDIOOUTPUT_RESUME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setBufferSize(int value)
-*/
+// void setBufferSize(int value)
 HB_FUNC_STATIC(QAUDIOOUTPUT_SETBUFFERSIZE)
 {
   QAudioOutput *obj = qobject_cast<QAudioOutput *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -377,9 +353,7 @@ HB_FUNC_STATIC(QAUDIOOUTPUT_SETBUFFERSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setNotifyInterval(int ms)
-*/
+// void setNotifyInterval(int ms)
 HB_FUNC_STATIC(QAUDIOOUTPUT_SETNOTIFYINTERVAL)
 {
   QAudioOutput *obj = qobject_cast<QAudioOutput *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -407,9 +381,7 @@ HB_FUNC_STATIC(QAUDIOOUTPUT_START)
 {
   if (ISNUMPAR(1) && ISQIODEVICE(1))
   {
-    /*
-    void start(QIODevice *device)
-    */
+    // void start(QIODevice *device)
     QAudioOutput *obj = qobject_cast<QAudioOutput *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -421,9 +393,7 @@ HB_FUNC_STATIC(QAUDIOOUTPUT_START)
   }
   else if (ISNUMPAR(0))
   {
-    /*
-    QIODevice *start()
-    */
+    // QIODevice *start()
     QAudioOutput *obj = qobject_cast<QAudioOutput *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -438,9 +408,7 @@ HB_FUNC_STATIC(QAUDIOOUTPUT_START)
   }
 }
 
-/*
-QAudio::State state() const
-*/
+// QAudio::State state() const
 HB_FUNC_STATIC(QAUDIOOUTPUT_STATE)
 {
   QAudioOutput *obj = qobject_cast<QAudioOutput *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -462,9 +430,7 @@ HB_FUNC_STATIC(QAUDIOOUTPUT_STATE)
   }
 }
 
-/*
-void stop()
-*/
+// void stop()
 HB_FUNC_STATIC(QAUDIOOUTPUT_STOP)
 {
   QAudioOutput *obj = qobject_cast<QAudioOutput *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -488,9 +454,7 @@ HB_FUNC_STATIC(QAUDIOOUTPUT_STOP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void suspend()
-*/
+// void suspend()
 HB_FUNC_STATIC(QAUDIOOUTPUT_SUSPEND)
 {
   QAudioOutput *obj = qobject_cast<QAudioOutput *>(Qt4xHb::getQObjectPointerFromSelfItem());
