@@ -72,20 +72,20 @@ HB_FUNC_STATIC(QAXWIDGET_NEW)
 {
   if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    // QAxWidget( QWidget * parent = 0, Qt::WindowFlags f = 0 )
+    // QAxWidget(QWidget *parent = 0, Qt::WindowFlags f = 0)
     QAxWidget *obj = new QAxWidget(OPQWIDGET(1, 0), HB_ISNIL(2) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(2));
     Qt4xHb::returnNewObject(obj, false);
   }
   else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
-    // QAxWidget( const QString & c, QWidget * parent = 0, Qt::WindowFlags f = 0 )
+    // QAxWidget(const QString &c, QWidget *parent = 0, Qt::WindowFlags f = 0)
     QAxWidget *obj =
         new QAxWidget(PQSTRING(1), OPQWIDGET(2, 0), HB_ISNIL(3) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(3));
     Qt4xHb::returnNewObject(obj, false);
   }
   else if (ISBETWEEN(1, 3) && HB_ISPOINTER(1) && (ISQWIDGET(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
-    // QAxWidget( IUnknown * iface, QWidget * parent = 0, Qt::WindowFlags f = 0 )
+    // QAxWidget(IUnknown *iface, QWidget *parent = 0, Qt::WindowFlags f = 0)
     QAxWidget *obj = new QAxWidget(static_cast<IUnknown *>(hb_parptr(1)), OPQWIDGET(2, 0),
                                    HB_ISNIL(3) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(3));
     Qt4xHb::returnNewObject(obj, false);
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QAXWIDGET_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-// virtual QAxAggregated * createAggregate()
+// virtual QAxAggregated *createAggregate()
 HB_FUNC_STATIC(QAXWIDGET_CREATEAGGREGATE)
 {
   QAxWidget *obj = qobject_cast<QAxWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QAXWIDGET_CREATEAGGREGATE)
   }
 }
 
-// bool doVerb( const QString & verb )
+// bool doVerb(const QString &verb)
 HB_FUNC_STATIC(QAXWIDGET_DOVERB)
 {
   QAxWidget *obj = qobject_cast<QAxWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -352,10 +352,9 @@ HB_FUNC_STATIC(QAXWIDGET_DYNAMICCALL)
       (ISQVARIANT(4) || HB_ISNIL(4)) && (ISQVARIANT(5) || HB_ISNIL(5)) && (ISQVARIANT(6) || HB_ISNIL(6)) &&
       (ISQVARIANT(7) || HB_ISNIL(7)) && (ISQVARIANT(8) || HB_ISNIL(8)) && (ISQVARIANT(9) || HB_ISNIL(9)))
   {
-    // QVariant dynamicCall( const char * function, const QVariant & var1 = QVariant(), const QVariant & var2 =
-    // QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 =
-    // QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 =
-    // QVariant() )
+    // QVariant dynamicCall(const char *function, const QVariant &var1 = QVariant(), const QVariant &var2 = QVariant(),
+    // const QVariant &var3 = QVariant(), const QVariant &var4 = QVariant(), const QVariant &var5 = QVariant(), const
+    // QVariant &var6 = QVariant(), const QVariant &var7 = QVariant(), const QVariant &var8 = QVariant())
     QAxWidget *obj = qobject_cast<QAxWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -374,7 +373,7 @@ HB_FUNC_STATIC(QAXWIDGET_DYNAMICCALL)
   }
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2))
   {
-    // QVariant dynamicCall( const char * function, QList<QVariant> & vars )
+    // QVariant dynamicCall(const char *function, QList<QVariant> &vars)
     QAxWidget *obj = qobject_cast<QAxWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -433,7 +432,7 @@ HB_FUNC_STATIC(QAXWIDGET_ISNULL)
   }
 }
 
-// virtual bool propertyWritable( const char * prop ) const
+// virtual bool propertyWritable(const char *prop) const
 HB_FUNC_STATIC(QAXWIDGET_PROPERTYWRITABLE)
 {
   QAxWidget *obj = qobject_cast<QAxWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -461,10 +460,9 @@ HB_FUNC_STATIC(QAXWIDGET_QUERYSUBOBJECT)
       (ISQVARIANT(4) || HB_ISNIL(4)) && (ISQVARIANT(5) || HB_ISNIL(5)) && (ISQVARIANT(6) || HB_ISNIL(6)) &&
       (ISQVARIANT(7) || HB_ISNIL(7)) && (ISQVARIANT(8) || HB_ISNIL(8)) && (ISQVARIANT(9) || HB_ISNIL(9)))
   {
-    // QAxObject * querySubObject( const char * name, const QVariant & var1 = QVariant(), const QVariant & var2 =
-    // QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 =
-    // QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 =
-    // QVariant() )
+    // QAxObject *querySubObject(const char *name, const QVariant &var1 = QVariant(), const QVariant &var2 = QVariant(),
+    // const QVariant &var3 = QVariant(), const QVariant &var4 = QVariant(), const QVariant &var5 = QVariant(), const
+    // QVariant &var6 = QVariant(), const QVariant &var7 = QVariant(), const QVariant &var8 = QVariant())
     QAxWidget *obj = qobject_cast<QAxWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -483,7 +481,7 @@ HB_FUNC_STATIC(QAXWIDGET_QUERYSUBOBJECT)
   }
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2))
   {
-    // QAxObject * querySubObject( const char * name, QList<QVariant> & vars )
+    // QAxObject *querySubObject(const char *name, QList<QVariant> &vars)
     QAxWidget *obj = qobject_cast<QAxWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -498,7 +496,7 @@ HB_FUNC_STATIC(QAXWIDGET_QUERYSUBOBJECT)
   }
 }
 
-// bool setControl( const QString & )
+// bool setControl(const QString &)
 HB_FUNC_STATIC(QAXWIDGET_SETCONTROL)
 {
   QAxWidget *obj = qobject_cast<QAxWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -520,7 +518,7 @@ HB_FUNC_STATIC(QAXWIDGET_SETCONTROL)
   }
 }
 
-// virtual void setPropertyWritable( const char * prop, bool ok )
+// virtual void setPropertyWritable(const char *prop, bool ok)
 HB_FUNC_STATIC(QAXWIDGET_SETPROPERTYWRITABLE)
 {
   QAxWidget *obj = qobject_cast<QAxWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
