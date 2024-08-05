@@ -56,7 +56,7 @@ RETURN
 #include <QtHelp/QHelpIndexWidget>
 #include <QtHelp/QHelpSearchEngine>
 
-// QHelpEngine(const QString &collectionFile, QObject *parent = 0)
+    // QHelpEngine(const QString &collectionFile, QObject *parent = 0)
 HB_FUNC_STATIC(QHELPENGINE_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
@@ -88,9 +88,7 @@ HB_FUNC_STATIC(QHELPENGINE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QHelpContentModel *contentModel() const
-*/
+// QHelpContentModel *contentModel() const
 HB_FUNC_STATIC(QHELPENGINE_CONTENTMODEL)
 {
   QHelpEngine *obj = qobject_cast<QHelpEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -113,9 +111,7 @@ HB_FUNC_STATIC(QHELPENGINE_CONTENTMODEL)
   }
 }
 
-/*
-QHelpContentWidget *contentWidget()
-*/
+// QHelpContentWidget *contentWidget()
 HB_FUNC_STATIC(QHELPENGINE_CONTENTWIDGET)
 {
   QHelpEngine *obj = qobject_cast<QHelpEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -138,9 +134,7 @@ HB_FUNC_STATIC(QHELPENGINE_CONTENTWIDGET)
   }
 }
 
-/*
-QHelpIndexModel *indexModel() const
-*/
+// QHelpIndexModel *indexModel() const
 HB_FUNC_STATIC(QHELPENGINE_INDEXMODEL)
 {
   QHelpEngine *obj = qobject_cast<QHelpEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -163,9 +157,7 @@ HB_FUNC_STATIC(QHELPENGINE_INDEXMODEL)
   }
 }
 
-/*
-QHelpIndexWidget *indexWidget()
-*/
+// QHelpIndexWidget *indexWidget()
 HB_FUNC_STATIC(QHELPENGINE_INDEXWIDGET)
 {
   QHelpEngine *obj = qobject_cast<QHelpEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -188,9 +180,7 @@ HB_FUNC_STATIC(QHELPENGINE_INDEXWIDGET)
   }
 }
 
-/*
-QHelpSearchEngine *searchEngine()
-*/
+// QHelpSearchEngine *searchEngine()
 HB_FUNC_STATIC(QHELPENGINE_SEARCHENGINE)
 {
   QHelpEngine *obj = qobject_cast<QHelpEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());

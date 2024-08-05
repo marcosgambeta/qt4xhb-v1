@@ -45,9 +45,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    /*
-    void createIndex(const QString &customFilterName)
-    */
+    // void createIndex(const QString &customFilterName)
 HB_FUNC_STATIC(QHELPINDEXMODEL_CREATEINDEX)
 {
   QHelpIndexModel *obj = qobject_cast<QHelpIndexModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -71,9 +69,7 @@ HB_FUNC_STATIC(QHELPINDEXMODEL_CREATEINDEX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QModelIndex filter(const QString &filter, const QString &wildcard = QString())
-*/
+// QModelIndex filter(const QString &filter, const QString &wildcard = QString())
 HB_FUNC_STATIC(QHELPINDEXMODEL_FILTER)
 {
   QHelpIndexModel *obj = qobject_cast<QHelpIndexModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -96,9 +92,7 @@ HB_FUNC_STATIC(QHELPINDEXMODEL_FILTER)
   }
 }
 
-/*
-bool isCreatingIndex() const
-*/
+// bool isCreatingIndex() const
 HB_FUNC_STATIC(QHELPINDEXMODEL_ISCREATINGINDEX)
 {
   QHelpIndexModel *obj = qobject_cast<QHelpIndexModel *>(Qt4xHb::getQObjectPointerFromSelfItem());

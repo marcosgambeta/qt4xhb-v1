@@ -42,9 +42,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    /*
-    void activateCurrentItem()
-    */
+    // void activateCurrentItem()
 HB_FUNC_STATIC(QHELPINDEXWIDGET_ACTIVATECURRENTITEM)
 {
   QHelpIndexWidget *obj = qobject_cast<QHelpIndexWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -68,9 +66,7 @@ HB_FUNC_STATIC(QHELPINDEXWIDGET_ACTIVATECURRENTITEM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void filterIndices(const QString &filter, const QString &wildcard = QString())
-*/
+// void filterIndices(const QString &filter, const QString &wildcard = QString())
 HB_FUNC_STATIC(QHELPINDEXWIDGET_FILTERINDICES)
 {
   QHelpIndexWidget *obj = qobject_cast<QHelpIndexWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());

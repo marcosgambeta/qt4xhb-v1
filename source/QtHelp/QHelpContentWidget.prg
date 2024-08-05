@@ -42,9 +42,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    /*
-    QModelIndex indexOf(const QUrl &link)
-    */
+    // QModelIndex indexOf(const QUrl &link)
 HB_FUNC_STATIC(QHELPCONTENTWIDGET_INDEXOF)
 {
   QHelpContentWidget *obj = qobject_cast<QHelpContentWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());

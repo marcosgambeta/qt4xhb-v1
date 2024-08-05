@@ -61,9 +61,7 @@ HB_FUNC_STATIC(QHELPSEARCHRESULTWIDGET_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QUrl linkAt(const QPoint &point)
-*/
+// QUrl linkAt(const QPoint &point)
 HB_FUNC_STATIC(QHELPSEARCHRESULTWIDGET_LINKAT)
 {
   QHelpSearchResultWidget *obj = qobject_cast<QHelpSearchResultWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());

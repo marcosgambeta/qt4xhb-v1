@@ -59,7 +59,7 @@ RETURN
 #include <QtHelp/QHelpSearchQueryWidget>
 #include <QtHelp/QHelpSearchResultWidget>
 
-// QHelpSearchEngine(QHelpEngineCore *helpEngine, QObject *parent = 0)
+    // QHelpSearchEngine(QHelpEngineCore *helpEngine, QObject *parent = 0)
 HB_FUNC_STATIC(QHELPSEARCHENGINE_NEW)
 {
   if (ISBETWEEN(1, 2) && ISQHELPENGINECORE(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
@@ -91,9 +91,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int hitCount() const
-*/
+// int hitCount() const
 HB_FUNC_STATIC(QHELPSEARCHENGINE_HITCOUNT)
 {
   QHelpSearchEngine *obj = qobject_cast<QHelpSearchEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -115,9 +113,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_HITCOUNT)
   }
 }
 
-/*
-QList<QHelpSearchQuery> query() const
-*/
+// QList<QHelpSearchQuery> query() const
 HB_FUNC_STATIC(QHELPSEARCHENGINE_QUERY)
 {
   QHelpSearchEngine *obj = qobject_cast<QHelpSearchEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -166,9 +162,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_QUERY)
   }
 }
 
-/*
-QHelpSearchQueryWidget *queryWidget()
-*/
+// QHelpSearchQueryWidget *queryWidget()
 HB_FUNC_STATIC(QHELPSEARCHENGINE_QUERYWIDGET)
 {
   QHelpSearchEngine *obj = qobject_cast<QHelpSearchEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -191,9 +185,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_QUERYWIDGET)
   }
 }
 
-/*
-QHelpSearchResultWidget *resultWidget()
-*/
+// QHelpSearchResultWidget *resultWidget()
 HB_FUNC_STATIC(QHELPSEARCHENGINE_RESULTWIDGET)
 {
   QHelpSearchEngine *obj = qobject_cast<QHelpSearchEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -216,9 +208,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_RESULTWIDGET)
   }
 }
 
-/*
-void cancelIndexing()
-*/
+// void cancelIndexing()
 HB_FUNC_STATIC(QHELPSEARCHENGINE_CANCELINDEXING)
 {
   QHelpSearchEngine *obj = qobject_cast<QHelpSearchEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -242,9 +232,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_CANCELINDEXING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void cancelSearching()
-*/
+// void cancelSearching()
 HB_FUNC_STATIC(QHELPSEARCHENGINE_CANCELSEARCHING)
 {
   QHelpSearchEngine *obj = qobject_cast<QHelpSearchEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -268,9 +256,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_CANCELSEARCHING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void reindexDocumentation()
-*/
+// void reindexDocumentation()
 HB_FUNC_STATIC(QHELPSEARCHENGINE_REINDEXDOCUMENTATION)
 {
   QHelpSearchEngine *obj = qobject_cast<QHelpSearchEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -294,9 +280,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_REINDEXDOCUMENTATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void search(const QList<QHelpSearchQuery> &queryList)
-*/
+// void search(const QList<QHelpSearchQuery> &queryList)
 HB_FUNC_STATIC(QHELPSEARCHENGINE_SEARCH)
 {
   QHelpSearchEngine *obj = qobject_cast<QHelpSearchEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -309,7 +293,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_SEARCH)
 #endif
       QList<QHelpSearchQuery> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      const int nLen1 = hb_arrayLen(aList1);
+      int nLen1 = hb_arrayLen(aList1);
       for (int i1 = 0; i1 < nLen1; i1++)
       {
         par1 << *static_cast<QHelpSearchQuery *>(
