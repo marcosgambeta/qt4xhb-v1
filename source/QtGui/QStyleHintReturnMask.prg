@@ -38,7 +38,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-// QStyleHintReturnMask()
+    // QStyleHintReturnMask()
 HB_FUNC_STATIC(QSTYLEHINTRETURNMASK_NEW)
 {
   if (ISNUMPAR(0))

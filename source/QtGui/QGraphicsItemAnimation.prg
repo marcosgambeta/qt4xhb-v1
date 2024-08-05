@@ -68,7 +68,7 @@ RETURN
 #include <QtCore/QPointF>
 #include <QtCore/QTimeLine>
 
-// QGraphicsItemAnimation(QObject *parent = 0)
+    // QGraphicsItemAnimation(QObject *parent = 0)
 HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
@@ -100,9 +100,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_CLEAR)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -126,9 +124,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qreal horizontalScaleAt(qreal step) const
-*/
+// qreal horizontalScaleAt(qreal step) const
 HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_HORIZONTALSCALEAT)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -150,9 +146,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_HORIZONTALSCALEAT)
   }
 }
 
-/*
-qreal horizontalShearAt(qreal step) const
-*/
+// qreal horizontalShearAt(qreal step) const
 HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_HORIZONTALSHEARAT)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -174,9 +168,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_HORIZONTALSHEARAT)
   }
 }
 
-/*
-QGraphicsItem *item() const
-*/
+// QGraphicsItem *item() const
 HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_ITEM)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -199,9 +191,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_ITEM)
   }
 }
 
-/*
-QMatrix matrixAt(qreal step) const
-*/
+// QMatrix matrixAt(qreal step) const
 HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_MATRIXAT)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -224,9 +214,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_MATRIXAT)
   }
 }
 
-/*
-QPointF posAt(qreal step) const
-*/
+// QPointF posAt(qreal step) const
 HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_POSAT)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -249,9 +237,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_POSAT)
   }
 }
 
-/*
-qreal rotationAt(qreal step) const
-*/
+// qreal rotationAt(qreal step) const
 HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_ROTATIONAT)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -273,9 +259,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_ROTATIONAT)
   }
 }
 
-/*
-void setItem(QGraphicsItem *item)
-*/
+// void setItem(QGraphicsItem *item)
 HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETITEM)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -299,9 +283,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETITEM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPosAt(qreal step, const QPointF &point)
-*/
+// void setPosAt(qreal step, const QPointF &point)
 HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETPOSAT)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -325,9 +307,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETPOSAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setRotationAt(qreal step, qreal angle)
-*/
+// void setRotationAt(qreal step, qreal angle)
 HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETROTATIONAT)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -351,9 +331,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETROTATIONAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setScaleAt(qreal step, qreal sx, qreal sy)
-*/
+// void setScaleAt(qreal step, qreal sx, qreal sy)
 HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETSCALEAT)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -377,9 +355,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETSCALEAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setShearAt(qreal step, qreal sh, qreal sv)
-*/
+// void setShearAt(qreal step, qreal sh, qreal sv)
 HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETSHEARAT)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -403,9 +379,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETSHEARAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTimeLine(QTimeLine *timeLine)
-*/
+// void setTimeLine(QTimeLine *timeLine)
 HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETTIMELINE)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -429,9 +403,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETTIMELINE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTranslationAt(qreal step, qreal dx, qreal dy)
-*/
+// void setTranslationAt(qreal step, qreal dx, qreal dy)
 HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETTRANSLATIONAT)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -455,9 +427,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETTRANSLATIONAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QTimeLine *timeLine() const
-*/
+// QTimeLine *timeLine() const
 HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_TIMELINE)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -480,9 +450,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_TIMELINE)
   }
 }
 
-/*
-qreal verticalScaleAt(qreal step) const
-*/
+// qreal verticalScaleAt(qreal step) const
 HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_VERTICALSCALEAT)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -504,9 +472,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_VERTICALSCALEAT)
   }
 }
 
-/*
-qreal verticalShearAt(qreal step) const
-*/
+// qreal verticalShearAt(qreal step) const
 HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_VERTICALSHEARAT)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -528,9 +494,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_VERTICALSHEARAT)
   }
 }
 
-/*
-qreal xTranslationAt(qreal step) const
-*/
+// qreal xTranslationAt(qreal step) const
 HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_XTRANSLATIONAT)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -552,9 +516,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_XTRANSLATIONAT)
   }
 }
 
-/*
-qreal yTranslationAt(qreal step) const
-*/
+// qreal yTranslationAt(qreal step) const
 HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_YTRANSLATIONAT)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -576,9 +538,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_YTRANSLATIONAT)
   }
 }
 
-/*
-void setStep(qreal step)
-*/
+// void setStep(qreal step)
 HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETSTEP)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());

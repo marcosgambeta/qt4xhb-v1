@@ -73,9 +73,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_NEW)
   }
 }
 
-/*
-Qt::Alignment displayAlignment
-*/
+// Qt::Alignment displayAlignment
 HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_DISPLAYALIGNMENT)
 {
   QStyleOptionViewItem *obj = static_cast<QStyleOptionViewItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -100,7 +98,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETDISPLAYALIGNMENT)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->displayAlignment = (Qt::Alignment)hb_parni(1);
+      obj->displayAlignment=(Qt::Alignment)hb_parni(1));
     }
     else
     {
@@ -111,9 +109,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETDISPLAYALIGNMENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::Alignment decorationAlignment
-*/
+// Qt::Alignment decorationAlignment
 HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_DECORATIONALIGNMENT)
 {
   QStyleOptionViewItem *obj = static_cast<QStyleOptionViewItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -138,7 +134,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETDECORATIONALIGNMENT)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->decorationAlignment = (Qt::Alignment)hb_parni(1);
+      obj->decorationAlignment=(Qt::Alignment)hb_parni(1));
     }
     else
     {
@@ -149,9 +145,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETDECORATIONALIGNMENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::TextElideMode textElideMode
-*/
+// Qt::TextElideMode textElideMode
 HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_TEXTELIDEMODE)
 {
   QStyleOptionViewItem *obj = static_cast<QStyleOptionViewItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -176,7 +170,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETTEXTELIDEMODE)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->textElideMode = (Qt::TextElideMode)hb_parni(1);
+      obj->textElideMode=(Qt::TextElideMode)hb_parni(1));
     }
     else
     {
@@ -187,9 +181,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETTEXTELIDEMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Position decorationPosition
-*/
+// Position decorationPosition
 HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_DECORATIONPOSITION)
 {
   QStyleOptionViewItem *obj = static_cast<QStyleOptionViewItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -214,7 +206,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETDECORATIONPOSITION)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->decorationPosition = (QStyleOptionViewItem::Position)hb_parni(1);
+      obj->decorationPosition=(QStyleOptionViewItem::Position)hb_parni(1));
     }
     else
     {
@@ -225,9 +217,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETDECORATIONPOSITION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSize decorationSize
-*/
+// QSize decorationSize
 HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_DECORATIONSIZE)
 {
   QStyleOptionViewItem *obj = static_cast<QStyleOptionViewItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -253,7 +243,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETDECORATIONSIZE)
   {
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
-      obj->decorationSize = *PQSIZE(1);
+      obj->decorationSize=*PQSIZE(1));
     }
     else
     {
@@ -264,9 +254,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETDECORATIONSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QFont font
-*/
+// QFont font
 HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_FONT)
 {
   QStyleOptionViewItem *obj = static_cast<QStyleOptionViewItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -292,7 +280,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETFONT)
   {
     if (ISNUMPAR(1) && ISQFONT(1))
     {
-      obj->font = *PQFONT(1);
+      obj->font=*PQFONT(1));
     }
     else
     {
@@ -303,9 +291,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETFONT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool showDecorationSelected
-*/
+// bool showDecorationSelected
 HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SHOWDECORATIONSELECTED)
 {
   QStyleOptionViewItem *obj = static_cast<QStyleOptionViewItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -330,7 +316,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETSHOWDECORATIONSELECTED)
   {
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
-      obj->showDecorationSelected = PBOOL(1);
+      obj->showDecorationSelected=PBOOL(1));
     }
     else
     {

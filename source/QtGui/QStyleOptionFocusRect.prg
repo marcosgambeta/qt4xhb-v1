@@ -60,9 +60,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFOCUSRECT_NEW)
   }
 }
 
-/*
-QColor backgroundColor
-*/
+// QColor backgroundColor
 HB_FUNC_STATIC(QSTYLEOPTIONFOCUSRECT_BACKGROUNDCOLOR)
 {
   QStyleOptionFocusRect *obj = static_cast<QStyleOptionFocusRect *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -88,7 +86,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFOCUSRECT_SETBACKGROUNDCOLOR)
   {
     if (ISNUMPAR(1) && ISQCOLOR(1))
     {
-      obj->backgroundColor = *PQCOLOR(1);
+      obj->backgroundColor=*PQCOLOR(1));
     }
     else
     {

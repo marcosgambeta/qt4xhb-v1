@@ -57,7 +57,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QSpinBox(QWidget *parent = 0)
+    // QSpinBox(QWidget *parent = 0)
 HB_FUNC_STATIC(QSPINBOX_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
@@ -89,9 +89,7 @@ HB_FUNC_STATIC(QSPINBOX_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString cleanText() const
-*/
+// QString cleanText() const
 HB_FUNC_STATIC(QSPINBOX_CLEANTEXT)
 {
   QSpinBox *obj = qobject_cast<QSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -113,9 +111,7 @@ HB_FUNC_STATIC(QSPINBOX_CLEANTEXT)
   }
 }
 
-/*
-int maximum() const
-*/
+// int maximum() const
 HB_FUNC_STATIC(QSPINBOX_MAXIMUM)
 {
   QSpinBox *obj = qobject_cast<QSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -137,9 +133,7 @@ HB_FUNC_STATIC(QSPINBOX_MAXIMUM)
   }
 }
 
-/*
-int minimum() const
-*/
+// int minimum() const
 HB_FUNC_STATIC(QSPINBOX_MINIMUM)
 {
   QSpinBox *obj = qobject_cast<QSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -161,9 +155,7 @@ HB_FUNC_STATIC(QSPINBOX_MINIMUM)
   }
 }
 
-/*
-QString prefix() const
-*/
+// QString prefix() const
 HB_FUNC_STATIC(QSPINBOX_PREFIX)
 {
   QSpinBox *obj = qobject_cast<QSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -185,9 +177,7 @@ HB_FUNC_STATIC(QSPINBOX_PREFIX)
   }
 }
 
-/*
-void setMaximum(int max)
-*/
+// void setMaximum(int max)
 HB_FUNC_STATIC(QSPINBOX_SETMAXIMUM)
 {
   QSpinBox *obj = qobject_cast<QSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -211,9 +201,7 @@ HB_FUNC_STATIC(QSPINBOX_SETMAXIMUM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setMinimum(int min)
-*/
+// void setMinimum(int min)
 HB_FUNC_STATIC(QSPINBOX_SETMINIMUM)
 {
   QSpinBox *obj = qobject_cast<QSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -237,9 +225,7 @@ HB_FUNC_STATIC(QSPINBOX_SETMINIMUM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPrefix(const QString &prefix)
-*/
+// void setPrefix(const QString &prefix)
 HB_FUNC_STATIC(QSPINBOX_SETPREFIX)
 {
   QSpinBox *obj = qobject_cast<QSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -263,9 +249,7 @@ HB_FUNC_STATIC(QSPINBOX_SETPREFIX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setRange(int minimum, int maximum)
-*/
+// void setRange(int minimum, int maximum)
 HB_FUNC_STATIC(QSPINBOX_SETRANGE)
 {
   QSpinBox *obj = qobject_cast<QSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -289,9 +273,7 @@ HB_FUNC_STATIC(QSPINBOX_SETRANGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSingleStep(int val)
-*/
+// void setSingleStep(int val)
 HB_FUNC_STATIC(QSPINBOX_SETSINGLESTEP)
 {
   QSpinBox *obj = qobject_cast<QSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -315,9 +297,7 @@ HB_FUNC_STATIC(QSPINBOX_SETSINGLESTEP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSuffix(const QString &suffix)
-*/
+// void setSuffix(const QString &suffix)
 HB_FUNC_STATIC(QSPINBOX_SETSUFFIX)
 {
   QSpinBox *obj = qobject_cast<QSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -341,9 +321,7 @@ HB_FUNC_STATIC(QSPINBOX_SETSUFFIX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int singleStep() const
-*/
+// int singleStep() const
 HB_FUNC_STATIC(QSPINBOX_SINGLESTEP)
 {
   QSpinBox *obj = qobject_cast<QSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -365,9 +343,7 @@ HB_FUNC_STATIC(QSPINBOX_SINGLESTEP)
   }
 }
 
-/*
-QString suffix() const
-*/
+// QString suffix() const
 HB_FUNC_STATIC(QSPINBOX_SUFFIX)
 {
   QSpinBox *obj = qobject_cast<QSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -389,9 +365,7 @@ HB_FUNC_STATIC(QSPINBOX_SUFFIX)
   }
 }
 
-/*
-int value() const
-*/
+// int value() const
 HB_FUNC_STATIC(QSPINBOX_VALUE)
 {
   QSpinBox *obj = qobject_cast<QSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -413,9 +387,7 @@ HB_FUNC_STATIC(QSPINBOX_VALUE)
   }
 }
 
-/*
-void setValue(int val)
-*/
+// void setValue(int val)
 HB_FUNC_STATIC(QSPINBOX_SETVALUE)
 {
   QSpinBox *obj = qobject_cast<QSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());

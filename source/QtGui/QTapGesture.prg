@@ -60,9 +60,7 @@ HB_FUNC_STATIC(QTAPGESTURE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QPointF position() const
-*/
+// QPointF position() const
 HB_FUNC_STATIC(QTAPGESTURE_POSITION)
 {
   QTapGesture *obj = qobject_cast<QTapGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -85,9 +83,7 @@ HB_FUNC_STATIC(QTAPGESTURE_POSITION)
   }
 }
 
-/*
-void setPosition(const QPointF &pos)
-*/
+// void setPosition(const QPointF &pos)
 HB_FUNC_STATIC(QTAPGESTURE_SETPOSITION)
 {
   QTapGesture *obj = qobject_cast<QTapGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());

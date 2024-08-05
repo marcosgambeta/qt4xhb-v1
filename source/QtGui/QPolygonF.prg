@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QPOLYGONF_NEW)
     // QPolygonF(const QVector<QPointF> &points)
     QVector<QPointF> par1;
     PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    const int nLen1 = hb_arrayLen(aList1);
+    int nLen1 = hb_arrayLen(aList1);
     for (int i1 = 0; i1 < nLen1; i1++)
     {
       par1 << *static_cast<QPointF *>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1 + 1), "POINTER", 0)));
@@ -126,9 +126,7 @@ HB_FUNC_STATIC(QPOLYGONF_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QRectF boundingRect() const
-*/
+// QRectF boundingRect() const
 HB_FUNC_STATIC(QPOLYGONF_BOUNDINGRECT)
 {
   QPolygonF *obj = static_cast<QPolygonF *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -151,9 +149,7 @@ HB_FUNC_STATIC(QPOLYGONF_BOUNDINGRECT)
   }
 }
 
-/*
-bool containsPoint(const QPointF &point, Qt::FillRule fillRule) const
-*/
+// bool containsPoint(const QPointF &point, Qt::FillRule fillRule) const
 HB_FUNC_STATIC(QPOLYGONF_CONTAINSPOINT)
 {
   QPolygonF *obj = static_cast<QPolygonF *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -175,9 +171,7 @@ HB_FUNC_STATIC(QPOLYGONF_CONTAINSPOINT)
   }
 }
 
-/*
-QPolygonF intersected(const QPolygonF &r) const
-*/
+// QPolygonF intersected(const QPolygonF &r) const
 HB_FUNC_STATIC(QPOLYGONF_INTERSECTED)
 {
   QPolygonF *obj = static_cast<QPolygonF *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -200,9 +194,7 @@ HB_FUNC_STATIC(QPOLYGONF_INTERSECTED)
   }
 }
 
-/*
-bool isClosed() const
-*/
+// bool isClosed() const
 HB_FUNC_STATIC(QPOLYGONF_ISCLOSED)
 {
   QPolygonF *obj = static_cast<QPolygonF *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -224,9 +216,7 @@ HB_FUNC_STATIC(QPOLYGONF_ISCLOSED)
   }
 }
 
-/*
-QPolygonF subtracted(const QPolygonF &r) const
-*/
+// QPolygonF subtracted(const QPolygonF &r) const
 HB_FUNC_STATIC(QPOLYGONF_SUBTRACTED)
 {
   QPolygonF *obj = static_cast<QPolygonF *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -249,9 +239,7 @@ HB_FUNC_STATIC(QPOLYGONF_SUBTRACTED)
   }
 }
 
-/*
-void swap(QPolygonF &other)
-*/
+// void swap(QPolygonF &other)
 HB_FUNC_STATIC(QPOLYGONF_SWAP)
 {
   QPolygonF *obj = static_cast<QPolygonF *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -275,9 +263,7 @@ HB_FUNC_STATIC(QPOLYGONF_SWAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QPolygon toPolygon() const
-*/
+// QPolygon toPolygon() const
 HB_FUNC_STATIC(QPOLYGONF_TOPOLYGON)
 {
   QPolygonF *obj = static_cast<QPolygonF *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -304,9 +290,7 @@ HB_FUNC_STATIC(QPOLYGONF_TRANSLATE)
 {
   if (ISNUMPAR(1) && ISQPOINTF(1))
   {
-    /*
-    void translate(const QPointF &offset)
-    */
+    // void translate(const QPointF &offset)
     QPolygonF *obj = static_cast<QPolygonF *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -318,9 +302,7 @@ HB_FUNC_STATIC(QPOLYGONF_TRANSLATE)
   }
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
-    /*
-    void translate(qreal dx, qreal dy)
-    */
+    // void translate(qreal dx, qreal dy)
     QPolygonF *obj = static_cast<QPolygonF *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -340,9 +322,7 @@ HB_FUNC_STATIC(QPOLYGONF_TRANSLATED)
 {
   if (ISNUMPAR(1) && ISQPOINTF(1))
   {
-    /*
-    QPolygonF translated(const QPointF &offset) const
-    */
+    // QPolygonF translated(const QPointF &offset) const
     QPolygonF *obj = static_cast<QPolygonF *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -353,9 +333,7 @@ HB_FUNC_STATIC(QPOLYGONF_TRANSLATED)
   }
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
-    /*
-    QPolygonF translated(qreal dx, qreal dy) const
-    */
+    // QPolygonF translated(qreal dx, qreal dy) const
     QPolygonF *obj = static_cast<QPolygonF *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -370,9 +348,7 @@ HB_FUNC_STATIC(QPOLYGONF_TRANSLATED)
   }
 }
 
-/*
-QPolygonF united(const QPolygonF &r) const
-*/
+// QPolygonF united(const QPolygonF &r) const
 HB_FUNC_STATIC(QPOLYGONF_UNITED)
 {
   QPolygonF *obj = static_cast<QPolygonF *>(Qt4xHb::itemGetPtrStackSelfItem());

@@ -85,9 +85,7 @@ HB_FUNC_STATIC(QPICTURE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QRect boundingRect() const
-*/
+// QRect boundingRect() const
 HB_FUNC_STATIC(QPICTURE_BOUNDINGRECT)
 {
   QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -110,9 +108,7 @@ HB_FUNC_STATIC(QPICTURE_BOUNDINGRECT)
   }
 }
 
-/*
-const char *data() const
-*/
+// const char *data() const
 HB_FUNC_STATIC(QPICTURE_DATA)
 {
   QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -134,9 +130,7 @@ HB_FUNC_STATIC(QPICTURE_DATA)
   }
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QPICTURE_ISNULL)
 {
   QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -162,9 +156,7 @@ HB_FUNC_STATIC(QPICTURE_LOAD)
 {
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
-    /*
-    bool load(const QString &fileName, const char *format = 0)
-    */
+    // bool load(const QString &fileName, const char *format = 0)
     QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -174,9 +166,7 @@ HB_FUNC_STATIC(QPICTURE_LOAD)
   }
   else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
-    /*
-    bool load(QIODevice *dev, const char *format = 0)
-    */
+    // bool load(QIODevice *dev, const char *format = 0)
     QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -190,9 +180,7 @@ HB_FUNC_STATIC(QPICTURE_LOAD)
   }
 }
 
-/*
-bool play(QPainter *painter)
-*/
+// bool play(QPainter *painter)
 HB_FUNC_STATIC(QPICTURE_PLAY)
 {
   QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -218,9 +206,7 @@ HB_FUNC_STATIC(QPICTURE_SAVE)
 {
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
-    /*
-    bool save(const QString &fileName, const char *format = 0)
-    */
+    // bool save(const QString &fileName, const char *format = 0)
     QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -230,9 +216,7 @@ HB_FUNC_STATIC(QPICTURE_SAVE)
   }
   else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
-    /*
-    bool save(QIODevice *dev, const char *format = 0)
-    */
+    // bool save(QIODevice *dev, const char *format = 0)
     QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -246,9 +230,7 @@ HB_FUNC_STATIC(QPICTURE_SAVE)
   }
 }
 
-/*
-void setBoundingRect(const QRect &r)
-*/
+// void setBoundingRect(const QRect &r)
 HB_FUNC_STATIC(QPICTURE_SETBOUNDINGRECT)
 {
   QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -272,9 +254,7 @@ HB_FUNC_STATIC(QPICTURE_SETBOUNDINGRECT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setData(const char *data, uint size)
-*/
+// virtual void setData(const char *data, uint size)
 HB_FUNC_STATIC(QPICTURE_SETDATA)
 {
   QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -298,9 +278,7 @@ HB_FUNC_STATIC(QPICTURE_SETDATA)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-uint size() const
-*/
+// uint size() const
 HB_FUNC_STATIC(QPICTURE_SIZE)
 {
   QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -322,9 +300,7 @@ HB_FUNC_STATIC(QPICTURE_SIZE)
   }
 }
 
-/*
-void swap(QPicture &other)
-*/
+// void swap(QPicture &other)
 HB_FUNC_STATIC(QPICTURE_SWAP)
 {
   QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());

@@ -81,9 +81,7 @@ HB_FUNC_STATIC(QSCROLLBAR_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool event(QEvent *event)
-*/
+// virtual bool event(QEvent *event)
 HB_FUNC_STATIC(QSCROLLBAR_EVENT)
 {
   QScrollBar *obj = qobject_cast<QScrollBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -105,9 +103,7 @@ HB_FUNC_STATIC(QSCROLLBAR_EVENT)
   }
 }
 
-/*
-virtual QSize sizeHint() const
-*/
+// virtual QSize sizeHint() const
 HB_FUNC_STATIC(QSCROLLBAR_SIZEHINT)
 {
   QScrollBar *obj = qobject_cast<QScrollBar *>(Qt4xHb::getQObjectPointerFromSelfItem());

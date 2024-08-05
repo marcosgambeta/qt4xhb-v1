@@ -115,9 +115,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QPointF center() const
-*/
+// QPointF center() const
 HB_FUNC_STATIC(QRADIALGRADIENT_CENTER)
 {
   QRadialGradient *obj = static_cast<QRadialGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -144,9 +142,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_SETCENTER)
 {
   if (ISNUMPAR(1) && ISQPOINTF(1))
   {
-    /*
-    void setCenter(const QPointF &center)
-    */
+    // void setCenter(const QPointF &center)
     QRadialGradient *obj = static_cast<QRadialGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -158,9 +154,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_SETCENTER)
   }
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
-    /*
-    void setCenter(qreal x, qreal y)
-    */
+    // void setCenter(qreal x, qreal y)
     QRadialGradient *obj = static_cast<QRadialGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -176,9 +170,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_SETCENTER)
   }
 }
 
-/*
-QPointF focalPoint() const
-*/
+// QPointF focalPoint() const
 HB_FUNC_STATIC(QRADIALGRADIENT_FOCALPOINT)
 {
   QRadialGradient *obj = static_cast<QRadialGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -205,9 +197,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_SETFOCALPOINT)
 {
   if (ISNUMPAR(1) && ISQPOINTF(1))
   {
-    /*
-    void setFocalPoint(const QPointF &focalPoint)
-    */
+    // void setFocalPoint(const QPointF &focalPoint)
     QRadialGradient *obj = static_cast<QRadialGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -219,9 +209,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_SETFOCALPOINT)
   }
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
-    /*
-    void setFocalPoint(qreal x, qreal y)
-    */
+    // void setFocalPoint(qreal x, qreal y)
     QRadialGradient *obj = static_cast<QRadialGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -237,9 +225,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_SETFOCALPOINT)
   }
 }
 
-/*
-qreal radius() const
-*/
+// qreal radius() const
 HB_FUNC_STATIC(QRADIALGRADIENT_RADIUS)
 {
   QRadialGradient *obj = static_cast<QRadialGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -261,9 +247,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_RADIUS)
   }
 }
 
-/*
-void setRadius(qreal radius)
-*/
+// void setRadius(qreal radius)
 HB_FUNC_STATIC(QRADIALGRADIENT_SETRADIUS)
 {
   QRadialGradient *obj = static_cast<QRadialGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -287,9 +271,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_SETRADIUS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qreal centerRadius() const
-*/
+// qreal centerRadius() const
 HB_FUNC_STATIC(QRADIALGRADIENT_CENTERRADIUS)
 {
   QRadialGradient *obj = static_cast<QRadialGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -311,9 +293,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_CENTERRADIUS)
   }
 }
 
-/*
-void setCenterRadius(qreal radius)
-*/
+// void setCenterRadius(qreal radius)
 HB_FUNC_STATIC(QRADIALGRADIENT_SETCENTERRADIUS)
 {
   QRadialGradient *obj = static_cast<QRadialGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -337,9 +317,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_SETCENTERRADIUS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qreal focalRadius() const
-*/
+// qreal focalRadius() const
 HB_FUNC_STATIC(QRADIALGRADIENT_FOCALRADIUS)
 {
   QRadialGradient *obj = static_cast<QRadialGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -361,9 +339,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_FOCALRADIUS)
   }
 }
 
-/*
-void setFocalRadius(qreal radius)
-*/
+// void setFocalRadius(qreal radius)
 HB_FUNC_STATIC(QRADIALGRADIENT_SETFOCALRADIUS)
 {
   QRadialGradient *obj = static_cast<QRadialGradient *>(Qt4xHb::itemGetPtrStackSelfItem());

@@ -62,9 +62,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHOR_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSizePolicy(QSizePolicy::Policy policy)
-*/
+// void setSizePolicy(QSizePolicy::Policy policy)
 HB_FUNC_STATIC(QGRAPHICSANCHOR_SETSIZEPOLICY)
 {
   QGraphicsAnchor *obj = qobject_cast<QGraphicsAnchor *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -88,9 +86,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHOR_SETSIZEPOLICY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSpacing(qreal spacing)
-*/
+// void setSpacing(qreal spacing)
 HB_FUNC_STATIC(QGRAPHICSANCHOR_SETSPACING)
 {
   QGraphicsAnchor *obj = qobject_cast<QGraphicsAnchor *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -114,9 +110,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHOR_SETSPACING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSizePolicy::Policy sizePolicy() const
-*/
+// QSizePolicy::Policy sizePolicy() const
 HB_FUNC_STATIC(QGRAPHICSANCHOR_SIZEPOLICY)
 {
   QGraphicsAnchor *obj = qobject_cast<QGraphicsAnchor *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -138,9 +132,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHOR_SIZEPOLICY)
   }
 }
 
-/*
-qreal spacing() const
-*/
+// qreal spacing() const
 HB_FUNC_STATIC(QGRAPHICSANCHOR_SPACING)
 {
   QGraphicsAnchor *obj = qobject_cast<QGraphicsAnchor *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -162,9 +154,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHOR_SPACING)
   }
 }
 
-/*
-void unsetSpacing()
-*/
+// void unsetSpacing()
 HB_FUNC_STATIC(QGRAPHICSANCHOR_UNSETSPACING)
 {
   QGraphicsAnchor *obj = qobject_cast<QGraphicsAnchor *>(Qt4xHb::getQObjectPointerFromSelfItem());

@@ -41,7 +41,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-// QHoverEvent(QEvent::Type type, const QPoint &pos, const QPoint &oldPos)
+    // QHoverEvent(QEvent::Type type, const QPoint &pos, const QPoint &oldPos)
 HB_FUNC_STATIC(QHOVEREVENT_NEW)
 {
   if (ISNUMPAR(3) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3))
@@ -71,9 +71,7 @@ HB_FUNC_STATIC(QHOVEREVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-const QPoint &pos() const
-*/
+// const QPoint &pos() const
 HB_FUNC_STATIC(QHOVEREVENT_POS)
 {
   QHoverEvent *obj = static_cast<QHoverEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -96,9 +94,7 @@ HB_FUNC_STATIC(QHOVEREVENT_POS)
   }
 }
 
-/*
-const QPoint &oldPos() const
-*/
+// const QPoint &oldPos() const
 HB_FUNC_STATIC(QHOVEREVENT_OLDPOS)
 {
   QHoverEvent *obj = static_cast<QHoverEvent *>(Qt4xHb::itemGetPtrStackSelfItem());

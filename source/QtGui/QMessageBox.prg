@@ -95,11 +95,9 @@ HB_FUNC_STATIC(QMESSAGEBOX_NEW)
   else if (ISBETWEEN(3, 6) && HB_ISNUM(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && (HB_ISNUM(4) || HB_ISNIL(4)) &&
            (ISQWIDGET(5) || HB_ISNIL(5)) && (HB_ISNUM(6) || HB_ISNIL(6)))
   {
-    /*
-    QMessageBox(QMessageBox::Icon icon, const QString &title, const QString &text, QMessageBox::StandardButtons
-    buttons = QMessageBox::NoButton, QWidget *parent = 0, Qt::WindowFlags f = Qt::Dialog |
-    Qt::MSWindowsFixedSizeDialogHint)
-    */
+    // QMessageBox(QMessageBox::Icon icon, const QString &title, const QString &text, QMessageBox::StandardButtons
+    // buttons = QMessageBox::NoButton, QWidget *parent = 0, Qt::WindowFlags f = Qt::Dialog |
+    // Qt::MSWindowsFixedSizeDialogHint)
     QMessageBox *obj = new QMessageBox(
         (QMessageBox::Icon)hb_parni(1), PQSTRING(2), PQSTRING(3),
         HB_ISNIL(4) ? (QMessageBox::StandardButtons)QMessageBox::NoButton : (QMessageBox::StandardButtons)hb_parni(4),
@@ -135,9 +133,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ADDBUTTON)
 {
   if (ISNUMPAR(2) && ISQABSTRACTBUTTON(1) && HB_ISNUM(2))
   {
-    /*
-    void addButton(QAbstractButton *button, QMessageBox::ButtonRole role)
-    */
+    // void addButton(QAbstractButton *button, QMessageBox::ButtonRole role)
     QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -149,9 +145,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ADDBUTTON)
   }
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
   {
-    /*
-    QPushButton *addButton(const QString &text, QMessageBox::ButtonRole role)
-    */
+    // QPushButton *addButton(const QString &text, QMessageBox::ButtonRole role)
     QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -162,9 +156,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ADDBUTTON)
   }
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    /*
-    QPushButton *addButton(QMessageBox::StandardButton button)
-    */
+    // QPushButton *addButton(QMessageBox::StandardButton button)
     QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -179,9 +171,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ADDBUTTON)
   }
 }
 
-/*
-QAbstractButton *button(QMessageBox::StandardButton which) const
-*/
+// QAbstractButton *button(QMessageBox::StandardButton which) const
 HB_FUNC_STATIC(QMESSAGEBOX_BUTTON)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -204,9 +194,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_BUTTON)
   }
 }
 
-/*
-QMessageBox::ButtonRole buttonRole(QAbstractButton *button) const
-*/
+// QMessageBox::ButtonRole buttonRole(QAbstractButton *button) const
 HB_FUNC_STATIC(QMESSAGEBOX_BUTTONROLE)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -228,9 +216,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_BUTTONROLE)
   }
 }
 
-/*
-QList<QAbstractButton *> buttons() const
-*/
+// QList<QAbstractButton *> buttons() const
 HB_FUNC_STATIC(QMESSAGEBOX_BUTTONS)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -254,7 +240,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_BUTTONS)
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, static_cast<QAbstractButton *>(list[i]));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -276,9 +262,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_BUTTONS)
   }
 }
 
-/*
-QAbstractButton *clickedButton() const
-*/
+// QAbstractButton *clickedButton() const
 HB_FUNC_STATIC(QMESSAGEBOX_CLICKEDBUTTON)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -301,9 +285,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_CLICKEDBUTTON)
   }
 }
 
-/*
-QPushButton *defaultButton() const
-*/
+// QPushButton *defaultButton() const
 HB_FUNC_STATIC(QMESSAGEBOX_DEFAULTBUTTON)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -326,9 +308,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_DEFAULTBUTTON)
   }
 }
 
-/*
-QString detailedText() const
-*/
+// QString detailedText() const
 HB_FUNC_STATIC(QMESSAGEBOX_DETAILEDTEXT)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -350,9 +330,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_DETAILEDTEXT)
   }
 }
 
-/*
-QAbstractButton *escapeButton() const
-*/
+// QAbstractButton *escapeButton() const
 HB_FUNC_STATIC(QMESSAGEBOX_ESCAPEBUTTON)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -375,9 +353,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ESCAPEBUTTON)
   }
 }
 
-/*
-QMessageBox::Icon icon() const
-*/
+// QMessageBox::Icon icon() const
 HB_FUNC_STATIC(QMESSAGEBOX_ICON)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -399,9 +375,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ICON)
   }
 }
 
-/*
-QPixmap iconPixmap() const
-*/
+// QPixmap iconPixmap() const
 HB_FUNC_STATIC(QMESSAGEBOX_ICONPIXMAP)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -424,9 +398,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ICONPIXMAP)
   }
 }
 
-/*
-QString informativeText() const
-*/
+// QString informativeText() const
 HB_FUNC_STATIC(QMESSAGEBOX_INFORMATIVETEXT)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -448,9 +420,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_INFORMATIVETEXT)
   }
 }
 
-/*
-void open(QObject *receiver, const char *member)
-*/
+// void open(QObject *receiver, const char *member)
 HB_FUNC_STATIC(QMESSAGEBOX_OPEN)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -474,9 +444,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_OPEN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void removeButton(QAbstractButton *button)
-*/
+// void removeButton(QAbstractButton *button)
 HB_FUNC_STATIC(QMESSAGEBOX_REMOVEBUTTON)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -504,9 +472,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETDEFAULTBUTTON)
 {
   if (ISNUMPAR(1) && ISQPUSHBUTTON(1))
   {
-    /*
-    void setDefaultButton(QPushButton *button)
-    */
+    // void setDefaultButton(QPushButton *button)
     QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -518,9 +484,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETDEFAULTBUTTON)
   }
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    /*
-    void setDefaultButton(QMessageBox::StandardButton button)
-    */
+    // void setDefaultButton(QMessageBox::StandardButton button)
     QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -536,9 +500,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETDEFAULTBUTTON)
   }
 }
 
-/*
-void setDetailedText(const QString &text)
-*/
+// void setDetailedText(const QString &text)
 HB_FUNC_STATIC(QMESSAGEBOX_SETDETAILEDTEXT)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -566,9 +528,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETESCAPEBUTTON)
 {
   if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1))
   {
-    /*
-    void setEscapeButton(QAbstractButton *button)
-    */
+    // void setEscapeButton(QAbstractButton *button)
     QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -580,9 +540,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETESCAPEBUTTON)
   }
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    /*
-    void setEscapeButton(QMessageBox::StandardButton button)
-    */
+    // void setEscapeButton(QMessageBox::StandardButton button)
     QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -598,9 +556,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETESCAPEBUTTON)
   }
 }
 
-/*
-void setIcon(QMessageBox::Icon)
-*/
+// void setIcon(QMessageBox::Icon)
 HB_FUNC_STATIC(QMESSAGEBOX_SETICON)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -624,9 +580,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETICON)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setIconPixmap(const QPixmap &pixmap)
-*/
+// void setIconPixmap(const QPixmap &pixmap)
 HB_FUNC_STATIC(QMESSAGEBOX_SETICONPIXMAP)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -650,9 +604,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETICONPIXMAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setInformativeText(const QString &text)
-*/
+// void setInformativeText(const QString &text)
 HB_FUNC_STATIC(QMESSAGEBOX_SETINFORMATIVETEXT)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -676,9 +628,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETINFORMATIVETEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setStandardButtons(QMessageBox::StandardButtons buttons)
-*/
+// void setStandardButtons(QMessageBox::StandardButtons buttons)
 HB_FUNC_STATIC(QMESSAGEBOX_SETSTANDARDBUTTONS)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -702,9 +652,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETSTANDARDBUTTONS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setText(const QString &text)
-*/
+// void setText(const QString &text)
 HB_FUNC_STATIC(QMESSAGEBOX_SETTEXT)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -728,9 +676,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTextFormat(Qt::TextFormat format)
-*/
+// void setTextFormat(Qt::TextFormat format)
 HB_FUNC_STATIC(QMESSAGEBOX_SETTEXTFORMAT)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -754,9 +700,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETTEXTFORMAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWindowModality(Qt::WindowModality windowModality)
-*/
+// void setWindowModality(Qt::WindowModality windowModality)
 HB_FUNC_STATIC(QMESSAGEBOX_SETWINDOWMODALITY)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -780,9 +724,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETWINDOWMODALITY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWindowTitle(const QString &title)
-*/
+// void setWindowTitle(const QString &title)
 HB_FUNC_STATIC(QMESSAGEBOX_SETWINDOWTITLE)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -806,9 +748,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETWINDOWTITLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QMessageBox::StandardButton standardButton(QAbstractButton *button) const
-*/
+// QMessageBox::StandardButton standardButton(QAbstractButton *button) const
 HB_FUNC_STATIC(QMESSAGEBOX_STANDARDBUTTON)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -830,9 +770,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_STANDARDBUTTON)
   }
 }
 
-/*
-QMessageBox::StandardButtons standardButtons() const
-*/
+// QMessageBox::StandardButtons standardButtons() const
 HB_FUNC_STATIC(QMESSAGEBOX_STANDARDBUTTONS)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -854,9 +792,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_STANDARDBUTTONS)
   }
 }
 
-/*
-QString text() const
-*/
+// QString text() const
 HB_FUNC_STATIC(QMESSAGEBOX_TEXT)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -878,9 +814,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_TEXT)
   }
 }
 
-/*
-Qt::TextFormat textFormat() const
-*/
+// Qt::TextFormat textFormat() const
 HB_FUNC_STATIC(QMESSAGEBOX_TEXTFORMAT)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -902,9 +836,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_TEXTFORMAT)
   }
 }
 
-/*
-virtual void setVisible(bool visible)
-*/
+// virtual void setVisible(bool visible)
 HB_FUNC_STATIC(QMESSAGEBOX_SETVISIBLE)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -928,9 +860,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETVISIBLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int exec()
-*/
+// int exec()
 HB_FUNC_STATIC(QMESSAGEBOX_EXEC)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -952,9 +882,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_EXEC)
   }
 }
 
-/*
-static void about(QWidget *parent, const QString &title, const QString &text)
-*/
+// static void about(QWidget *parent, const QString &title, const QString &text)
 HB_FUNC_STATIC(QMESSAGEBOX_ABOUT)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -973,9 +901,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ABOUT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void aboutQt(QWidget *parent, const QString &title = QString())
-*/
+// static void aboutQt(QWidget *parent, const QString &title = QString())
 HB_FUNC_STATIC(QMESSAGEBOX_ABOUTQT)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -994,11 +920,9 @@ HB_FUNC_STATIC(QMESSAGEBOX_ABOUTQT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static QMessageBox::StandardButton critical(QWidget *parent, const QString &title, const QString &text,
-QMessageBox::StandardButtons buttons = QMessageBox::Ok, QMessageBox::StandardButton defaultButton =
-QMessageBox::NoButton)
-*/
+// static QMessageBox::StandardButton critical(QWidget *parent, const QString &title, const QString &text,
+// QMessageBox::StandardButtons buttons = QMessageBox::Ok, QMessageBox::StandardButton defaultButton =
+// QMessageBox::NoButton)
 HB_FUNC_STATIC(QMESSAGEBOX_CRITICAL)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1019,11 +943,9 @@ HB_FUNC_STATIC(QMESSAGEBOX_CRITICAL)
 #endif
 }
 
-/*
-static QMessageBox::StandardButton information(QWidget *parent, const QString &title, const QString &text,
-QMessageBox::StandardButtons buttons = QMessageBox::Ok, QMessageBox::StandardButton defaultButton =
-QMessageBox::NoButton)
-*/
+// static QMessageBox::StandardButton information(QWidget *parent, const QString &title, const QString &text,
+// QMessageBox::StandardButtons buttons = QMessageBox::Ok, QMessageBox::StandardButton defaultButton =
+// QMessageBox::NoButton)
 HB_FUNC_STATIC(QMESSAGEBOX_INFORMATION)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1044,11 +966,9 @@ HB_FUNC_STATIC(QMESSAGEBOX_INFORMATION)
 #endif
 }
 
-/*
-static QMessageBox::StandardButton question(QWidget *parent, const QString &title, const QString &text,
-QMessageBox::StandardButtons buttons = QMessageBox::Ok, QMessageBox::StandardButton defaultButton =
-QMessageBox::NoButton)
-*/
+// static QMessageBox::StandardButton question(QWidget *parent, const QString &title, const QString &text,
+// QMessageBox::StandardButtons buttons = QMessageBox::Ok, QMessageBox::StandardButton defaultButton =
+// QMessageBox::NoButton)
 HB_FUNC_STATIC(QMESSAGEBOX_QUESTION)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1069,11 +989,9 @@ HB_FUNC_STATIC(QMESSAGEBOX_QUESTION)
 #endif
 }
 
-/*
-static QMessageBox::StandardButton warning(QWidget *parent, const QString &title, const QString &text,
-QMessageBox::StandardButtons buttons = QMessageBox::Ok, QMessageBox::StandardButton defaultButton =
-QMessageBox::NoButton)
-*/
+// static QMessageBox::StandardButton warning(QWidget *parent, const QString &title, const QString &text,
+// QMessageBox::StandardButtons buttons = QMessageBox::Ok, QMessageBox::StandardButton defaultButton =
+// QMessageBox::NoButton)
 HB_FUNC_STATIC(QMESSAGEBOX_WARNING)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

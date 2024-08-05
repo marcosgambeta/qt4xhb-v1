@@ -99,7 +99,7 @@ RETURN
 #include <QtCore/QDateTime>
 #include <QtCore/QMimeData>
 
-// QFileSystemModel(QObject *parent = 0)
+    // QFileSystemModel(QObject *parent = 0)
 HB_FUNC_STATIC(QFILESYSTEMMODEL_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
@@ -131,9 +131,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QIcon fileIcon(const QModelIndex &index) const
-*/
+// QIcon fileIcon(const QModelIndex &index) const
 HB_FUNC_STATIC(QFILESYSTEMMODEL_FILEICON)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -156,9 +154,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_FILEICON)
   }
 }
 
-/*
-QFileInfo fileInfo(const QModelIndex &index) const
-*/
+// QFileInfo fileInfo(const QModelIndex &index) const
 HB_FUNC_STATIC(QFILESYSTEMMODEL_FILEINFO)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -181,9 +177,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_FILEINFO)
   }
 }
 
-/*
-QString fileName(const QModelIndex &index) const
-*/
+// QString fileName(const QModelIndex &index) const
 HB_FUNC_STATIC(QFILESYSTEMMODEL_FILENAME)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -205,9 +199,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_FILENAME)
   }
 }
 
-/*
-QString filePath(const QModelIndex &index) const
-*/
+// QString filePath(const QModelIndex &index) const
 HB_FUNC_STATIC(QFILESYSTEMMODEL_FILEPATH)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -229,9 +221,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_FILEPATH)
   }
 }
 
-/*
-QDir::Filters filter() const
-*/
+// QDir::Filters filter() const
 HB_FUNC_STATIC(QFILESYSTEMMODEL_FILTER)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -253,9 +243,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_FILTER)
   }
 }
 
-/*
-QFileIconProvider *iconProvider() const
-*/
+// QFileIconProvider *iconProvider() const
 HB_FUNC_STATIC(QFILESYSTEMMODEL_ICONPROVIDER)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -278,9 +266,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_ICONPROVIDER)
   }
 }
 
-/*
-bool isDir(const QModelIndex &index) const
-*/
+// bool isDir(const QModelIndex &index) const
 HB_FUNC_STATIC(QFILESYSTEMMODEL_ISDIR)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -302,9 +288,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_ISDIR)
   }
 }
 
-/*
-bool isReadOnly() const
-*/
+// bool isReadOnly() const
 HB_FUNC_STATIC(QFILESYSTEMMODEL_ISREADONLY)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -326,9 +310,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_ISREADONLY)
   }
 }
 
-/*
-QDateTime lastModified(const QModelIndex &index) const
-*/
+// QDateTime lastModified(const QModelIndex &index) const
 HB_FUNC_STATIC(QFILESYSTEMMODEL_LASTMODIFIED)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -351,9 +333,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_LASTMODIFIED)
   }
 }
 
-/*
-QModelIndex mkdir(const QModelIndex &parent, const QString &name)
-*/
+// QModelIndex mkdir(const QModelIndex &parent, const QString &name)
 HB_FUNC_STATIC(QFILESYSTEMMODEL_MKDIR)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -376,9 +356,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_MKDIR)
   }
 }
 
-/*
-QVariant myComputer(int role = Qt::DisplayRole) const
-*/
+// QVariant myComputer(int role = Qt::DisplayRole) const
 HB_FUNC_STATIC(QFILESYSTEMMODEL_MYCOMPUTER)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -401,9 +379,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_MYCOMPUTER)
   }
 }
 
-/*
-bool nameFilterDisables() const
-*/
+// bool nameFilterDisables() const
 HB_FUNC_STATIC(QFILESYSTEMMODEL_NAMEFILTERDISABLES)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -425,9 +401,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_NAMEFILTERDISABLES)
   }
 }
 
-/*
-QStringList nameFilters() const
-*/
+// QStringList nameFilters() const
 HB_FUNC_STATIC(QFILESYSTEMMODEL_NAMEFILTERS)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -449,9 +423,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_NAMEFILTERS)
   }
 }
 
-/*
-QFile::Permissions permissions(const QModelIndex &index) const
-*/
+// QFile::Permissions permissions(const QModelIndex &index) const
 HB_FUNC_STATIC(QFILESYSTEMMODEL_PERMISSIONS)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -473,9 +445,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_PERMISSIONS)
   }
 }
 
-/*
-bool remove(const QModelIndex &index) const
-*/
+// bool remove(const QModelIndex &index) const
 HB_FUNC_STATIC(QFILESYSTEMMODEL_REMOVE)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -497,9 +467,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_REMOVE)
   }
 }
 
-/*
-bool resolveSymlinks() const
-*/
+// bool resolveSymlinks() const
 HB_FUNC_STATIC(QFILESYSTEMMODEL_RESOLVESYMLINKS)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -521,9 +489,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_RESOLVESYMLINKS)
   }
 }
 
-/*
-bool rmdir(const QModelIndex &index) const
-*/
+// bool rmdir(const QModelIndex &index) const
 HB_FUNC_STATIC(QFILESYSTEMMODEL_RMDIR)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -545,9 +511,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_RMDIR)
   }
 }
 
-/*
-QDir rootDirectory() const
-*/
+// QDir rootDirectory() const
 HB_FUNC_STATIC(QFILESYSTEMMODEL_ROOTDIRECTORY)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -570,9 +534,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_ROOTDIRECTORY)
   }
 }
 
-/*
-QString rootPath() const
-*/
+// QString rootPath() const
 HB_FUNC_STATIC(QFILESYSTEMMODEL_ROOTPATH)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -594,9 +556,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_ROOTPATH)
   }
 }
 
-/*
-void setFilter(QDir::Filters filters)
-*/
+// void setFilter(QDir::Filters filters)
 HB_FUNC_STATIC(QFILESYSTEMMODEL_SETFILTER)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -620,9 +580,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETFILTER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setIconProvider(QFileIconProvider *provider)
-*/
+// void setIconProvider(QFileIconProvider *provider)
 HB_FUNC_STATIC(QFILESYSTEMMODEL_SETICONPROVIDER)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -646,9 +604,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETICONPROVIDER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setNameFilterDisables(bool enable)
-*/
+// void setNameFilterDisables(bool enable)
 HB_FUNC_STATIC(QFILESYSTEMMODEL_SETNAMEFILTERDISABLES)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -672,9 +628,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETNAMEFILTERDISABLES)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setNameFilters(const QStringList &filters)
-*/
+// void setNameFilters(const QStringList &filters)
 HB_FUNC_STATIC(QFILESYSTEMMODEL_SETNAMEFILTERS)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -698,9 +652,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETNAMEFILTERS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setReadOnly(bool enable)
-*/
+// void setReadOnly(bool enable)
 HB_FUNC_STATIC(QFILESYSTEMMODEL_SETREADONLY)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -724,9 +676,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETREADONLY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setResolveSymlinks(bool enable)
-*/
+// void setResolveSymlinks(bool enable)
 HB_FUNC_STATIC(QFILESYSTEMMODEL_SETRESOLVESYMLINKS)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -750,9 +700,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETRESOLVESYMLINKS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QModelIndex setRootPath(const QString &newPath)
-*/
+// QModelIndex setRootPath(const QString &newPath)
 HB_FUNC_STATIC(QFILESYSTEMMODEL_SETROOTPATH)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -775,9 +723,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETROOTPATH)
   }
 }
 
-/*
-qint64 size(const QModelIndex &index) const
-*/
+// qint64 size(const QModelIndex &index) const
 HB_FUNC_STATIC(QFILESYSTEMMODEL_SIZE)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -799,9 +745,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SIZE)
   }
 }
 
-/*
-QString type(const QModelIndex &index) const
-*/
+// QString type(const QModelIndex &index) const
 HB_FUNC_STATIC(QFILESYSTEMMODEL_TYPE)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -823,9 +767,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_TYPE)
   }
 }
 
-/*
-virtual bool canFetchMore(const QModelIndex &parent) const
-*/
+// virtual bool canFetchMore(const QModelIndex &parent) const
 HB_FUNC_STATIC(QFILESYSTEMMODEL_CANFETCHMORE)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -847,9 +789,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_CANFETCHMORE)
   }
 }
 
-/*
-virtual int columnCount(const QModelIndex &parent = QModelIndex()) const
-*/
+// virtual int columnCount(const QModelIndex &parent = QModelIndex()) const
 HB_FUNC_STATIC(QFILESYSTEMMODEL_COLUMNCOUNT)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -871,9 +811,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_COLUMNCOUNT)
   }
 }
 
-/*
-virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
-*/
+// virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
 HB_FUNC_STATIC(QFILESYSTEMMODEL_DATA)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -896,10 +834,8 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_DATA)
   }
 }
 
-/*
-virtual bool dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &
-parent)
-*/
+// virtual bool dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex
+// &parent)
 HB_FUNC_STATIC(QFILESYSTEMMODEL_DROPMIMEDATA)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -921,9 +857,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_DROPMIMEDATA)
   }
 }
 
-/*
-virtual void fetchMore(const QModelIndex &parent)
-*/
+// virtual void fetchMore(const QModelIndex &parent)
 HB_FUNC_STATIC(QFILESYSTEMMODEL_FETCHMORE)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -947,9 +881,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_FETCHMORE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual Qt::ItemFlags flags(const QModelIndex &index) const
-*/
+// virtual Qt::ItemFlags flags(const QModelIndex &index) const
 HB_FUNC_STATIC(QFILESYSTEMMODEL_FLAGS)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -971,9 +903,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_FLAGS)
   }
 }
 
-/*
-virtual bool hasChildren(const QModelIndex &parent = QModelIndex()) const
-*/
+// virtual bool hasChildren(const QModelIndex &parent = QModelIndex()) const
 HB_FUNC_STATIC(QFILESYSTEMMODEL_HASCHILDREN)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -995,9 +925,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_HASCHILDREN)
   }
 }
 
-/*
-virtual QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const
-*/
+// virtual QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const
 HB_FUNC_STATIC(QFILESYSTEMMODEL_HEADERDATA)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1024,9 +952,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_INDEX)
 {
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    /*
-    QModelIndex index(const QString &path, int column = 0) const
-    */
+    // QModelIndex index(const QString &path, int column = 0) const
     QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -1037,9 +963,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_INDEX)
   }
   else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
   {
-    /*
-    virtual QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
-    */
+    // virtual QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
     QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -1055,9 +979,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_INDEX)
   }
 }
 
-/*
-virtual QMimeData *mimeData(const QModelIndexList &indexes) const
-*/
+// virtual QMimeData *mimeData(const QModelIndexList &indexes) const
 HB_FUNC_STATIC(QFILESYSTEMMODEL_MIMEDATA)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1070,7 +992,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_MIMEDATA)
 #endif
       QModelIndexList par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      const int nLen1 = hb_arrayLen(aList1);
+      int nLen1 = hb_arrayLen(aList1);
       for (int i1 = 0; i1 < nLen1; i1++)
       {
         par1 << *static_cast<QModelIndex *>(
@@ -1088,9 +1010,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_MIMEDATA)
   }
 }
 
-/*
-virtual QStringList mimeTypes() const
-*/
+// virtual QStringList mimeTypes() const
 HB_FUNC_STATIC(QFILESYSTEMMODEL_MIMETYPES)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1112,9 +1032,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_MIMETYPES)
   }
 }
 
-/*
-virtual QModelIndex parent(const QModelIndex &index) const
-*/
+// virtual QModelIndex parent(const QModelIndex &index) const
 HB_FUNC_STATIC(QFILESYSTEMMODEL_PARENT)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1137,9 +1055,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_PARENT)
   }
 }
 
-/*
-virtual int rowCount(const QModelIndex &parent = QModelIndex()) const
-*/
+// virtual int rowCount(const QModelIndex &parent = QModelIndex()) const
 HB_FUNC_STATIC(QFILESYSTEMMODEL_ROWCOUNT)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1161,9 +1077,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_ROWCOUNT)
   }
 }
 
-/*
-virtual bool setData(const QModelIndex &idx, const QVariant &value, int role = Qt::EditRole)
-*/
+// virtual bool setData(const QModelIndex &idx, const QVariant &value, int role = Qt::EditRole)
 HB_FUNC_STATIC(QFILESYSTEMMODEL_SETDATA)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1185,9 +1099,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETDATA)
   }
 }
 
-/*
-virtual void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
-*/
+// virtual void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
 HB_FUNC_STATIC(QFILESYSTEMMODEL_SORT)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1211,9 +1123,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SORT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual Qt::DropActions supportedDropActions() const
-*/
+// virtual Qt::DropActions supportedDropActions() const
 HB_FUNC_STATIC(QFILESYSTEMMODEL_SUPPORTEDDROPACTIONS)
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());

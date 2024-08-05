@@ -60,9 +60,7 @@ HB_FUNC_STATIC(QICONENGINEPLUGINV2_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QIconEngineV2 *create(const QString &filename = QString()) = 0
-*/
+// virtual QIconEngineV2 *create(const QString &filename = QString()) = 0
 HB_FUNC_STATIC(QICONENGINEPLUGINV2_CREATE)
 {
   QIconEnginePluginV2 *obj = qobject_cast<QIconEnginePluginV2 *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -85,9 +83,7 @@ HB_FUNC_STATIC(QICONENGINEPLUGINV2_CREATE)
   }
 }
 
-/*
-virtual QStringList keys() const = 0
-*/
+// virtual QStringList keys() const = 0
 HB_FUNC_STATIC(QICONENGINEPLUGINV2_KEYS)
 {
   QIconEnginePluginV2 *obj = qobject_cast<QIconEnginePluginV2 *>(Qt4xHb::getQObjectPointerFromSelfItem());

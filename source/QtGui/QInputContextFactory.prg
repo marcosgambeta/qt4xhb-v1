@@ -70,9 +70,7 @@ HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QInputContext *create(const QString &key, QObject *parent)
-*/
+// QInputContext *create(const QString &key, QObject *parent)
 HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_CREATE)
 {
   QInputContextFactory *obj = static_cast<QInputContextFactory *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -95,9 +93,7 @@ HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_CREATE)
   }
 }
 
-/*
-static QString description(const QString &key)
-*/
+// static QString description(const QString &key)
 HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_DESCRIPTION)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -114,9 +110,7 @@ HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_DESCRIPTION)
 #endif
 }
 
-/*
-static QString displayName(const QString &key)
-*/
+// static QString displayName(const QString &key)
 HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_DISPLAYNAME)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -133,9 +127,7 @@ HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_DISPLAYNAME)
 #endif
 }
 
-/*
-static QStringList keys()
-*/
+// static QStringList keys()
 HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_KEYS)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -152,9 +144,7 @@ HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_KEYS)
 #endif
 }
 
-/*
-static QStringList languages(const QString &key)
-*/
+// static QStringList languages(const QString &key)
 HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_LANGUAGES)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

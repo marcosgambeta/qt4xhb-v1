@@ -155,9 +155,7 @@ HB_FUNC_STATIC(QACTION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QActionGroup *actionGroup() const
-*/
+// QActionGroup *actionGroup() const
 HB_FUNC_STATIC(QACTION_ACTIONGROUP)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -180,9 +178,7 @@ HB_FUNC_STATIC(QACTION_ACTIONGROUP)
   }
 }
 
-/*
-void activate(QAction::ActionEvent event)
-*/
+// void activate(QAction::ActionEvent event)
 HB_FUNC_STATIC(QACTION_ACTIVATE)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -206,9 +202,7 @@ HB_FUNC_STATIC(QACTION_ACTIVATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QList<QGraphicsWidget *> associatedGraphicsWidgets() const
-*/
+// QList<QGraphicsWidget *> associatedGraphicsWidgets() const
 HB_FUNC_STATIC(QACTION_ASSOCIATEDGRAPHICSWIDGETS)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -232,7 +226,7 @@ HB_FUNC_STATIC(QACTION_ASSOCIATEDGRAPHICSWIDGETS)
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, static_cast<QGraphicsWidget *>(list[i]));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -254,9 +248,7 @@ HB_FUNC_STATIC(QACTION_ASSOCIATEDGRAPHICSWIDGETS)
   }
 }
 
-/*
-QList<QWidget *> associatedWidgets() const
-*/
+// QList<QWidget *> associatedWidgets() const
 HB_FUNC_STATIC(QACTION_ASSOCIATEDWIDGETS)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -280,7 +272,7 @@ HB_FUNC_STATIC(QACTION_ASSOCIATEDWIDGETS)
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, static_cast<QWidget *>(list[i]));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -302,9 +294,7 @@ HB_FUNC_STATIC(QACTION_ASSOCIATEDWIDGETS)
   }
 }
 
-/*
-bool autoRepeat() const
-*/
+// bool autoRepeat() const
 HB_FUNC_STATIC(QACTION_AUTOREPEAT)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -326,9 +316,7 @@ HB_FUNC_STATIC(QACTION_AUTOREPEAT)
   }
 }
 
-/*
-QVariant data() const
-*/
+// QVariant data() const
 HB_FUNC_STATIC(QACTION_DATA)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -351,9 +339,7 @@ HB_FUNC_STATIC(QACTION_DATA)
   }
 }
 
-/*
-QFont font() const
-*/
+// QFont font() const
 HB_FUNC_STATIC(QACTION_FONT)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -376,9 +362,7 @@ HB_FUNC_STATIC(QACTION_FONT)
   }
 }
 
-/*
-QIcon icon() const
-*/
+// QIcon icon() const
 HB_FUNC_STATIC(QACTION_ICON)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -401,9 +385,7 @@ HB_FUNC_STATIC(QACTION_ICON)
   }
 }
 
-/*
-QString iconText() const
-*/
+// QString iconText() const
 HB_FUNC_STATIC(QACTION_ICONTEXT)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -425,9 +407,7 @@ HB_FUNC_STATIC(QACTION_ICONTEXT)
   }
 }
 
-/*
-bool isCheckable() const
-*/
+// bool isCheckable() const
 HB_FUNC_STATIC(QACTION_ISCHECKABLE)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -449,9 +429,7 @@ HB_FUNC_STATIC(QACTION_ISCHECKABLE)
   }
 }
 
-/*
-bool isChecked() const
-*/
+// bool isChecked() const
 HB_FUNC_STATIC(QACTION_ISCHECKED)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -473,9 +451,7 @@ HB_FUNC_STATIC(QACTION_ISCHECKED)
   }
 }
 
-/*
-bool isEnabled() const
-*/
+// bool isEnabled() const
 HB_FUNC_STATIC(QACTION_ISENABLED)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -497,9 +473,7 @@ HB_FUNC_STATIC(QACTION_ISENABLED)
   }
 }
 
-/*
-bool isIconVisibleInMenu() const
-*/
+// bool isIconVisibleInMenu() const
 HB_FUNC_STATIC(QACTION_ISICONVISIBLEINMENU)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -521,9 +495,7 @@ HB_FUNC_STATIC(QACTION_ISICONVISIBLEINMENU)
   }
 }
 
-/*
-bool isSeparator() const
-*/
+// bool isSeparator() const
 HB_FUNC_STATIC(QACTION_ISSEPARATOR)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -545,9 +517,7 @@ HB_FUNC_STATIC(QACTION_ISSEPARATOR)
   }
 }
 
-/*
-bool isVisible() const
-*/
+// bool isVisible() const
 HB_FUNC_STATIC(QACTION_ISVISIBLE)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -569,9 +539,7 @@ HB_FUNC_STATIC(QACTION_ISVISIBLE)
   }
 }
 
-/*
-QMenu *menu() const
-*/
+// QMenu *menu() const
 HB_FUNC_STATIC(QACTION_MENU)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -594,9 +562,7 @@ HB_FUNC_STATIC(QACTION_MENU)
   }
 }
 
-/*
-QAction::MenuRole menuRole() const
-*/
+// QAction::MenuRole menuRole() const
 HB_FUNC_STATIC(QACTION_MENUROLE)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -618,9 +584,7 @@ HB_FUNC_STATIC(QACTION_MENUROLE)
   }
 }
 
-/*
-QWidget *parentWidget() const
-*/
+// QWidget *parentWidget() const
 HB_FUNC_STATIC(QACTION_PARENTWIDGET)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -643,9 +607,7 @@ HB_FUNC_STATIC(QACTION_PARENTWIDGET)
   }
 }
 
-/*
-QAction::Priority priority() const
-*/
+// QAction::Priority priority() const
 HB_FUNC_STATIC(QACTION_PRIORITY)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -667,9 +629,7 @@ HB_FUNC_STATIC(QACTION_PRIORITY)
   }
 }
 
-/*
-void setActionGroup(QActionGroup *group)
-*/
+// void setActionGroup(QActionGroup *group)
 HB_FUNC_STATIC(QACTION_SETACTIONGROUP)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -693,9 +653,7 @@ HB_FUNC_STATIC(QACTION_SETACTIONGROUP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setAutoRepeat(bool)
-*/
+// void setAutoRepeat(bool)
 HB_FUNC_STATIC(QACTION_SETAUTOREPEAT)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -719,9 +677,7 @@ HB_FUNC_STATIC(QACTION_SETAUTOREPEAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCheckable(bool)
-*/
+// void setCheckable(bool)
 HB_FUNC_STATIC(QACTION_SETCHECKABLE)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -745,9 +701,7 @@ HB_FUNC_STATIC(QACTION_SETCHECKABLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setData(const QVariant &userData)
-*/
+// void setData(const QVariant &userData)
 HB_FUNC_STATIC(QACTION_SETDATA)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -771,9 +725,7 @@ HB_FUNC_STATIC(QACTION_SETDATA)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFont(const QFont &font)
-*/
+// void setFont(const QFont &font)
 HB_FUNC_STATIC(QACTION_SETFONT)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -797,9 +749,7 @@ HB_FUNC_STATIC(QACTION_SETFONT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setIcon(const QIcon &icon)
-*/
+// void setIcon(const QIcon &icon)
 HB_FUNC_STATIC(QACTION_SETICON)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -823,9 +773,7 @@ HB_FUNC_STATIC(QACTION_SETICON)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setIconText(const QString &text)
-*/
+// void setIconText(const QString &text)
 HB_FUNC_STATIC(QACTION_SETICONTEXT)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -849,9 +797,7 @@ HB_FUNC_STATIC(QACTION_SETICONTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setIconVisibleInMenu(bool visible)
-*/
+// void setIconVisibleInMenu(bool visible)
 HB_FUNC_STATIC(QACTION_SETICONVISIBLEINMENU)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -875,9 +821,7 @@ HB_FUNC_STATIC(QACTION_SETICONVISIBLEINMENU)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setMenu(QMenu *menu)
-*/
+// void setMenu(QMenu *menu)
 HB_FUNC_STATIC(QACTION_SETMENU)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -901,9 +845,7 @@ HB_FUNC_STATIC(QACTION_SETMENU)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setMenuRole(QAction::MenuRole menuRole)
-*/
+// void setMenuRole(QAction::MenuRole menuRole)
 HB_FUNC_STATIC(QACTION_SETMENUROLE)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -927,9 +869,7 @@ HB_FUNC_STATIC(QACTION_SETMENUROLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPriority(QAction::Priority priority)
-*/
+// void setPriority(QAction::Priority priority)
 HB_FUNC_STATIC(QACTION_SETPRIORITY)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -953,9 +893,7 @@ HB_FUNC_STATIC(QACTION_SETPRIORITY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSeparator(bool b)
-*/
+// void setSeparator(bool b)
 HB_FUNC_STATIC(QACTION_SETSEPARATOR)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -979,9 +917,7 @@ HB_FUNC_STATIC(QACTION_SETSEPARATOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setShortcut(const QKeySequence &shortcut)
-*/
+// void setShortcut(const QKeySequence &shortcut)
 HB_FUNC_STATIC(QACTION_SETSHORTCUT)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1005,9 +941,7 @@ HB_FUNC_STATIC(QACTION_SETSHORTCUT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setShortcutContext(Qt::ShortcutContext context)
-*/
+// void setShortcutContext(Qt::ShortcutContext context)
 HB_FUNC_STATIC(QACTION_SETSHORTCUTCONTEXT)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1035,16 +969,14 @@ HB_FUNC_STATIC(QACTION_SETSHORTCUTS)
 {
   if (ISNUMPAR(1) && HB_ISARRAY(1))
   {
-    /*
-    void setShortcuts(const QList<QKeySequence> &shortcuts)
-    */
+    // void setShortcuts(const QList<QKeySequence> &shortcuts)
     QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
     {
       QList<QKeySequence> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      const int nLen1 = hb_arrayLen(aList1);
+      int nLen1 = hb_arrayLen(aList1);
       for (int i1 = 0; i1 < nLen1; i1++)
       {
         par1 << *static_cast<QKeySequence *>(
@@ -1057,9 +989,7 @@ HB_FUNC_STATIC(QACTION_SETSHORTCUTS)
   }
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    /*
-    void setShortcuts(QKeySequence::StandardKey key)
-    */
+    // void setShortcuts(QKeySequence::StandardKey key)
     QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -1075,9 +1005,7 @@ HB_FUNC_STATIC(QACTION_SETSHORTCUTS)
   }
 }
 
-/*
-void setSoftKeyRole(QAction::SoftKeyRole softKeyRole)
-*/
+// void setSoftKeyRole(QAction::SoftKeyRole softKeyRole)
 HB_FUNC_STATIC(QACTION_SETSOFTKEYROLE)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1101,9 +1029,7 @@ HB_FUNC_STATIC(QACTION_SETSOFTKEYROLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setStatusTip(const QString &statusTip)
-*/
+// void setStatusTip(const QString &statusTip)
 HB_FUNC_STATIC(QACTION_SETSTATUSTIP)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1127,9 +1053,7 @@ HB_FUNC_STATIC(QACTION_SETSTATUSTIP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setText(const QString &text)
-*/
+// void setText(const QString &text)
 HB_FUNC_STATIC(QACTION_SETTEXT)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1153,9 +1077,7 @@ HB_FUNC_STATIC(QACTION_SETTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setToolTip(const QString &tip)
-*/
+// void setToolTip(const QString &tip)
 HB_FUNC_STATIC(QACTION_SETTOOLTIP)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1179,9 +1101,7 @@ HB_FUNC_STATIC(QACTION_SETTOOLTIP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWhatsThis(const QString &what)
-*/
+// void setWhatsThis(const QString &what)
 HB_FUNC_STATIC(QACTION_SETWHATSTHIS)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1205,9 +1125,7 @@ HB_FUNC_STATIC(QACTION_SETWHATSTHIS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QKeySequence shortcut() const
-*/
+// QKeySequence shortcut() const
 HB_FUNC_STATIC(QACTION_SHORTCUT)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1230,9 +1148,7 @@ HB_FUNC_STATIC(QACTION_SHORTCUT)
   }
 }
 
-/*
-Qt::ShortcutContext shortcutContext() const
-*/
+// Qt::ShortcutContext shortcutContext() const
 HB_FUNC_STATIC(QACTION_SHORTCUTCONTEXT)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1254,9 +1170,7 @@ HB_FUNC_STATIC(QACTION_SHORTCUTCONTEXT)
   }
 }
 
-/*
-QList<QKeySequence> shortcuts() const
-*/
+// QList<QKeySequence> shortcuts() const
 HB_FUNC_STATIC(QACTION_SHORTCUTS)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1305,9 +1219,7 @@ HB_FUNC_STATIC(QACTION_SHORTCUTS)
   }
 }
 
-/*
-bool showStatusText(QWidget *widget = 0)
-*/
+// bool showStatusText(QWidget *widget = 0)
 HB_FUNC_STATIC(QACTION_SHOWSTATUSTEXT)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1329,9 +1241,7 @@ HB_FUNC_STATIC(QACTION_SHOWSTATUSTEXT)
   }
 }
 
-/*
-QAction::SoftKeyRole softKeyRole() const
-*/
+// QAction::SoftKeyRole softKeyRole() const
 HB_FUNC_STATIC(QACTION_SOFTKEYROLE)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1353,9 +1263,7 @@ HB_FUNC_STATIC(QACTION_SOFTKEYROLE)
   }
 }
 
-/*
-QString statusTip() const
-*/
+// QString statusTip() const
 HB_FUNC_STATIC(QACTION_STATUSTIP)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1377,9 +1285,7 @@ HB_FUNC_STATIC(QACTION_STATUSTIP)
   }
 }
 
-/*
-QString text() const
-*/
+// QString text() const
 HB_FUNC_STATIC(QACTION_TEXT)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1401,9 +1307,7 @@ HB_FUNC_STATIC(QACTION_TEXT)
   }
 }
 
-/*
-QString toolTip() const
-*/
+// QString toolTip() const
 HB_FUNC_STATIC(QACTION_TOOLTIP)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1425,9 +1329,7 @@ HB_FUNC_STATIC(QACTION_TOOLTIP)
   }
 }
 
-/*
-QString whatsThis() const
-*/
+// QString whatsThis() const
 HB_FUNC_STATIC(QACTION_WHATSTHIS)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1449,9 +1351,7 @@ HB_FUNC_STATIC(QACTION_WHATSTHIS)
   }
 }
 
-/*
-void hover()
-*/
+// void hover()
 HB_FUNC_STATIC(QACTION_HOVER)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1475,9 +1375,7 @@ HB_FUNC_STATIC(QACTION_HOVER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setChecked(bool)
-*/
+// void setChecked(bool)
 HB_FUNC_STATIC(QACTION_SETCHECKED)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1501,9 +1399,7 @@ HB_FUNC_STATIC(QACTION_SETCHECKED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDisabled(bool b)
-*/
+// void setDisabled(bool b)
 HB_FUNC_STATIC(QACTION_SETDISABLED)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1527,9 +1423,7 @@ HB_FUNC_STATIC(QACTION_SETDISABLED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setEnabled(bool)
-*/
+// void setEnabled(bool)
 HB_FUNC_STATIC(QACTION_SETENABLED)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1553,9 +1447,7 @@ HB_FUNC_STATIC(QACTION_SETENABLED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setVisible(bool)
-*/
+// void setVisible(bool)
 HB_FUNC_STATIC(QACTION_SETVISIBLE)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1579,9 +1471,7 @@ HB_FUNC_STATIC(QACTION_SETVISIBLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void toggle()
-*/
+// void toggle()
 HB_FUNC_STATIC(QACTION_TOGGLE)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1605,9 +1495,7 @@ HB_FUNC_STATIC(QACTION_TOGGLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void trigger()
-*/
+// void trigger()
 HB_FUNC_STATIC(QACTION_TRIGGER)
 {
   QAction *obj = qobject_cast<QAction *>(Qt4xHb::getQObjectPointerFromSelfItem());

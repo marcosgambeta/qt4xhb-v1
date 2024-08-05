@@ -70,9 +70,7 @@ HB_FUNC_STATIC(QPLATFORMFONTDATABASE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QStringList addApplicationFont(const QByteArray &fontData, const QString &fileName)
-*/
+// virtual QStringList addApplicationFont(const QByteArray &fontData, const QString &fileName)
 HB_FUNC_STATIC(QPLATFORMFONTDATABASE_ADDAPPLICATIONFONT)
 {
   QPlatformFontDatabase *obj = static_cast<QPlatformFontDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -94,9 +92,7 @@ HB_FUNC_STATIC(QPLATFORMFONTDATABASE_ADDAPPLICATIONFONT)
   }
 }
 
-/*
-virtual QString fontDir() const
-*/
+// virtual QString fontDir() const
 HB_FUNC_STATIC(QPLATFORMFONTDATABASE_FONTDIR)
 {
   QPlatformFontDatabase *obj = static_cast<QPlatformFontDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -118,10 +114,8 @@ HB_FUNC_STATIC(QPLATFORMFONTDATABASE_FONTDIR)
   }
 }
 
-/*
-virtual QFontEngine *fontEngine(const QByteArray &fontData, qreal pixelSize, QFont::HintingPreference
-hintingPreference)
-*/
+// virtual QFontEngine *fontEngine(const QByteArray &fontData, qreal pixelSize, QFont::HintingPreference
+// hintingPreference)
 HB_FUNC_STATIC(QPLATFORMFONTDATABASE_FONTENGINE)
 {
   QPlatformFontDatabase *obj = static_cast<QPlatformFontDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -144,9 +138,7 @@ HB_FUNC_STATIC(QPLATFORMFONTDATABASE_FONTENGINE)
   }
 }
 
-/*
-virtual void populateFontDatabase()
-*/
+// virtual void populateFontDatabase()
 HB_FUNC_STATIC(QPLATFORMFONTDATABASE_POPULATEFONTDATABASE)
 {
   QPlatformFontDatabase *obj = static_cast<QPlatformFontDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -170,9 +162,7 @@ HB_FUNC_STATIC(QPLATFORMFONTDATABASE_POPULATEFONTDATABASE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void releaseHandle(void *handle)
-*/
+// virtual void releaseHandle(void *handle)
 HB_FUNC_STATIC(QPLATFORMFONTDATABASE_RELEASEHANDLE)
 {
   QPlatformFontDatabase *obj = static_cast<QPlatformFontDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -196,11 +186,9 @@ HB_FUNC_STATIC(QPLATFORMFONTDATABASE_RELEASEHANDLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void registerFont(const QString &familyName, const QString &foundryName, QFont::Weight weight, QFont::Style
-style, QFont::Stretch stretch, bool antialiased, bool scalable, int pixelSize, const QSupportedWritingSystems &
-writingSystems, void *usrPtr)
-*/
+// static void registerFont(const QString &familyName, const QString &foundryName, QFont::Weight weight, QFont::Style
+// style, QFont::Stretch stretch, bool antialiased, bool scalable, int pixelSize, const QSupportedWritingSystems
+// &writingSystems, void *usrPtr)
 HB_FUNC_STATIC(QPLATFORMFONTDATABASE_REGISTERFONT)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -222,9 +210,7 @@ HB_FUNC_STATIC(QPLATFORMFONTDATABASE_REGISTERFONT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void registerQPF2Font(const QByteArray &dataArray, void *handle)
-*/
+// static void registerQPF2Font(const QByteArray &dataArray, void *handle)
 HB_FUNC_STATIC(QPLATFORMFONTDATABASE_REGISTERQPF2FONT)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

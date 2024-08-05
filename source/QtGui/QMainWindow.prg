@@ -100,7 +100,7 @@ RETURN
 #include <QtGui/QMenuBar>
 #include <QtGui/QStatusBar>
 
-// QMainWindow(QWidget *parent = 0, Qt::WindowFlags flags = 0)
+    // QMainWindow(QWidget *parent = 0, Qt::WindowFlags flags = 0)
 HB_FUNC_STATIC(QMAINWINDOW_NEW)
 {
   if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
@@ -137,9 +137,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDDOCKWIDGET)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && ISQDOCKWIDGET(2))
   {
-    /*
-    void addDockWidget(Qt::DockWidgetArea area, QDockWidget *dockwidget)
-    */
+    // void addDockWidget(Qt::DockWidgetArea area, QDockWidget *dockwidget)
     QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -151,9 +149,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDDOCKWIDGET)
   }
   else if (ISNUMPAR(3) && HB_ISNUM(1) && ISQDOCKWIDGET(2) && HB_ISNUM(3))
   {
-    /*
-    void addDockWidget(Qt::DockWidgetArea area, QDockWidget *dockwidget, Qt::Orientation orientation)
-    */
+    // void addDockWidget(Qt::DockWidgetArea area, QDockWidget *dockwidget, Qt::Orientation orientation)
     QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -173,9 +169,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDTOOLBAR)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && ISQTOOLBAR(2))
   {
-    /*
-    void addToolBar(Qt::ToolBarArea area, QToolBar *toolbar)
-    */
+    // void addToolBar(Qt::ToolBarArea area, QToolBar *toolbar)
     QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -187,9 +181,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDTOOLBAR)
   }
   else if (ISNUMPAR(1) && ISQTOOLBAR(1))
   {
-    /*
-    void addToolBar(QToolBar *toolbar)
-    */
+    // void addToolBar(QToolBar *toolbar)
     QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -201,9 +193,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDTOOLBAR)
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    QToolBar *addToolBar(const QString &title)
-    */
+    // QToolBar *addToolBar(const QString &title)
     QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -218,9 +208,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDTOOLBAR)
   }
 }
 
-/*
-void addToolBarBreak(Qt::ToolBarArea area = Qt::TopToolBarArea)
-*/
+// void addToolBarBreak(Qt::ToolBarArea area = Qt::TopToolBarArea)
 HB_FUNC_STATIC(QMAINWINDOW_ADDTOOLBARBREAK)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -244,9 +232,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDTOOLBARBREAK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWidget *centralWidget() const
-*/
+// QWidget *centralWidget() const
 HB_FUNC_STATIC(QMAINWINDOW_CENTRALWIDGET)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -269,9 +255,7 @@ HB_FUNC_STATIC(QMAINWINDOW_CENTRALWIDGET)
   }
 }
 
-/*
-Qt::DockWidgetArea corner(Qt::Corner corner) const
-*/
+// Qt::DockWidgetArea corner(Qt::Corner corner) const
 HB_FUNC_STATIC(QMAINWINDOW_CORNER)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -293,9 +277,7 @@ HB_FUNC_STATIC(QMAINWINDOW_CORNER)
   }
 }
 
-/*
-virtual QMenu *createPopupMenu()
-*/
+// virtual QMenu *createPopupMenu()
 HB_FUNC_STATIC(QMAINWINDOW_CREATEPOPUPMENU)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -318,9 +300,7 @@ HB_FUNC_STATIC(QMAINWINDOW_CREATEPOPUPMENU)
   }
 }
 
-/*
-QMainWindow::DockOptions dockOptions() const
-*/
+// QMainWindow::DockOptions dockOptions() const
 HB_FUNC_STATIC(QMAINWINDOW_DOCKOPTIONS)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -342,9 +322,7 @@ HB_FUNC_STATIC(QMAINWINDOW_DOCKOPTIONS)
   }
 }
 
-/*
-Qt::DockWidgetArea dockWidgetArea(QDockWidget *dockwidget) const
-*/
+// Qt::DockWidgetArea dockWidgetArea(QDockWidget *dockwidget) const
 HB_FUNC_STATIC(QMAINWINDOW_DOCKWIDGETAREA)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -366,9 +344,7 @@ HB_FUNC_STATIC(QMAINWINDOW_DOCKWIDGETAREA)
   }
 }
 
-/*
-bool documentMode() const
-*/
+// bool documentMode() const
 HB_FUNC_STATIC(QMAINWINDOW_DOCUMENTMODE)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -390,9 +366,7 @@ HB_FUNC_STATIC(QMAINWINDOW_DOCUMENTMODE)
   }
 }
 
-/*
-QSize iconSize() const
-*/
+// QSize iconSize() const
 HB_FUNC_STATIC(QMAINWINDOW_ICONSIZE)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -415,9 +389,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ICONSIZE)
   }
 }
 
-/*
-void insertToolBar(QToolBar *before, QToolBar *toolbar)
-*/
+// void insertToolBar(QToolBar *before, QToolBar *toolbar)
 HB_FUNC_STATIC(QMAINWINDOW_INSERTTOOLBAR)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -441,9 +413,7 @@ HB_FUNC_STATIC(QMAINWINDOW_INSERTTOOLBAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void insertToolBarBreak(QToolBar *before)
-*/
+// void insertToolBarBreak(QToolBar *before)
 HB_FUNC_STATIC(QMAINWINDOW_INSERTTOOLBARBREAK)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -467,9 +437,7 @@ HB_FUNC_STATIC(QMAINWINDOW_INSERTTOOLBARBREAK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isAnimated() const
-*/
+// bool isAnimated() const
 HB_FUNC_STATIC(QMAINWINDOW_ISANIMATED)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -491,9 +459,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ISANIMATED)
   }
 }
 
-/*
-bool isDockNestingEnabled() const
-*/
+// bool isDockNestingEnabled() const
 HB_FUNC_STATIC(QMAINWINDOW_ISDOCKNESTINGENABLED)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -515,9 +481,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ISDOCKNESTINGENABLED)
   }
 }
 
-/*
-QMenuBar *menuBar() const
-*/
+// QMenuBar *menuBar() const
 HB_FUNC_STATIC(QMAINWINDOW_MENUBAR)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -540,9 +504,7 @@ HB_FUNC_STATIC(QMAINWINDOW_MENUBAR)
   }
 }
 
-/*
-QWidget *menuWidget() const
-*/
+// QWidget *menuWidget() const
 HB_FUNC_STATIC(QMAINWINDOW_MENUWIDGET)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -565,9 +527,7 @@ HB_FUNC_STATIC(QMAINWINDOW_MENUWIDGET)
   }
 }
 
-/*
-void removeDockWidget(QDockWidget *dockwidget)
-*/
+// void removeDockWidget(QDockWidget *dockwidget)
 HB_FUNC_STATIC(QMAINWINDOW_REMOVEDOCKWIDGET)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -591,9 +551,7 @@ HB_FUNC_STATIC(QMAINWINDOW_REMOVEDOCKWIDGET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void removeToolBar(QToolBar *toolbar)
-*/
+// void removeToolBar(QToolBar *toolbar)
 HB_FUNC_STATIC(QMAINWINDOW_REMOVETOOLBAR)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -617,9 +575,7 @@ HB_FUNC_STATIC(QMAINWINDOW_REMOVETOOLBAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void removeToolBarBreak(QToolBar *before)
-*/
+// void removeToolBarBreak(QToolBar *before)
 HB_FUNC_STATIC(QMAINWINDOW_REMOVETOOLBARBREAK)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -643,9 +599,7 @@ HB_FUNC_STATIC(QMAINWINDOW_REMOVETOOLBARBREAK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool restoreDockWidget(QDockWidget *dockwidget)
-*/
+// bool restoreDockWidget(QDockWidget *dockwidget)
 HB_FUNC_STATIC(QMAINWINDOW_RESTOREDOCKWIDGET)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -667,9 +621,7 @@ HB_FUNC_STATIC(QMAINWINDOW_RESTOREDOCKWIDGET)
   }
 }
 
-/*
-bool restoreState(const QByteArray &state, int version = 0)
-*/
+// bool restoreState(const QByteArray &state, int version = 0)
 HB_FUNC_STATIC(QMAINWINDOW_RESTORESTATE)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -691,9 +643,7 @@ HB_FUNC_STATIC(QMAINWINDOW_RESTORESTATE)
   }
 }
 
-/*
-QByteArray saveState(int version = 0) const
-*/
+// QByteArray saveState(int version = 0) const
 HB_FUNC_STATIC(QMAINWINDOW_SAVESTATE)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -716,9 +666,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SAVESTATE)
   }
 }
 
-/*
-void setCentralWidget(QWidget *widget)
-*/
+// void setCentralWidget(QWidget *widget)
 HB_FUNC_STATIC(QMAINWINDOW_SETCENTRALWIDGET)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -742,9 +690,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SETCENTRALWIDGET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCorner(Qt::Corner corner, Qt::DockWidgetArea area)
-*/
+// void setCorner(Qt::Corner corner, Qt::DockWidgetArea area)
 HB_FUNC_STATIC(QMAINWINDOW_SETCORNER)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -768,9 +714,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SETCORNER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDockOptions(QMainWindow::DockOptions options)
-*/
+// void setDockOptions(QMainWindow::DockOptions options)
 HB_FUNC_STATIC(QMAINWINDOW_SETDOCKOPTIONS)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -794,9 +738,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SETDOCKOPTIONS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDocumentMode(bool enabled)
-*/
+// void setDocumentMode(bool enabled)
 HB_FUNC_STATIC(QMAINWINDOW_SETDOCUMENTMODE)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -820,9 +762,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SETDOCUMENTMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setIconSize(const QSize &iconSize)
-*/
+// void setIconSize(const QSize &iconSize)
 HB_FUNC_STATIC(QMAINWINDOW_SETICONSIZE)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -846,9 +786,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SETICONSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setMenuBar(QMenuBar *menuBar)
-*/
+// void setMenuBar(QMenuBar *menuBar)
 HB_FUNC_STATIC(QMAINWINDOW_SETMENUBAR)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -872,9 +810,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SETMENUBAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setMenuWidget(QWidget *menuBar)
-*/
+// void setMenuWidget(QWidget *menuBar)
 HB_FUNC_STATIC(QMAINWINDOW_SETMENUWIDGET)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -898,9 +834,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SETMENUWIDGET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setStatusBar(QStatusBar *statusbar)
-*/
+// void setStatusBar(QStatusBar *statusbar)
 HB_FUNC_STATIC(QMAINWINDOW_SETSTATUSBAR)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -924,9 +858,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SETSTATUSBAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTabPosition(Qt::DockWidgetAreas areas, QTabWidget::TabPosition tabPosition)
-*/
+// void setTabPosition(Qt::DockWidgetAreas areas, QTabWidget::TabPosition tabPosition)
 HB_FUNC_STATIC(QMAINWINDOW_SETTABPOSITION)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -950,9 +882,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SETTABPOSITION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTabShape(QTabWidget::TabShape tabShape)
-*/
+// void setTabShape(QTabWidget::TabShape tabShape)
 HB_FUNC_STATIC(QMAINWINDOW_SETTABSHAPE)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -976,9 +906,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SETTABSHAPE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setToolButtonStyle(Qt::ToolButtonStyle toolButtonStyle)
-*/
+// void setToolButtonStyle(Qt::ToolButtonStyle toolButtonStyle)
 HB_FUNC_STATIC(QMAINWINDOW_SETTOOLBUTTONSTYLE)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1002,9 +930,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SETTOOLBUTTONSTYLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void splitDockWidget(QDockWidget *first, QDockWidget *second, Qt::Orientation orientation)
-*/
+// void splitDockWidget(QDockWidget *first, QDockWidget *second, Qt::Orientation orientation)
 HB_FUNC_STATIC(QMAINWINDOW_SPLITDOCKWIDGET)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1028,9 +954,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SPLITDOCKWIDGET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStatusBar *statusBar() const
-*/
+// QStatusBar *statusBar() const
 HB_FUNC_STATIC(QMAINWINDOW_STATUSBAR)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1053,9 +977,7 @@ HB_FUNC_STATIC(QMAINWINDOW_STATUSBAR)
   }
 }
 
-/*
-QTabWidget::TabPosition tabPosition(Qt::DockWidgetArea area) const
-*/
+// QTabWidget::TabPosition tabPosition(Qt::DockWidgetArea area) const
 HB_FUNC_STATIC(QMAINWINDOW_TABPOSITION)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1077,9 +999,7 @@ HB_FUNC_STATIC(QMAINWINDOW_TABPOSITION)
   }
 }
 
-/*
-QTabWidget::TabShape tabShape() const
-*/
+// QTabWidget::TabShape tabShape() const
 HB_FUNC_STATIC(QMAINWINDOW_TABSHAPE)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1101,9 +1021,7 @@ HB_FUNC_STATIC(QMAINWINDOW_TABSHAPE)
   }
 }
 
-/*
-QList<QDockWidget *> tabifiedDockWidgets(QDockWidget *dockwidget) const
-*/
+// QList<QDockWidget *> tabifiedDockWidgets(QDockWidget *dockwidget) const
 HB_FUNC_STATIC(QMAINWINDOW_TABIFIEDDOCKWIDGETS)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1127,7 +1045,7 @@ HB_FUNC_STATIC(QMAINWINDOW_TABIFIEDDOCKWIDGETS)
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, static_cast<QDockWidget *>(list[i]));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -1149,9 +1067,7 @@ HB_FUNC_STATIC(QMAINWINDOW_TABIFIEDDOCKWIDGETS)
   }
 }
 
-/*
-void tabifyDockWidget(QDockWidget *first, QDockWidget *second)
-*/
+// void tabifyDockWidget(QDockWidget *first, QDockWidget *second)
 HB_FUNC_STATIC(QMAINWINDOW_TABIFYDOCKWIDGET)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1175,9 +1091,7 @@ HB_FUNC_STATIC(QMAINWINDOW_TABIFYDOCKWIDGET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::ToolBarArea toolBarArea(QToolBar *toolbar) const
-*/
+// Qt::ToolBarArea toolBarArea(QToolBar *toolbar) const
 HB_FUNC_STATIC(QMAINWINDOW_TOOLBARAREA)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1199,9 +1113,7 @@ HB_FUNC_STATIC(QMAINWINDOW_TOOLBARAREA)
   }
 }
 
-/*
-bool toolBarBreak(QToolBar *toolbar) const
-*/
+// bool toolBarBreak(QToolBar *toolbar) const
 HB_FUNC_STATIC(QMAINWINDOW_TOOLBARBREAK)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1223,9 +1135,7 @@ HB_FUNC_STATIC(QMAINWINDOW_TOOLBARBREAK)
   }
 }
 
-/*
-Qt::ToolButtonStyle toolButtonStyle() const
-*/
+// Qt::ToolButtonStyle toolButtonStyle() const
 HB_FUNC_STATIC(QMAINWINDOW_TOOLBUTTONSTYLE)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1247,9 +1157,7 @@ HB_FUNC_STATIC(QMAINWINDOW_TOOLBUTTONSTYLE)
   }
 }
 
-/*
-void setAnimated(bool enabled)
-*/
+// void setAnimated(bool enabled)
 HB_FUNC_STATIC(QMAINWINDOW_SETANIMATED)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1273,9 +1181,7 @@ HB_FUNC_STATIC(QMAINWINDOW_SETANIMATED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDockNestingEnabled(bool enabled) const
-*/
+// void setDockNestingEnabled(bool enabled) const
 HB_FUNC_STATIC(QMAINWINDOW_SETDOCKNESTINGENABLED)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());

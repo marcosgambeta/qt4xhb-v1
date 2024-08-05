@@ -88,9 +88,7 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::MouseButton button() const
-*/
+// Qt::MouseButton button() const
 HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_BUTTON)
 {
   QMouseEventTransition *obj = qobject_cast<QMouseEventTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -112,9 +110,7 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_BUTTON)
   }
 }
 
-/*
-QPainterPath hitTestPath() const
-*/
+// QPainterPath hitTestPath() const
 HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_HITTESTPATH)
 {
   QMouseEventTransition *obj = qobject_cast<QMouseEventTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -137,9 +133,7 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_HITTESTPATH)
   }
 }
 
-/*
-Qt::KeyboardModifiers modifierMask() const
-*/
+// Qt::KeyboardModifiers modifierMask() const
 HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_MODIFIERMASK)
 {
   QMouseEventTransition *obj = qobject_cast<QMouseEventTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -161,9 +155,7 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_MODIFIERMASK)
   }
 }
 
-/*
-void setButton(Qt::MouseButton button)
-*/
+// void setButton(Qt::MouseButton button)
 HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_SETBUTTON)
 {
   QMouseEventTransition *obj = qobject_cast<QMouseEventTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -187,9 +179,7 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_SETBUTTON)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setHitTestPath(const QPainterPath &path)
-*/
+// void setHitTestPath(const QPainterPath &path)
 HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_SETHITTESTPATH)
 {
   QMouseEventTransition *obj = qobject_cast<QMouseEventTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -213,9 +203,7 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_SETHITTESTPATH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setModifierMask(Qt::KeyboardModifiers modifierMask)
-*/
+// void setModifierMask(Qt::KeyboardModifiers modifierMask)
 HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_SETMODIFIERMASK)
 {
   QMouseEventTransition *obj = qobject_cast<QMouseEventTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());

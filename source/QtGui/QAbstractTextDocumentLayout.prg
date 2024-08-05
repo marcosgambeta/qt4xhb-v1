@@ -59,9 +59,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    /*
-    QString anchorAt(const QPointF &position) const
-    */
+    // QString anchorAt(const QPointF &position) const
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ANCHORAT)
 {
   QAbstractTextDocumentLayout *obj =
@@ -84,9 +82,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ANCHORAT)
   }
 }
 
-/*
-virtual QRectF blockBoundingRect(const QTextBlock &block) const = 0
-*/
+// virtual QRectF blockBoundingRect(const QTextBlock &block) const = 0
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT)
 {
   QAbstractTextDocumentLayout *obj =
@@ -110,9 +106,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT)
   }
 }
 
-/*
-QTextDocument *document() const
-*/
+// QTextDocument *document() const
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENT)
 {
   QAbstractTextDocumentLayout *obj =
@@ -136,9 +130,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENT)
   }
 }
 
-/*
-virtual QSizeF documentSize() const = 0
-*/
+// virtual QSizeF documentSize() const = 0
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENTSIZE)
 {
   QAbstractTextDocumentLayout *obj =
@@ -162,9 +154,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENTSIZE)
   }
 }
 
-/*
-virtual QRectF frameBoundingRect(QTextFrame *frame) const = 0
-*/
+// virtual QRectF frameBoundingRect(QTextFrame *frame) const = 0
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT)
 {
   QAbstractTextDocumentLayout *obj =
@@ -188,9 +178,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT)
   }
 }
 
-/*
-QTextObjectInterface *handlerForObject(int objectType) const
-*/
+// QTextObjectInterface *handlerForObject(int objectType) const
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_HANDLERFOROBJECT)
 {
   QAbstractTextDocumentLayout *obj =
@@ -214,9 +202,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_HANDLERFOROBJECT)
   }
 }
 
-/*
-virtual int hitTest(const QPointF &point, Qt::HitTestAccuracy accuracy) const = 0
-*/
+// virtual int hitTest(const QPointF &point, Qt::HitTestAccuracy accuracy) const = 0
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_HITTEST)
 {
   QAbstractTextDocumentLayout *obj =
@@ -239,9 +225,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_HITTEST)
   }
 }
 
-/*
-virtual int pageCount() const = 0
-*/
+// virtual int pageCount() const = 0
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_PAGECOUNT)
 {
   QAbstractTextDocumentLayout *obj =
@@ -264,9 +248,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_PAGECOUNT)
   }
 }
 
-/*
-QPaintDevice *paintDevice() const
-*/
+// QPaintDevice *paintDevice() const
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_PAINTDEVICE)
 {
   QAbstractTextDocumentLayout *obj =
@@ -290,9 +272,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_PAINTDEVICE)
   }
 }
 
-/*
-void registerHandler(int objectType, QObject *component)
-*/
+// void registerHandler(int objectType, QObject *component)
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_REGISTERHANDLER)
 {
   QAbstractTextDocumentLayout *obj =
@@ -317,9 +297,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_REGISTERHANDLER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPaintDevice(QPaintDevice *device)
-*/
+// void setPaintDevice(QPaintDevice *device)
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_SETPAINTDEVICE)
 {
   QAbstractTextDocumentLayout *obj =

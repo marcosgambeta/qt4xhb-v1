@@ -53,7 +53,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QScrollArea(QWidget *parent = 0)
+    // QScrollArea(QWidget *parent = 0)
 HB_FUNC_STATIC(QSCROLLAREA_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
@@ -85,9 +85,7 @@ HB_FUNC_STATIC(QSCROLLAREA_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::Alignment alignment() const
-*/
+// Qt::Alignment alignment() const
 HB_FUNC_STATIC(QSCROLLAREA_ALIGNMENT)
 {
   QScrollArea *obj = qobject_cast<QScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -109,9 +107,7 @@ HB_FUNC_STATIC(QSCROLLAREA_ALIGNMENT)
   }
 }
 
-/*
-void ensureVisible(int x, int y, int xmargin = 50, int ymargin = 50)
-*/
+// void ensureVisible(int x, int y, int xmargin = 50, int ymargin = 50)
 HB_FUNC_STATIC(QSCROLLAREA_ENSUREVISIBLE)
 {
   QScrollArea *obj = qobject_cast<QScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -135,9 +131,7 @@ HB_FUNC_STATIC(QSCROLLAREA_ENSUREVISIBLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void ensureWidgetVisible(QWidget *childWidget, int xmargin = 50, int ymargin = 50)
-*/
+// void ensureWidgetVisible(QWidget *childWidget, int xmargin = 50, int ymargin = 50)
 HB_FUNC_STATIC(QSCROLLAREA_ENSUREWIDGETVISIBLE)
 {
   QScrollArea *obj = qobject_cast<QScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -161,9 +155,7 @@ HB_FUNC_STATIC(QSCROLLAREA_ENSUREWIDGETVISIBLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setAlignment(Qt::Alignment)
-*/
+// void setAlignment(Qt::Alignment)
 HB_FUNC_STATIC(QSCROLLAREA_SETALIGNMENT)
 {
   QScrollArea *obj = qobject_cast<QScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -187,9 +179,7 @@ HB_FUNC_STATIC(QSCROLLAREA_SETALIGNMENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWidget(QWidget *widget)
-*/
+// void setWidget(QWidget *widget)
 HB_FUNC_STATIC(QSCROLLAREA_SETWIDGET)
 {
   QScrollArea *obj = qobject_cast<QScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -213,9 +203,7 @@ HB_FUNC_STATIC(QSCROLLAREA_SETWIDGET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWidgetResizable(bool resizable)
-*/
+// void setWidgetResizable(bool resizable)
 HB_FUNC_STATIC(QSCROLLAREA_SETWIDGETRESIZABLE)
 {
   QScrollArea *obj = qobject_cast<QScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -239,9 +227,7 @@ HB_FUNC_STATIC(QSCROLLAREA_SETWIDGETRESIZABLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWidget *takeWidget()
-*/
+// QWidget *takeWidget()
 HB_FUNC_STATIC(QSCROLLAREA_TAKEWIDGET)
 {
   QScrollArea *obj = qobject_cast<QScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -264,9 +250,7 @@ HB_FUNC_STATIC(QSCROLLAREA_TAKEWIDGET)
   }
 }
 
-/*
-QWidget *widget() const
-*/
+// QWidget *widget() const
 HB_FUNC_STATIC(QSCROLLAREA_WIDGET)
 {
   QScrollArea *obj = qobject_cast<QScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -289,9 +273,7 @@ HB_FUNC_STATIC(QSCROLLAREA_WIDGET)
   }
 }
 
-/*
-bool widgetResizable() const
-*/
+// bool widgetResizable() const
 HB_FUNC_STATIC(QSCROLLAREA_WIDGETRESIZABLE)
 {
   QScrollArea *obj = qobject_cast<QScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -313,9 +295,7 @@ HB_FUNC_STATIC(QSCROLLAREA_WIDGETRESIZABLE)
   }
 }
 
-/*
-virtual bool focusNextPrevChild(bool next)
-*/
+// virtual bool focusNextPrevChild(bool next)
 HB_FUNC_STATIC(QSCROLLAREA_FOCUSNEXTPREVCHILD)
 {
   QScrollArea *obj = qobject_cast<QScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -337,9 +317,7 @@ HB_FUNC_STATIC(QSCROLLAREA_FOCUSNEXTPREVCHILD)
   }
 }
 
-/*
-virtual QSize sizeHint() const
-*/
+// virtual QSize sizeHint() const
 HB_FUNC_STATIC(QSCROLLAREA_SIZEHINT)
 {
   QScrollArea *obj = qobject_cast<QScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());

@@ -49,7 +49,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QGraphicsProxyWidget(QGraphicsItem *parent = 0, Qt::WindowFlags wFlags = 0)
+    // QGraphicsProxyWidget(QGraphicsItem *parent = 0, Qt::WindowFlags wFlags = 0)
 HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_NEW)
 {
   if (ISBETWEEN(0, 2) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
@@ -83,9 +83,7 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QGraphicsProxyWidget *createProxyForChildWidget(QWidget *child)
-*/
+// QGraphicsProxyWidget *createProxyForChildWidget(QWidget *child)
 HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_CREATEPROXYFORCHILDWIDGET)
 {
   QGraphicsProxyWidget *obj = qobject_cast<QGraphicsProxyWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -108,9 +106,7 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_CREATEPROXYFORCHILDWIDGET)
   }
 }
 
-/*
-void setWidget(QWidget *widget)
-*/
+// void setWidget(QWidget *widget)
 HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_SETWIDGET)
 {
   QGraphicsProxyWidget *obj = qobject_cast<QGraphicsProxyWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -134,9 +130,7 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_SETWIDGET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QRectF subWidgetRect(const QWidget *widget) const
-*/
+// QRectF subWidgetRect(const QWidget *widget) const
 HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_SUBWIDGETRECT)
 {
   QGraphicsProxyWidget *obj = qobject_cast<QGraphicsProxyWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -159,9 +153,7 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_SUBWIDGETRECT)
   }
 }
 
-/*
-QWidget *widget() const
-*/
+// QWidget *widget() const
 HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_WIDGET)
 {
   QGraphicsProxyWidget *obj = qobject_cast<QGraphicsProxyWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -184,9 +176,7 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_WIDGET)
   }
 }
 
-/*
-virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
-*/
+// virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_PAINT)
 {
   QGraphicsProxyWidget *obj = qobject_cast<QGraphicsProxyWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -210,9 +200,7 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_PAINT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setGeometry(const QRectF &rect)
-*/
+// virtual void setGeometry(const QRectF &rect)
 HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_SETGEOMETRY)
 {
   QGraphicsProxyWidget *obj = qobject_cast<QGraphicsProxyWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -236,9 +224,7 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_SETGEOMETRY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual int type() const
-*/
+// virtual int type() const
 HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_TYPE)
 {
   QGraphicsProxyWidget *obj = qobject_cast<QGraphicsProxyWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());

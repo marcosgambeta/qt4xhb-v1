@@ -50,9 +50,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    /*
-    void grabGesture(Qt::GestureType gesture, Qt::GestureFlags flags = Qt::GestureFlags())
-    */
+    // void grabGesture(Qt::GestureType gesture, Qt::GestureFlags flags = Qt::GestureFlags())
 HB_FUNC_STATIC(QGRAPHICSOBJECT_GRABGESTURE)
 {
   QGraphicsObject *obj = qobject_cast<QGraphicsObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -77,9 +75,7 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_GRABGESTURE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void ungrabGesture(Qt::GestureType gesture)
-*/
+// void ungrabGesture(Qt::GestureType gesture)
 HB_FUNC_STATIC(QGRAPHICSOBJECT_UNGRABGESTURE)
 {
   QGraphicsObject *obj = qobject_cast<QGraphicsObject *>(Qt4xHb::getQObjectPointerFromSelfItem());

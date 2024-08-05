@@ -63,7 +63,7 @@ RETURN
 #include <QtGui/QAction>
 #include <QtGui/QMenu>
 
-// QToolButton(QWidget *parent = 0)
+    // QToolButton(QWidget *parent = 0)
 HB_FUNC_STATIC(QTOOLBUTTON_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
@@ -95,9 +95,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::ArrowType arrowType() const
-*/
+// Qt::ArrowType arrowType() const
 HB_FUNC_STATIC(QTOOLBUTTON_ARROWTYPE)
 {
   QToolButton *obj = qobject_cast<QToolButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -119,9 +117,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_ARROWTYPE)
   }
 }
 
-/*
-bool autoRaise() const
-*/
+// bool autoRaise() const
 HB_FUNC_STATIC(QTOOLBUTTON_AUTORAISE)
 {
   QToolButton *obj = qobject_cast<QToolButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -143,9 +139,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_AUTORAISE)
   }
 }
 
-/*
-QAction *defaultAction() const
-*/
+// QAction *defaultAction() const
 HB_FUNC_STATIC(QTOOLBUTTON_DEFAULTACTION)
 {
   QToolButton *obj = qobject_cast<QToolButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -168,9 +162,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_DEFAULTACTION)
   }
 }
 
-/*
-QMenu *menu() const
-*/
+// QMenu *menu() const
 HB_FUNC_STATIC(QTOOLBUTTON_MENU)
 {
   QToolButton *obj = qobject_cast<QToolButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -193,9 +185,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_MENU)
   }
 }
 
-/*
-QToolButton::ToolButtonPopupMode popupMode() const
-*/
+// QToolButton::ToolButtonPopupMode popupMode() const
 HB_FUNC_STATIC(QTOOLBUTTON_POPUPMODE)
 {
   QToolButton *obj = qobject_cast<QToolButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -217,9 +207,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_POPUPMODE)
   }
 }
 
-/*
-void setArrowType(Qt::ArrowType type)
-*/
+// void setArrowType(Qt::ArrowType type)
 HB_FUNC_STATIC(QTOOLBUTTON_SETARROWTYPE)
 {
   QToolButton *obj = qobject_cast<QToolButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -243,9 +231,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SETARROWTYPE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setAutoRaise(bool enable)
-*/
+// void setAutoRaise(bool enable)
 HB_FUNC_STATIC(QTOOLBUTTON_SETAUTORAISE)
 {
   QToolButton *obj = qobject_cast<QToolButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -269,9 +255,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SETAUTORAISE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setMenu(QMenu *menu)
-*/
+// void setMenu(QMenu *menu)
 HB_FUNC_STATIC(QTOOLBUTTON_SETMENU)
 {
   QToolButton *obj = qobject_cast<QToolButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -295,9 +279,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SETMENU)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPopupMode(QToolButton::ToolButtonPopupMode mode)
-*/
+// void setPopupMode(QToolButton::ToolButtonPopupMode mode)
 HB_FUNC_STATIC(QTOOLBUTTON_SETPOPUPMODE)
 {
   QToolButton *obj = qobject_cast<QToolButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -321,9 +303,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SETPOPUPMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::ToolButtonStyle toolButtonStyle() const
-*/
+// Qt::ToolButtonStyle toolButtonStyle() const
 HB_FUNC_STATIC(QTOOLBUTTON_TOOLBUTTONSTYLE)
 {
   QToolButton *obj = qobject_cast<QToolButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -345,9 +325,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_TOOLBUTTONSTYLE)
   }
 }
 
-/*
-virtual QSize minimumSizeHint() const
-*/
+// virtual QSize minimumSizeHint() const
 HB_FUNC_STATIC(QTOOLBUTTON_MINIMUMSIZEHINT)
 {
   QToolButton *obj = qobject_cast<QToolButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -370,9 +348,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_MINIMUMSIZEHINT)
   }
 }
 
-/*
-virtual QSize sizeHint() const
-*/
+// virtual QSize sizeHint() const
 HB_FUNC_STATIC(QTOOLBUTTON_SIZEHINT)
 {
   QToolButton *obj = qobject_cast<QToolButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -395,9 +371,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SIZEHINT)
   }
 }
 
-/*
-void setDefaultAction(QAction *action)
-*/
+// void setDefaultAction(QAction *action)
 HB_FUNC_STATIC(QTOOLBUTTON_SETDEFAULTACTION)
 {
   QToolButton *obj = qobject_cast<QToolButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -421,9 +395,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SETDEFAULTACTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setToolButtonStyle(Qt::ToolButtonStyle style)
-*/
+// void setToolButtonStyle(Qt::ToolButtonStyle style)
 HB_FUNC_STATIC(QTOOLBUTTON_SETTOOLBUTTONSTYLE)
 {
   QToolButton *obj = qobject_cast<QToolButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -447,9 +419,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SETTOOLBUTTONSTYLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void showMenu()
-*/
+// void showMenu()
 HB_FUNC_STATIC(QTOOLBUTTON_SHOWMENU)
 {
   QToolButton *obj = qobject_cast<QToolButton *>(Qt4xHb::getQObjectPointerFromSelfItem());

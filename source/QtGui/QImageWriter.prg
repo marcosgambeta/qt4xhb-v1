@@ -111,9 +111,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool canWrite() const
-*/
+// bool canWrite() const
 HB_FUNC_STATIC(QIMAGEWRITER_CANWRITE)
 {
   QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -135,9 +133,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_CANWRITE)
   }
 }
 
-/*
-int compression() const
-*/
+// int compression() const
 HB_FUNC_STATIC(QIMAGEWRITER_COMPRESSION)
 {
   QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -159,9 +155,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_COMPRESSION)
   }
 }
 
-/*
-QIODevice *device() const
-*/
+// QIODevice *device() const
 HB_FUNC_STATIC(QIMAGEWRITER_DEVICE)
 {
   QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -184,9 +178,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_DEVICE)
   }
 }
 
-/*
-QImageWriterError::ImageWriterError error() const
-*/
+// QImageWriterError::ImageWriterError error() const
 HB_FUNC_STATIC(QIMAGEWRITER_ERROR)
 {
   QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -208,9 +200,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_ERROR)
   }
 }
 
-/*
-QString errorString() const
-*/
+// QString errorString() const
 HB_FUNC_STATIC(QIMAGEWRITER_ERRORSTRING)
 {
   QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -232,9 +222,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_ERRORSTRING)
   }
 }
 
-/*
-QString fileName() const
-*/
+// QString fileName() const
 HB_FUNC_STATIC(QIMAGEWRITER_FILENAME)
 {
   QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -256,9 +244,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_FILENAME)
   }
 }
 
-/*
-QByteArray format() const
-*/
+// QByteArray format() const
 HB_FUNC_STATIC(QIMAGEWRITER_FORMAT)
 {
   QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -281,9 +267,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_FORMAT)
   }
 }
 
-/*
-float gamma() const
-*/
+// float gamma() const
 HB_FUNC_STATIC(QIMAGEWRITER_GAMMA)
 {
   QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -305,9 +289,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_GAMMA)
   }
 }
 
-/*
-int quality() const
-*/
+// int quality() const
 HB_FUNC_STATIC(QIMAGEWRITER_QUALITY)
 {
   QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -329,9 +311,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_QUALITY)
   }
 }
 
-/*
-void setCompression(int compression)
-*/
+// void setCompression(int compression)
 HB_FUNC_STATIC(QIMAGEWRITER_SETCOMPRESSION)
 {
   QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -355,9 +335,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_SETCOMPRESSION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDevice(QIODevice *device)
-*/
+// void setDevice(QIODevice *device)
 HB_FUNC_STATIC(QIMAGEWRITER_SETDEVICE)
 {
   QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -381,9 +359,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_SETDEVICE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFileName(const QString &fileName)
-*/
+// void setFileName(const QString &fileName)
 HB_FUNC_STATIC(QIMAGEWRITER_SETFILENAME)
 {
   QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -407,9 +383,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_SETFILENAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFormat(const QByteArray &format)
-*/
+// void setFormat(const QByteArray &format)
 HB_FUNC_STATIC(QIMAGEWRITER_SETFORMAT)
 {
   QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -433,9 +407,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_SETFORMAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setGamma(float gamma)
-*/
+// void setGamma(float gamma)
 HB_FUNC_STATIC(QIMAGEWRITER_SETGAMMA)
 {
   QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -459,9 +431,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_SETGAMMA)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setQuality(int quality)
-*/
+// void setQuality(int quality)
 HB_FUNC_STATIC(QIMAGEWRITER_SETQUALITY)
 {
   QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -485,9 +455,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_SETQUALITY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setText(const QString &key, const QString &text)
-*/
+// void setText(const QString &key, const QString &text)
 HB_FUNC_STATIC(QIMAGEWRITER_SETTEXT)
 {
   QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -511,9 +479,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_SETTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool supportsOption(QImageIOHandler::ImageOption option) const
-*/
+// bool supportsOption(QImageIOHandler::ImageOption option) const
 HB_FUNC_STATIC(QIMAGEWRITER_SUPPORTSOPTION)
 {
   QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -535,9 +501,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_SUPPORTSOPTION)
   }
 }
 
-/*
-bool write(const QImage &image)
-*/
+// bool write(const QImage &image)
 HB_FUNC_STATIC(QIMAGEWRITER_WRITE)
 {
   QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -559,9 +523,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_WRITE)
   }
 }
 
-/*
-QList<QByteArray> supportedImageFormats()
-*/
+// QList<QByteArray> supportedImageFormats()
 HB_FUNC_STATIC(QIMAGEWRITER_SUPPORTEDIMAGEFORMATS)
 {
   QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());

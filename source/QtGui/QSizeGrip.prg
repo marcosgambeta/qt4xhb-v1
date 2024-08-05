@@ -43,7 +43,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QSizeGrip(QWidget *parent)
+    // QSizeGrip(QWidget *parent)
 HB_FUNC_STATIC(QSIZEGRIP_NEW)
 {
   if (ISNUMPAR(1) && ISQWIDGET(1))
@@ -75,9 +75,7 @@ HB_FUNC_STATIC(QSIZEGRIP_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setVisible(bool visible)
-*/
+// virtual void setVisible(bool visible)
 HB_FUNC_STATIC(QSIZEGRIP_SETVISIBLE)
 {
   QSizeGrip *obj = qobject_cast<QSizeGrip *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -101,9 +99,7 @@ HB_FUNC_STATIC(QSIZEGRIP_SETVISIBLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QSize sizeHint() const
-*/
+// virtual QSize sizeHint() const
 HB_FUNC_STATIC(QSIZEGRIP_SIZEHINT)
 {
   QSizeGrip *obj = qobject_cast<QSizeGrip *>(Qt4xHb::getQObjectPointerFromSelfItem());

@@ -90,9 +90,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void finish(QWidget *mainWin)
-*/
+// void finish(QWidget *mainWin)
 HB_FUNC_STATIC(QSPLASHSCREEN_FINISH)
 {
   QSplashScreen *obj = qobject_cast<QSplashScreen *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -116,9 +114,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_FINISH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-const QPixmap pixmap() const
-*/
+// const QPixmap pixmap() const
 HB_FUNC_STATIC(QSPLASHSCREEN_PIXMAP)
 {
   QSplashScreen *obj = qobject_cast<QSplashScreen *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -141,9 +137,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_PIXMAP)
   }
 }
 
-/*
-void repaint()
-*/
+// void repaint()
 HB_FUNC_STATIC(QSPLASHSCREEN_REPAINT)
 {
   QSplashScreen *obj = qobject_cast<QSplashScreen *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -167,9 +161,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_REPAINT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPixmap(const QPixmap &pixmap)
-*/
+// void setPixmap(const QPixmap &pixmap)
 HB_FUNC_STATIC(QSPLASHSCREEN_SETPIXMAP)
 {
   QSplashScreen *obj = qobject_cast<QSplashScreen *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -193,9 +185,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_SETPIXMAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void clearMessage()
-*/
+// void clearMessage()
 HB_FUNC_STATIC(QSPLASHSCREEN_CLEARMESSAGE)
 {
   QSplashScreen *obj = qobject_cast<QSplashScreen *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -219,9 +209,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_CLEARMESSAGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void showMessage(const QString &message, int alignment = Qt::AlignLeft, const QColor &color = Qt::black)
-*/
+// void showMessage(const QString &message, int alignment = Qt::AlignLeft, const QColor &color = Qt::black)
 HB_FUNC_STATIC(QSPLASHSCREEN_SHOWMESSAGE)
 {
   QSplashScreen *obj = qobject_cast<QSplashScreen *>(Qt4xHb::getQObjectPointerFromSelfItem());

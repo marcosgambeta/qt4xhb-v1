@@ -46,9 +46,7 @@ RETURN
 
 #include <QtGui/QTextDocument>
 
-    /*
-    QTextDocument *document() const
-    */
+    // QTextDocument *document() const
 HB_FUNC_STATIC(QTEXTOBJECT_DOCUMENT)
 {
   QTextObject *obj = qobject_cast<QTextObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -71,9 +69,7 @@ HB_FUNC_STATIC(QTEXTOBJECT_DOCUMENT)
   }
 }
 
-/*
-QTextFormat format() const
-*/
+// QTextFormat format() const
 HB_FUNC_STATIC(QTEXTOBJECT_FORMAT)
 {
   QTextObject *obj = qobject_cast<QTextObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -96,9 +92,7 @@ HB_FUNC_STATIC(QTEXTOBJECT_FORMAT)
   }
 }
 
-/*
-int formatIndex() const
-*/
+// int formatIndex() const
 HB_FUNC_STATIC(QTEXTOBJECT_FORMATINDEX)
 {
   QTextObject *obj = qobject_cast<QTextObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -120,9 +114,7 @@ HB_FUNC_STATIC(QTEXTOBJECT_FORMATINDEX)
   }
 }
 
-/*
-int objectIndex() const
-*/
+// int objectIndex() const
 HB_FUNC_STATIC(QTEXTOBJECT_OBJECTINDEX)
 {
   QTextObject *obj = qobject_cast<QTextObject *>(Qt4xHb::getQObjectPointerFromSelfItem());

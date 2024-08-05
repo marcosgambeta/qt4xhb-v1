@@ -74,9 +74,7 @@ HB_FUNC_STATIC(QGROUPBOX_NEW)
   }
 }
 
-/*
-Qt::Alignment alignment() const
-*/
+// Qt::Alignment alignment() const
 HB_FUNC_STATIC(QGROUPBOX_ALIGNMENT)
 {
   QGroupBox *obj = qobject_cast<QGroupBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -98,9 +96,7 @@ HB_FUNC_STATIC(QGROUPBOX_ALIGNMENT)
   }
 }
 
-/*
-bool isCheckable() const
-*/
+// bool isCheckable() const
 HB_FUNC_STATIC(QGROUPBOX_ISCHECKABLE)
 {
   QGroupBox *obj = qobject_cast<QGroupBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -122,9 +118,7 @@ HB_FUNC_STATIC(QGROUPBOX_ISCHECKABLE)
   }
 }
 
-/*
-bool isChecked() const
-*/
+// bool isChecked() const
 HB_FUNC_STATIC(QGROUPBOX_ISCHECKED)
 {
   QGroupBox *obj = qobject_cast<QGroupBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -146,9 +140,7 @@ HB_FUNC_STATIC(QGROUPBOX_ISCHECKED)
   }
 }
 
-/*
-bool isFlat() const
-*/
+// bool isFlat() const
 HB_FUNC_STATIC(QGROUPBOX_ISFLAT)
 {
   QGroupBox *obj = qobject_cast<QGroupBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -170,9 +162,7 @@ HB_FUNC_STATIC(QGROUPBOX_ISFLAT)
   }
 }
 
-/*
-void setAlignment(int alignment)
-*/
+// void setAlignment(int alignment)
 HB_FUNC_STATIC(QGROUPBOX_SETALIGNMENT)
 {
   QGroupBox *obj = qobject_cast<QGroupBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -196,9 +186,7 @@ HB_FUNC_STATIC(QGROUPBOX_SETALIGNMENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCheckable(bool checkable)
-*/
+// void setCheckable(bool checkable)
 HB_FUNC_STATIC(QGROUPBOX_SETCHECKABLE)
 {
   QGroupBox *obj = qobject_cast<QGroupBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -222,9 +210,7 @@ HB_FUNC_STATIC(QGROUPBOX_SETCHECKABLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFlat(bool flat)
-*/
+// void setFlat(bool flat)
 HB_FUNC_STATIC(QGROUPBOX_SETFLAT)
 {
   QGroupBox *obj = qobject_cast<QGroupBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -248,9 +234,7 @@ HB_FUNC_STATIC(QGROUPBOX_SETFLAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTitle(const QString &title)
-*/
+// void setTitle(const QString &title)
 HB_FUNC_STATIC(QGROUPBOX_SETTITLE)
 {
   QGroupBox *obj = qobject_cast<QGroupBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -274,9 +258,7 @@ HB_FUNC_STATIC(QGROUPBOX_SETTITLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString title() const
-*/
+// QString title() const
 HB_FUNC_STATIC(QGROUPBOX_TITLE)
 {
   QGroupBox *obj = qobject_cast<QGroupBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -298,9 +280,7 @@ HB_FUNC_STATIC(QGROUPBOX_TITLE)
   }
 }
 
-/*
-virtual QSize minimumSizeHint() const
-*/
+// virtual QSize minimumSizeHint() const
 HB_FUNC_STATIC(QGROUPBOX_MINIMUMSIZEHINT)
 {
   QGroupBox *obj = qobject_cast<QGroupBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -323,9 +303,7 @@ HB_FUNC_STATIC(QGROUPBOX_MINIMUMSIZEHINT)
   }
 }
 
-/*
-void setChecked(bool checked)
-*/
+// void setChecked(bool checked)
 HB_FUNC_STATIC(QGROUPBOX_SETCHECKED)
 {
   QGroupBox *obj = qobject_cast<QGroupBox *>(Qt4xHb::getQObjectPointerFromSelfItem());

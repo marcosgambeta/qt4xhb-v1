@@ -90,9 +90,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QModelIndex mapFromSource(const QModelIndex &sourceIndex) const = 0
-*/
+// virtual QModelIndex mapFromSource(const QModelIndex &sourceIndex) const = 0
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_MAPFROMSOURCE)
 {
   QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -115,9 +113,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_MAPFROMSOURCE)
   }
 }
 
-/*
-virtual QItemSelection mapSelectionFromSource(const QItemSelection &sourceSelection) const
-*/
+// virtual QItemSelection mapSelectionFromSource(const QItemSelection &sourceSelection) const
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_MAPSELECTIONFROMSOURCE)
 {
   QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -140,9 +136,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_MAPSELECTIONFROMSOURCE)
   }
 }
 
-/*
-virtual QItemSelection mapSelectionToSource(const QItemSelection &proxySelection) const
-*/
+// virtual QItemSelection mapSelectionToSource(const QItemSelection &proxySelection) const
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_MAPSELECTIONTOSOURCE)
 {
   QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -165,9 +159,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_MAPSELECTIONTOSOURCE)
   }
 }
 
-/*
-virtual QModelIndex mapToSource(const QModelIndex &proxyIndex) const = 0
-*/
+// virtual QModelIndex mapToSource(const QModelIndex &proxyIndex) const = 0
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_MAPTOSOURCE)
 {
   QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -190,9 +182,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_MAPTOSOURCE)
   }
 }
 
-/*
-virtual void setSourceModel(QAbstractItemModel *sourceModel)
-*/
+// virtual void setSourceModel(QAbstractItemModel *sourceModel)
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SETSOURCEMODEL)
 {
   QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -216,9 +206,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SETSOURCEMODEL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAbstractItemModel *sourceModel() const
-*/
+// QAbstractItemModel *sourceModel() const
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SOURCEMODEL)
 {
   QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -241,9 +229,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SOURCEMODEL)
   }
 }
 
-/*
-virtual QModelIndex buddy(const QModelIndex &index) const
-*/
+// virtual QModelIndex buddy(const QModelIndex &index) const
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_BUDDY)
 {
   QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -266,9 +252,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_BUDDY)
   }
 }
 
-/*
-virtual bool canFetchMore(const QModelIndex &parent) const
-*/
+// virtual bool canFetchMore(const QModelIndex &parent) const
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_CANFETCHMORE)
 {
   QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -290,9 +274,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_CANFETCHMORE)
   }
 }
 
-/*
-virtual QVariant data(const QModelIndex &proxyIndex, int role = Qt::DisplayRole) const
-*/
+// virtual QVariant data(const QModelIndex &proxyIndex, int role = Qt::DisplayRole) const
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_DATA)
 {
   QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -315,9 +297,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_DATA)
   }
 }
 
-/*
-virtual void fetchMore(const QModelIndex &parent)
-*/
+// virtual void fetchMore(const QModelIndex &parent)
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_FETCHMORE)
 {
   QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -341,9 +321,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_FETCHMORE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual Qt::ItemFlags flags(const QModelIndex &index) const
-*/
+// virtual Qt::ItemFlags flags(const QModelIndex &index) const
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_FLAGS)
 {
   QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -365,9 +343,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_FLAGS)
   }
 }
 
-/*
-virtual bool hasChildren(const QModelIndex &parent = QModelIndex()) const
-*/
+// virtual bool hasChildren(const QModelIndex &parent = QModelIndex()) const
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_HASCHILDREN)
 {
   QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -389,9 +365,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_HASCHILDREN)
   }
 }
 
-/*
-virtual QVariant headerData(int section, Qt::Orientation orientation, int role) const
-*/
+// virtual QVariant headerData(int section, Qt::Orientation orientation, int role) const
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_HEADERDATA)
 {
   QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -414,9 +388,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_HEADERDATA)
   }
 }
 
-/*
-virtual QMimeData *mimeData(const QModelIndexList &indexes) const
-*/
+// virtual QMimeData *mimeData(const QModelIndexList &indexes) const
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_MIMEDATA)
 {
   QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -429,7 +401,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_MIMEDATA)
 #endif
       QModelIndexList par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      const int nLen1 = hb_arrayLen(aList1);
+      int nLen1 = hb_arrayLen(aList1);
       for (int i1 = 0; i1 < nLen1; i1++)
       {
         par1 << *static_cast<QModelIndex *>(
@@ -447,9 +419,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_MIMEDATA)
   }
 }
 
-/*
-virtual QStringList mimeTypes() const
-*/
+// virtual QStringList mimeTypes() const
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_MIMETYPES)
 {
   QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -471,9 +441,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_MIMETYPES)
   }
 }
 
-/*
-virtual void revert()
-*/
+// virtual void revert()
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_REVERT)
 {
   QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -497,9 +465,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_REVERT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole)
-*/
+// virtual bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole)
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SETDATA)
 {
   QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -521,9 +487,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SETDATA)
   }
 }
 
-/*
-virtual bool setHeaderData(int section, Qt::Orientation orientation, const QVariant &value, int role = Qt::EditRole)
-*/
+// virtual bool setHeaderData(int section, Qt::Orientation orientation, const QVariant &value, int role = Qt::EditRole)
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SETHEADERDATA)
 {
   QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -545,9 +509,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SETHEADERDATA)
   }
 }
 
-/*
-virtual void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
-*/
+// virtual void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SORT)
 {
   QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -571,9 +533,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SORT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QSize span(const QModelIndex &index) const
-*/
+// virtual QSize span(const QModelIndex &index) const
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SPAN)
 {
   QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -596,9 +556,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SPAN)
   }
 }
 
-/*
-virtual bool submit()
-*/
+// virtual bool submit()
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SUBMIT)
 {
   QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -620,9 +578,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SUBMIT)
   }
 }
 
-/*
-virtual Qt::DropActions supportedDropActions() const
-*/
+// virtual Qt::DropActions supportedDropActions() const
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SUPPORTEDDROPACTIONS)
 {
   QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());

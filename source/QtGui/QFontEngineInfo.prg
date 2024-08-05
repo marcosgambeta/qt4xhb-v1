@@ -99,9 +99,7 @@ HB_FUNC_STATIC(QFONTENGINEINFO_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString family() const
-*/
+// QString family() const
 HB_FUNC_STATIC(QFONTENGINEINFO_FAMILY)
 {
   QFontEngineInfo *obj = static_cast<QFontEngineInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -123,9 +121,7 @@ HB_FUNC_STATIC(QFONTENGINEINFO_FAMILY)
   }
 }
 
-/*
-qreal pixelSize() const
-*/
+// qreal pixelSize() const
 HB_FUNC_STATIC(QFONTENGINEINFO_PIXELSIZE)
 {
   QFontEngineInfo *obj = static_cast<QFontEngineInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -147,9 +143,7 @@ HB_FUNC_STATIC(QFONTENGINEINFO_PIXELSIZE)
   }
 }
 
-/*
-void setFamily(const QString &name)
-*/
+// void setFamily(const QString &name)
 HB_FUNC_STATIC(QFONTENGINEINFO_SETFAMILY)
 {
   QFontEngineInfo *obj = static_cast<QFontEngineInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -173,9 +167,7 @@ HB_FUNC_STATIC(QFONTENGINEINFO_SETFAMILY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPixelSize(qreal size)
-*/
+// void setPixelSize(qreal size)
 HB_FUNC_STATIC(QFONTENGINEINFO_SETPIXELSIZE)
 {
   QFontEngineInfo *obj = static_cast<QFontEngineInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -199,9 +191,7 @@ HB_FUNC_STATIC(QFONTENGINEINFO_SETPIXELSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setStyle(QFont::Style style)
-*/
+// void setStyle(QFont::Style style)
 HB_FUNC_STATIC(QFONTENGINEINFO_SETSTYLE)
 {
   QFontEngineInfo *obj = static_cast<QFontEngineInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -225,9 +215,7 @@ HB_FUNC_STATIC(QFONTENGINEINFO_SETSTYLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWeight(int weight)
-*/
+// void setWeight(int weight)
 HB_FUNC_STATIC(QFONTENGINEINFO_SETWEIGHT)
 {
   QFontEngineInfo *obj = static_cast<QFontEngineInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -251,9 +239,7 @@ HB_FUNC_STATIC(QFONTENGINEINFO_SETWEIGHT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWritingSystems(const QList<QFontDatabase::WritingSystem> &writingSystems)
-*/
+// void setWritingSystems(const QList<QFontDatabase::WritingSystem> &writingSystems)
 HB_FUNC_STATIC(QFONTENGINEINFO_SETWRITINGSYSTEMS)
 {
   QFontEngineInfo *obj = static_cast<QFontEngineInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -266,7 +252,7 @@ HB_FUNC_STATIC(QFONTENGINEINFO_SETWRITINGSYSTEMS)
 #endif
       QList<QFontDatabase::WritingSystem> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      const int nLen1 = hb_arrayLen(aList1);
+      int nLen1 = hb_arrayLen(aList1);
       for (int i1 = 0; i1 < nLen1; i1++)
       {
         par1 << (QFontDatabase::WritingSystem)hb_arrayGetNI(aList1, i1 + 1);
@@ -284,9 +270,7 @@ HB_FUNC_STATIC(QFONTENGINEINFO_SETWRITINGSYSTEMS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QFont::Style style() const
-*/
+// QFont::Style style() const
 HB_FUNC_STATIC(QFONTENGINEINFO_STYLE)
 {
   QFontEngineInfo *obj = static_cast<QFontEngineInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -308,9 +292,7 @@ HB_FUNC_STATIC(QFONTENGINEINFO_STYLE)
   }
 }
 
-/*
-int weight() const
-*/
+// int weight() const
 HB_FUNC_STATIC(QFONTENGINEINFO_WEIGHT)
 {
   QFontEngineInfo *obj = static_cast<QFontEngineInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -332,9 +314,7 @@ HB_FUNC_STATIC(QFONTENGINEINFO_WEIGHT)
   }
 }
 
-/*
-QList<QFontDatabase::WritingSystem> writingSystems() const
-*/
+// QList<QFontDatabase::WritingSystem> writingSystems() const
 HB_FUNC_STATIC(QFONTENGINEINFO_WRITINGSYSTEMS)
 {
   QFontEngineInfo *obj = static_cast<QFontEngineInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -350,7 +330,7 @@ HB_FUNC_STATIC(QFONTENGINEINFO_WRITINGSYSTEMS)
       const int count = list.count();
       for (int i = 0; i < count; i++)
       {
-        PHB_ITEM pItem = hb_itemPutNI(NULL, static_cast<int>(list[i]));
+        PHB_ITEM pItem = hb_itemPutNI(NULL, (int)list[i]);
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }

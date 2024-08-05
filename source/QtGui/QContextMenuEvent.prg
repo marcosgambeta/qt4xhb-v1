@@ -50,10 +50,8 @@ HB_FUNC_STATIC(QCONTEXTMENUEVENT_NEW)
 {
   if (ISNUMPAR(4) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) && HB_ISNUM(4))
   {
-    /*
-    QContextMenuEvent(QContextMenuEvent::Reason reason, const QPoint &pos, const QPoint &globalPos,
-    Qt::KeyboardModifiers modifiers)
-    */
+    // QContextMenuEvent(QContextMenuEvent::Reason reason, const QPoint &pos, const QPoint &globalPos,
+    // Qt::KeyboardModifiers modifiers)
     QContextMenuEvent *obj = new QContextMenuEvent((QContextMenuEvent::Reason)hb_parni(1), *PQPOINT(2), *PQPOINT(3),
                                                    (Qt::KeyboardModifiers)hb_parni(4));
     Qt4xHb::returnNewObject(obj, false);
@@ -92,9 +90,7 @@ HB_FUNC_STATIC(QCONTEXTMENUEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-const QPoint &globalPos() const
-*/
+// const QPoint &globalPos() const
 HB_FUNC_STATIC(QCONTEXTMENUEVENT_GLOBALPOS)
 {
   QContextMenuEvent *obj = static_cast<QContextMenuEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -117,9 +113,7 @@ HB_FUNC_STATIC(QCONTEXTMENUEVENT_GLOBALPOS)
   }
 }
 
-/*
-int globalX() const
-*/
+// int globalX() const
 HB_FUNC_STATIC(QCONTEXTMENUEVENT_GLOBALX)
 {
   QContextMenuEvent *obj = static_cast<QContextMenuEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -141,9 +135,7 @@ HB_FUNC_STATIC(QCONTEXTMENUEVENT_GLOBALX)
   }
 }
 
-/*
-int globalY() const
-*/
+// int globalY() const
 HB_FUNC_STATIC(QCONTEXTMENUEVENT_GLOBALY)
 {
   QContextMenuEvent *obj = static_cast<QContextMenuEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -165,9 +157,7 @@ HB_FUNC_STATIC(QCONTEXTMENUEVENT_GLOBALY)
   }
 }
 
-/*
-const QPoint &pos() const
-*/
+// const QPoint &pos() const
 HB_FUNC_STATIC(QCONTEXTMENUEVENT_POS)
 {
   QContextMenuEvent *obj = static_cast<QContextMenuEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -190,9 +180,7 @@ HB_FUNC_STATIC(QCONTEXTMENUEVENT_POS)
   }
 }
 
-/*
-QContextMenuEvent::Reason reason() const
-*/
+// QContextMenuEvent::Reason reason() const
 HB_FUNC_STATIC(QCONTEXTMENUEVENT_REASON)
 {
   QContextMenuEvent *obj = static_cast<QContextMenuEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -214,9 +202,7 @@ HB_FUNC_STATIC(QCONTEXTMENUEVENT_REASON)
   }
 }
 
-/*
-int x() const
-*/
+// int x() const
 HB_FUNC_STATIC(QCONTEXTMENUEVENT_X)
 {
   QContextMenuEvent *obj = static_cast<QContextMenuEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -238,9 +224,7 @@ HB_FUNC_STATIC(QCONTEXTMENUEVENT_X)
   }
 }
 
-/*
-int y() const
-*/
+// int y() const
 HB_FUNC_STATIC(QCONTEXTMENUEVENT_Y)
 {
   QContextMenuEvent *obj = static_cast<QContextMenuEvent *>(Qt4xHb::itemGetPtrStackSelfItem());

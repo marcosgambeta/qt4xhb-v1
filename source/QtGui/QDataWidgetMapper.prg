@@ -75,7 +75,7 @@ RETURN
 #include <QtCore/QModelIndex>
 #include <QtGui/QAbstractItemDelegate>
 
-// QDataWidgetMapper(QObject *parent = 0)
+    // QDataWidgetMapper(QObject *parent = 0)
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
@@ -111,9 +111,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_ADDMAPPING)
 {
   if (ISNUMPAR(2) && ISQWIDGET(1) && HB_ISNUM(2))
   {
-    /*
-    void addMapping(QWidget *widget, int section)
-    */
+    // void addMapping(QWidget *widget, int section)
     QDataWidgetMapper *obj = qobject_cast<QDataWidgetMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -125,9 +123,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_ADDMAPPING)
   }
   else if (ISNUMPAR(3) && ISQWIDGET(1) && HB_ISNUM(2) && ISQBYTEARRAY(3))
   {
-    /*
-    void addMapping(QWidget *widget, int section, const QByteArray &propertyName)
-    */
+    // void addMapping(QWidget *widget, int section, const QByteArray &propertyName)
     QDataWidgetMapper *obj = qobject_cast<QDataWidgetMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -143,9 +139,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_ADDMAPPING)
   }
 }
 
-/*
-void clearMapping()
-*/
+// void clearMapping()
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_CLEARMAPPING)
 {
   QDataWidgetMapper *obj = qobject_cast<QDataWidgetMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -169,9 +163,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_CLEARMAPPING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int currentIndex() const
-*/
+// int currentIndex() const
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_CURRENTINDEX)
 {
   QDataWidgetMapper *obj = qobject_cast<QDataWidgetMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -193,9 +185,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_CURRENTINDEX)
   }
 }
 
-/*
-QAbstractItemDelegate *itemDelegate() const
-*/
+// QAbstractItemDelegate *itemDelegate() const
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_ITEMDELEGATE)
 {
   QDataWidgetMapper *obj = qobject_cast<QDataWidgetMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -218,9 +208,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_ITEMDELEGATE)
   }
 }
 
-/*
-QByteArray mappedPropertyName(QWidget *widget) const
-*/
+// QByteArray mappedPropertyName(QWidget *widget) const
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_MAPPEDPROPERTYNAME)
 {
   QDataWidgetMapper *obj = qobject_cast<QDataWidgetMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -243,9 +231,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_MAPPEDPROPERTYNAME)
   }
 }
 
-/*
-int mappedSection(QWidget *widget) const
-*/
+// int mappedSection(QWidget *widget) const
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_MAPPEDSECTION)
 {
   QDataWidgetMapper *obj = qobject_cast<QDataWidgetMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -267,9 +253,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_MAPPEDSECTION)
   }
 }
 
-/*
-QWidget *mappedWidgetAt(int section) const
-*/
+// QWidget *mappedWidgetAt(int section) const
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_MAPPEDWIDGETAT)
 {
   QDataWidgetMapper *obj = qobject_cast<QDataWidgetMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -292,9 +276,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_MAPPEDWIDGETAT)
   }
 }
 
-/*
-QAbstractItemModel *model() const
-*/
+// QAbstractItemModel *model() const
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_MODEL)
 {
   QDataWidgetMapper *obj = qobject_cast<QDataWidgetMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -317,9 +299,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_MODEL)
   }
 }
 
-/*
-Qt::Orientation orientation() const
-*/
+// Qt::Orientation orientation() const
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_ORIENTATION)
 {
   QDataWidgetMapper *obj = qobject_cast<QDataWidgetMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -341,9 +321,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_ORIENTATION)
   }
 }
 
-/*
-void removeMapping(QWidget *widget)
-*/
+// void removeMapping(QWidget *widget)
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_REMOVEMAPPING)
 {
   QDataWidgetMapper *obj = qobject_cast<QDataWidgetMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -367,9 +345,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_REMOVEMAPPING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QModelIndex rootIndex() const
-*/
+// QModelIndex rootIndex() const
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_ROOTINDEX)
 {
   QDataWidgetMapper *obj = qobject_cast<QDataWidgetMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -392,9 +368,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_ROOTINDEX)
   }
 }
 
-/*
-void setItemDelegate(QAbstractItemDelegate *delegate)
-*/
+// void setItemDelegate(QAbstractItemDelegate *delegate)
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETITEMDELEGATE)
 {
   QDataWidgetMapper *obj = qobject_cast<QDataWidgetMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -418,9 +392,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETITEMDELEGATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setModel(QAbstractItemModel *model)
-*/
+// void setModel(QAbstractItemModel *model)
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETMODEL)
 {
   QDataWidgetMapper *obj = qobject_cast<QDataWidgetMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -444,9 +416,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETMODEL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setOrientation(Qt::Orientation aOrientation)
-*/
+// void setOrientation(Qt::Orientation aOrientation)
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETORIENTATION)
 {
   QDataWidgetMapper *obj = qobject_cast<QDataWidgetMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -470,9 +440,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETORIENTATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setRootIndex(const QModelIndex &index)
-*/
+// void setRootIndex(const QModelIndex &index)
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETROOTINDEX)
 {
   QDataWidgetMapper *obj = qobject_cast<QDataWidgetMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -496,9 +464,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETROOTINDEX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSubmitPolicy(QDataWidgetMapper::SubmitPolicy policy)
-*/
+// void setSubmitPolicy(QDataWidgetMapper::SubmitPolicy policy)
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETSUBMITPOLICY)
 {
   QDataWidgetMapper *obj = qobject_cast<QDataWidgetMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -522,9 +488,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETSUBMITPOLICY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QDataWidgetMapper::SubmitPolicy submitPolicy() const
-*/
+// QDataWidgetMapper::SubmitPolicy submitPolicy() const
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_SUBMITPOLICY)
 {
   QDataWidgetMapper *obj = qobject_cast<QDataWidgetMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -546,9 +510,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_SUBMITPOLICY)
   }
 }
 
-/*
-void revert()
-*/
+// void revert()
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_REVERT)
 {
   QDataWidgetMapper *obj = qobject_cast<QDataWidgetMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -572,9 +534,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_REVERT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setCurrentIndex(int index)
-*/
+// virtual void setCurrentIndex(int index)
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETCURRENTINDEX)
 {
   QDataWidgetMapper *obj = qobject_cast<QDataWidgetMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -598,9 +558,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETCURRENTINDEX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCurrentModelIndex(const QModelIndex &index)
-*/
+// void setCurrentModelIndex(const QModelIndex &index)
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETCURRENTMODELINDEX)
 {
   QDataWidgetMapper *obj = qobject_cast<QDataWidgetMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -624,9 +582,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETCURRENTMODELINDEX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool submit()
-*/
+// bool submit()
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_SUBMIT)
 {
   QDataWidgetMapper *obj = qobject_cast<QDataWidgetMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -648,9 +604,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_SUBMIT)
   }
 }
 
-/*
-void toFirst()
-*/
+// void toFirst()
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_TOFIRST)
 {
   QDataWidgetMapper *obj = qobject_cast<QDataWidgetMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -674,9 +628,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_TOFIRST)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void toLast()
-*/
+// void toLast()
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_TOLAST)
 {
   QDataWidgetMapper *obj = qobject_cast<QDataWidgetMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -700,9 +652,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_TOLAST)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void toNext()
-*/
+// void toNext()
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_TONEXT)
 {
   QDataWidgetMapper *obj = qobject_cast<QDataWidgetMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -726,9 +676,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_TONEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void toPrevious()
-*/
+// void toPrevious()
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_TOPREVIOUS)
 {
   QDataWidgetMapper *obj = qobject_cast<QDataWidgetMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());

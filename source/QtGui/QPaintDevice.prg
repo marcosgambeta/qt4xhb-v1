@@ -76,9 +76,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int colorCount() const
-*/
+// int colorCount() const
 HB_FUNC_STATIC(QPAINTDEVICE_COLORCOUNT)
 {
   QPaintDevice *obj = static_cast<QPaintDevice *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -100,9 +98,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_COLORCOUNT)
   }
 }
 
-/*
-int depth() const
-*/
+// int depth() const
 HB_FUNC_STATIC(QPAINTDEVICE_DEPTH)
 {
   QPaintDevice *obj = static_cast<QPaintDevice *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -124,9 +120,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_DEPTH)
   }
 }
 
-/*
-int height() const
-*/
+// int height() const
 HB_FUNC_STATIC(QPAINTDEVICE_HEIGHT)
 {
   QPaintDevice *obj = static_cast<QPaintDevice *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -148,9 +142,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_HEIGHT)
   }
 }
 
-/*
-int heightMM() const
-*/
+// int heightMM() const
 HB_FUNC_STATIC(QPAINTDEVICE_HEIGHTMM)
 {
   QPaintDevice *obj = static_cast<QPaintDevice *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -172,9 +164,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_HEIGHTMM)
   }
 }
 
-/*
-int logicalDpiX() const
-*/
+// int logicalDpiX() const
 HB_FUNC_STATIC(QPAINTDEVICE_LOGICALDPIX)
 {
   QPaintDevice *obj = static_cast<QPaintDevice *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -196,9 +186,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_LOGICALDPIX)
   }
 }
 
-/*
-int logicalDpiY() const
-*/
+// int logicalDpiY() const
 HB_FUNC_STATIC(QPAINTDEVICE_LOGICALDPIY)
 {
   QPaintDevice *obj = static_cast<QPaintDevice *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -220,9 +208,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_LOGICALDPIY)
   }
 }
 
-/*
-int numColors() const
-*/
+// int numColors() const
 HB_FUNC_STATIC(QPAINTDEVICE_NUMCOLORS)
 {
   QPaintDevice *obj = static_cast<QPaintDevice *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -244,9 +230,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_NUMCOLORS)
   }
 }
 
-/*
-virtual QPaintEngine *paintEngine() const = 0
-*/
+// virtual QPaintEngine *paintEngine() const = 0
 HB_FUNC_STATIC(QPAINTDEVICE_PAINTENGINE)
 {
   QPaintDevice *obj = static_cast<QPaintDevice *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -269,9 +253,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_PAINTENGINE)
   }
 }
 
-/*
-bool paintingActive() const
-*/
+// bool paintingActive() const
 HB_FUNC_STATIC(QPAINTDEVICE_PAINTINGACTIVE)
 {
   QPaintDevice *obj = static_cast<QPaintDevice *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -293,9 +275,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_PAINTINGACTIVE)
   }
 }
 
-/*
-int physicalDpiX() const
-*/
+// int physicalDpiX() const
 HB_FUNC_STATIC(QPAINTDEVICE_PHYSICALDPIX)
 {
   QPaintDevice *obj = static_cast<QPaintDevice *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -317,9 +297,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_PHYSICALDPIX)
   }
 }
 
-/*
-int physicalDpiY() const
-*/
+// int physicalDpiY() const
 HB_FUNC_STATIC(QPAINTDEVICE_PHYSICALDPIY)
 {
   QPaintDevice *obj = static_cast<QPaintDevice *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -341,9 +319,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_PHYSICALDPIY)
   }
 }
 
-/*
-int width() const
-*/
+// int width() const
 HB_FUNC_STATIC(QPAINTDEVICE_WIDTH)
 {
   QPaintDevice *obj = static_cast<QPaintDevice *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -365,9 +341,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_WIDTH)
   }
 }
 
-/*
-int widthMM() const
-*/
+// int widthMM() const
 HB_FUNC_STATIC(QPAINTDEVICE_WIDTHMM)
 {
   QPaintDevice *obj = static_cast<QPaintDevice *>(Qt4xHb::itemGetPtrStackSelfItem());

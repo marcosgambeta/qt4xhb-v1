@@ -62,9 +62,7 @@ HB_FUNC_STATIC(QRADIOBUTTON_NEW)
   }
 }
 
-/*
-virtual QSize minimumSizeHint() const
-*/
+// virtual QSize minimumSizeHint() const
 HB_FUNC_STATIC(QRADIOBUTTON_MINIMUMSIZEHINT)
 {
   QRadioButton *obj = qobject_cast<QRadioButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -87,9 +85,7 @@ HB_FUNC_STATIC(QRADIOBUTTON_MINIMUMSIZEHINT)
   }
 }
 
-/*
-virtual QSize sizeHint() const
-*/
+// virtual QSize sizeHint() const
 HB_FUNC_STATIC(QRADIOBUTTON_SIZEHINT)
 {
   QRadioButton *obj = qobject_cast<QRadioButton *>(Qt4xHb::getQObjectPointerFromSelfItem());

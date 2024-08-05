@@ -62,7 +62,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QToolBox(QWidget *parent = 0, Qt::WindowFlags f = 0)
+    // QToolBox(QWidget *parent = 0, Qt::WindowFlags f = 0)
 HB_FUNC_STATIC(QTOOLBOX_NEW)
 {
   if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
@@ -98,9 +98,7 @@ HB_FUNC_STATIC(QTOOLBOX_ADDITEM)
 {
   if (ISNUMPAR(3) && ISQWIDGET(1) && (ISQICON(2) || HB_ISCHAR(2)) && HB_ISCHAR(3))
   {
-    /*
-    int addItem(QWidget *widget, const QIcon &iconSet, const QString &text)
-    */
+    // int addItem(QWidget *widget, const QIcon &iconSet, const QString &text)
     QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -111,9 +109,7 @@ HB_FUNC_STATIC(QTOOLBOX_ADDITEM)
   }
   else if (ISNUMPAR(2) && ISQWIDGET(1) && HB_ISCHAR(2))
   {
-    /*
-    int addItem(QWidget *w, const QString &text)
-    */
+    // int addItem(QWidget *w, const QString &text)
     QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -127,9 +123,7 @@ HB_FUNC_STATIC(QTOOLBOX_ADDITEM)
   }
 }
 
-/*
-int count() const
-*/
+// int count() const
 HB_FUNC_STATIC(QTOOLBOX_COUNT)
 {
   QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -151,9 +145,7 @@ HB_FUNC_STATIC(QTOOLBOX_COUNT)
   }
 }
 
-/*
-int currentIndex() const
-*/
+// int currentIndex() const
 HB_FUNC_STATIC(QTOOLBOX_CURRENTINDEX)
 {
   QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -175,9 +167,7 @@ HB_FUNC_STATIC(QTOOLBOX_CURRENTINDEX)
   }
 }
 
-/*
-QWidget *currentWidget() const
-*/
+// QWidget *currentWidget() const
 HB_FUNC_STATIC(QTOOLBOX_CURRENTWIDGET)
 {
   QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -200,9 +190,7 @@ HB_FUNC_STATIC(QTOOLBOX_CURRENTWIDGET)
   }
 }
 
-/*
-int indexOf(QWidget *widget) const
-*/
+// int indexOf(QWidget *widget) const
 HB_FUNC_STATIC(QTOOLBOX_INDEXOF)
 {
   QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -228,9 +216,7 @@ HB_FUNC_STATIC(QTOOLBOX_INSERTITEM)
 {
   if (ISNUMPAR(4) && HB_ISNUM(1) && ISQWIDGET(2) && (ISQICON(3) || HB_ISCHAR(3)) && HB_ISCHAR(4))
   {
-    /*
-    int insertItem(int index, QWidget *widget, const QIcon &icon, const QString &text)
-    */
+    // int insertItem(int index, QWidget *widget, const QIcon &icon, const QString &text)
     QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -242,9 +228,7 @@ HB_FUNC_STATIC(QTOOLBOX_INSERTITEM)
   }
   else if (ISNUMPAR(3) && HB_ISNUM(1) && ISQWIDGET(2) && HB_ISCHAR(3))
   {
-    /*
-    int insertItem(int index, QWidget *widget, const QString &text)
-    */
+    // int insertItem(int index, QWidget *widget, const QString &text)
     QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -258,9 +242,7 @@ HB_FUNC_STATIC(QTOOLBOX_INSERTITEM)
   }
 }
 
-/*
-bool isItemEnabled(int index) const
-*/
+// bool isItemEnabled(int index) const
 HB_FUNC_STATIC(QTOOLBOX_ISITEMENABLED)
 {
   QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -282,9 +264,7 @@ HB_FUNC_STATIC(QTOOLBOX_ISITEMENABLED)
   }
 }
 
-/*
-QIcon itemIcon(int index) const
-*/
+// QIcon itemIcon(int index) const
 HB_FUNC_STATIC(QTOOLBOX_ITEMICON)
 {
   QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -307,9 +287,7 @@ HB_FUNC_STATIC(QTOOLBOX_ITEMICON)
   }
 }
 
-/*
-QString itemText(int index) const
-*/
+// QString itemText(int index) const
 HB_FUNC_STATIC(QTOOLBOX_ITEMTEXT)
 {
   QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -331,9 +309,7 @@ HB_FUNC_STATIC(QTOOLBOX_ITEMTEXT)
   }
 }
 
-/*
-QString itemToolTip(int index) const
-*/
+// QString itemToolTip(int index) const
 HB_FUNC_STATIC(QTOOLBOX_ITEMTOOLTIP)
 {
   QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -355,9 +331,7 @@ HB_FUNC_STATIC(QTOOLBOX_ITEMTOOLTIP)
   }
 }
 
-/*
-void removeItem(int index)
-*/
+// void removeItem(int index)
 HB_FUNC_STATIC(QTOOLBOX_REMOVEITEM)
 {
   QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -381,9 +355,7 @@ HB_FUNC_STATIC(QTOOLBOX_REMOVEITEM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setItemEnabled(int index, bool enabled)
-*/
+// void setItemEnabled(int index, bool enabled)
 HB_FUNC_STATIC(QTOOLBOX_SETITEMENABLED)
 {
   QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -407,9 +379,7 @@ HB_FUNC_STATIC(QTOOLBOX_SETITEMENABLED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setItemIcon(int index, const QIcon &icon)
-*/
+// void setItemIcon(int index, const QIcon &icon)
 HB_FUNC_STATIC(QTOOLBOX_SETITEMICON)
 {
   QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -433,9 +403,7 @@ HB_FUNC_STATIC(QTOOLBOX_SETITEMICON)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setItemText(int index, const QString &text)
-*/
+// void setItemText(int index, const QString &text)
 HB_FUNC_STATIC(QTOOLBOX_SETITEMTEXT)
 {
   QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -459,9 +427,7 @@ HB_FUNC_STATIC(QTOOLBOX_SETITEMTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setItemToolTip(int index, const QString &toolTip)
-*/
+// void setItemToolTip(int index, const QString &toolTip)
 HB_FUNC_STATIC(QTOOLBOX_SETITEMTOOLTIP)
 {
   QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -485,9 +451,7 @@ HB_FUNC_STATIC(QTOOLBOX_SETITEMTOOLTIP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWidget *widget(int index) const
-*/
+// QWidget *widget(int index) const
 HB_FUNC_STATIC(QTOOLBOX_WIDGET)
 {
   QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -510,9 +474,7 @@ HB_FUNC_STATIC(QTOOLBOX_WIDGET)
   }
 }
 
-/*
-void setCurrentIndex(int index)
-*/
+// void setCurrentIndex(int index)
 HB_FUNC_STATIC(QTOOLBOX_SETCURRENTINDEX)
 {
   QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -536,9 +498,7 @@ HB_FUNC_STATIC(QTOOLBOX_SETCURRENTINDEX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCurrentWidget(QWidget *widget)
-*/
+// void setCurrentWidget(QWidget *widget)
 HB_FUNC_STATIC(QTOOLBOX_SETCURRENTWIDGET)
 {
   QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());

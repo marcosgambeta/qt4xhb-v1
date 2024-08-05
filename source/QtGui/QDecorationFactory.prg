@@ -48,9 +48,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    static QDecoration *create(const QString &key)
-    */
+    // static QDecoration *create(const QString &key)
 HB_FUNC_STATIC(QDECORATIONFACTORY_CREATE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -68,9 +66,7 @@ HB_FUNC_STATIC(QDECORATIONFACTORY_CREATE)
 #endif
 }
 
-/*
-static QStringList keys()
-*/
+// static QStringList keys()
 HB_FUNC_STATIC(QDECORATIONFACTORY_KEYS)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

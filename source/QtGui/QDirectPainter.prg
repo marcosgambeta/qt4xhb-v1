@@ -59,7 +59,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QDirectPainter(QObject *parent = 0, QDirectPainter::SurfaceFlag flag = QDirectPainter::NonReserved)
+    // QDirectPainter(QObject *parent = 0, QDirectPainter::SurfaceFlag flag = QDirectPainter::NonReserved)
 HB_FUNC_STATIC(QDIRECTPAINTER_NEW)
 {
   if (ISBETWEEN(0, 2) && (ISQOBJECT(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
@@ -93,9 +93,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QRegion allocatedRegion() const
-*/
+// QRegion allocatedRegion() const
 HB_FUNC_STATIC(QDIRECTPAINTER_ALLOCATEDREGION)
 {
   QDirectPainter *obj = qobject_cast<QDirectPainter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -122,9 +120,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_ENDPAINTING)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    void endPainting()
-    */
+    // void endPainting()
     QDirectPainter *obj = qobject_cast<QDirectPainter *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -136,9 +132,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_ENDPAINTING)
   }
   else if (ISNUMPAR(1) && ISQREGION(1))
   {
-    /*
-    void endPainting(const QRegion &region)
-    */
+    // void endPainting(const QRegion &region)
     QDirectPainter *obj = qobject_cast<QDirectPainter *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -154,9 +148,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_ENDPAINTING)
   }
 }
 
-/*
-void flush(const QRegion &region)
-*/
+// void flush(const QRegion &region)
 HB_FUNC_STATIC(QDIRECTPAINTER_FLUSH)
 {
   QDirectPainter *obj = qobject_cast<QDirectPainter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -180,9 +172,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_FLUSH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QRect geometry() const
-*/
+// QRect geometry() const
 HB_FUNC_STATIC(QDIRECTPAINTER_GEOMETRY)
 {
   QDirectPainter *obj = qobject_cast<QDirectPainter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -205,9 +195,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_GEOMETRY)
   }
 }
 
-/*
-void lower()
-*/
+// void lower()
 HB_FUNC_STATIC(QDIRECTPAINTER_LOWER)
 {
   QDirectPainter *obj = qobject_cast<QDirectPainter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -231,9 +219,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_LOWER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void raise()
-*/
+// void raise()
 HB_FUNC_STATIC(QDIRECTPAINTER_RAISE)
 {
   QDirectPainter *obj = qobject_cast<QDirectPainter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -257,9 +243,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_RAISE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void regionChanged(const QRegion &newRegion)
-*/
+// virtual void regionChanged(const QRegion &newRegion)
 HB_FUNC_STATIC(QDIRECTPAINTER_REGIONCHANGED)
 {
   QDirectPainter *obj = qobject_cast<QDirectPainter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -283,9 +267,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_REGIONCHANGED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QRegion requestedRegion() const
-*/
+// QRegion requestedRegion() const
 HB_FUNC_STATIC(QDIRECTPAINTER_REQUESTEDREGION)
 {
   QDirectPainter *obj = qobject_cast<QDirectPainter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -308,9 +290,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_REQUESTEDREGION)
   }
 }
 
-/*
-void setGeometry(const QRect &rectangle)
-*/
+// void setGeometry(const QRect &rectangle)
 HB_FUNC_STATIC(QDIRECTPAINTER_SETGEOMETRY)
 {
   QDirectPainter *obj = qobject_cast<QDirectPainter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -334,9 +314,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_SETGEOMETRY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setRegion(const QRegion &region)
-*/
+// void setRegion(const QRegion &region)
 HB_FUNC_STATIC(QDIRECTPAINTER_SETREGION)
 {
   QDirectPainter *obj = qobject_cast<QDirectPainter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -360,9 +338,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_SETREGION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void startPainting(bool lockDisplay = true)
-*/
+// void startPainting(bool lockDisplay = true)
 HB_FUNC_STATIC(QDIRECTPAINTER_STARTPAINTING)
 {
   QDirectPainter *obj = qobject_cast<QDirectPainter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -386,9 +362,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_STARTPAINTING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static int linestep()
-*/
+// static int linestep()
 HB_FUNC_STATIC(QDIRECTPAINTER_LINESTEP)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -405,9 +379,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_LINESTEP)
 #endif
 }
 
-/*
-static void lock()
-*/
+// static void lock()
 HB_FUNC_STATIC(QDIRECTPAINTER_LOCK)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -426,9 +398,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_LOCK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static int screenDepth()
-*/
+// static int screenDepth()
 HB_FUNC_STATIC(QDIRECTPAINTER_SCREENDEPTH)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -445,9 +415,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_SCREENDEPTH)
 #endif
 }
 
-/*
-static int screenHeight()
-*/
+// static int screenHeight()
 HB_FUNC_STATIC(QDIRECTPAINTER_SCREENHEIGHT)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -464,9 +432,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_SCREENHEIGHT)
 #endif
 }
 
-/*
-static int screenWidth()
-*/
+// static int screenWidth()
 HB_FUNC_STATIC(QDIRECTPAINTER_SCREENWIDTH)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -483,9 +449,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_SCREENWIDTH)
 #endif
 }
 
-/*
-static void unlock()
-*/
+// static void unlock()
 HB_FUNC_STATIC(QDIRECTPAINTER_UNLOCK)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

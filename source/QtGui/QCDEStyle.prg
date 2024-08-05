@@ -45,7 +45,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QCDEStyle(bool useHighlightCols = false)
+    // QCDEStyle(bool useHighlightCols = false)
 HB_FUNC_STATIC(QCDESTYLE_NEW)
 {
   if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
@@ -77,10 +77,8 @@ HB_FUNC_STATIC(QCDESTYLE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void drawControl(QStyle::ControlElement element, const QStyleOption *opt, QPainter *p, const QWidget *widget
-= 0) const
-*/
+// virtual void drawControl(QStyle::ControlElement element, const QStyleOption *opt, QPainter *p, const QWidget *widget
+// = 0) const
 HB_FUNC_STATIC(QCDESTYLE_DRAWCONTROL)
 {
   QCDEStyle *obj = qobject_cast<QCDEStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -104,10 +102,8 @@ HB_FUNC_STATIC(QCDESTYLE_DRAWCONTROL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void drawPrimitive(QStyle::PrimitiveElement pe, const QStyleOption *opt, QPainter *p, const QWidget *widget
-= 0) const
-*/
+// virtual void drawPrimitive(QStyle::PrimitiveElement pe, const QStyleOption *opt, QPainter *p, const QWidget *widget =
+// 0) const
 HB_FUNC_STATIC(QCDESTYLE_DRAWPRIMITIVE)
 {
   QCDEStyle *obj = qobject_cast<QCDEStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -131,9 +127,7 @@ HB_FUNC_STATIC(QCDESTYLE_DRAWPRIMITIVE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual int pixelMetric(QStyle::PixelMetric metric, const QStyleOption *option = 0, const QWidget *widget = 0) const
-*/
+// virtual int pixelMetric(QStyle::PixelMetric metric, const QStyleOption *option = 0, const QWidget *widget = 0) const
 HB_FUNC_STATIC(QCDESTYLE_PIXELMETRIC)
 {
   QCDEStyle *obj = qobject_cast<QCDEStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -156,9 +150,7 @@ HB_FUNC_STATIC(QCDESTYLE_PIXELMETRIC)
   }
 }
 
-/*
-virtual QPalette standardPalette() const
-*/
+// virtual QPalette standardPalette() const
 HB_FUNC_STATIC(QCDESTYLE_STANDARDPALETTE)
 {
   QCDEStyle *obj = qobject_cast<QCDEStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());

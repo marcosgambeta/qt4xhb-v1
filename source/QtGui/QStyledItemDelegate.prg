@@ -52,7 +52,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QStyledItemDelegate(QObject *parent = 0)
+    // QStyledItemDelegate(QObject *parent = 0)
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
@@ -84,9 +84,7 @@ HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QString displayText(const QVariant &value, const QLocale &locale) const
-*/
+// virtual QString displayText(const QVariant &value, const QLocale &locale) const
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_DISPLAYTEXT)
 {
   QStyledItemDelegate *obj = qobject_cast<QStyledItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -108,9 +106,7 @@ HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_DISPLAYTEXT)
   }
 }
 
-/*
-QItemEditorFactory *itemEditorFactory() const
-*/
+// QItemEditorFactory *itemEditorFactory() const
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_ITEMEDITORFACTORY)
 {
   QStyledItemDelegate *obj = qobject_cast<QStyledItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -133,9 +129,7 @@ HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_ITEMEDITORFACTORY)
   }
 }
 
-/*
-void setItemEditorFactory(QItemEditorFactory *factory)
-*/
+// void setItemEditorFactory(QItemEditorFactory *factory)
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_SETITEMEDITORFACTORY)
 {
   QStyledItemDelegate *obj = qobject_cast<QStyledItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -159,9 +153,7 @@ HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_SETITEMEDITORFACTORY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
-*/
+// virtual QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_CREATEEDITOR)
 {
   QStyledItemDelegate *obj = qobject_cast<QStyledItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -184,9 +176,7 @@ HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_CREATEEDITOR)
   }
 }
 
-/*
-virtual void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
-*/
+// virtual void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_PAINT)
 {
   QStyledItemDelegate *obj = qobject_cast<QStyledItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -210,9 +200,7 @@ HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_PAINT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setEditorData(QWidget *editor, const QModelIndex &index) const
-*/
+// virtual void setEditorData(QWidget *editor, const QModelIndex &index) const
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_SETEDITORDATA)
 {
   QStyledItemDelegate *obj = qobject_cast<QStyledItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -236,9 +224,7 @@ HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_SETEDITORDATA)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
-*/
+// virtual void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_SETMODELDATA)
 {
   QStyledItemDelegate *obj = qobject_cast<QStyledItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -262,9 +248,7 @@ HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_SETMODELDATA)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const
-*/
+// virtual QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_SIZEHINT)
 {
   QStyledItemDelegate *obj = qobject_cast<QStyledItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -287,10 +271,8 @@ HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_SIZEHINT)
   }
 }
 
-/*
-virtual void updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index)
-const
-*/
+// virtual void updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index)
+// const
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_UPDATEEDITORGEOMETRY)
 {
   QStyledItemDelegate *obj = qobject_cast<QStyledItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());

@@ -61,9 +61,7 @@ HB_FUNC_STATIC(QSWIPEGESTURE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSwipeGesture::SwipeDirection horizontalDirection() const
-*/
+// QSwipeGesture::SwipeDirection horizontalDirection() const
 HB_FUNC_STATIC(QSWIPEGESTURE_HORIZONTALDIRECTION)
 {
   QSwipeGesture *obj = qobject_cast<QSwipeGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -85,9 +83,7 @@ HB_FUNC_STATIC(QSWIPEGESTURE_HORIZONTALDIRECTION)
   }
 }
 
-/*
-void setSwipeAngle(qreal value)
-*/
+// void setSwipeAngle(qreal value)
 HB_FUNC_STATIC(QSWIPEGESTURE_SETSWIPEANGLE)
 {
   QSwipeGesture *obj = qobject_cast<QSwipeGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -111,9 +107,7 @@ HB_FUNC_STATIC(QSWIPEGESTURE_SETSWIPEANGLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qreal swipeAngle() const
-*/
+// qreal swipeAngle() const
 HB_FUNC_STATIC(QSWIPEGESTURE_SWIPEANGLE)
 {
   QSwipeGesture *obj = qobject_cast<QSwipeGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -135,9 +129,7 @@ HB_FUNC_STATIC(QSWIPEGESTURE_SWIPEANGLE)
   }
 }
 
-/*
-QSwipeGesture::SwipeDirection verticalDirection() const
-*/
+// QSwipeGesture::SwipeDirection verticalDirection() const
 HB_FUNC_STATIC(QSWIPEGESTURE_VERTICALDIRECTION)
 {
   QSwipeGesture *obj = qobject_cast<QSwipeGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());

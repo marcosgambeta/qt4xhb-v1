@@ -65,9 +65,7 @@ HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QBrush brush() const
-*/
+// QBrush brush() const
 HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_BRUSH)
 {
   QAbstractGraphicsShapeItem *obj = static_cast<QAbstractGraphicsShapeItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -90,9 +88,7 @@ HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_BRUSH)
   }
 }
 
-/*
-QPen pen() const
-*/
+// QPen pen() const
 HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_PEN)
 {
   QAbstractGraphicsShapeItem *obj = static_cast<QAbstractGraphicsShapeItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -115,9 +111,7 @@ HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_PEN)
   }
 }
 
-/*
-void setBrush(const QBrush &brush)
-*/
+// void setBrush(const QBrush &brush)
 HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_SETBRUSH)
 {
   QAbstractGraphicsShapeItem *obj = static_cast<QAbstractGraphicsShapeItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -141,9 +135,7 @@ HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_SETBRUSH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPen(const QPen &pen)
-*/
+// void setPen(const QPen &pen)
 HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_SETPEN)
 {
   QAbstractGraphicsShapeItem *obj = static_cast<QAbstractGraphicsShapeItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -167,9 +159,7 @@ HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_SETPEN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool isObscuredBy(const QGraphicsItem *item) const
-*/
+// virtual bool isObscuredBy(const QGraphicsItem *item) const
 HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_ISOBSCUREDBY)
 {
   QAbstractGraphicsShapeItem *obj = static_cast<QAbstractGraphicsShapeItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -191,9 +181,7 @@ HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_ISOBSCUREDBY)
   }
 }
 
-/*
-virtual QPainterPath opaqueArea() const
-*/
+// virtual QPainterPath opaqueArea() const
 HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_OPAQUEAREA)
 {
   QAbstractGraphicsShapeItem *obj = static_cast<QAbstractGraphicsShapeItem *>(Qt4xHb::itemGetPtrStackSelfItem());

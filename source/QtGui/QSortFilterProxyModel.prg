@@ -101,7 +101,7 @@ RETURN
 #include <QtCore/QSize>
 #include <QtCore/QMimeData>
 
-// QSortFilterProxyModel(QObject *parent = 0)
+    // QSortFilterProxyModel(QObject *parent = 0)
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
@@ -133,9 +133,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool dynamicSortFilter() const
-*/
+// bool dynamicSortFilter() const
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_DYNAMICSORTFILTER)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -157,9 +155,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_DYNAMICSORTFILTER)
   }
 }
 
-/*
-Qt::CaseSensitivity filterCaseSensitivity() const
-*/
+// Qt::CaseSensitivity filterCaseSensitivity() const
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_FILTERCASESENSITIVITY)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -181,9 +177,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_FILTERCASESENSITIVITY)
   }
 }
 
-/*
-int filterKeyColumn() const
-*/
+// int filterKeyColumn() const
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_FILTERKEYCOLUMN)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -205,9 +199,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_FILTERKEYCOLUMN)
   }
 }
 
-/*
-QRegExp filterRegExp() const
-*/
+// QRegExp filterRegExp() const
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_FILTERREGEXP)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -230,9 +222,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_FILTERREGEXP)
   }
 }
 
-/*
-int filterRole() const
-*/
+// int filterRole() const
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_FILTERROLE)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -254,9 +244,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_FILTERROLE)
   }
 }
 
-/*
-bool isSortLocaleAware() const
-*/
+// bool isSortLocaleAware() const
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_ISSORTLOCALEAWARE)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -278,9 +266,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_ISSORTLOCALEAWARE)
   }
 }
 
-/*
-void setDynamicSortFilter(bool enable)
-*/
+// void setDynamicSortFilter(bool enable)
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETDYNAMICSORTFILTER)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -304,9 +290,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETDYNAMICSORTFILTER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFilterCaseSensitivity(Qt::CaseSensitivity cs)
-*/
+// void setFilterCaseSensitivity(Qt::CaseSensitivity cs)
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERCASESENSITIVITY)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -330,9 +314,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERCASESENSITIVITY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFilterKeyColumn(int column)
-*/
+// void setFilterKeyColumn(int column)
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERKEYCOLUMN)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -356,9 +338,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERKEYCOLUMN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFilterRole(int role)
-*/
+// void setFilterRole(int role)
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERROLE)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -382,9 +362,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERROLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSortCaseSensitivity(Qt::CaseSensitivity cs)
-*/
+// void setSortCaseSensitivity(Qt::CaseSensitivity cs)
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETSORTCASESENSITIVITY)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -408,9 +386,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETSORTCASESENSITIVITY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSortLocaleAware(bool on)
-*/
+// void setSortLocaleAware(bool on)
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETSORTLOCALEAWARE)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -434,9 +410,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETSORTLOCALEAWARE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSortRole(int role)
-*/
+// void setSortRole(int role)
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETSORTROLE)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -460,9 +434,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETSORTROLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::CaseSensitivity sortCaseSensitivity() const
-*/
+// Qt::CaseSensitivity sortCaseSensitivity() const
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SORTCASESENSITIVITY)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -484,9 +456,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SORTCASESENSITIVITY)
   }
 }
 
-/*
-int sortColumn() const
-*/
+// int sortColumn() const
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SORTCOLUMN)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -508,9 +478,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SORTCOLUMN)
   }
 }
 
-/*
-Qt::SortOrder sortOrder() const
-*/
+// Qt::SortOrder sortOrder() const
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SORTORDER)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -532,9 +500,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SORTORDER)
   }
 }
 
-/*
-int sortRole() const
-*/
+// int sortRole() const
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SORTROLE)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -556,9 +522,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SORTROLE)
   }
 }
 
-/*
-virtual QModelIndex buddy(const QModelIndex &index) const
-*/
+// virtual QModelIndex buddy(const QModelIndex &index) const
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_BUDDY)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -581,9 +545,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_BUDDY)
   }
 }
 
-/*
-virtual bool canFetchMore(const QModelIndex &parent) const
-*/
+// virtual bool canFetchMore(const QModelIndex &parent) const
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_CANFETCHMORE)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -605,9 +567,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_CANFETCHMORE)
   }
 }
 
-/*
-virtual int columnCount(const QModelIndex &parent = QModelIndex()) const
-*/
+// virtual int columnCount(const QModelIndex &parent = QModelIndex()) const
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_COLUMNCOUNT)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -629,9 +589,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_COLUMNCOUNT)
   }
 }
 
-/*
-virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
-*/
+// virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_DATA)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -654,10 +612,8 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_DATA)
   }
 }
 
-/*
-virtual bool dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &
-parent)
-*/
+// virtual bool dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex
+// &parent)
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_DROPMIMEDATA)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -679,9 +635,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_DROPMIMEDATA)
   }
 }
 
-/*
-virtual void fetchMore(const QModelIndex &parent)
-*/
+// virtual void fetchMore(const QModelIndex &parent)
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_FETCHMORE)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -705,9 +659,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_FETCHMORE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual Qt::ItemFlags flags(const QModelIndex &index) const
-*/
+// virtual Qt::ItemFlags flags(const QModelIndex &index) const
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_FLAGS)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -729,9 +681,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_FLAGS)
   }
 }
 
-/*
-virtual bool hasChildren(const QModelIndex &parent = QModelIndex()) const
-*/
+// virtual bool hasChildren(const QModelIndex &parent = QModelIndex()) const
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_HASCHILDREN)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -753,9 +703,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_HASCHILDREN)
   }
 }
 
-/*
-virtual QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const
-*/
+// virtual QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_HEADERDATA)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -778,9 +726,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_HEADERDATA)
   }
 }
 
-/*
-virtual QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
-*/
+// virtual QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_INDEX)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -804,9 +750,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_INDEX)
   }
 }
 
-/*
-virtual bool insertColumns(int column, int count, const QModelIndex &parent = QModelIndex())
-*/
+// virtual bool insertColumns(int column, int count, const QModelIndex &parent = QModelIndex())
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_INSERTCOLUMNS)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -829,9 +773,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_INSERTCOLUMNS)
   }
 }
 
-/*
-virtual bool insertRows(int row, int count, const QModelIndex &parent = QModelIndex())
-*/
+// virtual bool insertRows(int row, int count, const QModelIndex &parent = QModelIndex())
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_INSERTROWS)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -854,9 +796,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_INSERTROWS)
   }
 }
 
-/*
-virtual QModelIndex mapFromSource(const QModelIndex &sourceIndex) const
-*/
+// virtual QModelIndex mapFromSource(const QModelIndex &sourceIndex) const
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MAPFROMSOURCE)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -879,9 +819,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MAPFROMSOURCE)
   }
 }
 
-/*
-virtual QItemSelection mapSelectionFromSource(const QItemSelection &sourceSelection) const
-*/
+// virtual QItemSelection mapSelectionFromSource(const QItemSelection &sourceSelection) const
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MAPSELECTIONFROMSOURCE)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -904,9 +842,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MAPSELECTIONFROMSOURCE)
   }
 }
 
-/*
-virtual QItemSelection mapSelectionToSource(const QItemSelection &proxySelection) const
-*/
+// virtual QItemSelection mapSelectionToSource(const QItemSelection &proxySelection) const
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MAPSELECTIONTOSOURCE)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -929,9 +865,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MAPSELECTIONTOSOURCE)
   }
 }
 
-/*
-virtual QModelIndex mapToSource(const QModelIndex &proxyIndex) const
-*/
+// virtual QModelIndex mapToSource(const QModelIndex &proxyIndex) const
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MAPTOSOURCE)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -954,10 +888,8 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MAPTOSOURCE)
   }
 }
 
-/*
-virtual QModelIndexList match(const QModelIndex &start, int role, const QVariant &value, int hits = 1, Qt::MatchFlags
-flags = Qt::MatchFlags(Qt::MatchStartsWith | Qt::MatchWrap)) const
-*/
+// virtual QModelIndexList match(const QModelIndex &start, int role, const QVariant &value, int hits = 1, Qt::MatchFlags
+// flags = Qt::MatchFlags(Qt::MatchStartsWith | Qt::MatchWrap)) const
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MATCH)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1010,9 +942,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MATCH)
   }
 }
 
-/*
-virtual QMimeData *mimeData(const QModelIndexList &indexes) const
-*/
+// virtual QMimeData *mimeData(const QModelIndexList &indexes) const
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MIMEDATA)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1025,7 +955,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MIMEDATA)
 #endif
       QModelIndexList par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      const int nLen1 = hb_arrayLen(aList1);
+      int nLen1 = hb_arrayLen(aList1);
       for (int i1 = 0; i1 < nLen1; i1++)
       {
         par1 << *static_cast<QModelIndex *>(
@@ -1043,9 +973,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MIMEDATA)
   }
 }
 
-/*
-virtual QStringList mimeTypes() const
-*/
+// virtual QStringList mimeTypes() const
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MIMETYPES)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1067,9 +995,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MIMETYPES)
   }
 }
 
-/*
-virtual QModelIndex parent(const QModelIndex &child) const
-*/
+// virtual QModelIndex parent(const QModelIndex &child) const
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_PARENT)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1092,9 +1018,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_PARENT)
   }
 }
 
-/*
-virtual bool removeColumns(int column, int count, const QModelIndex &parent = QModelIndex())
-*/
+// virtual bool removeColumns(int column, int count, const QModelIndex &parent = QModelIndex())
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_REMOVECOLUMNS)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1117,9 +1041,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_REMOVECOLUMNS)
   }
 }
 
-/*
-virtual bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex())
-*/
+// virtual bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex())
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_REMOVEROWS)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1142,9 +1064,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_REMOVEROWS)
   }
 }
 
-/*
-virtual int rowCount(const QModelIndex &parent = QModelIndex()) const
-*/
+// virtual int rowCount(const QModelIndex &parent = QModelIndex()) const
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_ROWCOUNT)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1166,9 +1086,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_ROWCOUNT)
   }
 }
 
-/*
-virtual bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole)
-*/
+// virtual bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole)
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETDATA)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1190,9 +1108,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETDATA)
   }
 }
 
-/*
-virtual bool setHeaderData(int section, Qt::Orientation orientation, const QVariant &value, int role = Qt::EditRole)
-*/
+// virtual bool setHeaderData(int section, Qt::Orientation orientation, const QVariant &value, int role = Qt::EditRole)
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETHEADERDATA)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1214,9 +1130,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETHEADERDATA)
   }
 }
 
-/*
-virtual void setSourceModel(QAbstractItemModel *sourceModel)
-*/
+// virtual void setSourceModel(QAbstractItemModel *sourceModel)
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETSOURCEMODEL)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1240,9 +1154,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETSOURCEMODEL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
-*/
+// virtual void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SORT)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1266,9 +1178,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SORT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QSize span(const QModelIndex &index) const
-*/
+// virtual QSize span(const QModelIndex &index) const
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SPAN)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1291,9 +1201,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SPAN)
   }
 }
 
-/*
-virtual Qt::DropActions supportedDropActions() const
-*/
+// virtual Qt::DropActions supportedDropActions() const
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SUPPORTEDDROPACTIONS)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1315,9 +1223,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SUPPORTEDDROPACTIONS)
   }
 }
 
-/*
-void invalidate()
-*/
+// void invalidate()
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_INVALIDATE)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1341,9 +1247,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_INVALIDATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFilterFixedString(const QString &pattern)
-*/
+// void setFilterFixedString(const QString &pattern)
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERFIXEDSTRING)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1371,9 +1275,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERREGEXP)
 {
   if (ISNUMPAR(1) && ISQREGEXP(1))
   {
-    /*
-    void setFilterRegExp(const QRegExp &regExp)
-    */
+    // void setFilterRegExp(const QRegExp &regExp)
     QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -1385,9 +1287,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERREGEXP)
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    void setFilterRegExp(const QString &pattern)
-    */
+    // void setFilterRegExp(const QString &pattern)
     QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -1403,9 +1303,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERREGEXP)
   }
 }
 
-/*
-void setFilterWildcard(const QString &pattern)
-*/
+// void setFilterWildcard(const QString &pattern)
 HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERWILDCARD)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());

@@ -60,9 +60,7 @@ HB_FUNC_STATIC(QGENERICPLUGIN_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QObject *create(const QString &key, const QString &specification) = 0
-*/
+// virtual QObject *create(const QString &key, const QString &specification) = 0
 HB_FUNC_STATIC(QGENERICPLUGIN_CREATE)
 {
   QGenericPlugin *obj = qobject_cast<QGenericPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -85,9 +83,7 @@ HB_FUNC_STATIC(QGENERICPLUGIN_CREATE)
   }
 }
 
-/*
-virtual QStringList keys() const = 0
-*/
+// virtual QStringList keys() const = 0
 HB_FUNC_STATIC(QGENERICPLUGIN_KEYS)
 {
   QGenericPlugin *obj = qobject_cast<QGenericPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());

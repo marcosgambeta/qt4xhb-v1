@@ -101,9 +101,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QMenu *contextMenu() const
-*/
+// QMenu *contextMenu() const
 HB_FUNC_STATIC(QSYSTEMTRAYICON_CONTEXTMENU)
 {
   QSystemTrayIcon *obj = qobject_cast<QSystemTrayIcon *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -126,9 +124,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_CONTEXTMENU)
   }
 }
 
-/*
-QRect geometry() const
-*/
+// QRect geometry() const
 HB_FUNC_STATIC(QSYSTEMTRAYICON_GEOMETRY)
 {
   QSystemTrayIcon *obj = qobject_cast<QSystemTrayIcon *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -151,9 +147,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_GEOMETRY)
   }
 }
 
-/*
-QIcon icon() const
-*/
+// QIcon icon() const
 HB_FUNC_STATIC(QSYSTEMTRAYICON_ICON)
 {
   QSystemTrayIcon *obj = qobject_cast<QSystemTrayIcon *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -176,9 +170,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_ICON)
   }
 }
 
-/*
-bool isVisible() const
-*/
+// bool isVisible() const
 HB_FUNC_STATIC(QSYSTEMTRAYICON_ISVISIBLE)
 {
   QSystemTrayIcon *obj = qobject_cast<QSystemTrayIcon *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -200,9 +192,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_ISVISIBLE)
   }
 }
 
-/*
-void setContextMenu(QMenu *menu)
-*/
+// void setContextMenu(QMenu *menu)
 HB_FUNC_STATIC(QSYSTEMTRAYICON_SETCONTEXTMENU)
 {
   QSystemTrayIcon *obj = qobject_cast<QSystemTrayIcon *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -226,9 +216,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_SETCONTEXTMENU)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setIcon(const QIcon &icon)
-*/
+// void setIcon(const QIcon &icon)
 HB_FUNC_STATIC(QSYSTEMTRAYICON_SETICON)
 {
   QSystemTrayIcon *obj = qobject_cast<QSystemTrayIcon *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -252,9 +240,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_SETICON)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setToolTip(const QString &tip)
-*/
+// void setToolTip(const QString &tip)
 HB_FUNC_STATIC(QSYSTEMTRAYICON_SETTOOLTIP)
 {
   QSystemTrayIcon *obj = qobject_cast<QSystemTrayIcon *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -278,10 +264,8 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_SETTOOLTIP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void showMessage(const QString &title, const QString &message, QSystemTrayIcon::MessageIcon icon =
-QSystemTrayIcon::Information, int millisecondsTimeoutHint = 10000)
-*/
+// void showMessage(const QString &title, const QString &message, QSystemTrayIcon::MessageIcon icon =
+// QSystemTrayIcon::Information, int millisecondsTimeoutHint = 10000)
 HB_FUNC_STATIC(QSYSTEMTRAYICON_SHOWMESSAGE)
 {
   QSystemTrayIcon *obj = qobject_cast<QSystemTrayIcon *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -308,9 +292,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_SHOWMESSAGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString toolTip() const
-*/
+// QString toolTip() const
 HB_FUNC_STATIC(QSYSTEMTRAYICON_TOOLTIP)
 {
   QSystemTrayIcon *obj = qobject_cast<QSystemTrayIcon *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -332,9 +314,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_TOOLTIP)
   }
 }
 
-/*
-void hide()
-*/
+// void hide()
 HB_FUNC_STATIC(QSYSTEMTRAYICON_HIDE)
 {
   QSystemTrayIcon *obj = qobject_cast<QSystemTrayIcon *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -358,9 +338,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_HIDE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setVisible(bool visible)
-*/
+// void setVisible(bool visible)
 HB_FUNC_STATIC(QSYSTEMTRAYICON_SETVISIBLE)
 {
   QSystemTrayIcon *obj = qobject_cast<QSystemTrayIcon *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -384,9 +362,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_SETVISIBLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void show()
-*/
+// void show()
 HB_FUNC_STATIC(QSYSTEMTRAYICON_SHOW)
 {
   QSystemTrayIcon *obj = qobject_cast<QSystemTrayIcon *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -410,9 +386,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_SHOW)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static bool isSystemTrayAvailable()
-*/
+// static bool isSystemTrayAvailable()
 HB_FUNC_STATIC(QSYSTEMTRAYICON_ISSYSTEMTRAYAVAILABLE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -429,9 +403,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_ISSYSTEMTRAYAVAILABLE)
 #endif
 }
 
-/*
-static bool supportsMessages()
-*/
+// static bool supportsMessages()
 HB_FUNC_STATIC(QSYSTEMTRAYICON_SUPPORTSMESSAGES)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

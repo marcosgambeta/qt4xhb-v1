@@ -48,10 +48,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QKeyEvent(QEvent::Type type, int key, Qt::KeyboardModifiers modifiers, const QString &text = QString(), bool
-autorep = false, ushort count = 1)
-*/
+    // QKeyEvent(QEvent::Type type, int key, Qt::KeyboardModifiers modifiers, const QString &text = QString(), bool
+    // autorep = false, ushort count = 1)
 HB_FUNC_STATIC(QKEYEVENT_NEW)
 {
   if (ISBETWEEN(3, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISCHAR(4) || HB_ISNIL(4)) &&
@@ -83,9 +81,7 @@ HB_FUNC_STATIC(QKEYEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int count() const
-*/
+// int count() const
 HB_FUNC_STATIC(QKEYEVENT_COUNT)
 {
   QKeyEvent *obj = static_cast<QKeyEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -107,9 +103,7 @@ HB_FUNC_STATIC(QKEYEVENT_COUNT)
   }
 }
 
-/*
-bool isAutoRepeat() const
-*/
+// bool isAutoRepeat() const
 HB_FUNC_STATIC(QKEYEVENT_ISAUTOREPEAT)
 {
   QKeyEvent *obj = static_cast<QKeyEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -131,9 +125,7 @@ HB_FUNC_STATIC(QKEYEVENT_ISAUTOREPEAT)
   }
 }
 
-/*
-int key() const
-*/
+// int key() const
 HB_FUNC_STATIC(QKEYEVENT_KEY)
 {
   QKeyEvent *obj = static_cast<QKeyEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -155,9 +147,7 @@ HB_FUNC_STATIC(QKEYEVENT_KEY)
   }
 }
 
-/*
-bool matches(QKeySequence::StandardKey key) const
-*/
+// bool matches(QKeySequence::StandardKey key) const
 HB_FUNC_STATIC(QKEYEVENT_MATCHES)
 {
   QKeyEvent *obj = static_cast<QKeyEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -179,9 +169,7 @@ HB_FUNC_STATIC(QKEYEVENT_MATCHES)
   }
 }
 
-/*
-Qt::KeyboardModifiers modifiers() const
-*/
+// Qt::KeyboardModifiers modifiers() const
 HB_FUNC_STATIC(QKEYEVENT_MODIFIERS)
 {
   QKeyEvent *obj = static_cast<QKeyEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -203,9 +191,7 @@ HB_FUNC_STATIC(QKEYEVENT_MODIFIERS)
   }
 }
 
-/*
-quint32 nativeModifiers() const
-*/
+// quint32 nativeModifiers() const
 HB_FUNC_STATIC(QKEYEVENT_NATIVEMODIFIERS)
 {
   QKeyEvent *obj = static_cast<QKeyEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -227,9 +213,7 @@ HB_FUNC_STATIC(QKEYEVENT_NATIVEMODIFIERS)
   }
 }
 
-/*
-quint32 nativeScanCode() const
-*/
+// quint32 nativeScanCode() const
 HB_FUNC_STATIC(QKEYEVENT_NATIVESCANCODE)
 {
   QKeyEvent *obj = static_cast<QKeyEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -251,9 +235,7 @@ HB_FUNC_STATIC(QKEYEVENT_NATIVESCANCODE)
   }
 }
 
-/*
-quint32 nativeVirtualKey() const
-*/
+// quint32 nativeVirtualKey() const
 HB_FUNC_STATIC(QKEYEVENT_NATIVEVIRTUALKEY)
 {
   QKeyEvent *obj = static_cast<QKeyEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -275,9 +257,7 @@ HB_FUNC_STATIC(QKEYEVENT_NATIVEVIRTUALKEY)
   }
 }
 
-/*
-QString text() const
-*/
+// QString text() const
 HB_FUNC_STATIC(QKEYEVENT_TEXT)
 {
   QKeyEvent *obj = static_cast<QKeyEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -299,11 +279,9 @@ HB_FUNC_STATIC(QKEYEVENT_TEXT)
   }
 }
 
-/*
-static QKeyEvent *createExtendedKeyEvent(QEvent::Type type, int key, Qt::KeyboardModifiers modifiers, quint32
-nativeScanCode, quint32 nativeVirtualKey, quint32 nativeModifiers, const QString &text = QString(), bool autorep =
-false, ushort count = 1)
-*/
+// static QKeyEvent *createExtendedKeyEvent(QEvent::Type type, int key, Qt::KeyboardModifiers modifiers, quint32
+// nativeScanCode, quint32 nativeVirtualKey, quint32 nativeModifiers, const QString &text = QString(), bool autorep =
+// false, ushort count = 1)
 HB_FUNC_STATIC(QKEYEVENT_CREATEEXTENDEDKEYEVENT)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

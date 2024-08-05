@@ -77,7 +77,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QListView(QWidget *parent = 0)
+    // QListView(QWidget *parent = 0)
 HB_FUNC_STATIC(QLISTVIEW_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
@@ -109,9 +109,7 @@ HB_FUNC_STATIC(QLISTVIEW_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int batchSize() const
-*/
+// int batchSize() const
 HB_FUNC_STATIC(QLISTVIEW_BATCHSIZE)
 {
   QListView *obj = qobject_cast<QListView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -133,9 +131,7 @@ HB_FUNC_STATIC(QLISTVIEW_BATCHSIZE)
   }
 }
 
-/*
-void clearPropertyFlags()
-*/
+// void clearPropertyFlags()
 HB_FUNC_STATIC(QLISTVIEW_CLEARPROPERTYFLAGS)
 {
   QListView *obj = qobject_cast<QListView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -159,9 +155,7 @@ HB_FUNC_STATIC(QLISTVIEW_CLEARPROPERTYFLAGS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QListView::Flow flow() const
-*/
+// QListView::Flow flow() const
 HB_FUNC_STATIC(QLISTVIEW_FLOW)
 {
   QListView *obj = qobject_cast<QListView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -183,9 +177,7 @@ HB_FUNC_STATIC(QLISTVIEW_FLOW)
   }
 }
 
-/*
-QSize gridSize() const
-*/
+// QSize gridSize() const
 HB_FUNC_STATIC(QLISTVIEW_GRIDSIZE)
 {
   QListView *obj = qobject_cast<QListView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -208,9 +200,7 @@ HB_FUNC_STATIC(QLISTVIEW_GRIDSIZE)
   }
 }
 
-/*
-bool isRowHidden(int row) const
-*/
+// bool isRowHidden(int row) const
 HB_FUNC_STATIC(QLISTVIEW_ISROWHIDDEN)
 {
   QListView *obj = qobject_cast<QListView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -232,9 +222,7 @@ HB_FUNC_STATIC(QLISTVIEW_ISROWHIDDEN)
   }
 }
 
-/*
-bool isSelectionRectVisible() const
-*/
+// bool isSelectionRectVisible() const
 HB_FUNC_STATIC(QLISTVIEW_ISSELECTIONRECTVISIBLE)
 {
   QListView *obj = qobject_cast<QListView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -256,9 +244,7 @@ HB_FUNC_STATIC(QLISTVIEW_ISSELECTIONRECTVISIBLE)
   }
 }
 
-/*
-bool isWrapping() const
-*/
+// bool isWrapping() const
 HB_FUNC_STATIC(QLISTVIEW_ISWRAPPING)
 {
   QListView *obj = qobject_cast<QListView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -280,9 +266,7 @@ HB_FUNC_STATIC(QLISTVIEW_ISWRAPPING)
   }
 }
 
-/*
-QListView::LayoutMode layoutMode() const
-*/
+// QListView::LayoutMode layoutMode() const
 HB_FUNC_STATIC(QLISTVIEW_LAYOUTMODE)
 {
   QListView *obj = qobject_cast<QListView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -304,9 +288,7 @@ HB_FUNC_STATIC(QLISTVIEW_LAYOUTMODE)
   }
 }
 
-/*
-int modelColumn() const
-*/
+// int modelColumn() const
 HB_FUNC_STATIC(QLISTVIEW_MODELCOLUMN)
 {
   QListView *obj = qobject_cast<QListView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -328,9 +310,7 @@ HB_FUNC_STATIC(QLISTVIEW_MODELCOLUMN)
   }
 }
 
-/*
-QListView::Movement movement() const
-*/
+// QListView::Movement movement() const
 HB_FUNC_STATIC(QLISTVIEW_MOVEMENT)
 {
   QListView *obj = qobject_cast<QListView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -352,9 +332,7 @@ HB_FUNC_STATIC(QLISTVIEW_MOVEMENT)
   }
 }
 
-/*
-QListView::ResizeMode resizeMode() const
-*/
+// QListView::ResizeMode resizeMode() const
 HB_FUNC_STATIC(QLISTVIEW_RESIZEMODE)
 {
   QListView *obj = qobject_cast<QListView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -376,9 +354,7 @@ HB_FUNC_STATIC(QLISTVIEW_RESIZEMODE)
   }
 }
 
-/*
-void setBatchSize(int batchSize)
-*/
+// void setBatchSize(int batchSize)
 HB_FUNC_STATIC(QLISTVIEW_SETBATCHSIZE)
 {
   QListView *obj = qobject_cast<QListView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -402,9 +378,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETBATCHSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFlow(QListView::Flow flow)
-*/
+// void setFlow(QListView::Flow flow)
 HB_FUNC_STATIC(QLISTVIEW_SETFLOW)
 {
   QListView *obj = qobject_cast<QListView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -428,9 +402,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETFLOW)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setGridSize(const QSize &size)
-*/
+// void setGridSize(const QSize &size)
 HB_FUNC_STATIC(QLISTVIEW_SETGRIDSIZE)
 {
   QListView *obj = qobject_cast<QListView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -454,9 +426,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETGRIDSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setLayoutMode(QListView::LayoutMode mode)
-*/
+// void setLayoutMode(QListView::LayoutMode mode)
 HB_FUNC_STATIC(QLISTVIEW_SETLAYOUTMODE)
 {
   QListView *obj = qobject_cast<QListView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -480,9 +450,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETLAYOUTMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setModelColumn(int column)
-*/
+// void setModelColumn(int column)
 HB_FUNC_STATIC(QLISTVIEW_SETMODELCOLUMN)
 {
   QListView *obj = qobject_cast<QListView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -506,9 +474,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETMODELCOLUMN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setMovement(QListView::Movement movement)
-*/
+// void setMovement(QListView::Movement movement)
 HB_FUNC_STATIC(QLISTVIEW_SETMOVEMENT)
 {
   QListView *obj = qobject_cast<QListView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -532,9 +498,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETMOVEMENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setResizeMode(QListView::ResizeMode mode)
-*/
+// void setResizeMode(QListView::ResizeMode mode)
 HB_FUNC_STATIC(QLISTVIEW_SETRESIZEMODE)
 {
   QListView *obj = qobject_cast<QListView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -558,9 +522,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETRESIZEMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setRowHidden(int row, bool hide)
-*/
+// void setRowHidden(int row, bool hide)
 HB_FUNC_STATIC(QLISTVIEW_SETROWHIDDEN)
 {
   QListView *obj = qobject_cast<QListView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -584,9 +546,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETROWHIDDEN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSelectionRectVisible(bool show)
-*/
+// void setSelectionRectVisible(bool show)
 HB_FUNC_STATIC(QLISTVIEW_SETSELECTIONRECTVISIBLE)
 {
   QListView *obj = qobject_cast<QListView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -610,9 +570,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETSELECTIONRECTVISIBLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSpacing(int space)
-*/
+// void setSpacing(int space)
 HB_FUNC_STATIC(QLISTVIEW_SETSPACING)
 {
   QListView *obj = qobject_cast<QListView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -636,9 +594,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETSPACING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setUniformItemSizes(bool enable)
-*/
+// void setUniformItemSizes(bool enable)
 HB_FUNC_STATIC(QLISTVIEW_SETUNIFORMITEMSIZES)
 {
   QListView *obj = qobject_cast<QListView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -662,9 +618,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETUNIFORMITEMSIZES)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setViewMode(QListView::ViewMode mode)
-*/
+// void setViewMode(QListView::ViewMode mode)
 HB_FUNC_STATIC(QLISTVIEW_SETVIEWMODE)
 {
   QListView *obj = qobject_cast<QListView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -688,9 +642,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETVIEWMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWordWrap(bool on)
-*/
+// void setWordWrap(bool on)
 HB_FUNC_STATIC(QLISTVIEW_SETWORDWRAP)
 {
   QListView *obj = qobject_cast<QListView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -714,9 +666,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETWORDWRAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWrapping(bool enable)
-*/
+// void setWrapping(bool enable)
 HB_FUNC_STATIC(QLISTVIEW_SETWRAPPING)
 {
   QListView *obj = qobject_cast<QListView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -740,9 +690,7 @@ HB_FUNC_STATIC(QLISTVIEW_SETWRAPPING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int spacing() const
-*/
+// int spacing() const
 HB_FUNC_STATIC(QLISTVIEW_SPACING)
 {
   QListView *obj = qobject_cast<QListView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -764,9 +712,7 @@ HB_FUNC_STATIC(QLISTVIEW_SPACING)
   }
 }
 
-/*
-bool uniformItemSizes() const
-*/
+// bool uniformItemSizes() const
 HB_FUNC_STATIC(QLISTVIEW_UNIFORMITEMSIZES)
 {
   QListView *obj = qobject_cast<QListView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -788,9 +734,7 @@ HB_FUNC_STATIC(QLISTVIEW_UNIFORMITEMSIZES)
   }
 }
 
-/*
-QListView::ViewMode viewMode() const
-*/
+// QListView::ViewMode viewMode() const
 HB_FUNC_STATIC(QLISTVIEW_VIEWMODE)
 {
   QListView *obj = qobject_cast<QListView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -812,9 +756,7 @@ HB_FUNC_STATIC(QLISTVIEW_VIEWMODE)
   }
 }
 
-/*
-bool wordWrap() const
-*/
+// bool wordWrap() const
 HB_FUNC_STATIC(QLISTVIEW_WORDWRAP)
 {
   QListView *obj = qobject_cast<QListView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -836,9 +778,7 @@ HB_FUNC_STATIC(QLISTVIEW_WORDWRAP)
   }
 }
 
-/*
-virtual QModelIndex indexAt(const QPoint &p) const
-*/
+// virtual QModelIndex indexAt(const QPoint &p) const
 HB_FUNC_STATIC(QLISTVIEW_INDEXAT)
 {
   QListView *obj = qobject_cast<QListView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -861,9 +801,7 @@ HB_FUNC_STATIC(QLISTVIEW_INDEXAT)
   }
 }
 
-/*
-virtual void scrollTo(const QModelIndex &index, QListView::ScrollHint hint = QListView::EnsureVisible)
-*/
+// virtual void scrollTo(const QModelIndex &index, QListView::ScrollHint hint = QListView::EnsureVisible)
 HB_FUNC_STATIC(QLISTVIEW_SCROLLTO)
 {
   QListView *obj = qobject_cast<QListView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -888,9 +826,7 @@ HB_FUNC_STATIC(QLISTVIEW_SCROLLTO)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QRect visualRect(const QModelIndex &index) const
-*/
+// virtual QRect visualRect(const QModelIndex &index) const
 HB_FUNC_STATIC(QLISTVIEW_VISUALRECT)
 {
   QListView *obj = qobject_cast<QListView *>(Qt4xHb::getQObjectPointerFromSelfItem());

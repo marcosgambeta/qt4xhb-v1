@@ -103,9 +103,7 @@ HB_FUNC_STATIC(QTEXTOPTION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::Alignment alignment() const
-*/
+// Qt::Alignment alignment() const
 HB_FUNC_STATIC(QTEXTOPTION_ALIGNMENT)
 {
   QTextOption *obj = static_cast<QTextOption *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -127,9 +125,7 @@ HB_FUNC_STATIC(QTEXTOPTION_ALIGNMENT)
   }
 }
 
-/*
-QTextOption::Flags flags() const
-*/
+// QTextOption::Flags flags() const
 HB_FUNC_STATIC(QTEXTOPTION_FLAGS)
 {
   QTextOption *obj = static_cast<QTextOption *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -151,9 +147,7 @@ HB_FUNC_STATIC(QTEXTOPTION_FLAGS)
   }
 }
 
-/*
-void setAlignment(Qt::Alignment alignment)
-*/
+// void setAlignment(Qt::Alignment alignment)
 HB_FUNC_STATIC(QTEXTOPTION_SETALIGNMENT)
 {
   QTextOption *obj = static_cast<QTextOption *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -177,9 +171,7 @@ HB_FUNC_STATIC(QTEXTOPTION_SETALIGNMENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFlags(QTextOption::Flags flags)
-*/
+// void setFlags(QTextOption::Flags flags)
 HB_FUNC_STATIC(QTEXTOPTION_SETFLAGS)
 {
   QTextOption *obj = static_cast<QTextOption *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -203,9 +195,7 @@ HB_FUNC_STATIC(QTEXTOPTION_SETFLAGS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTabArray(QList<qreal> tabStops)
-*/
+// void setTabArray(QList<qreal> tabStops)
 HB_FUNC_STATIC(QTEXTOPTION_SETTABARRAY)
 {
   QTextOption *obj = static_cast<QTextOption *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -218,7 +208,7 @@ HB_FUNC_STATIC(QTEXTOPTION_SETTABARRAY)
 #endif
       QList<qreal> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      const int nLen1 = hb_arrayLen(aList1);
+      int nLen1 = hb_arrayLen(aList1);
       qreal temp1;
       for (int i1 = 0; i1 < nLen1; i1++)
       {
@@ -238,9 +228,7 @@ HB_FUNC_STATIC(QTEXTOPTION_SETTABARRAY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTabStop(qreal tabStop)
-*/
+// void setTabStop(qreal tabStop)
 HB_FUNC_STATIC(QTEXTOPTION_SETTABSTOP)
 {
   QTextOption *obj = static_cast<QTextOption *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -264,9 +252,7 @@ HB_FUNC_STATIC(QTEXTOPTION_SETTABSTOP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTextDirection(Qt::LayoutDirection direction)
-*/
+// void setTextDirection(Qt::LayoutDirection direction)
 HB_FUNC_STATIC(QTEXTOPTION_SETTEXTDIRECTION)
 {
   QTextOption *obj = static_cast<QTextOption *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -290,9 +276,7 @@ HB_FUNC_STATIC(QTEXTOPTION_SETTEXTDIRECTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setUseDesignMetrics(bool enable)
-*/
+// void setUseDesignMetrics(bool enable)
 HB_FUNC_STATIC(QTEXTOPTION_SETUSEDESIGNMETRICS)
 {
   QTextOption *obj = static_cast<QTextOption *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -316,9 +300,7 @@ HB_FUNC_STATIC(QTEXTOPTION_SETUSEDESIGNMETRICS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWrapMode(QTextOption::WrapMode mode)
-*/
+// void setWrapMode(QTextOption::WrapMode mode)
 HB_FUNC_STATIC(QTEXTOPTION_SETWRAPMODE)
 {
   QTextOption *obj = static_cast<QTextOption *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -342,9 +324,7 @@ HB_FUNC_STATIC(QTEXTOPTION_SETWRAPMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QList<qreal> tabArray() const
-*/
+// QList<qreal> tabArray() const
 HB_FUNC_STATIC(QTEXTOPTION_TABARRAY)
 {
   QTextOption *obj = static_cast<QTextOption *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -367,9 +347,7 @@ HB_FUNC_STATIC(QTEXTOPTION_TABARRAY)
   }
 }
 
-/*
-qreal tabStop() const
-*/
+// qreal tabStop() const
 HB_FUNC_STATIC(QTEXTOPTION_TABSTOP)
 {
   QTextOption *obj = static_cast<QTextOption *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -391,9 +369,7 @@ HB_FUNC_STATIC(QTEXTOPTION_TABSTOP)
   }
 }
 
-/*
-Qt::LayoutDirection textDirection() const
-*/
+// Qt::LayoutDirection textDirection() const
 HB_FUNC_STATIC(QTEXTOPTION_TEXTDIRECTION)
 {
   QTextOption *obj = static_cast<QTextOption *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -415,9 +391,7 @@ HB_FUNC_STATIC(QTEXTOPTION_TEXTDIRECTION)
   }
 }
 
-/*
-bool useDesignMetrics() const
-*/
+// bool useDesignMetrics() const
 HB_FUNC_STATIC(QTEXTOPTION_USEDESIGNMETRICS)
 {
   QTextOption *obj = static_cast<QTextOption *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -439,9 +413,7 @@ HB_FUNC_STATIC(QTEXTOPTION_USEDESIGNMETRICS)
   }
 }
 
-/*
-QTextOption::WrapMode wrapMode() const
-*/
+// QTextOption::WrapMode wrapMode() const
 HB_FUNC_STATIC(QTEXTOPTION_WRAPMODE)
 {
   QTextOption *obj = static_cast<QTextOption *>(Qt4xHb::itemGetPtrStackSelfItem());

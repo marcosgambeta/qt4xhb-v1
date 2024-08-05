@@ -69,7 +69,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QTextBrowser(QWidget *parent = 0)
+    // QTextBrowser(QWidget *parent = 0)
 HB_FUNC_STATIC(QTEXTBROWSER_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
@@ -83,9 +83,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_NEW)
   }
 }
 
-/*
-int backwardHistoryCount() const
-*/
+// int backwardHistoryCount() const
 HB_FUNC_STATIC(QTEXTBROWSER_BACKWARDHISTORYCOUNT)
 {
   QTextBrowser *obj = qobject_cast<QTextBrowser *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -107,9 +105,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_BACKWARDHISTORYCOUNT)
   }
 }
 
-/*
-void clearHistory()
-*/
+// void clearHistory()
 HB_FUNC_STATIC(QTEXTBROWSER_CLEARHISTORY)
 {
   QTextBrowser *obj = qobject_cast<QTextBrowser *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -133,9 +129,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_CLEARHISTORY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int forwardHistoryCount() const
-*/
+// int forwardHistoryCount() const
 HB_FUNC_STATIC(QTEXTBROWSER_FORWARDHISTORYCOUNT)
 {
   QTextBrowser *obj = qobject_cast<QTextBrowser *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -157,9 +151,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_FORWARDHISTORYCOUNT)
   }
 }
 
-/*
-QString historyTitle(int i) const
-*/
+// QString historyTitle(int i) const
 HB_FUNC_STATIC(QTEXTBROWSER_HISTORYTITLE)
 {
   QTextBrowser *obj = qobject_cast<QTextBrowser *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -181,9 +173,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_HISTORYTITLE)
   }
 }
 
-/*
-QUrl historyUrl(int i) const
-*/
+// QUrl historyUrl(int i) const
 HB_FUNC_STATIC(QTEXTBROWSER_HISTORYURL)
 {
   QTextBrowser *obj = qobject_cast<QTextBrowser *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -206,9 +196,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_HISTORYURL)
   }
 }
 
-/*
-bool isBackwardAvailable() const
-*/
+// bool isBackwardAvailable() const
 HB_FUNC_STATIC(QTEXTBROWSER_ISBACKWARDAVAILABLE)
 {
   QTextBrowser *obj = qobject_cast<QTextBrowser *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -230,9 +218,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_ISBACKWARDAVAILABLE)
   }
 }
 
-/*
-bool isForwardAvailable() const
-*/
+// bool isForwardAvailable() const
 HB_FUNC_STATIC(QTEXTBROWSER_ISFORWARDAVAILABLE)
 {
   QTextBrowser *obj = qobject_cast<QTextBrowser *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -254,9 +240,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_ISFORWARDAVAILABLE)
   }
 }
 
-/*
-bool openExternalLinks() const
-*/
+// bool openExternalLinks() const
 HB_FUNC_STATIC(QTEXTBROWSER_OPENEXTERNALLINKS)
 {
   QTextBrowser *obj = qobject_cast<QTextBrowser *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -278,9 +262,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_OPENEXTERNALLINKS)
   }
 }
 
-/*
-bool openLinks() const
-*/
+// bool openLinks() const
 HB_FUNC_STATIC(QTEXTBROWSER_OPENLINKS)
 {
   QTextBrowser *obj = qobject_cast<QTextBrowser *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -302,9 +284,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_OPENLINKS)
   }
 }
 
-/*
-QStringList searchPaths() const
-*/
+// QStringList searchPaths() const
 HB_FUNC_STATIC(QTEXTBROWSER_SEARCHPATHS)
 {
   QTextBrowser *obj = qobject_cast<QTextBrowser *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -326,9 +306,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_SEARCHPATHS)
   }
 }
 
-/*
-void setOpenExternalLinks(bool open)
-*/
+// void setOpenExternalLinks(bool open)
 HB_FUNC_STATIC(QTEXTBROWSER_SETOPENEXTERNALLINKS)
 {
   QTextBrowser *obj = qobject_cast<QTextBrowser *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -352,9 +330,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_SETOPENEXTERNALLINKS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setOpenLinks(bool open)
-*/
+// void setOpenLinks(bool open)
 HB_FUNC_STATIC(QTEXTBROWSER_SETOPENLINKS)
 {
   QTextBrowser *obj = qobject_cast<QTextBrowser *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -378,9 +354,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_SETOPENLINKS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSearchPaths(const QStringList &paths)
-*/
+// void setSearchPaths(const QStringList &paths)
 HB_FUNC_STATIC(QTEXTBROWSER_SETSEARCHPATHS)
 {
   QTextBrowser *obj = qobject_cast<QTextBrowser *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -404,9 +378,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_SETSEARCHPATHS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QUrl source() const
-*/
+// QUrl source() const
 HB_FUNC_STATIC(QTEXTBROWSER_SOURCE)
 {
   QTextBrowser *obj = qobject_cast<QTextBrowser *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -429,9 +401,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_SOURCE)
   }
 }
 
-/*
-virtual QVariant loadResource(int type, const QUrl &name)
-*/
+// virtual QVariant loadResource(int type, const QUrl &name)
 HB_FUNC_STATIC(QTEXTBROWSER_LOADRESOURCE)
 {
   QTextBrowser *obj = qobject_cast<QTextBrowser *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -454,9 +424,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_LOADRESOURCE)
   }
 }
 
-/*
-virtual void backward()
-*/
+// virtual void backward()
 HB_FUNC_STATIC(QTEXTBROWSER_BACKWARD)
 {
   QTextBrowser *obj = qobject_cast<QTextBrowser *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -480,9 +448,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_BACKWARD)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void forward()
-*/
+// virtual void forward()
 HB_FUNC_STATIC(QTEXTBROWSER_FORWARD)
 {
   QTextBrowser *obj = qobject_cast<QTextBrowser *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -506,9 +472,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_FORWARD)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void home()
-*/
+// virtual void home()
 HB_FUNC_STATIC(QTEXTBROWSER_HOME)
 {
   QTextBrowser *obj = qobject_cast<QTextBrowser *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -532,9 +496,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_HOME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void reload()
-*/
+// virtual void reload()
 HB_FUNC_STATIC(QTEXTBROWSER_RELOAD)
 {
   QTextBrowser *obj = qobject_cast<QTextBrowser *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -558,9 +520,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_RELOAD)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setSource(const QUrl &name)
-*/
+// virtual void setSource(const QUrl &name)
 HB_FUNC_STATIC(QTEXTBROWSER_SETSOURCE)
 {
   QTextBrowser *obj = qobject_cast<QTextBrowser *>(Qt4xHb::getQObjectPointerFromSelfItem());

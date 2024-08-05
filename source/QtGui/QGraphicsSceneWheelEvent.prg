@@ -62,9 +62,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEWHEELEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::MouseButtons buttons() const
-*/
+// Qt::MouseButtons buttons() const
 HB_FUNC_STATIC(QGRAPHICSSCENEWHEELEVENT_BUTTONS)
 {
   QGraphicsSceneWheelEvent *obj = static_cast<QGraphicsSceneWheelEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -86,9 +84,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEWHEELEVENT_BUTTONS)
   }
 }
 
-/*
-int delta() const
-*/
+// int delta() const
 HB_FUNC_STATIC(QGRAPHICSSCENEWHEELEVENT_DELTA)
 {
   QGraphicsSceneWheelEvent *obj = static_cast<QGraphicsSceneWheelEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -110,9 +106,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEWHEELEVENT_DELTA)
   }
 }
 
-/*
-Qt::KeyboardModifiers modifiers() const
-*/
+// Qt::KeyboardModifiers modifiers() const
 HB_FUNC_STATIC(QGRAPHICSSCENEWHEELEVENT_MODIFIERS)
 {
   QGraphicsSceneWheelEvent *obj = static_cast<QGraphicsSceneWheelEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -134,9 +128,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEWHEELEVENT_MODIFIERS)
   }
 }
 
-/*
-Qt::Orientation orientation() const
-*/
+// Qt::Orientation orientation() const
 HB_FUNC_STATIC(QGRAPHICSSCENEWHEELEVENT_ORIENTATION)
 {
   QGraphicsSceneWheelEvent *obj = static_cast<QGraphicsSceneWheelEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -158,9 +150,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEWHEELEVENT_ORIENTATION)
   }
 }
 
-/*
-QPointF pos() const
-*/
+// QPointF pos() const
 HB_FUNC_STATIC(QGRAPHICSSCENEWHEELEVENT_POS)
 {
   QGraphicsSceneWheelEvent *obj = static_cast<QGraphicsSceneWheelEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -183,9 +173,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEWHEELEVENT_POS)
   }
 }
 
-/*
-QPointF scenePos() const
-*/
+// QPointF scenePos() const
 HB_FUNC_STATIC(QGRAPHICSSCENEWHEELEVENT_SCENEPOS)
 {
   QGraphicsSceneWheelEvent *obj = static_cast<QGraphicsSceneWheelEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -208,9 +196,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEWHEELEVENT_SCENEPOS)
   }
 }
 
-/*
-QPoint screenPos() const
-*/
+// QPoint screenPos() const
 HB_FUNC_STATIC(QGRAPHICSSCENEWHEELEVENT_SCREENPOS)
 {
   QGraphicsSceneWheelEvent *obj = static_cast<QGraphicsSceneWheelEvent *>(Qt4xHb::itemGetPtrStackSelfItem());

@@ -82,9 +82,7 @@ HB_FUNC_STATIC(QREGEXPVALIDATOR_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-const QRegExp &regExp() const
-*/
+// const QRegExp &regExp() const
 HB_FUNC_STATIC(QREGEXPVALIDATOR_REGEXP)
 {
   QRegExpValidator *obj = qobject_cast<QRegExpValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -107,9 +105,7 @@ HB_FUNC_STATIC(QREGEXPVALIDATOR_REGEXP)
   }
 }
 
-/*
-void setRegExp(const QRegExp &rx)
-*/
+// void setRegExp(const QRegExp &rx)
 HB_FUNC_STATIC(QREGEXPVALIDATOR_SETREGEXP)
 {
   QRegExpValidator *obj = qobject_cast<QRegExpValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -133,9 +129,7 @@ HB_FUNC_STATIC(QREGEXPVALIDATOR_SETREGEXP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QValidator::State validate(QString &input, int &pos) const
-*/
+// virtual QValidator::State validate(QString &input, int &pos) const
 HB_FUNC_STATIC(QREGEXPVALIDATOR_VALIDATE)
 {
   QRegExpValidator *obj = qobject_cast<QRegExpValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());

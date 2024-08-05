@@ -113,9 +113,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int bottom() const
-*/
+// int bottom() const
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_BOTTOM)
 {
   QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -137,9 +135,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_BOTTOM)
   }
 }
 
-/*
-QModelIndex bottomRight() const
-*/
+// QModelIndex bottomRight() const
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_BOTTOMRIGHT)
 {
   QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -166,9 +162,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_CONTAINS)
 {
   if (ISNUMPAR(1) && ISQMODELINDEX(1))
   {
-    /*
-    bool contains(const QModelIndex &index) const
-    */
+    // bool contains(const QModelIndex &index) const
     QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -178,9 +172,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_CONTAINS)
   }
   else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEX(3))
   {
-    /*
-    bool contains(int row, int column, const QModelIndex &parentIndex) const
-    */
+    // bool contains(int row, int column, const QModelIndex &parentIndex) const
     QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -194,9 +186,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_CONTAINS)
   }
 }
 
-/*
-int height() const
-*/
+// int height() const
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_HEIGHT)
 {
   QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -218,9 +208,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_HEIGHT)
   }
 }
 
-/*
-QModelIndexList indexes() const
-*/
+// QModelIndexList indexes() const
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_INDEXES)
 {
   QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -269,9 +257,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_INDEXES)
   }
 }
 
-/*
-QItemSelectionRange intersected(const QItemSelectionRange &other) const
-*/
+// QItemSelectionRange intersected(const QItemSelectionRange &other) const
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_INTERSECTED)
 {
   QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -294,9 +280,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_INTERSECTED)
   }
 }
 
-/*
-bool intersects(const QItemSelectionRange &other) const
-*/
+// bool intersects(const QItemSelectionRange &other) const
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_INTERSECTS)
 {
   QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -318,9 +302,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_INTERSECTS)
   }
 }
 
-/*
-bool isEmpty() const
-*/
+// bool isEmpty() const
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_ISEMPTY)
 {
   QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -342,9 +324,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_ISEMPTY)
   }
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_ISVALID)
 {
   QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -366,9 +346,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_ISVALID)
   }
 }
 
-/*
-int left() const
-*/
+// int left() const
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_LEFT)
 {
   QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -390,9 +368,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_LEFT)
   }
 }
 
-/*
-const QAbstractItemModel *model() const
-*/
+// const QAbstractItemModel *model() const
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_MODEL)
 {
   QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -415,9 +391,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_MODEL)
   }
 }
 
-/*
-QModelIndex parent() const
-*/
+// QModelIndex parent() const
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_PARENT)
 {
   QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -440,9 +414,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_PARENT)
   }
 }
 
-/*
-int right() const
-*/
+// int right() const
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_RIGHT)
 {
   QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -464,9 +436,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_RIGHT)
   }
 }
 
-/*
-int top() const
-*/
+// int top() const
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_TOP)
 {
   QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -488,9 +458,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_TOP)
   }
 }
 
-/*
-QModelIndex topLeft() const
-*/
+// QModelIndex topLeft() const
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_TOPLEFT)
 {
   QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -513,9 +481,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_TOPLEFT)
   }
 }
 
-/*
-int width() const
-*/
+// int width() const
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_WIDTH)
 {
   QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt4xHb::itemGetPtrStackSelfItem());

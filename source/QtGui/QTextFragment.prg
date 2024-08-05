@@ -93,9 +93,7 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QTextCharFormat charFormat() const
-*/
+// QTextCharFormat charFormat() const
 HB_FUNC_STATIC(QTEXTFRAGMENT_CHARFORMAT)
 {
   QTextFragment *obj = static_cast<QTextFragment *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -118,9 +116,7 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_CHARFORMAT)
   }
 }
 
-/*
-int charFormatIndex() const
-*/
+// int charFormatIndex() const
 HB_FUNC_STATIC(QTEXTFRAGMENT_CHARFORMATINDEX)
 {
   QTextFragment *obj = static_cast<QTextFragment *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -142,9 +138,7 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_CHARFORMATINDEX)
   }
 }
 
-/*
-bool contains(int position) const
-*/
+// bool contains(int position) const
 HB_FUNC_STATIC(QTEXTFRAGMENT_CONTAINS)
 {
   QTextFragment *obj = static_cast<QTextFragment *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -166,9 +160,7 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_CONTAINS)
   }
 }
 
-/*
-QList<QGlyphRun> glyphRuns() const
-*/
+// QList<QGlyphRun> glyphRuns() const
 HB_FUNC_STATIC(QTEXTFRAGMENT_GLYPHRUNS)
 {
   QTextFragment *obj = static_cast<QTextFragment *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -217,9 +209,7 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_GLYPHRUNS)
   }
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QTEXTFRAGMENT_ISVALID)
 {
   QTextFragment *obj = static_cast<QTextFragment *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -241,9 +231,7 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_ISVALID)
   }
 }
 
-/*
-int length() const
-*/
+// int length() const
 HB_FUNC_STATIC(QTEXTFRAGMENT_LENGTH)
 {
   QTextFragment *obj = static_cast<QTextFragment *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -265,9 +253,7 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_LENGTH)
   }
 }
 
-/*
-int position() const
-*/
+// int position() const
 HB_FUNC_STATIC(QTEXTFRAGMENT_POSITION)
 {
   QTextFragment *obj = static_cast<QTextFragment *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -289,9 +275,7 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_POSITION)
   }
 }
 
-/*
-QString text() const
-*/
+// QString text() const
 HB_FUNC_STATIC(QTEXTFRAGMENT_TEXT)
 {
   QTextFragment *obj = static_cast<QTextFragment *>(Qt4xHb::itemGetPtrStackSelfItem());

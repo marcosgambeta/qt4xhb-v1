@@ -57,7 +57,7 @@ RETURN
 
 #include <QtGui/QColor>
 
-// QColormap(const QColormap &colormap)
+    // QColormap(const QColormap &colormap)
 HB_FUNC_STATIC(QCOLORMAP_NEW)
 {
   if (ISNUMPAR(1) && ISQCOLORMAP(1))
@@ -87,9 +87,7 @@ HB_FUNC_STATIC(QCOLORMAP_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-const QColor colorAt(uint pixel) const
-*/
+// const QColor colorAt(uint pixel) const
 HB_FUNC_STATIC(QCOLORMAP_COLORAT)
 {
   QColormap *obj = static_cast<QColormap *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -112,9 +110,7 @@ HB_FUNC_STATIC(QCOLORMAP_COLORAT)
   }
 }
 
-/*
-const QVector<QColor> colormap() const
-*/
+// const QVector<QColor> colormap() const
 HB_FUNC_STATIC(QCOLORMAP_COLORMAP)
 {
   QColormap *obj = static_cast<QColormap *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -163,9 +159,7 @@ HB_FUNC_STATIC(QCOLORMAP_COLORMAP)
   }
 }
 
-/*
-int depth() const
-*/
+// int depth() const
 HB_FUNC_STATIC(QCOLORMAP_DEPTH)
 {
   QColormap *obj = static_cast<QColormap *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -187,9 +181,7 @@ HB_FUNC_STATIC(QCOLORMAP_DEPTH)
   }
 }
 
-/*
-QColormap::Mode mode() const
-*/
+// QColormap::Mode mode() const
 HB_FUNC_STATIC(QCOLORMAP_MODE)
 {
   QColormap *obj = static_cast<QColormap *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -211,9 +203,7 @@ HB_FUNC_STATIC(QCOLORMAP_MODE)
   }
 }
 
-/*
-uint pixel(const QColor &color) const
-*/
+// uint pixel(const QColor &color) const
 HB_FUNC_STATIC(QCOLORMAP_PIXEL)
 {
   QColormap *obj = static_cast<QColormap *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -235,9 +225,7 @@ HB_FUNC_STATIC(QCOLORMAP_PIXEL)
   }
 }
 
-/*
-int size() const
-*/
+// int size() const
 HB_FUNC_STATIC(QCOLORMAP_SIZE)
 {
   QColormap *obj = static_cast<QColormap *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -259,9 +247,7 @@ HB_FUNC_STATIC(QCOLORMAP_SIZE)
   }
 }
 
-/*
-static QColormap instance(int screen = -1)
-*/
+// static QColormap instance(int screen = -1)
 HB_FUNC_STATIC(QCOLORMAP_INSTANCE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

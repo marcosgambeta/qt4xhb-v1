@@ -43,7 +43,7 @@ RETURN
 
 #include <QtGui/QAction>
 
-// QActionEvent(int type, QAction *action, QAction *before = 0)
+    // QActionEvent(int type, QAction *action, QAction *before = 0)
 HB_FUNC_STATIC(QACTIONEVENT_NEW)
 {
   if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQACTION(2) && (ISQACTION(3) || HB_ISNIL(3)))
@@ -73,9 +73,7 @@ HB_FUNC_STATIC(QACTIONEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAction *action() const
-*/
+// QAction *action() const
 HB_FUNC_STATIC(QACTIONEVENT_ACTION)
 {
   QActionEvent *obj = static_cast<QActionEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -98,9 +96,7 @@ HB_FUNC_STATIC(QACTIONEVENT_ACTION)
   }
 }
 
-/*
-QAction *before() const
-*/
+// QAction *before() const
 HB_FUNC_STATIC(QACTIONEVENT_BEFORE)
 {
   QActionEvent *obj = static_cast<QActionEvent *>(Qt4xHb::itemGetPtrStackSelfItem());

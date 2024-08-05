@@ -39,7 +39,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-// QWhatsThisClickedEvent(const QString &href)
+    // QWhatsThisClickedEvent(const QString &href)
 HB_FUNC_STATIC(QWHATSTHISCLICKEDEVENT_NEW)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1))
@@ -69,9 +69,7 @@ HB_FUNC_STATIC(QWHATSTHISCLICKEDEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString href() const
-*/
+// QString href() const
 HB_FUNC_STATIC(QWHATSTHISCLICKEDEVENT_HREF)
 {
   QWhatsThisClickedEvent *obj = static_cast<QWhatsThisClickedEvent *>(Qt4xHb::itemGetPtrStackSelfItem());

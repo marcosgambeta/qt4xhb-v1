@@ -60,9 +60,7 @@ HB_FUNC_STATIC(QDECORATIONPLUGIN_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QDecoration *create(const QString &key) = 0
-*/
+// virtual QDecoration *create(const QString &key) = 0
 HB_FUNC_STATIC(QDECORATIONPLUGIN_CREATE)
 {
   QDecorationPlugin *obj = qobject_cast<QDecorationPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -85,9 +83,7 @@ HB_FUNC_STATIC(QDECORATIONPLUGIN_CREATE)
   }
 }
 
-/*
-virtual QStringList keys() const = 0
-*/
+// virtual QStringList keys() const = 0
 HB_FUNC_STATIC(QDECORATIONPLUGIN_KEYS)
 {
   QDecorationPlugin *obj = qobject_cast<QDecorationPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());

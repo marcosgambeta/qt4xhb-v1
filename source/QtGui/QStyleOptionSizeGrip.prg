@@ -59,9 +59,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSIZEGRIP_NEW)
   }
 }
 
-/*
-Qt::Corner corner
-*/
+// Qt::Corner corner
 HB_FUNC_STATIC(QSTYLEOPTIONSIZEGRIP_CORNER)
 {
   QStyleOptionSizeGrip *obj = static_cast<QStyleOptionSizeGrip *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -86,7 +84,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSIZEGRIP_SETCORNER)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->corner = (Qt::Corner)hb_parni(1);
+      obj->corner=(Qt::Corner)hb_parni(1));
     }
     else
     {

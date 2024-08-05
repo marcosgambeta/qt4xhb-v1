@@ -61,7 +61,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QWorkspace(QWidget *parent = 0)
+    // QWorkspace(QWidget *parent = 0)
 HB_FUNC_STATIC(QWORKSPACE_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
@@ -93,9 +93,7 @@ HB_FUNC_STATIC(QWORKSPACE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWidget *activeWindow() const
-*/
+// QWidget *activeWindow() const
 HB_FUNC_STATIC(QWORKSPACE_ACTIVEWINDOW)
 {
   QWorkspace *obj = qobject_cast<QWorkspace *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -118,9 +116,7 @@ HB_FUNC_STATIC(QWORKSPACE_ACTIVEWINDOW)
   }
 }
 
-/*
-QWidget *addWindow(QWidget *w, Qt::WindowFlags flags = 0)
-*/
+// QWidget *addWindow(QWidget *w, Qt::WindowFlags flags = 0)
 HB_FUNC_STATIC(QWORKSPACE_ADDWINDOW)
 {
   QWorkspace *obj = qobject_cast<QWorkspace *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -143,9 +139,7 @@ HB_FUNC_STATIC(QWORKSPACE_ADDWINDOW)
   }
 }
 
-/*
-QBrush background() const
-*/
+// QBrush background() const
 HB_FUNC_STATIC(QWORKSPACE_BACKGROUND)
 {
   QWorkspace *obj = qobject_cast<QWorkspace *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -168,9 +162,7 @@ HB_FUNC_STATIC(QWORKSPACE_BACKGROUND)
   }
 }
 
-/*
-bool scrollBarsEnabled() const
-*/
+// bool scrollBarsEnabled() const
 HB_FUNC_STATIC(QWORKSPACE_SCROLLBARSENABLED)
 {
   QWorkspace *obj = qobject_cast<QWorkspace *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -192,9 +184,7 @@ HB_FUNC_STATIC(QWORKSPACE_SCROLLBARSENABLED)
   }
 }
 
-/*
-void setBackground(const QBrush &background)
-*/
+// void setBackground(const QBrush &background)
 HB_FUNC_STATIC(QWORKSPACE_SETBACKGROUND)
 {
   QWorkspace *obj = qobject_cast<QWorkspace *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -218,9 +208,7 @@ HB_FUNC_STATIC(QWORKSPACE_SETBACKGROUND)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setScrollBarsEnabled(bool enable)
-*/
+// void setScrollBarsEnabled(bool enable)
 HB_FUNC_STATIC(QWORKSPACE_SETSCROLLBARSENABLED)
 {
   QWorkspace *obj = qobject_cast<QWorkspace *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -244,9 +232,7 @@ HB_FUNC_STATIC(QWORKSPACE_SETSCROLLBARSENABLED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWidgetList windowList(QWorkspace::WindowOrder order = QWorkspace::CreationOrder) const
-*/
+// QWidgetList windowList(QWorkspace::WindowOrder order = QWorkspace::CreationOrder) const
 HB_FUNC_STATIC(QWORKSPACE_WINDOWLIST)
 {
   QWorkspace *obj = qobject_cast<QWorkspace *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -271,7 +257,7 @@ HB_FUNC_STATIC(QWORKSPACE_WINDOWLIST)
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, static_cast<QWidget *>(list[i]));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -293,9 +279,7 @@ HB_FUNC_STATIC(QWORKSPACE_WINDOWLIST)
   }
 }
 
-/*
-virtual QSize sizeHint() const
-*/
+// virtual QSize sizeHint() const
 HB_FUNC_STATIC(QWORKSPACE_SIZEHINT)
 {
   QWorkspace *obj = qobject_cast<QWorkspace *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -318,9 +302,7 @@ HB_FUNC_STATIC(QWORKSPACE_SIZEHINT)
   }
 }
 
-/*
-void activateNextWindow()
-*/
+// void activateNextWindow()
 HB_FUNC_STATIC(QWORKSPACE_ACTIVATENEXTWINDOW)
 {
   QWorkspace *obj = qobject_cast<QWorkspace *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -344,9 +326,7 @@ HB_FUNC_STATIC(QWORKSPACE_ACTIVATENEXTWINDOW)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void activatePreviousWindow()
-*/
+// void activatePreviousWindow()
 HB_FUNC_STATIC(QWORKSPACE_ACTIVATEPREVIOUSWINDOW)
 {
   QWorkspace *obj = qobject_cast<QWorkspace *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -370,9 +350,7 @@ HB_FUNC_STATIC(QWORKSPACE_ACTIVATEPREVIOUSWINDOW)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void arrangeIcons()
-*/
+// void arrangeIcons()
 HB_FUNC_STATIC(QWORKSPACE_ARRANGEICONS)
 {
   QWorkspace *obj = qobject_cast<QWorkspace *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -396,9 +374,7 @@ HB_FUNC_STATIC(QWORKSPACE_ARRANGEICONS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void cascade()
-*/
+// void cascade()
 HB_FUNC_STATIC(QWORKSPACE_CASCADE)
 {
   QWorkspace *obj = qobject_cast<QWorkspace *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -422,9 +398,7 @@ HB_FUNC_STATIC(QWORKSPACE_CASCADE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void closeActiveWindow()
-*/
+// void closeActiveWindow()
 HB_FUNC_STATIC(QWORKSPACE_CLOSEACTIVEWINDOW)
 {
   QWorkspace *obj = qobject_cast<QWorkspace *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -448,9 +422,7 @@ HB_FUNC_STATIC(QWORKSPACE_CLOSEACTIVEWINDOW)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void closeAllWindows()
-*/
+// void closeAllWindows()
 HB_FUNC_STATIC(QWORKSPACE_CLOSEALLWINDOWS)
 {
   QWorkspace *obj = qobject_cast<QWorkspace *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -474,9 +446,7 @@ HB_FUNC_STATIC(QWORKSPACE_CLOSEALLWINDOWS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setActiveWindow(QWidget *w)
-*/
+// void setActiveWindow(QWidget *w)
 HB_FUNC_STATIC(QWORKSPACE_SETACTIVEWINDOW)
 {
   QWorkspace *obj = qobject_cast<QWorkspace *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -500,9 +470,7 @@ HB_FUNC_STATIC(QWORKSPACE_SETACTIVEWINDOW)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void tile()
-*/
+// void tile()
 HB_FUNC_STATIC(QWORKSPACE_TILE)
 {
   QWorkspace *obj = qobject_cast<QWorkspace *>(Qt4xHb::getQObjectPointerFromSelfItem());

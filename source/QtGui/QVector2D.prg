@@ -128,9 +128,7 @@ HB_FUNC_STATIC(QVECTOR2D_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QVECTOR2D_ISNULL)
 {
   QVector2D *obj = static_cast<QVector2D *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -152,9 +150,7 @@ HB_FUNC_STATIC(QVECTOR2D_ISNULL)
   }
 }
 
-/*
-qreal length() const
-*/
+// qreal length() const
 HB_FUNC_STATIC(QVECTOR2D_LENGTH)
 {
   QVector2D *obj = static_cast<QVector2D *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -176,9 +172,7 @@ HB_FUNC_STATIC(QVECTOR2D_LENGTH)
   }
 }
 
-/*
-qreal lengthSquared() const
-*/
+// qreal lengthSquared() const
 HB_FUNC_STATIC(QVECTOR2D_LENGTHSQUARED)
 {
   QVector2D *obj = static_cast<QVector2D *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -200,9 +194,7 @@ HB_FUNC_STATIC(QVECTOR2D_LENGTHSQUARED)
   }
 }
 
-/*
-void normalize()
-*/
+// void normalize()
 HB_FUNC_STATIC(QVECTOR2D_NORMALIZE)
 {
   QVector2D *obj = static_cast<QVector2D *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -226,9 +218,7 @@ HB_FUNC_STATIC(QVECTOR2D_NORMALIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QVector2D normalized() const
-*/
+// QVector2D normalized() const
 HB_FUNC_STATIC(QVECTOR2D_NORMALIZED)
 {
   QVector2D *obj = static_cast<QVector2D *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -251,9 +241,7 @@ HB_FUNC_STATIC(QVECTOR2D_NORMALIZED)
   }
 }
 
-/*
-void setX(qreal x)
-*/
+// void setX(qreal x)
 HB_FUNC_STATIC(QVECTOR2D_SETX)
 {
   QVector2D *obj = static_cast<QVector2D *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -277,9 +265,7 @@ HB_FUNC_STATIC(QVECTOR2D_SETX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setY(qreal y)
-*/
+// void setY(qreal y)
 HB_FUNC_STATIC(QVECTOR2D_SETY)
 {
   QVector2D *obj = static_cast<QVector2D *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -303,9 +289,7 @@ HB_FUNC_STATIC(QVECTOR2D_SETY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QPoint toPoint() const
-*/
+// QPoint toPoint() const
 HB_FUNC_STATIC(QVECTOR2D_TOPOINT)
 {
   QVector2D *obj = static_cast<QVector2D *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -328,9 +312,7 @@ HB_FUNC_STATIC(QVECTOR2D_TOPOINT)
   }
 }
 
-/*
-QPointF toPointF() const
-*/
+// QPointF toPointF() const
 HB_FUNC_STATIC(QVECTOR2D_TOPOINTF)
 {
   QVector2D *obj = static_cast<QVector2D *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -353,9 +335,7 @@ HB_FUNC_STATIC(QVECTOR2D_TOPOINTF)
   }
 }
 
-/*
-QVector3D toVector3D() const
-*/
+// QVector3D toVector3D() const
 HB_FUNC_STATIC(QVECTOR2D_TOVECTOR3D)
 {
   QVector2D *obj = static_cast<QVector2D *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -378,9 +358,7 @@ HB_FUNC_STATIC(QVECTOR2D_TOVECTOR3D)
   }
 }
 
-/*
-QVector4D toVector4D() const
-*/
+// QVector4D toVector4D() const
 HB_FUNC_STATIC(QVECTOR2D_TOVECTOR4D)
 {
   QVector2D *obj = static_cast<QVector2D *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -403,9 +381,7 @@ HB_FUNC_STATIC(QVECTOR2D_TOVECTOR4D)
   }
 }
 
-/*
-qreal x() const
-*/
+// qreal x() const
 HB_FUNC_STATIC(QVECTOR2D_X)
 {
   QVector2D *obj = static_cast<QVector2D *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -427,9 +403,7 @@ HB_FUNC_STATIC(QVECTOR2D_X)
   }
 }
 
-/*
-qreal y() const
-*/
+// qreal y() const
 HB_FUNC_STATIC(QVECTOR2D_Y)
 {
   QVector2D *obj = static_cast<QVector2D *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -451,9 +425,7 @@ HB_FUNC_STATIC(QVECTOR2D_Y)
   }
 }
 
-/*
-static qreal dotProduct(const QVector2D &v1, const QVector2D &v2)
-*/
+// static qreal dotProduct(const QVector2D &v1, const QVector2D &v2)
 HB_FUNC_STATIC(QVECTOR2D_DOTPRODUCT)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

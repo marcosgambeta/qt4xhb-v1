@@ -95,9 +95,7 @@ HB_FUNC_STATIC(QPRINTERINFO_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isDefault() const
-*/
+// bool isDefault() const
 HB_FUNC_STATIC(QPRINTERINFO_ISDEFAULT)
 {
   QPrinterInfo *obj = static_cast<QPrinterInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -119,9 +117,7 @@ HB_FUNC_STATIC(QPRINTERINFO_ISDEFAULT)
   }
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QPRINTERINFO_ISNULL)
 {
   QPrinterInfo *obj = static_cast<QPrinterInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -143,9 +139,7 @@ HB_FUNC_STATIC(QPRINTERINFO_ISNULL)
   }
 }
 
-/*
-QString printerName() const
-*/
+// QString printerName() const
 HB_FUNC_STATIC(QPRINTERINFO_PRINTERNAME)
 {
   QPrinterInfo *obj = static_cast<QPrinterInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -167,9 +161,7 @@ HB_FUNC_STATIC(QPRINTERINFO_PRINTERNAME)
   }
 }
 
-/*
-QList<QPrinter::PaperSize> supportedPaperSizes() const
-*/
+// QList<QPrinter::PaperSize> supportedPaperSizes() const
 HB_FUNC_STATIC(QPRINTERINFO_SUPPORTEDPAPERSIZES)
 {
   QPrinterInfo *obj = static_cast<QPrinterInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -185,7 +177,7 @@ HB_FUNC_STATIC(QPRINTERINFO_SUPPORTEDPAPERSIZES)
       const int count = list.count();
       for (int i = 0; i < count; i++)
       {
-        PHB_ITEM pItem = hb_itemPutNI(NULL, static_cast<int>(list[i]));
+        PHB_ITEM pItem = hb_itemPutNI(NULL, (int)list[i]);
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }
@@ -200,9 +192,7 @@ HB_FUNC_STATIC(QPRINTERINFO_SUPPORTEDPAPERSIZES)
   }
 }
 
-/*
-QList<QPrinterInfo> availablePrinters()
-*/
+// QList<QPrinterInfo> availablePrinters()
 HB_FUNC_STATIC(QPRINTERINFO_AVAILABLEPRINTERS)
 {
   QPrinterInfo *obj = static_cast<QPrinterInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -251,9 +241,7 @@ HB_FUNC_STATIC(QPRINTERINFO_AVAILABLEPRINTERS)
   }
 }
 
-/*
-static QPrinterInfo defaultPrinter()
-*/
+// static QPrinterInfo defaultPrinter()
 HB_FUNC_STATIC(QPRINTERINFO_DEFAULTPRINTER)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

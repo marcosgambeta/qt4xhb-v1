@@ -90,9 +90,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::FillRule fillRule() const
-*/
+// Qt::FillRule fillRule() const
 HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_FILLRULE)
 {
   QGraphicsPolygonItem *obj = static_cast<QGraphicsPolygonItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -114,9 +112,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_FILLRULE)
   }
 }
 
-/*
-QPolygonF polygon() const
-*/
+// QPolygonF polygon() const
 HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_POLYGON)
 {
   QGraphicsPolygonItem *obj = static_cast<QGraphicsPolygonItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -139,9 +135,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_POLYGON)
   }
 }
 
-/*
-void setFillRule(Qt::FillRule rule)
-*/
+// void setFillRule(Qt::FillRule rule)
 HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_SETFILLRULE)
 {
   QGraphicsPolygonItem *obj = static_cast<QGraphicsPolygonItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -165,9 +159,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_SETFILLRULE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPolygon(const QPolygonF &polygon)
-*/
+// void setPolygon(const QPolygonF &polygon)
 HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_SETPOLYGON)
 {
   QGraphicsPolygonItem *obj = static_cast<QGraphicsPolygonItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -191,9 +183,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_SETPOLYGON)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QRectF boundingRect() const
-*/
+// virtual QRectF boundingRect() const
 HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_BOUNDINGRECT)
 {
   QGraphicsPolygonItem *obj = static_cast<QGraphicsPolygonItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -216,9 +206,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_BOUNDINGRECT)
   }
 }
 
-/*
-virtual bool contains(const QPointF &point) const
-*/
+// virtual bool contains(const QPointF &point) const
 HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_CONTAINS)
 {
   QGraphicsPolygonItem *obj = static_cast<QGraphicsPolygonItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -240,9 +228,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_CONTAINS)
   }
 }
 
-/*
-virtual bool isObscuredBy(const QGraphicsItem *item) const
-*/
+// virtual bool isObscuredBy(const QGraphicsItem *item) const
 HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_ISOBSCUREDBY)
 {
   QGraphicsPolygonItem *obj = static_cast<QGraphicsPolygonItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -264,9 +250,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_ISOBSCUREDBY)
   }
 }
 
-/*
-virtual QPainterPath opaqueArea() const
-*/
+// virtual QPainterPath opaqueArea() const
 HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_OPAQUEAREA)
 {
   QGraphicsPolygonItem *obj = static_cast<QGraphicsPolygonItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -289,9 +273,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_OPAQUEAREA)
   }
 }
 
-/*
-virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0)
-*/
+// virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0)
 HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_PAINT)
 {
   QGraphicsPolygonItem *obj = static_cast<QGraphicsPolygonItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -315,9 +297,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_PAINT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QPainterPath shape() const
-*/
+// virtual QPainterPath shape() const
 HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_SHAPE)
 {
   QGraphicsPolygonItem *obj = static_cast<QGraphicsPolygonItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -340,9 +320,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_SHAPE)
   }
 }
 
-/*
-virtual int type() const
-*/
+// virtual int type() const
 HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_TYPE)
 {
   QGraphicsPolygonItem *obj = static_cast<QGraphicsPolygonItem *>(Qt4xHb::itemGetPtrStackSelfItem());

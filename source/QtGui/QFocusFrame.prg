@@ -42,7 +42,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QFocusFrame(QWidget *parent = 0)
+    // QFocusFrame(QWidget *parent = 0)
 HB_FUNC_STATIC(QFOCUSFRAME_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
@@ -56,9 +56,7 @@ HB_FUNC_STATIC(QFOCUSFRAME_NEW)
   }
 }
 
-/*
-void setWidget(QWidget *widget)
-*/
+// void setWidget(QWidget *widget)
 HB_FUNC_STATIC(QFOCUSFRAME_SETWIDGET)
 {
   QFocusFrame *obj = qobject_cast<QFocusFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -82,9 +80,7 @@ HB_FUNC_STATIC(QFOCUSFRAME_SETWIDGET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWidget *widget() const
-*/
+// QWidget *widget() const
 HB_FUNC_STATIC(QFOCUSFRAME_WIDGET)
 {
   QFocusFrame *obj = qobject_cast<QFocusFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());

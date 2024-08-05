@@ -105,7 +105,7 @@ RETURN
 
 #include <QtGui/QHeaderView>
 
-// QTreeView(QWidget *parent = 0)
+    // QTreeView(QWidget *parent = 0)
 HB_FUNC_STATIC(QTREEVIEW_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
@@ -137,9 +137,7 @@ HB_FUNC_STATIC(QTREEVIEW_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool allColumnsShowFocus() const
-*/
+// bool allColumnsShowFocus() const
 HB_FUNC_STATIC(QTREEVIEW_ALLCOLUMNSSHOWFOCUS)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -161,9 +159,7 @@ HB_FUNC_STATIC(QTREEVIEW_ALLCOLUMNSSHOWFOCUS)
   }
 }
 
-/*
-int autoExpandDelay() const
-*/
+// int autoExpandDelay() const
 HB_FUNC_STATIC(QTREEVIEW_AUTOEXPANDDELAY)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -185,9 +181,7 @@ HB_FUNC_STATIC(QTREEVIEW_AUTOEXPANDDELAY)
   }
 }
 
-/*
-int columnAt(int x) const
-*/
+// int columnAt(int x) const
 HB_FUNC_STATIC(QTREEVIEW_COLUMNAT)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -209,9 +203,7 @@ HB_FUNC_STATIC(QTREEVIEW_COLUMNAT)
   }
 }
 
-/*
-int columnViewportPosition(int column) const
-*/
+// int columnViewportPosition(int column) const
 HB_FUNC_STATIC(QTREEVIEW_COLUMNVIEWPORTPOSITION)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -233,9 +225,7 @@ HB_FUNC_STATIC(QTREEVIEW_COLUMNVIEWPORTPOSITION)
   }
 }
 
-/*
-int columnWidth(int column) const
-*/
+// int columnWidth(int column) const
 HB_FUNC_STATIC(QTREEVIEW_COLUMNWIDTH)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -257,9 +247,7 @@ HB_FUNC_STATIC(QTREEVIEW_COLUMNWIDTH)
   }
 }
 
-/*
-bool expandsOnDoubleClick() const
-*/
+// bool expandsOnDoubleClick() const
 HB_FUNC_STATIC(QTREEVIEW_EXPANDSONDOUBLECLICK)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -281,9 +269,7 @@ HB_FUNC_STATIC(QTREEVIEW_EXPANDSONDOUBLECLICK)
   }
 }
 
-/*
-QHeaderView *header() const
-*/
+// QHeaderView *header() const
 HB_FUNC_STATIC(QTREEVIEW_HEADER)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -306,9 +292,7 @@ HB_FUNC_STATIC(QTREEVIEW_HEADER)
   }
 }
 
-/*
-int indentation() const
-*/
+// int indentation() const
 HB_FUNC_STATIC(QTREEVIEW_INDENTATION)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -330,9 +314,7 @@ HB_FUNC_STATIC(QTREEVIEW_INDENTATION)
   }
 }
 
-/*
-QModelIndex indexAbove(const QModelIndex &index) const
-*/
+// QModelIndex indexAbove(const QModelIndex &index) const
 HB_FUNC_STATIC(QTREEVIEW_INDEXABOVE)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -355,9 +337,7 @@ HB_FUNC_STATIC(QTREEVIEW_INDEXABOVE)
   }
 }
 
-/*
-QModelIndex indexBelow(const QModelIndex &index) const
-*/
+// QModelIndex indexBelow(const QModelIndex &index) const
 HB_FUNC_STATIC(QTREEVIEW_INDEXBELOW)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -380,9 +360,7 @@ HB_FUNC_STATIC(QTREEVIEW_INDEXBELOW)
   }
 }
 
-/*
-bool isAnimated() const
-*/
+// bool isAnimated() const
 HB_FUNC_STATIC(QTREEVIEW_ISANIMATED)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -404,9 +382,7 @@ HB_FUNC_STATIC(QTREEVIEW_ISANIMATED)
   }
 }
 
-/*
-bool isColumnHidden(int column) const
-*/
+// bool isColumnHidden(int column) const
 HB_FUNC_STATIC(QTREEVIEW_ISCOLUMNHIDDEN)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -428,9 +404,7 @@ HB_FUNC_STATIC(QTREEVIEW_ISCOLUMNHIDDEN)
   }
 }
 
-/*
-bool isExpanded(const QModelIndex &index) const
-*/
+// bool isExpanded(const QModelIndex &index) const
 HB_FUNC_STATIC(QTREEVIEW_ISEXPANDED)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -452,9 +426,7 @@ HB_FUNC_STATIC(QTREEVIEW_ISEXPANDED)
   }
 }
 
-/*
-bool isFirstColumnSpanned(int row, const QModelIndex &parent) const
-*/
+// bool isFirstColumnSpanned(int row, const QModelIndex &parent) const
 HB_FUNC_STATIC(QTREEVIEW_ISFIRSTCOLUMNSPANNED)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -476,9 +448,7 @@ HB_FUNC_STATIC(QTREEVIEW_ISFIRSTCOLUMNSPANNED)
   }
 }
 
-/*
-bool isHeaderHidden() const
-*/
+// bool isHeaderHidden() const
 HB_FUNC_STATIC(QTREEVIEW_ISHEADERHIDDEN)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -500,9 +470,7 @@ HB_FUNC_STATIC(QTREEVIEW_ISHEADERHIDDEN)
   }
 }
 
-/*
-bool isRowHidden(int row, const QModelIndex &parent) const
-*/
+// bool isRowHidden(int row, const QModelIndex &parent) const
 HB_FUNC_STATIC(QTREEVIEW_ISROWHIDDEN)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -524,9 +492,7 @@ HB_FUNC_STATIC(QTREEVIEW_ISROWHIDDEN)
   }
 }
 
-/*
-bool isSortingEnabled() const
-*/
+// bool isSortingEnabled() const
 HB_FUNC_STATIC(QTREEVIEW_ISSORTINGENABLED)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -548,9 +514,7 @@ HB_FUNC_STATIC(QTREEVIEW_ISSORTINGENABLED)
   }
 }
 
-/*
-bool itemsExpandable() const
-*/
+// bool itemsExpandable() const
 HB_FUNC_STATIC(QTREEVIEW_ITEMSEXPANDABLE)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -572,9 +536,7 @@ HB_FUNC_STATIC(QTREEVIEW_ITEMSEXPANDABLE)
   }
 }
 
-/*
-bool rootIsDecorated() const
-*/
+// bool rootIsDecorated() const
 HB_FUNC_STATIC(QTREEVIEW_ROOTISDECORATED)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -596,9 +558,7 @@ HB_FUNC_STATIC(QTREEVIEW_ROOTISDECORATED)
   }
 }
 
-/*
-void setAllColumnsShowFocus(bool enable)
-*/
+// void setAllColumnsShowFocus(bool enable)
 HB_FUNC_STATIC(QTREEVIEW_SETALLCOLUMNSSHOWFOCUS)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -622,9 +582,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETALLCOLUMNSSHOWFOCUS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setAnimated(bool enable)
-*/
+// void setAnimated(bool enable)
 HB_FUNC_STATIC(QTREEVIEW_SETANIMATED)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -648,9 +606,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETANIMATED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setAutoExpandDelay(int delay)
-*/
+// void setAutoExpandDelay(int delay)
 HB_FUNC_STATIC(QTREEVIEW_SETAUTOEXPANDDELAY)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -674,9 +630,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETAUTOEXPANDDELAY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setColumnHidden(int column, bool hide)
-*/
+// void setColumnHidden(int column, bool hide)
 HB_FUNC_STATIC(QTREEVIEW_SETCOLUMNHIDDEN)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -700,9 +654,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETCOLUMNHIDDEN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setColumnWidth(int column, int width)
-*/
+// void setColumnWidth(int column, int width)
 HB_FUNC_STATIC(QTREEVIEW_SETCOLUMNWIDTH)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -726,9 +678,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETCOLUMNWIDTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setExpanded(const QModelIndex &index, bool expanded)
-*/
+// void setExpanded(const QModelIndex &index, bool expanded)
 HB_FUNC_STATIC(QTREEVIEW_SETEXPANDED)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -752,9 +702,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETEXPANDED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setExpandsOnDoubleClick(bool enable)
-*/
+// void setExpandsOnDoubleClick(bool enable)
 HB_FUNC_STATIC(QTREEVIEW_SETEXPANDSONDOUBLECLICK)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -778,9 +726,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETEXPANDSONDOUBLECLICK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFirstColumnSpanned(int row, const QModelIndex &parent, bool span)
-*/
+// void setFirstColumnSpanned(int row, const QModelIndex &parent, bool span)
 HB_FUNC_STATIC(QTREEVIEW_SETFIRSTCOLUMNSPANNED)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -804,9 +750,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETFIRSTCOLUMNSPANNED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setHeader(QHeaderView *header)
-*/
+// void setHeader(QHeaderView *header)
 HB_FUNC_STATIC(QTREEVIEW_SETHEADER)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -830,9 +774,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETHEADER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setHeaderHidden(bool hide)
-*/
+// void setHeaderHidden(bool hide)
 HB_FUNC_STATIC(QTREEVIEW_SETHEADERHIDDEN)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -856,9 +798,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETHEADERHIDDEN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setIndentation(int i)
-*/
+// void setIndentation(int i)
 HB_FUNC_STATIC(QTREEVIEW_SETINDENTATION)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -882,9 +822,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETINDENTATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setItemsExpandable(bool enable)
-*/
+// void setItemsExpandable(bool enable)
 HB_FUNC_STATIC(QTREEVIEW_SETITEMSEXPANDABLE)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -908,9 +846,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETITEMSEXPANDABLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setRootIsDecorated(bool show)
-*/
+// void setRootIsDecorated(bool show)
 HB_FUNC_STATIC(QTREEVIEW_SETROOTISDECORATED)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -934,9 +870,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETROOTISDECORATED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setRowHidden(int row, const QModelIndex &parent, bool hide)
-*/
+// void setRowHidden(int row, const QModelIndex &parent, bool hide)
 HB_FUNC_STATIC(QTREEVIEW_SETROWHIDDEN)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -960,9 +894,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETROWHIDDEN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSortingEnabled(bool enable)
-*/
+// void setSortingEnabled(bool enable)
 HB_FUNC_STATIC(QTREEVIEW_SETSORTINGENABLED)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -986,9 +918,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETSORTINGENABLED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setUniformRowHeights(bool uniform)
-*/
+// void setUniformRowHeights(bool uniform)
 HB_FUNC_STATIC(QTREEVIEW_SETUNIFORMROWHEIGHTS)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1012,9 +942,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETUNIFORMROWHEIGHTS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWordWrap(bool on)
-*/
+// void setWordWrap(bool on)
 HB_FUNC_STATIC(QTREEVIEW_SETWORDWRAP)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1038,9 +966,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETWORDWRAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void sortByColumn(int column, Qt::SortOrder order)
-*/
+// void sortByColumn(int column, Qt::SortOrder order)
 HB_FUNC_STATIC(QTREEVIEW_SORTBYCOLUMN)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1064,9 +990,7 @@ HB_FUNC_STATIC(QTREEVIEW_SORTBYCOLUMN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool uniformRowHeights() const
-*/
+// bool uniformRowHeights() const
 HB_FUNC_STATIC(QTREEVIEW_UNIFORMROWHEIGHTS)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1088,9 +1012,7 @@ HB_FUNC_STATIC(QTREEVIEW_UNIFORMROWHEIGHTS)
   }
 }
 
-/*
-bool wordWrap() const
-*/
+// bool wordWrap() const
 HB_FUNC_STATIC(QTREEVIEW_WORDWRAP)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1112,9 +1034,7 @@ HB_FUNC_STATIC(QTREEVIEW_WORDWRAP)
   }
 }
 
-/*
-virtual void dataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight)
-*/
+// virtual void dataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight)
 HB_FUNC_STATIC(QTREEVIEW_DATACHANGED)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1138,9 +1058,7 @@ HB_FUNC_STATIC(QTREEVIEW_DATACHANGED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QModelIndex indexAt(const QPoint &point) const
-*/
+// virtual QModelIndex indexAt(const QPoint &point) const
 HB_FUNC_STATIC(QTREEVIEW_INDEXAT)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1163,9 +1081,7 @@ HB_FUNC_STATIC(QTREEVIEW_INDEXAT)
   }
 }
 
-/*
-virtual void keyboardSearch(const QString &search)
-*/
+// virtual void keyboardSearch(const QString &search)
 HB_FUNC_STATIC(QTREEVIEW_KEYBOARDSEARCH)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1189,9 +1105,7 @@ HB_FUNC_STATIC(QTREEVIEW_KEYBOARDSEARCH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void reset()
-*/
+// virtual void reset()
 HB_FUNC_STATIC(QTREEVIEW_RESET)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1215,9 +1129,7 @@ HB_FUNC_STATIC(QTREEVIEW_RESET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void scrollTo(const QModelIndex &index, QTreeView::ScrollHint hint = QTreeView::EnsureVisible)
-*/
+// virtual void scrollTo(const QModelIndex &index, QTreeView::ScrollHint hint = QTreeView::EnsureVisible)
 HB_FUNC_STATIC(QTREEVIEW_SCROLLTO)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1242,9 +1154,7 @@ HB_FUNC_STATIC(QTREEVIEW_SCROLLTO)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void selectAll()
-*/
+// virtual void selectAll()
 HB_FUNC_STATIC(QTREEVIEW_SELECTALL)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1268,9 +1178,7 @@ HB_FUNC_STATIC(QTREEVIEW_SELECTALL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setModel(QAbstractItemModel *model)
-*/
+// virtual void setModel(QAbstractItemModel *model)
 HB_FUNC_STATIC(QTREEVIEW_SETMODEL)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1294,9 +1202,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETMODEL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setRootIndex(const QModelIndex &index)
-*/
+// virtual void setRootIndex(const QModelIndex &index)
 HB_FUNC_STATIC(QTREEVIEW_SETROOTINDEX)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1320,9 +1226,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETROOTINDEX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setSelectionModel(QItemSelectionModel *selectionModel)
-*/
+// virtual void setSelectionModel(QItemSelectionModel *selectionModel)
 HB_FUNC_STATIC(QTREEVIEW_SETSELECTIONMODEL)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1346,9 +1250,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETSELECTIONMODEL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QRect visualRect(const QModelIndex &index) const
-*/
+// virtual QRect visualRect(const QModelIndex &index) const
 HB_FUNC_STATIC(QTREEVIEW_VISUALRECT)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1371,9 +1273,7 @@ HB_FUNC_STATIC(QTREEVIEW_VISUALRECT)
   }
 }
 
-/*
-void collapse(const QModelIndex &index)
-*/
+// void collapse(const QModelIndex &index)
 HB_FUNC_STATIC(QTREEVIEW_COLLAPSE)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1397,9 +1297,7 @@ HB_FUNC_STATIC(QTREEVIEW_COLLAPSE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void collapseAll()
-*/
+// void collapseAll()
 HB_FUNC_STATIC(QTREEVIEW_COLLAPSEALL)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1423,9 +1321,7 @@ HB_FUNC_STATIC(QTREEVIEW_COLLAPSEALL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void expand(const QModelIndex &index)
-*/
+// void expand(const QModelIndex &index)
 HB_FUNC_STATIC(QTREEVIEW_EXPAND)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1449,9 +1345,7 @@ HB_FUNC_STATIC(QTREEVIEW_EXPAND)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void expandAll()
-*/
+// void expandAll()
 HB_FUNC_STATIC(QTREEVIEW_EXPANDALL)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1475,9 +1369,7 @@ HB_FUNC_STATIC(QTREEVIEW_EXPANDALL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void expandToDepth(int depth)
-*/
+// void expandToDepth(int depth)
 HB_FUNC_STATIC(QTREEVIEW_EXPANDTODEPTH)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1501,9 +1393,7 @@ HB_FUNC_STATIC(QTREEVIEW_EXPANDTODEPTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void hideColumn(int column)
-*/
+// void hideColumn(int column)
 HB_FUNC_STATIC(QTREEVIEW_HIDECOLUMN)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1527,9 +1417,7 @@ HB_FUNC_STATIC(QTREEVIEW_HIDECOLUMN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void resizeColumnToContents(int column)
-*/
+// void resizeColumnToContents(int column)
 HB_FUNC_STATIC(QTREEVIEW_RESIZECOLUMNTOCONTENTS)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1553,9 +1441,7 @@ HB_FUNC_STATIC(QTREEVIEW_RESIZECOLUMNTOCONTENTS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void showColumn(int column)
-*/
+// void showColumn(int column)
 HB_FUNC_STATIC(QTREEVIEW_SHOWCOLUMN)
 {
   QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());

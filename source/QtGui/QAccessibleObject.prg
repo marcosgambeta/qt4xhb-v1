@@ -45,9 +45,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    virtual QString actionText(int action, QAccessibleObject::Text t, int child) const
-    */
+    // virtual QString actionText(int action, QAccessibleObject::Text t, int child) const
 HB_FUNC_STATIC(QACCESSIBLEOBJECT_ACTIONTEXT)
 {
   QAccessibleObject *obj = static_cast<QAccessibleObject *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -69,9 +67,7 @@ HB_FUNC_STATIC(QACCESSIBLEOBJECT_ACTIONTEXT)
   }
 }
 
-/*
-virtual bool doAction(int action, int child, const QVariantList &params)
-*/
+// virtual bool doAction(int action, int child, const QVariantList &params)
 HB_FUNC_STATIC(QACCESSIBLEOBJECT_DOACTION)
 {
   QAccessibleObject *obj = static_cast<QAccessibleObject *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -101,9 +97,7 @@ HB_FUNC_STATIC(QACCESSIBLEOBJECT_DOACTION)
   }
 }
 
-/*
-virtual bool isValid() const
-*/
+// virtual bool isValid() const
 HB_FUNC_STATIC(QACCESSIBLEOBJECT_ISVALID)
 {
   QAccessibleObject *obj = static_cast<QAccessibleObject *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -125,9 +119,7 @@ HB_FUNC_STATIC(QACCESSIBLEOBJECT_ISVALID)
   }
 }
 
-/*
-virtual QObject *object() const
-*/
+// virtual QObject *object() const
 HB_FUNC_STATIC(QACCESSIBLEOBJECT_OBJECT)
 {
   QAccessibleObject *obj = static_cast<QAccessibleObject *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -150,9 +142,7 @@ HB_FUNC_STATIC(QACCESSIBLEOBJECT_OBJECT)
   }
 }
 
-/*
-virtual QRect rect(int child) const
-*/
+// virtual QRect rect(int child) const
 HB_FUNC_STATIC(QACCESSIBLEOBJECT_RECT)
 {
   QAccessibleObject *obj = static_cast<QAccessibleObject *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -175,9 +165,7 @@ HB_FUNC_STATIC(QACCESSIBLEOBJECT_RECT)
   }
 }
 
-/*
-virtual void setText(QAccessibleObject::Text t, int child, const QString &text)
-*/
+// virtual void setText(QAccessibleObject::Text t, int child, const QString &text)
 HB_FUNC_STATIC(QACCESSIBLEOBJECT_SETTEXT)
 {
   QAccessibleObject *obj = static_cast<QAccessibleObject *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -201,9 +189,7 @@ HB_FUNC_STATIC(QACCESSIBLEOBJECT_SETTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual int userActionCount(int child) const
-*/
+// virtual int userActionCount(int child) const
 HB_FUNC_STATIC(QACCESSIBLEOBJECT_USERACTIONCOUNT)
 {
   QAccessibleObject *obj = static_cast<QAccessibleObject *>(Qt4xHb::itemGetPtrStackSelfItem());

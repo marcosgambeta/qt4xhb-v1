@@ -38,10 +38,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QDragEnterEvent(const QPoint &point, Qt::DropActions actions, const QMimeData *data, Qt::MouseButtons buttons,
-Qt::KeyboardModifiers modifiers)
-*/
+    // QDragEnterEvent(const QPoint &point, Qt::DropActions actions, const QMimeData *data, Qt::MouseButtons buttons,
+    // Qt::KeyboardModifiers modifiers)
 HB_FUNC_STATIC(QDRAGENTEREVENT_NEW)
 {
   if (ISNUMPAR(5) && ISQPOINT(1) && HB_ISNUM(2) && ISQMIMEDATA(3) && HB_ISNUM(4) && HB_ISNUM(5))

@@ -66,9 +66,7 @@ HB_FUNC_STATIC(QMIMESOURCE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QByteArray encodedData(const char *format) const = 0
-*/
+// virtual QByteArray encodedData(const char *format) const = 0
 HB_FUNC_STATIC(QMIMESOURCE_ENCODEDDATA)
 {
   QMimeSource *obj = static_cast<QMimeSource *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -91,9 +89,7 @@ HB_FUNC_STATIC(QMIMESOURCE_ENCODEDDATA)
   }
 }
 
-/*
-virtual const char *format(int i = 0) const = 0
-*/
+// virtual const char *format(int i = 0) const = 0
 HB_FUNC_STATIC(QMIMESOURCE_FORMAT)
 {
   QMimeSource *obj = static_cast<QMimeSource *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -115,9 +111,7 @@ HB_FUNC_STATIC(QMIMESOURCE_FORMAT)
   }
 }
 
-/*
-virtual bool provides(const char *mimeType) const
-*/
+// virtual bool provides(const char *mimeType) const
 HB_FUNC_STATIC(QMIMESOURCE_PROVIDES)
 {
   QMimeSource *obj = static_cast<QMimeSource *>(Qt4xHb::itemGetPtrStackSelfItem());

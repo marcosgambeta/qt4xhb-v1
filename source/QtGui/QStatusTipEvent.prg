@@ -39,7 +39,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-// QStatusTipEvent(const QString &tip)
+    // QStatusTipEvent(const QString &tip)
 HB_FUNC_STATIC(QSTATUSTIPEVENT_NEW)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1))
@@ -69,9 +69,7 @@ HB_FUNC_STATIC(QSTATUSTIPEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString tip() const
-*/
+// QString tip() const
 HB_FUNC_STATIC(QSTATUSTIPEVENT_TIP)
 {
   QStatusTipEvent *obj = static_cast<QStatusTipEvent *>(Qt4xHb::itemGetPtrStackSelfItem());

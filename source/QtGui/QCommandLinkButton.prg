@@ -69,9 +69,7 @@ HB_FUNC_STATIC(QCOMMANDLINKBUTTON_NEW)
   }
 }
 
-/*
-QString description() const
-*/
+// QString description() const
 HB_FUNC_STATIC(QCOMMANDLINKBUTTON_DESCRIPTION)
 {
   QCommandLinkButton *obj = qobject_cast<QCommandLinkButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -93,9 +91,7 @@ HB_FUNC_STATIC(QCOMMANDLINKBUTTON_DESCRIPTION)
   }
 }
 
-/*
-void setDescription(const QString &description)
-*/
+// void setDescription(const QString &description)
 HB_FUNC_STATIC(QCOMMANDLINKBUTTON_SETDESCRIPTION)
 {
   QCommandLinkButton *obj = qobject_cast<QCommandLinkButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -119,9 +115,7 @@ HB_FUNC_STATIC(QCOMMANDLINKBUTTON_SETDESCRIPTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isFlat() const
-*/
+// bool isFlat() const
 HB_FUNC_STATIC(QCOMMANDLINKBUTTON_ISFLAT)
 {
   QCommandLinkButton *obj = qobject_cast<QCommandLinkButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -143,9 +137,7 @@ HB_FUNC_STATIC(QCOMMANDLINKBUTTON_ISFLAT)
   }
 }
 
-/*
-void setFlat(bool)
-*/
+// void setFlat(bool)
 HB_FUNC_STATIC(QCOMMANDLINKBUTTON_SETFLAT)
 {
   QCommandLinkButton *obj = qobject_cast<QCommandLinkButton *>(Qt4xHb::getQObjectPointerFromSelfItem());

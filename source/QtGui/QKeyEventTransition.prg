@@ -82,9 +82,7 @@ HB_FUNC_STATIC(QKEYEVENTTRANSITION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int key() const
-*/
+// int key() const
 HB_FUNC_STATIC(QKEYEVENTTRANSITION_KEY)
 {
   QKeyEventTransition *obj = qobject_cast<QKeyEventTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -106,9 +104,7 @@ HB_FUNC_STATIC(QKEYEVENTTRANSITION_KEY)
   }
 }
 
-/*
-Qt::KeyboardModifiers modifierMask() const
-*/
+// Qt::KeyboardModifiers modifierMask() const
 HB_FUNC_STATIC(QKEYEVENTTRANSITION_MODIFIERMASK)
 {
   QKeyEventTransition *obj = qobject_cast<QKeyEventTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -130,9 +126,7 @@ HB_FUNC_STATIC(QKEYEVENTTRANSITION_MODIFIERMASK)
   }
 }
 
-/*
-void setKey(int key)
-*/
+// void setKey(int key)
 HB_FUNC_STATIC(QKEYEVENTTRANSITION_SETKEY)
 {
   QKeyEventTransition *obj = qobject_cast<QKeyEventTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -156,9 +150,7 @@ HB_FUNC_STATIC(QKEYEVENTTRANSITION_SETKEY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setModifierMask(Qt::KeyboardModifiers modifierMask)
-*/
+// void setModifierMask(Qt::KeyboardModifiers modifierMask)
 HB_FUNC_STATIC(QKEYEVENTTRANSITION_SETMODIFIERMASK)
 {
   QKeyEventTransition *obj = qobject_cast<QKeyEventTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());

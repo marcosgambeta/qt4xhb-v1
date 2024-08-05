@@ -64,9 +64,7 @@ HB_FUNC_STATIC(QACCESSIBLEBRIDGE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void notifyAccessibilityUpdate(int reason, QAccessibleInterface *interface, int child) = 0
-*/
+// virtual void notifyAccessibilityUpdate(int reason, QAccessibleInterface *interface, int child) = 0
 HB_FUNC_STATIC(QACCESSIBLEBRIDGE_NOTIFYACCESSIBILITYUPDATE)
 {
   QAccessibleBridge *obj = static_cast<QAccessibleBridge *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -90,9 +88,7 @@ HB_FUNC_STATIC(QACCESSIBLEBRIDGE_NOTIFYACCESSIBILITYUPDATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setRootObject(QAccessibleInterface *object) = 0
-*/
+// virtual void setRootObject(QAccessibleInterface *object) = 0
 HB_FUNC_STATIC(QACCESSIBLEBRIDGE_SETROOTOBJECT)
 {
   QAccessibleBridge *obj = static_cast<QAccessibleBridge *>(Qt4xHb::itemGetPtrStackSelfItem());

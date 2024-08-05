@@ -41,7 +41,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-// QDecorationDefault()
+    // QDecorationDefault()
 HB_FUNC_STATIC(QDECORATIONDEFAULT_NEW)
 {
   if (ISNUMPAR(0))
@@ -71,10 +71,8 @@ HB_FUNC_STATIC(QDECORATIONDEFAULT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool paint(QPainter *painter, const QWidget *widget, int decorationRegion = QDecoration::All,
-QDecoration::DecorationState state = QDecoration::Normal)
-*/
+// virtual bool paint(QPainter *painter, const QWidget *widget, int decorationRegion = QDecoration::All,
+// QDecoration::DecorationState state = QDecoration::Normal)
 HB_FUNC_STATIC(QDECORATIONDEFAULT_PAINT)
 {
   QDecorationDefault *obj = static_cast<QDecorationDefault *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -99,9 +97,7 @@ HB_FUNC_STATIC(QDECORATIONDEFAULT_PAINT)
   }
 }
 
-/*
-virtual QRegion region(const QWidget *widget, const QRect &rect, int decorationRegion = QDecoration::All)
-*/
+// virtual QRegion region(const QWidget *widget, const QRect &rect, int decorationRegion = QDecoration::All)
 HB_FUNC_STATIC(QDECORATIONDEFAULT_REGION)
 {
   QDecorationDefault *obj = static_cast<QDecorationDefault *>(Qt4xHb::itemGetPtrStackSelfItem());

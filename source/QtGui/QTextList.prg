@@ -68,9 +68,7 @@ HB_FUNC_STATIC(QTEXTLIST_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void add(const QTextBlock &block)
-*/
+// void add(const QTextBlock &block)
 HB_FUNC_STATIC(QTEXTLIST_ADD)
 {
   QTextList *obj = qobject_cast<QTextList *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -94,9 +92,7 @@ HB_FUNC_STATIC(QTEXTLIST_ADD)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int count() const
-*/
+// int count() const
 HB_FUNC_STATIC(QTEXTLIST_COUNT)
 {
   QTextList *obj = qobject_cast<QTextList *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -118,9 +114,7 @@ HB_FUNC_STATIC(QTEXTLIST_COUNT)
   }
 }
 
-/*
-QTextListFormat format() const
-*/
+// QTextListFormat format() const
 HB_FUNC_STATIC(QTEXTLIST_FORMAT)
 {
   QTextList *obj = qobject_cast<QTextList *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -143,9 +137,7 @@ HB_FUNC_STATIC(QTEXTLIST_FORMAT)
   }
 }
 
-/*
-QTextBlock item(int i) const
-*/
+// QTextBlock item(int i) const
 HB_FUNC_STATIC(QTEXTLIST_ITEM)
 {
   QTextList *obj = qobject_cast<QTextList *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -168,9 +160,7 @@ HB_FUNC_STATIC(QTEXTLIST_ITEM)
   }
 }
 
-/*
-int itemNumber(const QTextBlock &block) const
-*/
+// int itemNumber(const QTextBlock &block) const
 HB_FUNC_STATIC(QTEXTLIST_ITEMNUMBER)
 {
   QTextList *obj = qobject_cast<QTextList *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -192,9 +182,7 @@ HB_FUNC_STATIC(QTEXTLIST_ITEMNUMBER)
   }
 }
 
-/*
-QString itemText(const QTextBlock &block) const
-*/
+// QString itemText(const QTextBlock &block) const
 HB_FUNC_STATIC(QTEXTLIST_ITEMTEXT)
 {
   QTextList *obj = qobject_cast<QTextList *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -216,9 +204,7 @@ HB_FUNC_STATIC(QTEXTLIST_ITEMTEXT)
   }
 }
 
-/*
-void remove(const QTextBlock &block)
-*/
+// void remove(const QTextBlock &block)
 HB_FUNC_STATIC(QTEXTLIST_REMOVE)
 {
   QTextList *obj = qobject_cast<QTextList *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -242,9 +228,7 @@ HB_FUNC_STATIC(QTEXTLIST_REMOVE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void removeItem(int i)
-*/
+// void removeItem(int i)
 HB_FUNC_STATIC(QTEXTLIST_REMOVEITEM)
 {
   QTextList *obj = qobject_cast<QTextList *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -268,9 +252,7 @@ HB_FUNC_STATIC(QTEXTLIST_REMOVEITEM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFormat(const QTextListFormat &format)
-*/
+// void setFormat(const QTextListFormat &format)
 HB_FUNC_STATIC(QTEXTLIST_SETFORMAT)
 {
   QTextList *obj = qobject_cast<QTextList *>(Qt4xHb::getQObjectPointerFromSelfItem());

@@ -68,10 +68,8 @@ HB_FUNC_STATIC(QSHORTCUT_NEW)
   else if (ISBETWEEN(2, 5) && ISQKEYSEQUENCE(1) && ISQWIDGET(2) && (HB_ISCHAR(3) || HB_ISNIL(3)) &&
            (HB_ISCHAR(4) || HB_ISNIL(4)) && (HB_ISNUM(5) || HB_ISNIL(5)))
   {
-    /*
-    QShortcut(const QKeySequence &key, QWidget *parent, const char *member = 0, const char *ambiguousMember = 0,
-    Qt::ShortcutContext context = Qt::WindowShortcut)
-    */
+    // QShortcut(const QKeySequence &key, QWidget *parent, const char *member = 0, const char *ambiguousMember = 0,
+    // Qt::ShortcutContext context = Qt::WindowShortcut)
     QShortcut *obj =
         new QShortcut(*PQKEYSEQUENCE(1), PQWIDGET(2), OPCONSTCHAR(3, 0), OPCONSTCHAR(4, 0),
                       HB_ISNIL(5) ? (Qt::ShortcutContext)Qt::WindowShortcut : (Qt::ShortcutContext)hb_parni(5));
@@ -101,9 +99,7 @@ HB_FUNC_STATIC(QSHORTCUT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool autoRepeat() const
-*/
+// bool autoRepeat() const
 HB_FUNC_STATIC(QSHORTCUT_AUTOREPEAT)
 {
   QShortcut *obj = qobject_cast<QShortcut *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -125,9 +121,7 @@ HB_FUNC_STATIC(QSHORTCUT_AUTOREPEAT)
   }
 }
 
-/*
-Qt::ShortcutContext context() const
-*/
+// Qt::ShortcutContext context() const
 HB_FUNC_STATIC(QSHORTCUT_CONTEXT)
 {
   QShortcut *obj = qobject_cast<QShortcut *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -149,9 +143,7 @@ HB_FUNC_STATIC(QSHORTCUT_CONTEXT)
   }
 }
 
-/*
-int id() const
-*/
+// int id() const
 HB_FUNC_STATIC(QSHORTCUT_ID)
 {
   QShortcut *obj = qobject_cast<QShortcut *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -173,9 +165,7 @@ HB_FUNC_STATIC(QSHORTCUT_ID)
   }
 }
 
-/*
-bool isEnabled() const
-*/
+// bool isEnabled() const
 HB_FUNC_STATIC(QSHORTCUT_ISENABLED)
 {
   QShortcut *obj = qobject_cast<QShortcut *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -197,9 +187,7 @@ HB_FUNC_STATIC(QSHORTCUT_ISENABLED)
   }
 }
 
-/*
-QKeySequence key() const
-*/
+// QKeySequence key() const
 HB_FUNC_STATIC(QSHORTCUT_KEY)
 {
   QShortcut *obj = qobject_cast<QShortcut *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -222,9 +210,7 @@ HB_FUNC_STATIC(QSHORTCUT_KEY)
   }
 }
 
-/*
-QWidget *parentWidget() const
-*/
+// QWidget *parentWidget() const
 HB_FUNC_STATIC(QSHORTCUT_PARENTWIDGET)
 {
   QShortcut *obj = qobject_cast<QShortcut *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -247,9 +233,7 @@ HB_FUNC_STATIC(QSHORTCUT_PARENTWIDGET)
   }
 }
 
-/*
-void setAutoRepeat(bool on)
-*/
+// void setAutoRepeat(bool on)
 HB_FUNC_STATIC(QSHORTCUT_SETAUTOREPEAT)
 {
   QShortcut *obj = qobject_cast<QShortcut *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -273,9 +257,7 @@ HB_FUNC_STATIC(QSHORTCUT_SETAUTOREPEAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setContext(Qt::ShortcutContext context)
-*/
+// void setContext(Qt::ShortcutContext context)
 HB_FUNC_STATIC(QSHORTCUT_SETCONTEXT)
 {
   QShortcut *obj = qobject_cast<QShortcut *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -299,9 +281,7 @@ HB_FUNC_STATIC(QSHORTCUT_SETCONTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setEnabled(bool enable)
-*/
+// void setEnabled(bool enable)
 HB_FUNC_STATIC(QSHORTCUT_SETENABLED)
 {
   QShortcut *obj = qobject_cast<QShortcut *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -325,9 +305,7 @@ HB_FUNC_STATIC(QSHORTCUT_SETENABLED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setKey(const QKeySequence &key)
-*/
+// void setKey(const QKeySequence &key)
 HB_FUNC_STATIC(QSHORTCUT_SETKEY)
 {
   QShortcut *obj = qobject_cast<QShortcut *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -351,9 +329,7 @@ HB_FUNC_STATIC(QSHORTCUT_SETKEY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWhatsThis(const QString &text)
-*/
+// void setWhatsThis(const QString &text)
 HB_FUNC_STATIC(QSHORTCUT_SETWHATSTHIS)
 {
   QShortcut *obj = qobject_cast<QShortcut *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -377,9 +353,7 @@ HB_FUNC_STATIC(QSHORTCUT_SETWHATSTHIS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString whatsThis() const
-*/
+// QString whatsThis() const
 HB_FUNC_STATIC(QSHORTCUT_WHATSTHIS)
 {
   QShortcut *obj = qobject_cast<QShortcut *>(Qt4xHb::getQObjectPointerFromSelfItem());

@@ -41,7 +41,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-// QGraphicsSceneMoveEvent()
+    // QGraphicsSceneMoveEvent()
 HB_FUNC_STATIC(QGRAPHICSSCENEMOVEEVENT_NEW)
 {
   if (ISNUMPAR(0))
@@ -71,9 +71,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOVEEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QPointF newPos() const
-*/
+// QPointF newPos() const
 HB_FUNC_STATIC(QGRAPHICSSCENEMOVEEVENT_NEWPOS)
 {
   QGraphicsSceneMoveEvent *obj = static_cast<QGraphicsSceneMoveEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -96,9 +94,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEMOVEEVENT_NEWPOS)
   }
 }
 
-/*
-QPointF oldPos() const
-*/
+// QPointF oldPos() const
 HB_FUNC_STATIC(QGRAPHICSSCENEMOVEEVENT_OLDPOS)
 {
   QGraphicsSceneMoveEvent *obj = static_cast<QGraphicsSceneMoveEvent *>(Qt4xHb::itemGetPtrStackSelfItem());

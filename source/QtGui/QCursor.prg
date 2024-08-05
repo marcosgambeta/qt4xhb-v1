@@ -115,9 +115,7 @@ HB_FUNC_STATIC(QCURSOR_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-const QBitmap *bitmap() const
-*/
+// const QBitmap *bitmap() const
 HB_FUNC_STATIC(QCURSOR_BITMAP)
 {
   QCursor *obj = static_cast<QCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -140,9 +138,7 @@ HB_FUNC_STATIC(QCURSOR_BITMAP)
   }
 }
 
-/*
-QPoint hotSpot() const
-*/
+// QPoint hotSpot() const
 HB_FUNC_STATIC(QCURSOR_HOTSPOT)
 {
   QCursor *obj = static_cast<QCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -165,9 +161,7 @@ HB_FUNC_STATIC(QCURSOR_HOTSPOT)
   }
 }
 
-/*
-const QBitmap *mask() const
-*/
+// const QBitmap *mask() const
 HB_FUNC_STATIC(QCURSOR_MASK)
 {
   QCursor *obj = static_cast<QCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -190,9 +184,7 @@ HB_FUNC_STATIC(QCURSOR_MASK)
   }
 }
 
-/*
-QPixmap pixmap() const
-*/
+// QPixmap pixmap() const
 HB_FUNC_STATIC(QCURSOR_PIXMAP)
 {
   QCursor *obj = static_cast<QCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -215,9 +207,7 @@ HB_FUNC_STATIC(QCURSOR_PIXMAP)
   }
 }
 
-/*
-void setShape(Qt::CursorShape shape)
-*/
+// void setShape(Qt::CursorShape shape)
 HB_FUNC_STATIC(QCURSOR_SETSHAPE)
 {
   QCursor *obj = static_cast<QCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -241,9 +231,7 @@ HB_FUNC_STATIC(QCURSOR_SETSHAPE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::CursorShape shape() const
-*/
+// Qt::CursorShape shape() const
 HB_FUNC_STATIC(QCURSOR_SHAPE)
 {
   QCursor *obj = static_cast<QCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -265,9 +253,7 @@ HB_FUNC_STATIC(QCURSOR_SHAPE)
   }
 }
 
-/*
-static QPoint pos()
-*/
+// static QPoint pos()
 HB_FUNC_STATIC(QCURSOR_POS)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -289,9 +275,7 @@ HB_FUNC_STATIC(QCURSOR_SETPOS)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
-    /*
-    static void setPos(int x, int y)
-    */
+    // static void setPos(int x, int y)
 
     QCursor::setPos(PINT(1), PINT(2));
 
@@ -299,9 +283,7 @@ HB_FUNC_STATIC(QCURSOR_SETPOS)
   }
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
-    /*
-    static void setPos(const QPoint &p)
-    */
+    // static void setPos(const QPoint &p)
 
     QCursor::setPos(*PQPOINT(1));
 

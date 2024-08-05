@@ -61,9 +61,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENECONTEXTMENUEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::KeyboardModifiers modifiers() const
-*/
+// Qt::KeyboardModifiers modifiers() const
 HB_FUNC_STATIC(QGRAPHICSSCENECONTEXTMENUEVENT_MODIFIERS)
 {
   QGraphicsSceneContextMenuEvent *obj =
@@ -86,9 +84,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENECONTEXTMENUEVENT_MODIFIERS)
   }
 }
 
-/*
-QPointF pos() const
-*/
+// QPointF pos() const
 HB_FUNC_STATIC(QGRAPHICSSCENECONTEXTMENUEVENT_POS)
 {
   QGraphicsSceneContextMenuEvent *obj =
@@ -112,9 +108,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENECONTEXTMENUEVENT_POS)
   }
 }
 
-/*
-QGraphicsSceneContextMenuEvent::Reason reason() const
-*/
+// QGraphicsSceneContextMenuEvent::Reason reason() const
 HB_FUNC_STATIC(QGRAPHICSSCENECONTEXTMENUEVENT_REASON)
 {
   QGraphicsSceneContextMenuEvent *obj =
@@ -137,9 +131,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENECONTEXTMENUEVENT_REASON)
   }
 }
 
-/*
-QPointF scenePos() const
-*/
+// QPointF scenePos() const
 HB_FUNC_STATIC(QGRAPHICSSCENECONTEXTMENUEVENT_SCENEPOS)
 {
   QGraphicsSceneContextMenuEvent *obj =
@@ -163,9 +155,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENECONTEXTMENUEVENT_SCENEPOS)
   }
 }
 
-/*
-QPoint screenPos() const
-*/
+// QPoint screenPos() const
 HB_FUNC_STATIC(QGRAPHICSSCENECONTEXTMENUEVENT_SCREENPOS)
 {
   QGraphicsSceneContextMenuEvent *obj =

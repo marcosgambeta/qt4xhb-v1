@@ -52,7 +52,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QStatusBar(QWidget *parent = 0)
+    // QStatusBar(QWidget *parent = 0)
 HB_FUNC_STATIC(QSTATUSBAR_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
@@ -84,9 +84,7 @@ HB_FUNC_STATIC(QSTATUSBAR_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addPermanentWidget(QWidget *widget, int stretch = 0)
-*/
+// void addPermanentWidget(QWidget *widget, int stretch = 0)
 HB_FUNC_STATIC(QSTATUSBAR_ADDPERMANENTWIDGET)
 {
   QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -110,9 +108,7 @@ HB_FUNC_STATIC(QSTATUSBAR_ADDPERMANENTWIDGET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addWidget(QWidget *widget, int stretch = 0)
-*/
+// void addWidget(QWidget *widget, int stretch = 0)
 HB_FUNC_STATIC(QSTATUSBAR_ADDWIDGET)
 {
   QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -136,9 +132,7 @@ HB_FUNC_STATIC(QSTATUSBAR_ADDWIDGET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString currentMessage() const
-*/
+// QString currentMessage() const
 HB_FUNC_STATIC(QSTATUSBAR_CURRENTMESSAGE)
 {
   QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -160,9 +154,7 @@ HB_FUNC_STATIC(QSTATUSBAR_CURRENTMESSAGE)
   }
 }
 
-/*
-int insertPermanentWidget(int index, QWidget *widget, int stretch = 0)
-*/
+// int insertPermanentWidget(int index, QWidget *widget, int stretch = 0)
 HB_FUNC_STATIC(QSTATUSBAR_INSERTPERMANENTWIDGET)
 {
   QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -184,9 +176,7 @@ HB_FUNC_STATIC(QSTATUSBAR_INSERTPERMANENTWIDGET)
   }
 }
 
-/*
-int insertWidget(int index, QWidget *widget, int stretch = 0)
-*/
+// int insertWidget(int index, QWidget *widget, int stretch = 0)
 HB_FUNC_STATIC(QSTATUSBAR_INSERTWIDGET)
 {
   QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -208,9 +198,7 @@ HB_FUNC_STATIC(QSTATUSBAR_INSERTWIDGET)
   }
 }
 
-/*
-bool isSizeGripEnabled() const
-*/
+// bool isSizeGripEnabled() const
 HB_FUNC_STATIC(QSTATUSBAR_ISSIZEGRIPENABLED)
 {
   QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -232,9 +220,7 @@ HB_FUNC_STATIC(QSTATUSBAR_ISSIZEGRIPENABLED)
   }
 }
 
-/*
-void removeWidget(QWidget *widget)
-*/
+// void removeWidget(QWidget *widget)
 HB_FUNC_STATIC(QSTATUSBAR_REMOVEWIDGET)
 {
   QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -258,9 +244,7 @@ HB_FUNC_STATIC(QSTATUSBAR_REMOVEWIDGET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSizeGripEnabled(bool)
-*/
+// void setSizeGripEnabled(bool)
 HB_FUNC_STATIC(QSTATUSBAR_SETSIZEGRIPENABLED)
 {
   QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -284,9 +268,7 @@ HB_FUNC_STATIC(QSTATUSBAR_SETSIZEGRIPENABLED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void clearMessage()
-*/
+// void clearMessage()
 HB_FUNC_STATIC(QSTATUSBAR_CLEARMESSAGE)
 {
   QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -310,9 +292,7 @@ HB_FUNC_STATIC(QSTATUSBAR_CLEARMESSAGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void showMessage(const QString &message, int timeout = 0)
-*/
+// void showMessage(const QString &message, int timeout = 0)
 HB_FUNC_STATIC(QSTATUSBAR_SHOWMESSAGE)
 {
   QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());

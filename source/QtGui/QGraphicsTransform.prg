@@ -58,9 +58,7 @@ HB_FUNC_STATIC(QGRAPHICSTRANSFORM_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void applyTo(QMatrix4x4 *matrix) const = 0
-*/
+// virtual void applyTo(QMatrix4x4 *matrix) const = 0
 HB_FUNC_STATIC(QGRAPHICSTRANSFORM_APPLYTO)
 {
   QGraphicsTransform *obj = qobject_cast<QGraphicsTransform *>(Qt4xHb::getQObjectPointerFromSelfItem());

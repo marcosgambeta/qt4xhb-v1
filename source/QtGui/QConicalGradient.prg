@@ -68,9 +68,7 @@ HB_FUNC_STATIC(QCONICALGRADIENT_NEW)
   }
 }
 
-/*
-qreal angle() const
-*/
+// qreal angle() const
 HB_FUNC_STATIC(QCONICALGRADIENT_ANGLE)
 {
   QConicalGradient *obj = static_cast<QConicalGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -92,9 +90,7 @@ HB_FUNC_STATIC(QCONICALGRADIENT_ANGLE)
   }
 }
 
-/*
-QPointF center() const
-*/
+// QPointF center() const
 HB_FUNC_STATIC(QCONICALGRADIENT_CENTER)
 {
   QConicalGradient *obj = static_cast<QConicalGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -117,9 +113,7 @@ HB_FUNC_STATIC(QCONICALGRADIENT_CENTER)
   }
 }
 
-/*
-void setAngle(qreal angle)
-*/
+// void setAngle(qreal angle)
 HB_FUNC_STATIC(QCONICALGRADIENT_SETANGLE)
 {
   QConicalGradient *obj = static_cast<QConicalGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -147,9 +141,7 @@ HB_FUNC_STATIC(QCONICALGRADIENT_SETCENTER)
 {
   if (ISNUMPAR(1) && ISQPOINTF(1))
   {
-    /*
-    void setCenter(const QPointF &center)
-    */
+    // void setCenter(const QPointF &center)
     QConicalGradient *obj = static_cast<QConicalGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -161,9 +153,7 @@ HB_FUNC_STATIC(QCONICALGRADIENT_SETCENTER)
   }
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
-    /*
-    void setCenter(qreal x, qreal y)
-    */
+    // void setCenter(qreal x, qreal y)
     QConicalGradient *obj = static_cast<QConicalGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)

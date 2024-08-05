@@ -71,9 +71,7 @@ HB_FUNC_STATIC(QWHATSTHIS_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static QAction *createAction(QObject *parent = 0)
-*/
+// static QAction *createAction(QObject *parent = 0)
 HB_FUNC_STATIC(QWHATSTHIS_CREATEACTION)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -91,9 +89,7 @@ HB_FUNC_STATIC(QWHATSTHIS_CREATEACTION)
 #endif
 }
 
-/*
-static void enterWhatsThisMode()
-*/
+// static void enterWhatsThisMode()
 HB_FUNC_STATIC(QWHATSTHIS_ENTERWHATSTHISMODE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -112,9 +108,7 @@ HB_FUNC_STATIC(QWHATSTHIS_ENTERWHATSTHISMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void hideText()
-*/
+// static void hideText()
 HB_FUNC_STATIC(QWHATSTHIS_HIDETEXT)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -133,9 +127,7 @@ HB_FUNC_STATIC(QWHATSTHIS_HIDETEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static bool inWhatsThisMode()
-*/
+// static bool inWhatsThisMode()
 HB_FUNC_STATIC(QWHATSTHIS_INWHATSTHISMODE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -152,9 +144,7 @@ HB_FUNC_STATIC(QWHATSTHIS_INWHATSTHISMODE)
 #endif
 }
 
-/*
-static void leaveWhatsThisMode()
-*/
+// static void leaveWhatsThisMode()
 HB_FUNC_STATIC(QWHATSTHIS_LEAVEWHATSTHISMODE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -173,9 +163,7 @@ HB_FUNC_STATIC(QWHATSTHIS_LEAVEWHATSTHISMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void showText(const QPoint &pos, const QString &text, QWidget *w = 0)
-*/
+// static void showText(const QPoint &pos, const QString &text, QWidget *w = 0)
 HB_FUNC_STATIC(QWHATSTHIS_SHOWTEXT)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

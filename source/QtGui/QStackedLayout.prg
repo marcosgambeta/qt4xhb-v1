@@ -97,9 +97,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int addWidget(QWidget *widget)
-*/
+// int addWidget(QWidget *widget)
 HB_FUNC_STATIC(QSTACKEDLAYOUT_ADDWIDGET)
 {
   QStackedLayout *obj = qobject_cast<QStackedLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -121,9 +119,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_ADDWIDGET)
   }
 }
 
-/*
-int currentIndex() const
-*/
+// int currentIndex() const
 HB_FUNC_STATIC(QSTACKEDLAYOUT_CURRENTINDEX)
 {
   QStackedLayout *obj = qobject_cast<QStackedLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -145,9 +141,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_CURRENTINDEX)
   }
 }
 
-/*
-QWidget *currentWidget() const
-*/
+// QWidget *currentWidget() const
 HB_FUNC_STATIC(QSTACKEDLAYOUT_CURRENTWIDGET)
 {
   QStackedLayout *obj = qobject_cast<QStackedLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -170,9 +164,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_CURRENTWIDGET)
   }
 }
 
-/*
-int insertWidget(int index, QWidget *widget)
-*/
+// int insertWidget(int index, QWidget *widget)
 HB_FUNC_STATIC(QSTACKEDLAYOUT_INSERTWIDGET)
 {
   QStackedLayout *obj = qobject_cast<QStackedLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -194,9 +186,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_INSERTWIDGET)
   }
 }
 
-/*
-void setStackingMode(QStackedLayout::StackingMode stackingMode)
-*/
+// void setStackingMode(QStackedLayout::StackingMode stackingMode)
 HB_FUNC_STATIC(QSTACKEDLAYOUT_SETSTACKINGMODE)
 {
   QStackedLayout *obj = qobject_cast<QStackedLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -220,9 +210,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_SETSTACKINGMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStackedLayout::StackingMode stackingMode() const
-*/
+// QStackedLayout::StackingMode stackingMode() const
 HB_FUNC_STATIC(QSTACKEDLAYOUT_STACKINGMODE)
 {
   QStackedLayout *obj = qobject_cast<QStackedLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -244,9 +232,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_STACKINGMODE)
   }
 }
 
-/*
-QWidget *widget(int index) const
-*/
+// QWidget *widget(int index) const
 HB_FUNC_STATIC(QSTACKEDLAYOUT_WIDGET)
 {
   QStackedLayout *obj = qobject_cast<QStackedLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -269,9 +255,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_WIDGET)
   }
 }
 
-/*
-void setCurrentIndex(int index)
-*/
+// void setCurrentIndex(int index)
 HB_FUNC_STATIC(QSTACKEDLAYOUT_SETCURRENTINDEX)
 {
   QStackedLayout *obj = qobject_cast<QStackedLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -295,9 +279,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_SETCURRENTINDEX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCurrentWidget(QWidget *widget)
-*/
+// void setCurrentWidget(QWidget *widget)
 HB_FUNC_STATIC(QSTACKEDLAYOUT_SETCURRENTWIDGET)
 {
   QStackedLayout *obj = qobject_cast<QStackedLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());

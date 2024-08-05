@@ -67,7 +67,7 @@ RETURN
 #include <QtGui/QUndoStack>
 #include <QtGui/QAction>
 
-// QUndoGroup(QObject *parent = 0)
+    // QUndoGroup(QObject *parent = 0)
 HB_FUNC_STATIC(QUNDOGROUP_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
@@ -99,9 +99,7 @@ HB_FUNC_STATIC(QUNDOGROUP_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QUndoStack *activeStack() const
-*/
+// QUndoStack *activeStack() const
 HB_FUNC_STATIC(QUNDOGROUP_ACTIVESTACK)
 {
   QUndoGroup *obj = qobject_cast<QUndoGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -124,9 +122,7 @@ HB_FUNC_STATIC(QUNDOGROUP_ACTIVESTACK)
   }
 }
 
-/*
-void addStack(QUndoStack *stack)
-*/
+// void addStack(QUndoStack *stack)
 HB_FUNC_STATIC(QUNDOGROUP_ADDSTACK)
 {
   QUndoGroup *obj = qobject_cast<QUndoGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -150,9 +146,7 @@ HB_FUNC_STATIC(QUNDOGROUP_ADDSTACK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool canRedo() const
-*/
+// bool canRedo() const
 HB_FUNC_STATIC(QUNDOGROUP_CANREDO)
 {
   QUndoGroup *obj = qobject_cast<QUndoGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -174,9 +168,7 @@ HB_FUNC_STATIC(QUNDOGROUP_CANREDO)
   }
 }
 
-/*
-bool canUndo() const
-*/
+// bool canUndo() const
 HB_FUNC_STATIC(QUNDOGROUP_CANUNDO)
 {
   QUndoGroup *obj = qobject_cast<QUndoGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -198,9 +190,7 @@ HB_FUNC_STATIC(QUNDOGROUP_CANUNDO)
   }
 }
 
-/*
-QAction *createRedoAction(QObject *parent, const QString &prefix = QString()) const
-*/
+// QAction *createRedoAction(QObject *parent, const QString &prefix = QString()) const
 HB_FUNC_STATIC(QUNDOGROUP_CREATEREDOACTION)
 {
   QUndoGroup *obj = qobject_cast<QUndoGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -223,9 +213,7 @@ HB_FUNC_STATIC(QUNDOGROUP_CREATEREDOACTION)
   }
 }
 
-/*
-QAction *createUndoAction(QObject *parent, const QString &prefix = QString()) const
-*/
+// QAction *createUndoAction(QObject *parent, const QString &prefix = QString()) const
 HB_FUNC_STATIC(QUNDOGROUP_CREATEUNDOACTION)
 {
   QUndoGroup *obj = qobject_cast<QUndoGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -248,9 +236,7 @@ HB_FUNC_STATIC(QUNDOGROUP_CREATEUNDOACTION)
   }
 }
 
-/*
-bool isClean() const
-*/
+// bool isClean() const
 HB_FUNC_STATIC(QUNDOGROUP_ISCLEAN)
 {
   QUndoGroup *obj = qobject_cast<QUndoGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -272,9 +258,7 @@ HB_FUNC_STATIC(QUNDOGROUP_ISCLEAN)
   }
 }
 
-/*
-QString redoText() const
-*/
+// QString redoText() const
 HB_FUNC_STATIC(QUNDOGROUP_REDOTEXT)
 {
   QUndoGroup *obj = qobject_cast<QUndoGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -296,9 +280,7 @@ HB_FUNC_STATIC(QUNDOGROUP_REDOTEXT)
   }
 }
 
-/*
-void removeStack(QUndoStack *stack)
-*/
+// void removeStack(QUndoStack *stack)
 HB_FUNC_STATIC(QUNDOGROUP_REMOVESTACK)
 {
   QUndoGroup *obj = qobject_cast<QUndoGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -322,9 +304,7 @@ HB_FUNC_STATIC(QUNDOGROUP_REMOVESTACK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QList<QUndoStack *> stacks() const
-*/
+// QList<QUndoStack *> stacks() const
 HB_FUNC_STATIC(QUNDOGROUP_STACKS)
 {
   QUndoGroup *obj = qobject_cast<QUndoGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -348,7 +328,7 @@ HB_FUNC_STATIC(QUNDOGROUP_STACKS)
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, static_cast<QUndoStack *>(list[i]));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -370,9 +350,7 @@ HB_FUNC_STATIC(QUNDOGROUP_STACKS)
   }
 }
 
-/*
-QString undoText() const
-*/
+// QString undoText() const
 HB_FUNC_STATIC(QUNDOGROUP_UNDOTEXT)
 {
   QUndoGroup *obj = qobject_cast<QUndoGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -394,9 +372,7 @@ HB_FUNC_STATIC(QUNDOGROUP_UNDOTEXT)
   }
 }
 
-/*
-void redo()
-*/
+// void redo()
 HB_FUNC_STATIC(QUNDOGROUP_REDO)
 {
   QUndoGroup *obj = qobject_cast<QUndoGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -420,9 +396,7 @@ HB_FUNC_STATIC(QUNDOGROUP_REDO)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setActiveStack(QUndoStack *stack)
-*/
+// void setActiveStack(QUndoStack *stack)
 HB_FUNC_STATIC(QUNDOGROUP_SETACTIVESTACK)
 {
   QUndoGroup *obj = qobject_cast<QUndoGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -446,9 +420,7 @@ HB_FUNC_STATIC(QUNDOGROUP_SETACTIVESTACK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void undo()
-*/
+// void undo()
 HB_FUNC_STATIC(QUNDOGROUP_UNDO)
 {
   QUndoGroup *obj = qobject_cast<QUndoGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());

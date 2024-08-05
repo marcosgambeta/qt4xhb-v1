@@ -38,7 +38,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-// QShowEvent()
+    // QShowEvent()
 HB_FUNC_STATIC(QSHOWEVENT_NEW)
 {
   if (ISNUMPAR(0))

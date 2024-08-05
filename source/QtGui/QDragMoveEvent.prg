@@ -42,10 +42,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QDragMoveEvent(const QPoint &pos, Qt::DropActions actions, const QMimeData *data, Qt::MouseButtons buttons,
-Qt::KeyboardModifiers modifiers, QEvent::Type type = QEvent::DragMove)
-*/
+    // QDragMoveEvent(const QPoint &pos, Qt::DropActions actions, const QMimeData *data, Qt::MouseButtons buttons,
+    // Qt::KeyboardModifiers modifiers, QEvent::Type type = QEvent::DragMove)
 HB_FUNC_STATIC(QDRAGMOVEEVENT_NEW)
 {
   if (ISBETWEEN(5, 6) && ISQPOINT(1) && HB_ISNUM(2) && ISQMIMEDATA(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
@@ -82,9 +80,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_ACCEPT)
 {
   if (ISNUMPAR(1) && ISQRECT(1))
   {
-    /*
-    void accept(const QRect &rectangle)
-    */
+    // void accept(const QRect &rectangle)
     QDragMoveEvent *obj = static_cast<QDragMoveEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -96,9 +92,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_ACCEPT)
   }
   else if (ISNUMPAR(0))
   {
-    /*
-    void accept()
-    */
+    // void accept()
     QDragMoveEvent *obj = static_cast<QDragMoveEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -114,9 +108,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_ACCEPT)
   }
 }
 
-/*
-QRect answerRect() const
-*/
+// QRect answerRect() const
 HB_FUNC_STATIC(QDRAGMOVEEVENT_ANSWERRECT)
 {
   QDragMoveEvent *obj = static_cast<QDragMoveEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -143,9 +135,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_IGNORE)
 {
   if (ISNUMPAR(1) && ISQRECT(1))
   {
-    /*
-    void ignore(const QRect &rectangle)
-    */
+    // void ignore(const QRect &rectangle)
     QDragMoveEvent *obj = static_cast<QDragMoveEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -157,9 +147,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_IGNORE)
   }
   else if (ISNUMPAR(0))
   {
-    /*
-    void ignore()
-    */
+    // void ignore()
     QDragMoveEvent *obj = static_cast<QDragMoveEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)

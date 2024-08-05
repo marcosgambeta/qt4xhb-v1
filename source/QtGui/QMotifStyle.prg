@@ -58,7 +58,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QMotifStyle(bool useHighlightCols = false)
+    // QMotifStyle(bool useHighlightCols = false)
 HB_FUNC_STATIC(QMOTIFSTYLE_NEW)
 {
   if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
@@ -90,9 +90,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setUseHighlightColors(bool arg)
-*/
+// void setUseHighlightColors(bool arg)
 HB_FUNC_STATIC(QMOTIFSTYLE_SETUSEHIGHLIGHTCOLORS)
 {
   QMotifStyle *obj = qobject_cast<QMotifStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -116,9 +114,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_SETUSEHIGHLIGHTCOLORS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool useHighlightColors() const
-*/
+// bool useHighlightColors() const
 HB_FUNC_STATIC(QMOTIFSTYLE_USEHIGHLIGHTCOLORS)
 {
   QMotifStyle *obj = qobject_cast<QMotifStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -140,10 +136,8 @@ HB_FUNC_STATIC(QMOTIFSTYLE_USEHIGHLIGHTCOLORS)
   }
 }
 
-/*
-virtual void drawComplexControl(QStyle::ComplexControl cc, const QStyleOptionComplex *opt, QPainter *p, const QWidget
-* widget = 0) const
-*/
+// virtual void drawComplexControl(QStyle::ComplexControl cc, const QStyleOptionComplex *opt, QPainter *p, const QWidget
+// *widget = 0) const
 HB_FUNC_STATIC(QMOTIFSTYLE_DRAWCOMPLEXCONTROL)
 {
   QMotifStyle *obj = qobject_cast<QMotifStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -168,10 +162,8 @@ HB_FUNC_STATIC(QMOTIFSTYLE_DRAWCOMPLEXCONTROL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void drawControl(QStyle::ControlElement element, const QStyleOption *opt, QPainter *p, const QWidget *widget
-= 0) const
-*/
+// virtual void drawControl(QStyle::ControlElement element, const QStyleOption *opt, QPainter *p, const QWidget *widget
+// = 0) const
 HB_FUNC_STATIC(QMOTIFSTYLE_DRAWCONTROL)
 {
   QMotifStyle *obj = qobject_cast<QMotifStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -195,10 +187,8 @@ HB_FUNC_STATIC(QMOTIFSTYLE_DRAWCONTROL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void drawPrimitive(QStyle::PrimitiveElement pe, const QStyleOption *opt, QPainter *p, const QWidget *w = 0)
-const
-*/
+// virtual void drawPrimitive(QStyle::PrimitiveElement pe, const QStyleOption *opt, QPainter *p, const QWidget *w = 0)
+// const
 HB_FUNC_STATIC(QMOTIFSTYLE_DRAWPRIMITIVE)
 {
   QMotifStyle *obj = qobject_cast<QMotifStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -222,9 +212,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_DRAWPRIMITIVE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool event(QEvent *e)
-*/
+// virtual bool event(QEvent *e)
 HB_FUNC_STATIC(QMOTIFSTYLE_EVENT)
 {
   QMotifStyle *obj = qobject_cast<QMotifStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -246,9 +234,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_EVENT)
   }
 }
 
-/*
-virtual int pixelMetric(QStyle::PixelMetric pm, const QStyleOption *opt = 0, const QWidget *widget = 0) const
-*/
+// virtual int pixelMetric(QStyle::PixelMetric pm, const QStyleOption *opt = 0, const QWidget *widget = 0) const
 HB_FUNC_STATIC(QMOTIFSTYLE_PIXELMETRIC)
 {
   QMotifStyle *obj = qobject_cast<QMotifStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -271,9 +257,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_PIXELMETRIC)
   }
 }
 
-/*
-virtual void polish(QPalette &pal)
-*/
+// virtual void polish(QPalette &pal)
 HB_FUNC_STATIC(QMOTIFSTYLE_POLISH)
 {
   QMotifStyle *obj = qobject_cast<QMotifStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -297,10 +281,8 @@ HB_FUNC_STATIC(QMOTIFSTYLE_POLISH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QSize sizeFromContents(QStyle::ContentsType ct, const QStyleOption *opt, const QSize &contentsSize, const
-QWidget *widget = 0) const
-*/
+// virtual QSize sizeFromContents(QStyle::ContentsType ct, const QStyleOption *opt, const QSize &contentsSize, const
+// QWidget *widget = 0) const
 HB_FUNC_STATIC(QMOTIFSTYLE_SIZEFROMCONTENTS)
 {
   QMotifStyle *obj = qobject_cast<QMotifStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -324,9 +306,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_SIZEFROMCONTENTS)
   }
 }
 
-/*
-virtual QPalette standardPalette() const
-*/
+// virtual QPalette standardPalette() const
 HB_FUNC_STATIC(QMOTIFSTYLE_STANDARDPALETTE)
 {
   QMotifStyle *obj = qobject_cast<QMotifStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -349,10 +329,8 @@ HB_FUNC_STATIC(QMOTIFSTYLE_STANDARDPALETTE)
   }
 }
 
-/*
-virtual QPixmap standardPixmap(QStyle::StandardPixmap standardPixmap, const QStyleOption *opt, const QWidget *widget
-= 0) const
-*/
+// virtual QPixmap standardPixmap(QStyle::StandardPixmap standardPixmap, const QStyleOption *opt, const QWidget *widget
+// = 0) const
 HB_FUNC_STATIC(QMOTIFSTYLE_STANDARDPIXMAP)
 {
   QMotifStyle *obj = qobject_cast<QMotifStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -376,10 +354,8 @@ HB_FUNC_STATIC(QMOTIFSTYLE_STANDARDPIXMAP)
   }
 }
 
-/*
-virtual int styleHint(QStyle::StyleHint hint, const QStyleOption *opt = 0, const QWidget *widget = 0,
-QStyleHintReturn *returnData = 0) const
-*/
+// virtual int styleHint(QStyle::StyleHint hint, const QStyleOption *opt = 0, const QWidget *widget = 0,
+// QStyleHintReturn *returnData = 0) const
 HB_FUNC_STATIC(QMOTIFSTYLE_STYLEHINT)
 {
   QMotifStyle *obj = qobject_cast<QMotifStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -404,10 +380,8 @@ HB_FUNC_STATIC(QMOTIFSTYLE_STYLEHINT)
   }
 }
 
-/*
-virtual QRect subControlRect(QStyle::ComplexControl cc, const QStyleOptionComplex *opt, QStyle::SubControl sc, const
-QWidget *widget = 0) const
-*/
+// virtual QRect subControlRect(QStyle::ComplexControl cc, const QStyleOptionComplex *opt, QStyle::SubControl sc, const
+// QWidget *widget = 0) const
 HB_FUNC_STATIC(QMOTIFSTYLE_SUBCONTROLRECT)
 {
   QMotifStyle *obj = qobject_cast<QMotifStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -431,9 +405,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_SUBCONTROLRECT)
   }
 }
 
-/*
-virtual QRect subElementRect(QStyle::SubElement sr, const QStyleOption *opt, const QWidget *widget = 0) const
-*/
+// virtual QRect subElementRect(QStyle::SubElement sr, const QStyleOption *opt, const QWidget *widget = 0) const
 HB_FUNC_STATIC(QMOTIFSTYLE_SUBELEMENTRECT)
 {
   QMotifStyle *obj = qobject_cast<QMotifStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());

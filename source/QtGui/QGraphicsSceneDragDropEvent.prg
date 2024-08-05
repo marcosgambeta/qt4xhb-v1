@@ -71,9 +71,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void acceptProposedAction()
-*/
+// void acceptProposedAction()
 HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_ACCEPTPROPOSEDACTION)
 {
   QGraphicsSceneDragDropEvent *obj = static_cast<QGraphicsSceneDragDropEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -97,9 +95,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_ACCEPTPROPOSEDACTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::MouseButtons buttons() const
-*/
+// Qt::MouseButtons buttons() const
 HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_BUTTONS)
 {
   QGraphicsSceneDragDropEvent *obj = static_cast<QGraphicsSceneDragDropEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -121,9 +117,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_BUTTONS)
   }
 }
 
-/*
-Qt::DropAction dropAction() const
-*/
+// Qt::DropAction dropAction() const
 HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_DROPACTION)
 {
   QGraphicsSceneDragDropEvent *obj = static_cast<QGraphicsSceneDragDropEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -145,9 +139,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_DROPACTION)
   }
 }
 
-/*
-const QMimeData *mimeData() const
-*/
+// const QMimeData *mimeData() const
 HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_MIMEDATA)
 {
   QGraphicsSceneDragDropEvent *obj = static_cast<QGraphicsSceneDragDropEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -170,9 +162,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_MIMEDATA)
   }
 }
 
-/*
-Qt::KeyboardModifiers modifiers() const
-*/
+// Qt::KeyboardModifiers modifiers() const
 HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_MODIFIERS)
 {
   QGraphicsSceneDragDropEvent *obj = static_cast<QGraphicsSceneDragDropEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -194,9 +184,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_MODIFIERS)
   }
 }
 
-/*
-QPointF pos() const
-*/
+// QPointF pos() const
 HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_POS)
 {
   QGraphicsSceneDragDropEvent *obj = static_cast<QGraphicsSceneDragDropEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -219,9 +207,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_POS)
   }
 }
 
-/*
-Qt::DropActions possibleActions() const
-*/
+// Qt::DropActions possibleActions() const
 HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_POSSIBLEACTIONS)
 {
   QGraphicsSceneDragDropEvent *obj = static_cast<QGraphicsSceneDragDropEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -243,9 +229,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_POSSIBLEACTIONS)
   }
 }
 
-/*
-Qt::DropAction proposedAction() const
-*/
+// Qt::DropAction proposedAction() const
 HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_PROPOSEDACTION)
 {
   QGraphicsSceneDragDropEvent *obj = static_cast<QGraphicsSceneDragDropEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -267,9 +251,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_PROPOSEDACTION)
   }
 }
 
-/*
-QPointF scenePos() const
-*/
+// QPointF scenePos() const
 HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_SCENEPOS)
 {
   QGraphicsSceneDragDropEvent *obj = static_cast<QGraphicsSceneDragDropEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -292,9 +274,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_SCENEPOS)
   }
 }
 
-/*
-QPoint screenPos() const
-*/
+// QPoint screenPos() const
 HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_SCREENPOS)
 {
   QGraphicsSceneDragDropEvent *obj = static_cast<QGraphicsSceneDragDropEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -317,9 +297,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_SCREENPOS)
   }
 }
 
-/*
-void setDropAction(Qt::DropAction action)
-*/
+// void setDropAction(Qt::DropAction action)
 HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_SETDROPACTION)
 {
   QGraphicsSceneDragDropEvent *obj = static_cast<QGraphicsSceneDragDropEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -343,9 +321,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_SETDROPACTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWidget *source() const
-*/
+// QWidget *source() const
 HB_FUNC_STATIC(QGRAPHICSSCENEDRAGDROPEVENT_SOURCE)
 {
   QGraphicsSceneDragDropEvent *obj = static_cast<QGraphicsSceneDragDropEvent *>(Qt4xHb::itemGetPtrStackSelfItem());

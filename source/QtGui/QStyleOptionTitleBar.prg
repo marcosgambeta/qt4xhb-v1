@@ -66,9 +66,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_NEW)
   }
 }
 
-/*
-QString text
-*/
+// QString text
 HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_TEXT)
 {
   QStyleOptionTitleBar *obj = static_cast<QStyleOptionTitleBar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -93,7 +91,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_SETTEXT)
   {
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
-      obj->text = PQSTRING(1);
+      obj->text=PQSTRING(1));
     }
     else
     {
@@ -104,9 +102,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_SETTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QIcon icon
-*/
+// QIcon icon
 HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_ICON)
 {
   QStyleOptionTitleBar *obj = static_cast<QStyleOptionTitleBar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -132,7 +128,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_SETICON)
   {
     if (ISNUMPAR(1) && ISQICON(1))
     {
-      obj->icon = *PQICON(1);
+      obj->icon=*PQICON(1));
     }
     else
     {
@@ -143,9 +139,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_SETICON)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int titleBarState
-*/
+// int titleBarState
 HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_TITLEBARSTATE)
 {
   QStyleOptionTitleBar *obj = static_cast<QStyleOptionTitleBar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -170,7 +164,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_SETTITLEBARSTATE)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->titleBarState = PINT(1);
+      obj->titleBarState=PINT(1));
     }
     else
     {
@@ -181,9 +175,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_SETTITLEBARSTATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::WindowFlags titleBarFlags
-*/
+// Qt::WindowFlags titleBarFlags
 HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_TITLEBARFLAGS)
 {
   QStyleOptionTitleBar *obj = static_cast<QStyleOptionTitleBar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -208,7 +200,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_SETTITLEBARFLAGS)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->titleBarFlags = (Qt::WindowFlags)hb_parni(1);
+      obj->titleBarFlags=(Qt::WindowFlags)hb_parni(1));
     }
     else
     {

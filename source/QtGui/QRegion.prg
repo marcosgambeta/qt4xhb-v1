@@ -126,9 +126,7 @@ HB_FUNC_STATIC(QREGION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QRect boundingRect() const
-*/
+// QRect boundingRect() const
 HB_FUNC_STATIC(QREGION_BOUNDINGRECT)
 {
   QRegion *obj = static_cast<QRegion *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -155,9 +153,7 @@ HB_FUNC_STATIC(QREGION_CONTAINS)
 {
   if (ISNUMPAR(1) && ISQPOINT(1))
   {
-    /*
-    bool contains(const QPoint &p) const
-    */
+    // bool contains(const QPoint &p) const
     QRegion *obj = static_cast<QRegion *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -167,9 +163,7 @@ HB_FUNC_STATIC(QREGION_CONTAINS)
   }
   else if (ISNUMPAR(1) && ISQRECT(1))
   {
-    /*
-    bool contains(const QRect &r) const
-    */
+    // bool contains(const QRect &r) const
     QRegion *obj = static_cast<QRegion *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -187,9 +181,7 @@ HB_FUNC_STATIC(QREGION_INTERSECTED)
 {
   if (ISNUMPAR(1) && ISQREGION(1))
   {
-    /*
-    QRegion intersected(const QRegion &r) const
-    */
+    // QRegion intersected(const QRegion &r) const
     QRegion *obj = static_cast<QRegion *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -200,9 +192,7 @@ HB_FUNC_STATIC(QREGION_INTERSECTED)
   }
   else if (ISNUMPAR(1) && ISQRECT(1))
   {
-    /*
-    QRegion intersected(const QRect &rect) const
-    */
+    // QRegion intersected(const QRect &rect) const
     QRegion *obj = static_cast<QRegion *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -221,9 +211,7 @@ HB_FUNC_STATIC(QREGION_INTERSECTS)
 {
   if (ISNUMPAR(1) && ISQREGION(1))
   {
-    /*
-    bool intersects(const QRegion &region) const
-    */
+    // bool intersects(const QRegion &region) const
     QRegion *obj = static_cast<QRegion *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -233,9 +221,7 @@ HB_FUNC_STATIC(QREGION_INTERSECTS)
   }
   else if (ISNUMPAR(1) && ISQRECT(1))
   {
-    /*
-    bool intersects(const QRect &rect) const
-    */
+    // bool intersects(const QRect &rect) const
     QRegion *obj = static_cast<QRegion *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -249,9 +235,7 @@ HB_FUNC_STATIC(QREGION_INTERSECTS)
   }
 }
 
-/*
-bool isEmpty() const
-*/
+// bool isEmpty() const
 HB_FUNC_STATIC(QREGION_ISEMPTY)
 {
   QRegion *obj = static_cast<QRegion *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -273,9 +257,7 @@ HB_FUNC_STATIC(QREGION_ISEMPTY)
   }
 }
 
-/*
-int rectCount() const
-*/
+// int rectCount() const
 HB_FUNC_STATIC(QREGION_RECTCOUNT)
 {
   QRegion *obj = static_cast<QRegion *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -297,9 +279,7 @@ HB_FUNC_STATIC(QREGION_RECTCOUNT)
   }
 }
 
-/*
-QVector<QRect> rects() const
-*/
+// QVector<QRect> rects() const
 HB_FUNC_STATIC(QREGION_RECTS)
 {
   QRegion *obj = static_cast<QRegion *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -323,7 +303,7 @@ HB_FUNC_STATIC(QREGION_RECTS)
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QRect(list[i]));
+          PHB_ITEM pItem = hb_itemPutPtr(pItem, new QRect(list[i]));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
@@ -348,9 +328,7 @@ HB_FUNC_STATIC(QREGION_RECTS)
   }
 }
 
-/*
-QRegion subtracted(const QRegion &r) const
-*/
+// QRegion subtracted(const QRegion &r) const
 HB_FUNC_STATIC(QREGION_SUBTRACTED)
 {
   QRegion *obj = static_cast<QRegion *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -373,9 +351,7 @@ HB_FUNC_STATIC(QREGION_SUBTRACTED)
   }
 }
 
-/*
-void swap(QRegion &other)
-*/
+// void swap(QRegion &other)
 HB_FUNC_STATIC(QREGION_SWAP)
 {
   QRegion *obj = static_cast<QRegion *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -403,9 +379,7 @@ HB_FUNC_STATIC(QREGION_TRANSLATE)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
-    /*
-    void translate(int dx, int dy)
-    */
+    // void translate(int dx, int dy)
     QRegion *obj = static_cast<QRegion *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -417,9 +391,7 @@ HB_FUNC_STATIC(QREGION_TRANSLATE)
   }
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
-    /*
-    void translate(const QPoint &point)
-    */
+    // void translate(const QPoint &point)
     QRegion *obj = static_cast<QRegion *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -439,9 +411,7 @@ HB_FUNC_STATIC(QREGION_TRANSLATED)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
-    /*
-    QRegion translated(int dx, int dy) const
-    */
+    // QRegion translated(int dx, int dy) const
     QRegion *obj = static_cast<QRegion *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -452,9 +422,7 @@ HB_FUNC_STATIC(QREGION_TRANSLATED)
   }
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
-    /*
-    QRegion translated(const QPoint &p) const
-    */
+    // QRegion translated(const QPoint &p) const
     QRegion *obj = static_cast<QRegion *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -473,9 +441,7 @@ HB_FUNC_STATIC(QREGION_UNITED)
 {
   if (ISNUMPAR(1) && ISQREGION(1))
   {
-    /*
-    QRegion united(const QRegion &r) const
-    */
+    // QRegion united(const QRegion &r) const
     QRegion *obj = static_cast<QRegion *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -486,9 +452,7 @@ HB_FUNC_STATIC(QREGION_UNITED)
   }
   else if (ISNUMPAR(1) && ISQRECT(1))
   {
-    /*
-    QRegion united(const QRect &rect) const
-    */
+    // QRegion united(const QRect &rect) const
     QRegion *obj = static_cast<QRegion *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -503,9 +467,7 @@ HB_FUNC_STATIC(QREGION_UNITED)
   }
 }
 
-/*
-QRegion xored(const QRegion &r) const
-*/
+// QRegion xored(const QRegion &r) const
 HB_FUNC_STATIC(QREGION_XORED)
 {
   QRegion *obj = static_cast<QRegion *>(Qt4xHb::itemGetPtrStackSelfItem());

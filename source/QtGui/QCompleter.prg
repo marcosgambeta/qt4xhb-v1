@@ -127,9 +127,7 @@ HB_FUNC_STATIC(QCOMPLETER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::CaseSensitivity caseSensitivity() const
-*/
+// Qt::CaseSensitivity caseSensitivity() const
 HB_FUNC_STATIC(QCOMPLETER_CASESENSITIVITY)
 {
   QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -151,9 +149,7 @@ HB_FUNC_STATIC(QCOMPLETER_CASESENSITIVITY)
   }
 }
 
-/*
-int completionColumn() const
-*/
+// int completionColumn() const
 HB_FUNC_STATIC(QCOMPLETER_COMPLETIONCOLUMN)
 {
   QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -175,9 +171,7 @@ HB_FUNC_STATIC(QCOMPLETER_COMPLETIONCOLUMN)
   }
 }
 
-/*
-int completionCount() const
-*/
+// int completionCount() const
 HB_FUNC_STATIC(QCOMPLETER_COMPLETIONCOUNT)
 {
   QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -199,9 +193,7 @@ HB_FUNC_STATIC(QCOMPLETER_COMPLETIONCOUNT)
   }
 }
 
-/*
-QCompleter::CompletionMode completionMode() const
-*/
+// QCompleter::CompletionMode completionMode() const
 HB_FUNC_STATIC(QCOMPLETER_COMPLETIONMODE)
 {
   QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -223,9 +215,7 @@ HB_FUNC_STATIC(QCOMPLETER_COMPLETIONMODE)
   }
 }
 
-/*
-QAbstractItemModel *completionModel() const
-*/
+// QAbstractItemModel *completionModel() const
 HB_FUNC_STATIC(QCOMPLETER_COMPLETIONMODEL)
 {
   QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -248,9 +238,7 @@ HB_FUNC_STATIC(QCOMPLETER_COMPLETIONMODEL)
   }
 }
 
-/*
-QString completionPrefix() const
-*/
+// QString completionPrefix() const
 HB_FUNC_STATIC(QCOMPLETER_COMPLETIONPREFIX)
 {
   QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -272,9 +260,7 @@ HB_FUNC_STATIC(QCOMPLETER_COMPLETIONPREFIX)
   }
 }
 
-/*
-int completionRole() const
-*/
+// int completionRole() const
 HB_FUNC_STATIC(QCOMPLETER_COMPLETIONROLE)
 {
   QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -296,9 +282,7 @@ HB_FUNC_STATIC(QCOMPLETER_COMPLETIONROLE)
   }
 }
 
-/*
-QString currentCompletion() const
-*/
+// QString currentCompletion() const
 HB_FUNC_STATIC(QCOMPLETER_CURRENTCOMPLETION)
 {
   QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -320,9 +304,7 @@ HB_FUNC_STATIC(QCOMPLETER_CURRENTCOMPLETION)
   }
 }
 
-/*
-QModelIndex currentIndex() const
-*/
+// QModelIndex currentIndex() const
 HB_FUNC_STATIC(QCOMPLETER_CURRENTINDEX)
 {
   QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -345,9 +327,7 @@ HB_FUNC_STATIC(QCOMPLETER_CURRENTINDEX)
   }
 }
 
-/*
-int currentRow() const
-*/
+// int currentRow() const
 HB_FUNC_STATIC(QCOMPLETER_CURRENTROW)
 {
   QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -369,9 +349,7 @@ HB_FUNC_STATIC(QCOMPLETER_CURRENTROW)
   }
 }
 
-/*
-int maxVisibleItems() const
-*/
+// int maxVisibleItems() const
 HB_FUNC_STATIC(QCOMPLETER_MAXVISIBLEITEMS)
 {
   QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -393,9 +371,7 @@ HB_FUNC_STATIC(QCOMPLETER_MAXVISIBLEITEMS)
   }
 }
 
-/*
-QAbstractItemModel *model() const
-*/
+// QAbstractItemModel *model() const
 HB_FUNC_STATIC(QCOMPLETER_MODEL)
 {
   QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -418,9 +394,7 @@ HB_FUNC_STATIC(QCOMPLETER_MODEL)
   }
 }
 
-/*
-QCompleter::ModelSorting modelSorting() const
-*/
+// QCompleter::ModelSorting modelSorting() const
 HB_FUNC_STATIC(QCOMPLETER_MODELSORTING)
 {
   QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -442,9 +416,7 @@ HB_FUNC_STATIC(QCOMPLETER_MODELSORTING)
   }
 }
 
-/*
-virtual QString pathFromIndex(const QModelIndex &index) const
-*/
+// virtual QString pathFromIndex(const QModelIndex &index) const
 HB_FUNC_STATIC(QCOMPLETER_PATHFROMINDEX)
 {
   QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -466,9 +438,7 @@ HB_FUNC_STATIC(QCOMPLETER_PATHFROMINDEX)
   }
 }
 
-/*
-QAbstractItemView *popup() const
-*/
+// QAbstractItemView *popup() const
 HB_FUNC_STATIC(QCOMPLETER_POPUP)
 {
   QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -491,9 +461,7 @@ HB_FUNC_STATIC(QCOMPLETER_POPUP)
   }
 }
 
-/*
-void setCaseSensitivity(Qt::CaseSensitivity caseSensitivity)
-*/
+// void setCaseSensitivity(Qt::CaseSensitivity caseSensitivity)
 HB_FUNC_STATIC(QCOMPLETER_SETCASESENSITIVITY)
 {
   QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -517,9 +485,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETCASESENSITIVITY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCompletionColumn(int column)
-*/
+// void setCompletionColumn(int column)
 HB_FUNC_STATIC(QCOMPLETER_SETCOMPLETIONCOLUMN)
 {
   QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -543,9 +509,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETCOMPLETIONCOLUMN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCompletionMode(QCompleter::CompletionMode mode)
-*/
+// void setCompletionMode(QCompleter::CompletionMode mode)
 HB_FUNC_STATIC(QCOMPLETER_SETCOMPLETIONMODE)
 {
   QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -569,9 +533,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETCOMPLETIONMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCompletionRole(int role)
-*/
+// void setCompletionRole(int role)
 HB_FUNC_STATIC(QCOMPLETER_SETCOMPLETIONROLE)
 {
   QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -595,9 +557,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETCOMPLETIONROLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool setCurrentRow(int row)
-*/
+// bool setCurrentRow(int row)
 HB_FUNC_STATIC(QCOMPLETER_SETCURRENTROW)
 {
   QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -619,9 +579,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETCURRENTROW)
   }
 }
 
-/*
-void setMaxVisibleItems(int maxItems)
-*/
+// void setMaxVisibleItems(int maxItems)
 HB_FUNC_STATIC(QCOMPLETER_SETMAXVISIBLEITEMS)
 {
   QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -645,9 +603,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETMAXVISIBLEITEMS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setModel(QAbstractItemModel *model)
-*/
+// void setModel(QAbstractItemModel *model)
 HB_FUNC_STATIC(QCOMPLETER_SETMODEL)
 {
   QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -671,9 +627,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETMODEL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setModelSorting(QCompleter::ModelSorting sorting)
-*/
+// void setModelSorting(QCompleter::ModelSorting sorting)
 HB_FUNC_STATIC(QCOMPLETER_SETMODELSORTING)
 {
   QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -697,9 +651,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETMODELSORTING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPopup(QAbstractItemView *popup)
-*/
+// void setPopup(QAbstractItemView *popup)
 HB_FUNC_STATIC(QCOMPLETER_SETPOPUP)
 {
   QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -723,9 +675,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETPOPUP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWidget(QWidget *widget)
-*/
+// void setWidget(QWidget *widget)
 HB_FUNC_STATIC(QCOMPLETER_SETWIDGET)
 {
   QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -749,9 +699,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETWIDGET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QStringList splitPath(const QString &path) const
-*/
+// virtual QStringList splitPath(const QString &path) const
 HB_FUNC_STATIC(QCOMPLETER_SPLITPATH)
 {
   QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -773,9 +721,7 @@ HB_FUNC_STATIC(QCOMPLETER_SPLITPATH)
   }
 }
 
-/*
-QWidget *widget() const
-*/
+// QWidget *widget() const
 HB_FUNC_STATIC(QCOMPLETER_WIDGET)
 {
   QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -798,9 +744,7 @@ HB_FUNC_STATIC(QCOMPLETER_WIDGET)
   }
 }
 
-/*
-bool wrapAround() const
-*/
+// bool wrapAround() const
 HB_FUNC_STATIC(QCOMPLETER_WRAPAROUND)
 {
   QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -822,9 +766,7 @@ HB_FUNC_STATIC(QCOMPLETER_WRAPAROUND)
   }
 }
 
-/*
-void complete(const QRect &rect = QRect())
-*/
+// void complete(const QRect &rect = QRect())
 HB_FUNC_STATIC(QCOMPLETER_COMPLETE)
 {
   QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -848,9 +790,7 @@ HB_FUNC_STATIC(QCOMPLETER_COMPLETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCompletionPrefix(const QString &prefix)
-*/
+// void setCompletionPrefix(const QString &prefix)
 HB_FUNC_STATIC(QCOMPLETER_SETCOMPLETIONPREFIX)
 {
   QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -874,9 +814,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETCOMPLETIONPREFIX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWrapAround(bool wrap)
-*/
+// void setWrapAround(bool wrap)
 HB_FUNC_STATIC(QCOMPLETER_SETWRAPAROUND)
 {
   QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());

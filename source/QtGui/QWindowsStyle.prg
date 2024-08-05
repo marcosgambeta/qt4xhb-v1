@@ -53,7 +53,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QWindowsStyle()
+    // QWindowsStyle()
 HB_FUNC_STATIC(QWINDOWSSTYLE_NEW)
 {
   if (ISNUMPAR(0))
@@ -85,10 +85,8 @@ HB_FUNC_STATIC(QWINDOWSSTYLE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void drawComplexControl(QStyle::ComplexControl cc, const QStyleOptionComplex *opt, QPainter *p, const QWidget
-* widget = 0) const
-*/
+// virtual void drawComplexControl(QStyle::ComplexControl cc, const QStyleOptionComplex *opt, QPainter *p, const QWidget
+// *widget = 0) const
 HB_FUNC_STATIC(QWINDOWSSTYLE_DRAWCOMPLEXCONTROL)
 {
   QWindowsStyle *obj = qobject_cast<QWindowsStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -113,10 +111,8 @@ HB_FUNC_STATIC(QWINDOWSSTYLE_DRAWCOMPLEXCONTROL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void drawControl(QStyle::ControlElement ce, const QStyleOption *opt, QPainter *p, const QWidget *widget = 0
-) const
-*/
+// virtual void drawControl(QStyle::ControlElement ce, const QStyleOption *opt, QPainter *p, const QWidget *widget = 0)
+// const
 HB_FUNC_STATIC(QWINDOWSSTYLE_DRAWCONTROL)
 {
   QWindowsStyle *obj = qobject_cast<QWindowsStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -140,10 +136,8 @@ HB_FUNC_STATIC(QWINDOWSSTYLE_DRAWCONTROL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void drawPrimitive(QStyle::PrimitiveElement pe, const QStyleOption *opt, QPainter *p, const QWidget *w = 0)
-const
-*/
+// virtual void drawPrimitive(QStyle::PrimitiveElement pe, const QStyleOption *opt, QPainter *p, const QWidget *w = 0)
+// const
 HB_FUNC_STATIC(QWINDOWSSTYLE_DRAWPRIMITIVE)
 {
   QWindowsStyle *obj = qobject_cast<QWindowsStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -167,9 +161,7 @@ HB_FUNC_STATIC(QWINDOWSSTYLE_DRAWPRIMITIVE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual int pixelMetric(QStyle::PixelMetric pm, const QStyleOption *opt = 0, const QWidget *widget = 0) const
-*/
+// virtual int pixelMetric(QStyle::PixelMetric pm, const QStyleOption *opt = 0, const QWidget *widget = 0) const
 HB_FUNC_STATIC(QWINDOWSSTYLE_PIXELMETRIC)
 {
   QWindowsStyle *obj = qobject_cast<QWindowsStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -196,9 +188,7 @@ HB_FUNC_STATIC(QWINDOWSSTYLE_POLISH)
 {
   if (ISNUMPAR(1) && ISQAPPLICATION(1))
   {
-    /*
-    virtual void polish(QApplication *app)
-    */
+    // virtual void polish(QApplication *app)
     QWindowsStyle *obj = qobject_cast<QWindowsStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -210,9 +200,7 @@ HB_FUNC_STATIC(QWINDOWSSTYLE_POLISH)
   }
   else if (ISNUMPAR(1) && ISQWIDGET(1))
   {
-    /*
-    virtual void polish(QWidget *widget)
-    */
+    // virtual void polish(QWidget *widget)
     QWindowsStyle *obj = qobject_cast<QWindowsStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -224,9 +212,7 @@ HB_FUNC_STATIC(QWINDOWSSTYLE_POLISH)
   }
   else if (ISNUMPAR(1) && ISQPALETTE(1))
   {
-    /*
-    virtual void polish(QPalette &pal)
-    */
+    // virtual void polish(QPalette &pal)
     QWindowsStyle *obj = qobject_cast<QWindowsStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -242,10 +228,8 @@ HB_FUNC_STATIC(QWINDOWSSTYLE_POLISH)
   }
 }
 
-/*
-virtual QSize sizeFromContents(QStyle::ContentsType ct, const QStyleOption *opt, const QSize &csz, const QWidget *
-widget = 0) const
-*/
+// virtual QSize sizeFromContents(QStyle::ContentsType ct, const QStyleOption *opt, const QSize &csz, const QWidget
+// *widget = 0) const
 HB_FUNC_STATIC(QWINDOWSSTYLE_SIZEFROMCONTENTS)
 {
   QWindowsStyle *obj = qobject_cast<QWindowsStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -269,10 +253,8 @@ HB_FUNC_STATIC(QWINDOWSSTYLE_SIZEFROMCONTENTS)
   }
 }
 
-/*
-virtual QPixmap standardPixmap(QStyle::StandardPixmap standardPixmap, const QStyleOption *opt, const QWidget *widget
-= 0) const
-*/
+// virtual QPixmap standardPixmap(QStyle::StandardPixmap standardPixmap, const QStyleOption *opt, const QWidget *widget
+// = 0) const
 HB_FUNC_STATIC(QWINDOWSSTYLE_STANDARDPIXMAP)
 {
   QWindowsStyle *obj = qobject_cast<QWindowsStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -296,10 +278,8 @@ HB_FUNC_STATIC(QWINDOWSSTYLE_STANDARDPIXMAP)
   }
 }
 
-/*
-virtual int styleHint(QStyle::StyleHint hint, const QStyleOption *opt = 0, const QWidget *widget = 0,
-QStyleHintReturn *returnData = 0) const
-*/
+// virtual int styleHint(QStyle::StyleHint hint, const QStyleOption *opt = 0, const QWidget *widget = 0,
+// QStyleHintReturn *returnData = 0) const
 HB_FUNC_STATIC(QWINDOWSSTYLE_STYLEHINT)
 {
   QWindowsStyle *obj = qobject_cast<QWindowsStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -324,9 +304,7 @@ HB_FUNC_STATIC(QWINDOWSSTYLE_STYLEHINT)
   }
 }
 
-/*
-virtual QRect subElementRect(QStyle::SubElement sr, const QStyleOption *opt, const QWidget *w = 0) const
-*/
+// virtual QRect subElementRect(QStyle::SubElement sr, const QStyleOption *opt, const QWidget *w = 0) const
 HB_FUNC_STATIC(QWINDOWSSTYLE_SUBELEMENTRECT)
 {
   QWindowsStyle *obj = qobject_cast<QWindowsStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -353,9 +331,7 @@ HB_FUNC_STATIC(QWINDOWSSTYLE_UNPOLISH)
 {
   if (ISNUMPAR(1) && ISQAPPLICATION(1))
   {
-    /*
-    virtual void unpolish(QApplication *app)
-    */
+    // virtual void unpolish(QApplication *app)
     QWindowsStyle *obj = qobject_cast<QWindowsStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -367,9 +343,7 @@ HB_FUNC_STATIC(QWINDOWSSTYLE_UNPOLISH)
   }
   else if (ISNUMPAR(1) && ISQWIDGET(1))
   {
-    /*
-    virtual void unpolish(QWidget *widget)
-    */
+    // virtual void unpolish(QWidget *widget)
     QWindowsStyle *obj = qobject_cast<QWindowsStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)

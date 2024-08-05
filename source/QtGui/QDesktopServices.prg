@@ -50,9 +50,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    static QString displayName(QDesktopServices::StandardLocation type)
-    */
+    // static QString displayName(QDesktopServices::StandardLocation type)
 HB_FUNC_STATIC(QDESKTOPSERVICES_DISPLAYNAME)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -69,9 +67,7 @@ HB_FUNC_STATIC(QDESKTOPSERVICES_DISPLAYNAME)
 #endif
 }
 
-/*
-static bool openUrl(const QUrl &url)
-*/
+// static bool openUrl(const QUrl &url)
 HB_FUNC_STATIC(QDESKTOPSERVICES_OPENURL)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -88,9 +84,7 @@ HB_FUNC_STATIC(QDESKTOPSERVICES_OPENURL)
 #endif
 }
 
-/*
-static void setUrlHandler(const QString &scheme, QObject *receiver, const char *method)
-*/
+// static void setUrlHandler(const QString &scheme, QObject *receiver, const char *method)
 HB_FUNC_STATIC(QDESKTOPSERVICES_SETURLHANDLER)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -109,9 +103,7 @@ HB_FUNC_STATIC(QDESKTOPSERVICES_SETURLHANDLER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static QString storageLocation(QDesktopServices::StandardLocation type)
-*/
+// static QString storageLocation(QDesktopServices::StandardLocation type)
 HB_FUNC_STATIC(QDESKTOPSERVICES_STORAGELOCATION)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -128,9 +120,7 @@ HB_FUNC_STATIC(QDESKTOPSERVICES_STORAGELOCATION)
 #endif
 }
 
-/*
-static void unsetUrlHandler(const QString &scheme)
-*/
+// static void unsetUrlHandler(const QString &scheme)
 HB_FUNC_STATIC(QDESKTOPSERVICES_UNSETURLHANDLER)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -41,7 +41,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-// QGraphicsSceneResizeEvent()
+    // QGraphicsSceneResizeEvent()
 HB_FUNC_STATIC(QGRAPHICSSCENERESIZEEVENT_NEW)
 {
   if (ISNUMPAR(0))
@@ -71,9 +71,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENERESIZEEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSizeF newSize() const
-*/
+// QSizeF newSize() const
 HB_FUNC_STATIC(QGRAPHICSSCENERESIZEEVENT_NEWSIZE)
 {
   QGraphicsSceneResizeEvent *obj = static_cast<QGraphicsSceneResizeEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -96,9 +94,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENERESIZEEVENT_NEWSIZE)
   }
 }
 
-/*
-QSizeF oldSize() const
-*/
+// QSizeF oldSize() const
 HB_FUNC_STATIC(QGRAPHICSSCENERESIZEEVENT_OLDSIZE)
 {
   QGraphicsSceneResizeEvent *obj = static_cast<QGraphicsSceneResizeEvent *>(Qt4xHb::itemGetPtrStackSelfItem());

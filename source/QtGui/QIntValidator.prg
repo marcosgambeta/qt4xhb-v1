@@ -85,9 +85,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int bottom() const
-*/
+// int bottom() const
 HB_FUNC_STATIC(QINTVALIDATOR_BOTTOM)
 {
   QIntValidator *obj = qobject_cast<QIntValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -109,9 +107,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_BOTTOM)
   }
 }
 
-/*
-void setBottom(int)
-*/
+// void setBottom(int)
 HB_FUNC_STATIC(QINTVALIDATOR_SETBOTTOM)
 {
   QIntValidator *obj = qobject_cast<QIntValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -135,9 +131,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_SETBOTTOM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setRange(int bottom, int top)
-*/
+// virtual void setRange(int bottom, int top)
 HB_FUNC_STATIC(QINTVALIDATOR_SETRANGE)
 {
   QIntValidator *obj = qobject_cast<QIntValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -161,9 +155,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_SETRANGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTop(int)
-*/
+// void setTop(int)
 HB_FUNC_STATIC(QINTVALIDATOR_SETTOP)
 {
   QIntValidator *obj = qobject_cast<QIntValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -187,9 +179,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_SETTOP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int top() const
-*/
+// int top() const
 HB_FUNC_STATIC(QINTVALIDATOR_TOP)
 {
   QIntValidator *obj = qobject_cast<QIntValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -211,9 +201,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_TOP)
   }
 }
 
-/*
-virtual void fixup(QString &input) const
-*/
+// virtual void fixup(QString &input) const
 HB_FUNC_STATIC(QINTVALIDATOR_FIXUP)
 {
   QIntValidator *obj = qobject_cast<QIntValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -239,9 +227,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_FIXUP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QValidator::State validate(QString &input, int &pos) const
-*/
+// virtual QValidator::State validate(QString &input, int &pos) const
 HB_FUNC_STATIC(QINTVALIDATOR_VALIDATE)
 {
   QIntValidator *obj = qobject_cast<QIntValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());

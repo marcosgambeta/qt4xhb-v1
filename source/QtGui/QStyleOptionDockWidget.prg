@@ -65,9 +65,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_NEW)
   }
 }
 
-/*
-QString title
-*/
+// QString title
 HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_TITLE)
 {
   QStyleOptionDockWidget *obj = static_cast<QStyleOptionDockWidget *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -92,7 +90,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETTITLE)
   {
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
-      obj->title = PQSTRING(1);
+      obj->title=PQSTRING(1));
     }
     else
     {
@@ -103,9 +101,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETTITLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool closable
-*/
+// bool closable
 HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_CLOSABLE)
 {
   QStyleOptionDockWidget *obj = static_cast<QStyleOptionDockWidget *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -130,7 +126,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETCLOSABLE)
   {
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
-      obj->closable = PBOOL(1);
+      obj->closable=PBOOL(1));
     }
     else
     {
@@ -141,9 +137,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETCLOSABLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool movable
-*/
+// bool movable
 HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_MOVABLE)
 {
   QStyleOptionDockWidget *obj = static_cast<QStyleOptionDockWidget *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -168,7 +162,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETMOVABLE)
   {
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
-      obj->movable = PBOOL(1);
+      obj->movable=PBOOL(1));
     }
     else
     {
@@ -179,9 +173,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETMOVABLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool floatable
-*/
+// bool floatable
 HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_FLOATABLE)
 {
   QStyleOptionDockWidget *obj = static_cast<QStyleOptionDockWidget *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -206,7 +198,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETFLOATABLE)
   {
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
-      obj->floatable = PBOOL(1);
+      obj->floatable=PBOOL(1));
     }
     else
     {

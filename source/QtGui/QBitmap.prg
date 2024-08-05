@@ -100,9 +100,7 @@ HB_FUNC_STATIC(QBITMAP_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QBITMAP_CLEAR)
 {
   QBitmap *obj = static_cast<QBitmap *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -126,9 +124,7 @@ HB_FUNC_STATIC(QBITMAP_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QBitmap transformed(const QTransform &matrix) const
-*/
+// QBitmap transformed(const QTransform &matrix) const
 HB_FUNC_STATIC(QBITMAP_TRANSFORMED)
 {
   QBitmap *obj = static_cast<QBitmap *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -151,9 +147,7 @@ HB_FUNC_STATIC(QBITMAP_TRANSFORMED)
   }
 }
 
-/*
-static QBitmap fromData(const QSize &size, const uchar *bits, QImage::Format monoFormat = QImage::Format_MonoLSB)
-*/
+// static QBitmap fromData(const QSize &size, const uchar *bits, QImage::Format monoFormat = QImage::Format_MonoLSB)
 HB_FUNC_STATIC(QBITMAP_FROMDATA)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -173,9 +167,7 @@ HB_FUNC_STATIC(QBITMAP_FROMDATA)
 #endif
 }
 
-/*
-static QBitmap fromImage(const QImage &image, Qt::ImageConversionFlags flags = Qt::AutoColor)
-*/
+// static QBitmap fromImage(const QImage &image, Qt::ImageConversionFlags flags = Qt::AutoColor)
 HB_FUNC_STATIC(QBITMAP_FROMIMAGE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -194,14 +186,12 @@ HB_FUNC_STATIC(QBITMAP_FROMIMAGE)
 #endif
 }
 
-/*
-QVariant toVariant()
-*/
+// QVariant toVariant()
 void QBitmap_toVariant1()
 {
   QBitmap *obj = static_cast<QBitmap *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
+  if (obj)
   {
     QVariant *variant = new QVariant();
     variant->setValue<QBitmap>(*obj);
@@ -209,9 +199,7 @@ void QBitmap_toVariant1()
   }
 }
 
-/*
-static QVariant toVariant(const QBitmap &)
-*/
+// static QVariant toVariant(const QBitmap &)
 void QBitmap_toVariant2()
 {
   QBitmap *bitmap = static_cast<QBitmap *>(hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
@@ -239,9 +227,7 @@ HB_FUNC_STATIC(QBITMAP_TOVARIANT)
   }
 }
 
-/*
-static QBitmap fromVariant(const QVariant &)
-*/
+// static QBitmap fromVariant(const QVariant &)
 HB_FUNC_STATIC(QBITMAP_FROMVARIANT)
 {
   if (ISNUMPAR(1) && ISQVARIANT(1))

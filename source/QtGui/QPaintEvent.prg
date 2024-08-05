@@ -78,9 +78,7 @@ HB_FUNC_STATIC(QPAINTEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-const QRect &rect() const
-*/
+// const QRect &rect() const
 HB_FUNC_STATIC(QPAINTEVENT_RECT)
 {
   QPaintEvent *obj = static_cast<QPaintEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -103,9 +101,7 @@ HB_FUNC_STATIC(QPAINTEVENT_RECT)
   }
 }
 
-/*
-const QRegion &region() const
-*/
+// const QRegion &region() const
 HB_FUNC_STATIC(QPAINTEVENT_REGION)
 {
   QPaintEvent *obj = static_cast<QPaintEvent *>(Qt4xHb::itemGetPtrStackSelfItem());

@@ -61,9 +61,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFRAME_NEW)
   }
 }
 
-/*
-int lineWidth
-*/
+// int lineWidth
 HB_FUNC_STATIC(QSTYLEOPTIONFRAME_LINEWIDTH)
 {
   QStyleOptionFrame *obj = static_cast<QStyleOptionFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -88,7 +86,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFRAME_SETLINEWIDTH)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->lineWidth = PINT(1);
+      obj->lineWidth=PINT(1));
     }
     else
     {
@@ -99,9 +97,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFRAME_SETLINEWIDTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int midLineWidth
-*/
+// int midLineWidth
 HB_FUNC_STATIC(QSTYLEOPTIONFRAME_MIDLINEWIDTH)
 {
   QStyleOptionFrame *obj = static_cast<QStyleOptionFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -126,7 +122,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFRAME_SETMIDLINEWIDTH)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->midLineWidth = PINT(1);
+      obj->midLineWidth=PINT(1));
     }
     else
     {

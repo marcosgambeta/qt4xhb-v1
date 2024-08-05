@@ -102,9 +102,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QLineF line() const
-*/
+// QLineF line() const
 HB_FUNC_STATIC(QGRAPHICSLINEITEM_LINE)
 {
   QGraphicsLineItem *obj = static_cast<QGraphicsLineItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -127,9 +125,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_LINE)
   }
 }
 
-/*
-QPen pen() const
-*/
+// QPen pen() const
 HB_FUNC_STATIC(QGRAPHICSLINEITEM_PEN)
 {
   QGraphicsLineItem *obj = static_cast<QGraphicsLineItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -156,9 +152,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_SETLINE)
 {
   if (ISNUMPAR(1) && ISQLINEF(1))
   {
-    /*
-    void setLine(const QLineF &line)
-    */
+    // void setLine(const QLineF &line)
     QGraphicsLineItem *obj = static_cast<QGraphicsLineItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -170,9 +164,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_SETLINE)
   }
   else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
-    /*
-    void setLine(qreal x1, qreal y1, qreal x2, qreal y2)
-    */
+    // void setLine(qreal x1, qreal y1, qreal x2, qreal y2)
     QGraphicsLineItem *obj = static_cast<QGraphicsLineItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -188,9 +180,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_SETLINE)
   }
 }
 
-/*
-void setPen(const QPen &pen)
-*/
+// void setPen(const QPen &pen)
 HB_FUNC_STATIC(QGRAPHICSLINEITEM_SETPEN)
 {
   QGraphicsLineItem *obj = static_cast<QGraphicsLineItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -214,9 +204,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_SETPEN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QRectF boundingRect() const
-*/
+// virtual QRectF boundingRect() const
 HB_FUNC_STATIC(QGRAPHICSLINEITEM_BOUNDINGRECT)
 {
   QGraphicsLineItem *obj = static_cast<QGraphicsLineItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -239,9 +227,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_BOUNDINGRECT)
   }
 }
 
-/*
-virtual bool contains(const QPointF &point) const
-*/
+// virtual bool contains(const QPointF &point) const
 HB_FUNC_STATIC(QGRAPHICSLINEITEM_CONTAINS)
 {
   QGraphicsLineItem *obj = static_cast<QGraphicsLineItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -263,9 +249,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_CONTAINS)
   }
 }
 
-/*
-virtual bool isObscuredBy(const QGraphicsItem *item) const
-*/
+// virtual bool isObscuredBy(const QGraphicsItem *item) const
 HB_FUNC_STATIC(QGRAPHICSLINEITEM_ISOBSCUREDBY)
 {
   QGraphicsLineItem *obj = static_cast<QGraphicsLineItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -287,9 +271,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_ISOBSCUREDBY)
   }
 }
 
-/*
-virtual QPainterPath opaqueArea() const
-*/
+// virtual QPainterPath opaqueArea() const
 HB_FUNC_STATIC(QGRAPHICSLINEITEM_OPAQUEAREA)
 {
   QGraphicsLineItem *obj = static_cast<QGraphicsLineItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -312,9 +294,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_OPAQUEAREA)
   }
 }
 
-/*
-virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0)
-*/
+// virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0)
 HB_FUNC_STATIC(QGRAPHICSLINEITEM_PAINT)
 {
   QGraphicsLineItem *obj = static_cast<QGraphicsLineItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -338,9 +318,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_PAINT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QPainterPath shape() const
-*/
+// virtual QPainterPath shape() const
 HB_FUNC_STATIC(QGRAPHICSLINEITEM_SHAPE)
 {
   QGraphicsLineItem *obj = static_cast<QGraphicsLineItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -363,9 +341,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_SHAPE)
   }
 }
 
-/*
-virtual int type() const
-*/
+// virtual int type() const
 HB_FUNC_STATIC(QGRAPHICSLINEITEM_TYPE)
 {
   QGraphicsLineItem *obj = static_cast<QGraphicsLineItem *>(Qt4xHb::itemGetPtrStackSelfItem());

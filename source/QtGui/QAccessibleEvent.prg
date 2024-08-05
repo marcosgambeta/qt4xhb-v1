@@ -40,7 +40,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-// QAccessibleEvent(QAccessibleEvent::Type type, int child)
+    // QAccessibleEvent(QAccessibleEvent::Type type, int child)
 HB_FUNC_STATIC(QACCESSIBLEEVENT_NEW)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
@@ -54,9 +54,7 @@ HB_FUNC_STATIC(QACCESSIBLEEVENT_NEW)
   }
 }
 
-/*
-int child() const
-*/
+// int child() const
 HB_FUNC_STATIC(QACCESSIBLEEVENT_CHILD)
 {
   QAccessibleEvent *obj = static_cast<QAccessibleEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -78,9 +76,7 @@ HB_FUNC_STATIC(QACCESSIBLEEVENT_CHILD)
   }
 }
 
-/*
-void setValue(const QString &text)
-*/
+// void setValue(const QString &text)
 HB_FUNC_STATIC(QACCESSIBLEEVENT_SETVALUE)
 {
   QAccessibleEvent *obj = static_cast<QAccessibleEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -104,9 +100,7 @@ HB_FUNC_STATIC(QACCESSIBLEEVENT_SETVALUE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString value() const
-*/
+// QString value() const
 HB_FUNC_STATIC(QACCESSIBLEEVENT_VALUE)
 {
   QAccessibleEvent *obj = static_cast<QAccessibleEvent *>(Qt4xHb::itemGetPtrStackSelfItem());

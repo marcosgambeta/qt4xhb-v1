@@ -106,9 +106,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSizePolicy::ControlType controlType() const
-*/
+// QSizePolicy::ControlType controlType() const
 HB_FUNC_STATIC(QSIZEPOLICY_CONTROLTYPE)
 {
   QSizePolicy *obj = static_cast<QSizePolicy *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -130,9 +128,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_CONTROLTYPE)
   }
 }
 
-/*
-Qt::Orientations expandingDirections() const
-*/
+// Qt::Orientations expandingDirections() const
 HB_FUNC_STATIC(QSIZEPOLICY_EXPANDINGDIRECTIONS)
 {
   QSizePolicy *obj = static_cast<QSizePolicy *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -154,9 +150,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_EXPANDINGDIRECTIONS)
   }
 }
 
-/*
-bool hasHeightForWidth() const
-*/
+// bool hasHeightForWidth() const
 HB_FUNC_STATIC(QSIZEPOLICY_HASHEIGHTFORWIDTH)
 {
   QSizePolicy *obj = static_cast<QSizePolicy *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -178,9 +172,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_HASHEIGHTFORWIDTH)
   }
 }
 
-/*
-bool hasWidthForHeight() const
-*/
+// bool hasWidthForHeight() const
 HB_FUNC_STATIC(QSIZEPOLICY_HASWIDTHFORHEIGHT)
 {
   QSizePolicy *obj = static_cast<QSizePolicy *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -202,9 +194,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_HASWIDTHFORHEIGHT)
   }
 }
 
-/*
-QSizePolicy::Policy horizontalPolicy() const
-*/
+// QSizePolicy::Policy horizontalPolicy() const
 HB_FUNC_STATIC(QSIZEPOLICY_HORIZONTALPOLICY)
 {
   QSizePolicy *obj = static_cast<QSizePolicy *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -226,9 +216,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_HORIZONTALPOLICY)
   }
 }
 
-/*
-int horizontalStretch() const
-*/
+// int horizontalStretch() const
 HB_FUNC_STATIC(QSIZEPOLICY_HORIZONTALSTRETCH)
 {
   QSizePolicy *obj = static_cast<QSizePolicy *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -250,9 +238,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_HORIZONTALSTRETCH)
   }
 }
 
-/*
-void setControlType(QSizePolicy::ControlType type)
-*/
+// void setControlType(QSizePolicy::ControlType type)
 HB_FUNC_STATIC(QSIZEPOLICY_SETCONTROLTYPE)
 {
   QSizePolicy *obj = static_cast<QSizePolicy *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -276,9 +262,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETCONTROLTYPE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setHeightForWidth(bool dependent)
-*/
+// void setHeightForWidth(bool dependent)
 HB_FUNC_STATIC(QSIZEPOLICY_SETHEIGHTFORWIDTH)
 {
   QSizePolicy *obj = static_cast<QSizePolicy *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -302,9 +286,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETHEIGHTFORWIDTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setHorizontalPolicy(QSizePolicy::Policy policy)
-*/
+// void setHorizontalPolicy(QSizePolicy::Policy policy)
 HB_FUNC_STATIC(QSIZEPOLICY_SETHORIZONTALPOLICY)
 {
   QSizePolicy *obj = static_cast<QSizePolicy *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -328,9 +310,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETHORIZONTALPOLICY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setHorizontalStretch(uchar stretchFactor)
-*/
+// void setHorizontalStretch(uchar stretchFactor)
 HB_FUNC_STATIC(QSIZEPOLICY_SETHORIZONTALSTRETCH)
 {
   QSizePolicy *obj = static_cast<QSizePolicy *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -354,9 +334,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETHORIZONTALSTRETCH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setVerticalPolicy(QSizePolicy::Policy policy)
-*/
+// void setVerticalPolicy(QSizePolicy::Policy policy)
 HB_FUNC_STATIC(QSIZEPOLICY_SETVERTICALPOLICY)
 {
   QSizePolicy *obj = static_cast<QSizePolicy *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -380,9 +358,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETVERTICALPOLICY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setVerticalStretch(uchar stretchFactor)
-*/
+// void setVerticalStretch(uchar stretchFactor)
 HB_FUNC_STATIC(QSIZEPOLICY_SETVERTICALSTRETCH)
 {
   QSizePolicy *obj = static_cast<QSizePolicy *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -406,9 +382,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETVERTICALSTRETCH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWidthForHeight(bool dependent)
-*/
+// void setWidthForHeight(bool dependent)
 HB_FUNC_STATIC(QSIZEPOLICY_SETWIDTHFORHEIGHT)
 {
   QSizePolicy *obj = static_cast<QSizePolicy *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -432,9 +406,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_SETWIDTHFORHEIGHT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void transpose()
-*/
+// void transpose()
 HB_FUNC_STATIC(QSIZEPOLICY_TRANSPOSE)
 {
   QSizePolicy *obj = static_cast<QSizePolicy *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -458,9 +430,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_TRANSPOSE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSizePolicy::Policy verticalPolicy() const
-*/
+// QSizePolicy::Policy verticalPolicy() const
 HB_FUNC_STATIC(QSIZEPOLICY_VERTICALPOLICY)
 {
   QSizePolicy *obj = static_cast<QSizePolicy *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -482,9 +452,7 @@ HB_FUNC_STATIC(QSIZEPOLICY_VERTICALPOLICY)
   }
 }
 
-/*
-int verticalStretch() const
-*/
+// int verticalStretch() const
 HB_FUNC_STATIC(QSIZEPOLICY_VERTICALSTRETCH)
 {
   QSizePolicy *obj = static_cast<QSizePolicy *>(Qt4xHb::itemGetPtrStackSelfItem());

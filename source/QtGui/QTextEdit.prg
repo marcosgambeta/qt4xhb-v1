@@ -175,9 +175,7 @@ HB_FUNC_STATIC(QTEXTEDIT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool acceptRichText() const
-*/
+// bool acceptRichText() const
 HB_FUNC_STATIC(QTEXTEDIT_ACCEPTRICHTEXT)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -199,9 +197,7 @@ HB_FUNC_STATIC(QTEXTEDIT_ACCEPTRICHTEXT)
   }
 }
 
-/*
-Qt::Alignment alignment() const
-*/
+// Qt::Alignment alignment() const
 HB_FUNC_STATIC(QTEXTEDIT_ALIGNMENT)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -223,9 +219,7 @@ HB_FUNC_STATIC(QTEXTEDIT_ALIGNMENT)
   }
 }
 
-/*
-QString anchorAt(const QPoint &pos) const
-*/
+// QString anchorAt(const QPoint &pos) const
 HB_FUNC_STATIC(QTEXTEDIT_ANCHORAT)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -247,9 +241,7 @@ HB_FUNC_STATIC(QTEXTEDIT_ANCHORAT)
   }
 }
 
-/*
-QTextEdit::AutoFormatting autoFormatting() const
-*/
+// QTextEdit::AutoFormatting autoFormatting() const
 HB_FUNC_STATIC(QTEXTEDIT_AUTOFORMATTING)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -271,9 +263,7 @@ HB_FUNC_STATIC(QTEXTEDIT_AUTOFORMATTING)
   }
 }
 
-/*
-bool canPaste() const
-*/
+// bool canPaste() const
 HB_FUNC_STATIC(QTEXTEDIT_CANPASTE)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -299,9 +289,7 @@ HB_FUNC_STATIC(QTEXTEDIT_CREATESTANDARDCONTEXTMENU)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QMenu *createStandardContextMenu()
-    */
+    // QMenu *createStandardContextMenu()
     QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -312,9 +300,7 @@ HB_FUNC_STATIC(QTEXTEDIT_CREATESTANDARDCONTEXTMENU)
   }
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
-    /*
-    QMenu *createStandardContextMenu(const QPoint &position)
-    */
+    // QMenu *createStandardContextMenu(const QPoint &position)
     QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -329,9 +315,7 @@ HB_FUNC_STATIC(QTEXTEDIT_CREATESTANDARDCONTEXTMENU)
   }
 }
 
-/*
-QTextCharFormat currentCharFormat() const
-*/
+// QTextCharFormat currentCharFormat() const
 HB_FUNC_STATIC(QTEXTEDIT_CURRENTCHARFORMAT)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -354,9 +338,7 @@ HB_FUNC_STATIC(QTEXTEDIT_CURRENTCHARFORMAT)
   }
 }
 
-/*
-QFont currentFont() const
-*/
+// QFont currentFont() const
 HB_FUNC_STATIC(QTEXTEDIT_CURRENTFONT)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -379,9 +361,7 @@ HB_FUNC_STATIC(QTEXTEDIT_CURRENTFONT)
   }
 }
 
-/*
-QTextCursor cursorForPosition(const QPoint &pos) const
-*/
+// QTextCursor cursorForPosition(const QPoint &pos) const
 HB_FUNC_STATIC(QTEXTEDIT_CURSORFORPOSITION)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -408,9 +388,7 @@ HB_FUNC_STATIC(QTEXTEDIT_CURSORRECT)
 {
   if (ISNUMPAR(1) && ISQTEXTCURSOR(1))
   {
-    /*
-    QRect cursorRect(const QTextCursor &cursor) const
-    */
+    // QRect cursorRect(const QTextCursor &cursor) const
     QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -421,9 +399,7 @@ HB_FUNC_STATIC(QTEXTEDIT_CURSORRECT)
   }
   else if (ISNUMPAR(0))
   {
-    /*
-    QRect cursorRect() const
-    */
+    // QRect cursorRect() const
     QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -438,9 +414,7 @@ HB_FUNC_STATIC(QTEXTEDIT_CURSORRECT)
   }
 }
 
-/*
-int cursorWidth() const
-*/
+// int cursorWidth() const
 HB_FUNC_STATIC(QTEXTEDIT_CURSORWIDTH)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -462,9 +436,7 @@ HB_FUNC_STATIC(QTEXTEDIT_CURSORWIDTH)
   }
 }
 
-/*
-QTextDocument *document() const
-*/
+// QTextDocument *document() const
 HB_FUNC_STATIC(QTEXTEDIT_DOCUMENT)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -487,9 +459,7 @@ HB_FUNC_STATIC(QTEXTEDIT_DOCUMENT)
   }
 }
 
-/*
-QString documentTitle() const
-*/
+// QString documentTitle() const
 HB_FUNC_STATIC(QTEXTEDIT_DOCUMENTTITLE)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -511,9 +481,7 @@ HB_FUNC_STATIC(QTEXTEDIT_DOCUMENTTITLE)
   }
 }
 
-/*
-void ensureCursorVisible()
-*/
+// void ensureCursorVisible()
 HB_FUNC_STATIC(QTEXTEDIT_ENSURECURSORVISIBLE)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -537,9 +505,7 @@ HB_FUNC_STATIC(QTEXTEDIT_ENSURECURSORVISIBLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool find(const QString &exp, QTextDocument::FindFlags options = 0)
-*/
+// bool find(const QString &exp, QTextDocument::FindFlags options = 0)
 HB_FUNC_STATIC(QTEXTEDIT_FIND)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -561,9 +527,7 @@ HB_FUNC_STATIC(QTEXTEDIT_FIND)
   }
 }
 
-/*
-QString fontFamily() const
-*/
+// QString fontFamily() const
 HB_FUNC_STATIC(QTEXTEDIT_FONTFAMILY)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -585,9 +549,7 @@ HB_FUNC_STATIC(QTEXTEDIT_FONTFAMILY)
   }
 }
 
-/*
-bool fontItalic() const
-*/
+// bool fontItalic() const
 HB_FUNC_STATIC(QTEXTEDIT_FONTITALIC)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -609,9 +571,7 @@ HB_FUNC_STATIC(QTEXTEDIT_FONTITALIC)
   }
 }
 
-/*
-qreal fontPointSize() const
-*/
+// qreal fontPointSize() const
 HB_FUNC_STATIC(QTEXTEDIT_FONTPOINTSIZE)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -633,9 +593,7 @@ HB_FUNC_STATIC(QTEXTEDIT_FONTPOINTSIZE)
   }
 }
 
-/*
-bool fontUnderline() const
-*/
+// bool fontUnderline() const
 HB_FUNC_STATIC(QTEXTEDIT_FONTUNDERLINE)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -657,9 +615,7 @@ HB_FUNC_STATIC(QTEXTEDIT_FONTUNDERLINE)
   }
 }
 
-/*
-int fontWeight() const
-*/
+// int fontWeight() const
 HB_FUNC_STATIC(QTEXTEDIT_FONTWEIGHT)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -681,9 +637,7 @@ HB_FUNC_STATIC(QTEXTEDIT_FONTWEIGHT)
   }
 }
 
-/*
-bool isReadOnly() const
-*/
+// bool isReadOnly() const
 HB_FUNC_STATIC(QTEXTEDIT_ISREADONLY)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -705,9 +659,7 @@ HB_FUNC_STATIC(QTEXTEDIT_ISREADONLY)
   }
 }
 
-/*
-bool isUndoRedoEnabled() const
-*/
+// bool isUndoRedoEnabled() const
 HB_FUNC_STATIC(QTEXTEDIT_ISUNDOREDOENABLED)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -729,9 +681,7 @@ HB_FUNC_STATIC(QTEXTEDIT_ISUNDOREDOENABLED)
   }
 }
 
-/*
-int lineWrapColumnOrWidth() const
-*/
+// int lineWrapColumnOrWidth() const
 HB_FUNC_STATIC(QTEXTEDIT_LINEWRAPCOLUMNORWIDTH)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -753,9 +703,7 @@ HB_FUNC_STATIC(QTEXTEDIT_LINEWRAPCOLUMNORWIDTH)
   }
 }
 
-/*
-QTextEdit::LineWrapMode lineWrapMode() const
-*/
+// QTextEdit::LineWrapMode lineWrapMode() const
 HB_FUNC_STATIC(QTEXTEDIT_LINEWRAPMODE)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -777,9 +725,7 @@ HB_FUNC_STATIC(QTEXTEDIT_LINEWRAPMODE)
   }
 }
 
-/*
-virtual QVariant loadResource(int type, const QUrl &name)
-*/
+// virtual QVariant loadResource(int type, const QUrl &name)
 HB_FUNC_STATIC(QTEXTEDIT_LOADRESOURCE)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -802,9 +748,7 @@ HB_FUNC_STATIC(QTEXTEDIT_LOADRESOURCE)
   }
 }
 
-/*
-void mergeCurrentCharFormat(const QTextCharFormat &modifier)
-*/
+// void mergeCurrentCharFormat(const QTextCharFormat &modifier)
 HB_FUNC_STATIC(QTEXTEDIT_MERGECURRENTCHARFORMAT)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -828,9 +772,7 @@ HB_FUNC_STATIC(QTEXTEDIT_MERGECURRENTCHARFORMAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void moveCursor(QTextCursor::MoveOperation operation, QTextCursor::MoveMode mode = QTextCursor::MoveAnchor)
-*/
+// void moveCursor(QTextCursor::MoveOperation operation, QTextCursor::MoveMode mode = QTextCursor::MoveAnchor)
 HB_FUNC_STATIC(QTEXTEDIT_MOVECURSOR)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -856,9 +798,7 @@ HB_FUNC_STATIC(QTEXTEDIT_MOVECURSOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool overwriteMode() const
-*/
+// bool overwriteMode() const
 HB_FUNC_STATIC(QTEXTEDIT_OVERWRITEMODE)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -880,9 +820,7 @@ HB_FUNC_STATIC(QTEXTEDIT_OVERWRITEMODE)
   }
 }
 
-/*
-void print(QPrinter *printer) const
-*/
+// void print(QPrinter *printer) const
 HB_FUNC_STATIC(QTEXTEDIT_PRINT)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -906,9 +844,7 @@ HB_FUNC_STATIC(QTEXTEDIT_PRINT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setAcceptRichText(bool accept)
-*/
+// void setAcceptRichText(bool accept)
 HB_FUNC_STATIC(QTEXTEDIT_SETACCEPTRICHTEXT)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -932,9 +868,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETACCEPTRICHTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setAutoFormatting(QTextEdit::AutoFormatting features)
-*/
+// void setAutoFormatting(QTextEdit::AutoFormatting features)
 HB_FUNC_STATIC(QTEXTEDIT_SETAUTOFORMATTING)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -958,9 +892,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETAUTOFORMATTING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCurrentCharFormat(const QTextCharFormat &format)
-*/
+// void setCurrentCharFormat(const QTextCharFormat &format)
 HB_FUNC_STATIC(QTEXTEDIT_SETCURRENTCHARFORMAT)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -984,9 +916,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETCURRENTCHARFORMAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCursorWidth(int width)
-*/
+// void setCursorWidth(int width)
 HB_FUNC_STATIC(QTEXTEDIT_SETCURSORWIDTH)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1010,9 +940,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETCURSORWIDTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDocument(QTextDocument *document)
-*/
+// void setDocument(QTextDocument *document)
 HB_FUNC_STATIC(QTEXTEDIT_SETDOCUMENT)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1036,9 +964,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETDOCUMENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDocumentTitle(const QString &title)
-*/
+// void setDocumentTitle(const QString &title)
 HB_FUNC_STATIC(QTEXTEDIT_SETDOCUMENTTITLE)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1062,9 +988,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETDOCUMENTTITLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setLineWrapColumnOrWidth(int w)
-*/
+// void setLineWrapColumnOrWidth(int w)
 HB_FUNC_STATIC(QTEXTEDIT_SETLINEWRAPCOLUMNORWIDTH)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1088,9 +1012,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETLINEWRAPCOLUMNORWIDTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setLineWrapMode(QTextEdit::LineWrapMode mode)
-*/
+// void setLineWrapMode(QTextEdit::LineWrapMode mode)
 HB_FUNC_STATIC(QTEXTEDIT_SETLINEWRAPMODE)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1114,9 +1036,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETLINEWRAPMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setOverwriteMode(bool overwrite)
-*/
+// void setOverwriteMode(bool overwrite)
 HB_FUNC_STATIC(QTEXTEDIT_SETOVERWRITEMODE)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1140,9 +1060,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETOVERWRITEMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setReadOnly(bool ro)
-*/
+// void setReadOnly(bool ro)
 HB_FUNC_STATIC(QTEXTEDIT_SETREADONLY)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1166,9 +1084,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETREADONLY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTabChangesFocus(bool b)
-*/
+// void setTabChangesFocus(bool b)
 HB_FUNC_STATIC(QTEXTEDIT_SETTABCHANGESFOCUS)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1192,9 +1108,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETTABCHANGESFOCUS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTabStopWidth(int width)
-*/
+// void setTabStopWidth(int width)
 HB_FUNC_STATIC(QTEXTEDIT_SETTABSTOPWIDTH)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1218,9 +1132,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETTABSTOPWIDTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTextCursor(const QTextCursor &cursor)
-*/
+// void setTextCursor(const QTextCursor &cursor)
 HB_FUNC_STATIC(QTEXTEDIT_SETTEXTCURSOR)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1244,9 +1156,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETTEXTCURSOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTextInteractionFlags(Qt::TextInteractionFlags flags)
-*/
+// void setTextInteractionFlags(Qt::TextInteractionFlags flags)
 HB_FUNC_STATIC(QTEXTEDIT_SETTEXTINTERACTIONFLAGS)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1270,9 +1180,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETTEXTINTERACTIONFLAGS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setUndoRedoEnabled(bool enable)
-*/
+// void setUndoRedoEnabled(bool enable)
 HB_FUNC_STATIC(QTEXTEDIT_SETUNDOREDOENABLED)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1296,9 +1204,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETUNDOREDOENABLED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWordWrapMode(QTextOption::WrapMode policy)
-*/
+// void setWordWrapMode(QTextOption::WrapMode policy)
 HB_FUNC_STATIC(QTEXTEDIT_SETWORDWRAPMODE)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1322,9 +1228,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETWORDWRAPMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool tabChangesFocus() const
-*/
+// bool tabChangesFocus() const
 HB_FUNC_STATIC(QTEXTEDIT_TABCHANGESFOCUS)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1346,9 +1250,7 @@ HB_FUNC_STATIC(QTEXTEDIT_TABCHANGESFOCUS)
   }
 }
 
-/*
-int tabStopWidth() const
-*/
+// int tabStopWidth() const
 HB_FUNC_STATIC(QTEXTEDIT_TABSTOPWIDTH)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1370,9 +1272,7 @@ HB_FUNC_STATIC(QTEXTEDIT_TABSTOPWIDTH)
   }
 }
 
-/*
-QColor textBackgroundColor() const
-*/
+// QColor textBackgroundColor() const
 HB_FUNC_STATIC(QTEXTEDIT_TEXTBACKGROUNDCOLOR)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1395,9 +1295,7 @@ HB_FUNC_STATIC(QTEXTEDIT_TEXTBACKGROUNDCOLOR)
   }
 }
 
-/*
-QColor textColor() const
-*/
+// QColor textColor() const
 HB_FUNC_STATIC(QTEXTEDIT_TEXTCOLOR)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1420,9 +1318,7 @@ HB_FUNC_STATIC(QTEXTEDIT_TEXTCOLOR)
   }
 }
 
-/*
-QTextCursor textCursor() const
-*/
+// QTextCursor textCursor() const
 HB_FUNC_STATIC(QTEXTEDIT_TEXTCURSOR)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1445,9 +1341,7 @@ HB_FUNC_STATIC(QTEXTEDIT_TEXTCURSOR)
   }
 }
 
-/*
-Qt::TextInteractionFlags textInteractionFlags() const
-*/
+// Qt::TextInteractionFlags textInteractionFlags() const
 HB_FUNC_STATIC(QTEXTEDIT_TEXTINTERACTIONFLAGS)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1469,9 +1363,7 @@ HB_FUNC_STATIC(QTEXTEDIT_TEXTINTERACTIONFLAGS)
   }
 }
 
-/*
-QString toHtml() const
-*/
+// QString toHtml() const
 HB_FUNC_STATIC(QTEXTEDIT_TOHTML)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1493,9 +1385,7 @@ HB_FUNC_STATIC(QTEXTEDIT_TOHTML)
   }
 }
 
-/*
-QString toPlainText() const
-*/
+// QString toPlainText() const
 HB_FUNC_STATIC(QTEXTEDIT_TOPLAINTEXT)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1517,9 +1407,7 @@ HB_FUNC_STATIC(QTEXTEDIT_TOPLAINTEXT)
   }
 }
 
-/*
-QTextOption::WrapMode wordWrapMode() const
-*/
+// QTextOption::WrapMode wordWrapMode() const
 HB_FUNC_STATIC(QTEXTEDIT_WORDWRAPMODE)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1541,9 +1429,7 @@ HB_FUNC_STATIC(QTEXTEDIT_WORDWRAPMODE)
   }
 }
 
-/*
-void append(const QString &text)
-*/
+// void append(const QString &text)
 HB_FUNC_STATIC(QTEXTEDIT_APPEND)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1567,9 +1453,7 @@ HB_FUNC_STATIC(QTEXTEDIT_APPEND)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QTEXTEDIT_CLEAR)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1593,9 +1477,7 @@ HB_FUNC_STATIC(QTEXTEDIT_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void copy()
-*/
+// void copy()
 HB_FUNC_STATIC(QTEXTEDIT_COPY)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1619,9 +1501,7 @@ HB_FUNC_STATIC(QTEXTEDIT_COPY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void cut()
-*/
+// void cut()
 HB_FUNC_STATIC(QTEXTEDIT_CUT)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1645,9 +1525,7 @@ HB_FUNC_STATIC(QTEXTEDIT_CUT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void insertHtml(const QString &text)
-*/
+// void insertHtml(const QString &text)
 HB_FUNC_STATIC(QTEXTEDIT_INSERTHTML)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1671,9 +1549,7 @@ HB_FUNC_STATIC(QTEXTEDIT_INSERTHTML)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void insertPlainText(const QString &text)
-*/
+// void insertPlainText(const QString &text)
 HB_FUNC_STATIC(QTEXTEDIT_INSERTPLAINTEXT)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1697,9 +1573,7 @@ HB_FUNC_STATIC(QTEXTEDIT_INSERTPLAINTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void paste()
-*/
+// void paste()
 HB_FUNC_STATIC(QTEXTEDIT_PASTE)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1723,9 +1597,7 @@ HB_FUNC_STATIC(QTEXTEDIT_PASTE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void redo()
-*/
+// void redo()
 HB_FUNC_STATIC(QTEXTEDIT_REDO)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1749,9 +1621,7 @@ HB_FUNC_STATIC(QTEXTEDIT_REDO)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void scrollToAnchor(const QString &name)
-*/
+// void scrollToAnchor(const QString &name)
 HB_FUNC_STATIC(QTEXTEDIT_SCROLLTOANCHOR)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1775,9 +1645,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SCROLLTOANCHOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void selectAll()
-*/
+// void selectAll()
 HB_FUNC_STATIC(QTEXTEDIT_SELECTALL)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1801,9 +1669,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SELECTALL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setAlignment(Qt::Alignment a)
-*/
+// void setAlignment(Qt::Alignment a)
 HB_FUNC_STATIC(QTEXTEDIT_SETALIGNMENT)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1827,9 +1693,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETALIGNMENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCurrentFont(const QFont &f)
-*/
+// void setCurrentFont(const QFont &f)
 HB_FUNC_STATIC(QTEXTEDIT_SETCURRENTFONT)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1853,9 +1717,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETCURRENTFONT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFontFamily(const QString &fontFamily)
-*/
+// void setFontFamily(const QString &fontFamily)
 HB_FUNC_STATIC(QTEXTEDIT_SETFONTFAMILY)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1879,9 +1741,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETFONTFAMILY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFontItalic(bool italic)
-*/
+// void setFontItalic(bool italic)
 HB_FUNC_STATIC(QTEXTEDIT_SETFONTITALIC)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1905,9 +1765,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETFONTITALIC)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFontPointSize(qreal s)
-*/
+// void setFontPointSize(qreal s)
 HB_FUNC_STATIC(QTEXTEDIT_SETFONTPOINTSIZE)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1931,9 +1789,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETFONTPOINTSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFontUnderline(bool underline)
-*/
+// void setFontUnderline(bool underline)
 HB_FUNC_STATIC(QTEXTEDIT_SETFONTUNDERLINE)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1957,9 +1813,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETFONTUNDERLINE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFontWeight(int weight)
-*/
+// void setFontWeight(int weight)
 HB_FUNC_STATIC(QTEXTEDIT_SETFONTWEIGHT)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1983,9 +1837,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETFONTWEIGHT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setHtml(const QString &text)
-*/
+// void setHtml(const QString &text)
 HB_FUNC_STATIC(QTEXTEDIT_SETHTML)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -2009,9 +1861,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETHTML)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPlainText(const QString &text)
-*/
+// void setPlainText(const QString &text)
 HB_FUNC_STATIC(QTEXTEDIT_SETPLAINTEXT)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -2035,9 +1885,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETPLAINTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setText(const QString &text)
-*/
+// void setText(const QString &text)
 HB_FUNC_STATIC(QTEXTEDIT_SETTEXT)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -2061,9 +1909,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTextBackgroundColor(const QColor &c)
-*/
+// void setTextBackgroundColor(const QColor &c)
 HB_FUNC_STATIC(QTEXTEDIT_SETTEXTBACKGROUNDCOLOR)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -2087,9 +1933,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETTEXTBACKGROUNDCOLOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTextColor(const QColor &c)
-*/
+// void setTextColor(const QColor &c)
 HB_FUNC_STATIC(QTEXTEDIT_SETTEXTCOLOR)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -2113,9 +1957,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETTEXTCOLOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void undo()
-*/
+// void undo()
 HB_FUNC_STATIC(QTEXTEDIT_UNDO)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -2139,9 +1981,7 @@ HB_FUNC_STATIC(QTEXTEDIT_UNDO)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void zoomIn(int range = 1)
-*/
+// void zoomIn(int range = 1)
 HB_FUNC_STATIC(QTEXTEDIT_ZOOMIN)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -2165,9 +2005,7 @@ HB_FUNC_STATIC(QTEXTEDIT_ZOOMIN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void zoomOut(int range = 1)
-*/
+// void zoomOut(int range = 1)
 HB_FUNC_STATIC(QTEXTEDIT_ZOOMOUT)
 {
   QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());

@@ -85,9 +85,7 @@ HB_FUNC_STATIC(QSUPPORTEDWRITINGSYSTEMS_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSupported(QFontDatabase::WritingSystem writingSystem, bool support = true)
-*/
+// void setSupported(QFontDatabase::WritingSystem writingSystem, bool support = true)
 HB_FUNC_STATIC(QSUPPORTEDWRITINGSYSTEMS_SETSUPPORTED)
 {
   QSupportedWritingSystems *obj = static_cast<QSupportedWritingSystems *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -111,9 +109,7 @@ HB_FUNC_STATIC(QSUPPORTEDWRITINGSYSTEMS_SETSUPPORTED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool supported(QFontDatabase::WritingSystem writingSystem) const
-*/
+// bool supported(QFontDatabase::WritingSystem writingSystem) const
 HB_FUNC_STATIC(QSUPPORTEDWRITINGSYSTEMS_SUPPORTED)
 {
   QSupportedWritingSystems *obj = static_cast<QSupportedWritingSystems *>(Qt4xHb::itemGetPtrStackSelfItem());

@@ -65,9 +65,7 @@ HB_FUNC_STATIC(QGRAPHICSEFFECT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QRectF boundingRect() const
-*/
+// QRectF boundingRect() const
 HB_FUNC_STATIC(QGRAPHICSEFFECT_BOUNDINGRECT)
 {
   QGraphicsEffect *obj = qobject_cast<QGraphicsEffect *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -90,9 +88,7 @@ HB_FUNC_STATIC(QGRAPHICSEFFECT_BOUNDINGRECT)
   }
 }
 
-/*
-virtual QRectF boundingRectFor(const QRectF &rect) const
-*/
+// virtual QRectF boundingRectFor(const QRectF &rect) const
 HB_FUNC_STATIC(QGRAPHICSEFFECT_BOUNDINGRECTFOR)
 {
   QGraphicsEffect *obj = qobject_cast<QGraphicsEffect *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -115,9 +111,7 @@ HB_FUNC_STATIC(QGRAPHICSEFFECT_BOUNDINGRECTFOR)
   }
 }
 
-/*
-bool isEnabled() const
-*/
+// bool isEnabled() const
 HB_FUNC_STATIC(QGRAPHICSEFFECT_ISENABLED)
 {
   QGraphicsEffect *obj = qobject_cast<QGraphicsEffect *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -139,9 +133,7 @@ HB_FUNC_STATIC(QGRAPHICSEFFECT_ISENABLED)
   }
 }
 
-/*
-void setEnabled(bool enable)
-*/
+// void setEnabled(bool enable)
 HB_FUNC_STATIC(QGRAPHICSEFFECT_SETENABLED)
 {
   QGraphicsEffect *obj = qobject_cast<QGraphicsEffect *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -165,9 +157,7 @@ HB_FUNC_STATIC(QGRAPHICSEFFECT_SETENABLED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void update()
-*/
+// void update()
 HB_FUNC_STATIC(QGRAPHICSEFFECT_UPDATE)
 {
   QGraphicsEffect *obj = qobject_cast<QGraphicsEffect *>(Qt4xHb::getQObjectPointerFromSelfItem());

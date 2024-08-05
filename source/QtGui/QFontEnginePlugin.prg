@@ -62,9 +62,7 @@ HB_FUNC_STATIC(QFONTENGINEPLUGIN_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QList<QFontEngineInfo> availableFontEngines() const = 0
-*/
+// virtual QList<QFontEngineInfo> availableFontEngines() const = 0
 HB_FUNC_STATIC(QFONTENGINEPLUGIN_AVAILABLEFONTENGINES)
 {
   QFontEnginePlugin *obj = qobject_cast<QFontEnginePlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -113,9 +111,7 @@ HB_FUNC_STATIC(QFONTENGINEPLUGIN_AVAILABLEFONTENGINES)
   }
 }
 
-/*
-virtual QAbstractFontEngine *create(const QFontEngineInfo &info) = 0
-*/
+// virtual QAbstractFontEngine *create(const QFontEngineInfo &info) = 0
 HB_FUNC_STATIC(QFONTENGINEPLUGIN_CREATE)
 {
   QFontEnginePlugin *obj = qobject_cast<QFontEnginePlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -138,9 +134,7 @@ HB_FUNC_STATIC(QFONTENGINEPLUGIN_CREATE)
   }
 }
 
-/*
-virtual QStringList keys() const
-*/
+// virtual QStringList keys() const
 HB_FUNC_STATIC(QFONTENGINEPLUGIN_KEYS)
 {
   QFontEnginePlugin *obj = qobject_cast<QFontEnginePlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());

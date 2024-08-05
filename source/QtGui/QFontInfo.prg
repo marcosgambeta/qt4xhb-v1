@@ -96,9 +96,7 @@ HB_FUNC_STATIC(QFONTINFO_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool bold() const
-*/
+// bool bold() const
 HB_FUNC_STATIC(QFONTINFO_BOLD)
 {
   QFontInfo *obj = static_cast<QFontInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -120,9 +118,7 @@ HB_FUNC_STATIC(QFONTINFO_BOLD)
   }
 }
 
-/*
-bool exactMatch() const
-*/
+// bool exactMatch() const
 HB_FUNC_STATIC(QFONTINFO_EXACTMATCH)
 {
   QFontInfo *obj = static_cast<QFontInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -144,9 +140,7 @@ HB_FUNC_STATIC(QFONTINFO_EXACTMATCH)
   }
 }
 
-/*
-QString family() const
-*/
+// QString family() const
 HB_FUNC_STATIC(QFONTINFO_FAMILY)
 {
   QFontInfo *obj = static_cast<QFontInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -168,9 +162,7 @@ HB_FUNC_STATIC(QFONTINFO_FAMILY)
   }
 }
 
-/*
-bool fixedPitch() const
-*/
+// bool fixedPitch() const
 HB_FUNC_STATIC(QFONTINFO_FIXEDPITCH)
 {
   QFontInfo *obj = static_cast<QFontInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -192,9 +184,7 @@ HB_FUNC_STATIC(QFONTINFO_FIXEDPITCH)
   }
 }
 
-/*
-bool italic() const
-*/
+// bool italic() const
 HB_FUNC_STATIC(QFONTINFO_ITALIC)
 {
   QFontInfo *obj = static_cast<QFontInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -216,9 +206,7 @@ HB_FUNC_STATIC(QFONTINFO_ITALIC)
   }
 }
 
-/*
-int pixelSize() const
-*/
+// int pixelSize() const
 HB_FUNC_STATIC(QFONTINFO_PIXELSIZE)
 {
   QFontInfo *obj = static_cast<QFontInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -240,9 +228,7 @@ HB_FUNC_STATIC(QFONTINFO_PIXELSIZE)
   }
 }
 
-/*
-int pointSize() const
-*/
+// int pointSize() const
 HB_FUNC_STATIC(QFONTINFO_POINTSIZE)
 {
   QFontInfo *obj = static_cast<QFontInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -264,9 +250,7 @@ HB_FUNC_STATIC(QFONTINFO_POINTSIZE)
   }
 }
 
-/*
-qreal pointSizeF() const
-*/
+// qreal pointSizeF() const
 HB_FUNC_STATIC(QFONTINFO_POINTSIZEF)
 {
   QFontInfo *obj = static_cast<QFontInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -288,9 +272,7 @@ HB_FUNC_STATIC(QFONTINFO_POINTSIZEF)
   }
 }
 
-/*
-bool rawMode() const
-*/
+// bool rawMode() const
 HB_FUNC_STATIC(QFONTINFO_RAWMODE)
 {
   QFontInfo *obj = static_cast<QFontInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -312,9 +294,7 @@ HB_FUNC_STATIC(QFONTINFO_RAWMODE)
   }
 }
 
-/*
-QFont::Style style() const
-*/
+// QFont::Style style() const
 HB_FUNC_STATIC(QFONTINFO_STYLE)
 {
   QFontInfo *obj = static_cast<QFontInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -336,9 +316,7 @@ HB_FUNC_STATIC(QFONTINFO_STYLE)
   }
 }
 
-/*
-QFont::StyleHint styleHint() const
-*/
+// QFont::StyleHint styleHint() const
 HB_FUNC_STATIC(QFONTINFO_STYLEHINT)
 {
   QFontInfo *obj = static_cast<QFontInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -360,9 +338,7 @@ HB_FUNC_STATIC(QFONTINFO_STYLEHINT)
   }
 }
 
-/*
-QString styleName() const
-*/
+// QString styleName() const
 HB_FUNC_STATIC(QFONTINFO_STYLENAME)
 {
   QFontInfo *obj = static_cast<QFontInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -384,9 +360,7 @@ HB_FUNC_STATIC(QFONTINFO_STYLENAME)
   }
 }
 
-/*
-int weight() const
-*/
+// int weight() const
 HB_FUNC_STATIC(QFONTINFO_WEIGHT)
 {
   QFontInfo *obj = static_cast<QFontInfo *>(Qt4xHb::itemGetPtrStackSelfItem());

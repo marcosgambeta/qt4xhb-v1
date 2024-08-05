@@ -88,10 +88,8 @@ HB_FUNC_STATIC(QRAWFONT_NEW)
   }
   else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
-    /*
-    QRawFont(const QString &fileName, qreal pixelSize, QFont::HintingPreference hintingPreference =
-    QFont::PreferDefaultHinting)
-    */
+    // QRawFont(const QString &fileName, qreal pixelSize, QFont::HintingPreference hintingPreference =
+    // QFont::PreferDefaultHinting)
     QRawFont *obj = new QRawFont(PQSTRING(1), PQREAL(2),
                                  HB_ISNIL(3) ? (QFont::HintingPreference)QFont::PreferDefaultHinting
                                              : (QFont::HintingPreference)hb_parni(3));
@@ -99,10 +97,8 @@ HB_FUNC_STATIC(QRAWFONT_NEW)
   }
   else if (ISBETWEEN(2, 3) && ISQBYTEARRAY(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
-    /*
-    QRawFont(const QByteArray &fontData, qreal pixelSize, QFont::HintingPreference hintingPreference =
-    QFont::PreferDefaultHinting)
-    */
+    // QRawFont(const QByteArray &fontData, qreal pixelSize, QFont::HintingPreference hintingPreference =
+    // QFont::PreferDefaultHinting)
     QRawFont *obj = new QRawFont(*PQBYTEARRAY(1), PQREAL(2),
                                  HB_ISNIL(3) ? (QFont::HintingPreference)QFont::PreferDefaultHinting
                                              : (QFont::HintingPreference)hb_parni(3));
@@ -136,9 +132,7 @@ HB_FUNC_STATIC(QRAWFONT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QVector<QPointF> advancesForGlyphIndexes(const QVector<quint32> &glyphIndexes) const
-*/
+// QVector<QPointF> advancesForGlyphIndexes(const QVector<quint32> &glyphIndexes) const
 HB_FUNC_STATIC(QRAWFONT_ADVANCESFORGLYPHINDEXES)
 {
   QRawFont *obj = static_cast<QRawFont *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -151,7 +145,7 @@ HB_FUNC_STATIC(QRAWFONT_ADVANCESFORGLYPHINDEXES)
 #endif
       QVector<quint32> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      const int nLen1 = hb_arrayLen(aList1);
+      int nLen1 = hb_arrayLen(aList1);
       quint32 temp1;
       for (int i1 = 0; i1 < nLen1; i1++)
       {
@@ -171,7 +165,7 @@ HB_FUNC_STATIC(QRAWFONT_ADVANCESFORGLYPHINDEXES)
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QPointF(list[i]));
+          PHB_ITEM pItem = hb_itemPutPtr(pItem, new QPointF(list[i]));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
@@ -196,10 +190,8 @@ HB_FUNC_STATIC(QRAWFONT_ADVANCESFORGLYPHINDEXES)
   }
 }
 
-/*
-QImage alphaMapForGlyph(quint32 glyphIndex, QRawFont::AntialiasingType antialiasingType =
-QRawFont::SubPixelAntialiasing, const QTransform &transform = QTransform()) const
-*/
+// QImage alphaMapForGlyph(quint32 glyphIndex, QRawFont::AntialiasingType antialiasingType =
+// QRawFont::SubPixelAntialiasing, const QTransform &transform = QTransform()) const
 HB_FUNC_STATIC(QRAWFONT_ALPHAMAPFORGLYPH)
 {
   QRawFont *obj = static_cast<QRawFont *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -226,9 +218,7 @@ HB_FUNC_STATIC(QRAWFONT_ALPHAMAPFORGLYPH)
   }
 }
 
-/*
-qreal ascent() const
-*/
+// qreal ascent() const
 HB_FUNC_STATIC(QRAWFONT_ASCENT)
 {
   QRawFont *obj = static_cast<QRawFont *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -250,9 +240,7 @@ HB_FUNC_STATIC(QRAWFONT_ASCENT)
   }
 }
 
-/*
-qreal averageCharWidth() const
-*/
+// qreal averageCharWidth() const
 HB_FUNC_STATIC(QRAWFONT_AVERAGECHARWIDTH)
 {
   QRawFont *obj = static_cast<QRawFont *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -274,9 +262,7 @@ HB_FUNC_STATIC(QRAWFONT_AVERAGECHARWIDTH)
   }
 }
 
-/*
-qreal descent() const
-*/
+// qreal descent() const
 HB_FUNC_STATIC(QRAWFONT_DESCENT)
 {
   QRawFont *obj = static_cast<QRawFont *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -298,9 +284,7 @@ HB_FUNC_STATIC(QRAWFONT_DESCENT)
   }
 }
 
-/*
-QString familyName() const
-*/
+// QString familyName() const
 HB_FUNC_STATIC(QRAWFONT_FAMILYNAME)
 {
   QRawFont *obj = static_cast<QRawFont *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -322,9 +306,7 @@ HB_FUNC_STATIC(QRAWFONT_FAMILYNAME)
   }
 }
 
-/*
-QByteArray fontTable(const char *tagName) const
-*/
+// QByteArray fontTable(const char *tagName) const
 HB_FUNC_STATIC(QRAWFONT_FONTTABLE)
 {
   QRawFont *obj = static_cast<QRawFont *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -347,9 +329,7 @@ HB_FUNC_STATIC(QRAWFONT_FONTTABLE)
   }
 }
 
-/*
-QVector<quint32> glyphIndexesForString(const QString &text) const
-*/
+// QVector<quint32> glyphIndexesForString(const QString &text) const
 HB_FUNC_STATIC(QRAWFONT_GLYPHINDEXESFORSTRING)
 {
   QRawFont *obj = static_cast<QRawFont *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -380,9 +360,7 @@ HB_FUNC_STATIC(QRAWFONT_GLYPHINDEXESFORSTRING)
   }
 }
 
-/*
-QFont::HintingPreference hintingPreference() const
-*/
+// QFont::HintingPreference hintingPreference() const
 HB_FUNC_STATIC(QRAWFONT_HINTINGPREFERENCE)
 {
   QRawFont *obj = static_cast<QRawFont *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -404,9 +382,7 @@ HB_FUNC_STATIC(QRAWFONT_HINTINGPREFERENCE)
   }
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QRAWFONT_ISVALID)
 {
   QRawFont *obj = static_cast<QRawFont *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -428,9 +404,7 @@ HB_FUNC_STATIC(QRAWFONT_ISVALID)
   }
 }
 
-/*
-qreal leading() const
-*/
+// qreal leading() const
 HB_FUNC_STATIC(QRAWFONT_LEADING)
 {
   QRawFont *obj = static_cast<QRawFont *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -452,9 +426,7 @@ HB_FUNC_STATIC(QRAWFONT_LEADING)
   }
 }
 
-/*
-void loadFromData(const QByteArray &fontData, qreal pixelSize, QFont::HintingPreference hintingPreference)
-*/
+// void loadFromData(const QByteArray &fontData, qreal pixelSize, QFont::HintingPreference hintingPreference)
 HB_FUNC_STATIC(QRAWFONT_LOADFROMDATA)
 {
   QRawFont *obj = static_cast<QRawFont *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -478,9 +450,7 @@ HB_FUNC_STATIC(QRAWFONT_LOADFROMDATA)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void loadFromFile(const QString &fileName, qreal pixelSize, QFont::HintingPreference hintingPreference)
-*/
+// void loadFromFile(const QString &fileName, qreal pixelSize, QFont::HintingPreference hintingPreference)
 HB_FUNC_STATIC(QRAWFONT_LOADFROMFILE)
 {
   QRawFont *obj = static_cast<QRawFont *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -504,9 +474,7 @@ HB_FUNC_STATIC(QRAWFONT_LOADFROMFILE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qreal maxCharWidth() const
-*/
+// qreal maxCharWidth() const
 HB_FUNC_STATIC(QRAWFONT_MAXCHARWIDTH)
 {
   QRawFont *obj = static_cast<QRawFont *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -528,9 +496,7 @@ HB_FUNC_STATIC(QRAWFONT_MAXCHARWIDTH)
   }
 }
 
-/*
-QPainterPath pathForGlyph(quint32 glyphIndex) const
-*/
+// QPainterPath pathForGlyph(quint32 glyphIndex) const
 HB_FUNC_STATIC(QRAWFONT_PATHFORGLYPH)
 {
   QRawFont *obj = static_cast<QRawFont *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -553,9 +519,7 @@ HB_FUNC_STATIC(QRAWFONT_PATHFORGLYPH)
   }
 }
 
-/*
-qreal pixelSize() const
-*/
+// qreal pixelSize() const
 HB_FUNC_STATIC(QRAWFONT_PIXELSIZE)
 {
   QRawFont *obj = static_cast<QRawFont *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -577,9 +541,7 @@ HB_FUNC_STATIC(QRAWFONT_PIXELSIZE)
   }
 }
 
-/*
-void setPixelSize(qreal pixelSize)
-*/
+// void setPixelSize(qreal pixelSize)
 HB_FUNC_STATIC(QRAWFONT_SETPIXELSIZE)
 {
   QRawFont *obj = static_cast<QRawFont *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -603,9 +565,7 @@ HB_FUNC_STATIC(QRAWFONT_SETPIXELSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QFont::Style style() const
-*/
+// QFont::Style style() const
 HB_FUNC_STATIC(QRAWFONT_STYLE)
 {
   QRawFont *obj = static_cast<QRawFont *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -627,9 +587,7 @@ HB_FUNC_STATIC(QRAWFONT_STYLE)
   }
 }
 
-/*
-QString styleName() const
-*/
+// QString styleName() const
 HB_FUNC_STATIC(QRAWFONT_STYLENAME)
 {
   QRawFont *obj = static_cast<QRawFont *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -651,9 +609,7 @@ HB_FUNC_STATIC(QRAWFONT_STYLENAME)
   }
 }
 
-/*
-QList<QFontDatabase::WritingSystem> supportedWritingSystems() const
-*/
+// QList<QFontDatabase::WritingSystem> supportedWritingSystems() const
 HB_FUNC_STATIC(QRAWFONT_SUPPORTEDWRITINGSYSTEMS)
 {
   QRawFont *obj = static_cast<QRawFont *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -669,7 +625,7 @@ HB_FUNC_STATIC(QRAWFONT_SUPPORTEDWRITINGSYSTEMS)
       const int count = list.count();
       for (int i = 0; i < count; i++)
       {
-        PHB_ITEM pItem = hb_itemPutNI(NULL, static_cast<int>(list[i]));
+        PHB_ITEM pItem = hb_itemPutNI(NULL, (int)list[i]);
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }
@@ -688,9 +644,7 @@ HB_FUNC_STATIC(QRAWFONT_SUPPORTSCHARACTER)
 {
   if (ISNUMPAR(1) && ISQCHAR(1))
   {
-    /*
-    bool supportsCharacter(QChar character) const
-    */
+    // bool supportsCharacter(QChar character) const
     QRawFont *obj = static_cast<QRawFont *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -700,9 +654,7 @@ HB_FUNC_STATIC(QRAWFONT_SUPPORTSCHARACTER)
   }
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    /*
-    bool supportsCharacter(quint32 ucs4) const
-    */
+    // bool supportsCharacter(quint32 ucs4) const
     QRawFont *obj = static_cast<QRawFont *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -716,9 +668,7 @@ HB_FUNC_STATIC(QRAWFONT_SUPPORTSCHARACTER)
   }
 }
 
-/*
-qreal unitsPerEm() const
-*/
+// qreal unitsPerEm() const
 HB_FUNC_STATIC(QRAWFONT_UNITSPEREM)
 {
   QRawFont *obj = static_cast<QRawFont *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -740,9 +690,7 @@ HB_FUNC_STATIC(QRAWFONT_UNITSPEREM)
   }
 }
 
-/*
-int weight() const
-*/
+// int weight() const
 HB_FUNC_STATIC(QRAWFONT_WEIGHT)
 {
   QRawFont *obj = static_cast<QRawFont *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -764,9 +712,7 @@ HB_FUNC_STATIC(QRAWFONT_WEIGHT)
   }
 }
 
-/*
-qreal xHeight() const
-*/
+// qreal xHeight() const
 HB_FUNC_STATIC(QRAWFONT_XHEIGHT)
 {
   QRawFont *obj = static_cast<QRawFont *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -788,9 +734,7 @@ HB_FUNC_STATIC(QRAWFONT_XHEIGHT)
   }
 }
 
-/*
-static QRawFont fromFont(const QFont &font, QFontDatabase::WritingSystem writingSystem = QFontDatabase::Any)
-*/
+// static QRawFont fromFont(const QFont &font, QFontDatabase::WritingSystem writingSystem = QFontDatabase::Any)
 HB_FUNC_STATIC(QRAWFONT_FROMFONT)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

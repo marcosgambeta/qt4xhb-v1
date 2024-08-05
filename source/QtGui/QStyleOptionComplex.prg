@@ -79,9 +79,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStyle::SubControls subControls
-*/
+// QStyle::SubControls subControls
 HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_SUBCONTROLS)
 {
   QStyleOptionComplex *obj = static_cast<QStyleOptionComplex *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -106,7 +104,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_SETSUBCONTROLS)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->subControls = (QStyle::SubControls)hb_parni(1);
+      obj->subControls=(QStyle::SubControls)hb_parni(1));
     }
     else
     {
@@ -117,9 +115,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_SETSUBCONTROLS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStyle::SubControls activeSubControls
-*/
+// QStyle::SubControls activeSubControls
 HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_ACTIVESUBCONTROLS)
 {
   QStyleOptionComplex *obj = static_cast<QStyleOptionComplex *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -144,7 +140,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_SETACTIVESUBCONTROLS)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->activeSubControls = (QStyle::SubControls)hb_parni(1);
+      obj->activeSubControls=(QStyle::SubControls)hb_parni(1));
     }
     else
     {

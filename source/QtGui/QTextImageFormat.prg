@@ -45,7 +45,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-// QTextImageFormat()
+    // QTextImageFormat()
 HB_FUNC_STATIC(QTEXTIMAGEFORMAT_NEW)
 {
   if (ISNUMPAR(0))
@@ -75,9 +75,7 @@ HB_FUNC_STATIC(QTEXTIMAGEFORMAT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qreal height() const
-*/
+// qreal height() const
 HB_FUNC_STATIC(QTEXTIMAGEFORMAT_HEIGHT)
 {
   QTextImageFormat *obj = static_cast<QTextImageFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -99,9 +97,7 @@ HB_FUNC_STATIC(QTEXTIMAGEFORMAT_HEIGHT)
   }
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QTEXTIMAGEFORMAT_ISVALID)
 {
   QTextImageFormat *obj = static_cast<QTextImageFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -123,9 +119,7 @@ HB_FUNC_STATIC(QTEXTIMAGEFORMAT_ISVALID)
   }
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QTEXTIMAGEFORMAT_NAME)
 {
   QTextImageFormat *obj = static_cast<QTextImageFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -147,9 +141,7 @@ HB_FUNC_STATIC(QTEXTIMAGEFORMAT_NAME)
   }
 }
 
-/*
-void setHeight(qreal height)
-*/
+// void setHeight(qreal height)
 HB_FUNC_STATIC(QTEXTIMAGEFORMAT_SETHEIGHT)
 {
   QTextImageFormat *obj = static_cast<QTextImageFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -173,9 +165,7 @@ HB_FUNC_STATIC(QTEXTIMAGEFORMAT_SETHEIGHT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setName(const QString &name)
-*/
+// void setName(const QString &name)
 HB_FUNC_STATIC(QTEXTIMAGEFORMAT_SETNAME)
 {
   QTextImageFormat *obj = static_cast<QTextImageFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -199,9 +189,7 @@ HB_FUNC_STATIC(QTEXTIMAGEFORMAT_SETNAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWidth(qreal width)
-*/
+// void setWidth(qreal width)
 HB_FUNC_STATIC(QTEXTIMAGEFORMAT_SETWIDTH)
 {
   QTextImageFormat *obj = static_cast<QTextImageFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -225,9 +213,7 @@ HB_FUNC_STATIC(QTEXTIMAGEFORMAT_SETWIDTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qreal width() const
-*/
+// qreal width() const
 HB_FUNC_STATIC(QTEXTIMAGEFORMAT_WIDTH)
 {
   QTextImageFormat *obj = static_cast<QTextImageFormat *>(Qt4xHb::itemGetPtrStackSelfItem());

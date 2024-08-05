@@ -65,9 +65,7 @@ HB_FUNC_STATIC(QINPUTCONTEXTPLUGIN_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QInputContext *create(const QString &key) = 0
-*/
+// virtual QInputContext *create(const QString &key) = 0
 HB_FUNC_STATIC(QINPUTCONTEXTPLUGIN_CREATE)
 {
   QInputContextPlugin *obj = qobject_cast<QInputContextPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -90,9 +88,7 @@ HB_FUNC_STATIC(QINPUTCONTEXTPLUGIN_CREATE)
   }
 }
 
-/*
-virtual QString description(const QString &key) = 0
-*/
+// virtual QString description(const QString &key) = 0
 HB_FUNC_STATIC(QINPUTCONTEXTPLUGIN_DESCRIPTION)
 {
   QInputContextPlugin *obj = qobject_cast<QInputContextPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -114,9 +110,7 @@ HB_FUNC_STATIC(QINPUTCONTEXTPLUGIN_DESCRIPTION)
   }
 }
 
-/*
-virtual QString displayName(const QString &key) = 0
-*/
+// virtual QString displayName(const QString &key) = 0
 HB_FUNC_STATIC(QINPUTCONTEXTPLUGIN_DISPLAYNAME)
 {
   QInputContextPlugin *obj = qobject_cast<QInputContextPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -138,9 +132,7 @@ HB_FUNC_STATIC(QINPUTCONTEXTPLUGIN_DISPLAYNAME)
   }
 }
 
-/*
-virtual QStringList keys() const = 0
-*/
+// virtual QStringList keys() const = 0
 HB_FUNC_STATIC(QINPUTCONTEXTPLUGIN_KEYS)
 {
   QInputContextPlugin *obj = qobject_cast<QInputContextPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -162,9 +154,7 @@ HB_FUNC_STATIC(QINPUTCONTEXTPLUGIN_KEYS)
   }
 }
 
-/*
-virtual QStringList languages(const QString &key) = 0
-*/
+// virtual QStringList languages(const QString &key) = 0
 HB_FUNC_STATIC(QINPUTCONTEXTPLUGIN_LANGUAGES)
 {
   QInputContextPlugin *obj = qobject_cast<QInputContextPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());

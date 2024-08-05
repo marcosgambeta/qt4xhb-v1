@@ -55,9 +55,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWidget *widget() const
-*/
+// QWidget *widget() const
 HB_FUNC_STATIC(QGRAPHICSSCENEEVENT_WIDGET)
 {
   QGraphicsSceneEvent *obj = static_cast<QGraphicsSceneEvent *>(Qt4xHb::itemGetPtrStackSelfItem());

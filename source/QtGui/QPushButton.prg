@@ -93,9 +93,7 @@ HB_FUNC_STATIC(QPUSHBUTTON_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool autoDefault() const
-*/
+// bool autoDefault() const
 HB_FUNC_STATIC(QPUSHBUTTON_AUTODEFAULT)
 {
   QPushButton *obj = qobject_cast<QPushButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -117,9 +115,7 @@ HB_FUNC_STATIC(QPUSHBUTTON_AUTODEFAULT)
   }
 }
 
-/*
-bool isDefault() const
-*/
+// bool isDefault() const
 HB_FUNC_STATIC(QPUSHBUTTON_ISDEFAULT)
 {
   QPushButton *obj = qobject_cast<QPushButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -141,9 +137,7 @@ HB_FUNC_STATIC(QPUSHBUTTON_ISDEFAULT)
   }
 }
 
-/*
-bool isFlat() const
-*/
+// bool isFlat() const
 HB_FUNC_STATIC(QPUSHBUTTON_ISFLAT)
 {
   QPushButton *obj = qobject_cast<QPushButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -165,9 +159,7 @@ HB_FUNC_STATIC(QPUSHBUTTON_ISFLAT)
   }
 }
 
-/*
-void setAutoDefault(bool)
-*/
+// void setAutoDefault(bool)
 HB_FUNC_STATIC(QPUSHBUTTON_SETAUTODEFAULT)
 {
   QPushButton *obj = qobject_cast<QPushButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -191,9 +183,7 @@ HB_FUNC_STATIC(QPUSHBUTTON_SETAUTODEFAULT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDefault(bool)
-*/
+// void setDefault(bool)
 HB_FUNC_STATIC(QPUSHBUTTON_SETDEFAULT)
 {
   QPushButton *obj = qobject_cast<QPushButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -217,9 +207,7 @@ HB_FUNC_STATIC(QPUSHBUTTON_SETDEFAULT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFlat(bool)
-*/
+// void setFlat(bool)
 HB_FUNC_STATIC(QPUSHBUTTON_SETFLAT)
 {
   QPushButton *obj = qobject_cast<QPushButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -243,9 +231,7 @@ HB_FUNC_STATIC(QPUSHBUTTON_SETFLAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void showMenu()
-*/
+// void showMenu()
 HB_FUNC_STATIC(QPUSHBUTTON_SHOWMENU)
 {
   QPushButton *obj = qobject_cast<QPushButton *>(Qt4xHb::getQObjectPointerFromSelfItem());

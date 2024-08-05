@@ -69,9 +69,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_NEW)
   }
 }
 
-/*
-ToolBarPosition positionOfLine
-*/
+// ToolBarPosition positionOfLine
 HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_POSITIONOFLINE)
 {
   QStyleOptionToolBar *obj = static_cast<QStyleOptionToolBar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -96,7 +94,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_SETPOSITIONOFLINE)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->positionOfLine = (QStyleOptionToolBar::ToolBarPosition)hb_parni(1);
+      obj->positionOfLine=(QStyleOptionToolBar::ToolBarPosition)hb_parni(1));
     }
     else
     {
@@ -107,9 +105,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_SETPOSITIONOFLINE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-ToolBarPosition positionWithinLine
-*/
+// ToolBarPosition positionWithinLine
 HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_POSITIONWITHINLINE)
 {
   QStyleOptionToolBar *obj = static_cast<QStyleOptionToolBar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -134,7 +130,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_SETPOSITIONWITHINLINE)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->positionWithinLine = (QStyleOptionToolBar::ToolBarPosition)hb_parni(1);
+      obj->positionWithinLine=(QStyleOptionToolBar::ToolBarPosition)hb_parni(1));
     }
     else
     {
@@ -145,9 +141,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_SETPOSITIONWITHINLINE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::ToolBarArea toolBarArea
-*/
+// Qt::ToolBarArea toolBarArea
 HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_TOOLBARAREA)
 {
   QStyleOptionToolBar *obj = static_cast<QStyleOptionToolBar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -172,7 +166,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_SETTOOLBARAREA)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->toolBarArea = (Qt::ToolBarArea)hb_parni(1);
+      obj->toolBarArea=(Qt::ToolBarArea)hb_parni(1));
     }
     else
     {
@@ -183,9 +177,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_SETTOOLBARAREA)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-ToolBarFeatures features
-*/
+// ToolBarFeatures features
 HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_FEATURES)
 {
   QStyleOptionToolBar *obj = static_cast<QStyleOptionToolBar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -210,7 +202,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_SETFEATURES)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->features = (QStyleOptionToolBar::ToolBarFeatures)hb_parni(1);
+      obj->features=(QStyleOptionToolBar::ToolBarFeatures)hb_parni(1));
     }
     else
     {
@@ -221,9 +213,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_SETFEATURES)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int lineWidth
-*/
+// int lineWidth
 HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_LINEWIDTH)
 {
   QStyleOptionToolBar *obj = static_cast<QStyleOptionToolBar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -248,7 +238,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_SETLINEWIDTH)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->lineWidth = PINT(1);
+      obj->lineWidth=PINT(1));
     }
     else
     {
@@ -259,9 +249,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_SETLINEWIDTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int midLineWidth
-*/
+// int midLineWidth
 HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_MIDLINEWIDTH)
 {
   QStyleOptionToolBar *obj = static_cast<QStyleOptionToolBar *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -286,7 +274,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_SETMIDLINEWIDTH)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->midLineWidth = PINT(1);
+      obj->midLineWidth=PINT(1));
     }
     else
     {

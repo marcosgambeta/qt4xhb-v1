@@ -77,9 +77,7 @@ HB_FUNC_STATIC(QINPUTMETHODEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int replacementLength() const
-*/
+// int replacementLength() const
 HB_FUNC_STATIC(QINPUTMETHODEVENT_REPLACEMENTLENGTH)
 {
   QInputMethodEvent *obj = static_cast<QInputMethodEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -101,9 +99,7 @@ HB_FUNC_STATIC(QINPUTMETHODEVENT_REPLACEMENTLENGTH)
   }
 }
 
-/*
-int replacementStart() const
-*/
+// int replacementStart() const
 HB_FUNC_STATIC(QINPUTMETHODEVENT_REPLACEMENTSTART)
 {
   QInputMethodEvent *obj = static_cast<QInputMethodEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -125,9 +121,7 @@ HB_FUNC_STATIC(QINPUTMETHODEVENT_REPLACEMENTSTART)
   }
 }
 
-/*
-void setCommitString(const QString &commitString, int replaceFrom = 0, int replaceLength = 0)
-*/
+// void setCommitString(const QString &commitString, int replaceFrom = 0, int replaceLength = 0)
 HB_FUNC_STATIC(QINPUTMETHODEVENT_SETCOMMITSTRING)
 {
   QInputMethodEvent *obj = static_cast<QInputMethodEvent *>(Qt4xHb::itemGetPtrStackSelfItem());

@@ -50,9 +50,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    static bool isActive()
-    */
+    // static bool isActive()
 HB_FUNC_STATIC(QACCESSIBLE_ISACTIVE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -69,9 +67,7 @@ HB_FUNC_STATIC(QACCESSIBLE_ISACTIVE)
 #endif
 }
 
-/*
-static QAccessibleInterface *queryAccessibleInterface(QObject *object)
-*/
+// static QAccessibleInterface *queryAccessibleInterface(QObject *object)
 HB_FUNC_STATIC(QACCESSIBLE_QUERYACCESSIBLEINTERFACE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -89,9 +85,7 @@ HB_FUNC_STATIC(QACCESSIBLE_QUERYACCESSIBLEINTERFACE)
 #endif
 }
 
-/*
-static void setRootObject(QObject *object)
-*/
+// static void setRootObject(QObject *object)
 HB_FUNC_STATIC(QACCESSIBLE_SETROOTOBJECT)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -110,9 +104,7 @@ HB_FUNC_STATIC(QACCESSIBLE_SETROOTOBJECT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void updateAccessibility(QObject *object, int child, QAccessible::Event reason)
-*/
+// static void updateAccessibility(QObject *object, int child, QAccessible::Event reason)
 HB_FUNC_STATIC(QACCESSIBLE_UPDATEACCESSIBILITY)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

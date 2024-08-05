@@ -60,9 +60,7 @@ HB_FUNC_STATIC(QACCESSIBLEBRIDGEPLUGIN_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QAccessibleBridge *create(const QString &key) = 0
-*/
+// virtual QAccessibleBridge *create(const QString &key) = 0
 HB_FUNC_STATIC(QACCESSIBLEBRIDGEPLUGIN_CREATE)
 {
   QAccessibleBridgePlugin *obj = qobject_cast<QAccessibleBridgePlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -85,9 +83,7 @@ HB_FUNC_STATIC(QACCESSIBLEBRIDGEPLUGIN_CREATE)
   }
 }
 
-/*
-virtual QStringList keys() const = 0
-*/
+// virtual QStringList keys() const = 0
 HB_FUNC_STATIC(QACCESSIBLEBRIDGEPLUGIN_KEYS)
 {
   QAccessibleBridgePlugin *obj = qobject_cast<QAccessibleBridgePlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());

@@ -61,9 +61,7 @@ HB_FUNC_STATIC(QABSTRACTFONTENGINE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QAbstractFontEngine::Capabilities capabilities() const = 0
-*/
+// virtual QAbstractFontEngine::Capabilities capabilities() const = 0
 HB_FUNC_STATIC(QABSTRACTFONTENGINE_CAPABILITIES)
 {
   QAbstractFontEngine *obj = qobject_cast<QAbstractFontEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -85,9 +83,7 @@ HB_FUNC_STATIC(QABSTRACTFONTENGINE_CAPABILITIES)
   }
 }
 
-/*
-virtual QVariant fontProperty(QAbstractFontEngine::FontProperty property) const = 0
-*/
+// virtual QVariant fontProperty(QAbstractFontEngine::FontProperty property) const = 0
 HB_FUNC_STATIC(QABSTRACTFONTENGINE_FONTPROPERTY)
 {
   QAbstractFontEngine *obj = qobject_cast<QAbstractFontEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -110,9 +106,7 @@ HB_FUNC_STATIC(QABSTRACTFONTENGINE_FONTPROPERTY)
   }
 }
 
-/*
-virtual bool renderGlyph(uint glyph, int depth, int bytesPerLine, int height, uchar *buffer)
-*/
+// virtual bool renderGlyph(uint glyph, int depth, int bytesPerLine, int height, uchar *buffer)
 HB_FUNC_STATIC(QABSTRACTFONTENGINE_RENDERGLYPH)
 {
   QAbstractFontEngine *obj = qobject_cast<QAbstractFontEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());

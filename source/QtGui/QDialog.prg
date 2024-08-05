@@ -58,7 +58,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QDialog(QWidget *parent = 0, Qt::WindowFlags f = 0)
+    // QDialog(QWidget *parent = 0, Qt::WindowFlags f = 0)
 HB_FUNC_STATIC(QDIALOG_NEW)
 {
   if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
@@ -90,9 +90,7 @@ HB_FUNC_STATIC(QDIALOG_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isSizeGripEnabled() const
-*/
+// bool isSizeGripEnabled() const
 HB_FUNC_STATIC(QDIALOG_ISSIZEGRIPENABLED)
 {
   QDialog *obj = qobject_cast<QDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -114,9 +112,7 @@ HB_FUNC_STATIC(QDIALOG_ISSIZEGRIPENABLED)
   }
 }
 
-/*
-int result() const
-*/
+// int result() const
 HB_FUNC_STATIC(QDIALOG_RESULT)
 {
   QDialog *obj = qobject_cast<QDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -138,9 +134,7 @@ HB_FUNC_STATIC(QDIALOG_RESULT)
   }
 }
 
-/*
-void setModal(bool modal)
-*/
+// void setModal(bool modal)
 HB_FUNC_STATIC(QDIALOG_SETMODAL)
 {
   QDialog *obj = qobject_cast<QDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -164,9 +158,7 @@ HB_FUNC_STATIC(QDIALOG_SETMODAL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setResult(int i)
-*/
+// void setResult(int i)
 HB_FUNC_STATIC(QDIALOG_SETRESULT)
 {
   QDialog *obj = qobject_cast<QDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -190,9 +182,7 @@ HB_FUNC_STATIC(QDIALOG_SETRESULT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSizeGripEnabled(bool)
-*/
+// void setSizeGripEnabled(bool)
 HB_FUNC_STATIC(QDIALOG_SETSIZEGRIPENABLED)
 {
   QDialog *obj = qobject_cast<QDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -216,9 +206,7 @@ HB_FUNC_STATIC(QDIALOG_SETSIZEGRIPENABLED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QSize minimumSizeHint() const
-*/
+// virtual QSize minimumSizeHint() const
 HB_FUNC_STATIC(QDIALOG_MINIMUMSIZEHINT)
 {
   QDialog *obj = qobject_cast<QDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -241,9 +229,7 @@ HB_FUNC_STATIC(QDIALOG_MINIMUMSIZEHINT)
   }
 }
 
-/*
-virtual void setVisible(bool visible)
-*/
+// virtual void setVisible(bool visible)
 HB_FUNC_STATIC(QDIALOG_SETVISIBLE)
 {
   QDialog *obj = qobject_cast<QDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -267,9 +253,7 @@ HB_FUNC_STATIC(QDIALOG_SETVISIBLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QSize sizeHint() const
-*/
+// virtual QSize sizeHint() const
 HB_FUNC_STATIC(QDIALOG_SIZEHINT)
 {
   QDialog *obj = qobject_cast<QDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -292,9 +276,7 @@ HB_FUNC_STATIC(QDIALOG_SIZEHINT)
   }
 }
 
-/*
-virtual void accept()
-*/
+// virtual void accept()
 HB_FUNC_STATIC(QDIALOG_ACCEPT)
 {
   QDialog *obj = qobject_cast<QDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -318,9 +300,7 @@ HB_FUNC_STATIC(QDIALOG_ACCEPT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void done(int r)
-*/
+// virtual void done(int r)
 HB_FUNC_STATIC(QDIALOG_DONE)
 {
   QDialog *obj = qobject_cast<QDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -344,9 +324,7 @@ HB_FUNC_STATIC(QDIALOG_DONE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int exec()
-*/
+// int exec()
 HB_FUNC_STATIC(QDIALOG_EXEC)
 {
   QDialog *obj = qobject_cast<QDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -368,9 +346,7 @@ HB_FUNC_STATIC(QDIALOG_EXEC)
   }
 }
 
-/*
-void open()
-*/
+// void open()
 HB_FUNC_STATIC(QDIALOG_OPEN)
 {
   QDialog *obj = qobject_cast<QDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -394,9 +370,7 @@ HB_FUNC_STATIC(QDIALOG_OPEN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void reject()
-*/
+// virtual void reject()
 HB_FUNC_STATIC(QDIALOG_REJECT)
 {
   QDialog *obj = qobject_cast<QDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());

@@ -117,10 +117,8 @@ HB_FUNC_STATIC(QGRIDLAYOUT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addItem(QLayoutItem *item, int row, int column, int rowSpan = 1, int columnSpan = 1, Qt::Alignment alignment = 0
-)
-*/
+// void addItem(QLayoutItem *item, int row, int column, int rowSpan = 1, int columnSpan = 1, Qt::Alignment alignment =
+// 0)
 HB_FUNC_STATIC(QGRIDLAYOUT_ADDITEM)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -150,9 +148,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ADDLAYOUT)
 {
   if (ISBETWEEN(3, 4) && ISQLAYOUT(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
-    /*
-    void addLayout(QLayout *layout, int row, int column, Qt::Alignment alignment = 0)
-    */
+    // void addLayout(QLayout *layout, int row, int column, Qt::Alignment alignment = 0)
     QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -165,9 +161,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ADDLAYOUT)
   else if (ISBETWEEN(5, 6) && ISQLAYOUT(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
            (HB_ISNUM(6) || HB_ISNIL(6)))
   {
-    /*
-    void addLayout(QLayout *layout, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0)
-    */
+    // void addLayout(QLayout *layout, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0)
     QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -188,9 +182,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ADDWIDGET)
 {
   if (ISBETWEEN(3, 4) && ISQWIDGET(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
-    /*
-    void addWidget(QWidget *widget, int row, int column, Qt::Alignment alignment = 0)
-    */
+    // void addWidget(QWidget *widget, int row, int column, Qt::Alignment alignment = 0)
     QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -203,10 +195,8 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ADDWIDGET)
   else if (ISBETWEEN(5, 6) && ISQWIDGET(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
            (HB_ISNUM(6) || HB_ISNIL(6)))
   {
-    /*
-    void addWidget(QWidget *widget, int fromRow, int fromColumn, int rowSpan, int columnSpan, Qt::Alignment alignment
-    = 0)
-    */
+    // void addWidget(QWidget *widget, int fromRow, int fromColumn, int rowSpan, int columnSpan, Qt::Alignment alignment
+    // = 0)
     QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -223,9 +213,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ADDWIDGET)
   }
 }
 
-/*
-QRect cellRect(int row, int column) const
-*/
+// QRect cellRect(int row, int column) const
 HB_FUNC_STATIC(QGRIDLAYOUT_CELLRECT)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -248,9 +236,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_CELLRECT)
   }
 }
 
-/*
-int columnCount() const
-*/
+// int columnCount() const
 HB_FUNC_STATIC(QGRIDLAYOUT_COLUMNCOUNT)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -272,9 +258,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_COLUMNCOUNT)
   }
 }
 
-/*
-int columnMinimumWidth(int column) const
-*/
+// int columnMinimumWidth(int column) const
 HB_FUNC_STATIC(QGRIDLAYOUT_COLUMNMINIMUMWIDTH)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -296,9 +280,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_COLUMNMINIMUMWIDTH)
   }
 }
 
-/*
-int columnStretch(int column) const
-*/
+// int columnStretch(int column) const
 HB_FUNC_STATIC(QGRIDLAYOUT_COLUMNSTRETCH)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -320,9 +302,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_COLUMNSTRETCH)
   }
 }
 
-/*
-void getItemPosition(int index, int *row, int *column, int *rowSpan, int *columnSpan)
-*/
+// void getItemPosition(int index, int *row, int *column, int *rowSpan, int *columnSpan)
 HB_FUNC_STATIC(QGRIDLAYOUT_GETITEMPOSITION)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -354,9 +334,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_GETITEMPOSITION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int horizontalSpacing() const
-*/
+// int horizontalSpacing() const
 HB_FUNC_STATIC(QGRIDLAYOUT_HORIZONTALSPACING)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -378,9 +356,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_HORIZONTALSPACING)
   }
 }
 
-/*
-QLayoutItem *itemAtPosition(int row, int column) const
-*/
+// QLayoutItem *itemAtPosition(int row, int column) const
 HB_FUNC_STATIC(QGRIDLAYOUT_ITEMATPOSITION)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -403,9 +379,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ITEMATPOSITION)
   }
 }
 
-/*
-Qt::Corner originCorner() const
-*/
+// Qt::Corner originCorner() const
 HB_FUNC_STATIC(QGRIDLAYOUT_ORIGINCORNER)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -427,9 +401,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ORIGINCORNER)
   }
 }
 
-/*
-int rowCount() const
-*/
+// int rowCount() const
 HB_FUNC_STATIC(QGRIDLAYOUT_ROWCOUNT)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -451,9 +423,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ROWCOUNT)
   }
 }
 
-/*
-int rowMinimumHeight(int row) const
-*/
+// int rowMinimumHeight(int row) const
 HB_FUNC_STATIC(QGRIDLAYOUT_ROWMINIMUMHEIGHT)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -475,9 +445,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ROWMINIMUMHEIGHT)
   }
 }
 
-/*
-int rowStretch(int row) const
-*/
+// int rowStretch(int row) const
 HB_FUNC_STATIC(QGRIDLAYOUT_ROWSTRETCH)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -499,9 +467,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ROWSTRETCH)
   }
 }
 
-/*
-void setColumnMinimumWidth(int column, int minSize)
-*/
+// void setColumnMinimumWidth(int column, int minSize)
 HB_FUNC_STATIC(QGRIDLAYOUT_SETCOLUMNMINIMUMWIDTH)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -525,9 +491,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_SETCOLUMNMINIMUMWIDTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setColumnStretch(int column, int stretch)
-*/
+// void setColumnStretch(int column, int stretch)
 HB_FUNC_STATIC(QGRIDLAYOUT_SETCOLUMNSTRETCH)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -551,9 +515,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_SETCOLUMNSTRETCH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setHorizontalSpacing(int spacing)
-*/
+// void setHorizontalSpacing(int spacing)
 HB_FUNC_STATIC(QGRIDLAYOUT_SETHORIZONTALSPACING)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -577,9 +539,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_SETHORIZONTALSPACING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setOriginCorner(Qt::Corner corner)
-*/
+// void setOriginCorner(Qt::Corner corner)
 HB_FUNC_STATIC(QGRIDLAYOUT_SETORIGINCORNER)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -603,9 +563,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_SETORIGINCORNER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setRowMinimumHeight(int row, int minSize)
-*/
+// void setRowMinimumHeight(int row, int minSize)
 HB_FUNC_STATIC(QGRIDLAYOUT_SETROWMINIMUMHEIGHT)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -629,9 +587,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_SETROWMINIMUMHEIGHT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setRowStretch(int row, int stretch)
-*/
+// void setRowStretch(int row, int stretch)
 HB_FUNC_STATIC(QGRIDLAYOUT_SETROWSTRETCH)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -655,9 +611,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_SETROWSTRETCH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSpacing(int spacing)
-*/
+// void setSpacing(int spacing)
 HB_FUNC_STATIC(QGRIDLAYOUT_SETSPACING)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -681,9 +635,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_SETSPACING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setVerticalSpacing(int spacing)
-*/
+// void setVerticalSpacing(int spacing)
 HB_FUNC_STATIC(QGRIDLAYOUT_SETVERTICALSPACING)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -707,9 +659,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_SETVERTICALSPACING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int spacing() const
-*/
+// int spacing() const
 HB_FUNC_STATIC(QGRIDLAYOUT_SPACING)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -731,9 +681,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_SPACING)
   }
 }
 
-/*
-int verticalSpacing() const
-*/
+// int verticalSpacing() const
 HB_FUNC_STATIC(QGRIDLAYOUT_VERTICALSPACING)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -755,9 +703,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_VERTICALSPACING)
   }
 }
 
-/*
-virtual int count() const
-*/
+// virtual int count() const
 HB_FUNC_STATIC(QGRIDLAYOUT_COUNT)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -779,9 +725,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_COUNT)
   }
 }
 
-/*
-virtual Qt::Orientations expandingDirections() const
-*/
+// virtual Qt::Orientations expandingDirections() const
 HB_FUNC_STATIC(QGRIDLAYOUT_EXPANDINGDIRECTIONS)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -803,9 +747,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_EXPANDINGDIRECTIONS)
   }
 }
 
-/*
-virtual bool hasHeightForWidth() const
-*/
+// virtual bool hasHeightForWidth() const
 HB_FUNC_STATIC(QGRIDLAYOUT_HASHEIGHTFORWIDTH)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -827,9 +769,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_HASHEIGHTFORWIDTH)
   }
 }
 
-/*
-virtual int heightForWidth(int w) const
-*/
+// virtual int heightForWidth(int w) const
 HB_FUNC_STATIC(QGRIDLAYOUT_HEIGHTFORWIDTH)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -851,9 +791,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_HEIGHTFORWIDTH)
   }
 }
 
-/*
-virtual void invalidate()
-*/
+// virtual void invalidate()
 HB_FUNC_STATIC(QGRIDLAYOUT_INVALIDATE)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -877,9 +815,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_INVALIDATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QLayoutItem *itemAt(int index) const
-*/
+// virtual QLayoutItem *itemAt(int index) const
 HB_FUNC_STATIC(QGRIDLAYOUT_ITEMAT)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -902,9 +838,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ITEMAT)
   }
 }
 
-/*
-virtual QSize maximumSize() const
-*/
+// virtual QSize maximumSize() const
 HB_FUNC_STATIC(QGRIDLAYOUT_MAXIMUMSIZE)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -927,9 +861,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_MAXIMUMSIZE)
   }
 }
 
-/*
-virtual int minimumHeightForWidth(int w) const
-*/
+// virtual int minimumHeightForWidth(int w) const
 HB_FUNC_STATIC(QGRIDLAYOUT_MINIMUMHEIGHTFORWIDTH)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -951,9 +883,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_MINIMUMHEIGHTFORWIDTH)
   }
 }
 
-/*
-virtual QSize minimumSize() const
-*/
+// virtual QSize minimumSize() const
 HB_FUNC_STATIC(QGRIDLAYOUT_MINIMUMSIZE)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -976,9 +906,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_MINIMUMSIZE)
   }
 }
 
-/*
-virtual void setGeometry(const QRect &rect)
-*/
+// virtual void setGeometry(const QRect &rect)
 HB_FUNC_STATIC(QGRIDLAYOUT_SETGEOMETRY)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1002,9 +930,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_SETGEOMETRY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QSize sizeHint() const
-*/
+// virtual QSize sizeHint() const
 HB_FUNC_STATIC(QGRIDLAYOUT_SIZEHINT)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1027,9 +953,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_SIZEHINT)
   }
 }
 
-/*
-virtual QLayoutItem *takeAt(int index)
-*/
+// virtual QLayoutItem *takeAt(int index)
 HB_FUNC_STATIC(QGRIDLAYOUT_TAKEAT)
 {
   QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());

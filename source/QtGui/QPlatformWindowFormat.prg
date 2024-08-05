@@ -136,9 +136,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool accum() const
-*/
+// bool accum() const
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_ACCUM)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -160,9 +158,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_ACCUM)
   }
 }
 
-/*
-int accumBufferSize() const
-*/
+// int accumBufferSize() const
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_ACCUMBUFFERSIZE)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -184,9 +180,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_ACCUMBUFFERSIZE)
   }
 }
 
-/*
-bool alpha() const
-*/
+// bool alpha() const
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_ALPHA)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -208,9 +202,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_ALPHA)
   }
 }
 
-/*
-int alphaBufferSize() const
-*/
+// int alphaBufferSize() const
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_ALPHABUFFERSIZE)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -232,9 +224,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_ALPHABUFFERSIZE)
   }
 }
 
-/*
-int blueBufferSize() const
-*/
+// int blueBufferSize() const
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_BLUEBUFFERSIZE)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -256,9 +246,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_BLUEBUFFERSIZE)
   }
 }
 
-/*
-bool depth() const
-*/
+// bool depth() const
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_DEPTH)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -280,9 +268,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_DEPTH)
   }
 }
 
-/*
-int depthBufferSize() const
-*/
+// int depthBufferSize() const
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_DEPTHBUFFERSIZE)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -304,9 +290,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_DEPTHBUFFERSIZE)
   }
 }
 
-/*
-bool directRendering() const
-*/
+// bool directRendering() const
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_DIRECTRENDERING)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -328,9 +312,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_DIRECTRENDERING)
   }
 }
 
-/*
-bool doubleBuffer() const
-*/
+// bool doubleBuffer() const
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_DOUBLEBUFFER)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -352,9 +334,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_DOUBLEBUFFER)
   }
 }
 
-/*
-int greenBufferSize() const
-*/
+// int greenBufferSize() const
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_GREENBUFFERSIZE)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -376,9 +356,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_GREENBUFFERSIZE)
   }
 }
 
-/*
-bool hasWindowSurface() const
-*/
+// bool hasWindowSurface() const
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_HASWINDOWSURFACE)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -400,9 +378,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_HASWINDOWSURFACE)
   }
 }
 
-/*
-int redBufferSize() const
-*/
+// int redBufferSize() const
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_REDBUFFERSIZE)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -424,9 +400,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_REDBUFFERSIZE)
   }
 }
 
-/*
-bool rgba() const
-*/
+// bool rgba() const
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_RGBA)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -448,9 +422,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_RGBA)
   }
 }
 
-/*
-bool sampleBuffers() const
-*/
+// bool sampleBuffers() const
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SAMPLEBUFFERS)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -472,9 +444,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SAMPLEBUFFERS)
   }
 }
 
-/*
-int samples() const
-*/
+// int samples() const
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SAMPLES)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -496,9 +466,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SAMPLES)
   }
 }
 
-/*
-void setAccum(bool enable)
-*/
+// void setAccum(bool enable)
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETACCUM)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -522,9 +490,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETACCUM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setAccumBufferSize(int size)
-*/
+// void setAccumBufferSize(int size)
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETACCUMBUFFERSIZE)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -548,9 +514,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETACCUMBUFFERSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setAlpha(bool enable)
-*/
+// void setAlpha(bool enable)
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETALPHA)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -574,9 +538,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETALPHA)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setAlphaBufferSize(int size)
-*/
+// void setAlphaBufferSize(int size)
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETALPHABUFFERSIZE)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -600,9 +562,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETALPHABUFFERSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setBlueBufferSize(int size)
-*/
+// void setBlueBufferSize(int size)
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETBLUEBUFFERSIZE)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -626,9 +586,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETBLUEBUFFERSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDepth(bool enable)
-*/
+// void setDepth(bool enable)
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETDEPTH)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -652,9 +610,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETDEPTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDepthBufferSize(int size)
-*/
+// void setDepthBufferSize(int size)
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETDEPTHBUFFERSIZE)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -678,9 +634,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETDEPTHBUFFERSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDirectRendering(bool enable)
-*/
+// void setDirectRendering(bool enable)
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETDIRECTRENDERING)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -704,9 +658,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETDIRECTRENDERING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDoubleBuffer(bool enable)
-*/
+// void setDoubleBuffer(bool enable)
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETDOUBLEBUFFER)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -730,9 +682,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETDOUBLEBUFFER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setGreenBufferSize(int size)
-*/
+// void setGreenBufferSize(int size)
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETGREENBUFFERSIZE)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -756,9 +706,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETGREENBUFFERSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setOption(QPlatformWindowFormat::FormatOptions opt)
-*/
+// void setOption(QPlatformWindowFormat::FormatOptions opt)
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETOPTION)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -782,9 +730,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETOPTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setRedBufferSize(int size)
-*/
+// void setRedBufferSize(int size)
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETREDBUFFERSIZE)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -808,9 +754,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETREDBUFFERSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setRgba(bool enable)
-*/
+// void setRgba(bool enable)
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETRGBA)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -834,9 +778,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETRGBA)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSampleBuffers(bool enable)
-*/
+// void setSampleBuffers(bool enable)
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSAMPLEBUFFERS)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -860,9 +802,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSAMPLEBUFFERS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSamples(int numSamples)
-*/
+// void setSamples(int numSamples)
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSAMPLES)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -886,9 +826,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSAMPLES)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSharedContext(QPlatformGLContext *context)
-*/
+// void setSharedContext(QPlatformGLContext *context)
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSHAREDCONTEXT)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -912,9 +850,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSHAREDCONTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setStencil(bool enable)
-*/
+// void setStencil(bool enable)
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSTENCIL)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -938,9 +874,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSTENCIL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setStencilBufferSize(int size)
-*/
+// void setStencilBufferSize(int size)
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSTENCILBUFFERSIZE)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -964,9 +898,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSTENCILBUFFERSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setStereo(bool enable)
-*/
+// void setStereo(bool enable)
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSTEREO)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -990,9 +922,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSTEREO)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSwapInterval(int interval)
-*/
+// void setSwapInterval(int interval)
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSWAPINTERVAL)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1016,9 +946,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSWAPINTERVAL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWindowApi(QPlatformWindowFormat::WindowApi api)
-*/
+// void setWindowApi(QPlatformWindowFormat::WindowApi api)
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETWINDOWAPI)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1042,9 +970,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETWINDOWAPI)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWindowSurface(bool enable)
-*/
+// void setWindowSurface(bool enable)
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETWINDOWSURFACE)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1068,9 +994,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETWINDOWSURFACE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QPlatformGLContext *sharedGLContext() const
-*/
+// QPlatformGLContext *sharedGLContext() const
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SHAREDGLCONTEXT)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1093,9 +1017,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SHAREDGLCONTEXT)
   }
 }
 
-/*
-bool stencil() const
-*/
+// bool stencil() const
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_STENCIL)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1117,9 +1039,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_STENCIL)
   }
 }
 
-/*
-int stencilBufferSize() const
-*/
+// int stencilBufferSize() const
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_STENCILBUFFERSIZE)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1141,9 +1061,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_STENCILBUFFERSIZE)
   }
 }
 
-/*
-bool stereo() const
-*/
+// bool stereo() const
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_STEREO)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1165,9 +1083,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_STEREO)
   }
 }
 
-/*
-int swapInterval() const
-*/
+// int swapInterval() const
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SWAPINTERVAL)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1189,9 +1105,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SWAPINTERVAL)
   }
 }
 
-/*
-bool testOption(QPlatformWindowFormat::FormatOptions opt) const
-*/
+// bool testOption(QPlatformWindowFormat::FormatOptions opt) const
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_TESTOPTION)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1213,9 +1127,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_TESTOPTION)
   }
 }
 
-/*
-QPlatformWindowFormat::WindowApi windowApi() const
-*/
+// QPlatformWindowFormat::WindowApi windowApi() const
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_WINDOWAPI)
 {
   QPlatformWindowFormat *obj = static_cast<QPlatformWindowFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1237,9 +1149,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_WINDOWAPI)
   }
 }
 
-/*
-static QPlatformWindowFormat defaultFormat()
-*/
+// static QPlatformWindowFormat defaultFormat()
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_DEFAULTFORMAT)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1257,9 +1167,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_DEFAULTFORMAT)
 #endif
 }
 
-/*
-static void setDefaultFormat(const QPlatformWindowFormat &f)
-*/
+// static void setDefaultFormat(const QPlatformWindowFormat &f)
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETDEFAULTFORMAT)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

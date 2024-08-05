@@ -88,9 +88,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-double bottom() const
-*/
+// double bottom() const
 HB_FUNC_STATIC(QDOUBLEVALIDATOR_BOTTOM)
 {
   QDoubleValidator *obj = qobject_cast<QDoubleValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -112,9 +110,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_BOTTOM)
   }
 }
 
-/*
-int decimals() const
-*/
+// int decimals() const
 HB_FUNC_STATIC(QDOUBLEVALIDATOR_DECIMALS)
 {
   QDoubleValidator *obj = qobject_cast<QDoubleValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -136,9 +132,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_DECIMALS)
   }
 }
 
-/*
-QDoubleValidator::Notation notation() const
-*/
+// QDoubleValidator::Notation notation() const
 HB_FUNC_STATIC(QDOUBLEVALIDATOR_NOTATION)
 {
   QDoubleValidator *obj = qobject_cast<QDoubleValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -160,9 +154,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_NOTATION)
   }
 }
 
-/*
-void setBottom(double)
-*/
+// void setBottom(double)
 HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETBOTTOM)
 {
   QDoubleValidator *obj = qobject_cast<QDoubleValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -186,9 +178,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETBOTTOM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDecimals(int)
-*/
+// void setDecimals(int)
 HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETDECIMALS)
 {
   QDoubleValidator *obj = qobject_cast<QDoubleValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -212,9 +202,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETDECIMALS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setNotation(QDoubleValidator::Notation)
-*/
+// void setNotation(QDoubleValidator::Notation)
 HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETNOTATION)
 {
   QDoubleValidator *obj = qobject_cast<QDoubleValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -238,9 +226,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETNOTATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setRange(double minimum, double maximum, int decimals = 0)
-*/
+// virtual void setRange(double minimum, double maximum, int decimals = 0)
 HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETRANGE)
 {
   QDoubleValidator *obj = qobject_cast<QDoubleValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -264,9 +250,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETRANGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTop(double)
-*/
+// void setTop(double)
 HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETTOP)
 {
   QDoubleValidator *obj = qobject_cast<QDoubleValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -290,9 +274,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_SETTOP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-double top() const
-*/
+// double top() const
 HB_FUNC_STATIC(QDOUBLEVALIDATOR_TOP)
 {
   QDoubleValidator *obj = qobject_cast<QDoubleValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -314,9 +296,7 @@ HB_FUNC_STATIC(QDOUBLEVALIDATOR_TOP)
   }
 }
 
-/*
-virtual QValidator::State validate(QString &input, int &pos) const
-*/
+// virtual QValidator::State validate(QString &input, int &pos) const
 HB_FUNC_STATIC(QDOUBLEVALIDATOR_VALIDATE)
 {
   QDoubleValidator *obj = qobject_cast<QDoubleValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());

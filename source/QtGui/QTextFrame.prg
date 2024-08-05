@@ -52,7 +52,7 @@ RETURN
 
 #include <QtGui/QTextCursor>
 
-// QTextFrame(QTextDocument *document)
+    // QTextFrame(QTextDocument *document)
 HB_FUNC_STATIC(QTEXTFRAME_NEW)
 {
   if (ISNUMPAR(1) && ISQTEXTDOCUMENT(1))
@@ -84,9 +84,7 @@ HB_FUNC_STATIC(QTEXTFRAME_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QList<QTextFrame *> childFrames() const
-*/
+// QList<QTextFrame *> childFrames() const
 HB_FUNC_STATIC(QTEXTFRAME_CHILDFRAMES)
 {
   QTextFrame *obj = qobject_cast<QTextFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -110,7 +108,7 @@ HB_FUNC_STATIC(QTEXTFRAME_CHILDFRAMES)
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, static_cast<QTextFrame *>(list[i]));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -132,9 +130,7 @@ HB_FUNC_STATIC(QTEXTFRAME_CHILDFRAMES)
   }
 }
 
-/*
-QTextCursor firstCursorPosition() const
-*/
+// QTextCursor firstCursorPosition() const
 HB_FUNC_STATIC(QTEXTFRAME_FIRSTCURSORPOSITION)
 {
   QTextFrame *obj = qobject_cast<QTextFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -157,9 +153,7 @@ HB_FUNC_STATIC(QTEXTFRAME_FIRSTCURSORPOSITION)
   }
 }
 
-/*
-int firstPosition() const
-*/
+// int firstPosition() const
 HB_FUNC_STATIC(QTEXTFRAME_FIRSTPOSITION)
 {
   QTextFrame *obj = qobject_cast<QTextFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -181,9 +175,7 @@ HB_FUNC_STATIC(QTEXTFRAME_FIRSTPOSITION)
   }
 }
 
-/*
-QTextFrameFormat frameFormat() const
-*/
+// QTextFrameFormat frameFormat() const
 HB_FUNC_STATIC(QTEXTFRAME_FRAMEFORMAT)
 {
   QTextFrame *obj = qobject_cast<QTextFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -206,9 +198,7 @@ HB_FUNC_STATIC(QTEXTFRAME_FRAMEFORMAT)
   }
 }
 
-/*
-QTextCursor lastCursorPosition() const
-*/
+// QTextCursor lastCursorPosition() const
 HB_FUNC_STATIC(QTEXTFRAME_LASTCURSORPOSITION)
 {
   QTextFrame *obj = qobject_cast<QTextFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -231,9 +221,7 @@ HB_FUNC_STATIC(QTEXTFRAME_LASTCURSORPOSITION)
   }
 }
 
-/*
-int lastPosition() const
-*/
+// int lastPosition() const
 HB_FUNC_STATIC(QTEXTFRAME_LASTPOSITION)
 {
   QTextFrame *obj = qobject_cast<QTextFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -255,9 +243,7 @@ HB_FUNC_STATIC(QTEXTFRAME_LASTPOSITION)
   }
 }
 
-/*
-QTextFrame *parentFrame() const
-*/
+// QTextFrame *parentFrame() const
 HB_FUNC_STATIC(QTEXTFRAME_PARENTFRAME)
 {
   QTextFrame *obj = qobject_cast<QTextFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -280,9 +266,7 @@ HB_FUNC_STATIC(QTEXTFRAME_PARENTFRAME)
   }
 }
 
-/*
-void setFrameFormat(const QTextFrameFormat &format)
-*/
+// void setFrameFormat(const QTextFrameFormat &format)
 HB_FUNC_STATIC(QTEXTFRAME_SETFRAMEFORMAT)
 {
   QTextFrame *obj = qobject_cast<QTextFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());

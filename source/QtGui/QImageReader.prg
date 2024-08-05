@@ -137,9 +137,7 @@ HB_FUNC_STATIC(QIMAGEREADER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool autoDetectImageFormat() const
-*/
+// bool autoDetectImageFormat() const
 HB_FUNC_STATIC(QIMAGEREADER_AUTODETECTIMAGEFORMAT)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -161,9 +159,7 @@ HB_FUNC_STATIC(QIMAGEREADER_AUTODETECTIMAGEFORMAT)
   }
 }
 
-/*
-QColor backgroundColor() const
-*/
+// QColor backgroundColor() const
 HB_FUNC_STATIC(QIMAGEREADER_BACKGROUNDCOLOR)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -186,9 +182,7 @@ HB_FUNC_STATIC(QIMAGEREADER_BACKGROUNDCOLOR)
   }
 }
 
-/*
-bool canRead() const
-*/
+// bool canRead() const
 HB_FUNC_STATIC(QIMAGEREADER_CANREAD)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -210,9 +204,7 @@ HB_FUNC_STATIC(QIMAGEREADER_CANREAD)
   }
 }
 
-/*
-QRect clipRect() const
-*/
+// QRect clipRect() const
 HB_FUNC_STATIC(QIMAGEREADER_CLIPRECT)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -235,9 +227,7 @@ HB_FUNC_STATIC(QIMAGEREADER_CLIPRECT)
   }
 }
 
-/*
-int currentImageNumber() const
-*/
+// int currentImageNumber() const
 HB_FUNC_STATIC(QIMAGEREADER_CURRENTIMAGENUMBER)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -259,9 +249,7 @@ HB_FUNC_STATIC(QIMAGEREADER_CURRENTIMAGENUMBER)
   }
 }
 
-/*
-QRect currentImageRect() const
-*/
+// QRect currentImageRect() const
 HB_FUNC_STATIC(QIMAGEREADER_CURRENTIMAGERECT)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -284,9 +272,7 @@ HB_FUNC_STATIC(QIMAGEREADER_CURRENTIMAGERECT)
   }
 }
 
-/*
-bool decideFormatFromContent() const
-*/
+// bool decideFormatFromContent() const
 HB_FUNC_STATIC(QIMAGEREADER_DECIDEFORMATFROMCONTENT)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -308,9 +294,7 @@ HB_FUNC_STATIC(QIMAGEREADER_DECIDEFORMATFROMCONTENT)
   }
 }
 
-/*
-QIODevice *device() const
-*/
+// QIODevice *device() const
 HB_FUNC_STATIC(QIMAGEREADER_DEVICE)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -333,9 +317,7 @@ HB_FUNC_STATIC(QIMAGEREADER_DEVICE)
   }
 }
 
-/*
-QImageReader::ImageReaderError error() const
-*/
+// QImageReader::ImageReaderError error() const
 HB_FUNC_STATIC(QIMAGEREADER_ERROR)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -357,9 +339,7 @@ HB_FUNC_STATIC(QIMAGEREADER_ERROR)
   }
 }
 
-/*
-QString errorString() const
-*/
+// QString errorString() const
 HB_FUNC_STATIC(QIMAGEREADER_ERRORSTRING)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -381,9 +361,7 @@ HB_FUNC_STATIC(QIMAGEREADER_ERRORSTRING)
   }
 }
 
-/*
-QString fileName() const
-*/
+// QString fileName() const
 HB_FUNC_STATIC(QIMAGEREADER_FILENAME)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -405,9 +383,7 @@ HB_FUNC_STATIC(QIMAGEREADER_FILENAME)
   }
 }
 
-/*
-QByteArray format() const
-*/
+// QByteArray format() const
 HB_FUNC_STATIC(QIMAGEREADER_FORMAT)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -430,9 +406,7 @@ HB_FUNC_STATIC(QIMAGEREADER_FORMAT)
   }
 }
 
-/*
-int imageCount() const
-*/
+// int imageCount() const
 HB_FUNC_STATIC(QIMAGEREADER_IMAGECOUNT)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -454,9 +428,7 @@ HB_FUNC_STATIC(QIMAGEREADER_IMAGECOUNT)
   }
 }
 
-/*
-bool jumpToImage(int imageNumber)
-*/
+// bool jumpToImage(int imageNumber)
 HB_FUNC_STATIC(QIMAGEREADER_JUMPTOIMAGE)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -478,9 +450,7 @@ HB_FUNC_STATIC(QIMAGEREADER_JUMPTOIMAGE)
   }
 }
 
-/*
-bool jumpToNextImage()
-*/
+// bool jumpToNextImage()
 HB_FUNC_STATIC(QIMAGEREADER_JUMPTONEXTIMAGE)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -502,9 +472,7 @@ HB_FUNC_STATIC(QIMAGEREADER_JUMPTONEXTIMAGE)
   }
 }
 
-/*
-int loopCount() const
-*/
+// int loopCount() const
 HB_FUNC_STATIC(QIMAGEREADER_LOOPCOUNT)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -526,9 +494,7 @@ HB_FUNC_STATIC(QIMAGEREADER_LOOPCOUNT)
   }
 }
 
-/*
-int nextImageDelay() const
-*/
+// int nextImageDelay() const
 HB_FUNC_STATIC(QIMAGEREADER_NEXTIMAGEDELAY)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -550,9 +516,7 @@ HB_FUNC_STATIC(QIMAGEREADER_NEXTIMAGEDELAY)
   }
 }
 
-/*
-int quality() const
-*/
+// int quality() const
 HB_FUNC_STATIC(QIMAGEREADER_QUALITY)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -578,9 +542,7 @@ HB_FUNC_STATIC(QIMAGEREADER_READ)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QImage read()
-    */
+    // QImage read()
     QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -591,9 +553,7 @@ HB_FUNC_STATIC(QIMAGEREADER_READ)
   }
   else if (ISNUMPAR(1) && ISQIMAGE(1))
   {
-    /*
-    bool read(QImage *image)
-    */
+    // bool read(QImage *image)
     QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -607,9 +567,7 @@ HB_FUNC_STATIC(QIMAGEREADER_READ)
   }
 }
 
-/*
-QRect scaledClipRect() const
-*/
+// QRect scaledClipRect() const
 HB_FUNC_STATIC(QIMAGEREADER_SCALEDCLIPRECT)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -632,9 +590,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SCALEDCLIPRECT)
   }
 }
 
-/*
-QSize scaledSize() const
-*/
+// QSize scaledSize() const
 HB_FUNC_STATIC(QIMAGEREADER_SCALEDSIZE)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -657,9 +613,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SCALEDSIZE)
   }
 }
 
-/*
-void setAutoDetectImageFormat(bool enabled)
-*/
+// void setAutoDetectImageFormat(bool enabled)
 HB_FUNC_STATIC(QIMAGEREADER_SETAUTODETECTIMAGEFORMAT)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -683,9 +637,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETAUTODETECTIMAGEFORMAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setBackgroundColor(const QColor &color)
-*/
+// void setBackgroundColor(const QColor &color)
 HB_FUNC_STATIC(QIMAGEREADER_SETBACKGROUNDCOLOR)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -709,9 +661,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETBACKGROUNDCOLOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setClipRect(const QRect &rect)
-*/
+// void setClipRect(const QRect &rect)
 HB_FUNC_STATIC(QIMAGEREADER_SETCLIPRECT)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -735,9 +685,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETCLIPRECT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDecideFormatFromContent(bool ignored)
-*/
+// void setDecideFormatFromContent(bool ignored)
 HB_FUNC_STATIC(QIMAGEREADER_SETDECIDEFORMATFROMCONTENT)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -761,9 +709,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETDECIDEFORMATFROMCONTENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDevice(QIODevice *device)
-*/
+// void setDevice(QIODevice *device)
 HB_FUNC_STATIC(QIMAGEREADER_SETDEVICE)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -787,9 +733,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETDEVICE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFileName(const QString &fileName)
-*/
+// void setFileName(const QString &fileName)
 HB_FUNC_STATIC(QIMAGEREADER_SETFILENAME)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -813,9 +757,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETFILENAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFormat(const QByteArray &format)
-*/
+// void setFormat(const QByteArray &format)
 HB_FUNC_STATIC(QIMAGEREADER_SETFORMAT)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -839,9 +781,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETFORMAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setQuality(int quality)
-*/
+// void setQuality(int quality)
 HB_FUNC_STATIC(QIMAGEREADER_SETQUALITY)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -865,9 +805,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETQUALITY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setScaledClipRect(const QRect &rect)
-*/
+// void setScaledClipRect(const QRect &rect)
 HB_FUNC_STATIC(QIMAGEREADER_SETSCALEDCLIPRECT)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -891,9 +829,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETSCALEDCLIPRECT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setScaledSize(const QSize &size)
-*/
+// void setScaledSize(const QSize &size)
 HB_FUNC_STATIC(QIMAGEREADER_SETSCALEDSIZE)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -917,9 +853,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETSCALEDSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSize size() const
-*/
+// QSize size() const
 HB_FUNC_STATIC(QIMAGEREADER_SIZE)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -942,9 +876,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SIZE)
   }
 }
 
-/*
-bool supportsAnimation() const
-*/
+// bool supportsAnimation() const
 HB_FUNC_STATIC(QIMAGEREADER_SUPPORTSANIMATION)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -966,9 +898,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SUPPORTSANIMATION)
   }
 }
 
-/*
-bool supportsOption(QImageIOHandler::ImageOption option) const
-*/
+// bool supportsOption(QImageIOHandler::ImageOption option) const
 HB_FUNC_STATIC(QIMAGEREADER_SUPPORTSOPTION)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -990,9 +920,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SUPPORTSOPTION)
   }
 }
 
-/*
-QString text(const QString &key) const
-*/
+// QString text(const QString &key) const
 HB_FUNC_STATIC(QIMAGEREADER_TEXT)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1014,9 +942,7 @@ HB_FUNC_STATIC(QIMAGEREADER_TEXT)
   }
 }
 
-/*
-QStringList textKeys() const
-*/
+// QStringList textKeys() const
 HB_FUNC_STATIC(QIMAGEREADER_TEXTKEYS)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1042,9 +968,7 @@ HB_FUNC_STATIC(QIMAGEREADER_IMAGEFORMAT)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QImage::Format imageFormat() const
-    */
+    // QImage::Format imageFormat() const
     QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -1054,18 +978,14 @@ HB_FUNC_STATIC(QIMAGEREADER_IMAGEFORMAT)
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    static QByteArray imageFormat(const QString &fileName)
-    */
+    // static QByteArray imageFormat(const QString &fileName)
 
     QByteArray *ptr = new QByteArray(QImageReader::imageFormat(PQSTRING(1)));
     Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
   }
   else if (ISNUMPAR(1) && ISQIODEVICE(1))
   {
-    /*
-    static QByteArray imageFormat(QIODevice *device)
-    */
+    // static QByteArray imageFormat(QIODevice *device)
 
     QByteArray *ptr = new QByteArray(QImageReader::imageFormat(PQIODEVICE(1)));
     Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -1076,9 +996,7 @@ HB_FUNC_STATIC(QIMAGEREADER_IMAGEFORMAT)
   }
 }
 
-/*
-QList<QByteArray> supportedImageFormats()
-*/
+// QList<QByteArray> supportedImageFormats()
 HB_FUNC_STATIC(QIMAGEREADER_SUPPORTEDIMAGEFORMATS)
 {
   QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());

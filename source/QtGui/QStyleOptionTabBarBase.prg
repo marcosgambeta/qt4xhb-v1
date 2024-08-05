@@ -64,9 +64,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_NEW)
   }
 }
 
-/*
-QTabBar::Shape shape
-*/
+// QTabBar::Shape shape
 HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SHAPE)
 {
   QStyleOptionTabBarBase *obj = static_cast<QStyleOptionTabBarBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -91,7 +89,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SETSHAPE)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->shape = (QTabBar::Shape)hb_parni(1);
+      obj->shape=(QTabBar::Shape)hb_parni(1));
     }
     else
     {
@@ -102,9 +100,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SETSHAPE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QRect tabBarRect
-*/
+// QRect tabBarRect
 HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_TABBARRECT)
 {
   QStyleOptionTabBarBase *obj = static_cast<QStyleOptionTabBarBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -130,7 +126,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SETTABBARRECT)
   {
     if (ISNUMPAR(1) && ISQRECT(1))
     {
-      obj->tabBarRect = *PQRECT(1);
+      obj->tabBarRect=*PQRECT(1));
     }
     else
     {
@@ -141,9 +137,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SETTABBARRECT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QRect selectedTabRect
-*/
+// QRect selectedTabRect
 HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SELECTEDTABRECT)
 {
   QStyleOptionTabBarBase *obj = static_cast<QStyleOptionTabBarBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -169,7 +163,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SETSELECTEDTABRECT)
   {
     if (ISNUMPAR(1) && ISQRECT(1))
     {
-      obj->selectedTabRect = *PQRECT(1);
+      obj->selectedTabRect=*PQRECT(1));
     }
     else
     {

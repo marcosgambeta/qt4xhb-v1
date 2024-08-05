@@ -138,9 +138,7 @@ HB_FUNC_STATIC(QPRINTER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool abort()
-*/
+// bool abort()
 HB_FUNC_STATIC(QPRINTER_ABORT)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -162,9 +160,7 @@ HB_FUNC_STATIC(QPRINTER_ABORT)
   }
 }
 
-/*
-bool collateCopies() const
-*/
+// bool collateCopies() const
 HB_FUNC_STATIC(QPRINTER_COLLATECOPIES)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -186,9 +182,7 @@ HB_FUNC_STATIC(QPRINTER_COLLATECOPIES)
   }
 }
 
-/*
-QPrinter::ColorMode colorMode() const
-*/
+// QPrinter::ColorMode colorMode() const
 HB_FUNC_STATIC(QPRINTER_COLORMODE)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -210,9 +204,7 @@ HB_FUNC_STATIC(QPRINTER_COLORMODE)
   }
 }
 
-/*
-int copyCount() const
-*/
+// int copyCount() const
 HB_FUNC_STATIC(QPRINTER_COPYCOUNT)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -234,9 +226,7 @@ HB_FUNC_STATIC(QPRINTER_COPYCOUNT)
   }
 }
 
-/*
-QString creator() const
-*/
+// QString creator() const
 HB_FUNC_STATIC(QPRINTER_CREATOR)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -258,9 +248,7 @@ HB_FUNC_STATIC(QPRINTER_CREATOR)
   }
 }
 
-/*
-QString docName() const
-*/
+// QString docName() const
 HB_FUNC_STATIC(QPRINTER_DOCNAME)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -282,9 +270,7 @@ HB_FUNC_STATIC(QPRINTER_DOCNAME)
   }
 }
 
-/*
-bool doubleSidedPrinting() const
-*/
+// bool doubleSidedPrinting() const
 HB_FUNC_STATIC(QPRINTER_DOUBLESIDEDPRINTING)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -306,9 +292,7 @@ HB_FUNC_STATIC(QPRINTER_DOUBLESIDEDPRINTING)
   }
 }
 
-/*
-QPrinter::DuplexMode duplex() const
-*/
+// QPrinter::DuplexMode duplex() const
 HB_FUNC_STATIC(QPRINTER_DUPLEX)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -330,9 +314,7 @@ HB_FUNC_STATIC(QPRINTER_DUPLEX)
   }
 }
 
-/*
-bool fontEmbeddingEnabled() const
-*/
+// bool fontEmbeddingEnabled() const
 HB_FUNC_STATIC(QPRINTER_FONTEMBEDDINGENABLED)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -354,9 +336,7 @@ HB_FUNC_STATIC(QPRINTER_FONTEMBEDDINGENABLED)
   }
 }
 
-/*
-int fromPage() const
-*/
+// int fromPage() const
 HB_FUNC_STATIC(QPRINTER_FROMPAGE)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -378,9 +358,7 @@ HB_FUNC_STATIC(QPRINTER_FROMPAGE)
   }
 }
 
-/*
-bool fullPage() const
-*/
+// bool fullPage() const
 HB_FUNC_STATIC(QPRINTER_FULLPAGE)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -402,9 +380,7 @@ HB_FUNC_STATIC(QPRINTER_FULLPAGE)
   }
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QPRINTER_ISVALID)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -426,9 +402,7 @@ HB_FUNC_STATIC(QPRINTER_ISVALID)
   }
 }
 
-/*
-bool newPage()
-*/
+// bool newPage()
 HB_FUNC_STATIC(QPRINTER_NEWPAGE)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -450,9 +424,7 @@ HB_FUNC_STATIC(QPRINTER_NEWPAGE)
   }
 }
 
-/*
-QPrinter::Orientation orientation() const
-*/
+// QPrinter::Orientation orientation() const
 HB_FUNC_STATIC(QPRINTER_ORIENTATION)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -474,9 +446,7 @@ HB_FUNC_STATIC(QPRINTER_ORIENTATION)
   }
 }
 
-/*
-QString outputFileName() const
-*/
+// QString outputFileName() const
 HB_FUNC_STATIC(QPRINTER_OUTPUTFILENAME)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -498,9 +468,7 @@ HB_FUNC_STATIC(QPRINTER_OUTPUTFILENAME)
   }
 }
 
-/*
-QPrinter::OutputFormat outputFormat() const
-*/
+// QPrinter::OutputFormat outputFormat() const
 HB_FUNC_STATIC(QPRINTER_OUTPUTFORMAT)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -522,9 +490,7 @@ HB_FUNC_STATIC(QPRINTER_OUTPUTFORMAT)
   }
 }
 
-/*
-QPrinter::PageOrder pageOrder() const
-*/
+// QPrinter::PageOrder pageOrder() const
 HB_FUNC_STATIC(QPRINTER_PAGEORDER)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -550,9 +516,7 @@ HB_FUNC_STATIC(QPRINTER_PAGERECT)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QRect pageRect() const
-    */
+    // QRect pageRect() const
     QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -563,9 +527,7 @@ HB_FUNC_STATIC(QPRINTER_PAGERECT)
   }
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    /*
-    QRectF pageRect(QPrinter::Unit unit) const
-    */
+    // QRectF pageRect(QPrinter::Unit unit) const
     QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -584,9 +546,7 @@ HB_FUNC_STATIC(QPRINTER_PAPERRECT)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QRect paperRect() const
-    */
+    // QRect paperRect() const
     QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -597,9 +557,7 @@ HB_FUNC_STATIC(QPRINTER_PAPERRECT)
   }
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    /*
-    QRectF paperRect(QPrinter::Unit unit) const
-    */
+    // QRectF paperRect(QPrinter::Unit unit) const
     QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -618,9 +576,7 @@ HB_FUNC_STATIC(QPRINTER_PAPERSIZE)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QPrinter::PaperSize paperSize() const
-    */
+    // QPrinter::PaperSize paperSize() const
     QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -630,9 +586,7 @@ HB_FUNC_STATIC(QPRINTER_PAPERSIZE)
   }
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    /*
-    QSizeF paperSize(QPrinter::Unit unit) const
-    */
+    // QSizeF paperSize(QPrinter::Unit unit) const
     QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -647,9 +601,7 @@ HB_FUNC_STATIC(QPRINTER_PAPERSIZE)
   }
 }
 
-/*
-QPrinter::PaperSource paperSource() const
-*/
+// QPrinter::PaperSource paperSource() const
 HB_FUNC_STATIC(QPRINTER_PAPERSOURCE)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -671,9 +623,7 @@ HB_FUNC_STATIC(QPRINTER_PAPERSOURCE)
   }
 }
 
-/*
-QPrintEngine *printEngine() const
-*/
+// QPrintEngine *printEngine() const
 HB_FUNC_STATIC(QPRINTER_PRINTENGINE)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -696,9 +646,7 @@ HB_FUNC_STATIC(QPRINTER_PRINTENGINE)
   }
 }
 
-/*
-QString printProgram() const
-*/
+// QString printProgram() const
 HB_FUNC_STATIC(QPRINTER_PRINTPROGRAM)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -720,9 +668,7 @@ HB_FUNC_STATIC(QPRINTER_PRINTPROGRAM)
   }
 }
 
-/*
-QPrinter::PrintRange printRange() const
-*/
+// QPrinter::PrintRange printRange() const
 HB_FUNC_STATIC(QPRINTER_PRINTRANGE)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -744,9 +690,7 @@ HB_FUNC_STATIC(QPRINTER_PRINTRANGE)
   }
 }
 
-/*
-QString printerName() const
-*/
+// QString printerName() const
 HB_FUNC_STATIC(QPRINTER_PRINTERNAME)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -768,9 +712,7 @@ HB_FUNC_STATIC(QPRINTER_PRINTERNAME)
   }
 }
 
-/*
-QPrinter::PrinterState printerState() const
-*/
+// QPrinter::PrinterState printerState() const
 HB_FUNC_STATIC(QPRINTER_PRINTERSTATE)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -792,9 +734,7 @@ HB_FUNC_STATIC(QPRINTER_PRINTERSTATE)
   }
 }
 
-/*
-int resolution() const
-*/
+// int resolution() const
 HB_FUNC_STATIC(QPRINTER_RESOLUTION)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -816,9 +756,7 @@ HB_FUNC_STATIC(QPRINTER_RESOLUTION)
   }
 }
 
-/*
-void setCollateCopies(bool collate)
-*/
+// void setCollateCopies(bool collate)
 HB_FUNC_STATIC(QPRINTER_SETCOLLATECOPIES)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -842,9 +780,7 @@ HB_FUNC_STATIC(QPRINTER_SETCOLLATECOPIES)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setColorMode(QPrinter::ColorMode newColorMode)
-*/
+// void setColorMode(QPrinter::ColorMode newColorMode)
 HB_FUNC_STATIC(QPRINTER_SETCOLORMODE)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -868,9 +804,7 @@ HB_FUNC_STATIC(QPRINTER_SETCOLORMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCopyCount(int count)
-*/
+// void setCopyCount(int count)
 HB_FUNC_STATIC(QPRINTER_SETCOPYCOUNT)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -894,9 +828,7 @@ HB_FUNC_STATIC(QPRINTER_SETCOPYCOUNT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCreator(const QString &creator)
-*/
+// void setCreator(const QString &creator)
 HB_FUNC_STATIC(QPRINTER_SETCREATOR)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -920,9 +852,7 @@ HB_FUNC_STATIC(QPRINTER_SETCREATOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDocName(const QString &name)
-*/
+// void setDocName(const QString &name)
 HB_FUNC_STATIC(QPRINTER_SETDOCNAME)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -946,9 +876,7 @@ HB_FUNC_STATIC(QPRINTER_SETDOCNAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDoubleSidedPrinting(bool doubleSided)
-*/
+// void setDoubleSidedPrinting(bool doubleSided)
 HB_FUNC_STATIC(QPRINTER_SETDOUBLESIDEDPRINTING)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -972,9 +900,7 @@ HB_FUNC_STATIC(QPRINTER_SETDOUBLESIDEDPRINTING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDuplex(QPrinter::DuplexMode duplex)
-*/
+// void setDuplex(QPrinter::DuplexMode duplex)
 HB_FUNC_STATIC(QPRINTER_SETDUPLEX)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -998,9 +924,7 @@ HB_FUNC_STATIC(QPRINTER_SETDUPLEX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFontEmbeddingEnabled(bool enable)
-*/
+// void setFontEmbeddingEnabled(bool enable)
 HB_FUNC_STATIC(QPRINTER_SETFONTEMBEDDINGENABLED)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1024,9 +948,7 @@ HB_FUNC_STATIC(QPRINTER_SETFONTEMBEDDINGENABLED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFromTo(int from, int to)
-*/
+// void setFromTo(int from, int to)
 HB_FUNC_STATIC(QPRINTER_SETFROMTO)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1050,9 +972,7 @@ HB_FUNC_STATIC(QPRINTER_SETFROMTO)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFullPage(bool fp)
-*/
+// void setFullPage(bool fp)
 HB_FUNC_STATIC(QPRINTER_SETFULLPAGE)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1076,9 +996,7 @@ HB_FUNC_STATIC(QPRINTER_SETFULLPAGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setOrientation(QPrinter::Orientation orientation)
-*/
+// void setOrientation(QPrinter::Orientation orientation)
 HB_FUNC_STATIC(QPRINTER_SETORIENTATION)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1102,9 +1020,7 @@ HB_FUNC_STATIC(QPRINTER_SETORIENTATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setOutputFileName(const QString &fileName)
-*/
+// void setOutputFileName(const QString &fileName)
 HB_FUNC_STATIC(QPRINTER_SETOUTPUTFILENAME)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1128,9 +1044,7 @@ HB_FUNC_STATIC(QPRINTER_SETOUTPUTFILENAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setOutputFormat(QPrinter::OutputFormat format)
-*/
+// void setOutputFormat(QPrinter::OutputFormat format)
 HB_FUNC_STATIC(QPRINTER_SETOUTPUTFORMAT)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1154,9 +1068,7 @@ HB_FUNC_STATIC(QPRINTER_SETOUTPUTFORMAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPageMargins(qreal left, qreal top, qreal right, qreal bottom, QPrinter::Unit unit)
-*/
+// void setPageMargins(qreal left, qreal top, qreal right, qreal bottom, QPrinter::Unit unit)
 HB_FUNC_STATIC(QPRINTER_SETPAGEMARGINS)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1180,9 +1092,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAGEMARGINS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPageOrder(QPrinter::PageOrder pageOrder)
-*/
+// void setPageOrder(QPrinter::PageOrder pageOrder)
 HB_FUNC_STATIC(QPRINTER_SETPAGEORDER)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1210,9 +1120,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAPERSIZE)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    /*
-    void setPaperSize(QPrinter::PaperSize newPaperSize)
-    */
+    // void setPaperSize(QPrinter::PaperSize newPaperSize)
     QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -1224,9 +1132,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAPERSIZE)
   }
   else if (ISNUMPAR(2) && ISQSIZEF(1) && HB_ISNUM(2))
   {
-    /*
-    void setPaperSize(const QSizeF &paperSize, QPrinter::Unit unit)
-    */
+    // void setPaperSize(const QSizeF &paperSize, QPrinter::Unit unit)
     QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -1242,9 +1148,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAPERSIZE)
   }
 }
 
-/*
-void setPaperSource(QPrinter::PaperSource source)
-*/
+// void setPaperSource(QPrinter::PaperSource source)
 HB_FUNC_STATIC(QPRINTER_SETPAPERSOURCE)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1268,9 +1172,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAPERSOURCE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPrintProgram(const QString &printProg)
-*/
+// void setPrintProgram(const QString &printProg)
 HB_FUNC_STATIC(QPRINTER_SETPRINTPROGRAM)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1294,9 +1196,7 @@ HB_FUNC_STATIC(QPRINTER_SETPRINTPROGRAM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPrintRange(QPrinter::PrintRange range)
-*/
+// void setPrintRange(QPrinter::PrintRange range)
 HB_FUNC_STATIC(QPRINTER_SETPRINTRANGE)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1320,9 +1220,7 @@ HB_FUNC_STATIC(QPRINTER_SETPRINTRANGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPrinterName(const QString &name)
-*/
+// void setPrinterName(const QString &name)
 HB_FUNC_STATIC(QPRINTER_SETPRINTERNAME)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1346,9 +1244,7 @@ HB_FUNC_STATIC(QPRINTER_SETPRINTERNAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setResolution(int dpi)
-*/
+// void setResolution(int dpi)
 HB_FUNC_STATIC(QPRINTER_SETRESOLUTION)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1372,9 +1268,7 @@ HB_FUNC_STATIC(QPRINTER_SETRESOLUTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWinPageSize (int pageSize)
-*/
+// void setWinPageSize ( int pageSize )
 HB_FUNC_STATIC(QPRINTER_SETWINPAGESIZE)
 {
 #ifdef Q_WS_WIN
@@ -1399,9 +1293,7 @@ HB_FUNC_STATIC(QPRINTER_SETWINPAGESIZE)
   hb_itemReturn(hb_stackSelfItem());
 #endif
 }
-/*
-QList<PaperSource> supportedPaperSources () const
-*/
+// QList<PaperSource> supportedPaperSources () const
 HB_FUNC_STATIC(QPRINTER_SUPPORTEDPAPERSOURCES)
 {
 #ifdef Q_WS_WIN
@@ -1418,7 +1310,7 @@ HB_FUNC_STATIC(QPRINTER_SUPPORTEDPAPERSOURCES)
       const int count = list.count();
       for (int i = 0; i < count; i++)
       {
-        PHB_ITEM pItem = hb_itemPutNI(NULL, static_cast<int>(list[i]));
+        PHB_ITEM pItem = hb_itemPutNI(NULL, (int)list[i]);
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }
@@ -1433,9 +1325,7 @@ HB_FUNC_STATIC(QPRINTER_SUPPORTEDPAPERSOURCES)
   }
 #endif
 }
-/*
-QList<int> supportedResolutions() const
-*/
+// QList<int> supportedResolutions() const
 HB_FUNC_STATIC(QPRINTER_SUPPORTEDRESOLUTIONS)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1458,9 +1348,7 @@ HB_FUNC_STATIC(QPRINTER_SUPPORTEDRESOLUTIONS)
   }
 }
 
-/*
-bool supportsMultipleCopies() const
-*/
+// bool supportsMultipleCopies() const
 HB_FUNC_STATIC(QPRINTER_SUPPORTSMULTIPLECOPIES)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1482,9 +1370,7 @@ HB_FUNC_STATIC(QPRINTER_SUPPORTSMULTIPLECOPIES)
   }
 }
 
-/*
-int toPage() const
-*/
+// int toPage() const
 HB_FUNC_STATIC(QPRINTER_TOPAGE)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1506,9 +1392,7 @@ HB_FUNC_STATIC(QPRINTER_TOPAGE)
   }
 }
 
-/*
-int winPageSize () const
-*/
+// int winPageSize () const
 HB_FUNC_STATIC(QPRINTER_WINPAGESIZE)
 {
 #ifdef Q_WS_WIN
@@ -1531,9 +1415,7 @@ HB_FUNC_STATIC(QPRINTER_WINPAGESIZE)
   }
 #endif
 }
-/*
-virtual QPaintEngine *paintEngine() const
-*/
+// virtual QPaintEngine *paintEngine() const
 HB_FUNC_STATIC(QPRINTER_PAINTENGINE)
 {
   QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());

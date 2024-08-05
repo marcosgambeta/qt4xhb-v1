@@ -87,9 +87,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void open(QObject *receiver, const char *member)
-*/
+// void open(QObject *receiver, const char *member)
 HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_OPEN)
 {
   QPrintPreviewDialog *obj = qobject_cast<QPrintPreviewDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -113,9 +111,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_OPEN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QPrinter *printer()
-*/
+// QPrinter *printer()
 HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_PRINTER)
 {
   QPrintPreviewDialog *obj = qobject_cast<QPrintPreviewDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -138,9 +134,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_PRINTER)
   }
 }
 
-/*
-virtual void done(int result)
-*/
+// virtual void done(int result)
 HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_DONE)
 {
   QPrintPreviewDialog *obj = qobject_cast<QPrintPreviewDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -164,9 +158,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_DONE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setVisible(bool visible)
-*/
+// virtual void setVisible(bool visible)
 HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_SETVISIBLE)
 {
   QPrintPreviewDialog *obj = qobject_cast<QPrintPreviewDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());

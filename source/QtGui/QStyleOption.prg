@@ -86,9 +86,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_NEW)
   }
 }
 
-/*
-~QStyleOption()
-*/
+// ~QStyleOption()
 HB_FUNC_STATIC(QSTYLEOPTION_DELETE)
 {
   QStyleOption *obj = static_cast<QStyleOption *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -105,9 +103,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void init(const QWidget *w)
-*/
+// void init(const QWidget *w)
 HB_FUNC_STATIC(QSTYLEOPTION_INIT)
 {
   QStyleOption *obj = static_cast<QStyleOption *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -131,9 +127,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_INIT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void initFrom(const QWidget *w)
-*/
+// void initFrom(const QWidget *w)
 HB_FUNC_STATIC(QSTYLEOPTION_INITFROM)
 {
   QStyleOption *obj = static_cast<QStyleOption *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -157,9 +151,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_INITFROM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int version
-*/
+// int version
 HB_FUNC_STATIC(QSTYLEOPTION_VERSION)
 {
   QStyleOption *obj = static_cast<QStyleOption *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -184,7 +176,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETVERSION)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->version = PINT(1);
+      obj->version=PINT(1));
     }
     else
     {
@@ -195,9 +187,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETVERSION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int type
-*/
+// int type
 HB_FUNC_STATIC(QSTYLEOPTION_TYPE)
 {
   QStyleOption *obj = static_cast<QStyleOption *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -222,7 +212,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETTYPE)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->type = PINT(1);
+      obj->type=PINT(1));
     }
     else
     {
@@ -233,9 +223,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETTYPE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QStyle::State state
-*/
+// QStyle::State state
 HB_FUNC_STATIC(QSTYLEOPTION_STATE)
 {
   QStyleOption *obj = static_cast<QStyleOption *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -260,7 +248,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETSTATE)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->state = (QStyle::State)hb_parni(1);
+      obj->state=(QStyle::State)hb_parni(1));
     }
     else
     {
@@ -271,9 +259,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETSTATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::LayoutDirection direction
-*/
+// Qt::LayoutDirection direction
 HB_FUNC_STATIC(QSTYLEOPTION_DIRECTION)
 {
   QStyleOption *obj = static_cast<QStyleOption *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -298,7 +284,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETDIRECTION)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->direction = (Qt::LayoutDirection)hb_parni(1);
+      obj->direction=(Qt::LayoutDirection)hb_parni(1));
     }
     else
     {
@@ -309,9 +295,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETDIRECTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QRect rect
-*/
+// QRect rect
 HB_FUNC_STATIC(QSTYLEOPTION_RECT)
 {
   QStyleOption *obj = static_cast<QStyleOption *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -337,7 +321,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETRECT)
   {
     if (ISNUMPAR(1) && ISQRECT(1))
     {
-      obj->rect = *PQRECT(1);
+      obj->rect=*PQRECT(1));
     }
     else
     {
@@ -348,9 +332,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETRECT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QFontMetrics fontMetrics
-*/
+// QFontMetrics fontMetrics
 HB_FUNC_STATIC(QSTYLEOPTION_FONTMETRICS)
 {
   QStyleOption *obj = static_cast<QStyleOption *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -376,7 +358,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETFONTMETRICS)
   {
     if (ISNUMPAR(1) && ISQFONTMETRICS(1))
     {
-      obj->fontMetrics = *PQFONTMETRICS(1);
+      obj->fontMetrics=*PQFONTMETRICS(1));
     }
     else
     {
@@ -387,9 +369,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETFONTMETRICS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QPalette palette
-*/
+// QPalette palette
 HB_FUNC_STATIC(QSTYLEOPTION_PALETTE)
 {
   QStyleOption *obj = static_cast<QStyleOption *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -415,7 +395,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETPALETTE)
   {
     if (ISNUMPAR(1) && ISQPALETTE(1))
     {
-      obj->palette = *PQPALETTE(1);
+      obj->palette=*PQPALETTE(1));
     }
     else
     {

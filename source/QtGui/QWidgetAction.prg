@@ -45,7 +45,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QWidgetAction(QObject *parent)
+    // QWidgetAction(QObject *parent)
 HB_FUNC_STATIC(QWIDGETACTION_NEW)
 {
   if (ISNUMPAR(1) && ISQOBJECT(1))
@@ -77,9 +77,7 @@ HB_FUNC_STATIC(QWIDGETACTION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWidget *defaultWidget() const
-*/
+// QWidget *defaultWidget() const
 HB_FUNC_STATIC(QWIDGETACTION_DEFAULTWIDGET)
 {
   QWidgetAction *obj = qobject_cast<QWidgetAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -102,9 +100,7 @@ HB_FUNC_STATIC(QWIDGETACTION_DEFAULTWIDGET)
   }
 }
 
-/*
-void releaseWidget(QWidget *widget)
-*/
+// void releaseWidget(QWidget *widget)
 HB_FUNC_STATIC(QWIDGETACTION_RELEASEWIDGET)
 {
   QWidgetAction *obj = qobject_cast<QWidgetAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -128,9 +124,7 @@ HB_FUNC_STATIC(QWIDGETACTION_RELEASEWIDGET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWidget *requestWidget(QWidget *parent)
-*/
+// QWidget *requestWidget(QWidget *parent)
 HB_FUNC_STATIC(QWIDGETACTION_REQUESTWIDGET)
 {
   QWidgetAction *obj = qobject_cast<QWidgetAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -153,9 +147,7 @@ HB_FUNC_STATIC(QWIDGETACTION_REQUESTWIDGET)
   }
 }
 
-/*
-void setDefaultWidget(QWidget *widget)
-*/
+// void setDefaultWidget(QWidget *widget)
 HB_FUNC_STATIC(QWIDGETACTION_SETDEFAULTWIDGET)
 {
   QWidgetAction *obj = qobject_cast<QWidgetAction *>(Qt4xHb::getQObjectPointerFromSelfItem());

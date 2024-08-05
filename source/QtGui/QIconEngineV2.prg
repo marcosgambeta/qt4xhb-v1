@@ -61,9 +61,7 @@ HB_FUNC_STATIC(QICONENGINEV2_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QList<QSize> availableSizes(QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off)
-*/
+// QList<QSize> availableSizes(QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off)
 HB_FUNC_STATIC(QICONENGINEV2_AVAILABLESIZES)
 {
   QIconEngineV2 *obj = static_cast<QIconEngineV2 *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -113,9 +111,7 @@ HB_FUNC_STATIC(QICONENGINEV2_AVAILABLESIZES)
   }
 }
 
-/*
-virtual QIconEngineV2 *clone() const
-*/
+// virtual QIconEngineV2 *clone() const
 HB_FUNC_STATIC(QICONENGINEV2_CLONE)
 {
   QIconEngineV2 *obj = static_cast<QIconEngineV2 *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -138,9 +134,7 @@ HB_FUNC_STATIC(QICONENGINEV2_CLONE)
   }
 }
 
-/*
-QString iconName()
-*/
+// QString iconName()
 HB_FUNC_STATIC(QICONENGINEV2_ICONNAME)
 {
   QIconEngineV2 *obj = static_cast<QIconEngineV2 *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -162,9 +156,7 @@ HB_FUNC_STATIC(QICONENGINEV2_ICONNAME)
   }
 }
 
-/*
-virtual QString key() const
-*/
+// virtual QString key() const
 HB_FUNC_STATIC(QICONENGINEV2_KEY)
 {
   QIconEngineV2 *obj = static_cast<QIconEngineV2 *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -186,9 +178,7 @@ HB_FUNC_STATIC(QICONENGINEV2_KEY)
   }
 }
 
-/*
-virtual bool read(QDataStream &in)
-*/
+// virtual bool read(QDataStream &in)
 HB_FUNC_STATIC(QICONENGINEV2_READ)
 {
   QIconEngineV2 *obj = static_cast<QIconEngineV2 *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -210,9 +200,7 @@ HB_FUNC_STATIC(QICONENGINEV2_READ)
   }
 }
 
-/*
-virtual void virtual_hook(int id, void *data)
-*/
+// virtual void virtual_hook(int id, void *data)
 HB_FUNC_STATIC(QICONENGINEV2_VIRTUAL_HOOK)
 {
   QIconEngineV2 *obj = static_cast<QIconEngineV2 *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -236,9 +224,7 @@ HB_FUNC_STATIC(QICONENGINEV2_VIRTUAL_HOOK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool write(QDataStream &out) const
-*/
+// virtual bool write(QDataStream &out) const
 HB_FUNC_STATIC(QICONENGINEV2_WRITE)
 {
   QIconEngineV2 *obj = static_cast<QIconEngineV2 *>(Qt4xHb::itemGetPtrStackSelfItem());

@@ -144,9 +144,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QBrush background() const
-*/
+// QBrush background() const
 HB_FUNC_STATIC(QTEXTFORMAT_BACKGROUND)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -169,9 +167,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_BACKGROUND)
   }
 }
 
-/*
-bool boolProperty(int propertyId) const
-*/
+// bool boolProperty(int propertyId) const
 HB_FUNC_STATIC(QTEXTFORMAT_BOOLPROPERTY)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -193,9 +189,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_BOOLPROPERTY)
   }
 }
 
-/*
-QBrush brushProperty(int propertyId) const
-*/
+// QBrush brushProperty(int propertyId) const
 HB_FUNC_STATIC(QTEXTFORMAT_BRUSHPROPERTY)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -218,9 +212,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_BRUSHPROPERTY)
   }
 }
 
-/*
-void clearBackground()
-*/
+// void clearBackground()
 HB_FUNC_STATIC(QTEXTFORMAT_CLEARBACKGROUND)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -244,9 +236,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_CLEARBACKGROUND)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void clearForeground()
-*/
+// void clearForeground()
 HB_FUNC_STATIC(QTEXTFORMAT_CLEARFOREGROUND)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -270,9 +260,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_CLEARFOREGROUND)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void clearProperty(int propertyId)
-*/
+// void clearProperty(int propertyId)
 HB_FUNC_STATIC(QTEXTFORMAT_CLEARPROPERTY)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -296,9 +284,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_CLEARPROPERTY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QColor colorProperty(int propertyId) const
-*/
+// QColor colorProperty(int propertyId) const
 HB_FUNC_STATIC(QTEXTFORMAT_COLORPROPERTY)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -321,9 +307,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_COLORPROPERTY)
   }
 }
 
-/*
-qreal doubleProperty(int propertyId) const
-*/
+// qreal doubleProperty(int propertyId) const
 HB_FUNC_STATIC(QTEXTFORMAT_DOUBLEPROPERTY)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -345,9 +329,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_DOUBLEPROPERTY)
   }
 }
 
-/*
-QBrush foreground() const
-*/
+// QBrush foreground() const
 HB_FUNC_STATIC(QTEXTFORMAT_FOREGROUND)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -370,9 +352,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_FOREGROUND)
   }
 }
 
-/*
-bool hasProperty(int propertyId) const
-*/
+// bool hasProperty(int propertyId) const
 HB_FUNC_STATIC(QTEXTFORMAT_HASPROPERTY)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -394,9 +374,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_HASPROPERTY)
   }
 }
 
-/*
-int intProperty(int propertyId) const
-*/
+// int intProperty(int propertyId) const
 HB_FUNC_STATIC(QTEXTFORMAT_INTPROPERTY)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -418,9 +396,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_INTPROPERTY)
   }
 }
 
-/*
-bool isBlockFormat() const
-*/
+// bool isBlockFormat() const
 HB_FUNC_STATIC(QTEXTFORMAT_ISBLOCKFORMAT)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -442,9 +418,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_ISBLOCKFORMAT)
   }
 }
 
-/*
-bool isCharFormat() const
-*/
+// bool isCharFormat() const
 HB_FUNC_STATIC(QTEXTFORMAT_ISCHARFORMAT)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -466,9 +440,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_ISCHARFORMAT)
   }
 }
 
-/*
-bool isFrameFormat() const
-*/
+// bool isFrameFormat() const
 HB_FUNC_STATIC(QTEXTFORMAT_ISFRAMEFORMAT)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -490,9 +462,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_ISFRAMEFORMAT)
   }
 }
 
-/*
-bool isImageFormat() const
-*/
+// bool isImageFormat() const
 HB_FUNC_STATIC(QTEXTFORMAT_ISIMAGEFORMAT)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -514,9 +484,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_ISIMAGEFORMAT)
   }
 }
 
-/*
-bool isListFormat() const
-*/
+// bool isListFormat() const
 HB_FUNC_STATIC(QTEXTFORMAT_ISLISTFORMAT)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -538,9 +506,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_ISLISTFORMAT)
   }
 }
 
-/*
-bool isTableCellFormat() const
-*/
+// bool isTableCellFormat() const
 HB_FUNC_STATIC(QTEXTFORMAT_ISTABLECELLFORMAT)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -562,9 +528,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_ISTABLECELLFORMAT)
   }
 }
 
-/*
-bool isTableFormat() const
-*/
+// bool isTableFormat() const
 HB_FUNC_STATIC(QTEXTFORMAT_ISTABLEFORMAT)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -586,9 +550,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_ISTABLEFORMAT)
   }
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QTEXTFORMAT_ISVALID)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -610,9 +572,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_ISVALID)
   }
 }
 
-/*
-Qt::LayoutDirection layoutDirection() const
-*/
+// Qt::LayoutDirection layoutDirection() const
 HB_FUNC_STATIC(QTEXTFORMAT_LAYOUTDIRECTION)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -634,9 +594,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_LAYOUTDIRECTION)
   }
 }
 
-/*
-QTextLength lengthProperty(int propertyId) const
-*/
+// QTextLength lengthProperty(int propertyId) const
 HB_FUNC_STATIC(QTEXTFORMAT_LENGTHPROPERTY)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -659,9 +617,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_LENGTHPROPERTY)
   }
 }
 
-/*
-QVector<QTextLength> lengthVectorProperty(int propertyId) const
-*/
+// QVector<QTextLength> lengthVectorProperty(int propertyId) const
 HB_FUNC_STATIC(QTEXTFORMAT_LENGTHVECTORPROPERTY)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -685,7 +641,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_LENGTHVECTORPROPERTY)
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QTextLength(list[i]));
+          PHB_ITEM pItem = hb_itemPutPtr(pItem, new QTextLength(list[i]));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
@@ -710,9 +666,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_LENGTHVECTORPROPERTY)
   }
 }
 
-/*
-void merge(const QTextFormat &other)
-*/
+// void merge(const QTextFormat &other)
 HB_FUNC_STATIC(QTEXTFORMAT_MERGE)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -736,9 +690,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_MERGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int objectIndex() const
-*/
+// int objectIndex() const
 HB_FUNC_STATIC(QTEXTFORMAT_OBJECTINDEX)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -760,9 +712,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_OBJECTINDEX)
   }
 }
 
-/*
-int objectType() const
-*/
+// int objectType() const
 HB_FUNC_STATIC(QTEXTFORMAT_OBJECTTYPE)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -784,9 +734,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_OBJECTTYPE)
   }
 }
 
-/*
-QPen penProperty(int propertyId) const
-*/
+// QPen penProperty(int propertyId) const
 HB_FUNC_STATIC(QTEXTFORMAT_PENPROPERTY)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -809,9 +757,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_PENPROPERTY)
   }
 }
 
-/*
-QVariant property(int propertyId) const
-*/
+// QVariant property(int propertyId) const
 HB_FUNC_STATIC(QTEXTFORMAT_PROPERTY)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -834,9 +780,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_PROPERTY)
   }
 }
 
-/*
-int propertyCount() const
-*/
+// int propertyCount() const
 HB_FUNC_STATIC(QTEXTFORMAT_PROPERTYCOUNT)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -858,9 +802,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_PROPERTYCOUNT)
   }
 }
 
-/*
-void setBackground(const QBrush &brush)
-*/
+// void setBackground(const QBrush &brush)
 HB_FUNC_STATIC(QTEXTFORMAT_SETBACKGROUND)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -884,9 +826,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_SETBACKGROUND)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setForeground(const QBrush &brush)
-*/
+// void setForeground(const QBrush &brush)
 HB_FUNC_STATIC(QTEXTFORMAT_SETFOREGROUND)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -910,9 +850,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_SETFOREGROUND)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setLayoutDirection(Qt::LayoutDirection direction)
-*/
+// void setLayoutDirection(Qt::LayoutDirection direction)
 HB_FUNC_STATIC(QTEXTFORMAT_SETLAYOUTDIRECTION)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -936,9 +874,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_SETLAYOUTDIRECTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setObjectIndex(int index)
-*/
+// void setObjectIndex(int index)
 HB_FUNC_STATIC(QTEXTFORMAT_SETOBJECTINDEX)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -962,9 +898,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_SETOBJECTINDEX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setObjectType(int type)
-*/
+// void setObjectType(int type)
 HB_FUNC_STATIC(QTEXTFORMAT_SETOBJECTTYPE)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -992,9 +926,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_SETPROPERTY)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2))
   {
-    /*
-    void setProperty(int propertyId, const QVariant &value)
-    */
+    // void setProperty(int propertyId, const QVariant &value)
     QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -1006,9 +938,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_SETPROPERTY)
   }
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISARRAY(2))
   {
-    /*
-    void setProperty(int propertyId, const QVector<QTextLength> &value)
-    */
+    // void setProperty(int propertyId, const QVector<QTextLength> &value)
     QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -1032,9 +962,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_SETPROPERTY)
   }
 }
 
-/*
-QString stringProperty(int propertyId) const
-*/
+// QString stringProperty(int propertyId) const
 HB_FUNC_STATIC(QTEXTFORMAT_STRINGPROPERTY)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1056,9 +984,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_STRINGPROPERTY)
   }
 }
 
-/*
-QTextBlockFormat toBlockFormat() const
-*/
+// QTextBlockFormat toBlockFormat() const
 HB_FUNC_STATIC(QTEXTFORMAT_TOBLOCKFORMAT)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1081,9 +1007,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_TOBLOCKFORMAT)
   }
 }
 
-/*
-QTextCharFormat toCharFormat() const
-*/
+// QTextCharFormat toCharFormat() const
 HB_FUNC_STATIC(QTEXTFORMAT_TOCHARFORMAT)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1106,9 +1030,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_TOCHARFORMAT)
   }
 }
 
-/*
-QTextFrameFormat toFrameFormat() const
-*/
+// QTextFrameFormat toFrameFormat() const
 HB_FUNC_STATIC(QTEXTFORMAT_TOFRAMEFORMAT)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1131,9 +1053,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_TOFRAMEFORMAT)
   }
 }
 
-/*
-QTextImageFormat toImageFormat() const
-*/
+// QTextImageFormat toImageFormat() const
 HB_FUNC_STATIC(QTEXTFORMAT_TOIMAGEFORMAT)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1156,9 +1076,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_TOIMAGEFORMAT)
   }
 }
 
-/*
-QTextListFormat toListFormat() const
-*/
+// QTextListFormat toListFormat() const
 HB_FUNC_STATIC(QTEXTFORMAT_TOLISTFORMAT)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1181,9 +1099,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_TOLISTFORMAT)
   }
 }
 
-/*
-QTextTableCellFormat toTableCellFormat() const
-*/
+// QTextTableCellFormat toTableCellFormat() const
 HB_FUNC_STATIC(QTEXTFORMAT_TOTABLECELLFORMAT)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1206,9 +1122,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_TOTABLECELLFORMAT)
   }
 }
 
-/*
-QTextTableFormat toTableFormat() const
-*/
+// QTextTableFormat toTableFormat() const
 HB_FUNC_STATIC(QTEXTFORMAT_TOTABLEFORMAT)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1231,9 +1145,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_TOTABLEFORMAT)
   }
 }
 
-/*
-int type() const
-*/
+// int type() const
 HB_FUNC_STATIC(QTEXTFORMAT_TYPE)
 {
   QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());

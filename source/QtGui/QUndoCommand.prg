@@ -92,9 +92,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-const QUndoCommand *child(int index) const
-*/
+// const QUndoCommand *child(int index) const
 HB_FUNC_STATIC(QUNDOCOMMAND_CHILD)
 {
   QUndoCommand *obj = static_cast<QUndoCommand *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -117,9 +115,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_CHILD)
   }
 }
 
-/*
-int childCount() const
-*/
+// int childCount() const
 HB_FUNC_STATIC(QUNDOCOMMAND_CHILDCOUNT)
 {
   QUndoCommand *obj = static_cast<QUndoCommand *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -141,9 +137,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_CHILDCOUNT)
   }
 }
 
-/*
-virtual int id() const
-*/
+// virtual int id() const
 HB_FUNC_STATIC(QUNDOCOMMAND_ID)
 {
   QUndoCommand *obj = static_cast<QUndoCommand *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -165,9 +159,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_ID)
   }
 }
 
-/*
-virtual bool mergeWith(const QUndoCommand *command)
-*/
+// virtual bool mergeWith(const QUndoCommand *command)
 HB_FUNC_STATIC(QUNDOCOMMAND_MERGEWITH)
 {
   QUndoCommand *obj = static_cast<QUndoCommand *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -189,9 +181,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_MERGEWITH)
   }
 }
 
-/*
-virtual void redo()
-*/
+// virtual void redo()
 HB_FUNC_STATIC(QUNDOCOMMAND_REDO)
 {
   QUndoCommand *obj = static_cast<QUndoCommand *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -215,9 +205,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_REDO)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setText(const QString &text)
-*/
+// void setText(const QString &text)
 HB_FUNC_STATIC(QUNDOCOMMAND_SETTEXT)
 {
   QUndoCommand *obj = static_cast<QUndoCommand *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -241,9 +229,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_SETTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString text() const
-*/
+// QString text() const
 HB_FUNC_STATIC(QUNDOCOMMAND_TEXT)
 {
   QUndoCommand *obj = static_cast<QUndoCommand *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -265,9 +251,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_TEXT)
   }
 }
 
-/*
-virtual void undo()
-*/
+// virtual void undo()
 HB_FUNC_STATIC(QUNDOCOMMAND_UNDO)
 {
   QUndoCommand *obj = static_cast<QUndoCommand *>(Qt4xHb::itemGetPtrStackSelfItem());

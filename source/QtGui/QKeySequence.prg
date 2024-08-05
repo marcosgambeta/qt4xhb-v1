@@ -117,9 +117,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-uint count() const
-*/
+// uint count() const
 HB_FUNC_STATIC(QKEYSEQUENCE_COUNT)
 {
   QKeySequence *obj = static_cast<QKeySequence *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -141,9 +139,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_COUNT)
   }
 }
 
-/*
-bool isEmpty() const
-*/
+// bool isEmpty() const
 HB_FUNC_STATIC(QKEYSEQUENCE_ISEMPTY)
 {
   QKeySequence *obj = static_cast<QKeySequence *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -165,9 +161,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_ISEMPTY)
   }
 }
 
-/*
-QKeySequence::SequenceMatch matches(const QKeySequence &seq) const
-*/
+// QKeySequence::SequenceMatch matches(const QKeySequence &seq) const
 HB_FUNC_STATIC(QKEYSEQUENCE_MATCHES)
 {
   QKeySequence *obj = static_cast<QKeySequence *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -189,9 +183,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_MATCHES)
   }
 }
 
-/*
-QString toString(QKeySequence::SequenceFormat format = QKeySequence::PortableText) const
-*/
+// QString toString(QKeySequence::SequenceFormat format = QKeySequence::PortableText) const
 HB_FUNC_STATIC(QKEYSEQUENCE_TOSTRING)
 {
   QKeySequence *obj = static_cast<QKeySequence *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -214,9 +206,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_TOSTRING)
   }
 }
 
-/*
-static QKeySequence fromString(const QString &str, QKeySequence::SequenceFormat format = QKeySequence::PortableText)
-*/
+// static QKeySequence fromString(const QString &str, QKeySequence::SequenceFormat format = QKeySequence::PortableText)
 HB_FUNC_STATIC(QKEYSEQUENCE_FROMSTRING)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -236,9 +226,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_FROMSTRING)
 #endif
 }
 
-/*
-static QList<QKeySequence> keyBindings(QKeySequence::StandardKey key)
-*/
+// static QList<QKeySequence> keyBindings(QKeySequence::StandardKey key)
 HB_FUNC_STATIC(QKEYSEQUENCE_KEYBINDINGS)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -282,9 +270,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_KEYBINDINGS)
 #endif
 }
 
-/*
-static QKeySequence mnemonic(const QString &text)
-*/
+// static QKeySequence mnemonic(const QString &text)
 HB_FUNC_STATIC(QKEYSEQUENCE_MNEMONIC)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

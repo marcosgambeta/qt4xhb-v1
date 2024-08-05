@@ -66,9 +66,7 @@ HB_FUNC_STATIC(QITEMEDITORCREATORBASE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QWidget *createWidget(QWidget *parent) const = 0
-*/
+// virtual QWidget *createWidget(QWidget *parent) const = 0
 HB_FUNC_STATIC(QITEMEDITORCREATORBASE_CREATEWIDGET)
 {
   QItemEditorCreatorBase *obj = static_cast<QItemEditorCreatorBase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -91,9 +89,7 @@ HB_FUNC_STATIC(QITEMEDITORCREATORBASE_CREATEWIDGET)
   }
 }
 
-/*
-virtual QByteArray valuePropertyName() const = 0
-*/
+// virtual QByteArray valuePropertyName() const = 0
 HB_FUNC_STATIC(QITEMEDITORCREATORBASE_VALUEPROPERTYNAME)
 {
   QItemEditorCreatorBase *obj = static_cast<QItemEditorCreatorBase *>(Qt4xHb::itemGetPtrStackSelfItem());

@@ -56,7 +56,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QGraphicsScale(QObject *parent = 0)
+    // QGraphicsScale(QObject *parent = 0)
 HB_FUNC_STATIC(QGRAPHICSSCALE_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
@@ -88,9 +88,7 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QVector3D origin() const
-*/
+// QVector3D origin() const
 HB_FUNC_STATIC(QGRAPHICSSCALE_ORIGIN)
 {
   QGraphicsScale *obj = qobject_cast<QGraphicsScale *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -113,9 +111,7 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_ORIGIN)
   }
 }
 
-/*
-void setOrigin(const QVector3D &point)
-*/
+// void setOrigin(const QVector3D &point)
 HB_FUNC_STATIC(QGRAPHICSSCALE_SETORIGIN)
 {
   QGraphicsScale *obj = qobject_cast<QGraphicsScale *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -139,9 +135,7 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_SETORIGIN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setXScale(qreal)
-*/
+// void setXScale(qreal)
 HB_FUNC_STATIC(QGRAPHICSSCALE_SETXSCALE)
 {
   QGraphicsScale *obj = qobject_cast<QGraphicsScale *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -165,9 +159,7 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_SETXSCALE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setYScale(qreal)
-*/
+// void setYScale(qreal)
 HB_FUNC_STATIC(QGRAPHICSSCALE_SETYSCALE)
 {
   QGraphicsScale *obj = qobject_cast<QGraphicsScale *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -191,9 +183,7 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_SETYSCALE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setZScale(qreal)
-*/
+// void setZScale(qreal)
 HB_FUNC_STATIC(QGRAPHICSSCALE_SETZSCALE)
 {
   QGraphicsScale *obj = qobject_cast<QGraphicsScale *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -217,9 +207,7 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_SETZSCALE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qreal xScale() const
-*/
+// qreal xScale() const
 HB_FUNC_STATIC(QGRAPHICSSCALE_XSCALE)
 {
   QGraphicsScale *obj = qobject_cast<QGraphicsScale *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -241,9 +229,7 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_XSCALE)
   }
 }
 
-/*
-qreal yScale() const
-*/
+// qreal yScale() const
 HB_FUNC_STATIC(QGRAPHICSSCALE_YSCALE)
 {
   QGraphicsScale *obj = qobject_cast<QGraphicsScale *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -265,9 +251,7 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_YSCALE)
   }
 }
 
-/*
-qreal zScale() const
-*/
+// qreal zScale() const
 HB_FUNC_STATIC(QGRAPHICSSCALE_ZSCALE)
 {
   QGraphicsScale *obj = qobject_cast<QGraphicsScale *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -289,9 +273,7 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_ZSCALE)
   }
 }
 
-/*
-virtual void applyTo(QMatrix4x4 *matrix) const
-*/
+// virtual void applyTo(QMatrix4x4 *matrix) const
 HB_FUNC_STATIC(QGRAPHICSSCALE_APPLYTO)
 {
   QGraphicsScale *obj = qobject_cast<QGraphicsScale *>(Qt4xHb::getQObjectPointerFromSelfItem());

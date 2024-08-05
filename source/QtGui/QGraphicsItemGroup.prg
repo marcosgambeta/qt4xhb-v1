@@ -47,7 +47,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-// QGraphicsItemGroup(QGraphicsItem *parent = 0)
+    // QGraphicsItemGroup(QGraphicsItem *parent = 0)
 HB_FUNC_STATIC(QGRAPHICSITEMGROUP_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)))
@@ -78,9 +78,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMGROUP_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addToGroup(QGraphicsItem *item)
-*/
+// void addToGroup(QGraphicsItem *item)
 HB_FUNC_STATIC(QGRAPHICSITEMGROUP_ADDTOGROUP)
 {
   QGraphicsItemGroup *obj = static_cast<QGraphicsItemGroup *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -104,9 +102,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMGROUP_ADDTOGROUP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void removeFromGroup(QGraphicsItem *item)
-*/
+// void removeFromGroup(QGraphicsItem *item)
 HB_FUNC_STATIC(QGRAPHICSITEMGROUP_REMOVEFROMGROUP)
 {
   QGraphicsItemGroup *obj = static_cast<QGraphicsItemGroup *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -130,9 +126,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMGROUP_REMOVEFROMGROUP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QRectF boundingRect() const
-*/
+// virtual QRectF boundingRect() const
 HB_FUNC_STATIC(QGRAPHICSITEMGROUP_BOUNDINGRECT)
 {
   QGraphicsItemGroup *obj = static_cast<QGraphicsItemGroup *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -155,9 +149,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMGROUP_BOUNDINGRECT)
   }
 }
 
-/*
-virtual bool isObscuredBy(const QGraphicsItem *item) const
-*/
+// virtual bool isObscuredBy(const QGraphicsItem *item) const
 HB_FUNC_STATIC(QGRAPHICSITEMGROUP_ISOBSCUREDBY)
 {
   QGraphicsItemGroup *obj = static_cast<QGraphicsItemGroup *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -179,9 +171,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMGROUP_ISOBSCUREDBY)
   }
 }
 
-/*
-virtual QPainterPath opaqueArea() const
-*/
+// virtual QPainterPath opaqueArea() const
 HB_FUNC_STATIC(QGRAPHICSITEMGROUP_OPAQUEAREA)
 {
   QGraphicsItemGroup *obj = static_cast<QGraphicsItemGroup *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -204,9 +194,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMGROUP_OPAQUEAREA)
   }
 }
 
-/*
-virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0)
-*/
+// virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0)
 HB_FUNC_STATIC(QGRAPHICSITEMGROUP_PAINT)
 {
   QGraphicsItemGroup *obj = static_cast<QGraphicsItemGroup *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -230,9 +218,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMGROUP_PAINT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual int type() const
-*/
+// virtual int type() const
 HB_FUNC_STATIC(QGRAPHICSITEMGROUP_TYPE)
 {
   QGraphicsItemGroup *obj = static_cast<QGraphicsItemGroup *>(Qt4xHb::itemGetPtrStackSelfItem());

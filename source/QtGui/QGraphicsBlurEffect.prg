@@ -49,7 +49,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QGraphicsBlurEffect(QObject *parent = 0)
+    // QGraphicsBlurEffect(QObject *parent = 0)
 HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
@@ -81,9 +81,7 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QGraphicsBlurEffect::BlurHints blurHints() const
-*/
+// QGraphicsBlurEffect::BlurHints blurHints() const
 HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_BLURHINTS)
 {
   QGraphicsBlurEffect *obj = qobject_cast<QGraphicsBlurEffect *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -105,9 +103,7 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_BLURHINTS)
   }
 }
 
-/*
-qreal blurRadius() const
-*/
+// qreal blurRadius() const
 HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_BLURRADIUS)
 {
   QGraphicsBlurEffect *obj = qobject_cast<QGraphicsBlurEffect *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -129,9 +125,7 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_BLURRADIUS)
   }
 }
 
-/*
-virtual QRectF boundingRectFor(const QRectF &rect) const
-*/
+// virtual QRectF boundingRectFor(const QRectF &rect) const
 HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_BOUNDINGRECTFOR)
 {
   QGraphicsBlurEffect *obj = qobject_cast<QGraphicsBlurEffect *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -154,9 +148,7 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_BOUNDINGRECTFOR)
   }
 }
 
-/*
-void setBlurHints(QGraphicsBlurEffect::BlurHints hints)
-*/
+// void setBlurHints(QGraphicsBlurEffect::BlurHints hints)
 HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_SETBLURHINTS)
 {
   QGraphicsBlurEffect *obj = qobject_cast<QGraphicsBlurEffect *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -180,9 +172,7 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_SETBLURHINTS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setBlurRadius(qreal blurRadius)
-*/
+// void setBlurRadius(qreal blurRadius)
 HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_SETBLURRADIUS)
 {
   QGraphicsBlurEffect *obj = qobject_cast<QGraphicsBlurEffect *>(Qt4xHb::getQObjectPointerFromSelfItem());

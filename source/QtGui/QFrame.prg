@@ -56,7 +56,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QFrame(QWidget *parent = 0, Qt::WindowFlags f = 0)
+    // QFrame(QWidget *parent = 0, Qt::WindowFlags f = 0)
 HB_FUNC_STATIC(QFRAME_NEW)
 {
   if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
@@ -88,9 +88,7 @@ HB_FUNC_STATIC(QFRAME_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QRect frameRect() const
-*/
+// QRect frameRect() const
 HB_FUNC_STATIC(QFRAME_FRAMERECT)
 {
   QFrame *obj = qobject_cast<QFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -113,9 +111,7 @@ HB_FUNC_STATIC(QFRAME_FRAMERECT)
   }
 }
 
-/*
-QFrame::Shadow frameShadow() const
-*/
+// QFrame::Shadow frameShadow() const
 HB_FUNC_STATIC(QFRAME_FRAMESHADOW)
 {
   QFrame *obj = qobject_cast<QFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -137,9 +133,7 @@ HB_FUNC_STATIC(QFRAME_FRAMESHADOW)
   }
 }
 
-/*
-QFrame::Shape frameShape() const
-*/
+// QFrame::Shape frameShape() const
 HB_FUNC_STATIC(QFRAME_FRAMESHAPE)
 {
   QFrame *obj = qobject_cast<QFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -161,9 +155,7 @@ HB_FUNC_STATIC(QFRAME_FRAMESHAPE)
   }
 }
 
-/*
-int frameStyle() const
-*/
+// int frameStyle() const
 HB_FUNC_STATIC(QFRAME_FRAMESTYLE)
 {
   QFrame *obj = qobject_cast<QFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -185,9 +177,7 @@ HB_FUNC_STATIC(QFRAME_FRAMESTYLE)
   }
 }
 
-/*
-int frameWidth() const
-*/
+// int frameWidth() const
 HB_FUNC_STATIC(QFRAME_FRAMEWIDTH)
 {
   QFrame *obj = qobject_cast<QFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -209,9 +199,7 @@ HB_FUNC_STATIC(QFRAME_FRAMEWIDTH)
   }
 }
 
-/*
-int lineWidth() const
-*/
+// int lineWidth() const
 HB_FUNC_STATIC(QFRAME_LINEWIDTH)
 {
   QFrame *obj = qobject_cast<QFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -233,9 +221,7 @@ HB_FUNC_STATIC(QFRAME_LINEWIDTH)
   }
 }
 
-/*
-int midLineWidth() const
-*/
+// int midLineWidth() const
 HB_FUNC_STATIC(QFRAME_MIDLINEWIDTH)
 {
   QFrame *obj = qobject_cast<QFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -257,9 +243,7 @@ HB_FUNC_STATIC(QFRAME_MIDLINEWIDTH)
   }
 }
 
-/*
-void setFrameRect(const QRect &)
-*/
+// void setFrameRect(const QRect &)
 HB_FUNC_STATIC(QFRAME_SETFRAMERECT)
 {
   QFrame *obj = qobject_cast<QFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -283,9 +267,7 @@ HB_FUNC_STATIC(QFRAME_SETFRAMERECT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFrameShadow(QFrame::Shadow)
-*/
+// void setFrameShadow(QFrame::Shadow)
 HB_FUNC_STATIC(QFRAME_SETFRAMESHADOW)
 {
   QFrame *obj = qobject_cast<QFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -309,9 +291,7 @@ HB_FUNC_STATIC(QFRAME_SETFRAMESHADOW)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFrameShape(QFrame::Shape)
-*/
+// void setFrameShape(QFrame::Shape)
 HB_FUNC_STATIC(QFRAME_SETFRAMESHAPE)
 {
   QFrame *obj = qobject_cast<QFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -335,9 +315,7 @@ HB_FUNC_STATIC(QFRAME_SETFRAMESHAPE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFrameStyle(int style)
-*/
+// void setFrameStyle(int style)
 HB_FUNC_STATIC(QFRAME_SETFRAMESTYLE)
 {
   QFrame *obj = qobject_cast<QFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -361,9 +339,7 @@ HB_FUNC_STATIC(QFRAME_SETFRAMESTYLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setLineWidth(int)
-*/
+// void setLineWidth(int)
 HB_FUNC_STATIC(QFRAME_SETLINEWIDTH)
 {
   QFrame *obj = qobject_cast<QFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -387,9 +363,7 @@ HB_FUNC_STATIC(QFRAME_SETLINEWIDTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setMidLineWidth(int)
-*/
+// void setMidLineWidth(int)
 HB_FUNC_STATIC(QFRAME_SETMIDLINEWIDTH)
 {
   QFrame *obj = qobject_cast<QFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -413,9 +387,7 @@ HB_FUNC_STATIC(QFRAME_SETMIDLINEWIDTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QSize sizeHint() const
-*/
+// virtual QSize sizeHint() const
 HB_FUNC_STATIC(QFRAME_SIZEHINT)
 {
   QFrame *obj = qobject_cast<QFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());

@@ -103,9 +103,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool columnIntersectsSelection(int column, const QModelIndex &parent) const
-*/
+// bool columnIntersectsSelection(int column, const QModelIndex &parent) const
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_COLUMNINTERSECTSSELECTION)
 {
   QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -127,9 +125,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_COLUMNINTERSECTSSELECTION)
   }
 }
 
-/*
-QModelIndex currentIndex() const
-*/
+// QModelIndex currentIndex() const
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_CURRENTINDEX)
 {
   QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -152,9 +148,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_CURRENTINDEX)
   }
 }
 
-/*
-bool hasSelection() const
-*/
+// bool hasSelection() const
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_HASSELECTION)
 {
   QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -176,9 +170,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_HASSELECTION)
   }
 }
 
-/*
-bool isColumnSelected(int column, const QModelIndex &parent) const
-*/
+// bool isColumnSelected(int column, const QModelIndex &parent) const
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_ISCOLUMNSELECTED)
 {
   QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -200,9 +192,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_ISCOLUMNSELECTED)
   }
 }
 
-/*
-bool isRowSelected(int row, const QModelIndex &parent) const
-*/
+// bool isRowSelected(int row, const QModelIndex &parent) const
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_ISROWSELECTED)
 {
   QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -224,9 +214,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_ISROWSELECTED)
   }
 }
 
-/*
-bool isSelected(const QModelIndex &index) const
-*/
+// bool isSelected(const QModelIndex &index) const
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_ISSELECTED)
 {
   QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -248,9 +236,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_ISSELECTED)
   }
 }
 
-/*
-const QAbstractItemModel *model() const
-*/
+// const QAbstractItemModel *model() const
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_MODEL)
 {
   QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -273,9 +259,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_MODEL)
   }
 }
 
-/*
-bool rowIntersectsSelection(int row, const QModelIndex &parent) const
-*/
+// bool rowIntersectsSelection(int row, const QModelIndex &parent) const
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_ROWINTERSECTSSELECTION)
 {
   QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -297,9 +281,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_ROWINTERSECTSSELECTION)
   }
 }
 
-/*
-QModelIndexList selectedColumns(int row = 0) const
-*/
+// QModelIndexList selectedColumns(int row = 0) const
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECTEDCOLUMNS)
 {
   QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -348,9 +330,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECTEDCOLUMNS)
   }
 }
 
-/*
-QModelIndexList selectedIndexes() const
-*/
+// QModelIndexList selectedIndexes() const
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECTEDINDEXES)
 {
   QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -399,9 +379,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECTEDINDEXES)
   }
 }
 
-/*
-QModelIndexList selectedRows(int column = 0) const
-*/
+// QModelIndexList selectedRows(int column = 0) const
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECTEDROWS)
 {
   QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -450,9 +428,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECTEDROWS)
   }
 }
 
-/*
-const QItemSelection selection() const
-*/
+// const QItemSelection selection() const
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECTION)
 {
   QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -475,9 +451,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECTION)
   }
 }
 
-/*
-virtual void clear()
-*/
+// virtual void clear()
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_CLEAR)
 {
   QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -501,9 +475,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void clearSelection()
-*/
+// void clearSelection()
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_CLEARSELECTION)
 {
   QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -527,9 +499,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_CLEARSELECTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void reset()
-*/
+// virtual void reset()
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_RESET)
 {
   QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -557,9 +527,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECT)
 {
   if (ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISNUM(2))
   {
-    /*
-    virtual void select(const QModelIndex &index, QItemSelectionModel::SelectionFlags command)
-    */
+    // virtual void select(const QModelIndex &index, QItemSelectionModel::SelectionFlags command)
     QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -571,9 +539,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECT)
   }
   else if (ISNUMPAR(2) && ISQITEMSELECTION(1) && HB_ISNUM(2))
   {
-    /*
-    virtual void select(const QItemSelection &selection, QItemSelectionModel::SelectionFlags command)
-    */
+    // virtual void select(const QItemSelection &selection, QItemSelectionModel::SelectionFlags command)
     QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -589,9 +555,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECT)
   }
 }
 
-/*
-void setCurrentIndex(const QModelIndex &index, QItemSelectionModel::SelectionFlags command)
-*/
+// void setCurrentIndex(const QModelIndex &index, QItemSelectionModel::SelectionFlags command)
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_SETCURRENTINDEX)
 {
   QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());

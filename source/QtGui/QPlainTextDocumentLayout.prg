@@ -51,7 +51,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QPlainTextDocumentLayout(QTextDocument *document)
+    // QPlainTextDocumentLayout(QTextDocument *document)
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_NEW)
 {
   if (ISNUMPAR(1) && ISQTEXTDOCUMENT(1))
@@ -83,9 +83,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int cursorWidth() const
-*/
+// int cursorWidth() const
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_CURSORWIDTH)
 {
   QPlainTextDocumentLayout *obj = qobject_cast<QPlainTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -107,9 +105,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_CURSORWIDTH)
   }
 }
 
-/*
-void ensureBlockLayout(const QTextBlock &block) const
-*/
+// void ensureBlockLayout(const QTextBlock &block) const
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_ENSUREBLOCKLAYOUT)
 {
   QPlainTextDocumentLayout *obj = qobject_cast<QPlainTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -133,9 +129,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_ENSUREBLOCKLAYOUT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void requestUpdate()
-*/
+// void requestUpdate()
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_REQUESTUPDATE)
 {
   QPlainTextDocumentLayout *obj = qobject_cast<QPlainTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -159,9 +153,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_REQUESTUPDATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCursorWidth(int width)
-*/
+// void setCursorWidth(int width)
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_SETCURSORWIDTH)
 {
   QPlainTextDocumentLayout *obj = qobject_cast<QPlainTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -185,9 +177,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_SETCURSORWIDTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QRectF blockBoundingRect(const QTextBlock &block) const
-*/
+// virtual QRectF blockBoundingRect(const QTextBlock &block) const
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT)
 {
   QPlainTextDocumentLayout *obj = qobject_cast<QPlainTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -210,9 +200,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT)
   }
 }
 
-/*
-virtual QSizeF documentSize() const
-*/
+// virtual QSizeF documentSize() const
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_DOCUMENTSIZE)
 {
   QPlainTextDocumentLayout *obj = qobject_cast<QPlainTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -235,9 +223,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_DOCUMENTSIZE)
   }
 }
 
-/*
-virtual QRectF frameBoundingRect(QTextFrame *) const
-*/
+// virtual QRectF frameBoundingRect(QTextFrame *) const
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT)
 {
   QPlainTextDocumentLayout *obj = qobject_cast<QPlainTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -260,9 +246,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT)
   }
 }
 
-/*
-virtual int hitTest(const QPointF &, Qt::HitTestAccuracy) const
-*/
+// virtual int hitTest(const QPointF &, Qt::HitTestAccuracy) const
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_HITTEST)
 {
   QPlainTextDocumentLayout *obj = qobject_cast<QPlainTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -284,9 +268,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_HITTEST)
   }
 }
 
-/*
-virtual int pageCount() const
-*/
+// virtual int pageCount() const
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_PAGECOUNT)
 {
   QPlainTextDocumentLayout *obj = qobject_cast<QPlainTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());

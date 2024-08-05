@@ -46,7 +46,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QSplitterHandle(Qt::Orientation orientation, QSplitter *parent)
+    // QSplitterHandle(Qt::Orientation orientation, QSplitter *parent)
 HB_FUNC_STATIC(QSPLITTERHANDLE_NEW)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSPLITTER(2))
@@ -60,9 +60,7 @@ HB_FUNC_STATIC(QSPLITTERHANDLE_NEW)
   }
 }
 
-/*
-bool opaqueResize() const
-*/
+// bool opaqueResize() const
 HB_FUNC_STATIC(QSPLITTERHANDLE_OPAQUERESIZE)
 {
   QSplitterHandle *obj = qobject_cast<QSplitterHandle *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -84,9 +82,7 @@ HB_FUNC_STATIC(QSPLITTERHANDLE_OPAQUERESIZE)
   }
 }
 
-/*
-Qt::Orientation orientation() const
-*/
+// Qt::Orientation orientation() const
 HB_FUNC_STATIC(QSPLITTERHANDLE_ORIENTATION)
 {
   QSplitterHandle *obj = qobject_cast<QSplitterHandle *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -108,9 +104,7 @@ HB_FUNC_STATIC(QSPLITTERHANDLE_ORIENTATION)
   }
 }
 
-/*
-void setOrientation(Qt::Orientation orientation)
-*/
+// void setOrientation(Qt::Orientation orientation)
 HB_FUNC_STATIC(QSPLITTERHANDLE_SETORIENTATION)
 {
   QSplitterHandle *obj = qobject_cast<QSplitterHandle *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -134,9 +128,7 @@ HB_FUNC_STATIC(QSPLITTERHANDLE_SETORIENTATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSplitter *splitter() const
-*/
+// QSplitter *splitter() const
 HB_FUNC_STATIC(QSPLITTERHANDLE_SPLITTER)
 {
   QSplitterHandle *obj = qobject_cast<QSplitterHandle *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -159,9 +151,7 @@ HB_FUNC_STATIC(QSPLITTERHANDLE_SPLITTER)
   }
 }
 
-/*
-virtual QSize sizeHint() const
-*/
+// virtual QSize sizeHint() const
 HB_FUNC_STATIC(QSPLITTERHANDLE_SIZEHINT)
 {
   QSplitterHandle *obj = qobject_cast<QSplitterHandle *>(Qt4xHb::getQObjectPointerFromSelfItem());

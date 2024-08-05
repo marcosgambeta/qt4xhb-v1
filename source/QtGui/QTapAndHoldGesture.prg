@@ -62,9 +62,7 @@ HB_FUNC_STATIC(QTAPANDHOLDGESTURE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QPointF position() const
-*/
+// QPointF position() const
 HB_FUNC_STATIC(QTAPANDHOLDGESTURE_POSITION)
 {
   QTapAndHoldGesture *obj = qobject_cast<QTapAndHoldGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -87,9 +85,7 @@ HB_FUNC_STATIC(QTAPANDHOLDGESTURE_POSITION)
   }
 }
 
-/*
-void setPosition(const QPointF &pos)
-*/
+// void setPosition(const QPointF &pos)
 HB_FUNC_STATIC(QTAPANDHOLDGESTURE_SETPOSITION)
 {
   QTapAndHoldGesture *obj = qobject_cast<QTapAndHoldGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -113,9 +109,7 @@ HB_FUNC_STATIC(QTAPANDHOLDGESTURE_SETPOSITION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void setTimeout(int msecs)
-*/
+// static void setTimeout(int msecs)
 HB_FUNC_STATIC(QTAPANDHOLDGESTURE_SETTIMEOUT)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -134,9 +128,7 @@ HB_FUNC_STATIC(QTAPANDHOLDGESTURE_SETTIMEOUT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static int timeout()
-*/
+// static int timeout()
 HB_FUNC_STATIC(QTAPANDHOLDGESTURE_TIMEOUT)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

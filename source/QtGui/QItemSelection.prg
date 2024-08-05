@@ -89,9 +89,7 @@ HB_FUNC_STATIC(QITEMSELECTION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool contains(const QModelIndex &index) const
-*/
+// bool contains(const QModelIndex &index) const
 HB_FUNC_STATIC(QITEMSELECTION_CONTAINS)
 {
   QItemSelection *obj = static_cast<QItemSelection *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -113,9 +111,7 @@ HB_FUNC_STATIC(QITEMSELECTION_CONTAINS)
   }
 }
 
-/*
-QModelIndexList indexes() const
-*/
+// QModelIndexList indexes() const
 HB_FUNC_STATIC(QITEMSELECTION_INDEXES)
 {
   QItemSelection *obj = static_cast<QItemSelection *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -164,9 +160,7 @@ HB_FUNC_STATIC(QITEMSELECTION_INDEXES)
   }
 }
 
-/*
-void merge(const QItemSelection &other, QItemSelectionModel::SelectionFlags command)
-*/
+// void merge(const QItemSelection &other, QItemSelectionModel::SelectionFlags command)
 HB_FUNC_STATIC(QITEMSELECTION_MERGE)
 {
   QItemSelection *obj = static_cast<QItemSelection *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -190,9 +184,7 @@ HB_FUNC_STATIC(QITEMSELECTION_MERGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void select(const QModelIndex &topLeft, const QModelIndex &bottomRight)
-*/
+// void select(const QModelIndex &topLeft, const QModelIndex &bottomRight)
 HB_FUNC_STATIC(QITEMSELECTION_SELECT)
 {
   QItemSelection *obj = static_cast<QItemSelection *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -216,9 +208,7 @@ HB_FUNC_STATIC(QITEMSELECTION_SELECT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void split(const QItemSelectionRange &range, const QItemSelectionRange &other, QItemSelection *result)
-*/
+// static void split(const QItemSelectionRange &range, const QItemSelectionRange &other, QItemSelection *result)
 HB_FUNC_STATIC(QITEMSELECTION_SPLIT)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

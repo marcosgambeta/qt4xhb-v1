@@ -92,9 +92,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QFont font() const
-*/
+// QFont font() const
 HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_FONT)
 {
   QGraphicsSimpleTextItem *obj = static_cast<QGraphicsSimpleTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -117,9 +115,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_FONT)
   }
 }
 
-/*
-void setFont(const QFont &font)
-*/
+// void setFont(const QFont &font)
 HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_SETFONT)
 {
   QGraphicsSimpleTextItem *obj = static_cast<QGraphicsSimpleTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -143,9 +139,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_SETFONT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setText(const QString &text)
-*/
+// void setText(const QString &text)
 HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_SETTEXT)
 {
   QGraphicsSimpleTextItem *obj = static_cast<QGraphicsSimpleTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -169,9 +163,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_SETTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString text() const
-*/
+// QString text() const
 HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_TEXT)
 {
   QGraphicsSimpleTextItem *obj = static_cast<QGraphicsSimpleTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -193,9 +185,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_TEXT)
   }
 }
 
-/*
-virtual QRectF boundingRect() const
-*/
+// virtual QRectF boundingRect() const
 HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_BOUNDINGRECT)
 {
   QGraphicsSimpleTextItem *obj = static_cast<QGraphicsSimpleTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -218,9 +208,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_BOUNDINGRECT)
   }
 }
 
-/*
-virtual bool contains(const QPointF &point) const
-*/
+// virtual bool contains(const QPointF &point) const
 HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_CONTAINS)
 {
   QGraphicsSimpleTextItem *obj = static_cast<QGraphicsSimpleTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -242,9 +230,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_CONTAINS)
   }
 }
 
-/*
-virtual bool isObscuredBy(const QGraphicsItem *item) const
-*/
+// virtual bool isObscuredBy(const QGraphicsItem *item) const
 HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_ISOBSCUREDBY)
 {
   QGraphicsSimpleTextItem *obj = static_cast<QGraphicsSimpleTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -266,9 +252,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_ISOBSCUREDBY)
   }
 }
 
-/*
-virtual QPainterPath opaqueArea() const
-*/
+// virtual QPainterPath opaqueArea() const
 HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_OPAQUEAREA)
 {
   QGraphicsSimpleTextItem *obj = static_cast<QGraphicsSimpleTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -291,9 +275,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_OPAQUEAREA)
   }
 }
 
-/*
-virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
-*/
+// virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_PAINT)
 {
   QGraphicsSimpleTextItem *obj = static_cast<QGraphicsSimpleTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -317,9 +299,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_PAINT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QPainterPath shape() const
-*/
+// virtual QPainterPath shape() const
 HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_SHAPE)
 {
   QGraphicsSimpleTextItem *obj = static_cast<QGraphicsSimpleTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -342,9 +322,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_SHAPE)
   }
 }
 
-/*
-virtual int type() const
-*/
+// virtual int type() const
 HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_TYPE)
 {
   QGraphicsSimpleTextItem *obj = static_cast<QGraphicsSimpleTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());

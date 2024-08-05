@@ -38,7 +38,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-// QHideEvent()
+    // QHideEvent()
 HB_FUNC_STATIC(QHIDEEVENT_NEW)
 {
   if (ISNUMPAR(0))

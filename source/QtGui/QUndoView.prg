@@ -98,9 +98,7 @@ HB_FUNC_STATIC(QUNDOVIEW_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QIcon cleanIcon() const
-*/
+// QIcon cleanIcon() const
 HB_FUNC_STATIC(QUNDOVIEW_CLEANICON)
 {
   QUndoView *obj = qobject_cast<QUndoView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -123,9 +121,7 @@ HB_FUNC_STATIC(QUNDOVIEW_CLEANICON)
   }
 }
 
-/*
-QString emptyLabel() const
-*/
+// QString emptyLabel() const
 HB_FUNC_STATIC(QUNDOVIEW_EMPTYLABEL)
 {
   QUndoView *obj = qobject_cast<QUndoView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -147,9 +143,7 @@ HB_FUNC_STATIC(QUNDOVIEW_EMPTYLABEL)
   }
 }
 
-/*
-QUndoGroup *group() const
-*/
+// QUndoGroup *group() const
 HB_FUNC_STATIC(QUNDOVIEW_GROUP)
 {
   QUndoView *obj = qobject_cast<QUndoView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -172,9 +166,7 @@ HB_FUNC_STATIC(QUNDOVIEW_GROUP)
   }
 }
 
-/*
-void setCleanIcon(const QIcon &icon)
-*/
+// void setCleanIcon(const QIcon &icon)
 HB_FUNC_STATIC(QUNDOVIEW_SETCLEANICON)
 {
   QUndoView *obj = qobject_cast<QUndoView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -198,9 +190,7 @@ HB_FUNC_STATIC(QUNDOVIEW_SETCLEANICON)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setEmptyLabel(const QString &label)
-*/
+// void setEmptyLabel(const QString &label)
 HB_FUNC_STATIC(QUNDOVIEW_SETEMPTYLABEL)
 {
   QUndoView *obj = qobject_cast<QUndoView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -224,9 +214,7 @@ HB_FUNC_STATIC(QUNDOVIEW_SETEMPTYLABEL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QUndoStack *stack() const
-*/
+// QUndoStack *stack() const
 HB_FUNC_STATIC(QUNDOVIEW_STACK)
 {
   QUndoView *obj = qobject_cast<QUndoView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -249,9 +237,7 @@ HB_FUNC_STATIC(QUNDOVIEW_STACK)
   }
 }
 
-/*
-void setGroup(QUndoGroup *group)
-*/
+// void setGroup(QUndoGroup *group)
 HB_FUNC_STATIC(QUNDOVIEW_SETGROUP)
 {
   QUndoView *obj = qobject_cast<QUndoView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -275,9 +261,7 @@ HB_FUNC_STATIC(QUNDOVIEW_SETGROUP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setStack(QUndoStack *stack)
-*/
+// void setStack(QUndoStack *stack)
 HB_FUNC_STATIC(QUNDOVIEW_SETSTACK)
 {
   QUndoView *obj = qobject_cast<QUndoView *>(Qt4xHb::getQObjectPointerFromSelfItem());

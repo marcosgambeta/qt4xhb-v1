@@ -75,7 +75,7 @@ RETURN
 
 #include <QtGui/QMdiSubWindow>
 
-// QMdiArea(QWidget *parent = 0)
+    // QMdiArea(QWidget *parent = 0)
 HB_FUNC_STATIC(QMDIAREA_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
@@ -107,9 +107,7 @@ HB_FUNC_STATIC(QMDIAREA_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QMdiArea::WindowOrder activationOrder() const
-*/
+// QMdiArea::WindowOrder activationOrder() const
 HB_FUNC_STATIC(QMDIAREA_ACTIVATIONORDER)
 {
   QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -131,9 +129,7 @@ HB_FUNC_STATIC(QMDIAREA_ACTIVATIONORDER)
   }
 }
 
-/*
-QMdiSubWindow *activeSubWindow() const
-*/
+// QMdiSubWindow *activeSubWindow() const
 HB_FUNC_STATIC(QMDIAREA_ACTIVESUBWINDOW)
 {
   QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -156,9 +152,7 @@ HB_FUNC_STATIC(QMDIAREA_ACTIVESUBWINDOW)
   }
 }
 
-/*
-QMdiSubWindow *addSubWindow(QWidget *widget, Qt::WindowFlags windowFlags = 0)
-*/
+// QMdiSubWindow *addSubWindow(QWidget *widget, Qt::WindowFlags windowFlags = 0)
 HB_FUNC_STATIC(QMDIAREA_ADDSUBWINDOW)
 {
   QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -182,9 +176,7 @@ HB_FUNC_STATIC(QMDIAREA_ADDSUBWINDOW)
   }
 }
 
-/*
-QBrush background() const
-*/
+// QBrush background() const
 HB_FUNC_STATIC(QMDIAREA_BACKGROUND)
 {
   QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -207,9 +199,7 @@ HB_FUNC_STATIC(QMDIAREA_BACKGROUND)
   }
 }
 
-/*
-QMdiSubWindow *currentSubWindow() const
-*/
+// QMdiSubWindow *currentSubWindow() const
 HB_FUNC_STATIC(QMDIAREA_CURRENTSUBWINDOW)
 {
   QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -232,9 +222,7 @@ HB_FUNC_STATIC(QMDIAREA_CURRENTSUBWINDOW)
   }
 }
 
-/*
-bool documentMode() const
-*/
+// bool documentMode() const
 HB_FUNC_STATIC(QMDIAREA_DOCUMENTMODE)
 {
   QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -256,9 +244,7 @@ HB_FUNC_STATIC(QMDIAREA_DOCUMENTMODE)
   }
 }
 
-/*
-void removeSubWindow(QWidget *widget)
-*/
+// void removeSubWindow(QWidget *widget)
 HB_FUNC_STATIC(QMDIAREA_REMOVESUBWINDOW)
 {
   QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -282,9 +268,7 @@ HB_FUNC_STATIC(QMDIAREA_REMOVESUBWINDOW)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setActivationOrder(QMdiArea::WindowOrder order)
-*/
+// void setActivationOrder(QMdiArea::WindowOrder order)
 HB_FUNC_STATIC(QMDIAREA_SETACTIVATIONORDER)
 {
   QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -308,9 +292,7 @@ HB_FUNC_STATIC(QMDIAREA_SETACTIVATIONORDER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setBackground(const QBrush &background)
-*/
+// void setBackground(const QBrush &background)
 HB_FUNC_STATIC(QMDIAREA_SETBACKGROUND)
 {
   QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -334,9 +316,7 @@ HB_FUNC_STATIC(QMDIAREA_SETBACKGROUND)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDocumentMode(bool enabled)
-*/
+// void setDocumentMode(bool enabled)
 HB_FUNC_STATIC(QMDIAREA_SETDOCUMENTMODE)
 {
   QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -360,9 +340,7 @@ HB_FUNC_STATIC(QMDIAREA_SETDOCUMENTMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setOption(QMdiArea::AreaOption option, bool on = true)
-*/
+// void setOption(QMdiArea::AreaOption option, bool on = true)
 HB_FUNC_STATIC(QMDIAREA_SETOPTION)
 {
   QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -386,9 +364,7 @@ HB_FUNC_STATIC(QMDIAREA_SETOPTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTabPosition(QTabWidget::TabPosition position)
-*/
+// void setTabPosition(QTabWidget::TabPosition position)
 HB_FUNC_STATIC(QMDIAREA_SETTABPOSITION)
 {
   QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -412,9 +388,7 @@ HB_FUNC_STATIC(QMDIAREA_SETTABPOSITION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTabShape(QTabWidget::TabShape shape)
-*/
+// void setTabShape(QTabWidget::TabShape shape)
 HB_FUNC_STATIC(QMDIAREA_SETTABSHAPE)
 {
   QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -438,9 +412,7 @@ HB_FUNC_STATIC(QMDIAREA_SETTABSHAPE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setViewMode(QMdiArea::ViewMode mode)
-*/
+// void setViewMode(QMdiArea::ViewMode mode)
 HB_FUNC_STATIC(QMDIAREA_SETVIEWMODE)
 {
   QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -464,9 +436,7 @@ HB_FUNC_STATIC(QMDIAREA_SETVIEWMODE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QList<QMdiSubWindow *> subWindowList(QMdiArea::WindowOrder order = QMdiArea::CreationOrder) const
-*/
+// QList<QMdiSubWindow *> subWindowList(QMdiArea::WindowOrder order = QMdiArea::CreationOrder) const
 HB_FUNC_STATIC(QMDIAREA_SUBWINDOWLIST)
 {
   QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -491,7 +461,7 @@ HB_FUNC_STATIC(QMDIAREA_SUBWINDOWLIST)
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, static_cast<QMdiSubWindow *>(list[i]));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -513,9 +483,7 @@ HB_FUNC_STATIC(QMDIAREA_SUBWINDOWLIST)
   }
 }
 
-/*
-QTabWidget::TabPosition tabPosition() const
-*/
+// QTabWidget::TabPosition tabPosition() const
 HB_FUNC_STATIC(QMDIAREA_TABPOSITION)
 {
   QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -537,9 +505,7 @@ HB_FUNC_STATIC(QMDIAREA_TABPOSITION)
   }
 }
 
-/*
-QTabWidget::TabShape tabShape() const
-*/
+// QTabWidget::TabShape tabShape() const
 HB_FUNC_STATIC(QMDIAREA_TABSHAPE)
 {
   QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -561,9 +527,7 @@ HB_FUNC_STATIC(QMDIAREA_TABSHAPE)
   }
 }
 
-/*
-bool testOption(QMdiArea::AreaOption option) const
-*/
+// bool testOption(QMdiArea::AreaOption option) const
 HB_FUNC_STATIC(QMDIAREA_TESTOPTION)
 {
   QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -585,9 +549,7 @@ HB_FUNC_STATIC(QMDIAREA_TESTOPTION)
   }
 }
 
-/*
-QMdiArea::ViewMode viewMode() const
-*/
+// QMdiArea::ViewMode viewMode() const
 HB_FUNC_STATIC(QMDIAREA_VIEWMODE)
 {
   QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -609,9 +571,7 @@ HB_FUNC_STATIC(QMDIAREA_VIEWMODE)
   }
 }
 
-/*
-virtual QSize minimumSizeHint() const
-*/
+// virtual QSize minimumSizeHint() const
 HB_FUNC_STATIC(QMDIAREA_MINIMUMSIZEHINT)
 {
   QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -634,9 +594,7 @@ HB_FUNC_STATIC(QMDIAREA_MINIMUMSIZEHINT)
   }
 }
 
-/*
-virtual QSize sizeHint() const
-*/
+// virtual QSize sizeHint() const
 HB_FUNC_STATIC(QMDIAREA_SIZEHINT)
 {
   QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -659,9 +617,7 @@ HB_FUNC_STATIC(QMDIAREA_SIZEHINT)
   }
 }
 
-/*
-void activateNextSubWindow()
-*/
+// void activateNextSubWindow()
 HB_FUNC_STATIC(QMDIAREA_ACTIVATENEXTSUBWINDOW)
 {
   QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -685,9 +641,7 @@ HB_FUNC_STATIC(QMDIAREA_ACTIVATENEXTSUBWINDOW)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void activatePreviousSubWindow()
-*/
+// void activatePreviousSubWindow()
 HB_FUNC_STATIC(QMDIAREA_ACTIVATEPREVIOUSSUBWINDOW)
 {
   QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -711,9 +665,7 @@ HB_FUNC_STATIC(QMDIAREA_ACTIVATEPREVIOUSSUBWINDOW)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void cascadeSubWindows()
-*/
+// void cascadeSubWindows()
 HB_FUNC_STATIC(QMDIAREA_CASCADESUBWINDOWS)
 {
   QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -737,9 +689,7 @@ HB_FUNC_STATIC(QMDIAREA_CASCADESUBWINDOWS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void closeActiveSubWindow()
-*/
+// void closeActiveSubWindow()
 HB_FUNC_STATIC(QMDIAREA_CLOSEACTIVESUBWINDOW)
 {
   QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -763,9 +713,7 @@ HB_FUNC_STATIC(QMDIAREA_CLOSEACTIVESUBWINDOW)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void closeAllSubWindows()
-*/
+// void closeAllSubWindows()
 HB_FUNC_STATIC(QMDIAREA_CLOSEALLSUBWINDOWS)
 {
   QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -789,9 +737,7 @@ HB_FUNC_STATIC(QMDIAREA_CLOSEALLSUBWINDOWS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setActiveSubWindow(QMdiSubWindow *window)
-*/
+// void setActiveSubWindow(QMdiSubWindow *window)
 HB_FUNC_STATIC(QMDIAREA_SETACTIVESUBWINDOW)
 {
   QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -815,9 +761,7 @@ HB_FUNC_STATIC(QMDIAREA_SETACTIVESUBWINDOW)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void tileSubWindows()
-*/
+// void tileSubWindows()
 HB_FUNC_STATIC(QMDIAREA_TILESUBWINDOWS)
 {
   QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());

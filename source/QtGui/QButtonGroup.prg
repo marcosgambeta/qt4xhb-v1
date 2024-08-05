@@ -60,7 +60,7 @@ RETURN
 
 #include <QtGui/QAbstractButton>
 
-// QButtonGroup(QObject *parent = 0)
+    // QButtonGroup(QObject *parent = 0)
 HB_FUNC_STATIC(QBUTTONGROUP_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
@@ -96,9 +96,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ADDBUTTON)
 {
   if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1))
   {
-    /*
-    void addButton(QAbstractButton *button)
-    */
+    // void addButton(QAbstractButton *button)
     QButtonGroup *obj = qobject_cast<QButtonGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -110,9 +108,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ADDBUTTON)
   }
   else if (ISNUMPAR(2) && ISQABSTRACTBUTTON(1) && HB_ISNUM(2))
   {
-    /*
-    void addButton(QAbstractButton *button, int id)
-    */
+    // void addButton(QAbstractButton *button, int id)
     QButtonGroup *obj = qobject_cast<QButtonGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -128,9 +124,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ADDBUTTON)
   }
 }
 
-/*
-QAbstractButton *button(int id) const
-*/
+// QAbstractButton *button(int id) const
 HB_FUNC_STATIC(QBUTTONGROUP_BUTTON)
 {
   QButtonGroup *obj = qobject_cast<QButtonGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -153,9 +147,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_BUTTON)
   }
 }
 
-/*
-QList<QAbstractButton *> buttons() const
-*/
+// QList<QAbstractButton *> buttons() const
 HB_FUNC_STATIC(QBUTTONGROUP_BUTTONS)
 {
   QButtonGroup *obj = qobject_cast<QButtonGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -179,7 +171,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_BUTTONS)
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, static_cast<QAbstractButton *>(list[i]));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -201,9 +193,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_BUTTONS)
   }
 }
 
-/*
-QAbstractButton *checkedButton() const
-*/
+// QAbstractButton *checkedButton() const
 HB_FUNC_STATIC(QBUTTONGROUP_CHECKEDBUTTON)
 {
   QButtonGroup *obj = qobject_cast<QButtonGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -226,9 +216,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_CHECKEDBUTTON)
   }
 }
 
-/*
-int checkedId() const
-*/
+// int checkedId() const
 HB_FUNC_STATIC(QBUTTONGROUP_CHECKEDID)
 {
   QButtonGroup *obj = qobject_cast<QButtonGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -250,9 +238,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_CHECKEDID)
   }
 }
 
-/*
-bool exclusive() const
-*/
+// bool exclusive() const
 HB_FUNC_STATIC(QBUTTONGROUP_EXCLUSIVE)
 {
   QButtonGroup *obj = qobject_cast<QButtonGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -274,9 +260,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_EXCLUSIVE)
   }
 }
 
-/*
-int id(QAbstractButton *button) const
-*/
+// int id(QAbstractButton *button) const
 HB_FUNC_STATIC(QBUTTONGROUP_ID)
 {
   QButtonGroup *obj = qobject_cast<QButtonGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -298,9 +282,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ID)
   }
 }
 
-/*
-void removeButton(QAbstractButton *button)
-*/
+// void removeButton(QAbstractButton *button)
 HB_FUNC_STATIC(QBUTTONGROUP_REMOVEBUTTON)
 {
   QButtonGroup *obj = qobject_cast<QButtonGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -324,9 +306,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_REMOVEBUTTON)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setExclusive(bool)
-*/
+// void setExclusive(bool)
 HB_FUNC_STATIC(QBUTTONGROUP_SETEXCLUSIVE)
 {
   QButtonGroup *obj = qobject_cast<QButtonGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -350,9 +330,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_SETEXCLUSIVE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setId(QAbstractButton *button, int id)
-*/
+// void setId(QAbstractButton *button, int id)
 HB_FUNC_STATIC(QBUTTONGROUP_SETID)
 {
   QButtonGroup *obj = qobject_cast<QButtonGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());

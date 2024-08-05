@@ -77,9 +77,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QList<QAction *> actions()
-*/
+// virtual QList<QAction *> actions()
 HB_FUNC_STATIC(QINPUTCONTEXT_ACTIONS)
 {
   QInputContext *obj = qobject_cast<QInputContext *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -103,7 +101,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_ACTIONS)
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, static_cast<QAction *>(list[i]));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -125,9 +123,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_ACTIONS)
   }
 }
 
-/*
-virtual bool filterEvent(const QEvent *event)
-*/
+// virtual bool filterEvent(const QEvent *event)
 HB_FUNC_STATIC(QINPUTCONTEXT_FILTEREVENT)
 {
   QInputContext *obj = qobject_cast<QInputContext *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -149,9 +145,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_FILTEREVENT)
   }
 }
 
-/*
-QWidget *focusWidget() const
-*/
+// QWidget *focusWidget() const
 HB_FUNC_STATIC(QINPUTCONTEXT_FOCUSWIDGET)
 {
   QInputContext *obj = qobject_cast<QInputContext *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -174,9 +168,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_FOCUSWIDGET)
   }
 }
 
-/*
-virtual QFont font() const
-*/
+// virtual QFont font() const
 HB_FUNC_STATIC(QINPUTCONTEXT_FONT)
 {
   QInputContext *obj = qobject_cast<QInputContext *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -199,9 +191,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_FONT)
   }
 }
 
-/*
-virtual QString identifierName() = 0
-*/
+// virtual QString identifierName() = 0
 HB_FUNC_STATIC(QINPUTCONTEXT_IDENTIFIERNAME)
 {
   QInputContext *obj = qobject_cast<QInputContext *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -223,9 +213,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_IDENTIFIERNAME)
   }
 }
 
-/*
-virtual bool isComposing() const = 0
-*/
+// virtual bool isComposing() const = 0
 HB_FUNC_STATIC(QINPUTCONTEXT_ISCOMPOSING)
 {
   QInputContext *obj = qobject_cast<QInputContext *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -247,9 +235,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_ISCOMPOSING)
   }
 }
 
-/*
-virtual QString language() = 0
-*/
+// virtual QString language() = 0
 HB_FUNC_STATIC(QINPUTCONTEXT_LANGUAGE)
 {
   QInputContext *obj = qobject_cast<QInputContext *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -271,9 +257,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_LANGUAGE)
   }
 }
 
-/*
-virtual void mouseHandler(int x, QMouseEvent *event)
-*/
+// virtual void mouseHandler(int x, QMouseEvent *event)
 HB_FUNC_STATIC(QINPUTCONTEXT_MOUSEHANDLER)
 {
   QInputContext *obj = qobject_cast<QInputContext *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -297,9 +281,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_MOUSEHANDLER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void reset() = 0
-*/
+// virtual void reset() = 0
 HB_FUNC_STATIC(QINPUTCONTEXT_RESET)
 {
   QInputContext *obj = qobject_cast<QInputContext *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -323,9 +305,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_RESET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void sendEvent(const QInputMethodEvent &event)
-*/
+// void sendEvent(const QInputMethodEvent &event)
 HB_FUNC_STATIC(QINPUTCONTEXT_SENDEVENT)
 {
   QInputContext *obj = qobject_cast<QInputContext *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -349,9 +329,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_SENDEVENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setFocusWidget(QWidget *widget)
-*/
+// virtual void setFocusWidget(QWidget *widget)
 HB_FUNC_STATIC(QINPUTCONTEXT_SETFOCUSWIDGET)
 {
   QInputContext *obj = qobject_cast<QInputContext *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -375,9 +353,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_SETFOCUSWIDGET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QTextFormat standardFormat(QInputContext::StandardFormat s) const
-*/
+// QTextFormat standardFormat(QInputContext::StandardFormat s) const
 HB_FUNC_STATIC(QINPUTCONTEXT_STANDARDFORMAT)
 {
   QInputContext *obj = qobject_cast<QInputContext *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -400,9 +376,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_STANDARDFORMAT)
   }
 }
 
-/*
-virtual void update()
-*/
+// virtual void update()
 HB_FUNC_STATIC(QINPUTCONTEXT_UPDATE)
 {
   QInputContext *obj = qobject_cast<QInputContext *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -426,9 +400,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_UPDATE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void widgetDestroyed(QWidget *widget)
-*/
+// virtual void widgetDestroyed(QWidget *widget)
 HB_FUNC_STATIC(QINPUTCONTEXT_WIDGETDESTROYED)
 {
   QInputContext *obj = qobject_cast<QInputContext *>(Qt4xHb::getQObjectPointerFromSelfItem());

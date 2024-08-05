@@ -86,9 +86,7 @@ HB_FUNC_STATIC(QSLIDER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTickInterval(int ti)
-*/
+// void setTickInterval(int ti)
 HB_FUNC_STATIC(QSLIDER_SETTICKINTERVAL)
 {
   QSlider *obj = qobject_cast<QSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -112,9 +110,7 @@ HB_FUNC_STATIC(QSLIDER_SETTICKINTERVAL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTickPosition(QSlider::TickPosition position)
-*/
+// void setTickPosition(QSlider::TickPosition position)
 HB_FUNC_STATIC(QSLIDER_SETTICKPOSITION)
 {
   QSlider *obj = qobject_cast<QSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -138,9 +134,7 @@ HB_FUNC_STATIC(QSLIDER_SETTICKPOSITION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int tickInterval() const
-*/
+// int tickInterval() const
 HB_FUNC_STATIC(QSLIDER_TICKINTERVAL)
 {
   QSlider *obj = qobject_cast<QSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -162,9 +156,7 @@ HB_FUNC_STATIC(QSLIDER_TICKINTERVAL)
   }
 }
 
-/*
-QSlider::TickPosition tickPosition() const
-*/
+// QSlider::TickPosition tickPosition() const
 HB_FUNC_STATIC(QSLIDER_TICKPOSITION)
 {
   QSlider *obj = qobject_cast<QSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -186,9 +178,7 @@ HB_FUNC_STATIC(QSLIDER_TICKPOSITION)
   }
 }
 
-/*
-virtual bool event(QEvent *event)
-*/
+// virtual bool event(QEvent *event)
 HB_FUNC_STATIC(QSLIDER_EVENT)
 {
   QSlider *obj = qobject_cast<QSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -210,9 +200,7 @@ HB_FUNC_STATIC(QSLIDER_EVENT)
   }
 }
 
-/*
-virtual QSize minimumSizeHint() const
-*/
+// virtual QSize minimumSizeHint() const
 HB_FUNC_STATIC(QSLIDER_MINIMUMSIZEHINT)
 {
   QSlider *obj = qobject_cast<QSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -235,9 +223,7 @@ HB_FUNC_STATIC(QSLIDER_MINIMUMSIZEHINT)
   }
 }
 
-/*
-virtual QSize sizeHint() const
-*/
+// virtual QSize sizeHint() const
 HB_FUNC_STATIC(QSLIDER_SIZEHINT)
 {
   QSlider *obj = qobject_cast<QSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());

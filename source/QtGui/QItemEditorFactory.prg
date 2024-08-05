@@ -54,7 +54,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-// QItemEditorFactory()
+    // QItemEditorFactory()
 HB_FUNC_STATIC(QITEMEDITORFACTORY_NEW)
 {
   if (ISNUMPAR(0))
@@ -84,9 +84,7 @@ HB_FUNC_STATIC(QITEMEDITORFACTORY_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QWidget *createEditor(QVariant::Type type, QWidget *parent) const
-*/
+// virtual QWidget *createEditor(QVariant::Type type, QWidget *parent) const
 HB_FUNC_STATIC(QITEMEDITORFACTORY_CREATEEDITOR)
 {
   QItemEditorFactory *obj = static_cast<QItemEditorFactory *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -109,9 +107,7 @@ HB_FUNC_STATIC(QITEMEDITORFACTORY_CREATEEDITOR)
   }
 }
 
-/*
-void registerEditor(QVariant::Type type, QItemEditorCreatorBase *creator)
-*/
+// void registerEditor(QVariant::Type type, QItemEditorCreatorBase *creator)
 HB_FUNC_STATIC(QITEMEDITORFACTORY_REGISTEREDITOR)
 {
   QItemEditorFactory *obj = static_cast<QItemEditorFactory *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -135,9 +131,7 @@ HB_FUNC_STATIC(QITEMEDITORFACTORY_REGISTEREDITOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QByteArray valuePropertyName(QVariant::Type type) const
-*/
+// virtual QByteArray valuePropertyName(QVariant::Type type) const
 HB_FUNC_STATIC(QITEMEDITORFACTORY_VALUEPROPERTYNAME)
 {
   QItemEditorFactory *obj = static_cast<QItemEditorFactory *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -160,9 +154,7 @@ HB_FUNC_STATIC(QITEMEDITORFACTORY_VALUEPROPERTYNAME)
   }
 }
 
-/*
-static const QItemEditorFactory *defaultFactory()
-*/
+// static const QItemEditorFactory *defaultFactory()
 HB_FUNC_STATIC(QITEMEDITORFACTORY_DEFAULTFACTORY)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -180,9 +172,7 @@ HB_FUNC_STATIC(QITEMEDITORFACTORY_DEFAULTFACTORY)
 #endif
 }
 
-/*
-static void setDefaultFactory(QItemEditorFactory *factory)
-*/
+// static void setDefaultFactory(QItemEditorFactory *factory)
 HB_FUNC_STATIC(QITEMEDITORFACTORY_SETDEFAULTFACTORY)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

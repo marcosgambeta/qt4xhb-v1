@@ -76,9 +76,7 @@ HB_FUNC_STATIC(QWINDOWSTATECHANGEEVENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Qt::WindowStates oldState() const
-*/
+// Qt::WindowStates oldState() const
 HB_FUNC_STATIC(QWINDOWSTATECHANGEEVENT_OLDSTATE)
 {
   QWindowStateChangeEvent *obj = static_cast<QWindowStateChangeEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -100,9 +98,7 @@ HB_FUNC_STATIC(QWINDOWSTATECHANGEEVENT_OLDSTATE)
   }
 }
 
-/*
-bool isOverride() const
-*/
+// bool isOverride() const
 HB_FUNC_STATIC(QWINDOWSTATECHANGEEVENT_ISOVERRIDE)
 {
   QWindowStateChangeEvent *obj = static_cast<QWindowStateChangeEvent *>(Qt4xHb::itemGetPtrStackSelfItem());

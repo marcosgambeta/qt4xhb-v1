@@ -120,9 +120,7 @@ HB_FUNC_STATIC(QTOOLBAR_ACTIONAT)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
-    /*
-    QAction *actionAt(int x, int y) const
-    */
+    // QAction *actionAt(int x, int y) const
     QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -133,9 +131,7 @@ HB_FUNC_STATIC(QTOOLBAR_ACTIONAT)
   }
   else if (ISNUMPAR(1) && ISQPOINT(1))
   {
-    /*
-    QAction *actionAt(const QPoint &p) const
-    */
+    // QAction *actionAt(const QPoint &p) const
     QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -154,9 +150,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDACTION)
 {
   if (ISNUMPAR(1) && ISQACTION(1))
   {
-    /*
-    void addAction(QAction *action)
-    */
+    // void addAction(QAction *action)
     QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -168,9 +162,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDACTION)
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    QAction *addAction(const QString &text)
-    */
+    // QAction *addAction(const QString &text)
     QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -181,9 +173,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDACTION)
   }
   else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2))
   {
-    /*
-    QAction *addAction(const QIcon &icon, const QString &text)
-    */
+    // QAction *addAction(const QIcon &icon, const QString &text)
     QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -195,9 +185,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDACTION)
   }
   else if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQOBJECT(2) && HB_ISCHAR(3))
   {
-    /*
-    QAction *addAction(const QString &text, const QObject *receiver, const char *member)
-    */
+    // QAction *addAction(const QString &text, const QObject *receiver, const char *member)
     QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -208,9 +196,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDACTION)
   }
   else if (ISNUMPAR(4) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && ISQOBJECT(3) && HB_ISCHAR(4))
   {
-    /*
-    QAction *addAction(const QIcon &icon, const QString &text, const QObject *receiver, const char *member)
-    */
+    // QAction *addAction(const QIcon &icon, const QString &text, const QObject *receiver, const char *member)
     QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -226,9 +212,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDACTION)
   }
 }
 
-/*
-QAction *addSeparator()
-*/
+// QAction *addSeparator()
 HB_FUNC_STATIC(QTOOLBAR_ADDSEPARATOR)
 {
   QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -251,9 +235,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDSEPARATOR)
   }
 }
 
-/*
-QAction *addWidget(QWidget *widget)
-*/
+// QAction *addWidget(QWidget *widget)
 HB_FUNC_STATIC(QTOOLBAR_ADDWIDGET)
 {
   QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -276,9 +258,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDWIDGET)
   }
 }
 
-/*
-Qt::ToolBarAreas allowedAreas() const
-*/
+// Qt::ToolBarAreas allowedAreas() const
 HB_FUNC_STATIC(QTOOLBAR_ALLOWEDAREAS)
 {
   QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -300,9 +280,7 @@ HB_FUNC_STATIC(QTOOLBAR_ALLOWEDAREAS)
   }
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QTOOLBAR_CLEAR)
 {
   QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -326,9 +304,7 @@ HB_FUNC_STATIC(QTOOLBAR_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSize iconSize() const
-*/
+// QSize iconSize() const
 HB_FUNC_STATIC(QTOOLBAR_ICONSIZE)
 {
   QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -351,9 +327,7 @@ HB_FUNC_STATIC(QTOOLBAR_ICONSIZE)
   }
 }
 
-/*
-QAction *insertSeparator(QAction *before)
-*/
+// QAction *insertSeparator(QAction *before)
 HB_FUNC_STATIC(QTOOLBAR_INSERTSEPARATOR)
 {
   QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -376,9 +350,7 @@ HB_FUNC_STATIC(QTOOLBAR_INSERTSEPARATOR)
   }
 }
 
-/*
-QAction *insertWidget(QAction *before, QWidget *widget)
-*/
+// QAction *insertWidget(QAction *before, QWidget *widget)
 HB_FUNC_STATIC(QTOOLBAR_INSERTWIDGET)
 {
   QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -401,9 +373,7 @@ HB_FUNC_STATIC(QTOOLBAR_INSERTWIDGET)
   }
 }
 
-/*
-bool isAreaAllowed(Qt::ToolBarArea area) const
-*/
+// bool isAreaAllowed(Qt::ToolBarArea area) const
 HB_FUNC_STATIC(QTOOLBAR_ISAREAALLOWED)
 {
   QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -425,9 +395,7 @@ HB_FUNC_STATIC(QTOOLBAR_ISAREAALLOWED)
   }
 }
 
-/*
-bool isFloatable() const
-*/
+// bool isFloatable() const
 HB_FUNC_STATIC(QTOOLBAR_ISFLOATABLE)
 {
   QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -449,9 +417,7 @@ HB_FUNC_STATIC(QTOOLBAR_ISFLOATABLE)
   }
 }
 
-/*
-bool isFloating() const
-*/
+// bool isFloating() const
 HB_FUNC_STATIC(QTOOLBAR_ISFLOATING)
 {
   QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -473,9 +439,7 @@ HB_FUNC_STATIC(QTOOLBAR_ISFLOATING)
   }
 }
 
-/*
-bool isMovable() const
-*/
+// bool isMovable() const
 HB_FUNC_STATIC(QTOOLBAR_ISMOVABLE)
 {
   QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -497,9 +461,7 @@ HB_FUNC_STATIC(QTOOLBAR_ISMOVABLE)
   }
 }
 
-/*
-Qt::Orientation orientation() const
-*/
+// Qt::Orientation orientation() const
 HB_FUNC_STATIC(QTOOLBAR_ORIENTATION)
 {
   QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -521,9 +483,7 @@ HB_FUNC_STATIC(QTOOLBAR_ORIENTATION)
   }
 }
 
-/*
-void setAllowedAreas(Qt::ToolBarAreas areas)
-*/
+// void setAllowedAreas(Qt::ToolBarAreas areas)
 HB_FUNC_STATIC(QTOOLBAR_SETALLOWEDAREAS)
 {
   QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -547,9 +507,7 @@ HB_FUNC_STATIC(QTOOLBAR_SETALLOWEDAREAS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFloatable(bool floatable)
-*/
+// void setFloatable(bool floatable)
 HB_FUNC_STATIC(QTOOLBAR_SETFLOATABLE)
 {
   QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -573,9 +531,7 @@ HB_FUNC_STATIC(QTOOLBAR_SETFLOATABLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setMovable(bool movable)
-*/
+// void setMovable(bool movable)
 HB_FUNC_STATIC(QTOOLBAR_SETMOVABLE)
 {
   QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -599,9 +555,7 @@ HB_FUNC_STATIC(QTOOLBAR_SETMOVABLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setOrientation(Qt::Orientation orientation)
-*/
+// void setOrientation(Qt::Orientation orientation)
 HB_FUNC_STATIC(QTOOLBAR_SETORIENTATION)
 {
   QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -625,9 +579,7 @@ HB_FUNC_STATIC(QTOOLBAR_SETORIENTATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAction *toggleViewAction() const
-*/
+// QAction *toggleViewAction() const
 HB_FUNC_STATIC(QTOOLBAR_TOGGLEVIEWACTION)
 {
   QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -650,9 +602,7 @@ HB_FUNC_STATIC(QTOOLBAR_TOGGLEVIEWACTION)
   }
 }
 
-/*
-Qt::ToolButtonStyle toolButtonStyle() const
-*/
+// Qt::ToolButtonStyle toolButtonStyle() const
 HB_FUNC_STATIC(QTOOLBAR_TOOLBUTTONSTYLE)
 {
   QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -674,9 +624,7 @@ HB_FUNC_STATIC(QTOOLBAR_TOOLBUTTONSTYLE)
   }
 }
 
-/*
-QWidget *widgetForAction(QAction *action) const
-*/
+// QWidget *widgetForAction(QAction *action) const
 HB_FUNC_STATIC(QTOOLBAR_WIDGETFORACTION)
 {
   QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -699,9 +647,7 @@ HB_FUNC_STATIC(QTOOLBAR_WIDGETFORACTION)
   }
 }
 
-/*
-void setIconSize(const QSize &iconSize)
-*/
+// void setIconSize(const QSize &iconSize)
 HB_FUNC_STATIC(QTOOLBAR_SETICONSIZE)
 {
   QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -725,9 +671,7 @@ HB_FUNC_STATIC(QTOOLBAR_SETICONSIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setToolButtonStyle(Qt::ToolButtonStyle toolButtonStyle)
-*/
+// void setToolButtonStyle(Qt::ToolButtonStyle toolButtonStyle)
 HB_FUNC_STATIC(QTOOLBAR_SETTOOLBUTTONSTYLE)
 {
   QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());

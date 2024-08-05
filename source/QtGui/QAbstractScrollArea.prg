@@ -79,9 +79,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addScrollBarWidget(QWidget *widget, Qt::Alignment alignment)
-*/
+// void addScrollBarWidget(QWidget *widget, Qt::Alignment alignment)
 HB_FUNC_STATIC(QABSTRACTSCROLLAREA_ADDSCROLLBARWIDGET)
 {
   QAbstractScrollArea *obj = qobject_cast<QAbstractScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -105,9 +103,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_ADDSCROLLBARWIDGET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWidget *cornerWidget() const
-*/
+// QWidget *cornerWidget() const
 HB_FUNC_STATIC(QABSTRACTSCROLLAREA_CORNERWIDGET)
 {
   QAbstractScrollArea *obj = qobject_cast<QAbstractScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -130,9 +126,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_CORNERWIDGET)
   }
 }
 
-/*
-QScrollBar *horizontalScrollBar() const
-*/
+// QScrollBar *horizontalScrollBar() const
 HB_FUNC_STATIC(QABSTRACTSCROLLAREA_HORIZONTALSCROLLBAR)
 {
   QAbstractScrollArea *obj = qobject_cast<QAbstractScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -155,9 +149,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_HORIZONTALSCROLLBAR)
   }
 }
 
-/*
-Qt::ScrollBarPolicy horizontalScrollBarPolicy() const
-*/
+// Qt::ScrollBarPolicy horizontalScrollBarPolicy() const
 HB_FUNC_STATIC(QABSTRACTSCROLLAREA_HORIZONTALSCROLLBARPOLICY)
 {
   QAbstractScrollArea *obj = qobject_cast<QAbstractScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -179,9 +171,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_HORIZONTALSCROLLBARPOLICY)
   }
 }
 
-/*
-QSize maximumViewportSize() const
-*/
+// QSize maximumViewportSize() const
 HB_FUNC_STATIC(QABSTRACTSCROLLAREA_MAXIMUMVIEWPORTSIZE)
 {
   QAbstractScrollArea *obj = qobject_cast<QAbstractScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -204,9 +194,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_MAXIMUMVIEWPORTSIZE)
   }
 }
 
-/*
-QWidgetList scrollBarWidgets(Qt::Alignment alignment)
-*/
+// QWidgetList scrollBarWidgets(Qt::Alignment alignment)
 HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SCROLLBARWIDGETS)
 {
   QAbstractScrollArea *obj = qobject_cast<QAbstractScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -230,7 +218,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SCROLLBARWIDGETS)
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, static_cast<QWidget *>(list[i]));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -252,9 +240,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SCROLLBARWIDGETS)
   }
 }
 
-/*
-void setCornerWidget(QWidget *widget)
-*/
+// void setCornerWidget(QWidget *widget)
 HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SETCORNERWIDGET)
 {
   QAbstractScrollArea *obj = qobject_cast<QAbstractScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -278,9 +264,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SETCORNERWIDGET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setHorizontalScrollBar(QScrollBar *scrollBar)
-*/
+// void setHorizontalScrollBar(QScrollBar *scrollBar)
 HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBAR)
 {
   QAbstractScrollArea *obj = qobject_cast<QAbstractScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -304,9 +288,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setHorizontalScrollBarPolicy(Qt::ScrollBarPolicy)
-*/
+// void setHorizontalScrollBarPolicy(Qt::ScrollBarPolicy)
 HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBARPOLICY)
 {
   QAbstractScrollArea *obj = qobject_cast<QAbstractScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -330,9 +312,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBARPOLICY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setVerticalScrollBar(QScrollBar *scrollBar)
-*/
+// void setVerticalScrollBar(QScrollBar *scrollBar)
 HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SETVERTICALSCROLLBAR)
 {
   QAbstractScrollArea *obj = qobject_cast<QAbstractScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -356,9 +336,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SETVERTICALSCROLLBAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setVerticalScrollBarPolicy(Qt::ScrollBarPolicy)
-*/
+// void setVerticalScrollBarPolicy(Qt::ScrollBarPolicy)
 HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SETVERTICALSCROLLBARPOLICY)
 {
   QAbstractScrollArea *obj = qobject_cast<QAbstractScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -382,9 +360,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SETVERTICALSCROLLBARPOLICY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setViewport(QWidget *widget)
-*/
+// void setViewport(QWidget *widget)
 HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SETVIEWPORT)
 {
   QAbstractScrollArea *obj = qobject_cast<QAbstractScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -408,9 +384,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SETVIEWPORT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QScrollBar *verticalScrollBar() const
-*/
+// QScrollBar *verticalScrollBar() const
 HB_FUNC_STATIC(QABSTRACTSCROLLAREA_VERTICALSCROLLBAR)
 {
   QAbstractScrollArea *obj = qobject_cast<QAbstractScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -433,9 +407,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_VERTICALSCROLLBAR)
   }
 }
 
-/*
-Qt::ScrollBarPolicy verticalScrollBarPolicy() const
-*/
+// Qt::ScrollBarPolicy verticalScrollBarPolicy() const
 HB_FUNC_STATIC(QABSTRACTSCROLLAREA_VERTICALSCROLLBARPOLICY)
 {
   QAbstractScrollArea *obj = qobject_cast<QAbstractScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -457,9 +429,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_VERTICALSCROLLBARPOLICY)
   }
 }
 
-/*
-QWidget *viewport() const
-*/
+// QWidget *viewport() const
 HB_FUNC_STATIC(QABSTRACTSCROLLAREA_VIEWPORT)
 {
   QAbstractScrollArea *obj = qobject_cast<QAbstractScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -482,9 +452,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_VIEWPORT)
   }
 }
 
-/*
-virtual QSize minimumSizeHint() const
-*/
+// virtual QSize minimumSizeHint() const
 HB_FUNC_STATIC(QABSTRACTSCROLLAREA_MINIMUMSIZEHINT)
 {
   QAbstractScrollArea *obj = qobject_cast<QAbstractScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -507,9 +475,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_MINIMUMSIZEHINT)
   }
 }
 
-/*
-virtual QSize sizeHint() const
-*/
+// virtual QSize sizeHint() const
 HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SIZEHINT)
 {
   QAbstractScrollArea *obj = qobject_cast<QAbstractScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());

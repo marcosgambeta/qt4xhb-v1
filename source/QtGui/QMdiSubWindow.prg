@@ -65,7 +65,7 @@ RETURN
 #include <QtGui/QMdiArea>
 #include <QtGui/QMenu>
 
-// QMdiSubWindow(QWidget *parent = 0, Qt::WindowFlags flags = 0)
+    // QMdiSubWindow(QWidget *parent = 0, Qt::WindowFlags flags = 0)
 HB_FUNC_STATIC(QMDISUBWINDOW_NEW)
 {
   if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
@@ -80,9 +80,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_NEW)
   }
 }
 
-/*
-bool isShaded() const
-*/
+// bool isShaded() const
 HB_FUNC_STATIC(QMDISUBWINDOW_ISSHADED)
 {
   QMdiSubWindow *obj = qobject_cast<QMdiSubWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -104,9 +102,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_ISSHADED)
   }
 }
 
-/*
-int keyboardPageStep() const
-*/
+// int keyboardPageStep() const
 HB_FUNC_STATIC(QMDISUBWINDOW_KEYBOARDPAGESTEP)
 {
   QMdiSubWindow *obj = qobject_cast<QMdiSubWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -128,9 +124,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_KEYBOARDPAGESTEP)
   }
 }
 
-/*
-int keyboardSingleStep() const
-*/
+// int keyboardSingleStep() const
 HB_FUNC_STATIC(QMDISUBWINDOW_KEYBOARDSINGLESTEP)
 {
   QMdiSubWindow *obj = qobject_cast<QMdiSubWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -152,9 +146,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_KEYBOARDSINGLESTEP)
   }
 }
 
-/*
-QMdiArea *mdiArea() const
-*/
+// QMdiArea *mdiArea() const
 HB_FUNC_STATIC(QMDISUBWINDOW_MDIAREA)
 {
   QMdiSubWindow *obj = qobject_cast<QMdiSubWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -177,9 +169,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_MDIAREA)
   }
 }
 
-/*
-void setKeyboardPageStep(int step)
-*/
+// void setKeyboardPageStep(int step)
 HB_FUNC_STATIC(QMDISUBWINDOW_SETKEYBOARDPAGESTEP)
 {
   QMdiSubWindow *obj = qobject_cast<QMdiSubWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -203,9 +193,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_SETKEYBOARDPAGESTEP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setKeyboardSingleStep(int step)
-*/
+// void setKeyboardSingleStep(int step)
 HB_FUNC_STATIC(QMDISUBWINDOW_SETKEYBOARDSINGLESTEP)
 {
   QMdiSubWindow *obj = qobject_cast<QMdiSubWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -229,9 +217,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_SETKEYBOARDSINGLESTEP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setOption(QMdiSubWindow::SubWindowOption option, bool on = true)
-*/
+// void setOption(QMdiSubWindow::SubWindowOption option, bool on = true)
 HB_FUNC_STATIC(QMDISUBWINDOW_SETOPTION)
 {
   QMdiSubWindow *obj = qobject_cast<QMdiSubWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -255,9 +241,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_SETOPTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSystemMenu(QMenu *systemMenu)
-*/
+// void setSystemMenu(QMenu *systemMenu)
 HB_FUNC_STATIC(QMDISUBWINDOW_SETSYSTEMMENU)
 {
   QMdiSubWindow *obj = qobject_cast<QMdiSubWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -281,9 +265,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_SETSYSTEMMENU)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWidget(QWidget *widget)
-*/
+// void setWidget(QWidget *widget)
 HB_FUNC_STATIC(QMDISUBWINDOW_SETWIDGET)
 {
   QMdiSubWindow *obj = qobject_cast<QMdiSubWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -307,9 +289,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_SETWIDGET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QMenu *systemMenu() const
-*/
+// QMenu *systemMenu() const
 HB_FUNC_STATIC(QMDISUBWINDOW_SYSTEMMENU)
 {
   QMdiSubWindow *obj = qobject_cast<QMdiSubWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -332,9 +312,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_SYSTEMMENU)
   }
 }
 
-/*
-bool testOption(QMdiSubWindow::SubWindowOption option) const
-*/
+// bool testOption(QMdiSubWindow::SubWindowOption option) const
 HB_FUNC_STATIC(QMDISUBWINDOW_TESTOPTION)
 {
   QMdiSubWindow *obj = qobject_cast<QMdiSubWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -356,9 +334,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_TESTOPTION)
   }
 }
 
-/*
-QWidget *widget() const
-*/
+// QWidget *widget() const
 HB_FUNC_STATIC(QMDISUBWINDOW_WIDGET)
 {
   QMdiSubWindow *obj = qobject_cast<QMdiSubWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -381,9 +357,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_WIDGET)
   }
 }
 
-/*
-virtual QSize minimumSizeHint() const
-*/
+// virtual QSize minimumSizeHint() const
 HB_FUNC_STATIC(QMDISUBWINDOW_MINIMUMSIZEHINT)
 {
   QMdiSubWindow *obj = qobject_cast<QMdiSubWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -406,9 +380,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_MINIMUMSIZEHINT)
   }
 }
 
-/*
-virtual QSize sizeHint() const
-*/
+// virtual QSize sizeHint() const
 HB_FUNC_STATIC(QMDISUBWINDOW_SIZEHINT)
 {
   QMdiSubWindow *obj = qobject_cast<QMdiSubWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -431,9 +403,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_SIZEHINT)
   }
 }
 
-/*
-void showShaded()
-*/
+// void showShaded()
 HB_FUNC_STATIC(QMDISUBWINDOW_SHOWSHADED)
 {
   QMdiSubWindow *obj = qobject_cast<QMdiSubWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -457,9 +427,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_SHOWSHADED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void showSystemMenu()
-*/
+// void showSystemMenu()
 HB_FUNC_STATIC(QMDISUBWINDOW_SHOWSYSTEMMENU)
 {
   QMdiSubWindow *obj = qobject_cast<QMdiSubWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());

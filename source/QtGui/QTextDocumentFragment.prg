@@ -100,9 +100,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isEmpty() const
-*/
+// bool isEmpty() const
 HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_ISEMPTY)
 {
   QTextDocumentFragment *obj = static_cast<QTextDocumentFragment *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -128,9 +126,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_TOHTML)
 {
   if (ISNUMPAR(1) && ISQBYTEARRAY(1))
   {
-    /*
-    QString toHtml(const QByteArray &encoding) const
-    */
+    // QString toHtml(const QByteArray &encoding) const
     QTextDocumentFragment *obj = static_cast<QTextDocumentFragment *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -140,9 +136,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_TOHTML)
   }
   else if (ISNUMPAR(0))
   {
-    /*
-    QString toHtml() const
-    */
+    // QString toHtml() const
     QTextDocumentFragment *obj = static_cast<QTextDocumentFragment *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -156,9 +150,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_TOHTML)
   }
 }
 
-/*
-QString toPlainText() const
-*/
+// QString toPlainText() const
 HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_TOPLAINTEXT)
 {
   QTextDocumentFragment *obj = static_cast<QTextDocumentFragment *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -184,18 +176,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_FROMHTML)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    static QTextDocumentFragment fromHtml(const QString &text)
-    */
+    // static QTextDocumentFragment fromHtml(const QString &text)
 
     QTextDocumentFragment *ptr = new QTextDocumentFragment(QTextDocumentFragment::fromHtml(PQSTRING(1)));
     Qt4xHb::createReturnClass(ptr, "QTEXTDOCUMENTFRAGMENT", true);
   }
   else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQTEXTDOCUMENT(2))
   {
-    /*
-    static QTextDocumentFragment fromHtml(const QString &text, const QTextDocument *resourceProvider)
-    */
+    // static QTextDocumentFragment fromHtml(const QString &text, const QTextDocument *resourceProvider)
 
     QTextDocumentFragment *ptr =
         new QTextDocumentFragment(QTextDocumentFragment::fromHtml(PQSTRING(1), PQTEXTDOCUMENT(2)));
@@ -207,9 +195,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_FROMHTML)
   }
 }
 
-/*
-static QTextDocumentFragment fromPlainText(const QString &plainText)
-*/
+// static QTextDocumentFragment fromPlainText(const QString &plainText)
 HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_FROMPLAINTEXT)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

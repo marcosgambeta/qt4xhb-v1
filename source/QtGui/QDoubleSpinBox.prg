@@ -62,7 +62,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QDoubleSpinBox(QWidget *parent = 0)
+    // QDoubleSpinBox(QWidget *parent = 0)
 HB_FUNC_STATIC(QDOUBLESPINBOX_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
@@ -76,9 +76,7 @@ HB_FUNC_STATIC(QDOUBLESPINBOX_NEW)
   }
 }
 
-/*
-QString cleanText() const
-*/
+// QString cleanText() const
 HB_FUNC_STATIC(QDOUBLESPINBOX_CLEANTEXT)
 {
   QDoubleSpinBox *obj = qobject_cast<QDoubleSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -100,9 +98,7 @@ HB_FUNC_STATIC(QDOUBLESPINBOX_CLEANTEXT)
   }
 }
 
-/*
-int decimals() const
-*/
+// int decimals() const
 HB_FUNC_STATIC(QDOUBLESPINBOX_DECIMALS)
 {
   QDoubleSpinBox *obj = qobject_cast<QDoubleSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -124,9 +120,7 @@ HB_FUNC_STATIC(QDOUBLESPINBOX_DECIMALS)
   }
 }
 
-/*
-double maximum() const
-*/
+// double maximum() const
 HB_FUNC_STATIC(QDOUBLESPINBOX_MAXIMUM)
 {
   QDoubleSpinBox *obj = qobject_cast<QDoubleSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -148,9 +142,7 @@ HB_FUNC_STATIC(QDOUBLESPINBOX_MAXIMUM)
   }
 }
 
-/*
-double minimum() const
-*/
+// double minimum() const
 HB_FUNC_STATIC(QDOUBLESPINBOX_MINIMUM)
 {
   QDoubleSpinBox *obj = qobject_cast<QDoubleSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -172,9 +164,7 @@ HB_FUNC_STATIC(QDOUBLESPINBOX_MINIMUM)
   }
 }
 
-/*
-QString prefix() const
-*/
+// QString prefix() const
 HB_FUNC_STATIC(QDOUBLESPINBOX_PREFIX)
 {
   QDoubleSpinBox *obj = qobject_cast<QDoubleSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -196,9 +186,7 @@ HB_FUNC_STATIC(QDOUBLESPINBOX_PREFIX)
   }
 }
 
-/*
-void setDecimals(int prec)
-*/
+// void setDecimals(int prec)
 HB_FUNC_STATIC(QDOUBLESPINBOX_SETDECIMALS)
 {
   QDoubleSpinBox *obj = qobject_cast<QDoubleSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -222,9 +210,7 @@ HB_FUNC_STATIC(QDOUBLESPINBOX_SETDECIMALS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setMaximum(double max)
-*/
+// void setMaximum(double max)
 HB_FUNC_STATIC(QDOUBLESPINBOX_SETMAXIMUM)
 {
   QDoubleSpinBox *obj = qobject_cast<QDoubleSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -248,9 +234,7 @@ HB_FUNC_STATIC(QDOUBLESPINBOX_SETMAXIMUM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setMinimum(double min)
-*/
+// void setMinimum(double min)
 HB_FUNC_STATIC(QDOUBLESPINBOX_SETMINIMUM)
 {
   QDoubleSpinBox *obj = qobject_cast<QDoubleSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -274,9 +258,7 @@ HB_FUNC_STATIC(QDOUBLESPINBOX_SETMINIMUM)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPrefix(const QString &prefix)
-*/
+// void setPrefix(const QString &prefix)
 HB_FUNC_STATIC(QDOUBLESPINBOX_SETPREFIX)
 {
   QDoubleSpinBox *obj = qobject_cast<QDoubleSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -300,9 +282,7 @@ HB_FUNC_STATIC(QDOUBLESPINBOX_SETPREFIX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setRange(double minimum, double maximum)
-*/
+// void setRange(double minimum, double maximum)
 HB_FUNC_STATIC(QDOUBLESPINBOX_SETRANGE)
 {
   QDoubleSpinBox *obj = qobject_cast<QDoubleSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -326,9 +306,7 @@ HB_FUNC_STATIC(QDOUBLESPINBOX_SETRANGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSingleStep(double val)
-*/
+// void setSingleStep(double val)
 HB_FUNC_STATIC(QDOUBLESPINBOX_SETSINGLESTEP)
 {
   QDoubleSpinBox *obj = qobject_cast<QDoubleSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -352,9 +330,7 @@ HB_FUNC_STATIC(QDOUBLESPINBOX_SETSINGLESTEP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSuffix(const QString &suffix)
-*/
+// void setSuffix(const QString &suffix)
 HB_FUNC_STATIC(QDOUBLESPINBOX_SETSUFFIX)
 {
   QDoubleSpinBox *obj = qobject_cast<QDoubleSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -378,9 +354,7 @@ HB_FUNC_STATIC(QDOUBLESPINBOX_SETSUFFIX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-double singleStep() const
-*/
+// double singleStep() const
 HB_FUNC_STATIC(QDOUBLESPINBOX_SINGLESTEP)
 {
   QDoubleSpinBox *obj = qobject_cast<QDoubleSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -402,9 +376,7 @@ HB_FUNC_STATIC(QDOUBLESPINBOX_SINGLESTEP)
   }
 }
 
-/*
-QString suffix() const
-*/
+// QString suffix() const
 HB_FUNC_STATIC(QDOUBLESPINBOX_SUFFIX)
 {
   QDoubleSpinBox *obj = qobject_cast<QDoubleSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -426,9 +398,7 @@ HB_FUNC_STATIC(QDOUBLESPINBOX_SUFFIX)
   }
 }
 
-/*
-virtual QString textFromValue(double value) const
-*/
+// virtual QString textFromValue(double value) const
 HB_FUNC_STATIC(QDOUBLESPINBOX_TEXTFROMVALUE)
 {
   QDoubleSpinBox *obj = qobject_cast<QDoubleSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -450,9 +420,7 @@ HB_FUNC_STATIC(QDOUBLESPINBOX_TEXTFROMVALUE)
   }
 }
 
-/*
-double value() const
-*/
+// double value() const
 HB_FUNC_STATIC(QDOUBLESPINBOX_VALUE)
 {
   QDoubleSpinBox *obj = qobject_cast<QDoubleSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -474,9 +442,7 @@ HB_FUNC_STATIC(QDOUBLESPINBOX_VALUE)
   }
 }
 
-/*
-virtual double valueFromText(const QString &text) const
-*/
+// virtual double valueFromText(const QString &text) const
 HB_FUNC_STATIC(QDOUBLESPINBOX_VALUEFROMTEXT)
 {
   QDoubleSpinBox *obj = qobject_cast<QDoubleSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -498,9 +464,7 @@ HB_FUNC_STATIC(QDOUBLESPINBOX_VALUEFROMTEXT)
   }
 }
 
-/*
-virtual void fixup(QString &input) const
-*/
+// virtual void fixup(QString &input) const
 HB_FUNC_STATIC(QDOUBLESPINBOX_FIXUP)
 {
   QDoubleSpinBox *obj = qobject_cast<QDoubleSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -526,9 +490,7 @@ HB_FUNC_STATIC(QDOUBLESPINBOX_FIXUP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QValidator::State validate(QString &text, int &pos) const
-*/
+// virtual QValidator::State validate(QString &text, int &pos) const
 HB_FUNC_STATIC(QDOUBLESPINBOX_VALIDATE)
 {
   QDoubleSpinBox *obj = qobject_cast<QDoubleSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -554,9 +516,7 @@ HB_FUNC_STATIC(QDOUBLESPINBOX_VALIDATE)
   }
 }
 
-/*
-void setValue(double val)
-*/
+// void setValue(double val)
 HB_FUNC_STATIC(QDOUBLESPINBOX_SETVALUE)
 {
   QDoubleSpinBox *obj = qobject_cast<QDoubleSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());

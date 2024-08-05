@@ -47,7 +47,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QPageSetupDialog(QPrinter *printer, QWidget *parent = 0)
+    // QPageSetupDialog(QPrinter *printer, QWidget *parent = 0)
 HB_FUNC_STATIC(QPAGESETUPDIALOG_NEW)
 {
   if (ISBETWEEN(1, 2) && ISQPRINTER(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
@@ -61,9 +61,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_NEW)
   }
 }
 
-/*
-void open(QObject *receiver, const char *member)
-*/
+// void open(QObject *receiver, const char *member)
 HB_FUNC_STATIC(QPAGESETUPDIALOG_OPEN)
 {
   QPageSetupDialog *obj = qobject_cast<QPageSetupDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -87,9 +85,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_OPEN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QPageSetupDialog::PageSetupDialogOptions options() const
-*/
+// QPageSetupDialog::PageSetupDialogOptions options() const
 HB_FUNC_STATIC(QPAGESETUPDIALOG_OPTIONS)
 {
   QPageSetupDialog *obj = qobject_cast<QPageSetupDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -111,9 +107,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_OPTIONS)
   }
 }
 
-/*
-QPrinter *printer()
-*/
+// QPrinter *printer()
 HB_FUNC_STATIC(QPAGESETUPDIALOG_PRINTER)
 {
   QPageSetupDialog *obj = qobject_cast<QPageSetupDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -136,9 +130,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_PRINTER)
   }
 }
 
-/*
-void setOption(QPageSetupDialog::PageSetupDialogOption option, bool on = true)
-*/
+// void setOption(QPageSetupDialog::PageSetupDialogOption option, bool on = true)
 HB_FUNC_STATIC(QPAGESETUPDIALOG_SETOPTION)
 {
   QPageSetupDialog *obj = qobject_cast<QPageSetupDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -162,9 +154,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_SETOPTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setOptions(QPageSetupDialog::PageSetupDialogOptions options)
-*/
+// void setOptions(QPageSetupDialog::PageSetupDialogOptions options)
 HB_FUNC_STATIC(QPAGESETUPDIALOG_SETOPTIONS)
 {
   QPageSetupDialog *obj = qobject_cast<QPageSetupDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -188,9 +178,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_SETOPTIONS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool testOption(QPageSetupDialog::PageSetupDialogOption option) const
-*/
+// bool testOption(QPageSetupDialog::PageSetupDialogOption option) const
 HB_FUNC_STATIC(QPAGESETUPDIALOG_TESTOPTION)
 {
   QPageSetupDialog *obj = qobject_cast<QPageSetupDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -212,9 +200,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_TESTOPTION)
   }
 }
 
-/*
-virtual void setVisible(bool visible)
-*/
+// virtual void setVisible(bool visible)
 HB_FUNC_STATIC(QPAGESETUPDIALOG_SETVISIBLE)
 {
   QPageSetupDialog *obj = qobject_cast<QPageSetupDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());

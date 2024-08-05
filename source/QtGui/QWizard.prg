@@ -95,7 +95,7 @@ RETURN
 #include <QtCore/QVariant>
 #include <QtGui/QAbstractButton>
 
-// QWizard(QWidget *parent = 0, Qt::WindowFlags flags = 0)
+    // QWizard(QWidget *parent = 0, Qt::WindowFlags flags = 0)
 HB_FUNC_STATIC(QWIZARD_NEW)
 {
   if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
@@ -127,9 +127,7 @@ HB_FUNC_STATIC(QWIZARD_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int addPage(QWizardPage *page)
-*/
+// int addPage(QWizardPage *page)
 HB_FUNC_STATIC(QWIZARD_ADDPAGE)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -151,9 +149,7 @@ HB_FUNC_STATIC(QWIZARD_ADDPAGE)
   }
 }
 
-/*
-QAbstractButton *button(QWizard::WizardButton which) const
-*/
+// QAbstractButton *button(QWizard::WizardButton which) const
 HB_FUNC_STATIC(QWIZARD_BUTTON)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -176,9 +172,7 @@ HB_FUNC_STATIC(QWIZARD_BUTTON)
   }
 }
 
-/*
-QString buttonText(QWizard::WizardButton which) const
-*/
+// QString buttonText(QWizard::WizardButton which) const
 HB_FUNC_STATIC(QWIZARD_BUTTONTEXT)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -200,9 +194,7 @@ HB_FUNC_STATIC(QWIZARD_BUTTONTEXT)
   }
 }
 
-/*
-int currentId() const
-*/
+// int currentId() const
 HB_FUNC_STATIC(QWIZARD_CURRENTID)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -224,9 +216,7 @@ HB_FUNC_STATIC(QWIZARD_CURRENTID)
   }
 }
 
-/*
-QWizardPage *currentPage() const
-*/
+// QWizardPage *currentPage() const
 HB_FUNC_STATIC(QWIZARD_CURRENTPAGE)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -249,9 +239,7 @@ HB_FUNC_STATIC(QWIZARD_CURRENTPAGE)
   }
 }
 
-/*
-QVariant field(const QString &name) const
-*/
+// QVariant field(const QString &name) const
 HB_FUNC_STATIC(QWIZARD_FIELD)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -274,9 +262,7 @@ HB_FUNC_STATIC(QWIZARD_FIELD)
   }
 }
 
-/*
-bool hasVisitedPage(int id) const
-*/
+// bool hasVisitedPage(int id) const
 HB_FUNC_STATIC(QWIZARD_HASVISITEDPAGE)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -298,9 +284,7 @@ HB_FUNC_STATIC(QWIZARD_HASVISITEDPAGE)
   }
 }
 
-/*
-virtual int nextId() const
-*/
+// virtual int nextId() const
 HB_FUNC_STATIC(QWIZARD_NEXTID)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -322,9 +306,7 @@ HB_FUNC_STATIC(QWIZARD_NEXTID)
   }
 }
 
-/*
-QWizard::WizardOptions options() const
-*/
+// QWizard::WizardOptions options() const
 HB_FUNC_STATIC(QWIZARD_OPTIONS)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -346,9 +328,7 @@ HB_FUNC_STATIC(QWIZARD_OPTIONS)
   }
 }
 
-/*
-QWizardPage *page(int id) const
-*/
+// QWizardPage *page(int id) const
 HB_FUNC_STATIC(QWIZARD_PAGE)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -371,9 +351,7 @@ HB_FUNC_STATIC(QWIZARD_PAGE)
   }
 }
 
-/*
-QList<int> pageIds() const
-*/
+// QList<int> pageIds() const
 HB_FUNC_STATIC(QWIZARD_PAGEIDS)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -396,9 +374,7 @@ HB_FUNC_STATIC(QWIZARD_PAGEIDS)
   }
 }
 
-/*
-QPixmap pixmap(QWizard::WizardPixmap which) const
-*/
+// QPixmap pixmap(QWizard::WizardPixmap which) const
 HB_FUNC_STATIC(QWIZARD_PIXMAP)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -421,9 +397,7 @@ HB_FUNC_STATIC(QWIZARD_PIXMAP)
   }
 }
 
-/*
-void removePage(int id)
-*/
+// void removePage(int id)
 HB_FUNC_STATIC(QWIZARD_REMOVEPAGE)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -447,9 +421,7 @@ HB_FUNC_STATIC(QWIZARD_REMOVEPAGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setButton(QWizard::WizardButton which, QAbstractButton *button)
-*/
+// void setButton(QWizard::WizardButton which, QAbstractButton *button)
 HB_FUNC_STATIC(QWIZARD_SETBUTTON)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -473,9 +445,7 @@ HB_FUNC_STATIC(QWIZARD_SETBUTTON)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setButtonLayout(const QList<QWizard::WizardButton> &layout)
-*/
+// void setButtonLayout(const QList<QWizard::WizardButton> &layout)
 HB_FUNC_STATIC(QWIZARD_SETBUTTONLAYOUT)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -488,7 +458,7 @@ HB_FUNC_STATIC(QWIZARD_SETBUTTONLAYOUT)
 #endif
       QList<QWizard::WizardButton> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      const int nLen1 = hb_arrayLen(aList1);
+      int nLen1 = hb_arrayLen(aList1);
       for (int i1 = 0; i1 < nLen1; i1++)
       {
         par1 << (QWizard::WizardButton)hb_arrayGetNI(aList1, i1 + 1);
@@ -506,9 +476,7 @@ HB_FUNC_STATIC(QWIZARD_SETBUTTONLAYOUT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setButtonText(QWizard::WizardButton which, const QString &text)
-*/
+// void setButtonText(QWizard::WizardButton which, const QString &text)
 HB_FUNC_STATIC(QWIZARD_SETBUTTONTEXT)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -532,9 +500,7 @@ HB_FUNC_STATIC(QWIZARD_SETBUTTONTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDefaultProperty(const char *className, const char *property, const char *changedSignal)
-*/
+// void setDefaultProperty(const char *className, const char *property, const char *changedSignal)
 HB_FUNC_STATIC(QWIZARD_SETDEFAULTPROPERTY)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -558,9 +524,7 @@ HB_FUNC_STATIC(QWIZARD_SETDEFAULTPROPERTY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setField(const QString &name, const QVariant &value)
-*/
+// void setField(const QString &name, const QVariant &value)
 HB_FUNC_STATIC(QWIZARD_SETFIELD)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -584,9 +548,7 @@ HB_FUNC_STATIC(QWIZARD_SETFIELD)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setOption(QWizard::WizardOption option, bool on = true)
-*/
+// void setOption(QWizard::WizardOption option, bool on = true)
 HB_FUNC_STATIC(QWIZARD_SETOPTION)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -610,9 +572,7 @@ HB_FUNC_STATIC(QWIZARD_SETOPTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setOptions(QWizard::WizardOptions options)
-*/
+// void setOptions(QWizard::WizardOptions options)
 HB_FUNC_STATIC(QWIZARD_SETOPTIONS)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -636,9 +596,7 @@ HB_FUNC_STATIC(QWIZARD_SETOPTIONS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPage(int id, QWizardPage *page)
-*/
+// void setPage(int id, QWizardPage *page)
 HB_FUNC_STATIC(QWIZARD_SETPAGE)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -662,9 +620,7 @@ HB_FUNC_STATIC(QWIZARD_SETPAGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPixmap(QWizard::WizardPixmap which, const QPixmap &pixmap)
-*/
+// void setPixmap(QWizard::WizardPixmap which, const QPixmap &pixmap)
 HB_FUNC_STATIC(QWIZARD_SETPIXMAP)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -688,9 +644,7 @@ HB_FUNC_STATIC(QWIZARD_SETPIXMAP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSideWidget(QWidget *widget)
-*/
+// void setSideWidget(QWidget *widget)
 HB_FUNC_STATIC(QWIZARD_SETSIDEWIDGET)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -714,9 +668,7 @@ HB_FUNC_STATIC(QWIZARD_SETSIDEWIDGET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setStartId(int id)
-*/
+// void setStartId(int id)
 HB_FUNC_STATIC(QWIZARD_SETSTARTID)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -740,9 +692,7 @@ HB_FUNC_STATIC(QWIZARD_SETSTARTID)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSubTitleFormat(Qt::TextFormat format)
-*/
+// void setSubTitleFormat(Qt::TextFormat format)
 HB_FUNC_STATIC(QWIZARD_SETSUBTITLEFORMAT)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -766,9 +716,7 @@ HB_FUNC_STATIC(QWIZARD_SETSUBTITLEFORMAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTitleFormat(Qt::TextFormat format)
-*/
+// void setTitleFormat(Qt::TextFormat format)
 HB_FUNC_STATIC(QWIZARD_SETTITLEFORMAT)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -792,9 +740,7 @@ HB_FUNC_STATIC(QWIZARD_SETTITLEFORMAT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWizardStyle(QWizard::WizardStyle style)
-*/
+// void setWizardStyle(QWizard::WizardStyle style)
 HB_FUNC_STATIC(QWIZARD_SETWIZARDSTYLE)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -818,9 +764,7 @@ HB_FUNC_STATIC(QWIZARD_SETWIZARDSTYLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWidget *sideWidget() const
-*/
+// QWidget *sideWidget() const
 HB_FUNC_STATIC(QWIZARD_SIDEWIDGET)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -843,9 +787,7 @@ HB_FUNC_STATIC(QWIZARD_SIDEWIDGET)
   }
 }
 
-/*
-int startId() const
-*/
+// int startId() const
 HB_FUNC_STATIC(QWIZARD_STARTID)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -867,9 +809,7 @@ HB_FUNC_STATIC(QWIZARD_STARTID)
   }
 }
 
-/*
-Qt::TextFormat subTitleFormat() const
-*/
+// Qt::TextFormat subTitleFormat() const
 HB_FUNC_STATIC(QWIZARD_SUBTITLEFORMAT)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -891,9 +831,7 @@ HB_FUNC_STATIC(QWIZARD_SUBTITLEFORMAT)
   }
 }
 
-/*
-bool testOption(QWizard::WizardOption option) const
-*/
+// bool testOption(QWizard::WizardOption option) const
 HB_FUNC_STATIC(QWIZARD_TESTOPTION)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -915,9 +853,7 @@ HB_FUNC_STATIC(QWIZARD_TESTOPTION)
   }
 }
 
-/*
-Qt::TextFormat titleFormat() const
-*/
+// Qt::TextFormat titleFormat() const
 HB_FUNC_STATIC(QWIZARD_TITLEFORMAT)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -939,9 +875,7 @@ HB_FUNC_STATIC(QWIZARD_TITLEFORMAT)
   }
 }
 
-/*
-virtual bool validateCurrentPage()
-*/
+// virtual bool validateCurrentPage()
 HB_FUNC_STATIC(QWIZARD_VALIDATECURRENTPAGE)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -963,9 +897,7 @@ HB_FUNC_STATIC(QWIZARD_VALIDATECURRENTPAGE)
   }
 }
 
-/*
-QList<int> visitedPages() const
-*/
+// QList<int> visitedPages() const
 HB_FUNC_STATIC(QWIZARD_VISITEDPAGES)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -988,9 +920,7 @@ HB_FUNC_STATIC(QWIZARD_VISITEDPAGES)
   }
 }
 
-/*
-QWizard::WizardStyle wizardStyle() const
-*/
+// QWizard::WizardStyle wizardStyle() const
 HB_FUNC_STATIC(QWIZARD_WIZARDSTYLE)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1012,9 +942,7 @@ HB_FUNC_STATIC(QWIZARD_WIZARDSTYLE)
   }
 }
 
-/*
-virtual void setVisible(bool visible)
-*/
+// virtual void setVisible(bool visible)
 HB_FUNC_STATIC(QWIZARD_SETVISIBLE)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1038,9 +966,7 @@ HB_FUNC_STATIC(QWIZARD_SETVISIBLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QSize sizeHint() const
-*/
+// virtual QSize sizeHint() const
 HB_FUNC_STATIC(QWIZARD_SIZEHINT)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1063,9 +989,7 @@ HB_FUNC_STATIC(QWIZARD_SIZEHINT)
   }
 }
 
-/*
-void back()
-*/
+// void back()
 HB_FUNC_STATIC(QWIZARD_BACK)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1089,9 +1013,7 @@ HB_FUNC_STATIC(QWIZARD_BACK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void next()
-*/
+// void next()
 HB_FUNC_STATIC(QWIZARD_NEXT)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -1115,9 +1037,7 @@ HB_FUNC_STATIC(QWIZARD_NEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void restart()
-*/
+// void restart()
 HB_FUNC_STATIC(QWIZARD_RESTART)
 {
   QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
