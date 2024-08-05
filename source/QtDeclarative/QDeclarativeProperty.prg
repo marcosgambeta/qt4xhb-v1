@@ -131,9 +131,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_CONNECTNOTIFYSIGNAL)
 {
   if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
   {
-    /*
-    bool connectNotifySignal(QObject *dest, const char *slot) const
-    */
+    // bool connectNotifySignal(QObject *dest, const char *slot) const
     QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -143,9 +141,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_CONNECTNOTIFYSIGNAL)
   }
   else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2))
   {
-    /*
-    bool connectNotifySignal(QObject *dest, int method) const
-    */
+    // bool connectNotifySignal(QObject *dest, int method) const
     QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -159,9 +155,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_CONNECTNOTIFYSIGNAL)
   }
 }
 
-/*
-bool hasNotifySignal() const
-*/
+// bool hasNotifySignal() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_HASNOTIFYSIGNAL)
 {
   QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -183,9 +177,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_HASNOTIFYSIGNAL)
   }
 }
 
-/*
-int index() const
-*/
+// int index() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_INDEX)
 {
   QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -207,9 +199,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_INDEX)
   }
 }
 
-/*
-bool isDesignable() const
-*/
+// bool isDesignable() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_ISDESIGNABLE)
 {
   QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -231,9 +221,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_ISDESIGNABLE)
   }
 }
 
-/*
-bool isProperty() const
-*/
+// bool isProperty() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_ISPROPERTY)
 {
   QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -255,9 +243,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_ISPROPERTY)
   }
 }
 
-/*
-bool isResettable() const
-*/
+// bool isResettable() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_ISRESETTABLE)
 {
   QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -279,9 +265,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_ISRESETTABLE)
   }
 }
 
-/*
-bool isSignalProperty() const
-*/
+// bool isSignalProperty() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_ISSIGNALPROPERTY)
 {
   QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -303,9 +287,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_ISSIGNALPROPERTY)
   }
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_ISVALID)
 {
   QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -327,9 +309,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_ISVALID)
   }
 }
 
-/*
-bool isWritable() const
-*/
+// bool isWritable() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_ISWRITABLE)
 {
   QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -351,9 +331,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_ISWRITABLE)
   }
 }
 
-/*
-QMetaMethod method() const
-*/
+// QMetaMethod method() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_METHOD)
 {
   QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -376,9 +354,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_METHOD)
   }
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_NAME)
 {
   QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -400,9 +376,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_NAME)
   }
 }
 
-/*
-bool needsNotifySignal() const
-*/
+// bool needsNotifySignal() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_NEEDSNOTIFYSIGNAL)
 {
   QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -424,9 +398,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_NEEDSNOTIFYSIGNAL)
   }
 }
 
-/*
-QObject *object() const
-*/
+// QObject *object() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_OBJECT)
 {
   QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -449,9 +421,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_OBJECT)
   }
 }
 
-/*
-QMetaProperty property() const
-*/
+// QMetaProperty property() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_PROPERTY)
 {
   QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -474,9 +444,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_PROPERTY)
   }
 }
 
-/*
-int propertyType() const
-*/
+// int propertyType() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_PROPERTYTYPE)
 {
   QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -498,9 +466,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_PROPERTYTYPE)
   }
 }
 
-/*
-QDeclarativeProperty::PropertyTypeCategory propertyTypeCategory() const
-*/
+// QDeclarativeProperty::PropertyTypeCategory propertyTypeCategory() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_PROPERTYTYPECATEGORY)
 {
   QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -522,9 +488,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_PROPERTYTYPECATEGORY)
   }
 }
 
-/*
-const char *propertyTypeName() const
-*/
+// const char *propertyTypeName() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_PROPERTYTYPENAME)
 {
   QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -546,9 +510,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_PROPERTYTYPENAME)
   }
 }
 
-/*
-bool reset() const
-*/
+// bool reset() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_RESET)
 {
   QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -570,9 +532,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_RESET)
   }
 }
 
-/*
-QDeclarativeProperty::Type type() const
-*/
+// QDeclarativeProperty::Type type() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_TYPE)
 {
   QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -598,9 +558,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_READ)
 {
   if (ISNUMPAR(0))
   {
-    /*
-    QVariant read() const
-    */
+    // QVariant read() const
     QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -611,27 +569,21 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_READ)
   }
   else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
   {
-    /*
-    static QVariant read(QObject *object, const QString &name)
-    */
+    // static QVariant read(QObject *object, const QString &name)
 
     QVariant *ptr = new QVariant(QDeclarativeProperty::read(PQOBJECT(1), PQSTRING(2)));
     Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
   }
   else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQDECLARATIVECONTEXT(3))
   {
-    /*
-    static QVariant read(QObject *object, const QString &name, QDeclarativeContext *ctxt)
-    */
+    // static QVariant read(QObject *object, const QString &name, QDeclarativeContext *ctxt)
 
     QVariant *ptr = new QVariant(QDeclarativeProperty::read(PQOBJECT(1), PQSTRING(2), PQDECLARATIVECONTEXT(3)));
     Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
   }
   else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQDECLARATIVEENGINE(3))
   {
-    /*
-    static QVariant read(QObject *object, const QString &name, QDeclarativeEngine *engine)
-    */
+    // static QVariant read(QObject *object, const QString &name, QDeclarativeEngine *engine)
 
     QVariant *ptr = new QVariant(QDeclarativeProperty::read(PQOBJECT(1), PQSTRING(2), PQDECLARATIVEENGINE(3)));
     Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -646,9 +598,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_WRITE)
 {
   if (ISNUMPAR(1) && ISQVARIANT(1))
   {
-    /*
-    bool write(const QVariant &value) const
-    */
+    // bool write(const QVariant &value) const
     QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -658,25 +608,19 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_WRITE)
   }
   else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3))
   {
-    /*
-    static bool write(QObject *object, const QString &name, const QVariant &value)
-    */
+    // static bool write(QObject *object, const QString &name, const QVariant &value)
 
     RBOOL(QDeclarativeProperty::write(PQOBJECT(1), PQSTRING(2), *PQVARIANT(3)));
   }
   else if (ISNUMPAR(4) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3) && ISQDECLARATIVECONTEXT(4))
   {
-    /*
-    static bool write(QObject *object, const QString &name, const QVariant &value, QDeclarativeContext *ctxt)
-    */
+    // static bool write(QObject *object, const QString &name, const QVariant &value, QDeclarativeContext *ctxt)
 
     RBOOL(QDeclarativeProperty::write(PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQDECLARATIVECONTEXT(4)));
   }
   else if (ISNUMPAR(4) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3) && ISQDECLARATIVEENGINE(4))
   {
-    /*
-    static bool write(QObject *object, const QString &name, const QVariant &value, QDeclarativeEngine *engine)
-    */
+    // static bool write(QObject *object, const QString &name, const QVariant &value, QDeclarativeEngine *engine)
 
     RBOOL(QDeclarativeProperty::write(PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQDECLARATIVEENGINE(4)));
   }

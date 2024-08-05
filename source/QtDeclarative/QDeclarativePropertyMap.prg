@@ -51,7 +51,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QDeclarativePropertyMap(QObject *parent = 0)
+    // QDeclarativePropertyMap(QObject *parent = 0)
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
@@ -83,9 +83,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void clear(const QString &key)
-*/
+// void clear(const QString &key)
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_CLEAR)
 {
   QDeclarativePropertyMap *obj = qobject_cast<QDeclarativePropertyMap *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -109,9 +107,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool contains(const QString &key) const
-*/
+// bool contains(const QString &key) const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_CONTAINS)
 {
   QDeclarativePropertyMap *obj = qobject_cast<QDeclarativePropertyMap *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -133,9 +129,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_CONTAINS)
   }
 }
 
-/*
-int count() const
-*/
+// int count() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_COUNT)
 {
   QDeclarativePropertyMap *obj = qobject_cast<QDeclarativePropertyMap *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -157,9 +151,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_COUNT)
   }
 }
 
-/*
-void insert(const QString &key, const QVariant &value)
-*/
+// void insert(const QString &key, const QVariant &value)
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_INSERT)
 {
   QDeclarativePropertyMap *obj = qobject_cast<QDeclarativePropertyMap *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -183,9 +175,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_INSERT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isEmpty() const
-*/
+// bool isEmpty() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_ISEMPTY)
 {
   QDeclarativePropertyMap *obj = qobject_cast<QDeclarativePropertyMap *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -207,9 +197,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_ISEMPTY)
   }
 }
 
-/*
-QStringList keys() const
-*/
+// QStringList keys() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_KEYS)
 {
   QDeclarativePropertyMap *obj = qobject_cast<QDeclarativePropertyMap *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -231,9 +219,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_KEYS)
   }
 }
 
-/*
-int size() const
-*/
+// int size() const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_SIZE)
 {
   QDeclarativePropertyMap *obj = qobject_cast<QDeclarativePropertyMap *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -255,9 +241,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_SIZE)
   }
 }
 
-/*
-QVariant value(const QString &key) const
-*/
+// QVariant value(const QString &key) const
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYMAP_VALUE)
 {
   QDeclarativePropertyMap *obj = qobject_cast<QDeclarativePropertyMap *>(Qt4xHb::getQObjectPointerFromSelfItem());

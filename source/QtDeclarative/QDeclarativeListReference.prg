@@ -80,9 +80,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_NEW)
   }
 }
 
-/*
-bool append(QObject *object) const
-*/
+// bool append(QObject *object) const
 HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_APPEND)
 {
   QDeclarativeListReference *obj = static_cast<QDeclarativeListReference *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -104,9 +102,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_APPEND)
   }
 }
 
-/*
-QObject *at(int index) const
-*/
+// QObject *at(int index) const
 HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_AT)
 {
   QDeclarativeListReference *obj = static_cast<QDeclarativeListReference *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -129,9 +125,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_AT)
   }
 }
 
-/*
-bool canAppend() const
-*/
+// bool canAppend() const
 HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_CANAPPEND)
 {
   QDeclarativeListReference *obj = static_cast<QDeclarativeListReference *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -153,9 +147,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_CANAPPEND)
   }
 }
 
-/*
-bool canAt() const
-*/
+// bool canAt() const
 HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_CANAT)
 {
   QDeclarativeListReference *obj = static_cast<QDeclarativeListReference *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -177,9 +169,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_CANAT)
   }
 }
 
-/*
-bool canClear() const
-*/
+// bool canClear() const
 HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_CANCLEAR)
 {
   QDeclarativeListReference *obj = static_cast<QDeclarativeListReference *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -201,9 +191,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_CANCLEAR)
   }
 }
 
-/*
-bool canCount() const
-*/
+// bool canCount() const
 HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_CANCOUNT)
 {
   QDeclarativeListReference *obj = static_cast<QDeclarativeListReference *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -225,9 +213,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_CANCOUNT)
   }
 }
 
-/*
-bool clear() const
-*/
+// bool clear() const
 HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_CLEAR)
 {
   QDeclarativeListReference *obj = static_cast<QDeclarativeListReference *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -249,9 +235,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_CLEAR)
   }
 }
 
-/*
-int count() const
-*/
+// int count() const
 HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_COUNT)
 {
   QDeclarativeListReference *obj = static_cast<QDeclarativeListReference *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -273,9 +257,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_COUNT)
   }
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_ISVALID)
 {
   QDeclarativeListReference *obj = static_cast<QDeclarativeListReference *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -297,9 +279,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_ISVALID)
   }
 }
 
-/*
-const QMetaObject *listElementType() const
-*/
+// const QMetaObject *listElementType() const
 HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_LISTELEMENTTYPE)
 {
   QDeclarativeListReference *obj = static_cast<QDeclarativeListReference *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -322,9 +302,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_LISTELEMENTTYPE)
   }
 }
 
-/*
-QObject *object() const
-*/
+// QObject *object() const
 HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_OBJECT)
 {
   QDeclarativeListReference *obj = static_cast<QDeclarativeListReference *>(Qt4xHb::itemGetPtrStackSelfItem());

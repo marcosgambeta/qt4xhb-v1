@@ -76,9 +76,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_NEW)
   }
 }
 
-/*
-QDeclarativeContext *context() const
-*/
+// QDeclarativeContext *context() const
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_CONTEXT)
 {
   QDeclarativeScriptString *obj = static_cast<QDeclarativeScriptString *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -101,9 +99,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_CONTEXT)
   }
 }
 
-/*
-QObject *scopeObject() const
-*/
+// QObject *scopeObject() const
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SCOPEOBJECT)
 {
   QDeclarativeScriptString *obj = static_cast<QDeclarativeScriptString *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -126,9 +122,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SCOPEOBJECT)
   }
 }
 
-/*
-QString script() const
-*/
+// QString script() const
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SCRIPT)
 {
   QDeclarativeScriptString *obj = static_cast<QDeclarativeScriptString *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -150,9 +144,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SCRIPT)
   }
 }
 
-/*
-void setContext(QDeclarativeContext *context)
-*/
+// void setContext(QDeclarativeContext *context)
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETCONTEXT)
 {
   QDeclarativeScriptString *obj = static_cast<QDeclarativeScriptString *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -176,9 +168,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETCONTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setScopeObject(QObject *object)
-*/
+// void setScopeObject(QObject *object)
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETSCOPEOBJECT)
 {
   QDeclarativeScriptString *obj = static_cast<QDeclarativeScriptString *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -202,9 +192,7 @@ HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETSCOPEOBJECT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setScript(const QString &script)
-*/
+// void setScript(const QString &script)
 HB_FUNC_STATIC(QDECLARATIVESCRIPTSTRING_SETSCRIPT)
 {
   QDeclarativeScriptString *obj = static_cast<QDeclarativeScriptString *>(Qt4xHb::itemGetPtrStackSelfItem());

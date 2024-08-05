@@ -64,9 +64,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYVALUESOURCE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setTarget(const QDeclarativeProperty &property) = 0
-*/
+// virtual void setTarget(const QDeclarativeProperty &property) = 0
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYVALUESOURCE_SETTARGET)
 {
   QDeclarativePropertyValueSource *obj =

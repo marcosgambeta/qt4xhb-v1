@@ -47,9 +47,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    /*
-    virtual void classBegin() = 0
-    */
+    // virtual void classBegin() = 0
 HB_FUNC_STATIC(QDECLARATIVEPARSERSTATUS_CLASSBEGIN)
 {
   QDeclarativeParserStatus *obj = static_cast<QDeclarativeParserStatus *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -73,9 +71,7 @@ HB_FUNC_STATIC(QDECLARATIVEPARSERSTATUS_CLASSBEGIN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void componentComplete() = 0
-*/
+// virtual void componentComplete() = 0
 HB_FUNC_STATIC(QDECLARATIVEPARSERSTATUS_COMPONENTCOMPLETE)
 {
   QDeclarativeParserStatus *obj = static_cast<QDeclarativeParserStatus *>(Qt4xHb::itemGetPtrStackSelfItem());

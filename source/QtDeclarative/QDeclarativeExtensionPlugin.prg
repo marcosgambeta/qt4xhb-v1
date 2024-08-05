@@ -40,9 +40,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    /*
-    virtual void initializeEngine(QDeclarativeEngine *engine, const char *uri)
-    */
+    // virtual void initializeEngine(QDeclarativeEngine *engine, const char *uri)
 HB_FUNC_STATIC(QDECLARATIVEEXTENSIONPLUGIN_INITIALIZEENGINE)
 {
   QDeclarativeExtensionPlugin *obj =
@@ -67,9 +65,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXTENSIONPLUGIN_INITIALIZEENGINE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void registerTypes(const char *uri) = 0
-*/
+// virtual void registerTypes(const char *uri) = 0
 HB_FUNC_STATIC(QDECLARATIVEEXTENSIONPLUGIN_REGISTERTYPES)
 {
   QDeclarativeExtensionPlugin *obj =
