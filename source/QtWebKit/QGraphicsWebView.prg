@@ -82,7 +82,7 @@ RETURN
 
 #include <QtGui/QAction>
 
-// QGraphicsWebView(QGraphicsItem *parent = 0)
+    // QGraphicsWebView(QGraphicsItem *parent = 0)
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)))
@@ -114,9 +114,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool findText(const QString &subString, QWebPage::FindFlags options = 0)
-*/
+// bool findText(const QString &subString, QWebPage::FindFlags options = 0)
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_FINDTEXT)
 {
   QGraphicsWebView *obj = qobject_cast<QGraphicsWebView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -138,9 +136,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_FINDTEXT)
   }
 }
 
-/*
-QWebHistory *history() const
-*/
+// QWebHistory *history() const
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_HISTORY)
 {
   QGraphicsWebView *obj = qobject_cast<QGraphicsWebView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -163,9 +159,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_HISTORY)
   }
 }
 
-/*
-QIcon icon() const
-*/
+// QIcon icon() const
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ICON)
 {
   QGraphicsWebView *obj = qobject_cast<QGraphicsWebView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -188,9 +182,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ICON)
   }
 }
 
-/*
-bool isModified() const
-*/
+// bool isModified() const
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ISMODIFIED)
 {
   QGraphicsWebView *obj = qobject_cast<QGraphicsWebView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -212,9 +204,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ISMODIFIED)
   }
 }
 
-/*
-bool isTiledBackingStoreFrozen() const
-*/
+// bool isTiledBackingStoreFrozen() const
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ISTILEDBACKINGSTOREFROZEN)
 {
   QGraphicsWebView *obj = qobject_cast<QGraphicsWebView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -240,9 +230,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_LOAD)
 {
   if (ISNUMPAR(1) && ISQURL(1))
   {
-    /*
-    void load(const QUrl &url)
-    */
+    // void load(const QUrl &url)
     QGraphicsWebView *obj = qobject_cast<QGraphicsWebView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -254,10 +242,8 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_LOAD)
   }
   else if (ISBETWEEN(1, 3) && ISQNETWORKREQUEST(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (ISQBYTEARRAY(3) || HB_ISNIL(3)))
   {
-    /*
-    void load(const QNetworkRequest &request, QNetworkAccessManager::Operation operation =
-    QNetworkAccessManager::GetOperation, const QByteArray &body = QByteArray())
-    */
+    // void load(const QNetworkRequest &request, QNetworkAccessManager::Operation operation =
+    // QNetworkAccessManager::GetOperation, const QByteArray &body = QByteArray())
     QGraphicsWebView *obj = qobject_cast<QGraphicsWebView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL)
@@ -276,9 +262,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_LOAD)
   }
 }
 
-/*
-QWebPage *page() const
-*/
+// QWebPage *page() const
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_PAGE)
 {
   QGraphicsWebView *obj = qobject_cast<QGraphicsWebView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -301,9 +285,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_PAGE)
   }
 }
 
-/*
-QAction *pageAction(QWebPage::WebAction action) const
-*/
+// QAction *pageAction(QWebPage::WebAction action) const
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_PAGEACTION)
 {
   QGraphicsWebView *obj = qobject_cast<QGraphicsWebView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -326,9 +308,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_PAGEACTION)
   }
 }
 
-/*
-bool resizesToContents() const
-*/
+// bool resizesToContents() const
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_RESIZESTOCONTENTS)
 {
   QGraphicsWebView *obj = qobject_cast<QGraphicsWebView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -350,9 +330,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_RESIZESTOCONTENTS)
   }
 }
 
-/*
-void setContent(const QByteArray &data, const QString &mimeType = QString(), const QUrl &baseUrl = QUrl())
-*/
+// void setContent(const QByteArray &data, const QString &mimeType = QString(), const QUrl &baseUrl = QUrl())
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETCONTENT)
 {
   QGraphicsWebView *obj = qobject_cast<QGraphicsWebView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -377,9 +355,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETCONTENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setHtml(const QString &html, const QUrl &baseUrl = QUrl())
-*/
+// void setHtml(const QString &html, const QUrl &baseUrl = QUrl())
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETHTML)
 {
   QGraphicsWebView *obj = qobject_cast<QGraphicsWebView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -403,9 +379,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETHTML)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPage(QWebPage *page)
-*/
+// void setPage(QWebPage *page)
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETPAGE)
 {
   QGraphicsWebView *obj = qobject_cast<QGraphicsWebView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -429,9 +403,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETPAGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setResizesToContents(bool enabled)
-*/
+// void setResizesToContents(bool enabled)
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETRESIZESTOCONTENTS)
 {
   QGraphicsWebView *obj = qobject_cast<QGraphicsWebView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -455,9 +427,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETRESIZESTOCONTENTS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTiledBackingStoreFrozen(bool frozen)
-*/
+// void setTiledBackingStoreFrozen(bool frozen)
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETTILEDBACKINGSTOREFROZEN)
 {
   QGraphicsWebView *obj = qobject_cast<QGraphicsWebView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -481,9 +451,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETTILEDBACKINGSTOREFROZEN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setUrl(const QUrl &)
-*/
+// void setUrl(const QUrl &)
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETURL)
 {
   QGraphicsWebView *obj = qobject_cast<QGraphicsWebView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -507,9 +475,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETURL)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setZoomFactor(qreal)
-*/
+// void setZoomFactor(qreal)
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETZOOMFACTOR)
 {
   QGraphicsWebView *obj = qobject_cast<QGraphicsWebView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -533,9 +499,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETZOOMFACTOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWebSettings *settings() const
-*/
+// QWebSettings *settings() const
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETTINGS)
 {
   QGraphicsWebView *obj = qobject_cast<QGraphicsWebView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -558,9 +522,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_SETTINGS)
   }
 }
 
-/*
-QString title() const
-*/
+// QString title() const
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_TITLE)
 {
   QGraphicsWebView *obj = qobject_cast<QGraphicsWebView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -582,9 +544,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_TITLE)
   }
 }
 
-/*
-void triggerPageAction(QWebPage::WebAction action, bool checked = false)
-*/
+// void triggerPageAction(QWebPage::WebAction action, bool checked = false)
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_TRIGGERPAGEACTION)
 {
   QGraphicsWebView *obj = qobject_cast<QGraphicsWebView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -608,9 +568,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_TRIGGERPAGEACTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QUrl url() const
-*/
+// QUrl url() const
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_URL)
 {
   QGraphicsWebView *obj = qobject_cast<QGraphicsWebView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -633,9 +591,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_URL)
   }
 }
 
-/*
-qreal zoomFactor() const
-*/
+// qreal zoomFactor() const
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ZOOMFACTOR)
 {
   QGraphicsWebView *obj = qobject_cast<QGraphicsWebView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -657,9 +613,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ZOOMFACTOR)
   }
 }
 
-/*
-void back()
-*/
+// void back()
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_BACK)
 {
   QGraphicsWebView *obj = qobject_cast<QGraphicsWebView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -683,9 +637,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_BACK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void forward()
-*/
+// void forward()
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_FORWARD)
 {
   QGraphicsWebView *obj = qobject_cast<QGraphicsWebView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -709,9 +661,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_FORWARD)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void reload()
-*/
+// void reload()
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_RELOAD)
 {
   QGraphicsWebView *obj = qobject_cast<QGraphicsWebView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -735,9 +685,7 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_RELOAD)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void stop()
-*/
+// void stop()
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_STOP)
 {
   QGraphicsWebView *obj = qobject_cast<QGraphicsWebView *>(Qt4xHb::getQObjectPointerFromSelfItem());

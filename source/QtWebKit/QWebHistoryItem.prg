@@ -61,7 +61,7 @@ RETURN
 
 #include <QtCore/QVariant>
 
-// QWebHistoryItem(const QWebHistoryItem &other)
+    // QWebHistoryItem(const QWebHistoryItem &other)
 HB_FUNC_STATIC(QWEBHISTORYITEM_NEW)
 {
   if (ISNUMPAR(1) && ISQWEBHISTORYITEM(1))
@@ -91,9 +91,7 @@ HB_FUNC_STATIC(QWEBHISTORYITEM_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QIcon icon() const
-*/
+// QIcon icon() const
 HB_FUNC_STATIC(QWEBHISTORYITEM_ICON)
 {
   QWebHistoryItem *obj = static_cast<QWebHistoryItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -116,9 +114,7 @@ HB_FUNC_STATIC(QWEBHISTORYITEM_ICON)
   }
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QWEBHISTORYITEM_ISVALID)
 {
   QWebHistoryItem *obj = static_cast<QWebHistoryItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -140,9 +136,7 @@ HB_FUNC_STATIC(QWEBHISTORYITEM_ISVALID)
   }
 }
 
-/*
-QDateTime lastVisited() const
-*/
+// QDateTime lastVisited() const
 HB_FUNC_STATIC(QWEBHISTORYITEM_LASTVISITED)
 {
   QWebHistoryItem *obj = static_cast<QWebHistoryItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -165,9 +159,7 @@ HB_FUNC_STATIC(QWEBHISTORYITEM_LASTVISITED)
   }
 }
 
-/*
-QUrl originalUrl() const
-*/
+// QUrl originalUrl() const
 HB_FUNC_STATIC(QWEBHISTORYITEM_ORIGINALURL)
 {
   QWebHistoryItem *obj = static_cast<QWebHistoryItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -190,9 +182,7 @@ HB_FUNC_STATIC(QWEBHISTORYITEM_ORIGINALURL)
   }
 }
 
-/*
-void setUserData(const QVariant &userData)
-*/
+// void setUserData(const QVariant &userData)
 HB_FUNC_STATIC(QWEBHISTORYITEM_SETUSERDATA)
 {
   QWebHistoryItem *obj = static_cast<QWebHistoryItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -216,9 +206,7 @@ HB_FUNC_STATIC(QWEBHISTORYITEM_SETUSERDATA)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString title() const
-*/
+// QString title() const
 HB_FUNC_STATIC(QWEBHISTORYITEM_TITLE)
 {
   QWebHistoryItem *obj = static_cast<QWebHistoryItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -240,9 +228,7 @@ HB_FUNC_STATIC(QWEBHISTORYITEM_TITLE)
   }
 }
 
-/*
-QUrl url() const
-*/
+// QUrl url() const
 HB_FUNC_STATIC(QWEBHISTORYITEM_URL)
 {
   QWebHistoryItem *obj = static_cast<QWebHistoryItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -265,9 +251,7 @@ HB_FUNC_STATIC(QWEBHISTORYITEM_URL)
   }
 }
 
-/*
-QVariant userData() const
-*/
+// QVariant userData() const
 HB_FUNC_STATIC(QWEBHISTORYITEM_USERDATA)
 {
   QWebHistoryItem *obj = static_cast<QWebHistoryItem *>(Qt4xHb::itemGetPtrStackSelfItem());

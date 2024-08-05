@@ -46,7 +46,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QWebInspector(QWidget *parent = 0)
+    // QWebInspector(QWidget *parent = 0)
 HB_FUNC_STATIC(QWEBINSPECTOR_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
@@ -78,9 +78,7 @@ HB_FUNC_STATIC(QWEBINSPECTOR_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWebPage *page() const
-*/
+// QWebPage *page() const
 HB_FUNC_STATIC(QWEBINSPECTOR_PAGE)
 {
   QWebInspector *obj = qobject_cast<QWebInspector *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -103,9 +101,7 @@ HB_FUNC_STATIC(QWEBINSPECTOR_PAGE)
   }
 }
 
-/*
-void setPage(QWebPage *page)
-*/
+// void setPage(QWebPage *page)
 HB_FUNC_STATIC(QWEBINSPECTOR_SETPAGE)
 {
   QWebInspector *obj = qobject_cast<QWebInspector *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -129,9 +125,7 @@ HB_FUNC_STATIC(QWEBINSPECTOR_SETPAGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool event(QEvent *ev)
-*/
+// virtual bool event(QEvent *ev)
 HB_FUNC_STATIC(QWEBINSPECTOR_EVENT)
 {
   QWebInspector *obj = qobject_cast<QWebInspector *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -153,9 +147,7 @@ HB_FUNC_STATIC(QWEBINSPECTOR_EVENT)
   }
 }
 
-/*
-virtual QSize sizeHint() const
-*/
+// virtual QSize sizeHint() const
 HB_FUNC_STATIC(QWEBINSPECTOR_SIZEHINT)
 {
   QWebInspector *obj = qobject_cast<QWebInspector *>(Qt4xHb::getQObjectPointerFromSelfItem());
