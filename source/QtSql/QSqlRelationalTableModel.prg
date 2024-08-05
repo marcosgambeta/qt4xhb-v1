@@ -53,7 +53,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QSqlRelationalTableModel(QObject *parent = 0, QSqlDatabase db = QSqlDatabase())
+    // QSqlRelationalTableModel(QObject *parent = 0, QSqlDatabase db = QSqlDatabase())
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_NEW)
 {
   if (ISBETWEEN(0, 2) && (ISQOBJECT(1) || HB_ISNIL(1)) && (ISQSQLDATABASE(2) || HB_ISNIL(2)))
@@ -86,9 +86,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSqlRelation relation(int column) const
-*/
+// QSqlRelation relation(int column) const
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_RELATION)
 {
   QSqlRelationalTableModel *obj = qobject_cast<QSqlRelationalTableModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -111,9 +109,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_RELATION)
   }
 }
 
-/*
-virtual QSqlTableModel *relationModel(int column) const
-*/
+// virtual QSqlTableModel *relationModel(int column) const
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_RELATIONMODEL)
 {
   QSqlRelationalTableModel *obj = qobject_cast<QSqlRelationalTableModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -136,9 +132,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_RELATIONMODEL)
   }
 }
 
-/*
-virtual void setRelation(int column, const QSqlRelation &relation)
-*/
+// virtual void setRelation(int column, const QSqlRelation &relation)
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETRELATION)
 {
   QSqlRelationalTableModel *obj = qobject_cast<QSqlRelationalTableModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -162,9 +156,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETRELATION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void clear()
-*/
+// virtual void clear()
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_CLEAR)
 {
   QSqlRelationalTableModel *obj = qobject_cast<QSqlRelationalTableModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -188,9 +180,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
-*/
+// virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_DATA)
 {
   QSqlRelationalTableModel *obj = qobject_cast<QSqlRelationalTableModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -213,9 +203,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_DATA)
   }
 }
 
-/*
-virtual bool removeColumns(int column, int count, const QModelIndex &parent = QModelIndex())
-*/
+// virtual bool removeColumns(int column, int count, const QModelIndex &parent = QModelIndex())
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_REMOVECOLUMNS)
 {
   QSqlRelationalTableModel *obj = qobject_cast<QSqlRelationalTableModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -238,9 +226,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_REMOVECOLUMNS)
   }
 }
 
-/*
-virtual bool select()
-*/
+// virtual bool select()
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SELECT)
 {
   QSqlRelationalTableModel *obj = qobject_cast<QSqlRelationalTableModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -262,9 +248,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SELECT)
   }
 }
 
-/*
-virtual bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole)
-*/
+// virtual bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole)
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETDATA)
 {
   QSqlRelationalTableModel *obj = qobject_cast<QSqlRelationalTableModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -286,9 +270,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETDATA)
   }
 }
 
-/*
-virtual void setTable(const QString &table)
-*/
+// virtual void setTable(const QString &table)
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETTABLE)
 {
   QSqlRelationalTableModel *obj = qobject_cast<QSqlRelationalTableModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -312,9 +294,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETTABLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void revertRow(int row)
-*/
+// virtual void revertRow(int row)
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_REVERTROW)
 {
   QSqlRelationalTableModel *obj = qobject_cast<QSqlRelationalTableModel *>(Qt4xHb::getQObjectPointerFromSelfItem());

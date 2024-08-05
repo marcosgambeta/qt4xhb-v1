@@ -109,9 +109,7 @@ HB_FUNC_STATIC(QSQLFIELD_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QSQLFIELD_CLEAR)
 {
   QSqlField *obj = static_cast<QSqlField *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -135,9 +133,7 @@ HB_FUNC_STATIC(QSQLFIELD_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QVariant defaultValue() const
-*/
+// QVariant defaultValue() const
 HB_FUNC_STATIC(QSQLFIELD_DEFAULTVALUE)
 {
   QSqlField *obj = static_cast<QSqlField *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -160,9 +156,7 @@ HB_FUNC_STATIC(QSQLFIELD_DEFAULTVALUE)
   }
 }
 
-/*
-bool isAutoValue() const
-*/
+// bool isAutoValue() const
 HB_FUNC_STATIC(QSQLFIELD_ISAUTOVALUE)
 {
   QSqlField *obj = static_cast<QSqlField *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -184,9 +178,7 @@ HB_FUNC_STATIC(QSQLFIELD_ISAUTOVALUE)
   }
 }
 
-/*
-bool isGenerated() const
-*/
+// bool isGenerated() const
 HB_FUNC_STATIC(QSQLFIELD_ISGENERATED)
 {
   QSqlField *obj = static_cast<QSqlField *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -208,9 +200,7 @@ HB_FUNC_STATIC(QSQLFIELD_ISGENERATED)
   }
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QSQLFIELD_ISNULL)
 {
   QSqlField *obj = static_cast<QSqlField *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -232,9 +222,7 @@ HB_FUNC_STATIC(QSQLFIELD_ISNULL)
   }
 }
 
-/*
-bool isReadOnly() const
-*/
+// bool isReadOnly() const
 HB_FUNC_STATIC(QSQLFIELD_ISREADONLY)
 {
   QSqlField *obj = static_cast<QSqlField *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -256,9 +244,7 @@ HB_FUNC_STATIC(QSQLFIELD_ISREADONLY)
   }
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QSQLFIELD_ISVALID)
 {
   QSqlField *obj = static_cast<QSqlField *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -280,9 +266,7 @@ HB_FUNC_STATIC(QSQLFIELD_ISVALID)
   }
 }
 
-/*
-int length() const
-*/
+// int length() const
 HB_FUNC_STATIC(QSQLFIELD_LENGTH)
 {
   QSqlField *obj = static_cast<QSqlField *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -304,9 +288,7 @@ HB_FUNC_STATIC(QSQLFIELD_LENGTH)
   }
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QSQLFIELD_NAME)
 {
   QSqlField *obj = static_cast<QSqlField *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -328,9 +310,7 @@ HB_FUNC_STATIC(QSQLFIELD_NAME)
   }
 }
 
-/*
-int precision() const
-*/
+// int precision() const
 HB_FUNC_STATIC(QSQLFIELD_PRECISION)
 {
   QSqlField *obj = static_cast<QSqlField *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -352,9 +332,7 @@ HB_FUNC_STATIC(QSQLFIELD_PRECISION)
   }
 }
 
-/*
-QSqlField::RequiredStatus requiredStatus() const
-*/
+// QSqlField::RequiredStatus requiredStatus() const
 HB_FUNC_STATIC(QSQLFIELD_REQUIREDSTATUS)
 {
   QSqlField *obj = static_cast<QSqlField *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -376,9 +354,7 @@ HB_FUNC_STATIC(QSQLFIELD_REQUIREDSTATUS)
   }
 }
 
-/*
-void setAutoValue(bool autoVal)
-*/
+// void setAutoValue(bool autoVal)
 HB_FUNC_STATIC(QSQLFIELD_SETAUTOVALUE)
 {
   QSqlField *obj = static_cast<QSqlField *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -402,9 +378,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETAUTOVALUE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDefaultValue(const QVariant &value)
-*/
+// void setDefaultValue(const QVariant &value)
 HB_FUNC_STATIC(QSQLFIELD_SETDEFAULTVALUE)
 {
   QSqlField *obj = static_cast<QSqlField *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -428,9 +402,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETDEFAULTVALUE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setGenerated(bool gen)
-*/
+// void setGenerated(bool gen)
 HB_FUNC_STATIC(QSQLFIELD_SETGENERATED)
 {
   QSqlField *obj = static_cast<QSqlField *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -454,9 +426,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETGENERATED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setLength(int fieldLength)
-*/
+// void setLength(int fieldLength)
 HB_FUNC_STATIC(QSQLFIELD_SETLENGTH)
 {
   QSqlField *obj = static_cast<QSqlField *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -480,9 +450,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETLENGTH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setName(const QString &name)
-*/
+// void setName(const QString &name)
 HB_FUNC_STATIC(QSQLFIELD_SETNAME)
 {
   QSqlField *obj = static_cast<QSqlField *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -506,9 +474,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETNAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPrecision(int precision)
-*/
+// void setPrecision(int precision)
 HB_FUNC_STATIC(QSQLFIELD_SETPRECISION)
 {
   QSqlField *obj = static_cast<QSqlField *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -532,9 +498,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETPRECISION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setReadOnly(bool readOnly)
-*/
+// void setReadOnly(bool readOnly)
 HB_FUNC_STATIC(QSQLFIELD_SETREADONLY)
 {
   QSqlField *obj = static_cast<QSqlField *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -558,9 +522,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETREADONLY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setRequired(bool required)
-*/
+// void setRequired(bool required)
 HB_FUNC_STATIC(QSQLFIELD_SETREQUIRED)
 {
   QSqlField *obj = static_cast<QSqlField *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -584,9 +546,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETREQUIRED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setRequiredStatus(QSqlField::RequiredStatus required)
-*/
+// void setRequiredStatus(QSqlField::RequiredStatus required)
 HB_FUNC_STATIC(QSQLFIELD_SETREQUIREDSTATUS)
 {
   QSqlField *obj = static_cast<QSqlField *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -610,9 +570,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETREQUIREDSTATUS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setType(QVariant::Type type)
-*/
+// void setType(QVariant::Type type)
 HB_FUNC_STATIC(QSQLFIELD_SETTYPE)
 {
   QSqlField *obj = static_cast<QSqlField *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -636,9 +594,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETTYPE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setValue(const QVariant &value)
-*/
+// void setValue(const QVariant &value)
 HB_FUNC_STATIC(QSQLFIELD_SETVALUE)
 {
   QSqlField *obj = static_cast<QSqlField *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -662,9 +618,7 @@ HB_FUNC_STATIC(QSQLFIELD_SETVALUE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QVariant::Type type() const
-*/
+// QVariant::Type type() const
 HB_FUNC_STATIC(QSQLFIELD_TYPE)
 {
   QSqlField *obj = static_cast<QSqlField *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -686,9 +640,7 @@ HB_FUNC_STATIC(QSQLFIELD_TYPE)
   }
 }
 
-/*
-QVariant value() const
-*/
+// QVariant value() const
 HB_FUNC_STATIC(QSQLFIELD_VALUE)
 {
   QSqlField *obj = static_cast<QSqlField *>(Qt4xHb::itemGetPtrStackSelfItem());

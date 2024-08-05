@@ -44,7 +44,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QSqlRelationalDelegate(QObject *parent = 0)
+    // QSqlRelationalDelegate(QObject *parent = 0)
 HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
@@ -76,9 +76,7 @@ HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
-*/
+// virtual QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
 HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_CREATEEDITOR)
 {
   QSqlRelationalDelegate *obj = static_cast<QSqlRelationalDelegate *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -101,9 +99,7 @@ HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_CREATEEDITOR)
   }
 }
 
-/*
-virtual void setEditorData(QWidget *editor, const QModelIndex &index) const
-*/
+// virtual void setEditorData(QWidget *editor, const QModelIndex &index) const
 HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_SETEDITORDATA)
 {
   QSqlRelationalDelegate *obj = static_cast<QSqlRelationalDelegate *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -127,9 +123,7 @@ HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_SETEDITORDATA)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
-*/
+// virtual void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
 HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_SETMODELDATA)
 {
   QSqlRelationalDelegate *obj = static_cast<QSqlRelationalDelegate *>(Qt4xHb::itemGetPtrStackSelfItem());

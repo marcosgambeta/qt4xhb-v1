@@ -70,9 +70,7 @@ HB_FUNC_STATIC(QSQLRELATION_NEW)
   }
 }
 
-/*
-QString displayColumn() const
-*/
+// QString displayColumn() const
 HB_FUNC_STATIC(QSQLRELATION_DISPLAYCOLUMN)
 {
   QSqlRelation *obj = static_cast<QSqlRelation *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -94,9 +92,7 @@ HB_FUNC_STATIC(QSQLRELATION_DISPLAYCOLUMN)
   }
 }
 
-/*
-QString indexColumn() const
-*/
+// QString indexColumn() const
 HB_FUNC_STATIC(QSQLRELATION_INDEXCOLUMN)
 {
   QSqlRelation *obj = static_cast<QSqlRelation *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -118,9 +114,7 @@ HB_FUNC_STATIC(QSQLRELATION_INDEXCOLUMN)
   }
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QSQLRELATION_ISVALID)
 {
   QSqlRelation *obj = static_cast<QSqlRelation *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -142,9 +136,7 @@ HB_FUNC_STATIC(QSQLRELATION_ISVALID)
   }
 }
 
-/*
-QString tableName() const
-*/
+// QString tableName() const
 HB_FUNC_STATIC(QSQLRELATION_TABLENAME)
 {
   QSqlRelation *obj = static_cast<QSqlRelation *>(Qt4xHb::itemGetPtrStackSelfItem());

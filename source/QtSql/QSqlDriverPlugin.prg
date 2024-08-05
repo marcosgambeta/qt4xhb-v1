@@ -62,9 +62,7 @@ HB_FUNC_STATIC(QSQLDRIVERPLUGIN_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QSqlDriver *create(const QString &key) = 0
-*/
+// virtual QSqlDriver *create(const QString &key) = 0
 HB_FUNC_STATIC(QSQLDRIVERPLUGIN_CREATE)
 {
   QSqlDriverPlugin *obj = qobject_cast<QSqlDriverPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -87,9 +85,7 @@ HB_FUNC_STATIC(QSQLDRIVERPLUGIN_CREATE)
   }
 }
 
-/*
-virtual QStringList keys() const = 0
-*/
+// virtual QStringList keys() const = 0
 HB_FUNC_STATIC(QSQLDRIVERPLUGIN_KEYS)
 {
   QSqlDriverPlugin *obj = qobject_cast<QSqlDriverPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());

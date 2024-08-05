@@ -66,9 +66,7 @@ HB_FUNC_STATIC(QSQLDRIVERCREATORBASE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QSqlDriver *createObject() const = 0
-*/
+// virtual QSqlDriver *createObject() const = 0
 HB_FUNC_STATIC(QSQLDRIVERCREATORBASE_CREATEOBJECT)
 {
   QSqlDriverCreatorBase *obj = static_cast<QSqlDriverCreatorBase *>(Qt4xHb::itemGetPtrStackSelfItem());

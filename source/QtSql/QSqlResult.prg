@@ -64,9 +64,7 @@ HB_FUNC_STATIC(QSQLRESULT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QVariant handle() const
-*/
+// virtual QVariant handle() const
 HB_FUNC_STATIC(QSQLRESULT_HANDLE)
 {
   QSqlResult *obj = static_cast<QSqlResult *>(Qt4xHb::itemGetPtrStackSelfItem());

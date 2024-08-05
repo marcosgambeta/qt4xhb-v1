@@ -139,9 +139,7 @@ HB_FUNC_STATIC(QSQLQUERY_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addBindValue(const QVariant &val, QSql::ParamType paramType = QSql::In)
-*/
+// void addBindValue(const QVariant &val, QSql::ParamType paramType = QSql::In)
 HB_FUNC_STATIC(QSQLQUERY_ADDBINDVALUE)
 {
   QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -165,9 +163,7 @@ HB_FUNC_STATIC(QSQLQUERY_ADDBINDVALUE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int at() const
-*/
+// int at() const
 HB_FUNC_STATIC(QSQLQUERY_AT)
 {
   QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -193,9 +189,7 @@ HB_FUNC_STATIC(QSQLQUERY_BINDVALUE)
 {
   if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQVARIANT(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
-    /*
-    void bindValue(const QString &placeholder, const QVariant &val, QSql::ParamType paramType = QSql::In)
-    */
+    // void bindValue(const QString &placeholder, const QVariant &val, QSql::ParamType paramType = QSql::In)
     QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -208,9 +202,7 @@ HB_FUNC_STATIC(QSQLQUERY_BINDVALUE)
   }
   else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQVARIANT(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
-    /*
-    void bindValue(int pos, const QVariant &val, QSql::ParamType paramType = QSql::In)
-    */
+    // void bindValue(int pos, const QVariant &val, QSql::ParamType paramType = QSql::In)
     QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -230,9 +222,7 @@ HB_FUNC_STATIC(QSQLQUERY_BOUNDVALUE)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    QVariant boundValue(const QString &placeholder) const
-    */
+    // QVariant boundValue(const QString &placeholder) const
     QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -243,9 +233,7 @@ HB_FUNC_STATIC(QSQLQUERY_BOUNDVALUE)
   }
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
-    /*
-    QVariant boundValue(int pos) const
-    */
+    // QVariant boundValue(int pos) const
     QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -260,9 +248,7 @@ HB_FUNC_STATIC(QSQLQUERY_BOUNDVALUE)
   }
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QSQLQUERY_CLEAR)
 {
   QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -286,9 +272,7 @@ HB_FUNC_STATIC(QSQLQUERY_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-const QSqlDriver *driver() const
-*/
+// const QSqlDriver *driver() const
 HB_FUNC_STATIC(QSQLQUERY_DRIVER)
 {
   QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -315,9 +299,7 @@ HB_FUNC_STATIC(QSQLQUERY_EXEC)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    bool exec(const QString &query)
-    */
+    // bool exec(const QString &query)
     QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -327,9 +309,7 @@ HB_FUNC_STATIC(QSQLQUERY_EXEC)
   }
   else if (ISNUMPAR(0))
   {
-    /*
-    bool exec()
-    */
+    // bool exec()
     QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -343,9 +323,7 @@ HB_FUNC_STATIC(QSQLQUERY_EXEC)
   }
 }
 
-/*
-bool execBatch(QSqlQuery::BatchExecutionMode mode = QSqlQuery::ValuesAsRows)
-*/
+// bool execBatch(QSqlQuery::BatchExecutionMode mode = QSqlQuery::ValuesAsRows)
 HB_FUNC_STATIC(QSQLQUERY_EXECBATCH)
 {
   QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -368,9 +346,7 @@ HB_FUNC_STATIC(QSQLQUERY_EXECBATCH)
   }
 }
 
-/*
-QString executedQuery() const
-*/
+// QString executedQuery() const
 HB_FUNC_STATIC(QSQLQUERY_EXECUTEDQUERY)
 {
   QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -392,9 +368,7 @@ HB_FUNC_STATIC(QSQLQUERY_EXECUTEDQUERY)
   }
 }
 
-/*
-void finish()
-*/
+// void finish()
 HB_FUNC_STATIC(QSQLQUERY_FINISH)
 {
   QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -418,9 +392,7 @@ HB_FUNC_STATIC(QSQLQUERY_FINISH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool first()
-*/
+// bool first()
 HB_FUNC_STATIC(QSQLQUERY_FIRST)
 {
   QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -442,9 +414,7 @@ HB_FUNC_STATIC(QSQLQUERY_FIRST)
   }
 }
 
-/*
-bool isActive() const
-*/
+// bool isActive() const
 HB_FUNC_STATIC(QSQLQUERY_ISACTIVE)
 {
   QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -466,9 +436,7 @@ HB_FUNC_STATIC(QSQLQUERY_ISACTIVE)
   }
 }
 
-/*
-bool isForwardOnly() const
-*/
+// bool isForwardOnly() const
 HB_FUNC_STATIC(QSQLQUERY_ISFORWARDONLY)
 {
   QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -490,9 +458,7 @@ HB_FUNC_STATIC(QSQLQUERY_ISFORWARDONLY)
   }
 }
 
-/*
-bool isNull(int field) const
-*/
+// bool isNull(int field) const
 HB_FUNC_STATIC(QSQLQUERY_ISNULL)
 {
   QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -514,9 +480,7 @@ HB_FUNC_STATIC(QSQLQUERY_ISNULL)
   }
 }
 
-/*
-bool isSelect() const
-*/
+// bool isSelect() const
 HB_FUNC_STATIC(QSQLQUERY_ISSELECT)
 {
   QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -538,9 +502,7 @@ HB_FUNC_STATIC(QSQLQUERY_ISSELECT)
   }
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QSQLQUERY_ISVALID)
 {
   QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -562,9 +524,7 @@ HB_FUNC_STATIC(QSQLQUERY_ISVALID)
   }
 }
 
-/*
-bool last()
-*/
+// bool last()
 HB_FUNC_STATIC(QSQLQUERY_LAST)
 {
   QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -586,9 +546,7 @@ HB_FUNC_STATIC(QSQLQUERY_LAST)
   }
 }
 
-/*
-QSqlError lastError() const
-*/
+// QSqlError lastError() const
 HB_FUNC_STATIC(QSQLQUERY_LASTERROR)
 {
   QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -611,9 +569,7 @@ HB_FUNC_STATIC(QSQLQUERY_LASTERROR)
   }
 }
 
-/*
-QVariant lastInsertId() const
-*/
+// QVariant lastInsertId() const
 HB_FUNC_STATIC(QSQLQUERY_LASTINSERTID)
 {
   QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -636,9 +592,7 @@ HB_FUNC_STATIC(QSQLQUERY_LASTINSERTID)
   }
 }
 
-/*
-QString lastQuery() const
-*/
+// QString lastQuery() const
 HB_FUNC_STATIC(QSQLQUERY_LASTQUERY)
 {
   QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -660,9 +614,7 @@ HB_FUNC_STATIC(QSQLQUERY_LASTQUERY)
   }
 }
 
-/*
-bool next()
-*/
+// bool next()
 HB_FUNC_STATIC(QSQLQUERY_NEXT)
 {
   QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -684,9 +636,7 @@ HB_FUNC_STATIC(QSQLQUERY_NEXT)
   }
 }
 
-/*
-bool nextResult()
-*/
+// bool nextResult()
 HB_FUNC_STATIC(QSQLQUERY_NEXTRESULT)
 {
   QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -708,9 +658,7 @@ HB_FUNC_STATIC(QSQLQUERY_NEXTRESULT)
   }
 }
 
-/*
-int numRowsAffected() const
-*/
+// int numRowsAffected() const
 HB_FUNC_STATIC(QSQLQUERY_NUMROWSAFFECTED)
 {
   QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -732,9 +680,7 @@ HB_FUNC_STATIC(QSQLQUERY_NUMROWSAFFECTED)
   }
 }
 
-/*
-QSql::NumericalPrecisionPolicy numericalPrecisionPolicy() const
-*/
+// QSql::NumericalPrecisionPolicy numericalPrecisionPolicy() const
 HB_FUNC_STATIC(QSQLQUERY_NUMERICALPRECISIONPOLICY)
 {
   QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -756,9 +702,7 @@ HB_FUNC_STATIC(QSQLQUERY_NUMERICALPRECISIONPOLICY)
   }
 }
 
-/*
-bool prepare(const QString &query)
-*/
+// bool prepare(const QString &query)
 HB_FUNC_STATIC(QSQLQUERY_PREPARE)
 {
   QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -780,9 +724,7 @@ HB_FUNC_STATIC(QSQLQUERY_PREPARE)
   }
 }
 
-/*
-bool previous()
-*/
+// bool previous()
 HB_FUNC_STATIC(QSQLQUERY_PREVIOUS)
 {
   QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -804,9 +746,7 @@ HB_FUNC_STATIC(QSQLQUERY_PREVIOUS)
   }
 }
 
-/*
-QSqlRecord record() const
-*/
+// QSqlRecord record() const
 HB_FUNC_STATIC(QSQLQUERY_RECORD)
 {
   QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -829,9 +769,7 @@ HB_FUNC_STATIC(QSQLQUERY_RECORD)
   }
 }
 
-/*
-const QSqlResult *result() const
-*/
+// const QSqlResult *result() const
 HB_FUNC_STATIC(QSQLQUERY_RESULT)
 {
   QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -854,9 +792,7 @@ HB_FUNC_STATIC(QSQLQUERY_RESULT)
   }
 }
 
-/*
-bool seek(int index, bool relative = false)
-*/
+// bool seek(int index, bool relative = false)
 HB_FUNC_STATIC(QSQLQUERY_SEEK)
 {
   QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -878,9 +814,7 @@ HB_FUNC_STATIC(QSQLQUERY_SEEK)
   }
 }
 
-/*
-void setForwardOnly(bool forward)
-*/
+// void setForwardOnly(bool forward)
 HB_FUNC_STATIC(QSQLQUERY_SETFORWARDONLY)
 {
   QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -904,9 +838,7 @@ HB_FUNC_STATIC(QSQLQUERY_SETFORWARDONLY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setNumericalPrecisionPolicy(QSql::NumericalPrecisionPolicy precisionPolicy)
-*/
+// void setNumericalPrecisionPolicy(QSql::NumericalPrecisionPolicy precisionPolicy)
 HB_FUNC_STATIC(QSQLQUERY_SETNUMERICALPRECISIONPOLICY)
 {
   QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -930,9 +862,7 @@ HB_FUNC_STATIC(QSQLQUERY_SETNUMERICALPRECISIONPOLICY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int size() const
-*/
+// int size() const
 HB_FUNC_STATIC(QSQLQUERY_SIZE)
 {
   QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -954,9 +884,7 @@ HB_FUNC_STATIC(QSQLQUERY_SIZE)
   }
 }
 
-/*
-QVariant value(int index) const
-*/
+// QVariant value(int index) const
 HB_FUNC_STATIC(QSQLQUERY_VALUE)
 {
   QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());

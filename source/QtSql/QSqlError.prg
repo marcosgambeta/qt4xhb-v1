@@ -62,10 +62,8 @@ HB_FUNC_STATIC(QSQLERROR_NEW)
   if (ISBETWEEN(0, 4) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (HB_ISCHAR(2) || HB_ISNIL(2)) &&
       (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
-    /*
-    QSqlError(const QString &driverText = QString(), const QString &databaseText = QString(), QSqlError::ErrorType
-    type = QSqlError::NoError, int number = -1)
-    */
+    // QSqlError(const QString &driverText = QString(), const QString &databaseText = QString(), QSqlError::ErrorType
+    // type = QSqlError::NoError, int number = -1)
     QSqlError *obj = new QSqlError(
         OPQSTRING(1, QString()), OPQSTRING(2, QString()),
         HB_ISNIL(3) ? (QSqlError::ErrorType)QSqlError::NoError : (QSqlError::ErrorType)hb_parni(3), OPINT(4, -1));
@@ -99,9 +97,7 @@ HB_FUNC_STATIC(QSQLERROR_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString databaseText() const
-*/
+// QString databaseText() const
 HB_FUNC_STATIC(QSQLERROR_DATABASETEXT)
 {
   QSqlError *obj = static_cast<QSqlError *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -123,9 +119,7 @@ HB_FUNC_STATIC(QSQLERROR_DATABASETEXT)
   }
 }
 
-/*
-QString driverText() const
-*/
+// QString driverText() const
 HB_FUNC_STATIC(QSQLERROR_DRIVERTEXT)
 {
   QSqlError *obj = static_cast<QSqlError *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -147,9 +141,7 @@ HB_FUNC_STATIC(QSQLERROR_DRIVERTEXT)
   }
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QSQLERROR_ISVALID)
 {
   QSqlError *obj = static_cast<QSqlError *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -171,9 +163,7 @@ HB_FUNC_STATIC(QSQLERROR_ISVALID)
   }
 }
 
-/*
-int number() const
-*/
+// int number() const
 HB_FUNC_STATIC(QSQLERROR_NUMBER)
 {
   QSqlError *obj = static_cast<QSqlError *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -195,9 +185,7 @@ HB_FUNC_STATIC(QSQLERROR_NUMBER)
   }
 }
 
-/*
-void setDatabaseText(const QString &databaseText)
-*/
+// void setDatabaseText(const QString &databaseText)
 HB_FUNC_STATIC(QSQLERROR_SETDATABASETEXT)
 {
   QSqlError *obj = static_cast<QSqlError *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -221,9 +209,7 @@ HB_FUNC_STATIC(QSQLERROR_SETDATABASETEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDriverText(const QString &driverText)
-*/
+// void setDriverText(const QString &driverText)
 HB_FUNC_STATIC(QSQLERROR_SETDRIVERTEXT)
 {
   QSqlError *obj = static_cast<QSqlError *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -247,9 +233,7 @@ HB_FUNC_STATIC(QSQLERROR_SETDRIVERTEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setNumber(int number)
-*/
+// void setNumber(int number)
 HB_FUNC_STATIC(QSQLERROR_SETNUMBER)
 {
   QSqlError *obj = static_cast<QSqlError *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -273,9 +257,7 @@ HB_FUNC_STATIC(QSQLERROR_SETNUMBER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setType(QSqlError::ErrorType type)
-*/
+// void setType(QSqlError::ErrorType type)
 HB_FUNC_STATIC(QSQLERROR_SETTYPE)
 {
   QSqlError *obj = static_cast<QSqlError *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -299,9 +281,7 @@ HB_FUNC_STATIC(QSQLERROR_SETTYPE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString text() const
-*/
+// QString text() const
 HB_FUNC_STATIC(QSQLERROR_TEXT)
 {
   QSqlError *obj = static_cast<QSqlError *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -323,9 +303,7 @@ HB_FUNC_STATIC(QSQLERROR_TEXT)
   }
 }
 
-/*
-QSqlError::ErrorType type() const
-*/
+// QSqlError::ErrorType type() const
 HB_FUNC_STATIC(QSQLERROR_TYPE)
 {
   QSqlError *obj = static_cast<QSqlError *>(Qt4xHb::itemGetPtrStackSelfItem());
