@@ -78,9 +78,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QWidget *current() const = 0
-*/
+// virtual QWidget *current() const = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_CURRENT)
 {
   QDesignerFormWindowCursorInterface *obj =
@@ -104,9 +102,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_CURRENT)
   }
 }
 
-/*
-virtual QDesignerFormWindowInterface *formWindow() const = 0
-*/
+// virtual QDesignerFormWindowInterface *formWindow() const = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_FORMWINDOW)
 {
   QDesignerFormWindowCursorInterface *obj =
@@ -130,9 +126,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_FORMWINDOW)
   }
 }
 
-/*
-virtual bool hasSelection() const = 0
-*/
+// virtual bool hasSelection() const = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_HASSELECTION)
 {
   QDesignerFormWindowCursorInterface *obj =
@@ -155,9 +149,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_HASSELECTION)
   }
 }
 
-/*
-bool isWidgetSelected(QWidget *widget) const
-*/
+// bool isWidgetSelected(QWidget *widget) const
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_ISWIDGETSELECTED)
 {
   QDesignerFormWindowCursorInterface *obj =
@@ -180,10 +172,8 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_ISWIDGETSELECTED)
   }
 }
 
-/*
-virtual bool movePosition(QDesignerFormWindowCursorInterface::MoveOperation operation,
-QDesignerFormWindowCursorInterface::MoveMode mode = QDesignerFormWindowCursorInterface::MoveAnchor) = 0
-*/
+// virtual bool movePosition(QDesignerFormWindowCursorInterface::MoveOperation operation,
+// QDesignerFormWindowCursorInterface::MoveMode mode = QDesignerFormWindowCursorInterface::MoveAnchor) = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_MOVEPOSITION)
 {
   QDesignerFormWindowCursorInterface *obj =
@@ -209,9 +199,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_MOVEPOSITION)
   }
 }
 
-/*
-virtual int position() const = 0
-*/
+// virtual int position() const = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_POSITION)
 {
   QDesignerFormWindowCursorInterface *obj =
@@ -234,9 +222,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_POSITION)
   }
 }
 
-/*
-virtual QWidget *selectedWidget(int index) const = 0
-*/
+// virtual QWidget *selectedWidget(int index) const = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_SELECTEDWIDGET)
 {
   QDesignerFormWindowCursorInterface *obj =
@@ -260,9 +246,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_SELECTEDWIDGET)
   }
 }
 
-/*
-virtual int selectedWidgetCount() const = 0
-*/
+// virtual int selectedWidgetCount() const = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_SELECTEDWIDGETCOUNT)
 {
   QDesignerFormWindowCursorInterface *obj =
@@ -285,10 +269,8 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_SELECTEDWIDGETCOUNT)
   }
 }
 
-/*
-virtual void setPosition(int position, QDesignerFormWindowCursorInterface::MoveMode mode =
-QDesignerFormWindowCursorInterface::MoveAnchor) = 0
-*/
+// virtual void setPosition(int position, QDesignerFormWindowCursorInterface::MoveMode mode =
+// QDesignerFormWindowCursorInterface::MoveAnchor) = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_SETPOSITION)
 {
   QDesignerFormWindowCursorInterface *obj =
@@ -316,9 +298,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_SETPOSITION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QWidget *widget(int index) const = 0
-*/
+// virtual QWidget *widget(int index) const = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_WIDGET)
 {
   QDesignerFormWindowCursorInterface *obj =
@@ -342,9 +322,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_WIDGET)
   }
 }
 
-/*
-virtual int widgetCount() const = 0
-*/
+// virtual int widgetCount() const = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_WIDGETCOUNT)
 {
   QDesignerFormWindowCursorInterface *obj =

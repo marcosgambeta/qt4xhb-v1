@@ -65,7 +65,7 @@ RETURN
 #include <QtDesigner/QDesignerPropertyEditorInterface>
 #include <QtDesigner/QDesignerWidgetBoxInterface>
 
-// QDesignerFormEditorInterface(QObject *parent = 0)
+    // QDesignerFormEditorInterface(QObject *parent = 0)
 HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
@@ -98,9 +98,7 @@ HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QDesignerActionEditorInterface *actionEditor() const
-*/
+// QDesignerActionEditorInterface *actionEditor() const
 HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_ACTIONEDITOR)
 {
   QDesignerFormEditorInterface *obj =
@@ -124,9 +122,7 @@ HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_ACTIONEDITOR)
   }
 }
 
-/*
-QExtensionManager *extensionManager() const
-*/
+// QExtensionManager *extensionManager() const
 HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_EXTENSIONMANAGER)
 {
   QDesignerFormEditorInterface *obj =
@@ -150,9 +146,7 @@ HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_EXTENSIONMANAGER)
   }
 }
 
-/*
-QDesignerFormWindowManagerInterface *formWindowManager() const
-*/
+// QDesignerFormWindowManagerInterface *formWindowManager() const
 HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_FORMWINDOWMANAGER)
 {
   QDesignerFormEditorInterface *obj =
@@ -176,9 +170,7 @@ HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_FORMWINDOWMANAGER)
   }
 }
 
-/*
-QDesignerObjectInspectorInterface *objectInspector() const
-*/
+// QDesignerObjectInspectorInterface *objectInspector() const
 HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_OBJECTINSPECTOR)
 {
   QDesignerFormEditorInterface *obj =
@@ -202,9 +194,7 @@ HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_OBJECTINSPECTOR)
   }
 }
 
-/*
-QDesignerPropertyEditorInterface *propertyEditor() const
-*/
+// QDesignerPropertyEditorInterface *propertyEditor() const
 HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_PROPERTYEDITOR)
 {
   QDesignerFormEditorInterface *obj =
@@ -228,9 +218,7 @@ HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_PROPERTYEDITOR)
   }
 }
 
-/*
-void setActionEditor(QDesignerActionEditorInterface *actionEditor)
-*/
+// void setActionEditor(QDesignerActionEditorInterface *actionEditor)
 HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_SETACTIONEDITOR)
 {
   QDesignerFormEditorInterface *obj =
@@ -255,9 +243,7 @@ HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_SETACTIONEDITOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setObjectInspector(QDesignerObjectInspectorInterface *objectInspector)
-*/
+// void setObjectInspector(QDesignerObjectInspectorInterface *objectInspector)
 HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_SETOBJECTINSPECTOR)
 {
   QDesignerFormEditorInterface *obj =
@@ -282,9 +268,7 @@ HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_SETOBJECTINSPECTOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPropertyEditor(QDesignerPropertyEditorInterface *propertyEditor)
-*/
+// void setPropertyEditor(QDesignerPropertyEditorInterface *propertyEditor)
 HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_SETPROPERTYEDITOR)
 {
   QDesignerFormEditorInterface *obj =
@@ -309,9 +293,7 @@ HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_SETPROPERTYEDITOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWidgetBox(QDesignerWidgetBoxInterface *widgetBox)
-*/
+// void setWidgetBox(QDesignerWidgetBoxInterface *widgetBox)
 HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_SETWIDGETBOX)
 {
   QDesignerFormEditorInterface *obj =
@@ -336,9 +318,7 @@ HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_SETWIDGETBOX)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QWidget *topLevel() const
-*/
+// QWidget *topLevel() const
 HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_TOPLEVEL)
 {
   QDesignerFormEditorInterface *obj =
@@ -362,9 +342,7 @@ HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_TOPLEVEL)
   }
 }
 
-/*
-QDesignerWidgetBoxInterface *widgetBox() const
-*/
+// QDesignerWidgetBoxInterface *widgetBox() const
 HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_WIDGETBOX)
 {
   QDesignerFormEditorInterface *obj =

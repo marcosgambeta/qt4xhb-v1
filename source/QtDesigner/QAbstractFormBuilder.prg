@@ -53,7 +53,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-// QAbstractFormBuilder()
+    // QAbstractFormBuilder()
 HB_FUNC_STATIC(QABSTRACTFORMBUILDER_NEW)
 {
   if (ISNUMPAR(0))
@@ -83,9 +83,7 @@ HB_FUNC_STATIC(QABSTRACTFORMBUILDER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QWidget *load(QIODevice *device, QWidget *parent = 0)
-*/
+// virtual QWidget *load(QIODevice *device, QWidget *parent = 0)
 HB_FUNC_STATIC(QABSTRACTFORMBUILDER_LOAD)
 {
   QAbstractFormBuilder *obj = static_cast<QAbstractFormBuilder *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -108,9 +106,7 @@ HB_FUNC_STATIC(QABSTRACTFORMBUILDER_LOAD)
   }
 }
 
-/*
-virtual void save(QIODevice *device, QWidget *widget)
-*/
+// virtual void save(QIODevice *device, QWidget *widget)
 HB_FUNC_STATIC(QABSTRACTFORMBUILDER_SAVE)
 {
   QAbstractFormBuilder *obj = static_cast<QAbstractFormBuilder *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -134,9 +130,7 @@ HB_FUNC_STATIC(QABSTRACTFORMBUILDER_SAVE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setWorkingDirectory(const QDir &directory)
-*/
+// void setWorkingDirectory(const QDir &directory)
 HB_FUNC_STATIC(QABSTRACTFORMBUILDER_SETWORKINGDIRECTORY)
 {
   QAbstractFormBuilder *obj = static_cast<QAbstractFormBuilder *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -160,9 +154,7 @@ HB_FUNC_STATIC(QABSTRACTFORMBUILDER_SETWORKINGDIRECTORY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QDir workingDirectory() const
-*/
+// QDir workingDirectory() const
 HB_FUNC_STATIC(QABSTRACTFORMBUILDER_WORKINGDIRECTORY)
 {
   QAbstractFormBuilder *obj = static_cast<QAbstractFormBuilder *>(Qt4xHb::itemGetPtrStackSelfItem());

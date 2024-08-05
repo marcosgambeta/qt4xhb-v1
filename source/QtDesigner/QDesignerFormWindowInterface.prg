@@ -119,9 +119,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QDir absoluteDir() const = 0
-*/
+// virtual QDir absoluteDir() const = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_ABSOLUTEDIR)
 {
   QDesignerFormWindowInterface *obj =
@@ -145,9 +143,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_ABSOLUTEDIR)
   }
 }
 
-/*
-virtual void addResourceFile(const QString &path) = 0
-*/
+// virtual void addResourceFile(const QString &path) = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_ADDRESOURCEFILE)
 {
   QDesignerFormWindowInterface *obj =
@@ -172,9 +168,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_ADDRESOURCEFILE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QString author() const = 0
-*/
+// virtual QString author() const = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_AUTHOR)
 {
   QDesignerFormWindowInterface *obj =
@@ -197,9 +191,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_AUTHOR)
   }
 }
 
-/*
-virtual QString comment() const = 0
-*/
+// virtual QString comment() const = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_COMMENT)
 {
   QDesignerFormWindowInterface *obj =
@@ -222,9 +214,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_COMMENT)
   }
 }
 
-/*
-virtual QString contents() const = 0
-*/
+// virtual QString contents() const = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_CONTENTS)
 {
   QDesignerFormWindowInterface *obj =
@@ -247,9 +237,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_CONTENTS)
   }
 }
 
-/*
-virtual QDesignerFormEditorInterface *core() const
-*/
+// virtual QDesignerFormEditorInterface *core() const
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_CORE)
 {
   QDesignerFormWindowInterface *obj =
@@ -273,9 +261,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_CORE)
   }
 }
 
-/*
-virtual QDesignerFormWindowCursorInterface *cursor() const = 0
-*/
+// virtual QDesignerFormWindowCursorInterface *cursor() const = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_CURSOR)
 {
   QDesignerFormWindowInterface *obj =
@@ -299,9 +285,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_CURSOR)
   }
 }
 
-/*
-virtual void emitSelectionChanged() = 0
-*/
+// virtual void emitSelectionChanged() = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_EMITSELECTIONCHANGED)
 {
   QDesignerFormWindowInterface *obj =
@@ -326,9 +310,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_EMITSELECTIONCHANGED)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QString exportMacro() const = 0
-*/
+// virtual QString exportMacro() const = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_EXPORTMACRO)
 {
   QDesignerFormWindowInterface *obj =
@@ -351,9 +333,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_EXPORTMACRO)
   }
 }
 
-/*
-virtual QDesignerFormWindowInterface::Feature features() const = 0
-*/
+// virtual QDesignerFormWindowInterface::Feature features() const = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_FEATURES)
 {
   QDesignerFormWindowInterface *obj =
@@ -376,9 +356,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_FEATURES)
   }
 }
 
-/*
-virtual QString fileName() const = 0
-*/
+// virtual QString fileName() const = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_FILENAME)
 {
   QDesignerFormWindowInterface *obj =
@@ -401,9 +379,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_FILENAME)
   }
 }
 
-/*
-virtual QPoint grid() const = 0
-*/
+// virtual QPoint grid() const = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_GRID)
 {
   QDesignerFormWindowInterface *obj =
@@ -427,9 +403,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_GRID)
   }
 }
 
-/*
-virtual bool hasFeature(QDesignerFormWindowInterface::Feature feature) const = 0
-*/
+// virtual bool hasFeature(QDesignerFormWindowInterface::Feature feature) const = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_HASFEATURE)
 {
   QDesignerFormWindowInterface *obj =
@@ -452,9 +426,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_HASFEATURE)
   }
 }
 
-/*
-virtual QStringList includeHints() const = 0
-*/
+// virtual QStringList includeHints() const = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_INCLUDEHINTS)
 {
   QDesignerFormWindowInterface *obj =
@@ -477,9 +449,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_INCLUDEHINTS)
   }
 }
 
-/*
-virtual bool isDirty() const = 0
-*/
+// virtual bool isDirty() const = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_ISDIRTY)
 {
   QDesignerFormWindowInterface *obj =
@@ -502,9 +472,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_ISDIRTY)
   }
 }
 
-/*
-virtual bool isManaged(QWidget *widget) const = 0
-*/
+// virtual bool isManaged(QWidget *widget) const = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_ISMANAGED)
 {
   QDesignerFormWindowInterface *obj =
@@ -527,9 +495,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_ISMANAGED)
   }
 }
 
-/*
-virtual void layoutDefault(int *margin, int *spacing) = 0
-*/
+// virtual void layoutDefault(int *margin, int *spacing) = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_LAYOUTDEFAULT)
 {
   QDesignerFormWindowInterface *obj =
@@ -558,9 +524,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_LAYOUTDEFAULT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QWidget *mainContainer() const = 0
-*/
+// virtual QWidget *mainContainer() const = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_MAINCONTAINER)
 {
   QDesignerFormWindowInterface *obj =
@@ -584,9 +548,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_MAINCONTAINER)
   }
 }
 
-/*
-virtual QString pixmapFunction() const = 0
-*/
+// virtual QString pixmapFunction() const = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_PIXMAPFUNCTION)
 {
   QDesignerFormWindowInterface *obj =
@@ -609,9 +571,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_PIXMAPFUNCTION)
   }
 }
 
-/*
-virtual void removeResourceFile(const QString &path) = 0
-*/
+// virtual void removeResourceFile(const QString &path) = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_REMOVERESOURCEFILE)
 {
   QDesignerFormWindowInterface *obj =
@@ -636,9 +596,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_REMOVERESOURCEFILE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QStringList resourceFiles() const = 0
-*/
+// virtual QStringList resourceFiles() const = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_RESOURCEFILES)
 {
   QDesignerFormWindowInterface *obj =
@@ -661,9 +619,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_RESOURCEFILES)
   }
 }
 
-/*
-virtual void setAuthor(const QString &author) = 0
-*/
+// virtual void setAuthor(const QString &author) = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETAUTHOR)
 {
   QDesignerFormWindowInterface *obj =
@@ -688,9 +644,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETAUTHOR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setComment(const QString &comment) = 0
-*/
+// virtual void setComment(const QString &comment) = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETCOMMENT)
 {
   QDesignerFormWindowInterface *obj =
@@ -715,9 +669,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETCOMMENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setExportMacro(const QString &exportMacro) = 0
-*/
+// virtual void setExportMacro(const QString &exportMacro) = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETEXPORTMACRO)
 {
   QDesignerFormWindowInterface *obj =
@@ -742,9 +694,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETEXPORTMACRO)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setIncludeHints(const QStringList &includeHints) = 0
-*/
+// virtual void setIncludeHints(const QStringList &includeHints) = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETINCLUDEHINTS)
 {
   QDesignerFormWindowInterface *obj =
@@ -769,9 +719,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETINCLUDEHINTS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setLayoutDefault(int margin, int spacing) = 0
-*/
+// virtual void setLayoutDefault(int margin, int spacing) = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETLAYOUTDEFAULT)
 {
   QDesignerFormWindowInterface *obj =
@@ -796,9 +744,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETLAYOUTDEFAULT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setLayoutFunction(const QString &margin, const QString &spacing) = 0
-*/
+// virtual void setLayoutFunction(const QString &margin, const QString &spacing) = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETLAYOUTFUNCTION)
 {
   QDesignerFormWindowInterface *obj =
@@ -823,9 +769,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETLAYOUTFUNCTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setMainContainer(QWidget *mainContainer) = 0
-*/
+// virtual void setMainContainer(QWidget *mainContainer) = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETMAINCONTAINER)
 {
   QDesignerFormWindowInterface *obj =
@@ -850,9 +794,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETMAINCONTAINER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setPixmapFunction(const QString &pixmapFunction) = 0
-*/
+// virtual void setPixmapFunction(const QString &pixmapFunction) = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETPIXMAPFUNCTION)
 {
   QDesignerFormWindowInterface *obj =
@@ -877,9 +819,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETPIXMAPFUNCTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void clearSelection(bool update = true) = 0
-*/
+// virtual void clearSelection(bool update = true) = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_CLEARSELECTION)
 {
   QDesignerFormWindowInterface *obj =
@@ -904,9 +844,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_CLEARSELECTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void manageWidget(QWidget *widget) = 0
-*/
+// virtual void manageWidget(QWidget *widget) = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_MANAGEWIDGET)
 {
   QDesignerFormWindowInterface *obj =
@@ -931,9 +869,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_MANAGEWIDGET)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void selectWidget(QWidget *widget, bool select = true) = 0
-*/
+// virtual void selectWidget(QWidget *widget, bool select = true) = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SELECTWIDGET)
 {
   QDesignerFormWindowInterface *obj =
@@ -962,9 +898,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETCONTENTS)
 {
   if (ISNUMPAR(1) && ISQIODEVICE(1))
   {
-    /*
-    virtual void setContents(QIODevice *device) = 0
-    */
+    // virtual void setContents(QIODevice *device) = 0
     QDesignerFormWindowInterface *obj =
         qobject_cast<QDesignerFormWindowInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -977,9 +911,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETCONTENTS)
   }
   else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    /*
-    virtual void setContents(const QString &contents) = 0
-    */
+    // virtual void setContents(const QString &contents) = 0
     QDesignerFormWindowInterface *obj =
         qobject_cast<QDesignerFormWindowInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -996,9 +928,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETCONTENTS)
   }
 }
 
-/*
-virtual void setDirty(bool dirty) = 0
-*/
+// virtual void setDirty(bool dirty) = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETDIRTY)
 {
   QDesignerFormWindowInterface *obj =
@@ -1023,9 +953,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETDIRTY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setFeatures(QDesignerFormWindowInterface::Feature features) = 0
-*/
+// virtual void setFeatures(QDesignerFormWindowInterface::Feature features) = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETFEATURES)
 {
   QDesignerFormWindowInterface *obj =
@@ -1050,9 +978,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETFEATURES)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setFileName(const QString &fileName) = 0
-*/
+// virtual void setFileName(const QString &fileName) = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETFILENAME)
 {
   QDesignerFormWindowInterface *obj =
@@ -1077,9 +1003,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETFILENAME)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setGrid(const QPoint &grid) = 0
-*/
+// virtual void setGrid(const QPoint &grid) = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETGRID)
 {
   QDesignerFormWindowInterface *obj =
@@ -1104,9 +1028,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETGRID)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void unmanageWidget(QWidget *widget) = 0
-*/
+// virtual void unmanageWidget(QWidget *widget) = 0
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_UNMANAGEWIDGET)
 {
   QDesignerFormWindowInterface *obj =
@@ -1135,18 +1057,14 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW)
 {
   if (ISNUMPAR(1) && ISQWIDGET(1))
   {
-    /*
-    static QDesignerFormWindowInterface *findFormWindow(QWidget *widget)
-    */
+    // static QDesignerFormWindowInterface *findFormWindow(QWidget *widget)
 
     QDesignerFormWindowInterface *ptr = QDesignerFormWindowInterface::findFormWindow(PQWIDGET(1));
     Qt4xHb::createReturnQWidgetClass(ptr, "QDESIGNERFORMWINDOWINTERFACE");
   }
   else if (ISNUMPAR(1) && ISQOBJECT(1))
   {
-    /*
-    static QDesignerFormWindowInterface *findFormWindow(QObject *object)
-    */
+    // static QDesignerFormWindowInterface *findFormWindow(QObject *object)
 
     QDesignerFormWindowInterface *ptr = QDesignerFormWindowInterface::findFormWindow(PQOBJECT(1));
     Qt4xHb::createReturnQWidgetClass(ptr, "QDESIGNERFORMWINDOWINTERFACE");

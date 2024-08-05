@@ -67,9 +67,7 @@ HB_FUNC_STATIC(QDESIGNERTASKMENUEXTENSION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QAction *preferredEditAction() const
-*/
+// virtual QAction *preferredEditAction() const
 HB_FUNC_STATIC(QDESIGNERTASKMENUEXTENSION_PREFERREDEDITACTION)
 {
   QDesignerTaskMenuExtension *obj = static_cast<QDesignerTaskMenuExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -92,9 +90,7 @@ HB_FUNC_STATIC(QDESIGNERTASKMENUEXTENSION_PREFERREDEDITACTION)
   }
 }
 
-/*
-virtual QList<QAction *> taskActions() const = 0
-*/
+// virtual QList<QAction *> taskActions() const = 0
 HB_FUNC_STATIC(QDESIGNERTASKMENUEXTENSION_TASKACTIONS)
 {
   QDesignerTaskMenuExtension *obj = static_cast<QDesignerTaskMenuExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -118,7 +114,7 @@ HB_FUNC_STATIC(QDESIGNERTASKMENUEXTENSION_TASKACTIONS)
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, static_cast<QAction *>(list[i]));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);

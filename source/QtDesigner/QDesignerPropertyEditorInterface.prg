@@ -71,9 +71,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QDesignerFormEditorInterface *core() const
-*/
+// virtual QDesignerFormEditorInterface *core() const
 HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_CORE)
 {
   QDesignerPropertyEditorInterface *obj =
@@ -97,9 +95,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_CORE)
   }
 }
 
-/*
-virtual QString currentPropertyName() const = 0
-*/
+// virtual QString currentPropertyName() const = 0
 HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_CURRENTPROPERTYNAME)
 {
   QDesignerPropertyEditorInterface *obj =
@@ -122,9 +118,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_CURRENTPROPERTYNAME)
   }
 }
 
-/*
-virtual bool isReadOnly() const = 0
-*/
+// virtual bool isReadOnly() const = 0
 HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_ISREADONLY)
 {
   QDesignerPropertyEditorInterface *obj =
@@ -147,9 +141,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_ISREADONLY)
   }
 }
 
-/*
-virtual QObject *object() const = 0
-*/
+// virtual QObject *object() const = 0
 HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_OBJECT)
 {
   QDesignerPropertyEditorInterface *obj =
@@ -173,9 +165,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_OBJECT)
   }
 }
 
-/*
-virtual void setObject(QObject *object) = 0
-*/
+// virtual void setObject(QObject *object) = 0
 HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_SETOBJECT)
 {
   QDesignerPropertyEditorInterface *obj =
@@ -200,9 +190,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_SETOBJECT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setPropertyValue(const QString &name, const QVariant &value, bool changed = true) = 0
-*/
+// virtual void setPropertyValue(const QString &name, const QVariant &value, bool changed = true) = 0
 HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_SETPROPERTYVALUE)
 {
   QDesignerPropertyEditorInterface *obj =
@@ -227,9 +215,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_SETPROPERTYVALUE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setReadOnly(bool readOnly) = 0
-*/
+// virtual void setReadOnly(bool readOnly) = 0
 HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_SETREADONLY)
 {
   QDesignerPropertyEditorInterface *obj =

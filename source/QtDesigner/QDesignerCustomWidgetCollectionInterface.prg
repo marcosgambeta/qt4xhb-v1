@@ -65,9 +65,7 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QList<QDesignerCustomWidgetInterface *> customWidgets() const = 0
-*/
+// virtual QList<QDesignerCustomWidgetInterface *> customWidgets() const = 0
 HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_CUSTOMWIDGETS)
 {
   QDesignerCustomWidgetCollectionInterface *obj =
@@ -92,7 +90,7 @@ HB_FUNC_STATIC(QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_CUSTOMWIDGETS)
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, static_cast<QDesignerCustomWidgetInterface *>(list[i]));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);

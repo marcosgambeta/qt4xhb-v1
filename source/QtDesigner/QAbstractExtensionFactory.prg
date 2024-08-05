@@ -64,9 +64,7 @@ HB_FUNC_STATIC(QABSTRACTEXTENSIONFACTORY_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QObject *extension(QObject *object, const QString &iid) const = 0
-*/
+// virtual QObject *extension(QObject *object, const QString &iid) const = 0
 HB_FUNC_STATIC(QABSTRACTEXTENSIONFACTORY_EXTENSION)
 {
   QAbstractExtensionFactory *obj = static_cast<QAbstractExtensionFactory *>(Qt4xHb::itemGetPtrStackSelfItem());

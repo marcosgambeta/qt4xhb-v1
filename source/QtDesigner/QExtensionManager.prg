@@ -44,7 +44,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-// QExtensionManager(QObject *parent = 0)
+    // QExtensionManager(QObject *parent = 0)
 HB_FUNC_STATIC(QEXTENSIONMANAGER_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
@@ -76,9 +76,7 @@ HB_FUNC_STATIC(QEXTENSIONMANAGER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QObject *extension(QObject *object, const QString &iid) const
-*/
+// virtual QObject *extension(QObject *object, const QString &iid) const
 HB_FUNC_STATIC(QEXTENSIONMANAGER_EXTENSION)
 {
   QExtensionManager *obj = qobject_cast<QExtensionManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -101,9 +99,7 @@ HB_FUNC_STATIC(QEXTENSIONMANAGER_EXTENSION)
   }
 }
 
-/*
-virtual void registerExtensions(QAbstractExtensionFactory *factory, const QString &iid = QString())
-*/
+// virtual void registerExtensions(QAbstractExtensionFactory *factory, const QString &iid = QString())
 HB_FUNC_STATIC(QEXTENSIONMANAGER_REGISTEREXTENSIONS)
 {
   QExtensionManager *obj = qobject_cast<QExtensionManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -127,9 +123,7 @@ HB_FUNC_STATIC(QEXTENSIONMANAGER_REGISTEREXTENSIONS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void unregisterExtensions(QAbstractExtensionFactory *factory, const QString &iid = QString())
-*/
+// virtual void unregisterExtensions(QAbstractExtensionFactory *factory, const QString &iid = QString())
 HB_FUNC_STATIC(QEXTENSIONMANAGER_UNREGISTEREXTENSIONS)
 {
   QExtensionManager *obj = qobject_cast<QExtensionManager *>(Qt4xHb::getQObjectPointerFromSelfItem());

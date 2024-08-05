@@ -77,9 +77,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual int count() const = 0
-*/
+// virtual int count() const = 0
 HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_COUNT)
 {
   QDesignerMemberSheetExtension *obj = static_cast<QDesignerMemberSheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -101,9 +99,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_COUNT)
   }
 }
 
-/*
-virtual QString declaredInClass(int index) const = 0
-*/
+// virtual QString declaredInClass(int index) const = 0
 HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_DECLAREDINCLASS)
 {
   QDesignerMemberSheetExtension *obj = static_cast<QDesignerMemberSheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -125,9 +121,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_DECLAREDINCLASS)
   }
 }
 
-/*
-virtual int indexOf(const QString &name) const = 0
-*/
+// virtual int indexOf(const QString &name) const = 0
 HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_INDEXOF)
 {
   QDesignerMemberSheetExtension *obj = static_cast<QDesignerMemberSheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -149,9 +143,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_INDEXOF)
   }
 }
 
-/*
-virtual bool inheritedFromWidget(int index) const = 0
-*/
+// virtual bool inheritedFromWidget(int index) const = 0
 HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_INHERITEDFROMWIDGET)
 {
   QDesignerMemberSheetExtension *obj = static_cast<QDesignerMemberSheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -173,9 +165,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_INHERITEDFROMWIDGET)
   }
 }
 
-/*
-virtual bool isSignal(int index) const = 0
-*/
+// virtual bool isSignal(int index) const = 0
 HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_ISSIGNAL)
 {
   QDesignerMemberSheetExtension *obj = static_cast<QDesignerMemberSheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -197,9 +187,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_ISSIGNAL)
   }
 }
 
-/*
-virtual bool isSlot(int index) const = 0
-*/
+// virtual bool isSlot(int index) const = 0
 HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_ISSLOT)
 {
   QDesignerMemberSheetExtension *obj = static_cast<QDesignerMemberSheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -221,9 +209,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_ISSLOT)
   }
 }
 
-/*
-virtual bool isVisible(int index) const = 0
-*/
+// virtual bool isVisible(int index) const = 0
 HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_ISVISIBLE)
 {
   QDesignerMemberSheetExtension *obj = static_cast<QDesignerMemberSheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -245,9 +231,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_ISVISIBLE)
   }
 }
 
-/*
-virtual QString memberGroup(int index) const = 0
-*/
+// virtual QString memberGroup(int index) const = 0
 HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_MEMBERGROUP)
 {
   QDesignerMemberSheetExtension *obj = static_cast<QDesignerMemberSheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -269,9 +253,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_MEMBERGROUP)
   }
 }
 
-/*
-virtual QString memberName(int index) const = 0
-*/
+// virtual QString memberName(int index) const = 0
 HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_MEMBERNAME)
 {
   QDesignerMemberSheetExtension *obj = static_cast<QDesignerMemberSheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -293,9 +275,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_MEMBERNAME)
   }
 }
 
-/*
-virtual QList<QByteArray> parameterNames(int index) const = 0
-*/
+// virtual QList<QByteArray> parameterNames(int index) const = 0
 HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_PARAMETERNAMES)
 {
   QDesignerMemberSheetExtension *obj = static_cast<QDesignerMemberSheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -344,9 +324,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_PARAMETERNAMES)
   }
 }
 
-/*
-virtual QList<QByteArray> parameterTypes(int index) const = 0
-*/
+// virtual QList<QByteArray> parameterTypes(int index) const = 0
 HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_PARAMETERTYPES)
 {
   QDesignerMemberSheetExtension *obj = static_cast<QDesignerMemberSheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -395,9 +373,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_PARAMETERTYPES)
   }
 }
 
-/*
-virtual void setMemberGroup(int index, const QString &group) = 0
-*/
+// virtual void setMemberGroup(int index, const QString &group) = 0
 HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_SETMEMBERGROUP)
 {
   QDesignerMemberSheetExtension *obj = static_cast<QDesignerMemberSheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -421,9 +397,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_SETMEMBERGROUP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void setVisible(int index, bool visible) = 0
-*/
+// virtual void setVisible(int index, bool visible) = 0
 HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_SETVISIBLE)
 {
   QDesignerMemberSheetExtension *obj = static_cast<QDesignerMemberSheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -447,9 +421,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_SETVISIBLE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QString signature(int index) const = 0
-*/
+// virtual QString signature(int index) const = 0
 HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_SIGNATURE)
 {
   QDesignerMemberSheetExtension *obj = static_cast<QDesignerMemberSheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
