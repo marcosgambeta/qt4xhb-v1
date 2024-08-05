@@ -54,7 +54,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-// QXmlSerializer(const QXmlQuery &query, QIODevice *outputDevice)
+    // QXmlSerializer(const QXmlQuery &query, QIODevice *outputDevice)
 HB_FUNC_STATIC(QXMLSERIALIZER_NEW)
 {
   if (ISNUMPAR(2) && ISQXMLQUERY(1) && ISQIODEVICE(2))
@@ -68,9 +68,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_NEW)
   }
 }
 
-/*
-const QTextCodec *codec() const
-*/
+// const QTextCodec *codec() const
 HB_FUNC_STATIC(QXMLSERIALIZER_CODEC)
 {
   QXmlSerializer *obj = static_cast<QXmlSerializer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -93,9 +91,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_CODEC)
   }
 }
 
-/*
-QIODevice *outputDevice() const
-*/
+// QIODevice *outputDevice() const
 HB_FUNC_STATIC(QXMLSERIALIZER_OUTPUTDEVICE)
 {
   QXmlSerializer *obj = static_cast<QXmlSerializer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -118,9 +114,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_OUTPUTDEVICE)
   }
 }
 
-/*
-void setCodec(const QTextCodec *outputCodec)
-*/
+// void setCodec(const QTextCodec *outputCodec)
 HB_FUNC_STATIC(QXMLSERIALIZER_SETCODEC)
 {
   QXmlSerializer *obj = static_cast<QXmlSerializer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -144,9 +138,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_SETCODEC)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void atomicValue(const QVariant &value)
-*/
+// virtual void atomicValue(const QVariant &value)
 HB_FUNC_STATIC(QXMLSERIALIZER_ATOMICVALUE)
 {
   QXmlSerializer *obj = static_cast<QXmlSerializer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -170,9 +162,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_ATOMICVALUE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void attribute(const QXmlName &name, const QStringRef &value)
-*/
+// virtual void attribute(const QXmlName &name, const QStringRef &value)
 HB_FUNC_STATIC(QXMLSERIALIZER_ATTRIBUTE)
 {
   QXmlSerializer *obj = static_cast<QXmlSerializer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -196,9 +186,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_ATTRIBUTE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void characters(const QStringRef &value)
-*/
+// virtual void characters(const QStringRef &value)
 HB_FUNC_STATIC(QXMLSERIALIZER_CHARACTERS)
 {
   QXmlSerializer *obj = static_cast<QXmlSerializer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -222,9 +210,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_CHARACTERS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void comment(const QString &value)
-*/
+// virtual void comment(const QString &value)
 HB_FUNC_STATIC(QXMLSERIALIZER_COMMENT)
 {
   QXmlSerializer *obj = static_cast<QXmlSerializer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -248,9 +234,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_COMMENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void endDocument()
-*/
+// virtual void endDocument()
 HB_FUNC_STATIC(QXMLSERIALIZER_ENDDOCUMENT)
 {
   QXmlSerializer *obj = static_cast<QXmlSerializer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -274,9 +258,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_ENDDOCUMENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void endElement()
-*/
+// virtual void endElement()
 HB_FUNC_STATIC(QXMLSERIALIZER_ENDELEMENT)
 {
   QXmlSerializer *obj = static_cast<QXmlSerializer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -300,9 +282,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_ENDELEMENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void endOfSequence()
-*/
+// virtual void endOfSequence()
 HB_FUNC_STATIC(QXMLSERIALIZER_ENDOFSEQUENCE)
 {
   QXmlSerializer *obj = static_cast<QXmlSerializer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -326,9 +306,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_ENDOFSEQUENCE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void namespaceBinding(const QXmlName &nb)
-*/
+// virtual void namespaceBinding(const QXmlName &nb)
 HB_FUNC_STATIC(QXMLSERIALIZER_NAMESPACEBINDING)
 {
   QXmlSerializer *obj = static_cast<QXmlSerializer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -352,9 +330,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_NAMESPACEBINDING)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void processingInstruction(const QXmlName &name, const QString &value)
-*/
+// virtual void processingInstruction(const QXmlName &name, const QString &value)
 HB_FUNC_STATIC(QXMLSERIALIZER_PROCESSINGINSTRUCTION)
 {
   QXmlSerializer *obj = static_cast<QXmlSerializer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -378,9 +354,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_PROCESSINGINSTRUCTION)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void startDocument()
-*/
+// virtual void startDocument()
 HB_FUNC_STATIC(QXMLSERIALIZER_STARTDOCUMENT)
 {
   QXmlSerializer *obj = static_cast<QXmlSerializer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -404,9 +378,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_STARTDOCUMENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void startElement(const QXmlName &name)
-*/
+// virtual void startElement(const QXmlName &name)
 HB_FUNC_STATIC(QXMLSERIALIZER_STARTELEMENT)
 {
   QXmlSerializer *obj = static_cast<QXmlSerializer *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -430,9 +402,7 @@ HB_FUNC_STATIC(QXMLSERIALIZER_STARTELEMENT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void startOfSequence()
-*/
+// virtual void startOfSequence()
 HB_FUNC_STATIC(QXMLSERIALIZER_STARTOFSEQUENCE)
 {
   QXmlSerializer *obj = static_cast<QXmlSerializer *>(Qt4xHb::itemGetPtrStackSelfItem());

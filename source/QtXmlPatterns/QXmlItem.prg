@@ -104,9 +104,7 @@ HB_FUNC_STATIC(QXMLITEM_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isAtomicValue() const
-*/
+// bool isAtomicValue() const
 HB_FUNC_STATIC(QXMLITEM_ISATOMICVALUE)
 {
   QXmlItem *obj = static_cast<QXmlItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -128,9 +126,7 @@ HB_FUNC_STATIC(QXMLITEM_ISATOMICVALUE)
   }
 }
 
-/*
-bool isNode() const
-*/
+// bool isNode() const
 HB_FUNC_STATIC(QXMLITEM_ISNODE)
 {
   QXmlItem *obj = static_cast<QXmlItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -152,9 +148,7 @@ HB_FUNC_STATIC(QXMLITEM_ISNODE)
   }
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QXMLITEM_ISNULL)
 {
   QXmlItem *obj = static_cast<QXmlItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -176,9 +170,7 @@ HB_FUNC_STATIC(QXMLITEM_ISNULL)
   }
 }
 
-/*
-QVariant toAtomicValue() const
-*/
+// QVariant toAtomicValue() const
 HB_FUNC_STATIC(QXMLITEM_TOATOMICVALUE)
 {
   QXmlItem *obj = static_cast<QXmlItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -201,9 +193,7 @@ HB_FUNC_STATIC(QXMLITEM_TOATOMICVALUE)
   }
 }
 
-/*
-QXmlNodeModelIndex toNodeModelIndex() const
-*/
+// QXmlNodeModelIndex toNodeModelIndex() const
 HB_FUNC_STATIC(QXMLITEM_TONODEMODELINDEX)
 {
   QXmlItem *obj = static_cast<QXmlItem *>(Qt4xHb::itemGetPtrStackSelfItem());

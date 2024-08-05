@@ -75,9 +75,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QUrl baseUri(const QXmlNodeModelIndex &n) const = 0
-*/
+// virtual QUrl baseUri(const QXmlNodeModelIndex &n) const = 0
 HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_BASEURI)
 {
   QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -100,10 +98,8 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_BASEURI)
   }
 }
 
-/*
-virtual QXmlNodeModelIndex::DocumentOrder compareOrder(const QXmlNodeModelIndex &ni1, const QXmlNodeModelIndex &ni2)
-const = 0
-*/
+// virtual QXmlNodeModelIndex::DocumentOrder compareOrder(const QXmlNodeModelIndex &ni1, const QXmlNodeModelIndex &ni2)
+// const = 0
 HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_COMPAREORDER)
 {
   QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -125,9 +121,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_COMPAREORDER)
   }
 }
 
-/*
-virtual QUrl documentUri(const QXmlNodeModelIndex &n) const = 0
-*/
+// virtual QUrl documentUri(const QXmlNodeModelIndex &n) const = 0
 HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_DOCUMENTURI)
 {
   QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -150,9 +144,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_DOCUMENTURI)
   }
 }
 
-/*
-virtual QXmlNodeModelIndex elementById(const QXmlName &id) const = 0
-*/
+// virtual QXmlNodeModelIndex elementById(const QXmlName &id) const = 0
 HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_ELEMENTBYID)
 {
   QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -175,9 +167,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_ELEMENTBYID)
   }
 }
 
-/*
-virtual QXmlNodeModelIndex::NodeKind kind(const QXmlNodeModelIndex &ni) const = 0
-*/
+// virtual QXmlNodeModelIndex::NodeKind kind(const QXmlNodeModelIndex &ni) const = 0
 HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_KIND)
 {
   QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -199,9 +189,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_KIND)
   }
 }
 
-/*
-virtual QXmlName name(const QXmlNodeModelIndex &ni) const = 0
-*/
+// virtual QXmlName name(const QXmlNodeModelIndex &ni) const = 0
 HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_NAME)
 {
   QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -224,9 +212,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_NAME)
   }
 }
 
-/*
-virtual QVector<QXmlName> namespaceBindings(const QXmlNodeModelIndex &n) const = 0
-*/
+// virtual QVector<QXmlName> namespaceBindings(const QXmlNodeModelIndex &n) const = 0
 HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_NAMESPACEBINDINGS)
 {
   QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -250,7 +236,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_NAMESPACEBINDINGS)
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QXmlName(list[i]));
+          PHB_ITEM pItem = hb_itemPutPtr(pItem, new QXmlName(list[i]));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
@@ -275,9 +261,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_NAMESPACEBINDINGS)
   }
 }
 
-/*
-virtual QVector<QXmlNodeModelIndex> nodesByIdref(const QXmlName &idref) const = 0
-*/
+// virtual QVector<QXmlNodeModelIndex> nodesByIdref(const QXmlName &idref) const = 0
 HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_NODESBYIDREF)
 {
   QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -301,7 +285,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_NODESBYIDREF)
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QXmlNodeModelIndex(list[i]));
+          PHB_ITEM pItem = hb_itemPutPtr(pItem, new QXmlNodeModelIndex(list[i]));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
@@ -326,9 +310,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_NODESBYIDREF)
   }
 }
 
-/*
-virtual QXmlNodeModelIndex root(const QXmlNodeModelIndex &n) const = 0
-*/
+// virtual QXmlNodeModelIndex root(const QXmlNodeModelIndex &n) const = 0
 HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_ROOT)
 {
   QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -351,9 +333,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_ROOT)
   }
 }
 
-/*
-QSourceLocation sourceLocation(const QXmlNodeModelIndex &index) const
-*/
+// QSourceLocation sourceLocation(const QXmlNodeModelIndex &index) const
 HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_SOURCELOCATION)
 {
   QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -376,9 +356,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_SOURCELOCATION)
   }
 }
 
-/*
-virtual QString stringValue(const QXmlNodeModelIndex &n) const = 0
-*/
+// virtual QString stringValue(const QXmlNodeModelIndex &n) const = 0
 HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_STRINGVALUE)
 {
   QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -400,9 +378,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_STRINGVALUE)
   }
 }
 
-/*
-virtual QVariant typedValue(const QXmlNodeModelIndex &node) const = 0
-*/
+// virtual QVariant typedValue(const QXmlNodeModelIndex &node) const = 0
 HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_TYPEDVALUE)
 {
   QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());

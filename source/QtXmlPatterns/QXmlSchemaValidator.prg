@@ -103,9 +103,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAbstractMessageHandler *messageHandler() const
-*/
+// QAbstractMessageHandler *messageHandler() const
 HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_MESSAGEHANDLER)
 {
   QXmlSchemaValidator *obj = static_cast<QXmlSchemaValidator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -128,9 +126,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_MESSAGEHANDLER)
   }
 }
 
-/*
-QXmlNamePool namePool() const
-*/
+// QXmlNamePool namePool() const
 HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_NAMEPOOL)
 {
   QXmlSchemaValidator *obj = static_cast<QXmlSchemaValidator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -153,9 +149,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_NAMEPOOL)
   }
 }
 
-/*
-QNetworkAccessManager *networkAccessManager() const
-*/
+// QNetworkAccessManager *networkAccessManager() const
 HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_NETWORKACCESSMANAGER)
 {
   QXmlSchemaValidator *obj = static_cast<QXmlSchemaValidator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -178,9 +172,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_NETWORKACCESSMANAGER)
   }
 }
 
-/*
-QXmlSchema schema() const
-*/
+// QXmlSchema schema() const
 HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_SCHEMA)
 {
   QXmlSchemaValidator *obj = static_cast<QXmlSchemaValidator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -203,9 +195,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_SCHEMA)
   }
 }
 
-/*
-void setMessageHandler(QAbstractMessageHandler *handler)
-*/
+// void setMessageHandler(QAbstractMessageHandler *handler)
 HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_SETMESSAGEHANDLER)
 {
   QXmlSchemaValidator *obj = static_cast<QXmlSchemaValidator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -229,9 +219,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_SETMESSAGEHANDLER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setNetworkAccessManager(QNetworkAccessManager *manager)
-*/
+// void setNetworkAccessManager(QNetworkAccessManager *manager)
 HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_SETNETWORKACCESSMANAGER)
 {
   QXmlSchemaValidator *obj = static_cast<QXmlSchemaValidator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -255,9 +243,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_SETNETWORKACCESSMANAGER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSchema(const QXmlSchema &schema)
-*/
+// void setSchema(const QXmlSchema &schema)
 HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_SETSCHEMA)
 {
   QXmlSchemaValidator *obj = static_cast<QXmlSchemaValidator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -281,9 +267,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_SETSCHEMA)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setUriResolver(const QAbstractUriResolver *resolver)
-*/
+// void setUriResolver(const QAbstractUriResolver *resolver)
 HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_SETURIRESOLVER)
 {
   QXmlSchemaValidator *obj = static_cast<QXmlSchemaValidator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -307,9 +291,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_SETURIRESOLVER)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-const QAbstractUriResolver *uriResolver() const
-*/
+// const QAbstractUriResolver *uriResolver() const
 HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_URIRESOLVER)
 {
   QXmlSchemaValidator *obj = static_cast<QXmlSchemaValidator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -336,9 +318,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_VALIDATE)
 {
   if (ISNUMPAR(1) && ISQURL(1))
   {
-    /*
-    bool validate(const QUrl &source) const
-    */
+    // bool validate(const QUrl &source) const
     QXmlSchemaValidator *obj = static_cast<QXmlSchemaValidator *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -348,9 +328,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_VALIDATE)
   }
   else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (ISQURL(2) || HB_ISNIL(2)))
   {
-    /*
-    bool validate(QIODevice *source, const QUrl &documentUri = QUrl()) const
-    */
+    // bool validate(QIODevice *source, const QUrl &documentUri = QUrl()) const
     QXmlSchemaValidator *obj = static_cast<QXmlSchemaValidator *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)
@@ -360,9 +338,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_VALIDATE)
   }
   else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (ISQURL(2) || HB_ISNIL(2)))
   {
-    /*
-    bool validate(const QByteArray &data, const QUrl &documentUri = QUrl()) const
-    */
+    // bool validate(const QByteArray &data, const QUrl &documentUri = QUrl()) const
     QXmlSchemaValidator *obj = static_cast<QXmlSchemaValidator *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL)

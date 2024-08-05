@@ -97,9 +97,7 @@ HB_FUNC_STATIC(QSOURCELOCATION_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qint64 column() const
-*/
+// qint64 column() const
 HB_FUNC_STATIC(QSOURCELOCATION_COLUMN)
 {
   QSourceLocation *obj = static_cast<QSourceLocation *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -121,9 +119,7 @@ HB_FUNC_STATIC(QSOURCELOCATION_COLUMN)
   }
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QSOURCELOCATION_ISNULL)
 {
   QSourceLocation *obj = static_cast<QSourceLocation *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -145,9 +141,7 @@ HB_FUNC_STATIC(QSOURCELOCATION_ISNULL)
   }
 }
 
-/*
-qint64 line() const
-*/
+// qint64 line() const
 HB_FUNC_STATIC(QSOURCELOCATION_LINE)
 {
   QSourceLocation *obj = static_cast<QSourceLocation *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -169,9 +163,7 @@ HB_FUNC_STATIC(QSOURCELOCATION_LINE)
   }
 }
 
-/*
-void setColumn(qint64 newColumn)
-*/
+// void setColumn(qint64 newColumn)
 HB_FUNC_STATIC(QSOURCELOCATION_SETCOLUMN)
 {
   QSourceLocation *obj = static_cast<QSourceLocation *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -195,9 +187,7 @@ HB_FUNC_STATIC(QSOURCELOCATION_SETCOLUMN)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setLine(qint64 newLine)
-*/
+// void setLine(qint64 newLine)
 HB_FUNC_STATIC(QSOURCELOCATION_SETLINE)
 {
   QSourceLocation *obj = static_cast<QSourceLocation *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -221,9 +211,7 @@ HB_FUNC_STATIC(QSOURCELOCATION_SETLINE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setUri(const QUrl &newUri)
-*/
+// void setUri(const QUrl &newUri)
 HB_FUNC_STATIC(QSOURCELOCATION_SETURI)
 {
   QSourceLocation *obj = static_cast<QSourceLocation *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -247,9 +235,7 @@ HB_FUNC_STATIC(QSOURCELOCATION_SETURI)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QUrl uri() const
-*/
+// QUrl uri() const
 HB_FUNC_STATIC(QSOURCELOCATION_URI)
 {
   QSourceLocation *obj = static_cast<QSourceLocation *>(Qt4xHb::itemGetPtrStackSelfItem());
