@@ -63,7 +63,7 @@ RETURN
 #include <QtGui/QToolBar>
 #include <QtGui/QMainWindow>
 
-// QScriptEngineDebugger(QObject *parent = 0)
+    // QScriptEngineDebugger(QObject *parent = 0)
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
@@ -95,9 +95,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QAction *action(QScriptEngineDebugger::DebuggerAction action) const
-*/
+// QAction *action(QScriptEngineDebugger::DebuggerAction action) const
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_ACTION)
 {
   QScriptEngineDebugger *obj = qobject_cast<QScriptEngineDebugger *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -120,9 +118,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_ACTION)
   }
 }
 
-/*
-void attachTo(QScriptEngine *engine)
-*/
+// void attachTo(QScriptEngine *engine)
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_ATTACHTO)
 {
   QScriptEngineDebugger *obj = qobject_cast<QScriptEngineDebugger *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -146,9 +142,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_ATTACHTO)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool autoShowStandardWindow() const
-*/
+// bool autoShowStandardWindow() const
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_AUTOSHOWSTANDARDWINDOW)
 {
   QScriptEngineDebugger *obj = qobject_cast<QScriptEngineDebugger *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -170,9 +164,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_AUTOSHOWSTANDARDWINDOW)
   }
 }
 
-/*
-QMenu *createStandardMenu(QWidget *parent = 0)
-*/
+// QMenu *createStandardMenu(QWidget *parent = 0)
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_CREATESTANDARDMENU)
 {
   QScriptEngineDebugger *obj = qobject_cast<QScriptEngineDebugger *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -195,9 +187,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_CREATESTANDARDMENU)
   }
 }
 
-/*
-QToolBar *createStandardToolBar(QWidget *parent = 0)
-*/
+// QToolBar *createStandardToolBar(QWidget *parent = 0)
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_CREATESTANDARDTOOLBAR)
 {
   QScriptEngineDebugger *obj = qobject_cast<QScriptEngineDebugger *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -220,9 +210,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_CREATESTANDARDTOOLBAR)
   }
 }
 
-/*
-void detach()
-*/
+// void detach()
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_DETACH)
 {
   QScriptEngineDebugger *obj = qobject_cast<QScriptEngineDebugger *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -246,9 +234,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_DETACH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setAutoShowStandardWindow(bool autoShow)
-*/
+// void setAutoShowStandardWindow(bool autoShow)
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_SETAUTOSHOWSTANDARDWINDOW)
 {
   QScriptEngineDebugger *obj = qobject_cast<QScriptEngineDebugger *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -272,9 +258,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_SETAUTOSHOWSTANDARDWINDOW)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QMainWindow *standardWindow() const
-*/
+// QMainWindow *standardWindow() const
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_STANDARDWINDOW)
 {
   QScriptEngineDebugger *obj = qobject_cast<QScriptEngineDebugger *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -297,9 +281,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_STANDARDWINDOW)
   }
 }
 
-/*
-QScriptEngineDebugger::DebuggerState state() const
-*/
+// QScriptEngineDebugger::DebuggerState state() const
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_STATE)
 {
   QScriptEngineDebugger *obj = qobject_cast<QScriptEngineDebugger *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -321,9 +303,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_STATE)
   }
 }
 
-/*
-QWidget *widget(QScriptEngineDebugger::DebuggerWidget widget) const
-*/
+// QWidget *widget(QScriptEngineDebugger::DebuggerWidget widget) const
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_WIDGET)
 {
   QScriptEngineDebugger *obj = qobject_cast<QScriptEngineDebugger *>(Qt4xHb::getQObjectPointerFromSelfItem());
