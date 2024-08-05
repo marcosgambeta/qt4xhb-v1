@@ -101,9 +101,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addDelay(int msecs)
-*/
+// void addDelay(int msecs)
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDDELAY)
 {
   QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -127,9 +125,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDDELAY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addKeyClick(Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1)
-*/
+// void addKeyClick(Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1)
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYCLICK1)
 {
   QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -155,9 +151,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYCLICK1)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addKeyClick(char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1)
-*/
+// void addKeyClick(char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1)
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYCLICK2)
 {
   QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -199,9 +193,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYCLICK)
   }
 }
 
-/*
-void addKeyClicks(const QString &keys, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1)
-*/
+// void addKeyClicks(const QString &keys, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1)
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYCLICKS)
 {
   QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -227,9 +219,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYCLICKS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addKeyPress(Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1)
-*/
+// void addKeyPress(Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1)
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYPRESS1)
 {
   QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -255,9 +245,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYPRESS1)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addKeyPress(char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1)
-*/
+// void addKeyPress(char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1)
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYPRESS2)
 {
   QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -299,9 +287,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYPRESS)
   }
 }
 
-/*
-void addKeyRelease(Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1)
-*/
+// void addKeyRelease(Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1)
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYRELEASE1)
 {
   QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -327,9 +313,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYRELEASE1)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addKeyRelease(char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1)
-*/
+// void addKeyRelease(char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1)
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYRELEASE2)
 {
   QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -371,9 +355,8 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYRELEASE)
   }
 }
 
-/*
-void addMouseClick(Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1)
-*/
+// void addMouseClick(Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay =
+// -1)
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSECLICK)
 {
   QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -400,10 +383,8 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSECLICK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addMouseDClick(Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1
-)
-*/
+// void addMouseDClick(Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay =
+// -1)
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSEDCLICK)
 {
   QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -430,9 +411,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSEDCLICK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addMouseMove(QPoint pos = QPoint(), int delay = -1)
-*/
+// void addMouseMove(QPoint pos = QPoint(), int delay = -1)
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSEMOVE)
 {
   QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -456,9 +435,8 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSEMOVE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addMousePress(Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1)
-*/
+// void addMousePress(Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay =
+// -1)
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSEPRESS)
 {
   QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -485,10 +463,8 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSEPRESS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addMouseRelease(Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1
-)
-*/
+// void addMouseRelease(Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay =
+// -1)
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSERELEASE)
 {
   QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -515,9 +491,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSERELEASE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void clear()
-*/
+// void clear()
 HB_FUNC_STATIC(QTESTEVENTLIST_CLEAR)
 {
   QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -541,9 +515,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_CLEAR)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void simulate(QWidget *w)
-*/
+// void simulate(QWidget *w)
 HB_FUNC_STATIC(QTESTEVENTLIST_SIMULATE)
 {
   QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
