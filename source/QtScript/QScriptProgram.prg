@@ -87,9 +87,7 @@ HB_FUNC_STATIC(QSCRIPTPROGRAM_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString fileName() const
-*/
+// QString fileName() const
 HB_FUNC_STATIC(QSCRIPTPROGRAM_FILENAME)
 {
   QScriptProgram *obj = static_cast<QScriptProgram *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -111,9 +109,7 @@ HB_FUNC_STATIC(QSCRIPTPROGRAM_FILENAME)
   }
 }
 
-/*
-int firstLineNumber() const
-*/
+// int firstLineNumber() const
 HB_FUNC_STATIC(QSCRIPTPROGRAM_FIRSTLINENUMBER)
 {
   QScriptProgram *obj = static_cast<QScriptProgram *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -135,9 +131,7 @@ HB_FUNC_STATIC(QSCRIPTPROGRAM_FIRSTLINENUMBER)
   }
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QSCRIPTPROGRAM_ISNULL)
 {
   QScriptProgram *obj = static_cast<QScriptProgram *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -159,9 +153,7 @@ HB_FUNC_STATIC(QSCRIPTPROGRAM_ISNULL)
   }
 }
 
-/*
-QString sourceCode() const
-*/
+// QString sourceCode() const
 HB_FUNC_STATIC(QSCRIPTPROGRAM_SOURCECODE)
 {
   QScriptProgram *obj = static_cast<QScriptProgram *>(Qt4xHb::itemGetPtrStackSelfItem());

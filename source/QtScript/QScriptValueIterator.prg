@@ -63,7 +63,7 @@ RETURN
 
 #include <QtScript/QScriptString>
 
-// QScriptValueIterator(const QScriptValue &object)
+    // QScriptValueIterator(const QScriptValue &object)
 HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_NEW)
 {
   if (ISNUMPAR(1) && ISQSCRIPTVALUE(1))
@@ -93,9 +93,7 @@ HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QScriptValue::PropertyFlags flags() const
-*/
+// QScriptValue::PropertyFlags flags() const
 HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_FLAGS)
 {
   QScriptValueIterator *obj = static_cast<QScriptValueIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -117,9 +115,7 @@ HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_FLAGS)
   }
 }
 
-/*
-bool hasNext() const
-*/
+// bool hasNext() const
 HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_HASNEXT)
 {
   QScriptValueIterator *obj = static_cast<QScriptValueIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -141,9 +137,7 @@ HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_HASNEXT)
   }
 }
 
-/*
-bool hasPrevious() const
-*/
+// bool hasPrevious() const
 HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_HASPREVIOUS)
 {
   QScriptValueIterator *obj = static_cast<QScriptValueIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -165,9 +159,7 @@ HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_HASPREVIOUS)
   }
 }
 
-/*
-QString name() const
-*/
+// QString name() const
 HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_NAME)
 {
   QScriptValueIterator *obj = static_cast<QScriptValueIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -189,9 +181,7 @@ HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_NAME)
   }
 }
 
-/*
-void next()
-*/
+// void next()
 HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_NEXT)
 {
   QScriptValueIterator *obj = static_cast<QScriptValueIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -215,9 +205,7 @@ HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_NEXT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void previous()
-*/
+// void previous()
 HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_PREVIOUS)
 {
   QScriptValueIterator *obj = static_cast<QScriptValueIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -241,9 +229,7 @@ HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_PREVIOUS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void remove()
-*/
+// void remove()
 HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_REMOVE)
 {
   QScriptValueIterator *obj = static_cast<QScriptValueIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -267,9 +253,7 @@ HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_REMOVE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QScriptString scriptName() const
-*/
+// QScriptString scriptName() const
 HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_SCRIPTNAME)
 {
   QScriptValueIterator *obj = static_cast<QScriptValueIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -292,9 +276,7 @@ HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_SCRIPTNAME)
   }
 }
 
-/*
-void setValue(const QScriptValue &value)
-*/
+// void setValue(const QScriptValue &value)
 HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_SETVALUE)
 {
   QScriptValueIterator *obj = static_cast<QScriptValueIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -318,9 +300,7 @@ HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_SETVALUE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void toBack()
-*/
+// void toBack()
 HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_TOBACK)
 {
   QScriptValueIterator *obj = static_cast<QScriptValueIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -344,9 +324,7 @@ HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_TOBACK)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void toFront()
-*/
+// void toFront()
 HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_TOFRONT)
 {
   QScriptValueIterator *obj = static_cast<QScriptValueIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -370,9 +348,7 @@ HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_TOFRONT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QScriptValue value() const
-*/
+// QScriptValue value() const
 HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_VALUE)
 {
   QScriptValueIterator *obj = static_cast<QScriptValueIterator *>(Qt4xHb::itemGetPtrStackSelfItem());

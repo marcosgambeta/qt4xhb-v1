@@ -63,9 +63,7 @@ HB_FUNC_STATIC(QSCRIPTEXTENSIONPLUGIN_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QScriptValue setupPackage(const QString &key, QScriptEngine *engine) const
-*/
+// QScriptValue setupPackage(const QString &key, QScriptEngine *engine) const
 HB_FUNC_STATIC(QSCRIPTEXTENSIONPLUGIN_SETUPPACKAGE)
 {
   QScriptExtensionPlugin *obj = qobject_cast<QScriptExtensionPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -88,9 +86,7 @@ HB_FUNC_STATIC(QSCRIPTEXTENSIONPLUGIN_SETUPPACKAGE)
   }
 }
 
-/*
-virtual void initialize(const QString &key, QScriptEngine *engine) = 0
-*/
+// virtual void initialize(const QString &key, QScriptEngine *engine) = 0
 HB_FUNC_STATIC(QSCRIPTEXTENSIONPLUGIN_INITIALIZE)
 {
   QScriptExtensionPlugin *obj = qobject_cast<QScriptExtensionPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -114,9 +110,7 @@ HB_FUNC_STATIC(QSCRIPTEXTENSIONPLUGIN_INITIALIZE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QStringList keys() const = 0
-*/
+// virtual QStringList keys() const = 0
 HB_FUNC_STATIC(QSCRIPTEXTENSIONPLUGIN_KEYS)
 {
   QScriptExtensionPlugin *obj = qobject_cast<QScriptExtensionPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());

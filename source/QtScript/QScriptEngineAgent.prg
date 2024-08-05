@@ -63,7 +63,7 @@ RETURN
 
 #include <QtScript/QScriptEngine>
 
-// QScriptEngineAgent(QScriptEngine *engine)
+    // QScriptEngineAgent(QScriptEngine *engine)
 HB_FUNC_STATIC(QSCRIPTENGINEAGENT_NEW)
 {
   if (ISNUMPAR(1) && ISQSCRIPTENGINE(1))
@@ -93,9 +93,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void contextPop()
-*/
+// virtual void contextPop()
 HB_FUNC_STATIC(QSCRIPTENGINEAGENT_CONTEXTPOP)
 {
   QScriptEngineAgent *obj = static_cast<QScriptEngineAgent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -119,9 +117,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_CONTEXTPOP)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void contextPush()
-*/
+// virtual void contextPush()
 HB_FUNC_STATIC(QSCRIPTENGINEAGENT_CONTEXTPUSH)
 {
   QScriptEngineAgent *obj = static_cast<QScriptEngineAgent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -145,9 +141,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_CONTEXTPUSH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QScriptEngine *engine() const
-*/
+// QScriptEngine *engine() const
 HB_FUNC_STATIC(QSCRIPTENGINEAGENT_ENGINE)
 {
   QScriptEngineAgent *obj = static_cast<QScriptEngineAgent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -170,9 +164,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_ENGINE)
   }
 }
 
-/*
-virtual void exceptionCatch(qint64 scriptId, const QScriptValue &exception)
-*/
+// virtual void exceptionCatch(qint64 scriptId, const QScriptValue &exception)
 HB_FUNC_STATIC(QSCRIPTENGINEAGENT_EXCEPTIONCATCH)
 {
   QScriptEngineAgent *obj = static_cast<QScriptEngineAgent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -196,9 +188,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_EXCEPTIONCATCH)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void exceptionThrow(qint64 scriptId, const QScriptValue &exception, bool hasHandler)
-*/
+// virtual void exceptionThrow(qint64 scriptId, const QScriptValue &exception, bool hasHandler)
 HB_FUNC_STATIC(QSCRIPTENGINEAGENT_EXCEPTIONTHROW)
 {
   QScriptEngineAgent *obj = static_cast<QScriptEngineAgent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -222,9 +212,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_EXCEPTIONTHROW)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QVariant extension(QScriptEngineAgent::Extension extension, const QVariant &argument = QVariant())
-*/
+// virtual QVariant extension(QScriptEngineAgent::Extension extension, const QVariant &argument = QVariant())
 HB_FUNC_STATIC(QSCRIPTENGINEAGENT_EXTENSION)
 {
   QScriptEngineAgent *obj = static_cast<QScriptEngineAgent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -249,9 +237,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_EXTENSION)
   }
 }
 
-/*
-virtual void functionEntry(qint64 scriptId)
-*/
+// virtual void functionEntry(qint64 scriptId)
 HB_FUNC_STATIC(QSCRIPTENGINEAGENT_FUNCTIONENTRY)
 {
   QScriptEngineAgent *obj = static_cast<QScriptEngineAgent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -275,9 +261,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_FUNCTIONENTRY)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void functionExit(qint64 scriptId, const QScriptValue &returnValue)
-*/
+// virtual void functionExit(qint64 scriptId, const QScriptValue &returnValue)
 HB_FUNC_STATIC(QSCRIPTENGINEAGENT_FUNCTIONEXIT)
 {
   QScriptEngineAgent *obj = static_cast<QScriptEngineAgent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -301,9 +285,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_FUNCTIONEXIT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void positionChange(qint64 scriptId, int lineNumber, int columnNumber)
-*/
+// virtual void positionChange(qint64 scriptId, int lineNumber, int columnNumber)
 HB_FUNC_STATIC(QSCRIPTENGINEAGENT_POSITIONCHANGE)
 {
   QScriptEngineAgent *obj = static_cast<QScriptEngineAgent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -327,9 +309,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_POSITIONCHANGE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void scriptLoad(qint64 id, const QString &program, const QString &fileName, int baseLineNumber)
-*/
+// virtual void scriptLoad(qint64 id, const QString &program, const QString &fileName, int baseLineNumber)
 HB_FUNC_STATIC(QSCRIPTENGINEAGENT_SCRIPTLOAD)
 {
   QScriptEngineAgent *obj = static_cast<QScriptEngineAgent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -353,9 +333,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_SCRIPTLOAD)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual void scriptUnload(qint64 id)
-*/
+// virtual void scriptUnload(qint64 id)
 HB_FUNC_STATIC(QSCRIPTENGINEAGENT_SCRIPTUNLOAD)
 {
   QScriptEngineAgent *obj = static_cast<QScriptEngineAgent *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -379,9 +357,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_SCRIPTUNLOAD)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual bool supportsExtension(QScriptEngineAgent::Extension extension) const
-*/
+// virtual bool supportsExtension(QScriptEngineAgent::Extension extension) const
 HB_FUNC_STATIC(QSCRIPTENGINEAGENT_SUPPORTSEXTENSION)
 {
   QScriptEngineAgent *obj = static_cast<QScriptEngineAgent *>(Qt4xHb::itemGetPtrStackSelfItem());

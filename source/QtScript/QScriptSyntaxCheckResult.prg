@@ -51,7 +51,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-// QScriptSyntaxCheckResult(const QScriptSyntaxCheckResult &other)
+    // QScriptSyntaxCheckResult(const QScriptSyntaxCheckResult &other)
 HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_NEW)
 {
   if (ISNUMPAR(1) && ISQSCRIPTSYNTAXCHECKRESULT(1))
@@ -81,9 +81,7 @@ HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int errorColumnNumber() const
-*/
+// int errorColumnNumber() const
 HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_ERRORCOLUMNNUMBER)
 {
   QScriptSyntaxCheckResult *obj = static_cast<QScriptSyntaxCheckResult *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -105,9 +103,7 @@ HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_ERRORCOLUMNNUMBER)
   }
 }
 
-/*
-int errorLineNumber() const
-*/
+// int errorLineNumber() const
 HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_ERRORLINENUMBER)
 {
   QScriptSyntaxCheckResult *obj = static_cast<QScriptSyntaxCheckResult *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -129,9 +125,7 @@ HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_ERRORLINENUMBER)
   }
 }
 
-/*
-QString errorMessage() const
-*/
+// QString errorMessage() const
 HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_ERRORMESSAGE)
 {
   QScriptSyntaxCheckResult *obj = static_cast<QScriptSyntaxCheckResult *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -153,9 +147,7 @@ HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_ERRORMESSAGE)
   }
 }
 
-/*
-QScriptSyntaxCheckResult::State state() const
-*/
+// QScriptSyntaxCheckResult::State state() const
 HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_STATE)
 {
   QScriptSyntaxCheckResult *obj = static_cast<QScriptSyntaxCheckResult *>(Qt4xHb::itemGetPtrStackSelfItem());

@@ -99,9 +99,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString fileName() const
-*/
+// QString fileName() const
 HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FILENAME)
 {
   QScriptContextInfo *obj = static_cast<QScriptContextInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -123,9 +121,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FILENAME)
   }
 }
 
-/*
-int functionEndLineNumber() const
-*/
+// int functionEndLineNumber() const
 HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONENDLINENUMBER)
 {
   QScriptContextInfo *obj = static_cast<QScriptContextInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -147,9 +143,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONENDLINENUMBER)
   }
 }
 
-/*
-int functionMetaIndex() const
-*/
+// int functionMetaIndex() const
 HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONMETAINDEX)
 {
   QScriptContextInfo *obj = static_cast<QScriptContextInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -171,9 +165,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONMETAINDEX)
   }
 }
 
-/*
-QString functionName() const
-*/
+// QString functionName() const
 HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONNAME)
 {
   QScriptContextInfo *obj = static_cast<QScriptContextInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -195,9 +187,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONNAME)
   }
 }
 
-/*
-QStringList functionParameterNames() const
-*/
+// QStringList functionParameterNames() const
 HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONPARAMETERNAMES)
 {
   QScriptContextInfo *obj = static_cast<QScriptContextInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -219,9 +209,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONPARAMETERNAMES)
   }
 }
 
-/*
-int functionStartLineNumber() const
-*/
+// int functionStartLineNumber() const
 HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONSTARTLINENUMBER)
 {
   QScriptContextInfo *obj = static_cast<QScriptContextInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -243,9 +231,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONSTARTLINENUMBER)
   }
 }
 
-/*
-QScriptContextInfo::FunctionType functionType() const
-*/
+// QScriptContextInfo::FunctionType functionType() const
 HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONTYPE)
 {
   QScriptContextInfo *obj = static_cast<QScriptContextInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -267,9 +253,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONTYPE)
   }
 }
 
-/*
-bool isNull() const
-*/
+// bool isNull() const
 HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_ISNULL)
 {
   QScriptContextInfo *obj = static_cast<QScriptContextInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -291,9 +275,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_ISNULL)
   }
 }
 
-/*
-int lineNumber() const
-*/
+// int lineNumber() const
 HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_LINENUMBER)
 {
   QScriptContextInfo *obj = static_cast<QScriptContextInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -315,9 +297,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_LINENUMBER)
   }
 }
 
-/*
-qint64 scriptId() const
-*/
+// qint64 scriptId() const
 HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_SCRIPTID)
 {
   QScriptContextInfo *obj = static_cast<QScriptContextInfo *>(Qt4xHb::itemGetPtrStackSelfItem());

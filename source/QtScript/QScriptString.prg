@@ -85,9 +85,7 @@ HB_FUNC_STATIC(QSCRIPTSTRING_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool isValid() const
-*/
+// bool isValid() const
 HB_FUNC_STATIC(QSCRIPTSTRING_ISVALID)
 {
   QScriptString *obj = static_cast<QScriptString *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -109,9 +107,7 @@ HB_FUNC_STATIC(QSCRIPTSTRING_ISVALID)
   }
 }
 
-/*
-QString toString() const
-*/
+// QString toString() const
 HB_FUNC_STATIC(QSCRIPTSTRING_TOSTRING)
 {
   QScriptString *obj = static_cast<QScriptString *>(Qt4xHb::itemGetPtrStackSelfItem());
