@@ -9,9 +9,7 @@
 #ifndef QACCESSIBLE_CH
 #define QACCESSIBLE_CH
 
-/*
-enum QAccessible::Action
-*/
+// enum QAccessible::Action
 #define QAccessible_DefaultAction                                    0
 #define QAccessible_Press                                            -1
 #define QAccessible_SetFocus                                         -2
@@ -27,9 +25,7 @@ enum QAccessible::Action
 #define QAccessible_FirstStandardAction                              QAccessible_Press
 #define QAccessible_LastStandardAction                               QAccessible_AddToSelection
 
-/*
-enum QAccessible::Event
-*/
+// enum QAccessible::Event
 #define QAccessible_AcceleratorChanged                               0x80C0
 #define QAccessible_ActionChanged                                    0x0101
 #define QAccessible_ActiveDescendantChanged                          0x0102
@@ -99,17 +95,13 @@ enum QAccessible::Event
 #define QAccessible_ValueChanged                                     0x800E
 #define QAccessible_VisibleDataChanged                               0x0122
 
-/*
-enum QAccessible::Method
-*/
+// enum QAccessible::Method
 #define QAccessible_ListSupportedMethods                             0
 #define QAccessible_SetCursorPosition                                1
 #define QAccessible_GetCursorPosition                                2
 
-/*
-enum QAccessible::RelationFlag
-flags QAccessible::Relation
-*/
+// enum QAccessible::RelationFlag
+// flags QAccessible::Relation
 #define QAccessible_Unrelated                                        0x00000000
 #define QAccessible_Self                                             0x00000001
 #define QAccessible_Ancestor                                         0x00000002
@@ -128,9 +120,7 @@ flags QAccessible::Relation
 #define QAccessible_Controller                                       0x00080000
 #define QAccessible_Controlled                                       0x00100000
 
-/*
-enum QAccessible::Role
-*/
+// enum QAccessible::Role
 #define QAccessible_AlertMessage                                     0x00000008
 #define QAccessible_Animation                                        0x00000036
 #define QAccessible_Application                                      0x0000000E
@@ -198,10 +188,8 @@ enum QAccessible::Role
 #define QAccessible_Whitespace                                       0x0000003B
 #define QAccessible_Window                                           0x00000009
 
-/*
-enum QAccessible::StateFlag
-flags QAccessible::State
-*/
+// enum QAccessible::StateFlag
+// flags QAccessible::State
 #define QAccessible_Animated                                         0x00004000
 #define QAccessible_Busy                                             0x00000800
 #define QAccessible_Checked                                          0x00000010
@@ -232,9 +220,7 @@ flags QAccessible::State
 #define QAccessible_Traversed                                        0x00800000
 #define QAccessible_Unavailable                                      0x00000001
 
-/*
-enum QAccessible::Text
-*/
+// enum QAccessible::Text
 #define QAccessible_Name                                             0
 #define QAccessible_Description                                      1
 #define QAccessible_Value                                            2

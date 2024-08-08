@@ -9,10 +9,8 @@
 #ifndef QDESIGNERFORMWINDOWINTERFACE_CH
 #define QDESIGNERFORMWINDOWINTERFACE_CH
 
-/*
-enum QDesignerFormWindowInterface::FeatureFlag
-flags QDesignerFormWindowInterface::Feature
-*/
+// enum QDesignerFormWindowInterface::FeatureFlag
+// flags QDesignerFormWindowInterface::Feature
 #define QDesignerFormWindowInterface_EditFeature                     0x01
 #define QDesignerFormWindowInterface_GridFeature                     0x02
 #define QDesignerFormWindowInterface_TabOrderFeature                 0x04

@@ -9,9 +9,7 @@
 #ifndef QTEXTFORMAT_CH
 #define QTEXTFORMAT_CH
 
-/*
-enum QTextFormat::FormatType
-*/
+// enum QTextFormat::FormatType
 #define QTextFormat_InvalidFormat                                    -1
 #define QTextFormat_BlockFormat                                      1
 #define QTextFormat_CharFormat                                       2
@@ -20,26 +18,20 @@ enum QTextFormat::FormatType
 #define QTextFormat_FrameFormat                                      5
 #define QTextFormat_UserFormat                                       100
 
-/*
-enum QTextFormat::ObjectTypes
-*/
+// enum QTextFormat::ObjectTypes
 #define QTextFormat_NoObject                                         0
 #define QTextFormat_ImageObject                                      1
 #define QTextFormat_TableObject                                      2
 #define QTextFormat_TableCellObject                                  3
 #define QTextFormat_UserObject                                       0x1000
 
-/*
-enum QTextFormat::PageBreakFlag
-flags QTextFormat::PageBreakFlags
-*/
+// enum QTextFormat::PageBreakFlag
+// flags QTextFormat::PageBreakFlags
 #define QTextFormat_PageBreak_Auto                                   0
 #define QTextFormat_PageBreak_AlwaysBefore                           0x001
 #define QTextFormat_PageBreak_AlwaysAfter                            0x010
 
-/*
-enum QTextFormat::Property
-*/
+// enum QTextFormat::Property
 #define QTextFormat_ObjectIndex                                      0x0
 #define QTextFormat_CssFloat                                         0x0800
 #define QTextFormat_LayoutDirection                                  0x0801

@@ -9,9 +9,7 @@
 #ifndef QLINEEDIT_CH
 #define QLINEEDIT_CH
 
-/*
-enum QLineEdit::EchoMode
-*/
+// enum QLineEdit::EchoMode
 #define QLineEdit_Normal                                             0
 #define QLineEdit_NoEcho                                             1
 #define QLineEdit_Password                                           2

@@ -9,9 +9,7 @@
 #ifndef QSTATE_CH
 #define QSTATE_CH
 
-/*
-enum QState::ChildMode
-*/
+// enum QState::ChildMode
 #define QState_ExclusiveStates                                       0
 #define QState_ParallelStates                                        1
 

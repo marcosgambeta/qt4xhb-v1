@@ -9,18 +9,14 @@
 #ifndef QABSTRACTFONTENGINE_CH
 #define QABSTRACTFONTENGINE_CH
 
-/*
-enum QAbstractFontEngine::Capability
-flags QAbstractFontEngine::Capabilities
-*/
+// enum QAbstractFontEngine::Capability
+// flags QAbstractFontEngine::Capabilities
 #define QAbstractFontEngine_CanRenderGlyphs_Gray                     4
 #define QAbstractFontEngine_CanRenderGlyphs_Mono                     2
 #define QAbstractFontEngine_CanRenderGlyphs                          hb_bitor(QAbstractFontEngine_CanRenderGlyphs_Mono,QAbstractFontEngine_CanRenderGlyphs_Gray)
 #define QAbstractFontEngine_CanOutlineGlyphs                         1
 
-/*
-enum QAbstractFontEngine::FontProperty
-*/
+// enum QAbstractFontEngine::FontProperty
 #define QAbstractFontEngine_Ascent                                   0
 #define QAbstractFontEngine_Descent                                  1
 #define QAbstractFontEngine_Leading                                  2
@@ -35,10 +31,8 @@ enum QAbstractFontEngine::FontProperty
 #define QAbstractFontEngine_CacheGlyphsHint                          11
 #define QAbstractFontEngine_OutlineGlyphsHint                        12
 
-/*
-enum QAbstractFontEngine::TextShapingFlag
-flags QAbstractFontEngine::TextShapingFlags
-*/
+// enum QAbstractFontEngine::TextShapingFlag
+// flags QAbstractFontEngine::TextShapingFlags
 #define QAbstractFontEngine_RightToLeft                              0x0001
 #define QAbstractFontEngine_ReturnDesignMetrics                      0x0002
 

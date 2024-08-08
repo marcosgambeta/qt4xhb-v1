@@ -9,38 +9,28 @@
 #ifndef QWEBPAGE_CH
 #define QWEBPAGE_CH
 
-/*
-enum QWebPage::ErrorDomain
-*/
+// enum QWebPage::ErrorDomain
 #define QWebPage_QtNetwork                                           0
 #define QWebPage_Http                                                1
 #define QWebPage_WebKit                                              2
 
-/*
-enum QWebPage::Extension
-*/
+// enum QWebPage::Extension
 #define QWebPage_ChooseMultipleFilesExtension                        0
 #define QWebPage_ErrorPageExtension                                  1
 
-/*
-enum QWebPage::FindFlag
-flags QWebPage::FindFlags
-*/
+// enum QWebPage::FindFlag
+// flags QWebPage::FindFlags
 #define QWebPage_FindBackward                                        1
 #define QWebPage_FindCaseSensitively                                 2
 #define QWebPage_FindWrapsAroundDocument                             4
 #define QWebPage_HighlightAllOccurrences                             8
 
-/*
-enum QWebPage::LinkDelegationPolicy
-*/
+// enum QWebPage::LinkDelegationPolicy
 #define QWebPage_DontDelegateLinks                                   0
 #define QWebPage_DelegateExternalLinks                               1
 #define QWebPage_DelegateAllLinks                                    2
 
-/*
-enum QWebPage::NavigationType
-*/
+// enum QWebPage::NavigationType
 #define QWebPage_NavigationTypeLinkClicked                           0
 #define QWebPage_NavigationTypeFormSubmitted                         1
 #define QWebPage_NavigationTypeBackOrForward                         2
@@ -48,9 +38,7 @@ enum QWebPage::NavigationType
 #define QWebPage_NavigationTypeFormResubmitted                       4
 #define QWebPage_NavigationTypeOther                                 5
 
-/*
-enum QWebPage::WebAction
-*/
+// enum QWebPage::WebAction
 #define QWebPage_NoWebAction                                         -1
 #define QWebPage_OpenLink                                            0
 #define QWebPage_OpenLinkInNewWindow                                 1
@@ -121,9 +109,7 @@ enum QWebPage::WebAction
 #define QWebPage_AlignLeft                                           65
 #define QWebPage_AlignRight                                          66
 
-/*
-enum QWebPage::WebWindowType
-*/
+// enum QWebPage::WebWindowType
 #define QWebPage_WebBrowserWindow                                    0
 #define QWebPage_WebModalDialog                                      1
 

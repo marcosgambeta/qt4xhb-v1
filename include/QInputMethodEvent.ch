@@ -9,9 +9,7 @@
 #ifndef QINPUTMETHODEVENT_CH
 #define QINPUTMETHODEVENT_CH
 
-/*
-enum QInputMethodEvent::AttributeType
-*/
+// enum QInputMethodEvent::AttributeType
 #define QInputMethodEvent_TextFormat                                 0
 #define QInputMethodEvent_Cursor                                     1
 #define QInputMethodEvent_Language                                   2

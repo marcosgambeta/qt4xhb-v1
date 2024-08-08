@@ -9,9 +9,7 @@
 #ifndef QVARIANT_CH
 #define QVARIANT_CH
 
-/*
-enum QVariant::Type
-*/
+// enum QVariant::Type
 #define QVariant_Invalid                                             0
 #define QVariant_BitArray                                            13
 #define QVariant_Bitmap                                              73

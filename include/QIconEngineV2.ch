@@ -9,9 +9,7 @@
 #ifndef QICONENGINEV2_CH
 #define QICONENGINEV2_CH
 
-/*
-enum QIconEngineV2::IconEngineHook
-*/
+// enum QIconEngineV2::IconEngineHook
 #define QIconEngineV2_AvailableSizesHook                             1
 #define QIconEngineV2_IconNameHook                                   2
 

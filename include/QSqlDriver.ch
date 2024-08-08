@@ -9,9 +9,7 @@
 #ifndef QSQLDRIVER_CH
 #define QSQLDRIVER_CH
 
-/*
-enum QSqlDriver::DriverFeature
-*/
+// enum QSqlDriver::DriverFeature
 #define QSqlDriver_Transactions                                      0
 #define QSqlDriver_QuerySize                                         1
 #define QSqlDriver_BLOB                                              2
@@ -27,15 +25,11 @@ enum QSqlDriver::DriverFeature
 #define QSqlDriver_FinishQuery                                       12
 #define QSqlDriver_MultipleResultSets                                13
 
-/*
-enum QSqlDriver::IdentifierType
-*/
+// enum QSqlDriver::IdentifierType
 #define QSqlDriver_FieldName                                         0
 #define QSqlDriver_TableName                                         1
 
-/*
-enum QSqlDriver::StatementType
-*/
+// enum QSqlDriver::StatementType
 #define QSqlDriver_WhereStatement                                    0
 #define QSqlDriver_SelectStatement                                   1
 #define QSqlDriver_UpdateStatement                                   2

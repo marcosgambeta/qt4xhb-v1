@@ -9,16 +9,12 @@
 #ifndef QSYSINFO_CH
 #define QSYSINFO_CH
 
-/*
-enum QSysInfo::Endian
-*/
+// enum QSysInfo::Endian
 #define QSysInfo_BigEndian                                           0
 #define QSysInfo_LittleEndian                                        1
 #define QSysInfo_ByteOrder                                           <platform-dependent>
 
-/*
-enum QSysInfo::MacVersion
-*/
+// enum QSysInfo::MacVersion
 #define QSysInfo_MV_9                                                0x0001
 #define QSysInfo_MV_10_0                                             0x0002
 #define QSysInfo_MV_10_1                                             0x0003
@@ -38,9 +34,7 @@ enum QSysInfo::MacVersion
 #define QSysInfo_MV_SNOWLEOPARD                                      QSysInfo_MV_10_6
 #define QSysInfo_MV_LION                                             QSysInfo_MV_10_7
 
-/*
-enum QSysInfo::S60Version
-*/
+// enum QSysInfo::S60Version
 #define QSysInfo_SV_S60_3_1                                          QSysInfo_SV_9_2
 #define QSysInfo_SV_S60_3_2                                          QSysInfo_SV_9_3
 #define QSysInfo_SV_S60_5_0                                          QSysInfo_SV_9_4
@@ -51,14 +45,10 @@ enum QSysInfo::S60Version
 #define QSysInfo_SV_S60_5_5                                          QSysInfo_SV_API_5_5
 #define QSysInfo_SV_S60_Unknown                                      QSysInfo_SV_Unknown
 
-/*
-enum QSysInfo::Sizes
-*/
+// enum QSysInfo::Sizes
 #define QSysInfo_WordSize                                            ( sizeof( void * ) <<3 )
 
-/*
-enum QSysInfo::SymbianVersion
-*/
+// enum QSysInfo::SymbianVersion
 #define QSysInfo_SV_9_2                                              10
 #define QSysInfo_SV_9_3                                              20
 #define QSysInfo_SV_9_4                                              30
@@ -71,9 +61,7 @@ enum QSysInfo::SymbianVersion
 #define QSysInfo_SV_API_5_5                                          90
 #define QSysInfo_SV_Unknown                                          1000000
 
-/*
-enum QSysInfo::WinVersion
-*/
+// enum QSysInfo::WinVersion
 #define QSysInfo_WV_32s                                              0x0001
 #define QSysInfo_WV_95                                               0x0002
 #define QSysInfo_WV_98                                               0x0003

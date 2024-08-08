@@ -9,9 +9,7 @@
 #ifndef QTEXTFRAMEFORMAT_CH
 #define QTEXTFRAMEFORMAT_CH
 
-/*
-enum QTextFrameFormat::BorderStyle
-*/
+// enum QTextFrameFormat::BorderStyle
 #define QTextFrameFormat_BorderStyle_None                            0
 #define QTextFrameFormat_BorderStyle_Dotted                          1
 #define QTextFrameFormat_BorderStyle_Dashed                          2
@@ -24,9 +22,7 @@ enum QTextFrameFormat::BorderStyle
 #define QTextFrameFormat_BorderStyle_Inset                           9
 #define QTextFrameFormat_BorderStyle_Outset                          10
 
-/*
-enum QTextFrameFormat::Position
-*/
+// enum QTextFrameFormat::Position
 #define QTextFrameFormat_InFlow                                      0
 #define QTextFrameFormat_FloatLeft                                   1
 #define QTextFrameFormat_FloatRight                                  2

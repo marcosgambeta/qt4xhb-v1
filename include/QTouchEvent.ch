@@ -9,9 +9,7 @@
 #ifndef QTOUCHEVENT_CH
 #define QTOUCHEVENT_CH
 
-/*
-enum QTouchEvent::DeviceType
-*/
+// enum QTouchEvent::DeviceType
 #define QTouchEvent_TouchScreen                                      0
 #define QTouchEvent_TouchPad                                         1
 

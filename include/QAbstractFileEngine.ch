@@ -9,18 +9,14 @@
 #ifndef QABSTRACTFILEENGINE_CH
 #define QABSTRACTFILEENGINE_CH
 
-/*
-enum QAbstractFileEngine::Extension
-*/
+// enum QAbstractFileEngine::Extension
 #define QAbstractFileEngine_AtEndExtension                           0
 #define QAbstractFileEngine_FastReadLineExtension                    1
 #define QAbstractFileEngine_MapExtension                             2
 #define QAbstractFileEngine_UnMapExtension                           3
 
-/*
-enum QAbstractFileEngine::FileFlag
-flags QAbstractFileEngine::FileFlags
-*/
+// enum QAbstractFileEngine::FileFlag
+// flags QAbstractFileEngine::FileFlags
 #define QAbstractFileEngine_ReadOwnerPerm                            0x4000
 #define QAbstractFileEngine_WriteOwnerPerm                           0x2000
 #define QAbstractFileEngine_ExeOwnerPerm                             0x1000
@@ -43,9 +39,7 @@ flags QAbstractFileEngine::FileFlags
 #define QAbstractFileEngine_LocalDiskFlag                            0x0200000
 #define QAbstractFileEngine_Refresh                                  0x1000000
 
-/*
-enum QAbstractFileEngine::FileName
-*/
+// enum QAbstractFileEngine::FileName
 #define QAbstractFileEngine_DefaultName                              0
 #define QAbstractFileEngine_BaseName                                 1
 #define QAbstractFileEngine_PathName                                 2
@@ -56,15 +50,11 @@ enum QAbstractFileEngine::FileName
 #define QAbstractFileEngine_CanonicalPathName                        7
 #define QAbstractFileEngine_BundleName                               8
 
-/*
-enum QAbstractFileEngine::FileOwner
-*/
+// enum QAbstractFileEngine::FileOwner
 #define QAbstractFileEngine_OwnerUser                                0
 #define QAbstractFileEngine_OwnerGroup                               1
 
-/*
-enum QAbstractFileEngine::FileTime
-*/
+// enum QAbstractFileEngine::FileTime
 #define QAbstractFileEngine_CreationTime                             0
 #define QAbstractFileEngine_ModificationTime                         1
 #define QAbstractFileEngine_AccessTime                               2

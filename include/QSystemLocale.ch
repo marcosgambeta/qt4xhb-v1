@@ -9,9 +9,7 @@
 #ifndef QSYSTEMLOCALE_CH
 #define QSYSTEMLOCALE_CH
 
-/*
-enum QSystemLocale::QueryType
-*/
+// enum QSystemLocale::QueryType
 #define QSystemLocale_LanguageId                                     0
 #define QSystemLocale_CountryId                                      1
 #define QSystemLocale_DecimalPoint                                   2

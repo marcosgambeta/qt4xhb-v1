@@ -9,9 +9,7 @@
 #ifndef QFTP_CH
 #define QFTP_CH
 
-/*
-enum QFtp::Command
-*/
+// enum QFtp::Command
 #define QFtp_None                                                    0
 #define QFtp_SetTransferMode                                         1
 #define QFtp_SetProxy                                                2
@@ -28,18 +26,14 @@ enum QFtp::Command
 #define QFtp_Rename                                                  13
 #define QFtp_RawCommand                                              14
 
-/*
-enum QFtp::Error
-*/
+// enum QFtp::Error
 #define QFtp_NoError                                                 0
 #define QFtp_HostNotFound                                            2
 #define QFtp_ConnectionRefused                                       3
 #define QFtp_NotConnected                                            4
 #define QFtp_UnknownError                                            1
 
-/*
-enum QFtp::State
-*/
+// enum QFtp::State
 #define QFtp_Unconnected                                             0
 #define QFtp_HostLookup                                              1
 #define QFtp_Connecting                                              2
@@ -47,15 +41,11 @@ enum QFtp::State
 #define QFtp_LoggedIn                                                4
 #define QFtp_Closing                                                 5
 
-/*
-enum QFtp::TransferMode
-*/
+// enum QFtp::TransferMode
 #define QFtp_Passive                                                 1
 #define QFtp_Active                                                  0
 
-/*
-enum QFtp::TransferType
-*/
+// enum QFtp::TransferType
 #define QFtp_Binary                                                  0
 #define QFtp_Ascii                                                   1
 

@@ -9,9 +9,7 @@
 #ifndef QDIRECTPAINTER_CH
 #define QDIRECTPAINTER_CH
 
-/*
-enum QDirectPainter::SurfaceFlag
-*/
+// enum QDirectPainter::SurfaceFlag
 #define QDirectPainter_NonReserved                                   0
 #define QDirectPainter_Reserved                                      1
 #define QDirectPainter_ReservedSynchronous                           3

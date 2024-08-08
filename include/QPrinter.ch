@@ -9,42 +9,30 @@
 #ifndef QPRINTER_CH
 #define QPRINTER_CH
 
-/*
-enum QPrinter::ColorMode
-*/
+// enum QPrinter::ColorMode
 #define QPrinter_Color                                               1
 #define QPrinter_GrayScale                                           0
 
-/*
-enum QPrinter::DuplexMode
-*/
+// enum QPrinter::DuplexMode
 #define QPrinter_DuplexNone                                          0
 #define QPrinter_DuplexAuto                                          1
 #define QPrinter_DuplexLongSide                                      2
 #define QPrinter_DuplexShortSide                                     3
 
-/*
-enum QPrinter::Orientation
-*/
+// enum QPrinter::Orientation
 #define QPrinter_Portrait                                            0
 #define QPrinter_Landscape                                           1
 
-/*
-enum QPrinter::OutputFormat
-*/
+// enum QPrinter::OutputFormat
 #define QPrinter_NativeFormat                                        0
 #define QPrinter_PdfFormat                                           1
 #define QPrinter_PostScriptFormat                                    2
 
-/*
-enum QPrinter::PageOrder
-*/
+// enum QPrinter::PageOrder
 #define QPrinter_FirstPageFirst                                      0
 #define QPrinter_LastPageFirst                                       1
 
-/*
-enum QPrinter::PaperSize
-*/
+// enum QPrinter::PaperSize
 #define QPrinter_A0                                                  5
 #define QPrinter_A1                                                  6
 #define QPrinter_A2                                                  7
@@ -77,9 +65,7 @@ enum QPrinter::PaperSize
 #define QPrinter_Tabloid                                             29
 #define QPrinter_Custom                                              30
 
-/*
-enum QPrinter::PaperSource
-*/
+// enum QPrinter::PaperSource
 #define QPrinter_Auto                                                6
 #define QPrinter_Cassette                                            11
 #define QPrinter_Envelope                                            4
@@ -95,32 +81,24 @@ enum QPrinter::PaperSource
 #define QPrinter_Tractor                                             7
 #define QPrinter_SmallFormat                                         8
 
-/*
-enum QPrinter::PrintRange
-*/
+// enum QPrinter::PrintRange
 #define QPrinter_AllPages                                            0
 #define QPrinter_Selection                                           1
 #define QPrinter_PageRange                                           2
 #define QPrinter_CurrentPage                                         3
 
-/*
-enum QPrinter::PrinterMode
-*/
+// enum QPrinter::PrinterMode
 #define QPrinter_ScreenResolution                                    0
 #define QPrinter_PrinterResolution                                   1
 #define QPrinter_HighResolution                                      2
 
-/*
-enum QPrinter::PrinterState
-*/
+// enum QPrinter::PrinterState
 #define QPrinter_Idle                                                0
 #define QPrinter_Active                                              1
 #define QPrinter_Aborted                                             2
 #define QPrinter_Error                                               3
 
-/*
-enum QPrinter::Unit
-*/
+// enum QPrinter::Unit
 #define QPrinter_Millimeter                                          0
 #define QPrinter_Point                                               1
 #define QPrinter_Inch                                                2

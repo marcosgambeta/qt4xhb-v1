@@ -9,9 +9,7 @@
 #ifndef QEVENT_CH
 #define QEVENT_CH
 
-/*
-enum QEvent::Type
-*/
+// enum QEvent::Type
 #define QEvent_None                                                  0
 #define QEvent_AccessibilityDescription                              130
 #define QEvent_AccessibilityHelp                                     119

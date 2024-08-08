@@ -9,9 +9,7 @@
 #ifndef QFUTUREINTERFACEBASE_CH
 #define QFUTUREINTERFACEBASE_CH
 
-/*
-enum QFutureInterfaceBase::State
-*/
+// enum QFutureInterfaceBase::State
 #define QFutureInterfaceBase_NoState                                 0x00
 #define QFutureInterfaceBase_Running                                 0x01
 #define QFutureInterfaceBase_Started                                 0x02

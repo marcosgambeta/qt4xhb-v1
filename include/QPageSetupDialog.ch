@@ -9,10 +9,8 @@
 #ifndef QPAGESETUPDIALOG_CH
 #define QPAGESETUPDIALOG_CH
 
-/*
-enum QPageSetupDialog::PageSetupDialogOption
-flags QPageSetupDialog::PageSetupDialogOptions
-*/
+// enum QPageSetupDialog::PageSetupDialogOption
+// flags QPageSetupDialog::PageSetupDialogOptions
 #define QPageSetupDialog_DontUseSheet                                0x00000001
 
 #endif // QPAGESETUPDIALOG_CH

@@ -9,19 +9,13 @@
 #ifndef QSTYLEOPTIONVIEWITEM_CH
 #define QSTYLEOPTIONVIEWITEM_CH
 
-/*
-enum QStyleOptionViewItem::StyleOptionType
-*/
+// enum QStyleOptionViewItem::StyleOptionType
 #define QStyleOptionViewItem_Type                                    QStyleOption_SO_ViewItem
 
-/*
-enum QStyleOptionViewItem::StyleOptionVersion
-*/
+// enum QStyleOptionViewItem::StyleOptionVersion
 #define QStyleOptionViewItem_Version                                 1
 
-/*
-enum QStyleOptionViewItem::Position
-*/
+// enum QStyleOptionViewItem::Position
 #define QStyleOptionViewItem_Left                                    0
 #define QStyleOptionViewItem_Right                                   1
 #define QStyleOptionViewItem_Top                                     2

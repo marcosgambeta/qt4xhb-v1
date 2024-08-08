@@ -9,9 +9,7 @@
 #ifndef QTABLETEVENT_CH
 #define QTABLETEVENT_CH
 
-/*
-enum QTabletEvent::TabletDevice
-*/
+// enum QTabletEvent::TabletDevice
 #define QTabletEvent_NoDevice                                        0
 #define QTabletEvent_Puck                                            1
 #define QTabletEvent_Stylus                                          2
@@ -20,9 +18,7 @@ enum QTabletEvent::TabletDevice
 #define QTabletEvent_XFreeEraser                                     5
 #define QTabletEvent_RotationStylus                                  6
 
-/*
-enum QTabletEvent::PointerType
-*/
+// enum QTabletEvent::PointerType
 #define QTabletEvent_UnknownPointer                                  0
 #define QTabletEvent_Pen                                             1
 #define QTabletEvent_Cursor                                          2

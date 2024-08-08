@@ -9,9 +9,7 @@
 #ifndef QDECORATION_CH
 #define QDECORATION_CH
 
-/*
-enum QDecoration::DecorationRegion
-*/
+// enum QDecoration::DecorationRegion
 #define QDecoration_All                                              0x7fffffff
 #define QDecoration_Top                                              0x0000000002
 #define QDecoration_Bottom                                           0x0000000040
@@ -33,9 +31,7 @@ enum QDecoration::DecorationRegion
 #define QDecoration_Move                                             0x0000008000
 #define QDecoration_None                                             0x0000000000
 
-/*
-enum QDecoration::DecorationState
-*/
+// enum QDecoration::DecorationState
 #define QDecoration_Normal                                           0x04
 #define QDecoration_Disabled                                         0x08
 #define QDecoration_Hover                                            0x01

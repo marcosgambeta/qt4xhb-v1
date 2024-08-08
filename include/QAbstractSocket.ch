@@ -9,16 +9,12 @@
 #ifndef QABSTRACTSOCKET_CH
 #define QABSTRACTSOCKET_CH
 
-/*
-enum QAbstractSocket::NetworkLayerProtocol
-*/
+// enum QAbstractSocket::NetworkLayerProtocol
 #define QAbstractSocket_IPv4Protocol                                 0
 #define QAbstractSocket_IPv6Protocol                                 1
 #define QAbstractSocket_UnknownNetworkLayerProtocol                  -1
 
-/*
-enum QAbstractSocket::SocketError
-*/
+// enum QAbstractSocket::SocketError
 #define QAbstractSocket_ConnectionRefusedError                       0
 #define QAbstractSocket_RemoteHostClosedError                        1
 #define QAbstractSocket_HostNotFoundError                            2
@@ -40,17 +36,13 @@ enum QAbstractSocket::SocketError
 #define QAbstractSocket_ProxyProtocolError                           18
 #define QAbstractSocket_UnknownSocketError                           -1
 
-/*
-enum QAbstractSocket::SocketOption
-*/
+// enum QAbstractSocket::SocketOption
 #define QAbstractSocket_LowDelayOption                               0
 #define QAbstractSocket_KeepAliveOption                              1
 #define QAbstractSocket_MulticastTtlOption                           2
 #define QAbstractSocket_MulticastLoopbackOption                      3
 
-/*
-enum QAbstractSocket::SocketState
-*/
+// enum QAbstractSocket::SocketState
 #define QAbstractSocket_UnconnectedState                             0
 #define QAbstractSocket_HostLookupState                              1
 #define QAbstractSocket_ConnectingState                              2
@@ -59,9 +51,7 @@ enum QAbstractSocket::SocketState
 #define QAbstractSocket_ClosingState                                 6
 #define QAbstractSocket_ListeningState                               5
 
-/*
-enum QAbstractSocket::SocketType
-*/
+// enum QAbstractSocket::SocketType
 #define QAbstractSocket_TcpSocket                                    0
 #define QAbstractSocket_UdpSocket                                    1
 #define QAbstractSocket_UnknownSocketType                            -1

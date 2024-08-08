@@ -9,9 +9,7 @@
 #ifndef QMETATYPE_CH
 #define QMETATYPE_CH
 
-/*
-enum QMetaType::Type
-*/
+// enum QMetaType::Type
 #define QMetaType_Void                                               0
 #define QMetaType_Bool                                               1
 #define QMetaType_Int                                                2

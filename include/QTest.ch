@@ -9,9 +9,7 @@
 #ifndef QTEST_CH
 #define QTEST_CH
 
-/*
-enum QTest::AttributeIndex
-*/
+// enum QTest::AttributeIndex
 #define QTest_AI_Undefined                                           -1
 #define QTest_AI_Name                                                0
 #define QTest_AI_Result                                              1
@@ -30,16 +28,12 @@ enum QTest::AttributeIndex
 #define QTest_AI_Value                                               14
 #define QTest_AI_Iterations                                          15
 
-/*
-enum QTest::KeyAction
-*/
+// enum QTest::KeyAction
 #define QTest_Press                                                  0
 #define QTest_Release                                                1
 #define QTest_Click                                                  2
 
-/*
-enum QTest::LogElementType
-*/
+// enum QTest::LogElementType
 #define QTest_LET_Undefined                                          -1
 #define QTest_LET_Property                                           0
 #define QTest_LET_Properties                                         1
@@ -50,18 +44,14 @@ enum QTest::LogElementType
 #define QTest_LET_Benchmark                                          6
 #define QTest_LET_SystemError                                        7
 
-/*
-enum QTest::MouseAction
-*/
+// enum QTest::MouseAction
 #define QTest_MousePress                                             0
 #define QTest_MouseRelease                                           1
 #define QTest_MouseClick                                             2
 #define QTest_MouseDClick                                            3
 #define QTest_MouseMove                                              4
 
-/*
-enum QTest::QBenchmarkMetric
-*/
+// enum QTest::QBenchmarkMetric
 #define QTest_FramesPerSecond                                        0
 #define QTest_BitsPerSecond                                          1
 #define QTest_BytesPerSecond                                         2
@@ -70,15 +60,11 @@ enum QTest::QBenchmarkMetric
 #define QTest_InstructionReads                                       5
 #define QTest_Events                                                 6
 
-/*
-enum QTest::SkipMode
-*/
+// enum QTest::SkipMode
 #define QTest_SkipSingle                                             1
 #define QTest_SkipAll                                                2
 
-/*
-enum QTest::TestFailMode
-*/
+// enum QTest::TestFailMode
 #define QTest_Abort                                                  1
 #define QTest_Continue                                               2
 

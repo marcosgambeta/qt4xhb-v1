@@ -9,14 +9,10 @@
 #ifndef QSTYLEOPTIONFRAME_CH
 #define QSTYLEOPTIONFRAME_CH
 
-/*
-enum QStyleOptionFrame::StyleOptionType
-*/
+// enum QStyleOptionFrame::StyleOptionType
 #define QStyleOptionFrame_Type                                       QStyleOption_SO_Frame
 
-/*
-enum QStyleOptionFrame::StyleOptionVersion
-*/
+// enum QStyleOptionFrame::StyleOptionVersion
 #define QStyleOptionFrame_Version                                    1
 
 #endif // QSTYLEOPTIONFRAME_CH

@@ -9,9 +9,7 @@
 #ifndef QDIALOG_CH
 #define QDIALOG_CH
 
-/*
-enum QDialog::DialogCode
-*/
+// enum QDialog::DialogCode
 #define QDialog_Accepted                                             1
 #define QDialog_Rejected                                             0
 

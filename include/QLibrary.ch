@@ -9,9 +9,7 @@
 #ifndef QLIBRARY_CH
 #define QLIBRARY_CH
 
-/*
-enum QLibrary::LoadHint
-*/
+// enum QLibrary::LoadHint
 #define QLibrary_ResolveAllSymbolsHint                               0x01
 #define QLibrary_ExportExternalSymbolsHint                           0x02
 #define QLibrary_LoadArchiveMemberHint                               0x04

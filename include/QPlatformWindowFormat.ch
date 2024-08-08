@@ -9,10 +9,8 @@
 #ifndef QPLATFORMWINDOWFORMAT_CH
 #define QPLATFORMWINDOWFORMAT_CH
 
-/*
-enum QPlatformWindowFormat::FormatOption
-flags QPlatformWindowFormat::FormatOptions
-*/
+// enum QPlatformWindowFormat::FormatOption
+// flags QPlatformWindowFormat::FormatOptions
 #define QPlatformWindowFormat_DoubleBuffer                           0x0001
 #define QPlatformWindowFormat_DepthBuffer                            0x0002
 #define QPlatformWindowFormat_Rgba                                   0x0004
@@ -38,9 +36,7 @@ flags QPlatformWindowFormat::FormatOptions
 #define QPlatformWindowFormat_NoDeprecatedFunctions                  QPlatformWindowFormat_DeprecatedFunctions << 16
 #define QPlatformWindowFormat_NoWindowSurface                        QPlatformWindowFormat_HasWindowSurface    << 16
 
-/*
-enum QPlatformWindowFormat::WindowApi
-*/
+// enum QPlatformWindowFormat::WindowApi
 #define QPlatformWindowFormat_Raster                                 0
 #define QPlatformWindowFormat_OpenGL                                 1
 #define QPlatformWindowFormat_OpenVG                                 2

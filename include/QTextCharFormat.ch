@@ -9,9 +9,7 @@
 #ifndef QTEXTCHARFORMAT_CH
 #define QTEXTCHARFORMAT_CH
 
-/*
-enum QTextCharFormat::UnderlineStyle
-*/
+// enum QTextCharFormat::UnderlineStyle
 #define QTextCharFormat_NoUnderline                                  0
 #define QTextCharFormat_SingleUnderline                              1
 #define QTextCharFormat_DashUnderline                                2
@@ -21,9 +19,7 @@ enum QTextCharFormat::UnderlineStyle
 #define QTextCharFormat_WaveUnderline                                6
 #define QTextCharFormat_SpellCheckUnderline                          7
 
-/*
-enum QTextCharFormat::VerticalAlignment
-*/
+// enum QTextCharFormat::VerticalAlignment
 #define QTextCharFormat_AlignNormal                                  0
 #define QTextCharFormat_AlignSuperScript                             1
 #define QTextCharFormat_AlignSubScript                               2

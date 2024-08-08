@@ -9,9 +9,7 @@
 #ifndef QURLINFO_CH
 #define QURLINFO_CH
 
-/*
-enum QUrlInfo::PermissionSpec
-*/
+// enum QUrlInfo::PermissionSpec
 #define QUrlInfo_ReadOwner                                           00400
 #define QUrlInfo_WriteOwner                                          00200
 #define QUrlInfo_ExeOwner                                            00100

@@ -9,9 +9,7 @@
 #ifndef QLOCALSOCKET_CH
 #define QLOCALSOCKET_CH
 
-/*
-enum QLocalSocket::LocalSocketError
-*/
+// enum QLocalSocket::LocalSocketError
 #define QLocalSocket_ConnectionRefusedError                          QAbstractSocket_ConnectionRefusedError
 #define QLocalSocket_PeerClosedError                                 QAbstractSocket_RemoteHostClosedError
 #define QLocalSocket_ServerNotFoundError                             QAbstractSocket_HostNotFoundError
@@ -23,9 +21,7 @@ enum QLocalSocket::LocalSocketError
 #define QLocalSocket_UnsupportedSocketOperationError                 QAbstractSocket_UnsupportedSocketOperationError
 #define QLocalSocket_UnknownSocketError                              QAbstractSocket_UnknownSocketError
 
-/*
-enum QLocalSocket::LocalSocketState
-*/
+// enum QLocalSocket::LocalSocketState
 #define QLocalSocket_UnconnectedState                                QAbstractSocket_UnconnectedState
 #define QLocalSocket_ConnectingState                                 QAbstractSocket_ConnectingState
 #define QLocalSocket_ConnectedState                                  QAbstractSocket_ConnectedState

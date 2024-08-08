@@ -9,9 +9,7 @@
 #ifndef QMUTEX_CH
 #define QMUTEX_CH
 
-/*
-enum QMutex::RecursionMode
-*/
+// enum QMutex::RecursionMode
 #define QMutex_Recursive                                             1
 #define QMutex_NonRecursive                                          0
 
