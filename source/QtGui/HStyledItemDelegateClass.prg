@@ -12,10 +12,10 @@ CLASS HStyledItemDelegate INHERIT QStyledItemDelegate
 
    METHOD new
    METHOD delete
-//   METHOD paint
+   //METHOD paint
    METHOD defaultPaint
-//   METHOD sizeHint
-//   METHOD displayText
+   //METHOD sizeHint
+   //METHOD displayText
 
    METHOD setPaintCB
    METHOD setSizeHintCB
@@ -47,38 +47,30 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    /*
-    explicit HStyledItemDelegate(QObject *parent = 0)
-    */
-    void HStyledItemDelegate_new1()
+// explicit HStyledItemDelegate(QObject *parent = 0)
+void HStyledItemDelegate_new1()
 {
   HStyledItemDelegate *obj = new HStyledItemDelegate(OPQOBJECT(1, 0));
   Qt4xHb::returnNewObject(obj, false);
 }
 
-/*
-HStyledItemDelegate(PHB_ITEM paintBlock, QObject *parent = 0)
-*/
+// HStyledItemDelegate(PHB_ITEM paintBlock, QObject *parent = 0)
 void HStyledItemDelegate_new2()
 {
   HStyledItemDelegate *obj = new HStyledItemDelegate(PBLOCKORSYMBOL(1), OPQOBJECT(2, 0));
   Qt4xHb::returnNewObject(obj, false);
 }
 
-/*
-HStyledItemDelegate(PHB_ITEM paintBlock, PHB_ITEM sizeHintBlock, QObject *parent = 0)
-*/
+// HStyledItemDelegate(PHB_ITEM paintBlock, PHB_ITEM sizeHintBlock, QObject *parent = 0)
 void HStyledItemDelegate_new3()
 {
   HStyledItemDelegate *obj = new HStyledItemDelegate(PBLOCKORSYMBOL(1), PBLOCKORSYMBOL(2), OPQOBJECT(3, 0));
   Qt4xHb::returnNewObject(obj, false);
 }
 
-/*
-[1]explicit HStyledItemDelegate(QObject *parent = 0)
-[2]HStyledItemDelegate(PHB_ITEM paintBlock, QObject *parent = 0)
-[3]HStyledItemDelegate(PHB_ITEM paintBlock, PHB_ITEM sizeHintBlock, QObject *parent = 0)
-*/
+// [1]explicit HStyledItemDelegate(QObject *parent = 0)
+// [2]HStyledItemDelegate(PHB_ITEM paintBlock, QObject *parent = 0)
+// [3]HStyledItemDelegate(PHB_ITEM paintBlock, PHB_ITEM sizeHintBlock, QObject *parent = 0)
 
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_NEW)
 {
@@ -100,9 +92,7 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_NEW)
   }
 }
 
-/*
-~HStyledItemDelegate()
-*/
+// ~HStyledItemDelegate()
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_DELETE)
 {
   HStyledItemDelegate *obj = (HStyledItemDelegate *)Qt4xHb::itemGetPtrStackSelfItem();
@@ -121,16 +111,12 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
-*/
+// void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
 // HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_PAINT)
 // {
 // }
 
-/*
-void defaultPaint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
-*/
+// void defaultPaint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_DEFAULTPAINT)
 {
   HStyledItemDelegate *obj = (HStyledItemDelegate *)Qt4xHb::itemGetPtrStackSelfItem();
@@ -154,36 +140,22 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_DEFAULTPAINT)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const
-*/
+// QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const
 // HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SIZEHINT)
 // {
 // }
 
-/*
-QString displayText(const QVariant &value, const QLocale &locale) const
-*/
+// QString displayText(const QVariant &value, const QLocale &locale) const
 
-/*
-QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
-*/
+// QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
 
-/*
-void setEditorData(QWidget *editor, const QModelIndex &index) const
-*/
+// void setEditorData(QWidget *editor, const QModelIndex &index) const
 
-/*
-void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
-*/
+// void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
 
-/*
-void updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index) const
-*/
+// void updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index) const
 
-/*
-void setPaintCB(PHB_ITEM block)
-*/
+// void setPaintCB(PHB_ITEM block)
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETPAINTCB)
 {
   HStyledItemDelegate *obj = (HStyledItemDelegate *)Qt4xHb::itemGetPtrStackSelfItem();
@@ -207,9 +179,7 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETPAINTCB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSizeHintCB(PHB_ITEM block)
-*/
+// void setSizeHintCB(PHB_ITEM block)
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETSIZEHINTCB)
 {
   HStyledItemDelegate *obj = (HStyledItemDelegate *)Qt4xHb::itemGetPtrStackSelfItem();
@@ -233,9 +203,7 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETSIZEHINTCB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDisplayTextCB(PHB_ITEM block)
-*/
+// void setDisplayTextCB(PHB_ITEM block)
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETDISPLAYTEXTCB)
 {
   HStyledItemDelegate *obj = (HStyledItemDelegate *)Qt4xHb::itemGetPtrStackSelfItem();
@@ -259,9 +227,7 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETDISPLAYTEXTCB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setCreateEditorCB(PHB_ITEM block)
-*/
+// void setCreateEditorCB(PHB_ITEM block)
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETCREATEEDITORCB)
 {
   HStyledItemDelegate *obj = (HStyledItemDelegate *)Qt4xHb::itemGetPtrStackSelfItem();
@@ -285,9 +251,7 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETCREATEEDITORCB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setEditorDataCB(PHB_ITEM block)
-*/
+// void setEditorDataCB(PHB_ITEM block)
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETEDITORDATACB)
 {
   HStyledItemDelegate *obj = (HStyledItemDelegate *)Qt4xHb::itemGetPtrStackSelfItem();
@@ -311,9 +275,7 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETEDITORDATACB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setModelDataCB(PHB_ITEM block)
-*/
+// void setModelDataCB(PHB_ITEM block)
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETMODELDATACB)
 {
   HStyledItemDelegate *obj = (HStyledItemDelegate *)Qt4xHb::itemGetPtrStackSelfItem();
@@ -337,9 +299,7 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETMODELDATACB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setUpdateEditorGeometryCB(PHB_ITEM block)
-*/
+// void setUpdateEditorGeometryCB(PHB_ITEM block)
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETUPDATEEDITORGEOMETRYCB)
 {
   HStyledItemDelegate *obj = (HStyledItemDelegate *)Qt4xHb::itemGetPtrStackSelfItem();

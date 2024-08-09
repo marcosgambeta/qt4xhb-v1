@@ -28,15 +28,11 @@ public:
   virtual ~HAbstractListModel();
 
 private:
-  /*
-   linhas
-  */
+  // linhas
 
   PHB_ITEM m_rowCountCB;
 
-  /*
-   células
-  */
+  // células
 
   PHB_ITEM m_getFieldCB;           // Qt::DisplayRole
   PHB_ITEM m_getFieldDecorationCB; // Qt::DecorationRole
@@ -53,9 +49,7 @@ private:
                                    // Qt::AccessibleTextRole
                                    // Qt::AccessibleDescriptionRole
 
-  /*
-   cabeçalho horizontal
-  */
+  // cabeçalho horizontal
 
   PHB_ITEM m_getHHCB;           // Qt::DisplayRole
   PHB_ITEM m_getHHDecorationCB; // Qt::DecorationRole
@@ -72,9 +66,7 @@ private:
                                 // Qt::AccessibleTextRole
                                 // Qt::AccessibleDescriptionRole
 
-  /*
-   cabeçalho vertical
-  */
+  // cabeçalho vertical
 
   PHB_ITEM m_getVHCB;           // Qt::DisplayRole
   PHB_ITEM m_getVHDecorationCB; // Qt::DecorationRole
@@ -92,15 +84,11 @@ private:
                                 // Qt::AccessibleDescriptionRole
 
 public:
-  /*
-   linhas
-  */
+  // linhas
 
   void setRowCountCB(PHB_ITEM block);
 
-  /*
-   células
-  */
+  // células
 
   void setDisplayRoleCB(PHB_ITEM block);       // Qt::DisplayRole
   void setDecorationRoleCB(PHB_ITEM block);    // Qt::DecorationRole
@@ -117,9 +105,7 @@ public:
                                                // Qt::AccessibleTextRole
                                                // Qt::AccessibleDescriptionRole
 
-  /*
-   cabeçalho horizontal
-  */
+  // cabeçalho horizontal
 
   void setHorizontalHeaderDisplayRoleCB(PHB_ITEM block);       // Qt::DisplayRole
   void setHorizontalHeaderDecorationRoleCB(PHB_ITEM block);    // Qt::DecorationRole
@@ -136,9 +122,7 @@ public:
                                                                // Qt::AccessibleTextRole
                                                                // Qt::AccessibleDescriptionRole
 
-  /*
-   cabeçalho vertical
-  */
+  // cabeçalho vertical
 
   void setVerticalHeaderDisplayRoleCB(PHB_ITEM block);       // Qt::DisplayRole
   void setVerticalHeaderDecorationRoleCB(PHB_ITEM block);    // Qt::DecorationRole

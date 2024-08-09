@@ -54,9 +54,7 @@ HB_FUNC_STATIC(HEVENTFILTER_NEW)
   }
 }
 
-/*
-~HEventFilter()
-*/
+// ~HEventFilter()
 HB_FUNC_STATIC(HEVENTFILTER_DELETE)
 {
   HEventFilter *obj = static_cast<HEventFilter *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -75,9 +73,7 @@ HB_FUNC_STATIC(HEVENTFILTER_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setEventFilterCB (PHB_ITEM block)
-*/
+// void setEventFilterCB (PHB_ITEM block)
 HB_FUNC_STATIC(HEVENTFILTER_SETEVENTFILTERCB)
 {
   HEventFilter *obj = static_cast<HEventFilter *>(Qt4xHb::itemGetPtrStackSelfItem());

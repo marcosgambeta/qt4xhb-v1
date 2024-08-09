@@ -865,10 +865,8 @@ int HAbstractListModel::rowCount(const QModelIndex &parent) const
   }
 }
 
-/*
-  emite o sinal QAbstractItemModel::layoutChanged(), forçando
-  o recarregamento dos dados
-*/
+// emite o sinal QAbstractItemModel::layoutChanged(), forçando
+// o recarregamento dos dados
 void HAbstractListModel::reloadData()
 {
   // Notas da documentação do Qt:

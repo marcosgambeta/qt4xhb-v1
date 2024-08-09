@@ -6,9 +6,7 @@
 
 #include "HAbstractTableModel.hpp"
 
-/*
-  método construtor
-*/
+// método construtor
 HAbstractTableModel::HAbstractTableModel(QObject *parent) : QAbstractTableModel(parent)
 {
   // linhas e colunas
@@ -45,9 +43,7 @@ HAbstractTableModel::HAbstractTableModel(QObject *parent) : QAbstractTableModel(
   m_getVHFGColorCB = NULL;
 }
 
-/*
-  método destruidor
-*/
+// método destruidor
 HAbstractTableModel::~HAbstractTableModel()
 {
   // linhas e colunas
@@ -184,9 +180,7 @@ HAbstractTableModel::~HAbstractTableModel()
   }
 }
 
-/*
-  define o codeblock para o número de linhas
-*/
+// define o codeblock para o número de linhas
 void HAbstractTableModel::setRowCountCB(PHB_ITEM block)
 {
   if (m_rowCountCB)
@@ -199,9 +193,7 @@ void HAbstractTableModel::setRowCountCB(PHB_ITEM block)
   }
 }
 
-/*
-  define o codeblock para o número de colunas
-*/
+// define o codeblock para o número de colunas
 void HAbstractTableModel::setColumnCountCB(PHB_ITEM block)
 {
   if (m_colCountCB)
@@ -214,9 +206,7 @@ void HAbstractTableModel::setColumnCountCB(PHB_ITEM block)
   }
 }
 
-/*
-  define o codeblock para o conteúdo da célula
-*/
+// define o codeblock para o conteúdo da célula
 void HAbstractTableModel::setDisplayRoleCB(PHB_ITEM block)
 {
   if (m_getFieldCB)
@@ -229,9 +219,7 @@ void HAbstractTableModel::setDisplayRoleCB(PHB_ITEM block)
   }
 }
 
-/*
-  define o codeblock para a decoração da célula
-*/
+// define o codeblock para a decoração da célula
 void HAbstractTableModel::setDecorationRoleCB(PHB_ITEM block)
 {
   if (m_getFieldDecorationCB)
@@ -244,9 +232,7 @@ void HAbstractTableModel::setDecorationRoleCB(PHB_ITEM block)
   }
 }
 
-/*
-  define o codeblock para a edição da célula
-*/
+// define o codeblock para a edição da célula
 void HAbstractTableModel::setEditRoleCB(PHB_ITEM block)
 {
   if (m_getFieldEditCB)
@@ -259,9 +245,7 @@ void HAbstractTableModel::setEditRoleCB(PHB_ITEM block)
   }
 }
 
-/*
-  define o codeblock para o tooltip da célula
-*/
+// define o codeblock para o tooltip da célula
 void HAbstractTableModel::setToolTipRoleCB(PHB_ITEM block)
 {
   if (m_getFieldToolTipCB)
@@ -274,9 +258,7 @@ void HAbstractTableModel::setToolTipRoleCB(PHB_ITEM block)
   }
 }
 
-/*
-  define o codeblock para o statustip da célula
-*/
+// define o codeblock para o statustip da célula
 void HAbstractTableModel::setStatusTipRoleCB(PHB_ITEM block)
 {
   if (m_getFieldStatusTipCB)
@@ -289,9 +271,7 @@ void HAbstractTableModel::setStatusTipRoleCB(PHB_ITEM block)
   }
 }
 
-/*
-  define o codeblock para o whatsthis da célula
-*/
+// define o codeblock para o whatsthis da célula
 void HAbstractTableModel::setWhatsThisRoleCB(PHB_ITEM block)
 {
   if (m_getFieldWhatsThisCB)
@@ -304,9 +284,7 @@ void HAbstractTableModel::setWhatsThisRoleCB(PHB_ITEM block)
   }
 }
 
-/*
-  define o codeblock para o sizehint da célula
-*/
+// define o codeblock para o sizehint da célula
 void HAbstractTableModel::setSizeHintRoleCB(PHB_ITEM block)
 {
   if (m_getFieldSizeHintCB)
@@ -319,9 +297,7 @@ void HAbstractTableModel::setSizeHintRoleCB(PHB_ITEM block)
   }
 }
 
-/*
-  define o codeblock para a fonte da célula
-*/
+// define o codeblock para a fonte da célula
 void HAbstractTableModel::setFontRoleCB(PHB_ITEM block)
 {
   if (m_getFieldFontCB)
@@ -334,9 +310,7 @@ void HAbstractTableModel::setFontRoleCB(PHB_ITEM block)
   }
 }
 
-/*
-  define o codeblock para o alinhamento do conteúdo da célula
-*/
+// define o codeblock para o alinhamento do conteúdo da célula
 void HAbstractTableModel::setTextAlignmentRoleCB(PHB_ITEM block)
 {
   if (m_getFieldAlignCB)
@@ -349,9 +323,7 @@ void HAbstractTableModel::setTextAlignmentRoleCB(PHB_ITEM block)
   }
 }
 
-/*
-  define o codeblock para o background da célula
-*/
+// define o codeblock para o background da célula
 void HAbstractTableModel::setBackgroundRoleCB(PHB_ITEM block)
 {
   if (m_getFieldBGColorCB)
@@ -364,9 +336,7 @@ void HAbstractTableModel::setBackgroundRoleCB(PHB_ITEM block)
   }
 }
 
-/*
-  define o codeblock para o foreground da célula
-*/
+// define o codeblock para o foreground da célula
 void HAbstractTableModel::setForegroundRoleCB(PHB_ITEM block)
 {
   if (m_getFieldFGColorCB)
@@ -379,9 +349,7 @@ void HAbstractTableModel::setForegroundRoleCB(PHB_ITEM block)
   }
 }
 
-/*
-  define o codeblock para o conteúdo do cabeçalho horizontal
-*/
+// define o codeblock para o conteúdo do cabeçalho horizontal
 void HAbstractTableModel::setHorizontalHeaderDisplayRoleCB(PHB_ITEM block)
 {
   if (m_getHHCB)
@@ -394,9 +362,7 @@ void HAbstractTableModel::setHorizontalHeaderDisplayRoleCB(PHB_ITEM block)
   }
 }
 
-/*
-  define o codeblock para a decoração do cabeçalho horizontal
-*/
+// define o codeblock para a decoração do cabeçalho horizontal
 void HAbstractTableModel::setHorizontalHeaderDecorationRoleCB(PHB_ITEM block)
 {
   if (m_getHHDecorationCB)
@@ -409,9 +375,7 @@ void HAbstractTableModel::setHorizontalHeaderDecorationRoleCB(PHB_ITEM block)
   }
 }
 
-/*
-  define o codeblock para a fonte do cabeçalho horizontal
-*/
+// define o codeblock para a fonte do cabeçalho horizontal
 void HAbstractTableModel::setHorizontalHeaderFontRoleCB(PHB_ITEM block)
 {
   if (m_getHHFontCB)
@@ -424,9 +388,7 @@ void HAbstractTableModel::setHorizontalHeaderFontRoleCB(PHB_ITEM block)
   }
 }
 
-/*
-  define o codeblock para o alinhamento do conteúdo do cabeçalho horizontal
-*/
+// define o codeblock para o alinhamento do conteúdo do cabeçalho horizontal
 void HAbstractTableModel::setHorizontalHeaderTextAlignmentRoleCB(PHB_ITEM block)
 {
   if (m_getHHAlignCB)
@@ -439,9 +401,7 @@ void HAbstractTableModel::setHorizontalHeaderTextAlignmentRoleCB(PHB_ITEM block)
   }
 }
 
-/*
-  define o codeblock para o background do cabeçalho horizontal
-*/
+// define o codeblock para o background do cabeçalho horizontal
 void HAbstractTableModel::setHorizontalHeaderBackgroundRoleCB(PHB_ITEM block)
 {
   if (m_getHHBGColorCB)
@@ -454,9 +414,7 @@ void HAbstractTableModel::setHorizontalHeaderBackgroundRoleCB(PHB_ITEM block)
   }
 }
 
-/*
-  define o codeblock para o foreground do cabeçalho horizontal
-*/
+// define o codeblock para o foreground do cabeçalho horizontal
 void HAbstractTableModel::setHorizontalHeaderForegroundRoleCB(PHB_ITEM block)
 {
   if (m_getHHFGColorCB)
@@ -469,9 +427,7 @@ void HAbstractTableModel::setHorizontalHeaderForegroundRoleCB(PHB_ITEM block)
   }
 }
 
-/*
-  define o codeblock para o conteúdo do cabeçalho vertical
-*/
+// define o codeblock para o conteúdo do cabeçalho vertical
 void HAbstractTableModel::setVerticalHeaderDisplayRoleCB(PHB_ITEM block)
 {
   if (m_getVHCB)
@@ -484,9 +440,7 @@ void HAbstractTableModel::setVerticalHeaderDisplayRoleCB(PHB_ITEM block)
   }
 }
 
-/*
-  define o codeblock para a decoração do cabeçalho vertical
-*/
+// define o codeblock para a decoração do cabeçalho vertical
 void HAbstractTableModel::setVerticalHeaderDecorationRoleCB(PHB_ITEM block)
 {
   if (m_getVHDecorationCB)
@@ -499,9 +453,7 @@ void HAbstractTableModel::setVerticalHeaderDecorationRoleCB(PHB_ITEM block)
   }
 }
 
-/*
-  define o codeblock para a fonte do cabeçalho vertical
-*/
+// define o codeblock para a fonte do cabeçalho vertical
 void HAbstractTableModel::setVerticalHeaderFontRoleCB(PHB_ITEM block)
 {
   if (m_getVHFontCB)
@@ -514,9 +466,7 @@ void HAbstractTableModel::setVerticalHeaderFontRoleCB(PHB_ITEM block)
   }
 }
 
-/*
-  define o codeblock para o alinhamento do conteúdo do cabeçalho vertical
-*/
+// define o codeblock para o alinhamento do conteúdo do cabeçalho vertical
 void HAbstractTableModel::setVerticalHeaderTextAlignmentRoleCB(PHB_ITEM block)
 {
   if (m_getVHAlignCB)
@@ -529,9 +479,7 @@ void HAbstractTableModel::setVerticalHeaderTextAlignmentRoleCB(PHB_ITEM block)
   }
 }
 
-/*
-  define o codeblock para o background do cabeçalho vertical
-*/
+// define o codeblock para o background do cabeçalho vertical
 void HAbstractTableModel::setVerticalHeaderBackgroundRoleCB(PHB_ITEM block)
 {
   if (m_getVHBGColorCB)
@@ -544,9 +492,7 @@ void HAbstractTableModel::setVerticalHeaderBackgroundRoleCB(PHB_ITEM block)
   }
 }
 
-/*
-  define o codeblock para o foreground do cabeçalho vertical
-*/
+// define o codeblock para o foreground do cabeçalho vertical
 void HAbstractTableModel::setVerticalHeaderForegroundRoleCB(PHB_ITEM block)
 {
   if (m_getVHFGColorCB)
@@ -559,9 +505,7 @@ void HAbstractTableModel::setVerticalHeaderForegroundRoleCB(PHB_ITEM block)
   }
 }
 
-/*
-  executa os codeblocks (células), conforme a informação (role) requisitada
-*/
+// executa os codeblocks (células), conforme a informação (role) requisitada
 QVariant HAbstractTableModel::data(const QModelIndex &index, int role) const
 {
   QVariant data;
@@ -786,9 +730,7 @@ QVariant HAbstractTableModel::data(const QModelIndex &index, int role) const
   return data;
 }
 
-/*
-  executa os codeblocks (cabeçalhos), conforme a informação (role) requisitada
-*/
+// executa os codeblocks (cabeçalhos), conforme a informação (role) requisitada
 QVariant HAbstractTableModel::headerData(int section, Qt::Orientation orientation, int role) const
 {
   QVariant data;
@@ -1026,9 +968,7 @@ QVariant HAbstractTableModel::headerData(int section, Qt::Orientation orientatio
   return data;
 }
 
-/*
-  executa o codeblock que retorna o número de linhas
-*/
+// executa o codeblock que retorna o número de linhas
 int HAbstractTableModel::rowCount(const QModelIndex &parent) const
 {
   if (parent.isValid())
@@ -1048,9 +988,7 @@ int HAbstractTableModel::rowCount(const QModelIndex &parent) const
   }
 }
 
-/*
-  executa o codeblock que retorna o número de colunas
-*/
+// executa o codeblock que retorna o número de colunas
 int HAbstractTableModel::columnCount(const QModelIndex &parent) const
 {
   if (parent.isValid())
@@ -1070,10 +1008,8 @@ int HAbstractTableModel::columnCount(const QModelIndex &parent) const
   }
 }
 
-/*
-  emite o sinal QAbstractItemModel::layoutChanged(), forçando
-  o recarregamento dos dados
-*/
+// emite o sinal QAbstractItemModel::layoutChanged(), forçando
+// o recarregamento dos dados
 void HAbstractTableModel::reloadData()
 {
   // Notas da documentação do Qt:
@@ -1086,10 +1022,8 @@ void HAbstractTableModel::reloadData()
   emit QAbstractTableModel::layoutChanged();
 }
 
-/*
-  cria um objeto da classe QModelIndex
-*/
-// QModelIndex HAbstractTableModel::createIndex ( int row, int column )
+// cria um objeto da classe QModelIndex
+// QModelIndex HAbstractTableModel::createIndex(int row, int column)
 // {
-//   return QAbstractItemModel::createIndex( row, column, 0 );
+//   return QAbstractItemModel::createIndex(row, column, 0);
 // }
