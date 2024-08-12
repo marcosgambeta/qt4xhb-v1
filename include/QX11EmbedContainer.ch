@@ -7,9 +7,7 @@
 #ifndef QX11EMBEDCONTAINER_CH
 #define QX11EMBEDCONTAINER_CH
 
-/*
-enum QX11EmbedContainer::Error
-*/
+// enum QX11EmbedContainer::Error
 #define QX11EmbedContainer_Unknown                                   0
 #define QX11EmbedContainer_InvalidWindowID                           2
 

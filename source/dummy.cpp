@@ -4,9 +4,7 @@
 // Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 //
 
-/*
-  Funções nulas, para evitar erros com classes ou recursos não implementados
-*/
+// Funções nulas, para evitar erros com classes ou recursos não implementados
 
 #include <hbapi.h>
 

@@ -4,9 +4,7 @@
 // Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 //
 
-/*
-  Exemplo de criação de arquivos PDF com Qt4xHb
-*/
+// Exemplo de criação de arquivos PDF com Qt4xHb
 
 #include "qt4xhb.ch"
 

@@ -4,19 +4,15 @@
 // Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 //
 
-/*
-  Exemplo de criação da janela principal de uma aplicação
-*/
+// Exemplo de criação da janela principal de uma aplicação
 
 #include "qt4xhb.ch"
 
 STATIC oApp
 STATIC oMainWindow
 
-/*
-  a função principal (main) cria um objeto da classe QApplication,
-  um objeto da classe HMainWindow e inicia o loop de eventos
-*/
+// a função principal (main) cria um objeto da classe QApplication,
+// um objeto da classe HMainWindow e inicia o loop de eventos
 
 PROCEDURE Main()
 
@@ -34,15 +30,13 @@ PROCEDURE Main()
 
 RETURN
 
-/*
-  a classe HMainWindow é uma classe derivada da classe QMainWindow, com métodos para:
-  . definir as propriedades da janela
-  . criar a barra de menus e as ações
-  . criar a barra de ferramentas
-  . criar a barra de status
-  . confirmar se o usuário quer realmente sair do programa
-  . exibir mensagens
-*/
+// a classe HMainWindow é uma classe derivada da classe QMainWindow, com métodos para:
+// . definir as propriedades da janela
+// . criar a barra de menus e as ações
+// . criar a barra de ferramentas
+// . criar a barra de status
+// . confirmar se o usuário quer realmente sair do programa
+// . exibir mensagens
 
 #include "hbclass.ch"
 
@@ -76,10 +70,8 @@ CLASS HMainWindow INHERIT QMainWindow
 
 END CLASS
 
-/*
- o método 'new' executa o método 'new' da classe QMainWindow
- e configura a janela principal
-*/
+// o método 'new' executa o método 'new' da classe QMainWindow
+// e configura a janela principal
 
 METHOD new() CLASS HMainWindow
 
@@ -97,10 +89,8 @@ METHOD new() CLASS HMainWindow
 
 RETURN self
 
-/*
-  o método 'defineProperties' define as propriedades
-  'title' e 'size' da janela principal
-*/
+// o método 'defineProperties' define as propriedades
+// 'title' e 'size' da janela principal
 
 METHOD defineProperties() CLASS HMainWindow
 
@@ -109,10 +99,8 @@ METHOD defineProperties() CLASS HMainWindow
 
 RETURN self
 
-/*
-  o método 'createMenuBar' cria os menus da janela principal
-  e configura a ação que cada item do menu irá executar
-*/
+// o método 'createMenuBar' cria os menus da janela principal
+// e configura a ação que cada item do menu irá executar
 
 METHOD createMenuBar() CLASS HMainWindow
 
@@ -166,10 +154,8 @@ METHOD createMenuBar() CLASS HMainWindow
 
 RETURN self
 
-/*
-  o método 'createToolBar' cria a barra de ferramentas da janela principal
-  e configura a ação que cada botão irá executar
-*/
+// o método 'createToolBar' cria a barra de ferramentas da janela principal
+// e configura a ação que cada botão irá executar
 
 METHOD createToolBar() CLASS HMainWindow
 
@@ -187,9 +173,7 @@ METHOD createToolBar() CLASS HMainWindow
 
 RETURN self
 
-/*
-  o método 'createStatusBar' cria a barra de status
-*/
+// o método 'createStatusBar' cria a barra de status
 
 METHOD createStatusBar() CLASS HMainWindow
 
@@ -197,9 +181,7 @@ METHOD createStatusBar() CLASS HMainWindow
 
 RETURN self
 
-/*
- o método 'defineEvent' define os eventos que serão processados
-*/
+// o método 'defineEvent' define os eventos que serão processados
 
 METHOD defineEvents() CLASS HMainWindow
 
@@ -207,10 +189,8 @@ METHOD defineEvents() CLASS HMainWindow
 
 RETURN self
 
-/*
- o método 'closeMainWindow' confirma, com o usuário, se quer
- realmente sair do programa
-*/
+// o método 'closeMainWindow' confirma, com o usuário, se quer
+// realmente sair do programa
 
 METHOD closeMainWindow(oSender, oCloseEvent) CLASS HMainWindow
 
@@ -238,10 +218,8 @@ METHOD closeMainWindow(oSender, oCloseEvent) CLASS HMainWindow
 
 RETURN .T.
 
-/*
-  o método 'showMessage' exibe uma janela com uma mensagem,
-  usando a classe QMessageBox
-*/
+// o método 'showMessage' exibe uma janela com uma mensagem,
+// usando a classe QMessageBox
 
 METHOD showMessage(cText) CLASS HMainWindow
 

@@ -113,9 +113,7 @@ RETURN
 
 #include "hbclass.ch"
 
-/*
-  Class TextDelegate
-*/
+// Class TextDelegate
 
 CLASS TextDelegate INHERIT HStyledItemDelegate
 
@@ -178,9 +176,7 @@ METHOD setModelData(pEditor, pModel, pIndex) CLASS TextDelegate
 
 RETURN NIL
 
-/*
-  Class ValueDelegate
-*/
+// Class ValueDelegate
 
 CLASS ValueDelegate INHERIT HStyledItemDelegate
 

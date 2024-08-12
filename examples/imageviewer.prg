@@ -4,9 +4,7 @@
 // Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 //
 
-/*
-  Baseado no exemplo "Image Viewer" do Qt Framework
-*/
+// Baseado no exemplo "Image Viewer" do Qt Framework
 
 #include "qt4xhb.ch"
 #include "hbclass.ch"

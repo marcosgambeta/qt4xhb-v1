@@ -4,12 +4,8 @@
 // Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 //
 
-/*
-
-  Exemplo de uso de leiautes
-  Baseado no exemplo "Basic Layouts" do Qt Framework
-
-*/
+// Exemplo de uso de leiautes
+// Baseado no exemplo "Basic Layouts" do Qt Framework
 
 #include "qt4xhb.ch"
 #include "hbclass.ch"

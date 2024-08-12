@@ -9,15 +9,11 @@
 #ifndef QSTYLEOPTIONFRAMEV2_CH
 #define QSTYLEOPTIONFRAMEV2_CH
 
-/*
-enum QStyleOptionFrameV2::StyleOptionVersion
-*/
+// enum QStyleOptionFrameV2::StyleOptionVersion
 #define QStyleOptionFrameV2_Version                                  2
 
-/*
-enum QStyleOptionFrameV2::FrameFeature
-flags QStyleOptionFrameV2::FrameFeature2
-*/
+// enum QStyleOptionFrameV2::FrameFeature
+// flags QStyleOptionFrameV2::FrameFeature2
 #define QStyleOptionFrameV2_None                                     0x00
 #define QStyleOptionFrameV2_Flat                                     0x01
 

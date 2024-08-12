@@ -4,9 +4,7 @@
 // Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 //
 
-/*
-  Qt4xHb: Exemplo de uso do módulo QtSql
-*/
+// Qt4xHb: Exemplo de uso do módulo QtSql
 
 #include "qt4xhb.ch"
 

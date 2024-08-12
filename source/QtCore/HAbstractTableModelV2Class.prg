@@ -63,9 +63,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_NEW)
   }
 }
 
-/*
-virtual ~HAbstractTableModelV2()
-*/
+// virtual ~HAbstractTableModelV2()
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_DELETE)
 {
   HAbstractTableModelV2 *obj = static_cast<HAbstractTableModelV2 *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -84,9 +82,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_DELETE)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setRowCountCB(PHB_ITEM block)
-*/
+// void setRowCountCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETROWCOUNTCB)
 {
   HAbstractTableModelV2 *obj = static_cast<HAbstractTableModelV2 *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -110,9 +106,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETROWCOUNTCB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setColumnCountCB(PHB_ITEM block)
-*/
+// void setColumnCountCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETCOLUMNCOUNTCB)
 {
   HAbstractTableModelV2 *obj = static_cast<HAbstractTableModelV2 *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -136,9 +130,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETCOLUMNCOUNTCB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDataCB(PHB_ITEM block)
-*/
+// void setDataCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETDATACB)
 {
   HAbstractTableModelV2 *obj = static_cast<HAbstractTableModelV2 *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -162,9 +154,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETDATACB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setHeaderDataCB(PHB_ITEM block)
-*/
+// void setHeaderDataCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETHEADERDATACB)
 {
   HAbstractTableModelV2 *obj = static_cast<HAbstractTableModelV2 *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -188,9 +178,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETHEADERDATACB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setFlagsCB(PHB_ITEM block)
-*/
+// void setFlagsCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETFLAGSCB)
 {
   HAbstractTableModelV2 *obj = static_cast<HAbstractTableModelV2 *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -214,9 +202,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETFLAGSCB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSetDataCB(PHB_ITEM block)
-*/
+// void setSetDataCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETSETDATACB)
 {
   HAbstractTableModelV2 *obj = static_cast<HAbstractTableModelV2 *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -240,33 +226,19 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETSETDATACB)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int rowCount(const QModelIndex &parent = QModelIndex()) const
-*/
+// int rowCount(const QModelIndex &parent = QModelIndex()) const
 
-/*
-int columnCount(const QModelIndex &parent = QModelIndex()) const
-*/
+// int columnCount(const QModelIndex &parent = QModelIndex()) const
 
-/*
-QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
-*/
+// QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
 
-/*
-QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const
-*/
+// QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const
 
-/*
-Qt::ItemFlagsflags(const QModelIndex &index) const
-*/
+// Qt::ItemFlagsflags(const QModelIndex &index) const
 
-/*
-bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole)
-*/
+// bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole)
 
-/*
-void reloadData()
-*/
+// void reloadData()
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_RELOADDATA)
 {
   HAbstractTableModelV2 *obj = static_cast<HAbstractTableModelV2 *>(Qt4xHb::itemGetPtrStackSelfItem());

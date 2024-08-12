@@ -15,9 +15,7 @@
 namespace Qt4xHb
 {
 
-/*
-  cria um objeto da classe 'classname', com o ponteiro 'ptr'
-*/
+// cria um objeto da classe 'classname', com o ponteiro 'ptr'
 void createReturnClass(void *ptr, const char *classname)
 {
   PHB_DYNS pDynSym = hb_dynsymFindName(classname);
@@ -41,9 +39,7 @@ void createReturnClass(void *ptr, const char *classname)
   }
 }
 
-/*
-  cria um objeto da classe 'classname', com o ponteiro 'ptr'
-*/
+// cria um objeto da classe 'classname', com o ponteiro 'ptr'
 void createReturnClass(const void *ptr, const char *classname)
 {
   PHB_DYNS pDynSym = hb_dynsymFindName(classname);
@@ -67,9 +63,7 @@ void createReturnClass(const void *ptr, const char *classname)
   }
 }
 
-/*
-  cria um objeto da classe 'classname', com o ponteiro 'ptr'
-*/
+// cria um objeto da classe 'classname', com o ponteiro 'ptr'
 void createReturnClass(void *ptr, const char *classname, bool destroy)
 {
   PHB_DYNS pDynSym = hb_dynsymFindName(classname);
@@ -96,9 +90,7 @@ void createReturnClass(void *ptr, const char *classname, bool destroy)
   }
 }
 
-/*
-  cria um objeto da classe 'classname', com o ponteiro 'ptr'
-*/
+// cria um objeto da classe 'classname', com o ponteiro 'ptr'
 void createReturnClass(const void *ptr, const char *classname, bool destroy)
 {
   PHB_DYNS pDynSym = hb_dynsymFindName(classname);
@@ -125,9 +117,7 @@ void createReturnClass(const void *ptr, const char *classname, bool destroy)
   }
 }
 
-/*
-  converte um objeto QList<int> em uma array do [x]Harbour
-*/
+// converte um objeto QList<int> em uma array do [x]Harbour
 void convert_qlist_int_to_array(const QList<int> &list)
 {
   PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -141,9 +131,7 @@ void convert_qlist_int_to_array(const QList<int> &list)
   hb_itemReturnRelease(pArray);
 }
 
-/*
-  converte um objeto QList<qint8> em uma array do [x]Harbour
-*/
+// converte um objeto QList<qint8> em uma array do [x]Harbour
 void convert_qlist_qint8_to_array(const QList<qint8> &list)
 {
   PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -157,9 +145,7 @@ void convert_qlist_qint8_to_array(const QList<qint8> &list)
   hb_itemReturnRelease(pArray);
 }
 
-/*
-  converte um objeto QList<qint16> em uma array do [x]Harbour
-*/
+// converte um objeto QList<qint16> em uma array do [x]Harbour
 void convert_qlist_qint16_to_array(const QList<qint16> &list)
 {
   PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -173,9 +159,7 @@ void convert_qlist_qint16_to_array(const QList<qint16> &list)
   hb_itemReturnRelease(pArray);
 }
 
-/*
-  converte um objeto QList<qint32> em uma array do [x]Harbour
-*/
+// converte um objeto QList<qint32> em uma array do [x]Harbour
 void convert_qlist_qint32_to_array(const QList<qint32> &list)
 {
   PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -189,9 +173,7 @@ void convert_qlist_qint32_to_array(const QList<qint32> &list)
   hb_itemReturnRelease(pArray);
 }
 
-/*
-  converte um objeto QList<qint64> em uma array do [x]Harbour
-*/
+// converte um objeto QList<qint64> em uma array do [x]Harbour
 void convert_qlist_qint64_to_array(const QList<qint64> &list)
 {
   PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -205,9 +187,7 @@ void convert_qlist_qint64_to_array(const QList<qint64> &list)
   hb_itemReturnRelease(pArray);
 }
 
-/*
-  converte um objeto QList<quint8> em uma array do [x]Harbour
-*/
+// converte um objeto QList<quint8> em uma array do [x]Harbour
 void convert_qlist_quint8_to_array(const QList<quint8> &list)
 {
   PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -221,9 +201,7 @@ void convert_qlist_quint8_to_array(const QList<quint8> &list)
   hb_itemReturnRelease(pArray);
 }
 
-/*
-  converte um objeto QList<quint16> em uma array do [x]Harbour
-*/
+// converte um objeto QList<quint16> em uma array do [x]Harbour
 void convert_qlist_quint16_to_array(const QList<quint16> &list)
 {
   PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -237,9 +215,7 @@ void convert_qlist_quint16_to_array(const QList<quint16> &list)
   hb_itemReturnRelease(pArray);
 }
 
-/*
-  converte um objeto QList<quint32> em uma array do [x]Harbour
-*/
+// converte um objeto QList<quint32> em uma array do [x]Harbour
 void convert_qlist_quint32_to_array(const QList<quint32> &list)
 {
   PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -253,9 +229,7 @@ void convert_qlist_quint32_to_array(const QList<quint32> &list)
   hb_itemReturnRelease(pArray);
 }
 
-/*
-  converte um objeto QList<quint64> em uma array do [x]Harbour
-*/
+// converte um objeto QList<quint64> em uma array do [x]Harbour
 void convert_qlist_quint64_to_array(const QList<quint64> &list)
 {
   PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -269,9 +243,7 @@ void convert_qlist_quint64_to_array(const QList<quint64> &list)
   hb_itemReturnRelease(pArray);
 }
 
-/*
-  converte um objeto QList<qreal> em uma array do [x]Harbour
-*/
+// converte um objeto QList<qreal> em uma array do [x]Harbour
 void convert_qlist_qreal_to_array(const QList<qreal> &list)
 {
   PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -285,9 +257,7 @@ void convert_qlist_qreal_to_array(const QList<qreal> &list)
   hb_itemReturnRelease(pArray);
 }
 
-/*
-  converte um objeto QList<double> em uma array do [x]Harbour
-*/
+// converte um objeto QList<double> em uma array do [x]Harbour
 void convert_qlist_double_to_array(const QList<double> &list)
 {
   PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -301,9 +271,7 @@ void convert_qlist_double_to_array(const QList<double> &list)
   hb_itemReturnRelease(pArray);
 }
 
-/*
-  converte um objeto QStringList (QList<QString>) em uma array do [x]Harbour
-*/
+// converte um objeto QStringList (QList<QString>) em uma array do [x]Harbour
 void convert_qstringlist_to_array(const QStringList &list)
 {
   PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -317,34 +285,26 @@ void convert_qstringlist_to_array(const QStringList &list)
   hb_itemReturnRelease(pArray);
 }
 
-/*
-  obtém e retorna o valor da propriedade POINTER de um objeto [x]Harbour (tipo O)
-*/
+// obtém e retorna o valor da propriedade POINTER de um objeto [x]Harbour (tipo O)
 void *itemGetPtr(int numpar)
 {
   return hb_itemGetPtr(hb_objSendMsg(hb_param(numpar, HB_IT_OBJECT), "POINTER", 0));
 }
 
-/*
-  obtém e retorna o valor da propriedade POINTER do objeto hb_stackSelfItem()
-*/
+// obtém e retorna o valor da propriedade POINTER do objeto hb_stackSelfItem()
 void *itemGetPtrStackSelfItem()
 {
   return hb_itemGetPtr(hb_objSendMsg(hb_stackSelfItem(), "POINTER", 0));
 }
 
-/*
-  obtém e retorna o valor da propriedade POINTER do objeto hb_stackSelfItem() como QObject
-*/
+// obtém e retorna o valor da propriedade POINTER do objeto hb_stackSelfItem() como QObject
 QObject *getQObjectPointerFromSelfItem()
 {
   return static_cast<QObject *>(hb_itemGetPtr(hb_objSendMsg(hb_stackSelfItem(), "POINTER", 0)));
 }
 
-/*
-  armazena o ponteiro e a flag de destruição no objeto (função
-  utilizada nos métodos construtores new)
-*/
+// armazena o ponteiro e a flag de destruição no objeto (função
+// utilizada nos métodos construtores new)
 void storePointerAndFlag(void *pointer, bool flag)
 {
   PHB_ITEM self = hb_stackSelfItem();
@@ -357,11 +317,9 @@ void storePointerAndFlag(void *pointer, bool flag)
   hb_itemReturn(self);
 }
 
-/*
-  used in constructors
-  store pointer and flag of the object
-  return self object
-*/
+// used in constructors
+// store pointer and flag of the object
+// return self object
 void returnNewObject(void *pointer, bool flag)
 {
   PHB_ITEM self = hb_stackSelfItem();
@@ -374,9 +332,7 @@ void returnNewObject(void *pointer, bool flag)
   hb_itemReturn(self);
 }
 
-/*
-  cria um objeto (QObject) da classe correspondente ou 'classname' para objetos nulos, com o ponteiro 'ptr'
-*/
+// cria um objeto (QObject) da classe correspondente ou 'classname' para objetos nulos, com o ponteiro 'ptr'
 void createReturnQObjectClass(QObject *ptr, const char *classname)
 {
   PHB_DYNS pDynSym = NULL;
@@ -410,9 +366,7 @@ void createReturnQObjectClass(QObject *ptr, const char *classname)
   }
 }
 
-/*
-  cria um objeto (QObject) da classe correspondente ou 'classname' para objetos nulos, com o ponteiro 'ptr'
-*/
+// cria um objeto (QObject) da classe correspondente ou 'classname' para objetos nulos, com o ponteiro 'ptr'
 void createReturnQObjectClass(const QObject *ptr, const char *classname)
 {
   PHB_DYNS pDynSym = NULL;
@@ -446,9 +400,7 @@ void createReturnQObjectClass(const QObject *ptr, const char *classname)
   }
 }
 
-/*
-  cria um objeto (QWidget) da classe correspondente ou 'classname' para objetos nulos, com o ponteiro 'ptr'
-*/
+// cria um objeto (QWidget) da classe correspondente ou 'classname' para objetos nulos, com o ponteiro 'ptr'
 void createReturnQWidgetClass(QWidget *ptr, const char *classname)
 {
   PHB_DYNS pDynSym = NULL;
@@ -482,9 +434,7 @@ void createReturnQWidgetClass(QWidget *ptr, const char *classname)
   }
 }
 
-/*
-  cria um objeto (QWidget) da classe correspondente ou 'classname' para objetos nulos, com o ponteiro 'ptr'
-*/
+// cria um objeto (QWidget) da classe correspondente ou 'classname' para objetos nulos, com o ponteiro 'ptr'
 void createReturnQWidgetClass(const QWidget *ptr, const char *classname)
 {
   PHB_DYNS pDynSym = NULL;
@@ -518,8 +468,6 @@ void createReturnQWidgetClass(const QWidget *ptr, const char *classname)
   }
 }
 
-/*
- */
 bool isClassDerivedFrom(const char *className1, const char *className2)
 {
 // TOFIX: code for xHarbour
@@ -531,8 +479,6 @@ bool isClassDerivedFrom(const char *className1, const char *className2)
 #endif
 }
 
-/*
- */
 bool isObjectDerivedFrom(int numpar, const QString &className)
 {
   PHB_ITEM pItem = hb_param(numpar, HB_IT_OBJECT);
@@ -547,9 +493,7 @@ bool isObjectDerivedFrom(int numpar, const QString &className)
   }
 }
 
-/*
-  converte parametro 'n' de array (Harbour) para QStrinList (Qt)
-*/
+// converte parametro 'n' de array (Harbour) para QStrinList (Qt)
 QStringList convert_array_parameter_to_qstringlist(int numpar)
 {
   QStringList list;
@@ -569,8 +513,6 @@ QStringList convert_array_parameter_to_qstringlist(int numpar)
   return list;
 }
 
-/*
- */
 // QString _qt4xhb_convert_string_parameter_to_qstring(int numpar)
 // {
 //   #ifdef QT4XHB_USE_LATIN1STRING
@@ -580,9 +522,7 @@ QStringList convert_array_parameter_to_qstringlist(int numpar)
 //   #endif
 // }
 
-/*
-  converte parametro 'n' de array (Harbour) para QVariantList/QList<QVariant> (Qt)
-*/
+// converte parametro 'n' de array (Harbour) para QVariantList/QList<QVariant> (Qt)
 QVariantList convert_array_parameter_to_qvariantlist(int numpar)
 {
   QVariantList list;
@@ -601,9 +541,7 @@ QVariantList convert_array_parameter_to_qvariantlist(int numpar)
   return list;
 }
 
-/*
-  converte um objeto QVariantList/QList<QVariant> em uma array do [x]Harbour
-*/
+// converte um objeto QVariantList/QList<QVariant> em uma array do [x]Harbour
 void convert_qvariantlist_to_array(const QVariantList &list)
 {
   PHB_DYNS pDynSym = hb_dynsymFindName("QVARIANT");
@@ -638,10 +576,7 @@ void convert_qvariantlist_to_array(const QVariantList &list)
   hb_itemReturnRelease(pArray);
 }
 
-/*
-  cria um objeto da classe QModelIndex, com o ponteiro 'ptr'
-*/
-
+// cria um objeto da classe QModelIndex, com o ponteiro 'ptr'
 PHB_ITEM returnQModelIndexObject(void *ptr)
 {
   static PHB_DYNS pDynSym = NULL;
@@ -671,10 +606,7 @@ PHB_ITEM returnQModelIndexObject(void *ptr)
   return pObject;
 }
 
-/*
-  cria um objeto da classe QVariant, com o ponteiro 'ptr'
-*/
-
+// cria um objeto da classe QVariant, com o ponteiro 'ptr'
 PHB_ITEM returnQVariantObject(void *ptr)
 {
   static PHB_DYNS pDynSym = NULL;
@@ -704,10 +636,7 @@ PHB_ITEM returnQVariantObject(void *ptr)
   return pObject;
 }
 
-/*
-  cria um objeto da classe QWidget ou derivada, com o ponteiro 'ptr'
-*/
-
+// cria um objeto da classe QWidget ou derivada, com o ponteiro 'ptr'
 PHB_ITEM returnQWidgetObject(QWidget *ptr)
 {
   PHB_DYNS pDynSym = NULL;
@@ -742,10 +671,7 @@ PHB_ITEM returnQWidgetObject(QWidget *ptr)
   return pObject;
 }
 
-/*
-  cria um objeto da classe QObject ou derivada, com o ponteiro 'ptr'
-*/
-
+// cria um objeto da classe QObject ou derivada, com o ponteiro 'ptr'
 PHB_ITEM returnQObjectObject(QObject *ptr)
 {
   PHB_DYNS pDynSym = NULL;

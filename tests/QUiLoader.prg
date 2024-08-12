@@ -4,9 +4,7 @@
 // Copyright (c) 2024 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 //
 
-/*
-  Qt4xHb: exemplo de uso da classe QUiLoader
-*/
+// Qt4xHb: exemplo de uso da classe QUiLoader
 
 #include "qt4xhb.ch"
 

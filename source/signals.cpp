@@ -8,9 +8,7 @@
 
 static Signals *s_signals = NULL;
 
-/*
-  constructor
-*/
+// constructor
 Signals::Signals(QObject *parent) : QObject(parent)
 {
   m_list1 = new QVector<QObject *>(1000, NULL); // armazena ponteiro do objeto
@@ -19,9 +17,7 @@ Signals::Signals(QObject *parent) : QObject(parent)
   m_mutex = new QMutex();
 }
 
-/*
-  destructor
-*/
+// destructor
 Signals::~Signals()
 {
   const int listsize = m_list1->size();
@@ -39,12 +35,10 @@ Signals::~Signals()
   delete m_mutex;
 }
 
-/*
-  Conecta um determinado sinal com um objeto
-  Parâmetro 1: ponteiro para o objeto
-  Parâmetro 2: assinatura do sinal
-  Parâmetro 3: codeblock
-*/
+// Conecta um determinado sinal com um objeto
+// Parâmetro 1: ponteiro para o objeto
+// Parâmetro 2: assinatura do sinal
+// Parâmetro 3: codeblock
 
 void Signals::connectSignal(QObject *object, const QString &signal, PHB_ITEM codeblock)
 {
@@ -67,11 +61,9 @@ void Signals::connectSignal(QObject *object, const QString &signal, PHB_ITEM cod
   }
 }
 
-/*
-  Desconecta um determinado sinal
-  Parâmetro 1: ponteiro para o objeto
-  Parâmetro 2: assinatura do sinal
-*/
+// Desconecta um determinado sinal
+// Parâmetro 1: ponteiro para o objeto
+// Parâmetro 2: assinatura do sinal
 
 void Signals::disconnectSignal(QObject *object, const QString &signal)
 {
@@ -89,12 +81,10 @@ void Signals::disconnectSignal(QObject *object, const QString &signal)
   }
 }
 
-/*
-  Verifica se um determinado sinal do objeto especificado está conectado
-  Parâmetro 1: ponteiro para o objeto
-  Parâmetro 2: assinatura do sinal
-  Retorna true se existe uma conexão ativa ou false caso não exista
-*/
+// Verifica se um determinado sinal do objeto especificado está conectado
+// Parâmetro 1: ponteiro para o objeto
+// Parâmetro 2: assinatura do sinal
+// Retorna true se existe uma conexão ativa ou false caso não exista
 
 bool Signals::isSignalConnected(QObject *object, const QString &signal)
 {
@@ -260,43 +250,35 @@ int Signals::active()
 namespace Qt4xHb
 {
 
-/*
-  Desconecta um determinado sinal
-  Parâmetro 1: ponteiro para o objeto
-  Parâmetro 2: assinatura do sinal
-  Função de uso interno, não deve ser usada nas aplicações do usuário
-*/
+// Desconecta um determinado sinal
+// Parâmetro 1: ponteiro para o objeto
+// Parâmetro 2: assinatura do sinal
+// Função de uso interno, não deve ser usada nas aplicações do usuário
 
 void Signals_disconnect_signal(QObject *object, const QString &signal)
 {
   s_signals->disconnectSignal(object, signal);
 }
 
-/*
-  Retorna o codeblock de um determinado objeto e sinal
-*/
+// Retorna o codeblock de um determinado objeto e sinal
 
 PHB_ITEM Signals_return_codeblock(QObject *object, const QString &signal)
 {
   return s_signals->returnCodeblock(object, signal);
 }
 
-/*
-  Libera todos os codeblocks relacionados com sinais do objeto 'obj',
-  incluindo os sinais ligados aos filhos, netos, bisnetos, etc... (se children = true).
-  NOTA: o sinal "destroyed(QObject*)" não é liberado, pois se fosse não seria executado
-  na destruição do objeto. Este sinal é liberado automaticamente após sua execução, pois
-  a destruição de um objeto ocorre apenas uma vez.
-*/
+// Libera todos os codeblocks relacionados com sinais do objeto 'obj',
+// incluindo os sinais ligados aos filhos, netos, bisnetos, etc... (se children = true).
+// NOTA: o sinal "destroyed(QObject*)" não é liberado, pois se fosse não seria executado
+// na destruição do objeto. Este sinal é liberado automaticamente após sua execução, pois
+// a destruição de um objeto ocorre apenas uma vez.
 
 void Signals_disconnect_all_signals(QObject *obj, bool children)
 {
   s_signals->disconnectAllSignals(obj, children);
 }
 
-/*
-  conecta/desconecta sinais e retorna resultado (true/false) (para uso nas classes Q*Slots)
-*/
+// conecta/desconecta sinais e retorna resultado (true/false) (para uso nas classes Q*Slots)
 
 bool Signals_connection_disconnection(QObject *receiver, const QString &signal, const QString &slot)
 {
@@ -363,22 +345,18 @@ PHB_ITEM Signals_return_qobject(QObject *ptr, const char *classname)
 
 } // namespace Qt4xHb
 
-/*
-  Retorna o tamanho da lista de sinais.
-  Atenção: está função não faz parte da API pública, podendo
-  ser removida ou sofrer modificações futuramente.
-*/
+// Retorna o tamanho da lista de sinais.
+// Atenção: está função não faz parte da API pública, podendo
+// ser removida ou sofrer modificações futuramente.
 
 HB_FUNC(QTXHB_SIGNALS_SIZE)
 {
   hb_retni(s_signals->size());
 }
 
-/*
-  Retorna o número de sinais ativos na lista de sinais.
-  Atenção: está função não faz parte da API pública, podendo
-  ser removida ou sofrer modificações futuramente.
-*/
+// Retorna o número de sinais ativos na lista de sinais.
+// Atenção: está função não faz parte da API pública, podendo
+// ser removida ou sofrer modificações futuramente.
 
 HB_FUNC(QTXHB_SIGNALS_ACTIVE)
 {

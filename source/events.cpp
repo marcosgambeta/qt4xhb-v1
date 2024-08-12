@@ -8,9 +8,7 @@
 
 static Events *s_events = NULL;
 
-/*
-  constructor
-*/
+// constructor
 Events::Events(QObject *parent) : QObject(parent)
 {
   m_list1 = new QVector<QObject *>(1000, NULL);            // armazena ponteiro do objeto
@@ -96,9 +94,7 @@ Events::Events(QObject *parent) : QObject(parent)
   m_events->insert(QEvent::GestureOverride, "QGestureEvent");
 }
 
-/*
-  destructor
-*/
+// destructor
 Events::~Events()
 {
   const int listsize = m_list1->size();
@@ -117,9 +113,7 @@ Events::~Events()
   delete m_events;
 }
 
-/*
-  filtro de eventos
-*/
+// filtro de eventos
 bool Events::eventFilter(QObject *obj, QEvent *event)
 {
   QEvent::Type eventtype = event->type();
@@ -155,13 +149,11 @@ bool Events::eventFilter(QObject *obj, QEvent *event)
   return result;
 }
 
-/*
-  Conecta um determinado evento com um objeto
-  Parâmetro 1: objeto
-  Parâmetro 2: id do evento
-  Parâmetro 3: codeblock
-  Retorna true se a conexão foi bem sucedida ou false se falhou
-*/
+// Conecta um determinado evento com um objeto
+// Parâmetro 1: objeto
+// Parâmetro 2: id do evento
+// Parâmetro 3: codeblock
+// Retorna true se a conexão foi bem sucedida ou false se falhou
 
 bool Events::connectEvent(QObject *object, int type, PHB_ITEM codeblock)
 {
@@ -217,12 +209,10 @@ bool Events::connectEvent(QObject *object, int type, PHB_ITEM codeblock)
   return result;
 }
 
-/*
-  Desconecta um determinado evento
-  Parâmetro 1: objeto
-  Parâmetro 2: id do evento
-  Retorna true se a desconexão foi bem sucedida ou false se falhou
-*/
+// Desconecta um determinado evento
+// Parâmetro 1: objeto
+// Parâmetro 2: id do evento
+// Retorna true se a desconexão foi bem sucedida ou false se falhou
 
 bool Events::disconnectEvent(QObject *object, int type)
 {
@@ -251,10 +241,8 @@ bool Events::disconnectEvent(QObject *object, int type)
   return result;
 }
 
-/*
-  Libera todos os codeblocks relacionados com eventos do objeto 'obj',
-  incluindo os eventos ligados aos filhos, netos, bisnetos, etc... (se children = true).
-*/
+// Libera todos os codeblocks relacionados com eventos do objeto 'obj',
+// incluindo os eventos ligados aos filhos, netos, bisnetos, etc... (se children = true).
 
 void Events::disconnectAllEvents(QObject *obj, bool children)
 {
@@ -381,22 +369,18 @@ PHB_ITEM Events::returnQObject(QObject *ptr, const char *classname)
   return pObject;
 }
 
-/*
-  Retorna o tamanho da lista de eventos.
-  Atenção: está função não faz parte da API pública, podendo
-  ser removida ou sofrer modificações futuramente.
-*/
+// Retorna o tamanho da lista de eventos.
+// Atenção: está função não faz parte da API pública, podendo
+// ser removida ou sofrer modificações futuramente.
 
 int Events::size()
 {
   return m_list1->size();
 }
 
-/*
-  Retorna o número de eventos ativos na lista de eventos.
-  Atenção: está função não faz parte da API pública, podendo
-  ser removida ou sofrer modificações futuramente.
-*/
+// Retorna o número de eventos ativos na lista de eventos.
+// Atenção: está função não faz parte da API pública, podendo
+// ser removida ou sofrer modificações futuramente.
 
 int Events::active()
 {

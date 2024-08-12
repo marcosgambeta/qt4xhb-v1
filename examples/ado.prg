@@ -69,12 +69,10 @@ PROCEDURE Main()
 
 RETURN
 
-/*
-  A função CriarBancoDeDados cria um banco de dados do Access, na pasta
-  corrente. Neste banco, é criada uma tabela chamada 'cadastro', com três
-  campos: 'codigo', 'nome' e 'valor'. Nesta tabela são inseridos 1000
-  registros.
-*/
+// A função CriarBancoDeDados cria um banco de dados do Access, na pasta
+// corrente. Neste banco, é criada uma tabela chamada 'cadastro', com três
+// campos: 'codigo', 'nome' e 'valor'. Nesta tabela são inseridos 1000
+// registros.
 
 STATIC FUNCTION CriarBancoDeDados()
 
