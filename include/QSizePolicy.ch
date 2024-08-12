@@ -37,9 +37,9 @@
 #define QSizePolicy_Fixed                                            0
 #define QSizePolicy_Minimum                                          QSizePolicy_GrowFlag
 #define QSizePolicy_Maximum                                          QSizePolicy_ShrinkFlag
-#define QSizePolicy_Preferred                                        hb_bitor(QSizePolicy_GrowFlag,QSizePolicy_ShrinkFlag)
-#define QSizePolicy_Expanding                                        hb_bitor(hb_bitor(QSizePolicy_GrowFlag,QSizePolicy_ShrinkFlag),QSizePolicy_ExpandFlag)
-#define QSizePolicy_MinimumExpanding                                 hb_bitor(QSizePolicy_GrowFlag,QSizePolicy_ExpandFlag)
-#define QSizePolicy_Ignored                                          hb_bitor(hb_bitor(QSizePolicy_ShrinkFlag,QSizePolicy_GrowFlag),QSizePolicy_IgnoreFlag)
+#define QSizePolicy_Preferred                                        hb_bitor(QSizePolicy_GrowFlag, QSizePolicy_ShrinkFlag)
+#define QSizePolicy_Expanding                                        hb_bitor(hb_bitor(QSizePolicy_GrowFlag, QSizePolicy_ShrinkFlag), QSizePolicy_ExpandFlag)
+#define QSizePolicy_MinimumExpanding                                 hb_bitor(QSizePolicy_GrowFlag, QSizePolicy_ExpandFlag)
+#define QSizePolicy_Ignored                                          hb_bitor(hb_bitor(QSizePolicy_ShrinkFlag, QSizePolicy_GrowFlag), QSizePolicy_IgnoreFlag)
 
 #endif // QSIZEPOLICY_CH

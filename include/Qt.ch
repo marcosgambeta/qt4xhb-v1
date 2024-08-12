@@ -16,12 +16,12 @@
 #define Qt_AlignTop                                        0x0020
 #define Qt_AlignBottom                                     0x0040
 #define Qt_AlignVCenter                                    0x0080
-#define Qt_AlignCenter                                     hb_bitor(Qt_AlignVCenter,Qt_AlignHCenter)
+#define Qt_AlignCenter                                     hb_bitor(Qt_AlignVCenter, Qt_AlignHCenter)
 #define Qt_AlignAbsolute                                   0x0010
 #define Qt_AlignLeading                                    Qt_AlignLeft
 #define Qt_AlignTrailing                                   Qt_AlignRight
-#define Qt_AlignHorizontal_Mask                            hb_bitor(hb_bitor(hb_bitor(hb_bitor(Qt_AlignLeft,Qt_AlignRight),Qt_AlignHCenter),Qt_AlignJustify),Qt_AlignAbsolute)
-#define Qt_AlignVertical_Mask                              hb_bitor(hb_bitor(Qt_AlignTop,Qt_AlignBottom),Qt_AlignVCenter)
+#define Qt_AlignHorizontal_Mask                            hb_bitor(hb_bitor(hb_bitor(hb_bitor(Qt_AlignLeft, Qt_AlignRight), Qt_AlignHCenter), Qt_AlignJustify), Qt_AlignAbsolute)
+#define Qt_AlignVertical_Mask                              hb_bitor(hb_bitor(Qt_AlignTop, Qt_AlignBottom), Qt_AlignVCenter)
 
 // enum Qt::AnchorAttribute
 #define Qt_AnchorName                                      0
@@ -203,8 +203,8 @@
 // enum Qt::FocusPolicy
 #define Qt_TabFocus                                        0x1
 #define Qt_ClickFocus                                      0x2
-#define Qt_StrongFocus                                     hb_bitor(hb_bitor(Qt_TabFocus,Qt_ClickFocus),0x8)
-#define Qt_WheelFocus                                      hb_bitor(Qt_StrongFocus,0x4)
+#define Qt_StrongFocus                                     hb_bitor(hb_bitor(Qt_TabFocus, Qt_ClickFocus), 0x8)
+#define Qt_WheelFocus                                      hb_bitor(Qt_StrongFocus, 0x4)
 #define Qt_NoFocus                                         0
 
 // enum Qt::FocusReason
@@ -900,8 +900,8 @@
 #define Qt_LinksAccessibleByMouse                          4
 #define Qt_LinksAccessibleByKeyboard                       8
 #define Qt_TextEditable                                    16
-#define Qt_TextEditorInteraction                           hb_bitor(hb_bitor(Qt_TextSelectableByMouse,Qt_TextSelectableByKeyboard),Qt_TextEditable)
-#define Qt_TextBrowserInteraction                          hb_bitor(hb_bitor(Qt_TextSelectableByMouse,Qt_LinksAccessibleByMouse),Qt_LinksAccessibleByKeyboard)
+#define Qt_TextEditorInteraction                           hb_bitor(hb_bitor(Qt_TextSelectableByMouse, Qt_TextSelectableByKeyboard), Qt_TextEditable)
+#define Qt_TextBrowserInteraction                          hb_bitor(hb_bitor(Qt_TextSelectableByMouse, Qt_LinksAccessibleByMouse), Qt_LinksAccessibleByKeyboard)
 
 // enum Qt::TileRule
 #define Qt_StretchTile                                     0
@@ -1067,14 +1067,14 @@
 // flags #define Qt_WindowFlags
 #define Qt_Widget                                          0x00000000
 #define Qt_Window                                          0x00000001
-#define Qt_Dialog                                          hb_bitor(0x00000002,Qt_Window)
-#define Qt_Sheet                                           hb_bitor(0x00000004,Qt_Window)
-#define Qt_Drawer                                          hb_bitor(0x00000006,Qt_Window)
-#define Qt_Popup                                           hb_bitor(0x00000008,Qt_Window)
-#define Qt_Tool                                            hb_bitor(0x0000000a,Qt_Window)
-#define Qt_ToolTip                                         hb_bitor(0x0000000c,Qt_Window)
-#define Qt_SplashScreen                                    hb_bitor(0x0000000e,Qt_Window)
-#define Qt_Desktop                                         hb_bitor(0x00000010,Qt_Window)
+#define Qt_Dialog                                          hb_bitor(0x00000002, Qt_Window)
+#define Qt_Sheet                                           hb_bitor(0x00000004, Qt_Window)
+#define Qt_Drawer                                          hb_bitor(0x00000006, Qt_Window)
+#define Qt_Popup                                           hb_bitor(0x00000008, Qt_Window)
+#define Qt_Tool                                            hb_bitor(0x0000000a, Qt_Window)
+#define Qt_ToolTip                                         hb_bitor(0x0000000c, Qt_Window)
+#define Qt_SplashScreen                                    hb_bitor(0x0000000e, Qt_Window)
+#define Qt_Desktop                                         hb_bitor(0x00000010, Qt_Window)
 #define Qt_SubWindow                                       0x00000012
 #define Qt_MSWindowsFixedSizeDialogHint                    0x00000100
 #define Qt_MSWindowsOwnDC                                  0x00000200
@@ -1085,7 +1085,7 @@
 #define Qt_WindowSystemMenuHint                            0x00002000
 #define Qt_WindowMinimizeButtonHint                        0x00004000
 #define Qt_WindowMaximizeButtonHint                        0x00008000
-#define Qt_WindowMinMaxButtonsHint                         hb_bitor(Qt_WindowMinimizeButtonHint,Qt_WindowMaximizeButtonHint)
+#define Qt_WindowMinMaxButtonsHint                         hb_bitor(Qt_WindowMinimizeButtonHint, Qt_WindowMaximizeButtonHint)
 #define Qt_WindowCloseButtonHint                           0x08000000
 #define Qt_WindowContextHelpButtonHint                     0x00010000
 #define Qt_MacWindowToolBarButtonHint                      0x10000000
@@ -1117,7 +1117,7 @@
 #define Qt_WStyle_SysMenu                                  Qt_WindowSystemMenuHint
 #define Qt_WStyle_Minimize                                 Qt_WindowMinimizeButtonHint
 #define Qt_WStyle_Maximize                                 Qt_WindowMaximizeButtonHint
-#define Qt_WStyle_MinMax                                   hb_bitor(Qt_WStyle_Minimize,Qt_WStyle_Maximize)
+#define Qt_WStyle_MinMax                                   hb_bitor(Qt_WStyle_Minimize, Qt_WStyle_Maximize)
 #define Qt_WStyle_Tool                                     Qt_Tool
 #define Qt_WStyle_StaysOnTop                               Qt_WindowStaysOnTopHint
 #define Qt_WStyle_ContextHelp                              Qt_WindowContextHelpButtonHint
@@ -1131,7 +1131,7 @@
 #define Qt_WNoAutoErase                                    0
 #define Qt_WRepaintNoErase                                 0
 #define Qt_WNorthWestGravity                               Qt_WStaticContents
-#define Qt_WType_Modal                                     hb_bitor(Qt_Dialog,Qt_WShowModal)
+#define Qt_WType_Modal                                     hb_bitor(Qt_Dialog, Qt_WShowModal)
 #define Qt_WStyle_Dialog                                   Qt_Dialog
 #define Qt_WStyle_NoBorderEx                               Qt_FramelessWindowHint
 #define Qt_WResizeNoErase                                  0

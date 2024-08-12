@@ -21,6 +21,6 @@
 #define QAbstractVideoBuffer_NotMapped                               0x00
 #define QAbstractVideoBuffer_ReadOnly                                0x01
 #define QAbstractVideoBuffer_WriteOnly                               0x02
-#define QAbstractVideoBuffer_ReadWrite                               hb_bitor(QAbstractVideoBuffer_ReadOnly,QAbstractVideoBuffer_WriteOnly)
+#define QAbstractVideoBuffer_ReadWrite                               hb_bitor(QAbstractVideoBuffer_ReadOnly, QAbstractVideoBuffer_WriteOnly)
 
 #endif // QABSTRACTVIDEOBUFFER_CH

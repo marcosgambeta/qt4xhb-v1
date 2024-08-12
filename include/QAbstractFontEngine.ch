@@ -13,7 +13,7 @@
 // flags QAbstractFontEngine::Capabilities
 #define QAbstractFontEngine_CanRenderGlyphs_Gray                     4
 #define QAbstractFontEngine_CanRenderGlyphs_Mono                     2
-#define QAbstractFontEngine_CanRenderGlyphs                          hb_bitor(QAbstractFontEngine_CanRenderGlyphs_Mono,QAbstractFontEngine_CanRenderGlyphs_Gray)
+#define QAbstractFontEngine_CanRenderGlyphs                          hb_bitor(QAbstractFontEngine_CanRenderGlyphs_Mono, QAbstractFontEngine_CanRenderGlyphs_Gray)
 #define QAbstractFontEngine_CanOutlineGlyphs                         1
 
 // enum QAbstractFontEngine::FontProperty
