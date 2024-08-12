@@ -73,7 +73,7 @@ CLASS Dialog INHERIT QWidget
 
    DATA cOpenFilesPath INIT ""
 
-   METHOD new( oParent )
+   METHOD new(oParent)
    METHOD setInteger()
    METHOD setDouble()
    METHOD setItem()
@@ -94,134 +94,134 @@ CLASS Dialog INHERIT QWidget
 
 END CLASS
 
-METHOD new( oParent ) CLASS Dialog
+METHOD new(oParent) CLASS Dialog
 
    LOCAL nFrameStyle
    LOCAL oLayout
 
-   ::super:new( oParent )
+   ::super:new(oParent)
 
-   ::oErrorMessageDialog := QErrorMessage():new( SELF )
+   ::oErrorMessageDialog := QErrorMessage():new(SELF)
 
    nFrameStyle := QFrame_Sunken + QFrame_Panel
 
    ::oIntegerLabel := QLabel():new()
-   ::oIntegerLabel:setFrameStyle( nFrameStyle )
-   ::oIntegerButton := QPushButton():new( "QInputDialog::get&Int()" )
+   ::oIntegerLabel:setFrameStyle(nFrameStyle)
+   ::oIntegerButton := QPushButton():new("QInputDialog::get&Int()")
 
    ::oDoubleLabel := QLabel():new()
-   ::oDoubleLabel:setFrameStyle( nFrameStyle )
-   ::oDoubleButton := QPushButton():new( "QInputDialog::get&Double()" )
+   ::oDoubleLabel:setFrameStyle(nFrameStyle)
+   ::oDoubleButton := QPushButton():new("QInputDialog::get&Double()")
 
    ::oItemLabel := QLabel():new()
-   ::oItemLabel:setFrameStyle( nFrameStyle )
-   ::oItemButton := QPushButton():new( "QInputDialog::getIte&m()" )
+   ::oItemLabel:setFrameStyle(nFrameStyle)
+   ::oItemButton := QPushButton():new("QInputDialog::getIte&m()")
 
    ::oTextLabel := QLabel():new()
-   ::oTextLabel:setFrameStyle( nFrameStyle )
-   ::oTextButton := QPushButton():new( "QInputDialog::get&Text()" )
+   ::oTextLabel:setFrameStyle(nFrameStyle)
+   ::oTextButton := QPushButton():new("QInputDialog::get&Text()")
 
    ::oColorLabel := QLabel():new()
-   ::oColorLabel:setFrameStyle( nFrameStyle )
-   ::oColorButton := QPushButton():new( "QColorDialog::get&Color()" )
+   ::oColorLabel:setFrameStyle(nFrameStyle)
+   ::oColorButton := QPushButton():new("QColorDialog::get&Color()")
 
    ::oFontLabel := QLabel():new()
-   ::oFontLabel:setFrameStyle( nFrameStyle )
-   ::oFontButton := QPushButton():new( "QFontDialog::get&Font()" )
+   ::oFontLabel:setFrameStyle(nFrameStyle)
+   ::oFontButton := QPushButton():new("QFontDialog::get&Font()")
 
    ::oDirectoryLabel := QLabel():new()
-   ::oDirectoryLabel:setFrameStyle( nFrameStyle )
-   ::oDirectoryButton := QPushButton():new( "QFileDialog::getE&xistingDirectory()" )
+   ::oDirectoryLabel:setFrameStyle(nFrameStyle)
+   ::oDirectoryButton := QPushButton():new("QFileDialog::getE&xistingDirectory()")
 
    ::oOpenFileNameLabel := QLabel():new()
-   ::oOpenFileNameLabel:setFrameStyle( nFrameStyle )
-   ::oOpenFileNameButton := QPushButton():new( "QFileDialog::get&OpenFileName()" )
+   ::oOpenFileNameLabel:setFrameStyle(nFrameStyle)
+   ::oOpenFileNameButton := QPushButton():new("QFileDialog::get&OpenFileName()")
 
    ::oOpenFileNamesLabel := QLabel():new()
-   ::oOpenFileNamesLabel:setFrameStyle( nFrameStyle )
-   ::oOpenFileNamesButton := QPushButton():new( "QFileDialog::&getOpenFileNames()" )
+   ::oOpenFileNamesLabel:setFrameStyle(nFrameStyle)
+   ::oOpenFileNamesButton := QPushButton():new("QFileDialog::&getOpenFileNames()")
 
    ::oSaveFileNameLabel := QLabel():new()
-   ::oSaveFileNameLabel:setFrameStyle( nFrameStyle )
-   ::oSaveFileNameButton := QPushButton():new( "QFileDialog::get&SaveFileName()" )
+   ::oSaveFileNameLabel:setFrameStyle(nFrameStyle)
+   ::oSaveFileNameButton := QPushButton():new("QFileDialog::get&SaveFileName()")
 
    ::oCriticalLabel := QLabel():new()
-   ::oCriticalLabel:setFrameStyle( nFrameStyle )
-   ::oCriticalButton := QPushButton():new( "QMessageBox::critica&l()" )
+   ::oCriticalLabel:setFrameStyle(nFrameStyle)
+   ::oCriticalButton := QPushButton():new("QMessageBox::critica&l()")
 
    ::oInformationLabel := QLabel():new()
-   ::oInformationLabel:setFrameStyle( nFrameStyle )
-   ::oInformationButton := QPushButton():new( "QMessageBox::i&nformation()" )
+   ::oInformationLabel:setFrameStyle(nFrameStyle)
+   ::oInformationButton := QPushButton():new("QMessageBox::i&nformation()")
 
    ::oQuestionLabel = QLabel():new()
-   ::oQuestionLabel:setFrameStyle( nFrameStyle )
-   ::oQuestionButton := QPushButton():new( "QMessageBox::&question()" )
+   ::oQuestionLabel:setFrameStyle(nFrameStyle)
+   ::oQuestionButton := QPushButton():new("QMessageBox::&question()")
 
    ::oWarningLabel := QLabel():new()
-   ::oWarningLabel:setFrameStyle( nFrameStyle )
-   ::oWarningButton := QPushButton():new( "QMessageBox::&warning()" )
+   ::oWarningLabel:setFrameStyle(nFrameStyle)
+   ::oWarningButton := QPushButton():new("QMessageBox::&warning()")
 
    ::oErrorLabel := QLabel():new()
-   ::oErrorLabel:setFrameStyle( nFrameStyle )
-   ::oErrorButton := QPushButton():new( "QErrorMessage::showM&essage()" )
+   ::oErrorLabel:setFrameStyle(nFrameStyle)
+   ::oErrorButton := QPushButton():new("QErrorMessage::showM&essage()")
 
-   ::oIntegerButton:onClicked( {||::setInteger()} )
-   ::oDoubleButton:onClicked( {||::setDouble()} )
-   ::oItemButton:onClicked( {||::setItem()} )
-   ::oTextButton:onClicked( {||::setText()} )
-   ::oColorButton:onClicked( {||::setColor()} )
-   ::oFontButton:onClicked( {||::setFont()} )
-   ::oDirectoryButton:onClicked( {||::setExistingDirectory()} )
-   ::oOpenFileNameButton:onClicked( {||::setOpenFileName()} )
-   ::oOpenFileNamesButton:onClicked( {||::setOpenFileNames()} )
-   ::oSaveFileNameButton:onClicked( {||::setSaveFileName()} )
-   ::oCriticalButton:onClicked( {||::criticalMessage()} )
-   ::oInformationButton:onClicked( {||::informationMessage()} )
-   ::oQuestionButton:onClicked( {||::questionMessage()} )
-   ::oWarningButton:onClicked( {||::warningMessage()} )
-   ::oErrorButton:onClicked( {||::errorMessage()} )
+   ::oIntegerButton:onClicked({||::setInteger()})
+   ::oDoubleButton:onClicked({||::setDouble()})
+   ::oItemButton:onClicked({||::setItem()})
+   ::oTextButton:onClicked({||::setText()})
+   ::oColorButton:onClicked({||::setColor()})
+   ::oFontButton:onClicked({||::setFont()})
+   ::oDirectoryButton:onClicked({||::setExistingDirectory()})
+   ::oOpenFileNameButton:onClicked({||::setOpenFileName()})
+   ::oOpenFileNamesButton:onClicked({||::setOpenFileNames()})
+   ::oSaveFileNameButton:onClicked({||::setSaveFileName()})
+   ::oCriticalButton:onClicked({||::criticalMessage()})
+   ::oInformationButton:onClicked({||::informationMessage()})
+   ::oQuestionButton:onClicked({||::questionMessage()})
+   ::oWarningButton:onClicked({||::warningMessage()})
+   ::oErrorButton:onClicked({||::errorMessage()})
 
-   ::oNative := QCheckBox():new( SELF )
-   ::oNative:setText( "Use native file dialog." )
-   ::oNative:setChecked( .T. )
+   ::oNative := QCheckBox():new(SELF)
+   ::oNative:setText("Use native file dialog.")
+   ::oNative:setChecked(.T.)
 
    oLayout := QGridLayout():new()
-   oLayout:setColumnStretch( 1, 1 )
-   oLayout:setColumnMinimumWidth( 1, 250 )
-   oLayout:addWidget( ::oIntegerButton, 0, 0 )
-   oLayout:addWidget( ::oIntegerLabel, 0, 1 )
-   oLayout:addWidget( ::oDoubleButton, 1, 0 )
-   oLayout:addWidget( ::oDoubleLabel, 1, 1 )
-   oLayout:addWidget( ::oItemButton, 2, 0 )
-   oLayout:addWidget( ::oitemLabel, 2, 1 )
-   oLayout:addWidget( ::oTextButton, 3, 0 )
-   oLayout:addWidget( ::oTextLabel, 3, 1 )
-   oLayout:addWidget( ::oColorButton, 4, 0 )
-   oLayout:addWidget( ::oColorLabel, 4, 1 )
-   oLayout:addWidget( ::oFontButton, 5, 0 )
-   oLayout:addWidget( ::oFontLabel, 5, 1 )
-   oLayout:addWidget( ::oDirectoryButton, 6, 0 )
-   oLayout:addWidget( ::oDirectoryLabel, 6, 1 )
-   oLayout:addWidget( ::oOpenFileNameButton, 7, 0 )
-   oLayout:addWidget( ::oOpenFileNameLabel, 7, 1 )
-   oLayout:addWidget( ::oOpenFileNamesButton, 8, 0 )
-   oLayout:addWidget( ::oOpenFileNamesLabel, 8, 1 )
-   oLayout:addWidget( ::oSaveFileNameButton, 9, 0 )
-   oLayout:addWidget( ::oSaveFileNameLabel, 9, 1 )
-   oLayout:addWidget( ::oCriticalButton, 10, 0 )
-   oLayout:addWidget( ::oCriticalLabel, 10, 1 )
-   oLayout:addWidget( ::oInformationButton, 11, 0 )
-   oLayout:addWidget( ::oInformationLabel, 11, 1 )
-   oLayout:addWidget( ::oQuestionButton, 12, 0 )
-   oLayout:addWidget( ::oQuestionLabel, 12, 1 )
-   oLayout:addWidget( ::oWarningButton, 13, 0 )
-   oLayout:addWidget( ::oWarningLabel, 13, 1 )
-   oLayout:addWidget( ::oErrorButton, 14, 0 )
-   oLayout:addWidget( ::oErrorLabel, 14, 1 )
-   oLayout:addWidget( ::oNative, 15, 0 )
-   ::setLayout( oLayout )
+   oLayout:setColumnStretch(1, 1)
+   oLayout:setColumnMinimumWidth(1, 250)
+   oLayout:addWidget(::oIntegerButton, 0, 0)
+   oLayout:addWidget(::oIntegerLabel, 0, 1)
+   oLayout:addWidget(::oDoubleButton, 1, 0)
+   oLayout:addWidget(::oDoubleLabel, 1, 1)
+   oLayout:addWidget(::oItemButton, 2, 0)
+   oLayout:addWidget(::oitemLabel, 2, 1)
+   oLayout:addWidget(::oTextButton, 3, 0)
+   oLayout:addWidget(::oTextLabel, 3, 1)
+   oLayout:addWidget(::oColorButton, 4, 0)
+   oLayout:addWidget(::oColorLabel, 4, 1)
+   oLayout:addWidget(::oFontButton, 5, 0)
+   oLayout:addWidget(::oFontLabel, 5, 1)
+   oLayout:addWidget(::oDirectoryButton, 6, 0)
+   oLayout:addWidget(::oDirectoryLabel, 6, 1)
+   oLayout:addWidget(::oOpenFileNameButton, 7, 0)
+   oLayout:addWidget(::oOpenFileNameLabel, 7, 1)
+   oLayout:addWidget(::oOpenFileNamesButton, 8, 0)
+   oLayout:addWidget(::oOpenFileNamesLabel, 8, 1)
+   oLayout:addWidget(::oSaveFileNameButton, 9, 0)
+   oLayout:addWidget(::oSaveFileNameLabel, 9, 1)
+   oLayout:addWidget(::oCriticalButton, 10, 0)
+   oLayout:addWidget(::oCriticalLabel, 10, 1)
+   oLayout:addWidget(::oInformationButton, 11, 0)
+   oLayout:addWidget(::oInformationLabel, 11, 1)
+   oLayout:addWidget(::oQuestionButton, 12, 0)
+   oLayout:addWidget(::oQuestionLabel, 12, 1)
+   oLayout:addWidget(::oWarningButton, 13, 0)
+   oLayout:addWidget(::oWarningLabel, 13, 1)
+   oLayout:addWidget(::oErrorButton, 14, 0)
+   oLayout:addWidget(::oErrorLabel, 14, 1)
+   oLayout:addWidget(::oNative, 15, 0)
+   ::setLayout(oLayout)
 
-   ::setWindowTitle( "Standard Dialogs" )
+   ::setWindowTitle("Standard Dialogs")
 
 RETURN SELF
 
@@ -230,10 +230,10 @@ METHOD setInteger() CLASS Dialog
    LOCAL lOk := .F.
    LOCAL nValue
 
-   nValue := QInputDialog():getInt( SELF, "QInputDialog::getInteger()", "Percentage:", 25, 0, 100, 1, @lOk )
+   nValue := QInputDialog():getInt(SELF, "QInputDialog::getInteger()", "Percentage:", 25, 0, 100, 1, @lOk)
 
    IF lOk
-      ::oIntegerLabel:setText( alltrim( str( nValue ) ) )
+      ::oIntegerLabel:setText(alltrim(str(nValue)))
    ENDIF
 
 RETURN NIL
@@ -243,10 +243,10 @@ METHOD setDouble() CLASS Dialog
    LOCAL lOk := .F.
    LOCAL nValue
 
-   nValue := QInputDialog():getDouble( SELF, "QInputDialog::getDouble()", "Amount:", 37.56, -10000, 10000, 2, @lOk )
+   nValue := QInputDialog():getDouble(SELF, "QInputDialog::getDouble()", "Amount:", 37.56, -10000, 10000, 2, @lOk)
 
    IF lOk
-      ::oDoubleLabel:setText( alltrim( str( nValue ) ) )
+      ::oDoubleLabel:setText(alltrim(str(nValue)))
    ENDIF
 
 RETURN NIL
@@ -257,10 +257,10 @@ METHOD setItem() CLASS Dialog
    LOCAL lOk := .F.
    LOCAL cItem
 
-   cItem := QInputDialog():getItem( SELF, "QInputDialog::getItem()", "Season:", aItems, 0, .F., @lOk )
+   cItem := QInputDialog():getItem(SELF, "QInputDialog::getItem()", "Season:", aItems, 0, .F., @lOk)
 
-   IF lOk .AND. !empty( cItem )
-      ::oItemLabel:setText( cItem )
+   IF lOk .AND. !empty(cItem)
+      ::oItemLabel:setText(cItem)
    ENDIF
 
 RETURN NIL
@@ -270,10 +270,10 @@ METHOD setText() CLASS Dialog
    LOCAL lOk := .F.
    LOCAL cText
 
-   cText := QInputDialog():getText( SELF, "QInputDialog::getText()", "User name:", QLineEdit_Normal, QDir():home():dirName(), @lOk )
+   cText := QInputDialog():getText(SELF, "QInputDialog::getText()", "User name:", QLineEdit_Normal, QDir():home():dirName(), @lOk)
 
-   IF lOk .AND. !empty( cText )
-      ::oTextLabel:setText( cText )
+   IF lOk .AND. !empty(cText)
+      ::oTextLabel:setText(cText)
    ENDIF
 
 RETURN NIL
@@ -283,15 +283,15 @@ METHOD setColor() CLASS Dialog
    LOCAL oColor
 
    IF ::oNative:isChecked()
-      oColor := QColorDialog():getColor( "green", SELF )
+      oColor := QColorDialog():getColor("green", SELF)
    ELSE
-      oColor := QColorDialog():getColor( "green", SELF, "Select Color", QColorDialog_DontUseNativeDialog )
+      oColor := QColorDialog():getColor("green", SELF, "Select Color", QColorDialog_DontUseNativeDialog)
    ENDIF
 
    IF oColor:isValid()
-      ::oColorLabel:setText( oColor:name() )
-      ::oColorLabel:setPalette( QPalette():new( oColor ) )
-      ::oColorLabel:setAutoFillBackground( .T. )
+      ::oColorLabel:setText(oColor:name())
+      ::oColorLabel:setPalette(QPalette():new(oColor))
+      ::oColorLabel:setAutoFillBackground(.T.)
    ENDIF
 
 RETURN NIL
@@ -301,11 +301,11 @@ METHOD setFont() CLASS Dialog
    LOCAL lOk := .F.
    LOCAL oFont
 
-   oFont := QFontDialog():getFont( @lOk, QFont():new( ::oFontLabel:text() ), SELF )
+   oFont := QFontDialog():getFont(@lOk, QFont():new(::oFontLabel:text()), SELF)
 
    IF lOk
-      ::oFontLabel:setText( oFont:key() )
-      ::oFontLabel:setFont( oFont )
+      ::oFontLabel:setText(oFont:key())
+      ::oFontLabel:setFont(oFont)
    ENDIF
 
 RETURN NIL
@@ -319,10 +319,10 @@ METHOD setExistingDirectory() CLASS Dialog
       nOptions -= QFileDialog_DontUseNativeDialog
    ENDIF
 
-   cDirectory := QFileDialog():getExistingDirectory( SELF, "QFileDialog::getExistingDirectory()", ::oDirectoryLabel:text(), nOptions )
+   cDirectory := QFileDialog():getExistingDirectory(SELF, "QFileDialog::getExistingDirectory()", ::oDirectoryLabel:text(), nOptions)
 
-   IF !empty( cDirectory )
-      ::oDirectoryLabel:setText( cDirectory )
+   IF !empty(cDirectory)
+      ::oDirectoryLabel:setText(cDirectory)
    ENDIF
 
 RETURN NIL
@@ -337,10 +337,10 @@ METHOD setOpenFileName() CLASS Dialog
       nOptions -= QFileDialog_DontUseNativeDialog
    ENDIF
 
-   cFileName := QFileDialog():getOpenFileName( SELF, "QFileDialog::getOpenFileName()", ::oOpenFileNameLabel:text(), "All Files (*);;Text Files (*.txt)", @cSelectedFilter, nOptions )
+   cFileName := QFileDialog():getOpenFileName(SELF, "QFileDialog::getOpenFileName()", ::oOpenFileNameLabel:text(), "All Files (*);;Text Files (*.txt)", @cSelectedFilter, nOptions)
 
-   IF !empty( cFileName )
-      ::oOpenFileNameLabel:setText( cFileName )
+   IF !empty(cFileName)
+      ::oOpenFileNameLabel:setText(cFileName)
    ENDIF
 
 RETURN NIL
@@ -355,22 +355,22 @@ METHOD setOpenFileNames() CLASS Dialog
       nOptions -= QFileDialog_DontUseNativeDialog
    ENDIF
 
-   aFiles := QFileDialog():getOpenFileNames( SELF, "QFileDialog::getOpenFileNames()", ::cOpenFilesPath, "All Files (*);;Text Files (*.txt)", @cSelectedFilter, nOptions )
+   aFiles := QFileDialog():getOpenFileNames(SELF, "QFileDialog::getOpenFileNames()", ::cOpenFilesPath, "All Files (*);;Text Files (*.txt)", @cSelectedFilter, nOptions)
 
-   IF len( afiles ) > 0
+   IF len(afiles) > 0
       ::cOpenFilesPath := aFiles[ 1 ]
-      ::oOpenFileNamesLabel:setText( "[" + join( aFiles, ", " ) + "]" )
+      ::oOpenFileNamesLabel:setText("[" + join(aFiles, ", ") + "]")
    ENDIF
 
 RETURN NIL
 
-STATIC FUNCTION Join( aItens, cDelim )
+STATIC FUNCTION Join(aItens, cDelim)
 
    LOCAL nIndex
    LOCAL cRet := ""
 
-   FOR nIndex := 1 TO len( aItens )
-      IF empty( cRet )
+   FOR nIndex := 1 TO len(aItens)
+      IF empty(cRet)
          cRet += aItens[ nIndex ]
       ELSE
          cRet += cDelim + aItens[ nIndex ]
@@ -389,10 +389,10 @@ METHOD setSaveFileName() CLASS Dialog
       nOptions -= QFileDialog_DontUseNativeDialog
    ENDIF
 
-   cFileName := QFileDialog():getSaveFileName( SELF, "QFileDialog::getSaveFileName()", ::oSaveFileNameLabel:text(), "All Files (*);;Text Files (*.txt)", @cSelectedFilter, nOptions )
+   cFileName := QFileDialog():getSaveFileName(SELF, "QFileDialog::getSaveFileName()", ::oSaveFileNameLabel:text(), "All Files (*);;Text Files (*.txt)", @cSelectedFilter, nOptions)
 
-   IF !empty( cFileName )
-      ::oSaveFileNameLabel:setText( cFileName )
+   IF !empty(cFileName)
+      ::oSaveFileNameLabel:setText(cFileName)
    ENDIF
 
 RETURN NIL
@@ -401,14 +401,14 @@ METHOD criticalMessage() CLASS Dialog
 
    LOCAL nReply
 
-   nReply := QMessageBox():critical( SELF, "QMessageBox::critical()", MESSAGE, QMessageBox_Abort + QMessageBox_Retry + QMessageBox_Ignore )
+   nReply := QMessageBox():critical(SELF, "QMessageBox::critical()", MESSAGE, QMessageBox_Abort + QMessageBox_Retry + QMessageBox_Ignore)
 
    IF nReply == QMessageBox_Abort
-      ::oCriticalLabel:setText( "Abort" )
+      ::oCriticalLabel:setText("Abort")
    ELSEIF nReply == QMessageBox_Retry
-      ::oCriticalLabel:setText( "Retry" )
+      ::oCriticalLabel:setText("Retry")
    ELSE
-      ::oCriticalLabel:setText( "Ignore" )
+      ::oCriticalLabel:setText("Ignore")
    ENDIF
 
 RETURN NIL
@@ -417,12 +417,12 @@ METHOD informationMessage() CLASS Dialog
 
    LOCAL nReply
 
-   nReply := QMessageBox():information( SELF, "QMessageBox::information()", MESSAGE )
+   nReply := QMessageBox():information(SELF, "QMessageBox::information()", MESSAGE)
 
    IF nReply == QMessageBox_Ok
-      ::oInformationLabel:setText( "OK" )
+      ::oInformationLabel:setText("OK")
    ELSE
-      ::oInformationLabel:setText( "Escape" )
+      ::oInformationLabel:setText("Escape")
    ENDIF
 
 RETURN NIL
@@ -431,14 +431,14 @@ METHOD questionMessage() CLASS Dialog
 
    LOCAL nReply
 
-   nReply := QMessageBox():question( SELF, "QMessageBox::question()", MESSAGE, QMessageBox_Yes + QMessageBox_No + QMessageBox_Cancel )
+   nReply := QMessageBox():question(SELF, "QMessageBox::question()", MESSAGE, QMessageBox_Yes + QMessageBox_No + QMessageBox_Cancel)
 
    IF nReply == QMessageBox_Yes
-      ::oQuestionLabel:setText( "Yes" )
+      ::oQuestionLabel:setText("Yes")
    ELSEIF nReply == QMessageBox_No
-      ::oQuestionLabel:setText( "No" )
+      ::oQuestionLabel:setText("No")
    ELSE
-      ::oQuestionLabel:setText( "Cancel" )
+      ::oQuestionLabel:setText("Cancel")
    ENDIF
 
 RETURN NIL
@@ -447,14 +447,14 @@ METHOD warningMessage() CLASS Dialog
 
    LOCAL oMsgBox
 
-   oMsgBox := QMessageBox():new( QMessageBox_Warning, "QMessageBox::warning()", MESSAGE, 0, SELF )
-   oMsgBox:addButton( "Save &Again", QMessageBox_AcceptRole )
-   oMsgBox:addButton( "&Continue", QMessageBox_RejectRole )
+   oMsgBox := QMessageBox():new(QMessageBox_Warning, "QMessageBox::warning()", MESSAGE, 0, SELF)
+   oMsgBox:addButton("Save &Again", QMessageBox_AcceptRole)
+   oMsgBox:addButton("&Continue", QMessageBox_RejectRole)
 
    IF oMsgBox:exec() == QMessageBox_AcceptRole
-      ::oWarningLabel:setText( "Save Again" )
+      ::oWarningLabel:setText("Save Again")
    ELSE
-      ::oWarningLabel:setText( "Continue" )
+      ::oWarningLabel:setText("Continue")
    ENDIF
 
 RETURN NIL
@@ -467,9 +467,9 @@ METHOD errorMessage() CLASS Dialog
             "the shown message will be shown again, " + ;
             "but if the user unchecks the box the message " + ;
             "will not appear again if QErrorMessage::showMessage() " + ;
-            "is called with the same message." )
+            "is called with the same message.")
 
-   ::oErrorLabel:setText( "If the box is unchecked, the message won't appear again." )
+   ::oErrorLabel:setText("If the box is unchecked, the message won't appear again.")
 
 RETURN NIL
 

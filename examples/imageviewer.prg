@@ -59,8 +59,8 @@ CLASS ImageViewer INHERIT QMainWindow
    METHOD createActions()
    METHOD createMenus()
    METHOD updateActions()
-   METHOD scaleImage( nFactor )
-   METHOD adjustScrollBar( oScrollBar, nFactor )
+   METHOD scaleImage(nFactor)
+   METHOD adjustScrollBar(oScrollBar, nFactor)
 
 END CLASS
 
@@ -69,20 +69,20 @@ METHOD new() CLASS ImageViewer
    ::super:new()
 
    ::oImageLabel := QLabel():new()
-   ::oImageLabel:setBackgroundRole( QPalette_Base )
-   ::oImageLabel:setSizePolicy( QSizePolicy_Ignored, QSizePolicy_Ignored )
-   ::oImageLabel:setScaledContents( .T. )
+   ::oImageLabel:setBackgroundRole(QPalette_Base)
+   ::oImageLabel:setSizePolicy(QSizePolicy_Ignored, QSizePolicy_Ignored)
+   ::oImageLabel:setScaledContents(.T.)
 
    ::oScrollArea := QScrollArea():new()
-   ::oScrollArea:setBackgroundRole( QPalette_Dark )
-   ::oScrollArea:setWidget( ::oImageLabel )
-   ::setCentralWidget( ::oScrollArea )
+   ::oScrollArea:setBackgroundRole(QPalette_Dark)
+   ::oScrollArea:setWidget(::oImageLabel)
+   ::setCentralWidget(::oScrollArea)
 
    ::createActions()
    ::createMenus()
 
-   ::setWindowTitle( "Image Viewer" )
-   ::resize( 500, 400 )
+   ::setWindowTitle("Image Viewer")
+   ::resize(500, 400)
 
    ::nScaleFactor := 0
 
@@ -99,19 +99,19 @@ METHOD open() CLASS ImageViewer
    LOCAL cFileName
    LOCAL oImage
 
-   cFileName := QFileDialog():getOpenFileName( SELF, "Open File", QDir():currentPath() )
+   cFileName := QFileDialog():getOpenFileName(SELF, "Open File", QDir():currentPath())
 
-   IF !empty( cFileName )
-      oImage := QImage():new( cFileName )
+   IF !empty(cFileName)
+      oImage := QImage():new(cFileName)
       IF oImage:isNull()
-         QMessageBox():information( SELF, "Image Viewer", "Cannot load " + cFileName + "." )
+         QMessageBox():information(SELF, "Image Viewer", "Cannot load " + cFileName + ".")
          RETURN NIL
       ENDIF
-      ::oImageLabel:setPixmap( QPixmap():fromImage( oImage ) )
+      ::oImageLabel:setPixmap(QPixmap():fromImage(oImage))
       ::nScaleFactor := 1.0
 
-      ::oPrintAct:setEnabled( .T. )
-      ::oFitToWindowAct:setEnabled( .T. )
+      ::oPrintAct:setEnabled(.T.)
+      ::oFitToWindowAct:setEnabled(.T.)
       ::updateActions()
 
       IF !::oFitToWindowAct:isChecked()
@@ -132,16 +132,16 @@ METHOD print() CLASS ImageViewer
       ::oPrinter := QPrinter():new()
    ENDIF
 
-   oDialog := QPrintDialog():new( ::oPrinter, SELF )
+   oDialog := QPrintDialog():new(::oPrinter, SELF)
 
    IF oDialog:exec() <> 0
-      oPainter := QPainter():new( ::oPrinter )
+      oPainter := QPainter():new(::oPrinter)
       oRect := oPainter:viewport()
       oSize := ::oImageLabel:pixmap():size()
-      oSize:scale( oRect:size(), Qt_KeepAspectRatio )
-      oPainter:setViewport( oRect:x(), oRect:y(), oSize:width(), oSize:height() )
-      oPainter:setWindow( ::oImageLabel:pixmap():rect() )
-      oPainter:drawPixmap( 0, 0, ::oImageLabel:pixmap() )
+      oSize:scale(oRect:size(), Qt_KeepAspectRatio)
+      oPainter:setViewport(oRect:x(), oRect:y(), oSize:width(), oSize:height())
+      oPainter:setWindow(::oImageLabel:pixmap():rect())
+      oPainter:drawPixmap(0, 0, ::oImageLabel:pixmap())
    ENDIF
 
    oDialog:delete()
@@ -150,13 +150,13 @@ RETURN NIL
 
 METHOD zoomIn() CLASS ImageViewer
 
-   ::scaleImage( 1.25 )
+   ::scaleImage(1.25)
 
 RETURN NIL
 
 METHOD zoomOut() CLASS ImageViewer
 
-   ::scaleImage( 0.8 )
+   ::scaleImage(0.8)
 
 RETURN NIL
 
@@ -172,7 +172,7 @@ METHOD fitToWindow() CLASS ImageViewer
    LOCAL lFitToWindow
 
    lFitToWindow := ::oFitToWindowAct:isChecked()
-   ::oScrollArea:setWidgetResizable( lFitToWindow )
+   ::oScrollArea:setWidgetResizable(lFitToWindow)
    IF !lFitToWindow
       ::normalSize()
    ENDIF
@@ -182,7 +182,7 @@ RETURN NIL
 
 METHOD about() CLASS ImageViewer
 
-   QMessageBox():about( SELF, "About Image Viewer", ;
+   QMessageBox():about(SELF, "About Image Viewer", ;
                 "<p>The <b>Image Viewer</b> example shows how to combine QLabel " + ;
                 "and QScrollArea to display an image. QLabel is typically used " + ;
                 "for displaying a text, but it can also display an image. " + ;
@@ -194,102 +194,102 @@ METHOD about() CLASS ImageViewer
                 "automatically resize its contents " + ;
                 "(QScrollArea::widgetResizable), can be used to implement " + ;
                 "zooming and scaling features. </p><p>In addition the example " + ;
-                "shows how to use QPainter to print an image.</p>" )
+                "shows how to use QPainter to print an image.</p>")
 
 RETURN NIL
 
 METHOD createActions() CLASS ImageViewer
 
-   ::oOpenAct := QAction():new( "&Open...", SELF )
-   ::oOpenAct:setShortcut( QKeySequence():new( "Ctrl+O" ) )
-   ::oOpenAct:onTriggered( {||::open()} )
+   ::oOpenAct := QAction():new("&Open...", SELF)
+   ::oOpenAct:setShortcut(QKeySequence():new("Ctrl+O"))
+   ::oOpenAct:onTriggered({||::open()})
 
-   ::oPrintAct := QAction():new( "&Print...", SELF )
-   ::oPrintAct:setShortcut( QKeySequence():new( "Ctrl+P" ) )
-   ::oPrintAct:setEnabled( .F. )
-   ::oPrintAct:onTriggered( {||::print()} )
+   ::oPrintAct := QAction():new("&Print...", SELF)
+   ::oPrintAct:setShortcut(QKeySequence():new("Ctrl+P"))
+   ::oPrintAct:setEnabled(.F.)
+   ::oPrintAct:onTriggered({||::print()})
 
-   ::oExitAct := QAction():new( "E&xit", SELF )
-   ::oExitAct:setShortcut( QKeySequence():new( "Ctrl+Q" ) )
-   ::oExitAct:onTriggered( {||::close()} )
+   ::oExitAct := QAction():new("E&xit", SELF)
+   ::oExitAct:setShortcut(QKeySequence():new("Ctrl+Q"))
+   ::oExitAct:onTriggered({||::close()})
 
-   ::oZoomInAct := QAction():new( "Zoom &In (25%)", SELF )
-   ::oZoomInAct:setShortcut( QKeySequence():new( "Ctrl++" ) )
-   ::oZoomInAct:setEnabled( .F. )
-   ::oZoomInAct:onTriggered( {||::zoomIn()} )
+   ::oZoomInAct := QAction():new("Zoom &In (25%)", SELF)
+   ::oZoomInAct:setShortcut(QKeySequence():new("Ctrl++"))
+   ::oZoomInAct:setEnabled(.F.)
+   ::oZoomInAct:onTriggered({||::zoomIn()})
 
-   ::oZoomOutAct := QAction():new( "Zoom &Out (25%)", SELF )
-   ::oZoomOutAct:setShortcut( QKeySequence():new( "Ctrl+-" ) )
-   ::oZoomOutAct:setEnabled( .F. )
-   ::oZoomOutAct:onTriggered( {||::zoomOut()} )
+   ::oZoomOutAct := QAction():new("Zoom &Out (25%)", SELF)
+   ::oZoomOutAct:setShortcut(QKeySequence():new("Ctrl+-"))
+   ::oZoomOutAct:setEnabled(.F.)
+   ::oZoomOutAct:onTriggered({||::zoomOut()})
 
-   ::oNormalSizeAct := QAction():new( "&Normal Size", SELF )
-   ::oNormalSizeAct:setShortcut( QKeySequence():new( "Ctrl+S" ) )
-   ::oNormalSizeAct:setEnabled( .F. )
-   ::oNormalSizeAct:onTriggered( {||::normalSize()} )
+   ::oNormalSizeAct := QAction():new("&Normal Size", SELF)
+   ::oNormalSizeAct:setShortcut(QKeySequence():new("Ctrl+S"))
+   ::oNormalSizeAct:setEnabled(.F.)
+   ::oNormalSizeAct:onTriggered({||::normalSize()})
 
-   ::oFitToWindowAct := QAction():new( "&Fit to Window", SELF )
-   ::oFitToWindowAct:setEnabled( .F. )
-   ::oFitToWindowAct:setCheckable( .T. )
-   ::oFitToWindowAct:setShortcut( QKeySequence():new(" Ctrl+F" ) )
-   ::oFitToWindowAct:OnTriggered( {||::fitToWindow()} )
+   ::oFitToWindowAct := QAction():new("&Fit to Window", SELF)
+   ::oFitToWindowAct:setEnabled(.F.)
+   ::oFitToWindowAct:setCheckable(.T.)
+   ::oFitToWindowAct:setShortcut(QKeySequence():new("Ctrl+F"))
+   ::oFitToWindowAct:OnTriggered({||::fitToWindow()})
 
-   ::oAboutAct := QAction():new( "&About", SELF )
-   ::oAboutAct:onTriggered( {||::about()} )
+   ::oAboutAct := QAction():new("&About", SELF)
+   ::oAboutAct:onTriggered({||::about()})
 
-   ::oAboutQtAct := QAction():new( "About &Qt", SELF )
-   ::oAboutQtAct:onTriggered( {||QApplication():newFrom(QApplication():instance()):aboutQt()} )
+   ::oAboutQtAct := QAction():new("About &Qt", SELF)
+   ::oAboutQtAct:onTriggered({||QApplication():newFrom(QApplication():instance()):aboutQt()})
 
 RETURN NIL
 
 METHOD createMenus() CLASS ImageViewer
 
-   ::oFileMenu := QMenu():new( "&File", SELF )
-   ::oFileMenu:addAction( ::oOpenAct )
-   ::oFileMenu:addAction( ::oPrintAct )
+   ::oFileMenu := QMenu():new("&File", SELF)
+   ::oFileMenu:addAction(::oOpenAct)
+   ::oFileMenu:addAction(::oPrintAct)
    ::oFileMenu:addSeparator()
-   ::oFileMenu:addAction( ::oExitAct )
+   ::oFileMenu:addAction(::oExitAct)
 
-   ::oViewMenu := QMenu():new( "&View", SELF )
-   ::oViewMenu:addAction( ::oZoomInAct )
-   ::oViewMenu:addAction( ::oZoomOutAct )
-   ::oViewMenu:addAction( ::oNormalSizeAct )
+   ::oViewMenu := QMenu():new("&View", SELF)
+   ::oViewMenu:addAction(::oZoomInAct)
+   ::oViewMenu:addAction(::oZoomOutAct)
+   ::oViewMenu:addAction(::oNormalSizeAct)
    ::oViewMenu:addSeparator()
-   ::oViewMenu:addAction( ::oFitToWindowAct )
+   ::oViewMenu:addAction(::oFitToWindowAct)
 
-   ::oHelpMenu := QMenu():new( "&Help", SELF )
-   ::oHelpMenu:addAction( ::oAboutAct )
-   ::oHelpMenu:addAction( ::oAboutQtAct )
+   ::oHelpMenu := QMenu():new("&Help", SELF)
+   ::oHelpMenu:addAction(::oAboutAct)
+   ::oHelpMenu:addAction(::oAboutQtAct)
 
-   ::menuBar():addMenu( ::oFileMenu )
-   ::menuBar():addMenu( ::oViewMenu )
-   ::menuBar():addMenu( ::oHelpMenu )
+   ::menuBar():addMenu(::oFileMenu)
+   ::menuBar():addMenu(::oViewMenu)
+   ::menuBar():addMenu(::oHelpMenu)
 
 RETURN NIL
 
 METHOD updateActions() CLASS ImageViewer
 
-   ::oZoomInAct:setEnabled( !::oFitToWindowAct:isChecked() )
-   ::oZoomOutAct:setEnabled( !::oFitToWindowAct:isChecked() )
-   ::oNormalSizeAct:setEnabled( !::oFitToWindowAct:isChecked() )
+   ::oZoomInAct:setEnabled(!::oFitToWindowAct:isChecked())
+   ::oZoomOutAct:setEnabled(!::oFitToWindowAct:isChecked())
+   ::oNormalSizeAct:setEnabled(!::oFitToWindowAct:isChecked())
 
 RETURN NIL
 
-METHOD scaleImage( nFactor ) CLASS ImageViewer
+METHOD scaleImage(nFactor) CLASS ImageViewer
 
    ::nScaleFactor := ::nScaleFactor * nFactor
-   ::oImageLabel:resize( ::nScaleFactor * ::oImageLabel:pixmap():size():width(), ::nScaleFactor * ::oImageLabel:pixmap():size():height() )
+   ::oImageLabel:resize(::nScaleFactor * ::oImageLabel:pixmap():size():width(), ::nScaleFactor * ::oImageLabel:pixmap():size():height())
 
-   ::adjustScrollBar( ::oScrollArea:horizontalScrollBar(), nFactor )
-   ::adjustScrollBar( ::oScrollArea:verticalScrollBar(), nFactor )
+   ::adjustScrollBar(::oScrollArea:horizontalScrollBar(), nFactor)
+   ::adjustScrollBar(::oScrollArea:verticalScrollBar(), nFactor)
 
-   ::oZoomInAct:setEnabled( ::nScaleFactor < 3.0 )
-   ::oZoomOutAct:setEnabled( ::nScaleFactor > 0.333 )
+   ::oZoomInAct:setEnabled(::nScaleFactor < 3.0)
+   ::oZoomOutAct:setEnabled(::nScaleFactor > 0.333)
 
 RETURN NIL
 
-METHOD adjustScrollBar( oScrollBar, nFactor ) CLASS ImageViewer
+METHOD adjustScrollBar(oScrollBar, nFactor) CLASS ImageViewer
 
-   oScrollBar:setValue( int( nFactor * oScrollBar:value() + ( ( nFactor - 1 ) * oScrollBar:pageStep() / 2 ) ) )
+   oScrollBar:setValue(int(nFactor * oScrollBar:value() + ((nFactor - 1) * oScrollBar:pageStep() / 2)))
 
 RETURN NIL
