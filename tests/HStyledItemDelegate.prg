@@ -6,7 +6,7 @@
 
 #include "qt4xhb.ch"
 
-PROCEDURE Main()
+FUNCTION Main()
 
    LOCAL oApp
    LOCAL oDB
@@ -109,7 +109,7 @@ PROCEDURE Main()
 
    oApp:delete()
 
-RETURN
+RETURN NIL
 
 #include "hbclass.ch"
 

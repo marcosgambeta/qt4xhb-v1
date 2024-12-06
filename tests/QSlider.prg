@@ -6,7 +6,7 @@
 
 #include "qt4xhb.ch"
 
-PROCEDURE Main()
+FUNCTION Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -32,7 +32,7 @@ PROCEDURE Main()
 
    oApp:delete()
 
-RETURN
+RETURN NIL
 
 STATIC FUNCTION test(oSender, nValue)
 

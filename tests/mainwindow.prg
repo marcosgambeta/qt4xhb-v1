@@ -14,7 +14,7 @@ STATIC oMainWindow
 // a função principal (main) cria um objeto da classe QApplication,
 // um objeto da classe HMainWindow e inicia o loop de eventos
 
-PROCEDURE Main()
+FUNCTION Main()
 
    oApp := QApplication():new()
 
@@ -28,7 +28,7 @@ PROCEDURE Main()
 
    oApp:delete()
 
-RETURN
+RETURN NIL
 
 // a classe HMainWindow é uma classe derivada da classe QMainWindow, com métodos para:
 // . definir as propriedades da janela
