@@ -142,7 +142,7 @@ METHOD createMenuBar() CLASS HMainWindow
 
    ::oActionAboutxH := ::oMenu3:AddAction("&xHarbour")
    ::oActionAboutxH:setStatusTip("Exibe a versão do Harbour/xHarbour")
-   ::oActionAboutxH:onTriggered({||::showMessage(version())})
+   ::oActionAboutxH:onTriggered({||::showMessage(Version())})
 
    ::oActionAboutCC := ::oMenu3:AddAction("&C/C++ Compiler")
    ::oActionAboutCC:setStatusTip("Exibe informações sobre o compilador C/C++")
@@ -198,11 +198,11 @@ METHOD closeMainWindow(oSender, oCloseEvent) CLASS HMainWindow
    LOCAL nRet
 
    oMB := QMessageBox():new(QMessageBox_Question, ;
-                             "Atenção", ;
-                             "Quer realmente sair do programa ?", ;
-                             QMessageBox_Yes + QMessageBox_No, ;
-                             self, ;
-                             Qt_Dialog + Qt_MSWindowsFixedSizeDialogHint)
+                            "Atenção", ;
+                            "Quer realmente sair do programa ?", ;
+                            QMessageBox_Yes + QMessageBox_No, ;
+                            self, ;
+                            Qt_Dialog + Qt_MSWindowsFixedSizeDialogHint)
 
    nRet := oMB:exec()
 
@@ -210,11 +210,11 @@ METHOD closeMainWindow(oSender, oCloseEvent) CLASS HMainWindow
 
    IF nRet == QMessageBox_Yes
       oCloseEvent:accept()
-   endif
+   ENDIF
 
    IF nRet == QMessageBox_No
       oCloseEvent:ignore()
-   endif
+   ENDIF
 
 RETURN .T.
 

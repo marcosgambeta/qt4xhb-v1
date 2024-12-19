@@ -34,7 +34,7 @@ RETURN NIL
 #pragma BEGINDUMP
 
 #include <iostream>
-#include "hbapi.h"
+#include <hbapi.h>
 
 HB_FUNC(TEST)
 {

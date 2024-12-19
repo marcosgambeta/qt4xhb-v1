@@ -22,8 +22,8 @@ FUNCTION Main()
    oModel := HAbstractTableModel():new()
    oModel:setRowCountCB({||100}) // total de linhas
    oModel:setColumnCountCB({||10}) // total de colunas
-   oModel:setDisplayRoleCB({|nRow, nCol|"Célula " + alltrim(str(nRow)) + "," + alltrim(str(nCol))}) // conteúdo da célula
-   oModel:setHorizontalHeaderDisplayRoleCB({|nCol|"Coluna " + strzero(nCol, 2)}) // títulos das colunas
+   oModel:setDisplayRoleCB({|nRow, nCol|"Célula " + AllTrim(Str(nRow)) + "," + AllTrim(Str(nCol))}) // conteúdo da célula
+   oModel:setHorizontalHeaderDisplayRoleCB({|nCol|"Coluna " + StrZero(nCol, 2)}) // títulos das colunas
 
    oView := QTableView():new(oWindow)
    oView:move(10, 10)

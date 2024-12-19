@@ -31,7 +31,7 @@ FUNCTION Main()
       QUIT
    ENDIF
 
-   IF ascan(oDB:tables(QSql_Tables), "cadastro") == 0
+   IF AScan(oDB:tables(QSql_Tables), "cadastro") == 0
       // cria a tabela
       oDB:exec("CREATE TABLE cadastro(id INTEGER PRIMARY KEY AUTOINCREMENT, nome TEXT, saldo REAL)")
       // insere dados
@@ -89,14 +89,14 @@ FUNCTION Main()
 
    // cria um objeto da classe TextDelegate para uso na coluna 1
    oTextDelegate := TextDelegate():new(oView)
-   oTextDelegate:onCloseEditor({|oSender, oEditor, nHint|qout("oTextDelegate - closeEditor - " + alltrim(str(nHint)))})
-   oTextDelegate:onCommitData({|oSender, oEditor|qout("oTextDelegate - commitData")})
+   oTextDelegate:onCloseEditor({|oSender, oEditor, nHint|QOut("oTextDelegate - closeEditor - " + AllTrim(Str(nHint)))})
+   oTextDelegate:onCommitData({|oSender, oEditor|QOut("oTextDelegate - commitData")})
    oView:setItemDelegateForColumn(1, oTextDelegate)
 
    // cria um objeto da classe ValueDelegate para uso na coluna 2
    oValueDelegate := ValueDelegate():new(oView)
-   oValueDelegate:onCloseEditor({|oSender, oEditor, nHint|qout("oValueDelegate - closeEditor - " + alltrim(str(nHint)))})
-   oValueDelegate:onCommitData({|oSender, oEditor|qout("oValueDelegate - commitData")})
+   oValueDelegate:onCloseEditor({|oSender, oEditor, nHint|QOut("oValueDelegate - closeEditor - " + AllTrim(Str(nHint)))})
+   oValueDelegate:onCommitData({|oSender, oEditor|QOut("oValueDelegate - commitData")})
    oView:setItemDelegateForColumn(2, oValueDelegate)
 
    oWindow:show()
@@ -215,7 +215,7 @@ METHOD paint(pPainter, pOption, pIndex) CLASS ValueDelegate
    nValue := oIndex:data(Qt_DisplayRole):toReal()
 
    // formata o valor
-   cValue := transform(nValue, "@E 999,999,999.99") + space(1)
+   cValue := Transform(nValue, "@E 999,999,999.99") + Space(1)
 
    IF nValue < 0
       oPen := oPainter:pen()

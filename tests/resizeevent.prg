@@ -21,8 +21,8 @@ FUNCTION Main()
    oLabelHeight := QLabel():new("0", oWindow):move(20, 80):resize(100, 30)
 
    oWindow:onResizeEvent({|oSender, oResizeEvent|
-      oLabelWidth:setText(alltrim(str(oResizeEvent:size():width())))
-      oLabelHeight:setText(alltrim(str(oResizeEvent:size():height())))
+      oLabelWidth:setText(AllTrim(Str(oResizeEvent:size():width())))
+      oLabelHeight:setText(AllTrim(Str(oResizeEvent:size():height())))
       })
 
    oWindow:show()

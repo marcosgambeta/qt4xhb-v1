@@ -37,7 +37,7 @@ STATIC FUNCTION dialog(oWindow)
 
    oFileDialog := QFileDialog():new(oWindow)
 
-   oFileDialog:onFileSelected({|oSender, cFile|qout(oSender), qout(cFile)})
+   oFileDialog:onFileSelected({|oSender, cFile|QOut(oSender), QOut(cFile)})
 
    oFileDialog:exec()
 

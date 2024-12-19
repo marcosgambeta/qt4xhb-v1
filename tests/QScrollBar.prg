@@ -36,8 +36,8 @@ RETURN NIL
 
 STATIC FUNCTION test(oSender, nValue)
 
-   qout("slider moved")
-   qout(oSender)
-   qout(nValue)
+   QOut("slider moved")
+   QOut(oSender)
+   QOut(nValue)
 
 RETURN NIL
