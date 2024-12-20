@@ -42,10 +42,14 @@ PROCEDURE Main()
 
    // cria e configura o modelo
    oModel := AdoTableModel():new()
-   oModel:setRowCountCB({||oRecordset:recordCount}) // total de linhas
-   oModel:setColumnCountCB({||oRecordset:Fields:count()}) // total de colunas
-   oModel:setDisplayRoleCB({|nRow, nCol|oRecordset:move(nRow, adBookmarkFirst), oRecordset:Fields(nCol):value}) // conteúdo da célula
-   oModel:setHorizontalHeaderDisplayRoleCB({|nCol|oRecordset:Fields(nCol):name}) // títulos das colunas (usa o nome do campo)
+   // total de linhas
+   oModel:setRowCountCB({||oRecordset:recordCount})
+   // total de colunas
+   oModel:setColumnCountCB({||oRecordset:Fields:count()})
+   // conteúdo da célula
+   oModel:setDisplayRoleCB({|nRow, nCol|oRecordset:move(nRow, adBookmarkFirst), oRecordset:Fields(nCol):value})
+   // títulos das colunas (usa o nome do campo)
+   oModel:setHorizontalHeaderDisplayRoleCB({|nCol|oRecordset:Fields(nCol):name})
 
    // cria o visualizador e associa ao modelo
    oView := QTableView():new(oWindow)
@@ -84,9 +88,9 @@ STATIC FUNCTION CriarBancoDeDados()
 
    // comente esta linha para o arquivo não ser recriado
    // cada vez que o exemplo for executado
-   ferase("teste.mdb")
+   FErase("teste.mdb")
 
-   IF !file(QDir():currentPath() + "\teste.mdb")
+   IF !File(QDir():currentPath() + "\teste.mdb")
 
       oCatalog := win_OleCreateObject("ADOX.Catalog")
 
@@ -112,7 +116,7 @@ STATIC FUNCTION CriarBancoDeDados()
       FOR n := 1 TO 1000
          oRecordset:AddNew()
          oRecordset:Fields(0):Value := n
-         oRecordset:Fields(1):Value := "Nome do cliente " + alltrim(str(n))
+         oRecordset:Fields(1):Value := "Nome do cliente " + AllTrim(Str(n))
          oRecordset:Fields(2):Value := n * 10
          oRecordset:Update()
       NEXT n

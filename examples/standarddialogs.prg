@@ -233,7 +233,7 @@ METHOD setInteger() CLASS Dialog
    nValue := QInputDialog():getInt(SELF, "QInputDialog::getInteger()", "Percentage:", 25, 0, 100, 1, @lOk)
 
    IF lOk
-      ::oIntegerLabel:setText(alltrim(str(nValue)))
+      ::oIntegerLabel:setText(AllTrim(Str(nValue)))
    ENDIF
 
 RETURN NIL
@@ -246,7 +246,7 @@ METHOD setDouble() CLASS Dialog
    nValue := QInputDialog():getDouble(SELF, "QInputDialog::getDouble()", "Amount:", 37.56, -10000, 10000, 2, @lOk)
 
    IF lOk
-      ::oDoubleLabel:setText(alltrim(str(nValue)))
+      ::oDoubleLabel:setText(AllTrim(Str(nValue)))
    ENDIF
 
 RETURN NIL
@@ -259,7 +259,7 @@ METHOD setItem() CLASS Dialog
 
    cItem := QInputDialog():getItem(SELF, "QInputDialog::getItem()", "Season:", aItems, 0, .F., @lOk)
 
-   IF lOk .AND. !empty(cItem)
+   IF lOk .AND. !Empty(cItem)
       ::oItemLabel:setText(cItem)
    ENDIF
 
@@ -272,7 +272,7 @@ METHOD setText() CLASS Dialog
 
    cText := QInputDialog():getText(SELF, "QInputDialog::getText()", "User name:", QLineEdit_Normal, QDir():home():dirName(), @lOk)
 
-   IF lOk .AND. !empty(cText)
+   IF lOk .AND. !Empty(cText)
       ::oTextLabel:setText(cText)
    ENDIF
 
@@ -321,7 +321,7 @@ METHOD setExistingDirectory() CLASS Dialog
 
    cDirectory := QFileDialog():getExistingDirectory(SELF, "QFileDialog::getExistingDirectory()", ::oDirectoryLabel:text(), nOptions)
 
-   IF !empty(cDirectory)
+   IF !Empty(cDirectory)
       ::oDirectoryLabel:setText(cDirectory)
    ENDIF
 
@@ -339,7 +339,7 @@ METHOD setOpenFileName() CLASS Dialog
 
    cFileName := QFileDialog():getOpenFileName(SELF, "QFileDialog::getOpenFileName()", ::oOpenFileNameLabel:text(), "All Files (*);;Text Files (*.txt)", @cSelectedFilter, nOptions)
 
-   IF !empty(cFileName)
+   IF !Empty(cFileName)
       ::oOpenFileNameLabel:setText(cFileName)
    ENDIF
 
@@ -357,9 +357,9 @@ METHOD setOpenFileNames() CLASS Dialog
 
    aFiles := QFileDialog():getOpenFileNames(SELF, "QFileDialog::getOpenFileNames()", ::cOpenFilesPath, "All Files (*);;Text Files (*.txt)", @cSelectedFilter, nOptions)
 
-   IF len(afiles) > 0
-      ::cOpenFilesPath := aFiles[ 1 ]
-      ::oOpenFileNamesLabel:setText("[" + join(aFiles, ", ") + "]")
+   IF Len(afiles) > 0
+      ::cOpenFilesPath := aFiles[1]
+      ::oOpenFileNamesLabel:setText("[" + Join(aFiles, ", ") + "]")
    ENDIF
 
 RETURN NIL
@@ -369,11 +369,11 @@ STATIC FUNCTION Join(aItens, cDelim)
    LOCAL nIndex
    LOCAL cRet := ""
 
-   FOR nIndex := 1 TO len(aItens)
-      IF empty(cRet)
-         cRet += aItens[ nIndex ]
+   FOR nIndex := 1 TO Len(aItens)
+      IF Empty(cRet)
+         cRet += aItens[nIndex]
       ELSE
-         cRet += cDelim + aItens[ nIndex ]
+         cRet += cDelim + aItens[nIndex]
       ENDIF
    NEXT nIndex
 
@@ -391,7 +391,7 @@ METHOD setSaveFileName() CLASS Dialog
 
    cFileName := QFileDialog():getSaveFileName(SELF, "QFileDialog::getSaveFileName()", ::oSaveFileNameLabel:text(), "All Files (*);;Text Files (*.txt)", @cSelectedFilter, nOptions)
 
-   IF !empty(cFileName)
+   IF !Empty(cFileName)
       ::oSaveFileNameLabel:setText(cFileName)
    ENDIF
 
