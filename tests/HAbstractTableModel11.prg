@@ -51,15 +51,22 @@ FUNCTION Main()
 
    oModel := HAbstractTableModel():new()
 
-   oModel:setRowCountCB({||Len(aEstados)}) // total de linhas
-   oModel:setColumnCountCB({||2}) // total de colunas (1=imagem 2=nome)
+   // total de linhas
+   oModel:setRowCountCB({||Len(aEstados)})
+   // total de colunas (1=imagem 2=nome)
+   oModel:setColumnCountCB({||2})
 
-   oModel:setDisplayRoleCB({|nRow, nCol|IIf(nCol == 1, aEstados[nRow + 1, 2], NIL)}) // conteúdo da célula (coluna 2)
-   oModel:setDecorationRoleCB({|nRow, nCol|IIf(nCol == 0, QPixmap():new(aEstados[nRow + 1, 1]), NIL)}) // conteúdo da célula (coluna 1)
-   oModel:setSizeHintRoleCB({|nRow, nCol|IIf(nCol == 0, QSize():new(150, 107), NIL)}) // tamanho da célula (coluna 1)
+   // conteúdo da célula (coluna 2)
+   oModel:setDisplayRoleCB({|nRow, nCol|IIf(nCol == 1, aEstados[nRow + 1, 2], NIL)})
+   // conteúdo da célula (coluna 1)
+   oModel:setDecorationRoleCB({|nRow, nCol|IIf(nCol == 0, QPixmap():new(aEstados[nRow + 1, 1]), NIL)})
+   // tamanho da célula (coluna 1)
+   oModel:setSizeHintRoleCB({|nRow, nCol|IIf(nCol == 0, QSize():new(150, 107), NIL)})
 
-   oModel:setHorizontalHeaderDisplayRoleCB({|nCol|{"Bandeira", "Estado"}[nCol + 1]}) // títulos das colunas
-   oModel:setVerticalHeaderDisplayRoleCB({|nRow|AllTrim(Str(nRow))}) // títulos das linhas
+   // títulos das colunas
+   oModel:setHorizontalHeaderDisplayRoleCB({|nCol|{"Bandeira", "Estado"}[nCol + 1]})
+   // títulos das linhas
+   oModel:setVerticalHeaderDisplayRoleCB({|nRow|AllTrim(Str(nRow))})
 
    oView := QTableView():new(oWindow)
    oView:move(10, 10)
