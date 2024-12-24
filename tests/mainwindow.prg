@@ -8,25 +8,25 @@
 
 #include "qt4xhb.ch"
 
-STATIC oApp
-STATIC oMainWindow
+STATIC s_oApp
+STATIC s_oMainWindow
 
 // a função principal (main) cria um objeto da classe QApplication,
 // um objeto da classe HMainWindow e inicia o loop de eventos
 
 FUNCTION Main()
 
-   oApp := QApplication():new()
+   s_oApp := QApplication():new()
 
-   oMainWindow := HMainWindow():new()
+   s_oMainWindow := HMainWindow():new()
 
-   oMainWindow:show()
+   s_oMainWindow:show()
 
-   oApp:exec()
+   s_oApp:exec()
 
-   oMainWindow:delete()
+   s_oMainWindow:delete()
 
-   oApp:delete()
+   s_oApp:delete()
 
 RETURN NIL
 
@@ -150,7 +150,7 @@ METHOD createMenuBar() CLASS HMainWindow
 
    ::oActionAboutQt := ::oMenu3:AddAction("&Qt Framework")
    ::oActionAboutQt:setStatusTip("Exibe informações sobre o Qt Framework")
-   ::oActionAboutQt:onTriggered({||oApp:aboutQt()})
+   ::oActionAboutQt:onTriggered({||s_oApp:aboutQt()})
 
 RETURN self
 
