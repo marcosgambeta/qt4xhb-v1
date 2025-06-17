@@ -26,7 +26,13 @@ https://github.com/marcosgambeta/qt4xhb/issues
 
 ### To contact the developer
 
-Send you message to: marcosgambeta AT outlook DOT com
+Send your message using one of the options below:
+
+E-mail:  
+marcosgambeta@outlook.com
+
+Telegram:  
+https://t.me/marcosgambeta
 
 ### More info and extra content
 
@@ -57,7 +63,13 @@ https://github.com/marcosgambeta/qt4xhb/issues
 
 ### Contato com o desenvolvedor
 
-Envie sua mensagem para: marcosgambeta AT outlook DOT com
+Envie sua mensagem usando uma das opções abaixo:
+
+E-mail:  
+marcosgambeta@outlook.com
+
+Telegram:  
+https://t.me/marcosgambeta
 
 ### Informações e conteúdo extra
 
