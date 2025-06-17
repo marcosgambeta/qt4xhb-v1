@@ -1,7 +1,7 @@
 //
 // Qt4xHb Project - Test Program
 //
-// Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+// Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
 // Qt4xHb: exemplo de uso da classe QUiLoader
