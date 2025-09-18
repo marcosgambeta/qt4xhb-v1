@@ -46,8 +46,7 @@ HB_FUNC_STATIC(QTAPGESTURE_DELETE)
 {
   QTapGesture *obj = qobject_cast<QTapGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -65,18 +64,14 @@ HB_FUNC_STATIC(QTAPGESTURE_POSITION)
 {
   QTapGesture *obj = qobject_cast<QTapGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPointF *ptr = new QPointF(obj->position());
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -88,17 +83,14 @@ HB_FUNC_STATIC(QTAPGESTURE_SETPOSITION)
 {
   QTapGesture *obj = qobject_cast<QTapGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
       obj->setPosition(*PQPOINTF(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

@@ -65,8 +65,7 @@ RETURN
 
 HB_FUNC_STATIC(QREGION_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     // QRegion()
     QRegion *obj = new QRegion();
     Qt4xHb::returnNewObject(obj, true);
@@ -103,9 +102,7 @@ HB_FUNC_STATIC(QREGION_NEW)
     QRegion *obj = new QRegion(*PQRECT(1), HB_ISNIL(2) ? (QRegion::RegionType)QRegion::Rectangle
                                                        : (QRegion::RegionType)hb_parni(2));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -114,8 +111,7 @@ HB_FUNC_STATIC(QREGION_DELETE)
 {
   QRegion *obj = static_cast<QRegion *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -131,18 +127,14 @@ HB_FUNC_STATIC(QREGION_BOUNDINGRECT)
 {
   QRegion *obj = static_cast<QRegion *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QRect *ptr = new QRect(obj->boundingRect());
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -170,9 +162,7 @@ HB_FUNC_STATIC(QREGION_CONTAINS)
     {
       RBOOL(obj->contains(*PQRECT(1)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -200,9 +190,7 @@ HB_FUNC_STATIC(QREGION_INTERSECTED)
       QRegion *ptr = new QRegion(obj->intersected(*PQRECT(1)));
       Qt4xHb::createReturnClass(ptr, "QREGION", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -228,9 +216,7 @@ HB_FUNC_STATIC(QREGION_INTERSECTS)
     {
       RBOOL(obj->intersects(*PQRECT(1)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -240,17 +226,13 @@ HB_FUNC_STATIC(QREGION_ISEMPTY)
 {
   QRegion *obj = static_cast<QRegion *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEmpty());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -262,17 +244,13 @@ HB_FUNC_STATIC(QREGION_RECTCOUNT)
 {
   QRegion *obj = static_cast<QRegion *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->rectCount());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -284,11 +262,9 @@ HB_FUNC_STATIC(QREGION_RECTS)
 {
   QRegion *obj = static_cast<QRegion *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QVector<QRect> list = obj->rects();
       PHB_DYNS pDynSym = hb_dynsymFindName("QRECT");
@@ -319,9 +295,7 @@ HB_FUNC_STATIC(QREGION_RECTS)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -333,8 +307,7 @@ HB_FUNC_STATIC(QREGION_SUBTRACTED)
 {
   QRegion *obj = static_cast<QRegion *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQREGION(1))
     {
@@ -342,9 +315,7 @@ HB_FUNC_STATIC(QREGION_SUBTRACTED)
       QRegion *ptr = new QRegion(obj->subtracted(*PQREGION(1)));
       Qt4xHb::createReturnClass(ptr, "QREGION", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -356,17 +327,14 @@ HB_FUNC_STATIC(QREGION_SWAP)
 {
   QRegion *obj = static_cast<QRegion *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQREGION(1))
     {
 #endif
       obj->swap(*PQREGION(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -400,9 +368,7 @@ HB_FUNC_STATIC(QREGION_TRANSLATE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -430,9 +396,7 @@ HB_FUNC_STATIC(QREGION_TRANSLATED)
       QRegion *ptr = new QRegion(obj->translated(*PQPOINT(1)));
       Qt4xHb::createReturnClass(ptr, "QREGION", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -460,9 +424,7 @@ HB_FUNC_STATIC(QREGION_UNITED)
       QRegion *ptr = new QRegion(obj->united(*PQRECT(1)));
       Qt4xHb::createReturnClass(ptr, "QREGION", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -472,8 +434,7 @@ HB_FUNC_STATIC(QREGION_XORED)
 {
   QRegion *obj = static_cast<QRegion *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQREGION(1))
     {
@@ -481,9 +442,7 @@ HB_FUNC_STATIC(QREGION_XORED)
       QRegion *ptr = new QRegion(obj->xored(*PQREGION(1)));
       Qt4xHb::createReturnClass(ptr, "QREGION", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -511,9 +470,7 @@ HB_FUNC_STATIC(QREGION_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -544,9 +501,7 @@ HB_FUNC_STATIC(QREGION_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

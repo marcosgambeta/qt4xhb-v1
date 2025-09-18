@@ -48,9 +48,7 @@ HB_FUNC_STATIC(QINPUTEVENT_NEW)
     QInputEvent *obj = new QInputEvent((QEvent::Type)hb_parni(1), HB_ISNIL(2) ? (Qt::KeyboardModifiers)Qt::NoModifier
                                                                               : (Qt::KeyboardModifiers)hb_parni(2));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -59,8 +57,7 @@ HB_FUNC_STATIC(QINPUTEVENT_DELETE)
 {
   QInputEvent *obj = static_cast<QInputEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -76,17 +73,13 @@ HB_FUNC_STATIC(QINPUTEVENT_MODIFIERS)
 {
   QInputEvent *obj = static_cast<QInputEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->modifiers());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -98,17 +91,14 @@ HB_FUNC_STATIC(QINPUTEVENT_SETMODIFIERS)
 {
   QInputEvent *obj = static_cast<QInputEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setModifiers((Qt::KeyboardModifiers)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

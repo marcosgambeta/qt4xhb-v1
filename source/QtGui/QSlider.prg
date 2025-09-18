@@ -61,9 +61,7 @@ HB_FUNC_STATIC(QSLIDER_NEW)
     // QSlider(Qt::Orientation orientation, QWidget *parent = 0)
     QSlider *obj = new QSlider((Qt::Orientation)hb_parni(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -72,8 +70,7 @@ HB_FUNC_STATIC(QSLIDER_DELETE)
 {
   QSlider *obj = qobject_cast<QSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -91,17 +88,14 @@ HB_FUNC_STATIC(QSLIDER_SETTICKINTERVAL)
 {
   QSlider *obj = qobject_cast<QSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setTickInterval(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -115,17 +109,14 @@ HB_FUNC_STATIC(QSLIDER_SETTICKPOSITION)
 {
   QSlider *obj = qobject_cast<QSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setTickPosition((QSlider::TickPosition)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -139,17 +130,13 @@ HB_FUNC_STATIC(QSLIDER_TICKINTERVAL)
 {
   QSlider *obj = qobject_cast<QSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->tickInterval());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -161,17 +148,13 @@ HB_FUNC_STATIC(QSLIDER_TICKPOSITION)
 {
   QSlider *obj = qobject_cast<QSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->tickPosition());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -183,17 +166,14 @@ HB_FUNC_STATIC(QSLIDER_EVENT)
 {
   QSlider *obj = qobject_cast<QSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQEVENT(1))
     {
 #endif
       RBOOL(obj->event(PQEVENT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -205,18 +185,14 @@ HB_FUNC_STATIC(QSLIDER_MINIMUMSIZEHINT)
 {
   QSlider *obj = qobject_cast<QSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSize *ptr = new QSize(obj->minimumSizeHint());
       Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -228,18 +204,14 @@ HB_FUNC_STATIC(QSLIDER_SIZEHINT)
 {
   QSlider *obj = qobject_cast<QSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSize *ptr = new QSize(obj->sizeHint());
       Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

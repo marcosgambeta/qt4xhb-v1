@@ -50,13 +50,10 @@ RETURN
     // QTextListFormat()
 HB_FUNC_STATIC(QTEXTLISTFORMAT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     QTextListFormat *obj = new QTextListFormat();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -65,8 +62,7 @@ HB_FUNC_STATIC(QTEXTLISTFORMAT_DELETE)
 {
   QTextListFormat *obj = static_cast<QTextListFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -82,17 +78,13 @@ HB_FUNC_STATIC(QTEXTLISTFORMAT_INDENT)
 {
   QTextListFormat *obj = static_cast<QTextListFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->indent());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -104,17 +96,13 @@ HB_FUNC_STATIC(QTEXTLISTFORMAT_ISVALID)
 {
   QTextListFormat *obj = static_cast<QTextListFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -126,17 +114,13 @@ HB_FUNC_STATIC(QTEXTLISTFORMAT_NUMBERPREFIX)
 {
   QTextListFormat *obj = static_cast<QTextListFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->numberPrefix());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -148,17 +132,13 @@ HB_FUNC_STATIC(QTEXTLISTFORMAT_NUMBERSUFFIX)
 {
   QTextListFormat *obj = static_cast<QTextListFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->numberSuffix());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -170,17 +150,14 @@ HB_FUNC_STATIC(QTEXTLISTFORMAT_SETINDENT)
 {
   QTextListFormat *obj = static_cast<QTextListFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setIndent(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -194,17 +171,14 @@ HB_FUNC_STATIC(QTEXTLISTFORMAT_SETNUMBERPREFIX)
 {
   QTextListFormat *obj = static_cast<QTextListFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       obj->setNumberPrefix(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -218,17 +192,14 @@ HB_FUNC_STATIC(QTEXTLISTFORMAT_SETNUMBERSUFFIX)
 {
   QTextListFormat *obj = static_cast<QTextListFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       obj->setNumberSuffix(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -242,17 +213,14 @@ HB_FUNC_STATIC(QTEXTLISTFORMAT_SETSTYLE)
 {
   QTextListFormat *obj = static_cast<QTextListFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setStyle((QTextListFormat::Style)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -266,17 +234,13 @@ HB_FUNC_STATIC(QTEXTLISTFORMAT_STYLE)
 {
   QTextListFormat *obj = static_cast<QTextListFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->style());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

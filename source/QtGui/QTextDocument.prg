@@ -148,9 +148,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_NEW)
     // QTextDocument(const QString &text, QObject *parent = 0)
     QTextDocument *obj = new QTextDocument(PQSTRING(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -159,8 +157,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_DELETE)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -178,17 +175,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ADDRESOURCE)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && ISQURL(2) && ISQVARIANT(3))
     {
 #endif
       obj->addResource(PINT(1), *PQURL(2), *PQVARIANT(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -202,17 +196,13 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ADJUSTSIZE)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->adjustSize();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -226,11 +216,9 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ALLFORMATS)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QVector<QTextFormat> list = obj->allFormats();
       PHB_DYNS pDynSym = hb_dynsymFindName("QTEXTFORMAT");
@@ -261,9 +249,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ALLFORMATS)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -275,17 +261,13 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_AVAILABLEREDOSTEPS)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->availableRedoSteps());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -297,17 +279,13 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_AVAILABLEUNDOSTEPS)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->availableUndoSteps());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -319,18 +297,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_BEGIN)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QTextBlock *ptr = new QTextBlock(obj->begin());
       Qt4xHb::createReturnClass(ptr, "QTEXTBLOCK", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -342,17 +316,13 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_BLOCKCOUNT)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->blockCount());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -364,8 +334,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_CHARACTERAT)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -373,9 +342,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_CHARACTERAT)
       QChar *ptr = new QChar(obj->characterAt(PINT(1)));
       Qt4xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -387,17 +354,13 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_CHARACTERCOUNT)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->characterCount());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -409,17 +372,13 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_CLEAR)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -433,8 +392,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_CLEARUNDOREDOSTACKS)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
@@ -442,9 +400,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_CLEARUNDOREDOSTACKS)
       obj->clearUndoRedoStacks(HB_ISNIL(1) ? (QTextDocument::Stacks)QTextDocument::UndoAndRedoStacks
                                            : (QTextDocument::Stacks)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -458,8 +414,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_CLONE)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
     {
@@ -467,9 +422,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_CLONE)
       QTextDocument *ptr = obj->clone(OPQOBJECT(1, 0));
       Qt4xHb::createReturnQObjectClass(ptr, "QTEXTDOCUMENT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -481,17 +434,13 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_DEFAULTCURSORMOVESTYLE)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->defaultCursorMoveStyle());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -503,18 +452,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_DEFAULTFONT)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QFont *ptr = new QFont(obj->defaultFont());
       Qt4xHb::createReturnClass(ptr, "QFONT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -526,17 +471,13 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_DEFAULTSTYLESHEET)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->defaultStyleSheet());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -548,18 +489,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_DEFAULTTEXTOPTION)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QTextOption *ptr = new QTextOption(obj->defaultTextOption());
       Qt4xHb::createReturnClass(ptr, "QTEXTOPTION", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -571,18 +508,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_DOCUMENTLAYOUT)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QAbstractTextDocumentLayout *ptr = obj->documentLayout();
       Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTTEXTDOCUMENTLAYOUT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -594,17 +527,13 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_DOCUMENTMARGIN)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->documentMargin());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -616,17 +545,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_DRAWCONTENTS)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQPAINTER(1) && (ISQRECTF(2) || HB_ISNIL(2)))
     {
 #endif
       obj->drawContents(PQPAINTER(1), HB_ISNIL(2) ? QRectF() : *static_cast<QRectF *>(Qt4xHb::itemGetPtr(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -640,18 +566,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_END)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QTextBlock *ptr = new QTextBlock(obj->end());
       Qt4xHb::createReturnClass(ptr, "QTEXTBLOCK", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -710,9 +632,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
                                     HB_ISNIL(3) ? (QTextDocument::FindFlags)0 : (QTextDocument::FindFlags)hb_parni(3)));
       Qt4xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -722,8 +642,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FINDBLOCK)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -731,9 +650,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FINDBLOCK)
       QTextBlock *ptr = new QTextBlock(obj->findBlock(PINT(1)));
       Qt4xHb::createReturnClass(ptr, "QTEXTBLOCK", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -745,8 +662,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FINDBLOCKBYLINENUMBER)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -754,9 +670,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FINDBLOCKBYLINENUMBER)
       QTextBlock *ptr = new QTextBlock(obj->findBlockByLineNumber(PINT(1)));
       Qt4xHb::createReturnClass(ptr, "QTEXTBLOCK", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -768,8 +682,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FINDBLOCKBYNUMBER)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -777,9 +690,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FINDBLOCKBYNUMBER)
       QTextBlock *ptr = new QTextBlock(obj->findBlockByNumber(PINT(1)));
       Qt4xHb::createReturnClass(ptr, "QTEXTBLOCK", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -791,18 +702,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FIRSTBLOCK)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QTextBlock *ptr = new QTextBlock(obj->firstBlock());
       Qt4xHb::createReturnClass(ptr, "QTEXTBLOCK", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -814,17 +721,13 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_IDEALWIDTH)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->idealWidth());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -836,17 +739,13 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_INDENTWIDTH)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->indentWidth());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -858,17 +757,13 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ISEMPTY)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEmpty());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -880,17 +775,13 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ISMODIFIED)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isModified());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -902,17 +793,13 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ISREDOAVAILABLE)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isRedoAvailable());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -924,17 +811,13 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ISUNDOAVAILABLE)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isUndoAvailable());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -946,17 +829,13 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ISUNDOREDOENABLED)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isUndoRedoEnabled());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -968,18 +847,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_LASTBLOCK)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QTextBlock *ptr = new QTextBlock(obj->lastBlock());
       Qt4xHb::createReturnClass(ptr, "QTEXTBLOCK", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -991,17 +866,13 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_LINECOUNT)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->lineCount());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1013,17 +884,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_MARKCONTENTSDIRTY)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
       obj->markContentsDirty(PINT(1), PINT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1037,17 +905,13 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_MAXIMUMBLOCKCOUNT)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->maximumBlockCount());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1059,17 +923,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_METAINFORMATION)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       RQSTRING(obj->metaInformation((QTextDocument::MetaInformation)hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1081,8 +942,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_OBJECT)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1090,9 +950,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_OBJECT)
       QTextObject *ptr = obj->object(PINT(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QTEXTOBJECT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1104,8 +962,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_OBJECTFORFORMAT)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTEXTFORMAT(1))
     {
@@ -1113,9 +970,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_OBJECTFORFORMAT)
       QTextObject *ptr = obj->objectForFormat(*PQTEXTFORMAT(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QTEXTOBJECT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1127,17 +982,13 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_PAGECOUNT)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->pageCount());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1149,18 +1000,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_PAGESIZE)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSizeF *ptr = new QSizeF(obj->pageSize());
       Qt4xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1172,17 +1019,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_PRINT)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPRINTER(1))
     {
 #endif
       obj->print(PQPRINTER(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1196,8 +1040,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_RESOURCE)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQURL(2))
     {
@@ -1205,9 +1048,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_RESOURCE)
       QVariant *ptr = new QVariant(obj->resource(PINT(1), *PQURL(2)));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1219,17 +1060,13 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_REVISION)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->revision());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1241,18 +1078,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_ROOTFRAME)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QTextFrame *ptr = obj->rootFrame();
       Qt4xHb::createReturnQObjectClass(ptr, "QTEXTFRAME");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1264,17 +1097,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETDEFAULTCURSORMOVESTYLE)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setDefaultCursorMoveStyle((Qt::CursorMoveStyle)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1288,17 +1118,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETDEFAULTFONT)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQFONT(1))
     {
 #endif
       obj->setDefaultFont(*PQFONT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1312,17 +1139,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETDEFAULTSTYLESHEET)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       obj->setDefaultStyleSheet(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1336,17 +1160,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETDEFAULTTEXTOPTION)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTEXTOPTION(1))
     {
 #endif
       obj->setDefaultTextOption(*PQTEXTOPTION(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1360,17 +1181,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETDOCUMENTLAYOUT)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQABSTRACTTEXTDOCUMENTLAYOUT(1))
     {
 #endif
       obj->setDocumentLayout(PQABSTRACTTEXTDOCUMENTLAYOUT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1384,17 +1202,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETDOCUMENTMARGIN)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setDocumentMargin(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1408,17 +1223,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETHTML)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       obj->setHtml(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1432,17 +1244,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETINDENTWIDTH)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setIndentWidth(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1456,17 +1265,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETMAXIMUMBLOCKCOUNT)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setMaximumBlockCount(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1480,17 +1286,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETMETAINFORMATION)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {
 #endif
       obj->setMetaInformation((QTextDocument::MetaInformation)hb_parni(1), PQSTRING(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1504,17 +1307,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETPAGESIZE)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQSIZEF(1))
     {
 #endif
       obj->setPageSize(*PQSIZEF(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1528,17 +1328,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETPLAINTEXT)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       obj->setPlainText(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1552,17 +1349,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETTEXTWIDTH)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setTextWidth(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1576,17 +1370,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETUNDOREDOENABLED)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setUndoRedoEnabled(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1600,17 +1391,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETUSEDESIGNMETRICS)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setUseDesignMetrics(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1624,18 +1412,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SIZE)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSizeF *ptr = new QSizeF(obj->size());
       Qt4xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1647,17 +1431,13 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_TEXTWIDTH)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->textWidth());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1669,17 +1449,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_TOHTML)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (ISQBYTEARRAY(1) || HB_ISNIL(1)))
     {
 #endif
       RQSTRING(obj->toHtml(HB_ISNIL(1) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1691,17 +1468,13 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_TOPLAINTEXT)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->toPlainText());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1713,17 +1486,13 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_USEDESIGNMETRICS)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->useDesignMetrics());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1755,9 +1524,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_REDO)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1767,17 +1534,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETMODIFIED)
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
 #endif
       obj->setModified(OPBOOL(1, true));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1811,9 +1575,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_UNDO)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

@@ -22,8 +22,7 @@ void QGraphicsSceneSlots::changed(const QList<QRectF> &region)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "changed(QList<QRectF>)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QGRAPHICSSCENE");
     PHB_DYNS pDynSym = hb_dynsymFindName("QRECTF");
     PHB_ITEM pRegion = hb_itemArrayNew(0);
@@ -43,9 +42,7 @@ void QGraphicsSceneSlots::changed(const QList<QRectF> &region)
         hb_itemRelease(pTempObject);
         hb_itemRelease(pTempItem);
       }
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QRECTF", HB_ERR_ARGS_BASEPARAMS);
     }
 
@@ -62,8 +59,7 @@ void QGraphicsSceneSlots::sceneRectChanged(const QRectF &rect)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "sceneRectChanged(QRectF)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QGRAPHICSSCENE");
     PHB_ITEM pRect = Qt4xHb::Signals_return_object((void *)&rect, "QRECTF");
 
@@ -80,8 +76,7 @@ void QGraphicsSceneSlots::selectionChanged()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "selectionChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QGRAPHICSSCENE");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -94,21 +89,17 @@ void QGraphicsSceneSlots_connect_signal(const QString &signal, const QString &sl
 {
   QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QGraphicsSceneSlots *s = QCoreApplication::instance()->findChild<QGraphicsSceneSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QGraphicsSceneSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

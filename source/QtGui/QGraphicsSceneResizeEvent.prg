@@ -44,13 +44,10 @@ RETURN
     // QGraphicsSceneResizeEvent()
 HB_FUNC_STATIC(QGRAPHICSSCENERESIZEEVENT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     QGraphicsSceneResizeEvent *obj = new QGraphicsSceneResizeEvent();
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -59,8 +56,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENERESIZEEVENT_DELETE)
 {
   QGraphicsSceneResizeEvent *obj = static_cast<QGraphicsSceneResizeEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -76,18 +72,14 @@ HB_FUNC_STATIC(QGRAPHICSSCENERESIZEEVENT_NEWSIZE)
 {
   QGraphicsSceneResizeEvent *obj = static_cast<QGraphicsSceneResizeEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSizeF *ptr = new QSizeF(obj->newSize());
       Qt4xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -99,18 +91,14 @@ HB_FUNC_STATIC(QGRAPHICSSCENERESIZEEVENT_OLDSIZE)
 {
   QGraphicsSceneResizeEvent *obj = static_cast<QGraphicsSceneResizeEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSizeF *ptr = new QSizeF(obj->oldSize());
       Qt4xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

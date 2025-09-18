@@ -22,8 +22,7 @@ void QPlainTextEditSlots::blockCountChanged(int newBlockCount)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "blockCountChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QPLAINTEXTEDIT");
     PHB_ITEM pNewBlockCount = hb_itemPutNI(NULL, newBlockCount);
 
@@ -40,8 +39,7 @@ void QPlainTextEditSlots::copyAvailable(bool yes)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "copyAvailable(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QPLAINTEXTEDIT");
     PHB_ITEM pYes = hb_itemPutL(NULL, yes);
 
@@ -58,8 +56,7 @@ void QPlainTextEditSlots::cursorPositionChanged()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "cursorPositionChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QPLAINTEXTEDIT");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -74,8 +71,7 @@ void QPlainTextEditSlots::modificationChanged(bool changed)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "modificationChanged(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QPLAINTEXTEDIT");
     PHB_ITEM pChanged = hb_itemPutL(NULL, changed);
 
@@ -92,8 +88,7 @@ void QPlainTextEditSlots::redoAvailable(bool available)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "redoAvailable(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QPLAINTEXTEDIT");
     PHB_ITEM pAvailable = hb_itemPutL(NULL, available);
 
@@ -110,8 +105,7 @@ void QPlainTextEditSlots::selectionChanged()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "selectionChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QPLAINTEXTEDIT");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -126,8 +120,7 @@ void QPlainTextEditSlots::textChanged()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "textChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QPLAINTEXTEDIT");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -142,8 +135,7 @@ void QPlainTextEditSlots::undoAvailable(bool available)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "undoAvailable(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QPLAINTEXTEDIT");
     PHB_ITEM pAvailable = hb_itemPutL(NULL, available);
 
@@ -160,8 +152,7 @@ void QPlainTextEditSlots::updateRequest(const QRect &rect, int dy)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "updateRequest(QRect,int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QPLAINTEXTEDIT");
     PHB_ITEM pRect = Qt4xHb::Signals_return_object((void *)&rect, "QRECT");
     PHB_ITEM pDy = hb_itemPutNI(NULL, dy);
@@ -178,21 +169,17 @@ void QPlainTextEditSlots_connect_signal(const QString &signal, const QString &sl
 {
   QPlainTextEdit *obj = qobject_cast<QPlainTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QPlainTextEditSlots *s = QCoreApplication::instance()->findChild<QPlainTextEditSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QPlainTextEditSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

@@ -50,8 +50,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEHOVEREVENT_DELETE)
 {
   QGraphicsSceneHoverEvent *obj = static_cast<QGraphicsSceneHoverEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -67,18 +66,14 @@ HB_FUNC_STATIC(QGRAPHICSSCENEHOVEREVENT_LASTPOS)
 {
   QGraphicsSceneHoverEvent *obj = static_cast<QGraphicsSceneHoverEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPointF *ptr = new QPointF(obj->lastPos());
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -90,18 +85,14 @@ HB_FUNC_STATIC(QGRAPHICSSCENEHOVEREVENT_LASTSCENEPOS)
 {
   QGraphicsSceneHoverEvent *obj = static_cast<QGraphicsSceneHoverEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPointF *ptr = new QPointF(obj->lastScenePos());
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -113,18 +104,14 @@ HB_FUNC_STATIC(QGRAPHICSSCENEHOVEREVENT_LASTSCREENPOS)
 {
   QGraphicsSceneHoverEvent *obj = static_cast<QGraphicsSceneHoverEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPoint *ptr = new QPoint(obj->lastScreenPos());
       Qt4xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -136,17 +123,13 @@ HB_FUNC_STATIC(QGRAPHICSSCENEHOVEREVENT_MODIFIERS)
 {
   QGraphicsSceneHoverEvent *obj = static_cast<QGraphicsSceneHoverEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->modifiers());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -158,18 +141,14 @@ HB_FUNC_STATIC(QGRAPHICSSCENEHOVEREVENT_POS)
 {
   QGraphicsSceneHoverEvent *obj = static_cast<QGraphicsSceneHoverEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPointF *ptr = new QPointF(obj->pos());
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -181,18 +160,14 @@ HB_FUNC_STATIC(QGRAPHICSSCENEHOVEREVENT_SCENEPOS)
 {
   QGraphicsSceneHoverEvent *obj = static_cast<QGraphicsSceneHoverEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPointF *ptr = new QPointF(obj->scenePos());
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -204,18 +179,14 @@ HB_FUNC_STATIC(QGRAPHICSSCENEHOVEREVENT_SCREENPOS)
 {
   QGraphicsSceneHoverEvent *obj = static_cast<QGraphicsSceneHoverEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPoint *ptr = new QPoint(obj->screenPos());
       Qt4xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

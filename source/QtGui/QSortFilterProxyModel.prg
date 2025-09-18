@@ -108,9 +108,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_NEW)
   {
     QSortFilterProxyModel *obj = new QSortFilterProxyModel(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -119,8 +117,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_DELETE)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -138,17 +135,13 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_DYNAMICSORTFILTER)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->dynamicSortFilter());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -160,17 +153,13 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_FILTERCASESENSITIVITY)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->filterCaseSensitivity());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -182,17 +171,13 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_FILTERKEYCOLUMN)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->filterKeyColumn());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -204,18 +189,14 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_FILTERREGEXP)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QRegExp *ptr = new QRegExp(obj->filterRegExp());
       Qt4xHb::createReturnClass(ptr, "QREGEXP", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -227,17 +208,13 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_FILTERROLE)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->filterRole());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -249,17 +226,13 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_ISSORTLOCALEAWARE)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isSortLocaleAware());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -271,17 +244,14 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETDYNAMICSORTFILTER)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setDynamicSortFilter(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -295,17 +265,14 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERCASESENSITIVITY)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setFilterCaseSensitivity((Qt::CaseSensitivity)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -319,17 +286,14 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERKEYCOLUMN)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setFilterKeyColumn(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -343,17 +307,14 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERROLE)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setFilterRole(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -367,17 +328,14 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETSORTCASESENSITIVITY)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setSortCaseSensitivity((Qt::CaseSensitivity)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -391,17 +349,14 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETSORTLOCALEAWARE)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setSortLocaleAware(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -415,17 +370,14 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETSORTROLE)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setSortRole(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -439,17 +391,13 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SORTCASESENSITIVITY)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->sortCaseSensitivity());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -461,17 +409,13 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SORTCOLUMN)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->sortColumn());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -483,17 +427,13 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SORTORDER)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->sortOrder());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -505,17 +445,13 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SORTROLE)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->sortRole());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -527,8 +463,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_BUDDY)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
@@ -536,9 +471,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_BUDDY)
       QModelIndex *ptr = new QModelIndex(obj->buddy(*PQMODELINDEX(1)));
       Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -550,17 +483,14 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_CANFETCHMORE)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
       RBOOL(obj->canFetchMore(*PQMODELINDEX(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -572,17 +502,14 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_COLUMNCOUNT)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)))
     {
 #endif
       RINT(obj->columnCount(HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex *>(Qt4xHb::itemGetPtr(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -594,8 +521,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_DATA)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
@@ -603,9 +529,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_DATA)
       QVariant *ptr = new QVariant(obj->data(*PQMODELINDEX(1), OPINT(2, Qt::DisplayRole)));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -618,17 +542,14 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_DROPMIMEDATA)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(5) && ISQMIMEDATA(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQMODELINDEX(5))
     {
 #endif
       RBOOL(obj->dropMimeData(PQMIMEDATA(1), (Qt::DropAction)hb_parni(2), PINT(3), PINT(4), *PQMODELINDEX(5)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -640,17 +561,14 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_FETCHMORE)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
       obj->fetchMore(*PQMODELINDEX(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -664,17 +582,14 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_FLAGS)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
       RENUM(obj->flags(*PQMODELINDEX(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -686,17 +601,14 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_HASCHILDREN)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)))
     {
 #endif
       RBOOL(obj->hasChildren(HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex *>(Qt4xHb::itemGetPtr(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -708,8 +620,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_HEADERDATA)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
@@ -717,9 +628,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_HEADERDATA)
       QVariant *ptr = new QVariant(obj->headerData(PINT(1), (Qt::Orientation)hb_parni(2), OPINT(3, Qt::DisplayRole)));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -731,8 +640,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_INDEX)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
     {
@@ -741,9 +649,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_INDEX)
           PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex *>(Qt4xHb::itemGetPtr(3))));
       Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -755,8 +661,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_INSERTCOLUMNS)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
     {
@@ -764,9 +669,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_INSERTCOLUMNS)
       RBOOL(obj->insertColumns(PINT(1), PINT(2),
                                HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex *>(Qt4xHb::itemGetPtr(3))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -778,8 +681,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_INSERTROWS)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
     {
@@ -787,9 +689,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_INSERTROWS)
       RBOOL(obj->insertRows(PINT(1), PINT(2),
                             HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex *>(Qt4xHb::itemGetPtr(3))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -801,8 +701,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MAPFROMSOURCE)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
@@ -810,9 +709,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MAPFROMSOURCE)
       QModelIndex *ptr = new QModelIndex(obj->mapFromSource(*PQMODELINDEX(1)));
       Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -824,8 +721,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MAPSELECTIONFROMSOURCE)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQITEMSELECTION(1))
     {
@@ -833,9 +729,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MAPSELECTIONFROMSOURCE)
       QItemSelection *ptr = new QItemSelection(obj->mapSelectionFromSource(*PQITEMSELECTION(1)));
       Qt4xHb::createReturnClass(ptr, "QITEMSELECTION", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -847,8 +741,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MAPSELECTIONTOSOURCE)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQITEMSELECTION(1))
     {
@@ -856,9 +749,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MAPSELECTIONTOSOURCE)
       QItemSelection *ptr = new QItemSelection(obj->mapSelectionToSource(*PQITEMSELECTION(1)));
       Qt4xHb::createReturnClass(ptr, "QITEMSELECTION", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -870,8 +761,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MAPTOSOURCE)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
@@ -879,9 +769,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MAPTOSOURCE)
       QModelIndex *ptr = new QModelIndex(obj->mapToSource(*PQMODELINDEX(1)));
       Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -894,8 +782,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MATCH)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(3, 5) && ISQMODELINDEX(1) && HB_ISNUM(2) && ISQVARIANT(3) && (HB_ISNUM(4) || HB_ISNIL(4)) &&
         (HB_ISNUM(5) || HB_ISNIL(5)))
@@ -933,9 +820,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MATCH)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -947,8 +832,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MIMEDATA)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -964,9 +848,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MIMEDATA)
       QMimeData *ptr = obj->mimeData(par1);
       Qt4xHb::createReturnQObjectClass(ptr, "QMIMEDATA");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -978,17 +860,13 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MIMETYPES)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->mimeTypes());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1000,8 +878,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_PARENT)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
@@ -1009,9 +886,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_PARENT)
       QModelIndex *ptr = new QModelIndex(obj->parent(*PQMODELINDEX(1)));
       Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1023,8 +898,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_REMOVECOLUMNS)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
     {
@@ -1032,9 +906,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_REMOVECOLUMNS)
       RBOOL(obj->removeColumns(PINT(1), PINT(2),
                                HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex *>(Qt4xHb::itemGetPtr(3))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1046,8 +918,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_REMOVEROWS)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)))
     {
@@ -1055,9 +926,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_REMOVEROWS)
       RBOOL(obj->removeRows(PINT(1), PINT(2),
                             HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex *>(Qt4xHb::itemGetPtr(3))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1069,17 +938,14 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_ROWCOUNT)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)))
     {
 #endif
       RINT(obj->rowCount(HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex *>(Qt4xHb::itemGetPtr(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1091,17 +957,14 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETDATA)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && ISQMODELINDEX(1) && ISQVARIANT(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
       RBOOL(obj->setData(*PQMODELINDEX(1), *PQVARIANT(2), OPINT(3, Qt::EditRole)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1113,17 +976,14 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETHEADERDATA)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISQVARIANT(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
     {
 #endif
       RBOOL(obj->setHeaderData(PINT(1), (Qt::Orientation)hb_parni(2), *PQVARIANT(3), OPINT(4, Qt::EditRole)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1135,17 +995,14 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETSOURCEMODEL)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1))
     {
 #endif
       obj->setSourceModel(PQABSTRACTITEMMODEL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1159,17 +1016,14 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SORT)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
       obj->sort(PINT(1), HB_ISNIL(2) ? (Qt::SortOrder)Qt::AscendingOrder : (Qt::SortOrder)hb_parni(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1183,8 +1037,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SPAN)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
@@ -1192,9 +1045,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SPAN)
       QSize *ptr = new QSize(obj->span(*PQMODELINDEX(1)));
       Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1206,17 +1057,13 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SUPPORTEDDROPACTIONS)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->supportedDropActions());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1228,17 +1075,13 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_INVALIDATE)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->invalidate();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1252,17 +1095,14 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERFIXEDSTRING)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       obj->setFilterFixedString(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1296,9 +1136,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERREGEXP)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1308,17 +1146,14 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERWILDCARD)
 {
   QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       obj->setFilterWildcard(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

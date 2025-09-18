@@ -54,14 +54,11 @@ RETURN
 HB_FUNC_STATIC(QACCESSIBLE_ISACTIVE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QAccessible::isActive());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -77,9 +74,7 @@ HB_FUNC_STATIC(QACCESSIBLE_QUERYACCESSIBLEINTERFACE)
     QAccessibleInterface *ptr = QAccessible::queryAccessibleInterface(PQOBJECT(1));
     Qt4xHb::createReturnClass(ptr, "QACCESSIBLEINTERFACE", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -94,9 +89,7 @@ HB_FUNC_STATIC(QACCESSIBLE_SETROOTOBJECT)
 #endif
     QAccessible::setRootObject(PQOBJECT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -113,9 +106,7 @@ HB_FUNC_STATIC(QACCESSIBLE_UPDATEACCESSIBILITY)
 #endif
     QAccessible::updateAccessibility(PQOBJECT(1), PINT(2), (QAccessible::Event)hb_parni(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -144,9 +135,7 @@ HB_FUNC_STATIC(QACCESSIBLE_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -177,9 +166,7 @@ HB_FUNC_STATIC(QACCESSIBLE_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

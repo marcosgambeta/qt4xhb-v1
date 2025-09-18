@@ -41,8 +41,7 @@ HB_FUNC_STATIC(QCLIPBOARDEVENT_DELETE)
 {
   QClipboardEvent *obj = static_cast<QClipboardEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);

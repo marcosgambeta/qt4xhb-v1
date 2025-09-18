@@ -74,9 +74,7 @@ HB_FUNC_STATIC(QUNDOGROUP_NEW)
   {
     QUndoGroup *obj = new QUndoGroup(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -85,8 +83,7 @@ HB_FUNC_STATIC(QUNDOGROUP_DELETE)
 {
   QUndoGroup *obj = qobject_cast<QUndoGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -104,18 +101,14 @@ HB_FUNC_STATIC(QUNDOGROUP_ACTIVESTACK)
 {
   QUndoGroup *obj = qobject_cast<QUndoGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QUndoStack *ptr = obj->activeStack();
       Qt4xHb::createReturnQObjectClass(ptr, "QUNDOSTACK");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -127,17 +120,14 @@ HB_FUNC_STATIC(QUNDOGROUP_ADDSTACK)
 {
   QUndoGroup *obj = qobject_cast<QUndoGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQUNDOSTACK(1))
     {
 #endif
       obj->addStack(PQUNDOSTACK(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -151,17 +141,13 @@ HB_FUNC_STATIC(QUNDOGROUP_CANREDO)
 {
   QUndoGroup *obj = qobject_cast<QUndoGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->canRedo());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -173,17 +159,13 @@ HB_FUNC_STATIC(QUNDOGROUP_CANUNDO)
 {
   QUndoGroup *obj = qobject_cast<QUndoGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->canUndo());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -195,8 +177,7 @@ HB_FUNC_STATIC(QUNDOGROUP_CREATEREDOACTION)
 {
   QUndoGroup *obj = qobject_cast<QUndoGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQOBJECT(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
     {
@@ -204,9 +185,7 @@ HB_FUNC_STATIC(QUNDOGROUP_CREATEREDOACTION)
       QAction *ptr = obj->createRedoAction(PQOBJECT(1), OPQSTRING(2, QString()));
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -218,8 +197,7 @@ HB_FUNC_STATIC(QUNDOGROUP_CREATEUNDOACTION)
 {
   QUndoGroup *obj = qobject_cast<QUndoGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQOBJECT(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
     {
@@ -227,9 +205,7 @@ HB_FUNC_STATIC(QUNDOGROUP_CREATEUNDOACTION)
       QAction *ptr = obj->createUndoAction(PQOBJECT(1), OPQSTRING(2, QString()));
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -241,17 +217,13 @@ HB_FUNC_STATIC(QUNDOGROUP_ISCLEAN)
 {
   QUndoGroup *obj = qobject_cast<QUndoGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isClean());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -263,17 +235,13 @@ HB_FUNC_STATIC(QUNDOGROUP_REDOTEXT)
 {
   QUndoGroup *obj = qobject_cast<QUndoGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->redoText());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -285,17 +253,14 @@ HB_FUNC_STATIC(QUNDOGROUP_REMOVESTACK)
 {
   QUndoGroup *obj = qobject_cast<QUndoGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQUNDOSTACK(1))
     {
 #endif
       obj->removeStack(PQUNDOSTACK(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -309,11 +274,9 @@ HB_FUNC_STATIC(QUNDOGROUP_STACKS)
 {
   QUndoGroup *obj = qobject_cast<QUndoGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QList<QUndoStack *> list = obj->stacks();
       PHB_DYNS pDynSym = hb_dynsymFindName("QUNDOSTACK");
@@ -341,9 +304,7 @@ HB_FUNC_STATIC(QUNDOGROUP_STACKS)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -355,17 +316,13 @@ HB_FUNC_STATIC(QUNDOGROUP_UNDOTEXT)
 {
   QUndoGroup *obj = qobject_cast<QUndoGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->undoText());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -377,17 +334,13 @@ HB_FUNC_STATIC(QUNDOGROUP_REDO)
 {
   QUndoGroup *obj = qobject_cast<QUndoGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->redo();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -401,17 +354,14 @@ HB_FUNC_STATIC(QUNDOGROUP_SETACTIVESTACK)
 {
   QUndoGroup *obj = qobject_cast<QUndoGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQUNDOSTACK(1))
     {
 #endif
       obj->setActiveStack(PQUNDOSTACK(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -425,17 +375,13 @@ HB_FUNC_STATIC(QUNDOGROUP_UNDO)
 {
   QUndoGroup *obj = qobject_cast<QUndoGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->undo();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

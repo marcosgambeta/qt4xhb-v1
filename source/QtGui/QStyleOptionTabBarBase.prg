@@ -46,8 +46,7 @@ RETURN
 
 HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     // QStyleOptionTabBarBase()
     QStyleOptionTabBarBase *obj = new QStyleOptionTabBarBase();
     Qt4xHb::returnNewObject(obj, true);
@@ -57,9 +56,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_NEW)
     // QStyleOptionTabBarBase(const QStyleOptionTabBarBase &other)
     QStyleOptionTabBarBase *obj = new QStyleOptionTabBarBase(*PQSTYLEOPTIONTABBARBASE(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -69,14 +66,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SHAPE)
 {
   QStyleOptionTabBarBase *obj = static_cast<QStyleOptionTabBarBase *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
-    if (ISNUMPAR(0))
-    {
+  if (obj != NULL) {
+    if (ISNUMPAR(0)) {
       RENUM(obj->shape);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -85,14 +78,11 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SETSHAPE)
 {
   QStyleOptionTabBarBase *obj = static_cast<QStyleOptionTabBarBase *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->shape = (QTabBar::Shape)hb_parni(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -105,15 +95,11 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_TABBARRECT)
 {
   QStyleOptionTabBarBase *obj = static_cast<QStyleOptionTabBarBase *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
-    if (ISNUMPAR(0))
-    {
+  if (obj != NULL) {
+    if (ISNUMPAR(0)) {
       QRect *ptr = new QRect(obj->tabBarRect);
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -122,14 +108,11 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SETTABBARRECT)
 {
   QStyleOptionTabBarBase *obj = static_cast<QStyleOptionTabBarBase *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && ISQRECT(1))
     {
       obj->tabBarRect = *PQRECT(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -142,15 +125,11 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SELECTEDTABRECT)
 {
   QStyleOptionTabBarBase *obj = static_cast<QStyleOptionTabBarBase *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
-    if (ISNUMPAR(0))
-    {
+  if (obj != NULL) {
+    if (ISNUMPAR(0)) {
       QRect *ptr = new QRect(obj->selectedTabRect);
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -159,14 +138,11 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SETSELECTEDTABRECT)
 {
   QStyleOptionTabBarBase *obj = static_cast<QStyleOptionTabBarBase *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && ISQRECT(1))
     {
       obj->selectedTabRect = *PQRECT(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }

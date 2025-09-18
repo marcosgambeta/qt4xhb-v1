@@ -22,8 +22,7 @@ void QProgressBarSlots::valueChanged(int value)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "valueChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QPROGRESSBAR");
     PHB_ITEM pValue = hb_itemPutNI(NULL, value);
 
@@ -38,21 +37,17 @@ void QProgressBarSlots_connect_signal(const QString &signal, const QString &slot
 {
   QProgressBar *obj = qobject_cast<QProgressBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QProgressBarSlots *s = QCoreApplication::instance()->findChild<QProgressBarSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QProgressBarSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

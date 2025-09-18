@@ -43,8 +43,7 @@ RETURN
 
 HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     // QStyleOptionRubberBand()
     QStyleOptionRubberBand *obj = new QStyleOptionRubberBand();
     Qt4xHb::returnNewObject(obj, true);
@@ -54,9 +53,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_NEW)
     // QStyleOptionRubberBand(const QStyleOptionRubberBand &other)
     QStyleOptionRubberBand *obj = new QStyleOptionRubberBand(*PQSTYLEOPTIONRUBBERBAND(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -66,14 +63,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_SHAPE)
 {
   QStyleOptionRubberBand *obj = static_cast<QStyleOptionRubberBand *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
-    if (ISNUMPAR(0))
-    {
+  if (obj != NULL) {
+    if (ISNUMPAR(0)) {
       RENUM(obj->shape);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -82,14 +75,11 @@ HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_SETSHAPE)
 {
   QStyleOptionRubberBand *obj = static_cast<QStyleOptionRubberBand *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->shape = (QRubberBand::Shape)hb_parni(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -102,14 +92,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_OPAQUE)
 {
   QStyleOptionRubberBand *obj = static_cast<QStyleOptionRubberBand *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
-    if (ISNUMPAR(0))
-    {
+  if (obj != NULL) {
+    if (ISNUMPAR(0)) {
       RBOOL(obj->opaque);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -118,14 +104,11 @@ HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_SETOPAQUE)
 {
   QStyleOptionRubberBand *obj = static_cast<QStyleOptionRubberBand *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
       obj->opaque = PBOOL(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }

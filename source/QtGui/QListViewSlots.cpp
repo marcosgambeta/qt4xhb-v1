@@ -22,8 +22,7 @@ void QListViewSlots::indexesMoved(const QModelIndexList &indexes)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "indexesMoved(QModelIndexList)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QLISTVIEW");
     PHB_DYNS pDynSym = hb_dynsymFindName("QMODELINDEX");
     PHB_ITEM pIndexes = hb_itemArrayNew(0);
@@ -43,9 +42,7 @@ void QListViewSlots::indexesMoved(const QModelIndexList &indexes)
         hb_itemRelease(pTempObject);
         hb_itemRelease(pTempItem);
       }
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QMODELINDEX", HB_ERR_ARGS_BASEPARAMS);
     }
 
@@ -60,21 +57,17 @@ void QListViewSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QListView *obj = qobject_cast<QListView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QListViewSlots *s = QCoreApplication::instance()->findChild<QListViewSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QListViewSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

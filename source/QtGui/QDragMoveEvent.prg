@@ -53,9 +53,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_NEW)
                                              (Qt::MouseButtons)hb_parni(4), (Qt::KeyboardModifiers)hb_parni(5),
                                              HB_ISNIL(6) ? (QEvent::Type)QEvent::DragMove : (QEvent::Type)hb_parni(6));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -64,8 +62,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_DELETE)
 {
   QDragMoveEvent *obj = static_cast<QDragMoveEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -101,9 +98,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_ACCEPT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -113,18 +108,14 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_ANSWERRECT)
 {
   QDragMoveEvent *obj = static_cast<QDragMoveEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QRect *ptr = new QRect(obj->answerRect());
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -156,9 +147,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_IGNORE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

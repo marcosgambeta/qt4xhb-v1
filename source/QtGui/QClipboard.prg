@@ -69,17 +69,14 @@ HB_FUNC_STATIC(QCLIPBOARD_CLEAR)
 {
   QClipboard *obj = qobject_cast<QClipboard *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
       obj->clear(HB_ISNIL(1) ? (QClipboard::Mode)QClipboard::Clipboard : (QClipboard::Mode)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -93,8 +90,7 @@ HB_FUNC_STATIC(QCLIPBOARD_IMAGE)
 {
   QClipboard *obj = qobject_cast<QClipboard *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
@@ -103,9 +99,7 @@ HB_FUNC_STATIC(QCLIPBOARD_IMAGE)
           new QImage(obj->image(HB_ISNIL(1) ? (QClipboard::Mode)QClipboard::Clipboard : (QClipboard::Mode)hb_parni(1)));
       Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -117,8 +111,7 @@ HB_FUNC_STATIC(QCLIPBOARD_MIMEDATA)
 {
   QClipboard *obj = qobject_cast<QClipboard *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
@@ -127,9 +120,7 @@ HB_FUNC_STATIC(QCLIPBOARD_MIMEDATA)
           obj->mimeData(HB_ISNIL(1) ? (QClipboard::Mode)QClipboard::Clipboard : (QClipboard::Mode)hb_parni(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QMIMEDATA");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -141,17 +132,13 @@ HB_FUNC_STATIC(QCLIPBOARD_OWNSCLIPBOARD)
 {
   QClipboard *obj = qobject_cast<QClipboard *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->ownsClipboard());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -163,17 +150,13 @@ HB_FUNC_STATIC(QCLIPBOARD_OWNSFINDBUFFER)
 {
   QClipboard *obj = qobject_cast<QClipboard *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->ownsFindBuffer());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -185,17 +168,13 @@ HB_FUNC_STATIC(QCLIPBOARD_OWNSSELECTION)
 {
   QClipboard *obj = qobject_cast<QClipboard *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->ownsSelection());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -207,8 +186,7 @@ HB_FUNC_STATIC(QCLIPBOARD_PIXMAP)
 {
   QClipboard *obj = qobject_cast<QClipboard *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
@@ -217,9 +195,7 @@ HB_FUNC_STATIC(QCLIPBOARD_PIXMAP)
           obj->pixmap(HB_ISNIL(1) ? (QClipboard::Mode)QClipboard::Clipboard : (QClipboard::Mode)hb_parni(1)));
       Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -231,17 +207,14 @@ HB_FUNC_STATIC(QCLIPBOARD_SETIMAGE)
 {
   QClipboard *obj = qobject_cast<QClipboard *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQIMAGE(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
       obj->setImage(*PQIMAGE(1), HB_ISNIL(2) ? (QClipboard::Mode)QClipboard::Clipboard : (QClipboard::Mode)hb_parni(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -255,8 +228,7 @@ HB_FUNC_STATIC(QCLIPBOARD_SETMIMEDATA)
 {
   QClipboard *obj = qobject_cast<QClipboard *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQMIMEDATA(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
@@ -264,9 +236,7 @@ HB_FUNC_STATIC(QCLIPBOARD_SETMIMEDATA)
       obj->setMimeData(PQMIMEDATA(1),
                        HB_ISNIL(2) ? (QClipboard::Mode)QClipboard::Clipboard : (QClipboard::Mode)hb_parni(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -280,8 +250,7 @@ HB_FUNC_STATIC(QCLIPBOARD_SETPIXMAP)
 {
   QClipboard *obj = qobject_cast<QClipboard *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQPIXMAP(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
@@ -289,9 +258,7 @@ HB_FUNC_STATIC(QCLIPBOARD_SETPIXMAP)
       obj->setPixmap(*PQPIXMAP(1),
                      HB_ISNIL(2) ? (QClipboard::Mode)QClipboard::Clipboard : (QClipboard::Mode)hb_parni(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -305,17 +272,14 @@ HB_FUNC_STATIC(QCLIPBOARD_SETTEXT)
 {
   QClipboard *obj = qobject_cast<QClipboard *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
       obj->setText(PQSTRING(1), HB_ISNIL(2) ? (QClipboard::Mode)QClipboard::Clipboard : (QClipboard::Mode)hb_parni(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -329,17 +293,13 @@ HB_FUNC_STATIC(QCLIPBOARD_SUPPORTSFINDBUFFER)
 {
   QClipboard *obj = qobject_cast<QClipboard *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->supportsFindBuffer());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -351,17 +311,13 @@ HB_FUNC_STATIC(QCLIPBOARD_SUPPORTSSELECTION)
 {
   QClipboard *obj = qobject_cast<QClipboard *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->supportsSelection());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -391,9 +347,7 @@ HB_FUNC_STATIC(QCLIPBOARD_TEXT)
       RQSTRING(obj->text(par1, HB_ISNIL(2) ? (QClipboard::Mode)QClipboard::Clipboard : (QClipboard::Mode)hb_parni(2)));
       hb_storc(QSTRINGTOSTRING(par1), 1);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

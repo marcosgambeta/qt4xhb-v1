@@ -22,8 +22,7 @@ void QCompleterSlots::activated(const QString &text)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "activated(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QCOMPLETER");
     PHB_ITEM pText = hb_itemPutC(NULL, QSTRINGTOSTRING(text));
 
@@ -40,8 +39,7 @@ void QCompleterSlots::activated(const QModelIndex &index)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "activated(QModelIndex)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QCOMPLETER");
     PHB_ITEM pIndex = Qt4xHb::Signals_return_object((void *)&index, "QMODELINDEX");
 
@@ -58,8 +56,7 @@ void QCompleterSlots::highlighted(const QString &text)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "highlighted(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QCOMPLETER");
     PHB_ITEM pText = hb_itemPutC(NULL, QSTRINGTOSTRING(text));
 
@@ -76,8 +73,7 @@ void QCompleterSlots::highlighted(const QModelIndex &index)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "highlighted(QModelIndex)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QCOMPLETER");
     PHB_ITEM pIndex = Qt4xHb::Signals_return_object((void *)&index, "QMODELINDEX");
 
@@ -92,21 +88,17 @@ void QCompleterSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QCompleterSlots *s = QCoreApplication::instance()->findChild<QCompleterSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QCompleterSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

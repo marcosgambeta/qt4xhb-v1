@@ -52,9 +52,7 @@ HB_FUNC_STATIC(QITEMDELEGATE_NEW)
   {
     QItemDelegate *obj = new QItemDelegate(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -63,8 +61,7 @@ HB_FUNC_STATIC(QITEMDELEGATE_DELETE)
 {
   QItemDelegate *obj = qobject_cast<QItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -82,17 +79,13 @@ HB_FUNC_STATIC(QITEMDELEGATE_HASCLIPPING)
 {
   QItemDelegate *obj = qobject_cast<QItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasClipping());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -104,18 +97,14 @@ HB_FUNC_STATIC(QITEMDELEGATE_ITEMEDITORFACTORY)
 {
   QItemDelegate *obj = qobject_cast<QItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QItemEditorFactory *ptr = obj->itemEditorFactory();
       Qt4xHb::createReturnClass(ptr, "QITEMEDITORFACTORY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -127,17 +116,14 @@ HB_FUNC_STATIC(QITEMDELEGATE_SETCLIPPING)
 {
   QItemDelegate *obj = qobject_cast<QItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setClipping(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -151,17 +137,14 @@ HB_FUNC_STATIC(QITEMDELEGATE_SETITEMEDITORFACTORY)
 {
   QItemDelegate *obj = qobject_cast<QItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQITEMEDITORFACTORY(1))
     {
 #endif
       obj->setItemEditorFactory(PQITEMEDITORFACTORY(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

@@ -69,9 +69,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_NEW)
     QGraphicsSimpleTextItem *obj =
         new QGraphicsSimpleTextItem(PQSTRING(1), HB_ISNIL(2) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(2)));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -80,8 +78,7 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_DELETE)
 {
   QGraphicsSimpleTextItem *obj = static_cast<QGraphicsSimpleTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -97,18 +94,14 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_FONT)
 {
   QGraphicsSimpleTextItem *obj = static_cast<QGraphicsSimpleTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QFont *ptr = new QFont(obj->font());
       Qt4xHb::createReturnClass(ptr, "QFONT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -120,17 +113,14 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_SETFONT)
 {
   QGraphicsSimpleTextItem *obj = static_cast<QGraphicsSimpleTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQFONT(1))
     {
 #endif
       obj->setFont(*PQFONT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -144,17 +134,14 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_SETTEXT)
 {
   QGraphicsSimpleTextItem *obj = static_cast<QGraphicsSimpleTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       obj->setText(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -168,17 +155,13 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_TEXT)
 {
   QGraphicsSimpleTextItem *obj = static_cast<QGraphicsSimpleTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->text());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -190,18 +173,14 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_BOUNDINGRECT)
 {
   QGraphicsSimpleTextItem *obj = static_cast<QGraphicsSimpleTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QRectF *ptr = new QRectF(obj->boundingRect());
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -213,17 +192,14 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_CONTAINS)
 {
   QGraphicsSimpleTextItem *obj = static_cast<QGraphicsSimpleTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
       RBOOL(obj->contains(*PQPOINTF(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -235,17 +211,14 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_ISOBSCUREDBY)
 {
   QGraphicsSimpleTextItem *obj = static_cast<QGraphicsSimpleTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQGRAPHICSITEM(1))
     {
 #endif
       RBOOL(obj->isObscuredBy(PQGRAPHICSITEM(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -257,18 +230,14 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_OPAQUEAREA)
 {
   QGraphicsSimpleTextItem *obj = static_cast<QGraphicsSimpleTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPainterPath *ptr = new QPainterPath(obj->opaqueArea());
       Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -280,17 +249,14 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_PAINT)
 {
   QGraphicsSimpleTextItem *obj = static_cast<QGraphicsSimpleTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ISQWIDGET(3))
     {
 #endif
       obj->paint(PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), PQWIDGET(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -304,18 +270,14 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_SHAPE)
 {
   QGraphicsSimpleTextItem *obj = static_cast<QGraphicsSimpleTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPainterPath *ptr = new QPainterPath(obj->shape());
       Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -327,17 +289,13 @@ HB_FUNC_STATIC(QGRAPHICSSIMPLETEXTITEM_TYPE)
 {
   QGraphicsSimpleTextItem *obj = static_cast<QGraphicsSimpleTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->type());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

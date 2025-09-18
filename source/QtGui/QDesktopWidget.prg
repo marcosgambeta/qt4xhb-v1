@@ -85,9 +85,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_AVAILABLEGEOMETRY)
       QRect *ptr = new QRect(obj->availableGeometry(*PQPOINT(1)));
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -97,17 +95,13 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_ISVIRTUALDESKTOP)
 {
   QDesktopWidget *obj = qobject_cast<QDesktopWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isVirtualDesktop());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -119,17 +113,13 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_PRIMARYSCREEN)
 {
   QDesktopWidget *obj = qobject_cast<QDesktopWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->primaryScreen());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -141,8 +131,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREEN)
 {
   QDesktopWidget *obj = qobject_cast<QDesktopWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
@@ -150,9 +139,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREEN)
       QWidget *ptr = obj->screen(OPINT(1, -1));
       Qt4xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -164,17 +151,13 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENCOUNT)
 {
   QDesktopWidget *obj = qobject_cast<QDesktopWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->screenCount());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -215,9 +198,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENGEOMETRY)
       QRect *ptr = new QRect(obj->screenGeometry(*PQPOINT(1)));
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -243,9 +224,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENNUMBER)
     {
       RINT(obj->screenNumber(*PQPOINT(1)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

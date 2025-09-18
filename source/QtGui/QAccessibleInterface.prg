@@ -59,8 +59,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_DELETE)
 {
   QAccessibleInterface *obj = static_cast<QAccessibleInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -76,17 +75,14 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_ACTIONTEXT)
 {
   QAccessibleInterface *obj = static_cast<QAccessibleInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
 #endif
       RQSTRING(obj->actionText(PINT(1), (QAccessible::Text)hb_parni(2), PINT(3)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -98,17 +94,14 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_CHILDAT)
 {
   QAccessibleInterface *obj = static_cast<QAccessibleInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
       RINT(obj->childAt(PINT(1), PINT(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -120,17 +113,13 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_CHILDCOUNT)
 {
   QAccessibleInterface *obj = static_cast<QAccessibleInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->childCount());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -142,8 +131,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_DOACTION)
 {
   QAccessibleInterface *obj = static_cast<QAccessibleInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISARRAY(3) || HB_ISNIL(3)))
     {
@@ -161,9 +149,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_DOACTION)
       }
       RBOOL(obj->doAction(PINT(1), PINT(2), par3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -175,17 +161,14 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_INDEXOFCHILD)
 {
   QAccessibleInterface *obj = static_cast<QAccessibleInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQACCESSIBLEINTERFACE(1))
     {
 #endif
       RINT(obj->indexOfChild(PQACCESSIBLEINTERFACE(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -197,8 +180,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_INVOKEMETHOD)
 {
   QAccessibleInterface *obj = static_cast<QAccessibleInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISARRAY(3) || HB_ISNIL(3)))
     {
@@ -217,9 +199,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_INVOKEMETHOD)
       QVariant *ptr = new QVariant(obj->invokeMethod((QAccessible::Method)hb_parni(1), OPINT(2, 0), par3));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -231,17 +211,13 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_ISVALID)
 {
   QAccessibleInterface *obj = static_cast<QAccessibleInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -253,18 +229,14 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_OBJECT)
 {
   QAccessibleInterface *obj = static_cast<QAccessibleInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QObject *ptr = obj->object();
       Qt4xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -276,8 +248,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_RECT)
 {
   QAccessibleInterface *obj = static_cast<QAccessibleInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -285,9 +256,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_RECT)
       QRect *ptr = new QRect(obj->rect(PINT(1)));
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -299,17 +268,14 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_RELATIONTO)
 {
   QAccessibleInterface *obj = static_cast<QAccessibleInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && ISQACCESSIBLEINTERFACE(2) && HB_ISNUM(3))
     {
 #endif
       RENUM(obj->relationTo(PINT(1), PQACCESSIBLEINTERFACE(2), PINT(3)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -321,17 +287,14 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_ROLE)
 {
   QAccessibleInterface *obj = static_cast<QAccessibleInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       RENUM(obj->role(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -343,17 +306,14 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_SETTEXT)
 {
   QAccessibleInterface *obj = static_cast<QAccessibleInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3))
     {
 #endif
       obj->setText((QAccessible::Text)hb_parni(1), PINT(2), PQSTRING(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -367,17 +327,14 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_STATE)
 {
   QAccessibleInterface *obj = static_cast<QAccessibleInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       RENUM(obj->state(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -389,17 +346,14 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_TEXT)
 {
   QAccessibleInterface *obj = static_cast<QAccessibleInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
       RQSTRING(obj->text((QAccessible::Text)hb_parni(1), PINT(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -411,17 +365,14 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_USERACTIONCOUNT)
 {
   QAccessibleInterface *obj = static_cast<QAccessibleInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       RINT(obj->userActionCount(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

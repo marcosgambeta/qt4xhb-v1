@@ -55,8 +55,7 @@ RETURN
 
 HB_FUNC_STATIC(QPRINTERINFO_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     // QPrinterInfo()
     QPrinterInfo *obj = new QPrinterInfo();
     Qt4xHb::returnNewObject(obj, true);
@@ -72,9 +71,7 @@ HB_FUNC_STATIC(QPRINTERINFO_NEW)
     // QPrinterInfo(const QPrinter &printer)
     QPrinterInfo *obj = new QPrinterInfo(*PQPRINTER(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -83,8 +80,7 @@ HB_FUNC_STATIC(QPRINTERINFO_DELETE)
 {
   QPrinterInfo *obj = static_cast<QPrinterInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -100,17 +96,13 @@ HB_FUNC_STATIC(QPRINTERINFO_ISDEFAULT)
 {
   QPrinterInfo *obj = static_cast<QPrinterInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isDefault());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -122,17 +114,13 @@ HB_FUNC_STATIC(QPRINTERINFO_ISNULL)
 {
   QPrinterInfo *obj = static_cast<QPrinterInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -144,17 +132,13 @@ HB_FUNC_STATIC(QPRINTERINFO_PRINTERNAME)
 {
   QPrinterInfo *obj = static_cast<QPrinterInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->printerName());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -166,11 +150,9 @@ HB_FUNC_STATIC(QPRINTERINFO_SUPPORTEDPAPERSIZES)
 {
   QPrinterInfo *obj = static_cast<QPrinterInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QList<QPrinter::PaperSize> list = obj->supportedPaperSizes();
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -183,9 +165,7 @@ HB_FUNC_STATIC(QPRINTERINFO_SUPPORTEDPAPERSIZES)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -197,11 +177,9 @@ HB_FUNC_STATIC(QPRINTERINFO_AVAILABLEPRINTERS)
 {
   QPrinterInfo *obj = static_cast<QPrinterInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QList<QPrinterInfo> list = obj->availablePrinters();
       PHB_DYNS pDynSym = hb_dynsymFindName("QPRINTERINFO");
@@ -232,9 +210,7 @@ HB_FUNC_STATIC(QPRINTERINFO_AVAILABLEPRINTERS)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -245,15 +221,12 @@ HB_FUNC_STATIC(QPRINTERINFO_AVAILABLEPRINTERS)
 HB_FUNC_STATIC(QPRINTERINFO_DEFAULTPRINTER)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     QPrinterInfo *ptr = new QPrinterInfo(QPrinterInfo::defaultPrinter());
     Qt4xHb::createReturnClass(ptr, "QPRINTERINFO", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -280,9 +253,7 @@ HB_FUNC_STATIC(QPRINTERINFO_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -313,9 +284,7 @@ HB_FUNC_STATIC(QPRINTERINFO_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

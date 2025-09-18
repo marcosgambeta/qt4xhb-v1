@@ -22,8 +22,7 @@ void QAbstractItemDelegateSlots::closeEditor(QWidget *editor, QAbstractItemDeleg
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTITEMDELEGATE");
     PHB_ITEM pEditor = Qt4xHb::Signals_return_qobject(editor, "QWIDGET");
     PHB_ITEM pHint = hb_itemPutNI(NULL, static_cast<int>(hint));
@@ -42,8 +41,7 @@ void QAbstractItemDelegateSlots::commitData(QWidget *editor)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "commitData(QWidget*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTITEMDELEGATE");
     PHB_ITEM pEditor = Qt4xHb::Signals_return_qobject(editor, "QWIDGET");
 
@@ -60,8 +58,7 @@ void QAbstractItemDelegateSlots::sizeHintChanged(const QModelIndex &index)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "sizeHintChanged(QModelIndex)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTITEMDELEGATE");
     PHB_ITEM pIndex = Qt4xHb::Signals_return_object((void *)&index, "QMODELINDEX");
 
@@ -76,21 +73,17 @@ void QAbstractItemDelegateSlots_connect_signal(const QString &signal, const QStr
 {
   QAbstractItemDelegate *obj = qobject_cast<QAbstractItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QAbstractItemDelegateSlots *s = QCoreApplication::instance()->findChild<QAbstractItemDelegateSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QAbstractItemDelegateSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

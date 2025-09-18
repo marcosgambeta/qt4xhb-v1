@@ -75,9 +75,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_NEW)
   {
     QGraphicsItemAnimation *obj = new QGraphicsItemAnimation(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -86,8 +84,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_DELETE)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -105,17 +102,13 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_CLEAR)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -129,17 +122,14 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_HORIZONTALSCALEAT)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       RQREAL(obj->horizontalScaleAt(PQREAL(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -151,17 +141,14 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_HORIZONTALSHEARAT)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       RQREAL(obj->horizontalShearAt(PQREAL(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -173,18 +160,14 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_ITEM)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QGraphicsItem *ptr = obj->item();
       Qt4xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -196,8 +179,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_MATRIXAT)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -205,9 +187,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_MATRIXAT)
       QMatrix *ptr = new QMatrix(obj->matrixAt(PQREAL(1)));
       Qt4xHb::createReturnClass(ptr, "QMATRIX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -219,8 +199,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_POSAT)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -228,9 +207,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_POSAT)
       QPointF *ptr = new QPointF(obj->posAt(PQREAL(1)));
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -242,17 +219,14 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_ROTATIONAT)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       RQREAL(obj->rotationAt(PQREAL(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -264,17 +238,14 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETITEM)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQGRAPHICSITEM(1))
     {
 #endif
       obj->setItem(PQGRAPHICSITEM(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -288,17 +259,14 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETPOSAT)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPOINTF(2))
     {
 #endif
       obj->setPosAt(PQREAL(1), *PQPOINTF(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -312,17 +280,14 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETROTATIONAT)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
       obj->setRotationAt(PQREAL(1), PQREAL(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -336,17 +301,14 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETSCALEAT)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
 #endif
       obj->setScaleAt(PQREAL(1), PQREAL(2), PQREAL(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -360,17 +322,14 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETSHEARAT)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
 #endif
       obj->setShearAt(PQREAL(1), PQREAL(2), PQREAL(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -384,17 +343,14 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETTIMELINE)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTIMELINE(1))
     {
 #endif
       obj->setTimeLine(PQTIMELINE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -408,17 +364,14 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETTRANSLATIONAT)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
 #endif
       obj->setTranslationAt(PQREAL(1), PQREAL(2), PQREAL(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -432,18 +385,14 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_TIMELINE)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QTimeLine *ptr = obj->timeLine();
       Qt4xHb::createReturnQObjectClass(ptr, "QTIMELINE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -455,17 +404,14 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_VERTICALSCALEAT)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       RQREAL(obj->verticalScaleAt(PQREAL(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -477,17 +423,14 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_VERTICALSHEARAT)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       RQREAL(obj->verticalShearAt(PQREAL(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -499,17 +442,14 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_XTRANSLATIONAT)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       RQREAL(obj->xTranslationAt(PQREAL(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -521,17 +461,14 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_YTRANSLATIONAT)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       RQREAL(obj->yTranslationAt(PQREAL(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -543,17 +480,14 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETSTEP)
 {
   QGraphicsItemAnimation *obj = qobject_cast<QGraphicsItemAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setStep(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

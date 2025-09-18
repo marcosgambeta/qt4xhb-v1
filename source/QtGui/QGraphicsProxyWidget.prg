@@ -58,9 +58,7 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_NEW)
         new QGraphicsProxyWidget(HB_ISNIL(1) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(1)),
                                  HB_ISNIL(2) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(2));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -69,8 +67,7 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_DELETE)
 {
   QGraphicsProxyWidget *obj = qobject_cast<QGraphicsProxyWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -88,8 +85,7 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_CREATEPROXYFORCHILDWIDGET)
 {
   QGraphicsProxyWidget *obj = qobject_cast<QGraphicsProxyWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQWIDGET(1))
     {
@@ -97,9 +93,7 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_CREATEPROXYFORCHILDWIDGET)
       QGraphicsProxyWidget *ptr = obj->createProxyForChildWidget(PQWIDGET(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QGRAPHICSPROXYWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -111,17 +105,14 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_SETWIDGET)
 {
   QGraphicsProxyWidget *obj = qobject_cast<QGraphicsProxyWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQWIDGET(1))
     {
 #endif
       obj->setWidget(PQWIDGET(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -135,8 +126,7 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_SUBWIDGETRECT)
 {
   QGraphicsProxyWidget *obj = qobject_cast<QGraphicsProxyWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQWIDGET(1))
     {
@@ -144,9 +134,7 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_SUBWIDGETRECT)
       QRectF *ptr = new QRectF(obj->subWidgetRect(PQWIDGET(1)));
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -158,18 +146,14 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_WIDGET)
 {
   QGraphicsProxyWidget *obj = qobject_cast<QGraphicsProxyWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QWidget *ptr = obj->widget();
       Qt4xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -181,17 +165,14 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_PAINT)
 {
   QGraphicsProxyWidget *obj = qobject_cast<QGraphicsProxyWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ISQWIDGET(3))
     {
 #endif
       obj->paint(PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), PQWIDGET(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -205,17 +186,14 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_SETGEOMETRY)
 {
   QGraphicsProxyWidget *obj = qobject_cast<QGraphicsProxyWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQRECTF(1))
     {
 #endif
       obj->setGeometry(*PQRECTF(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -229,17 +207,13 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_TYPE)
 {
   QGraphicsProxyWidget *obj = qobject_cast<QGraphicsProxyWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->type());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

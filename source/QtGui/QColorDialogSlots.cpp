@@ -22,8 +22,7 @@ void QColorDialogSlots::colorSelected(const QColor &color)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "colorSelected(QColor)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QCOLORDIALOG");
     PHB_ITEM pColor = Qt4xHb::Signals_return_object((void *)&color, "QCOLOR");
 
@@ -40,8 +39,7 @@ void QColorDialogSlots::currentColorChanged(const QColor &color)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "currentColorChanged(QColor)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QCOLORDIALOG");
     PHB_ITEM pColor = Qt4xHb::Signals_return_object((void *)&color, "QCOLOR");
 
@@ -56,21 +54,17 @@ void QColorDialogSlots_connect_signal(const QString &signal, const QString &slot
 {
   QColorDialog *obj = qobject_cast<QColorDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QColorDialogSlots *s = QCoreApplication::instance()->findChild<QColorDialogSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QColorDialogSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

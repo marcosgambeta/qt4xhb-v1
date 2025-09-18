@@ -22,8 +22,7 @@ void QMainWindowSlots::iconSizeChanged(const QSize &iconSize)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "iconSizeChanged(QSize)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QMAINWINDOW");
     PHB_ITEM pIconSize = Qt4xHb::Signals_return_object((void *)&iconSize, "QSIZE");
 
@@ -40,8 +39,7 @@ void QMainWindowSlots::toolButtonStyleChanged(Qt::ToolButtonStyle toolButtonStyl
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "toolButtonStyleChanged(Qt::ToolButtonStyle)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QMAINWINDOW");
     PHB_ITEM pToolButtonStyle = hb_itemPutNI(NULL, static_cast<int>(toolButtonStyle));
 
@@ -56,21 +54,17 @@ void QMainWindowSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QMainWindowSlots *s = QCoreApplication::instance()->findChild<QMainWindowSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QMainWindowSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

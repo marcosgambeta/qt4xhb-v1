@@ -22,8 +22,7 @@ void QDialogButtonBoxSlots::accepted()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "accepted()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QDIALOGBUTTONBOX");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -38,8 +37,7 @@ void QDialogButtonBoxSlots::clicked(QAbstractButton *button)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "clicked(QAbstractButton*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QDIALOGBUTTONBOX");
     PHB_ITEM pButton = Qt4xHb::Signals_return_qobject(button, "QABSTRACTBUTTON");
 
@@ -56,8 +54,7 @@ void QDialogButtonBoxSlots::helpRequested()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "helpRequested()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QDIALOGBUTTONBOX");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -72,8 +69,7 @@ void QDialogButtonBoxSlots::rejected()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "rejected()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QDIALOGBUTTONBOX");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -86,21 +82,17 @@ void QDialogButtonBoxSlots_connect_signal(const QString &signal, const QString &
 {
   QDialogButtonBox *obj = qobject_cast<QDialogButtonBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QDialogButtonBoxSlots *s = QCoreApplication::instance()->findChild<QDialogButtonBoxSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QDialogButtonBoxSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

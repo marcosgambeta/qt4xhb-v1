@@ -48,8 +48,7 @@ HB_FUNC_STATIC(QVALIDATOR_DELETE)
 {
   QValidator *obj = qobject_cast<QValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -67,8 +66,7 @@ HB_FUNC_STATIC(QVALIDATOR_FIXUP)
 {
   QValidator *obj = qobject_cast<QValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -77,9 +75,7 @@ HB_FUNC_STATIC(QVALIDATOR_FIXUP)
       obj->fixup(par1);
       hb_storc(QSTRINGTOSTRING(par1), 1);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -93,18 +89,14 @@ HB_FUNC_STATIC(QVALIDATOR_LOCALE)
 {
   QValidator *obj = qobject_cast<QValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QLocale *ptr = new QLocale(obj->locale());
       Qt4xHb::createReturnClass(ptr, "QLOCALE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -116,17 +108,14 @@ HB_FUNC_STATIC(QVALIDATOR_SETLOCALE)
 {
   QValidator *obj = qobject_cast<QValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQLOCALE(1))
     {
 #endif
       obj->setLocale(*PQLOCALE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -140,8 +129,7 @@ HB_FUNC_STATIC(QVALIDATOR_VALIDATE)
 {
   QValidator *obj = qobject_cast<QValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
@@ -152,9 +140,7 @@ HB_FUNC_STATIC(QVALIDATOR_VALIDATE)
       hb_storc(QSTRINGTOSTRING(par1), 1);
       hb_storni(par2, 2);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

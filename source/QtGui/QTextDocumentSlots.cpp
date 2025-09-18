@@ -22,8 +22,7 @@ void QTextDocumentSlots::blockCountChanged(int newBlockCount)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "blockCountChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTEXTDOCUMENT");
     PHB_ITEM pNewBlockCount = hb_itemPutNI(NULL, newBlockCount);
 
@@ -40,8 +39,7 @@ void QTextDocumentSlots::contentsChange(int position, int charsRemoved, int char
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "contentsChange(int,int,int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTEXTDOCUMENT");
     PHB_ITEM pPosition = hb_itemPutNI(NULL, position);
     PHB_ITEM pCharsRemoved = hb_itemPutNI(NULL, charsRemoved);
@@ -62,8 +60,7 @@ void QTextDocumentSlots::contentsChanged()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "contentsChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTEXTDOCUMENT");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -78,8 +75,7 @@ void QTextDocumentSlots::cursorPositionChanged(const QTextCursor &cursor)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "cursorPositionChanged(QTextCursor)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTEXTDOCUMENT");
     PHB_ITEM pCursor = Qt4xHb::Signals_return_object((void *)&cursor, "QTEXTCURSOR");
 
@@ -96,8 +92,7 @@ void QTextDocumentSlots::documentLayoutChanged()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "documentLayoutChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTEXTDOCUMENT");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -112,8 +107,7 @@ void QTextDocumentSlots::modificationChanged(bool changed)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "modificationChanged(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTEXTDOCUMENT");
     PHB_ITEM pChanged = hb_itemPutL(NULL, changed);
 
@@ -130,8 +124,7 @@ void QTextDocumentSlots::redoAvailable(bool available)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "redoAvailable(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTEXTDOCUMENT");
     PHB_ITEM pAvailable = hb_itemPutL(NULL, available);
 
@@ -148,8 +141,7 @@ void QTextDocumentSlots::undoAvailable(bool available)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "undoAvailable(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTEXTDOCUMENT");
     PHB_ITEM pAvailable = hb_itemPutL(NULL, available);
 
@@ -166,8 +158,7 @@ void QTextDocumentSlots::undoCommandAdded()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "undoCommandAdded()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTEXTDOCUMENT");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -180,21 +171,17 @@ void QTextDocumentSlots_connect_signal(const QString &signal, const QString &slo
 {
   QTextDocument *obj = qobject_cast<QTextDocument *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QTextDocumentSlots *s = QCoreApplication::instance()->findChild<QTextDocumentSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QTextDocumentSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

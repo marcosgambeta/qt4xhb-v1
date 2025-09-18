@@ -75,13 +75,10 @@ RETURN
     // QFontDatabase()
 HB_FUNC_STATIC(QFONTDATABASE_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     QFontDatabase *obj = new QFontDatabase();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -91,17 +88,14 @@ HB_FUNC_STATIC(QFONTDATABASE_BOLD)
 {
   QFontDatabase *obj = static_cast<QFontDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
 #endif
       RBOOL(obj->bold(PQSTRING(1), PQSTRING(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -113,8 +107,7 @@ HB_FUNC_STATIC(QFONTDATABASE_FAMILIES)
 {
   QFontDatabase *obj = static_cast<QFontDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
@@ -122,9 +115,7 @@ HB_FUNC_STATIC(QFONTDATABASE_FAMILIES)
       RQSTRINGLIST(obj->families(HB_ISNIL(1) ? (QFontDatabase::WritingSystem)QFontDatabase::Any
                                              : (QFontDatabase::WritingSystem)hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -136,8 +127,7 @@ HB_FUNC_STATIC(QFONTDATABASE_FONT)
 {
   QFontDatabase *obj = static_cast<QFontDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3))
     {
@@ -145,9 +135,7 @@ HB_FUNC_STATIC(QFONTDATABASE_FONT)
       QFont *ptr = new QFont(obj->font(PQSTRING(1), PQSTRING(2), PINT(3)));
       Qt4xHb::createReturnClass(ptr, "QFONT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -159,17 +147,14 @@ HB_FUNC_STATIC(QFONTDATABASE_ISBITMAPSCALABLE)
 {
   QFontDatabase *obj = static_cast<QFontDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
     {
 #endif
       RBOOL(obj->isBitmapScalable(PQSTRING(1), OPQSTRING(2, QString())));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -181,17 +166,14 @@ HB_FUNC_STATIC(QFONTDATABASE_ISFIXEDPITCH)
 {
   QFontDatabase *obj = static_cast<QFontDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
     {
 #endif
       RBOOL(obj->isFixedPitch(PQSTRING(1), OPQSTRING(2, QString())));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -203,17 +185,14 @@ HB_FUNC_STATIC(QFONTDATABASE_ISSCALABLE)
 {
   QFontDatabase *obj = static_cast<QFontDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
     {
 #endif
       RBOOL(obj->isScalable(PQSTRING(1), OPQSTRING(2, QString())));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -225,17 +204,14 @@ HB_FUNC_STATIC(QFONTDATABASE_ISSMOOTHLYSCALABLE)
 {
   QFontDatabase *obj = static_cast<QFontDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
     {
 #endif
       RBOOL(obj->isSmoothlyScalable(PQSTRING(1), OPQSTRING(2, QString())));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -247,17 +223,14 @@ HB_FUNC_STATIC(QFONTDATABASE_ITALIC)
 {
   QFontDatabase *obj = static_cast<QFontDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
 #endif
       RBOOL(obj->italic(PQSTRING(1), PQSTRING(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -269,8 +242,7 @@ HB_FUNC_STATIC(QFONTDATABASE_POINTSIZES)
 {
   QFontDatabase *obj = static_cast<QFontDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
     {
@@ -278,9 +250,7 @@ HB_FUNC_STATIC(QFONTDATABASE_POINTSIZES)
       QList<int> list = obj->pointSizes(PQSTRING(1), OPQSTRING(2, QString()));
       Qt4xHb::convert_qlist_int_to_array(list);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -292,8 +262,7 @@ HB_FUNC_STATIC(QFONTDATABASE_SMOOTHSIZES)
 {
   QFontDatabase *obj = static_cast<QFontDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
@@ -301,9 +270,7 @@ HB_FUNC_STATIC(QFONTDATABASE_SMOOTHSIZES)
       QList<int> list = obj->smoothSizes(PQSTRING(1), PQSTRING(2));
       Qt4xHb::convert_qlist_int_to_array(list);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -331,9 +298,7 @@ HB_FUNC_STATIC(QFONTDATABASE_STYLESTRING)
     {
       RQSTRING(obj->styleString(*PQFONTINFO(1)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -343,17 +308,14 @@ HB_FUNC_STATIC(QFONTDATABASE_STYLES)
 {
   QFontDatabase *obj = static_cast<QFontDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       RQSTRINGLIST(obj->styles(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -365,17 +327,14 @@ HB_FUNC_STATIC(QFONTDATABASE_WEIGHT)
 {
   QFontDatabase *obj = static_cast<QFontDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
 #endif
       RINT(obj->weight(PQSTRING(1), PQSTRING(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -384,8 +343,7 @@ HB_FUNC_STATIC(QFONTDATABASE_WEIGHT)
 
 HB_FUNC_STATIC(QFONTDATABASE_WRITINGSYSTEMS)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     // QList<QFontDatabase::WritingSystem> writingSystems() const
     QFontDatabase *obj = static_cast<QFontDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -421,9 +379,7 @@ HB_FUNC_STATIC(QFONTDATABASE_WRITINGSYSTEMS)
       }
       hb_itemReturnRelease(pArray);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -437,9 +393,7 @@ HB_FUNC_STATIC(QFONTDATABASE_ADDAPPLICATIONFONT)
 #endif
     RINT(QFontDatabase::addApplicationFont(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -454,9 +408,7 @@ HB_FUNC_STATIC(QFONTDATABASE_ADDAPPLICATIONFONTFROMDATA)
 #endif
     RINT(QFontDatabase::addApplicationFontFromData(*PQBYTEARRAY(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -471,9 +423,7 @@ HB_FUNC_STATIC(QFONTDATABASE_APPLICATIONFONTFAMILIES)
 #endif
     RQSTRINGLIST(QFontDatabase::applicationFontFamilies(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -483,14 +433,11 @@ HB_FUNC_STATIC(QFONTDATABASE_APPLICATIONFONTFAMILIES)
 HB_FUNC_STATIC(QFONTDATABASE_REMOVEALLAPPLICATIONFONTS)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QFontDatabase::removeAllApplicationFonts());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -505,9 +452,7 @@ HB_FUNC_STATIC(QFONTDATABASE_REMOVEAPPLICATIONFONT)
 #endif
     RBOOL(QFontDatabase::removeApplicationFont(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -517,15 +462,12 @@ HB_FUNC_STATIC(QFONTDATABASE_REMOVEAPPLICATIONFONT)
 HB_FUNC_STATIC(QFONTDATABASE_STANDARDSIZES)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     QList<int> list = QFontDatabase::standardSizes();
     Qt4xHb::convert_qlist_int_to_array(list);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -535,14 +477,11 @@ HB_FUNC_STATIC(QFONTDATABASE_STANDARDSIZES)
 HB_FUNC_STATIC(QFONTDATABASE_SUPPORTSTHREADEDFONTRENDERING)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QFontDatabase::supportsThreadedFontRendering());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -557,9 +496,7 @@ HB_FUNC_STATIC(QFONTDATABASE_WRITINGSYSTEMNAME)
 #endif
     RQSTRING(QFontDatabase::writingSystemName((QFontDatabase::WritingSystem)hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -574,9 +511,7 @@ HB_FUNC_STATIC(QFONTDATABASE_WRITINGSYSTEMSAMPLE)
 #endif
     RQSTRING(QFontDatabase::writingSystemSample((QFontDatabase::WritingSystem)hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -603,9 +538,7 @@ HB_FUNC_STATIC(QFONTDATABASE_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -636,9 +569,7 @@ HB_FUNC_STATIC(QFONTDATABASE_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

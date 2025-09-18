@@ -22,8 +22,7 @@ void QGraphicsScaleSlots::originChanged()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "originChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QGRAPHICSSCALE");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -38,8 +37,7 @@ void QGraphicsScaleSlots::scaleChanged()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "scaleChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QGRAPHICSSCALE");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -54,8 +52,7 @@ void QGraphicsScaleSlots::xScaleChanged()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "xScaleChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QGRAPHICSSCALE");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -70,8 +67,7 @@ void QGraphicsScaleSlots::yScaleChanged()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "yScaleChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QGRAPHICSSCALE");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -86,8 +82,7 @@ void QGraphicsScaleSlots::zScaleChanged()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "zScaleChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QGRAPHICSSCALE");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -100,21 +95,17 @@ void QGraphicsScaleSlots_connect_signal(const QString &signal, const QString &sl
 {
   QGraphicsScale *obj = qobject_cast<QGraphicsScale *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QGraphicsScaleSlots *s = QCoreApplication::instance()->findChild<QGraphicsScaleSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QGraphicsScaleSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

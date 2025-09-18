@@ -93,8 +93,7 @@ RETURN
 
 HB_FUNC_STATIC(QPAINTERPATH_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     // QPainterPath()
     QPainterPath *obj = new QPainterPath();
     Qt4xHb::returnNewObject(obj, true);
@@ -110,9 +109,7 @@ HB_FUNC_STATIC(QPAINTERPATH_NEW)
     // QPainterPath(const QPainterPath &path)
     QPainterPath *obj = new QPainterPath(*PQPAINTERPATH(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -121,8 +118,7 @@ HB_FUNC_STATIC(QPAINTERPATH_DELETE)
 {
   QPainterPath *obj = static_cast<QPainterPath *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -170,9 +166,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ADDELLIPSE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -182,17 +176,14 @@ HB_FUNC_STATIC(QPAINTERPATH_ADDPATH)
 {
   QPainterPath *obj = static_cast<QPainterPath *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPAINTERPATH(1))
     {
 #endif
       obj->addPath(*PQPAINTERPATH(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -206,17 +197,14 @@ HB_FUNC_STATIC(QPAINTERPATH_ADDPOLYGON)
 {
   QPainterPath *obj = static_cast<QPainterPath *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOLYGONF(1))
     {
 #endif
       obj->addPolygon(*PQPOLYGONF(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -250,9 +238,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ADDRECT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -262,17 +248,14 @@ HB_FUNC_STATIC(QPAINTERPATH_ADDREGION)
 {
   QPainterPath *obj = static_cast<QPainterPath *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQREGION(1))
     {
 #endif
       obj->addRegion(*PQREGION(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -310,9 +293,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ADDROUNDEDRECT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -342,9 +323,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ADDTEXT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -354,17 +333,14 @@ HB_FUNC_STATIC(QPAINTERPATH_ANGLEATPERCENT)
 {
   QPainterPath *obj = static_cast<QPainterPath *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       RQREAL(obj->angleAtPercent(PQREAL(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -396,9 +372,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ARCMOVETO)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -428,9 +402,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ARCTO)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -440,18 +412,14 @@ HB_FUNC_STATIC(QPAINTERPATH_BOUNDINGRECT)
 {
   QPainterPath *obj = static_cast<QPainterPath *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QRectF *ptr = new QRectF(obj->boundingRect());
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -463,17 +431,13 @@ HB_FUNC_STATIC(QPAINTERPATH_CLOSESUBPATH)
 {
   QPainterPath *obj = static_cast<QPainterPath *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->closeSubpath();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -487,17 +451,14 @@ HB_FUNC_STATIC(QPAINTERPATH_CONNECTPATH)
 {
   QPainterPath *obj = static_cast<QPainterPath *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPAINTERPATH(1))
     {
 #endif
       obj->connectPath(*PQPAINTERPATH(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -537,9 +498,7 @@ HB_FUNC_STATIC(QPAINTERPATH_CONTAINS)
     {
       RBOOL(obj->contains(*PQPAINTERPATH(1)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -549,18 +508,14 @@ HB_FUNC_STATIC(QPAINTERPATH_CONTROLPOINTRECT)
 {
   QPainterPath *obj = static_cast<QPainterPath *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QRectF *ptr = new QRectF(obj->controlPointRect());
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -592,9 +547,7 @@ HB_FUNC_STATIC(QPAINTERPATH_CUBICTO)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -604,18 +557,14 @@ HB_FUNC_STATIC(QPAINTERPATH_CURRENTPOSITION)
 {
   QPainterPath *obj = static_cast<QPainterPath *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPointF *ptr = new QPointF(obj->currentPosition());
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -627,17 +576,13 @@ HB_FUNC_STATIC(QPAINTERPATH_ELEMENTCOUNT)
 {
   QPainterPath *obj = static_cast<QPainterPath *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->elementCount());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -649,17 +594,13 @@ HB_FUNC_STATIC(QPAINTERPATH_FILLRULE)
 {
   QPainterPath *obj = static_cast<QPainterPath *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->fillRule());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -671,8 +612,7 @@ HB_FUNC_STATIC(QPAINTERPATH_INTERSECTED)
 {
   QPainterPath *obj = static_cast<QPainterPath *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPAINTERPATH(1))
     {
@@ -680,9 +620,7 @@ HB_FUNC_STATIC(QPAINTERPATH_INTERSECTED)
       QPainterPath *ptr = new QPainterPath(obj->intersected(*PQPAINTERPATH(1)));
       Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -710,9 +648,7 @@ HB_FUNC_STATIC(QPAINTERPATH_INTERSECTS)
     {
       RBOOL(obj->intersects(*PQPAINTERPATH(1)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -722,17 +658,13 @@ HB_FUNC_STATIC(QPAINTERPATH_ISEMPTY)
 {
   QPainterPath *obj = static_cast<QPainterPath *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEmpty());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -744,17 +676,13 @@ HB_FUNC_STATIC(QPAINTERPATH_LENGTH)
 {
   QPainterPath *obj = static_cast<QPainterPath *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->length());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -786,9 +714,7 @@ HB_FUNC_STATIC(QPAINTERPATH_LINETO)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -818,9 +744,7 @@ HB_FUNC_STATIC(QPAINTERPATH_MOVETO)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -830,17 +754,14 @@ HB_FUNC_STATIC(QPAINTERPATH_PERCENTATLENGTH)
 {
   QPainterPath *obj = static_cast<QPainterPath *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       RQREAL(obj->percentAtLength(PQREAL(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -852,8 +773,7 @@ HB_FUNC_STATIC(QPAINTERPATH_POINTATPERCENT)
 {
   QPainterPath *obj = static_cast<QPainterPath *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -861,9 +781,7 @@ HB_FUNC_STATIC(QPAINTERPATH_POINTATPERCENT)
       QPointF *ptr = new QPointF(obj->pointAtPercent(PQREAL(1)));
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -895,9 +813,7 @@ HB_FUNC_STATIC(QPAINTERPATH_QUADTO)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -907,17 +823,14 @@ HB_FUNC_STATIC(QPAINTERPATH_SETELEMENTPOSITIONAT)
 {
   QPainterPath *obj = static_cast<QPainterPath *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
 #endif
       obj->setElementPositionAt(PINT(1), PQREAL(2), PQREAL(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -931,17 +844,14 @@ HB_FUNC_STATIC(QPAINTERPATH_SETFILLRULE)
 {
   QPainterPath *obj = static_cast<QPainterPath *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setFillRule((Qt::FillRule)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -955,18 +865,14 @@ HB_FUNC_STATIC(QPAINTERPATH_SIMPLIFIED)
 {
   QPainterPath *obj = static_cast<QPainterPath *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPainterPath *ptr = new QPainterPath(obj->simplified());
       Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -978,17 +884,14 @@ HB_FUNC_STATIC(QPAINTERPATH_SLOPEATPERCENT)
 {
   QPainterPath *obj = static_cast<QPainterPath *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       RQREAL(obj->slopeAtPercent(PQREAL(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1000,8 +903,7 @@ HB_FUNC_STATIC(QPAINTERPATH_SUBTRACTED)
 {
   QPainterPath *obj = static_cast<QPainterPath *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPAINTERPATH(1))
     {
@@ -1009,9 +911,7 @@ HB_FUNC_STATIC(QPAINTERPATH_SUBTRACTED)
       QPainterPath *ptr = new QPainterPath(obj->subtracted(*PQPAINTERPATH(1)));
       Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1023,17 +923,14 @@ HB_FUNC_STATIC(QPAINTERPATH_SWAP)
 {
   QPainterPath *obj = static_cast<QPainterPath *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPAINTERPATH(1))
     {
 #endif
       obj->swap(*PQPAINTERPATH(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1066,9 +963,7 @@ HB_FUNC_STATIC(QPAINTERPATH_TOFILLPOLYGON)
           new QPolygonF(obj->toFillPolygon(HB_ISNIL(1) ? QMatrix() : *static_cast<QMatrix *>(Qt4xHb::itemGetPtr(1))));
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1149,9 +1044,7 @@ HB_FUNC_STATIC(QPAINTERPATH_TOFILLPOLYGONS)
       }
       hb_itemReturnRelease(pArray);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1161,18 +1054,14 @@ HB_FUNC_STATIC(QPAINTERPATH_TOREVERSED)
 {
   QPainterPath *obj = static_cast<QPainterPath *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPainterPath *ptr = new QPainterPath(obj->toReversed());
       Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1255,9 +1144,7 @@ HB_FUNC_STATIC(QPAINTERPATH_TOSUBPATHPOLYGONS)
       }
       hb_itemReturnRelease(pArray);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1287,9 +1174,7 @@ HB_FUNC_STATIC(QPAINTERPATH_TRANSLATE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1317,9 +1202,7 @@ HB_FUNC_STATIC(QPAINTERPATH_TRANSLATED)
       QPainterPath *ptr = new QPainterPath(obj->translated(*PQPOINTF(1)));
       Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1329,8 +1212,7 @@ HB_FUNC_STATIC(QPAINTERPATH_UNITED)
 {
   QPainterPath *obj = static_cast<QPainterPath *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPAINTERPATH(1))
     {
@@ -1338,9 +1220,7 @@ HB_FUNC_STATIC(QPAINTERPATH_UNITED)
       QPainterPath *ptr = new QPainterPath(obj->united(*PQPAINTERPATH(1)));
       Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1368,9 +1248,7 @@ HB_FUNC_STATIC(QPAINTERPATH_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -1401,9 +1279,7 @@ HB_FUNC_STATIC(QPAINTERPATH_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

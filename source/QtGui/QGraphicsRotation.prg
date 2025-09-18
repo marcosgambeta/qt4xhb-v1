@@ -59,9 +59,7 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_NEW)
   {
     QGraphicsRotation *obj = new QGraphicsRotation(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -70,8 +68,7 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_DELETE)
 {
   QGraphicsRotation *obj = qobject_cast<QGraphicsRotation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -89,17 +86,13 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_ANGLE)
 {
   QGraphicsRotation *obj = qobject_cast<QGraphicsRotation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->angle());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -111,18 +104,14 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_AXIS)
 {
   QGraphicsRotation *obj = qobject_cast<QGraphicsRotation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QVector3D *ptr = new QVector3D(obj->axis());
       Qt4xHb::createReturnClass(ptr, "QVECTOR3D", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -134,18 +123,14 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_ORIGIN)
 {
   QGraphicsRotation *obj = qobject_cast<QGraphicsRotation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QVector3D *ptr = new QVector3D(obj->origin());
       Qt4xHb::createReturnClass(ptr, "QVECTOR3D", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -157,17 +142,14 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_SETANGLE)
 {
   QGraphicsRotation *obj = qobject_cast<QGraphicsRotation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setAngle(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -201,9 +183,7 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_SETAXIS)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -213,17 +193,14 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_SETORIGIN)
 {
   QGraphicsRotation *obj = qobject_cast<QGraphicsRotation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQVECTOR3D(1))
     {
 #endif
       obj->setOrigin(*PQVECTOR3D(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -237,17 +214,14 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_APPLYTO)
 {
   QGraphicsRotation *obj = qobject_cast<QGraphicsRotation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMATRIX4X4(1))
     {
 #endif
       obj->applyTo(PQMATRIX4X4(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

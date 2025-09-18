@@ -54,8 +54,7 @@ RETURN
 
 HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     // QTextDocumentFragment()
     QTextDocumentFragment *obj = new QTextDocumentFragment();
     Qt4xHb::returnNewObject(obj, true);
@@ -77,9 +76,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_NEW)
     // QTextDocumentFragment(const QTextDocumentFragment &other)
     QTextDocumentFragment *obj = new QTextDocumentFragment(*PQTEXTDOCUMENTFRAGMENT(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -88,8 +85,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_DELETE)
 {
   QTextDocumentFragment *obj = static_cast<QTextDocumentFragment *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -105,17 +101,13 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_ISEMPTY)
 {
   QTextDocumentFragment *obj = static_cast<QTextDocumentFragment *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEmpty());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -143,9 +135,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_TOHTML)
     {
       RQSTRING(obj->toHtml());
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -155,17 +145,13 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_TOPLAINTEXT)
 {
   QTextDocumentFragment *obj = static_cast<QTextDocumentFragment *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->toPlainText());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -188,9 +174,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_FROMHTML)
     QTextDocumentFragment *ptr =
         new QTextDocumentFragment(QTextDocumentFragment::fromHtml(PQSTRING(1), PQTEXTDOCUMENT(2)));
     Qt4xHb::createReturnClass(ptr, "QTEXTDOCUMENTFRAGMENT", true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -205,9 +189,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_FROMPLAINTEXT)
     QTextDocumentFragment *ptr = new QTextDocumentFragment(QTextDocumentFragment::fromPlainText(PQSTRING(1)));
     Qt4xHb::createReturnClass(ptr, "QTEXTDOCUMENTFRAGMENT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -234,9 +216,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -267,9 +247,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

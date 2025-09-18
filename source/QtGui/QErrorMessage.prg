@@ -49,9 +49,7 @@ HB_FUNC_STATIC(QERRORMESSAGE_NEW)
   {
     QErrorMessage *obj = new QErrorMessage(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -60,8 +58,7 @@ HB_FUNC_STATIC(QERRORMESSAGE_DELETE)
 {
   QErrorMessage *obj = qobject_cast<QErrorMessage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -99,9 +96,7 @@ HB_FUNC_STATIC(QERRORMESSAGE_SHOWMESSAGE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -111,18 +106,14 @@ HB_FUNC_STATIC(QERRORMESSAGE_QTHANDLER)
 {
   QErrorMessage *obj = qobject_cast<QErrorMessage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QErrorMessage *ptr = obj->qtHandler();
       Qt4xHb::createReturnQObjectClass(ptr, "QERRORMESSAGE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

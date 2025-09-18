@@ -47,8 +47,7 @@ HB_FUNC_STATIC(QIMAGEIOPLUGIN_DELETE)
 {
   QImageIOPlugin *obj = qobject_cast<QImageIOPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -66,17 +65,14 @@ HB_FUNC_STATIC(QIMAGEIOPLUGIN_CAPABILITIES)
 {
   QImageIOPlugin *obj = qobject_cast<QImageIOPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQIODEVICE(1) && ISQBYTEARRAY(2))
     {
 #endif
       RENUM(obj->capabilities(PQIODEVICE(1), *PQBYTEARRAY(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -88,8 +84,7 @@ HB_FUNC_STATIC(QIMAGEIOPLUGIN_CREATE)
 {
   QImageIOPlugin *obj = qobject_cast<QImageIOPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)))
     {
@@ -98,9 +93,7 @@ HB_FUNC_STATIC(QIMAGEIOPLUGIN_CREATE)
           obj->create(PQIODEVICE(1), HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(2)));
       Qt4xHb::createReturnClass(ptr, "QIMAGEIOHANDLER", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -112,17 +105,13 @@ HB_FUNC_STATIC(QIMAGEIOPLUGIN_KEYS)
 {
   QImageIOPlugin *obj = qobject_cast<QImageIOPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->keys());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

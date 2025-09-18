@@ -22,8 +22,7 @@ void QAbstractTextDocumentLayoutSlots::documentSizeChanged(const QSizeF &newSize
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "documentSizeChanged(QSizeF)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTTEXTDOCUMENTLAYOUT");
     PHB_ITEM pNewSize = Qt4xHb::Signals_return_object((void *)&newSize, "QSIZEF");
 
@@ -40,8 +39,7 @@ void QAbstractTextDocumentLayoutSlots::pageCountChanged(int newPages)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "pageCountChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTTEXTDOCUMENTLAYOUT");
     PHB_ITEM pNewPages = hb_itemPutNI(NULL, newPages);
 
@@ -58,8 +56,7 @@ void QAbstractTextDocumentLayoutSlots::update(const QRectF &rect)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "update(QRectF)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTTEXTDOCUMENTLAYOUT");
     PHB_ITEM pRect = Qt4xHb::Signals_return_object((void *)&rect, "QRECTF");
 
@@ -76,8 +73,7 @@ void QAbstractTextDocumentLayoutSlots::updateBlock(const QTextBlock &block)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "updateBlock(QTextBlock)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTTEXTDOCUMENTLAYOUT");
     PHB_ITEM pBlock = Qt4xHb::Signals_return_object((void *)&block, "QTEXTBLOCK");
 
@@ -93,21 +89,17 @@ void QAbstractTextDocumentLayoutSlots_connect_signal(const QString &signal, cons
   QAbstractTextDocumentLayout *obj =
       qobject_cast<QAbstractTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QAbstractTextDocumentLayoutSlots *s = QCoreApplication::instance()->findChild<QAbstractTextDocumentLayoutSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QAbstractTextDocumentLayoutSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

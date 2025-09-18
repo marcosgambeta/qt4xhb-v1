@@ -44,13 +44,10 @@ RETURN
     // QDecorationDefault()
 HB_FUNC_STATIC(QDECORATIONDEFAULT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     QDecorationDefault *obj = new QDecorationDefault();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -59,8 +56,7 @@ HB_FUNC_STATIC(QDECORATIONDEFAULT_DELETE)
 {
   QDecorationDefault *obj = static_cast<QDecorationDefault *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -77,8 +73,7 @@ HB_FUNC_STATIC(QDECORATIONDEFAULT_PAINT)
 {
   QDecorationDefault *obj = static_cast<QDecorationDefault *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 4) && ISQPAINTER(1) && ISQWIDGET(2) && (HB_ISNUM(3) || HB_ISNIL(3)) &&
         (HB_ISNUM(4) || HB_ISNIL(4)))
@@ -88,9 +83,7 @@ HB_FUNC_STATIC(QDECORATIONDEFAULT_PAINT)
                        HB_ISNIL(4) ? (QDecoration::DecorationState)QDecoration::Normal
                                    : (QDecoration::DecorationState)hb_parni(4)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -102,8 +95,7 @@ HB_FUNC_STATIC(QDECORATIONDEFAULT_REGION)
 {
   QDecorationDefault *obj = static_cast<QDecorationDefault *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && ISQWIDGET(1) && ISQRECT(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
@@ -111,9 +103,7 @@ HB_FUNC_STATIC(QDECORATIONDEFAULT_REGION)
       QRegion *ptr = new QRegion(obj->region(PQWIDGET(1), *PQRECT(2), OPINT(3, QDecoration::All)));
       Qt4xHb::createReturnClass(ptr, "QREGION", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

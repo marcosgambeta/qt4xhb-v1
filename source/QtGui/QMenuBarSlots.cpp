@@ -22,8 +22,7 @@ void QMenuBarSlots::hovered(QAction *action)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "hovered(QAction*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QMENUBAR");
     PHB_ITEM pAction = Qt4xHb::Signals_return_qobject(action, "QACTION");
 
@@ -40,8 +39,7 @@ void QMenuBarSlots::triggered(QAction *action)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "triggered(QAction*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QMENUBAR");
     PHB_ITEM pAction = Qt4xHb::Signals_return_qobject(action, "QACTION");
 
@@ -56,21 +54,17 @@ void QMenuBarSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QMenuBar *obj = qobject_cast<QMenuBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QMenuBarSlots *s = QCoreApplication::instance()->findChild<QMenuBarSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QMenuBarSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

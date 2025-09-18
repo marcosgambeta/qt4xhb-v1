@@ -58,8 +58,7 @@ HB_FUNC_STATIC(QGESTURERECOGNIZER_DELETE)
 {
   QGestureRecognizer *obj = static_cast<QGestureRecognizer *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -75,8 +74,7 @@ HB_FUNC_STATIC(QGESTURERECOGNIZER_CREATE)
 {
   QGestureRecognizer *obj = static_cast<QGestureRecognizer *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQOBJECT(1))
     {
@@ -84,9 +82,7 @@ HB_FUNC_STATIC(QGESTURERECOGNIZER_CREATE)
       QGesture *ptr = obj->create(PQOBJECT(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QGESTURE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -98,17 +94,14 @@ HB_FUNC_STATIC(QGESTURERECOGNIZER_RECOGNIZE)
 {
   QGestureRecognizer *obj = static_cast<QGestureRecognizer *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQGESTURE(1) && ISQOBJECT(2) && ISQEVENT(3))
     {
 #endif
       RENUM(obj->recognize(PQGESTURE(1), PQOBJECT(2), PQEVENT(3)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -120,17 +113,14 @@ HB_FUNC_STATIC(QGESTURERECOGNIZER_RESET)
 {
   QGestureRecognizer *obj = static_cast<QGestureRecognizer *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQGESTURE(1))
     {
 #endif
       obj->reset(PQGESTURE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -148,9 +138,7 @@ HB_FUNC_STATIC(QGESTURERECOGNIZER_REGISTERRECOGNIZER)
 #endif
     RENUM(QGestureRecognizer::registerRecognizer(PQGESTURERECOGNIZER(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -165,9 +153,7 @@ HB_FUNC_STATIC(QGESTURERECOGNIZER_UNREGISTERRECOGNIZER)
 #endif
     QGestureRecognizer::unregisterRecognizer((Qt::GestureType)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -196,9 +182,7 @@ HB_FUNC_STATIC(QGESTURERECOGNIZER_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -229,9 +213,7 @@ HB_FUNC_STATIC(QGESTURERECOGNIZER_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

@@ -22,8 +22,7 @@ void QPrintPreviewDialogSlots::paintRequested(QPrinter *printer)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "paintRequested(QPrinter*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QPRINTPREVIEWDIALOG");
     PHB_ITEM pPrinter = Qt4xHb::Signals_return_object((void *)printer, "QPRINTER");
 
@@ -38,21 +37,17 @@ void QPrintPreviewDialogSlots_connect_signal(const QString &signal, const QStrin
 {
   QPrintPreviewDialog *obj = qobject_cast<QPrintPreviewDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QPrintPreviewDialogSlots *s = QCoreApplication::instance()->findChild<QPrintPreviewDialogSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QPrintPreviewDialogSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

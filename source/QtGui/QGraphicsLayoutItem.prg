@@ -76,8 +76,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_DELETE)
 {
   QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -93,18 +92,14 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_CONTENTSRECT)
 {
   QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QRectF *ptr = new QRectF(obj->contentsRect());
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -116,8 +111,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_EFFECTIVESIZEHINT)
 {
   QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQSIZEF(2) || HB_ISNIL(2)))
     {
@@ -126,9 +120,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_EFFECTIVESIZEHINT)
           (Qt::SizeHint)hb_parni(1), HB_ISNIL(2) ? QSizeF() : *static_cast<QSizeF *>(Qt4xHb::itemGetPtr(2))));
       Qt4xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -140,18 +132,14 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_GEOMETRY)
 {
   QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QRectF *ptr = new QRectF(obj->geometry());
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -163,8 +151,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_GETCONTENTSMARGINS)
 {
   QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
     {
@@ -179,9 +166,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_GETCONTENTSMARGINS)
       hb_stornd(par3, 3);
       hb_stornd(par4, 4);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -195,18 +180,14 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_GRAPHICSITEM)
 {
   QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QGraphicsItem *ptr = obj->graphicsItem();
       Qt4xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -218,17 +199,13 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_ISLAYOUT)
 {
   QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isLayout());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -240,17 +217,13 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_MAXIMUMHEIGHT)
 {
   QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->maximumHeight());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -262,18 +235,14 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_MAXIMUMSIZE)
 {
   QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSizeF *ptr = new QSizeF(obj->maximumSize());
       Qt4xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -285,17 +254,13 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_MAXIMUMWIDTH)
 {
   QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->maximumWidth());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -307,17 +272,13 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_MINIMUMHEIGHT)
 {
   QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->minimumHeight());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -329,18 +290,14 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_MINIMUMSIZE)
 {
   QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSizeF *ptr = new QSizeF(obj->minimumSize());
       Qt4xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -352,17 +309,13 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_MINIMUMWIDTH)
 {
   QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->minimumWidth());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -374,17 +327,13 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_OWNEDBYLAYOUT)
 {
   QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->ownedByLayout());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -396,18 +345,14 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_PARENTLAYOUTITEM)
 {
   QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QGraphicsLayoutItem *ptr = obj->parentLayoutItem();
       Qt4xHb::createReturnClass(ptr, "QGRAPHICSLAYOUTITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -419,17 +364,13 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_PREFERREDHEIGHT)
 {
   QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->preferredHeight());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -441,18 +382,14 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_PREFERREDSIZE)
 {
   QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSizeF *ptr = new QSizeF(obj->preferredSize());
       Qt4xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -464,17 +401,13 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_PREFERREDWIDTH)
 {
   QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQREAL(obj->preferredWidth());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -486,17 +419,14 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETGEOMETRY)
 {
   QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQRECTF(1))
     {
 #endif
       obj->setGeometry(*PQRECTF(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -510,17 +440,14 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETMAXIMUMHEIGHT)
 {
   QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setMaximumHeight(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -554,9 +481,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETMAXIMUMSIZE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -566,17 +491,14 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETMAXIMUMWIDTH)
 {
   QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setMaximumWidth(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -590,17 +512,14 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETMINIMUMHEIGHT)
 {
   QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setMinimumHeight(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -634,9 +553,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETMINIMUMSIZE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -646,17 +563,14 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETMINIMUMWIDTH)
 {
   QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setMinimumWidth(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -670,17 +584,14 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETPARENTLAYOUTITEM)
 {
   QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQGRAPHICSLAYOUTITEM(1))
     {
 #endif
       obj->setParentLayoutItem(PQGRAPHICSLAYOUTITEM(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -694,17 +605,14 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETPREFERREDHEIGHT)
 {
   QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setPreferredHeight(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -738,9 +646,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETPREFERREDSIZE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -750,17 +656,14 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETPREFERREDWIDTH)
 {
   QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setPreferredWidth(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -797,9 +700,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETSIZEPOLICY)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -809,18 +710,14 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SIZEPOLICY)
 {
   QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QSizePolicy *ptr = new QSizePolicy(obj->sizePolicy());
       Qt4xHb::createReturnClass(ptr, "QSIZEPOLICY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -832,17 +729,13 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_UPDATEGEOMETRY)
 {
   QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->updateGeometry();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

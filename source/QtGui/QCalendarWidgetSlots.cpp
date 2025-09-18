@@ -22,8 +22,7 @@ void QCalendarWidgetSlots::activated(const QDate &date)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "activated(QDate)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QCALENDARWIDGET");
     PHB_ITEM pDate = Qt4xHb::Signals_return_object((void *)&date, "QDATE");
 
@@ -40,8 +39,7 @@ void QCalendarWidgetSlots::clicked(const QDate &date)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "clicked(QDate)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QCALENDARWIDGET");
     PHB_ITEM pDate = Qt4xHb::Signals_return_object((void *)&date, "QDATE");
 
@@ -58,8 +56,7 @@ void QCalendarWidgetSlots::currentPageChanged(int year, int month)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "currentPageChanged(int,int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QCALENDARWIDGET");
     PHB_ITEM pYear = hb_itemPutNI(NULL, year);
     PHB_ITEM pMonth = hb_itemPutNI(NULL, month);
@@ -78,8 +75,7 @@ void QCalendarWidgetSlots::selectionChanged()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "selectionChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QCALENDARWIDGET");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -92,21 +88,17 @@ void QCalendarWidgetSlots_connect_signal(const QString &signal, const QString &s
 {
   QCalendarWidget *obj = qobject_cast<QCalendarWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QCalendarWidgetSlots *s = QCoreApplication::instance()->findChild<QCalendarWidgetSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QCalendarWidgetSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

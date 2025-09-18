@@ -22,8 +22,7 @@ void QGraphicsColorizeEffectSlots::colorChanged(const QColor &color)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "colorChanged(QColor)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QGRAPHICSCOLORIZEEFFECT");
     PHB_ITEM pColor = Qt4xHb::Signals_return_object((void *)&color, "QCOLOR");
 
@@ -40,8 +39,7 @@ void QGraphicsColorizeEffectSlots::strengthChanged(qreal strength)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "strengthChanged(qreal)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QGRAPHICSCOLORIZEEFFECT");
     PHB_ITEM pStrength = hb_itemPutND(NULL, strength);
 
@@ -56,21 +54,17 @@ void QGraphicsColorizeEffectSlots_connect_signal(const QString &signal, const QS
 {
   QGraphicsColorizeEffect *obj = qobject_cast<QGraphicsColorizeEffect *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QGraphicsColorizeEffectSlots *s = QCoreApplication::instance()->findChild<QGraphicsColorizeEffectSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QGraphicsColorizeEffectSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

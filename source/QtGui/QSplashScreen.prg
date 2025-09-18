@@ -65,9 +65,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_NEW)
         new QSplashScreen(PQWIDGET(1), HB_ISNIL(2) ? QPixmap() : *static_cast<QPixmap *>(Qt4xHb::itemGetPtr(2)),
                           HB_ISNIL(3) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(3));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -76,8 +74,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_DELETE)
 {
   QSplashScreen *obj = qobject_cast<QSplashScreen *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -95,17 +92,14 @@ HB_FUNC_STATIC(QSPLASHSCREEN_FINISH)
 {
   QSplashScreen *obj = qobject_cast<QSplashScreen *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQWIDGET(1))
     {
 #endif
       obj->finish(PQWIDGET(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -119,18 +113,14 @@ HB_FUNC_STATIC(QSPLASHSCREEN_PIXMAP)
 {
   QSplashScreen *obj = qobject_cast<QSplashScreen *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPixmap *ptr = new QPixmap(obj->pixmap());
       Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -142,17 +132,13 @@ HB_FUNC_STATIC(QSPLASHSCREEN_REPAINT)
 {
   QSplashScreen *obj = qobject_cast<QSplashScreen *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->repaint();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -166,17 +152,14 @@ HB_FUNC_STATIC(QSPLASHSCREEN_SETPIXMAP)
 {
   QSplashScreen *obj = qobject_cast<QSplashScreen *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPIXMAP(1))
     {
 #endif
       obj->setPixmap(*PQPIXMAP(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -190,17 +173,13 @@ HB_FUNC_STATIC(QSPLASHSCREEN_CLEARMESSAGE)
 {
   QSplashScreen *obj = qobject_cast<QSplashScreen *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clearMessage();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -214,8 +193,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_SHOWMESSAGE)
 {
   QSplashScreen *obj = qobject_cast<QSplashScreen *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (ISQCOLOR(3) || HB_ISNIL(3)))
     {
@@ -223,9 +201,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_SHOWMESSAGE)
       obj->showMessage(PQSTRING(1), OPINT(2, Qt::AlignLeft),
                        HB_ISNIL(3) ? Qt::black : *static_cast<QColor *>(Qt4xHb::itemGetPtr(3)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

@@ -22,8 +22,7 @@ void QSplitterSlots::splitterMoved(int pos, int index)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "splitterMoved(int,int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSPLITTER");
     PHB_ITEM pPos = hb_itemPutNI(NULL, pos);
     PHB_ITEM pIndex = hb_itemPutNI(NULL, index);
@@ -40,21 +39,17 @@ void QSplitterSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QSplitter *obj = qobject_cast<QSplitter *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QSplitterSlots *s = QCoreApplication::instance()->findChild<QSplitterSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QSplitterSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

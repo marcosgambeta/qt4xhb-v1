@@ -60,8 +60,7 @@ HB_FUNC_STATIC(QDECORATION_DELETE)
 {
   QDecoration *obj = static_cast<QDecoration *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -77,17 +76,14 @@ HB_FUNC_STATIC(QDECORATION_BUILDSYSMENU)
 {
   QDecoration *obj = static_cast<QDecoration *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQWIDGET(1) && ISQMENU(2))
     {
 #endif
       obj->buildSysMenu(PQWIDGET(1), PQMENU(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -101,17 +97,14 @@ HB_FUNC_STATIC(QDECORATION_MENUTRIGGERED)
 {
   QDecoration *obj = static_cast<QDecoration *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQWIDGET(1) && ISQACTION(2))
     {
 #endif
       obj->menuTriggered(PQWIDGET(1), PQACTION(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -126,8 +119,7 @@ HB_FUNC_STATIC(QDECORATION_PAINT)
 {
   QDecoration *obj = static_cast<QDecoration *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 4) && ISQPAINTER(1) && ISQWIDGET(2) && (HB_ISNUM(3) || HB_ISNIL(3)) &&
         (HB_ISNUM(4) || HB_ISNIL(4)))
@@ -137,9 +129,7 @@ HB_FUNC_STATIC(QDECORATION_PAINT)
                        HB_ISNIL(4) ? (QDecoration::DecorationState)QDecoration::Normal
                                    : (QDecoration::DecorationState)hb_parni(4)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -170,9 +160,7 @@ HB_FUNC_STATIC(QDECORATION_REGION)
       QRegion *ptr = new QRegion(obj->region(PQWIDGET(1), OPINT(2, QDecoration::All)));
       Qt4xHb::createReturnClass(ptr, "QREGION", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -182,17 +170,14 @@ HB_FUNC_STATIC(QDECORATION_REGIONAT)
 {
   QDecoration *obj = static_cast<QDecoration *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQWIDGET(1) && ISQPOINT(2))
     {
 #endif
       RINT(obj->regionAt(PQWIDGET(1), *PQPOINT(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -204,17 +189,14 @@ HB_FUNC_STATIC(QDECORATION_REGIONCLICKED)
 {
   QDecoration *obj = static_cast<QDecoration *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQWIDGET(1) && HB_ISNUM(2))
     {
 #endif
       obj->regionClicked(PQWIDGET(1), PINT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -228,17 +210,14 @@ HB_FUNC_STATIC(QDECORATION_REGIONDOUBLECLICKED)
 {
   QDecoration *obj = static_cast<QDecoration *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQWIDGET(1) && HB_ISNUM(2))
     {
 #endif
       obj->regionDoubleClicked(PQWIDGET(1), PINT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -256,9 +235,7 @@ HB_FUNC_STATIC(QDECORATION_STARTMOVE)
 #endif
     QDecoration::startMove(PQWIDGET(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -275,9 +252,7 @@ HB_FUNC_STATIC(QDECORATION_STARTRESIZE)
 #endif
     QDecoration::startResize(PQWIDGET(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -306,9 +281,7 @@ HB_FUNC_STATIC(QDECORATION_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -339,9 +312,7 @@ HB_FUNC_STATIC(QDECORATION_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

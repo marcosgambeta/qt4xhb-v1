@@ -55,8 +55,7 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_GRABGESTURE)
 {
   QGraphicsObject *obj = qobject_cast<QGraphicsObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
@@ -64,9 +63,7 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_GRABGESTURE)
       obj->grabGesture((Qt::GestureType)hb_parni(1),
                        HB_ISNIL(2) ? (Qt::GestureFlags)Qt::GestureFlags() : (Qt::GestureFlags)hb_parni(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -80,17 +77,14 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_UNGRABGESTURE)
 {
   QGraphicsObject *obj = qobject_cast<QGraphicsObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->ungrabGesture((Qt::GestureType)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

@@ -45,8 +45,7 @@ RETURN
 
 HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     // QStyleOptionSpinBox()
     QStyleOptionSpinBox *obj = new QStyleOptionSpinBox();
     Qt4xHb::returnNewObject(obj, true);
@@ -56,9 +55,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_NEW)
     // QStyleOptionSpinBox(const QStyleOptionSpinBox &other)
     QStyleOptionSpinBox *obj = new QStyleOptionSpinBox(*PQSTYLEOPTIONSPINBOX(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -68,14 +65,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_BUTTONSYMBOLS)
 {
   QStyleOptionSpinBox *obj = static_cast<QStyleOptionSpinBox *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
-    if (ISNUMPAR(0))
-    {
+  if (obj != NULL) {
+    if (ISNUMPAR(0)) {
       RENUM(obj->buttonSymbols);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -84,14 +77,11 @@ HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_SETBUTTONSYMBOLS)
 {
   QStyleOptionSpinBox *obj = static_cast<QStyleOptionSpinBox *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->buttonSymbols = (QAbstractSpinBox::ButtonSymbols)hb_parni(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -104,14 +94,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_STEPENABLED)
 {
   QStyleOptionSpinBox *obj = static_cast<QStyleOptionSpinBox *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
-    if (ISNUMPAR(0))
-    {
+  if (obj != NULL) {
+    if (ISNUMPAR(0)) {
       RENUM(obj->stepEnabled);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -120,14 +106,11 @@ HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_SETSTEPENABLED)
 {
   QStyleOptionSpinBox *obj = static_cast<QStyleOptionSpinBox *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->stepEnabled = (QAbstractSpinBox::StepEnabled)hb_parni(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -140,14 +123,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_FRAME)
 {
   QStyleOptionSpinBox *obj = static_cast<QStyleOptionSpinBox *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
-    if (ISNUMPAR(0))
-    {
+  if (obj != NULL) {
+    if (ISNUMPAR(0)) {
       RBOOL(obj->frame);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -156,14 +135,11 @@ HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_SETFRAME)
 {
   QStyleOptionSpinBox *obj = static_cast<QStyleOptionSpinBox *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
       obj->frame = PBOOL(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }

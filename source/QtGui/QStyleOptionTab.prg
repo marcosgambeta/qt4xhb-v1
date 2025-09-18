@@ -54,8 +54,7 @@ RETURN
 
 HB_FUNC_STATIC(QSTYLEOPTIONTAB_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     // QStyleOptionTab()
     QStyleOptionTab *obj = new QStyleOptionTab();
     Qt4xHb::returnNewObject(obj, true);
@@ -65,9 +64,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_NEW)
     // QStyleOptionTab(const QStyleOptionTab &other)
     QStyleOptionTab *obj = new QStyleOptionTab(*PQSTYLEOPTIONTAB(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -77,14 +74,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SHAPE)
 {
   QStyleOptionTab *obj = static_cast<QStyleOptionTab *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
-    if (ISNUMPAR(0))
-    {
+  if (obj != NULL) {
+    if (ISNUMPAR(0)) {
       RENUM(obj->shape);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -93,14 +86,11 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETSHAPE)
 {
   QStyleOptionTab *obj = static_cast<QStyleOptionTab *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->shape = (QTabBar::Shape)hb_parni(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -113,14 +103,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_TEXT)
 {
   QStyleOptionTab *obj = static_cast<QStyleOptionTab *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
-    if (ISNUMPAR(0))
-    {
+  if (obj != NULL) {
+    if (ISNUMPAR(0)) {
       RQSTRING(obj->text);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -129,14 +115,11 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETTEXT)
 {
   QStyleOptionTab *obj = static_cast<QStyleOptionTab *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
       obj->text = PQSTRING(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -149,15 +132,11 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_ICON)
 {
   QStyleOptionTab *obj = static_cast<QStyleOptionTab *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
-    if (ISNUMPAR(0))
-    {
+  if (obj != NULL) {
+    if (ISNUMPAR(0)) {
       QIcon *ptr = new QIcon(obj->icon);
       Qt4xHb::createReturnClass(ptr, "QICON", true);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -166,14 +145,11 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETICON)
 {
   QStyleOptionTab *obj = static_cast<QStyleOptionTab *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && ISQICON(1))
     {
       obj->icon = *PQICON(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -186,14 +162,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_ROW)
 {
   QStyleOptionTab *obj = static_cast<QStyleOptionTab *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
-    if (ISNUMPAR(0))
-    {
+  if (obj != NULL) {
+    if (ISNUMPAR(0)) {
       RINT(obj->row);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -202,14 +174,11 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETROW)
 {
   QStyleOptionTab *obj = static_cast<QStyleOptionTab *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->row = PINT(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -222,14 +191,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_POSITION)
 {
   QStyleOptionTab *obj = static_cast<QStyleOptionTab *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
-    if (ISNUMPAR(0))
-    {
+  if (obj != NULL) {
+    if (ISNUMPAR(0)) {
       RENUM(obj->position);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -238,14 +203,11 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETPOSITION)
 {
   QStyleOptionTab *obj = static_cast<QStyleOptionTab *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->position = (QStyleOptionTab::TabPosition)hb_parni(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -258,14 +220,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SELECTEDPOSITION)
 {
   QStyleOptionTab *obj = static_cast<QStyleOptionTab *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
-    if (ISNUMPAR(0))
-    {
+  if (obj != NULL) {
+    if (ISNUMPAR(0)) {
       RENUM(obj->selectedPosition);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -274,14 +232,11 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETSELECTEDPOSITION)
 {
   QStyleOptionTab *obj = static_cast<QStyleOptionTab *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->selectedPosition = (QStyleOptionTab::SelectedPosition)hb_parni(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -294,14 +249,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_CORNERWIDGETS)
 {
   QStyleOptionTab *obj = static_cast<QStyleOptionTab *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
-    if (ISNUMPAR(0))
-    {
+  if (obj != NULL) {
+    if (ISNUMPAR(0)) {
       RENUM(obj->cornerWidgets);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -310,14 +261,11 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETCORNERWIDGETS)
 {
   QStyleOptionTab *obj = static_cast<QStyleOptionTab *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->cornerWidgets = (QStyleOptionTab::CornerWidgets)hb_parni(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }

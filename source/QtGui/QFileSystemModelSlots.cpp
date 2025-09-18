@@ -22,8 +22,7 @@ void QFileSystemModelSlots::directoryLoaded(const QString &path)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "directoryLoaded(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFILESYSTEMMODEL");
     PHB_ITEM pPath = hb_itemPutC(NULL, QSTRINGTOSTRING(path));
 
@@ -40,8 +39,7 @@ void QFileSystemModelSlots::fileRenamed(const QString &path, const QString &oldN
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "fileRenamed(QString,QString,QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFILESYSTEMMODEL");
     PHB_ITEM pPath = hb_itemPutC(NULL, QSTRINGTOSTRING(path));
     PHB_ITEM pOldName = hb_itemPutC(NULL, QSTRINGTOSTRING(oldName));
@@ -62,8 +60,7 @@ void QFileSystemModelSlots::rootPathChanged(const QString &newPath)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "rootPathChanged(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFILESYSTEMMODEL");
     PHB_ITEM pNewPath = hb_itemPutC(NULL, QSTRINGTOSTRING(newPath));
 
@@ -78,21 +75,17 @@ void QFileSystemModelSlots_connect_signal(const QString &signal, const QString &
 {
   QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QFileSystemModelSlots *s = QCoreApplication::instance()->findChild<QFileSystemModelSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QFileSystemModelSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

@@ -57,9 +57,7 @@ HB_FUNC_STATIC(QFILEOPENEVENT_NEW)
     // QFileOpenEvent(const QUrl &url)
     QFileOpenEvent *obj = new QFileOpenEvent(*PQURL(1));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -68,8 +66,7 @@ HB_FUNC_STATIC(QFILEOPENEVENT_DELETE)
 {
   QFileOpenEvent *obj = static_cast<QFileOpenEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -85,17 +82,13 @@ HB_FUNC_STATIC(QFILEOPENEVENT_FILE)
 {
   QFileOpenEvent *obj = static_cast<QFileOpenEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->file());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -107,17 +100,14 @@ HB_FUNC_STATIC(QFILEOPENEVENT_OPENFILE)
 {
   QFileOpenEvent *obj = static_cast<QFileOpenEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQFILE(1) && HB_ISNUM(2))
     {
 #endif
       RBOOL(obj->openFile(*PQFILE(1), (QIODevice::OpenMode)hb_parni(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -129,18 +119,14 @@ HB_FUNC_STATIC(QFILEOPENEVENT_URL)
 {
   QFileOpenEvent *obj = static_cast<QFileOpenEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QUrl *ptr = new QUrl(obj->url());
       Qt4xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

@@ -41,13 +41,10 @@ RETURN
     // QShowEvent()
 HB_FUNC_STATIC(QSHOWEVENT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     QShowEvent *obj = new QShowEvent();
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -56,8 +53,7 @@ HB_FUNC_STATIC(QSHOWEVENT_DELETE)
 {
   QShowEvent *obj = static_cast<QShowEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);

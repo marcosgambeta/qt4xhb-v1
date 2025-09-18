@@ -104,9 +104,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_NEW)
         OPQWIDGET(5, 0),
         HB_ISNIL(6) ? (Qt::WindowFlags)Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint : (Qt::WindowFlags)hb_parni(6));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -115,8 +113,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_DELETE)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -164,9 +161,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ADDBUTTON)
       QPushButton *ptr = obj->addButton((QMessageBox::StandardButton)hb_parni(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QPUSHBUTTON");
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -176,8 +171,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_BUTTON)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -185,9 +179,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_BUTTON)
       QAbstractButton *ptr = obj->button((QMessageBox::StandardButton)hb_parni(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTBUTTON");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -199,17 +191,14 @@ HB_FUNC_STATIC(QMESSAGEBOX_BUTTONROLE)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1))
     {
 #endif
       RENUM(obj->buttonRole(PQABSTRACTBUTTON(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -221,11 +210,9 @@ HB_FUNC_STATIC(QMESSAGEBOX_BUTTONS)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QList<QAbstractButton *> list = obj->buttons();
       PHB_DYNS pDynSym = hb_dynsymFindName("QABSTRACTBUTTON");
@@ -253,9 +240,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_BUTTONS)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -267,18 +252,14 @@ HB_FUNC_STATIC(QMESSAGEBOX_CLICKEDBUTTON)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QAbstractButton *ptr = obj->clickedButton();
       Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTBUTTON");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -290,18 +271,14 @@ HB_FUNC_STATIC(QMESSAGEBOX_DEFAULTBUTTON)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPushButton *ptr = obj->defaultButton();
       Qt4xHb::createReturnQObjectClass(ptr, "QPUSHBUTTON");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -313,17 +290,13 @@ HB_FUNC_STATIC(QMESSAGEBOX_DETAILEDTEXT)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->detailedText());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -335,18 +308,14 @@ HB_FUNC_STATIC(QMESSAGEBOX_ESCAPEBUTTON)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QAbstractButton *ptr = obj->escapeButton();
       Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTBUTTON");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -358,17 +327,13 @@ HB_FUNC_STATIC(QMESSAGEBOX_ICON)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->icon());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -380,18 +345,14 @@ HB_FUNC_STATIC(QMESSAGEBOX_ICONPIXMAP)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPixmap *ptr = new QPixmap(obj->iconPixmap());
       Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -403,17 +364,13 @@ HB_FUNC_STATIC(QMESSAGEBOX_INFORMATIVETEXT)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->informativeText());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -425,17 +382,14 @@ HB_FUNC_STATIC(QMESSAGEBOX_OPEN)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
     {
 #endif
       obj->open(PQOBJECT(1), PCONSTCHAR(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -449,17 +403,14 @@ HB_FUNC_STATIC(QMESSAGEBOX_REMOVEBUTTON)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1))
     {
 #endif
       obj->removeButton(PQABSTRACTBUTTON(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -493,9 +444,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETDEFAULTBUTTON)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -505,17 +454,14 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETDETAILEDTEXT)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       obj->setDetailedText(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -549,9 +495,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETESCAPEBUTTON)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -561,17 +505,14 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETICON)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setIcon((QMessageBox::Icon)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -585,17 +526,14 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETICONPIXMAP)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPIXMAP(1))
     {
 #endif
       obj->setIconPixmap(*PQPIXMAP(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -609,17 +547,14 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETINFORMATIVETEXT)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       obj->setInformativeText(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -633,17 +568,14 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETSTANDARDBUTTONS)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setStandardButtons((QMessageBox::StandardButtons)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -657,17 +589,14 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETTEXT)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       obj->setText(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -681,17 +610,14 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETTEXTFORMAT)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setTextFormat((Qt::TextFormat)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -705,17 +631,14 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETWINDOWMODALITY)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->setWindowModality((Qt::WindowModality)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -729,17 +652,14 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETWINDOWTITLE)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       obj->setWindowTitle(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -753,17 +673,14 @@ HB_FUNC_STATIC(QMESSAGEBOX_STANDARDBUTTON)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1))
     {
 #endif
       RENUM(obj->standardButton(PQABSTRACTBUTTON(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -775,17 +692,13 @@ HB_FUNC_STATIC(QMESSAGEBOX_STANDARDBUTTONS)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->standardButtons());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -797,17 +710,13 @@ HB_FUNC_STATIC(QMESSAGEBOX_TEXT)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->text());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -819,17 +728,13 @@ HB_FUNC_STATIC(QMESSAGEBOX_TEXTFORMAT)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->textFormat());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -841,17 +746,14 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETVISIBLE)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setVisible(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -865,17 +767,13 @@ HB_FUNC_STATIC(QMESSAGEBOX_EXEC)
 {
   QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->exec());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -891,9 +789,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ABOUT)
 #endif
     QMessageBox::about(PQWIDGET(1), PQSTRING(2), PQSTRING(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -910,9 +806,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ABOUTQT)
 #endif
     QMessageBox::aboutQt(PQWIDGET(1), OPQSTRING(2, QString()));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -935,9 +829,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_CRITICAL)
         HB_ISNIL(4) ? (QMessageBox::StandardButtons)QMessageBox::Ok : (QMessageBox::StandardButtons)hb_parni(4),
         HB_ISNIL(5) ? (QMessageBox::StandardButton)QMessageBox::NoButton : (QMessageBox::StandardButton)hb_parni(5)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -958,9 +850,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_INFORMATION)
         HB_ISNIL(4) ? (QMessageBox::StandardButtons)QMessageBox::Ok : (QMessageBox::StandardButtons)hb_parni(4),
         HB_ISNIL(5) ? (QMessageBox::StandardButton)QMessageBox::NoButton : (QMessageBox::StandardButton)hb_parni(5)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -981,9 +871,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_QUESTION)
         HB_ISNIL(4) ? (QMessageBox::StandardButtons)QMessageBox::Ok : (QMessageBox::StandardButtons)hb_parni(4),
         HB_ISNIL(5) ? (QMessageBox::StandardButton)QMessageBox::NoButton : (QMessageBox::StandardButton)hb_parni(5)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -1004,9 +892,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_WARNING)
         HB_ISNIL(4) ? (QMessageBox::StandardButtons)QMessageBox::Ok : (QMessageBox::StandardButtons)hb_parni(4),
         HB_ISNIL(5) ? (QMessageBox::StandardButton)QMessageBox::NoButton : (QMessageBox::StandardButton)hb_parni(5)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif

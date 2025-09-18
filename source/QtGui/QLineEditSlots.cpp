@@ -22,8 +22,7 @@ void QLineEditSlots::cursorPositionChanged(int iold, int inew)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "cursorPositionChanged(int,int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QLINEEDIT");
     PHB_ITEM pIold = hb_itemPutNI(NULL, iold);
     PHB_ITEM pInew = hb_itemPutNI(NULL, inew);
@@ -42,8 +41,7 @@ void QLineEditSlots::editingFinished()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "editingFinished()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QLINEEDIT");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -58,8 +56,7 @@ void QLineEditSlots::returnPressed()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "returnPressed()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QLINEEDIT");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -74,8 +71,7 @@ void QLineEditSlots::selectionChanged()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "selectionChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QLINEEDIT");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -90,8 +86,7 @@ void QLineEditSlots::textChanged(const QString &text)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "textChanged(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QLINEEDIT");
     PHB_ITEM pText = hb_itemPutC(NULL, QSTRINGTOSTRING(text));
 
@@ -108,8 +103,7 @@ void QLineEditSlots::textEdited(const QString &text)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "textEdited(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QLINEEDIT");
     PHB_ITEM pText = hb_itemPutC(NULL, QSTRINGTOSTRING(text));
 
@@ -124,21 +118,17 @@ void QLineEditSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QLineEditSlots *s = QCoreApplication::instance()->findChild<QLineEditSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QLineEditSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

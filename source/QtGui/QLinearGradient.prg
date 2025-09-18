@@ -45,8 +45,7 @@ RETURN
 
 HB_FUNC_STATIC(QLINEARGRADIENT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     // QLinearGradient()
     QLinearGradient *obj = new QLinearGradient();
     Qt4xHb::returnNewObject(obj, true);
@@ -62,9 +61,7 @@ HB_FUNC_STATIC(QLINEARGRADIENT_NEW)
     // QLinearGradient(qreal xStart, qreal yStart, qreal xFinalStop, qreal yFinalStop)
     QLinearGradient *obj = new QLinearGradient(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -73,8 +70,7 @@ HB_FUNC_STATIC(QLINEARGRADIENT_DELETE)
 {
   QLinearGradient *obj = static_cast<QLinearGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -90,18 +86,14 @@ HB_FUNC_STATIC(QLINEARGRADIENT_FINALSTOP)
 {
   QLinearGradient *obj = static_cast<QLinearGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPointF *ptr = new QPointF(obj->finalStop());
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -133,9 +125,7 @@ HB_FUNC_STATIC(QLINEARGRADIENT_SETFINALSTOP)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -165,9 +155,7 @@ HB_FUNC_STATIC(QLINEARGRADIENT_SETSTART)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -177,18 +165,14 @@ HB_FUNC_STATIC(QLINEARGRADIENT_START)
 {
   QLinearGradient *obj = static_cast<QLinearGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QPointF *ptr = new QPointF(obj->start());
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

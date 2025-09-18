@@ -58,8 +58,7 @@ RETURN
 
 HB_FUNC_STATIC(QKEYSEQUENCE_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     // QKeySequence()
     QKeySequence *obj = new QKeySequence();
     Qt4xHb::returnNewObject(obj, true);
@@ -94,9 +93,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_NEW)
     // QKeySequence(const QKeySequence &keysequence)
     QKeySequence *obj = new QKeySequence(*PQKEYSEQUENCE(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -105,8 +102,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_DELETE)
 {
   QKeySequence *obj = static_cast<QKeySequence *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -122,17 +118,13 @@ HB_FUNC_STATIC(QKEYSEQUENCE_COUNT)
 {
   QKeySequence *obj = static_cast<QKeySequence *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RUINT(obj->count());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -144,17 +136,13 @@ HB_FUNC_STATIC(QKEYSEQUENCE_ISEMPTY)
 {
   QKeySequence *obj = static_cast<QKeySequence *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEmpty());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -166,17 +154,14 @@ HB_FUNC_STATIC(QKEYSEQUENCE_MATCHES)
 {
   QKeySequence *obj = static_cast<QKeySequence *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQKEYSEQUENCE(1))
     {
 #endif
       RENUM(obj->matches(*PQKEYSEQUENCE(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -188,8 +173,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_TOSTRING)
 {
   QKeySequence *obj = static_cast<QKeySequence *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
@@ -197,9 +181,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_TOSTRING)
       RQSTRING(obj->toString(HB_ISNIL(1) ? (QKeySequence::SequenceFormat)QKeySequence::PortableText
                                          : (QKeySequence::SequenceFormat)hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -218,9 +200,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_FROMSTRING)
                                                           : (QKeySequence::SequenceFormat)hb_parni(2)));
     Qt4xHb::createReturnClass(ptr, "QKEYSEQUENCE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -255,16 +235,12 @@ HB_FUNC_STATIC(QKEYSEQUENCE_KEYBINDINGS)
         hb_arrayAddForward(pArray, pObject);
         hb_itemRelease(pObject);
       }
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QKEYSEQUENCE", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -280,9 +256,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_MNEMONIC)
     QKeySequence *ptr = new QKeySequence(QKeySequence::mnemonic(PQSTRING(1)));
     Qt4xHb::createReturnClass(ptr, "QKEYSEQUENCE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -309,9 +283,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -342,9 +314,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

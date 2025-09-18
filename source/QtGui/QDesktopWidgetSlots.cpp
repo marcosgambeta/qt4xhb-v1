@@ -22,8 +22,7 @@ void QDesktopWidgetSlots::resized(int screen)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "resized(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QDESKTOPWIDGET");
     PHB_ITEM pScreen = hb_itemPutNI(NULL, screen);
 
@@ -40,8 +39,7 @@ void QDesktopWidgetSlots::screenCountChanged(int newCount)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "screenCountChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QDESKTOPWIDGET");
     PHB_ITEM pNewCount = hb_itemPutNI(NULL, newCount);
 
@@ -58,8 +56,7 @@ void QDesktopWidgetSlots::workAreaResized(int screen)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "workAreaResized(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QDESKTOPWIDGET");
     PHB_ITEM pScreen = hb_itemPutNI(NULL, screen);
 
@@ -74,21 +71,17 @@ void QDesktopWidgetSlots_connect_signal(const QString &signal, const QString &sl
 {
   QDesktopWidget *obj = qobject_cast<QDesktopWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QDesktopWidgetSlots *s = QCoreApplication::instance()->findChild<QDesktopWidgetSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QDesktopWidgetSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

@@ -42,8 +42,7 @@ RETURN
 
 HB_FUNC_STATIC(QHBOXLAYOUT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     // QHBoxLayout()
     QHBoxLayout *obj = new QHBoxLayout();
     Qt4xHb::returnNewObject(obj, false);
@@ -53,9 +52,7 @@ HB_FUNC_STATIC(QHBOXLAYOUT_NEW)
     // QHBoxLayout(QWidget *parent)
     QHBoxLayout *obj = new QHBoxLayout(PQWIDGET(1));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -64,8 +61,7 @@ HB_FUNC_STATIC(QHBOXLAYOUT_DELETE)
 {
   QHBoxLayout *obj = qobject_cast<QHBoxLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;

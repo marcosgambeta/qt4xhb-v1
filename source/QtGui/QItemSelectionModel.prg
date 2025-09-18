@@ -78,9 +78,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_NEW)
     // QItemSelectionModel(QAbstractItemModel *model, QObject *parent)
     QItemSelectionModel *obj = new QItemSelectionModel(PQABSTRACTITEMMODEL(1), PQOBJECT(2));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -89,8 +87,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_DELETE)
 {
   QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -108,17 +105,14 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_COLUMNINTERSECTSSELECTION)
 {
   QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQMODELINDEX(2))
     {
 #endif
       RBOOL(obj->columnIntersectsSelection(PINT(1), *PQMODELINDEX(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -130,18 +124,14 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_CURRENTINDEX)
 {
   QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QModelIndex *ptr = new QModelIndex(obj->currentIndex());
       Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -153,17 +143,13 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_HASSELECTION)
 {
   QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->hasSelection());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -175,17 +161,14 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_ISCOLUMNSELECTED)
 {
   QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQMODELINDEX(2))
     {
 #endif
       RBOOL(obj->isColumnSelected(PINT(1), *PQMODELINDEX(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -197,17 +180,14 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_ISROWSELECTED)
 {
   QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQMODELINDEX(2))
     {
 #endif
       RBOOL(obj->isRowSelected(PINT(1), *PQMODELINDEX(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -219,17 +199,14 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_ISSELECTED)
 {
   QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1))
     {
 #endif
       RBOOL(obj->isSelected(*PQMODELINDEX(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -241,18 +218,14 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_MODEL)
 {
   QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       const QAbstractItemModel *ptr = obj->model();
       Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -264,17 +237,14 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_ROWINTERSECTSSELECTION)
 {
   QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQMODELINDEX(2))
     {
 #endif
       RBOOL(obj->rowIntersectsSelection(PINT(1), *PQMODELINDEX(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -286,8 +256,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECTEDCOLUMNS)
 {
   QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
@@ -321,9 +290,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECTEDCOLUMNS)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -335,11 +302,9 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECTEDINDEXES)
 {
   QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QModelIndexList list = obj->selectedIndexes();
       PHB_DYNS pDynSym = hb_dynsymFindName("QMODELINDEX");
@@ -370,9 +335,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECTEDINDEXES)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -384,8 +347,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECTEDROWS)
 {
   QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
@@ -419,9 +381,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECTEDROWS)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -433,18 +393,14 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECTION)
 {
   QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QItemSelection *ptr = new QItemSelection(obj->selection());
       Qt4xHb::createReturnClass(ptr, "QITEMSELECTION", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -456,17 +412,13 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_CLEAR)
 {
   QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -480,17 +432,13 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_CLEARSELECTION)
 {
   QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clearSelection();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -504,17 +452,13 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_RESET)
 {
   QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->reset();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -548,9 +492,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -560,17 +502,14 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SETCURRENTINDEX)
 {
   QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISNUM(2))
     {
 #endif
       obj->setCurrentIndex(*PQMODELINDEX(1), (QItemSelectionModel::SelectionFlags)hb_parni(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

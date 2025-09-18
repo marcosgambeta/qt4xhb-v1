@@ -22,8 +22,7 @@ void QTextBrowserSlots::anchorClicked(const QUrl &link)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "anchorClicked(QUrl)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTEXTBROWSER");
     PHB_ITEM pLink = Qt4xHb::Signals_return_object((void *)&link, "QURL");
 
@@ -40,8 +39,7 @@ void QTextBrowserSlots::backwardAvailable(bool available)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "backwardAvailable(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTEXTBROWSER");
     PHB_ITEM pAvailable = hb_itemPutL(NULL, available);
 
@@ -58,8 +56,7 @@ void QTextBrowserSlots::forwardAvailable(bool available)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "forwardAvailable(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTEXTBROWSER");
     PHB_ITEM pAvailable = hb_itemPutL(NULL, available);
 
@@ -76,8 +73,7 @@ void QTextBrowserSlots::highlighted(const QUrl &link)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "highlighted(QUrl)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTEXTBROWSER");
     PHB_ITEM pLink = Qt4xHb::Signals_return_object((void *)&link, "QURL");
 
@@ -94,8 +90,7 @@ void QTextBrowserSlots::highlighted(const QString &link)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "highlighted(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTEXTBROWSER");
     PHB_ITEM pLink = hb_itemPutC(NULL, QSTRINGTOSTRING(link));
 
@@ -112,8 +107,7 @@ void QTextBrowserSlots::historyChanged()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "historyChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTEXTBROWSER");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -128,8 +122,7 @@ void QTextBrowserSlots::sourceChanged(const QUrl &src)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "sourceChanged(QUrl)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTEXTBROWSER");
     PHB_ITEM pSrc = Qt4xHb::Signals_return_object((void *)&src, "QURL");
 
@@ -144,21 +137,17 @@ void QTextBrowserSlots_connect_signal(const QString &signal, const QString &slot
 {
   QTextBrowser *obj = qobject_cast<QTextBrowser *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QTextBrowserSlots *s = QCoreApplication::instance()->findChild<QTextBrowserSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QTextBrowserSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

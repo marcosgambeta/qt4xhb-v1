@@ -48,8 +48,7 @@ HB_FUNC_STATIC(QFONTENGINEPLUGIN_DELETE)
 {
   QFontEnginePlugin *obj = qobject_cast<QFontEnginePlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -67,11 +66,9 @@ HB_FUNC_STATIC(QFONTENGINEPLUGIN_AVAILABLEFONTENGINES)
 {
   QFontEnginePlugin *obj = qobject_cast<QFontEnginePlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QList<QFontEngineInfo> list = obj->availableFontEngines();
       PHB_DYNS pDynSym = hb_dynsymFindName("QFONTENGINEINFO");
@@ -102,9 +99,7 @@ HB_FUNC_STATIC(QFONTENGINEPLUGIN_AVAILABLEFONTENGINES)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -116,8 +111,7 @@ HB_FUNC_STATIC(QFONTENGINEPLUGIN_CREATE)
 {
   QFontEnginePlugin *obj = qobject_cast<QFontEnginePlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQFONTENGINEINFO(1))
     {
@@ -125,9 +119,7 @@ HB_FUNC_STATIC(QFONTENGINEPLUGIN_CREATE)
       QAbstractFontEngine *ptr = obj->create(*PQFONTENGINEINFO(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTFONTENGINE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -139,17 +131,13 @@ HB_FUNC_STATIC(QFONTENGINEPLUGIN_KEYS)
 {
   QFontEnginePlugin *obj = qobject_cast<QFontEnginePlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->keys());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

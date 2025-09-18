@@ -22,8 +22,7 @@ void QStatusBarSlots::messageChanged(const QString &message)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "messageChanged(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSTATUSBAR");
     PHB_ITEM pMessage = hb_itemPutC(NULL, QSTRINGTOSTRING(message));
 
@@ -38,21 +37,17 @@ void QStatusBarSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QStatusBarSlots *s = QCoreApplication::instance()->findChild<QStatusBarSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QStatusBarSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

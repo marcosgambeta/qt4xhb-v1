@@ -53,8 +53,7 @@ HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_DELETE)
 {
   QTextObjectInterface *obj = static_cast<QTextObjectInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -71,17 +70,14 @@ HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_DRAWOBJECT)
 {
   QTextObjectInterface *obj = static_cast<QTextObjectInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(5) && ISQPAINTER(1) && ISQRECTF(2) && ISQTEXTDOCUMENT(3) && HB_ISNUM(4) && ISQTEXTFORMAT(5))
     {
 #endif
       obj->drawObject(PQPAINTER(1), *PQRECTF(2), PQTEXTDOCUMENT(3), PINT(4), *PQTEXTFORMAT(5));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -95,8 +91,7 @@ HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_INTRINSICSIZE)
 {
   QTextObjectInterface *obj = static_cast<QTextObjectInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQTEXTDOCUMENT(1) && HB_ISNUM(2) && ISQTEXTFORMAT(3))
     {
@@ -104,9 +99,7 @@ HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_INTRINSICSIZE)
       QSizeF *ptr = new QSizeF(obj->intrinsicSize(PQTEXTDOCUMENT(1), PINT(2), *PQTEXTFORMAT(3)));
       Qt4xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -134,9 +127,7 @@ HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -167,9 +158,7 @@ HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

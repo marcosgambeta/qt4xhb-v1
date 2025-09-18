@@ -47,8 +47,7 @@ RETURN
 
 HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     // QStyleOptionDockWidget()
     QStyleOptionDockWidget *obj = new QStyleOptionDockWidget();
     Qt4xHb::returnNewObject(obj, true);
@@ -58,9 +57,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_NEW)
     // QStyleOptionDockWidget(const QStyleOptionDockWidget &other)
     QStyleOptionDockWidget *obj = new QStyleOptionDockWidget(*PQSTYLEOPTIONDOCKWIDGET(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -70,14 +67,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_TITLE)
 {
   QStyleOptionDockWidget *obj = static_cast<QStyleOptionDockWidget *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
-    if (ISNUMPAR(0))
-    {
+  if (obj != NULL) {
+    if (ISNUMPAR(0)) {
       RQSTRING(obj->title);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -86,14 +79,11 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETTITLE)
 {
   QStyleOptionDockWidget *obj = static_cast<QStyleOptionDockWidget *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
       obj->title = PQSTRING(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -106,14 +96,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_CLOSABLE)
 {
   QStyleOptionDockWidget *obj = static_cast<QStyleOptionDockWidget *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
-    if (ISNUMPAR(0))
-    {
+  if (obj != NULL) {
+    if (ISNUMPAR(0)) {
       RBOOL(obj->closable);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -122,14 +108,11 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETCLOSABLE)
 {
   QStyleOptionDockWidget *obj = static_cast<QStyleOptionDockWidget *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
       obj->closable = PBOOL(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -142,14 +125,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_MOVABLE)
 {
   QStyleOptionDockWidget *obj = static_cast<QStyleOptionDockWidget *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
-    if (ISNUMPAR(0))
-    {
+  if (obj != NULL) {
+    if (ISNUMPAR(0)) {
       RBOOL(obj->movable);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -158,14 +137,11 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETMOVABLE)
 {
   QStyleOptionDockWidget *obj = static_cast<QStyleOptionDockWidget *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
       obj->movable = PBOOL(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -178,14 +154,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_FLOATABLE)
 {
   QStyleOptionDockWidget *obj = static_cast<QStyleOptionDockWidget *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
-    if (ISNUMPAR(0))
-    {
+  if (obj != NULL) {
+    if (ISNUMPAR(0)) {
       RBOOL(obj->floatable);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -194,14 +166,11 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETFLOATABLE)
 {
   QStyleOptionDockWidget *obj = static_cast<QStyleOptionDockWidget *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
       obj->floatable = PBOOL(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }

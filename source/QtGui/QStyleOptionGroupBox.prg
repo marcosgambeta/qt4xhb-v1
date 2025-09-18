@@ -52,8 +52,7 @@ RETURN
 
 HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     // QStyleOptionGroupBox()
     QStyleOptionGroupBox *obj = new QStyleOptionGroupBox();
     Qt4xHb::returnNewObject(obj, true);
@@ -63,9 +62,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_NEW)
     // QStyleOptionGroupBox(const QStyleOptionGroupBox &other)
     QStyleOptionGroupBox *obj = new QStyleOptionGroupBox(*PQSTYLEOPTIONGROUPBOX(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -75,14 +72,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_FEATURES)
 {
   QStyleOptionGroupBox *obj = static_cast<QStyleOptionGroupBox *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
-    if (ISNUMPAR(0))
-    {
+  if (obj != NULL) {
+    if (ISNUMPAR(0)) {
       RENUM(obj->features);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -91,14 +84,11 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETFEATURES)
 {
   QStyleOptionGroupBox *obj = static_cast<QStyleOptionGroupBox *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->features = (QStyleOptionFrameV2::FrameFeatures)hb_parni(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -111,14 +101,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_TEXT)
 {
   QStyleOptionGroupBox *obj = static_cast<QStyleOptionGroupBox *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
-    if (ISNUMPAR(0))
-    {
+  if (obj != NULL) {
+    if (ISNUMPAR(0)) {
       RQSTRING(obj->text);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -127,14 +113,11 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETTEXT)
 {
   QStyleOptionGroupBox *obj = static_cast<QStyleOptionGroupBox *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
       obj->text = PQSTRING(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -147,14 +130,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_TEXTALIGNMENT)
 {
   QStyleOptionGroupBox *obj = static_cast<QStyleOptionGroupBox *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
-    if (ISNUMPAR(0))
-    {
+  if (obj != NULL) {
+    if (ISNUMPAR(0)) {
       RENUM(obj->textAlignment);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -163,14 +142,11 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETTEXTALIGNMENT)
 {
   QStyleOptionGroupBox *obj = static_cast<QStyleOptionGroupBox *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->textAlignment = (Qt::Alignment)hb_parni(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -183,15 +159,11 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_TEXTCOLOR)
 {
   QStyleOptionGroupBox *obj = static_cast<QStyleOptionGroupBox *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
-    if (ISNUMPAR(0))
-    {
+  if (obj != NULL) {
+    if (ISNUMPAR(0)) {
       QColor *ptr = new QColor(obj->textColor);
       Qt4xHb::createReturnClass(ptr, "QCOLOR", true);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -200,14 +172,11 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETTEXTCOLOR)
 {
   QStyleOptionGroupBox *obj = static_cast<QStyleOptionGroupBox *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && ISQCOLOR(1))
     {
       obj->textColor = *PQCOLOR(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -220,14 +189,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_LINEWIDTH)
 {
   QStyleOptionGroupBox *obj = static_cast<QStyleOptionGroupBox *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
-    if (ISNUMPAR(0))
-    {
+  if (obj != NULL) {
+    if (ISNUMPAR(0)) {
       RINT(obj->lineWidth);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -236,14 +201,11 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETLINEWIDTH)
 {
   QStyleOptionGroupBox *obj = static_cast<QStyleOptionGroupBox *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->lineWidth = PINT(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -256,14 +218,10 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_MIDLINEWIDTH)
 {
   QStyleOptionGroupBox *obj = static_cast<QStyleOptionGroupBox *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
-    if (ISNUMPAR(0))
-    {
+  if (obj != NULL) {
+    if (ISNUMPAR(0)) {
       RINT(obj->midLineWidth);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -272,14 +230,11 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETMIDLINEWIDTH)
 {
   QStyleOptionGroupBox *obj = static_cast<QStyleOptionGroupBox *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
       obj->midLineWidth = PINT(1);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
