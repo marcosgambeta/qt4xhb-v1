@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_SETFEATURES)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->features=(QStyleOptionButton::ButtonFeatures)hb_parni(1));
+      obj->features=(QStyleOptionButton::ButtonFeatures)hb_parni(1);
     }
     else
     {
@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_SETTEXT)
   {
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
-      obj->text=PQSTRING(1));
+      obj->text=PQSTRING(1);
     }
     else
     {
@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_SETICON)
   {
     if (ISNUMPAR(1) && ISQICON(1))
     {
-      obj->icon=*PQICON(1));
+      obj->icon=*PQICON(1);
     }
     else
     {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_SETICONSIZE)
   {
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
-      obj->iconSize=*PQSIZE(1));
+      obj->iconSize=*PQSIZE(1);
     }
     else
     {

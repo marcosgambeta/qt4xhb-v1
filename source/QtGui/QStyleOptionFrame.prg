@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFRAME_SETLINEWIDTH)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->lineWidth=PINT(1));
+      obj->lineWidth=PINT(1);
     }
     else
     {
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFRAME_SETMIDLINEWIDTH)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->midLineWidth=PINT(1));
+      obj->midLineWidth=PINT(1);
     }
     else
     {

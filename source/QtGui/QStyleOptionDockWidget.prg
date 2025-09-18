@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETTITLE)
   {
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
-      obj->title=PQSTRING(1));
+      obj->title=PQSTRING(1);
     }
     else
     {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETCLOSABLE)
   {
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
-      obj->closable=PBOOL(1));
+      obj->closable=PBOOL(1);
     }
     else
     {
@@ -162,7 +162,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETMOVABLE)
   {
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
-      obj->movable=PBOOL(1));
+      obj->movable=PBOOL(1);
     }
     else
     {
@@ -198,7 +198,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONDOCKWIDGET_SETFLOATABLE)
   {
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
-      obj->floatable=PBOOL(1));
+      obj->floatable=PBOOL(1);
     }
     else
     {

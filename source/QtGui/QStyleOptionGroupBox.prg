@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETFEATURES)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->features=(QStyleOptionFrameV2::FrameFeatures)hb_parni(1));
+      obj->features=(QStyleOptionFrameV2::FrameFeatures)hb_parni(1);
     }
     else
     {
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETTEXT)
   {
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
-      obj->text=PQSTRING(1));
+      obj->text=PQSTRING(1);
     }
     else
     {
@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETTEXTALIGNMENT)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->textAlignment=(Qt::Alignment)hb_parni(1));
+      obj->textAlignment=(Qt::Alignment)hb_parni(1);
     }
     else
     {
@@ -204,7 +204,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETTEXTCOLOR)
   {
     if (ISNUMPAR(1) && ISQCOLOR(1))
     {
-      obj->textColor=*PQCOLOR(1));
+      obj->textColor=*PQCOLOR(1);
     }
     else
     {
@@ -240,7 +240,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETLINEWIDTH)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->lineWidth=PINT(1));
+      obj->lineWidth=PINT(1);
     }
     else
     {
@@ -276,7 +276,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETMIDLINEWIDTH)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->midLineWidth=PINT(1));
+      obj->midLineWidth=PINT(1);
     }
     else
     {

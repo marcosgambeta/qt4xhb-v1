@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_SETTEXT)
   {
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
-      obj->text=PQSTRING(1));
+      obj->text=PQSTRING(1);
     }
     else
     {
@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_SETICON)
   {
     if (ISNUMPAR(1) && ISQICON(1))
     {
-      obj->icon=*PQICON(1));
+      obj->icon=*PQICON(1);
     }
     else
     {
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_SETTITLEBARSTATE)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->titleBarState=PINT(1));
+      obj->titleBarState=PINT(1);
     }
     else
     {
@@ -200,7 +200,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_SETTITLEBARFLAGS)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->titleBarFlags=(Qt::WindowFlags)hb_parni(1));
+      obj->titleBarFlags=(Qt::WindowFlags)hb_parni(1);
     }
     else
     {

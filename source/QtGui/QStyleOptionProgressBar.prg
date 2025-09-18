@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_SETMINIMUM)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->minimum=PINT(1));
+      obj->minimum=PINT(1);
     }
     else
     {
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_SETMAXIMUM)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->maximum=PINT(1));
+      obj->maximum=PINT(1);
     }
     else
     {
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_SETPROGRESS)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->progress=PINT(1));
+      obj->progress=PINT(1);
     }
     else
     {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_SETTEXT)
   {
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
-      obj->text=PQSTRING(1));
+      obj->text=PQSTRING(1);
     }
     else
     {
@@ -238,7 +238,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_SETTEXTALIGNMENT)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->textAlignment=(Qt::Alignment)hb_parni(1));
+      obj->textAlignment=(Qt::Alignment)hb_parni(1);
     }
     else
     {
@@ -274,7 +274,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_SETTEXTVISIBLE)
   {
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
-      obj->textVisible=PBOOL(1));
+      obj->textVisible=PBOOL(1);
     }
     else
     {

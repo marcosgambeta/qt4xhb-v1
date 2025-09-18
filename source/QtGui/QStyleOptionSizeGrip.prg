@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSIZEGRIP_SETCORNER)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->corner=(Qt::Corner)hb_parni(1));
+      obj->corner=(Qt::Corner)hb_parni(1);
     }
     else
     {

@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_SETEXPOSEDRECT)
   {
     if (ISNUMPAR(1) && ISQRECTF(1))
     {
-      obj->exposedRect=*PQRECTF(1));
+      obj->exposedRect=*PQRECTF(1);
     }
     else
     {
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_SETMATRIX)
   {
     if (ISNUMPAR(1) && ISQMATRIX(1))
     {
-      obj->matrix=*PQMATRIX(1));
+      obj->matrix=*PQMATRIX(1);
     }
     else
     {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_SETLEVELOFDETAIL)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->levelOfDetail=PQREAL(1));
+      obj->levelOfDetail=PQREAL(1);
     }
     else
     {
