@@ -67,8 +67,7 @@ HB_FUNC_STATIC(QAXFACTORY_DELETE)
 {
   QAxFactory *obj = static_cast<QAxFactory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -86,18 +85,14 @@ HB_FUNC_STATIC(QAXFACTORY_APPID)
 {
   QAxFactory *obj = static_cast<QAxFactory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QUuid *ptr = new QUuid(obj->appID());
       Qt4xHb::createReturnClass(ptr, "QUUID", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -109,8 +104,7 @@ HB_FUNC_STATIC(QAXFACTORY_CLASSID)
 {
   QAxFactory *obj = static_cast<QAxFactory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -118,9 +112,7 @@ HB_FUNC_STATIC(QAXFACTORY_CLASSID)
       QUuid *ptr = new QUuid(obj->classID(PQSTRING(1)));
       Qt4xHb::createReturnClass(ptr, "QUUID", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -132,8 +124,7 @@ HB_FUNC_STATIC(QAXFACTORY_CREATEOBJECT)
 {
   QAxFactory *obj = static_cast<QAxFactory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -141,9 +132,7 @@ HB_FUNC_STATIC(QAXFACTORY_CREATEOBJECT)
       QObject *ptr = obj->createObject(PQSTRING(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -155,8 +144,7 @@ HB_FUNC_STATIC(QAXFACTORY_EVENTSID)
 {
   QAxFactory *obj = static_cast<QAxFactory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -164,9 +152,7 @@ HB_FUNC_STATIC(QAXFACTORY_EVENTSID)
       QUuid *ptr = new QUuid(obj->eventsID(PQSTRING(1)));
       Qt4xHb::createReturnClass(ptr, "QUUID", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -178,17 +164,14 @@ HB_FUNC_STATIC(QAXFACTORY_EXPOSETOSUPERCLASS)
 {
   QAxFactory *obj = static_cast<QAxFactory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       RQSTRING(obj->exposeToSuperClass(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -200,17 +183,13 @@ HB_FUNC_STATIC(QAXFACTORY_FEATURELIST)
 {
   QAxFactory *obj = static_cast<QAxFactory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->featureList());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -222,17 +201,14 @@ HB_FUNC_STATIC(QAXFACTORY_HASSTOCKEVENTS)
 {
   QAxFactory *obj = static_cast<QAxFactory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       RBOOL(obj->hasStockEvents(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -244,8 +220,7 @@ HB_FUNC_STATIC(QAXFACTORY_INTERFACEID)
 {
   QAxFactory *obj = static_cast<QAxFactory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -253,9 +228,7 @@ HB_FUNC_STATIC(QAXFACTORY_INTERFACEID)
       QUuid *ptr = new QUuid(obj->interfaceID(PQSTRING(1)));
       Qt4xHb::createReturnClass(ptr, "QUUID", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -267,17 +240,13 @@ HB_FUNC_STATIC(QAXFACTORY_ISSERVICE)
 {
   QAxFactory *obj = static_cast<QAxFactory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isService());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -289,8 +258,7 @@ HB_FUNC_STATIC(QAXFACTORY_METAOBJECT)
 {
   QAxFactory *obj = static_cast<QAxFactory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -298,9 +266,7 @@ HB_FUNC_STATIC(QAXFACTORY_METAOBJECT)
       const QMetaObject *ptr = obj->metaObject(PQSTRING(1));
       Qt4xHb::createReturnClass(ptr, "QMETAOBJECT", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -312,17 +278,14 @@ HB_FUNC_STATIC(QAXFACTORY_REGISTERCLASS)
 {
   QAxFactory *obj = static_cast<QAxFactory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQSETTINGS(2))
     {
 #endif
       obj->registerClass(PQSTRING(1), PQSETTINGS(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -336,17 +299,14 @@ HB_FUNC_STATIC(QAXFACTORY_STAYTOPLEVEL)
 {
   QAxFactory *obj = static_cast<QAxFactory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       RBOOL(obj->stayTopLevel(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -358,18 +318,14 @@ HB_FUNC_STATIC(QAXFACTORY_TYPELIBID)
 {
   QAxFactory *obj = static_cast<QAxFactory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QUuid *ptr = new QUuid(obj->typeLibID());
       Qt4xHb::createReturnClass(ptr, "QUUID", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -381,17 +337,14 @@ HB_FUNC_STATIC(QAXFACTORY_UNREGISTERCLASS)
 {
   QAxFactory *obj = static_cast<QAxFactory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQSETTINGS(2))
     {
 #endif
       obj->unregisterClass(PQSTRING(1), PQSETTINGS(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -405,17 +358,14 @@ HB_FUNC_STATIC(QAXFACTORY_VALIDATELICENSEKEY)
 {
   QAxFactory *obj = static_cast<QAxFactory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
 #endif
       RBOOL(obj->validateLicenseKey(PQSTRING(1), PQSTRING(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -426,14 +376,11 @@ HB_FUNC_STATIC(QAXFACTORY_VALIDATELICENSEKEY)
 HB_FUNC_STATIC(QAXFACTORY_ISSERVER)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QAxFactory::isServer());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -448,9 +395,7 @@ HB_FUNC_STATIC(QAXFACTORY_REGISTERACTIVEOBJECT)
 #endif
     RBOOL(QAxFactory::registerActiveObject(PQOBJECT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -460,14 +405,11 @@ HB_FUNC_STATIC(QAXFACTORY_REGISTERACTIVEOBJECT)
 HB_FUNC_STATIC(QAXFACTORY_SERVERDIRPATH)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRING(QAxFactory::serverDirPath());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -477,14 +419,11 @@ HB_FUNC_STATIC(QAXFACTORY_SERVERDIRPATH)
 HB_FUNC_STATIC(QAXFACTORY_SERVERFILEPATH)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RQSTRING(QAxFactory::serverFilePath());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -500,9 +439,7 @@ HB_FUNC_STATIC(QAXFACTORY_STARTSERVER)
     RBOOL(QAxFactory::startServer(HB_ISNIL(1) ? (QAxFactory::ServerType)QAxFactory::MultipleInstances
                                               : (QAxFactory::ServerType)hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -512,14 +449,11 @@ HB_FUNC_STATIC(QAXFACTORY_STARTSERVER)
 HB_FUNC_STATIC(QAXFACTORY_STOPSERVER)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
 #endif
     RBOOL(QAxFactory::stopServer());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif

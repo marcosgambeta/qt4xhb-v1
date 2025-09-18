@@ -23,8 +23,7 @@ void QAxScriptManagerSlots::error(QAxScript *script, int code, const QString &de
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "error(QAxScript*,int,QString,int,QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QAXSCRIPTMANAGER");
     PHB_ITEM pScript = Qt4xHb::Signals_return_qobject(script, "QAXSCRIPT");
     PHB_ITEM pCode = hb_itemPutNI(NULL, code);
@@ -47,21 +46,17 @@ void QAxScriptManagerSlots_connect_signal(const QString &signal, const QString &
 {
   QAxScriptManager *obj = qobject_cast<QAxScriptManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QAxScriptManagerSlots *s = QCoreApplication::instance()->findChild<QAxScriptManagerSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QAxScriptManagerSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }
