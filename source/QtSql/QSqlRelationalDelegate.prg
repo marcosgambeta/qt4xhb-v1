@@ -51,9 +51,7 @@ HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_NEW)
   {
     QSqlRelationalDelegate *obj = new QSqlRelationalDelegate(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -62,8 +60,7 @@ HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_DELETE)
 {
   QSqlRelationalDelegate *obj = static_cast<QSqlRelationalDelegate *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -81,8 +78,7 @@ HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_CREATEEDITOR)
 {
   QSqlRelationalDelegate *obj = static_cast<QSqlRelationalDelegate *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQWIDGET(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3))
     {
@@ -90,9 +86,7 @@ HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_CREATEEDITOR)
       QWidget *ptr = obj->createEditor(PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3));
       Qt4xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -104,17 +98,14 @@ HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_SETEDITORDATA)
 {
   QSqlRelationalDelegate *obj = static_cast<QSqlRelationalDelegate *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQWIDGET(1) && ISQMODELINDEX(2))
     {
 #endif
       obj->setEditorData(PQWIDGET(1), *PQMODELINDEX(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -128,17 +119,14 @@ HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_SETMODELDATA)
 {
   QSqlRelationalDelegate *obj = static_cast<QSqlRelationalDelegate *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQWIDGET(1) && ISQABSTRACTITEMMODEL(2) && ISQMODELINDEX(3))
     {
 #endif
       obj->setModelData(PQWIDGET(1), PQABSTRACTITEMMODEL(2), *PQMODELINDEX(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

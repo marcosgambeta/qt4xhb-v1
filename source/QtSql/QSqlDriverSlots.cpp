@@ -22,8 +22,7 @@ void QSqlDriverSlots::notification(const QString &name)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "notification(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSQLDRIVER");
     PHB_ITEM pName = hb_itemPutC(NULL, QSTRINGTOSTRING(name));
 
@@ -38,21 +37,17 @@ void QSqlDriverSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QSqlDriver *obj = qobject_cast<QSqlDriver *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QSqlDriverSlots *s = QCoreApplication::instance()->findChild<QSqlDriverSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QSqlDriverSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }
