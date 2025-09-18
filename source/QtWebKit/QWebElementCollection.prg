@@ -56,8 +56,7 @@ RETURN
 
 HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     // QWebElementCollection()
     QWebElementCollection *obj = new QWebElementCollection();
     Qt4xHb::returnNewObject(obj, true);
@@ -73,9 +72,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_NEW)
     // QWebElementCollection(const QWebElementCollection &other)
     QWebElementCollection *obj = new QWebElementCollection(*PQWEBELEMENTCOLLECTION(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -84,8 +81,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_DELETE)
 {
   QWebElementCollection *obj = static_cast<QWebElementCollection *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -101,17 +97,14 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_APPEND)
 {
   QWebElementCollection *obj = static_cast<QWebElementCollection *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQWEBELEMENTCOLLECTION(1))
     {
 #endif
       obj->append(*PQWEBELEMENTCOLLECTION(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -125,8 +118,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_AT)
 {
   QWebElementCollection *obj = static_cast<QWebElementCollection *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -134,9 +126,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_AT)
       QWebElement *ptr = new QWebElement(obj->at(PINT(1)));
       Qt4xHb::createReturnClass(ptr, "QWEBELEMENT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -148,17 +138,13 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_COUNT)
 {
   QWebElementCollection *obj = static_cast<QWebElementCollection *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->count());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -170,18 +156,14 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_FIRST)
 {
   QWebElementCollection *obj = static_cast<QWebElementCollection *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QWebElement *ptr = new QWebElement(obj->first());
       Qt4xHb::createReturnClass(ptr, "QWEBELEMENT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -193,18 +175,14 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_LAST)
 {
   QWebElementCollection *obj = static_cast<QWebElementCollection *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QWebElement *ptr = new QWebElement(obj->last());
       Qt4xHb::createReturnClass(ptr, "QWEBELEMENT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -216,11 +194,9 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_TOLIST)
 {
   QWebElementCollection *obj = static_cast<QWebElementCollection *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QList<QWebElement> list = obj->toList();
       PHB_DYNS pDynSym = hb_dynsymFindName("QWEBELEMENT");
@@ -251,9 +227,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_TOLIST)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -281,9 +255,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -314,9 +286,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

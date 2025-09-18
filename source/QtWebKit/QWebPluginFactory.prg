@@ -46,8 +46,7 @@ HB_FUNC_STATIC(QWEBPLUGINFACTORY_DELETE)
 {
   QWebPluginFactory *obj = qobject_cast<QWebPluginFactory *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -66,8 +65,7 @@ HB_FUNC_STATIC(QWEBPLUGINFACTORY_CREATE)
 {
   QWebPluginFactory *obj = qobject_cast<QWebPluginFactory *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(4) && HB_ISCHAR(1) && ISQURL(2) && HB_ISARRAY(3) && HB_ISARRAY(4))
     {
@@ -75,9 +73,7 @@ HB_FUNC_STATIC(QWEBPLUGINFACTORY_CREATE)
       QObject *ptr = obj->create(PQSTRING(1), *PQURL(2), PQSTRINGLIST(3), PQSTRINGLIST(4));
       Qt4xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -89,17 +85,13 @@ HB_FUNC_STATIC(QWEBPLUGINFACTORY_REFRESHPLUGINS)
 {
   QWebPluginFactory *obj = qobject_cast<QWebPluginFactory *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->refreshPlugins();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
