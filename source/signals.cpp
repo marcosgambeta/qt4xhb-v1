@@ -139,9 +139,7 @@ void Signals::disconnectAllSignals(QObject *obj, bool children)
         m_list3->replace(i, NULL);
       }
     }
-  }
-  else
-  {
+  } else {
     // obtém a lista de filhos, netos, bisnetos, etc...
     QList<QObject *> objectList = obj->findChildren<QObject *>();
     // adiciona o pai na lista
@@ -300,9 +298,7 @@ PHB_ITEM Signals_return_object(void *ptr, const char *classname)
     PHB_ITEM pItem = hb_itemPutPtr(NULL, ptr);
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, NULL, classname, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -334,9 +330,7 @@ PHB_ITEM Signals_return_qobject(QObject *ptr, const char *classname)
     PHB_ITEM pItem = hb_itemPutPtr(NULL, ptr);
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, NULL, classname, HB_ERR_ARGS_BASEPARAMS);
   }
 
