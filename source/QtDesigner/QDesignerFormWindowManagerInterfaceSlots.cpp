@@ -22,8 +22,7 @@ void QDesignerFormWindowManagerInterfaceSlots::activeFormWindowChanged(QDesigner
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "activeFormWindowChanged(QDesignerFormWindowInterface*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QDESIGNERFORMWINDOWMANAGERINTERFACE");
     PHB_ITEM pFormWindow = Qt4xHb::Signals_return_qobject(formWindow, "QDESIGNERFORMWINDOWINTERFACE");
 
@@ -40,8 +39,7 @@ void QDesignerFormWindowManagerInterfaceSlots::formWindowAdded(QDesignerFormWind
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "formWindowAdded(QDesignerFormWindowInterface*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QDESIGNERFORMWINDOWMANAGERINTERFACE");
     PHB_ITEM pFormWindow = Qt4xHb::Signals_return_qobject(formWindow, "QDESIGNERFORMWINDOWINTERFACE");
 
@@ -58,8 +56,7 @@ void QDesignerFormWindowManagerInterfaceSlots::formWindowRemoved(QDesignerFormWi
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "formWindowRemoved(QDesignerFormWindowInterface*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QDESIGNERFORMWINDOWMANAGERINTERFACE");
     PHB_ITEM pFormWindow = Qt4xHb::Signals_return_qobject(formWindow, "QDESIGNERFORMWINDOWINTERFACE");
 
@@ -75,22 +72,18 @@ void QDesignerFormWindowManagerInterfaceSlots_connect_signal(const QString &sign
   QDesignerFormWindowManagerInterface *obj =
       qobject_cast<QDesignerFormWindowManagerInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QDesignerFormWindowManagerInterfaceSlots *s =
         QCoreApplication::instance()->findChild<QDesignerFormWindowManagerInterfaceSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QDesignerFormWindowManagerInterfaceSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

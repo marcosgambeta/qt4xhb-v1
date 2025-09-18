@@ -50,8 +50,7 @@ HB_FUNC_STATIC(QDESIGNERACTIONEDITORINTERFACE_DELETE)
   QDesignerActionEditorInterface *obj =
       qobject_cast<QDesignerActionEditorInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -70,18 +69,14 @@ HB_FUNC_STATIC(QDESIGNERACTIONEDITORINTERFACE_CORE)
   QDesignerActionEditorInterface *obj =
       qobject_cast<QDesignerActionEditorInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QDesignerFormEditorInterface *ptr = obj->core();
       Qt4xHb::createReturnQObjectClass(ptr, "QDESIGNERFORMEDITORINTERFACE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -94,17 +89,14 @@ HB_FUNC_STATIC(QDESIGNERACTIONEDITORINTERFACE_MANAGEACTION)
   QDesignerActionEditorInterface *obj =
       qobject_cast<QDesignerActionEditorInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQACTION(1))
     {
 #endif
       obj->manageAction(PQACTION(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -119,17 +111,14 @@ HB_FUNC_STATIC(QDESIGNERACTIONEDITORINTERFACE_SETFORMWINDOW)
   QDesignerActionEditorInterface *obj =
       qobject_cast<QDesignerActionEditorInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1))
     {
 #endif
       obj->setFormWindow(PQDESIGNERFORMWINDOWINTERFACE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
