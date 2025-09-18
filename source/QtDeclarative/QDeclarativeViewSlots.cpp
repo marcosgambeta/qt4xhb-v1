@@ -22,8 +22,7 @@ void QDeclarativeViewSlots::sceneResized(QSize size)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "sceneResized(QSize)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QDECLARATIVEVIEW");
     PHB_ITEM pSize = Qt4xHb::Signals_return_object((void *)&size, "QSIZE");
 
@@ -40,8 +39,7 @@ void QDeclarativeViewSlots::statusChanged(QDeclarativeView::Status status)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "statusChanged(QDeclarativeView::Status)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QDECLARATIVEVIEW");
     PHB_ITEM pStatus = hb_itemPutNI(NULL, static_cast<int>(status));
 
@@ -56,21 +54,17 @@ void QDeclarativeViewSlots_connect_signal(const QString &signal, const QString &
 {
   QDeclarativeView *obj = qobject_cast<QDeclarativeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QDeclarativeViewSlots *s = QCoreApplication::instance()->findChild<QDeclarativeViewSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QDeclarativeViewSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }
