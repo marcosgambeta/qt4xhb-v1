@@ -67,8 +67,7 @@ RETURN
 
 HB_FUNC_STATIC(QTESTEVENTLIST_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     // QTestEventList()
     QTestEventList *obj = new QTestEventList();
     Qt4xHb::returnNewObject(obj, true);
@@ -78,9 +77,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_NEW)
     // QTestEventList(const QTestEventList &other)
     QTestEventList *obj = new QTestEventList(*PQTESTEVENTLIST(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -89,8 +86,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_DELETE)
 {
   QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -106,17 +102,14 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDDELAY)
 {
   QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->addDelay(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -130,8 +123,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYCLICK1)
 {
   QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
@@ -140,9 +132,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYCLICK1)
                        HB_ISNIL(2) ? (Qt::KeyboardModifiers)Qt::NoModifier : (Qt::KeyboardModifiers)hb_parni(2),
                        OPINT(3, -1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -156,8 +146,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYCLICK2)
 {
   QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
@@ -166,9 +155,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYCLICK2)
                        HB_ISNIL(2) ? (Qt::KeyboardModifiers)Qt::NoModifier : (Qt::KeyboardModifiers)hb_parni(2),
                        OPINT(3, -1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -186,9 +173,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYCLICK)
   else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     HB_FUNC_EXEC(QTESTEVENTLIST_ADDKEYCLICK2);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -198,8 +183,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYCLICKS)
 {
   QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
@@ -208,9 +192,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYCLICKS)
                         HB_ISNIL(2) ? (Qt::KeyboardModifiers)Qt::NoModifier : (Qt::KeyboardModifiers)hb_parni(2),
                         OPINT(3, -1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -224,8 +206,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYPRESS1)
 {
   QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
@@ -234,9 +215,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYPRESS1)
                        HB_ISNIL(2) ? (Qt::KeyboardModifiers)Qt::NoModifier : (Qt::KeyboardModifiers)hb_parni(2),
                        OPINT(3, -1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -250,8 +229,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYPRESS2)
 {
   QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
@@ -260,9 +238,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYPRESS2)
                        HB_ISNIL(2) ? (Qt::KeyboardModifiers)Qt::NoModifier : (Qt::KeyboardModifiers)hb_parni(2),
                        OPINT(3, -1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -280,9 +256,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYPRESS)
   else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     HB_FUNC_EXEC(QTESTEVENTLIST_ADDKEYPRESS2);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -292,8 +266,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYRELEASE1)
 {
   QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
@@ -302,9 +275,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYRELEASE1)
                          HB_ISNIL(2) ? (Qt::KeyboardModifiers)Qt::NoModifier : (Qt::KeyboardModifiers)hb_parni(2),
                          OPINT(3, -1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -318,8 +289,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYRELEASE2)
 {
   QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
@@ -328,9 +298,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYRELEASE2)
                          HB_ISNIL(2) ? (Qt::KeyboardModifiers)Qt::NoModifier : (Qt::KeyboardModifiers)hb_parni(2),
                          OPINT(3, -1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -348,9 +316,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYRELEASE)
   else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
   {
     HB_FUNC_EXEC(QTESTEVENTLIST_ADDKEYRELEASE2);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -361,8 +327,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSECLICK)
 {
   QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 4) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (ISQPOINT(3) || HB_ISNIL(3)) &&
         (HB_ISNUM(4) || HB_ISNIL(4)))
@@ -372,9 +337,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSECLICK)
                          HB_ISNIL(2) ? (Qt::KeyboardModifiers)0 : (Qt::KeyboardModifiers)hb_parni(2),
                          HB_ISNIL(3) ? QPoint() : *static_cast<QPoint *>(Qt4xHb::itemGetPtr(3)), OPINT(4, -1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -389,8 +352,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSEDCLICK)
 {
   QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 4) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (ISQPOINT(3) || HB_ISNIL(3)) &&
         (HB_ISNUM(4) || HB_ISNIL(4)))
@@ -400,9 +362,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSEDCLICK)
                           HB_ISNIL(2) ? (Qt::KeyboardModifiers)0 : (Qt::KeyboardModifiers)hb_parni(2),
                           HB_ISNIL(3) ? QPoint() : *static_cast<QPoint *>(Qt4xHb::itemGetPtr(3)), OPINT(4, -1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -416,17 +376,14 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSEMOVE)
 {
   QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 2) && (ISQPOINT(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
       obj->addMouseMove(HB_ISNIL(1) ? QPoint() : *static_cast<QPoint *>(Qt4xHb::itemGetPtr(1)), OPINT(2, -1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -441,8 +398,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSEPRESS)
 {
   QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 4) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (ISQPOINT(3) || HB_ISNIL(3)) &&
         (HB_ISNUM(4) || HB_ISNIL(4)))
@@ -452,9 +408,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSEPRESS)
                          HB_ISNIL(2) ? (Qt::KeyboardModifiers)0 : (Qt::KeyboardModifiers)hb_parni(2),
                          HB_ISNIL(3) ? QPoint() : *static_cast<QPoint *>(Qt4xHb::itemGetPtr(3)), OPINT(4, -1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -469,8 +423,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSERELEASE)
 {
   QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 4) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (ISQPOINT(3) || HB_ISNIL(3)) &&
         (HB_ISNUM(4) || HB_ISNIL(4)))
@@ -480,9 +433,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSERELEASE)
                            HB_ISNIL(2) ? (Qt::KeyboardModifiers)0 : (Qt::KeyboardModifiers)hb_parni(2),
                            HB_ISNIL(3) ? QPoint() : *static_cast<QPoint *>(Qt4xHb::itemGetPtr(3)), OPINT(4, -1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -496,17 +447,13 @@ HB_FUNC_STATIC(QTESTEVENTLIST_CLEAR)
 {
   QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -520,17 +467,14 @@ HB_FUNC_STATIC(QTESTEVENTLIST_SIMULATE)
 {
   QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQWIDGET(1))
     {
 #endif
       obj->simulate(PQWIDGET(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -560,9 +504,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -593,9 +535,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
