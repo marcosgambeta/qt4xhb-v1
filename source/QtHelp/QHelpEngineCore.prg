@@ -82,9 +82,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_NEW)
   {
     QHelpEngineCore *obj = new QHelpEngineCore(PQSTRING(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -93,8 +91,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_DELETE)
 {
   QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -112,17 +109,14 @@ HB_FUNC_STATIC(QHELPENGINECORE_ADDCUSTOMFILTER)
 {
   QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2))
     {
 #endif
       RBOOL(obj->addCustomFilter(PQSTRING(1), PQSTRINGLIST(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -134,17 +128,13 @@ HB_FUNC_STATIC(QHELPENGINECORE_AUTOSAVEFILTER)
 {
   QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->autoSaveFilter());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -156,17 +146,13 @@ HB_FUNC_STATIC(QHELPENGINECORE_COLLECTIONFILE)
 {
   QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->collectionFile());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -178,17 +164,14 @@ HB_FUNC_STATIC(QHELPENGINECORE_COPYCOLLECTIONFILE)
 {
   QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       RBOOL(obj->copyCollectionFile(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -200,17 +183,13 @@ HB_FUNC_STATIC(QHELPENGINECORE_CURRENTFILTER)
 {
   QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->currentFilter());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -222,17 +201,13 @@ HB_FUNC_STATIC(QHELPENGINECORE_CUSTOMFILTERS)
 {
   QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->customFilters());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -244,8 +219,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_CUSTOMVALUE)
 {
   QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQVARIANT(2) || HB_ISNIL(2)))
     {
@@ -254,9 +228,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_CUSTOMVALUE)
           obj->customValue(PQSTRING(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(2))));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -268,17 +240,14 @@ HB_FUNC_STATIC(QHELPENGINECORE_DOCUMENTATIONFILENAME)
 {
   QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       RQSTRING(obj->documentationFileName(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -290,17 +259,13 @@ HB_FUNC_STATIC(QHELPENGINECORE_ERROR)
 {
   QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->error());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -312,8 +277,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_FILEDATA)
 {
   QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQURL(1))
     {
@@ -321,9 +285,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_FILEDATA)
       QByteArray *ptr = new QByteArray(obj->fileData(*PQURL(1)));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -336,8 +298,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_FILES)
 {
   QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISARRAY(2) && (HB_ISCHAR(3) || HB_ISNIL(3)))
     {
@@ -371,9 +332,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_FILES)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -382,8 +341,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_FILES)
 
 HB_FUNC_STATIC(QHELPENGINECORE_FILTERATTRIBUTES)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     // QStringList filterAttributes() const
     QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -401,9 +359,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_FILTERATTRIBUTES)
     {
       RQSTRINGLIST(obj->filterAttributes(PQSTRING(1)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -413,8 +369,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_FINDFILE)
 {
   QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQURL(1))
     {
@@ -422,9 +377,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_FINDFILE)
       QUrl *ptr = new QUrl(obj->findFile(*PQURL(1)));
       Qt4xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -436,17 +389,14 @@ HB_FUNC_STATIC(QHELPENGINECORE_REGISTERDOCUMENTATION)
 {
   QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       RBOOL(obj->registerDocumentation(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -458,17 +408,13 @@ HB_FUNC_STATIC(QHELPENGINECORE_REGISTEREDDOCUMENTATIONS)
 {
   QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->registeredDocumentations());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -480,17 +426,14 @@ HB_FUNC_STATIC(QHELPENGINECORE_REMOVECUSTOMFILTER)
 {
   QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       RBOOL(obj->removeCustomFilter(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -502,17 +445,14 @@ HB_FUNC_STATIC(QHELPENGINECORE_REMOVECUSTOMVALUE)
 {
   QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       RBOOL(obj->removeCustomValue(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -524,17 +464,14 @@ HB_FUNC_STATIC(QHELPENGINECORE_SETAUTOSAVEFILTER)
 {
   QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
       obj->setAutoSaveFilter(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -548,17 +485,14 @@ HB_FUNC_STATIC(QHELPENGINECORE_SETCOLLECTIONFILE)
 {
   QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       obj->setCollectionFile(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -572,17 +506,14 @@ HB_FUNC_STATIC(QHELPENGINECORE_SETCURRENTFILTER)
 {
   QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       obj->setCurrentFilter(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -596,17 +527,14 @@ HB_FUNC_STATIC(QHELPENGINECORE_SETCUSTOMVALUE)
 {
   QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2))
     {
 #endif
       RBOOL(obj->setCustomValue(PQSTRING(1), *PQVARIANT(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -618,17 +546,13 @@ HB_FUNC_STATIC(QHELPENGINECORE_SETUPDATA)
 {
   QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->setupData());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -640,17 +564,14 @@ HB_FUNC_STATIC(QHELPENGINECORE_UNREGISTERDOCUMENTATION)
 {
   QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       RBOOL(obj->unregisterDocumentation(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -667,9 +588,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_METADATA)
     QVariant *ptr = new QVariant(QHelpEngineCore::metaData(PQSTRING(1), PQSTRING(2)));
     Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -684,9 +603,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_NAMESPACENAME)
 #endif
     RQSTRING(QHelpEngineCore::namespaceName(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif

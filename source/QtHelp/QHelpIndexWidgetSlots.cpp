@@ -22,8 +22,7 @@ void QHelpIndexWidgetSlots::linkActivated(const QUrl &link, const QString &keywo
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "linkActivated(QUrl,QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QHELPINDEXWIDGET");
     PHB_ITEM pLink = Qt4xHb::Signals_return_object((void *)&link, "QURL");
     PHB_ITEM pKeyword = hb_itemPutC(NULL, QSTRINGTOSTRING(keyword));
@@ -40,21 +39,17 @@ void QHelpIndexWidgetSlots_connect_signal(const QString &signal, const QString &
 {
   QHelpIndexWidget *obj = qobject_cast<QHelpIndexWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QHelpIndexWidgetSlots *s = QCoreApplication::instance()->findChild<QHelpIndexWidgetSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QHelpIndexWidgetSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

@@ -22,8 +22,7 @@ void QHelpEngineCoreSlots::currentFilterChanged(const QString &newFilter)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "currentFilterChanged(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QHELPENGINECORE");
     PHB_ITEM pNewFilter = hb_itemPutC(NULL, QSTRINGTOSTRING(newFilter));
 
@@ -40,8 +39,7 @@ void QHelpEngineCoreSlots::setupFinished()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "setupFinished()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QHELPENGINECORE");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -56,8 +54,7 @@ void QHelpEngineCoreSlots::setupStarted()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "setupStarted()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QHELPENGINECORE");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -72,8 +69,7 @@ void QHelpEngineCoreSlots::warning(const QString &msg)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "warning(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QHELPENGINECORE");
     PHB_ITEM pMsg = hb_itemPutC(NULL, QSTRINGTOSTRING(msg));
 
@@ -88,21 +84,17 @@ void QHelpEngineCoreSlots_connect_signal(const QString &signal, const QString &s
 {
   QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QHelpEngineCoreSlots *s = QCoreApplication::instance()->findChild<QHelpEngineCoreSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QHelpEngineCoreSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

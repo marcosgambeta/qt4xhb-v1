@@ -22,8 +22,7 @@ void QHelpSearchQueryWidgetSlots::search()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "search()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QHELPSEARCHQUERYWIDGET");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -36,21 +35,17 @@ void QHelpSearchQueryWidgetSlots_connect_signal(const QString &signal, const QSt
 {
   QHelpSearchQueryWidget *obj = qobject_cast<QHelpSearchQueryWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QHelpSearchQueryWidgetSlots *s = QCoreApplication::instance()->findChild<QHelpSearchQueryWidgetSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QHelpSearchQueryWidgetSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }
