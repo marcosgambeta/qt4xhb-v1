@@ -32,9 +32,7 @@ void createReturnClass(void *ptr, const char *classname)
     hb_itemReturn(pObject);
     hb_itemRelease(pObject);
     hb_itemRelease(pItem);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, NULL, classname, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -56,9 +54,7 @@ void createReturnClass(const void *ptr, const char *classname)
     hb_itemReturn(pObject);
     hb_itemRelease(pObject);
     hb_itemRelease(pItem);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, NULL, classname, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -83,9 +79,7 @@ void createReturnClass(void *ptr, const char *classname, bool destroy)
     hb_itemRelease(pDestroy);
     hb_itemReturn(pObject);
     hb_itemRelease(pObject);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, NULL, classname, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -110,9 +104,7 @@ void createReturnClass(const void *ptr, const char *classname, bool destroy)
     hb_itemRelease(pDestroy);
     hb_itemReturn(pObject);
     hb_itemRelease(pObject);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, NULL, classname, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -359,9 +351,7 @@ void createReturnQObjectClass(QObject *ptr, const char *classname)
     hb_itemReturn(pObject);
     hb_itemRelease(pObject);
     hb_itemRelease(pItem);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, NULL, classname, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -393,9 +383,7 @@ void createReturnQObjectClass(const QObject *ptr, const char *classname)
     hb_itemReturn(pObject);
     hb_itemRelease(pObject);
     hb_itemRelease(pItem);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, NULL, classname, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -427,9 +415,7 @@ void createReturnQWidgetClass(QWidget *ptr, const char *classname)
     hb_itemReturn(pObject);
     hb_itemRelease(pObject);
     hb_itemRelease(pItem);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, NULL, classname, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -461,9 +447,7 @@ void createReturnQWidgetClass(const QWidget *ptr, const char *classname)
     hb_itemReturn(pObject);
     hb_itemRelease(pObject);
     hb_itemRelease(pItem);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, NULL, classname, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -486,9 +470,7 @@ bool isObjectDerivedFrom(int numpar, const QString &className)
   if (pItem != NULL)
   {
     return hb_clsIsParent(hb_objGetClass(pItem), className.toUpper().toLatin1().data());
-  }
-  else
-  {
+  } else {
     return false;
   }
 }
@@ -566,9 +548,7 @@ void convert_qvariantlist_to_array(const QVariantList &list)
       hb_itemRelease(pDestroy);
       hb_arrayAddForward(pArray, pObject);
       hb_itemRelease(pObject);
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QVARIANT", HB_ERR_ARGS_BASEPARAMS);
     }
   }
@@ -597,9 +577,7 @@ PHB_ITEM returnQModelIndexObject(void *ptr)
     PHB_ITEM pItem = hb_itemPutPtr(NULL, ptr);
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QMODELINDEX", HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -627,9 +605,7 @@ PHB_ITEM returnQVariantObject(void *ptr)
     PHB_ITEM pItem = hb_itemPutPtr(NULL, ptr);
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QVARIANT", HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -662,9 +638,7 @@ PHB_ITEM returnQWidgetObject(QWidget *ptr)
     PHB_ITEM pItem = hb_itemPutPtr(NULL, ptr);
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QWIDGET", HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -697,9 +671,7 @@ PHB_ITEM returnQObjectObject(QObject *ptr)
     PHB_ITEM pItem = hb_itemPutPtr(NULL, ptr);
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QOBJECT", HB_ERR_ARGS_BASEPARAMS);
   }
 
