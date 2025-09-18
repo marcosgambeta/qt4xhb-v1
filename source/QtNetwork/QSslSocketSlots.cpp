@@ -22,8 +22,7 @@ void QSslSocketSlots::encrypted()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "encrypted()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSSLSOCKET");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -38,8 +37,7 @@ void QSslSocketSlots::encryptedBytesWritten(qint64 written)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "encryptedBytesWritten(qint64)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSSLSOCKET");
     PHB_ITEM pWritten = hb_itemPutNLL(NULL, written);
 
@@ -56,8 +54,7 @@ void QSslSocketSlots::modeChanged(QSslSocket::SslMode mode)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "modeChanged(QSslSocket::SslMode)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSSLSOCKET");
     PHB_ITEM pMode = hb_itemPutNI(NULL, static_cast<int>(mode));
 
@@ -74,8 +71,7 @@ void QSslSocketSlots::peerVerifyError(const QSslError &error)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "peerVerifyError(QSslError)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSSLSOCKET");
     PHB_ITEM pError = Qt4xHb::Signals_return_object((void *)&error, "QSSLERROR");
 
@@ -92,8 +88,7 @@ void QSslSocketSlots::sslErrors(const QList<QSslError> &errors)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "sslErrors(QList<QSslError>)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSSLSOCKET");
     PHB_DYNS pDynSym = hb_dynsymFindName("QSSLERROR");
     PHB_ITEM pErrors = hb_itemArrayNew(0);
@@ -113,9 +108,7 @@ void QSslSocketSlots::sslErrors(const QList<QSslError> &errors)
         hb_itemRelease(pTempObject);
         hb_itemRelease(pTempItem);
       }
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QSSLERROR", HB_ERR_ARGS_BASEPARAMS);
     }
 
@@ -130,21 +123,17 @@ void QSslSocketSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QSslSocket *obj = qobject_cast<QSslSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QSslSocketSlots *s = QCoreApplication::instance()->findChild<QSslSocketSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QSslSocketSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

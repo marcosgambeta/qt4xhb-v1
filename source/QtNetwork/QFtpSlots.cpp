@@ -22,8 +22,7 @@ void QFtpSlots::commandFinished(int id, bool error)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "commandFinished(int,bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFTP");
     PHB_ITEM pId = hb_itemPutNI(NULL, id);
     PHB_ITEM pError = hb_itemPutL(NULL, error);
@@ -42,8 +41,7 @@ void QFtpSlots::commandStarted(int id)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "commandStarted(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFTP");
     PHB_ITEM pId = hb_itemPutNI(NULL, id);
 
@@ -60,8 +58,7 @@ void QFtpSlots::dataTransferProgress(qint64 done, qint64 total)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "dataTransferProgress(qint64,qint64)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFTP");
     PHB_ITEM pDone = hb_itemPutNLL(NULL, done);
     PHB_ITEM pTotal = hb_itemPutNLL(NULL, total);
@@ -80,8 +77,7 @@ void QFtpSlots::done(bool error)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "done(bool)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFTP");
     PHB_ITEM pError = hb_itemPutL(NULL, error);
 
@@ -98,8 +94,7 @@ void QFtpSlots::listInfo(const QUrlInfo &i)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "listInfo(QUrlInfo)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFTP");
     PHB_ITEM pI = Qt4xHb::Signals_return_object((void *)&i, "QURLINFO");
 
@@ -116,8 +111,7 @@ void QFtpSlots::rawCommandReply(int replyCode, const QString &detail)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "rawCommandReply(int,QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFTP");
     PHB_ITEM pReplyCode = hb_itemPutNI(NULL, replyCode);
     PHB_ITEM pDetail = hb_itemPutC(NULL, QSTRINGTOSTRING(detail));
@@ -136,8 +130,7 @@ void QFtpSlots::readyRead()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "readyRead()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFTP");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -152,8 +145,7 @@ void QFtpSlots::stateChanged(int state)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "stateChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFTP");
     PHB_ITEM pState = hb_itemPutNI(NULL, state);
 
@@ -168,21 +160,17 @@ void QFtpSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QFtpSlots *s = QCoreApplication::instance()->findChild<QFtpSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QFtpSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

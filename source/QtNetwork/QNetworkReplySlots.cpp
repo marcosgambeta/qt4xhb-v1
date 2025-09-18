@@ -22,8 +22,7 @@ void QNetworkReplySlots::downloadProgress(qint64 bytesReceived, qint64 bytesTota
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "downloadProgress(qint64,qint64)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QNETWORKREPLY");
     PHB_ITEM pBytesReceived = hb_itemPutNLL(NULL, bytesReceived);
     PHB_ITEM pBytesTotal = hb_itemPutNLL(NULL, bytesTotal);
@@ -42,8 +41,7 @@ void QNetworkReplySlots::error(QNetworkReply::NetworkError code)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "error(QNetworkReply::NetworkError)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QNETWORKREPLY");
     PHB_ITEM pCode = hb_itemPutNI(NULL, static_cast<int>(code));
 
@@ -60,8 +58,7 @@ void QNetworkReplySlots::finished()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "finished()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QNETWORKREPLY");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -76,8 +73,7 @@ void QNetworkReplySlots::metaDataChanged()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "metaDataChanged()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QNETWORKREPLY");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -92,8 +88,7 @@ void QNetworkReplySlots::sslErrors(const QList<QSslError> &errors)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "sslErrors(QList<QSslError>)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QNETWORKREPLY");
     PHB_DYNS pDynSym = hb_dynsymFindName("QSSLERROR");
     PHB_ITEM pErrors = hb_itemArrayNew(0);
@@ -113,9 +108,7 @@ void QNetworkReplySlots::sslErrors(const QList<QSslError> &errors)
         hb_itemRelease(pTempObject);
         hb_itemRelease(pTempItem);
       }
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QSSLERROR", HB_ERR_ARGS_BASEPARAMS);
     }
 
@@ -132,8 +125,7 @@ void QNetworkReplySlots::uploadProgress(qint64 bytesSent, qint64 bytesTotal)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "uploadProgress(qint64,qint64)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QNETWORKREPLY");
     PHB_ITEM pBytesSent = hb_itemPutNLL(NULL, bytesSent);
     PHB_ITEM pBytesTotal = hb_itemPutNLL(NULL, bytesTotal);
@@ -150,21 +142,17 @@ void QNetworkReplySlots_connect_signal(const QString &signal, const QString &slo
 {
   QNetworkReply *obj = qobject_cast<QNetworkReply *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QNetworkReplySlots *s = QCoreApplication::instance()->findChild<QNetworkReplySlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QNetworkReplySlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

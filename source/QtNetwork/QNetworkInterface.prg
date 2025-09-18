@@ -62,8 +62,7 @@ RETURN
 
 HB_FUNC_STATIC(QNETWORKINTERFACE_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     // QNetworkInterface()
     QNetworkInterface *obj = new QNetworkInterface();
     Qt4xHb::returnNewObject(obj, true);
@@ -73,9 +72,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_NEW)
     // QNetworkInterface(const QNetworkInterface &other)
     QNetworkInterface *obj = new QNetworkInterface(*PQNETWORKINTERFACE(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -84,8 +81,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_DELETE)
 {
   QNetworkInterface *obj = static_cast<QNetworkInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -101,11 +97,9 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_ADDRESSENTRIES)
 {
   QNetworkInterface *obj = static_cast<QNetworkInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QList<QNetworkAddressEntry> list = obj->addressEntries();
       PHB_DYNS pDynSym = hb_dynsymFindName("QNETWORKADDRESSENTRY");
@@ -136,9 +130,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_ADDRESSENTRIES)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -150,17 +142,13 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_FLAGS)
 {
   QNetworkInterface *obj = static_cast<QNetworkInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->flags());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -172,17 +160,13 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_HARDWAREADDRESS)
 {
   QNetworkInterface *obj = static_cast<QNetworkInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->hardwareAddress());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -194,17 +178,13 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_HUMANREADABLENAME)
 {
   QNetworkInterface *obj = static_cast<QNetworkInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->humanReadableName());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -216,17 +196,13 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_INDEX)
 {
   QNetworkInterface *obj = static_cast<QNetworkInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->index());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -238,17 +214,13 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_ISVALID)
 {
   QNetworkInterface *obj = static_cast<QNetworkInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isValid());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -260,17 +232,13 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_NAME)
 {
   QNetworkInterface *obj = static_cast<QNetworkInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRING(obj->name());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -282,11 +250,9 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_ALLADDRESSES)
 {
   QNetworkInterface *obj = static_cast<QNetworkInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QList<QHostAddress> list = obj->allAddresses();
       PHB_DYNS pDynSym = hb_dynsymFindName("QHOSTADDRESS");
@@ -317,9 +283,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_ALLADDRESSES)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -331,11 +295,9 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_ALLINTERFACES)
 {
   QNetworkInterface *obj = static_cast<QNetworkInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QList<QNetworkInterface> list = obj->allInterfaces();
       PHB_DYNS pDynSym = hb_dynsymFindName("QNETWORKINTERFACE");
@@ -366,9 +328,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_ALLINTERFACES)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -385,9 +345,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_INTERFACEFROMINDEX)
     QNetworkInterface *ptr = new QNetworkInterface(QNetworkInterface::interfaceFromIndex(PINT(1)));
     Qt4xHb::createReturnClass(ptr, "QNETWORKINTERFACE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -403,9 +361,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_INTERFACEFROMNAME)
     QNetworkInterface *ptr = new QNetworkInterface(QNetworkInterface::interfaceFromName(PQSTRING(1)));
     Qt4xHb::createReturnClass(ptr, "QNETWORKINTERFACE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -432,9 +388,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -465,9 +419,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

@@ -53,8 +53,7 @@ HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_DELETE)
 {
   QAbstractNetworkCache *obj = qobject_cast<QAbstractNetworkCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -72,17 +71,13 @@ HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_CACHESIZE)
 {
   QAbstractNetworkCache *obj = qobject_cast<QAbstractNetworkCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQINT64(obj->cacheSize());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -94,8 +89,7 @@ HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_DATA)
 {
   QAbstractNetworkCache *obj = qobject_cast<QAbstractNetworkCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQURL(1))
     {
@@ -103,9 +97,7 @@ HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_DATA)
       QIODevice *ptr = obj->data(*PQURL(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -117,17 +109,14 @@ HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_INSERT)
 {
   QAbstractNetworkCache *obj = qobject_cast<QAbstractNetworkCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQIODEVICE(1))
     {
 #endif
       obj->insert(PQIODEVICE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -141,8 +130,7 @@ HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_METADATA)
 {
   QAbstractNetworkCache *obj = qobject_cast<QAbstractNetworkCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQURL(1))
     {
@@ -150,9 +138,7 @@ HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_METADATA)
       QNetworkCacheMetaData *ptr = new QNetworkCacheMetaData(obj->metaData(*PQURL(1)));
       Qt4xHb::createReturnClass(ptr, "QNETWORKCACHEMETADATA", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -164,8 +150,7 @@ HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_PREPARE)
 {
   QAbstractNetworkCache *obj = qobject_cast<QAbstractNetworkCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQNETWORKCACHEMETADATA(1))
     {
@@ -173,9 +158,7 @@ HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_PREPARE)
       QIODevice *ptr = obj->prepare(*PQNETWORKCACHEMETADATA(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -187,17 +170,14 @@ HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_REMOVE)
 {
   QAbstractNetworkCache *obj = qobject_cast<QAbstractNetworkCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQURL(1))
     {
 #endif
       RBOOL(obj->remove(*PQURL(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -209,17 +189,14 @@ HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_UPDATEMETADATA)
 {
   QAbstractNetworkCache *obj = qobject_cast<QAbstractNetworkCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQNETWORKCACHEMETADATA(1))
     {
 #endif
       obj->updateMetaData(*PQNETWORKCACHEMETADATA(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -233,17 +210,13 @@ HB_FUNC_STATIC(QABSTRACTNETWORKCACHE_CLEAR)
 {
   QAbstractNetworkCache *obj = qobject_cast<QAbstractNetworkCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

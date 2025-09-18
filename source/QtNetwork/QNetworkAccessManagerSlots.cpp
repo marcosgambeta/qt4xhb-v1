@@ -22,8 +22,7 @@ void QNetworkAccessManagerSlots::authenticationRequired(QNetworkReply *reply, QA
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "authenticationRequired(QNetworkReply*,QAuthenticator*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QNETWORKACCESSMANAGER");
     PHB_ITEM pReply = Qt4xHb::Signals_return_qobject(reply, "QNETWORKREPLY");
     PHB_ITEM pAuthenticator = Qt4xHb::Signals_return_object((void *)authenticator, "QAUTHENTICATOR");
@@ -42,8 +41,7 @@ void QNetworkAccessManagerSlots::finished(QNetworkReply *reply)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "finished(QNetworkReply*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QNETWORKACCESSMANAGER");
     PHB_ITEM pReply = Qt4xHb::Signals_return_qobject(reply, "QNETWORKREPLY");
 
@@ -61,8 +59,7 @@ void QNetworkAccessManagerSlots::networkAccessibleChanged(QNetworkAccessManager:
   PHB_ITEM cb =
       Qt4xHb::Signals_return_codeblock(object, "networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QNETWORKACCESSMANAGER");
     PHB_ITEM pAccessible = hb_itemPutNI(NULL, static_cast<int>(accessible));
 
@@ -79,8 +76,7 @@ void QNetworkAccessManagerSlots::proxyAuthenticationRequired(const QNetworkProxy
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QNETWORKACCESSMANAGER");
     PHB_ITEM pProxy = Qt4xHb::Signals_return_object((void *)&proxy, "QNETWORKPROXY");
     PHB_ITEM pAuthenticator = Qt4xHb::Signals_return_object((void *)authenticator, "QAUTHENTICATOR");
@@ -99,8 +95,7 @@ void QNetworkAccessManagerSlots::sslErrors(QNetworkReply *reply, const QList<QSs
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "sslErrors(QNetworkReply*,QList<QSslError>)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QNETWORKACCESSMANAGER");
     PHB_ITEM pReply = Qt4xHb::Signals_return_qobject(reply, "QNETWORKREPLY");
     PHB_DYNS pDynSym = hb_dynsymFindName("QSSLERROR");
@@ -121,9 +116,7 @@ void QNetworkAccessManagerSlots::sslErrors(QNetworkReply *reply, const QList<QSs
         hb_itemRelease(pTempObject);
         hb_itemRelease(pTempItem);
       }
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QSSLERROR", HB_ERR_ARGS_BASEPARAMS);
     }
 
@@ -139,21 +132,17 @@ void QNetworkAccessManagerSlots_connect_signal(const QString &signal, const QStr
 {
   QNetworkAccessManager *obj = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QNetworkAccessManagerSlots *s = QCoreApplication::instance()->findChild<QNetworkAccessManagerSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QNetworkAccessManagerSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }
