@@ -43,13 +43,10 @@ RETURN
     // QXmlSimpleReader()
 HB_FUNC_STATIC(QXMLSIMPLEREADER_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     QXmlSimpleReader *obj = new QXmlSimpleReader();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -58,8 +55,7 @@ HB_FUNC_STATIC(QXMLSIMPLEREADER_DELETE)
 {
   QXmlSimpleReader *obj = static_cast<QXmlSimpleReader *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -75,17 +71,14 @@ HB_FUNC_STATIC(QXMLSIMPLEREADER_PARSE)
 {
   QXmlSimpleReader *obj = static_cast<QXmlSimpleReader *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQXMLINPUTSOURCE(1) && HB_ISLOG(2))
     {
 #endif
       RBOOL(obj->parse(PQXMLINPUTSOURCE(1), PBOOL(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -97,17 +90,13 @@ HB_FUNC_STATIC(QXMLSIMPLEREADER_PARSECONTINUE)
 {
   QXmlSimpleReader *obj = static_cast<QXmlSimpleReader *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->parseContinue());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

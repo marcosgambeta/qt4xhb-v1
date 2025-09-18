@@ -41,8 +41,7 @@ RETURN
 
 HB_FUNC_STATIC(QDOMTEXT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     // QDomText()
     QDomText *obj = new QDomText();
     Qt4xHb::returnNewObject(obj, true);
@@ -52,9 +51,7 @@ HB_FUNC_STATIC(QDOMTEXT_NEW)
     // QDomText(const QDomText &x)
     QDomText *obj = new QDomText(*PQDOMTEXT(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -64,17 +61,13 @@ HB_FUNC_STATIC(QDOMTEXT_NODETYPE)
 {
   QDomText *obj = static_cast<QDomText *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->nodeType());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -86,8 +79,7 @@ HB_FUNC_STATIC(QDOMTEXT_SPLITTEXT)
 {
   QDomText *obj = static_cast<QDomText *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -95,9 +87,7 @@ HB_FUNC_STATIC(QDOMTEXT_SPLITTEXT)
       QDomText *ptr = new QDomText(obj->splitText(PINT(1)));
       Qt4xHb::createReturnClass(ptr, "QDOMTEXT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

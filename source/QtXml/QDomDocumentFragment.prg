@@ -40,8 +40,7 @@ RETURN
 
 HB_FUNC_STATIC(QDOMDOCUMENTFRAGMENT_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     // QDomDocumentFragment()
     QDomDocumentFragment *obj = new QDomDocumentFragment();
     Qt4xHb::returnNewObject(obj, true);
@@ -51,9 +50,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTFRAGMENT_NEW)
     // QDomDocumentFragment(const QDomDocumentFragment &x)
     QDomDocumentFragment *obj = new QDomDocumentFragment(*PQDOMDOCUMENTFRAGMENT(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -63,17 +60,13 @@ HB_FUNC_STATIC(QDOMDOCUMENTFRAGMENT_NODETYPE)
 {
   QDomDocumentFragment *obj = static_cast<QDomDocumentFragment *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RENUM(obj->nodeType());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
