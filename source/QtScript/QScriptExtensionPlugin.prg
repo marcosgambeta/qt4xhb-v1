@@ -49,8 +49,7 @@ HB_FUNC_STATIC(QSCRIPTEXTENSIONPLUGIN_DELETE)
 {
   QScriptExtensionPlugin *obj = qobject_cast<QScriptExtensionPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -68,8 +67,7 @@ HB_FUNC_STATIC(QSCRIPTEXTENSIONPLUGIN_SETUPPACKAGE)
 {
   QScriptExtensionPlugin *obj = qobject_cast<QScriptExtensionPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQSCRIPTENGINE(2))
     {
@@ -77,9 +75,7 @@ HB_FUNC_STATIC(QSCRIPTEXTENSIONPLUGIN_SETUPPACKAGE)
       QScriptValue *ptr = new QScriptValue(obj->setupPackage(PQSTRING(1), PQSCRIPTENGINE(2)));
       Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -91,17 +87,14 @@ HB_FUNC_STATIC(QSCRIPTEXTENSIONPLUGIN_INITIALIZE)
 {
   QScriptExtensionPlugin *obj = qobject_cast<QScriptExtensionPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQSCRIPTENGINE(2))
     {
 #endif
       obj->initialize(PQSTRING(1), PQSCRIPTENGINE(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -115,17 +108,13 @@ HB_FUNC_STATIC(QSCRIPTEXTENSIONPLUGIN_KEYS)
 {
   QScriptExtensionPlugin *obj = qobject_cast<QScriptExtensionPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RQSTRINGLIST(obj->keys());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
