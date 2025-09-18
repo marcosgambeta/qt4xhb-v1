@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_SETEDITABLE)
   {
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
-      obj->editable=PBOOL(1);
+      obj->editable = PBOOL(1);
     }
     else
     {
@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_SETPOPUPRECT)
   {
     if (ISNUMPAR(1) && ISQRECT(1))
     {
-      obj->popupRect=*PQRECT(1);
+      obj->popupRect = *PQRECT(1);
     }
     else
     {
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_SETFRAME)
   {
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
-      obj->frame=PBOOL(1);
+      obj->frame = PBOOL(1);
     }
     else
     {
@@ -206,7 +206,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_SETCURRENTTEXT)
   {
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
-      obj->currentText=PQSTRING(1);
+      obj->currentText = PQSTRING(1);
     }
     else
     {
@@ -243,7 +243,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_SETCURRENTICON)
   {
     if (ISNUMPAR(1) && ISQICON(1))
     {
-      obj->currentIcon=*PQICON(1);
+      obj->currentIcon = *PQICON(1);
     }
     else
     {
@@ -280,7 +280,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_SETICONSIZE)
   {
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
-      obj->iconSize=*PQSIZE(1);
+      obj->iconSize = *PQSIZE(1);
     }
     else
     {

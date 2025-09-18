@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SETSHAPE)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->shape=(QTabBar::Shape)hb_parni(1);
+      obj->shape = (QTabBar::Shape)hb_parni(1);
     }
     else
     {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SETTABBARRECT)
   {
     if (ISNUMPAR(1) && ISQRECT(1))
     {
-      obj->tabBarRect=*PQRECT(1);
+      obj->tabBarRect = *PQRECT(1);
     }
     else
     {
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SETSELECTEDTABRECT)
   {
     if (ISNUMPAR(1) && ISQRECT(1))
     {
-      obj->selectedTabRect=*PQRECT(1);
+      obj->selectedTabRect = *PQRECT(1);
     }
     else
     {

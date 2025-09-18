@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SETORIENTATION)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->orientation=(Qt::Orientation)hb_parni(1);
+      obj->orientation = (Qt::Orientation)hb_parni(1);
     }
     else
     {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SETMINIMUM)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->minimum=PINT(1);
+      obj->minimum = PINT(1);
     }
     else
     {
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SETMAXIMUM)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->maximum=PINT(1);
+      obj->maximum = PINT(1);
     }
     else
     {
@@ -214,7 +214,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SETTICKPOSITION)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->tickPosition=(QSlider::TickPosition)hb_parni(1);
+      obj->tickPosition = (QSlider::TickPosition)hb_parni(1);
     }
     else
     {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SETTICKINTERVAL)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->tickInterval=PINT(1);
+      obj->tickInterval = PINT(1);
     }
     else
     {
@@ -286,7 +286,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SETUPSIDEDOWN)
   {
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
-      obj->upsideDown=PBOOL(1);
+      obj->upsideDown = PBOOL(1);
     }
     else
     {
@@ -322,7 +322,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SETSLIDERPOSITION)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->sliderPosition=PINT(1);
+      obj->sliderPosition = PINT(1);
     }
     else
     {
@@ -358,7 +358,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SETSLIDERVALUE)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->sliderValue=PINT(1);
+      obj->sliderValue = PINT(1);
     }
     else
     {
@@ -394,7 +394,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SETSINGLESTEP)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->singleStep=PINT(1);
+      obj->singleStep = PINT(1);
     }
     else
     {
@@ -430,7 +430,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SETPAGESTEP)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->pageStep=PINT(1);
+      obj->pageStep = PINT(1);
     }
     else
     {
@@ -466,7 +466,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SETNOTCHTARGET)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->notchTarget=PQREAL(1);
+      obj->notchTarget = PQREAL(1);
     }
     else
     {
@@ -502,7 +502,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SETDIALWRAPPING)
   {
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
-      obj->dialWrapping=PBOOL(1);
+      obj->dialWrapping = PBOOL(1);
     }
     else
     {

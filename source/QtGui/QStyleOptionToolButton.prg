@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBUTTON_SETFEATURES)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->features=(QStyleOptionToolButton::ToolButtonFeatures)hb_parni(1);
+      obj->features = (QStyleOptionToolButton::ToolButtonFeatures)hb_parni(1);
     }
     else
     {
@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBUTTON_SETICON)
   {
     if (ISNUMPAR(1) && ISQICON(1))
     {
-      obj->icon=*PQICON(1);
+      obj->icon = *PQICON(1);
     }
     else
     {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBUTTON_SETICONSIZE)
   {
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
-      obj->iconSize=*PQSIZE(1);
+      obj->iconSize = *PQSIZE(1);
     }
     else
     {
@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBUTTON_SETTEXT)
   {
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
-      obj->text=PQSTRING(1);
+      obj->text = PQSTRING(1);
     }
     else
     {
@@ -248,7 +248,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBUTTON_SETARROWTYPE)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->arrowType=(Qt::ArrowType)hb_parni(1);
+      obj->arrowType = (Qt::ArrowType)hb_parni(1);
     }
     else
     {
@@ -284,7 +284,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBUTTON_SETTOOLBUTTONSTYLE)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->toolButtonStyle=(Qt::ToolButtonStyle)hb_parni(1);
+      obj->toolButtonStyle = (Qt::ToolButtonStyle)hb_parni(1);
     }
     else
     {
@@ -321,7 +321,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBUTTON_SETPOS)
   {
     if (ISNUMPAR(1) && ISQPOINT(1))
     {
-      obj->pos=*PQPOINT(1);
+      obj->pos = *PQPOINT(1);
     }
     else
     {
@@ -358,7 +358,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBUTTON_SETFONT)
   {
     if (ISNUMPAR(1) && ISQFONT(1))
     {
-      obj->font=*PQFONT(1);
+      obj->font = *PQFONT(1);
     }
     else
     {

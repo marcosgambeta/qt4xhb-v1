@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETDISPLAYALIGNMENT)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->displayAlignment=(Qt::Alignment)hb_parni(1);
+      obj->displayAlignment = (Qt::Alignment)hb_parni(1);
     }
     else
     {
@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETDECORATIONALIGNMENT)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->decorationAlignment=(Qt::Alignment)hb_parni(1);
+      obj->decorationAlignment = (Qt::Alignment)hb_parni(1);
     }
     else
     {
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETTEXTELIDEMODE)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->textElideMode=(Qt::TextElideMode)hb_parni(1);
+      obj->textElideMode = (Qt::TextElideMode)hb_parni(1);
     }
     else
     {
@@ -206,7 +206,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETDECORATIONPOSITION)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->decorationPosition=(QStyleOptionViewItem::Position)hb_parni(1);
+      obj->decorationPosition = (QStyleOptionViewItem::Position)hb_parni(1);
     }
     else
     {
@@ -243,7 +243,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETDECORATIONSIZE)
   {
     if (ISNUMPAR(1) && ISQSIZE(1))
     {
-      obj->decorationSize=*PQSIZE(1);
+      obj->decorationSize = *PQSIZE(1);
     }
     else
     {
@@ -280,7 +280,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETFONT)
   {
     if (ISNUMPAR(1) && ISQFONT(1))
     {
-      obj->font=*PQFONT(1);
+      obj->font = *PQFONT(1);
     }
     else
     {
@@ -316,7 +316,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETSHOWDECORATIONSELECTED)
   {
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
-      obj->showDecorationSelected=PBOOL(1);
+      obj->showDecorationSelected = PBOOL(1);
     }
     else
     {

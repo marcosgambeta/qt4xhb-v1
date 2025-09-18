@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETVERSION)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->version=PINT(1);
+      obj->version = PINT(1);
     }
     else
     {
@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETTYPE)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->type=PINT(1);
+      obj->type = PINT(1);
     }
     else
     {
@@ -248,7 +248,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETSTATE)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->state=(QStyle::State)hb_parni(1);
+      obj->state = (QStyle::State)hb_parni(1);
     }
     else
     {
@@ -284,7 +284,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETDIRECTION)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->direction=(Qt::LayoutDirection)hb_parni(1);
+      obj->direction = (Qt::LayoutDirection)hb_parni(1);
     }
     else
     {
@@ -321,7 +321,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETRECT)
   {
     if (ISNUMPAR(1) && ISQRECT(1))
     {
-      obj->rect=*PQRECT(1);
+      obj->rect = *PQRECT(1);
     }
     else
     {
@@ -358,7 +358,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETFONTMETRICS)
   {
     if (ISNUMPAR(1) && ISQFONTMETRICS(1))
     {
-      obj->fontMetrics=*PQFONTMETRICS(1);
+      obj->fontMetrics = *PQFONTMETRICS(1);
     }
     else
     {
@@ -395,7 +395,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_SETPALETTE)
   {
     if (ISNUMPAR(1) && ISQPALETTE(1))
     {
-      obj->palette=*PQPALETTE(1);
+      obj->palette = *PQPALETTE(1);
     }
     else
     {

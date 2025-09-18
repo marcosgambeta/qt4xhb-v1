@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFOCUSRECT_SETBACKGROUNDCOLOR)
   {
     if (ISNUMPAR(1) && ISQCOLOR(1))
     {
-      obj->backgroundColor=*PQCOLOR(1);
+      obj->backgroundColor = *PQCOLOR(1);
     }
     else
     {

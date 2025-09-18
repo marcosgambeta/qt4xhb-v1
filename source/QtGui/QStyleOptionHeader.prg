@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SETSECTION)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->section=PINT(1);
+      obj->section = PINT(1);
     }
     else
     {
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SETTEXT)
   {
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
-      obj->text=PQSTRING(1);
+      obj->text = PQSTRING(1);
     }
     else
     {
@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SETTEXTALIGNMENT)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->textAlignment=(Qt::Alignment)hb_parni(1);
+      obj->textAlignment = (Qt::Alignment)hb_parni(1);
     }
     else
     {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SETICON)
   {
     if (ISNUMPAR(1) && ISQICON(1))
     {
-      obj->icon=*PQICON(1);
+      obj->icon = *PQICON(1);
     }
     else
     {
@@ -246,7 +246,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SETICONALIGNMENT)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->iconAlignment=(Qt::Alignment)hb_parni(1);
+      obj->iconAlignment = (Qt::Alignment)hb_parni(1);
     }
     else
     {
@@ -282,7 +282,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SETPOSITION)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->position=(QStyleOptionHeader::SectionPosition)hb_parni(1);
+      obj->position = (QStyleOptionHeader::SectionPosition)hb_parni(1);
     }
     else
     {
@@ -318,7 +318,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SETSELECTEDPOSITION)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->selectedPosition=(QStyleOptionHeader::SelectedPosition)hb_parni(1);
+      obj->selectedPosition = (QStyleOptionHeader::SelectedPosition)hb_parni(1);
     }
     else
     {
@@ -354,7 +354,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SETSORTINDICATOR)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->sortIndicator=(QStyleOptionHeader::SortIndicator)hb_parni(1);
+      obj->sortIndicator = (QStyleOptionHeader::SortIndicator)hb_parni(1);
     }
     else
     {
@@ -390,7 +390,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SETORIENTATION)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->orientation=(Qt::Orientation)hb_parni(1);
+      obj->orientation = (Qt::Orientation)hb_parni(1);
     }
     else
     {

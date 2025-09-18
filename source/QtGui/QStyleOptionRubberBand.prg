@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_SETSHAPE)
   {
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->shape=(QRubberBand::Shape)hb_parni(1);
+      obj->shape = (QRubberBand::Shape)hb_parni(1);
     }
     else
     {
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_SETOPAQUE)
   {
     if (ISNUMPAR(1) && HB_ISLOG(1))
     {
-      obj->opaque=PBOOL(1);
+      obj->opaque = PBOOL(1);
     }
     else
     {
