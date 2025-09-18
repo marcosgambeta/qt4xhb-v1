@@ -44,8 +44,7 @@ HB_FUNC_STATIC(QABSTRACTMESSAGEHANDLER_DELETE)
 {
   QAbstractMessageHandler *obj = qobject_cast<QAbstractMessageHandler *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -64,8 +63,7 @@ HB_FUNC_STATIC(QABSTRACTMESSAGEHANDLER_MESSAGE)
 {
   QAbstractMessageHandler *obj = qobject_cast<QAbstractMessageHandler *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && (ISQURL(3) || HB_ISNIL(3)) &&
         (ISQSOURCELOCATION(4) || HB_ISNIL(4)))
@@ -75,9 +73,7 @@ HB_FUNC_STATIC(QABSTRACTMESSAGEHANDLER_MESSAGE)
                    HB_ISNIL(3) ? QUrl() : *static_cast<QUrl *>(Qt4xHb::itemGetPtr(3)),
                    HB_ISNIL(4) ? QSourceLocation() : *static_cast<QSourceLocation *>(Qt4xHb::itemGetPtr(4)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

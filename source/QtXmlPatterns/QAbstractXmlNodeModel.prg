@@ -63,8 +63,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_DELETE)
 {
   QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -80,8 +79,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_BASEURI)
 {
   QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
     {
@@ -89,9 +87,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_BASEURI)
       QUrl *ptr = new QUrl(obj->baseUri(*PQXMLNODEMODELINDEX(1)));
       Qt4xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -104,17 +100,14 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_COMPAREORDER)
 {
   QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQXMLNODEMODELINDEX(1) && ISQXMLNODEMODELINDEX(2))
     {
 #endif
       RENUM(obj->compareOrder(*PQXMLNODEMODELINDEX(1), *PQXMLNODEMODELINDEX(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -126,8 +119,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_DOCUMENTURI)
 {
   QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
     {
@@ -135,9 +127,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_DOCUMENTURI)
       QUrl *ptr = new QUrl(obj->documentUri(*PQXMLNODEMODELINDEX(1)));
       Qt4xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -149,8 +139,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_ELEMENTBYID)
 {
   QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQXMLNAME(1))
     {
@@ -158,9 +147,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_ELEMENTBYID)
       QXmlNodeModelIndex *ptr = new QXmlNodeModelIndex(obj->elementById(*PQXMLNAME(1)));
       Qt4xHb::createReturnClass(ptr, "QXMLNODEMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -172,17 +159,14 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_KIND)
 {
   QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
     {
 #endif
       RENUM(obj->kind(*PQXMLNODEMODELINDEX(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -194,8 +178,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_NAME)
 {
   QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
     {
@@ -203,9 +186,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_NAME)
       QXmlName *ptr = new QXmlName(obj->name(*PQXMLNODEMODELINDEX(1)));
       Qt4xHb::createReturnClass(ptr, "QXMLNAME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -217,8 +198,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_NAMESPACEBINDINGS)
 {
   QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
     {
@@ -252,9 +232,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_NAMESPACEBINDINGS)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -266,8 +244,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_NODESBYIDREF)
 {
   QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQXMLNAME(1))
     {
@@ -301,9 +278,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_NODESBYIDREF)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -315,8 +290,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_ROOT)
 {
   QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
     {
@@ -324,9 +298,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_ROOT)
       QXmlNodeModelIndex *ptr = new QXmlNodeModelIndex(obj->root(*PQXMLNODEMODELINDEX(1)));
       Qt4xHb::createReturnClass(ptr, "QXMLNODEMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -338,8 +310,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_SOURCELOCATION)
 {
   QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
     {
@@ -347,9 +318,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_SOURCELOCATION)
       QSourceLocation *ptr = new QSourceLocation(obj->sourceLocation(*PQXMLNODEMODELINDEX(1)));
       Qt4xHb::createReturnClass(ptr, "QSOURCELOCATION", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -361,17 +330,14 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_STRINGVALUE)
 {
   QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
     {
 #endif
       RQSTRING(obj->stringValue(*PQXMLNODEMODELINDEX(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -383,8 +349,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_TYPEDVALUE)
 {
   QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
     {
@@ -392,9 +357,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_TYPEDVALUE)
       QVariant *ptr = new QVariant(obj->typedValue(*PQXMLNODEMODELINDEX(1)));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
