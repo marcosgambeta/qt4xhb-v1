@@ -974,15 +974,11 @@ int HAbstractTableModel::rowCount(const QModelIndex &parent) const
   if (parent.isValid())
   {
     return 0;
-  }
-  else
-  {
+  } else {
     if (m_rowCountCB)
     {
       return static_cast<int>(hb_itemGetNI(hb_vmEvalBlockV(m_rowCountCB, 0)));
-    }
-    else
-    {
+    } else {
       return 0;
     }
   }
@@ -994,15 +990,11 @@ int HAbstractTableModel::columnCount(const QModelIndex &parent) const
   if (parent.isValid())
   {
     return 0;
-  }
-  else
-  {
+  } else {
     if (m_colCountCB)
     {
       return static_cast<int>(hb_itemGetNI(hb_vmEvalBlockV(m_colCountCB, 0)));
-    }
-    else
-    {
+    } else {
       return 0;
     }
   }

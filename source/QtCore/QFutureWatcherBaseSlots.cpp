@@ -22,8 +22,7 @@ void QFutureWatcherBaseSlots::started()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "started()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFUTUREWATCHERBASE");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -38,8 +37,7 @@ void QFutureWatcherBaseSlots::finished()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "finished()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFUTUREWATCHERBASE");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -54,8 +52,7 @@ void QFutureWatcherBaseSlots::canceled()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "canceled()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFUTUREWATCHERBASE");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -70,8 +67,7 @@ void QFutureWatcherBaseSlots::paused()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "paused()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFUTUREWATCHERBASE");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -86,8 +82,7 @@ void QFutureWatcherBaseSlots::resumed()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "resumed()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFUTUREWATCHERBASE");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -102,8 +97,7 @@ void QFutureWatcherBaseSlots::resultReadyAt(int resultIndex)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "resultReadyAt(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFUTUREWATCHERBASE");
     PHB_ITEM pResultIndex = hb_itemPutNI(NULL, resultIndex);
 
@@ -120,8 +114,7 @@ void QFutureWatcherBaseSlots::resultsReadyAt(int beginIndex, int endIndex)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "resultsReadyAt(int,int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFUTUREWATCHERBASE");
     PHB_ITEM pBeginIndex = hb_itemPutNI(NULL, beginIndex);
     PHB_ITEM pEndIndex = hb_itemPutNI(NULL, endIndex);
@@ -140,8 +133,7 @@ void QFutureWatcherBaseSlots::progressRangeChanged(int minimum, int maximum)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "progressRangeChanged(int,int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFUTUREWATCHERBASE");
     PHB_ITEM pMinimum = hb_itemPutNI(NULL, minimum);
     PHB_ITEM pMaximum = hb_itemPutNI(NULL, maximum);
@@ -160,8 +152,7 @@ void QFutureWatcherBaseSlots::progressValueChanged(int progressValue)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "progressValueChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFUTUREWATCHERBASE");
     PHB_ITEM pProgressValue = hb_itemPutNI(NULL, progressValue);
 
@@ -178,8 +169,7 @@ void QFutureWatcherBaseSlots::progressTextChanged(const QString &progressText)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "progressTextChanged(QString)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFUTUREWATCHERBASE");
     PHB_ITEM pProgressText = hb_itemPutC(NULL, QSTRINGTOSTRING(progressText));
 
@@ -194,21 +184,17 @@ void QFutureWatcherBaseSlots_connect_signal(const QString &signal, const QString
 {
   QFutureWatcherBase *obj = qobject_cast<QFutureWatcherBase *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QFutureWatcherBaseSlots *s = QCoreApplication::instance()->findChild<QFutureWatcherBaseSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QFutureWatcherBaseSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

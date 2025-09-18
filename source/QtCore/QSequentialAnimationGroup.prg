@@ -57,9 +57,7 @@ HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_NEW)
   {
     QSequentialAnimationGroup *obj = new QSequentialAnimationGroup(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -68,8 +66,7 @@ HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_DELETE)
 {
   QSequentialAnimationGroup *obj = qobject_cast<QSequentialAnimationGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -87,8 +84,7 @@ HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_ADDPAUSE)
 {
   QSequentialAnimationGroup *obj = qobject_cast<QSequentialAnimationGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -96,9 +92,7 @@ HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_ADDPAUSE)
       QPauseAnimation *ptr = obj->addPause(PINT(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QPAUSEANIMATION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -110,18 +104,14 @@ HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_CURRENTANIMATION)
 {
   QSequentialAnimationGroup *obj = qobject_cast<QSequentialAnimationGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QAbstractAnimation *ptr = obj->currentAnimation();
       Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTANIMATION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -133,8 +123,7 @@ HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_INSERTPAUSE)
 {
   QSequentialAnimationGroup *obj = qobject_cast<QSequentialAnimationGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -142,9 +131,7 @@ HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_INSERTPAUSE)
       QPauseAnimation *ptr = obj->insertPause(PINT(1), PINT(2));
       Qt4xHb::createReturnQObjectClass(ptr, "QPAUSEANIMATION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -156,17 +143,13 @@ HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_DURATION)
 {
   QSequentialAnimationGroup *obj = qobject_cast<QSequentialAnimationGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->duration());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

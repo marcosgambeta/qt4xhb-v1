@@ -149,9 +149,7 @@ PHB_ITEM HEventFilter::returnQEvent(QEvent *event, const char *classname)
     PHB_ITEM pItem = hb_itemPutPtr(NULL, static_cast<QEvent *>(event));
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, NULL, classname, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -183,9 +181,7 @@ PHB_ITEM HEventFilter::returnQObject(QObject *object, const char *classname)
     PHB_ITEM pItem = hb_itemPutPtr(NULL, static_cast<void *>(object));
     hb_objSendMsg(pObject, "_POINTER", 1, pItem);
     hb_itemRelease(pItem);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_NOFUNC, 1001, NULL, classname, HB_ERR_ARGS_BASEPARAMS);
   }
 

@@ -22,8 +22,7 @@ void QStateSlots::finished()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "finished()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSTATE");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -38,8 +37,7 @@ void QStateSlots::propertiesAssigned()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "propertiesAssigned()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSTATE");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -52,21 +50,17 @@ void QStateSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QState *obj = qobject_cast<QState *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QStateSlots *s = QCoreApplication::instance()->findChild<QStateSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QStateSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

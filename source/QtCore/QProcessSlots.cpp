@@ -22,8 +22,7 @@ void QProcessSlots::error(QProcess::ProcessError error)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "error(QProcess::ProcessError)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QPROCESS");
     PHB_ITEM pError = hb_itemPutNI(NULL, static_cast<int>(error));
 
@@ -40,8 +39,7 @@ void QProcessSlots::finished(int exitCode, QProcess::ExitStatus exitStatus)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "finished(int,QProcess::ExitStatus)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QPROCESS");
     PHB_ITEM pExitCode = hb_itemPutNI(NULL, exitCode);
     PHB_ITEM pExitStatus = hb_itemPutNI(NULL, static_cast<int>(exitStatus));
@@ -60,8 +58,7 @@ void QProcessSlots::readyReadStandardError()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "readyReadStandardError()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QPROCESS");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -76,8 +73,7 @@ void QProcessSlots::readyReadStandardOutput()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "readyReadStandardOutput()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QPROCESS");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -92,8 +88,7 @@ void QProcessSlots::started()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "started()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QPROCESS");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -108,8 +103,7 @@ void QProcessSlots::stateChanged(QProcess::ProcessState newState)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "stateChanged(QProcess::ProcessState)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QPROCESS");
     PHB_ITEM pNewState = hb_itemPutNI(NULL, static_cast<int>(newState));
 
@@ -124,21 +118,17 @@ void QProcessSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QProcessSlots *s = QCoreApplication::instance()->findChild<QProcessSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QProcessSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

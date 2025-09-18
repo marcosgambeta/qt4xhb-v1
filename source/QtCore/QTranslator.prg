@@ -52,9 +52,7 @@ HB_FUNC_STATIC(QTRANSLATOR_NEW)
   {
     QTranslator *obj = new QTranslator(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -63,8 +61,7 @@ HB_FUNC_STATIC(QTRANSLATOR_DELETE)
 {
   QTranslator *obj = qobject_cast<QTranslator *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -82,17 +79,13 @@ HB_FUNC_STATIC(QTRANSLATOR_ISEMPTY)
 {
   QTranslator *obj = qobject_cast<QTranslator *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEmpty());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -125,9 +118,7 @@ HB_FUNC_STATIC(QTRANSLATOR_LOAD)
       RBOOL(obj->load(*PQLOCALE(1), PQSTRING(2), OPQSTRING(3, QString()), OPQSTRING(4, QString()),
                       OPQSTRING(5, QString())));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -138,8 +129,7 @@ HB_FUNC_STATIC(QTRANSLATOR_TRANSLATE)
 {
   QTranslator *obj = qobject_cast<QTranslator *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISCHAR(2) && (HB_ISCHAR(3) || HB_ISNIL(3)) &&
         (HB_ISNUM(4) || HB_ISNIL(4)))
@@ -147,9 +137,7 @@ HB_FUNC_STATIC(QTRANSLATOR_TRANSLATE)
 #endif
       RQSTRING(obj->translate(PCONSTCHAR(1), PCONSTCHAR(2), OPCONSTCHAR(3, 0), OPINT(4, -1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

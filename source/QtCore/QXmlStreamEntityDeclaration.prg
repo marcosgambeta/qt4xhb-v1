@@ -55,8 +55,7 @@ RETURN
 
 HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     // QXmlStreamEntityDeclaration()
     QXmlStreamEntityDeclaration *obj = new QXmlStreamEntityDeclaration();
     Qt4xHb::returnNewObject(obj, true);
@@ -66,9 +65,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_NEW)
     // QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration &other)
     QXmlStreamEntityDeclaration *obj = new QXmlStreamEntityDeclaration(*PQXMLSTREAMENTITYDECLARATION(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -77,8 +74,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_DELETE)
 {
   QXmlStreamEntityDeclaration *obj = static_cast<QXmlStreamEntityDeclaration *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -94,18 +90,14 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_NAME)
 {
   QXmlStreamEntityDeclaration *obj = static_cast<QXmlStreamEntityDeclaration *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QStringRef *ptr = new QStringRef(obj->name());
       Qt4xHb::createReturnClass(ptr, "QSTRINGREF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -117,18 +109,14 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_NOTATIONNAME)
 {
   QXmlStreamEntityDeclaration *obj = static_cast<QXmlStreamEntityDeclaration *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QStringRef *ptr = new QStringRef(obj->notationName());
       Qt4xHb::createReturnClass(ptr, "QSTRINGREF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -140,18 +128,14 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_PUBLICID)
 {
   QXmlStreamEntityDeclaration *obj = static_cast<QXmlStreamEntityDeclaration *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QStringRef *ptr = new QStringRef(obj->publicId());
       Qt4xHb::createReturnClass(ptr, "QSTRINGREF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -163,18 +147,14 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_SYSTEMID)
 {
   QXmlStreamEntityDeclaration *obj = static_cast<QXmlStreamEntityDeclaration *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QStringRef *ptr = new QStringRef(obj->systemId());
       Qt4xHb::createReturnClass(ptr, "QSTRINGREF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -186,18 +166,14 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_VALUE)
 {
   QXmlStreamEntityDeclaration *obj = static_cast<QXmlStreamEntityDeclaration *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QStringRef *ptr = new QStringRef(obj->value());
       Qt4xHb::createReturnClass(ptr, "QSTRINGREF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -225,9 +201,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -258,9 +232,7 @@ HB_FUNC_STATIC(QXMLSTREAMENTITYDECLARATION_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

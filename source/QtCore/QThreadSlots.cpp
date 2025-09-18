@@ -22,8 +22,7 @@ void QThreadSlots::finished()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "finished()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTHREAD");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -38,8 +37,7 @@ void QThreadSlots::started()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "started()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTHREAD");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -52,21 +50,17 @@ void QThreadSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QThread *obj = qobject_cast<QThread *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QThreadSlots *s = QCoreApplication::instance()->findChild<QThreadSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QThreadSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

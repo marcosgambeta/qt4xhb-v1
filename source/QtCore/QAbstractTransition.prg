@@ -62,8 +62,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_DELETE)
 {
   QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
@@ -81,17 +80,14 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_ADDANIMATION)
 {
   QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQABSTRACTANIMATION(1))
     {
 #endif
       obj->addAnimation(PQABSTRACTANIMATION(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -105,11 +101,9 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_ANIMATIONS)
 {
   QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QList<QAbstractAnimation *> list = obj->animations();
       PHB_DYNS pDynSym = hb_dynsymFindName("QABSTRACTANIMATION");
@@ -137,9 +131,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_ANIMATIONS)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -151,18 +143,14 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_MACHINE)
 {
   QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QStateMachine *ptr = obj->machine();
       Qt4xHb::createReturnQObjectClass(ptr, "QSTATEMACHINE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -174,17 +162,14 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_REMOVEANIMATION)
 {
   QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQABSTRACTANIMATION(1))
     {
 #endif
       obj->removeAnimation(PQABSTRACTANIMATION(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -198,17 +183,14 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_SETTARGETSTATE)
 {
   QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQABSTRACTSTATE(1))
     {
 #endif
       obj->setTargetState(PQABSTRACTSTATE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -222,8 +204,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_SETTARGETSTATES)
 {
   QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
@@ -238,9 +219,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_SETTARGETSTATES)
       }
       obj->setTargetStates(par1);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -254,18 +233,14 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_SOURCESTATE)
 {
   QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QState *ptr = obj->sourceState();
       Qt4xHb::createReturnQObjectClass(ptr, "QSTATE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -277,18 +252,14 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_TARGETSTATE)
 {
   QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QAbstractState *ptr = obj->targetState();
       Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTSTATE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -300,11 +271,9 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_TARGETSTATES)
 {
   QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QList<QAbstractState *> list = obj->targetStates();
       PHB_DYNS pDynSym = hb_dynsymFindName("QABSTRACTSTATE");
@@ -332,9 +301,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_TARGETSTATES)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif

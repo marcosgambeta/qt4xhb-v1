@@ -54,13 +54,10 @@ RETURN
     // QXmlStreamAttributes()
 HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     QXmlStreamAttributes *obj = new QXmlStreamAttributes();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -69,8 +66,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_DELETE)
 {
   QXmlStreamAttributes *obj = static_cast<QXmlStreamAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -118,9 +114,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_APPEND)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -156,9 +150,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_HASATTRIBUTE)
     {
       RBOOL(obj->hasAttribute(PQSTRING(1), PQSTRING(2)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -219,9 +211,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_VALUE)
       QStringRef *ptr = new QStringRef(obj->value(*PQLATIN1STRING(1)));
       Qt4xHb::createReturnClass(ptr, "QSTRINGREF", true);
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -247,9 +237,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -280,9 +268,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

@@ -22,8 +22,7 @@ void QTimeLineSlots::finished()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "finished()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTIMELINE");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -38,8 +37,7 @@ void QTimeLineSlots::frameChanged(int frame)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "frameChanged(int)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTIMELINE");
     PHB_ITEM pFrame = hb_itemPutNI(NULL, frame);
 
@@ -56,8 +54,7 @@ void QTimeLineSlots::stateChanged(QTimeLine::State newState)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "stateChanged(QTimeLine::State)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTIMELINE");
     PHB_ITEM pNewState = hb_itemPutNI(NULL, static_cast<int>(newState));
 
@@ -74,8 +71,7 @@ void QTimeLineSlots::valueChanged(qreal value)
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "valueChanged(qreal)");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTIMELINE");
     PHB_ITEM pValue = hb_itemPutND(NULL, value);
 
@@ -90,21 +86,17 @@ void QTimeLineSlots_connect_signal(const QString &signal, const QString &slot)
 {
   QTimeLine *obj = qobject_cast<QTimeLine *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QTimeLineSlots *s = QCoreApplication::instance()->findChild<QTimeLineSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QTimeLineSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

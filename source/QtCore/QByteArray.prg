@@ -159,8 +159,7 @@ RETURN
 
 HB_FUNC_STATIC(QBYTEARRAY_NEW)
 {
-  if (ISNUMPAR(0))
-  {
+  if (ISNUMPAR(0)) {
     // QByteArray()
     QByteArray *obj = new QByteArray();
     Qt4xHb::returnNewObject(obj, true);
@@ -188,9 +187,7 @@ HB_FUNC_STATIC(QBYTEARRAY_NEW)
     // QByteArray(const QByteArray &other)
     QByteArray *obj = new QByteArray(*PQBYTEARRAY(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -199,8 +196,7 @@ HB_FUNC_STATIC(QBYTEARRAY_DELETE)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     delete obj;
     obj = NULL;
     PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
@@ -216,8 +212,7 @@ HB_FUNC_STATIC(QBYTEARRAY_APPEND1)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
@@ -225,9 +220,7 @@ HB_FUNC_STATIC(QBYTEARRAY_APPEND1)
       QByteArray *ptr = &obj->append(*PQBYTEARRAY(1));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -239,8 +232,7 @@ HB_FUNC_STATIC(QBYTEARRAY_APPEND2)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -248,9 +240,7 @@ HB_FUNC_STATIC(QBYTEARRAY_APPEND2)
       QByteArray *ptr = &obj->append(PQSTRING(1));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -262,8 +252,7 @@ HB_FUNC_STATIC(QBYTEARRAY_APPEND3)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -271,9 +260,7 @@ HB_FUNC_STATIC(QBYTEARRAY_APPEND3)
       QByteArray *ptr = &obj->append(PCONSTCHAR(1));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -285,8 +272,7 @@ HB_FUNC_STATIC(QBYTEARRAY_APPEND4)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
@@ -294,9 +280,7 @@ HB_FUNC_STATIC(QBYTEARRAY_APPEND4)
       QByteArray *ptr = &obj->append(PCONSTCHAR(1), PINT(2));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -308,8 +292,7 @@ HB_FUNC_STATIC(QBYTEARRAY_APPEND5)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -317,9 +300,7 @@ HB_FUNC_STATIC(QBYTEARRAY_APPEND5)
       QByteArray *ptr = &obj->append(PCHAR(1));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -343,9 +324,7 @@ HB_FUNC_STATIC(QBYTEARRAY_APPEND)
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     HB_FUNC_EXEC(QBYTEARRAY_APPEND5);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -355,17 +334,14 @@ HB_FUNC_STATIC(QBYTEARRAY_AT)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       hb_retni(obj->at(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -377,17 +353,13 @@ HB_FUNC_STATIC(QBYTEARRAY_CAPACITY)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->capacity());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -399,17 +371,14 @@ HB_FUNC_STATIC(QBYTEARRAY_CHOP)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->chop(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -423,17 +392,13 @@ HB_FUNC_STATIC(QBYTEARRAY_CLEAR)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->clear();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -447,17 +412,13 @@ HB_FUNC_STATIC(QBYTEARRAY_CONSTDATA)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       hb_retc((const char *)obj->constData());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -495,9 +456,7 @@ HB_FUNC_STATIC(QBYTEARRAY_CONTAINS)
     {
       RBOOL(obj->contains(PCHAR(1)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -543,9 +502,7 @@ HB_FUNC_STATIC(QBYTEARRAY_COUNT)
     {
       RINT(obj->count());
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -581,9 +538,7 @@ HB_FUNC_STATIC(QBYTEARRAY_ENDSWITH)
     {
       RBOOL(obj->endsWith(PCHAR(1)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -593,8 +548,7 @@ HB_FUNC_STATIC(QBYTEARRAY_FILL)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
@@ -602,9 +556,7 @@ HB_FUNC_STATIC(QBYTEARRAY_FILL)
       QByteArray *ptr = &obj->fill(PCHAR(1), OPINT(2, -1));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -616,17 +568,14 @@ HB_FUNC_STATIC(QBYTEARRAY_INDEXOF1)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
       RINT(obj->indexOf(*PQBYTEARRAY(1), OPINT(2, 0)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -638,17 +587,14 @@ HB_FUNC_STATIC(QBYTEARRAY_INDEXOF2)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
       RINT(obj->indexOf(PQSTRING(1), OPINT(2, 0)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -660,17 +606,14 @@ HB_FUNC_STATIC(QBYTEARRAY_INDEXOF3)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
       RINT(obj->indexOf(PCONSTCHAR(1), OPINT(2, 0)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -682,17 +625,14 @@ HB_FUNC_STATIC(QBYTEARRAY_INDEXOF4)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
       RINT(obj->indexOf(PCHAR(1), OPINT(2, 0)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -716,9 +656,7 @@ HB_FUNC_STATIC(QBYTEARRAY_INDEXOF)
   else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     HB_FUNC_EXEC(QBYTEARRAY_INDEXOF4);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -728,8 +666,7 @@ HB_FUNC_STATIC(QBYTEARRAY_INSERT1)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQBYTEARRAY(2))
     {
@@ -737,9 +674,7 @@ HB_FUNC_STATIC(QBYTEARRAY_INSERT1)
       QByteArray *ptr = &obj->insert(PINT(1), *PQBYTEARRAY(2));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -751,8 +686,7 @@ HB_FUNC_STATIC(QBYTEARRAY_INSERT2)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {
@@ -760,9 +694,7 @@ HB_FUNC_STATIC(QBYTEARRAY_INSERT2)
       QByteArray *ptr = &obj->insert(PINT(1), PQSTRING(2));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -774,8 +706,7 @@ HB_FUNC_STATIC(QBYTEARRAY_INSERT3)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {
@@ -783,9 +714,7 @@ HB_FUNC_STATIC(QBYTEARRAY_INSERT3)
       QByteArray *ptr = &obj->insert(PINT(1), PCONSTCHAR(2));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -797,8 +726,7 @@ HB_FUNC_STATIC(QBYTEARRAY_INSERT4)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISCHAR(2) && HB_ISNUM(3))
     {
@@ -806,9 +734,7 @@ HB_FUNC_STATIC(QBYTEARRAY_INSERT4)
       QByteArray *ptr = &obj->insert(PINT(1), PCONSTCHAR(2), PINT(3));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -820,8 +746,7 @@ HB_FUNC_STATIC(QBYTEARRAY_INSERT5)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -829,9 +754,7 @@ HB_FUNC_STATIC(QBYTEARRAY_INSERT5)
       QByteArray *ptr = &obj->insert(PINT(1), PCHAR(2));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -855,9 +778,7 @@ HB_FUNC_STATIC(QBYTEARRAY_INSERT)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     HB_FUNC_EXEC(QBYTEARRAY_INSERT5);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -867,17 +788,13 @@ HB_FUNC_STATIC(QBYTEARRAY_ISEMPTY)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isEmpty());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -889,17 +806,13 @@ HB_FUNC_STATIC(QBYTEARRAY_ISNULL)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RBOOL(obj->isNull());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -911,17 +824,14 @@ HB_FUNC_STATIC(QBYTEARRAY_LASTINDEXOF1)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
       RINT(obj->lastIndexOf(*PQBYTEARRAY(1), OPINT(2, -1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -933,17 +843,14 @@ HB_FUNC_STATIC(QBYTEARRAY_LASTINDEXOF2)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
       RINT(obj->lastIndexOf(PQSTRING(1), OPINT(2, -1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -955,17 +862,14 @@ HB_FUNC_STATIC(QBYTEARRAY_LASTINDEXOF3)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
       RINT(obj->lastIndexOf(PCONSTCHAR(1), OPINT(2, -1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -977,17 +881,14 @@ HB_FUNC_STATIC(QBYTEARRAY_LASTINDEXOF4)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
       RINT(obj->lastIndexOf(PCHAR(1), OPINT(2, -1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1011,9 +912,7 @@ HB_FUNC_STATIC(QBYTEARRAY_LASTINDEXOF)
   else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     HB_FUNC_EXEC(QBYTEARRAY_LASTINDEXOF4);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1023,8 +922,7 @@ HB_FUNC_STATIC(QBYTEARRAY_LEFT)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1032,9 +930,7 @@ HB_FUNC_STATIC(QBYTEARRAY_LEFT)
       QByteArray *ptr = new QByteArray(obj->left(PINT(1)));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1046,8 +942,7 @@ HB_FUNC_STATIC(QBYTEARRAY_LEFTJUSTIFIED)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISLOG(3) || HB_ISNIL(3)))
     {
@@ -1055,9 +950,7 @@ HB_FUNC_STATIC(QBYTEARRAY_LEFTJUSTIFIED)
       QByteArray *ptr = new QByteArray(obj->leftJustified(PINT(1), OPCHAR(2, ' '), OPBOOL(3, false)));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1069,17 +962,13 @@ HB_FUNC_STATIC(QBYTEARRAY_LENGTH)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->length());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1091,8 +980,7 @@ HB_FUNC_STATIC(QBYTEARRAY_MID)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
@@ -1100,9 +988,7 @@ HB_FUNC_STATIC(QBYTEARRAY_MID)
       QByteArray *ptr = new QByteArray(obj->mid(PINT(1), OPINT(2, -1)));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1114,8 +1000,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PREPEND1)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
@@ -1123,9 +1008,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PREPEND1)
       QByteArray *ptr = &obj->prepend(*PQBYTEARRAY(1));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1137,8 +1020,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PREPEND2)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
@@ -1146,9 +1028,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PREPEND2)
       QByteArray *ptr = &obj->prepend(PCONSTCHAR(1));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1160,8 +1040,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PREPEND3)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
@@ -1169,9 +1048,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PREPEND3)
       QByteArray *ptr = &obj->prepend(PCONSTCHAR(1), PINT(2));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1183,8 +1060,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PREPEND4)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1192,9 +1068,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PREPEND4)
       QByteArray *ptr = &obj->prepend(PCHAR(1));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1218,9 +1092,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PREPEND)
   else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     HB_FUNC_EXEC(QBYTEARRAY_PREPEND4);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1262,9 +1134,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PUSH_BACK)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1306,9 +1176,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PUSH_FRONT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1318,8 +1186,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REMOVE)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -1327,9 +1194,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REMOVE)
       QByteArray *ptr = &obj->remove(PINT(1), PINT(2));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1341,8 +1206,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPEATED)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1350,9 +1214,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPEATED)
       QByteArray *ptr = new QByteArray(obj->repeated(PINT(1)));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1364,8 +1226,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE1)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQBYTEARRAY(3))
     {
@@ -1373,9 +1234,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE1)
       QByteArray *ptr = &obj->replace(PINT(1), PINT(2), *PQBYTEARRAY(3));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1387,8 +1246,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE2)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3))
     {
@@ -1396,9 +1254,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE2)
       QByteArray *ptr = &obj->replace(PINT(1), PINT(2), PCONSTCHAR(3));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1410,8 +1266,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE3)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3) && HB_ISNUM(4))
     {
@@ -1419,9 +1274,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE3)
       QByteArray *ptr = &obj->replace(PINT(1), PINT(2), PCONSTCHAR(3), PINT(4));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1433,8 +1286,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE4)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2))
     {
@@ -1442,9 +1294,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE4)
       QByteArray *ptr = &obj->replace(*PQBYTEARRAY(1), *PQBYTEARRAY(2));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1456,8 +1306,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE5)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQBYTEARRAY(2))
     {
@@ -1465,9 +1314,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE5)
       QByteArray *ptr = &obj->replace(PCONSTCHAR(1), *PQBYTEARRAY(2));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1479,8 +1326,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE6)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISCHAR(3) && HB_ISNUM(4))
     {
@@ -1488,9 +1334,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE6)
       QByteArray *ptr = &obj->replace(PCONSTCHAR(1), PINT(2), PCONSTCHAR(3), PINT(4));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1502,8 +1346,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE7)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISCHAR(2))
     {
@@ -1511,9 +1354,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE7)
       QByteArray *ptr = &obj->replace(*PQBYTEARRAY(1), PCONSTCHAR(2));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1525,8 +1366,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE8)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQBYTEARRAY(2))
     {
@@ -1534,9 +1374,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE8)
       QByteArray *ptr = &obj->replace(PQSTRING(1), *PQBYTEARRAY(2));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1548,8 +1386,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE9)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
@@ -1557,9 +1394,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE9)
       QByteArray *ptr = &obj->replace(PQSTRING(1), PCONSTCHAR(2));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1571,8 +1406,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE10)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
@@ -1580,9 +1414,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE10)
       QByteArray *ptr = &obj->replace(PCONSTCHAR(1), PCONSTCHAR(2));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1594,8 +1426,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE11)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQBYTEARRAY(2))
     {
@@ -1603,9 +1434,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE11)
       QByteArray *ptr = &obj->replace(PCHAR(1), *PQBYTEARRAY(2));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1617,8 +1446,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE12)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {
@@ -1626,9 +1454,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE12)
       QByteArray *ptr = &obj->replace(PCHAR(1), PQSTRING(2));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1640,8 +1466,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE13)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
     {
@@ -1649,9 +1474,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE13)
       QByteArray *ptr = &obj->replace(PCHAR(1), PCONSTCHAR(2));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1663,8 +1486,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE14)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
@@ -1672,9 +1494,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE14)
       QByteArray *ptr = &obj->replace(PCHAR(1), PCHAR(2));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1738,9 +1558,7 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE)
   else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     HB_FUNC_EXEC(QBYTEARRAY_REPLACE14);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -1750,17 +1568,14 @@ HB_FUNC_STATIC(QBYTEARRAY_RESERVE)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->reserve(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1774,17 +1589,14 @@ HB_FUNC_STATIC(QBYTEARRAY_RESIZE)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->resize(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1798,8 +1610,7 @@ HB_FUNC_STATIC(QBYTEARRAY_RIGHT)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -1807,9 +1618,7 @@ HB_FUNC_STATIC(QBYTEARRAY_RIGHT)
       QByteArray *ptr = new QByteArray(obj->right(PINT(1)));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1821,8 +1630,7 @@ HB_FUNC_STATIC(QBYTEARRAY_RIGHTJUSTIFIED)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISLOG(3) || HB_ISNIL(3)))
     {
@@ -1830,9 +1638,7 @@ HB_FUNC_STATIC(QBYTEARRAY_RIGHTJUSTIFIED)
       QByteArray *ptr = new QByteArray(obj->rightJustified(PINT(1), OPCHAR(2, ' '), OPBOOL(3, false)));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1844,8 +1650,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM1)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
@@ -1853,9 +1658,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM1)
       QByteArray *ptr = &obj->setNum(PINT(1), OPINT(2, 10));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1867,8 +1670,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM2)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
@@ -1876,9 +1678,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM2)
       QByteArray *ptr = &obj->setNum(PUINT(1), OPINT(2, 10));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1890,8 +1690,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM3)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
@@ -1899,9 +1698,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM3)
       QByteArray *ptr = &obj->setNum(PSHORT(1), OPINT(2, 10));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1913,8 +1710,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM4)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
@@ -1922,9 +1718,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM4)
       QByteArray *ptr = &obj->setNum(PUSHORT(1), OPINT(2, 10));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1936,8 +1730,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM5)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
@@ -1945,9 +1738,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM5)
       QByteArray *ptr = &obj->setNum(PQLONGLONG(1), OPINT(2, 10));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1959,8 +1750,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM6)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
@@ -1968,9 +1758,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM6)
       QByteArray *ptr = &obj->setNum(PQULONGLONG(1), OPINT(2, 10));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -1982,8 +1770,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM7)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
@@ -1991,9 +1778,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM7)
       QByteArray *ptr = &obj->setNum(PDOUBLE(1), OPCHAR(2, 'g'), OPINT(3, 6));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -2005,8 +1790,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM8)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
@@ -2014,9 +1798,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM8)
       QByteArray *ptr = &obj->setNum(PFLOAT(1), OPCHAR(2, 'g'), OPINT(3, 6));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -2056,9 +1838,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM)
   else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(2)))
   {
     HB_FUNC_EXEC(QBYTEARRAY_SETNUM8);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -2068,8 +1848,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETRAWDATA)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
@@ -2077,9 +1856,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETRAWDATA)
       QByteArray *ptr = &obj->setRawData(PCONSTCHAR(1), PUINT(2));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -2091,18 +1868,14 @@ HB_FUNC_STATIC(QBYTEARRAY_SIMPLIFIED)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->simplified());
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -2114,17 +1887,13 @@ HB_FUNC_STATIC(QBYTEARRAY_SIZE)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       RINT(obj->size());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -2136,8 +1905,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SPLIT)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
@@ -2171,9 +1939,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SPLIT)
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -2185,17 +1951,13 @@ HB_FUNC_STATIC(QBYTEARRAY_SQUEEZE)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       obj->squeeze();
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -2235,9 +1997,7 @@ HB_FUNC_STATIC(QBYTEARRAY_STARTSWITH)
     {
       RBOOL(obj->startsWith(PCHAR(1)));
     }
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -2247,18 +2007,14 @@ HB_FUNC_STATIC(QBYTEARRAY_TOBASE64)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->toBase64());
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -2270,8 +2026,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TODOUBLE)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
@@ -2280,9 +2035,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TODOUBLE)
       RDOUBLE(obj->toDouble(&par1));
       hb_storl(par1, 1);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -2294,8 +2047,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOFLOAT)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
     {
@@ -2304,9 +2056,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOFLOAT)
       RFLOAT(obj->toFloat(&par1));
       hb_storl(par1, 1);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -2318,18 +2068,14 @@ HB_FUNC_STATIC(QBYTEARRAY_TOHEX)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->toHex());
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -2341,8 +2087,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOINT)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 2) && (HB_ISLOG(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
@@ -2351,9 +2096,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOINT)
       RINT(obj->toInt(&par1, OPINT(2, 10)));
       hb_storl(par1, 1);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -2365,8 +2108,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOLONG)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 2) && (HB_ISLOG(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
@@ -2375,9 +2117,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOLONG)
       RLONG(obj->toLong(&par1, OPINT(2, 10)));
       hb_storl(par1, 1);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -2389,8 +2129,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOLONGLONG)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 2) && (HB_ISLOG(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
@@ -2399,9 +2138,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOLONGLONG)
       RQLONGLONG(obj->toLongLong(&par1, OPINT(2, 10)));
       hb_storl(par1, 1);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -2413,18 +2150,14 @@ HB_FUNC_STATIC(QBYTEARRAY_TOLOWER)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->toLower());
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -2437,8 +2170,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOPERCENTENCODING)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 3) && (ISQBYTEARRAY(1) || HB_ISNIL(1)) && (ISQBYTEARRAY(2) || HB_ISNIL(2)) &&
         (HB_ISNUM(3) || HB_ISNIL(3)))
@@ -2449,9 +2181,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOPERCENTENCODING)
           HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(2)), OPCHAR(3, '%')));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -2463,8 +2193,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOSHORT)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 2) && (HB_ISLOG(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
@@ -2473,9 +2202,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOSHORT)
       RSHORT(obj->toShort(&par1, OPINT(2, 10)));
       hb_storl(par1, 1);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -2487,8 +2214,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOUINT)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 2) && (HB_ISLOG(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
@@ -2497,9 +2223,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOUINT)
       RUINT(obj->toUInt(&par1, OPINT(2, 10)));
       hb_storl(par1, 1);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -2511,8 +2235,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOULONG)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 2) && (HB_ISLOG(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
@@ -2521,9 +2244,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOULONG)
       RULONG(obj->toULong(&par1, OPINT(2, 10)));
       hb_storl(par1, 1);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -2535,8 +2256,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOULONGLONG)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 2) && (HB_ISLOG(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
@@ -2545,9 +2265,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOULONGLONG)
       RQULONGLONG(obj->toULongLong(&par1, OPINT(2, 10)));
       hb_storl(par1, 1);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -2559,8 +2277,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOUSHORT)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 2) && (HB_ISLOG(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
@@ -2569,9 +2286,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOUSHORT)
       RUSHORT(obj->toUShort(&par1, OPINT(2, 10)));
       hb_storl(par1, 1);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -2583,18 +2298,14 @@ HB_FUNC_STATIC(QBYTEARRAY_TOUPPER)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->toUpper());
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -2606,18 +2317,14 @@ HB_FUNC_STATIC(QBYTEARRAY_TRIMMED)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(0))
-    {
+    if (ISNUMPAR(0)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->trimmed());
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -2629,17 +2336,14 @@ HB_FUNC_STATIC(QBYTEARRAY_TRUNCATE)
 {
   QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
       obj->truncate(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
+    } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
@@ -2658,9 +2362,7 @@ HB_FUNC_STATIC(QBYTEARRAY_FROMBASE64)
     QByteArray *ptr = new QByteArray(QByteArray::fromBase64(*PQBYTEARRAY(1)));
     Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -2676,9 +2378,7 @@ HB_FUNC_STATIC(QBYTEARRAY_FROMHEX)
     QByteArray *ptr = new QByteArray(QByteArray::fromHex(*PQBYTEARRAY(1)));
     Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -2694,9 +2394,7 @@ HB_FUNC_STATIC(QBYTEARRAY_FROMPERCENTENCODING)
     QByteArray *ptr = new QByteArray(QByteArray::fromPercentEncoding(*PQBYTEARRAY(1), OPCHAR(2, '%')));
     Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -2712,9 +2410,7 @@ HB_FUNC_STATIC(QBYTEARRAY_FROMRAWDATA)
     QByteArray *ptr = new QByteArray(QByteArray::fromRawData(PCONSTCHAR(1), PINT(2)));
     Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -2730,9 +2426,7 @@ HB_FUNC_STATIC(QBYTEARRAY_NUMBER1)
     QByteArray *ptr = new QByteArray(QByteArray::number(PINT(1), OPINT(2, 10)));
     Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -2748,9 +2442,7 @@ HB_FUNC_STATIC(QBYTEARRAY_NUMBER2)
     QByteArray *ptr = new QByteArray(QByteArray::number(PUINT(1), OPINT(2, 10)));
     Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -2766,9 +2458,7 @@ HB_FUNC_STATIC(QBYTEARRAY_NUMBER3)
     QByteArray *ptr = new QByteArray(QByteArray::number(PQLONGLONG(1), OPINT(2, 10)));
     Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -2784,9 +2474,7 @@ HB_FUNC_STATIC(QBYTEARRAY_NUMBER4)
     QByteArray *ptr = new QByteArray(QByteArray::number(PQULONGLONG(1), OPINT(2, 10)));
     Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -2802,9 +2490,7 @@ HB_FUNC_STATIC(QBYTEARRAY_NUMBER5)
     QByteArray *ptr = new QByteArray(QByteArray::number(PDOUBLE(1), OPCHAR(2, 'g'), OPINT(3, 6)));
     Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
@@ -2815,9 +2501,7 @@ HB_FUNC_STATIC(QBYTEARRAY_NUMBER)
   if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     HB_FUNC_EXEC(QBYTEARRAY_NUMBER1);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -2843,9 +2527,7 @@ HB_FUNC_STATIC(QBYTEARRAY_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
@@ -2876,9 +2558,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETSELFDESTRUCTION)
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 

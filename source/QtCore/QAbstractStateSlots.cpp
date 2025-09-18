@@ -22,8 +22,7 @@ void QAbstractStateSlots::entered()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "entered()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTSTATE");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -38,8 +37,7 @@ void QAbstractStateSlots::exited()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "exited()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTSTATE");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -52,21 +50,17 @@ void QAbstractStateSlots_connect_signal(const QString &signal, const QString &sl
 {
   QAbstractState *obj = qobject_cast<QAbstractState *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QAbstractStateSlots *s = QCoreApplication::instance()->findChild<QAbstractStateSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QAbstractStateSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }

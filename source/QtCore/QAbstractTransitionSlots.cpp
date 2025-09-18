@@ -22,8 +22,7 @@ void QAbstractTransitionSlots::triggered()
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "triggered()");
 
-  if (cb != NULL)
-  {
+  if (cb != NULL) {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTTRANSITION");
 
     hb_vmEvalBlockV(cb, 1, pSender);
@@ -36,21 +35,17 @@ void QAbstractTransitionSlots_connect_signal(const QString &signal, const QStrin
 {
   QAbstractTransition *obj = qobject_cast<QAbstractTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if (obj != NULL)
-  {
+  if (obj != NULL) {
     QAbstractTransitionSlots *s = QCoreApplication::instance()->findChild<QAbstractTransitionSlots *>();
 
-    if (s == NULL)
-    {
+    if (s == NULL) {
       s = new QAbstractTransitionSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
       s->setParent(QCoreApplication::instance());
     }
 
     hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
-  }
-  else
-  {
+  } else {
     hb_retl(false);
   }
 }
