@@ -295,11 +295,9 @@ HB_FUNC_STATIC(QOBJECT_CHILDREN)
       const QObjectList list = obj->children();
       PHB_DYNS pDynSym = hb_dynsymFindName("QOBJECT");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
+      if (pDynSym != NULL) {
         const int count = list.count();
-        for (int i = 0; i < count; i++)
-        {
+        for (int i = 0; i < count; i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -311,9 +309,7 @@ HB_FUNC_STATIC(QOBJECT_CHILDREN)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QOBJECT", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -377,11 +373,9 @@ HB_FUNC_STATIC(QOBJECT_DYNAMICPROPERTYNAMES)
       QList<QByteArray> list = obj->dynamicPropertyNames();
       PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
+      if (pDynSym != NULL) {
         const int count = list.count();
-        for (int i = 0; i < count; i++)
-        {
+        for (int i = 0; i < count; i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -396,9 +390,7 @@ HB_FUNC_STATIC(QOBJECT_DYNAMICPROPERTYNAMES)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -1555,9 +1547,7 @@ HB_FUNC_STATIC(QOBJECT_CONNECT)
         PHB_ITEM codeblock = hb_param(2, HB_IT_BLOCK | HB_IT_SYMBOL);
         hb_vmPush(codeblock);
         hb_vmSend(1);
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS);
       }
     }
@@ -1575,9 +1565,7 @@ HB_FUNC_STATIC(QOBJECT_CONNECT)
         hb_vmPushDynSym(pDynSym);
         hb_vmPush(hb_stackSelfItem());
         hb_vmSend(0);
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS);
       }
     }
@@ -1616,9 +1604,7 @@ HB_FUNC_STATIC(QOBJECT_DISCONNECT)
         hb_vmPushDynSym(pDynSym);
         hb_vmPush(hb_stackSelfItem());
         hb_vmSend(0);
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS);
       }
     }
