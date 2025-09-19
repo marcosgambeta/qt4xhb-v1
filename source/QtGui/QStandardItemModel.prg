@@ -933,11 +933,9 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_TAKEROW)
       QList<QStandardItem *> list = obj->takeRow(PINT(1));
       PHB_DYNS pDynSym = hb_dynsymFindName("QSTANDARDITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
+      if (pDynSym != NULL) {
         const int count = list.count();
-        for (int i = 0; i < count; i++)
-        {
+        for (int i = 0; i < count; i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -949,9 +947,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_TAKEROW)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QSTANDARDITEM", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -976,11 +972,9 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_TAKECOLUMN)
       QList<QStandardItem *> list = obj->takeColumn(PINT(1));
       PHB_DYNS pDynSym = hb_dynsymFindName("QSTANDARDITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
+      if (pDynSym != NULL) {
         const int count = list.count();
-        for (int i = 0; i < count; i++)
-        {
+        for (int i = 0; i < count; i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -992,9 +986,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_TAKECOLUMN)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QSTANDARDITEM", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -1100,11 +1092,9 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_FINDITEMS)
           PQSTRING(1), HB_ISNIL(2) ? (Qt::MatchFlags)Qt::MatchExactly : (Qt::MatchFlags)hb_parni(2), OPINT(3, 0));
       PHB_DYNS pDynSym = hb_dynsymFindName("QSTANDARDITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
+      if (pDynSym != NULL) {
         const int count = list.count();
-        for (int i = 0; i < count; i++)
-        {
+        for (int i = 0; i < count; i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -1116,9 +1106,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_FINDITEMS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QSTANDARDITEM", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);

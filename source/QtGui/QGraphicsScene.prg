@@ -532,11 +532,9 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_COLLIDINGITEMS)
                                                              : (Qt::ItemSelectionMode)hb_parni(2));
       PHB_DYNS pDynSym = hb_dynsymFindName("QGRAPHICSITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
+      if (pDynSym != NULL) {
         const int count = list.count();
-        for (int i = 0; i < count; i++)
-        {
+        for (int i = 0; i < count; i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -548,9 +546,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_COLLIDINGITEMS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QGRAPHICSITEM", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -852,11 +848,9 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ITEMS)
       QList<QGraphicsItem *> list = obj->items();
       PHB_DYNS pDynSym = hb_dynsymFindName("QGRAPHICSITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
+      if (pDynSym != NULL) {
         const int count = list.count();
-        for (int i = 0; i < count; i++)
-        {
+        for (int i = 0; i < count; i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -868,9 +862,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ITEMS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QGRAPHICSITEM", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -886,11 +878,9 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ITEMS)
       QList<QGraphicsItem *> list = obj->items((Qt::SortOrder)hb_parni(1));
       PHB_DYNS pDynSym = hb_dynsymFindName("QGRAPHICSITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
+      if (pDynSym != NULL) {
         const int count = list.count();
-        for (int i = 0; i < count; i++)
-        {
+        for (int i = 0; i < count; i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -902,9 +892,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ITEMS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QGRAPHICSITEM", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -923,11 +911,9 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ITEMS)
                      HB_ISNIL(4) ? QTransform() : *static_cast<QTransform *>(Qt4xHb::itemGetPtr(4)));
       PHB_DYNS pDynSym = hb_dynsymFindName("QGRAPHICSITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
+      if (pDynSym != NULL) {
         const int count = list.count();
-        for (int i = 0; i < count; i++)
-        {
+        for (int i = 0; i < count; i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -939,9 +925,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ITEMS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QGRAPHICSITEM", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -961,11 +945,9 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ITEMS)
           HB_ISNIL(7) ? QTransform() : *static_cast<QTransform *>(Qt4xHb::itemGetPtr(7)));
       PHB_DYNS pDynSym = hb_dynsymFindName("QGRAPHICSITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
+      if (pDynSym != NULL) {
         const int count = list.count();
-        for (int i = 0; i < count; i++)
-        {
+        for (int i = 0; i < count; i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -977,9 +959,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ITEMS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QGRAPHICSITEM", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -998,11 +978,9 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ITEMS)
                      HB_ISNIL(4) ? QTransform() : *static_cast<QTransform *>(Qt4xHb::itemGetPtr(4)));
       PHB_DYNS pDynSym = hb_dynsymFindName("QGRAPHICSITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
+      if (pDynSym != NULL) {
         const int count = list.count();
-        for (int i = 0; i < count; i++)
-        {
+        for (int i = 0; i < count; i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -1014,9 +992,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ITEMS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QGRAPHICSITEM", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -1035,11 +1011,9 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ITEMS)
                      HB_ISNIL(4) ? QTransform() : *static_cast<QTransform *>(Qt4xHb::itemGetPtr(4)));
       PHB_DYNS pDynSym = hb_dynsymFindName("QGRAPHICSITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
+      if (pDynSym != NULL) {
         const int count = list.count();
-        for (int i = 0; i < count; i++)
-        {
+        for (int i = 0; i < count; i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -1051,9 +1025,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ITEMS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QGRAPHICSITEM", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -1072,11 +1044,9 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ITEMS)
                      HB_ISNIL(4) ? QTransform() : *static_cast<QTransform *>(Qt4xHb::itemGetPtr(4)));
       PHB_DYNS pDynSym = hb_dynsymFindName("QGRAPHICSITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
+      if (pDynSym != NULL) {
         const int count = list.count();
-        for (int i = 0; i < count; i++)
-        {
+        for (int i = 0; i < count; i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -1088,9 +1058,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ITEMS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QGRAPHICSITEM", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -1234,11 +1202,9 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SELECTEDITEMS)
       QList<QGraphicsItem *> list = obj->selectedItems();
       PHB_DYNS pDynSym = hb_dynsymFindName("QGRAPHICSITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
+      if (pDynSym != NULL) {
         const int count = list.count();
-        for (int i = 0; i < count; i++)
-        {
+        for (int i = 0; i < count; i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -1250,9 +1216,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_SELECTEDITEMS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QGRAPHICSITEM", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -1715,11 +1679,9 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_VIEWS)
       QList<QGraphicsView *> list = obj->views();
       PHB_DYNS pDynSym = hb_dynsymFindName("QGRAPHICSVIEW");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
+      if (pDynSym != NULL) {
         const int count = list.count();
-        for (int i = 0; i < count; i++)
-        {
+        for (int i = 0; i < count; i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -1731,9 +1693,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_VIEWS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QGRAPHICSVIEW", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);

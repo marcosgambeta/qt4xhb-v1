@@ -307,11 +307,9 @@ HB_FUNC_STATIC(QTABLEWIDGET_FINDITEMS)
       QList<QTableWidgetItem *> list = obj->findItems(PQSTRING(1), (Qt::MatchFlags)hb_parni(2));
       PHB_DYNS pDynSym = hb_dynsymFindName("QTABLEWIDGETITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
+      if (pDynSym != NULL) {
         const int count = list.count();
-        for (int i = 0; i < count; i++)
-        {
+        for (int i = 0; i < count; i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -323,9 +321,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_FINDITEMS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QTABLEWIDGETITEM", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -496,11 +492,9 @@ HB_FUNC_STATIC(QTABLEWIDGET_SELECTEDITEMS)
       QList<QTableWidgetItem *> list = obj->selectedItems();
       PHB_DYNS pDynSym = hb_dynsymFindName("QTABLEWIDGETITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
+      if (pDynSym != NULL) {
         const int count = list.count();
-        for (int i = 0; i < count; i++)
-        {
+        for (int i = 0; i < count; i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -512,9 +506,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SELECTEDITEMS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QTABLEWIDGETITEM", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -538,11 +530,9 @@ HB_FUNC_STATIC(QTABLEWIDGET_SELECTEDRANGES)
       QList<QTableWidgetSelectionRange> list = obj->selectedRanges();
       PHB_DYNS pDynSym = hb_dynsymFindName("QTABLEWIDGETSELECTIONRANGE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
+      if (pDynSym != NULL) {
         const int count = list.count();
-        for (int i = 0; i < count; i++)
-        {
+        for (int i = 0; i < count; i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -557,9 +547,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SELECTEDRANGES)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QTABLEWIDGETSELECTIONRANGE", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);

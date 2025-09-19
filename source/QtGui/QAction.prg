@@ -204,11 +204,9 @@ HB_FUNC_STATIC(QACTION_ASSOCIATEDGRAPHICSWIDGETS)
       QList<QGraphicsWidget *> list = obj->associatedGraphicsWidgets();
       PHB_DYNS pDynSym = hb_dynsymFindName("QGRAPHICSWIDGET");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
+      if (pDynSym != NULL) {
         const int count = list.count();
-        for (int i = 0; i < count; i++)
-        {
+        for (int i = 0; i < count; i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -220,9 +218,7 @@ HB_FUNC_STATIC(QACTION_ASSOCIATEDGRAPHICSWIDGETS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QGRAPHICSWIDGET", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -246,11 +242,9 @@ HB_FUNC_STATIC(QACTION_ASSOCIATEDWIDGETS)
       QList<QWidget *> list = obj->associatedWidgets();
       PHB_DYNS pDynSym = hb_dynsymFindName("QWIDGET");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
+      if (pDynSym != NULL) {
         const int count = list.count();
-        for (int i = 0; i < count; i++)
-        {
+        for (int i = 0; i < count; i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -262,9 +256,7 @@ HB_FUNC_STATIC(QACTION_ASSOCIATEDWIDGETS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QWIDGET", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -1037,11 +1029,9 @@ HB_FUNC_STATIC(QACTION_SHORTCUTS)
       QList<QKeySequence> list = obj->shortcuts();
       PHB_DYNS pDynSym = hb_dynsymFindName("QKEYSEQUENCE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
+      if (pDynSym != NULL) {
         const int count = list.count();
-        for (int i = 0; i < count; i++)
-        {
+        for (int i = 0; i < count; i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -1056,9 +1046,7 @@ HB_FUNC_STATIC(QACTION_SHORTCUTS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QKEYSEQUENCE", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);

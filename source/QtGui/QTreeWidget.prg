@@ -282,11 +282,9 @@ HB_FUNC_STATIC(QTREEWIDGET_FINDITEMS)
       QList<QTreeWidgetItem *> list = obj->findItems(PQSTRING(1), (Qt::MatchFlags)hb_parni(2), OPINT(3, 0));
       PHB_DYNS pDynSym = hb_dynsymFindName("QTREEWIDGETITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
+      if (pDynSym != NULL) {
         const int count = list.count();
-        for (int i = 0; i < count; i++)
-        {
+        for (int i = 0; i < count; i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -298,9 +296,7 @@ HB_FUNC_STATIC(QTREEWIDGET_FINDITEMS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QTREEWIDGETITEM", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -580,11 +576,9 @@ HB_FUNC_STATIC(QTREEWIDGET_SELECTEDITEMS)
       QList<QTreeWidgetItem *> list = obj->selectedItems();
       PHB_DYNS pDynSym = hb_dynsymFindName("QTREEWIDGETITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
+      if (pDynSym != NULL) {
         const int count = list.count();
-        for (int i = 0; i < count; i++)
-        {
+        for (int i = 0; i < count; i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -596,9 +590,7 @@ HB_FUNC_STATIC(QTREEWIDGET_SELECTEDITEMS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QTREEWIDGETITEM", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);

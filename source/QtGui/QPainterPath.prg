@@ -980,11 +980,9 @@ HB_FUNC_STATIC(QPAINTERPATH_TOFILLPOLYGONS)
       QList<QPolygonF> list = obj->toFillPolygons(*PQTRANSFORM(1));
       PHB_DYNS pDynSym = hb_dynsymFindName("QPOLYGONF");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
+      if (pDynSym != NULL) {
         const int count = list.count();
-        for (int i = 0; i < count; i++)
-        {
+        for (int i = 0; i < count; i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -999,9 +997,7 @@ HB_FUNC_STATIC(QPAINTERPATH_TOFILLPOLYGONS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QPOLYGONF", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -1018,11 +1014,9 @@ HB_FUNC_STATIC(QPAINTERPATH_TOFILLPOLYGONS)
           obj->toFillPolygons(HB_ISNIL(1) ? QMatrix() : *static_cast<QMatrix *>(Qt4xHb::itemGetPtr(1)));
       PHB_DYNS pDynSym = hb_dynsymFindName("QPOLYGONF");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
+      if (pDynSym != NULL) {
         const int count = list.count();
-        for (int i = 0; i < count; i++)
-        {
+        for (int i = 0; i < count; i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -1037,9 +1031,7 @@ HB_FUNC_STATIC(QPAINTERPATH_TOFILLPOLYGONS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QPOLYGONF", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -1080,11 +1072,9 @@ HB_FUNC_STATIC(QPAINTERPATH_TOSUBPATHPOLYGONS)
       QList<QPolygonF> list = obj->toSubpathPolygons(*PQTRANSFORM(1));
       PHB_DYNS pDynSym = hb_dynsymFindName("QPOLYGONF");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
+      if (pDynSym != NULL) {
         const int count = list.count();
-        for (int i = 0; i < count; i++)
-        {
+        for (int i = 0; i < count; i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -1099,9 +1089,7 @@ HB_FUNC_STATIC(QPAINTERPATH_TOSUBPATHPOLYGONS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QPOLYGONF", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
@@ -1118,11 +1106,9 @@ HB_FUNC_STATIC(QPAINTERPATH_TOSUBPATHPOLYGONS)
           obj->toSubpathPolygons(HB_ISNIL(1) ? QMatrix() : *static_cast<QMatrix *>(Qt4xHb::itemGetPtr(1)));
       PHB_DYNS pDynSym = hb_dynsymFindName("QPOLYGONF");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if (pDynSym != NULL)
-      {
+      if (pDynSym != NULL) {
         const int count = list.count();
-        for (int i = 0; i < count; i++)
-        {
+        for (int i = 0; i < count; i++) {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
@@ -1137,9 +1123,7 @@ HB_FUNC_STATIC(QPAINTERPATH_TOSUBPATHPOLYGONS)
           hb_arrayAddForward(pArray, pObject);
           hb_itemRelease(pObject);
         }
-      }
-      else
-      {
+      } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QPOLYGONF", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
