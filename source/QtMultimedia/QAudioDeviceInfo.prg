@@ -71,8 +71,7 @@ HB_FUNC_STATIC(QAUDIODEVICEINFO_NEW)
     QAudioDeviceInfo *obj = new QAudioDeviceInfo();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(1) && ISQAUDIODEVICEINFO(1))
-  {
+  else if (ISNUMPAR(1) && ISQAUDIODEVICEINFO(1)) {
     // QAudioDeviceInfo(const QAudioDeviceInfo &other)
     QAudioDeviceInfo *obj = new QAudioDeviceInfo(*PQAUDIODEVICEINFO(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -121,8 +120,7 @@ HB_FUNC_STATIC(QAUDIODEVICEINFO_ISFORMATSUPPORTED)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQAUDIOFORMAT(1))
-    {
+    if (ISNUMPAR(1) && ISQAUDIOFORMAT(1)) {
 #endif
       RBOOL(obj->isFormatSupported(*PQAUDIOFORMAT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -158,8 +156,7 @@ HB_FUNC_STATIC(QAUDIODEVICEINFO_NEARESTFORMAT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQAUDIOFORMAT(1))
-    {
+    if (ISNUMPAR(1) && ISQAUDIOFORMAT(1)) {
 #endif
       QAudioFormat *ptr = new QAudioFormat(obj->nearestFormat(*PQAUDIOFORMAT(1)));
       Qt4xHb::createReturnClass(ptr, "QAUDIOFORMAT", true);
@@ -361,8 +358,7 @@ HB_FUNC_STATIC(QAUDIODEVICEINFO_SUPPORTEDCODECS)
 HB_FUNC_STATIC(QAUDIODEVICEINFO_AVAILABLEDEVICES)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
     QList<QAudioDeviceInfo> list = QAudioDeviceInfo::availableDevices((QAudio::Mode)hb_parni(1));
     PHB_DYNS pDynSym = hb_dynsymFindName("QAUDIODEVICEINFO");
@@ -431,8 +427,7 @@ HB_FUNC_STATIC(QAUDIODEVICEINFO_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -440,8 +435,7 @@ HB_FUNC_STATIC(QAUDIODEVICEINFO_NEWFROM)
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -474,8 +468,7 @@ HB_FUNC_STATIC(QAUDIODEVICEINFO_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

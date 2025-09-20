@@ -115,8 +115,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ISFORMATSUPPORTED)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1))
-    {
+    if (ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1)) {
 #endif
       RBOOL(obj->isFormatSupported(*PQVIDEOSURFACEFORMAT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -134,8 +133,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_NEARESTFORMAT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1))
-    {
+    if (ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1)) {
 #endif
       QVideoSurfaceFormat *ptr = new QVideoSurfaceFormat(obj->nearestFormat(*PQVIDEOSURFACEFORMAT(1)));
       Qt4xHb::createReturnClass(ptr, "QVIDEOSURFACEFORMAT", true);
@@ -154,8 +152,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_PRESENT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVIDEOFRAME(1))
-    {
+    if (ISNUMPAR(1) && ISQVIDEOFRAME(1)) {
 #endif
       RBOOL(obj->present(*PQVIDEOFRAME(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -173,8 +170,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_START)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1))
-    {
+    if (ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1)) {
 #endif
       RBOOL(obj->start(*PQVIDEOSURFACEFORMAT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -213,8 +209,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_SUPPORTEDPIXELFORMATS)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
-    {
+    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1))) {
 #endif
       QList<QVideoFrame::PixelFormat> list =
           obj->supportedPixelFormats(HB_ISNIL(1) ? (QAbstractVideoBuffer::HandleType)QAbstractVideoBuffer::NoHandle

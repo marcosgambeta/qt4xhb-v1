@@ -63,16 +63,14 @@ RETURN
 
 HB_FUNC_STATIC(QAUDIOINPUT_NEW)
 {
-  if (ISBETWEEN(0, 2) && (ISQAUDIOFORMAT(1) || HB_ISNIL(1)) && (ISQOBJECT(2) || HB_ISNIL(2)))
-  {
+  if (ISBETWEEN(0, 2) && (ISQAUDIOFORMAT(1) || HB_ISNIL(1)) && (ISQOBJECT(2) || HB_ISNIL(2))) {
     // QAudioInput(const QAudioFormat &format = QAudioFormat(), QObject *parent = 0)
     QAudioInput *obj = new QAudioInput(
         HB_ISNIL(1) ? QAudioFormat() : *static_cast<QAudioFormat *>(Qt4xHb::itemGetPtr(1)), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else if (ISBETWEEN(1, 3) && ISQAUDIODEVICEINFO(1) && (ISQAUDIOFORMAT(2) || HB_ISNIL(2)) &&
-           (ISQOBJECT(3) || HB_ISNIL(3)))
-  {
+           (ISQOBJECT(3) || HB_ISNIL(3))) {
     // QAudioInput(const QAudioDeviceInfo &audioDevice, const QAudioFormat &format = QAudioFormat(), QObject *parent =
     // 0)
     QAudioInput *obj = new QAudioInput(
@@ -293,8 +291,7 @@ HB_FUNC_STATIC(QAUDIOINPUT_SETBUFFERSIZE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setBufferSize(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -314,8 +311,7 @@ HB_FUNC_STATIC(QAUDIOINPUT_SETNOTIFYINTERVAL)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setNotifyInterval(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -330,25 +326,21 @@ HB_FUNC_STATIC(QAUDIOINPUT_SETNOTIFYINTERVAL)
 
 HB_FUNC_STATIC(QAUDIOINPUT_START)
 {
-  if (ISNUMPAR(1) && ISQIODEVICE(1))
-  {
+  if (ISNUMPAR(1) && ISQIODEVICE(1)) {
     // void start(QIODevice *device)
     QAudioInput *obj = qobject_cast<QAudioInput *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->start(PQIODEVICE(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISNUMPAR(0))
-  {
+  else if (ISNUMPAR(0)) {
     // QIODevice *start()
     QAudioInput *obj = qobject_cast<QAudioInput *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QIODevice *ptr = obj->start();
       Qt4xHb::createReturnQObjectClass(ptr, "QIODEVICE");
     }
