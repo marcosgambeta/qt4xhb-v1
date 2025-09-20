@@ -159,4 +159,6 @@
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  static_cast<const char*>(x.toAscii().data())
 
+#define ISNUMORNIL(n) (HB_ISNUM(n) || HB_ISNIL(n))
+
 #endif // QT4XHB_MACROS_H
