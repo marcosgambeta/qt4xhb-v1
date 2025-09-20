@@ -98,10 +98,8 @@ Events::Events(QObject *parent) : QObject(parent)
 Events::~Events()
 {
   const int listsize = m_list1->size();
-  for (int i = 0; i < listsize; ++i)
-  {
-    if (m_list1->at(i) != NULL)
-    {
+  for (int i = 0; i < listsize; ++i) {
+    if (m_list1->at(i) != NULL) {
       hb_itemRelease(m_list3->at(i));
     }
   }
@@ -121,18 +119,15 @@ bool Events::eventFilter(QObject *obj, QEvent *event)
   int index = -1;
 
   const int listsize = m_list1->size();
-  for (int i = 0; i < listsize; ++i)
-  {
-    if ((m_list1->at(i) == obj) && (m_list2->at(i) == eventtype))
-    {
+  for (int i = 0; i < listsize; ++i) {
+    if ((m_list1->at(i) == obj) && (m_list2->at(i) == eventtype)) {
       index = i;
       break;
     }
   }
 
   // se não encontrado na lista, propaga o evento
-  if (index != -1)
-  {
+  if (index != -1) {
     // executa bloco de código/função
     PHB_ITEM pObject = returnQObject(obj, "QOBJECT");
     PHB_ITEM pEvent = returnQEvent(event, "QEVENT");
@@ -161,8 +156,7 @@ bool Events::connectEvent(QObject *object, int type, PHB_ITEM codeblock)
   bool found = false;
 
   // instala eventfilter, se não houver nenhum evento
-  if (m_list1->contains(object) == false)
-  {
+  if (m_list1->contains(object) == false) {
     object->installEventFilter(this);
   }
 
@@ -170,10 +164,8 @@ bool Events::connectEvent(QObject *object, int type, PHB_ITEM codeblock)
 
   // verifica se já está na lista
   const int listsize = m_list1->size();
-  for (int i = 0; i < listsize; ++i)
-  {
-    if ((m_list1->at(i) == object) && (m_list2->at(i) == static_cast<QEvent::Type>(type)))
-    {
+  for (int i = 0; i < listsize; ++i) {
+    if ((m_list1->at(i) == object) && (m_list2->at(i) == static_cast<QEvent::Type>(type))) {
       found = true;
       hb_itemRelease(codeblock);
       break;
@@ -181,20 +173,16 @@ bool Events::connectEvent(QObject *object, int type, PHB_ITEM codeblock)
   }
 
   // se nao encontrado na lista, adiciona
-  if (!found)
-  {
+  if (!found) {
     // procura por posição livre
     int index = m_list1->indexOf(NULL);
 
-    if (index == -1) // nao encontrou posicao livre
-    {
+    if (index == -1) { // nao encontrou posicao livre
       // adiciona evento na lista de eventos
       m_list1->append(object);
       m_list2->append(static_cast<QEvent::Type>(type));
       m_list3->append(codeblock);
-    }
-    else // encontrou posicao livre
-    {
+    } else { // encontrou posicao livre
       // coloca na posição livre
       m_list1->replace(index, object);
       m_list2->replace(index, static_cast<QEvent::Type>(type));
@@ -220,10 +208,8 @@ bool Events::disconnectEvent(QObject *object, int type)
 
   // remove evento da lista de eventos
   const int listsize = m_list1->size();
-  for (int i = 0; i < listsize; ++i)
-  {
-    if ((m_list1->at(i) == object) && (m_list2->at(i) == static_cast<QEvent::Type>(type)))
-    {
+  for (int i = 0; i < listsize; ++i) {
+    if ((m_list1->at(i) == object) && (m_list2->at(i) == static_cast<QEvent::Type>(type))) {
       hb_itemRelease(m_list3->at(i));
       m_list1->replace(i, NULL);
       m_list2->replace(i, QEvent::None);
@@ -233,8 +219,7 @@ bool Events::disconnectEvent(QObject *object, int type)
   }
 
   // desinstala eventfilter, se não houver mais nenhum evento
-  if (m_list1->contains(object) == false)
-  {
+  if (m_list1->contains(object) == false) {
     object->removeEventFilter(this);
   }
 
@@ -246,15 +231,12 @@ bool Events::disconnectEvent(QObject *object, int type)
 
 void Events::disconnectAllEvents(QObject *obj, bool children)
 {
-  if (!children)
-  {
+  if (!children) {
     // percorre toda a lista de eventos
     const int listsize = m_list1->size();
-    for (int i = 0; i < listsize; ++i)
-    {
+    for (int i = 0; i < listsize; ++i) {
       // elimina eventos ativos (true) ligados ao objeto (obj)
-      if (m_list1->at(i) == obj)
-      {
+      if (m_list1->at(i) == obj) {
         hb_itemRelease(m_list3->at(i));
         m_list1->replace(i, NULL);
         m_list2->replace(i, QEvent::None);
@@ -262,8 +244,7 @@ void Events::disconnectAllEvents(QObject *obj, bool children)
       }
     }
     // desinstala eventfilter do objeto 'obj'
-    if (m_list1->contains(obj) == false)
-    {
+    if (m_list1->contains(obj) == false) {
       obj->removeEventFilter(this);
     }
   } else {
@@ -275,17 +256,14 @@ void Events::disconnectAllEvents(QObject *obj, bool children)
 
     // percorre toda a lista de objetos
     const int listsize = objectList.size();
-    for (int i = 0; i < listsize; ++i)
-    {
+    for (int i = 0; i < listsize; ++i) {
       QObject *currentObject = objectList.at(i);
 
       // percorre toda a lista de eventos
       const int listsize2 = m_list1->size();
-      for (int ii = 0; ii < listsize2; ++ii)
-      {
+      for (int ii = 0; ii < listsize2; ++ii) {
         // elimina eventos ativos (true) ligados ao objeto list.at(i)
-        if (m_list1->at(ii) == currentObject)
-        {
+        if (m_list1->at(ii) == currentObject) {
           hb_itemRelease(m_list3->at(ii));
           m_list1->replace(ii, NULL);
           m_list2->replace(ii, QEvent::None);
@@ -294,8 +272,7 @@ void Events::disconnectAllEvents(QObject *obj, bool children)
       }
 
       // desinstala eventfilter do objeto 'list.at(i)'
-      if (m_list1->contains(currentObject) == false)
-      {
+      if (m_list1->contains(currentObject) == false) {
         currentObject->removeEventFilter(this);
       }
     }
@@ -308,15 +285,13 @@ PHB_ITEM Events::returnQEvent(QEvent *ptr, const char *classname)
 
   PHB_DYNS pDynSym = hb_dynsymFindName(eventname.toUpper().toLatin1().constData());
 
-  if (pDynSym == NULL)
-  {
+  if (pDynSym == NULL) {
     pDynSym = hb_dynsymFindName(classname);
   }
 
   PHB_ITEM pObject = hb_itemNew(NULL);
 
-  if (pDynSym != NULL)
-  {
+  if (pDynSym != NULL) {
     hb_vmPushDynSym(pDynSym);
     hb_vmPushNil();
     hb_vmDo(0);
@@ -335,20 +310,17 @@ PHB_ITEM Events::returnQObject(QObject *ptr, const char *classname)
 {
   PHB_DYNS pDynSym = NULL;
 
-  if (ptr != NULL)
-  {
+  if (ptr != NULL) {
     pDynSym = hb_dynsymFindName(ptr->metaObject()->className());
   }
 
-  if (pDynSym == NULL)
-  {
+  if (pDynSym == NULL) {
     pDynSym = hb_dynsymFindName(classname);
   }
 
   PHB_ITEM pObject = hb_itemNew(NULL);
 
-  if (pDynSym != NULL)
-  {
+  if (pDynSym != NULL) {
     hb_vmPushDynSym(pDynSym);
     hb_vmPushNil();
     hb_vmDo(0);
@@ -382,10 +354,8 @@ int Events::active()
 
   // percorre toda a lista de eventos
   const int listsize = m_list1->size();
-  for (int i = 0; i < listsize; ++i)
-  {
-    if (m_list1->at(i))
-    {
+  for (int i = 0; i < listsize; ++i) {
+    if (m_list1->at(i)) {
       ++count;
     }
   }
@@ -433,8 +403,7 @@ static void qt4xhb_events_init(void *cargo)
 {
   HB_SYMBOL_UNUSED(cargo);
 
-  if (s_events == NULL)
-  {
+  if (s_events == NULL) {
     s_events = new Events();
   }
 }
