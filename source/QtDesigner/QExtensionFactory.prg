@@ -49,8 +49,7 @@ RETURN
     // QExtensionFactory(QExtensionManager *parent = 0)
 HB_FUNC_STATIC(QEXTENSIONFACTORY_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQEXTENSIONMANAGER(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQEXTENSIONMANAGER(1) || HB_ISNIL(1))) {
     QExtensionFactory *obj = new QExtensionFactory(OPQEXTENSIONMANAGER(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   } else {
@@ -101,8 +100,7 @@ HB_FUNC_STATIC(QEXTENSIONFACTORY_EXTENSION)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2)) {
 #endif
       QObject *ptr = obj->extension(PQOBJECT(1), PQSTRING(2));
       Qt4xHb::createReturnQObjectClass(ptr, "QOBJECT");
