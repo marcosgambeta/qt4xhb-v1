@@ -673,7 +673,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_REMOVESHADER)
 
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEBUFFER)
 {
-  if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5) || HB_ISNIL(5))) {
+  if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISNUMORNIL(5)) {
     // void setAttributeBuffer(int location, GLenum type, int offset, int tupleSize, int stride = 0)
     QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -683,7 +683,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEBUFFER)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(4, 5) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5) || HB_ISNIL(5))) {
+  else if (ISBETWEEN(4, 5) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISNUMORNIL(5)) {
     // void setAttributeBuffer(const char *name, GLenum type, int offset, int tupleSize, int stride = 0)
     QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
