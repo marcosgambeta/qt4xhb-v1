@@ -58,14 +58,12 @@ RETURN
 
 HB_FUNC_STATIC(QDECLARATIVECONTEXT_NEW)
 {
-  if (ISBETWEEN(1, 2) && ISQDECLARATIVEENGINE(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
-  {
+  if (ISBETWEEN(1, 2) && ISQDECLARATIVEENGINE(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
     // QDeclarativeContext(QDeclarativeEngine *engine, QObject *parent = 0)
     QDeclarativeContext *obj = new QDeclarativeContext(PQDECLARATIVEENGINE(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && ISQDECLARATIVECONTEXT(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
-  {
+  else if (ISBETWEEN(1, 2) && ISQDECLARATIVECONTEXT(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
     // QDeclarativeContext(QDeclarativeContext *parentContext, QObject *parent = 0)
     QDeclarativeContext *obj = new QDeclarativeContext(PQDECLARATIVECONTEXT(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -136,8 +134,7 @@ HB_FUNC_STATIC(QDECLARATIVECONTEXT_CONTEXTPROPERTY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       QVariant *ptr = new QVariant(obj->contextProperty(PQSTRING(1)));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -212,8 +209,7 @@ HB_FUNC_STATIC(QDECLARATIVECONTEXT_RESOLVEDURL)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQURL(1))
-    {
+    if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
       QUrl *ptr = new QUrl(obj->resolvedUrl(*PQURL(1)));
       Qt4xHb::createReturnClass(ptr, "QURL", true);
@@ -232,8 +228,7 @@ HB_FUNC_STATIC(QDECLARATIVECONTEXT_SETBASEURL)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQURL(1))
-    {
+    if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
       obj->setBaseUrl(*PQURL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -253,8 +248,7 @@ HB_FUNC_STATIC(QDECLARATIVECONTEXT_SETCONTEXTOBJECT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQOBJECT(1))
-    {
+    if (ISNUMPAR(1) && ISQOBJECT(1)) {
 #endif
       obj->setContextObject(PQOBJECT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -269,25 +263,21 @@ HB_FUNC_STATIC(QDECLARATIVECONTEXT_SETCONTEXTOBJECT)
 
 HB_FUNC_STATIC(QDECLARATIVECONTEXT_SETCONTEXTPROPERTY)
 {
-  if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2))
-  {
+  if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2)) {
     // void setContextProperty(const QString &name, QObject *value)
     QDeclarativeContext *obj = qobject_cast<QDeclarativeContext *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setContextProperty(PQSTRING(1), PQOBJECT(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2))
-  {
+  else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2)) {
     // void setContextProperty(const QString &name, const QVariant &value)
     QDeclarativeContext *obj = qobject_cast<QDeclarativeContext *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setContextProperty(PQSTRING(1), *PQVARIANT(2));
     }
 

@@ -66,14 +66,12 @@ RETURN
 
 HB_FUNC_STATIC(QDECLARATIVEVIEW_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1))) {
     // QDeclarativeView(QWidget *parent = 0)
     QDeclarativeView *obj = new QDeclarativeView(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && ISQURL(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
-  {
+  else if (ISBETWEEN(1, 2) && ISQURL(1) && (ISQWIDGET(2) || HB_ISNIL(2))) {
     // QDeclarativeView(const QUrl &source, QWidget *parent = 0)
     QDeclarativeView *obj = new QDeclarativeView(*PQURL(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -241,8 +239,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_SETRESIZEMODE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setResizeMode((QDeclarativeView::ResizeMode)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -262,8 +259,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_SETSOURCE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQURL(1))
-    {
+    if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
       obj->setSource(*PQURL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

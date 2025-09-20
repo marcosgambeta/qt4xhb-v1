@@ -78,44 +78,37 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_NEW)
     QDeclarativeProperty *obj = new QDeclarativeProperty();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(1) && ISQOBJECT(1))
-  {
+  else if (ISNUMPAR(1) && ISQOBJECT(1)) {
     // QDeclarativeProperty(QObject *obj)
     QDeclarativeProperty *obj = new QDeclarativeProperty(PQOBJECT(1));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(2) && ISQOBJECT(1) && ISQDECLARATIVECONTEXT(2))
-  {
+  else if (ISNUMPAR(2) && ISQOBJECT(1) && ISQDECLARATIVECONTEXT(2)) {
     // QDeclarativeProperty(QObject *obj, QDeclarativeContext *ctxt)
     QDeclarativeProperty *obj = new QDeclarativeProperty(PQOBJECT(1), PQDECLARATIVECONTEXT(2));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(2) && ISQOBJECT(1) && ISQDECLARATIVEENGINE(2))
-  {
+  else if (ISNUMPAR(2) && ISQOBJECT(1) && ISQDECLARATIVEENGINE(2)) {
     // QDeclarativeProperty(QObject *obj, QDeclarativeEngine *engine)
     QDeclarativeProperty *obj = new QDeclarativeProperty(PQOBJECT(1), PQDECLARATIVEENGINE(2));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
-  {
+  else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2)) {
     // QDeclarativeProperty(QObject *obj, const QString &name)
     QDeclarativeProperty *obj = new QDeclarativeProperty(PQOBJECT(1), PQSTRING(2));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQDECLARATIVECONTEXT(3))
-  {
+  else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQDECLARATIVECONTEXT(3)) {
     // QDeclarativeProperty(QObject *obj, const QString &name, QDeclarativeContext *ctxt)
     QDeclarativeProperty *obj = new QDeclarativeProperty(PQOBJECT(1), PQSTRING(2), PQDECLARATIVECONTEXT(3));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQDECLARATIVEENGINE(3))
-  {
+  else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQDECLARATIVEENGINE(3)) {
     // QDeclarativeProperty(QObject *obj, const QString &name, QDeclarativeEngine *engine)
     QDeclarativeProperty *obj = new QDeclarativeProperty(PQOBJECT(1), PQSTRING(2), PQDECLARATIVEENGINE(3));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(1) && ISQDECLARATIVEPROPERTY(1))
-  {
+  else if (ISNUMPAR(1) && ISQDECLARATIVEPROPERTY(1)) {
     // QDeclarativeProperty(const QDeclarativeProperty &other)
     QDeclarativeProperty *obj = new QDeclarativeProperty(*PQDECLARATIVEPROPERTY(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -126,23 +119,19 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_NEW)
 
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_CONNECTNOTIFYSIGNAL)
 {
-  if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
-  {
+  if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2)) {
     // bool connectNotifySignal(QObject *dest, const char *slot) const
     QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RBOOL(obj->connectNotifySignal(PQOBJECT(1), PCONSTCHAR(2)));
     }
   }
-  else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2))
-  {
+  else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2)) {
     // bool connectNotifySignal(QObject *dest, int method) const
     QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RBOOL(obj->connectNotifySignal(PQOBJECT(1), PINT(2)));
     }
   } else {
@@ -483,28 +472,24 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_READ)
     // QVariant read() const
     QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QVariant *ptr = new QVariant(obj->read());
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
     }
   }
-  else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
-  {
+  else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2)) {
     // static QVariant read(QObject *object, const QString &name)
 
     QVariant *ptr = new QVariant(QDeclarativeProperty::read(PQOBJECT(1), PQSTRING(2)));
     Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
   }
-  else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQDECLARATIVECONTEXT(3))
-  {
+  else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQDECLARATIVECONTEXT(3)) {
     // static QVariant read(QObject *object, const QString &name, QDeclarativeContext *ctxt)
 
     QVariant *ptr = new QVariant(QDeclarativeProperty::read(PQOBJECT(1), PQSTRING(2), PQDECLARATIVECONTEXT(3)));
     Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
   }
-  else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQDECLARATIVEENGINE(3))
-  {
+  else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQDECLARATIVEENGINE(3)) {
     // static QVariant read(QObject *object, const QString &name, QDeclarativeEngine *engine)
 
     QVariant *ptr = new QVariant(QDeclarativeProperty::read(PQOBJECT(1), PQSTRING(2), PQDECLARATIVEENGINE(3)));
@@ -516,30 +501,25 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_READ)
 
 HB_FUNC_STATIC(QDECLARATIVEPROPERTY_WRITE)
 {
-  if (ISNUMPAR(1) && ISQVARIANT(1))
-  {
+  if (ISNUMPAR(1) && ISQVARIANT(1)) {
     // bool write(const QVariant &value) const
     QDeclarativeProperty *obj = static_cast<QDeclarativeProperty *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RBOOL(obj->write(*PQVARIANT(1)));
     }
   }
-  else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3))
-  {
+  else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3)) {
     // static bool write(QObject *object, const QString &name, const QVariant &value)
 
     RBOOL(QDeclarativeProperty::write(PQOBJECT(1), PQSTRING(2), *PQVARIANT(3)));
   }
-  else if (ISNUMPAR(4) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3) && ISQDECLARATIVECONTEXT(4))
-  {
+  else if (ISNUMPAR(4) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3) && ISQDECLARATIVECONTEXT(4)) {
     // static bool write(QObject *object, const QString &name, const QVariant &value, QDeclarativeContext *ctxt)
 
     RBOOL(QDeclarativeProperty::write(PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQDECLARATIVECONTEXT(4)));
   }
-  else if (ISNUMPAR(4) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3) && ISQDECLARATIVEENGINE(4))
-  {
+  else if (ISNUMPAR(4) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3) && ISQDECLARATIVEENGINE(4)) {
     // static bool write(QObject *object, const QString &name, const QVariant &value, QDeclarativeEngine *engine)
 
     RBOOL(QDeclarativeProperty::write(PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQDECLARATIVEENGINE(4)));
@@ -552,8 +532,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -561,8 +540,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_NEWFROM)
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -595,8 +573,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
