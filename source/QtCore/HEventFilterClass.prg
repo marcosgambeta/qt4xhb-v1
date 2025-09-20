@@ -43,8 +43,7 @@ RETURN
 // HEventFilter(QObject *parent = NULL)
 HB_FUNC_STATIC(HEVENTFILTER_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1))) {
     HEventFilter *obj = new HEventFilter(OPQOBJECT(1, NULL));
     Qt4xHb::returnNewObject(obj, false);
   } else {
@@ -77,8 +76,7 @@ HB_FUNC_STATIC(HEVENTFILTER_SETEVENTFILTERCB)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1))
-    {
+    if (ISNUMPAR(1)) {
 #endif
       obj->setEventFilterCB(PBLOCKORSYMBOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -54,14 +54,12 @@ RETURN
 
 HB_FUNC_STATIC(QBUFFER_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1))) {
     // QBuffer(QObject *parent = 0)
     QBuffer *obj = new QBuffer(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
-  {
+  else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
     // QBuffer(QByteArray *byteArray, QObject *parent = 0)
     QBuffer *obj = new QBuffer(PQBYTEARRAY(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -132,8 +130,7 @@ HB_FUNC_STATIC(QBUFFER_SETBUFFER)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-    {
+    if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
       obj->setBuffer(PQBYTEARRAY(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -148,25 +145,21 @@ HB_FUNC_STATIC(QBUFFER_SETBUFFER)
 
 HB_FUNC_STATIC(QBUFFER_SETDATA)
 {
-  if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-  {
+  if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     // void setData(const QByteArray &data)
     QBuffer *obj = qobject_cast<QBuffer *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setData(*PQBYTEARRAY(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
-  {
+  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     // void setData(const char *data, int size)
     QBuffer *obj = qobject_cast<QBuffer *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setData(PCONSTCHAR(1), PINT(2));
     }
 
@@ -239,8 +232,7 @@ HB_FUNC_STATIC(QBUFFER_OPEN)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->open((QBuffer::OpenMode)hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -276,8 +268,7 @@ HB_FUNC_STATIC(QBUFFER_SEEK)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->seek(PQINT64(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

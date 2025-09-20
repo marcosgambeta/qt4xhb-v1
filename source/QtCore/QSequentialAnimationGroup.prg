@@ -53,8 +53,7 @@ RETURN
     // QSequentialAnimationGroup(QObject *parent = 0)
 HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1))) {
     QSequentialAnimationGroup *obj = new QSequentialAnimationGroup(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   } else {
@@ -86,8 +85,7 @@ HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_ADDPAUSE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QPauseAnimation *ptr = obj->addPause(PINT(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QPAUSEANIMATION");
@@ -125,8 +123,7 @@ HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_INSERTPAUSE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       QPauseAnimation *ptr = obj->insertPause(PINT(1), PINT(2));
       Qt4xHb::createReturnQObjectClass(ptr, "QPAUSEANIMATION");

@@ -54,20 +54,17 @@ HB_FUNC_STATIC(QTEMPORARYFILE_NEW)
     QTemporaryFile *obj = new QTemporaryFile();
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // QTemporaryFile(const QString &templateName)
     QTemporaryFile *obj = new QTemporaryFile(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISNUMPAR(1) && ISQOBJECT(1))
-  {
+  else if (ISNUMPAR(1) && ISQOBJECT(1)) {
     // QTemporaryFile(QObject *parent)
     QTemporaryFile *obj = new QTemporaryFile(PQOBJECT(1));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2))
-  {
+  else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2)) {
     // QTemporaryFile(const QString &templateName, QObject *parent)
     QTemporaryFile *obj = new QTemporaryFile(PQSTRING(1), PQOBJECT(2));
     Qt4xHb::returnNewObject(obj, false);
@@ -154,8 +151,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_SETAUTOREMOVE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setAutoRemove(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -175,8 +171,7 @@ HB_FUNC_STATIC(QTEMPORARYFILE_SETFILETEMPLATE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setFileTemplate(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -209,15 +204,13 @@ HB_FUNC_STATIC(QTEMPORARYFILE_FILENAME)
 
 HB_FUNC_STATIC(QTEMPORARYFILE_CREATELOCALFILE)
 {
-  if (ISNUMPAR(1) && ISQFILE(1))
-  {
+  if (ISNUMPAR(1) && ISQFILE(1)) {
     // static QTemporaryFile *createLocalFile(QFile &file)
 
     QTemporaryFile *ptr = QTemporaryFile::createLocalFile(*PQFILE(1));
     Qt4xHb::createReturnQObjectClass(ptr, "QTEMPORARYFILE");
   }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // static QTemporaryFile *createLocalFile(const QString &fileName)
 
     QTemporaryFile *ptr = QTemporaryFile::createLocalFile(PQSTRING(1));

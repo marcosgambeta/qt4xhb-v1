@@ -59,22 +59,19 @@ HB_FUNC_STATIC(QSTRINGMATCHER_NEW)
     QStringMatcher *obj = new QStringMatcher();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
-  {
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
     // QStringMatcher(const QString &pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive)
     QStringMatcher *obj = new QStringMatcher(PQSTRING(1), HB_ISNIL(2) ? (Qt::CaseSensitivity)Qt::CaseSensitive
                                                                       : (Qt::CaseSensitivity)hb_parni(2));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(2, 3) && ISQCHAR(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
-  {
+  else if (ISBETWEEN(2, 3) && ISQCHAR(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3))) {
     // QStringMatcher(const QChar *uc, int len, Qt::CaseSensitivity cs = Qt::CaseSensitive)
     QStringMatcher *obj = new QStringMatcher(
         PQCHAR(1), PINT(2), HB_ISNIL(3) ? (Qt::CaseSensitivity)Qt::CaseSensitive : (Qt::CaseSensitivity)hb_parni(3));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(1) && ISQSTRINGMATCHER(1))
-  {
+  else if (ISNUMPAR(1) && ISQSTRINGMATCHER(1)) {
     // QStringMatcher(const QStringMatcher &other)
     QStringMatcher *obj = new QStringMatcher(*PQSTRINGMATCHER(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -105,8 +102,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_SETPATTERN)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setPattern(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -126,8 +122,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_SETCASESENSITIVITY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setCaseSensitivity((Qt::CaseSensitivity)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -142,23 +137,19 @@ HB_FUNC_STATIC(QSTRINGMATCHER_SETCASESENSITIVITY)
 
 HB_FUNC_STATIC(QSTRINGMATCHER_INDEXIN)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
-  {
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
     // int indexIn(const QString &str, int from = 0) const
     QStringMatcher *obj = static_cast<QStringMatcher *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RINT(obj->indexIn(PQSTRING(1), OPINT(2, 0)));
     }
   }
-  else if (ISBETWEEN(2, 3) && ISQCHAR(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
-  {
+  else if (ISBETWEEN(2, 3) && ISQCHAR(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3))) {
     // int indexIn(const QChar *str, int length, int from = 0) const
     QStringMatcher *obj = static_cast<QStringMatcher *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RINT(obj->indexIn(PQCHAR(1), PINT(2), OPINT(3, 0)));
     }
   } else {
@@ -206,8 +197,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -215,8 +205,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_NEWFROM)
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -249,8 +238,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

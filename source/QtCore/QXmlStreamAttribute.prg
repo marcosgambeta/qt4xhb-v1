@@ -61,20 +61,17 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTE_NEW)
     QXmlStreamAttribute *obj = new QXmlStreamAttribute();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
-  {
+  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     // QXmlStreamAttribute(const QString &qualifiedName, const QString &value)
     QXmlStreamAttribute *obj = new QXmlStreamAttribute(PQSTRING(1), PQSTRING(2));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3))
-  {
+  else if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3)) {
     // QXmlStreamAttribute(const QString &namespaceUri, const QString &name, const QString &value)
     QXmlStreamAttribute *obj = new QXmlStreamAttribute(PQSTRING(1), PQSTRING(2), PQSTRING(3));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(1) && ISQXMLSTREAMATTRIBUTE(1))
-  {
+  else if (ISNUMPAR(1) && ISQXMLSTREAMATTRIBUTE(1)) {
     // QXmlStreamAttribute(const QXmlStreamAttribute &other)
     QXmlStreamAttribute *obj = new QXmlStreamAttribute(*PQXMLSTREAMATTRIBUTE(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -215,8 +212,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTE_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -224,8 +220,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTE_NEWFROM)
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -258,8 +253,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTE_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

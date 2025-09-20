@@ -56,24 +56,21 @@ RETURN
 
 HB_FUNC_STATIC(QDIRITERATOR_NEW)
 {
-  if (ISBETWEEN(1, 2) && ISQDIR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
-  {
+  if (ISBETWEEN(1, 2) && ISQDIR(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
     // QDirIterator(const QDir &dir, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags)
     QDirIterator *obj =
         new QDirIterator(*PQDIR(1), HB_ISNIL(2) ? (QDirIterator::IteratorFlags)QDirIterator::NoIteratorFlags
                                                 : (QDirIterator::IteratorFlags)hb_parni(2));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
-  {
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
     // QDirIterator(const QString &path, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags)
     QDirIterator *obj =
         new QDirIterator(PQSTRING(1), HB_ISNIL(2) ? (QDirIterator::IteratorFlags)QDirIterator::NoIteratorFlags
                                                   : (QDirIterator::IteratorFlags)hb_parni(2));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
-  {
+  else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3))) {
     // QDirIterator(const QString &path, QDir::Filters filters, QDirIterator::IteratorFlags flags =
     // QDirIterator::NoIteratorFlags)
     QDirIterator *obj = new QDirIterator(PQSTRING(1), (QDir::Filters)hb_parni(2),
@@ -82,8 +79,7 @@ HB_FUNC_STATIC(QDIRITERATOR_NEW)
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISARRAY(2) && (HB_ISNUM(3) || HB_ISNIL(3)) &&
-           (HB_ISNUM(4) || HB_ISNIL(4)))
-  {
+           (HB_ISNUM(4) || HB_ISNIL(4))) {
     // QDirIterator(const QString &path, const QStringList &nameFilters, QDir::Filters filters = QDir::NoFilter,
     // QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags)
     QDirIterator *obj = new QDirIterator(PQSTRING(1), PQSTRINGLIST(2),
@@ -224,8 +220,7 @@ HB_FUNC_STATIC(QDIRITERATOR_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -233,8 +228,7 @@ HB_FUNC_STATIC(QDIRITERATOR_NEWFROM)
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -267,8 +261,7 @@ HB_FUNC_STATIC(QDIRITERATOR_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

@@ -54,8 +54,7 @@ RETURN
     // QThreadPool(QObject *parent = 0)
 HB_FUNC_STATIC(QTHREADPOOL_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1))) {
     QThreadPool *obj = new QThreadPool(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   } else {
@@ -181,8 +180,7 @@ HB_FUNC_STATIC(QTHREADPOOL_SETEXPIRYTIMEOUT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setExpiryTimeout(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -202,8 +200,7 @@ HB_FUNC_STATIC(QTHREADPOOL_SETMAXTHREADCOUNT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setMaxThreadCount(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -223,8 +220,7 @@ HB_FUNC_STATIC(QTHREADPOOL_START)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQRUNNABLE(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
-    {
+    if (ISBETWEEN(1, 2) && ISQRUNNABLE(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
 #endif
       obj->start(PQRUNNABLE(1), OPINT(2, 0));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -244,8 +240,7 @@ HB_FUNC_STATIC(QTHREADPOOL_TRYSTART)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQRUNNABLE(1))
-    {
+    if (ISNUMPAR(1) && ISQRUNNABLE(1)) {
 #endif
       RBOOL(obj->tryStart(PQRUNNABLE(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -262,20 +257,17 @@ HB_FUNC_STATIC(QTHREADPOOL_WAITFORDONE)
     // void waitForDone()
     QThreadPool *obj = qobject_cast<QThreadPool *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->waitForDone();
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // bool waitForDone(int msecs)
     QThreadPool *obj = qobject_cast<QThreadPool *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RBOOL(obj->waitForDone(PINT(1)));
     }
   } else {

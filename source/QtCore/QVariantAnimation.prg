@@ -134,8 +134,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_KEYVALUEAT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QVariant *ptr = new QVariant(obj->keyValueAt(PQREAL(1)));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -154,8 +153,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_SETDURATION)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setDuration(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -175,8 +173,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_SETEASINGCURVE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQEASINGCURVE(1))
-    {
+    if (ISNUMPAR(1) && ISQEASINGCURVE(1)) {
 #endif
       obj->setEasingCurve(*PQEASINGCURVE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -196,8 +193,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_SETENDVALUE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVARIANT(1))
-    {
+    if (ISNUMPAR(1) && ISQVARIANT(1)) {
 #endif
       obj->setEndValue(*PQVARIANT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -217,8 +213,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_SETKEYVALUEAT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2)) {
 #endif
       obj->setKeyValueAt(PQREAL(1), *PQVARIANT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -238,8 +233,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_SETSTARTVALUE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVARIANT(1))
-    {
+    if (ISNUMPAR(1) && ISQVARIANT(1)) {
 #endif
       obj->setStartValue(*PQVARIANT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -66,8 +66,7 @@ RETURN
     // QStateMachine(QObject *parent = 0)
 HB_FUNC_STATIC(QSTATEMACHINE_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1))) {
     QStateMachine *obj = new QStateMachine(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   } else {
@@ -99,8 +98,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_ADDDEFAULTANIMATION)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTANIMATION(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTANIMATION(1)) {
 #endif
       obj->addDefaultAnimation(PQABSTRACTANIMATION(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -120,8 +118,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_ADDSTATE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTSTATE(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTSTATE(1)) {
 #endif
       obj->addState(PQABSTRACTSTATE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -141,8 +138,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_CANCELDELAYEDEVENT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->cancelDelayedEvent(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -308,8 +304,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_POSTDELAYEDEVENT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQEVENT(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && ISQEVENT(1) && HB_ISNUM(2)) {
 #endif
       RINT(obj->postDelayedEvent(PQEVENT(1), PINT(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -327,8 +322,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_POSTEVENT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQEVENT(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
-    {
+    if (ISBETWEEN(1, 2) && ISQEVENT(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
 #endif
       obj->postEvent(PQEVENT(1), HB_ISNIL(2) ? (QStateMachine::EventPriority)QStateMachine::NormalPriority
                                              : (QStateMachine::EventPriority)hb_parni(2));
@@ -349,8 +343,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_REMOVEDEFAULTANIMATION)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTANIMATION(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTANIMATION(1)) {
 #endif
       obj->removeDefaultAnimation(PQABSTRACTANIMATION(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -370,8 +363,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_REMOVESTATE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTSTATE(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTSTATE(1)) {
 #endif
       obj->removeState(PQABSTRACTSTATE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -391,8 +383,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_SETANIMATED)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setAnimated(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -412,8 +403,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_SETGLOBALRESTOREPOLICY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setGlobalRestorePolicy((QStateMachine::RestorePolicy)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -433,8 +423,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_EVENTFILTER)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQOBJECT(1) && ISQEVENT(2))
-    {
+    if (ISNUMPAR(2) && ISQOBJECT(1) && ISQEVENT(2)) {
 #endif
       RBOOL(obj->eventFilter(PQOBJECT(1), PQEVENT(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

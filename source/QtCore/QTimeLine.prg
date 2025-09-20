@@ -76,8 +76,7 @@ RETURN
     // QTimeLine(int duration = 1000, QObject *parent = 0)
 HB_FUNC_STATIC(QTIMELINE_NEW)
 {
-  if (ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (ISQOBJECT(2) || HB_ISNIL(2)))
-  {
+  if (ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (ISQOBJECT(2) || HB_ISNIL(2))) {
     QTimeLine *obj = new QTimeLine(OPINT(1, 1000), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   } else {
@@ -235,8 +234,7 @@ HB_FUNC_STATIC(QTIMELINE_FRAMEFORTIME)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RINT(obj->frameForTime(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -272,8 +270,7 @@ HB_FUNC_STATIC(QTIMELINE_SETCURVESHAPE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setCurveShape((QTimeLine::CurveShape)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -293,8 +290,7 @@ HB_FUNC_STATIC(QTIMELINE_SETDIRECTION)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setDirection((QTimeLine::Direction)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -314,8 +310,7 @@ HB_FUNC_STATIC(QTIMELINE_SETDURATION)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setDuration(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -335,8 +330,7 @@ HB_FUNC_STATIC(QTIMELINE_SETEASINGCURVE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQEASINGCURVE(1))
-    {
+    if (ISNUMPAR(1) && ISQEASINGCURVE(1)) {
 #endif
       obj->setEasingCurve(*PQEASINGCURVE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -356,8 +350,7 @@ HB_FUNC_STATIC(QTIMELINE_SETENDFRAME)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setEndFrame(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -377,8 +370,7 @@ HB_FUNC_STATIC(QTIMELINE_SETFRAMERANGE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       obj->setFrameRange(PINT(1), PINT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -398,8 +390,7 @@ HB_FUNC_STATIC(QTIMELINE_SETLOOPCOUNT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setLoopCount(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -419,8 +410,7 @@ HB_FUNC_STATIC(QTIMELINE_SETSTARTFRAME)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setStartFrame(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -440,8 +430,7 @@ HB_FUNC_STATIC(QTIMELINE_SETUPDATEINTERVAL)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setUpdateInterval(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -515,8 +504,7 @@ HB_FUNC_STATIC(QTIMELINE_VALUEFORTIME)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RQREAL(obj->valueForTime(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -554,8 +542,7 @@ HB_FUNC_STATIC(QTIMELINE_SETCURRENTTIME)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setCurrentTime(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -575,8 +562,7 @@ HB_FUNC_STATIC(QTIMELINE_SETPAUSED)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setPaused(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -43,8 +43,7 @@ RETURN
     // QDynamicPropertyChangeEvent(const QByteArray &name)
 HB_FUNC_STATIC(QDYNAMICPROPERTYCHANGEEVENT_NEW)
 {
-  if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-  {
+  if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     QDynamicPropertyChangeEvent *obj = new QDynamicPropertyChangeEvent(*PQBYTEARRAY(1));
     Qt4xHb::returnNewObject(obj, false);
   } else {

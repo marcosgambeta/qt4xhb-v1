@@ -48,14 +48,12 @@ RETURN
 
 HB_FUNC_STATIC(QSIGNALTRANSITION_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQSTATE(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQSTATE(1) || HB_ISNIL(1))) {
     // QSignalTransition(QState *sourceState = 0)
     QSignalTransition *obj = new QSignalTransition(OPQSTATE(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(2, 3) && ISQOBJECT(1) && HB_ISCHAR(2) && (ISQSTATE(3) || HB_ISNIL(3)))
-  {
+  else if (ISBETWEEN(2, 3) && ISQOBJECT(1) && HB_ISCHAR(2) && (ISQSTATE(3) || HB_ISNIL(3))) {
     // QSignalTransition(QObject *sender, const char *signal, QState *sourceState = 0)
     QSignalTransition *obj = new QSignalTransition(PQOBJECT(1), PCONSTCHAR(2), OPQSTATE(3, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -107,8 +105,7 @@ HB_FUNC_STATIC(QSIGNALTRANSITION_SETSENDEROBJECT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQOBJECT(1))
-    {
+    if (ISNUMPAR(1) && ISQOBJECT(1)) {
 #endif
       obj->setSenderObject(PQOBJECT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -147,8 +144,7 @@ HB_FUNC_STATIC(QSIGNALTRANSITION_SETSIGNAL)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-    {
+    if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
       obj->setSignal(*PQBYTEARRAY(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -62,14 +62,12 @@ RETURN
 
 HB_FUNC_STATIC(QSTATE_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQSTATE(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQSTATE(1) || HB_ISNIL(1))) {
     // QState(QState *parent = 0)
     QState *obj = new QState(OPQSTATE(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQSTATE(2) || HB_ISNIL(2)))
-  {
+  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQSTATE(2) || HB_ISNIL(2))) {
     // QState(QState::ChildMode childMode, QState *parent = 0)
     QState *obj = new QState((QState::ChildMode)hb_parni(1), OPQSTATE(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -97,36 +95,30 @@ HB_FUNC_STATIC(QSTATE_DELETE)
 
 HB_FUNC_STATIC(QSTATE_ADDTRANSITION)
 {
-  if (ISNUMPAR(1) && ISQABSTRACTTRANSITION(1))
-  {
+  if (ISNUMPAR(1) && ISQABSTRACTTRANSITION(1)) {
     // void addTransition(QAbstractTransition *transition)
     QState *obj = qobject_cast<QState *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->addTransition(PQABSTRACTTRANSITION(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQABSTRACTSTATE(3))
-  {
+  else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQABSTRACTSTATE(3)) {
     // QSignalTransition *addTransition(QObject *sender, const char *signal, QAbstractState *target)
     QState *obj = qobject_cast<QState *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QSignalTransition *ptr = obj->addTransition(PQOBJECT(1), PCONSTCHAR(2), PQABSTRACTSTATE(3));
       Qt4xHb::createReturnQObjectClass(ptr, "QSIGNALTRANSITION");
     }
   }
-  else if (ISNUMPAR(1) && ISQABSTRACTSTATE(1))
-  {
+  else if (ISNUMPAR(1) && ISQABSTRACTSTATE(1)) {
     // QAbstractTransition *addTransition(QAbstractState *target)
     QState *obj = qobject_cast<QState *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QAbstractTransition *ptr = obj->addTransition(PQABSTRACTSTATE(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTTRANSITION");
     }
@@ -142,8 +134,7 @@ HB_FUNC_STATIC(QSTATE_ASSIGNPROPERTY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3))
-    {
+    if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3)) {
 #endif
       obj->assignProperty(PQOBJECT(1), PCONSTCHAR(2), *PQVARIANT(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -219,8 +210,7 @@ HB_FUNC_STATIC(QSTATE_REMOVETRANSITION)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTTRANSITION(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTTRANSITION(1)) {
 #endif
       obj->removeTransition(PQABSTRACTTRANSITION(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -240,8 +230,7 @@ HB_FUNC_STATIC(QSTATE_SETCHILDMODE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setChildMode((QState::ChildMode)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -261,8 +250,7 @@ HB_FUNC_STATIC(QSTATE_SETERRORSTATE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTSTATE(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTSTATE(1)) {
 #endif
       obj->setErrorState(PQABSTRACTSTATE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -282,8 +270,7 @@ HB_FUNC_STATIC(QSTATE_SETINITIALSTATE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTSTATE(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTSTATE(1)) {
 #endif
       obj->setInitialState(PQABSTRACTSTATE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

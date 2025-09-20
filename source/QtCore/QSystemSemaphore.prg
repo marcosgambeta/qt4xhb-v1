@@ -57,8 +57,7 @@ RETURN
     // QSystemSemaphore::Open)
 HB_FUNC_STATIC(QSYSTEMSEMAPHORE_NEW)
 {
-  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
-  {
+  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3))) {
     QSystemSemaphore *obj = new QSystemSemaphore(PQSTRING(1), OPINT(2, 0),
                                                  HB_ISNIL(3) ? (QSystemSemaphore::AccessMode)QSystemSemaphore::Open
                                                              : (QSystemSemaphore::AccessMode)hb_parni(3));
@@ -162,8 +161,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_RELEASE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
-    {
+    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1))) {
 #endif
       RBOOL(obj->release(OPINT(1, 1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -181,8 +179,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_SETKEY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
-    {
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3))) {
 #endif
       obj->setKey(PQSTRING(1), OPINT(2, 0),
                   HB_ISNIL(3) ? (QSystemSemaphore::AccessMode)QSystemSemaphore::Open
@@ -201,8 +198,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -210,8 +206,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_NEWFROM)
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -244,8 +239,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

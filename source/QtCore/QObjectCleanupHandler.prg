@@ -80,8 +80,7 @@ HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_ADD)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQOBJECT(1))
-    {
+    if (ISNUMPAR(1) && ISQOBJECT(1)) {
 #endif
       QObject *ptr = obj->add(PQOBJECT(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QOBJECT");
@@ -100,8 +99,7 @@ HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_REMOVE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQOBJECT(1))
-    {
+    if (ISNUMPAR(1) && ISQOBJECT(1)) {
 #endif
       obj->remove(PQOBJECT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

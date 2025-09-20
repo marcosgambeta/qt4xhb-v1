@@ -58,8 +58,7 @@ RETURN
 HB_FUNC_STATIC(QMETATYPE_REGISTERTYPEDEF)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
-  {
+  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
 #endif
     RINT(QMetaType::registerTypedef(PCONSTCHAR(1), PINT(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -73,8 +72,7 @@ HB_FUNC_STATIC(QMETATYPE_REGISTERTYPEDEF)
 HB_FUNC_STATIC(QMETATYPE_TYPE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
     RINT(QMetaType::type(PCONSTCHAR(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -88,8 +86,7 @@ HB_FUNC_STATIC(QMETATYPE_TYPE)
 HB_FUNC_STATIC(QMETATYPE_TYPENAME)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
     hb_retc((const char *)QMetaType::typeName(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -103,8 +100,7 @@ HB_FUNC_STATIC(QMETATYPE_TYPENAME)
 HB_FUNC_STATIC(QMETATYPE_ISREGISTERED)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
     RBOOL(QMetaType::isRegistered(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -118,8 +114,7 @@ HB_FUNC_STATIC(QMETATYPE_ISREGISTERED)
 HB_FUNC_STATIC(QMETATYPE_CONSTRUCT)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(2) && HB_ISNUM(1) && (HB_ISPOINTER(2) || HB_ISNIL(2)))
-  {
+  if (ISNUMPAR(2) && HB_ISNUM(1) && (HB_ISPOINTER(2) || HB_ISNIL(2))) {
 #endif
     hb_retptr(
         static_cast<void *>(QMetaType::construct(PINT(1), HB_ISNIL(2) ? (const void *)0 : (const void *)hb_parptr(2))));
@@ -134,8 +129,7 @@ HB_FUNC_STATIC(QMETATYPE_CONSTRUCT)
 HB_FUNC_STATIC(QMETATYPE_DESTROY)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISPOINTER(2))
-  {
+  if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISPOINTER(2)) {
 #endif
     QMetaType::destroy(PINT(1), static_cast<void *>(hb_parptr(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -151,8 +145,7 @@ HB_FUNC_STATIC(QMETATYPE_DESTROY)
 HB_FUNC_STATIC(QMETATYPE_UNREGISTERTYPE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
     QMetaType::unregisterType(PCONSTCHAR(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -168,8 +161,7 @@ HB_FUNC_STATIC(QMETATYPE_UNREGISTERTYPE)
 HB_FUNC_STATIC(QMETATYPE_SAVE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(3) && ISQDATASTREAM(1) && HB_ISNUM(2) && HB_ISPOINTER(3))
-  {
+  if (ISNUMPAR(3) && ISQDATASTREAM(1) && HB_ISNUM(2) && HB_ISPOINTER(3)) {
 #endif
     RBOOL(QMetaType::save(*PQDATASTREAM(1), PINT(2), static_cast<const void *>(hb_parptr(3))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -183,8 +175,7 @@ HB_FUNC_STATIC(QMETATYPE_SAVE)
 HB_FUNC_STATIC(QMETATYPE_LOAD)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(3) && ISQDATASTREAM(1) && HB_ISNUM(2) && HB_ISPOINTER(3))
-  {
+  if (ISNUMPAR(3) && ISQDATASTREAM(1) && HB_ISNUM(2) && HB_ISPOINTER(3)) {
 #endif
     RBOOL(QMetaType::load(*PQDATASTREAM(1), PINT(2), static_cast<void *>(hb_parptr(3))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -198,8 +189,7 @@ HB_FUNC_STATIC(QMETATYPE_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -207,8 +197,7 @@ HB_FUNC_STATIC(QMETATYPE_NEWFROM)
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -241,8 +230,7 @@ HB_FUNC_STATIC(QMETATYPE_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
