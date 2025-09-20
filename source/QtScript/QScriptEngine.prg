@@ -89,8 +89,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEW)
     QScriptEngine *obj = new QScriptEngine();
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISNUMPAR(1) && ISQOBJECT(1))
-  {
+  else if (ISNUMPAR(1) && ISQOBJECT(1)) {
     // QScriptEngine(QObject *parent)
     QScriptEngine *obj = new QScriptEngine(PQOBJECT(1));
     Qt4xHb::returnNewObject(obj, false);
@@ -123,8 +122,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_ABORTEVALUATION)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQSCRIPTVALUE(1) || HB_ISNIL(1)))
-    {
+    if (ISBETWEEN(0, 1) && (ISQSCRIPTVALUE(1) || HB_ISNIL(1))) {
 #endif
       obj->abortEvaluation(HB_ISNIL(1) ? QScriptValue() : *static_cast<QScriptValue *>(Qt4xHb::itemGetPtr(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -240,8 +238,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_DEFAULTPROTOTYPE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QScriptValue *ptr = new QScriptValue(obj->defaultPrototype(PINT(1)));
       Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
@@ -255,24 +252,20 @@ HB_FUNC_STATIC(QSCRIPTENGINE_DEFAULTPROTOTYPE)
 
 HB_FUNC_STATIC(QSCRIPTENGINE_EVALUATE)
 {
-  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNUM(3)))
-  {
+  if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNUM(3))) {
     // QScriptValue evaluate(const QString &program, const QString &fileName = QString(), int lineNumber = 1)
     QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QScriptValue *ptr = new QScriptValue(obj->evaluate(PQSTRING(1), OPQSTRING(2, QString()), OPINT(3, 1)));
       Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
   }
-  else if (ISNUMPAR(1) && ISQSCRIPTPROGRAM(1))
-  {
+  else if (ISNUMPAR(1) && ISQSCRIPTPROGRAM(1)) {
     // QScriptValue evaluate(const QScriptProgram &program)
     QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QScriptValue *ptr = new QScriptValue(obj->evaluate(*PQSCRIPTPROGRAM(1)));
       Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
@@ -325,8 +318,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_IMPORTEXTENSION)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       QScriptValue *ptr = new QScriptValue(obj->importExtension(PQSTRING(1)));
       Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
@@ -363,8 +355,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_INSTALLTRANSLATORFUNCTIONS)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQSCRIPTVALUE(1) || HB_ISNIL(1)))
-    {
+    if (ISBETWEEN(0, 1) && (ISQSCRIPTVALUE(1) || HB_ISNIL(1))) {
 #endif
       obj->installTranslatorFunctions(HB_ISNIL(1) ? QScriptValue()
                                                   : *static_cast<QScriptValue *>(Qt4xHb::itemGetPtr(1)));
@@ -403,8 +394,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWARRAY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
-    {
+    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1))) {
 #endif
       QScriptValue *ptr = new QScriptValue(obj->newArray(OPUINT(1, 0)));
       Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
@@ -418,24 +408,20 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWARRAY)
 
 HB_FUNC_STATIC(QSCRIPTENGINE_NEWREGEXP)
 {
-  if (ISNUMPAR(1) && ISQREGEXP(1))
-  {
+  if (ISNUMPAR(1) && ISQREGEXP(1)) {
     // QScriptValue newRegExp(const QRegExp &regexp)
     QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QScriptValue *ptr = new QScriptValue(obj->newRegExp(*PQREGEXP(1)));
       Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
   }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
-  {
+  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     // QScriptValue newRegExp(const QString &pattern, const QString &flags)
     QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QScriptValue *ptr = new QScriptValue(obj->newRegExp(PQSTRING(1), PQSTRING(2)));
       Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
@@ -446,24 +432,20 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWREGEXP)
 
 HB_FUNC_STATIC(QSCRIPTENGINE_NEWVARIANT)
 {
-  if (ISNUMPAR(1) && ISQVARIANT(1))
-  {
+  if (ISNUMPAR(1) && ISQVARIANT(1)) {
     // QScriptValue newVariant(const QVariant &value)
     QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QScriptValue *ptr = new QScriptValue(obj->newVariant(*PQVARIANT(1)));
       Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
   }
-  else if (ISNUMPAR(2) && ISQSCRIPTVALUE(1) && ISQVARIANT(2))
-  {
+  else if (ISNUMPAR(2) && ISQSCRIPTVALUE(1) && ISQVARIANT(2)) {
     // QScriptValue newVariant(const QScriptValue &object, const QVariant &value)
     QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QScriptValue *ptr = new QScriptValue(obj->newVariant(*PQSCRIPTVALUE(1), *PQVARIANT(2)));
       Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
@@ -555,8 +537,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_REPORTADDITIONALMEMORYCOST)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->reportAdditionalMemoryCost(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -576,8 +557,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_SETAGENT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSCRIPTENGINEAGENT(1))
-    {
+    if (ISNUMPAR(1) && ISQSCRIPTENGINEAGENT(1)) {
 #endif
       obj->setAgent(PQSCRIPTENGINEAGENT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -597,8 +577,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_SETDEFAULTPROTOTYPE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSCRIPTVALUE(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSCRIPTVALUE(2)) {
 #endif
       obj->setDefaultPrototype(PINT(1), *PQSCRIPTVALUE(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -618,8 +597,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_SETGLOBALOBJECT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSCRIPTVALUE(1))
-    {
+    if (ISNUMPAR(1) && ISQSCRIPTVALUE(1)) {
 #endif
       obj->setGlobalObject(*PQSCRIPTVALUE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -639,8 +617,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_SETPROCESSEVENTSINTERVAL)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setProcessEventsInterval(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -660,8 +637,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_TOOBJECT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSCRIPTVALUE(1))
-    {
+    if (ISNUMPAR(1) && ISQSCRIPTVALUE(1)) {
 #endif
       QScriptValue *ptr = new QScriptValue(obj->toObject(*PQSCRIPTVALUE(1)));
       Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
@@ -680,8 +656,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_TOSTRINGHANDLE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       QScriptString *ptr = new QScriptString(obj->toStringHandle(PQSTRING(1)));
       Qt4xHb::createReturnClass(ptr, "QSCRIPTSTRING", true);
@@ -771,8 +746,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_UNDEFINEDVALUE)
 HB_FUNC_STATIC(QSCRIPTENGINE_CHECKSYNTAX)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
     QScriptSyntaxCheckResult *ptr = new QScriptSyntaxCheckResult(QScriptEngine::checkSyntax(PQSTRING(1)));
     Qt4xHb::createReturnClass(ptr, "QSCRIPTSYNTAXCHECKRESULT", true);

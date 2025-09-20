@@ -69,8 +69,7 @@ HB_FUNC_STATIC(QSCRIPTEXTENSIONPLUGIN_SETUPPACKAGE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQSCRIPTENGINE(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQSCRIPTENGINE(2)) {
 #endif
       QScriptValue *ptr = new QScriptValue(obj->setupPackage(PQSTRING(1), PQSCRIPTENGINE(2)));
       Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
@@ -89,8 +88,7 @@ HB_FUNC_STATIC(QSCRIPTEXTENSIONPLUGIN_INITIALIZE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQSCRIPTENGINE(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQSCRIPTENGINE(2)) {
 #endif
       obj->initialize(PQSTRING(1), PQSCRIPTENGINE(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
