@@ -16,26 +16,22 @@ HUiLoader::HUiLoader(QObject *parent) : QUiLoader(parent)
 
 HUiLoader::~HUiLoader()
 {
-  if (m_createActionBlock != NULL)
-  {
+  if (m_createActionBlock != NULL) {
     hb_itemRelease(m_createActionBlock);
     m_createActionBlock = NULL;
   }
 
-  if (m_createActionGroupBlock != NULL)
-  {
+  if (m_createActionGroupBlock != NULL) {
     hb_itemRelease(m_createActionGroupBlock);
     m_createActionGroupBlock = NULL;
   }
 
-  if (m_createLayoutBlock != NULL)
-  {
+  if (m_createLayoutBlock != NULL) {
     hb_itemRelease(m_createLayoutBlock);
     m_createLayoutBlock = NULL;
   }
 
-  if (m_createWidgetBlock != NULL)
-  {
+  if (m_createWidgetBlock != NULL) {
     hb_itemRelease(m_createWidgetBlock);
     m_createWidgetBlock = NULL;
   }
@@ -45,8 +41,7 @@ QAction *HUiLoader::createAction(QObject *parent, const QString &name)
 {
   QAction *action = QUiLoader::createAction(parent, name);
 
-  if (m_createActionBlock != NULL)
-  {
+  if (m_createActionBlock != NULL) {
     PHB_ITEM pAction = Qt4xHb::returnQObjectObject(action);
     hb_vmEvalBlockV(m_createActionBlock, 1, pAction);
     hb_itemRelease(pAction);
@@ -59,8 +54,7 @@ QActionGroup *HUiLoader::createActionGroup(QObject *parent, const QString &name)
 {
   QActionGroup *actionGroup = QUiLoader::createActionGroup(parent, name);
 
-  if (m_createActionGroupBlock != NULL)
-  {
+  if (m_createActionGroupBlock != NULL) {
     PHB_ITEM pActionGroup = Qt4xHb::returnQObjectObject(actionGroup);
     hb_vmEvalBlockV(m_createActionGroupBlock, 1, pActionGroup);
     hb_itemRelease(pActionGroup);
@@ -73,8 +67,7 @@ QLayout *HUiLoader::createLayout(const QString &className, QObject *parent, cons
 {
   QLayout *layout = QUiLoader::createLayout(className, parent, name);
 
-  if (m_createLayoutBlock != NULL)
-  {
+  if (m_createLayoutBlock != NULL) {
     PHB_ITEM pLayout = Qt4xHb::returnQObjectObject(layout);
     hb_vmEvalBlockV(m_createLayoutBlock, 1, pLayout);
     hb_itemRelease(pLayout);
@@ -87,8 +80,7 @@ QWidget *HUiLoader::createWidget(const QString &className, QWidget *parent, cons
 {
   QWidget *widget = QUiLoader::createWidget(className, parent, name);
 
-  if (m_createWidgetBlock != NULL)
-  {
+  if (m_createWidgetBlock != NULL) {
     PHB_ITEM pWidget = Qt4xHb::returnQWidgetObject(widget);
     hb_vmEvalBlockV(m_createWidgetBlock, 1, pWidget);
     hb_itemRelease(pWidget);
@@ -99,48 +91,40 @@ QWidget *HUiLoader::createWidget(const QString &className, QWidget *parent, cons
 
 void HUiLoader::setCreateActionCB(PHB_ITEM block)
 {
-  if (m_createActionBlock != NULL)
-  {
+  if (m_createActionBlock != NULL) {
     hb_itemRelease(m_createActionBlock);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_createActionBlock = hb_itemNew(block);
   }
 }
 
 void HUiLoader::setCreateActionGroupCB(PHB_ITEM block)
 {
-  if (m_createActionGroupBlock != NULL)
-  {
+  if (m_createActionGroupBlock != NULL) {
     hb_itemRelease(m_createActionGroupBlock);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_createActionGroupBlock = hb_itemNew(block);
   }
 }
 
 void HUiLoader::setCreateLayoutCB(PHB_ITEM block)
 {
-  if (m_createLayoutBlock != NULL)
-  {
+  if (m_createLayoutBlock != NULL) {
     hb_itemRelease(m_createLayoutBlock);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_createLayoutBlock = hb_itemNew(block);
   }
 }
 
 void HUiLoader::setCreateWidgetCB(PHB_ITEM block)
 {
-  if (m_createWidgetBlock != NULL)
-  {
+  if (m_createWidgetBlock != NULL) {
     hb_itemRelease(m_createWidgetBlock);
   }
-  if (block != NULL)
-  {
+  if (block != NULL) {
     m_createWidgetBlock = hb_itemNew(block);
   }
 }
