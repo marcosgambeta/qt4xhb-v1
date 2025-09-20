@@ -62,8 +62,7 @@ RETURN
     // QHelpSearchEngine(QHelpEngineCore *helpEngine, QObject *parent = 0)
 HB_FUNC_STATIC(QHELPSEARCHENGINE_NEW)
 {
-  if (ISBETWEEN(1, 2) && ISQHELPENGINECORE(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
-  {
+  if (ISBETWEEN(1, 2) && ISQHELPENGINECORE(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
     QHelpSearchEngine *obj = new QHelpSearchEngine(PQHELPENGINECORE(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   } else {
@@ -252,8 +251,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_SEARCH)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISARRAY(1))
-    {
+    if (ISNUMPAR(1) && HB_ISARRAY(1)) {
 #endif
       QList<QHelpSearchQuery> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);

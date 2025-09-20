@@ -67,8 +67,7 @@ HB_FUNC_STATIC(QHELPSEARCHRESULTWIDGET_LINKAT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOINT(1))
-    {
+    if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
       QUrl *ptr = new QUrl(obj->linkAt(*PQPOINT(1)));
       Qt4xHb::createReturnClass(ptr, "QURL", true);

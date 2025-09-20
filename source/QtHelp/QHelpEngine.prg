@@ -59,8 +59,7 @@ RETURN
     // QHelpEngine(const QString &collectionFile, QObject *parent = 0)
 HB_FUNC_STATIC(QHELPENGINE_NEW)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
-  {
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
     QHelpEngine *obj = new QHelpEngine(PQSTRING(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   } else {
