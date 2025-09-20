@@ -72,8 +72,7 @@ HB_FUNC_STATIC(QXMLERRORHANDLER_ERROR)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1))
-    {
+    if (ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1)) {
 #endif
       RBOOL(obj->error(*PQXMLPARSEEXCEPTION(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -109,8 +108,7 @@ HB_FUNC_STATIC(QXMLERRORHANDLER_FATALERROR)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1))
-    {
+    if (ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1)) {
 #endif
       RBOOL(obj->fatalError(*PQXMLPARSEEXCEPTION(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -128,8 +126,7 @@ HB_FUNC_STATIC(QXMLERRORHANDLER_WARNING)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1))
-    {
+    if (ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1)) {
 #endif
       RBOOL(obj->warning(*PQXMLPARSEEXCEPTION(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -144,8 +141,7 @@ HB_FUNC_STATIC(QXMLERRORHANDLER_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -153,8 +149,7 @@ HB_FUNC_STATIC(QXMLERRORHANDLER_NEWFROM)
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -187,8 +182,7 @@ HB_FUNC_STATIC(QXMLERRORHANDLER_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

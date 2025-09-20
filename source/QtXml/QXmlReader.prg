@@ -188,8 +188,7 @@ HB_FUNC_STATIC(QXMLREADER_FEATURE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
-    {
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISLOG(2) || HB_ISNIL(2))) {
 #endif
       bool par2;
       RBOOL(obj->feature(PQSTRING(1), &par2));
@@ -209,8 +208,7 @@ HB_FUNC_STATIC(QXMLREADER_HASFEATURE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RBOOL(obj->hasFeature(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -228,8 +226,7 @@ HB_FUNC_STATIC(QXMLREADER_HASPROPERTY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RBOOL(obj->hasProperty(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -266,8 +263,7 @@ HB_FUNC_STATIC(QXMLREADER_PARSE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQXMLINPUTSOURCE(1))
-    {
+    if (ISNUMPAR(1) && ISQXMLINPUTSOURCE(1)) {
 #endif
       RBOOL(obj->parse(PQXMLINPUTSOURCE(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -285,8 +281,7 @@ HB_FUNC_STATIC(QXMLREADER_PROPERTY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
-    {
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISLOG(2) || HB_ISNIL(2))) {
 #endif
       bool par2;
       hb_retptr(static_cast<void *>(obj->property(PQSTRING(1), &par2)));
@@ -306,8 +301,7 @@ HB_FUNC_STATIC(QXMLREADER_SETCONTENTHANDLER)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQXMLCONTENTHANDLER(1))
-    {
+    if (ISNUMPAR(1) && ISQXMLCONTENTHANDLER(1)) {
 #endif
       obj->setContentHandler(PQXMLCONTENTHANDLER(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -327,8 +321,7 @@ HB_FUNC_STATIC(QXMLREADER_SETDTDHANDLER)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQXMLDTDHANDLER(1))
-    {
+    if (ISNUMPAR(1) && ISQXMLDTDHANDLER(1)) {
 #endif
       obj->setDTDHandler(PQXMLDTDHANDLER(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -348,8 +341,7 @@ HB_FUNC_STATIC(QXMLREADER_SETDECLHANDLER)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQXMLDECLHANDLER(1))
-    {
+    if (ISNUMPAR(1) && ISQXMLDECLHANDLER(1)) {
 #endif
       obj->setDeclHandler(PQXMLDECLHANDLER(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -369,8 +361,7 @@ HB_FUNC_STATIC(QXMLREADER_SETENTITYRESOLVER)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQXMLENTITYRESOLVER(1))
-    {
+    if (ISNUMPAR(1) && ISQXMLENTITYRESOLVER(1)) {
 #endif
       obj->setEntityResolver(PQXMLENTITYRESOLVER(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -390,8 +381,7 @@ HB_FUNC_STATIC(QXMLREADER_SETERRORHANDLER)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQXMLERRORHANDLER(1))
-    {
+    if (ISNUMPAR(1) && ISQXMLERRORHANDLER(1)) {
 #endif
       obj->setErrorHandler(PQXMLERRORHANDLER(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -411,8 +401,7 @@ HB_FUNC_STATIC(QXMLREADER_SETFEATURE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISLOG(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISLOG(2)) {
 #endif
       obj->setFeature(PQSTRING(1), PBOOL(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -432,8 +421,7 @@ HB_FUNC_STATIC(QXMLREADER_SETLEXICALHANDLER)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQXMLLEXICALHANDLER(1))
-    {
+    if (ISNUMPAR(1) && ISQXMLLEXICALHANDLER(1)) {
 #endif
       obj->setLexicalHandler(PQXMLLEXICALHANDLER(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -453,8 +441,7 @@ HB_FUNC_STATIC(QXMLREADER_SETPROPERTY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISPOINTER(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISPOINTER(2)) {
 #endif
       obj->setProperty(PQSTRING(1), static_cast<void *>(hb_parptr(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -471,8 +458,7 @@ HB_FUNC_STATIC(QXMLREADER_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -480,8 +466,7 @@ HB_FUNC_STATIC(QXMLREADER_NEWFROM)
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -514,8 +499,7 @@ HB_FUNC_STATIC(QXMLREADER_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

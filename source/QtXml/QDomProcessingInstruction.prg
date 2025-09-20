@@ -48,8 +48,7 @@ HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_NEW)
     QDomProcessingInstruction *obj = new QDomProcessingInstruction();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(1) && ISQDOMPROCESSINGINSTRUCTION(1))
-  {
+  else if (ISNUMPAR(1) && ISQDOMPROCESSINGINSTRUCTION(1)) {
     // QDomProcessingInstruction(const QDomProcessingInstruction &x)
     QDomProcessingInstruction *obj = new QDomProcessingInstruction(*PQDOMPROCESSINGINSTRUCTION(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -101,8 +100,7 @@ HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_SETDATA)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setData(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
