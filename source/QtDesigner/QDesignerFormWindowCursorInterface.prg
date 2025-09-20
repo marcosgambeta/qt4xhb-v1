@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_MOVEPOSITION)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       RBOOL(obj->movePosition(
           (QDesignerFormWindowCursorInterface::MoveOperation)hb_parni(1),
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWCURSORINTERFACE_SETPOSITION)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       obj->setPosition(
           PINT(1), HB_ISNIL(2)
