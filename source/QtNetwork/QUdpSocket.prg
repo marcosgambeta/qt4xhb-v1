@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QUDPSOCKET_BIND)
       RBOOL(obj->bind(*PQHOSTADDRESS(1), PQUINT16(2), (QUdpSocket::BindMode)hb_parni(3)));
     }
   }
-  else if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1))) {
+  else if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
     // bool bind(quint16 port = 0)
     QUdpSocket *obj = qobject_cast<QUdpSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

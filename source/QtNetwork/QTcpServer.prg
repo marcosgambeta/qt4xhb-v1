@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QTCPSERVER_LISTEN)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (ISQHOSTADDRESS(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(0, 2) && (ISQHOSTADDRESS(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {
 #endif
       RBOOL(obj->listen(HB_ISNIL(1) ? QHostAddress::Any : *static_cast<QHostAddress *>(Qt4xHb::itemGetPtr(1)),
                         OPQUINT16(2, 0)));
@@ -379,7 +379,7 @@ HB_FUNC_STATIC(QTCPSERVER_WAITFORNEWCONNECTION)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (HB_ISLOG(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && (HB_ISLOG(2) || HB_ISNIL(2))) {
 #endif
       bool par2;
       RBOOL(obj->waitForNewConnection(OPINT(1, 0), &par2));

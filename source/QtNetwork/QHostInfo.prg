@@ -65,7 +65,7 @@ RETURN
 
 HB_FUNC_STATIC(QHOSTINFO_NEW)
 {
-  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
     // QHostInfo(int id = -1)
     QHostInfo *obj = new QHostInfo(OPINT(1, -1));
     Qt4xHb::returnNewObject(obj, true);

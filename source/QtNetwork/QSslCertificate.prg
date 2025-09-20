@@ -71,13 +71,13 @@ RETURN
 
 HB_FUNC_STATIC(QSSLCERTIFICATE_NEW)
 {
-  if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+  if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && ISNUMORNIL(2)) {
     // QSslCertificate(QIODevice *device, QSsl::EncodingFormat format = QSsl::Pem)
     QSslCertificate *obj = new QSslCertificate(PQIODEVICE(1), HB_ISNIL(2) ? (QSsl::EncodingFormat)QSsl::Pem
                                                                           : (QSsl::EncodingFormat)hb_parni(2));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(0, 2) && (ISQBYTEARRAY(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+  else if (ISBETWEEN(0, 2) && (ISQBYTEARRAY(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {
     // QSslCertificate(const QByteArray &data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem)
     QSslCertificate *obj =
         new QSslCertificate(HB_ISNIL(1) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(1)),
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_DIGEST)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->digest(HB_ISNIL(1) ? (QCryptographicHash::Algorithm)QCryptographicHash::Md5
                                                                : (QCryptographicHash::Algorithm)hb_parni(1)));
@@ -368,7 +368,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_FROMDATA)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISNUMORNIL(2)) {
 #endif
       QList<QSslCertificate> list = obj->fromData(*PQBYTEARRAY(1), HB_ISNIL(2) ? (QSsl::EncodingFormat)QSsl::Pem
                                                                                : (QSsl::EncodingFormat)hb_parni(2));
@@ -410,7 +410,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_FROMDEVICE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && ISNUMORNIL(2)) {
 #endif
       QList<QSslCertificate> list = obj->fromDevice(PQIODEVICE(1), HB_ISNIL(2) ? (QSsl::EncodingFormat)QSsl::Pem
                                                                                : (QSsl::EncodingFormat)hb_parni(2));
@@ -453,7 +453,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_FROMPATH)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3))) {
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
       QList<QSslCertificate> list = obj->fromPath(
           PQSTRING(1), HB_ISNIL(2) ? (QSsl::EncodingFormat)QSsl::Pem : (QSsl::EncodingFormat)hb_parni(2),
