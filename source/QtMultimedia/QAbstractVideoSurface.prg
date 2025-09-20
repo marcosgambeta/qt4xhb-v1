@@ -209,7 +209,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_SUPPORTEDPIXELFORMATS)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       QList<QVideoFrame::PixelFormat> list =
           obj->supportedPixelFormats(HB_ISNIL(1) ? (QAbstractVideoBuffer::HandleType)QAbstractVideoBuffer::NoHandle
