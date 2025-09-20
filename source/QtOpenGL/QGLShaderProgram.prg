@@ -117,14 +117,12 @@ RETURN
 
 HB_FUNC_STATIC(QGLSHADERPROGRAM_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1))) {
     // QGLShaderProgram(QObject *parent = 0)
     QGLShaderProgram *obj = new QGLShaderProgram(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && ISQGLCONTEXT(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
-  {
+  else if (ISBETWEEN(1, 2) && ISQGLCONTEXT(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
     // QGLShaderProgram(const QGLContext *context, QObject *parent = 0)
     QGLShaderProgram *obj = new QGLShaderProgram(PQGLCONTEXT(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -157,8 +155,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_ADDSHADER)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQGLSHADER(1))
-    {
+    if (ISNUMPAR(1) && ISQGLSHADER(1)) {
 #endif
       RBOOL(obj->addShader(PQGLSHADER(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -176,8 +173,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE1)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
 #endif
       RBOOL(obj->addShaderFromSourceCode((QGLShader::ShaderType)hb_parni(1), PCONSTCHAR(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -195,8 +191,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE2)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQBYTEARRAY(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQBYTEARRAY(2)) {
 #endif
       RBOOL(obj->addShaderFromSourceCode((QGLShader::ShaderType)hb_parni(1), *PQBYTEARRAY(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -214,8 +209,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE3)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
 #endif
       RBOOL(obj->addShaderFromSourceCode((QGLShader::ShaderType)hb_parni(1), PQSTRING(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -228,16 +222,13 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE3)
 
 HB_FUNC_STATIC(QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE)
 {
-  if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
-  {
+  if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
     HB_FUNC_EXEC(QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE1);
   }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQBYTEARRAY(2))
-  {
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQBYTEARRAY(2)) {
     HB_FUNC_EXEC(QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE2);
   }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
-  {
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
     HB_FUNC_EXEC(QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE3);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -251,8 +242,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_ADDSHADERFROMSOURCEFILE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
 #endif
       RBOOL(obj->addShaderFromSourceFile((QGLShader::ShaderType)hb_parni(1), PQSTRING(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -270,8 +260,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_ATTRIBUTELOCATION1)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RINT(obj->attributeLocation(PCONSTCHAR(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -289,8 +278,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_ATTRIBUTELOCATION2)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-    {
+    if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
       RINT(obj->attributeLocation(*PQBYTEARRAY(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -308,8 +296,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_ATTRIBUTELOCATION3)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RINT(obj->attributeLocation(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -322,16 +309,13 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_ATTRIBUTELOCATION3)
 
 HB_FUNC_STATIC(QGLSHADERPROGRAM_ATTRIBUTELOCATION)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     HB_FUNC_EXEC(QGLSHADERPROGRAM_ATTRIBUTELOCATION1);
   }
-  else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-  {
+  else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     HB_FUNC_EXEC(QGLSHADERPROGRAM_ATTRIBUTELOCATION2);
   }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     HB_FUNC_EXEC(QGLSHADERPROGRAM_ATTRIBUTELOCATION3);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -363,8 +347,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_BINDATTRIBUTELOCATION1)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
 #endif
       obj->bindAttributeLocation(PCONSTCHAR(1), PINT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -384,8 +367,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_BINDATTRIBUTELOCATION2)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISNUM(2)) {
 #endif
       obj->bindAttributeLocation(*PQBYTEARRAY(1), PINT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -405,8 +387,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_BINDATTRIBUTELOCATION3)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
 #endif
       obj->bindAttributeLocation(PQSTRING(1), PINT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -421,16 +402,13 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_BINDATTRIBUTELOCATION3)
 
 HB_FUNC_STATIC(QGLSHADERPROGRAM_BINDATTRIBUTELOCATION)
 {
-  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
-  {
+  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     HB_FUNC_EXEC(QGLSHADERPROGRAM_BINDATTRIBUTELOCATION1);
   }
-  else if (ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISNUM(2))
-  {
+  else if (ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISNUM(2)) {
     HB_FUNC_EXEC(QGLSHADERPROGRAM_BINDATTRIBUTELOCATION2);
   }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
-  {
+  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     HB_FUNC_EXEC(QGLSHADERPROGRAM_BINDATTRIBUTELOCATION3);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -439,25 +417,21 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_BINDATTRIBUTELOCATION)
 
 HB_FUNC_STATIC(QGLSHADERPROGRAM_DISABLEATTRIBUTEARRAY)
 {
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void disableAttributeArray(int location)
     QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->disableAttributeArray(PINT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // void disableAttributeArray(const char *name)
     QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->disableAttributeArray(PCONSTCHAR(1));
     }
 
@@ -469,25 +443,21 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_DISABLEATTRIBUTEARRAY)
 
 HB_FUNC_STATIC(QGLSHADERPROGRAM_ENABLEATTRIBUTEARRAY)
 {
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void enableAttributeArray(int location)
     QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->enableAttributeArray(PINT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // void enableAttributeArray(const char *name)
     QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->enableAttributeArray(PCONSTCHAR(1));
     }
 
@@ -688,8 +658,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_REMOVESHADER)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQGLSHADER(1))
-    {
+    if (ISNUMPAR(1) && ISQGLSHADER(1)) {
 #endif
       obj->removeShader(PQGLSHADER(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -704,25 +673,21 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_REMOVESHADER)
 
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEBUFFER)
 {
-  if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5) || HB_ISNIL(5)))
-  {
+  if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5) || HB_ISNIL(5))) {
     // void setAttributeBuffer(int location, GLenum type, int offset, int tupleSize, int stride = 0)
     QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setAttributeBuffer(PINT(1), PGLENUM(2), PINT(3), PINT(4), OPINT(5, 0));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(4, 5) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5) || HB_ISNIL(5)))
-  {
+  else if (ISBETWEEN(4, 5) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5) || HB_ISNIL(5))) {
     // void setAttributeBuffer(const char *name, GLenum type, int offset, int tupleSize, int stride = 0)
     QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setAttributeBuffer(PCONSTCHAR(1), PGLENUM(2), PINT(3), PINT(4), OPINT(5, 0));
     }
 
@@ -739,8 +704,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE1)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       obj->setAttributeValue(PINT(1), PGLFLOAT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -760,8 +724,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE2)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
-    {
+    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
       obj->setAttributeValue(PINT(1), PGLFLOAT(2), PGLFLOAT(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -781,8 +744,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE3)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
-    {
+    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
 #endif
       obj->setAttributeValue(PINT(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -802,8 +764,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE4)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5))
-    {
+    if (ISNUMPAR(5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5)) {
 #endif
       obj->setAttributeValue(PINT(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4), PGLFLOAT(5));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -823,8 +784,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE8)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2) || HB_ISCHAR(2)))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2) || HB_ISCHAR(2))) {
 #endif
       obj->setAttributeValue(PINT(1),
                              HB_ISOBJECT(2) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(2)) : QColor(hb_parc(2)));
@@ -845,8 +805,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE10)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
 #endif
       obj->setAttributeValue(PCONSTCHAR(1), PGLFLOAT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -866,8 +825,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE11)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3))
-    {
+    if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
       obj->setAttributeValue(PCONSTCHAR(1), PGLFLOAT(2), PGLFLOAT(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -887,8 +845,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE12)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
-    {
+    if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
 #endif
       obj->setAttributeValue(PCONSTCHAR(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -908,8 +865,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE13)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(5) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5))
-    {
+    if (ISNUMPAR(5) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5)) {
 #endif
       obj->setAttributeValue(PCONSTCHAR(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4), PGLFLOAT(5));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -929,8 +885,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE17)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && (ISQCOLOR(2) || HB_ISCHAR(2)))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && (ISQCOLOR(2) || HB_ISCHAR(2))) {
 #endif
       obj->setAttributeValue(PCONSTCHAR(1),
                              HB_ISOBJECT(2) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(2)) : QColor(hb_parc(2)));
@@ -946,44 +901,34 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE17)
 
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE)
 {
-  if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-  {
+  if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     HB_FUNC_EXEC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE1);
   }
-  else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
-  {
+  else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
     HB_FUNC_EXEC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE2);
   }
-  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
-  {
+  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     HB_FUNC_EXEC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE3);
   }
-  else if (ISNUMPAR(5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5))
-  {
+  else if (ISNUMPAR(5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5)) {
     HB_FUNC_EXEC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE4);
   }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2) || HB_ISCHAR(2)))
-  {
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2) || HB_ISCHAR(2))) {
     HB_FUNC_EXEC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE8);
   }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
-  {
+  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     HB_FUNC_EXEC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE10);
   }
-  else if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3))
-  {
+  else if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
     HB_FUNC_EXEC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE11);
   }
-  else if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
-  {
+  else if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     HB_FUNC_EXEC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE12);
   }
-  else if (ISNUMPAR(5) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5))
-  {
+  else if (ISNUMPAR(5) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5)) {
     HB_FUNC_EXEC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE13);
   }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && (ISQCOLOR(2) || HB_ISCHAR(2)))
-  {
+  else if (ISNUMPAR(2) && HB_ISCHAR(1) && (ISQCOLOR(2) || HB_ISCHAR(2))) {
     HB_FUNC_EXEC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE17);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -997,8 +942,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETGEOMETRYINPUTTYPE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setGeometryInputType(PGLENUM(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1018,8 +962,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETGEOMETRYOUTPUTTYPE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setGeometryOutputType(PGLENUM(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1039,8 +982,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETGEOMETRYOUTPUTVERTEXCOUNT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setGeometryOutputVertexCount(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1060,8 +1002,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE1)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       obj->setUniformValue(PINT(1), PGLFLOAT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1081,8 +1022,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE2)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQPOINTF(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQPOINTF(2)) {
 #endif
       obj->setUniformValue(PCONSTCHAR(1), *PQPOINTF(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1102,8 +1042,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE3)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQSIZE(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQSIZE(2)) {
 #endif
       obj->setUniformValue(PCONSTCHAR(1), *PQSIZE(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1123,8 +1062,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE4)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQSIZEF(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQSIZEF(2)) {
 #endif
       obj->setUniformValue(PCONSTCHAR(1), *PQSIZEF(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1144,8 +1082,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE20)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQTRANSFORM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQTRANSFORM(2)) {
 #endif
       obj->setUniformValue(PCONSTCHAR(1), *PQTRANSFORM(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1165,8 +1102,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE21)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       obj->setUniformValue(PINT(1), PGLINT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1186,8 +1122,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE22)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       obj->setUniformValue(PINT(1), PGLUINT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1207,8 +1142,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE23)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
-    {
+    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
       obj->setUniformValue(PINT(1), PGLFLOAT(2), PGLFLOAT(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1228,8 +1162,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE24)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
-    {
+    if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
 #endif
       obj->setUniformValue(PINT(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1249,8 +1182,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE25)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5))
-    {
+    if (ISNUMPAR(5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5)) {
 #endif
       obj->setUniformValue(PINT(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4), PGLFLOAT(5));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1270,8 +1202,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE29)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2) || HB_ISCHAR(2)))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2) || HB_ISCHAR(2))) {
 #endif
       obj->setUniformValue(PINT(1),
                            HB_ISOBJECT(2) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(2)) : QColor(hb_parc(2)));
@@ -1292,8 +1223,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE30)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPOINT(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPOINT(2)) {
 #endif
       obj->setUniformValue(PINT(1), *PQPOINT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1313,8 +1243,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE31)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPOINTF(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPOINTF(2)) {
 #endif
       obj->setUniformValue(PINT(1), *PQPOINTF(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1334,8 +1263,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE32)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSIZE(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSIZE(2)) {
 #endif
       obj->setUniformValue(PINT(1), *PQSIZE(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1355,8 +1283,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE33)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSIZEF(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSIZEF(2)) {
 #endif
       obj->setUniformValue(PINT(1), *PQSIZEF(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1376,8 +1303,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE43)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQTRANSFORM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQTRANSFORM(2)) {
 #endif
       obj->setUniformValue(PINT(1), *PQTRANSFORM(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1397,8 +1323,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE44)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
 #endif
       obj->setUniformValue(PCONSTCHAR(1), PGLFLOAT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1418,8 +1343,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE45)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
 #endif
       obj->setUniformValue(PCONSTCHAR(1), PGLINT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1439,8 +1363,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE46)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
 #endif
       obj->setUniformValue(PCONSTCHAR(1), PGLUINT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1460,8 +1383,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE47)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3))
-    {
+    if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
       obj->setUniformValue(PCONSTCHAR(1), PGLFLOAT(2), PGLFLOAT(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1481,8 +1403,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE48)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
-    {
+    if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
 #endif
       obj->setUniformValue(PCONSTCHAR(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1502,8 +1423,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE49)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(5) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5))
-    {
+    if (ISNUMPAR(5) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5)) {
 #endif
       obj->setUniformValue(PCONSTCHAR(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4), PGLFLOAT(5));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1523,8 +1443,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE53)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && (ISQCOLOR(2) || HB_ISCHAR(2)))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && (ISQCOLOR(2) || HB_ISCHAR(2))) {
 #endif
       obj->setUniformValue(PCONSTCHAR(1),
                            HB_ISOBJECT(2) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(2)) : QColor(hb_parc(2)));
@@ -1545,8 +1464,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE54)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQPOINT(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQPOINT(2)) {
 #endif
       obj->setUniformValue(PCONSTCHAR(1), *PQPOINT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1561,12 +1479,10 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE54)
 
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE)
 {
-  if (ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2) || HB_ISCHAR(2)))
-  {
+  if (ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2) || HB_ISCHAR(2))) {
     HB_FUNC_EXEC(QGLSHADERPROGRAM_SETUNIFORMVALUE29);
   }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && (ISQCOLOR(2) || HB_ISCHAR(2)))
-  {
+  else if (ISNUMPAR(2) && HB_ISCHAR(1) && (ISQCOLOR(2) || HB_ISCHAR(2))) {
     HB_FUNC_EXEC(QGLSHADERPROGRAM_SETUNIFORMVALUE53);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1618,8 +1534,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_UNIFORMLOCATION1)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RINT(obj->uniformLocation(PCONSTCHAR(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1637,8 +1552,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_UNIFORMLOCATION2)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-    {
+    if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
       RINT(obj->uniformLocation(*PQBYTEARRAY(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1656,8 +1570,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_UNIFORMLOCATION3)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RINT(obj->uniformLocation(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1670,16 +1583,13 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_UNIFORMLOCATION3)
 
 HB_FUNC_STATIC(QGLSHADERPROGRAM_UNIFORMLOCATION)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     HB_FUNC_EXEC(QGLSHADERPROGRAM_UNIFORMLOCATION1);
   }
-  else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-  {
+  else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     HB_FUNC_EXEC(QGLSHADERPROGRAM_UNIFORMLOCATION2);
   }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     HB_FUNC_EXEC(QGLSHADERPROGRAM_UNIFORMLOCATION3);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1690,8 +1600,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_UNIFORMLOCATION)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_HASOPENGLSHADERPROGRAMS)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 1) && (ISQGLCONTEXT(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQGLCONTEXT(1) || HB_ISNIL(1))) {
 #endif
     RBOOL(
         QGLShaderProgram::hasOpenGLShaderPrograms(HB_ISNIL(1) ? 0 : static_cast<QGLContext *>(Qt4xHb::itemGetPtr(1))));

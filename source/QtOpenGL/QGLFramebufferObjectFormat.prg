@@ -53,8 +53,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_NEW)
     QGLFramebufferObjectFormat *obj = new QGLFramebufferObjectFormat();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(1) && ISQGLFRAMEBUFFEROBJECTFORMAT(1))
-  {
+  else if (ISNUMPAR(1) && ISQGLFRAMEBUFFEROBJECTFORMAT(1)) {
     // QGLFramebufferObjectFormat(const QGLFramebufferObjectFormat &other)
     QGLFramebufferObjectFormat *obj = new QGLFramebufferObjectFormat(*PQGLFRAMEBUFFEROBJECTFORMAT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -139,8 +138,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_SETATTACHMENT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setAttachment((QGLFramebufferObject::Attachment)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -160,8 +158,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_SETINTERNALTEXTUREFORMAT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setInternalTextureFormat(PGLENUM(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -181,8 +178,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_SETSAMPLES)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setSamples(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -202,8 +198,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECTFORMAT_SETTEXTURETARGET)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setTextureTarget(PGLENUM(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
