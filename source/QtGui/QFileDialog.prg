@@ -1084,7 +1084,7 @@ HB_FUNC_STATIC(QFILEDIALOG_GETEXISTINGDIRECTORY)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(0, 4) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISCHAR(2) || HB_ISNIL(2)) &&
-      (HB_ISCHAR(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4))) {
+      (HB_ISCHAR(3) || HB_ISNIL(3)) && ISNUMORNIL(4)) {
 #endif
     RQSTRING(QFileDialog::getExistingDirectory(OPQWIDGET(1, 0), OPQSTRING(2, QString()), OPQSTRING(3, QString()),
                                                HB_ISNIL(4) ? (QFileDialog::Options)QFileDialog::ShowDirsOnly
@@ -1103,7 +1103,7 @@ HB_FUNC_STATIC(QFILEDIALOG_GETOPENFILENAME)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(0, 6) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISCHAR(2) || HB_ISNIL(2)) &&
       (HB_ISCHAR(3) || HB_ISNIL(3)) && (HB_ISCHAR(4) || HB_ISNIL(4)) && (HB_ISCHAR(5) || HB_ISNIL(5)) &&
-      (HB_ISNUM(6) || HB_ISNIL(6))) {
+      ISNUMORNIL(6)) {
 #endif
     RQSTRING(QFileDialog::getOpenFileName(OPQWIDGET(1, 0), OPQSTRING(2, QString()), OPQSTRING(3, QString()),
                                           OPQSTRING(4, QString()), NULL,
@@ -1122,7 +1122,7 @@ HB_FUNC_STATIC(QFILEDIALOG_GETOPENFILENAMES)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(0, 6) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISCHAR(2) || HB_ISNIL(2)) &&
       (HB_ISCHAR(3) || HB_ISNIL(3)) && (HB_ISCHAR(4) || HB_ISNIL(4)) && (HB_ISCHAR(5) || HB_ISNIL(5)) &&
-      (HB_ISNUM(6) || HB_ISNIL(6))) {
+      ISNUMORNIL(6)) {
 #endif
     RQSTRINGLIST(QFileDialog::getOpenFileNames(
         OPQWIDGET(1, 0), OPQSTRING(2, QString()), OPQSTRING(3, QString()), OPQSTRING(4, QString()), NULL,
@@ -1141,7 +1141,7 @@ HB_FUNC_STATIC(QFILEDIALOG_GETSAVEFILENAME)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(0, 6) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISCHAR(2) || HB_ISNIL(2)) &&
       (HB_ISCHAR(3) || HB_ISNIL(3)) && (HB_ISCHAR(4) || HB_ISNIL(4)) && (HB_ISCHAR(5) || HB_ISNIL(5)) &&
-      (HB_ISNUM(6) || HB_ISNIL(6))) {
+      ISNUMORNIL(6)) {
 #endif
     RQSTRING(QFileDialog::getSaveFileName(OPQWIDGET(1, 0), OPQSTRING(2, QString()), OPQSTRING(3, QString()),
                                           OPQSTRING(4, QString()), NULL,

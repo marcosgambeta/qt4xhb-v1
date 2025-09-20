@@ -764,7 +764,7 @@ HB_FUNC_STATIC(QTEXTCHARFORMAT_SETFONTSTYLEHINT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       obj->setFontStyleHint((QFont::StyleHint)hb_parni(1), HB_ISNIL(2) ? (QFont::StyleStrategy)QFont::PreferDefault
                                                                        : (QFont::StyleStrategy)hb_parni(2));

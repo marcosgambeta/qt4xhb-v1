@@ -481,7 +481,7 @@ HB_FUNC_STATIC(QMATRIX4X4_ROTATE)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4))) {
+  else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4)) {
     // void rotate(qreal angle, qreal x, qreal y, qreal z = 0.0f)
     QMatrix4x4 *obj = static_cast<QMatrix4x4 *>(Qt4xHb::itemGetPtrStackSelfItem());
 

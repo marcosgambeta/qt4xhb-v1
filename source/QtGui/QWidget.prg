@@ -333,7 +333,7 @@ RETURN
     // QWidget(QWidget *parent = 0, Qt::WindowFlags f = 0)
 HB_FUNC_STATIC(QWIDGET_NEW)
 {
-  if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+  if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {
     QWidget *obj = new QWidget(OPQWIDGET(1, 0), HB_ISNIL(2) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(2));
     Qt4xHb::returnNewObject(obj, false);
   } else {
@@ -1031,7 +1031,7 @@ HB_FUNC_STATIC(QWIDGET_GRABGESTURE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       obj->grabGesture((Qt::GestureType)hb_parni(1),
                        HB_ISNIL(2) ? (Qt::GestureFlags)Qt::GestureFlags() : (Qt::GestureFlags)hb_parni(2));
@@ -1098,7 +1098,7 @@ HB_FUNC_STATIC(QWIDGET_GRABSHORTCUT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQKEYSEQUENCE(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && ISQKEYSEQUENCE(1) && ISNUMORNIL(2)) {
 #endif
       RINT(obj->grabShortcut(*PQKEYSEQUENCE(1),
                              HB_ISNIL(2) ? (Qt::ShortcutContext)Qt::WindowShortcut : (Qt::ShortcutContext)hb_parni(2)));
@@ -2156,7 +2156,7 @@ HB_FUNC_STATIC(QWIDGET_REMOVEACTION)
 HB_FUNC_STATIC(QWIDGET_RENDER)
 {
   if (ISBETWEEN(1, 4) && ISQPAINTDEVICE(1) && (ISQPOINT(2) || HB_ISNIL(2)) && (ISQREGION(3) || HB_ISNIL(3)) &&
-      (HB_ISNUM(4) || HB_ISNIL(4))) {
+      ISNUMORNIL(4)) {
     // void render(QPaintDevice *target, const QPoint &targetOffset = QPoint(), const QRegion &sourceRegion = QRegion(),
     // QWidget::RenderFlags renderFlags = QWidget::RenderFlags(QWidget::DrawWindowBackground | QWidget::DrawChildren))
     QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -2172,7 +2172,7 @@ HB_FUNC_STATIC(QWIDGET_RENDER)
     hb_itemReturn(hb_stackSelfItem());
   }
   else if (ISBETWEEN(1, 4) && ISQPAINTER(1) && (ISQPOINT(2) || HB_ISNIL(2)) && (ISQREGION(3) || HB_ISNIL(3)) &&
-           (HB_ISNUM(4) || HB_ISNIL(4))) {
+           ISNUMORNIL(4)) {
     // void render(QPainter *painter, const QPoint &targetOffset = QPoint(), const QRegion &sourceRegion = QRegion(),
     // QWidget::RenderFlags renderFlags = QWidget::RenderFlags(QWidget::DrawWindowBackground | QWidget::DrawChildren))
     QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());

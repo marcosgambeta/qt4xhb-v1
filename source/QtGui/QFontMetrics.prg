@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QFONTMETRICS_BOUNDINGRECT)
     }
   }
   else if (ISBETWEEN(6, 8) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISCHAR(6) &&
-           (HB_ISNUM(7) || HB_ISNIL(7)) && (HB_ISARRAY(8) || HB_ISNIL(8))) {
+           ISNUMORNIL(7) && (HB_ISARRAY(8) || HB_ISNIL(8))) {
     // QRect boundingRect(int x, int y, int width, int height, int flags, const QString &text, int tabStops = 0, int
     // *tabArray = 0) const
     QFontMetrics *obj = static_cast<QFontMetrics *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QFONTMETRICS_BOUNDINGRECT)
       hb_storni(par8, 8);
     }
   }
-  else if (ISBETWEEN(3, 5) && ISQRECT(1) && HB_ISNUM(2) && HB_ISCHAR(3) && (HB_ISNUM(4) || HB_ISNIL(4)) &&
+  else if (ISBETWEEN(3, 5) && ISQRECT(1) && HB_ISNUM(2) && HB_ISCHAR(3) && ISNUMORNIL(4) &&
            (HB_ISARRAY(5) || HB_ISNIL(5))) {
     // QRect boundingRect(const QRect &rect, int flags, const QString &text, int tabStops = 0, int *tabArray = 0) const
     QFontMetrics *obj = static_cast<QFontMetrics *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -219,7 +219,7 @@ HB_FUNC_STATIC(QFONTMETRICS_ELIDEDTEXT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(3, 4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4))) {
+    if (ISBETWEEN(3, 4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4)) {
 #endif
       RQSTRING(obj->elidedText(PQSTRING(1), (Qt::TextElideMode)hb_parni(2), PINT(3), OPINT(4, 0)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -453,7 +453,7 @@ HB_FUNC_STATIC(QFONTMETRICS_SIZE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4))) {
+    if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
 #endif
       int par4;
       QSize *ptr = new QSize(obj->size(PINT(1), PQSTRING(2), OPINT(3, 0), &par4));
@@ -524,7 +524,7 @@ HB_FUNC_STATIC(QFONTMETRICS_UNDERLINEPOS)
 
 HB_FUNC_STATIC(QFONTMETRICS_WIDTH)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
     // int width(const QString &text, int len = -1) const
     QFontMetrics *obj = static_cast<QFontMetrics *>(Qt4xHb::itemGetPtrStackSelfItem());
 

@@ -119,8 +119,8 @@ HB_FUNC_STATIC(QDECORATION_PAINT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 4) && ISQPAINTER(1) && ISQWIDGET(2) && (HB_ISNUM(3) || HB_ISNIL(3)) &&
-        (HB_ISNUM(4) || HB_ISNIL(4))) {
+    if (ISBETWEEN(2, 4) && ISQPAINTER(1) && ISQWIDGET(2) && ISNUMORNIL(3) &&
+        ISNUMORNIL(4)) {
 #endif
       RBOOL(obj->paint(PQPAINTER(1), PQWIDGET(2), OPINT(3, QDecoration::All),
                        HB_ISNIL(4) ? (QDecoration::DecorationState)QDecoration::Normal
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QDECORATION_PAINT)
 
 HB_FUNC_STATIC(QDECORATION_REGION)
 {
-  if (ISBETWEEN(2, 3) && ISQWIDGET(1) && ISQRECT(2) && (HB_ISNUM(3) || HB_ISNIL(3))) {
+  if (ISBETWEEN(2, 3) && ISQWIDGET(1) && ISQRECT(2) && ISNUMORNIL(3)) {
     // virtual QRegion region(const QWidget *widget, const QRect &rectangle, int decorationRegion = QDecoration::All) =
     // 0
     QDecoration *obj = static_cast<QDecoration *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QDECORATION_REGION)
       Qt4xHb::createReturnClass(ptr, "QREGION", true);
     }
   }
-  else if (ISBETWEEN(1, 2) && ISQWIDGET(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+  else if (ISBETWEEN(1, 2) && ISQWIDGET(1) && ISNUMORNIL(2)) {
     // QRegion region(const QWidget *widget, int decorationRegion = QDecoration::All)
     QDecoration *obj = static_cast<QDecoration *>(Qt4xHb::itemGetPtrStackSelfItem());
 

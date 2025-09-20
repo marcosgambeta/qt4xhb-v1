@@ -91,8 +91,8 @@ HB_FUNC_STATIC(QMESSAGEBOX_NEW)
     QMessageBox *obj = new QMessageBox(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(3, 6) && HB_ISNUM(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && (HB_ISNUM(4) || HB_ISNIL(4)) &&
-           (ISQWIDGET(5) || HB_ISNIL(5)) && (HB_ISNUM(6) || HB_ISNIL(6))) {
+  else if (ISBETWEEN(3, 6) && HB_ISNUM(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ISNUMORNIL(4) &&
+           (ISQWIDGET(5) || HB_ISNIL(5)) && ISNUMORNIL(6)) {
     // QMessageBox(QMessageBox::Icon icon, const QString &title, const QString &text, QMessageBox::StandardButtons
     // buttons = QMessageBox::NoButton, QWidget *parent = 0, Qt::WindowFlags f = Qt::Dialog |
     // Qt::MSWindowsFixedSizeDialogHint)
@@ -783,8 +783,8 @@ HB_FUNC_STATIC(QMESSAGEBOX_ABOUTQT)
 HB_FUNC_STATIC(QMESSAGEBOX_CRITICAL)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(3, 5) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && (HB_ISNUM(4) || HB_ISNIL(4)) &&
-      (HB_ISNUM(5) || HB_ISNIL(5))) {
+  if (ISBETWEEN(3, 5) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ISNUMORNIL(4) &&
+      ISNUMORNIL(5)) {
 #endif
     RENUM(QMessageBox::critical(
         PQWIDGET(1), PQSTRING(2), PQSTRING(3),
@@ -803,8 +803,8 @@ HB_FUNC_STATIC(QMESSAGEBOX_CRITICAL)
 HB_FUNC_STATIC(QMESSAGEBOX_INFORMATION)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(3, 5) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && (HB_ISNUM(4) || HB_ISNIL(4)) &&
-      (HB_ISNUM(5) || HB_ISNIL(5))) {
+  if (ISBETWEEN(3, 5) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ISNUMORNIL(4) &&
+      ISNUMORNIL(5)) {
 #endif
     RENUM(QMessageBox::information(
         PQWIDGET(1), PQSTRING(2), PQSTRING(3),
@@ -823,8 +823,8 @@ HB_FUNC_STATIC(QMESSAGEBOX_INFORMATION)
 HB_FUNC_STATIC(QMESSAGEBOX_QUESTION)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(3, 5) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && (HB_ISNUM(4) || HB_ISNIL(4)) &&
-      (HB_ISNUM(5) || HB_ISNIL(5))) {
+  if (ISBETWEEN(3, 5) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ISNUMORNIL(4) &&
+      ISNUMORNIL(5)) {
 #endif
     RENUM(QMessageBox::question(
         PQWIDGET(1), PQSTRING(2), PQSTRING(3),
@@ -843,8 +843,8 @@ HB_FUNC_STATIC(QMESSAGEBOX_QUESTION)
 HB_FUNC_STATIC(QMESSAGEBOX_WARNING)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(3, 5) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && (HB_ISNUM(4) || HB_ISNIL(4)) &&
-      (HB_ISNUM(5) || HB_ISNIL(5))) {
+  if (ISBETWEEN(3, 5) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ISNUMORNIL(4) &&
+      ISNUMORNIL(5)) {
 #endif
     RENUM(QMessageBox::warning(
         PQWIDGET(1), PQSTRING(2), PQSTRING(3),

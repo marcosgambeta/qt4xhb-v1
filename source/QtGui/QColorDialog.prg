@@ -302,7 +302,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_CUSTOMCOUNT)
 
 HB_FUNC_STATIC(QCOLORDIALOG_GETCOLOR)
 {
-  if (ISBETWEEN(3, 4) && (ISQCOLOR(1) || HB_ISCHAR(1)) && ISQWIDGET(2) && HB_ISCHAR(3) && (HB_ISNUM(4) || HB_ISNIL(4))) {
+  if (ISBETWEEN(3, 4) && (ISQCOLOR(1) || HB_ISCHAR(1)) && ISQWIDGET(2) && HB_ISCHAR(3) && ISNUMORNIL(4)) {
     // static QColor getColor(const QColor &initial, QWidget *parent, const QString &title,
     // QColorDialog::ColorDialogOptions options = 0)
 

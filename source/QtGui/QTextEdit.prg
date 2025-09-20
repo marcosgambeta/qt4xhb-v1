@@ -447,7 +447,7 @@ HB_FUNC_STATIC(QTEXTEDIT_FIND)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
 #endif
       RBOOL(obj->find(PQSTRING(1), HB_ISNIL(2) ? (QTextDocument::FindFlags)0 : (QTextDocument::FindFlags)hb_parni(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -666,7 +666,7 @@ HB_FUNC_STATIC(QTEXTEDIT_MOVECURSOR)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       obj->moveCursor((QTextCursor::MoveOperation)hb_parni(1), HB_ISNIL(2)
                                                                    ? (QTextCursor::MoveMode)QTextCursor::MoveAnchor
@@ -1671,7 +1671,7 @@ HB_FUNC_STATIC(QTEXTEDIT_ZOOMIN)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       obj->zoomIn(OPINT(1, 1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1691,7 +1691,7 @@ HB_FUNC_STATIC(QTEXTEDIT_ZOOMOUT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       obj->zoomOut(OPINT(1, 1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

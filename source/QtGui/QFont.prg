@@ -117,8 +117,8 @@ HB_FUNC_STATIC(QFONT_NEW)
     QFont *obj = new QFont();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)) &&
-           (HB_ISNUM(4) || HB_ISNIL(4))) {
+  else if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3) &&
+           ISNUMORNIL(4)) {
     // QFont(const QString &family, int pointSize = -1, int weight = -1, bool italic = false)
     QFont *obj = new QFont(PQSTRING(1), OPINT(2, -1), OPINT(3, -1), OPBOOL(4, false));
     Qt4xHb::returnNewObject(obj, true);
@@ -876,7 +876,7 @@ HB_FUNC_STATIC(QFONT_SETSTYLEHINT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       obj->setStyleHint((QFont::StyleHint)hb_parni(1),
                         HB_ISNIL(2) ? (QFont::StyleStrategy)QFont::PreferDefault : (QFont::StyleStrategy)hb_parni(2));

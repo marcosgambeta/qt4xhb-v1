@@ -83,13 +83,13 @@ HB_FUNC_STATIC(QBRUSH_NEW)
     QBrush *obj = new QBrush((Qt::BrushStyle)hb_parni(1));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(1, 2) && (ISQCOLOR(1) || HB_ISCHAR(1)) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+  else if (ISBETWEEN(1, 2) && (ISQCOLOR(1) || HB_ISCHAR(1)) && ISNUMORNIL(2)) {
     // QBrush(const QColor &color, Qt::BrushStyle style = Qt::SolidPattern)
     QBrush *obj = new QBrush(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(1)) : QColor(hb_parc(1)),
                              HB_ISNIL(2) ? (Qt::BrushStyle)Qt::SolidPattern : (Qt::BrushStyle)hb_parni(2));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
     // QBrush(Qt::GlobalColor color, Qt::BrushStyle style = Qt::SolidPattern)
     QBrush *obj = new QBrush((Qt::GlobalColor)hb_parni(1),
                              HB_ISNIL(2) ? (Qt::BrushStyle)Qt::SolidPattern : (Qt::BrushStyle)hb_parni(2));

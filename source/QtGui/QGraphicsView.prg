@@ -255,7 +255,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_DRAGMODE)
 
 HB_FUNC_STATIC(QGRAPHICSVIEW_ENSUREVISIBLE)
 {
-  if (ISBETWEEN(1, 3) && ISQRECTF(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3))) {
+  if (ISBETWEEN(1, 3) && ISQRECTF(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     // void ensureVisible(const QRectF &rect, int xmargin = 50, int ymargin = 50)
     QGraphicsView *obj = qobject_cast<QGraphicsView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -266,7 +266,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ENSUREVISIBLE)
     hb_itemReturn(hb_stackSelfItem());
   }
   else if (ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) &&
-           (HB_ISNUM(5) || HB_ISNIL(5)) && (HB_ISNUM(6) || HB_ISNIL(6))) {
+           ISNUMORNIL(5) && ISNUMORNIL(6)) {
     // void ensureVisible(qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50)
     QGraphicsView *obj = qobject_cast<QGraphicsView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -276,7 +276,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ENSUREVISIBLE)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(1, 3) && ISQGRAPHICSITEM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3))) {
+  else if (ISBETWEEN(1, 3) && ISQGRAPHICSITEM(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     // void ensureVisible(const QGraphicsItem *item, int xmargin = 50, int ymargin = 50)
     QGraphicsView *obj = qobject_cast<QGraphicsView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -292,7 +292,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ENSUREVISIBLE)
 
 HB_FUNC_STATIC(QGRAPHICSVIEW_FITINVIEW)
 {
-  if (ISBETWEEN(1, 2) && ISQRECTF(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+  if (ISBETWEEN(1, 2) && ISQRECTF(1) && ISNUMORNIL(2)) {
     // void fitInView(const QRectF &rect, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio)
     QGraphicsView *obj = qobject_cast<QGraphicsView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -303,7 +303,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_FITINVIEW)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5) || HB_ISNIL(5))) {
+  else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISNUMORNIL(5)) {
     // void fitInView(qreal x, qreal y, qreal w, qreal h, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio)
     QGraphicsView *obj = qobject_cast<QGraphicsView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -314,7 +314,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_FITINVIEW)
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISBETWEEN(1, 2) && ISQGRAPHICSITEM(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+  else if (ISBETWEEN(1, 2) && ISQGRAPHICSITEM(1) && ISNUMORNIL(2)) {
     // void fitInView(const QGraphicsItem *item, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio)
     QGraphicsView *obj = qobject_cast<QGraphicsView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -494,7 +494,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ITEMS)
       hb_itemReturnRelease(pArray);
     }
   }
-  else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5) || HB_ISNIL(5))) {
+  else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISNUMORNIL(5)) {
     // QList<QGraphicsItem *> items(int x, int y, int w, int h, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape)
     // const
     QGraphicsView *obj = qobject_cast<QGraphicsView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -525,7 +525,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ITEMS)
       hb_itemReturnRelease(pArray);
     }
   }
-  else if (ISBETWEEN(1, 2) && ISQRECT(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+  else if (ISBETWEEN(1, 2) && ISQRECT(1) && ISNUMORNIL(2)) {
     // QList<QGraphicsItem *> items(const QRect &rect, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape) const
     QGraphicsView *obj = qobject_cast<QGraphicsView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -554,7 +554,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ITEMS)
       hb_itemReturnRelease(pArray);
     }
   }
-  else if (ISBETWEEN(1, 2) && ISQPOLYGON(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+  else if (ISBETWEEN(1, 2) && ISQPOLYGON(1) && ISNUMORNIL(2)) {
     // QList<QGraphicsItem *> items(const QPolygon &polygon, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape) const
     QGraphicsView *obj = qobject_cast<QGraphicsView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -584,7 +584,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ITEMS)
       hb_itemReturnRelease(pArray);
     }
   }
-  else if (ISBETWEEN(1, 2) && ISQPAINTERPATH(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+  else if (ISBETWEEN(1, 2) && ISQPAINTERPATH(1) && ISNUMORNIL(2)) {
     // QList<QGraphicsItem *> items(const QPainterPath &path, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape)
     // const
     QGraphicsView *obj = qobject_cast<QGraphicsView *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -785,7 +785,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_RENDER)
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 4) && ISQPAINTER(1) && (ISQRECTF(2) || HB_ISNIL(2)) && (ISQRECT(3) || HB_ISNIL(3)) &&
-        (HB_ISNUM(4) || HB_ISNIL(4))) {
+        ISNUMORNIL(4)) {
 #endif
       obj->render(PQPAINTER(1), HB_ISNIL(2) ? QRectF() : *static_cast<QRectF *>(Qt4xHb::itemGetPtr(2)),
                   HB_ISNIL(3) ? QRect() : *static_cast<QRect *>(Qt4xHb::itemGetPtr(3)),
@@ -1517,7 +1517,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_INVALIDATESCENE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (ISQRECTF(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(0, 2) && (ISQRECTF(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {
 #endif
       obj->invalidateScene(HB_ISNIL(1) ? QRectF() : *static_cast<QRectF *>(Qt4xHb::itemGetPtr(1)),
                            HB_ISNIL(2) ? (QGraphicsScene::SceneLayers)QGraphicsScene::AllLayers

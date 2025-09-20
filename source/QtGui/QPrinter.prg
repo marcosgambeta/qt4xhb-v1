@@ -102,7 +102,7 @@ RETURN
 
 HB_FUNC_STATIC(QPRINTER_NEW)
 {
-  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
     // QPrinter(QPrinter::PrinterMode mode = QPrinter::ScreenResolution)
     QPrinter *obj = new QPrinter(HB_ISNIL(1) ? (QPrinter::PrinterMode)QPrinter::ScreenResolution
                                              : (QPrinter::PrinterMode)hb_parni(1));

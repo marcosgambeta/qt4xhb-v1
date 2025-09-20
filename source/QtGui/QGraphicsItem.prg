@@ -482,7 +482,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_COLLIDESWITHITEM)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQGRAPHICSITEM(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && ISQGRAPHICSITEM(1) && ISNUMORNIL(2)) {
 #endif
       RBOOL(obj->collidesWithItem(PQGRAPHICSITEM(1), HB_ISNIL(2) ? (Qt::ItemSelectionMode)Qt::IntersectsItemShape
                                                                  : (Qt::ItemSelectionMode)hb_parni(2)));
@@ -501,7 +501,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_COLLIDESWITHPATH)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQPAINTERPATH(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && ISQPAINTERPATH(1) && ISNUMORNIL(2)) {
 #endif
       RBOOL(obj->collidesWithPath(*PQPAINTERPATH(1), HB_ISNIL(2) ? (Qt::ItemSelectionMode)Qt::IntersectsItemShape
                                                                  : (Qt::ItemSelectionMode)hb_parni(2)));
@@ -520,7 +520,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_COLLIDINGITEMS)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       QList<QGraphicsItem *> list = obj->collidingItems(HB_ISNIL(1) ? (Qt::ItemSelectionMode)Qt::IntersectsItemShape
                                                                     : (Qt::ItemSelectionMode)hb_parni(1));
@@ -666,7 +666,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_EFFECTIVEOPACITY)
 
 HB_FUNC_STATIC(QGRAPHICSITEM_ENSUREVISIBLE)
 {
-  if (ISBETWEEN(0, 3) && (ISQRECTF(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3))) {
+  if (ISBETWEEN(0, 3) && (ISQRECTF(1) || HB_ISNIL(1)) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     // void ensureVisible(const QRectF &rect = QRectF(), int xmargin = 50, int ymargin = 50)
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -678,7 +678,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_ENSUREVISIBLE)
     hb_itemReturn(hb_stackSelfItem());
   }
   else if (ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) &&
-           (HB_ISNUM(5) || HB_ISNIL(5)) && (HB_ISNUM(6) || HB_ISNIL(6))) {
+           ISNUMORNIL(5) && ISNUMORNIL(6)) {
     // void ensureVisible(qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50)
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -2339,7 +2339,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_SETFOCUS)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       obj->setFocus(HB_ISNIL(1) ? (Qt::FocusReason)Qt::OtherFocusReason : (Qt::FocusReason)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
