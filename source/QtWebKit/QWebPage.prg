@@ -125,8 +125,7 @@ RETURN
     // QWebPage(QObject *parent = 0)
 HB_FUNC_STATIC(QWEBPAGE_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1))) {
     QWebPage *obj = new QWebPage(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   } else {
@@ -158,8 +157,7 @@ HB_FUNC_STATIC(QWEBPAGE_ACTION)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QAction *ptr = obj->action((QWebPage::WebAction)hb_parni(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -234,8 +232,7 @@ HB_FUNC_STATIC(QWEBPAGE_FINDTEXT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
-    {
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
 #endif
       RBOOL(obj->findText(PQSTRING(1), HB_ISNIL(2) ? (QWebPage::FindFlags)0 : (QWebPage::FindFlags)hb_parni(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -253,8 +250,7 @@ HB_FUNC_STATIC(QWEBPAGE_FOCUSNEXTPREVCHILD)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       RBOOL(obj->focusNextPrevChild(PBOOL(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -290,8 +286,7 @@ HB_FUNC_STATIC(QWEBPAGE_FRAMEAT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOINT(1))
-    {
+    if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
       QWebFrame *ptr = obj->frameAt(*PQPOINT(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QWEBFRAME");
@@ -329,8 +324,7 @@ HB_FUNC_STATIC(QWEBPAGE_INPUTMETHODQUERY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QVariant *ptr = new QVariant(obj->inputMethodQuery((Qt::InputMethodQuery)hb_parni(1)));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -516,8 +510,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETCONTENTEDITABLE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setContentEditable(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -537,8 +530,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETFORWARDUNSUPPORTEDCONTENT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setForwardUnsupportedContent(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -558,8 +550,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETLINKDELEGATIONPOLICY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setLinkDelegationPolicy((QWebPage::LinkDelegationPolicy)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -579,8 +570,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETNETWORKACCESSMANAGER)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQNETWORKACCESSMANAGER(1))
-    {
+    if (ISNUMPAR(1) && ISQNETWORKACCESSMANAGER(1)) {
 #endif
       obj->setNetworkAccessManager(PQNETWORKACCESSMANAGER(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -600,8 +590,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETPALETTE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPALETTE(1))
-    {
+    if (ISNUMPAR(1) && ISQPALETTE(1)) {
 #endif
       obj->setPalette(*PQPALETTE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -621,8 +610,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETPLUGINFACTORY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQWEBPLUGINFACTORY(1))
-    {
+    if (ISNUMPAR(1) && ISQWEBPLUGINFACTORY(1)) {
 #endif
       obj->setPluginFactory(PQWEBPLUGINFACTORY(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -642,8 +630,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETPREFERREDCONTENTSSIZE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSIZE(1))
-    {
+    if (ISNUMPAR(1) && ISQSIZE(1)) {
 #endif
       obj->setPreferredContentsSize(*PQSIZE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -663,8 +650,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETVIEW)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQWIDGET(1))
-    {
+    if (ISNUMPAR(1) && ISQWIDGET(1)) {
 #endif
       obj->setView(PQWIDGET(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -684,8 +670,7 @@ HB_FUNC_STATIC(QWEBPAGE_SETVIEWPORTSIZE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSIZE(1))
-    {
+    if (ISNUMPAR(1) && ISQSIZE(1)) {
 #endif
       obj->setViewportSize(*PQSIZE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -724,8 +709,7 @@ HB_FUNC_STATIC(QWEBPAGE_SUPPORTSEXTENSION)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->supportsExtension((QWebPage::Extension)hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -743,8 +727,7 @@ HB_FUNC_STATIC(QWEBPAGE_SWALLOWCONTEXTMENUEVENT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQCONTEXTMENUEVENT(1))
-    {
+    if (ISNUMPAR(1) && ISQCONTEXTMENUEVENT(1)) {
 #endif
       RBOOL(obj->swallowContextMenuEvent(PQCONTEXTMENUEVENT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -780,8 +763,7 @@ HB_FUNC_STATIC(QWEBPAGE_TRIGGERACTION)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
-    {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2))) {
 #endif
       obj->triggerAction((QWebPage::WebAction)hb_parni(1), OPBOOL(2, false));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -820,8 +802,7 @@ HB_FUNC_STATIC(QWEBPAGE_UPDATEPOSITIONDEPENDENTACTIONS)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOINT(1))
-    {
+    if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
       obj->updatePositionDependentActions(*PQPOINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -879,8 +860,7 @@ HB_FUNC_STATIC(QWEBPAGE_EVENT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQEVENT(1))
-    {
+    if (ISNUMPAR(1) && ISQEVENT(1)) {
 #endif
       RBOOL(obj->event(PQEVENT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
