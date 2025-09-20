@@ -66,8 +66,7 @@ RETURN
     // QScriptEngineDebugger(QObject *parent = 0)
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1))) {
     QScriptEngineDebugger *obj = new QScriptEngineDebugger(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   } else {
@@ -99,8 +98,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_ACTION)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QAction *ptr = obj->action((QScriptEngineDebugger::DebuggerAction)hb_parni(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
@@ -119,8 +117,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_ATTACHTO)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSCRIPTENGINE(1))
-    {
+    if (ISNUMPAR(1) && ISQSCRIPTENGINE(1)) {
 #endif
       obj->attachTo(PQSCRIPTENGINE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -158,8 +155,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_CREATESTANDARDMENU)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
-    {
+    if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1))) {
 #endif
       QMenu *ptr = obj->createStandardMenu(OPQWIDGET(1, 0));
       Qt4xHb::createReturnQObjectClass(ptr, "QMENU");
@@ -178,8 +174,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_CREATESTANDARDTOOLBAR)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
-    {
+    if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1))) {
 #endif
       QToolBar *ptr = obj->createStandardToolBar(OPQWIDGET(1, 0));
       Qt4xHb::createReturnQObjectClass(ptr, "QTOOLBAR");
@@ -218,8 +213,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_SETAUTOSHOWSTANDARDWINDOW)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setAutoShowStandardWindow(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -276,8 +270,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_WIDGET)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QWidget *ptr = obj->widget((QScriptEngineDebugger::DebuggerWidget)hb_parni(1));
       Qt4xHb::createReturnQWidgetClass(ptr, "QWIDGET");
