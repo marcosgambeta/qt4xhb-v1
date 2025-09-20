@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QGLYPHRUN_POSITIONS)
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(pItem, new QPointF(list[i]));
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QPointF(list[i]));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           PHB_ITEM pDestroy = hb_itemPutL(NULL, true);

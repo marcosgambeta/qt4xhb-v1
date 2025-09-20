@@ -260,7 +260,7 @@ HB_FUNC_STATIC(QREGION_RECTS)
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(pItem, new QRect(list[i]));
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QRect(list[i]));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           PHB_ITEM pDestroy = hb_itemPutL(NULL, true);

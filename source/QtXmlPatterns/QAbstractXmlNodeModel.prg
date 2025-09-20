@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_NAMESPACEBINDINGS)
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(pItem, new QXmlName(list[i]));
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QXmlName(list[i]));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
@@ -248,7 +248,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_NODESBYIDREF)
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr(pItem, new QXmlNodeModelIndex(list[i]));
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QXmlNodeModelIndex(list[i]));
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
