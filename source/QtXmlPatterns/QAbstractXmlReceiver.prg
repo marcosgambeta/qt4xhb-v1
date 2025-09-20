@@ -80,8 +80,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_ATOMICVALUE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVARIANT(1))
-    {
+    if (ISNUMPAR(1) && ISQVARIANT(1)) {
 #endif
       obj->atomicValue(*PQVARIANT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -101,8 +100,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_ATTRIBUTE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQXMLNAME(1) && ISQSTRINGREF(2))
-    {
+    if (ISNUMPAR(2) && ISQXMLNAME(1) && ISQSTRINGREF(2)) {
 #endif
       obj->attribute(*PQXMLNAME(1), *PQSTRINGREF(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -122,8 +120,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_CHARACTERS)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSTRINGREF(1))
-    {
+    if (ISNUMPAR(1) && ISQSTRINGREF(1)) {
 #endif
       obj->characters(*PQSTRINGREF(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -143,8 +140,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_COMMENT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->comment(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -224,8 +220,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_NAMESPACEBINDING)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQXMLNAME(1))
-    {
+    if (ISNUMPAR(1) && ISQXMLNAME(1)) {
 #endif
       obj->namespaceBinding(*PQXMLNAME(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -245,8 +240,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_PROCESSINGINSTRUCTION)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQXMLNAME(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && ISQXMLNAME(1) && HB_ISCHAR(2)) {
 #endif
       obj->processingInstruction(*PQXMLNAME(1), PQSTRING(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -286,8 +280,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_STARTELEMENT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQXMLNAME(1))
-    {
+    if (ISNUMPAR(1) && ISQXMLNAME(1)) {
 #endif
       obj->startElement(*PQXMLNAME(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -324,8 +317,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -333,8 +325,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_NEWFROM)
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -367,8 +358,7 @@ HB_FUNC_STATIC(QABSTRACTXMLRECEIVER_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

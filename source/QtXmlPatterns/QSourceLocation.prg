@@ -62,14 +62,12 @@ HB_FUNC_STATIC(QSOURCELOCATION_NEW)
     QSourceLocation *obj = new QSourceLocation();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(1) && ISQSOURCELOCATION(1))
-  {
+  else if (ISNUMPAR(1) && ISQSOURCELOCATION(1)) {
     // QSourceLocation(const QSourceLocation &other)
     QSourceLocation *obj = new QSourceLocation(*PQSOURCELOCATION(1));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(1, 3) && ISQURL(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
-  {
+  else if (ISBETWEEN(1, 3) && ISQURL(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3))) {
     // QSourceLocation(const QUrl &u, int l = -1, int c = -1)
     QSourceLocation *obj = new QSourceLocation(*PQURL(1), OPINT(2, -1), OPINT(3, -1));
     Qt4xHb::returnNewObject(obj, true);
@@ -154,8 +152,7 @@ HB_FUNC_STATIC(QSOURCELOCATION_SETCOLUMN)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setColumn(PQINT64(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -175,8 +172,7 @@ HB_FUNC_STATIC(QSOURCELOCATION_SETLINE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setLine(PQINT64(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -196,8 +192,7 @@ HB_FUNC_STATIC(QSOURCELOCATION_SETURI)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQURL(1))
-    {
+    if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
       obj->setUri(*PQURL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -233,8 +228,7 @@ HB_FUNC_STATIC(QSOURCELOCATION_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -242,8 +236,7 @@ HB_FUNC_STATIC(QSOURCELOCATION_NEWFROM)
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -276,8 +269,7 @@ HB_FUNC_STATIC(QSOURCELOCATION_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

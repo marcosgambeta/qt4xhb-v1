@@ -81,8 +81,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_BASEURI)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
-    {
+    if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1)) {
 #endif
       QUrl *ptr = new QUrl(obj->baseUri(*PQXMLNODEMODELINDEX(1)));
       Qt4xHb::createReturnClass(ptr, "QURL", true);
@@ -102,8 +101,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_COMPAREORDER)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQXMLNODEMODELINDEX(1) && ISQXMLNODEMODELINDEX(2))
-    {
+    if (ISNUMPAR(2) && ISQXMLNODEMODELINDEX(1) && ISQXMLNODEMODELINDEX(2)) {
 #endif
       RENUM(obj->compareOrder(*PQXMLNODEMODELINDEX(1), *PQXMLNODEMODELINDEX(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -121,8 +119,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_DOCUMENTURI)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
-    {
+    if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1)) {
 #endif
       QUrl *ptr = new QUrl(obj->documentUri(*PQXMLNODEMODELINDEX(1)));
       Qt4xHb::createReturnClass(ptr, "QURL", true);
@@ -141,8 +138,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_ELEMENTBYID)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQXMLNAME(1))
-    {
+    if (ISNUMPAR(1) && ISQXMLNAME(1)) {
 #endif
       QXmlNodeModelIndex *ptr = new QXmlNodeModelIndex(obj->elementById(*PQXMLNAME(1)));
       Qt4xHb::createReturnClass(ptr, "QXMLNODEMODELINDEX", true);
@@ -161,8 +157,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_KIND)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
-    {
+    if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1)) {
 #endif
       RENUM(obj->kind(*PQXMLNODEMODELINDEX(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -180,8 +175,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_NAME)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
-    {
+    if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1)) {
 #endif
       QXmlName *ptr = new QXmlName(obj->name(*PQXMLNODEMODELINDEX(1)));
       Qt4xHb::createReturnClass(ptr, "QXMLNAME", true);
@@ -200,8 +194,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_NAMESPACEBINDINGS)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
-    {
+    if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1)) {
 #endif
       QVector<QXmlName> list = obj->namespaceBindings(*PQXMLNODEMODELINDEX(1));
       PHB_DYNS pDynSym = hb_dynsymFindName("QXMLNAME");
@@ -242,8 +235,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_NODESBYIDREF)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQXMLNAME(1))
-    {
+    if (ISNUMPAR(1) && ISQXMLNAME(1)) {
 #endif
       QVector<QXmlNodeModelIndex> list = obj->nodesByIdref(*PQXMLNAME(1));
       PHB_DYNS pDynSym = hb_dynsymFindName("QXMLNODEMODELINDEX");
@@ -284,8 +276,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_ROOT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
-    {
+    if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1)) {
 #endif
       QXmlNodeModelIndex *ptr = new QXmlNodeModelIndex(obj->root(*PQXMLNODEMODELINDEX(1)));
       Qt4xHb::createReturnClass(ptr, "QXMLNODEMODELINDEX", true);
@@ -304,8 +295,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_SOURCELOCATION)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
-    {
+    if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1)) {
 #endif
       QSourceLocation *ptr = new QSourceLocation(obj->sourceLocation(*PQXMLNODEMODELINDEX(1)));
       Qt4xHb::createReturnClass(ptr, "QSOURCELOCATION", true);
@@ -324,8 +314,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_STRINGVALUE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
-    {
+    if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1)) {
 #endif
       RQSTRING(obj->stringValue(*PQXMLNODEMODELINDEX(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -343,8 +332,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_TYPEDVALUE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1))
-    {
+    if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1)) {
 #endif
       QVariant *ptr = new QVariant(obj->typedValue(*PQXMLNODEMODELINDEX(1)));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
