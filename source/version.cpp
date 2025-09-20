@@ -10,3 +10,13 @@ HB_FUNC(QT4XHB_VERSION)
 {
   hb_retc(static_cast<const char *>("1.0.0dev"));
 }
+
+HB_FUNC(QT4XHB_BUILD_DATE)
+{
+  hb_retc(static_cast<const char *>(__DATE__));
+}
+
+HB_FUNC(QT4XHB_BUILD_TIME)
+{
+  hb_retc(static_cast<const char *>(__TIME__));
+}
