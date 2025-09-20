@@ -71,16 +71,14 @@ HB_FUNC_STATIC(QNETWORKPROXY_NEW)
     Qt4xHb::returnNewObject(obj, true);
   }
   else if (ISBETWEEN(1, 5) && HB_ISNUM(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (HB_ISCHAR(3) || HB_ISNIL(3)) &&
-           (HB_ISCHAR(4) || HB_ISNIL(4)) && (HB_ISCHAR(5) || HB_ISNIL(5)))
-  {
+           (HB_ISCHAR(4) || HB_ISNIL(4)) && (HB_ISCHAR(5) || HB_ISNIL(5))) {
     // QNetworkProxy(QNetworkProxy::ProxyType type, const QString &hostName = QString(), quint16 port = 0, const QString
     // &user = QString(), const QString &password = QString())
     QNetworkProxy *obj = new QNetworkProxy((QNetworkProxy::ProxyType)hb_parni(1), OPQSTRING(2, QString()),
                                            OPQUINT16(3, 0), OPQSTRING(4, QString()), OPQSTRING(5, QString()));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(1) && ISQNETWORKPROXY(1))
-  {
+  else if (ISNUMPAR(1) && ISQNETWORKPROXY(1)) {
     // QNetworkProxy(const QNetworkProxy &other)
     QNetworkProxy *obj = new QNetworkProxy(*PQNETWORKPROXY(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -219,8 +217,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_SETCAPABILITIES)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setCapabilities((QNetworkProxy::Capabilities)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -240,8 +237,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_SETHOSTNAME)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setHostName(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -261,8 +257,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_SETPASSWORD)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setPassword(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -282,8 +277,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_SETPORT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setPort(PQUINT16(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -303,8 +297,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_SETTYPE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setType((QNetworkProxy::ProxyType)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -324,8 +317,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_SETUSER)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setUser(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -393,8 +385,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_APPLICATIONPROXY)
 HB_FUNC_STATIC(QNETWORKPROXY_SETAPPLICATIONPROXY)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && ISQNETWORKPROXY(1))
-  {
+  if (ISNUMPAR(1) && ISQNETWORKPROXY(1)) {
 #endif
     QNetworkProxy::setApplicationProxy(*PQNETWORKPROXY(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -410,8 +401,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -419,8 +409,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_NEWFROM)
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -453,8 +442,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

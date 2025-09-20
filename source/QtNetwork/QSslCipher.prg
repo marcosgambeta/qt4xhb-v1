@@ -63,14 +63,12 @@ HB_FUNC_STATIC(QSSLCIPHER_NEW)
     QSslCipher *obj = new QSslCipher();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
-  {
+  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     // QSslCipher(const QString &name, QSsl::SslProtocol protocol)
     QSslCipher *obj = new QSslCipher(PQSTRING(1), (QSsl::SslProtocol)hb_parni(2));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(1) && ISQSSLCIPHER(1))
-  {
+  else if (ISNUMPAR(1) && ISQSSLCIPHER(1)) {
     // QSslCipher(const QSslCipher &other)
     QSslCipher *obj = new QSslCipher(*PQSSLCIPHER(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -260,8 +258,7 @@ HB_FUNC_STATIC(QSSLCIPHER_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -269,8 +266,7 @@ HB_FUNC_STATIC(QSSLCIPHER_NEWFROM)
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -303,8 +299,7 @@ HB_FUNC_STATIC(QSSLCIPHER_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

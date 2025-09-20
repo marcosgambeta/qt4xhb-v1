@@ -80,8 +80,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_NEW)
     QSslConfiguration *obj = new QSslConfiguration();
     Qt4xHb::returnNewObject(obj, true);
   }
-  if (ISNUMPAR(1) && ISQSSLCONFIGURATION(1))
-  {
+  if (ISNUMPAR(1) && ISQSSLCONFIGURATION(1)) {
     // QSslConfiguration(const QSslConfiguration &other)
     QSslConfiguration *obj = new QSslConfiguration(*PQSSLCONFIGURATION(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -383,8 +382,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SETCACERTIFICATES)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISARRAY(1))
-    {
+    if (ISNUMPAR(1) && HB_ISARRAY(1)) {
 #endif
       QList<QSslCertificate> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
@@ -412,8 +410,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SETCIPHERS)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISARRAY(1))
-    {
+    if (ISNUMPAR(1) && HB_ISARRAY(1)) {
 #endif
       QList<QSslCipher> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
@@ -441,8 +438,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SETLOCALCERTIFICATE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSSLCERTIFICATE(1))
-    {
+    if (ISNUMPAR(1) && ISQSSLCERTIFICATE(1)) {
 #endif
       obj->setLocalCertificate(*PQSSLCERTIFICATE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -462,8 +458,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SETPEERVERIFYDEPTH)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setPeerVerifyDepth(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -483,8 +478,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SETPEERVERIFYMODE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setPeerVerifyMode((QSslSocket::PeerVerifyMode)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -504,8 +498,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SETPRIVATEKEY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSSLKEY(1))
-    {
+    if (ISNUMPAR(1) && ISQSSLKEY(1)) {
 #endif
       obj->setPrivateKey(*PQSSLKEY(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -525,8 +518,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SETPROTOCOL)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setProtocol((QSsl::SslProtocol)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -558,8 +550,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_DEFAULTCONFIGURATION)
 HB_FUNC_STATIC(QSSLCONFIGURATION_SETDEFAULTCONFIGURATION)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && ISQSSLCONFIGURATION(1))
-  {
+  if (ISNUMPAR(1) && ISQSSLCONFIGURATION(1)) {
 #endif
     QSslConfiguration::setDefaultConfiguration(*PQSSLCONFIGURATION(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -575,8 +566,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -584,8 +574,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_NEWFROM)
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -618,8 +607,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

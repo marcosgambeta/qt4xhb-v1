@@ -67,8 +67,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_NEW)
     QNetworkInterface *obj = new QNetworkInterface();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(1) && ISQNETWORKINTERFACE(1))
-  {
+  else if (ISNUMPAR(1) && ISQNETWORKINTERFACE(1)) {
     // QNetworkInterface(const QNetworkInterface &other)
     QNetworkInterface *obj = new QNetworkInterface(*PQNETWORKINTERFACE(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -327,8 +326,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_ALLINTERFACES)
 HB_FUNC_STATIC(QNETWORKINTERFACE_INTERFACEFROMINDEX)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
     QNetworkInterface *ptr = new QNetworkInterface(QNetworkInterface::interfaceFromIndex(PINT(1)));
     Qt4xHb::createReturnClass(ptr, "QNETWORKINTERFACE", true);
@@ -343,8 +341,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_INTERFACEFROMINDEX)
 HB_FUNC_STATIC(QNETWORKINTERFACE_INTERFACEFROMNAME)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
     QNetworkInterface *ptr = new QNetworkInterface(QNetworkInterface::interfaceFromName(PQSTRING(1)));
     Qt4xHb::createReturnClass(ptr, "QNETWORKINTERFACE", true);
@@ -359,8 +356,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -368,8 +364,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_NEWFROM)
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -402,8 +397,7 @@ HB_FUNC_STATIC(QNETWORKINTERFACE_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

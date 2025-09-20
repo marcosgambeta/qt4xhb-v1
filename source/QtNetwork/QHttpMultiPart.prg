@@ -47,14 +47,12 @@ RETURN
 
 HB_FUNC_STATIC(QHTTPMULTIPART_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1))) {
     // QHttpMultiPart(QObject *parent = 0)
     QHttpMultiPart *obj = new QHttpMultiPart(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
-  {
+  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
     // QHttpMultiPart(QHttpMultiPart::ContentType contentType, QObject *parent = 0)
     QHttpMultiPart *obj = new QHttpMultiPart((QHttpMultiPart::ContentType)hb_parni(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -87,8 +85,7 @@ HB_FUNC_STATIC(QHTTPMULTIPART_APPEND)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQHTTPPART(1))
-    {
+    if (ISNUMPAR(1) && ISQHTTPPART(1)) {
 #endif
       obj->append(*PQHTTPPART(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -127,8 +124,7 @@ HB_FUNC_STATIC(QHTTPMULTIPART_SETBOUNDARY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-    {
+    if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
       obj->setBoundary(*PQBYTEARRAY(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -148,8 +144,7 @@ HB_FUNC_STATIC(QHTTPMULTIPART_SETCONTENTTYPE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setContentType((QHttpMultiPart::ContentType)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

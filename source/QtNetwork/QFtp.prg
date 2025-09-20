@@ -80,8 +80,7 @@ RETURN
     // QFtp(QObject *parent = 0)
 HB_FUNC_STATIC(QFTP_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1))) {
     QFtp *obj = new QFtp(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   } else {
@@ -131,8 +130,7 @@ HB_FUNC_STATIC(QFTP_CD)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RINT(obj->cd(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -188,8 +186,7 @@ HB_FUNC_STATIC(QFTP_CONNECTTOHOST)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
-    {
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
 #endif
       RINT(obj->connectToHost(PQSTRING(1), OPQUINT16(2, 21)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -298,8 +295,7 @@ HB_FUNC_STATIC(QFTP_GET)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQIODEVICE(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
-    {
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQIODEVICE(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3))) {
 #endif
       RINT(obj->get(PQSTRING(1), OPQIODEVICE(2, 0),
                     HB_ISNIL(3) ? (QFtp::TransferType)QFtp::Binary : (QFtp::TransferType)hb_parni(3)));
@@ -336,8 +332,7 @@ HB_FUNC_STATIC(QFTP_LIST)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)))
-    {
+    if (ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1))) {
 #endif
       RINT(obj->list(OPQSTRING(1, QString())));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -355,8 +350,7 @@ HB_FUNC_STATIC(QFTP_LOGIN)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (HB_ISCHAR(2) || HB_ISNIL(2)))
-    {
+    if (ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (HB_ISCHAR(2) || HB_ISNIL(2))) {
 #endif
       RINT(obj->login(OPQSTRING(1, QString()), OPQSTRING(2, QString())));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -374,8 +368,7 @@ HB_FUNC_STATIC(QFTP_MKDIR)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RINT(obj->mkdir(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -388,24 +381,20 @@ HB_FUNC_STATIC(QFTP_MKDIR)
 
 HB_FUNC_STATIC(QFTP_PUT)
 {
-  if (ISBETWEEN(2, 3) && ISQIODEVICE(1) && HB_ISCHAR(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
-  {
+  if (ISBETWEEN(2, 3) && ISQIODEVICE(1) && HB_ISCHAR(2) && (HB_ISNUM(3) || HB_ISNIL(3))) {
     // int put(QIODevice *dev, const QString &file, QFtp::TransferType type = QFtp::Binary)
     QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RINT(obj->put(PQIODEVICE(1), PQSTRING(2),
                     HB_ISNIL(3) ? (QFtp::TransferType)QFtp::Binary : (QFtp::TransferType)hb_parni(3)));
     }
   }
-  else if (ISBETWEEN(2, 3) && ISQBYTEARRAY(1) && HB_ISCHAR(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
-  {
+  else if (ISBETWEEN(2, 3) && ISQBYTEARRAY(1) && HB_ISCHAR(2) && (HB_ISNUM(3) || HB_ISNIL(3))) {
     // int put(const QByteArray &data, const QString &file, QFtp::TransferType type = QFtp::Binary)
     QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RINT(obj->put(*PQBYTEARRAY(1), PQSTRING(2),
                     HB_ISNIL(3) ? (QFtp::TransferType)QFtp::Binary : (QFtp::TransferType)hb_parni(3)));
     }
@@ -421,8 +410,7 @@ HB_FUNC_STATIC(QFTP_RAWCOMMAND)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RINT(obj->rawCommand(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -440,8 +428,7 @@ HB_FUNC_STATIC(QFTP_READ)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
 #endif
       RQINT64(obj->read((char *)hb_parc(1), PQINT64(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -478,8 +465,7 @@ HB_FUNC_STATIC(QFTP_REMOVE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RINT(obj->remove(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -497,8 +483,7 @@ HB_FUNC_STATIC(QFTP_RENAME)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
 #endif
       RINT(obj->rename(PQSTRING(1), PQSTRING(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -516,8 +501,7 @@ HB_FUNC_STATIC(QFTP_RMDIR)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RINT(obj->rmdir(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -535,8 +519,7 @@ HB_FUNC_STATIC(QFTP_SETPROXY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
 #endif
       RINT(obj->setProxy(PQSTRING(1), PQUINT16(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -554,8 +537,7 @@ HB_FUNC_STATIC(QFTP_SETTRANSFERMODE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RINT(obj->setTransferMode((QFtp::TransferMode)hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

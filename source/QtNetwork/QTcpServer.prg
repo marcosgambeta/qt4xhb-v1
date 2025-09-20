@@ -67,8 +67,7 @@ RETURN
     // QTcpServer(QObject *parent = 0)
 HB_FUNC_STATIC(QTCPSERVER_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1))) {
     QTcpServer *obj = new QTcpServer(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   } else {
@@ -174,8 +173,7 @@ HB_FUNC_STATIC(QTCPSERVER_LISTEN)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (ISQHOSTADDRESS(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
-    {
+    if (ISBETWEEN(0, 2) && (ISQHOSTADDRESS(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2))) {
 #endif
       RBOOL(obj->listen(HB_ISNIL(1) ? QHostAddress::Any : *static_cast<QHostAddress *>(Qt4xHb::itemGetPtr(1)),
                         OPQUINT16(2, 0)));
@@ -305,8 +303,7 @@ HB_FUNC_STATIC(QTCPSERVER_SETMAXPENDINGCONNECTIONS)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setMaxPendingConnections(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -326,8 +323,7 @@ HB_FUNC_STATIC(QTCPSERVER_SETPROXY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQNETWORKPROXY(1))
-    {
+    if (ISNUMPAR(1) && ISQNETWORKPROXY(1)) {
 #endif
       obj->setProxy(*PQNETWORKPROXY(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -347,8 +343,7 @@ HB_FUNC_STATIC(QTCPSERVER_SETSOCKETDESCRIPTOR)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->setSocketDescriptor(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -384,8 +379,7 @@ HB_FUNC_STATIC(QTCPSERVER_WAITFORNEWCONNECTION)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (HB_ISLOG(2) || HB_ISNIL(2)))
-    {
+    if (ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (HB_ISLOG(2) || HB_ISNIL(2))) {
 #endif
       bool par2;
       RBOOL(obj->waitForNewConnection(OPINT(1, 0), &par2));

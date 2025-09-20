@@ -72,14 +72,12 @@ RETURN
 
 HB_FUNC_STATIC(QNETWORKREQUEST_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQURL(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQURL(1) || HB_ISNIL(1))) {
     // QNetworkRequest(const QUrl &url = QUrl())
     QNetworkRequest *obj = new QNetworkRequest(HB_ISNIL(1) ? QUrl() : *static_cast<QUrl *>(Qt4xHb::itemGetPtr(1)));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(1) && ISQNETWORKREQUEST(1))
-  {
+  else if (ISNUMPAR(1) && ISQNETWORKREQUEST(1)) {
     // QNetworkRequest(const QNetworkRequest &other)
     QNetworkRequest *obj = new QNetworkRequest(*PQNETWORKREQUEST(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -110,8 +108,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_ATTRIBUTE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQVARIANT(2) || HB_ISNIL(2)))
-    {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQVARIANT(2) || HB_ISNIL(2))) {
 #endif
       QVariant *ptr =
           new QVariant(obj->attribute((QNetworkRequest::Attribute)hb_parni(1),
@@ -132,8 +129,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_HASRAWHEADER)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-    {
+    if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
       RBOOL(obj->hasRawHeader(*PQBYTEARRAY(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -151,8 +147,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_HEADER)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QVariant *ptr = new QVariant(obj->header((QNetworkRequest::KnownHeaders)hb_parni(1)));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -208,8 +203,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_RAWHEADER)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-    {
+    if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->rawHeader(*PQBYTEARRAY(1)));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -269,8 +263,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETATTRIBUTE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2)) {
 #endif
       obj->setAttribute((QNetworkRequest::Attribute)hb_parni(1), *PQVARIANT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -290,8 +283,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETHEADER)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2)) {
 #endif
       obj->setHeader((QNetworkRequest::KnownHeaders)hb_parni(1), *PQVARIANT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -311,8 +303,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETORIGINATINGOBJECT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQOBJECT(1))
-    {
+    if (ISNUMPAR(1) && ISQOBJECT(1)) {
 #endif
       obj->setOriginatingObject(PQOBJECT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -332,8 +323,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETPRIORITY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setPriority((QNetworkRequest::Priority)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -353,8 +343,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETRAWHEADER)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2))
-    {
+    if (ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2)) {
 #endif
       obj->setRawHeader(*PQBYTEARRAY(1), *PQBYTEARRAY(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -374,8 +363,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETSSLCONFIGURATION)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSSLCONFIGURATION(1))
-    {
+    if (ISNUMPAR(1) && ISQSSLCONFIGURATION(1)) {
 #endif
       obj->setSslConfiguration(*PQSSLCONFIGURATION(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -395,8 +383,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETURL)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQURL(1))
-    {
+    if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
       obj->setUrl(*PQURL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -451,8 +438,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -460,8 +446,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_NEWFROM)
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -494,8 +479,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

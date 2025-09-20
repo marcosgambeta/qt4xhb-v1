@@ -71,23 +71,20 @@ RETURN
 
 HB_FUNC_STATIC(QSSLCERTIFICATE_NEW)
 {
-  if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
-  {
+  if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
     // QSslCertificate(QIODevice *device, QSsl::EncodingFormat format = QSsl::Pem)
     QSslCertificate *obj = new QSslCertificate(PQIODEVICE(1), HB_ISNIL(2) ? (QSsl::EncodingFormat)QSsl::Pem
                                                                           : (QSsl::EncodingFormat)hb_parni(2));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(0, 2) && (ISQBYTEARRAY(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
-  {
+  else if (ISBETWEEN(0, 2) && (ISQBYTEARRAY(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2))) {
     // QSslCertificate(const QByteArray &data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem)
     QSslCertificate *obj =
         new QSslCertificate(HB_ISNIL(1) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(1)),
                             HB_ISNIL(2) ? (QSsl::EncodingFormat)QSsl::Pem : (QSsl::EncodingFormat)hb_parni(2));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(1) && ISQSSLCERTIFICATE(1))
-  {
+  else if (ISNUMPAR(1) && ISQSSLCERTIFICATE(1)) {
     // QSslCertificate(const QSslCertificate &other)
     QSslCertificate *obj = new QSslCertificate(*PQSSLCERTIFICATE(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -138,8 +135,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_DIGEST)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
-    {
+    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1))) {
 #endif
       QByteArray *ptr = new QByteArray(obj->digest(HB_ISNIL(1) ? (QCryptographicHash::Algorithm)QCryptographicHash::Md5
                                                                : (QCryptographicHash::Algorithm)hb_parni(1)));
@@ -228,23 +224,19 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_ISVALID)
 
 HB_FUNC_STATIC(QSSLCERTIFICATE_ISSUERINFO)
 {
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QString issuerInfo(QSslCertificate::SubjectInfo subject) const
     QSslCertificate *obj = static_cast<QSslCertificate *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RQSTRING(obj->issuerInfo((QSslCertificate::SubjectInfo)hb_parni(1)));
     }
   }
-  else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-  {
+  else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     // QString issuerInfo(const QByteArray &tag) const
     QSslCertificate *obj = static_cast<QSslCertificate *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RQSTRING(obj->issuerInfo(*PQBYTEARRAY(1)));
     }
   } else {
@@ -292,23 +284,19 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_SERIALNUMBER)
 
 HB_FUNC_STATIC(QSSLCERTIFICATE_SUBJECTINFO)
 {
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QString subjectInfo(QSslCertificate::SubjectInfo subject) const
     QSslCertificate *obj = static_cast<QSslCertificate *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RQSTRING(obj->subjectInfo((QSslCertificate::SubjectInfo)hb_parni(1)));
     }
   }
-  else if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-  {
+  else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     // QString subjectInfo(const QByteArray &tag) const
     QSslCertificate *obj = static_cast<QSslCertificate *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RQSTRING(obj->subjectInfo(*PQBYTEARRAY(1)));
     }
   } else {
@@ -380,8 +368,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_FROMDATA)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
-    {
+    if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
 #endif
       QList<QSslCertificate> list = obj->fromData(*PQBYTEARRAY(1), HB_ISNIL(2) ? (QSsl::EncodingFormat)QSsl::Pem
                                                                                : (QSsl::EncodingFormat)hb_parni(2));
@@ -423,8 +410,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_FROMDEVICE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
-    {
+    if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
 #endif
       QList<QSslCertificate> list = obj->fromDevice(PQIODEVICE(1), HB_ISNIL(2) ? (QSsl::EncodingFormat)QSsl::Pem
                                                                                : (QSsl::EncodingFormat)hb_parni(2));
@@ -467,8 +453,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_FROMPATH)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
-    {
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3))) {
 #endif
       QList<QSslCertificate> list = obj->fromPath(
           PQSTRING(1), HB_ISNIL(2) ? (QSsl::EncodingFormat)QSsl::Pem : (QSsl::EncodingFormat)hb_parni(2),
@@ -508,8 +493,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -517,8 +501,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_NEWFROM)
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -551,8 +534,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

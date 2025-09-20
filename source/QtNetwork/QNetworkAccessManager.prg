@@ -80,8 +80,7 @@ RETURN
     // QNetworkAccessManager(QObject *parent = 0)
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1))) {
     QNetworkAccessManager *obj = new QNetworkAccessManager(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   } else {
@@ -189,8 +188,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_DELETERESOURCE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQNETWORKREQUEST(1))
-    {
+    if (ISNUMPAR(1) && ISQNETWORKREQUEST(1)) {
 #endif
       QNetworkReply *ptr = obj->deleteResource(*PQNETWORKREQUEST(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
@@ -209,8 +207,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_GET)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQNETWORKREQUEST(1))
-    {
+    if (ISNUMPAR(1) && ISQNETWORKREQUEST(1)) {
 #endif
       QNetworkReply *ptr = obj->get(*PQNETWORKREQUEST(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
@@ -229,8 +226,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_HEAD)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQNETWORKREQUEST(1))
-    {
+    if (ISNUMPAR(1) && ISQNETWORKREQUEST(1)) {
 #endif
       QNetworkReply *ptr = obj->head(*PQNETWORKREQUEST(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
@@ -262,24 +258,20 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_NETWORKACCESSIBLE)
 
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_POST)
 {
-  if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQIODEVICE(2))
-  {
+  if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQIODEVICE(2)) {
     // QNetworkReply *post(const QNetworkRequest &request, QIODevice *data)
     QNetworkAccessManager *obj = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QNetworkReply *ptr = obj->post(*PQNETWORKREQUEST(1), PQIODEVICE(2));
       Qt4xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
   }
-  else if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2))
-  {
+  else if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2)) {
     // QNetworkReply *post(const QNetworkRequest &request, const QByteArray &data)
     QNetworkAccessManager *obj = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QNetworkReply *ptr = obj->post(*PQNETWORKREQUEST(1), *PQBYTEARRAY(2));
       Qt4xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
@@ -328,24 +320,20 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_PROXYFACTORY)
 
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_PUT)
 {
-  if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQIODEVICE(2))
-  {
+  if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQIODEVICE(2)) {
     // QNetworkReply *put(const QNetworkRequest &request, QIODevice *data)
     QNetworkAccessManager *obj = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QNetworkReply *ptr = obj->put(*PQNETWORKREQUEST(1), PQIODEVICE(2));
       Qt4xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
   }
-  else if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2))
-  {
+  else if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2)) {
     // QNetworkReply *put(const QNetworkRequest &request, const QByteArray &data)
     QNetworkAccessManager *obj = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QNetworkReply *ptr = obj->put(*PQNETWORKREQUEST(1), *PQBYTEARRAY(2));
       Qt4xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
@@ -361,8 +349,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2) && (ISQIODEVICE(3) || HB_ISNIL(3)))
-    {
+    if (ISBETWEEN(2, 3) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2) && (ISQIODEVICE(3) || HB_ISNIL(3))) {
 #endif
       QNetworkReply *ptr = obj->sendCustomRequest(*PQNETWORKREQUEST(1), *PQBYTEARRAY(2), OPQIODEVICE(3, 0));
       Qt4xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
@@ -381,8 +368,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETCACHE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTNETWORKCACHE(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTNETWORKCACHE(1)) {
 #endif
       obj->setCache(PQABSTRACTNETWORKCACHE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -402,8 +388,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETCONFIGURATION)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQNETWORKCONFIGURATION(1))
-    {
+    if (ISNUMPAR(1) && ISQNETWORKCONFIGURATION(1)) {
 #endif
       obj->setConfiguration(*PQNETWORKCONFIGURATION(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -423,8 +408,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETCOOKIEJAR)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQNETWORKCOOKIEJAR(1))
-    {
+    if (ISNUMPAR(1) && ISQNETWORKCOOKIEJAR(1)) {
 #endif
       obj->setCookieJar(PQNETWORKCOOKIEJAR(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -444,8 +428,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETNETWORKACCESSIBLE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setNetworkAccessible((QNetworkAccessManager::NetworkAccessibility)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -465,8 +448,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETPROXY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQNETWORKPROXY(1))
-    {
+    if (ISNUMPAR(1) && ISQNETWORKPROXY(1)) {
 #endif
       obj->setProxy(*PQNETWORKPROXY(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -486,8 +468,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETPROXYFACTORY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQNETWORKPROXYFACTORY(1))
-    {
+    if (ISNUMPAR(1) && ISQNETWORKPROXYFACTORY(1)) {
 #endif
       obj->setProxyFactory(PQNETWORKPROXYFACTORY(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
