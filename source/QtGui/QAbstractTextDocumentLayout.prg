@@ -67,8 +67,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ANCHORAT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOINTF(1))
-    {
+    if (ISNUMPAR(1) && ISQPOINTF(1)) {
 #endif
       RQSTRING(obj->anchorAt(*PQPOINTF(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -87,8 +86,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQTEXTBLOCK(1))
-    {
+    if (ISNUMPAR(1) && ISQTEXTBLOCK(1)) {
 #endif
       QRectF *ptr = new QRectF(obj->blockBoundingRect(*PQTEXTBLOCK(1)));
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
@@ -148,8 +146,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQTEXTFRAME(1))
-    {
+    if (ISNUMPAR(1) && ISQTEXTFRAME(1)) {
 #endif
       QRectF *ptr = new QRectF(obj->frameBoundingRect(PQTEXTFRAME(1)));
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
@@ -169,8 +166,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_HANDLERFOROBJECT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QTextObjectInterface *ptr = obj->handlerForObject(PINT(1));
       Qt4xHb::createReturnClass(ptr, "QTEXTOBJECTINTERFACE", false);
@@ -190,8 +186,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_HITTEST)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQPOINTF(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && ISQPOINTF(1) && HB_ISNUM(2)) {
 #endif
       RINT(obj->hitTest(*PQPOINTF(1), (Qt::HitTestAccuracy)hb_parni(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -249,8 +244,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_REGISTERHANDLER)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQOBJECT(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQOBJECT(2)) {
 #endif
       obj->registerHandler(PINT(1), PQOBJECT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -271,8 +265,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_SETPAINTDEVICE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPAINTDEVICE(1))
-    {
+    if (ISNUMPAR(1) && ISQPAINTDEVICE(1)) {
 #endif
       obj->setPaintDevice(PQPAINTDEVICE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

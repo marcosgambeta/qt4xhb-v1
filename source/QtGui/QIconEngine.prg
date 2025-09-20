@@ -75,8 +75,7 @@ HB_FUNC_STATIC(QICONENGINE_ACTUALSIZE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && ISQSIZE(1) && HB_ISNUM(2) && HB_ISNUM(3))
-    {
+    if (ISNUMPAR(3) && ISQSIZE(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
       QSize *ptr = new QSize(obj->actualSize(*PQSIZE(1), (QIcon::Mode)hb_parni(2), (QIcon::State)hb_parni(3)));
       Qt4xHb::createReturnClass(ptr, "QSIZE", true);
@@ -95,8 +94,7 @@ HB_FUNC_STATIC(QICONENGINE_ADDFILE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISCHAR(1) && ISQSIZE(2) && HB_ISNUM(3) && HB_ISNUM(4))
-    {
+    if (ISNUMPAR(4) && HB_ISCHAR(1) && ISQSIZE(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
 #endif
       obj->addFile(PQSTRING(1), *PQSIZE(2), (QIcon::Mode)hb_parni(3), (QIcon::State)hb_parni(4));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -116,8 +114,7 @@ HB_FUNC_STATIC(QICONENGINE_ADDPIXMAP)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && ISQPIXMAP(1) && HB_ISNUM(2) && HB_ISNUM(3))
-    {
+    if (ISNUMPAR(3) && ISQPIXMAP(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
       obj->addPixmap(*PQPIXMAP(1), (QIcon::Mode)hb_parni(2), (QIcon::State)hb_parni(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -137,8 +134,7 @@ HB_FUNC_STATIC(QICONENGINE_PAINT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && ISQPAINTER(1) && ISQRECT(2) && HB_ISNUM(3) && HB_ISNUM(4))
-    {
+    if (ISNUMPAR(4) && ISQPAINTER(1) && ISQRECT(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
 #endif
       obj->paint(PQPAINTER(1), *PQRECT(2), (QIcon::Mode)hb_parni(3), (QIcon::State)hb_parni(4));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -158,8 +154,7 @@ HB_FUNC_STATIC(QICONENGINE_PIXMAP)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && ISQSIZE(1) && HB_ISNUM(2) && HB_ISNUM(3))
-    {
+    if (ISNUMPAR(3) && ISQSIZE(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
       QPixmap *ptr = new QPixmap(obj->pixmap(*PQSIZE(1), (QIcon::Mode)hb_parni(2), (QIcon::State)hb_parni(3)));
       Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
@@ -175,8 +170,7 @@ HB_FUNC_STATIC(QICONENGINE_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -184,8 +178,7 @@ HB_FUNC_STATIC(QICONENGINE_NEWFROM)
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -218,8 +211,7 @@ HB_FUNC_STATIC(QICONENGINE_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

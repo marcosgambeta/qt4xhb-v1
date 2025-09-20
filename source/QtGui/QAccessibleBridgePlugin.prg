@@ -66,8 +66,7 @@ HB_FUNC_STATIC(QACCESSIBLEBRIDGEPLUGIN_CREATE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       QAccessibleBridge *ptr = obj->create(PQSTRING(1));
       Qt4xHb::createReturnClass(ptr, "QACCESSIBLEBRIDGE", false);

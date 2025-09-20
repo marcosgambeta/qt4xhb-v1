@@ -72,20 +72,17 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_NEW)
     QItemSelectionRange *obj = new QItemSelectionRange();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(1) && ISQITEMSELECTIONRANGE(1))
-  {
+  else if (ISNUMPAR(1) && ISQITEMSELECTIONRANGE(1)) {
     // QItemSelectionRange(const QItemSelectionRange &other)
     QItemSelectionRange *obj = new QItemSelectionRange(*PQITEMSELECTIONRANGE(1));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(2) && ISQMODELINDEX(1) && ISQMODELINDEX(2))
-  {
+  else if (ISNUMPAR(2) && ISQMODELINDEX(1) && ISQMODELINDEX(2)) {
     // QItemSelectionRange(const QModelIndex &topLeft, const QModelIndex &bottomRight)
     QItemSelectionRange *obj = new QItemSelectionRange(*PQMODELINDEX(1), *PQMODELINDEX(2));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(1) && ISQMODELINDEX(1))
-  {
+  else if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
     // QItemSelectionRange(const QModelIndex &index)
     QItemSelectionRange *obj = new QItemSelectionRange(*PQMODELINDEX(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -148,23 +145,19 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_BOTTOMRIGHT)
 
 HB_FUNC_STATIC(QITEMSELECTIONRANGE_CONTAINS)
 {
-  if (ISNUMPAR(1) && ISQMODELINDEX(1))
-  {
+  if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
     // bool contains(const QModelIndex &index) const
     QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RBOOL(obj->contains(*PQMODELINDEX(1)));
     }
   }
-  else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEX(3))
-  {
+  else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEX(3)) {
     // bool contains(int row, int column, const QModelIndex &parentIndex) const
     QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RBOOL(obj->contains(PINT(1), PINT(2), *PQMODELINDEX(3)));
     }
   } else {
@@ -238,8 +231,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_INTERSECTED)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQITEMSELECTIONRANGE(1))
-    {
+    if (ISNUMPAR(1) && ISQITEMSELECTIONRANGE(1)) {
 #endif
       QItemSelectionRange *ptr = new QItemSelectionRange(obj->intersected(*PQITEMSELECTIONRANGE(1)));
       Qt4xHb::createReturnClass(ptr, "QITEMSELECTIONRANGE", true);
@@ -258,8 +250,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_INTERSECTS)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQITEMSELECTIONRANGE(1))
-    {
+    if (ISNUMPAR(1) && ISQITEMSELECTIONRANGE(1)) {
 #endif
       RBOOL(obj->intersects(*PQITEMSELECTIONRANGE(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -439,8 +430,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -448,8 +438,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_NEWFROM)
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -482,8 +471,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

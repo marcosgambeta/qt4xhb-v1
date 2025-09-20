@@ -111,57 +111,48 @@ RETURN
 
 HB_FUNC_STATIC(QTREEWIDGETITEM_NEW)
 {
-  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1))) {
     // QTreeWidgetItem(int type = QTreeWidgetItem::Type)
     QTreeWidgetItem *obj = new QTreeWidgetItem(OPINT(1, QTreeWidgetItem::Type));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISARRAY(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
-  {
+  else if (ISBETWEEN(1, 2) && HB_ISARRAY(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
     // QTreeWidgetItem(const QStringList &strings, int type = QTreeWidgetItem::Type)
     QTreeWidgetItem *obj = new QTreeWidgetItem(PQSTRINGLIST(1), OPINT(2, QTreeWidgetItem::Type));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && ISQTREEWIDGET(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
-  {
+  else if (ISBETWEEN(1, 2) && ISQTREEWIDGET(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
     // QTreeWidgetItem(QTreeWidget *parent, int type = QTreeWidgetItem::Type)
     QTreeWidgetItem *obj = new QTreeWidgetItem(PQTREEWIDGET(1), OPINT(2, QTreeWidgetItem::Type));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(2, 3) && ISQTREEWIDGET(1) && HB_ISARRAY(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
-  {
+  else if (ISBETWEEN(2, 3) && ISQTREEWIDGET(1) && HB_ISARRAY(2) && (HB_ISNUM(3) || HB_ISNIL(3))) {
     // QTreeWidgetItem(QTreeWidget *parent, const QStringList &strings, int type = QTreeWidgetItem::Type)
     QTreeWidgetItem *obj = new QTreeWidgetItem(PQTREEWIDGET(1), PQSTRINGLIST(2), OPINT(3, QTreeWidgetItem::Type));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(2, 3) && ISQTREEWIDGET(1) && ISQTREEWIDGETITEM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
-  {
+  else if (ISBETWEEN(2, 3) && ISQTREEWIDGET(1) && ISQTREEWIDGETITEM(2) && (HB_ISNUM(3) || HB_ISNIL(3))) {
     // QTreeWidgetItem(QTreeWidget *parent, QTreeWidgetItem *preceding, int type = QTreeWidgetItem::Type)
     QTreeWidgetItem *obj = new QTreeWidgetItem(PQTREEWIDGET(1), PQTREEWIDGETITEM(2), OPINT(3, QTreeWidgetItem::Type));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && ISQTREEWIDGETITEM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
-  {
+  else if (ISBETWEEN(1, 2) && ISQTREEWIDGETITEM(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
     // QTreeWidgetItem(QTreeWidgetItem *parent, int type = QTreeWidgetItem::Type)
     QTreeWidgetItem *obj = new QTreeWidgetItem(PQTREEWIDGETITEM(1), OPINT(2, QTreeWidgetItem::Type));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(2, 3) && ISQTREEWIDGETITEM(1) && HB_ISARRAY(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
-  {
+  else if (ISBETWEEN(2, 3) && ISQTREEWIDGETITEM(1) && HB_ISARRAY(2) && (HB_ISNUM(3) || HB_ISNIL(3))) {
     // QTreeWidgetItem(QTreeWidgetItem *parent, const QStringList &strings, int type = QTreeWidgetItem::Type)
     QTreeWidgetItem *obj = new QTreeWidgetItem(PQTREEWIDGETITEM(1), PQSTRINGLIST(2), OPINT(3, QTreeWidgetItem::Type));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(2, 3) && ISQTREEWIDGETITEM(1) && ISQTREEWIDGETITEM(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
-  {
+  else if (ISBETWEEN(2, 3) && ISQTREEWIDGETITEM(1) && ISQTREEWIDGETITEM(2) && (HB_ISNUM(3) || HB_ISNIL(3))) {
     // QTreeWidgetItem(QTreeWidgetItem *parent, QTreeWidgetItem *preceding, int type = QTreeWidgetItem::Type)
     QTreeWidgetItem *obj =
         new QTreeWidgetItem(PQTREEWIDGETITEM(1), PQTREEWIDGETITEM(2), OPINT(3, QTreeWidgetItem::Type));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISNUMPAR(1) && ISQTREEWIDGETITEM(1))
-  {
+  else if (ISNUMPAR(1) && ISQTREEWIDGETITEM(1)) {
     // QTreeWidgetItem(const QTreeWidgetItem &other)
     QTreeWidgetItem *obj = new QTreeWidgetItem(*PQTREEWIDGETITEM(1));
     Qt4xHb::returnNewObject(obj, false);
@@ -192,8 +183,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_ADDCHILD)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQTREEWIDGETITEM(1))
-    {
+    if (ISNUMPAR(1) && ISQTREEWIDGETITEM(1)) {
 #endif
       obj->addChild(PQTREEWIDGETITEM(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -213,8 +203,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_ADDCHILDREN)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISARRAY(1))
-    {
+    if (ISNUMPAR(1) && HB_ISARRAY(1)) {
 #endif
       QList<QTreeWidgetItem *> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
@@ -242,8 +231,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_BACKGROUND)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QBrush *ptr = new QBrush(obj->background(PINT(1)));
       Qt4xHb::createReturnClass(ptr, "QBRUSH", true);
@@ -262,8 +250,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_CHECKSTATE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RENUM(obj->checkState(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -281,8 +268,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_CHILD)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QTreeWidgetItem *ptr = obj->child(PINT(1));
       Qt4xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
@@ -374,8 +360,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_DATA)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       QVariant *ptr = new QVariant(obj->data(PINT(1), PINT(2)));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -412,8 +397,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_FONT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QFont *ptr = new QFont(obj->font(PINT(1)));
       Qt4xHb::createReturnClass(ptr, "QFONT", true);
@@ -432,8 +416,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_FOREGROUND)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QBrush *ptr = new QBrush(obj->foreground(PINT(1)));
       Qt4xHb::createReturnClass(ptr, "QBRUSH", true);
@@ -452,8 +435,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_ICON)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QIcon *ptr = new QIcon(obj->icon(PINT(1)));
       Qt4xHb::createReturnClass(ptr, "QICON", true);
@@ -472,8 +454,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_INDEXOFCHILD)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQTREEWIDGETITEM(1))
-    {
+    if (ISNUMPAR(1) && ISQTREEWIDGETITEM(1)) {
 #endif
       RINT(obj->indexOfChild(PQTREEWIDGETITEM(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -491,8 +472,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_INSERTCHILD)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQTREEWIDGETITEM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQTREEWIDGETITEM(2)) {
 #endif
       obj->insertChild(PINT(1), PQTREEWIDGETITEM(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -512,8 +492,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_INSERTCHILDREN)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISARRAY(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISARRAY(2)) {
 #endif
       QList<QTreeWidgetItem *> par2;
       PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
@@ -650,8 +629,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_READ)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQDATASTREAM(1))
-    {
+    if (ISNUMPAR(1) && ISQDATASTREAM(1)) {
 #endif
       obj->read(*PQDATASTREAM(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -671,8 +649,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_REMOVECHILD)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQTREEWIDGETITEM(1))
-    {
+    if (ISNUMPAR(1) && ISQTREEWIDGETITEM(1)) {
 #endif
       obj->removeChild(PQTREEWIDGETITEM(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -692,8 +669,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETBACKGROUND)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQBRUSH(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQBRUSH(2)) {
 #endif
       obj->setBackground(PINT(1), *PQBRUSH(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -713,8 +689,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETCHECKSTATE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       obj->setCheckState(PINT(1), (Qt::CheckState)hb_parni(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -734,8 +709,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETCHILDINDICATORPOLICY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setChildIndicatorPolicy((QTreeWidgetItem::ChildIndicatorPolicy)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -755,8 +729,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETDATA)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQVARIANT(3))
-    {
+    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQVARIANT(3)) {
 #endif
       obj->setData(PINT(1), PINT(2), *PQVARIANT(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -776,8 +749,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETDISABLED)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setDisabled(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -797,8 +769,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETEXPANDED)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setExpanded(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -818,8 +789,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETFIRSTCOLUMNSPANNED)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setFirstColumnSpanned(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -839,8 +809,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETFLAGS)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setFlags((Qt::ItemFlags)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -860,8 +829,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETFONT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQFONT(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQFONT(2)) {
 #endif
       obj->setFont(PINT(1), *PQFONT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -881,8 +849,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETFOREGROUND)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQBRUSH(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQBRUSH(2)) {
 #endif
       obj->setForeground(PINT(1), *PQBRUSH(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -902,8 +869,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETHIDDEN)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setHidden(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -923,8 +889,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETICON)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && (ISQICON(2) || HB_ISCHAR(2)))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && (ISQICON(2) || HB_ISCHAR(2))) {
 #endif
       obj->setIcon(PINT(1), HB_ISOBJECT(2) ? *static_cast<QIcon *>(Qt4xHb::itemGetPtr(2)) : QIcon(hb_parc(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -944,8 +909,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETSELECTED)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setSelected(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -965,8 +929,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETSIZEHINT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSIZE(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSIZE(2)) {
 #endif
       obj->setSizeHint(PINT(1), *PQSIZE(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -986,8 +949,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETSTATUSTIP)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
 #endif
       obj->setStatusTip(PINT(1), PQSTRING(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1007,8 +969,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETTEXT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
 #endif
       obj->setText(PINT(1), PQSTRING(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1028,8 +989,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETTEXTALIGNMENT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       obj->setTextAlignment(PINT(1), PINT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1049,8 +1009,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETTOOLTIP)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
 #endif
       obj->setToolTip(PINT(1), PQSTRING(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1070,8 +1029,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETWHATSTHIS)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
 #endif
       obj->setWhatsThis(PINT(1), PQSTRING(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1091,8 +1049,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SIZEHINT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QSize *ptr = new QSize(obj->sizeHint(PINT(1)));
       Qt4xHb::createReturnClass(ptr, "QSIZE", true);
@@ -1111,8 +1068,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SORTCHILDREN)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       obj->sortChildren(PINT(1), (Qt::SortOrder)hb_parni(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1132,8 +1088,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_STATUSTIP)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RQSTRING(obj->statusTip(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1151,8 +1106,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_TAKECHILD)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QTreeWidgetItem *ptr = obj->takeChild(PINT(1));
       Qt4xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
@@ -1209,8 +1163,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_TEXT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RQSTRING(obj->text(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1228,8 +1181,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_TEXTALIGNMENT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RINT(obj->textAlignment(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1247,8 +1199,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_TOOLTIP)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RQSTRING(obj->toolTip(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1303,8 +1254,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_WHATSTHIS)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RQSTRING(obj->whatsThis(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1322,8 +1272,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_WRITE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQDATASTREAM(1))
-    {
+    if (ISNUMPAR(1) && ISQDATASTREAM(1)) {
 #endif
       obj->write(*PQDATASTREAM(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1340,8 +1289,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -1349,8 +1297,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_NEWFROM)
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -1383,8 +1330,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

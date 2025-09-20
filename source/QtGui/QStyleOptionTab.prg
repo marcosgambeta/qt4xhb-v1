@@ -59,8 +59,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_NEW)
     QStyleOptionTab *obj = new QStyleOptionTab();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(1) && ISQSTYLEOPTIONTAB(1))
-  {
+  else if (ISNUMPAR(1) && ISQSTYLEOPTIONTAB(1)) {
     // QStyleOptionTab(const QStyleOptionTab &other)
     QStyleOptionTab *obj = new QStyleOptionTab(*PQSTYLEOPTIONTAB(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -87,8 +86,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETSHAPE)
   QStyleOptionTab *obj = static_cast<QStyleOptionTab *>(Qt4xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->shape = (QTabBar::Shape)hb_parni(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -116,8 +114,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETTEXT)
   QStyleOptionTab *obj = static_cast<QStyleOptionTab *>(Qt4xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
       obj->text = PQSTRING(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -146,8 +143,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETICON)
   QStyleOptionTab *obj = static_cast<QStyleOptionTab *>(Qt4xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && ISQICON(1))
-    {
+    if (ISNUMPAR(1) && ISQICON(1)) {
       obj->icon = *PQICON(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -175,8 +171,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETROW)
   QStyleOptionTab *obj = static_cast<QStyleOptionTab *>(Qt4xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->row = PINT(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -204,8 +199,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETPOSITION)
   QStyleOptionTab *obj = static_cast<QStyleOptionTab *>(Qt4xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->position = (QStyleOptionTab::TabPosition)hb_parni(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -233,8 +227,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETSELECTEDPOSITION)
   QStyleOptionTab *obj = static_cast<QStyleOptionTab *>(Qt4xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->selectedPosition = (QStyleOptionTab::SelectedPosition)hb_parni(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -262,8 +255,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETCORNERWIDGETS)
   QStyleOptionTab *obj = static_cast<QStyleOptionTab *>(Qt4xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->cornerWidgets = (QStyleOptionTab::CornerWidgets)hb_parni(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

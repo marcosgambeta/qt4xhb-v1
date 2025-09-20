@@ -109,8 +109,7 @@ HB_FUNC_STATIC(QFONTENGINEPLUGIN_CREATE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQFONTENGINEINFO(1))
-    {
+    if (ISNUMPAR(1) && ISQFONTENGINEINFO(1)) {
 #endif
       QAbstractFontEngine *ptr = obj->create(*PQFONTENGINEINFO(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTFONTENGINE");

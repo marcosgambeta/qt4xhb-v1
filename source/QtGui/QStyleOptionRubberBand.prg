@@ -48,8 +48,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_NEW)
     QStyleOptionRubberBand *obj = new QStyleOptionRubberBand();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(1) && ISQSTYLEOPTIONRUBBERBAND(1))
-  {
+  else if (ISNUMPAR(1) && ISQSTYLEOPTIONRUBBERBAND(1)) {
     // QStyleOptionRubberBand(const QStyleOptionRubberBand &other)
     QStyleOptionRubberBand *obj = new QStyleOptionRubberBand(*PQSTYLEOPTIONRUBBERBAND(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -76,8 +75,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_SETSHAPE)
   QStyleOptionRubberBand *obj = static_cast<QStyleOptionRubberBand *>(Qt4xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->shape = (QRubberBand::Shape)hb_parni(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -105,8 +103,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONRUBBERBAND_SETOPAQUE)
   QStyleOptionRubberBand *obj = static_cast<QStyleOptionRubberBand *>(Qt4xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
       obj->opaque = PBOOL(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

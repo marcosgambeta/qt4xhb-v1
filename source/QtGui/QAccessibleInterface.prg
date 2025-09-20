@@ -77,8 +77,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_ACTIONTEXT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
-    {
+    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
       RQSTRING(obj->actionText(PINT(1), (QAccessible::Text)hb_parni(2), PINT(3)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -96,8 +95,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_CHILDAT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       RINT(obj->childAt(PINT(1), PINT(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -133,8 +131,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_DOACTION)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISARRAY(3) || HB_ISNIL(3)))
-    {
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISARRAY(3) || HB_ISNIL(3))) {
 #endif
       QVariantList par3;
       if (HB_ISARRAY(3))
@@ -163,8 +160,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_INDEXOFCHILD)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQACCESSIBLEINTERFACE(1))
-    {
+    if (ISNUMPAR(1) && ISQACCESSIBLEINTERFACE(1)) {
 #endif
       RINT(obj->indexOfChild(PQACCESSIBLEINTERFACE(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -182,8 +178,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_INVOKEMETHOD)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISARRAY(3) || HB_ISNIL(3)))
-    {
+    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISARRAY(3) || HB_ISNIL(3))) {
 #endif
       QVariantList par3;
       if (HB_ISARRAY(3))
@@ -250,8 +245,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_RECT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QRect *ptr = new QRect(obj->rect(PINT(1)));
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
@@ -270,8 +264,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_RELATIONTO)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISNUM(1) && ISQACCESSIBLEINTERFACE(2) && HB_ISNUM(3))
-    {
+    if (ISNUMPAR(3) && HB_ISNUM(1) && ISQACCESSIBLEINTERFACE(2) && HB_ISNUM(3)) {
 #endif
       RENUM(obj->relationTo(PINT(1), PQACCESSIBLEINTERFACE(2), PINT(3)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -289,8 +282,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_ROLE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RENUM(obj->role(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -308,8 +300,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_SETTEXT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3))
-    {
+    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3)) {
 #endif
       obj->setText((QAccessible::Text)hb_parni(1), PINT(2), PQSTRING(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -329,8 +320,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_STATE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RENUM(obj->state(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -348,8 +338,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_TEXT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       RQSTRING(obj->text((QAccessible::Text)hb_parni(1), PINT(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -367,8 +356,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_USERACTIONCOUNT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RINT(obj->userActionCount(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

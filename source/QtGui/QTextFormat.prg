@@ -109,14 +109,12 @@ HB_FUNC_STATIC(QTEXTFORMAT_NEW)
     QTextFormat *obj = new QTextFormat();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QTextFormat(int type)
     QTextFormat *obj = new QTextFormat(PINT(1));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(1) && ISQTEXTFORMAT(1))
-  {
+  else if (ISNUMPAR(1) && ISQTEXTFORMAT(1)) {
     // QTextFormat(const QTextFormat &other)
     QTextFormat *obj = new QTextFormat(*PQTEXTFORMAT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -166,8 +164,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_BOOLPROPERTY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->boolProperty(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -185,8 +182,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_BRUSHPROPERTY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QBrush *ptr = new QBrush(obj->brushProperty(PINT(1)));
       Qt4xHb::createReturnClass(ptr, "QBRUSH", true);
@@ -245,8 +241,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_CLEARPROPERTY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->clearProperty(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -266,8 +261,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_COLORPROPERTY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QColor *ptr = new QColor(obj->colorProperty(PINT(1)));
       Qt4xHb::createReturnClass(ptr, "QCOLOR", true);
@@ -286,8 +280,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_DOUBLEPROPERTY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RQREAL(obj->doubleProperty(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -324,8 +317,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_HASPROPERTY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->hasProperty(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -343,8 +335,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_INTPROPERTY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RINT(obj->intProperty(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -524,8 +515,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_LENGTHPROPERTY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QTextLength *ptr = new QTextLength(obj->lengthProperty(PINT(1)));
       Qt4xHb::createReturnClass(ptr, "QTEXTLENGTH", true);
@@ -544,8 +534,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_LENGTHVECTORPROPERTY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QVector<QTextLength> list = obj->lengthVectorProperty(PINT(1));
       PHB_DYNS pDynSym = hb_dynsymFindName("QTEXTLENGTH");
@@ -586,8 +575,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_MERGE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQTEXTFORMAT(1))
-    {
+    if (ISNUMPAR(1) && ISQTEXTFORMAT(1)) {
 #endif
       obj->merge(*PQTEXTFORMAT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -643,8 +631,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_PENPROPERTY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QPen *ptr = new QPen(obj->penProperty(PINT(1)));
       Qt4xHb::createReturnClass(ptr, "QPEN", true);
@@ -663,8 +650,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_PROPERTY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QVariant *ptr = new QVariant(obj->property(PINT(1)));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -701,8 +687,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_SETBACKGROUND)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBRUSH(1))
-    {
+    if (ISNUMPAR(1) && ISQBRUSH(1)) {
 #endif
       obj->setBackground(*PQBRUSH(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -722,8 +707,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_SETFOREGROUND)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBRUSH(1))
-    {
+    if (ISNUMPAR(1) && ISQBRUSH(1)) {
 #endif
       obj->setForeground(*PQBRUSH(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -743,8 +727,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_SETLAYOUTDIRECTION)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setLayoutDirection((Qt::LayoutDirection)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -764,8 +747,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_SETOBJECTINDEX)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setObjectIndex(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -785,8 +767,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_SETOBJECTTYPE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setObjectType(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -801,25 +782,21 @@ HB_FUNC_STATIC(QTEXTFORMAT_SETOBJECTTYPE)
 
 HB_FUNC_STATIC(QTEXTFORMAT_SETPROPERTY)
 {
-  if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2))
-  {
+  if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2)) {
     // void setProperty(int propertyId, const QVariant &value)
     QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setProperty(PINT(1), *PQVARIANT(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISARRAY(2))
-  {
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISARRAY(2)) {
     // void setProperty(int propertyId, const QVector<QTextLength> &value)
     QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QVector<QTextLength> par2;
       PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
       int nLen2 = hb_arrayLen(aList2);
@@ -844,8 +821,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_STRINGPROPERTY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RQSTRING(obj->stringProperty(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1011,8 +987,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -1020,8 +995,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_NEWFROM)
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -1054,8 +1028,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

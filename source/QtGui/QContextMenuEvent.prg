@@ -48,22 +48,19 @@ RETURN
 
 HB_FUNC_STATIC(QCONTEXTMENUEVENT_NEW)
 {
-  if (ISNUMPAR(4) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) && HB_ISNUM(4))
-  {
+  if (ISNUMPAR(4) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) && HB_ISNUM(4)) {
     // QContextMenuEvent(QContextMenuEvent::Reason reason, const QPoint &pos, const QPoint &globalPos,
     // Qt::KeyboardModifiers modifiers)
     QContextMenuEvent *obj = new QContextMenuEvent((QContextMenuEvent::Reason)hb_parni(1), *PQPOINT(2), *PQPOINT(3),
                                                    (Qt::KeyboardModifiers)hb_parni(4));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISNUMPAR(3) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3))
-  {
+  else if (ISNUMPAR(3) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3)) {
     // QContextMenuEvent(QContextMenuEvent::Reason reason, const QPoint &pos, const QPoint &globalPos)
     QContextMenuEvent *obj = new QContextMenuEvent((QContextMenuEvent::Reason)hb_parni(1), *PQPOINT(2), *PQPOINT(3));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPOINT(2))
-  {
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPOINT(2)) {
     // QContextMenuEvent(QContextMenuEvent::Reason reason, const QPoint &pos)
     QContextMenuEvent *obj = new QContextMenuEvent((QContextMenuEvent::Reason)hb_parni(1), *PQPOINT(2));
     Qt4xHb::returnNewObject(obj, false);

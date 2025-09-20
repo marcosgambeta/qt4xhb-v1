@@ -64,8 +64,7 @@ RETURN
     // QDrag(QWidget *dragSource)
 HB_FUNC_STATIC(QDRAG_NEW)
 {
-  if (ISNUMPAR(1) && ISQWIDGET(1))
-  {
+  if (ISNUMPAR(1) && ISQWIDGET(1)) {
     QDrag *obj = new QDrag(PQWIDGET(1));
     Qt4xHb::returnNewObject(obj, false);
   } else {
@@ -92,23 +91,19 @@ HB_FUNC_STATIC(QDRAG_DELETE)
 
 HB_FUNC_STATIC(QDRAG_EXEC)
 {
-  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1))) {
     // Qt::DropAction exec(Qt::DropActions supportedActions = Qt::MoveAction)
     QDrag *obj = qobject_cast<QDrag *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RENUM(obj->exec(HB_ISNIL(1) ? (Qt::DropActions)Qt::MoveAction : (Qt::DropActions)hb_parni(1)));
     }
   }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-  {
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // Qt::DropAction exec(Qt::DropActions supportedActions, Qt::DropAction defaultDropAction)
     QDrag *obj = qobject_cast<QDrag *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       RENUM(obj->exec((Qt::DropActions)hb_parni(1), (Qt::DropAction)hb_parni(2)));
     }
   } else {
@@ -180,8 +175,7 @@ HB_FUNC_STATIC(QDRAG_SETDRAGCURSOR)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQPIXMAP(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && ISQPIXMAP(1) && HB_ISNUM(2)) {
 #endif
       obj->setDragCursor(*PQPIXMAP(1), (Qt::DropAction)hb_parni(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -201,8 +195,7 @@ HB_FUNC_STATIC(QDRAG_SETHOTSPOT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOINT(1))
-    {
+    if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
       obj->setHotSpot(*PQPOINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -222,8 +215,7 @@ HB_FUNC_STATIC(QDRAG_SETMIMEDATA)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQMIMEDATA(1))
-    {
+    if (ISNUMPAR(1) && ISQMIMEDATA(1)) {
 #endif
       obj->setMimeData(PQMIMEDATA(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -243,8 +235,7 @@ HB_FUNC_STATIC(QDRAG_SETPIXMAP)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPIXMAP(1))
-    {
+    if (ISNUMPAR(1) && ISQPIXMAP(1)) {
 #endif
       obj->setPixmap(*PQPIXMAP(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

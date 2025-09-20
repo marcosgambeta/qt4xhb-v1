@@ -55,8 +55,7 @@ RETURN
     // QGraphicsRotation(QObject *parent = 0)
 HB_FUNC_STATIC(QGRAPHICSROTATION_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1))) {
     QGraphicsRotation *obj = new QGraphicsRotation(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   } else {
@@ -144,8 +143,7 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_SETANGLE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setAngle(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -160,25 +158,21 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_SETANGLE)
 
 HB_FUNC_STATIC(QGRAPHICSROTATION_SETAXIS)
 {
-  if (ISNUMPAR(1) && ISQVECTOR3D(1))
-  {
+  if (ISNUMPAR(1) && ISQVECTOR3D(1)) {
     // void setAxis(const QVector3D &axis)
     QGraphicsRotation *obj = qobject_cast<QGraphicsRotation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setAxis(*PQVECTOR3D(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void setAxis(Qt::Axis axis)
     QGraphicsRotation *obj = qobject_cast<QGraphicsRotation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setAxis((Qt::Axis)hb_parni(1));
     }
 
@@ -195,8 +189,7 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_SETORIGIN)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVECTOR3D(1))
-    {
+    if (ISNUMPAR(1) && ISQVECTOR3D(1)) {
 #endif
       obj->setOrigin(*PQVECTOR3D(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -216,8 +209,7 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_APPLYTO)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQMATRIX4X4(1))
-    {
+    if (ISNUMPAR(1) && ISQMATRIX4X4(1)) {
 #endif
       obj->applyTo(PQMATRIX4X4(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

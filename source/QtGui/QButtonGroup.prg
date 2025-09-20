@@ -63,8 +63,7 @@ RETURN
     // QButtonGroup(QObject *parent = 0)
 HB_FUNC_STATIC(QBUTTONGROUP_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1))) {
     QButtonGroup *obj = new QButtonGroup(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   } else {
@@ -91,25 +90,21 @@ HB_FUNC_STATIC(QBUTTONGROUP_DELETE)
 
 HB_FUNC_STATIC(QBUTTONGROUP_ADDBUTTON)
 {
-  if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1))
-  {
+  if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1)) {
     // void addButton(QAbstractButton *button)
     QButtonGroup *obj = qobject_cast<QButtonGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->addButton(PQABSTRACTBUTTON(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISNUMPAR(2) && ISQABSTRACTBUTTON(1) && HB_ISNUM(2))
-  {
+  else if (ISNUMPAR(2) && ISQABSTRACTBUTTON(1) && HB_ISNUM(2)) {
     // void addButton(QAbstractButton *button, int id)
     QButtonGroup *obj = qobject_cast<QButtonGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->addButton(PQABSTRACTBUTTON(1), PINT(2));
     }
 
@@ -126,8 +121,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_BUTTON)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QAbstractButton *ptr = obj->button(PINT(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTBUTTON");
@@ -239,8 +233,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ID)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1)) {
 #endif
       RINT(obj->id(PQABSTRACTBUTTON(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -258,8 +251,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_REMOVEBUTTON)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1)) {
 #endif
       obj->removeButton(PQABSTRACTBUTTON(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -279,8 +271,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_SETEXCLUSIVE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setExclusive(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -300,8 +291,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_SETID)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQABSTRACTBUTTON(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && ISQABSTRACTBUTTON(1) && HB_ISNUM(2)) {
 #endif
       obj->setId(PQABSTRACTBUTTON(1), PINT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

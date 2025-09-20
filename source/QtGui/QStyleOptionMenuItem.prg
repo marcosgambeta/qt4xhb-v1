@@ -67,8 +67,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_NEW)
     QStyleOptionMenuItem *obj = new QStyleOptionMenuItem();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(1) && ISQSTYLEOPTIONMENUITEM(1))
-  {
+  else if (ISNUMPAR(1) && ISQSTYLEOPTIONMENUITEM(1)) {
     // QStyleOptionMenuItem(const QStyleOptionMenuItem &other)
     QStyleOptionMenuItem *obj = new QStyleOptionMenuItem(*PQSTYLEOPTIONMENUITEM(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -95,8 +94,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_SETMENUITEMTYPE)
   QStyleOptionMenuItem *obj = static_cast<QStyleOptionMenuItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->menuItemType = (QStyleOptionMenuItem::MenuItemType)hb_parni(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -124,8 +122,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_SETCHECKTYPE)
   QStyleOptionMenuItem *obj = static_cast<QStyleOptionMenuItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->checkType = (QStyleOptionMenuItem::CheckType)hb_parni(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -153,8 +150,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_SETCHECKED)
   QStyleOptionMenuItem *obj = static_cast<QStyleOptionMenuItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
       obj->checked = PBOOL(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -182,8 +178,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_SETMENUHASCHECKABLEITEMS)
   QStyleOptionMenuItem *obj = static_cast<QStyleOptionMenuItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
       obj->menuHasCheckableItems = PBOOL(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -212,8 +207,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_SETMENURECT)
   QStyleOptionMenuItem *obj = static_cast<QStyleOptionMenuItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && ISQRECT(1))
-    {
+    if (ISNUMPAR(1) && ISQRECT(1)) {
       obj->menuRect = *PQRECT(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -241,8 +235,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_SETTEXT)
   QStyleOptionMenuItem *obj = static_cast<QStyleOptionMenuItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
       obj->text = PQSTRING(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -271,8 +264,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_SETICON)
   QStyleOptionMenuItem *obj = static_cast<QStyleOptionMenuItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && ISQICON(1))
-    {
+    if (ISNUMPAR(1) && ISQICON(1)) {
       obj->icon = *PQICON(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -300,8 +292,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_SETMAXICONWIDTH)
   QStyleOptionMenuItem *obj = static_cast<QStyleOptionMenuItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->maxIconWidth = PINT(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -329,8 +320,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_SETTABWIDTH)
   QStyleOptionMenuItem *obj = static_cast<QStyleOptionMenuItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->tabWidth = PINT(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -359,8 +349,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_SETFONT)
   QStyleOptionMenuItem *obj = static_cast<QStyleOptionMenuItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && ISQFONT(1))
-    {
+    if (ISNUMPAR(1) && ISQFONT(1)) {
       obj->font = *PQFONT(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

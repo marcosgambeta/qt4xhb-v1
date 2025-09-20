@@ -46,8 +46,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSIZEGRIP_NEW)
     QStyleOptionSizeGrip *obj = new QStyleOptionSizeGrip();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(1) && ISQSTYLEOPTIONSIZEGRIP(1))
-  {
+  else if (ISNUMPAR(1) && ISQSTYLEOPTIONSIZEGRIP(1)) {
     // QStyleOptionSizeGrip(const QStyleOptionSizeGrip &other)
     QStyleOptionSizeGrip *obj = new QStyleOptionSizeGrip(*PQSTYLEOPTIONSIZEGRIP(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -74,8 +73,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSIZEGRIP_SETCORNER)
   QStyleOptionSizeGrip *obj = static_cast<QStyleOptionSizeGrip *>(Qt4xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->corner = (Qt::Corner)hb_parni(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -52,8 +52,7 @@ HB_FUNC_STATIC(QACCESSIBLEOBJECT_ACTIONTEXT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
-    {
+    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
       RQSTRING(obj->actionText(PINT(1), (QAccessibleObject::Text)hb_parni(2), PINT(3)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -71,8 +70,7 @@ HB_FUNC_STATIC(QACCESSIBLEOBJECT_DOACTION)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISARRAY(3))
-    {
+    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISARRAY(3)) {
 #endif
       QVariantList par3;
       PHB_ITEM aList3 = hb_param(3, HB_IT_ARRAY);
@@ -135,8 +133,7 @@ HB_FUNC_STATIC(QACCESSIBLEOBJECT_RECT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QRect *ptr = new QRect(obj->rect(PINT(1)));
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
@@ -155,8 +152,7 @@ HB_FUNC_STATIC(QACCESSIBLEOBJECT_SETTEXT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3))
-    {
+    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3)) {
 #endif
       obj->setText((QAccessibleObject::Text)hb_parni(1), PINT(2), PQSTRING(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -176,8 +172,7 @@ HB_FUNC_STATIC(QACCESSIBLEOBJECT_USERACTIONCOUNT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RINT(obj->userActionCount(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

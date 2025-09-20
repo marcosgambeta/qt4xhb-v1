@@ -89,21 +89,18 @@ RETURN
 
 HB_FUNC_STATIC(QMOVIE_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1))) {
     // QMovie(QObject *parent = 0)
     QMovie *obj = new QMovie(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 3) && ISQIODEVICE(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)) && (ISQOBJECT(3) || HB_ISNIL(3)))
-  {
+  else if (ISBETWEEN(1, 3) && ISQIODEVICE(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)) && (ISQOBJECT(3) || HB_ISNIL(3))) {
     // QMovie(QIODevice *device, const QByteArray &format = QByteArray(), QObject *parent = 0)
     QMovie *obj = new QMovie(
         PQIODEVICE(1), HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(2)), OPQOBJECT(3, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)) && (ISQOBJECT(3) || HB_ISNIL(3)))
-  {
+  else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)) && (ISQOBJECT(3) || HB_ISNIL(3))) {
     // QMovie(const QString &fileName, const QByteArray &format = QByteArray(), QObject *parent = 0)
     QMovie *obj = new QMovie(
         PQSTRING(1), HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(2)), OPQOBJECT(3, 0));
@@ -341,8 +338,7 @@ HB_FUNC_STATIC(QMOVIE_JUMPTOFRAME)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->jumpToFrame(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -415,8 +411,7 @@ HB_FUNC_STATIC(QMOVIE_SETBACKGROUNDCOLOR)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
-    {
+    if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1))) {
 #endif
       obj->setBackgroundColor(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -436,8 +431,7 @@ HB_FUNC_STATIC(QMOVIE_SETCACHEMODE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setCacheMode((QMovie::CacheMode)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -457,8 +451,7 @@ HB_FUNC_STATIC(QMOVIE_SETDEVICE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQIODEVICE(1))
-    {
+    if (ISNUMPAR(1) && ISQIODEVICE(1)) {
 #endif
       obj->setDevice(PQIODEVICE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -478,8 +471,7 @@ HB_FUNC_STATIC(QMOVIE_SETFILENAME)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setFileName(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -499,8 +491,7 @@ HB_FUNC_STATIC(QMOVIE_SETFORMAT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBYTEARRAY(1))
-    {
+    if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
       obj->setFormat(*PQBYTEARRAY(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -520,8 +511,7 @@ HB_FUNC_STATIC(QMOVIE_SETSCALEDSIZE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQSIZE(1))
-    {
+    if (ISNUMPAR(1) && ISQSIZE(1)) {
 #endif
       obj->setScaledSize(*PQSIZE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -595,8 +585,7 @@ HB_FUNC_STATIC(QMOVIE_SETPAUSED)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setPaused(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -616,8 +605,7 @@ HB_FUNC_STATIC(QMOVIE_SETSPEED)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setSpeed(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

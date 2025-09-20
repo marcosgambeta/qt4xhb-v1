@@ -51,8 +51,7 @@ RETURN
     // QSound(const QString &filename, QObject *parent = 0)
 HB_FUNC_STATIC(QSOUND_NEW)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
-  {
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
     QSound *obj = new QSound(PQSTRING(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   } else {
@@ -156,8 +155,7 @@ HB_FUNC_STATIC(QSOUND_SETLOOPS)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setLoops(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -210,15 +208,13 @@ HB_FUNC_STATIC(QSOUND_PLAY)
     // void play()
     QSound *obj = qobject_cast<QSound *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->play();
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // static void play(const QString &filename)
 
     QSound::play(PQSTRING(1));

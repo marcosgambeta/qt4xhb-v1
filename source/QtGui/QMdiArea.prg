@@ -78,8 +78,7 @@ RETURN
     // QMdiArea(QWidget *parent = 0)
 HB_FUNC_STATIC(QMDIAREA_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1))) {
     QMdiArea *obj = new QMdiArea(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   } else {
@@ -148,8 +147,7 @@ HB_FUNC_STATIC(QMDIAREA_ADDSUBWINDOW)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQWIDGET(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
-    {
+    if (ISBETWEEN(1, 2) && ISQWIDGET(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
 #endif
       QMdiSubWindow *ptr =
           obj->addSubWindow(PQWIDGET(1), HB_ISNIL(2) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(2));
@@ -225,8 +223,7 @@ HB_FUNC_STATIC(QMDIAREA_REMOVESUBWINDOW)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQWIDGET(1))
-    {
+    if (ISNUMPAR(1) && ISQWIDGET(1)) {
 #endif
       obj->removeSubWindow(PQWIDGET(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -246,8 +243,7 @@ HB_FUNC_STATIC(QMDIAREA_SETACTIVATIONORDER)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setActivationOrder((QMdiArea::WindowOrder)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -267,8 +263,7 @@ HB_FUNC_STATIC(QMDIAREA_SETBACKGROUND)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBRUSH(1))
-    {
+    if (ISNUMPAR(1) && ISQBRUSH(1)) {
 #endif
       obj->setBackground(*PQBRUSH(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -288,8 +283,7 @@ HB_FUNC_STATIC(QMDIAREA_SETDOCUMENTMODE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setDocumentMode(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -309,8 +303,7 @@ HB_FUNC_STATIC(QMDIAREA_SETOPTION)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
-    {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2))) {
 #endif
       obj->setOption((QMdiArea::AreaOption)hb_parni(1), OPBOOL(2, true));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -330,8 +323,7 @@ HB_FUNC_STATIC(QMDIAREA_SETTABPOSITION)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setTabPosition((QTabWidget::TabPosition)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -351,8 +343,7 @@ HB_FUNC_STATIC(QMDIAREA_SETTABSHAPE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setTabShape((QTabWidget::TabShape)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -372,8 +363,7 @@ HB_FUNC_STATIC(QMDIAREA_SETVIEWMODE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setViewMode((QMdiArea::ViewMode)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -393,8 +383,7 @@ HB_FUNC_STATIC(QMDIAREA_SUBWINDOWLIST)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
-    {
+    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1))) {
 #endif
       QList<QMdiSubWindow *> list = obj->subWindowList(HB_ISNIL(1) ? (QMdiArea::WindowOrder)QMdiArea::CreationOrder
                                                                    : (QMdiArea::WindowOrder)hb_parni(1));
@@ -469,8 +458,7 @@ HB_FUNC_STATIC(QMDIAREA_TESTOPTION)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->testOption((QMdiArea::AreaOption)hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -644,8 +632,7 @@ HB_FUNC_STATIC(QMDIAREA_SETACTIVESUBWINDOW)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQMDISUBWINDOW(1))
-    {
+    if (ISNUMPAR(1) && ISQMDISUBWINDOW(1)) {
 #endif
       obj->setActiveSubWindow(PQMDISUBWINDOW(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

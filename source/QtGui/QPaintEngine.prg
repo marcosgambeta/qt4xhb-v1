@@ -89,8 +89,7 @@ HB_FUNC_STATIC(QPAINTENGINE_BEGIN)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPAINTDEVICE(1))
-    {
+    if (ISNUMPAR(1) && ISQPAINTDEVICE(1)) {
 #endif
       RBOOL(obj->begin(PQPAINTDEVICE(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -103,25 +102,21 @@ HB_FUNC_STATIC(QPAINTENGINE_BEGIN)
 
 HB_FUNC_STATIC(QPAINTENGINE_DRAWELLIPSE)
 {
-  if (ISNUMPAR(1) && ISQRECTF(1))
-  {
+  if (ISNUMPAR(1) && ISQRECTF(1)) {
     // virtual void drawEllipse(const QRectF &rect)
     QPaintEngine *obj = static_cast<QPaintEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->drawEllipse(*PQRECTF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISNUMPAR(1) && ISQRECT(1))
-  {
+  else if (ISNUMPAR(1) && ISQRECT(1)) {
     // virtual void drawEllipse(const QRect &rect)
     QPaintEngine *obj = static_cast<QPaintEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->drawEllipse(*PQRECT(1));
     }
 
@@ -139,8 +134,7 @@ HB_FUNC_STATIC(QPAINTENGINE_DRAWIMAGE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(3, 4) && ISQRECTF(1) && ISQIMAGE(2) && ISQRECTF(3) && (HB_ISNUM(4) || HB_ISNIL(4)))
-    {
+    if (ISBETWEEN(3, 4) && ISQRECTF(1) && ISQIMAGE(2) && ISQRECTF(3) && (HB_ISNUM(4) || HB_ISNIL(4))) {
 #endif
       obj->drawImage(*PQRECTF(1), *PQIMAGE(2), *PQRECTF(3),
                      HB_ISNIL(4) ? (Qt::ImageConversionFlags)Qt::AutoColor : (Qt::ImageConversionFlags)hb_parni(4));
@@ -165,8 +159,7 @@ HB_FUNC_STATIC(QPAINTENGINE_DRAWPATH)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPAINTERPATH(1))
-    {
+    if (ISNUMPAR(1) && ISQPAINTERPATH(1)) {
 #endif
       obj->drawPath(*PQPAINTERPATH(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -186,8 +179,7 @@ HB_FUNC_STATIC(QPAINTENGINE_DRAWPIXMAP)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && ISQRECTF(1) && ISQPIXMAP(2) && ISQRECTF(3))
-    {
+    if (ISNUMPAR(3) && ISQRECTF(1) && ISQPIXMAP(2) && ISQRECTF(3)) {
 #endif
       obj->drawPixmap(*PQRECTF(1), *PQPIXMAP(2), *PQRECTF(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -219,8 +211,7 @@ HB_FUNC_STATIC(QPAINTENGINE_DRAWTEXTITEM)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQPOINTF(1) && ISQTEXTITEM(2))
-    {
+    if (ISNUMPAR(2) && ISQPOINTF(1) && ISQTEXTITEM(2)) {
 #endif
       obj->drawTextItem(*PQPOINTF(1), *PQTEXTITEM(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -240,8 +231,7 @@ HB_FUNC_STATIC(QPAINTENGINE_DRAWTILEDPIXMAP)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && ISQRECTF(1) && ISQPIXMAP(2) && ISQPOINTF(3))
-    {
+    if (ISNUMPAR(3) && ISQRECTF(1) && ISQPIXMAP(2) && ISQPOINTF(3)) {
 #endif
       obj->drawTiledPixmap(*PQRECTF(1), *PQPIXMAP(2), *PQPOINTF(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -279,8 +269,7 @@ HB_FUNC_STATIC(QPAINTENGINE_HASFEATURE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->hasFeature((QPaintEngine::PaintEngineFeatures)hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -354,8 +343,7 @@ HB_FUNC_STATIC(QPAINTENGINE_SETACTIVE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setActive(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -393,8 +381,7 @@ HB_FUNC_STATIC(QPAINTENGINE_UPDATESTATE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPAINTENGINESTATE(1))
-    {
+    if (ISNUMPAR(1) && ISQPAINTENGINESTATE(1)) {
 #endif
       obj->updateState(*PQPAINTENGINESTATE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -411,8 +398,7 @@ HB_FUNC_STATIC(QPAINTENGINE_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -420,8 +406,7 @@ HB_FUNC_STATIC(QPAINTENGINE_NEWFROM)
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -454,8 +439,7 @@ HB_FUNC_STATIC(QPAINTENGINE_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

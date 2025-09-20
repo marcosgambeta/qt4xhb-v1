@@ -67,14 +67,12 @@ RETURN
 
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_NEW)
 {
-  if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1))
-  {
+  if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1)) {
     // QItemSelectionModel(QAbstractItemModel *model)
     QItemSelectionModel *obj = new QItemSelectionModel(PQABSTRACTITEMMODEL(1));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISNUMPAR(2) && ISQABSTRACTITEMMODEL(1) && ISQOBJECT(2))
-  {
+  else if (ISNUMPAR(2) && ISQABSTRACTITEMMODEL(1) && ISQOBJECT(2)) {
     // QItemSelectionModel(QAbstractItemModel *model, QObject *parent)
     QItemSelectionModel *obj = new QItemSelectionModel(PQABSTRACTITEMMODEL(1), PQOBJECT(2));
     Qt4xHb::returnNewObject(obj, false);
@@ -107,8 +105,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_COLUMNINTERSECTSSELECTION)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQMODELINDEX(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQMODELINDEX(2)) {
 #endif
       RBOOL(obj->columnIntersectsSelection(PINT(1), *PQMODELINDEX(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -163,8 +160,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_ISCOLUMNSELECTED)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQMODELINDEX(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQMODELINDEX(2)) {
 #endif
       RBOOL(obj->isColumnSelected(PINT(1), *PQMODELINDEX(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -182,8 +178,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_ISROWSELECTED)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQMODELINDEX(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQMODELINDEX(2)) {
 #endif
       RBOOL(obj->isRowSelected(PINT(1), *PQMODELINDEX(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -201,8 +196,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_ISSELECTED)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQMODELINDEX(1))
-    {
+    if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
 #endif
       RBOOL(obj->isSelected(*PQMODELINDEX(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -239,8 +233,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_ROWINTERSECTSSELECTION)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQMODELINDEX(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQMODELINDEX(2)) {
 #endif
       RBOOL(obj->rowIntersectsSelection(PINT(1), *PQMODELINDEX(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -258,8 +251,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECTEDCOLUMNS)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
-    {
+    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1))) {
 #endif
       QModelIndexList list = obj->selectedColumns(OPINT(1, 0));
       PHB_DYNS pDynSym = hb_dynsymFindName("QMODELINDEX");
@@ -341,8 +333,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECTEDROWS)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
-    {
+    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1))) {
 #endif
       QModelIndexList list = obj->selectedRows(OPINT(1, 0));
       PHB_DYNS pDynSym = hb_dynsymFindName("QMODELINDEX");
@@ -457,25 +448,21 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_RESET)
 
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECT)
 {
-  if (ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISNUM(2))
-  {
+  if (ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISNUM(2)) {
     // virtual void select(const QModelIndex &index, QItemSelectionModel::SelectionFlags command)
     QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->select(*PQMODELINDEX(1), (QItemSelectionModel::SelectionFlags)hb_parni(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISNUMPAR(2) && ISQITEMSELECTION(1) && HB_ISNUM(2))
-  {
+  else if (ISNUMPAR(2) && ISQITEMSELECTION(1) && HB_ISNUM(2)) {
     // virtual void select(const QItemSelection &selection, QItemSelectionModel::SelectionFlags command)
     QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->select(*PQITEMSELECTION(1), (QItemSelectionModel::SelectionFlags)hb_parni(2));
     }
 
@@ -492,8 +479,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SETCURRENTINDEX)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISNUM(2)) {
 #endif
       obj->setCurrentIndex(*PQMODELINDEX(1), (QItemSelectionModel::SelectionFlags)hb_parni(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

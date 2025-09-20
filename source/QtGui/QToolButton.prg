@@ -66,8 +66,7 @@ RETURN
     // QToolButton(QWidget *parent = 0)
 HB_FUNC_STATIC(QTOOLBUTTON_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1))) {
     QToolButton *obj = new QToolButton(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   } else {
@@ -191,8 +190,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SETARROWTYPE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setArrowType((Qt::ArrowType)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -212,8 +210,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SETAUTORAISE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setAutoRaise(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -233,8 +230,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SETMENU)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQMENU(1))
-    {
+    if (ISNUMPAR(1) && ISQMENU(1)) {
 #endif
       obj->setMenu(PQMENU(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -254,8 +250,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SETPOPUPMODE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setPopupMode((QToolButton::ToolButtonPopupMode)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -331,8 +326,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SETDEFAULTACTION)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQACTION(1))
-    {
+    if (ISNUMPAR(1) && ISQACTION(1)) {
 #endif
       obj->setDefaultAction(PQACTION(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -352,8 +346,7 @@ HB_FUNC_STATIC(QTOOLBUTTON_SETTOOLBUTTONSTYLE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setToolButtonStyle((Qt::ToolButtonStyle)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

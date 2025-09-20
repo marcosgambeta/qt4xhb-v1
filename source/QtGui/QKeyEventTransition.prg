@@ -46,14 +46,12 @@ RETURN
 
 HB_FUNC_STATIC(QKEYEVENTTRANSITION_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQSTATE(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQSTATE(1) || HB_ISNIL(1))) {
     // QKeyEventTransition(QState *sourceState = 0)
     QKeyEventTransition *obj = new QKeyEventTransition(OPQSTATE(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(3, 4) && ISQOBJECT(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISQSTATE(4) || HB_ISNIL(4)))
-  {
+  else if (ISBETWEEN(3, 4) && ISQOBJECT(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISQSTATE(4) || HB_ISNIL(4))) {
     // QKeyEventTransition(QObject *object, QEvent::Type type, int key, QState *sourceState = 0)
     QKeyEventTransition *obj = new QKeyEventTransition(PQOBJECT(1), (QEvent::Type)hb_parni(2), PINT(3), OPQSTATE(4, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -122,8 +120,7 @@ HB_FUNC_STATIC(QKEYEVENTTRANSITION_SETKEY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setKey(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -143,8 +140,7 @@ HB_FUNC_STATIC(QKEYEVENTTRANSITION_SETMODIFIERMASK)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setModifierMask((Qt::KeyboardModifiers)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

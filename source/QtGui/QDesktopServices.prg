@@ -54,8 +54,7 @@ RETURN
 HB_FUNC_STATIC(QDESKTOPSERVICES_DISPLAYNAME)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
     RQSTRING(QDesktopServices::displayName((QDesktopServices::StandardLocation)hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -69,8 +68,7 @@ HB_FUNC_STATIC(QDESKTOPSERVICES_DISPLAYNAME)
 HB_FUNC_STATIC(QDESKTOPSERVICES_OPENURL)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && ISQURL(1))
-  {
+  if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
     RBOOL(QDesktopServices::openUrl(*PQURL(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -84,8 +82,7 @@ HB_FUNC_STATIC(QDESKTOPSERVICES_OPENURL)
 HB_FUNC_STATIC(QDESKTOPSERVICES_SETURLHANDLER)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQOBJECT(2) && HB_ISCHAR(3))
-  {
+  if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQOBJECT(2) && HB_ISCHAR(3)) {
 #endif
     QDesktopServices::setUrlHandler(PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -101,8 +98,7 @@ HB_FUNC_STATIC(QDESKTOPSERVICES_SETURLHANDLER)
 HB_FUNC_STATIC(QDESKTOPSERVICES_STORAGELOCATION)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
     RQSTRING(QDesktopServices::storageLocation((QDesktopServices::StandardLocation)hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -116,8 +112,7 @@ HB_FUNC_STATIC(QDESKTOPSERVICES_STORAGELOCATION)
 HB_FUNC_STATIC(QDESKTOPSERVICES_UNSETURLHANDLER)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
     QDesktopServices::unsetUrlHandler(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -133,8 +128,7 @@ HB_FUNC_STATIC(QDESKTOPSERVICES_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -142,8 +136,7 @@ HB_FUNC_STATIC(QDESKTOPSERVICES_NEWFROM)
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -176,8 +169,7 @@ HB_FUNC_STATIC(QDESKTOPSERVICES_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

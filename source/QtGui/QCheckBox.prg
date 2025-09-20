@@ -50,14 +50,12 @@ RETURN
 
 HB_FUNC_STATIC(QCHECKBOX_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1))) {
     // QCheckBox(QWidget *parent = 0)
     QCheckBox *obj = new QCheckBox(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
-  {
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2))) {
     // QCheckBox(const QString &text, QWidget *parent = 0)
     QCheckBox *obj = new QCheckBox(PQSTRING(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -109,8 +107,7 @@ HB_FUNC_STATIC(QCHECKBOX_SETCHECKSTATE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setCheckState((Qt::CheckState)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -130,8 +127,7 @@ HB_FUNC_STATIC(QCHECKBOX_SETTRISTATE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
-    {
+    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1))) {
 #endif
       obj->setTristate(OPBOOL(1, true));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

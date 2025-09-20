@@ -48,8 +48,7 @@ RETURN
     // QCDEStyle(bool useHighlightCols = false)
 HB_FUNC_STATIC(QCDESTYLE_NEW)
 {
-  if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1))) {
     QCDEStyle *obj = new QCDEStyle(OPBOOL(1, false));
     Qt4xHb::returnNewObject(obj, false);
   } else {
@@ -82,8 +81,7 @@ HB_FUNC_STATIC(QCDESTYLE_DRAWCONTROL)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && (ISQWIDGET(4) || HB_ISNIL(4)))
-    {
+    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && (ISQWIDGET(4) || HB_ISNIL(4))) {
 #endif
       obj->drawControl((QStyle::ControlElement)hb_parni(1), PQSTYLEOPTION(2), PQPAINTER(3), OPQWIDGET(4, 0));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -104,8 +102,7 @@ HB_FUNC_STATIC(QCDESTYLE_DRAWPRIMITIVE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && (ISQWIDGET(4) || HB_ISNIL(4)))
-    {
+    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && (ISQWIDGET(4) || HB_ISNIL(4))) {
 #endif
       obj->drawPrimitive((QStyle::PrimitiveElement)hb_parni(1), PQSTYLEOPTION(2), PQPAINTER(3), OPQWIDGET(4, 0));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -125,8 +122,7 @@ HB_FUNC_STATIC(QCDESTYLE_PIXELMETRIC)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (ISQSTYLEOPTION(2) || HB_ISNIL(2)) && (ISQWIDGET(3) || HB_ISNIL(3)))
-    {
+    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (ISQSTYLEOPTION(2) || HB_ISNIL(2)) && (ISQWIDGET(3) || HB_ISNIL(3))) {
 #endif
       RINT(obj->pixelMetric((QStyle::PixelMetric)hb_parni(1),
                             HB_ISNIL(2) ? 0 : static_cast<QStyleOption *>(Qt4xHb::itemGetPtr(2)), OPQWIDGET(3, 0)));

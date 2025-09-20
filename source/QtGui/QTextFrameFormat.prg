@@ -318,8 +318,7 @@ HB_FUNC_STATIC(QTEXTFRAMEFORMAT_SETBORDER)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setBorder(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -339,8 +338,7 @@ HB_FUNC_STATIC(QTEXTFRAMEFORMAT_SETBORDERBRUSH)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQBRUSH(1))
-    {
+    if (ISNUMPAR(1) && ISQBRUSH(1)) {
 #endif
       obj->setBorderBrush(*PQBRUSH(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -360,8 +358,7 @@ HB_FUNC_STATIC(QTEXTFRAMEFORMAT_SETBORDERSTYLE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setBorderStyle((QTextFrameFormat::BorderStyle)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -381,8 +378,7 @@ HB_FUNC_STATIC(QTEXTFRAMEFORMAT_SETBOTTOMMARGIN)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setBottomMargin(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -397,25 +393,21 @@ HB_FUNC_STATIC(QTEXTFRAMEFORMAT_SETBOTTOMMARGIN)
 
 HB_FUNC_STATIC(QTEXTFRAMEFORMAT_SETHEIGHT)
 {
-  if (ISNUMPAR(1) && ISQTEXTLENGTH(1))
-  {
+  if (ISNUMPAR(1) && ISQTEXTLENGTH(1)) {
     // void setHeight(const QTextLength &height)
     QTextFrameFormat *obj = static_cast<QTextFrameFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setHeight(*PQTEXTLENGTH(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void setHeight(qreal height)
     QTextFrameFormat *obj = static_cast<QTextFrameFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setHeight(PQREAL(1));
     }
 
@@ -432,8 +424,7 @@ HB_FUNC_STATIC(QTEXTFRAMEFORMAT_SETLEFTMARGIN)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setLeftMargin(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -453,8 +444,7 @@ HB_FUNC_STATIC(QTEXTFRAMEFORMAT_SETMARGIN)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setMargin(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -474,8 +464,7 @@ HB_FUNC_STATIC(QTEXTFRAMEFORMAT_SETPADDING)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setPadding(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -495,8 +484,7 @@ HB_FUNC_STATIC(QTEXTFRAMEFORMAT_SETPAGEBREAKPOLICY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setPageBreakPolicy((QTextFormat::PageBreakFlags)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -516,8 +504,7 @@ HB_FUNC_STATIC(QTEXTFRAMEFORMAT_SETPOSITION)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setPosition((QTextFrameFormat::Position)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -537,8 +524,7 @@ HB_FUNC_STATIC(QTEXTFRAMEFORMAT_SETRIGHTMARGIN)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setRightMargin(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -558,8 +544,7 @@ HB_FUNC_STATIC(QTEXTFRAMEFORMAT_SETTOPMARGIN)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setTopMargin(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -574,25 +559,21 @@ HB_FUNC_STATIC(QTEXTFRAMEFORMAT_SETTOPMARGIN)
 
 HB_FUNC_STATIC(QTEXTFRAMEFORMAT_SETWIDTH)
 {
-  if (ISNUMPAR(1) && ISQTEXTLENGTH(1))
-  {
+  if (ISNUMPAR(1) && ISQTEXTLENGTH(1)) {
     // void setWidth(const QTextLength &width)
     QTextFrameFormat *obj = static_cast<QTextFrameFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setWidth(*PQTEXTLENGTH(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void setWidth(qreal width)
     QTextFrameFormat *obj = static_cast<QTextFrameFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setWidth(PQREAL(1));
     }
 

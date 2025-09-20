@@ -72,8 +72,7 @@ RETURN
     // QTextBrowser(QWidget *parent = 0)
 HB_FUNC_STATIC(QTEXTBROWSER_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1))) {
     QTextBrowser *obj = new QTextBrowser(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   } else {
@@ -144,8 +143,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_HISTORYTITLE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RQSTRING(obj->historyTitle(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -163,8 +161,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_HISTORYURL)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QUrl *ptr = new QUrl(obj->historyUrl(PINT(1)));
       Qt4xHb::createReturnClass(ptr, "QURL", true);
@@ -273,8 +270,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_SETOPENEXTERNALLINKS)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setOpenExternalLinks(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -294,8 +290,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_SETOPENLINKS)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setOpenLinks(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -315,8 +310,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_SETSEARCHPATHS)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISARRAY(1))
-    {
+    if (ISNUMPAR(1) && HB_ISARRAY(1)) {
 #endif
       obj->setSearchPaths(PQSTRINGLIST(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -355,8 +349,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_LOADRESOURCE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQURL(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQURL(2)) {
 #endif
       QVariant *ptr = new QVariant(obj->loadResource(PINT(1), *PQURL(2)));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
@@ -455,8 +448,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_SETSOURCE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQURL(1))
-    {
+    if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
       obj->setSource(*PQURL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

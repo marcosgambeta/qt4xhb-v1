@@ -51,15 +51,13 @@ RETURN
 
 HB_FUNC_STATIC(QGRAPHICSPATHITEM_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1))) {
     // QGraphicsPathItem(QGraphicsItem *parent = 0)
     QGraphicsPathItem *obj =
         new QGraphicsPathItem(HB_ISNIL(1) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(1)));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(1, 2) && ISQPAINTERPATH(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2)))
-  {
+  else if (ISBETWEEN(1, 2) && ISQPAINTERPATH(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2))) {
     // QGraphicsPathItem(const QPainterPath &path, QGraphicsItem *parent = 0)
     QGraphicsPathItem *obj =
         new QGraphicsPathItem(*PQPAINTERPATH(1), HB_ISNIL(2) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(2)));
@@ -110,8 +108,7 @@ HB_FUNC_STATIC(QGRAPHICSPATHITEM_SETPATH)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPAINTERPATH(1))
-    {
+    if (ISNUMPAR(1) && ISQPAINTERPATH(1)) {
 #endif
       obj->setPath(*PQPAINTERPATH(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -150,8 +147,7 @@ HB_FUNC_STATIC(QGRAPHICSPATHITEM_CONTAINS)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPOINTF(1))
-    {
+    if (ISNUMPAR(1) && ISQPOINTF(1)) {
 #endif
       RBOOL(obj->contains(*PQPOINTF(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -169,8 +165,7 @@ HB_FUNC_STATIC(QGRAPHICSPATHITEM_ISOBSCUREDBY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQGRAPHICSITEM(1))
-    {
+    if (ISNUMPAR(1) && ISQGRAPHICSITEM(1)) {
 #endif
       RBOOL(obj->isObscuredBy(PQGRAPHICSITEM(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -207,8 +202,7 @@ HB_FUNC_STATIC(QGRAPHICSPATHITEM_PAINT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3) || HB_ISNIL(3)))
-    {
+    if (ISBETWEEN(2, 3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3) || HB_ISNIL(3))) {
 #endif
       obj->paint(PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3, 0));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

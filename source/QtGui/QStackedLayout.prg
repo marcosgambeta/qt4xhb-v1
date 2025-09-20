@@ -60,14 +60,12 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_NEW)
     QStackedLayout *obj = new QStackedLayout();
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISNUMPAR(1) && ISQWIDGET(1))
-  {
+  else if (ISNUMPAR(1) && ISQWIDGET(1)) {
     // QStackedLayout(QWidget *parent)
     QStackedLayout *obj = new QStackedLayout(PQWIDGET(1));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISNUMPAR(1) && ISQLAYOUT(1))
-  {
+  else if (ISNUMPAR(1) && ISQLAYOUT(1)) {
     // QStackedLayout(QLayout *parentLayout)
     QStackedLayout *obj = new QStackedLayout(PQLAYOUT(1));
     Qt4xHb::returnNewObject(obj, false);
@@ -100,8 +98,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_ADDWIDGET)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQWIDGET(1))
-    {
+    if (ISNUMPAR(1) && ISQWIDGET(1)) {
 #endif
       RINT(obj->addWidget(PQWIDGET(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -156,8 +153,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_INSERTWIDGET)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQWIDGET(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQWIDGET(2)) {
 #endif
       RINT(obj->insertWidget(PINT(1), PQWIDGET(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -175,8 +171,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_SETSTACKINGMODE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setStackingMode((QStackedLayout::StackingMode)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -214,8 +209,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_WIDGET)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QWidget *ptr = obj->widget(PINT(1));
       Qt4xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -234,8 +228,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_SETCURRENTINDEX)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setCurrentIndex(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -255,8 +248,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_SETCURRENTWIDGET)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQWIDGET(1))
-    {
+    if (ISNUMPAR(1) && ISQWIDGET(1)) {
 #endif
       obj->setCurrentWidget(PQWIDGET(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -97,8 +97,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_DRAWCOMPLEXCONTROL)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && ISQPAINTER(3) && ISQWIDGET(4))
-    {
+    if (ISNUMPAR(4) && HB_ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && ISQPAINTER(3) && ISQWIDGET(4)) {
 #endif
       obj->drawComplexControl((QStyle::ComplexControl)hb_parni(1), PQSTYLEOPTIONCOMPLEX(2), PQPAINTER(3), PQWIDGET(4));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -119,8 +118,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_DRAWCONTROL)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && ISQWIDGET(4))
-    {
+    if (ISNUMPAR(4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && ISQWIDGET(4)) {
 #endif
       obj->drawControl((QStyle::ControlElement)hb_parni(1), PQSTYLEOPTION(2), PQPAINTER(3), PQWIDGET(4));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -140,8 +138,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_DRAWITEMPIXMAP)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && ISQPAINTER(1) && ISQRECT(2) && HB_ISNUM(3) && ISQPIXMAP(4))
-    {
+    if (ISNUMPAR(4) && ISQPAINTER(1) && ISQRECT(2) && HB_ISNUM(3) && ISQPIXMAP(4)) {
 #endif
       obj->drawItemPixmap(PQPAINTER(1), *PQRECT(2), PINT(3), *PQPIXMAP(4));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -163,8 +160,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_DRAWITEMTEXT)
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(6, 7) && ISQPAINTER(1) && ISQRECT(2) && HB_ISNUM(3) && ISQPALETTE(4) && HB_ISLOG(5) && HB_ISCHAR(6) &&
-        (HB_ISNUM(7) || HB_ISNIL(7)))
-    {
+        (HB_ISNUM(7) || HB_ISNIL(7))) {
 #endif
       obj->drawItemText(PQPAINTER(1), *PQRECT(2), PINT(3), *PQPALETTE(4), PBOOL(5), PQSTRING(6),
                         HB_ISNIL(7) ? (QPalette::ColorRole)QPalette::NoRole : (QPalette::ColorRole)hb_parni(7));
@@ -186,8 +182,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_DRAWPRIMITIVE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && (ISQWIDGET(4) || HB_ISNIL(4)))
-    {
+    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && (ISQWIDGET(4) || HB_ISNIL(4))) {
 #endif
       obj->drawPrimitive((QStyle::PrimitiveElement)hb_parni(1), PQSTYLEOPTION(2), PQPAINTER(3), OPQWIDGET(4, 0));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -207,8 +202,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_GENERATEDICONPIXMAP)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && HB_ISNUM(1) && ISQPIXMAP(2) && ISQSTYLEOPTION(3))
-    {
+    if (ISNUMPAR(3) && HB_ISNUM(1) && ISQPIXMAP(2) && ISQSTYLEOPTION(3)) {
 #endif
       QPixmap *ptr = new QPixmap(obj->generatedIconPixmap((QIcon::Mode)hb_parni(1), *PQPIXMAP(2), PQSTYLEOPTION(3)));
       Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
@@ -228,8 +222,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_HITTESTCOMPLEXCONTROL)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && ISQPOINT(3) && (ISQWIDGET(4) || HB_ISNIL(4)))
-    {
+    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && ISQPOINT(3) && (ISQWIDGET(4) || HB_ISNIL(4))) {
 #endif
       RENUM(obj->hitTestComplexControl((QStyle::ComplexControl)hb_parni(1), PQSTYLEOPTIONCOMPLEX(2), *PQPOINT(3),
                                        OPQWIDGET(4, 0)));
@@ -248,8 +241,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_ITEMPIXMAPRECT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(3) && ISQRECT(1) && HB_ISNUM(2) && ISQPIXMAP(3))
-    {
+    if (ISNUMPAR(3) && ISQRECT(1) && HB_ISNUM(2) && ISQPIXMAP(3)) {
 #endif
       QRect *ptr = new QRect(obj->itemPixmapRect(*PQRECT(1), PINT(2), *PQPIXMAP(3)));
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
@@ -268,8 +260,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_PIXELMETRIC)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (ISQSTYLEOPTION(2) || HB_ISNIL(2)) && (ISQWIDGET(3) || HB_ISNIL(3)))
-    {
+    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (ISQSTYLEOPTION(2) || HB_ISNIL(2)) && (ISQWIDGET(3) || HB_ISNIL(3))) {
 #endif
       RINT(obj->pixelMetric((QStyle::PixelMetric)hb_parni(1),
                             HB_ISNIL(2) ? 0 : static_cast<QStyleOption *>(Qt4xHb::itemGetPtr(2)), OPQWIDGET(3, 0)));
@@ -283,37 +274,31 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_PIXELMETRIC)
 
 HB_FUNC_STATIC(QCLEANLOOKSSTYLE_POLISH)
 {
-  if (ISNUMPAR(1) && ISQWIDGET(1))
-  {
+  if (ISNUMPAR(1) && ISQWIDGET(1)) {
     // virtual void polish(QWidget *widget)
     QCleanlooksStyle *obj = qobject_cast<QCleanlooksStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->polish(PQWIDGET(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISNUMPAR(1) && ISQAPPLICATION(1))
-  {
+  else if (ISNUMPAR(1) && ISQAPPLICATION(1)) {
     // virtual void polish(QApplication *app)
     QCleanlooksStyle *obj = qobject_cast<QCleanlooksStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->polish(PQAPPLICATION(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISNUMPAR(1) && ISQPALETTE(1))
-  {
+  else if (ISNUMPAR(1) && ISQPALETTE(1)) {
     // virtual void polish(QPalette &pal)
     QCleanlooksStyle *obj = qobject_cast<QCleanlooksStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->polish(*PQPALETTE(1));
     }
 
@@ -331,8 +316,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_SIZEFROMCONTENTS)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQSIZE(3) && ISQWIDGET(4))
-    {
+    if (ISNUMPAR(4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQSIZE(3) && ISQWIDGET(4)) {
 #endif
       QSize *ptr = new QSize(
           obj->sizeFromContents((QStyle::ContentsType)hb_parni(1), PQSTYLEOPTION(2), *PQSIZE(3), PQWIDGET(4)));
@@ -372,8 +356,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_STANDARDPIXMAP)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && (ISQWIDGET(3) || HB_ISNIL(3)))
-    {
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && (ISQWIDGET(3) || HB_ISNIL(3))) {
 #endif
       QPixmap *ptr =
           new QPixmap(obj->standardPixmap((QStyle::StandardPixmap)hb_parni(1), PQSTYLEOPTION(2), OPQWIDGET(3, 0)));
@@ -395,8 +378,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_STYLEHINT)
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 4) && HB_ISNUM(1) && (ISQSTYLEOPTION(2) || HB_ISNIL(2)) && (ISQWIDGET(3) || HB_ISNIL(3)) &&
-        (ISQSTYLEHINTRETURN(4) || HB_ISNIL(4)))
-    {
+        (ISQSTYLEHINTRETURN(4) || HB_ISNIL(4))) {
 #endif
       RINT(obj->styleHint((QStyle::StyleHint)hb_parni(1),
                           HB_ISNIL(2) ? 0 : static_cast<QStyleOption *>(Qt4xHb::itemGetPtr(2)), OPQWIDGET(3, 0),
@@ -417,8 +399,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_SUBCONTROLRECT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(4) && HB_ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && HB_ISNUM(3) && ISQWIDGET(4))
-    {
+    if (ISNUMPAR(4) && HB_ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && HB_ISNUM(3) && ISQWIDGET(4)) {
 #endif
       QRect *ptr = new QRect(obj->subControlRect((QStyle::ComplexControl)hb_parni(1), PQSTYLEOPTIONCOMPLEX(2),
                                                  (QStyle::SubControl)hb_parni(3), PQWIDGET(4)));
@@ -438,8 +419,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_SUBELEMENTRECT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && (ISQWIDGET(3) || HB_ISNIL(3)))
-    {
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && (ISQWIDGET(3) || HB_ISNIL(3))) {
 #endif
       QRect *ptr = new QRect(obj->subElementRect((QStyle::SubElement)hb_parni(1), PQSTYLEOPTION(2), OPQWIDGET(3, 0)));
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
@@ -453,25 +433,21 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_SUBELEMENTRECT)
 
 HB_FUNC_STATIC(QCLEANLOOKSSTYLE_UNPOLISH)
 {
-  if (ISNUMPAR(1) && ISQWIDGET(1))
-  {
+  if (ISNUMPAR(1) && ISQWIDGET(1)) {
     // virtual void unpolish(QWidget *widget)
     QCleanlooksStyle *obj = qobject_cast<QCleanlooksStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->unpolish(PQWIDGET(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISNUMPAR(1) && ISQAPPLICATION(1))
-  {
+  else if (ISNUMPAR(1) && ISQAPPLICATION(1)) {
     // virtual void unpolish(QApplication *app)
     QCleanlooksStyle *obj = qobject_cast<QCleanlooksStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->unpolish(PQAPPLICATION(1));
     }
 

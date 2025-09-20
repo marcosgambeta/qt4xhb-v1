@@ -76,8 +76,7 @@ HB_FUNC_STATIC(QDECORATIONDEFAULT_PAINT)
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 4) && ISQPAINTER(1) && ISQWIDGET(2) && (HB_ISNUM(3) || HB_ISNIL(3)) &&
-        (HB_ISNUM(4) || HB_ISNIL(4)))
-    {
+        (HB_ISNUM(4) || HB_ISNIL(4))) {
 #endif
       RBOOL(obj->paint(PQPAINTER(1), PQWIDGET(2), OPINT(3, QDecoration::All),
                        HB_ISNIL(4) ? (QDecoration::DecorationState)QDecoration::Normal
@@ -97,8 +96,7 @@ HB_FUNC_STATIC(QDECORATIONDEFAULT_REGION)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && ISQWIDGET(1) && ISQRECT(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
-    {
+    if (ISBETWEEN(2, 3) && ISQWIDGET(1) && ISQRECT(2) && (HB_ISNUM(3) || HB_ISNIL(3))) {
 #endif
       QRegion *ptr = new QRegion(obj->region(PQWIDGET(1), *PQRECT(2), OPINT(3, QDecoration::All)));
       Qt4xHb::createReturnClass(ptr, "QREGION", true);

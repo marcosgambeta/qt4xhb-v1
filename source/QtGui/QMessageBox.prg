@@ -86,15 +86,13 @@ RETURN
 
 HB_FUNC_STATIC(QMESSAGEBOX_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1))) {
     // QMessageBox(QWidget *parent = 0)
     QMessageBox *obj = new QMessageBox(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else if (ISBETWEEN(3, 6) && HB_ISNUM(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && (HB_ISNUM(4) || HB_ISNIL(4)) &&
-           (ISQWIDGET(5) || HB_ISNIL(5)) && (HB_ISNUM(6) || HB_ISNIL(6)))
-  {
+           (ISQWIDGET(5) || HB_ISNIL(5)) && (HB_ISNUM(6) || HB_ISNIL(6))) {
     // QMessageBox(QMessageBox::Icon icon, const QString &title, const QString &text, QMessageBox::StandardButtons
     // buttons = QMessageBox::NoButton, QWidget *parent = 0, Qt::WindowFlags f = Qt::Dialog |
     // Qt::MSWindowsFixedSizeDialogHint)
@@ -128,36 +126,30 @@ HB_FUNC_STATIC(QMESSAGEBOX_DELETE)
 
 HB_FUNC_STATIC(QMESSAGEBOX_ADDBUTTON)
 {
-  if (ISNUMPAR(2) && ISQABSTRACTBUTTON(1) && HB_ISNUM(2))
-  {
+  if (ISNUMPAR(2) && ISQABSTRACTBUTTON(1) && HB_ISNUM(2)) {
     // void addButton(QAbstractButton *button, QMessageBox::ButtonRole role)
     QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->addButton(PQABSTRACTBUTTON(1), (QMessageBox::ButtonRole)hb_parni(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
-  {
+  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     // QPushButton *addButton(const QString &text, QMessageBox::ButtonRole role)
     QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QPushButton *ptr = obj->addButton(PQSTRING(1), (QMessageBox::ButtonRole)hb_parni(2));
       Qt4xHb::createReturnQObjectClass(ptr, "QPUSHBUTTON");
     }
   }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QPushButton *addButton(QMessageBox::StandardButton button)
     QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QPushButton *ptr = obj->addButton((QMessageBox::StandardButton)hb_parni(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QPUSHBUTTON");
     }
@@ -173,8 +165,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_BUTTON)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QAbstractButton *ptr = obj->button((QMessageBox::StandardButton)hb_parni(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTBUTTON");
@@ -193,8 +184,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_BUTTONROLE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1)) {
 #endif
       RENUM(obj->buttonRole(PQABSTRACTBUTTON(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -380,8 +370,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_OPEN)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
-    {
+    if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2)) {
 #endif
       obj->open(PQOBJECT(1), PCONSTCHAR(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -401,8 +390,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_REMOVEBUTTON)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1)) {
 #endif
       obj->removeButton(PQABSTRACTBUTTON(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -417,25 +405,21 @@ HB_FUNC_STATIC(QMESSAGEBOX_REMOVEBUTTON)
 
 HB_FUNC_STATIC(QMESSAGEBOX_SETDEFAULTBUTTON)
 {
-  if (ISNUMPAR(1) && ISQPUSHBUTTON(1))
-  {
+  if (ISNUMPAR(1) && ISQPUSHBUTTON(1)) {
     // void setDefaultButton(QPushButton *button)
     QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setDefaultButton(PQPUSHBUTTON(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void setDefaultButton(QMessageBox::StandardButton button)
     QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setDefaultButton((QMessageBox::StandardButton)hb_parni(1));
     }
 
@@ -452,8 +436,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETDETAILEDTEXT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setDetailedText(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -468,25 +451,21 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETDETAILEDTEXT)
 
 HB_FUNC_STATIC(QMESSAGEBOX_SETESCAPEBUTTON)
 {
-  if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1))
-  {
+  if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1)) {
     // void setEscapeButton(QAbstractButton *button)
     QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setEscapeButton(PQABSTRACTBUTTON(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void setEscapeButton(QMessageBox::StandardButton button)
     QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       obj->setEscapeButton((QMessageBox::StandardButton)hb_parni(1));
     }
 
@@ -503,8 +482,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETICON)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setIcon((QMessageBox::Icon)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -524,8 +502,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETICONPIXMAP)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQPIXMAP(1))
-    {
+    if (ISNUMPAR(1) && ISQPIXMAP(1)) {
 #endif
       obj->setIconPixmap(*PQPIXMAP(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -545,8 +522,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETINFORMATIVETEXT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setInformativeText(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -566,8 +542,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETSTANDARDBUTTONS)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setStandardButtons((QMessageBox::StandardButtons)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -587,8 +562,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETTEXT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setText(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -608,8 +582,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETTEXTFORMAT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setTextFormat((Qt::TextFormat)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -629,8 +602,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETWINDOWMODALITY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setWindowModality((Qt::WindowModality)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -650,8 +622,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETWINDOWTITLE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->setWindowTitle(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -671,8 +642,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_STANDARDBUTTON)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1))
-    {
+    if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1)) {
 #endif
       RENUM(obj->standardButton(PQABSTRACTBUTTON(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -744,8 +714,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETVISIBLE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setVisible(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -780,8 +749,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_EXEC)
 HB_FUNC_STATIC(QMESSAGEBOX_ABOUT)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(3) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3))
-  {
+  if (ISNUMPAR(3) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3)) {
 #endif
     QMessageBox::about(PQWIDGET(1), PQSTRING(2), PQSTRING(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -797,8 +765,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ABOUT)
 HB_FUNC_STATIC(QMESSAGEBOX_ABOUTQT)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 2) && ISQWIDGET(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
-  {
+  if (ISBETWEEN(1, 2) && ISQWIDGET(1) && (HB_ISCHAR(2) || HB_ISNIL(2))) {
 #endif
     QMessageBox::aboutQt(PQWIDGET(1), OPQSTRING(2, QString()));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -817,8 +784,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_CRITICAL)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(3, 5) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && (HB_ISNUM(4) || HB_ISNIL(4)) &&
-      (HB_ISNUM(5) || HB_ISNIL(5)))
-  {
+      (HB_ISNUM(5) || HB_ISNIL(5))) {
 #endif
     RENUM(QMessageBox::critical(
         PQWIDGET(1), PQSTRING(2), PQSTRING(3),
@@ -838,8 +804,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_INFORMATION)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(3, 5) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && (HB_ISNUM(4) || HB_ISNIL(4)) &&
-      (HB_ISNUM(5) || HB_ISNIL(5)))
-  {
+      (HB_ISNUM(5) || HB_ISNIL(5))) {
 #endif
     RENUM(QMessageBox::information(
         PQWIDGET(1), PQSTRING(2), PQSTRING(3),
@@ -859,8 +824,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_QUESTION)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(3, 5) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && (HB_ISNUM(4) || HB_ISNIL(4)) &&
-      (HB_ISNUM(5) || HB_ISNIL(5)))
-  {
+      (HB_ISNUM(5) || HB_ISNIL(5))) {
 #endif
     RENUM(QMessageBox::question(
         PQWIDGET(1), PQSTRING(2), PQSTRING(3),
@@ -880,8 +844,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_WARNING)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(3, 5) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && (HB_ISNUM(4) || HB_ISNIL(4)) &&
-      (HB_ISNUM(5) || HB_ISNIL(5)))
-  {
+      (HB_ISNUM(5) || HB_ISNIL(5))) {
 #endif
     RENUM(QMessageBox::warning(
         PQWIDGET(1), PQSTRING(2), PQSTRING(3),

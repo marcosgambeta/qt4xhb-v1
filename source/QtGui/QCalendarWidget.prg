@@ -93,8 +93,7 @@ RETURN
     // QCalendarWidget(QWidget *parent = 0)
 HB_FUNC_STATIC(QCALENDARWIDGET_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1))) {
     QCalendarWidget *obj = new QCalendarWidget(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   } else {
@@ -144,8 +143,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_DATETEXTFORMAT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQDATE(1))
-    {
+    if (ISNUMPAR(1) && ISQDATE(1)) {
 #endif
       QTextCharFormat *ptr = new QTextCharFormat(obj->dateTextFormat(*PQDATE(1)));
       Qt4xHb::createReturnClass(ptr, "QTEXTCHARFORMAT", true);
@@ -366,8 +364,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_SETDATEEDITACCEPTDELAY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setDateEditAcceptDelay(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -387,8 +384,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_SETDATEEDITENABLED)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setDateEditEnabled(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -408,8 +404,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_SETDATETEXTFORMAT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQDATE(1) && ISQTEXTCHARFORMAT(2))
-    {
+    if (ISNUMPAR(2) && ISQDATE(1) && ISQTEXTCHARFORMAT(2)) {
 #endif
       obj->setDateTextFormat(*PQDATE(1), *PQTEXTCHARFORMAT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -429,8 +424,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_SETFIRSTDAYOFWEEK)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setFirstDayOfWeek((Qt::DayOfWeek)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -450,8 +444,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_SETHEADERTEXTFORMAT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQTEXTCHARFORMAT(1))
-    {
+    if (ISNUMPAR(1) && ISQTEXTCHARFORMAT(1)) {
 #endif
       obj->setHeaderTextFormat(*PQTEXTCHARFORMAT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -471,8 +464,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_SETHORIZONTALHEADERFORMAT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setHorizontalHeaderFormat((QCalendarWidget::HorizontalHeaderFormat)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -492,8 +484,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_SETMAXIMUMDATE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQDATE(1))
-    {
+    if (ISNUMPAR(1) && ISQDATE(1)) {
 #endif
       obj->setMaximumDate(*PQDATE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -513,8 +504,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_SETMINIMUMDATE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQDATE(1))
-    {
+    if (ISNUMPAR(1) && ISQDATE(1)) {
 #endif
       obj->setMinimumDate(*PQDATE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -534,8 +524,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_SETSELECTIONMODE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setSelectionMode((QCalendarWidget::SelectionMode)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -555,8 +544,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_SETVERTICALHEADERFORMAT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setVerticalHeaderFormat((QCalendarWidget::VerticalHeaderFormat)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -576,8 +564,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_SETWEEKDAYTEXTFORMAT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQTEXTCHARFORMAT(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQTEXTCHARFORMAT(2)) {
 #endif
       obj->setWeekdayTextFormat((Qt::DayOfWeek)hb_parni(1), *PQTEXTCHARFORMAT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -615,8 +602,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_WEEKDAYTEXTFORMAT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QTextCharFormat *ptr = new QTextCharFormat(obj->weekdayTextFormat((Qt::DayOfWeek)hb_parni(1)));
       Qt4xHb::createReturnClass(ptr, "QTEXTCHARFORMAT", true);
@@ -691,8 +677,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_SETCURRENTPAGE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       obj->setCurrentPage(PINT(1), PINT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -712,8 +697,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_SETDATERANGE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && ISQDATE(1) && ISQDATE(2))
-    {
+    if (ISNUMPAR(2) && ISQDATE(1) && ISQDATE(2)) {
 #endif
       obj->setDateRange(*PQDATE(1), *PQDATE(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -733,8 +717,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_SETGRIDVISIBLE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setGridVisible(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -754,8 +737,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_SETNAVIGATIONBARVISIBLE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setNavigationBarVisible(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -775,8 +757,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_SETSELECTEDDATE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQDATE(1))
-    {
+    if (ISNUMPAR(1) && ISQDATE(1)) {
 #endif
       obj->setSelectedDate(*PQDATE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

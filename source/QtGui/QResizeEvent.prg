@@ -44,8 +44,7 @@ RETURN
     // QResizeEvent(const QSize &size, const QSize &oldSize)
 HB_FUNC_STATIC(QRESIZEEVENT_NEW)
 {
-  if (ISNUMPAR(2) && ISQSIZE(1) && ISQSIZE(2))
-  {
+  if (ISNUMPAR(2) && ISQSIZE(1) && ISQSIZE(2)) {
     QResizeEvent *obj = new QResizeEvent(*PQSIZE(1), *PQSIZE(2));
     Qt4xHb::returnNewObject(obj, false);
   } else {

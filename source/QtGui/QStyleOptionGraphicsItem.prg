@@ -53,8 +53,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_NEW)
     QStyleOptionGraphicsItem *obj = new QStyleOptionGraphicsItem();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(1) && ISQSTYLEOPTIONGRAPHICSITEM(1))
-  {
+  else if (ISNUMPAR(1) && ISQSTYLEOPTIONGRAPHICSITEM(1)) {
     // QStyleOptionGraphicsItem(const QStyleOptionGraphicsItem &other)
     QStyleOptionGraphicsItem *obj = new QStyleOptionGraphicsItem(*PQSTYLEOPTIONGRAPHICSITEM(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -67,8 +66,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_NEW)
 HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_LEVELOFDETAILFROMTRANSFORM)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && ISQTRANSFORM(1))
-  {
+  if (ISNUMPAR(1) && ISQTRANSFORM(1)) {
 #endif
     RQREAL(QStyleOptionGraphicsItem::levelOfDetailFromTransform(*PQTRANSFORM(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -97,8 +95,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_SETEXPOSEDRECT)
   QStyleOptionGraphicsItem *obj = static_cast<QStyleOptionGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && ISQRECTF(1))
-    {
+    if (ISNUMPAR(1) && ISQRECTF(1)) {
       obj->exposedRect = *PQRECTF(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -127,8 +124,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_SETMATRIX)
   QStyleOptionGraphicsItem *obj = static_cast<QStyleOptionGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && ISQMATRIX(1))
-    {
+    if (ISNUMPAR(1) && ISQMATRIX(1)) {
       obj->matrix = *PQMATRIX(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -156,8 +152,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_SETLEVELOFDETAIL)
   QStyleOptionGraphicsItem *obj = static_cast<QStyleOptionGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->levelOfDetail = PQREAL(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -67,14 +67,12 @@ RETURN
 
 HB_FUNC_STATIC(QLCDNUMBER_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1))) {
     // QLCDNumber(QWidget *parent = 0)
     QLCDNumber *obj = new QLCDNumber(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
-  {
+  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQWIDGET(2) || HB_ISNIL(2))) {
     // QLCDNumber(uint numDigits, QWidget *parent = 0)
     QLCDNumber *obj = new QLCDNumber(PUINT(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -107,8 +105,7 @@ HB_FUNC_STATIC(QLCDNUMBER_CHECKOVERFLOW1)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->checkOverflow(PDOUBLE(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -126,8 +123,7 @@ HB_FUNC_STATIC(QLCDNUMBER_CHECKOVERFLOW2)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       RBOOL(obj->checkOverflow(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -140,8 +136,7 @@ HB_FUNC_STATIC(QLCDNUMBER_CHECKOVERFLOW2)
 
 HB_FUNC_STATIC(QLCDNUMBER_CHECKOVERFLOW)
 {
-  if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  if (ISNUMPAR(1) && HB_ISNUM(1)) {
     HB_FUNC_EXEC(QLCDNUMBER_CHECKOVERFLOW1);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -227,8 +222,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETDIGITCOUNT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setDigitCount(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -248,8 +242,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETMODE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setMode((QLCDNumber::Mode)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -269,8 +262,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETSEGMENTSTYLE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setSegmentStyle((QLCDNumber::SegmentStyle)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -345,8 +337,7 @@ HB_FUNC_STATIC(QLCDNUMBER_DISPLAY1)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       obj->display(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -366,8 +357,7 @@ HB_FUNC_STATIC(QLCDNUMBER_DISPLAY2)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->display(PDOUBLE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -387,8 +377,7 @@ HB_FUNC_STATIC(QLCDNUMBER_DISPLAY3)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->display(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -403,12 +392,10 @@ HB_FUNC_STATIC(QLCDNUMBER_DISPLAY3)
 
 HB_FUNC_STATIC(QLCDNUMBER_DISPLAY)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     HB_FUNC_EXEC(QLCDNUMBER_DISPLAY1);
   }
-  else if (ISNUMPAR(1) && HB_ISNUM(1))
-  {
+  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     HB_FUNC_EXEC(QLCDNUMBER_DISPLAY2);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -502,8 +489,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETSMALLDECIMALPOINT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISLOG(1))
-    {
+    if (ISNUMPAR(1) && HB_ISLOG(1)) {
 #endif
       obj->setSmallDecimalPoint(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

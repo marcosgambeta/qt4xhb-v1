@@ -54,8 +54,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_NEW)
     QStyleOptionButton *obj = new QStyleOptionButton();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(1) && ISQSTYLEOPTIONBUTTON(1))
-  {
+  else if (ISNUMPAR(1) && ISQSTYLEOPTIONBUTTON(1)) {
     // QStyleOptionButton(const QStyleOptionButton &other)
     QStyleOptionButton *obj = new QStyleOptionButton(*PQSTYLEOPTIONBUTTON(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -82,8 +81,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_SETFEATURES)
   QStyleOptionButton *obj = static_cast<QStyleOptionButton *>(Qt4xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->features = (QStyleOptionButton::ButtonFeatures)hb_parni(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -111,8 +109,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_SETTEXT)
   QStyleOptionButton *obj = static_cast<QStyleOptionButton *>(Qt4xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
       obj->text = PQSTRING(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -141,8 +138,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_SETICON)
   QStyleOptionButton *obj = static_cast<QStyleOptionButton *>(Qt4xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && ISQICON(1))
-    {
+    if (ISNUMPAR(1) && ISQICON(1)) {
       obj->icon = *PQICON(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -171,8 +167,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONBUTTON_SETICONSIZE)
   QStyleOptionButton *obj = static_cast<QStyleOptionButton *>(Qt4xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && ISQSIZE(1))
-    {
+    if (ISNUMPAR(1) && ISQSIZE(1)) {
       obj->iconSize = *PQSIZE(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

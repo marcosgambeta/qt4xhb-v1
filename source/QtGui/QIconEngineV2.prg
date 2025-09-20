@@ -67,8 +67,7 @@ HB_FUNC_STATIC(QICONENGINEV2_AVAILABLESIZES)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
-    {
+    if (ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2))) {
 #endif
       QList<QSize> list = obj->availableSizes(HB_ISNIL(1) ? (QIcon::Mode)QIcon::Normal : (QIcon::Mode)hb_parni(1),
                                               HB_ISNIL(2) ? (QIcon::State)QIcon::Off : (QIcon::State)hb_parni(2));
@@ -165,8 +164,7 @@ HB_FUNC_STATIC(QICONENGINEV2_READ)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQDATASTREAM(1))
-    {
+    if (ISNUMPAR(1) && ISQDATASTREAM(1)) {
 #endif
       RBOOL(obj->read(*PQDATASTREAM(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -184,8 +182,7 @@ HB_FUNC_STATIC(QICONENGINEV2_VIRTUAL_HOOK)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISPOINTER(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISPOINTER(2)) {
 #endif
       obj->virtual_hook(PINT(1), static_cast<void *>(hb_parptr(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -205,8 +202,7 @@ HB_FUNC_STATIC(QICONENGINEV2_WRITE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQDATASTREAM(1))
-    {
+    if (ISNUMPAR(1) && ISQDATASTREAM(1)) {
 #endif
       RBOOL(obj->write(*PQDATASTREAM(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

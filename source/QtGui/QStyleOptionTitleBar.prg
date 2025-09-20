@@ -53,8 +53,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_NEW)
     QStyleOptionTitleBar *obj = new QStyleOptionTitleBar();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(1) && ISQSTYLEOPTIONTITLEBAR(1))
-  {
+  else if (ISNUMPAR(1) && ISQSTYLEOPTIONTITLEBAR(1)) {
     // QStyleOptionTitleBar(const QStyleOptionTitleBar &other)
     QStyleOptionTitleBar *obj = new QStyleOptionTitleBar(*PQSTYLEOPTIONTITLEBAR(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -81,8 +80,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_SETTEXT)
   QStyleOptionTitleBar *obj = static_cast<QStyleOptionTitleBar *>(Qt4xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
       obj->text = PQSTRING(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -111,8 +109,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_SETICON)
   QStyleOptionTitleBar *obj = static_cast<QStyleOptionTitleBar *>(Qt4xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && ISQICON(1))
-    {
+    if (ISNUMPAR(1) && ISQICON(1)) {
       obj->icon = *PQICON(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -140,8 +137,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_SETTITLEBARSTATE)
   QStyleOptionTitleBar *obj = static_cast<QStyleOptionTitleBar *>(Qt4xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->titleBarState = PINT(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -169,8 +165,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_SETTITLEBARFLAGS)
   QStyleOptionTitleBar *obj = static_cast<QStyleOptionTitleBar *>(Qt4xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->titleBarFlags = (Qt::WindowFlags)hb_parni(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

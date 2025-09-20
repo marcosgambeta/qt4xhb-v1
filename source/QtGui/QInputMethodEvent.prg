@@ -48,8 +48,7 @@ HB_FUNC_STATIC(QINPUTMETHODEVENT_NEW)
     QInputMethodEvent *obj = new QInputMethodEvent();
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISNUMPAR(1) && ISQINPUTMETHODEVENT(1))
-  {
+  else if (ISNUMPAR(1) && ISQINPUTMETHODEVENT(1)) {
     // QInputMethodEvent(const QInputMethodEvent &other)
     QInputMethodEvent *obj = new QInputMethodEvent(*PQINPUTMETHODEVENT(1));
     Qt4xHb::returnNewObject(obj, false);
@@ -116,8 +115,7 @@ HB_FUNC_STATIC(QINPUTMETHODEVENT_SETCOMMITSTRING)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)))
-    {
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3))) {
 #endif
       obj->setCommitString(PQSTRING(1), OPINT(2, 0), OPINT(3, 0));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

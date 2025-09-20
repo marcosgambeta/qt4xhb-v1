@@ -65,8 +65,7 @@ HB_FUNC_STATIC(QTABLETEVENT_NEW)
 {
   if (ISNUMPAR(14) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) && ISQPOINTF(4) && HB_ISNUM(5) && HB_ISNUM(6) &&
       HB_ISNUM(7) && HB_ISNUM(8) && HB_ISNUM(9) && HB_ISNUM(10) && HB_ISNUM(11) && HB_ISNUM(12) && HB_ISNUM(13) &&
-      HB_ISNUM(14))
-  {
+      HB_ISNUM(14)) {
     QTabletEvent *obj = new QTabletEvent((QEvent::Type)hb_parni(1), *PQPOINT(2), *PQPOINT(3), *PQPOINTF(4), PINT(5),
                                          PINT(6), PQREAL(7), PINT(8), PINT(9), PQREAL(10), PQREAL(11), PINT(12),
                                          (Qt::KeyboardModifiers)hb_parni(13), PQINT64(14));

@@ -81,44 +81,37 @@ HB_FUNC_STATIC(QVECTOR4D_NEW)
     QVector4D *obj = new QVector4D();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
-  {
+  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // QVector4D(qreal xpos, qreal ypos, qreal zpos, qreal wpos)
     QVector4D *obj = new QVector4D(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(1) && ISQPOINT(1))
-  {
+  else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // QVector4D(const QPoint &point)
     QVector4D *obj = new QVector4D(*PQPOINT(1));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(1) && ISQPOINTF(1))
-  {
+  else if (ISNUMPAR(1) && ISQPOINTF(1)) {
     // QVector4D(const QPointF &point)
     QVector4D *obj = new QVector4D(*PQPOINTF(1));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(1) && ISQVECTOR2D(1))
-  {
+  else if (ISNUMPAR(1) && ISQVECTOR2D(1)) {
     // QVector4D(const QVector2D &vector)
     QVector4D *obj = new QVector4D(*PQVECTOR2D(1));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(3) && ISQVECTOR2D(1) && HB_ISNUM(2) && HB_ISNUM(3))
-  {
+  else if (ISNUMPAR(3) && ISQVECTOR2D(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
     // QVector4D(const QVector2D &vector, qreal zpos, qreal wpos)
     QVector4D *obj = new QVector4D(*PQVECTOR2D(1), PQREAL(2), PQREAL(3));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(1) && ISQVECTOR3D(1))
-  {
+  else if (ISNUMPAR(1) && ISQVECTOR3D(1)) {
     // QVector4D(const QVector3D &vector)
     QVector4D *obj = new QVector4D(*PQVECTOR3D(1));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(2) && ISQVECTOR3D(1) && HB_ISNUM(2))
-  {
+  else if (ISNUMPAR(2) && ISQVECTOR3D(1) && HB_ISNUM(2)) {
     // QVector4D(const QVector3D &vector, qreal wpos)
     QVector4D *obj = new QVector4D(*PQVECTOR3D(1), PQREAL(2));
     Qt4xHb::returnNewObject(obj, true);
@@ -242,8 +235,7 @@ HB_FUNC_STATIC(QVECTOR4D_SETW)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setW(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -263,8 +255,7 @@ HB_FUNC_STATIC(QVECTOR4D_SETX)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setX(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -284,8 +275,7 @@ HB_FUNC_STATIC(QVECTOR4D_SETY)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setY(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -305,8 +295,7 @@ HB_FUNC_STATIC(QVECTOR4D_SETZ)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setZ(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -509,8 +498,7 @@ HB_FUNC_STATIC(QVECTOR4D_Z)
 HB_FUNC_STATIC(QVECTOR4D_DOTPRODUCT)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(2) && ISQVECTOR4D(1) && ISQVECTOR4D(2))
-  {
+  if (ISNUMPAR(2) && ISQVECTOR4D(1) && ISQVECTOR4D(2)) {
 #endif
     RQREAL(QVector4D::dotProduct(*PQVECTOR4D(1), *PQVECTOR4D(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -524,8 +512,7 @@ HB_FUNC_STATIC(QVECTOR4D_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -533,8 +520,7 @@ HB_FUNC_STATIC(QVECTOR4D_NEWFROM)
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -567,8 +553,7 @@ HB_FUNC_STATIC(QVECTOR4D_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

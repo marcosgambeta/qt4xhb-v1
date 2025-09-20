@@ -49,14 +49,12 @@ RETURN
 
 HB_FUNC_STATIC(QINTVALIDATOR_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1))) {
     // QIntValidator(QObject *parent = 0)
     QIntValidator *obj = new QIntValidator(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQOBJECT(3))
-  {
+  else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQOBJECT(3)) {
     // QIntValidator(int minimum, int maximum, QObject *parent)
     QIntValidator *obj = new QIntValidator(PINT(1), PINT(2), PQOBJECT(3));
     Qt4xHb::returnNewObject(obj, false);
@@ -107,8 +105,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_SETBOTTOM)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setBottom(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -128,8 +125,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_SETRANGE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       obj->setRange(PINT(1), PINT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -149,8 +145,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_SETTOP)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setTop(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -188,8 +183,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_FIXUP)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       QString par1 = hb_parc(1);
       obj->fixup(par1);
@@ -211,8 +205,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_VALIDATE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
 #endif
       QString par1 = hb_parc(1);
       int par2;

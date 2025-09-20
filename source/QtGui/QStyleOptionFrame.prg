@@ -48,8 +48,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFRAME_NEW)
     QStyleOptionFrame *obj = new QStyleOptionFrame();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISNUMPAR(1) && ISQSTYLEOPTIONFRAME(1))
-  {
+  else if (ISNUMPAR(1) && ISQSTYLEOPTIONFRAME(1)) {
     // QStyleOptionFrame(const QStyleOptionFrame &other)
     QStyleOptionFrame *obj = new QStyleOptionFrame(*PQSTYLEOPTIONFRAME(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -76,8 +75,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFRAME_SETLINEWIDTH)
   QStyleOptionFrame *obj = static_cast<QStyleOptionFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->lineWidth = PINT(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -105,8 +103,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFRAME_SETMIDLINEWIDTH)
   QStyleOptionFrame *obj = static_cast<QStyleOptionFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
 
   if (obj != NULL) {
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
       obj->midLineWidth = PINT(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

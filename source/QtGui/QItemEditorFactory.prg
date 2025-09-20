@@ -87,8 +87,7 @@ HB_FUNC_STATIC(QITEMEDITORFACTORY_CREATEEDITOR)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQWIDGET(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQWIDGET(2)) {
 #endif
       QWidget *ptr = obj->createEditor((QVariant::Type)hb_parni(1), PQWIDGET(2));
       Qt4xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -107,8 +106,7 @@ HB_FUNC_STATIC(QITEMEDITORFACTORY_REGISTEREDITOR)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQITEMEDITORCREATORBASE(2))
-    {
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQITEMEDITORCREATORBASE(2)) {
 #endif
       obj->registerEditor((QVariant::Type)hb_parni(1), PQITEMEDITORCREATORBASE(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -128,8 +126,7 @@ HB_FUNC_STATIC(QITEMEDITORFACTORY_VALUEPROPERTYNAME)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->valuePropertyName((QVariant::Type)hb_parni(1)));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -160,8 +157,7 @@ HB_FUNC_STATIC(QITEMEDITORFACTORY_DEFAULTFACTORY)
 HB_FUNC_STATIC(QITEMEDITORFACTORY_SETDEFAULTFACTORY)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(1) && ISQITEMEDITORFACTORY(1))
-  {
+  if (ISNUMPAR(1) && ISQITEMEDITORFACTORY(1)) {
 #endif
     QItemEditorFactory::setDefaultFactory(PQITEMEDITORFACTORY(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -177,8 +173,7 @@ HB_FUNC_STATIC(QITEMEDITORFACTORY_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISOBJECT(1))
-  {
+  if (hb_pcount() == 1 && HB_ISOBJECT(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -186,8 +181,7 @@ HB_FUNC_STATIC(QITEMEDITORFACTORY_NEWFROM)
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
@@ -220,8 +214,7 @@ HB_FUNC_STATIC(QITEMEDITORFACTORY_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if (hb_pcount() == 1 && HB_ISLOG(1))
-  {
+  if (hb_pcount() == 1 && HB_ISLOG(1)) {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);

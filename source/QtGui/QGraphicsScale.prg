@@ -59,8 +59,7 @@ RETURN
     // QGraphicsScale(QObject *parent = 0)
 HB_FUNC_STATIC(QGRAPHICSSCALE_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1))) {
     QGraphicsScale *obj = new QGraphicsScale(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   } else {
@@ -111,8 +110,7 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_SETORIGIN)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQVECTOR3D(1))
-    {
+    if (ISNUMPAR(1) && ISQVECTOR3D(1)) {
 #endif
       obj->setOrigin(*PQVECTOR3D(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -132,8 +130,7 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_SETXSCALE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setXScale(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -153,8 +150,7 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_SETYSCALE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setYScale(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -174,8 +170,7 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_SETZSCALE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISNUM(1))
-    {
+    if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
       obj->setZScale(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -249,8 +244,7 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_APPLYTO)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && ISQMATRIX4X4(1))
-    {
+    if (ISNUMPAR(1) && ISQMATRIX4X4(1)) {
 #endif
       obj->applyTo(PQMATRIX4X4(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -42,8 +42,7 @@ RETURN
     // QStatusTipEvent(const QString &tip)
 HB_FUNC_STATIC(QSTATUSTIPEVENT_NEW)
 {
-  if (ISNUMPAR(1) && HB_ISCHAR(1))
-  {
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     QStatusTipEvent *obj = new QStatusTipEvent(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, false);
   } else {
