@@ -53,7 +53,7 @@ RETURN
     // QMutex(QMutex::RecursionMode mode = QMutex::NonRecursive)
 HB_FUNC_STATIC(QMUTEX_NEW)
 {
-  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
     QMutex *obj =
         new QMutex(HB_ISNIL(1) ? (QMutex::RecursionMode)QMutex::NonRecursive : (QMutex::RecursionMode)hb_parni(1));
     Qt4xHb::returnNewObject(obj, true);

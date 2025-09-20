@@ -113,8 +113,8 @@ HB_FUNC_STATIC(QDIR_NEW)
     QDir *obj = new QDir(OPQSTRING(1, QString()));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISCHAR(2) && (HB_ISNUM(3) || HB_ISNIL(3)) &&
-           (HB_ISNUM(4) || HB_ISNIL(4))) {
+  else if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISNUMORNIL(3) &&
+           ISNUMORNIL(4)) {
     // QDir(const QString &path, const QString &nameFilter, QDir::SortFlags sort = QDir::SortFlags(QDir::Name |
     // QDir::IgnoreCase), QDir::Filters filters = QDir::AllEntries)
     QDir *obj = new QDir(PQSTRING(1), PQSTRING(2),
@@ -270,7 +270,7 @@ HB_FUNC_STATIC(QDIR_DIRNAME)
 
 HB_FUNC_STATIC(QDIR_ENTRYINFOLIST)
 {
-  if (ISBETWEEN(1, 3) && HB_ISARRAY(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3))) {
+  if (ISBETWEEN(1, 3) && HB_ISARRAY(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     // QFileInfoList entryInfoList(const QStringList &nameFilters, QDir::Filters filters = QDir::NoFilter,
     // QDir::SortFlags sort = QDir::NoSort) const
     QDir *obj = static_cast<QDir *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -304,7 +304,7 @@ HB_FUNC_STATIC(QDIR_ENTRYINFOLIST)
       hb_itemReturnRelease(pArray);
     }
   }
-  else if (ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+  else if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISNUMORNIL(2)) {
     // QFileInfoList entryInfoList(QDir::Filters filters = QDir::NoFilter, QDir::SortFlags sort = QDir::NoSort) const
     QDir *obj = static_cast<QDir *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -343,7 +343,7 @@ HB_FUNC_STATIC(QDIR_ENTRYINFOLIST)
 
 HB_FUNC_STATIC(QDIR_ENTRYLIST)
 {
-  if (ISBETWEEN(1, 3) && HB_ISARRAY(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3))) {
+  if (ISBETWEEN(1, 3) && HB_ISARRAY(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     // QStringList entryList(const QStringList &nameFilters, QDir::Filters filters = QDir::NoFilter, QDir::SortFlags
     // sort = QDir::NoSort) const
     QDir *obj = static_cast<QDir *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -354,7 +354,7 @@ HB_FUNC_STATIC(QDIR_ENTRYLIST)
                                   HB_ISNIL(3) ? (QDir::SortFlags)QDir::NoSort : (QDir::SortFlags)hb_parni(3)));
     }
   }
-  else if (ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+  else if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISNUMORNIL(2)) {
     // QStringList entryList(QDir::Filters filters = QDir::NoFilter, QDir::SortFlags sort = QDir::NoSort) const
     QDir *obj = static_cast<QDir *>(Qt4xHb::itemGetPtrStackSelfItem());
 

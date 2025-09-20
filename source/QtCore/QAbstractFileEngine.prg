@@ -230,7 +230,7 @@ HB_FUNC_STATIC(QABSTRACTFILEENGINE_FILEFLAGS)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RENUM(obj->fileFlags(HB_ISNIL(1) ? (QAbstractFileEngine::FileFlags)QAbstractFileEngine::FileInfoAll
                                        : (QAbstractFileEngine::FileFlags)hb_parni(1)));
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QABSTRACTFILEENGINE_FILENAME)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RQSTRING(obj->fileName(HB_ISNIL(1) ? (QAbstractFileEngine::FileName)QAbstractFileEngine::DefaultName
                                          : (QAbstractFileEngine::FileName)hb_parni(1)));

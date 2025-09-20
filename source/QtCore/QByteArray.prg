@@ -515,7 +515,7 @@ HB_FUNC_STATIC(QBYTEARRAY_FILL)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       QByteArray *ptr = &obj->fill(PCHAR(1), OPINT(2, -1));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
@@ -534,7 +534,7 @@ HB_FUNC_STATIC(QBYTEARRAY_INDEXOF1)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISNUMORNIL(2)) {
 #endif
       RINT(obj->indexOf(*PQBYTEARRAY(1), OPINT(2, 0)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -552,7 +552,7 @@ HB_FUNC_STATIC(QBYTEARRAY_INDEXOF2)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
 #endif
       RINT(obj->indexOf(PQSTRING(1), OPINT(2, 0)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -570,7 +570,7 @@ HB_FUNC_STATIC(QBYTEARRAY_INDEXOF3)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
 #endif
       RINT(obj->indexOf(PCONSTCHAR(1), OPINT(2, 0)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -588,7 +588,7 @@ HB_FUNC_STATIC(QBYTEARRAY_INDEXOF4)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       RINT(obj->indexOf(PCHAR(1), OPINT(2, 0)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -601,16 +601,16 @@ HB_FUNC_STATIC(QBYTEARRAY_INDEXOF4)
 
 HB_FUNC_STATIC(QBYTEARRAY_INDEXOF)
 {
-  if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+  if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISNUMORNIL(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_INDEXOF1);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_INDEXOF2);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_INDEXOF3);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_INDEXOF4);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -773,7 +773,7 @@ HB_FUNC_STATIC(QBYTEARRAY_LASTINDEXOF1)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISNUMORNIL(2)) {
 #endif
       RINT(obj->lastIndexOf(*PQBYTEARRAY(1), OPINT(2, -1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -791,7 +791,7 @@ HB_FUNC_STATIC(QBYTEARRAY_LASTINDEXOF2)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
 #endif
       RINT(obj->lastIndexOf(PQSTRING(1), OPINT(2, -1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -809,7 +809,7 @@ HB_FUNC_STATIC(QBYTEARRAY_LASTINDEXOF3)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
 #endif
       RINT(obj->lastIndexOf(PCONSTCHAR(1), OPINT(2, -1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -827,7 +827,7 @@ HB_FUNC_STATIC(QBYTEARRAY_LASTINDEXOF4)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       RINT(obj->lastIndexOf(PCHAR(1), OPINT(2, -1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -840,16 +840,16 @@ HB_FUNC_STATIC(QBYTEARRAY_LASTINDEXOF4)
 
 HB_FUNC_STATIC(QBYTEARRAY_LASTINDEXOF)
 {
-  if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+  if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISNUMORNIL(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_LASTINDEXOF1);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_LASTINDEXOF2);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_LASTINDEXOF3);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_LASTINDEXOF4);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -882,7 +882,7 @@ HB_FUNC_STATIC(QBYTEARRAY_LEFTJUSTIFIED)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISLOG(3) || HB_ISNIL(3))) {
+    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && (HB_ISLOG(3) || HB_ISNIL(3))) {
 #endif
       QByteArray *ptr = new QByteArray(obj->leftJustified(PINT(1), OPCHAR(2, ' '), OPBOOL(3, false)));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -919,7 +919,7 @@ HB_FUNC_STATIC(QBYTEARRAY_MID)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->mid(PINT(1), OPINT(2, -1)));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -1515,7 +1515,7 @@ HB_FUNC_STATIC(QBYTEARRAY_RIGHTJUSTIFIED)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISLOG(3) || HB_ISNIL(3))) {
+    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && (HB_ISLOG(3) || HB_ISNIL(3))) {
 #endif
       QByteArray *ptr = new QByteArray(obj->rightJustified(PINT(1), OPCHAR(2, ' '), OPBOOL(3, false)));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -1534,7 +1534,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM1)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       QByteArray *ptr = &obj->setNum(PINT(1), OPINT(2, 10));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
@@ -1553,7 +1553,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM2)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       QByteArray *ptr = &obj->setNum(PUINT(1), OPINT(2, 10));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
@@ -1572,7 +1572,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM3)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       QByteArray *ptr = &obj->setNum(PSHORT(1), OPINT(2, 10));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
@@ -1591,7 +1591,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM4)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       QByteArray *ptr = &obj->setNum(PUSHORT(1), OPINT(2, 10));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
@@ -1610,7 +1610,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM5)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       QByteArray *ptr = &obj->setNum(PQLONGLONG(1), OPINT(2, 10));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
@@ -1629,7 +1629,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM6)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       QByteArray *ptr = &obj->setNum(PQULONGLONG(1), OPINT(2, 10));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
@@ -1648,7 +1648,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM7)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3))) {
+    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
       QByteArray *ptr = &obj->setNum(PDOUBLE(1), OPCHAR(2, 'g'), OPINT(3, 6));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
@@ -1667,7 +1667,7 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM8)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3))) {
+    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
       QByteArray *ptr = &obj->setNum(PFLOAT(1), OPCHAR(2, 'g'), OPINT(3, 6));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
@@ -1681,28 +1681,28 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM8)
 
 HB_FUNC_STATIC(QBYTEARRAY_SETNUM)
 {
-  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_SETNUM1);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_SETNUM2);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_SETNUM3);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_SETNUM4);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_SETNUM5);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_SETNUM6);
   }
-  else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(2))) {
+  else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && (HB_ISNUM(3) || HB_ISNIL(2))) {
     HB_FUNC_EXEC(QBYTEARRAY_SETNUM7);
   }
-  else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(2))) {
+  else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && (HB_ISNUM(3) || HB_ISNIL(2))) {
     HB_FUNC_EXEC(QBYTEARRAY_SETNUM8);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1941,7 +1941,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOINT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (HB_ISLOG(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(0, 2) && (HB_ISLOG(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {
 #endif
       bool par1;
       RINT(obj->toInt(&par1, OPINT(2, 10)));
@@ -1961,7 +1961,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOLONG)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (HB_ISLOG(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(0, 2) && (HB_ISLOG(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {
 #endif
       bool par1;
       RLONG(obj->toLong(&par1, OPINT(2, 10)));
@@ -1981,7 +1981,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOLONGLONG)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (HB_ISLOG(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(0, 2) && (HB_ISLOG(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {
 #endif
       bool par1;
       RQLONGLONG(obj->toLongLong(&par1, OPINT(2, 10)));
@@ -2022,7 +2022,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOPERCENTENCODING)
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 3) && (ISQBYTEARRAY(1) || HB_ISNIL(1)) && (ISQBYTEARRAY(2) || HB_ISNIL(2)) &&
-        (HB_ISNUM(3) || HB_ISNIL(3))) {
+        ISNUMORNIL(3)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->toPercentEncoding(
           HB_ISNIL(1) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(1)),
@@ -2043,7 +2043,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOSHORT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (HB_ISLOG(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(0, 2) && (HB_ISLOG(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {
 #endif
       bool par1;
       RSHORT(obj->toShort(&par1, OPINT(2, 10)));
@@ -2063,7 +2063,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOUINT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (HB_ISLOG(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(0, 2) && (HB_ISLOG(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {
 #endif
       bool par1;
       RUINT(obj->toUInt(&par1, OPINT(2, 10)));
@@ -2083,7 +2083,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOULONG)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (HB_ISLOG(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(0, 2) && (HB_ISLOG(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {
 #endif
       bool par1;
       RULONG(obj->toULong(&par1, OPINT(2, 10)));
@@ -2103,7 +2103,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOULONGLONG)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (HB_ISLOG(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(0, 2) && (HB_ISLOG(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {
 #endif
       bool par1;
       RQULONGLONG(obj->toULongLong(&par1, OPINT(2, 10)));
@@ -2123,7 +2123,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOUSHORT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (HB_ISLOG(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(0, 2) && (HB_ISLOG(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {
 #endif
       bool par1;
       RUSHORT(obj->toUShort(&par1, OPINT(2, 10)));
@@ -2228,7 +2228,7 @@ HB_FUNC_STATIC(QBYTEARRAY_FROMHEX)
 HB_FUNC_STATIC(QBYTEARRAY_FROMPERCENTENCODING)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+  if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISNUMORNIL(2)) {
 #endif
     QByteArray *ptr = new QByteArray(QByteArray::fromPercentEncoding(*PQBYTEARRAY(1), OPCHAR(2, '%')));
     Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -2258,7 +2258,7 @@ HB_FUNC_STATIC(QBYTEARRAY_FROMRAWDATA)
 HB_FUNC_STATIC(QBYTEARRAY_NUMBER1)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
     QByteArray *ptr = new QByteArray(QByteArray::number(PINT(1), OPINT(2, 10)));
     Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -2273,7 +2273,7 @@ HB_FUNC_STATIC(QBYTEARRAY_NUMBER1)
 HB_FUNC_STATIC(QBYTEARRAY_NUMBER2)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
     QByteArray *ptr = new QByteArray(QByteArray::number(PUINT(1), OPINT(2, 10)));
     Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -2288,7 +2288,7 @@ HB_FUNC_STATIC(QBYTEARRAY_NUMBER2)
 HB_FUNC_STATIC(QBYTEARRAY_NUMBER3)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
     QByteArray *ptr = new QByteArray(QByteArray::number(PQLONGLONG(1), OPINT(2, 10)));
     Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -2303,7 +2303,7 @@ HB_FUNC_STATIC(QBYTEARRAY_NUMBER3)
 HB_FUNC_STATIC(QBYTEARRAY_NUMBER4)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2))) {
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
     QByteArray *ptr = new QByteArray(QByteArray::number(PQULONGLONG(1), OPINT(2, 10)));
     Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
@@ -2318,7 +2318,7 @@ HB_FUNC_STATIC(QBYTEARRAY_NUMBER4)
 HB_FUNC_STATIC(QBYTEARRAY_NUMBER5)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3))) {
+  if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
     QByteArray *ptr = new QByteArray(QByteArray::number(PDOUBLE(1), OPCHAR(2, 'g'), OPINT(3, 6)));
     Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);

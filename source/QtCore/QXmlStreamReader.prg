@@ -1023,7 +1023,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_READELEMENTTEXT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RQSTRING(obj->readElementText(
           HB_ISNIL(1) ? (QXmlStreamReader::ReadElementTextBehaviour)QXmlStreamReader::ErrorOnUnexpectedElement

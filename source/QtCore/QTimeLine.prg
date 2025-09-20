@@ -76,7 +76,7 @@ RETURN
     // QTimeLine(int duration = 1000, QObject *parent = 0)
 HB_FUNC_STATIC(QTIMELINE_NEW)
 {
-  if (ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (ISQOBJECT(2) || HB_ISNIL(2))) {
+  if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
     QTimeLine *obj = new QTimeLine(OPINT(1, 1000), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   } else {

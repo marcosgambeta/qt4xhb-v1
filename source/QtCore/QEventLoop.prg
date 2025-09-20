@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QEVENTLOOP_EXEC)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RINT(obj->exec(HB_ISNIL(1) ? (QEventLoop::ProcessEventsFlags)QEventLoop::AllEvents
                                  : (QEventLoop::ProcessEventsFlags)hb_parni(1)));
@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QEVENTLOOP_EXIT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       obj->exit(OPINT(1, 0));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QEVENTLOOP_ISRUNNING)
 
 HB_FUNC_STATIC(QEVENTLOOP_PROCESSEVENTS)
 {
-  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
     // bool processEvents(QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents)
     QEventLoop *obj = qobject_cast<QEventLoop *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

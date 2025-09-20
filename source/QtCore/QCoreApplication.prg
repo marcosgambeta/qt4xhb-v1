@@ -298,7 +298,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_EXEC)
 HB_FUNC_STATIC(QCOREAPPLICATION_EXIT)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
     QCoreApplication::exit(OPINT(1, 0));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -435,7 +435,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_POSTEVENT)
 
 HB_FUNC_STATIC(QCOREAPPLICATION_PROCESSEVENTS)
 {
-  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
     // static void processEvents(QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents)
 
     QCoreApplication::processEvents(HB_ISNIL(1) ? (QEventLoop::ProcessEventsFlags)QEventLoop::AllEvents

@@ -1238,7 +1238,7 @@ HB_FUNC_STATIC(QURL_TOENCODED)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       QByteArray *ptr = new QByteArray(
           obj->toEncoded(HB_ISNIL(1) ? (QUrl::FormattingOptions)QUrl::None : (QUrl::FormattingOptions)hb_parni(1)));
@@ -1276,7 +1276,7 @@ HB_FUNC_STATIC(QURL_TOSTRING)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RQSTRING(obj->toString(HB_ISNIL(1) ? (QUrl::FormattingOptions)QUrl::None : (QUrl::FormattingOptions)hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
