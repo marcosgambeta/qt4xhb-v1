@@ -64,20 +64,17 @@ RETURN
 
 HB_FUNC_STATIC(QAXOBJECT_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
-  {
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1))) {
     // QAxObject(QObject *parent = 0)
     QAxObject *obj = new QAxObject(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
-  {
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
     // QAxObject(const QString &c, QObject *parent = 0)
     QAxObject *obj = new QAxObject(PQSTRING(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if (ISBETWEEN(1, 2) && HB_ISPOINTER(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
-  {
+  else if (ISBETWEEN(1, 2) && HB_ISPOINTER(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
     // QAxObject(IUnknown *iface, QObject *parent = 0)
     QAxObject *obj = new QAxObject(static_cast<IUnknown *>(hb_parptr(1)), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -110,8 +107,7 @@ HB_FUNC_STATIC(QAXOBJECT_DOVERB)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RBOOL(obj->doVerb(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -243,15 +239,13 @@ HB_FUNC_STATIC(QAXOBJECT_DYNAMICCALL)
 {
   if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && (ISQVARIANT(2) || HB_ISNIL(2)) && (ISQVARIANT(3) || HB_ISNIL(3)) &&
       (ISQVARIANT(4) || HB_ISNIL(4)) && (ISQVARIANT(5) || HB_ISNIL(5)) && (ISQVARIANT(6) || HB_ISNIL(6)) &&
-      (ISQVARIANT(7) || HB_ISNIL(7)) && (ISQVARIANT(8) || HB_ISNIL(8)) && (ISQVARIANT(9) || HB_ISNIL(9)))
-  {
+      (ISQVARIANT(7) || HB_ISNIL(7)) && (ISQVARIANT(8) || HB_ISNIL(8)) && (ISQVARIANT(9) || HB_ISNIL(9))) {
     // QVariant dynamicCall(const char *function, const QVariant &var1 = QVariant(), const QVariant &var2 = QVariant(),
     // const QVariant &var3 = QVariant(), const QVariant &var4 = QVariant(), const QVariant &var5 = QVariant(), const
     // QVariant &var6 = QVariant(), const QVariant &var7 = QVariant(), const QVariant &var8 = QVariant())
     QAxObject *obj = qobject_cast<QAxObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QVariant *ptr = new QVariant(
           obj->dynamicCall(PCONSTCHAR(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(2)),
                            HB_ISNIL(3) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(3)),
@@ -264,13 +258,11 @@ HB_FUNC_STATIC(QAXOBJECT_DYNAMICCALL)
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
     }
   }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2))
-  {
+  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
     // QVariant dynamicCall(const char *function, QList<QVariant> &vars)
     QAxObject *obj = qobject_cast<QAxObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QVariant *ptr = new QVariant(obj->dynamicCall(PCONSTCHAR(1), PQVARIANTLIST(2)));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
     }
@@ -322,8 +314,7 @@ HB_FUNC_STATIC(QAXOBJECT_PROPERTYWRITABLE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RBOOL(obj->propertyWritable(PCONSTCHAR(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -338,15 +329,13 @@ HB_FUNC_STATIC(QAXOBJECT_QUERYSUBOBJECT)
 {
   if (ISBETWEEN(1, 9) && HB_ISCHAR(1) && (ISQVARIANT(2) || HB_ISNIL(2)) && (ISQVARIANT(3) || HB_ISNIL(3)) &&
       (ISQVARIANT(4) || HB_ISNIL(4)) && (ISQVARIANT(5) || HB_ISNIL(5)) && (ISQVARIANT(6) || HB_ISNIL(6)) &&
-      (ISQVARIANT(7) || HB_ISNIL(7)) && (ISQVARIANT(8) || HB_ISNIL(8)) && (ISQVARIANT(9) || HB_ISNIL(9)))
-  {
+      (ISQVARIANT(7) || HB_ISNIL(7)) && (ISQVARIANT(8) || HB_ISNIL(8)) && (ISQVARIANT(9) || HB_ISNIL(9))) {
     // QAxObject *querySubObject(const char *name, const QVariant &var1 = QVariant(), const QVariant &var2 = QVariant(),
     // const QVariant &var3 = QVariant(), const QVariant &var4 = QVariant(), const QVariant &var5 = QVariant(), const
     // QVariant &var6 = QVariant(), const QVariant &var7 = QVariant(), const QVariant &var8 = QVariant())
     QAxObject *obj = qobject_cast<QAxObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QAxObject *ptr =
           obj->querySubObject(PCONSTCHAR(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(2)),
                               HB_ISNIL(3) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(3)),
@@ -359,13 +348,11 @@ HB_FUNC_STATIC(QAXOBJECT_QUERYSUBOBJECT)
       Qt4xHb::createReturnQObjectClass(ptr, "QAXOBJECT");
     }
   }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2))
-  {
+  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
     // QAxObject *querySubObject(const char *name, QList<QVariant> &vars)
     QAxObject *obj = qobject_cast<QAxObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if (obj != NULL)
-    {
+    if (obj != NULL) {
       QAxObject *ptr = obj->querySubObject(PCONSTCHAR(1), PQVARIANTLIST(2));
       Qt4xHb::createReturnQObjectClass(ptr, "QAXOBJECT");
     }
@@ -381,8 +368,7 @@ HB_FUNC_STATIC(QAXOBJECT_SETCONTROL)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(1) && HB_ISCHAR(1))
-    {
+    if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       RBOOL(obj->setControl(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -400,8 +386,7 @@ HB_FUNC_STATIC(QAXOBJECT_SETPROPERTYWRITABLE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISLOG(2))
-    {
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISLOG(2)) {
 #endif
       obj->setPropertyWritable(PCONSTCHAR(1), PBOOL(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
