@@ -135,19 +135,16 @@ HB_FUNC_STATIC(QSTANDARDITEM_NEW)
     // QStandardItem()
     QStandardItem *obj = new QStandardItem();
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // QStandardItem(const QString &text)
     QStandardItem *obj = new QStandardItem(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2)) {
     // QStandardItem(const QIcon &icon, const QString &text)
     QStandardItem *obj = new QStandardItem(
         HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt4xHb::itemGetPtr(1)) : QIcon(hb_parc(1)), PQSTRING(2));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
     // QStandardItem(int rows, int columns = 1)
     QStandardItem *obj = new QStandardItem(PINT(1), OPINT(2, 1));
     Qt4xHb::returnNewObject(obj, false);
@@ -1230,8 +1227,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_SETCHILD)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTANDARDITEM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTANDARDITEM(2)) {
     // void setChild(int row, QStandardItem *item)
     QStandardItem *obj = static_cast<QStandardItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1264,8 +1260,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_INSERTROW)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTANDARDITEM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTANDARDITEM(2)) {
     // void insertRow(int row, QStandardItem *item)
     QStandardItem *obj = static_cast<QStandardItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1326,8 +1321,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_INSERTROWS)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void insertRows(int row, int count)
     QStandardItem *obj = static_cast<QStandardItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1460,8 +1454,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_APPENDROW)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQSTANDARDITEM(1)) {
+  } else if (ISNUMPAR(1) && ISQSTANDARDITEM(1)) {
     // void appendRow(QStandardItem *item)
     QStandardItem *obj = static_cast<QStandardItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1734,8 +1727,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

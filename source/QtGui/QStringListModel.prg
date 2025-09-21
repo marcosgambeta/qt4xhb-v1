@@ -56,8 +56,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_NEW)
     // QStringListModel(QObject *parent = 0)
     QStringListModel *obj = new QStringListModel(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISARRAY(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && HB_ISARRAY(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
     // QStringListModel(const QStringList &strings, QObject *parent = 0)
     QStringListModel *obj = new QStringListModel(PQSTRINGLIST(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);

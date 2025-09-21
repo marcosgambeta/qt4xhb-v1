@@ -59,13 +59,11 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_NEW)
     // QStackedLayout()
     QStackedLayout *obj = new QStackedLayout();
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISNUMPAR(1) && ISQWIDGET(1)) {
+  } else if (ISNUMPAR(1) && ISQWIDGET(1)) {
     // QStackedLayout(QWidget *parent)
     QStackedLayout *obj = new QStackedLayout(PQWIDGET(1));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISNUMPAR(1) && ISQLAYOUT(1)) {
+  } else if (ISNUMPAR(1) && ISQLAYOUT(1)) {
     // QStackedLayout(QLayout *parentLayout)
     QStackedLayout *obj = new QStackedLayout(PQLAYOUT(1));
     Qt4xHb::returnNewObject(obj, false);

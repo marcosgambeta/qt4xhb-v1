@@ -127,8 +127,7 @@ HB_FUNC_STATIC(QTEXTTABLE_CELLAT)
       QTextTableCell *ptr = new QTextTableCell(obj->cellAt(PINT(1), PINT(2)));
       Qt4xHb::createReturnClass(ptr, "QTEXTTABLECELL", true);
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QTextTableCell cellAt(int position) const
     QTextTable *obj = qobject_cast<QTextTable *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -136,8 +135,7 @@ HB_FUNC_STATIC(QTEXTTABLE_CELLAT)
       QTextTableCell *ptr = new QTextTableCell(obj->cellAt(PINT(1)));
       Qt4xHb::createReturnClass(ptr, "QTEXTTABLECELL", true);
     }
-  }
-  else if (ISNUMPAR(1) && ISQTEXTCURSOR(1)) {
+  } else if (ISNUMPAR(1) && ISQTEXTCURSOR(1)) {
     // QTextTableCell cellAt(const QTextCursor &cursor) const
     QTextTable *obj = qobject_cast<QTextTable *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -238,8 +236,7 @@ HB_FUNC_STATIC(QTEXTTABLE_MERGECELLS)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQTEXTCURSOR(1)) {
+  } else if (ISNUMPAR(1) && ISQTEXTCURSOR(1)) {
     // void mergeCells(const QTextCursor &cursor)
     QTextTable *obj = qobject_cast<QTextTable *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

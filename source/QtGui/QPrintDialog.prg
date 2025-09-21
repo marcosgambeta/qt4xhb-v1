@@ -58,8 +58,7 @@ HB_FUNC_STATIC(QPRINTDIALOG_NEW)
     // QPrintDialog(QPrinter *printer, QWidget *parent = 0)
     QPrintDialog *obj = new QPrintDialog(PQPRINTER(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1))) {
+  } else if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1))) {
     // QPrintDialog(QWidget *parent = 0)
     QPrintDialog *obj = new QPrintDialog(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);

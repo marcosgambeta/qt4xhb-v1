@@ -185,8 +185,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_LINEHEIGHT)
     if (obj != NULL) {
       RQREAL(obj->lineHeight(PQREAL(1), PQREAL(2)));
     }
-  }
-  else if (ISNUMPAR(0)) {
+  } else if (ISNUMPAR(0)) {
     // qreal lineHeight() const
     QTextBlockFormat *obj = static_cast<QTextBlockFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 

@@ -116,19 +116,16 @@ HB_FUNC_STATIC(QFONT_NEW)
     // QFont()
     QFont *obj = new QFont();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3) &&
+  } else if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3) &&
            ISNUMORNIL(4)) {
     // QFont(const QString &family, int pointSize = -1, int weight = -1, bool italic = false)
     QFont *obj = new QFont(PQSTRING(1), OPINT(2, -1), OPINT(3, -1), OPBOOL(4, false));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(2) && ISQFONT(1) && HB_ISOBJECT(2)) {
+  } else if (ISNUMPAR(2) && ISQFONT(1) && HB_ISOBJECT(2)) {
     // QFont(const QFont &font, QPaintDevice *pd)
     QFont *obj = new QFont(*PQFONT(1), PQPAINTDEVICE(2));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQFONT(1)) {
+  } else if (ISNUMPAR(1) && ISQFONT(1)) {
     // QFont(const QFont &font)
     QFont *obj = new QFont(*PQFONT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -1251,8 +1248,7 @@ HB_FUNC_STATIC(QFONT_TOVARIANT)
 {
   if (ISNUMPAR(0)) {
     QFont_toVariant1();
-  }
-  else if (ISNUMPAR(1) && ISQFONT(1)) {
+  } else if (ISNUMPAR(1) && ISQFONT(1)) {
     QFont_toVariant2();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1282,8 +1278,7 @@ HB_FUNC_STATIC(QFONT_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

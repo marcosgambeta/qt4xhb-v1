@@ -213,8 +213,7 @@ HB_FUNC_STATIC(QSOUND_PLAY)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // static void play(const QString &filename)
 
     QSound::play(PQSTRING(1));

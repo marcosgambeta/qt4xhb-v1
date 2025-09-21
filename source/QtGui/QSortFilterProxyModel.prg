@@ -1082,8 +1082,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_SETFILTERREGEXP)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // void setFilterRegExp(const QString &pattern)
     QSortFilterProxyModel *obj = qobject_cast<QSortFilterProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

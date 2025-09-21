@@ -383,16 +383,14 @@ HB_FUNC_STATIC(QHEADERVIEW_LOGICALINDEXAT)
     if (obj != NULL) {
       RINT(obj->logicalIndexAt(PINT(1)));
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // int logicalIndexAt(int x, int y) const
     QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL) {
       RINT(obj->logicalIndexAt(PINT(1), PINT(2)));
     }
-  }
-  else if (ISNUMPAR(1) && ISQPOINT(1)) {
+  } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // int logicalIndexAt(const QPoint &pos) const
     QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -832,8 +830,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETRESIZEMODE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setResizeMode(int logicalIndex, QHeaderView::ResizeMode mode)
     QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

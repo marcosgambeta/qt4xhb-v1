@@ -325,8 +325,7 @@ HB_FUNC_STATIC(QCLIPBOARD_TEXT)
     if (obj != NULL) {
       RQSTRING(obj->text(HB_ISNIL(1) ? (QClipboard::Mode)QClipboard::Clipboard : (QClipboard::Mode)hb_parni(1)));
     }
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
     // QString text(QString &subtype, QClipboard::Mode mode = QClipboard::Clipboard) const
     QClipboard *obj = qobject_cast<QClipboard *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

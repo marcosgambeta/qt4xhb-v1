@@ -86,32 +86,27 @@ HB_FUNC_STATIC(QPALETTE_NEW)
     // QPalette()
     QPalette *obj = new QPalette();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1))) {
+  } else if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1))) {
     // QPalette(const QColor &button)
     QPalette *obj = new QPalette(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QPalette(Qt::GlobalColor button)
     QPalette *obj = new QPalette((Qt::GlobalColor)hb_parni(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(2) && (ISQCOLOR(1) || HB_ISCHAR(1)) && (ISQCOLOR(2) || HB_ISCHAR(2))) {
+  } else if (ISNUMPAR(2) && (ISQCOLOR(1) || HB_ISCHAR(1)) && (ISQCOLOR(2) || HB_ISCHAR(2))) {
     // QPalette(const QColor &button, const QColor &window)
     QPalette *obj = new QPalette(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(1)) : QColor(hb_parc(1)),
                                  HB_ISOBJECT(2) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(2)) : QColor(hb_parc(2)));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(9) && ISQBRUSH(1) && ISQBRUSH(2) && ISQBRUSH(3) && ISQBRUSH(4) && ISQBRUSH(5) && ISQBRUSH(6) &&
+  } else if (ISNUMPAR(9) && ISQBRUSH(1) && ISQBRUSH(2) && ISQBRUSH(3) && ISQBRUSH(4) && ISQBRUSH(5) && ISQBRUSH(6) &&
            ISQBRUSH(7) && ISQBRUSH(8) && ISQBRUSH(9)) {
     // QPalette(const QBrush &windowText, const QBrush &button, const QBrush &light, const QBrush &dark, const QBrush
     // &mid, const QBrush &text, const QBrush &bright_text, const QBrush &base, const QBrush &window)
     QPalette *obj = new QPalette(*PQBRUSH(1), *PQBRUSH(2), *PQBRUSH(3), *PQBRUSH(4), *PQBRUSH(5), *PQBRUSH(6),
                                  *PQBRUSH(7), *PQBRUSH(8), *PQBRUSH(9));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQPALETTE(1)) {
+  } else if (ISNUMPAR(1) && ISQPALETTE(1)) {
     // QPalette(const QPalette &p)
     QPalette *obj = new QPalette(*PQPALETTE(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -202,8 +197,7 @@ HB_FUNC_STATIC(QPALETTE_BRUSH)
       const QBrush *ptr = &obj->brush((QPalette::ColorGroup)hb_parni(1), (QPalette::ColorRole)hb_parni(2));
       Qt4xHb::createReturnClass(ptr, "QBRUSH", false);
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // const QBrush &brush(QPalette::ColorRole role) const
     QPalette *obj = static_cast<QPalette *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -282,8 +276,7 @@ HB_FUNC_STATIC(QPALETTE_COLOR)
       const QColor *ptr = &obj->color((QPalette::ColorGroup)hb_parni(1), (QPalette::ColorRole)hb_parni(2));
       Qt4xHb::createReturnClass(ptr, "QCOLOR", false);
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // const QColor &color(QPalette::ColorRole role) const
     QPalette *obj = static_cast<QPalette *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -550,8 +543,7 @@ HB_FUNC_STATIC(QPALETTE_SETBRUSH)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQBRUSH(3)) {
+  } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQBRUSH(3)) {
     // void setBrush(QPalette::ColorGroup group, QPalette::ColorRole role, const QBrush &brush)
     QPalette *obj = static_cast<QPalette *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -577,8 +569,7 @@ HB_FUNC_STATIC(QPALETTE_SETCOLOR)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2) || HB_ISCHAR(3))) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2) || HB_ISCHAR(3))) {
     // void setColor(QPalette::ColorRole role, const QColor &color)
     QPalette *obj = static_cast<QPalette *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -762,8 +753,7 @@ HB_FUNC_STATIC(QPALETTE_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

@@ -74,13 +74,11 @@ HB_FUNC_STATIC(QIMAGEWRITER_NEW)
     // QImageWriter()
     QImageWriter *obj = new QImageWriter();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2))) {
     // QImageWriter(QIODevice *device, const QByteArray &format)
     QImageWriter *obj = new QImageWriter(PQIODEVICE(1), *PQBYTEARRAY(2));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2))) {
     // QImageWriter(const QString &fileName, const QByteArray &format = QByteArray())
     QImageWriter *obj =
         new QImageWriter(PQSTRING(1), HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(2)));
@@ -497,8 +495,7 @@ HB_FUNC_STATIC(QIMAGEWRITER_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

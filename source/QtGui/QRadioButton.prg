@@ -48,8 +48,7 @@ HB_FUNC_STATIC(QRADIOBUTTON_NEW)
     // QRadioButton(QWidget *parent = 0)
     QRadioButton *obj = new QRadioButton(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2))) {
     // QRadioButton(const QString &text, QWidget *parent = 0)
     QRadioButton *obj = new QRadioButton(PQSTRING(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);

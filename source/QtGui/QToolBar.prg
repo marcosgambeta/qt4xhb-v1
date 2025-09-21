@@ -84,8 +84,7 @@ HB_FUNC_STATIC(QTOOLBAR_NEW)
     // QToolBar(const QString &title, QWidget *parent = 0)
     QToolBar *obj = new QToolBar(PQSTRING(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1))) {
+  } else if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1))) {
     // QToolBar(QWidget *parent = 0)
     QToolBar *obj = new QToolBar(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -121,8 +120,7 @@ HB_FUNC_STATIC(QTOOLBAR_ACTIONAT)
       QAction *ptr = obj->actionAt(PINT(1), PINT(2));
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-  }
-  else if (ISNUMPAR(1) && ISQPOINT(1)) {
+  } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // QAction *actionAt(const QPoint &p) const
     QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -146,8 +144,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDACTION)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // QAction *addAction(const QString &text)
     QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -155,8 +152,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDACTION)
       QAction *ptr = obj->addAction(PQSTRING(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-  }
-  else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2)) {
     // QAction *addAction(const QIcon &icon, const QString &text)
     QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -165,8 +161,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDACTION)
                                     PQSTRING(2));
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-  }
-  else if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQOBJECT(2) && HB_ISCHAR(3)) {
+  } else if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQOBJECT(2) && HB_ISCHAR(3)) {
     // QAction *addAction(const QString &text, const QObject *receiver, const char *member)
     QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -174,8 +169,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDACTION)
       QAction *ptr = obj->addAction(PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3));
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-  }
-  else if (ISNUMPAR(4) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && ISQOBJECT(3) && HB_ISCHAR(4)) {
+  } else if (ISNUMPAR(4) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && ISQOBJECT(3) && HB_ISCHAR(4)) {
     // QAction *addAction(const QIcon &icon, const QString &text, const QObject *receiver, const char *member)
     QToolBar *obj = qobject_cast<QToolBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

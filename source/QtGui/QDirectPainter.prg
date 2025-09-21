@@ -119,8 +119,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_ENDPAINTING)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQREGION(1)) {
+  } else if (ISNUMPAR(1) && ISQREGION(1)) {
     // void endPainting(const QRegion &region)
     QDirectPainter *obj = qobject_cast<QDirectPainter *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

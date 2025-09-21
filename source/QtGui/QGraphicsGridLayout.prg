@@ -124,8 +124,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ADDITEM)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISBETWEEN(3, 4) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(3)) {
+  } else if (ISBETWEEN(3, 4) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(3)) {
     // void addItem(QGraphicsLayoutItem *item, int row, int column, Qt::Alignment alignment = 0)
     QGraphicsGridLayout *obj = static_cast<QGraphicsGridLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -312,8 +311,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ITEMAT)
       QGraphicsLayoutItem *ptr = obj->itemAt(PINT(1), PINT(2));
       Qt4xHb::createReturnClass(ptr, "QGRAPHICSLAYOUTITEM", false);
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // virtual QGraphicsLayoutItem *itemAt(int index) const
     QGraphicsGridLayout *obj = static_cast<QGraphicsGridLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
 

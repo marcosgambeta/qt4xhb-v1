@@ -94,20 +94,17 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_NEW)
     // QTableWidgetItem(int type = QTableWidgetItem::Type)
     QTableWidgetItem *obj = new QTableWidgetItem(OPINT(1, QTableWidgetItem::Type));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
     // QTableWidgetItem(const QString &text, int type = QTableWidgetItem::Type)
     QTableWidgetItem *obj = new QTableWidgetItem(PQSTRING(1), OPINT(2, QTableWidgetItem::Type));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(2, 3) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && ISNUMORNIL(3)) {
+  } else if (ISBETWEEN(2, 3) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && ISNUMORNIL(3)) {
     // QTableWidgetItem(const QIcon &icon, const QString &text, int type = QTableWidgetItem::Type)
     QTableWidgetItem *obj =
         new QTableWidgetItem(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt4xHb::itemGetPtr(1)) : QIcon(hb_parc(1)),
                              PQSTRING(2), OPINT(3, QTableWidgetItem::Type));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISNUMPAR(1) && ISQTABLEWIDGETITEM(1)) {
+  } else if (ISNUMPAR(1) && ISQTABLEWIDGETITEM(1)) {
     // QTableWidgetItem(const QTableWidgetItem &other)
     QTableWidgetItem *obj = new QTableWidgetItem(*PQTABLEWIDGETITEM(1));
     Qt4xHb::returnNewObject(obj, false);
@@ -812,8 +809,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

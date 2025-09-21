@@ -108,13 +108,11 @@ HB_FUNC_STATIC(QTEXTFORMAT_NEW)
     // QTextFormat()
     QTextFormat *obj = new QTextFormat();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QTextFormat(int type)
     QTextFormat *obj = new QTextFormat(PINT(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQTEXTFORMAT(1)) {
+  } else if (ISNUMPAR(1) && ISQTEXTFORMAT(1)) {
     // QTextFormat(const QTextFormat &other)
     QTextFormat *obj = new QTextFormat(*PQTEXTFORMAT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -791,8 +789,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_SETPROPERTY)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISARRAY(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISARRAY(2)) {
     // void setProperty(int propertyId, const QVector<QTextLength> &value)
     QTextFormat *obj = static_cast<QTextFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -994,8 +991,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

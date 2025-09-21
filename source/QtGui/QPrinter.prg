@@ -107,8 +107,7 @@ HB_FUNC_STATIC(QPRINTER_NEW)
     QPrinter *obj = new QPrinter(HB_ISNIL(1) ? (QPrinter::PrinterMode)QPrinter::ScreenResolution
                                              : (QPrinter::PrinterMode)hb_parni(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(1, 2) && ISQPRINTERINFO(1) && HB_ISNUM(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQPRINTERINFO(1) && HB_ISNUM(2)) {
     // QPrinter(const QPrinterInfo &printer, QPrinter::PrinterMode mode = QPrinter::ScreenResolution)
     QPrinter *obj = new QPrinter(*PQPRINTERINFO(1), HB_ISNIL(2) ? (QPrinter::PrinterMode)QPrinter::ScreenResolution
                                                                 : (QPrinter::PrinterMode)hb_parni(2));
@@ -449,8 +448,7 @@ HB_FUNC_STATIC(QPRINTER_PAGERECT)
       QRect *ptr = new QRect(obj->pageRect());
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QRectF pageRect(QPrinter::Unit unit) const
     QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -473,8 +471,7 @@ HB_FUNC_STATIC(QPRINTER_PAPERRECT)
       QRect *ptr = new QRect(obj->paperRect());
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QRectF paperRect(QPrinter::Unit unit) const
     QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -496,8 +493,7 @@ HB_FUNC_STATIC(QPRINTER_PAPERSIZE)
     if (obj != NULL) {
       RENUM(obj->paperSize());
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QSizeF paperSize(QPrinter::Unit unit) const
     QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -948,8 +944,7 @@ HB_FUNC_STATIC(QPRINTER_SETPAPERSIZE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && ISQSIZEF(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && ISQSIZEF(1) && HB_ISNUM(2)) {
     // void setPaperSize(const QSizeF &paperSize, QPrinter::Unit unit)
     QPrinter *obj = static_cast<QPrinter *>(Qt4xHb::itemGetPtrStackSelfItem());
 

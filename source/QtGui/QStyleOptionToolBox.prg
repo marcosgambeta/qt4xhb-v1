@@ -48,8 +48,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_NEW)
     // QStyleOptionToolBox()
     QStyleOptionToolBox *obj = new QStyleOptionToolBox();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQSTYLEOPTIONTOOLBOX(1)) {
+  } else if (ISNUMPAR(1) && ISQSTYLEOPTIONTOOLBOX(1)) {
     // QStyleOptionToolBox(const QStyleOptionToolBox &other)
     QStyleOptionToolBox *obj = new QStyleOptionToolBox(*PQSTYLEOPTIONTOOLBOX(1));
     Qt4xHb::returnNewObject(obj, true);

@@ -248,8 +248,7 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_SETOFFSET)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setOffset(qreal dx, qreal dy)
     QGraphicsDropShadowEffect *obj = qobject_cast<QGraphicsDropShadowEffect *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -258,8 +257,7 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_SETOFFSET)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void setOffset(qreal d)
     QGraphicsDropShadowEffect *obj = qobject_cast<QGraphicsDropShadowEffect *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

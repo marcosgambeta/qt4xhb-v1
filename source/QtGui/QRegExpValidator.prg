@@ -50,8 +50,7 @@ HB_FUNC_STATIC(QREGEXPVALIDATOR_NEW)
     // QRegExpValidator(QObject *parent = 0)
     QRegExpValidator *obj = new QRegExpValidator(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISNUMPAR(2) && ISQREGEXP(1) && ISQOBJECT(2)) {
+  } else if (ISNUMPAR(2) && ISQREGEXP(1) && ISQOBJECT(2)) {
     // QRegExpValidator(const QRegExp &rx, QObject *parent)
     QRegExpValidator *obj = new QRegExpValidator(*PQREGEXP(1), PQOBJECT(2));
     Qt4xHb::returnNewObject(obj, false);

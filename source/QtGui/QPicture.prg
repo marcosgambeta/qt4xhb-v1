@@ -55,8 +55,7 @@ HB_FUNC_STATIC(QPICTURE_NEW)
     // QPicture(int formatVersion = -1)
     QPicture *obj = new QPicture(OPINT(1, -1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQPICTURE(1)) {
+  } else if (ISNUMPAR(1) && ISQPICTURE(1)) {
     // QPicture(const QPicture &pic)
     QPicture *obj = new QPicture(*PQPICTURE(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -144,8 +143,7 @@ HB_FUNC_STATIC(QPICTURE_LOAD)
     if (obj != NULL) {
       RBOOL(obj->load(PQSTRING(1), OPCONSTCHAR(2, 0)));
     }
-  }
-  else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (HB_ISCHAR(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (HB_ISCHAR(2) || HB_ISNIL(2))) {
     // bool load(QIODevice *dev, const char *format = 0)
     QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -184,8 +182,7 @@ HB_FUNC_STATIC(QPICTURE_SAVE)
     if (obj != NULL) {
       RBOOL(obj->save(PQSTRING(1), OPCONSTCHAR(2, 0)));
     }
-  }
-  else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (HB_ISCHAR(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (HB_ISCHAR(2) || HB_ISNIL(2))) {
     // bool save(QIODevice *dev, const char *format = 0)
     QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
 

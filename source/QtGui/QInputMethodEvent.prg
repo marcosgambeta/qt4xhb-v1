@@ -47,8 +47,7 @@ HB_FUNC_STATIC(QINPUTMETHODEVENT_NEW)
     // QInputMethodEvent()
     QInputMethodEvent *obj = new QInputMethodEvent();
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISNUMPAR(1) && ISQINPUTMETHODEVENT(1)) {
+  } else if (ISNUMPAR(1) && ISQINPUTMETHODEVENT(1)) {
     // QInputMethodEvent(const QInputMethodEvent &other)
     QInputMethodEvent *obj = new QInputMethodEvent(*PQINPUTMETHODEVENT(1));
     Qt4xHb::returnNewObject(obj, false);

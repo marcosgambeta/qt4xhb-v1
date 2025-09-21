@@ -69,8 +69,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_NEW)
     QDockWidget *obj =
         new QDockWidget(PQSTRING(1), OPQWIDGET(2, 0), HB_ISNIL(3) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(3));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {
+  } else if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {
     // QDockWidget(QWidget *parent = 0, Qt::WindowFlags flags = 0)
     QDockWidget *obj =
         new QDockWidget(OPQWIDGET(1, 0), HB_ISNIL(2) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(2));

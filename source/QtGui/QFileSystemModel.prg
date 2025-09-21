@@ -810,8 +810,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_INDEX)
       QModelIndex *ptr = new QModelIndex(obj->index(PQSTRING(1), OPINT(2, 0)));
       Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
     }
-  }
-  else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3))) {
+  } else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3))) {
     // virtual QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
     QFileSystemModel *obj = qobject_cast<QFileSystemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

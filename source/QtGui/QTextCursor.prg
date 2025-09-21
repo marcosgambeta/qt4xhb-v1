@@ -124,23 +124,19 @@ HB_FUNC_STATIC(QTEXTCURSOR_NEW)
     // QTextCursor()
     QTextCursor *obj = new QTextCursor();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQTEXTDOCUMENT(1)) {
+  } else if (ISNUMPAR(1) && ISQTEXTDOCUMENT(1)) {
     // QTextCursor(QTextDocument *document)
     QTextCursor *obj = new QTextCursor(PQTEXTDOCUMENT(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQTEXTFRAME(1)) {
+  } else if (ISNUMPAR(1) && ISQTEXTFRAME(1)) {
     // QTextCursor(QTextFrame *frame)
     QTextCursor *obj = new QTextCursor(PQTEXTFRAME(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQTEXTBLOCK(1)) {
+  } else if (ISNUMPAR(1) && ISQTEXTBLOCK(1)) {
     // QTextCursor(const QTextBlock &block)
     QTextCursor *obj = new QTextCursor(*PQTEXTBLOCK(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQTEXTCURSOR(1)) {
+  } else if (ISNUMPAR(1) && ISQTEXTCURSOR(1)) {
     // QTextCursor(const QTextCursor &cursor)
     QTextCursor *obj = new QTextCursor(*PQTEXTCURSOR(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -416,8 +412,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_CREATELIST)
       QTextList *ptr = obj->createList(*PQTEXTLISTFORMAT(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QTEXTLIST");
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QTextList *createList(QTextListFormat::Style style)
     QTextCursor *obj = static_cast<QTextCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -613,8 +608,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTBLOCK)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQTEXTBLOCKFORMAT(1)) {
+  } else if (ISNUMPAR(1) && ISQTEXTBLOCKFORMAT(1)) {
     // void insertBlock(const QTextBlockFormat &format)
     QTextCursor *obj = static_cast<QTextCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -623,8 +617,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTBLOCK)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && ISQTEXTBLOCKFORMAT(1) && ISQTEXTCHARFORMAT(2)) {
+  } else if (ISNUMPAR(2) && ISQTEXTBLOCKFORMAT(1) && ISQTEXTCHARFORMAT(2)) {
     // void insertBlock(const QTextBlockFormat &format, const QTextCharFormat &charFormat)
     QTextCursor *obj = static_cast<QTextCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -708,8 +701,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTIMAGE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && ISQTEXTIMAGEFORMAT(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && ISQTEXTIMAGEFORMAT(1) && HB_ISNUM(2)) {
     // void insertImage(const QTextImageFormat &format, QTextFrameFormat::Position alignment)
     QTextCursor *obj = static_cast<QTextCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -718,8 +710,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTIMAGE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // void insertImage(const QString &name)
     QTextCursor *obj = static_cast<QTextCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -728,8 +719,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTIMAGE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISBETWEEN(1, 2) && ISQIMAGE(1) && (HB_ISCHAR(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && ISQIMAGE(1) && (HB_ISCHAR(2) || HB_ISNIL(2))) {
     // void insertImage(const QImage &image, const QString &name = QString())
     QTextCursor *obj = static_cast<QTextCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -753,8 +743,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTLIST)
       QTextList *ptr = obj->insertList(*PQTEXTLISTFORMAT(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QTEXTLIST");
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QTextList *insertList(QTextListFormat::Style style)
     QTextCursor *obj = static_cast<QTextCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -777,8 +766,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTTABLE)
       QTextTable *ptr = obj->insertTable(PINT(1), PINT(2), *PQTEXTTABLEFORMAT(3));
       Qt4xHb::createReturnQObjectClass(ptr, "QTEXTTABLE");
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // QTextTable *insertTable(int rows, int columns)
     QTextCursor *obj = static_cast<QTextCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -802,8 +790,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTTEXT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQTEXTCHARFORMAT(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQTEXTCHARFORMAT(2)) {
     // void insertText(const QString &text, const QTextCharFormat &format)
     QTextCursor *obj = static_cast<QTextCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1338,8 +1325,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

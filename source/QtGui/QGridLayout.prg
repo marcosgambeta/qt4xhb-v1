@@ -85,8 +85,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_NEW)
     // QGridLayout(QWidget *parent)
     QGridLayout *obj = new QGridLayout(PQWIDGET(1));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISNUMPAR(0)) {
+  } else if (ISNUMPAR(0)) {
     // QGridLayout()
     QGridLayout *obj = new QGridLayout();
     Qt4xHb::returnNewObject(obj, false);
@@ -146,8 +145,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ADDLAYOUT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISBETWEEN(5, 6) && ISQLAYOUT(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
+  } else if (ISBETWEEN(5, 6) && ISQLAYOUT(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
            ISNUMORNIL(6)) {
     // void addLayout(QLayout *layout, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0)
     QGridLayout *obj = qobject_cast<QGridLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -174,8 +172,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ADDWIDGET)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISBETWEEN(5, 6) && ISQWIDGET(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
+  } else if (ISBETWEEN(5, 6) && ISQWIDGET(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
            ISNUMORNIL(6)) {
     // void addWidget(QWidget *widget, int fromRow, int fromColumn, int rowSpan, int columnSpan, Qt::Alignment alignment
     // = 0)

@@ -102,8 +102,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_NEW)
     // QStandardItemModel(QObject *parent = 0)
     QStandardItemModel *obj = new QStandardItemModel(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQOBJECT(3) || HB_ISNIL(3))) {
+  } else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQOBJECT(3) || HB_ISNIL(3))) {
     // QStandardItemModel(int rows, int columns, QObject *parent = 0)
     QStandardItemModel *obj = new QStandardItemModel(PINT(1), PINT(2), OPQOBJECT(3, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -159,8 +158,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_PARENT)
       QModelIndex *ptr = new QModelIndex(obj->parent(*PQMODELINDEX(1)));
       Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
     }
-  }
-  else if (ISNUMPAR(0)) {
+  } else if (ISNUMPAR(0)) {
     // QObject *parent() const
     QStandardItemModel *obj = qobject_cast<QStandardItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -521,8 +519,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_SETITEM)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTANDARDITEM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTANDARDITEM(2)) {
     // void setItem(int row, QStandardItem *item)
     QStandardItemModel *obj = qobject_cast<QStandardItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -732,8 +729,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_APPENDROW)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQSTANDARDITEM(1)) {
+  } else if (ISNUMPAR(1) && ISQSTANDARDITEM(1)) {
     // void appendRow(QStandardItem *item)
     QStandardItemModel *obj = qobject_cast<QStandardItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -794,8 +790,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_INSERTROW)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTANDARDITEM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTANDARDITEM(2)) {
     // void insertRow(int row, QStandardItem *item)
     QStandardItemModel *obj = qobject_cast<QStandardItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -804,8 +799,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_INSERTROW)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQMODELINDEX(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQMODELINDEX(2) || HB_ISNIL(2))) {
     // bool insertRow(int row, const QModelIndex &parent = QModelIndex())
     QStandardItemModel *obj = qobject_cast<QStandardItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -836,8 +830,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_INSERTCOLUMN)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQMODELINDEX(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQMODELINDEX(2) || HB_ISNIL(2))) {
     // bool insertColumn(int column, const QModelIndex &parent = QModelIndex())
     QStandardItemModel *obj = qobject_cast<QStandardItemModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

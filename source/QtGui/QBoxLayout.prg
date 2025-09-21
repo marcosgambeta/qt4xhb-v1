@@ -408,8 +408,7 @@ HB_FUNC_STATIC(QBOXLAYOUT_SETSTRETCHFACTOR)
     if (obj != NULL) {
       RBOOL(obj->setStretchFactor(PQWIDGET(1), PINT(2)));
     }
-  }
-  else if (ISNUMPAR(2) && ISQLAYOUT(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && ISQLAYOUT(1) && HB_ISNUM(2)) {
     // bool setStretchFactor(QLayout *layout, int stretch)
     QBoxLayout *obj = qobject_cast<QBoxLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

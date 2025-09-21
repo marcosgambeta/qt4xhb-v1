@@ -71,8 +71,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_NEW)
     // QItemSelectionModel(QAbstractItemModel *model)
     QItemSelectionModel *obj = new QItemSelectionModel(PQABSTRACTITEMMODEL(1));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISNUMPAR(2) && ISQABSTRACTITEMMODEL(1) && ISQOBJECT(2)) {
+  } else if (ISNUMPAR(2) && ISQABSTRACTITEMMODEL(1) && ISQOBJECT(2)) {
     // QItemSelectionModel(QAbstractItemModel *model, QObject *parent)
     QItemSelectionModel *obj = new QItemSelectionModel(PQABSTRACTITEMMODEL(1), PQOBJECT(2));
     Qt4xHb::returnNewObject(obj, false);
@@ -457,8 +456,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && ISQITEMSELECTION(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && ISQITEMSELECTION(1) && HB_ISNUM(2)) {
     // virtual void select(const QItemSelection &selection, QItemSelectionModel::SelectionFlags command)
     QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

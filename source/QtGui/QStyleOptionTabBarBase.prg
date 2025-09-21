@@ -50,8 +50,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_NEW)
     // QStyleOptionTabBarBase()
     QStyleOptionTabBarBase *obj = new QStyleOptionTabBarBase();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQSTYLEOPTIONTABBARBASE(1)) {
+  } else if (ISNUMPAR(1) && ISQSTYLEOPTIONTABBARBASE(1)) {
     // QStyleOptionTabBarBase(const QStyleOptionTabBarBase &other)
     QStyleOptionTabBarBase *obj = new QStyleOptionTabBarBase(*PQSTYLEOPTIONTABBARBASE(1));
     Qt4xHb::returnNewObject(obj, true);

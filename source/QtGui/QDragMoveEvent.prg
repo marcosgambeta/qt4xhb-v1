@@ -83,8 +83,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_ACCEPT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(0)) {
+  } else if (ISNUMPAR(0)) {
     // void accept()
     QDragMoveEvent *obj = static_cast<QDragMoveEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -128,8 +127,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_IGNORE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(0)) {
+  } else if (ISNUMPAR(0)) {
     // void ignore()
     QDragMoveEvent *obj = static_cast<QDragMoveEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 

@@ -62,29 +62,24 @@ HB_FUNC_STATIC(QKEYSEQUENCE_NEW)
     // QKeySequence()
     QKeySequence *obj = new QKeySequence();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // QKeySequence(const QString &key)
     QKeySequence *obj = new QKeySequence(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     // QKeySequence(const QString &key, QKeySequence::SequenceFormat format)
     QKeySequence *obj = new QKeySequence(PQSTRING(1), (QKeySequence::SequenceFormat)hb_parni(2));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QKeySequence(QKeySequence::StandardKey key)
     QKeySequence *obj = new QKeySequence((QKeySequence::StandardKey)hb_parni(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(1, 4) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3) &&
+  } else if (ISBETWEEN(1, 4) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3) &&
            ISNUMORNIL(4)) {
     // QKeySequence(int k1, int k2 = 0, int k3 = 0, int k4 = 0)
     QKeySequence *obj = new QKeySequence(PINT(1), OPINT(2, 0), OPINT(3, 0), OPINT(4, 0));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQKEYSEQUENCE(1)) {
+  } else if (ISNUMPAR(1) && ISQKEYSEQUENCE(1)) {
     // QKeySequence(const QKeySequence &keysequence)
     QKeySequence *obj = new QKeySequence(*PQKEYSEQUENCE(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -263,8 +258,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

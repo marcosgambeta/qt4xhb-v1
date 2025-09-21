@@ -121,8 +121,7 @@ HB_FUNC_STATIC(QLISTWIDGET_ADDITEM)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1)) {
+  } else if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1)) {
     // void addItem(QListWidgetItem *item)
     QListWidget *obj = qobject_cast<QListWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -300,8 +299,7 @@ HB_FUNC_STATIC(QLISTWIDGET_INSERTITEM)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
     // void insertItem(int row, const QString &label)
     QListWidget *obj = qobject_cast<QListWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -382,8 +380,7 @@ HB_FUNC_STATIC(QLISTWIDGET_ITEMAT)
       QListWidgetItem *ptr = obj->itemAt(*PQPOINT(1));
       Qt4xHb::createReturnClass(ptr, "QLISTWIDGETITEM", false);
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // QListWidgetItem *itemAt(int x, int y) const
     QListWidget *obj = qobject_cast<QListWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -522,8 +519,7 @@ HB_FUNC_STATIC(QLISTWIDGET_SETCURRENTITEM)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && ISQLISTWIDGETITEM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && ISQLISTWIDGETITEM(1) && HB_ISNUM(2)) {
     // void setCurrentItem(QListWidgetItem *item, QItemSelectionModel::SelectionFlags command)
     QListWidget *obj = qobject_cast<QListWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -548,8 +544,7 @@ HB_FUNC_STATIC(QLISTWIDGET_SETCURRENTROW)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setCurrentRow(int row, QItemSelectionModel::SelectionFlags command)
     QListWidget *obj = qobject_cast<QListWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

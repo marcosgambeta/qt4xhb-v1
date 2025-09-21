@@ -124,8 +124,7 @@ HB_FUNC_STATIC(QTABWIDGET_ADDTAB)
     if (obj != NULL) {
       RINT(obj->addTab(PQWIDGET(1), PQSTRING(2)));
     }
-  }
-  else if (ISNUMPAR(3) && ISQWIDGET(1) && (ISQICON(2) || HB_ISCHAR(2)) && HB_ISCHAR(3)) {
+  } else if (ISNUMPAR(3) && ISQWIDGET(1) && (ISQICON(2) || HB_ISCHAR(2)) && HB_ISCHAR(3)) {
     // int addTab(QWidget *page, const QIcon &icon, const QString &label)
     QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -314,8 +313,7 @@ HB_FUNC_STATIC(QTABWIDGET_INSERTTAB)
     if (obj != NULL) {
       RINT(obj->insertTab(PINT(1), PQWIDGET(2), PQSTRING(3)));
     }
-  }
-  else if (ISNUMPAR(4) && HB_ISNUM(1) && ISQWIDGET(2) && (ISQICON(3) || HB_ISCHAR(3)) && HB_ISCHAR(4)) {
+  } else if (ISNUMPAR(4) && HB_ISNUM(1) && ISQWIDGET(2) && (ISQICON(3) || HB_ISCHAR(3)) && HB_ISCHAR(4)) {
     // int insertTab(int index, QWidget *page, const QIcon &icon, const QString &label)
     QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

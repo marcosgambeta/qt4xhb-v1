@@ -46,8 +46,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFOCUSRECT_NEW)
     // QStyleOptionFocusRect()
     QStyleOptionFocusRect *obj = new QStyleOptionFocusRect();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQSTYLEOPTIONFOCUSRECT(1)) {
+  } else if (ISNUMPAR(1) && ISQSTYLEOPTIONFOCUSRECT(1)) {
     // QStyleOptionFocusRect(const QStyleOptionFocusRect &other)
     QStyleOptionFocusRect *obj = new QStyleOptionFocusRect(*PQSTYLEOPTIONFOCUSRECT(1));
     Qt4xHb::returnNewObject(obj, true);

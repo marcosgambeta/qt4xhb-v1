@@ -463,8 +463,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETMAXIMUMSIZE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setMaximumSize(qreal w, qreal h)
     QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -529,8 +528,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETMINIMUMSIZE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setMinimumSize(qreal w, qreal h)
     QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -615,8 +613,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETPREFERREDSIZE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setPreferredSize(qreal w, qreal h)
     QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -661,8 +658,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETSIZEPOLICY)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
+  } else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
     // void setSizePolicy(QSizePolicy::Policy hPolicy, QSizePolicy::Policy vPolicy, QSizePolicy::ControlType controlType
     // = QSizePolicy::DefaultType)
     QGraphicsLayoutItem *obj = static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtrStackSelfItem());

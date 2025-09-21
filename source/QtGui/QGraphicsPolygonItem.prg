@@ -59,8 +59,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_NEW)
     QGraphicsPolygonItem *obj =
         new QGraphicsPolygonItem(HB_ISNIL(1) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(1)));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(1, 2) && ISQPOLYGONF(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && ISQPOLYGONF(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2))) {
     // QGraphicsPolygonItem(const QPolygonF &polygon, QGraphicsItem *parent = 0)
     QGraphicsPolygonItem *obj =
         new QGraphicsPolygonItem(*PQPOLYGONF(1), HB_ISNIL(2) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(2)));

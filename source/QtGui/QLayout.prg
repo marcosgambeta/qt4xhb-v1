@@ -416,8 +416,7 @@ HB_FUNC_STATIC(QLAYOUT_SETALIGNMENT)
     if (obj != NULL) {
       RBOOL(obj->setAlignment(PQWIDGET(1), (Qt::Alignment)hb_parni(2)));
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void setAlignment(Qt::Alignment alignment)
     QLayout *obj = qobject_cast<QLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -426,8 +425,7 @@ HB_FUNC_STATIC(QLAYOUT_SETALIGNMENT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && ISQLAYOUT(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && ISQLAYOUT(1) && HB_ISNUM(2)) {
     // bool setAlignment(QLayout *l, Qt::Alignment alignment)
     QLayout *obj = qobject_cast<QLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -450,8 +448,7 @@ HB_FUNC_STATIC(QLAYOUT_SETCONTENTSMARGINS)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQMARGINS(1)) {
+  } else if (ISNUMPAR(1) && ISQMARGINS(1)) {
     // void setContentsMargins(const QMargins &margins)
     QLayout *obj = qobject_cast<QLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

@@ -90,8 +90,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_NEW)
     // QMessageBox(QWidget *parent = 0)
     QMessageBox *obj = new QMessageBox(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(3, 6) && HB_ISNUM(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ISNUMORNIL(4) &&
+  } else if (ISBETWEEN(3, 6) && HB_ISNUM(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ISNUMORNIL(4) &&
            (ISQWIDGET(5) || HB_ISNIL(5)) && ISNUMORNIL(6)) {
     // QMessageBox(QMessageBox::Icon icon, const QString &title, const QString &text, QMessageBox::StandardButtons
     // buttons = QMessageBox::NoButton, QWidget *parent = 0, Qt::WindowFlags f = Qt::Dialog |
@@ -135,8 +134,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ADDBUTTON)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     // QPushButton *addButton(const QString &text, QMessageBox::ButtonRole role)
     QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -144,8 +142,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_ADDBUTTON)
       QPushButton *ptr = obj->addButton(PQSTRING(1), (QMessageBox::ButtonRole)hb_parni(2));
       Qt4xHb::createReturnQObjectClass(ptr, "QPUSHBUTTON");
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QPushButton *addButton(QMessageBox::StandardButton button)
     QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -414,8 +411,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETDEFAULTBUTTON)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void setDefaultButton(QMessageBox::StandardButton button)
     QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -460,8 +456,7 @@ HB_FUNC_STATIC(QMESSAGEBOX_SETESCAPEBUTTON)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void setEscapeButton(QMessageBox::StandardButton button)
     QMessageBox *obj = qobject_cast<QMessageBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

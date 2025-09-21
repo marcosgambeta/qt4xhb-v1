@@ -676,8 +676,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_ENSUREVISIBLE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) &&
+  } else if (ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) &&
            ISNUMORNIL(5) && ISNUMORNIL(6)) {
     // void ensureVisible(qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50)
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -1019,16 +1018,14 @@ HB_FUNC_STATIC(QGRAPHICSITEM_ISOBSCURED)
     if (obj != NULL) {
       RBOOL(obj->isObscured());
     }
-  }
-  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
+  } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // bool isObscured(qreal x, qreal y, qreal w, qreal h) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL) {
       RBOOL(obj->isObscured(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
     }
-  }
-  else if (ISNUMPAR(1) && ISQRECTF(1)) {
+  } else if (ISNUMPAR(1) && ISQRECTF(1)) {
     // bool isObscured(const QRectF &rect) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1215,8 +1212,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMITEM)
       QPointF *ptr = new QPointF(obj->mapFromItem(PQGRAPHICSITEM(1), *PQPOINTF(2)));
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
     }
-  }
-  else if (ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQRECTF(2)) {
+  } else if (ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQRECTF(2)) {
     // QPolygonF mapFromItem(const QGraphicsItem *item, const QRectF &rect) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1224,8 +1220,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMITEM)
       QPolygonF *ptr = new QPolygonF(obj->mapFromItem(PQGRAPHICSITEM(1), *PQRECTF(2)));
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
-  }
-  else if (ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQPOLYGONF(2)) {
+  } else if (ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQPOLYGONF(2)) {
     // QPolygonF mapFromItem(const QGraphicsItem *item, const QPolygonF &polygon) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1233,8 +1228,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMITEM)
       QPolygonF *ptr = new QPolygonF(obj->mapFromItem(PQGRAPHICSITEM(1), *PQPOLYGONF(2)));
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
-  }
-  else if (ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQPAINTERPATH(2)) {
+  } else if (ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQPAINTERPATH(2)) {
     // QPainterPath mapFromItem(const QGraphicsItem *item, const QPainterPath &path) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1242,8 +1236,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMITEM)
       QPainterPath *ptr = new QPainterPath(obj->mapFromItem(PQGRAPHICSITEM(1), *PQPAINTERPATH(2)));
       Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
     }
-  }
-  else if (ISNUMPAR(5) && ISQGRAPHICSITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5)) {
+  } else if (ISNUMPAR(5) && ISQGRAPHICSITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5)) {
     // QPolygonF mapFromItem(const QGraphicsItem *item, qreal x, qreal y, qreal w, qreal h) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1251,8 +1244,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMITEM)
       QPolygonF *ptr = new QPolygonF(obj->mapFromItem(PQGRAPHICSITEM(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5)));
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
-  }
-  else if (ISNUMPAR(3) && ISQGRAPHICSITEM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
+  } else if (ISNUMPAR(3) && ISQGRAPHICSITEM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
     // QPointF mapFromItem(const QGraphicsItem *item, qreal x, qreal y) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1275,8 +1267,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMPARENT)
       QPointF *ptr = new QPointF(obj->mapFromParent(*PQPOINTF(1)));
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
     }
-  }
-  else if (ISNUMPAR(1) && ISQRECTF(1)) {
+  } else if (ISNUMPAR(1) && ISQRECTF(1)) {
     // QPolygonF mapFromParent(const QRectF &rect) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1284,8 +1275,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMPARENT)
       QPolygonF *ptr = new QPolygonF(obj->mapFromParent(*PQRECTF(1)));
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
-  }
-  else if (ISNUMPAR(1) && ISQPOLYGONF(1)) {
+  } else if (ISNUMPAR(1) && ISQPOLYGONF(1)) {
     // QPolygonF mapFromParent(const QPolygonF &polygon) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1293,8 +1283,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMPARENT)
       QPolygonF *ptr = new QPolygonF(obj->mapFromParent(*PQPOLYGONF(1)));
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
-  }
-  else if (ISNUMPAR(1) && ISQPAINTERPATH(1)) {
+  } else if (ISNUMPAR(1) && ISQPAINTERPATH(1)) {
     // QPainterPath mapFromParent(const QPainterPath &path) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1302,8 +1291,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMPARENT)
       QPainterPath *ptr = new QPainterPath(obj->mapFromParent(*PQPAINTERPATH(1)));
       Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
     }
-  }
-  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
+  } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // QPolygonF mapFromParent(qreal x, qreal y, qreal w, qreal h) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1311,8 +1299,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMPARENT)
       QPolygonF *ptr = new QPolygonF(obj->mapFromParent(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // QPointF mapFromParent(qreal x, qreal y) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1335,8 +1322,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMSCENE)
       QPointF *ptr = new QPointF(obj->mapFromScene(*PQPOINTF(1)));
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
     }
-  }
-  else if (ISNUMPAR(1) && ISQRECTF(1)) {
+  } else if (ISNUMPAR(1) && ISQRECTF(1)) {
     // QPolygonF mapFromScene(const QRectF &rect) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1344,8 +1330,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMSCENE)
       QPolygonF *ptr = new QPolygonF(obj->mapFromScene(*PQRECTF(1)));
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
-  }
-  else if (ISNUMPAR(1) && ISQPOLYGONF(1)) {
+  } else if (ISNUMPAR(1) && ISQPOLYGONF(1)) {
     // QPolygonF mapFromScene(const QPolygonF &polygon) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1353,8 +1338,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMSCENE)
       QPolygonF *ptr = new QPolygonF(obj->mapFromScene(*PQPOLYGONF(1)));
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
-  }
-  else if (ISNUMPAR(1) && ISQPAINTERPATH(1)) {
+  } else if (ISNUMPAR(1) && ISQPAINTERPATH(1)) {
     // QPainterPath mapFromScene(const QPainterPath &path) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1362,8 +1346,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMSCENE)
       QPainterPath *ptr = new QPainterPath(obj->mapFromScene(*PQPAINTERPATH(1)));
       Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
     }
-  }
-  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
+  } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // QPolygonF mapFromScene(qreal x, qreal y, qreal w, qreal h) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1371,8 +1354,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPFROMSCENE)
       QPolygonF *ptr = new QPolygonF(obj->mapFromScene(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // QPointF mapFromScene(qreal x, qreal y) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1395,8 +1377,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTFROMITEM)
       QRectF *ptr = new QRectF(obj->mapRectFromItem(PQGRAPHICSITEM(1), *PQRECTF(2)));
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
     }
-  }
-  else if (ISNUMPAR(5) && ISQGRAPHICSITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5)) {
+  } else if (ISNUMPAR(5) && ISQGRAPHICSITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5)) {
     // QRectF mapRectFromItem(const QGraphicsItem *item, qreal x, qreal y, qreal w, qreal h) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1419,8 +1400,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTFROMPARENT)
       QRectF *ptr = new QRectF(obj->mapRectFromParent(*PQRECTF(1)));
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
     }
-  }
-  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
+  } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // QRectF mapRectFromParent(qreal x, qreal y, qreal w, qreal h) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1443,8 +1423,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTFROMSCENE)
       QRectF *ptr = new QRectF(obj->mapRectFromScene(*PQRECTF(1)));
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
     }
-  }
-  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
+  } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // QRectF mapRectFromScene(qreal x, qreal y, qreal w, qreal h) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1467,8 +1446,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTTOITEM)
       QRectF *ptr = new QRectF(obj->mapRectToItem(PQGRAPHICSITEM(1), *PQRECTF(2)));
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
     }
-  }
-  else if (ISNUMPAR(5) && ISQGRAPHICSITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5)) {
+  } else if (ISNUMPAR(5) && ISQGRAPHICSITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5)) {
     // QRectF mapRectToItem(const QGraphicsItem *item, qreal x, qreal y, qreal w, qreal h) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1491,8 +1469,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTTOPARENT)
       QRectF *ptr = new QRectF(obj->mapRectToParent(*PQRECTF(1)));
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
     }
-  }
-  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
+  } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // QRectF mapRectToParent(qreal x, qreal y, qreal w, qreal h) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1515,8 +1492,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTTOSCENE)
       QRectF *ptr = new QRectF(obj->mapRectToScene(*PQRECTF(1)));
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
     }
-  }
-  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
+  } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // QRectF mapRectToScene(qreal x, qreal y, qreal w, qreal h) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1539,8 +1515,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOITEM)
       QPointF *ptr = new QPointF(obj->mapToItem(PQGRAPHICSITEM(1), *PQPOINTF(2)));
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
     }
-  }
-  else if (ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQRECTF(2)) {
+  } else if (ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQRECTF(2)) {
     // QPolygonF mapToItem(const QGraphicsItem *item, const QRectF &rect) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1548,8 +1523,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOITEM)
       QPolygonF *ptr = new QPolygonF(obj->mapToItem(PQGRAPHICSITEM(1), *PQRECTF(2)));
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
-  }
-  else if (ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQPOLYGONF(2)) {
+  } else if (ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQPOLYGONF(2)) {
     // QPolygonF mapToItem(const QGraphicsItem *item, const QPolygonF &polygon) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1557,8 +1531,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOITEM)
       QPolygonF *ptr = new QPolygonF(obj->mapToItem(PQGRAPHICSITEM(1), *PQPOLYGONF(2)));
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
-  }
-  else if (ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQPAINTERPATH(2)) {
+  } else if (ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQPAINTERPATH(2)) {
     // QPainterPath mapToItem(const QGraphicsItem *item, const QPainterPath &path) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1566,8 +1539,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOITEM)
       QPainterPath *ptr = new QPainterPath(obj->mapToItem(PQGRAPHICSITEM(1), *PQPAINTERPATH(2)));
       Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
     }
-  }
-  else if (ISNUMPAR(5) && ISQGRAPHICSITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5)) {
+  } else if (ISNUMPAR(5) && ISQGRAPHICSITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5)) {
     // QPolygonF mapToItem(const QGraphicsItem *item, qreal x, qreal y, qreal w, qreal h) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1575,8 +1547,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOITEM)
       QPolygonF *ptr = new QPolygonF(obj->mapToItem(PQGRAPHICSITEM(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5)));
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
-  }
-  else if (ISNUMPAR(3) && ISQGRAPHICSITEM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
+  } else if (ISNUMPAR(3) && ISQGRAPHICSITEM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
     // QPointF mapToItem(const QGraphicsItem *item, qreal x, qreal y) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1599,8 +1570,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOPARENT)
       QPointF *ptr = new QPointF(obj->mapToParent(*PQPOINTF(1)));
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
     }
-  }
-  else if (ISNUMPAR(1) && ISQRECTF(1)) {
+  } else if (ISNUMPAR(1) && ISQRECTF(1)) {
     // QPolygonF mapToParent(const QRectF &rect) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1608,8 +1578,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOPARENT)
       QPolygonF *ptr = new QPolygonF(obj->mapToParent(*PQRECTF(1)));
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
-  }
-  else if (ISNUMPAR(1) && ISQPOLYGONF(1)) {
+  } else if (ISNUMPAR(1) && ISQPOLYGONF(1)) {
     // QPolygonF mapToParent(const QPolygonF &polygon) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1617,8 +1586,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOPARENT)
       QPolygonF *ptr = new QPolygonF(obj->mapToParent(*PQPOLYGONF(1)));
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
-  }
-  else if (ISNUMPAR(1) && ISQPAINTERPATH(1)) {
+  } else if (ISNUMPAR(1) && ISQPAINTERPATH(1)) {
     // QPainterPath mapToParent(const QPainterPath &path) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1626,8 +1594,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOPARENT)
       QPainterPath *ptr = new QPainterPath(obj->mapToParent(*PQPAINTERPATH(1)));
       Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
     }
-  }
-  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
+  } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // QPolygonF mapToParent(qreal x, qreal y, qreal w, qreal h) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1635,8 +1602,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOPARENT)
       QPolygonF *ptr = new QPolygonF(obj->mapToParent(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // QPointF mapToParent(qreal x, qreal y) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1659,8 +1625,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOSCENE)
       QPointF *ptr = new QPointF(obj->mapToScene(*PQPOINTF(1)));
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
     }
-  }
-  else if (ISNUMPAR(1) && ISQRECTF(1)) {
+  } else if (ISNUMPAR(1) && ISQRECTF(1)) {
     // QPolygonF mapToScene(const QRectF &rect) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1668,8 +1633,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOSCENE)
       QPolygonF *ptr = new QPolygonF(obj->mapToScene(*PQRECTF(1)));
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
-  }
-  else if (ISNUMPAR(1) && ISQPOLYGONF(1)) {
+  } else if (ISNUMPAR(1) && ISQPOLYGONF(1)) {
     // QPolygonF mapToScene(const QPolygonF &polygon) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1677,8 +1641,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOSCENE)
       QPolygonF *ptr = new QPolygonF(obj->mapToScene(*PQPOLYGONF(1)));
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
-  }
-  else if (ISNUMPAR(1) && ISQPAINTERPATH(1)) {
+  } else if (ISNUMPAR(1) && ISQPAINTERPATH(1)) {
     // QPainterPath mapToScene(const QPainterPath &path) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1686,8 +1649,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOSCENE)
       QPainterPath *ptr = new QPainterPath(obj->mapToScene(*PQPAINTERPATH(1)));
       Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
     }
-  }
-  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
+  } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // QPolygonF mapToScene(qreal x, qreal y, qreal w, qreal h) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1695,8 +1657,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPTOSCENE)
       QPolygonF *ptr = new QPolygonF(obj->mapToScene(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // QPointF mapToScene(qreal x, qreal y) const
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -2503,8 +2464,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_SETPOS)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setPos(qreal x, qreal y)
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -2629,8 +2589,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_SETTRANSFORMORIGINPOINT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setTransformOriginPoint(qreal x, qreal y)
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -3051,8 +3010,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_UPDATE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
+  } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // void update(qreal x, qreal y, qreal width, qreal height)
     QGraphicsItem *obj = static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -3150,8 +3108,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

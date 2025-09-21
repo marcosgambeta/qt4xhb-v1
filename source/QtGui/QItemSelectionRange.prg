@@ -71,18 +71,15 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_NEW)
     // QItemSelectionRange()
     QItemSelectionRange *obj = new QItemSelectionRange();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQITEMSELECTIONRANGE(1)) {
+  } else if (ISNUMPAR(1) && ISQITEMSELECTIONRANGE(1)) {
     // QItemSelectionRange(const QItemSelectionRange &other)
     QItemSelectionRange *obj = new QItemSelectionRange(*PQITEMSELECTIONRANGE(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(2) && ISQMODELINDEX(1) && ISQMODELINDEX(2)) {
+  } else if (ISNUMPAR(2) && ISQMODELINDEX(1) && ISQMODELINDEX(2)) {
     // QItemSelectionRange(const QModelIndex &topLeft, const QModelIndex &bottomRight)
     QItemSelectionRange *obj = new QItemSelectionRange(*PQMODELINDEX(1), *PQMODELINDEX(2));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
+  } else if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
     // QItemSelectionRange(const QModelIndex &index)
     QItemSelectionRange *obj = new QItemSelectionRange(*PQMODELINDEX(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -152,8 +149,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_CONTAINS)
     if (obj != NULL) {
       RBOOL(obj->contains(*PQMODELINDEX(1)));
     }
-  }
-  else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEX(3)) {
+  } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEX(3)) {
     // bool contains(int row, int column, const QModelIndex &parentIndex) const
     QItemSelectionRange *obj = static_cast<QItemSelectionRange *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -437,8 +433,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

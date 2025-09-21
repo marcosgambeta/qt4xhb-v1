@@ -68,8 +68,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_NEW)
     QGraphicsLinearLayout *obj =
         new QGraphicsLinearLayout(HB_ISNIL(1) ? 0 : static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtr(1)));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQGRAPHICSLAYOUTITEM(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQGRAPHICSLAYOUTITEM(2) || HB_ISNIL(2))) {
     // QGraphicsLinearLayout(Qt::Orientation orientation, QGraphicsLayoutItem *parent = 0)
     QGraphicsLinearLayout *obj = new QGraphicsLinearLayout(
         (Qt::Orientation)hb_parni(1), HB_ISNIL(2) ? 0 : static_cast<QGraphicsLayoutItem *>(Qt4xHb::itemGetPtr(2)));

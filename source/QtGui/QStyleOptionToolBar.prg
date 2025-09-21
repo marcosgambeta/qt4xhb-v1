@@ -55,8 +55,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_NEW)
     // QStyleOptionToolBar()
     QStyleOptionToolBar *obj = new QStyleOptionToolBar();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQSTYLEOPTIONTOOLBAR(1)) {
+  } else if (ISNUMPAR(1) && ISQSTYLEOPTIONTOOLBAR(1)) {
     // QStyleOptionToolBar(const QStyleOptionToolBar &other)
     QStyleOptionToolBar *obj = new QStyleOptionToolBar(*PQSTYLEOPTIONTOOLBAR(1));
     Qt4xHb::returnNewObject(obj, true);

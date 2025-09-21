@@ -571,8 +571,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_RESIZE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void resize(qreal w, qreal h)
     QGraphicsWidget *obj = qobject_cast<QGraphicsWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -1132,8 +1131,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_SETGEOMETRY)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQRECTF(1)) {
+  } else if (ISNUMPAR(1) && ISQRECTF(1)) {
     // virtual void setGeometry(const QRectF &rect)
     QGraphicsWidget *obj = qobject_cast<QGraphicsWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

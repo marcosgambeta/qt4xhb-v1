@@ -60,14 +60,12 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_NEW)
     QGraphicsEllipseItem *obj =
         new QGraphicsEllipseItem(HB_ISNIL(1) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(1)));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(1, 2) && ISQRECTF(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && ISQRECTF(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2))) {
     // QGraphicsEllipseItem(const QRectF &rect, QGraphicsItem *parent = 0)
     QGraphicsEllipseItem *obj =
         new QGraphicsEllipseItem(*PQRECTF(1), HB_ISNIL(2) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(2)));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) &&
+  } else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) &&
            (ISQGRAPHICSITEM(5) || HB_ISNIL(5))) {
     // QGraphicsEllipseItem(qreal x, qreal y, qreal width, qreal height, QGraphicsItem *parent = 0)
     QGraphicsEllipseItem *obj =
@@ -124,8 +122,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_SETRECT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
+  } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // void setRect(qreal x, qreal y, qreal width, qreal height)
     QGraphicsEllipseItem *obj = static_cast<QGraphicsEllipseItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 

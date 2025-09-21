@@ -113,8 +113,7 @@ HB_FUNC_STATIC(QFILEDIALOG_NEW)
     // QFileDialog(QWidget *parent, Qt::WindowFlags flags)
     QFileDialog *obj = new QFileDialog(PQWIDGET(1), (Qt::WindowFlags)hb_parni(2));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(0, 4) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISCHAR(2) || HB_ISNIL(2)) &&
+  } else if (ISBETWEEN(0, 4) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISCHAR(2) || HB_ISNIL(2)) &&
            (HB_ISCHAR(3) || HB_ISNIL(3)) && (HB_ISCHAR(4) || HB_ISNIL(4))) {
     // QFileDialog(QWidget *parent = 0, const QString &caption = QString(), const QString &directory = QString(), const
     // QString &filter = QString())
@@ -639,8 +638,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETDIRECTORY)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQDIR(1)) {
+  } else if (ISNUMPAR(1) && ISQDIR(1)) {
     // void setDirectory(const QDir &directory)
     QFileDialog *obj = qobject_cast<QFileDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

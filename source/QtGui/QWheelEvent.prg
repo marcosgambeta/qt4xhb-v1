@@ -57,8 +57,7 @@ HB_FUNC_STATIC(QWHEELEVENT_NEW)
         new QWheelEvent(*PQPOINT(1), PINT(2), (Qt::MouseButtons)hb_parni(3), (Qt::KeyboardModifiers)hb_parni(4),
                         HB_ISNIL(5) ? (Qt::Orientation)Qt::Vertical : (Qt::Orientation)hb_parni(5));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(5, 6) && ISQPOINT(1) && ISQPOINT(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
+  } else if (ISBETWEEN(5, 6) && ISQPOINT(1) && ISQPOINT(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
            ISNUMORNIL(6)) {
     // QWheelEvent(const QPoint &pos, const QPoint &globalPos, int delta, Qt::MouseButtons buttons,
     // Qt::KeyboardModifiers modifiers, Qt::Orientation orient = Qt::Vertical)

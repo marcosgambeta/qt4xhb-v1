@@ -100,8 +100,7 @@ HB_FUNC_STATIC(QTOOLBOX_ADDITEM)
       RINT(obj->addItem(PQWIDGET(1), HB_ISOBJECT(2) ? *static_cast<QIcon *>(Qt4xHb::itemGetPtr(2)) : QIcon(hb_parc(2)),
                         PQSTRING(3)));
     }
-  }
-  else if (ISNUMPAR(2) && ISQWIDGET(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && ISQWIDGET(1) && HB_ISCHAR(2)) {
     // int addItem(QWidget *w, const QString &text)
     QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -197,8 +196,7 @@ HB_FUNC_STATIC(QTOOLBOX_INSERTITEM)
                            HB_ISOBJECT(3) ? *static_cast<QIcon *>(Qt4xHb::itemGetPtr(3)) : QIcon(hb_parc(3)),
                            PQSTRING(4)));
     }
-  }
-  else if (ISNUMPAR(3) && HB_ISNUM(1) && ISQWIDGET(2) && HB_ISCHAR(3)) {
+  } else if (ISNUMPAR(3) && HB_ISNUM(1) && ISQWIDGET(2) && HB_ISCHAR(3)) {
     // int insertItem(int index, QWidget *widget, const QString &text)
     QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

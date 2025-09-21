@@ -99,14 +99,12 @@ HB_FUNC_STATIC(QIMAGEREADER_NEW)
     // QImageReader()
     QImageReader *obj = new QImageReader();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2))) {
     // QImageReader(QIODevice *device, const QByteArray &format = QByteArray())
     QImageReader *obj =
         new QImageReader(PQIODEVICE(1), HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(2)));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2))) {
     // QImageReader(const QString &fileName, const QByteArray &format = QByteArray())
     QImageReader *obj =
         new QImageReader(PQSTRING(1), HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(2)));
@@ -470,8 +468,7 @@ HB_FUNC_STATIC(QIMAGEREADER_READ)
       QImage *ptr = new QImage(obj->read());
       Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
     }
-  }
-  else if (ISNUMPAR(1) && ISQIMAGE(1)) {
+  } else if (ISNUMPAR(1) && ISQIMAGE(1)) {
     // bool read(QImage *image)
     QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -821,14 +818,12 @@ HB_FUNC_STATIC(QIMAGEREADER_IMAGEFORMAT)
     if (obj != NULL) {
       RENUM(obj->imageFormat());
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // static QByteArray imageFormat(const QString &fileName)
 
     QByteArray *ptr = new QByteArray(QImageReader::imageFormat(PQSTRING(1)));
     Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
-  }
-  else if (ISNUMPAR(1) && ISQIODEVICE(1)) {
+  } else if (ISNUMPAR(1) && ISQIODEVICE(1)) {
     // static QByteArray imageFormat(QIODevice *device)
 
     QByteArray *ptr = new QByteArray(QImageReader::imageFormat(PQIODEVICE(1)));
@@ -890,8 +885,7 @@ HB_FUNC_STATIC(QIMAGEREADER_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

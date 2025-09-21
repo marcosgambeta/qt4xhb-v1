@@ -167,8 +167,7 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_SETAXIS)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void setAxis(Qt::Axis axis)
     QGraphicsRotation *obj = qobject_cast<QGraphicsRotation *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

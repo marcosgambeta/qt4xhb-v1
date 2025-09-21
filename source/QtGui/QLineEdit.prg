@@ -123,8 +123,7 @@ HB_FUNC_STATIC(QLINEEDIT_NEW)
     // QLineEdit(QWidget *parent = 0)
     QLineEdit *obj = new QLineEdit(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2))) {
     // QLineEdit(const QString &contents, QWidget *parent = 0)
     QLineEdit *obj = new QLineEdit(PQSTRING(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -1010,8 +1009,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETTEXTMARGINS)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQMARGINS(1)) {
+  } else if (ISNUMPAR(1) && ISQMARGINS(1)) {
     // void setTextMargins(const QMargins &margins)
     QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

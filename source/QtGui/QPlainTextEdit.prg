@@ -121,8 +121,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_NEW)
     // QPlainTextEdit(QWidget *parent = 0)
     QPlainTextEdit *obj = new QPlainTextEdit(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2))) {
     // QPlainTextEdit(const QString &text, QWidget *parent = 0)
     QPlainTextEdit *obj = new QPlainTextEdit(PQSTRING(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -305,8 +304,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_CURSORRECT)
       QRect *ptr = new QRect(obj->cursorRect(*PQTEXTCURSOR(1)));
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
-  }
-  else if (ISNUMPAR(0)) {
+  } else if (ISNUMPAR(0)) {
     // QRect cursorRect() const
     QPlainTextEdit *obj = qobject_cast<QPlainTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

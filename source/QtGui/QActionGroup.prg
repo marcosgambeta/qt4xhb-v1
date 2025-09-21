@@ -131,8 +131,7 @@ HB_FUNC_STATIC(QACTIONGROUP_ADDACTION)
       QAction *ptr = obj->addAction(PQACTION(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // QAction *addAction(const QString &text)
     QActionGroup *obj = qobject_cast<QActionGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -140,8 +139,7 @@ HB_FUNC_STATIC(QACTIONGROUP_ADDACTION)
       QAction *ptr = obj->addAction(PQSTRING(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
     }
-  }
-  else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2)) {
     // QAction *addAction(const QIcon &icon, const QString &text)
     QActionGroup *obj = qobject_cast<QActionGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

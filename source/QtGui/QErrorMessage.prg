@@ -81,8 +81,7 @@ HB_FUNC_STATIC(QERRORMESSAGE_SHOWMESSAGE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     // void showMessage(const QString &message, const QString &type)
     QErrorMessage *obj = qobject_cast<QErrorMessage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

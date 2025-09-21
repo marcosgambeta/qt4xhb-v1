@@ -111,8 +111,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_NEW)
     // QTableWidget(QWidget *parent = 0)
     QTableWidget *obj = new QTableWidget(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQWIDGET(3) || HB_ISNIL(3))) {
+  } else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQWIDGET(3) || HB_ISNIL(3))) {
     // QTableWidget(int rows, int columns, QWidget *parent = 0)
     QTableWidget *obj = new QTableWidget(PINT(1), PINT(2), OPQWIDGET(3, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -374,8 +373,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_ITEMAT)
       QTableWidgetItem *ptr = obj->itemAt(*PQPOINT(1));
       Qt4xHb::createReturnClass(ptr, "QTABLEWIDGETITEM", false);
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // QTableWidgetItem *itemAt(int ax, int ay) const
     QTableWidget *obj = qobject_cast<QTableWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -594,8 +592,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SETCURRENTCELL)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
+  } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
     // void setCurrentCell(int row, int column, QItemSelectionModel::SelectionFlags command)
     QTableWidget *obj = qobject_cast<QTableWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -620,8 +617,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SETCURRENTITEM)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && ISQTABLEWIDGETITEM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && ISQTABLEWIDGETITEM(1) && HB_ISNUM(2)) {
     // void setCurrentItem(QTableWidgetItem *item, QItemSelectionModel::SelectionFlags command)
     QTableWidget *obj = qobject_cast<QTableWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

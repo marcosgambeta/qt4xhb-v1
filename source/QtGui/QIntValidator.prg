@@ -53,8 +53,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_NEW)
     // QIntValidator(QObject *parent = 0)
     QIntValidator *obj = new QIntValidator(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQOBJECT(3)) {
+  } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQOBJECT(3)) {
     // QIntValidator(int minimum, int maximum, QObject *parent)
     QIntValidator *obj = new QIntValidator(PINT(1), PINT(2), PQOBJECT(3));
     Qt4xHb::returnNewObject(obj, false);

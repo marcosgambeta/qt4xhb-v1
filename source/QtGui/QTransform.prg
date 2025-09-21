@@ -97,21 +97,18 @@ HB_FUNC_STATIC(QTRANSFORM_NEW)
     // QTransform()
     QTransform *obj = new QTransform();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(8, 9) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) &&
+  } else if (ISBETWEEN(8, 9) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) &&
            HB_ISNUM(7) && HB_ISNUM(8) && ISNUMORNIL(9)) {
     // QTransform(qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33
     // = 1.0)
     QTransform *obj = new QTransform(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6), PQREAL(7),
                                      PQREAL(8), OPQREAL(9, 1.0));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6)) {
+  } else if (ISNUMPAR(6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6)) {
     // QTransform(qreal m11, qreal m12, qreal m21, qreal m22, qreal dx, qreal dy)
     QTransform *obj = new QTransform(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQMATRIX(1)) {
+  } else if (ISNUMPAR(1) && ISQMATRIX(1)) {
     // QTransform(const QMatrix &matrix)
     QTransform *obj = new QTransform(*PQMATRIX(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -551,8 +548,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
 {
   if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     HB_FUNC_EXEC(QTRANSFORM_MAP1);
-  }
-  else if (ISNUMPAR(1) && ISQPOINTF(1)) {
+  } else if (ISNUMPAR(1) && ISQPOINTF(1)) {
     // QPointF map(const QPointF &p) const
     QTransform *obj = static_cast<QTransform *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -560,8 +556,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
       QPointF *ptr = new QPointF(obj->map(*PQPOINTF(1)));
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
     }
-  }
-  else if (ISNUMPAR(1) && ISQPOINT(1)) {
+  } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // QPoint map(const QPoint &point) const
     QTransform *obj = static_cast<QTransform *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -569,8 +564,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
       QPoint *ptr = new QPoint(obj->map(*PQPOINT(1)));
       Qt4xHb::createReturnClass(ptr, "QPOINT", true);
     }
-  }
-  else if (ISNUMPAR(1) && ISQLINE(1)) {
+  } else if (ISNUMPAR(1) && ISQLINE(1)) {
     // QLine map(const QLine &l) const
     QTransform *obj = static_cast<QTransform *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -578,8 +572,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
       QLine *ptr = new QLine(obj->map(*PQLINE(1)));
       Qt4xHb::createReturnClass(ptr, "QLINE", true);
     }
-  }
-  else if (ISNUMPAR(1) && ISQLINEF(1)) {
+  } else if (ISNUMPAR(1) && ISQLINEF(1)) {
     // QLineF map(const QLineF &line) const
     QTransform *obj = static_cast<QTransform *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -587,8 +580,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
       QLineF *ptr = new QLineF(obj->map(*PQLINEF(1)));
       Qt4xHb::createReturnClass(ptr, "QLINEF", true);
     }
-  }
-  else if (ISNUMPAR(1) && ISQPOLYGONF(1)) {
+  } else if (ISNUMPAR(1) && ISQPOLYGONF(1)) {
     // QPolygonF map(const QPolygonF &polygon) const
     QTransform *obj = static_cast<QTransform *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -596,8 +588,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
       QPolygonF *ptr = new QPolygonF(obj->map(*PQPOLYGONF(1)));
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
-  }
-  else if (ISNUMPAR(1) && ISQPOLYGON(1)) {
+  } else if (ISNUMPAR(1) && ISQPOLYGON(1)) {
     // QPolygon map(const QPolygon &polygon) const
     QTransform *obj = static_cast<QTransform *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -605,8 +596,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
       QPolygon *ptr = new QPolygon(obj->map(*PQPOLYGON(1)));
       Qt4xHb::createReturnClass(ptr, "QPOLYGON", true);
     }
-  }
-  else if (ISNUMPAR(1) && ISQREGION(1)) {
+  } else if (ISNUMPAR(1) && ISQREGION(1)) {
     // QRegion map(const QRegion &region) const
     QTransform *obj = static_cast<QTransform *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -614,8 +604,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
       QRegion *ptr = new QRegion(obj->map(*PQREGION(1)));
       Qt4xHb::createReturnClass(ptr, "QREGION", true);
     }
-  }
-  else if (ISNUMPAR(1) && ISQPAINTERPATH(1)) {
+  } else if (ISNUMPAR(1) && ISQPAINTERPATH(1)) {
     // QPainterPath map(const QPainterPath &path) const
     QTransform *obj = static_cast<QTransform *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -623,8 +612,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
       QPainterPath *ptr = new QPainterPath(obj->map(*PQPAINTERPATH(1)));
       Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
     }
-  }
-  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
+  } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     HB_FUNC_EXEC(QTRANSFORM_MAP10);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -641,8 +629,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAPRECT)
       QRectF *ptr = new QRectF(obj->mapRect(*PQRECTF(1)));
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
     }
-  }
-  else if (ISNUMPAR(1) && ISQRECT(1)) {
+  } else if (ISNUMPAR(1) && ISQRECT(1)) {
     // QRect mapRect(const QRect &rectangle) const
     QTransform *obj = static_cast<QTransform *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -835,8 +822,7 @@ HB_FUNC_STATIC(QTRANSFORM_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

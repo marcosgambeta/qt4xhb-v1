@@ -77,8 +77,7 @@ HB_FUNC_STATIC(QSPLITTER_NEW)
     // QSplitter(QWidget *parent = 0)
     QSplitter *obj = new QSplitter(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQWIDGET(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQWIDGET(2) || HB_ISNIL(2))) {
     // QSplitter(Qt::Orientation orientation, QWidget *parent = 0)
     QSplitter *obj = new QSplitter((Qt::Orientation)hb_parni(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);

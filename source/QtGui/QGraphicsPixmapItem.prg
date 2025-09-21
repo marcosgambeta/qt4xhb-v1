@@ -64,8 +64,7 @@ HB_FUNC_STATIC(QGRAPHICSPIXMAPITEM_NEW)
     QGraphicsPixmapItem *obj =
         new QGraphicsPixmapItem(HB_ISNIL(1) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(1)));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(1, 2) && ISQPIXMAP(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && ISQPIXMAP(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2))) {
     // QGraphicsPixmapItem(const QPixmap &pixmap, QGraphicsItem *parent = 0)
     QGraphicsPixmapItem *obj =
         new QGraphicsPixmapItem(*PQPIXMAP(1), HB_ISNIL(2) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(2)));
@@ -139,8 +138,7 @@ HB_FUNC_STATIC(QGRAPHICSPIXMAPITEM_SETOFFSET)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setOffset(qreal x, qreal y)
     QGraphicsPixmapItem *obj = static_cast<QGraphicsPixmapItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 

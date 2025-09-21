@@ -50,8 +50,7 @@ HB_FUNC_STATIC(QFILEOPENEVENT_NEW)
     // QFileOpenEvent(const QString &file)
     QFileOpenEvent *obj = new QFileOpenEvent(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISNUMPAR(1) && ISQURL(1)) {
+  } else if (ISNUMPAR(1) && ISQURL(1)) {
     // QFileOpenEvent(const QUrl &url)
     QFileOpenEvent *obj = new QFileOpenEvent(*PQURL(1));
     Qt4xHb::returnNewObject(obj, false);

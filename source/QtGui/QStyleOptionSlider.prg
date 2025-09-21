@@ -67,8 +67,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_NEW)
     // QStyleOptionSlider()
     QStyleOptionSlider *obj = new QStyleOptionSlider();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQSTYLEOPTIONSLIDER(1)) {
+  } else if (ISNUMPAR(1) && ISQSTYLEOPTIONSLIDER(1)) {
     // QStyleOptionSlider(const QStyleOptionSlider &other)
     QStyleOptionSlider *obj = new QStyleOptionSlider(*PQSTYLEOPTIONSLIDER(1));
     Qt4xHb::returnNewObject(obj, true);

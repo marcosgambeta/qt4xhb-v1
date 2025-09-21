@@ -140,8 +140,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDDOCKWIDGET)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(3) && HB_ISNUM(1) && ISQDOCKWIDGET(2) && HB_ISNUM(3)) {
+  } else if (ISNUMPAR(3) && HB_ISNUM(1) && ISQDOCKWIDGET(2) && HB_ISNUM(3)) {
     // void addDockWidget(Qt::DockWidgetArea area, QDockWidget *dockwidget, Qt::Orientation orientation)
     QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -166,8 +165,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDTOOLBAR)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQTOOLBAR(1)) {
+  } else if (ISNUMPAR(1) && ISQTOOLBAR(1)) {
     // void addToolBar(QToolBar *toolbar)
     QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -176,8 +174,7 @@ HB_FUNC_STATIC(QMAINWINDOW_ADDTOOLBAR)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // QToolBar *addToolBar(const QString &title)
     QMainWindow *obj = qobject_cast<QMainWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

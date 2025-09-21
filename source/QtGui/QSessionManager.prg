@@ -288,8 +288,7 @@ HB_FUNC_STATIC(QSESSIONMANAGER_SETMANAGERPROPERTY)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     // void setManagerProperty(const QString &name, const QString &value)
     QSessionManager *obj = qobject_cast<QSessionManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

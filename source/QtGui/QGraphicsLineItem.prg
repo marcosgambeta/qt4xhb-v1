@@ -62,14 +62,12 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_NEW)
     QGraphicsLineItem *obj =
         new QGraphicsLineItem(HB_ISNIL(1) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(1)));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(1, 2) && ISQLINEF(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && ISQLINEF(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2))) {
     // QGraphicsLineItem(const QLineF &line, QGraphicsItem *parent = 0)
     QGraphicsLineItem *obj =
         new QGraphicsLineItem(*PQLINEF(1), HB_ISNIL(2) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(2)));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) &&
+  } else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) &&
            (ISQGRAPHICSITEM(5) || HB_ISNIL(5))) {
     // QGraphicsLineItem(qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem *parent = 0)
     QGraphicsLineItem *obj =
@@ -145,8 +143,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_SETLINE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
+  } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // void setLine(qreal x1, qreal y1, qreal x2, qreal y2)
     QGraphicsLineItem *obj = static_cast<QGraphicsLineItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 

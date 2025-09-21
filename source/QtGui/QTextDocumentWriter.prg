@@ -68,13 +68,11 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_NEW)
     // QTextDocumentWriter()
     QTextDocumentWriter *obj = new QTextDocumentWriter();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(2) && ISQIODEVICE(1) && ISQBYTEARRAY(2)) {
+  } else if (ISNUMPAR(2) && ISQIODEVICE(1) && ISQBYTEARRAY(2)) {
     // QTextDocumentWriter(QIODevice *device, const QByteArray &format)
     QTextDocumentWriter *obj = new QTextDocumentWriter(PQIODEVICE(1), *PQBYTEARRAY(2));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2))) {
     // QTextDocumentWriter(const QString &fileName, const QByteArray &format = QByteArray())
     QTextDocumentWriter *obj = new QTextDocumentWriter(
         PQSTRING(1), HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(2)));
@@ -263,8 +261,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_WRITE)
     if (obj != NULL) {
       RBOOL(obj->write(PQTEXTDOCUMENT(1)));
     }
-  }
-  else if (ISNUMPAR(1) && ISQTEXTDOCUMENTFRAGMENT(1)) {
+  } else if (ISNUMPAR(1) && ISQTEXTDOCUMENTFRAGMENT(1)) {
     // bool write(const QTextDocumentFragment &fragment)
     QTextDocumentWriter *obj = static_cast<QTextDocumentWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -328,8 +325,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

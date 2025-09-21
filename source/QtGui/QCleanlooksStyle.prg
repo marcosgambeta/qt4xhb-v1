@@ -283,8 +283,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_POLISH)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQAPPLICATION(1)) {
+  } else if (ISNUMPAR(1) && ISQAPPLICATION(1)) {
     // virtual void polish(QApplication *app)
     QCleanlooksStyle *obj = qobject_cast<QCleanlooksStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -293,8 +292,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_POLISH)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQPALETTE(1)) {
+  } else if (ISNUMPAR(1) && ISQPALETTE(1)) {
     // virtual void polish(QPalette &pal)
     QCleanlooksStyle *obj = qobject_cast<QCleanlooksStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -442,8 +440,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_UNPOLISH)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQAPPLICATION(1)) {
+  } else if (ISNUMPAR(1) && ISQAPPLICATION(1)) {
     // virtual void unpolish(QApplication *app)
     QCleanlooksStyle *obj = qobject_cast<QCleanlooksStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

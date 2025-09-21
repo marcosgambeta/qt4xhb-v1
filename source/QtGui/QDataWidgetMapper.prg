@@ -114,8 +114,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_ADDMAPPING)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(3) && ISQWIDGET(1) && HB_ISNUM(2) && ISQBYTEARRAY(3)) {
+  } else if (ISNUMPAR(3) && ISQWIDGET(1) && HB_ISNUM(2) && ISQBYTEARRAY(3)) {
     // void addMapping(QWidget *widget, int section, const QByteArray &propertyName)
     QDataWidgetMapper *obj = qobject_cast<QDataWidgetMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

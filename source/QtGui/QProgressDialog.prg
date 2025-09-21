@@ -74,8 +74,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_NEW)
     QProgressDialog *obj =
         new QProgressDialog(OPQWIDGET(1, 0), HB_ISNIL(2) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(2));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(4, 6) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) && HB_ISNUM(4) &&
+  } else if (ISBETWEEN(4, 6) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) && HB_ISNUM(4) &&
            (ISQWIDGET(5) || HB_ISNIL(5)) && ISNUMORNIL(6)) {
     // QProgressDialog(const QString &labelText, const QString &cancelButtonText, int minimum, int maximum, QWidget
     // *parent = 0, Qt::WindowFlags f = 0)

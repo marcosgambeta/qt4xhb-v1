@@ -115,44 +115,36 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_NEW)
     // QTreeWidgetItem(int type = QTreeWidgetItem::Type)
     QTreeWidgetItem *obj = new QTreeWidgetItem(OPINT(1, QTreeWidgetItem::Type));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISARRAY(1) && ISNUMORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && HB_ISARRAY(1) && ISNUMORNIL(2)) {
     // QTreeWidgetItem(const QStringList &strings, int type = QTreeWidgetItem::Type)
     QTreeWidgetItem *obj = new QTreeWidgetItem(PQSTRINGLIST(1), OPINT(2, QTreeWidgetItem::Type));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && ISQTREEWIDGET(1) && ISNUMORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQTREEWIDGET(1) && ISNUMORNIL(2)) {
     // QTreeWidgetItem(QTreeWidget *parent, int type = QTreeWidgetItem::Type)
     QTreeWidgetItem *obj = new QTreeWidgetItem(PQTREEWIDGET(1), OPINT(2, QTreeWidgetItem::Type));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(2, 3) && ISQTREEWIDGET(1) && HB_ISARRAY(2) && ISNUMORNIL(3)) {
+  } else if (ISBETWEEN(2, 3) && ISQTREEWIDGET(1) && HB_ISARRAY(2) && ISNUMORNIL(3)) {
     // QTreeWidgetItem(QTreeWidget *parent, const QStringList &strings, int type = QTreeWidgetItem::Type)
     QTreeWidgetItem *obj = new QTreeWidgetItem(PQTREEWIDGET(1), PQSTRINGLIST(2), OPINT(3, QTreeWidgetItem::Type));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(2, 3) && ISQTREEWIDGET(1) && ISQTREEWIDGETITEM(2) && ISNUMORNIL(3)) {
+  } else if (ISBETWEEN(2, 3) && ISQTREEWIDGET(1) && ISQTREEWIDGETITEM(2) && ISNUMORNIL(3)) {
     // QTreeWidgetItem(QTreeWidget *parent, QTreeWidgetItem *preceding, int type = QTreeWidgetItem::Type)
     QTreeWidgetItem *obj = new QTreeWidgetItem(PQTREEWIDGET(1), PQTREEWIDGETITEM(2), OPINT(3, QTreeWidgetItem::Type));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && ISQTREEWIDGETITEM(1) && ISNUMORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQTREEWIDGETITEM(1) && ISNUMORNIL(2)) {
     // QTreeWidgetItem(QTreeWidgetItem *parent, int type = QTreeWidgetItem::Type)
     QTreeWidgetItem *obj = new QTreeWidgetItem(PQTREEWIDGETITEM(1), OPINT(2, QTreeWidgetItem::Type));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(2, 3) && ISQTREEWIDGETITEM(1) && HB_ISARRAY(2) && ISNUMORNIL(3)) {
+  } else if (ISBETWEEN(2, 3) && ISQTREEWIDGETITEM(1) && HB_ISARRAY(2) && ISNUMORNIL(3)) {
     // QTreeWidgetItem(QTreeWidgetItem *parent, const QStringList &strings, int type = QTreeWidgetItem::Type)
     QTreeWidgetItem *obj = new QTreeWidgetItem(PQTREEWIDGETITEM(1), PQSTRINGLIST(2), OPINT(3, QTreeWidgetItem::Type));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(2, 3) && ISQTREEWIDGETITEM(1) && ISQTREEWIDGETITEM(2) && ISNUMORNIL(3)) {
+  } else if (ISBETWEEN(2, 3) && ISQTREEWIDGETITEM(1) && ISQTREEWIDGETITEM(2) && ISNUMORNIL(3)) {
     // QTreeWidgetItem(QTreeWidgetItem *parent, QTreeWidgetItem *preceding, int type = QTreeWidgetItem::Type)
     QTreeWidgetItem *obj =
         new QTreeWidgetItem(PQTREEWIDGETITEM(1), PQTREEWIDGETITEM(2), OPINT(3, QTreeWidgetItem::Type));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISNUMPAR(1) && ISQTREEWIDGETITEM(1)) {
+  } else if (ISNUMPAR(1) && ISQTREEWIDGETITEM(1)) {
     // QTreeWidgetItem(const QTreeWidgetItem &other)
     QTreeWidgetItem *obj = new QTreeWidgetItem(*PQTREEWIDGETITEM(1));
     Qt4xHb::returnNewObject(obj, false);
@@ -1296,8 +1288,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

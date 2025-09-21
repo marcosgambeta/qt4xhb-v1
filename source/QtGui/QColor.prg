@@ -162,29 +162,23 @@ HB_FUNC_STATIC(QCOLOR_NEW)
     // QColor()
     QColor *obj = new QColor();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4)) {
+  } else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4)) {
     // QColor(int r, int g, int b, int a = 255)
     QColor *obj = new QColor(PINT(1), PINT(2), PINT(3), OPINT(4, 255));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     HB_FUNC_EXEC(QCOLOR_NEW3);
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // QColor(const QString &name)
     QColor *obj = new QColor(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     HB_FUNC_EXEC(QCOLOR_NEW5);
-  }
-  else if (ISNUMPAR(1) && ISQCOLOR(1)) {
+  } else if (ISNUMPAR(1) && ISQCOLOR(1)) {
     // QColor(const QColor &color)
     QColor *obj = new QColor(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     HB_FUNC_EXEC(QCOLOR_NEW7);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1378,8 +1372,7 @@ HB_FUNC_STATIC(QCOLOR_SETRGB)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void setRgb(QRgb rgb)
     QColor *obj = static_cast<QColor *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1710,8 +1703,7 @@ HB_FUNC_STATIC(QCOLOR_FROMRGB)
 
     QColor *ptr = new QColor(QColor::fromRgb(PQRGB(1)));
     Qt4xHb::createReturnClass(ptr, "QCOLOR", true);
-  }
-  else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4)) {
+  } else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4)) {
     // static QColor fromRgb(int r, int g, int b, int a = 255)
 
     QColor *ptr = new QColor(QColor::fromRgb(PINT(1), PINT(2), PINT(3), OPINT(4, 255)));
@@ -1793,8 +1785,7 @@ HB_FUNC(QGRAY)
 {
   if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
     HB_FUNC_EXEC(QGRAY1);
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     HB_FUNC_EXEC(QGRAY2);
   }
 }
@@ -1852,8 +1843,7 @@ HB_FUNC_STATIC(QCOLOR_TOVARIANT)
 {
   if (ISNUMPAR(0)) {
     QColor_toVariant1();
-  }
-  else if (ISNUMPAR(1) && ISQCOLOR(1)) {
+  } else if (ISNUMPAR(1) && ISQCOLOR(1)) {
     QColor_toVariant2();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1883,8 +1873,7 @@ HB_FUNC_STATIC(QCOLOR_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

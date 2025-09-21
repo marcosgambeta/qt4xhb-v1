@@ -60,8 +60,7 @@ HB_FUNC_STATIC(QGROUPBOX_NEW)
     // QGroupBox(QWidget *parent = 0)
     QGroupBox *obj = new QGroupBox(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2))) {
     // QGroupBox(const QString &title, QWidget *parent = 0)
     QGroupBox *obj = new QGroupBox(PQSTRING(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);

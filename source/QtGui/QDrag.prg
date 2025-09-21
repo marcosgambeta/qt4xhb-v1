@@ -98,8 +98,7 @@ HB_FUNC_STATIC(QDRAG_EXEC)
     if (obj != NULL) {
       RENUM(obj->exec(HB_ISNIL(1) ? (Qt::DropActions)Qt::MoveAction : (Qt::DropActions)hb_parni(1)));
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // Qt::DropAction exec(Qt::DropActions supportedActions, Qt::DropAction defaultDropAction)
     QDrag *obj = qobject_cast<QDrag *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

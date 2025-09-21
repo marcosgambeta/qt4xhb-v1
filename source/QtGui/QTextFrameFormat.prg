@@ -402,8 +402,7 @@ HB_FUNC_STATIC(QTEXTFRAMEFORMAT_SETHEIGHT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void setHeight(qreal height)
     QTextFrameFormat *obj = static_cast<QTextFrameFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -568,8 +567,7 @@ HB_FUNC_STATIC(QTEXTFRAMEFORMAT_SETWIDTH)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void setWidth(qreal width)
     QTextFrameFormat *obj = static_cast<QTextFrameFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 

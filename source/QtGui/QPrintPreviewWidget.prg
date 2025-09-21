@@ -73,8 +73,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_NEW)
     QPrintPreviewWidget *obj = new QPrintPreviewWidget(PQPRINTER(1), OPQWIDGET(2, 0),
                                                        HB_ISNIL(3) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(3));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {
+  } else if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {
     // QPrintPreviewWidget(QWidget *parent = 0, Qt::WindowFlags flags = 0)
     QPrintPreviewWidget *obj =
         new QPrintPreviewWidget(OPQWIDGET(1, 0), HB_ISNIL(2) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(2));

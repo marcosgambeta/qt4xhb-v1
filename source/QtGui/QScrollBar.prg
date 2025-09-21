@@ -49,8 +49,7 @@ HB_FUNC_STATIC(QSCROLLBAR_NEW)
     // QScrollBar(QWidget *parent = 0)
     QScrollBar *obj = new QScrollBar(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQWIDGET(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQWIDGET(2) || HB_ISNIL(2))) {
     // QScrollBar(Qt::Orientation orientation, QWidget *parent = 0)
     QScrollBar *obj = new QScrollBar((Qt::Orientation)hb_parni(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);

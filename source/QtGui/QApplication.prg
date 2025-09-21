@@ -652,14 +652,12 @@ HB_FUNC_STATIC(QAPPLICATION_FONT)
 
     QFont *ptr = new QFont(QApplication::font());
     Qt4xHb::createReturnClass(ptr, "QFONT", true);
-  }
-  else if (ISNUMPAR(1) && ISQWIDGET(1)) {
+  } else if (ISNUMPAR(1) && ISQWIDGET(1)) {
     // static QFont font(const QWidget *widget)
 
     QFont *ptr = new QFont(QApplication::font(PQWIDGET(1)));
     Qt4xHb::createReturnClass(ptr, "QFONT", true);
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // static QFont font(const char *className)
 
     QFont *ptr = new QFont(QApplication::font(PCONSTCHAR(1)));
@@ -848,14 +846,12 @@ HB_FUNC_STATIC(QAPPLICATION_PALETTE)
 
     QPalette *ptr = new QPalette(QApplication::palette());
     Qt4xHb::createReturnClass(ptr, "QPALETTE", true);
-  }
-  else if (ISNUMPAR(1) && ISQWIDGET(1)) {
+  } else if (ISNUMPAR(1) && ISQWIDGET(1)) {
     // static QPalette palette(const QWidget *widget)
 
     QPalette *ptr = new QPalette(QApplication::palette(PQWIDGET(1)));
     Qt4xHb::createReturnClass(ptr, "QPALETTE", true);
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // static QPalette palette(const char *className)
 
     QPalette *ptr = new QPalette(QApplication::palette(PCONSTCHAR(1)));
@@ -1173,8 +1169,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETSTYLE)
     QApplication::setStyle(PQSTYLE(1));
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // static QStyle *setStyle(const QString &style)
 
     QStyle *ptr = QApplication::setStyle(PQSTRING(1));
@@ -1282,8 +1277,7 @@ HB_FUNC_STATIC(QAPPLICATION_TOPLEVELAT)
 
     QWidget *ptr = QApplication::topLevelAt(*PQPOINT(1));
     Qt4xHb::createReturnQWidgetClass(ptr, "QWIDGET");
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // static QWidget *topLevelAt(int x, int y)
 
     QWidget *ptr = QApplication::topLevelAt(PINT(1), PINT(2));
@@ -1364,8 +1358,7 @@ HB_FUNC_STATIC(QAPPLICATION_WIDGETAT)
 
     QWidget *ptr = QApplication::widgetAt(*PQPOINT(1));
     Qt4xHb::createReturnQWidgetClass(ptr, "QWIDGET");
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // static QWidget *widgetAt(int x, int y)
 
     QWidget *ptr = QApplication::widgetAt(PINT(1), PINT(2));

@@ -114,8 +114,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_ADDROW)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && ISQWIDGET(1) && ISQLAYOUT(2)) {
+  } else if (ISNUMPAR(2) && ISQWIDGET(1) && ISQLAYOUT(2)) {
     // void addRow(QWidget *label, QLayout *field)
     QFormLayout *obj = qobject_cast<QFormLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -124,8 +123,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_ADDROW)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQWIDGET(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQWIDGET(2)) {
     // void addRow(const QString &labelText, QWidget *field)
     QFormLayout *obj = qobject_cast<QFormLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -134,8 +132,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_ADDROW)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQLAYOUT(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQLAYOUT(2)) {
     // void addRow(const QString &labelText, QLayout *field)
     QFormLayout *obj = qobject_cast<QFormLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -144,8 +141,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_ADDROW)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQWIDGET(1)) {
+  } else if (ISNUMPAR(1) && ISQWIDGET(1)) {
     // void addRow(QWidget *widget)
     QFormLayout *obj = qobject_cast<QFormLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -154,8 +150,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_ADDROW)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQLAYOUT(1)) {
+  } else if (ISNUMPAR(1) && ISQLAYOUT(1)) {
     // void addRow(QLayout *layout)
     QFormLayout *obj = qobject_cast<QFormLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -234,8 +229,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_INSERTROW)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(3) && HB_ISNUM(1) && ISQWIDGET(2) && ISQLAYOUT(3)) {
+  } else if (ISNUMPAR(3) && HB_ISNUM(1) && ISQWIDGET(2) && ISQLAYOUT(3)) {
     // void insertRow(int row, QWidget *label, QLayout *field)
     QFormLayout *obj = qobject_cast<QFormLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -244,8 +238,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_INSERTROW)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQWIDGET(3)) {
+  } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQWIDGET(3)) {
     // void insertRow(int row, const QString &labelText, QWidget *field)
     QFormLayout *obj = qobject_cast<QFormLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -254,8 +247,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_INSERTROW)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQLAYOUT(3)) {
+  } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQLAYOUT(3)) {
     // void insertRow(int row, const QString &labelText, QLayout *field)
     QFormLayout *obj = qobject_cast<QFormLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -264,8 +256,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_INSERTROW)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQWIDGET(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQWIDGET(2)) {
     // void insertRow(int row, QWidget *widget)
     QFormLayout *obj = qobject_cast<QFormLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -274,8 +265,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_INSERTROW)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQLAYOUT(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQLAYOUT(2)) {
     // void insertRow(int row, QLayout *layout)
     QFormLayout *obj = qobject_cast<QFormLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -317,8 +307,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_LABELFORFIELD)
       QWidget *ptr = obj->labelForField(PQWIDGET(1));
       Qt4xHb::createReturnQWidgetClass(ptr, "QWIDGET");
     }
-  }
-  else if (ISNUMPAR(1) && ISQLAYOUT(1)) {
+  } else if (ISNUMPAR(1) && ISQLAYOUT(1)) {
     // QWidget *labelForField(QLayout *field) const
     QFormLayout *obj = qobject_cast<QFormLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -725,8 +714,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_ITEMAT)
       QLayoutItem *ptr = obj->itemAt(PINT(1), (QFormLayout::ItemRole)hb_parni(2));
       Qt4xHb::createReturnClass(ptr, "QLAYOUTITEM", false);
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // virtual QLayoutItem *itemAt(int index) const
     QFormLayout *obj = qobject_cast<QFormLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

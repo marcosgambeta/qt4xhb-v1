@@ -59,8 +59,7 @@ HB_FUNC_STATIC(QMOUSEEVENT_NEW)
     QMouseEvent *obj = new QMouseEvent((QEvent::Type)hb_parni(1), *PQPOINT(2), (Qt::MouseButton)hb_parni(3),
                                        (Qt::MouseButtons)hb_parni(4), (Qt::KeyboardModifiers)hb_parni(5));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISNUMPAR(6) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6)) {
+  } else if (ISNUMPAR(6) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6)) {
     // QMouseEvent(QEvent::Type type, const QPoint &pos, const QPoint &globalPos, Qt::MouseButton button,
     // Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
     QMouseEvent *obj =

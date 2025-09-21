@@ -88,8 +88,7 @@ HB_FUNC_STATIC(QGRAPHICSTEXTITEM_NEW)
     QGraphicsTextItem *obj =
         new QGraphicsTextItem(HB_ISNIL(1) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(1)));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2))) {
     // QGraphicsTextItem(const QString &text, QGraphicsItem *parent = 0)
     QGraphicsTextItem *obj =
         new QGraphicsTextItem(PQSTRING(1), HB_ISNIL(2) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(2)));

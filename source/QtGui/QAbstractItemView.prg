@@ -404,8 +404,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_ITEMDELEGATE)
       QAbstractItemDelegate *ptr = obj->itemDelegate();
       Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMDELEGATE");
     }
-  }
-  else if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
+  } else if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
     // QAbstractItemDelegate *itemDelegate(const QModelIndex &index) const
     QAbstractItemView *obj = qobject_cast<QAbstractItemView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

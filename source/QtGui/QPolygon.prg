@@ -66,18 +66,15 @@ HB_FUNC_STATIC(QPOLYGON_NEW)
     // QPolygon()
     QPolygon *obj = new QPolygon();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QPolygon(int size)
     QPolygon *obj = new QPolygon(PINT(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQPOLYGON(1)) {
+  } else if (ISNUMPAR(1) && ISQPOLYGON(1)) {
     // QPolygon(const QPolygon &polygon)
     QPolygon *obj = new QPolygon(*PQPOLYGON(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && HB_ISARRAY(1)) {
+  } else if (ISNUMPAR(1) && HB_ISARRAY(1)) {
     // QPolygon(const QVector<QPoint> &points)
     QVector<QPoint> par1;
     PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
@@ -88,8 +85,7 @@ HB_FUNC_STATIC(QPOLYGON_NEW)
     }
     QPolygon *obj = new QPolygon(par1);
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(1, 2) && ISQRECT(1) && (HB_ISLOG(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && ISQRECT(1) && (HB_ISLOG(2) || HB_ISNIL(2))) {
     // QPolygon(const QRect &rectangle, bool closed = false)
     QPolygon *obj = new QPolygon(*PQRECT(1), OPBOOL(2, false));
     Qt4xHb::returnNewObject(obj, true);
@@ -184,8 +180,7 @@ HB_FUNC_STATIC(QPOLYGON_POINT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QPoint point(int index) const
     QPolygon *obj = static_cast<QPolygon *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -229,8 +224,7 @@ HB_FUNC_STATIC(QPOLYGON_SETPOINT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPOINT(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPOINT(2)) {
     // void setPoint(int index, const QPoint &point)
     QPolygon *obj = static_cast<QPolygon *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -294,8 +288,7 @@ HB_FUNC_STATIC(QPOLYGON_TRANSLATE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQPOINT(1)) {
+  } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // void translate(const QPoint &offset)
     QPolygon *obj = static_cast<QPolygon *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -319,8 +312,7 @@ HB_FUNC_STATIC(QPOLYGON_TRANSLATED)
       QPolygon *ptr = new QPolygon(obj->translated(PINT(1), PINT(2)));
       Qt4xHb::createReturnClass(ptr, "QPOLYGON", true);
     }
-  }
-  else if (ISNUMPAR(1) && ISQPOINT(1)) {
+  } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // QPolygon translated(const QPoint &offset) const
     QPolygon *obj = static_cast<QPolygon *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -363,8 +355,7 @@ HB_FUNC_STATIC(QPOLYGON_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
