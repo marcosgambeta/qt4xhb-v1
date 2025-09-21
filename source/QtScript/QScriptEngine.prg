@@ -88,8 +88,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEW)
     // QScriptEngine()
     QScriptEngine *obj = new QScriptEngine();
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISNUMPAR(1) && ISQOBJECT(1)) {
+  } else if (ISNUMPAR(1) && ISQOBJECT(1)) {
     // QScriptEngine(QObject *parent)
     QScriptEngine *obj = new QScriptEngine(PQOBJECT(1));
     Qt4xHb::returnNewObject(obj, false);
@@ -260,8 +259,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_EVALUATE)
       QScriptValue *ptr = new QScriptValue(obj->evaluate(PQSTRING(1), OPQSTRING(2, QString()), OPINT(3, 1)));
       Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
-  }
-  else if (ISNUMPAR(1) && ISQSCRIPTPROGRAM(1)) {
+  } else if (ISNUMPAR(1) && ISQSCRIPTPROGRAM(1)) {
     // QScriptValue evaluate(const QScriptProgram &program)
     QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -416,8 +414,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWREGEXP)
       QScriptValue *ptr = new QScriptValue(obj->newRegExp(*PQREGEXP(1)));
       Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     // QScriptValue newRegExp(const QString &pattern, const QString &flags)
     QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -440,8 +437,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWVARIANT)
       QScriptValue *ptr = new QScriptValue(obj->newVariant(*PQVARIANT(1)));
       Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
-  }
-  else if (ISNUMPAR(2) && ISQSCRIPTVALUE(1) && ISQVARIANT(2)) {
+  } else if (ISNUMPAR(2) && ISQSCRIPTVALUE(1) && ISQVARIANT(2)) {
     // QScriptValue newVariant(const QScriptValue &object, const QVariant &value)
     QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
