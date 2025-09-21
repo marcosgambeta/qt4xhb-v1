@@ -337,8 +337,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_FILTERATTRIBUTES)
     if (obj != NULL) {
       RQSTRINGLIST(obj->filterAttributes());
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // QStringList filterAttributes(const QString &filterName) const
     QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
