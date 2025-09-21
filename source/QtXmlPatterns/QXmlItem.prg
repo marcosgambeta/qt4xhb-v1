@@ -62,18 +62,15 @@ HB_FUNC_STATIC(QXMLITEM_NEW)
     // QXmlItem()
     QXmlItem *obj = new QXmlItem();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQXMLITEM(1)) {
+  } else if (ISNUMPAR(1) && ISQXMLITEM(1)) {
     // QXmlItem(const QXmlItem &other)
     QXmlItem *obj = new QXmlItem(*PQXMLITEM(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1)) {
+  } else if (ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1)) {
     // QXmlItem(const QXmlNodeModelIndex &node)
     QXmlItem *obj = new QXmlItem(*PQXMLNODEMODELINDEX(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQVARIANT(1)) {
+  } else if (ISNUMPAR(1) && ISQVARIANT(1)) {
     // QXmlItem(const QVariant &atomicValue)
     QXmlItem *obj = new QXmlItem(*PQVARIANT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -200,8 +197,7 @@ HB_FUNC_STATIC(QXMLITEM_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

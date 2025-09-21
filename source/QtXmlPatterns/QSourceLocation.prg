@@ -61,13 +61,11 @@ HB_FUNC_STATIC(QSOURCELOCATION_NEW)
     // QSourceLocation()
     QSourceLocation *obj = new QSourceLocation();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQSOURCELOCATION(1)) {
+  } else if (ISNUMPAR(1) && ISQSOURCELOCATION(1)) {
     // QSourceLocation(const QSourceLocation &other)
     QSourceLocation *obj = new QSourceLocation(*PQSOURCELOCATION(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(1, 3) && ISQURL(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
+  } else if (ISBETWEEN(1, 3) && ISQURL(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     // QSourceLocation(const QUrl &u, int l = -1, int c = -1)
     QSourceLocation *obj = new QSourceLocation(*PQURL(1), OPINT(2, -1), OPINT(3, -1));
     Qt4xHb::returnNewObject(obj, true);
@@ -235,8 +233,7 @@ HB_FUNC_STATIC(QSOURCELOCATION_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

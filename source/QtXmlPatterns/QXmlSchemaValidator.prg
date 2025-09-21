@@ -73,8 +73,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_NEW)
     // QXmlSchemaValidator()
     QXmlSchemaValidator *obj = new QXmlSchemaValidator();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQXMLSCHEMA(1)) {
+  } else if (ISNUMPAR(1) && ISQXMLSCHEMA(1)) {
     // QXmlSchemaValidator(const QXmlSchema &schema)
     QXmlSchemaValidator *obj = new QXmlSchemaValidator(*PQXMLSCHEMA(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -282,16 +281,14 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_VALIDATE)
     if (obj != NULL) {
       RBOOL(obj->validate(*PQURL(1)));
     }
-  }
-  else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (ISQURL(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (ISQURL(2) || HB_ISNIL(2))) {
     // bool validate(QIODevice *source, const QUrl &documentUri = QUrl()) const
     QXmlSchemaValidator *obj = static_cast<QXmlSchemaValidator *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL) {
       RBOOL(obj->validate(PQIODEVICE(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl *>(Qt4xHb::itemGetPtr(2))));
     }
-  }
-  else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (ISQURL(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (ISQURL(2) || HB_ISNIL(2))) {
     // bool validate(const QByteArray &data, const QUrl &documentUri = QUrl()) const
     QXmlSchemaValidator *obj = static_cast<QXmlSchemaValidator *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -314,8 +311,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
