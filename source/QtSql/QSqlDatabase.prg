@@ -104,8 +104,7 @@ HB_FUNC_STATIC(QSQLDATABASE_NEW)
     // QSqlDatabase()
     QSqlDatabase *obj = new QSqlDatabase();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQSQLDATABASE(1)) {
+  } else if (ISNUMPAR(1) && ISQSQLDATABASE(1)) {
     // QSqlDatabase(const QSqlDatabase &other)
     QSqlDatabase *obj = new QSqlDatabase(*PQSQLDATABASE(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -395,8 +394,7 @@ HB_FUNC_STATIC(QSQLDATABASE_OPEN)
     if (obj != NULL) {
       RBOOL(obj->open());
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     // bool open(const QString &user, const QString &password)
     QSqlDatabase *obj = static_cast<QSqlDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -703,8 +701,7 @@ HB_FUNC_STATIC(QSQLDATABASE_ADDDATABASE)
     QSqlDatabase *ptr = new QSqlDatabase(
         QSqlDatabase::addDatabase(PQSTRING(1), OPQSTRING(2, QLatin1String(QSqlDatabase::defaultConnection))));
     Qt4xHb::createReturnClass(ptr, "QSQLDATABASE", true);
-  }
-  else if (ISBETWEEN(1, 2) && ISQSQLDRIVER(1) && (HB_ISCHAR(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && ISQSQLDRIVER(1) && (HB_ISCHAR(2) || HB_ISNIL(2))) {
     // static QSqlDatabase addDatabase(QSqlDriver *driver, const QString &connectionName =
     // QLatin1String(QSqlDatabase::defaultConnection))
 
@@ -847,8 +844,7 @@ HB_FUNC_STATIC(QSQLDATABASE_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

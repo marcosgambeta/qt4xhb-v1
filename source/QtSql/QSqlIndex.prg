@@ -51,8 +51,7 @@ HB_FUNC_STATIC(QSQLINDEX_NEW)
     // QSqlIndex(const QString &cursorname = QString(), const QString &name = QString())
     QSqlIndex *obj = new QSqlIndex(OPQSTRING(1, QString()), OPQSTRING(2, QString()));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQSQLINDEX(1)) {
+  } else if (ISNUMPAR(1) && ISQSQLINDEX(1)) {
     // QSqlIndex(const QSqlIndex &other)
     QSqlIndex *obj = new QSqlIndex(*PQSQLINDEX(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -87,8 +86,7 @@ HB_FUNC_STATIC(QSQLINDEX_APPEND)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && ISQSQLFIELD(1) && HB_ISLOG(2)) {
+  } else if (ISNUMPAR(2) && ISQSQLFIELD(1) && HB_ISLOG(2)) {
     // void append(const QSqlField &field, bool desc)
     QSqlIndex *obj = static_cast<QSqlIndex *>(Qt4xHb::itemGetPtrStackSelfItem());
 

@@ -158,8 +158,7 @@ HB_FUNC_STATIC(QSQLQUERYMODEL_RECORD)
       QSqlRecord *ptr = new QSqlRecord(obj->record(PINT(1)));
       Qt4xHb::createReturnClass(ptr, "QSQLRECORD", true);
     }
-  }
-  else if (ISNUMPAR(0)) {
+  } else if (ISNUMPAR(0)) {
     // QSqlRecord record() const
     QSqlQueryModel *obj = qobject_cast<QSqlQueryModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -183,8 +182,7 @@ HB_FUNC_STATIC(QSQLQUERYMODEL_SETQUERY)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQSQLDATABASE(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQSQLDATABASE(2) || HB_ISNIL(2))) {
     // void setQuery(const QString &query, const QSqlDatabase &db = QSqlDatabase())
     QSqlQueryModel *obj = qobject_cast<QSqlQueryModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

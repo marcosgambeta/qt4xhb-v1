@@ -96,19 +96,16 @@ HB_FUNC_STATIC(QSQLQUERY_NEW)
     // QSqlQuery(QSqlResult *result)
     QSqlQuery *obj = new QSqlQuery(PQSQLRESULT(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (ISQSQLDATABASE(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (ISQSQLDATABASE(2) || HB_ISNIL(2))) {
     // QSqlQuery(const QString &query = QString(), QSqlDatabase db = QSqlDatabase())
     QSqlQuery *obj = new QSqlQuery(OPQSTRING(1, QString()),
                                    HB_ISNIL(2) ? QSqlDatabase() : *static_cast<QSqlDatabase *>(Qt4xHb::itemGetPtr(2)));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQSQLDATABASE(1)) {
+  } else if (ISNUMPAR(1) && ISQSQLDATABASE(1)) {
     // QSqlQuery(QSqlDatabase db)
     QSqlQuery *obj = new QSqlQuery(*PQSQLDATABASE(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQSQLQUERY(1)) {
+  } else if (ISNUMPAR(1) && ISQSQLQUERY(1)) {
     // QSqlQuery(const QSqlQuery &other)
     QSqlQuery *obj = new QSqlQuery(*PQSQLQUERY(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -182,8 +179,7 @@ HB_FUNC_STATIC(QSQLQUERY_BINDVALUE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQVARIANT(2) && ISNUMORNIL(3)) {
+  } else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQVARIANT(2) && ISNUMORNIL(3)) {
     // void bindValue(int pos, const QVariant &val, QSql::ParamType paramType = QSql::In)
     QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -207,8 +203,7 @@ HB_FUNC_STATIC(QSQLQUERY_BOUNDVALUE)
       QVariant *ptr = new QVariant(obj->boundValue(PQSTRING(1)));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QVariant boundValue(int pos) const
     QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -269,8 +264,7 @@ HB_FUNC_STATIC(QSQLQUERY_EXEC)
     if (obj != NULL) {
       RBOOL(obj->exec(PQSTRING(1)));
     }
-  }
-  else if (ISNUMPAR(0)) {
+  } else if (ISNUMPAR(0)) {
     // bool exec()
     QSqlQuery *obj = static_cast<QSqlQuery *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -773,8 +767,7 @@ HB_FUNC_STATIC(QSQLQUERY_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
