@@ -287,8 +287,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETVIEWBOX)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQRECTF(1)) {
+  } else if (ISNUMPAR(1) && ISQRECTF(1)) {
     // void setViewBox(const QRectF &viewBox)
     QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
 

@@ -65,18 +65,15 @@ HB_FUNC_STATIC(QSVGRENDERER_NEW)
     // QSvgRenderer(QObject *parent = 0)
     QSvgRenderer *obj = new QSvgRenderer(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
     // QSvgRenderer(const QString &filename, QObject *parent = 0)
     QSvgRenderer *obj = new QSvgRenderer(PQSTRING(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
     // QSvgRenderer(const QByteArray &contents, QObject *parent = 0)
     QSvgRenderer *obj = new QSvgRenderer(*PQBYTEARRAY(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && ISQXMLSTREAMREADER(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && ISQXMLSTREAMREADER(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
     // QSvgRenderer(QXmlStreamReader *contents, QObject *parent = 0)
     QSvgRenderer *obj = new QSvgRenderer(PQXMLSTREAMREADER(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -262,8 +259,7 @@ HB_FUNC_STATIC(QSVGRENDERER_SETVIEWBOX)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQRECTF(1)) {
+  } else if (ISNUMPAR(1) && ISQRECTF(1)) {
     // void setViewBox(const QRectF &viewbox)
     QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -324,16 +320,14 @@ HB_FUNC_STATIC(QSVGRENDERER_LOAD)
     if (obj != NULL) {
       RBOOL(obj->load(PQSTRING(1)));
     }
-  }
-  else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
+  } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     // bool load(const QByteArray &contents)
     QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL) {
       RBOOL(obj->load(*PQBYTEARRAY(1)));
     }
-  }
-  else if (ISNUMPAR(1) && ISQXMLSTREAMREADER(1)) {
+  } else if (ISNUMPAR(1) && ISQXMLSTREAMREADER(1)) {
     // bool load(QXmlStreamReader *contents)
     QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -356,8 +350,7 @@ HB_FUNC_STATIC(QSVGRENDERER_RENDER)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && ISQPAINTER(1) && ISQRECTF(2)) {
+  } else if (ISNUMPAR(2) && ISQPAINTER(1) && ISQRECTF(2)) {
     // void render(QPainter *painter, const QRectF &bounds)
     QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -366,8 +359,7 @@ HB_FUNC_STATIC(QSVGRENDERER_RENDER)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISBETWEEN(2, 3) && ISQPAINTER(1) && HB_ISCHAR(2) && (ISQRECTF(3) || HB_ISNIL(3))) {
+  } else if (ISBETWEEN(2, 3) && ISQPAINTER(1) && HB_ISCHAR(2) && (ISQRECTF(3) || HB_ISNIL(3))) {
     // void render(QPainter *painter, const QString &elementId, const QRectF &bounds = QRectF())
     QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
