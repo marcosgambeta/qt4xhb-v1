@@ -80,8 +80,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_NEW)
     // QVideoSurfaceFormat()
     QVideoSurfaceFormat *obj = new QVideoSurfaceFormat();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(2, 3) && ISQSIZE(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
+  } else if (ISBETWEEN(2, 3) && ISQSIZE(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
     // QVideoSurfaceFormat(const QSize &size, QVideoFrame::PixelFormat format, QAbstractVideoBuffer::HandleType type =
     // QAbstractVideoBuffer::NoHandle)
     QVideoSurfaceFormat *obj =
@@ -89,8 +88,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_NEW)
                                 HB_ISNIL(3) ? (QAbstractVideoBuffer::HandleType)QAbstractVideoBuffer::NoHandle
                                             : (QAbstractVideoBuffer::HandleType)hb_parni(3));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1)) {
+  } else if (ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1)) {
     // QVideoSurfaceFormat(const QVideoSurfaceFormat &other)
     QVideoSurfaceFormat *obj = new QVideoSurfaceFormat(*PQVIDEOSURFACEFORMAT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -369,8 +367,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETFRAMESIZE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setFrameSize(int width, int height)
     QVideoSurfaceFormat *obj = static_cast<QVideoSurfaceFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -395,8 +392,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETPIXELASPECTRATIO)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setPixelAspectRatio(int horizontal, int vertical)
     QVideoSurfaceFormat *obj = static_cast<QVideoSurfaceFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -557,8 +553,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

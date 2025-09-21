@@ -68,8 +68,7 @@ HB_FUNC_STATIC(QAUDIOOUTPUT_NEW)
     QAudioOutput *obj = new QAudioOutput(
         HB_ISNIL(1) ? QAudioFormat() : *static_cast<QAudioFormat *>(Qt4xHb::itemGetPtr(1)), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 3) && ISQAUDIODEVICEINFO(1) && (ISQAUDIOFORMAT(2) || HB_ISNIL(2)) &&
+  } else if (ISBETWEEN(1, 3) && ISQAUDIODEVICEINFO(1) && (ISQAUDIOFORMAT(2) || HB_ISNIL(2)) &&
            (ISQOBJECT(3) || HB_ISNIL(3))) {
     // QAudioOutput(const QAudioDeviceInfo &audioDevice, const QAudioFormat &format = QAudioFormat(), QObject *parent =
     // 0)
@@ -335,8 +334,7 @@ HB_FUNC_STATIC(QAUDIOOUTPUT_START)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(0)) {
+  } else if (ISNUMPAR(0)) {
     // QIODevice *start()
     QAudioOutput *obj = qobject_cast<QAudioOutput *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
