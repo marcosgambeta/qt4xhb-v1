@@ -119,8 +119,7 @@ HB_FUNC_STATIC(QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQOBJECT(2) && HB_ISNUM(3)) {
+  } else if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQOBJECT(2) && HB_ISNUM(3)) {
     // void addToJavaScriptWindowObject(const QString &name, QObject *object, QScriptEngine::ValueOwnership own)
     QWebFrame *obj = qobject_cast<QWebFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -371,8 +370,7 @@ HB_FUNC_STATIC(QWEBFRAME_LOAD)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISBETWEEN(1, 3) && ISQNETWORKREQUEST(1) && ISNUMORNIL(2) && (ISQBYTEARRAY(3) || HB_ISNIL(3))) {
+  } else if (ISBETWEEN(1, 3) && ISQNETWORKREQUEST(1) && ISNUMORNIL(2) && (ISQBYTEARRAY(3) || HB_ISNIL(3))) {
     // void load(const QNetworkRequest &req, QNetworkAccessManager::Operation operation =
     // QNetworkAccessManager::GetOperation, const QByteArray &body = QByteArray())
     QWebFrame *obj = qobject_cast<QWebFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -458,8 +456,7 @@ HB_FUNC_STATIC(QWEBFRAME_RENDER)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && ISQPAINTER(1) && ISQREGION(2)) {
+  } else if (ISNUMPAR(2) && ISQPAINTER(1) && ISQREGION(2)) {
     // void render(QPainter *painter, const QRegion &clip)
     QWebFrame *obj = qobject_cast<QWebFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -468,8 +465,7 @@ HB_FUNC_STATIC(QWEBFRAME_RENDER)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISBETWEEN(2, 3) && ISQPAINTER(1) && HB_ISNUM(2) && (ISQREGION(3) || HB_ISNIL(3))) {
+  } else if (ISBETWEEN(2, 3) && ISQPAINTER(1) && HB_ISNUM(2) && (ISQREGION(3) || HB_ISNIL(3))) {
     // void render(QPainter *painter, QWebFrame::RenderLayer layer, const QRegion &clip = QRegion())
     QWebFrame *obj = qobject_cast<QWebFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
