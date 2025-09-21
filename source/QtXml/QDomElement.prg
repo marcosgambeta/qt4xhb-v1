@@ -79,8 +79,7 @@ HB_FUNC_STATIC(QDOMELEMENT_NEW)
     // QDomElement()
     QDomElement *obj = new QDomElement();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQDOMELEMENT(1)) {
+  } else if (ISNUMPAR(1) && ISQDOMELEMENT(1)) {
     // QDomElement(const QDomElement &x)
     QDomElement *obj = new QDomElement(*PQDOMELEMENT(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -477,8 +476,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE)
 {
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     HB_FUNC_EXEC(QDOMELEMENT_SETATTRIBUTE1);
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     HB_FUNC_EXEC(QDOMELEMENT_SETATTRIBUTE2);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -609,8 +607,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS)
 {
   if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3)) {
     HB_FUNC_EXEC(QDOMELEMENT_SETATTRIBUTENS1);
-  }
-  else if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3)) {
+  } else if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3)) {
     HB_FUNC_EXEC(QDOMELEMENT_SETATTRIBUTENS2);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

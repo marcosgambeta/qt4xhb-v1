@@ -44,8 +44,7 @@ HB_FUNC_STATIC(QDOMCOMMENT_NEW)
     // QDomComment()
     QDomComment *obj = new QDomComment();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQDOMCOMMENT(1)) {
+  } else if (ISNUMPAR(1) && ISQDOMCOMMENT(1)) {
     // QDomComment(const QDomComment &x)
     QDomComment *obj = new QDomComment(*PQDOMCOMMENT(1));
     Qt4xHb::returnNewObject(obj, true);

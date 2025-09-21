@@ -44,8 +44,7 @@ HB_FUNC_STATIC(QDOMCDATASECTION_NEW)
     // QDomCDATASection()
     QDomCDATASection *obj = new QDomCDATASection();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQDOMCDATASECTION(1)) {
+  } else if (ISNUMPAR(1) && ISQDOMCDATASECTION(1)) {
     // QDomCDATASection(const QDomCDATASection &x)
     QDomCDATASection *obj = new QDomCDATASection(*PQDOMCDATASECTION(1));
     Qt4xHb::returnNewObject(obj, true);

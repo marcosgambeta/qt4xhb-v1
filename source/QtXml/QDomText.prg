@@ -45,8 +45,7 @@ HB_FUNC_STATIC(QDOMTEXT_NEW)
     // QDomText()
     QDomText *obj = new QDomText();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQDOMTEXT(1)) {
+  } else if (ISNUMPAR(1) && ISQDOMTEXT(1)) {
     // QDomText(const QDomText &x)
     QDomText *obj = new QDomText(*PQDOMTEXT(1));
     Qt4xHb::returnNewObject(obj, true);

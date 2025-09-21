@@ -61,8 +61,7 @@ HB_FUNC_STATIC(QXMLPARSEEXCEPTION_NEW)
     QXmlParseException *obj = new QXmlParseException(OPQSTRING(1, QString()), OPINT(2, -1), OPINT(3, -1),
                                                      OPQSTRING(4, QString()), OPQSTRING(5, QString()));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1)) {
+  } else if (ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1)) {
     // QXmlParseException(const QXmlParseException &other)
     QXmlParseException *obj = new QXmlParseException(*PQXMLPARSEEXCEPTION(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -187,8 +186,7 @@ HB_FUNC_STATIC(QXMLPARSEEXCEPTION_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

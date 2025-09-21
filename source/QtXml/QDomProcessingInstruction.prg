@@ -47,8 +47,7 @@ HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_NEW)
     // QDomProcessingInstruction()
     QDomProcessingInstruction *obj = new QDomProcessingInstruction();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQDOMPROCESSINGINSTRUCTION(1)) {
+  } else if (ISNUMPAR(1) && ISQDOMPROCESSINGINSTRUCTION(1)) {
     // QDomProcessingInstruction(const QDomProcessingInstruction &x)
     QDomProcessingInstruction *obj = new QDomProcessingInstruction(*PQDOMPROCESSINGINSTRUCTION(1));
     Qt4xHb::returnNewObject(obj, true);
