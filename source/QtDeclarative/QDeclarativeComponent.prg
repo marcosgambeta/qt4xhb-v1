@@ -70,18 +70,15 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_NEW)
     // QDeclarativeComponent(QObject *parent = 0)
     QDeclarativeComponent *obj = new QDeclarativeComponent(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && ISQDECLARATIVEENGINE(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && ISQDECLARATIVEENGINE(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
     // QDeclarativeComponent(QDeclarativeEngine *, QObject *parent = 0)
     QDeclarativeComponent *obj = new QDeclarativeComponent(PQDECLARATIVEENGINE(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(2, 3) && ISQDECLARATIVEENGINE(1) && HB_ISCHAR(2) && (ISQOBJECT(3) || HB_ISNIL(3))) {
+  } else if (ISBETWEEN(2, 3) && ISQDECLARATIVEENGINE(1) && HB_ISCHAR(2) && (ISQOBJECT(3) || HB_ISNIL(3))) {
     // QDeclarativeComponent(QDeclarativeEngine *, const QString &fileName, QObject *parent = 0)
     QDeclarativeComponent *obj = new QDeclarativeComponent(PQDECLARATIVEENGINE(1), PQSTRING(2), OPQOBJECT(3, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(2, 3) && ISQDECLARATIVEENGINE(1) && ISQURL(2) && (ISQOBJECT(3) || HB_ISNIL(3))) {
+  } else if (ISBETWEEN(2, 3) && ISQDECLARATIVEENGINE(1) && ISQURL(2) && (ISQOBJECT(3) || HB_ISNIL(3))) {
     // QDeclarativeComponent(QDeclarativeEngine *, const QUrl &url, QObject *parent = 0)
     QDeclarativeComponent *obj = new QDeclarativeComponent(PQDECLARATIVEENGINE(1), *PQURL(2), OPQOBJECT(3, 0));
     Qt4xHb::returnNewObject(obj, false);

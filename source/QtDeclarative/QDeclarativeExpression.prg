@@ -70,8 +70,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_NEW)
     // QDeclarativeExpression()
     QDeclarativeExpression *obj = new QDeclarativeExpression();
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(3, 4) && ISQDECLARATIVECONTEXT(1) && ISQOBJECT(2) && HB_ISCHAR(3) && (ISQOBJECT(4) || HB_ISNIL(4))) {
+  } else if (ISBETWEEN(3, 4) && ISQDECLARATIVECONTEXT(1) && ISQOBJECT(2) && HB_ISCHAR(3) && (ISQOBJECT(4) || HB_ISNIL(4))) {
     // QDeclarativeExpression(QDeclarativeContext *ctxt, QObject *scope, const QString &expression, QObject *parent = 0)
     QDeclarativeExpression *obj =
         new QDeclarativeExpression(PQDECLARATIVECONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4, 0));

@@ -70,8 +70,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_NEW)
     // QDeclarativeView(QWidget *parent = 0)
     QDeclarativeView *obj = new QDeclarativeView(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && ISQURL(1) && (ISQWIDGET(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && ISQURL(1) && (ISQWIDGET(2) || HB_ISNIL(2))) {
     // QDeclarativeView(const QUrl &source, QWidget *parent = 0)
     QDeclarativeView *obj = new QDeclarativeView(*PQURL(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);

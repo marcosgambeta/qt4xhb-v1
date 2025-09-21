@@ -65,8 +65,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_NEW)
     // QDeclarativeListReference()
     QDeclarativeListReference *obj = new QDeclarativeListReference();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(2, 3) && ISQOBJECT(1) && HB_ISCHAR(2) && (ISQDECLARATIVEENGINE(3) || HB_ISNIL(3))) {
+  } else if (ISBETWEEN(2, 3) && ISQOBJECT(1) && HB_ISCHAR(2) && (ISQDECLARATIVEENGINE(3) || HB_ISNIL(3))) {
     // QDeclarativeListReference(QObject *object, const char *property, QDeclarativeEngine *engine = 0)
     QDeclarativeListReference *obj =
         new QDeclarativeListReference(PQOBJECT(1), PCONSTCHAR(2), OPQDECLARATIVEENGINE(3, 0));
@@ -288,8 +287,7 @@ HB_FUNC_STATIC(QDECLARATIVELISTREFERENCE_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

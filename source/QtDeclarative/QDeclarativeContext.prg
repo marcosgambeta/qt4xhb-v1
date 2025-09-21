@@ -62,8 +62,7 @@ HB_FUNC_STATIC(QDECLARATIVECONTEXT_NEW)
     // QDeclarativeContext(QDeclarativeEngine *engine, QObject *parent = 0)
     QDeclarativeContext *obj = new QDeclarativeContext(PQDECLARATIVEENGINE(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && ISQDECLARATIVECONTEXT(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && ISQDECLARATIVECONTEXT(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
     // QDeclarativeContext(QDeclarativeContext *parentContext, QObject *parent = 0)
     QDeclarativeContext *obj = new QDeclarativeContext(PQDECLARATIVECONTEXT(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -272,8 +271,7 @@ HB_FUNC_STATIC(QDECLARATIVECONTEXT_SETCONTEXTPROPERTY)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2)) {
     // void setContextProperty(const QString &name, const QVariant &value)
     QDeclarativeContext *obj = qobject_cast<QDeclarativeContext *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
