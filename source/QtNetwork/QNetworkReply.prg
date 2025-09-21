@@ -203,8 +203,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_IGNORESSLERRORS)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(0)) {
+  } else if (ISNUMPAR(0)) {
     // virtual void ignoreSslErrors()
     QNetworkReply *obj = qobject_cast<QNetworkReply *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

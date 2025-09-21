@@ -389,8 +389,7 @@ HB_FUNC_STATIC(QFTP_PUT)
       RINT(obj->put(PQIODEVICE(1), PQSTRING(2),
                     HB_ISNIL(3) ? (QFtp::TransferType)QFtp::Binary : (QFtp::TransferType)hb_parni(3)));
     }
-  }
-  else if (ISBETWEEN(2, 3) && ISQBYTEARRAY(1) && HB_ISCHAR(2) && ISNUMORNIL(3)) {
+  } else if (ISBETWEEN(2, 3) && ISQBYTEARRAY(1) && HB_ISCHAR(2) && ISNUMORNIL(3)) {
     // int put(const QByteArray &data, const QString &file, QFtp::TransferType type = QFtp::Binary)
     QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

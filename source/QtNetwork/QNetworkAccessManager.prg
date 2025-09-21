@@ -266,8 +266,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_POST)
       QNetworkReply *ptr = obj->post(*PQNETWORKREQUEST(1), PQIODEVICE(2));
       Qt4xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
-  }
-  else if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2)) {
+  } else if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2)) {
     // QNetworkReply *post(const QNetworkRequest &request, const QByteArray &data)
     QNetworkAccessManager *obj = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -328,8 +327,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_PUT)
       QNetworkReply *ptr = obj->put(*PQNETWORKREQUEST(1), PQIODEVICE(2));
       Qt4xHb::createReturnQObjectClass(ptr, "QNETWORKREPLY");
     }
-  }
-  else if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2)) {
+  } else if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2)) {
     // QNetworkReply *put(const QNetworkRequest &request, const QByteArray &data)
     QNetworkAccessManager *obj = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

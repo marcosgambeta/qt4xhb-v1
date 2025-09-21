@@ -61,8 +61,7 @@ HB_FUNC_STATIC(QSSLKEY_NEW)
     // QSslKey()
     QSslKey *obj = new QSslKey();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(2, 5) && ISQBYTEARRAY(1) && HB_ISNUM(2) && ISNUMORNIL(3) &&
+  } else if (ISBETWEEN(2, 5) && ISQBYTEARRAY(1) && HB_ISNUM(2) && ISNUMORNIL(3) &&
            ISNUMORNIL(4) && (ISQBYTEARRAY(5) || HB_ISNIL(5))) {
     // QSslKey(const QByteArray &encoded, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem,
     // QSsl::KeyType type = QSsl::PrivateKey, const QByteArray &passPhrase = QByteArray())
@@ -71,8 +70,7 @@ HB_FUNC_STATIC(QSSLKEY_NEW)
                                HB_ISNIL(4) ? (QSsl::KeyType)QSsl::PrivateKey : (QSsl::KeyType)hb_parni(4),
                                HB_ISNIL(5) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(5)));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(2, 5) && ISQIODEVICE(1) && HB_ISNUM(2) && ISNUMORNIL(3) &&
+  } else if (ISBETWEEN(2, 5) && ISQIODEVICE(1) && HB_ISNUM(2) && ISNUMORNIL(3) &&
            ISNUMORNIL(4) && (ISQBYTEARRAY(5) || HB_ISNIL(5))) {
     // QSslKey(QIODevice *device, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType
     // type = QSsl::PrivateKey, const QByteArray &passPhrase = QByteArray())
@@ -81,8 +79,7 @@ HB_FUNC_STATIC(QSSLKEY_NEW)
                                HB_ISNIL(4) ? (QSsl::KeyType)QSsl::PrivateKey : (QSsl::KeyType)hb_parni(4),
                                HB_ISNIL(5) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(5)));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQSSLKEY(1)) {
+  } else if (ISNUMPAR(1) && ISQSSLKEY(1)) {
     // QSslKey(const QSslKey &other)
     QSslKey *obj = new QSslKey(*PQSSLKEY(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -249,8 +246,7 @@ HB_FUNC_STATIC(QSSLKEY_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

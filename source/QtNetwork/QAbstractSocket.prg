@@ -144,8 +144,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_CONNECTTOHOST)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISBETWEEN(2, 3) && ISQHOSTADDRESS(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
+  } else if (ISBETWEEN(2, 3) && ISQHOSTADDRESS(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
     // void connectToHost(const QHostAddress &address, quint16 port, QIODevice::OpenMode openMode =
     // QIODevice::ReadWrite)
     QAbstractSocket *obj = qobject_cast<QAbstractSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());

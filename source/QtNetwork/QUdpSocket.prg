@@ -81,24 +81,21 @@ HB_FUNC_STATIC(QUDPSOCKET_BIND)
     if (obj != NULL) {
       RBOOL(obj->bind(*PQHOSTADDRESS(1), PQUINT16(2)));
     }
-  }
-  else if (ISNUMPAR(3) && ISQHOSTADDRESS(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
+  } else if (ISNUMPAR(3) && ISQHOSTADDRESS(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
     // bool bind(const QHostAddress &address, quint16 port, QUdpSocket::BindMode mode)
     QUdpSocket *obj = qobject_cast<QUdpSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL) {
       RBOOL(obj->bind(*PQHOSTADDRESS(1), PQUINT16(2), (QUdpSocket::BindMode)hb_parni(3)));
     }
-  }
-  else if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
+  } else if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
     // bool bind(quint16 port = 0)
     QUdpSocket *obj = qobject_cast<QUdpSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if (obj != NULL) {
       RBOOL(obj->bind(OPQUINT16(1, 0)));
     }
-  }
-  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // bool bind(quint16 port, QUdpSocket::BindMode mode)
     QUdpSocket *obj = qobject_cast<QUdpSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -155,8 +152,7 @@ HB_FUNC_STATIC(QUDPSOCKET_WRITEDATAGRAM)
     if (obj != NULL) {
       RQINT64(obj->writeDatagram(PCONSTCHAR(1), PQINT64(2), *PQHOSTADDRESS(3), PQUINT16(4)));
     }
-  }
-  else if (ISNUMPAR(3) && ISQBYTEARRAY(1) && ISQHOSTADDRESS(2) && HB_ISNUM(3)) {
+  } else if (ISNUMPAR(3) && ISQBYTEARRAY(1) && ISQHOSTADDRESS(2) && HB_ISNUM(3)) {
     // qint64 writeDatagram(const QByteArray &datagram, const QHostAddress &host, quint16 port)
     QUdpSocket *obj = qobject_cast<QUdpSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

@@ -69,16 +69,14 @@ HB_FUNC_STATIC(QNETWORKPROXY_NEW)
     // QNetworkProxy()
     QNetworkProxy *obj = new QNetworkProxy();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(1, 5) && HB_ISNUM(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (HB_ISCHAR(3) || HB_ISNIL(3)) &&
+  } else if (ISBETWEEN(1, 5) && HB_ISNUM(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (HB_ISCHAR(3) || HB_ISNIL(3)) &&
            (HB_ISCHAR(4) || HB_ISNIL(4)) && (HB_ISCHAR(5) || HB_ISNIL(5))) {
     // QNetworkProxy(QNetworkProxy::ProxyType type, const QString &hostName = QString(), quint16 port = 0, const QString
     // &user = QString(), const QString &password = QString())
     QNetworkProxy *obj = new QNetworkProxy((QNetworkProxy::ProxyType)hb_parni(1), OPQSTRING(2, QString()),
                                            OPQUINT16(3, 0), OPQSTRING(4, QString()), OPQSTRING(5, QString()));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQNETWORKPROXY(1)) {
+  } else if (ISNUMPAR(1) && ISQNETWORKPROXY(1)) {
     // QNetworkProxy(const QNetworkProxy &other)
     QNetworkProxy *obj = new QNetworkProxy(*PQNETWORKPROXY(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -408,8 +406,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);
