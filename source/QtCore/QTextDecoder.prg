@@ -54,8 +54,7 @@ HB_FUNC_STATIC(QTEXTDECODER_NEW)
     // QTextDecoder(const QTextCodec *codec)
     QTextDecoder *obj = new QTextDecoder(PQTEXTCODEC(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(2) && ISQTEXTCODEC(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && ISQTEXTCODEC(1) && HB_ISNUM(2)) {
     // QTextDecoder(const QTextCodec *codec, QTextCodec::ConversionFlags flags)
     QTextDecoder *obj = new QTextDecoder(PQTEXTCODEC(1), (QTextCodec::ConversionFlags)hb_parni(2));
     Qt4xHb::returnNewObject(obj, true);
@@ -88,8 +87,7 @@ HB_FUNC_STATIC(QTEXTDECODER_TOUNICODE)
     if (obj != NULL) {
       RQSTRING(obj->toUnicode(PCONSTCHAR(1), PINT(2)));
     }
-  }
-  else if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3)) {
+  } else if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3)) {
     // void toUnicode(QString *target, const char *chars, int len)
     QTextDecoder *obj = static_cast<QTextDecoder *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -98,8 +96,7 @@ HB_FUNC_STATIC(QTEXTDECODER_TOUNICODE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
+  } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     // QString toUnicode(const QByteArray &ba)
     QTextDecoder *obj = static_cast<QTextDecoder *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -122,8 +119,7 @@ HB_FUNC_STATIC(QTEXTDECODER_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

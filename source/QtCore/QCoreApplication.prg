@@ -421,8 +421,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_POSTEVENT)
     QCoreApplication::postEvent(PQOBJECT(1), PQEVENT(2));
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISOBJECT(2) && HB_ISNUM(3)) {
+  } else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISOBJECT(2) && HB_ISNUM(3)) {
     // static void postEvent(QObject *receiver, QEvent *event, int priority)
 
     QCoreApplication::postEvent(PQOBJECT(1), PQEVENT(2), PINT(3));
@@ -442,8 +441,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_PROCESSEVENTS)
                                                 : (QEventLoop::ProcessEventsFlags)hb_parni(1));
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // static void processEvents(QEventLoop::ProcessEventsFlags flags, int maxtime)
 
     QCoreApplication::processEvents((QEventLoop::ProcessEventsFlags)hb_parni(1), PINT(2));
@@ -478,8 +476,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_REMOVEPOSTEDEVENTS)
     QCoreApplication::removePostedEvents(PQOBJECT(1));
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2)) {
     // static void removePostedEvents(QObject *receiver, int eventType)
 
     QCoreApplication::removePostedEvents(PQOBJECT(1), PINT(2));
@@ -528,8 +525,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_SENDPOSTEDEVENTS)
     QCoreApplication::sendPostedEvents(PQOBJECT(1), PINT(2));
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(0)) {
+  } else if (ISNUMPAR(0)) {
     // static void sendPostedEvents()
 
     QCoreApplication::sendPostedEvents();
@@ -672,8 +668,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_TRANSLATE)
 
     RQSTRING(QCoreApplication::translate(PCONSTCHAR(1), PCONSTCHAR(2), PCONSTCHAR(3),
                                          (QCoreApplication::Encoding)hb_parni(4), PINT(5)));
-  }
-  else if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISNUM(4)) {
+  } else if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISNUM(4)) {
     // static QString translate(const char *context, const char *sourceText, const char *disambiguation = 0,
     // QCoreApplication::Encoding encoding = QCoreApplication::CodecForTr)
 

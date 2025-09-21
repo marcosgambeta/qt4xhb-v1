@@ -163,23 +163,19 @@ HB_FUNC_STATIC(QBYTEARRAY_NEW)
     // QByteArray()
     QByteArray *obj = new QByteArray();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // QByteArray(const char *str)
     QByteArray *obj = new QByteArray(PCONSTCHAR(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     // QByteArray(const char *data, int size)
     QByteArray *obj = new QByteArray(PCONSTCHAR(1), PINT(2));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // QByteArray(int size, char ch)
     QByteArray *obj = new QByteArray(PINT(1), PCHAR(2));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
+  } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     // QByteArray(const QByteArray &other)
     QByteArray *obj = new QByteArray(*PQBYTEARRAY(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -302,14 +298,11 @@ HB_FUNC_STATIC(QBYTEARRAY_APPEND)
 {
   if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     HB_FUNC_EXEC(QBYTEARRAY_APPEND1);
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     HB_FUNC_EXEC(QBYTEARRAY_APPEND2);
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_APPEND4);
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     HB_FUNC_EXEC(QBYTEARRAY_APPEND5);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -419,16 +412,14 @@ HB_FUNC_STATIC(QBYTEARRAY_CONTAINS)
     if (obj != NULL) {
       RBOOL(obj->contains(*PQBYTEARRAY(1)));
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // bool contains(const char *str) const
     QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL) {
       RBOOL(obj->contains(PCONSTCHAR(1)));
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // bool contains(char ch) const
     QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -449,24 +440,21 @@ HB_FUNC_STATIC(QBYTEARRAY_COUNT)
     if (obj != NULL) {
       RINT(obj->count(*PQBYTEARRAY(1)));
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // int count(const char *str) const
     QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL) {
       RINT(obj->count(PCONSTCHAR(1)));
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // int count(char ch) const
     QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL) {
       RINT(obj->count(PCHAR(1)));
     }
-  }
-  else if (ISNUMPAR(0)) {
+  } else if (ISNUMPAR(0)) {
     // int count() const
     QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -487,16 +475,14 @@ HB_FUNC_STATIC(QBYTEARRAY_ENDSWITH)
     if (obj != NULL) {
       RBOOL(obj->endsWith(*PQBYTEARRAY(1)));
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // bool endsWith(const char *str) const
     QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL) {
       RBOOL(obj->endsWith(PCONSTCHAR(1)));
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // bool endsWith(char ch) const
     QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -603,14 +589,11 @@ HB_FUNC_STATIC(QBYTEARRAY_INDEXOF)
 {
   if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISNUMORNIL(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_INDEXOF1);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_INDEXOF2);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_INDEXOF3);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_INDEXOF4);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -716,14 +699,11 @@ HB_FUNC_STATIC(QBYTEARRAY_INSERT)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && ISQBYTEARRAY(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_INSERT1);
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_INSERT2);
-  }
-  else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISCHAR(2) && HB_ISNUM(3)) {
+  } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISCHAR(2) && HB_ISNUM(3)) {
     HB_FUNC_EXEC(QBYTEARRAY_INSERT4);
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_INSERT5);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -842,14 +822,11 @@ HB_FUNC_STATIC(QBYTEARRAY_LASTINDEXOF)
 {
   if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISNUMORNIL(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_LASTINDEXOF1);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_LASTINDEXOF2);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_LASTINDEXOF3);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_LASTINDEXOF4);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1011,14 +988,11 @@ HB_FUNC_STATIC(QBYTEARRAY_PREPEND)
 {
   if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     HB_FUNC_EXEC(QBYTEARRAY_PREPEND1);
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     HB_FUNC_EXEC(QBYTEARRAY_PREPEND2);
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_PREPEND3);
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     HB_FUNC_EXEC(QBYTEARRAY_PREPEND4);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1036,8 +1010,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PUSH_BACK)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // void push_back(const char *str)
     QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1046,8 +1019,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PUSH_BACK)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void push_back(char ch)
     QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1072,8 +1044,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PUSH_FRONT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // void push_front(const char *str)
     QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1082,8 +1053,7 @@ HB_FUNC_STATIC(QBYTEARRAY_PUSH_FRONT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void push_front(char ch)
     QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1405,44 +1375,31 @@ HB_FUNC_STATIC(QBYTEARRAY_REPLACE)
 {
   if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQBYTEARRAY(3)) {
     HB_FUNC_EXEC(QBYTEARRAY_REPLACE1);
-  }
-  else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3)) {
+  } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3)) {
     HB_FUNC_EXEC(QBYTEARRAY_REPLACE2);
-  }
-  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3) && HB_ISNUM(4)) {
+  } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3) && HB_ISNUM(4)) {
     HB_FUNC_EXEC(QBYTEARRAY_REPLACE3);
-  }
-  else if (ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2)) {
+  } else if (ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_REPLACE4);
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQBYTEARRAY(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQBYTEARRAY(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_REPLACE5);
-  }
-  else if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISCHAR(3) && HB_ISNUM(4)) {
+  } else if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISCHAR(3) && HB_ISNUM(4)) {
     HB_FUNC_EXEC(QBYTEARRAY_REPLACE6);
-  }
-  else if (ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISCHAR(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_REPLACE7);
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQBYTEARRAY(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQBYTEARRAY(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_REPLACE8);
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_REPLACE9);
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_REPLACE10);
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQBYTEARRAY(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQBYTEARRAY(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_REPLACE11);
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_REPLACE12);
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_REPLACE13);
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_REPLACE14);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1683,26 +1640,19 @@ HB_FUNC_STATIC(QBYTEARRAY_SETNUM)
 {
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_SETNUM1);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_SETNUM2);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_SETNUM3);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_SETNUM4);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_SETNUM5);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
     HB_FUNC_EXEC(QBYTEARRAY_SETNUM6);
-  }
-  else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
+  } else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     HB_FUNC_EXEC(QBYTEARRAY_SETNUM7);
-  }
-  else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
+  } else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     HB_FUNC_EXEC(QBYTEARRAY_SETNUM8);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1835,16 +1785,14 @@ HB_FUNC_STATIC(QBYTEARRAY_STARTSWITH)
     if (obj != NULL) {
       RBOOL(obj->startsWith(*PQBYTEARRAY(1)));
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // bool startsWith(const char *str) const
     QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL) {
       RBOOL(obj->startsWith(PCONSTCHAR(1)));
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // bool startsWith(char ch) const
     QByteArray *obj = static_cast<QByteArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -2349,8 +2297,7 @@ HB_FUNC_STATIC(QBYTEARRAY_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

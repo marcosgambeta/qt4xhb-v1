@@ -80,29 +80,25 @@ HB_FUNC_STATIC(QSETTINGS_NEW)
     // QSettings(const QString &organization, const QString &application = QString(), QObject *parent = 0)
     QSettings *obj = new QSettings(PQSTRING(1), OPQSTRING(2, QString()), OPQOBJECT(3, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && (HB_ISCHAR(3) || HB_ISNIL(3)) &&
+  } else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && (HB_ISCHAR(3) || HB_ISNIL(3)) &&
            (ISQOBJECT(4) || HB_ISNIL(4))) {
     // QSettings(QSettings::Scope scope, const QString &organization, const QString &application = QString(), QObject
     // *parent = 0)
     QSettings *obj =
         new QSettings((QSettings::Scope)hb_parni(1), PQSTRING(2), OPQSTRING(3, QString()), OPQOBJECT(4, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3) && (HB_ISCHAR(4) || HB_ISNIL(4)) &&
+  } else if (ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3) && (HB_ISCHAR(4) || HB_ISNIL(4)) &&
            (ISQOBJECT(5) || HB_ISNIL(5))) {
     // QSettings(QSettings::Format format, QSettings::Scope scope, const QString &organization, const QString
     // &application = QString(), QObject *parent = 0)
     QSettings *obj = new QSettings((QSettings::Format)hb_parni(1), (QSettings::Scope)hb_parni(2), PQSTRING(3),
                                    OPQSTRING(4, QString()), OPQOBJECT(5, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (ISQOBJECT(3) || HB_ISNIL(3))) {
+  } else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (ISQOBJECT(3) || HB_ISNIL(3))) {
     // QSettings(const QString &fileName, QSettings::Format format, QObject *parent = 0)
     QSettings *obj = new QSettings(PQSTRING(1), (QSettings::Format)hb_parni(2), OPQOBJECT(3, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1))) {
+  } else if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1))) {
     // QSettings(QObject *parent = 0)
     QSettings *obj = new QSettings(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -552,8 +548,7 @@ HB_FUNC_STATIC(QSETTINGS_SETINICODEC)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // void setIniCodec(const char *codecName)
     QSettings *obj = qobject_cast<QSettings *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

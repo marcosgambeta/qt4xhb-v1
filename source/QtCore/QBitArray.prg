@@ -65,13 +65,11 @@ HB_FUNC_STATIC(QBITARRAY_NEW)
     // QBitArray()
     QBitArray *obj = new QBitArray();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2))) {
     // QBitArray(int size, bool value = false)
     QBitArray *obj = new QBitArray(PINT(1), OPBOOL(2, false));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQBITARRAY(1)) {
+  } else if (ISNUMPAR(1) && ISQBITARRAY(1)) {
     // QBitArray(const QBitArray &other)
     QBitArray *obj = new QBitArray(*PQBITARRAY(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -147,8 +145,7 @@ HB_FUNC_STATIC(QBITARRAY_COUNT)
     if (obj != NULL) {
       RINT(obj->count());
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISLOG(1)) {
+  } else if (ISNUMPAR(1) && HB_ISLOG(1)) {
     // int count(bool on) const
     QBitArray *obj = static_cast<QBitArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -169,8 +166,7 @@ HB_FUNC_STATIC(QBITARRAY_FILL)
     if (obj != NULL) {
       RBOOL(obj->fill(PBOOL(1), OPINT(2, -1)));
     }
-  }
-  else if (ISNUMPAR(3) && HB_ISLOG(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
+  } else if (ISNUMPAR(3) && HB_ISLOG(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
     // void fill(bool value, int begin, int end)
     QBitArray *obj = static_cast<QBitArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -251,8 +247,7 @@ HB_FUNC_STATIC(QBITARRAY_SETBIT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2)) {
     // void setBit(int i, bool value)
     QBitArray *obj = static_cast<QBitArray *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -351,8 +346,7 @@ HB_FUNC_STATIC(QBITARRAY_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

@@ -70,8 +70,7 @@ HB_FUNC_STATIC(QTIME_NEW)
     // QTime()
     QTime *obj = new QTime();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) &&
+  } else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) &&
            ISNUMORNIL(4)) {
     // QTime(int h, int m, int s = 0, int ms = 0)
     QTime *obj = new QTime(PINT(1), PINT(2), OPINT(3, 0), OPINT(4, 0));
@@ -343,8 +342,7 @@ HB_FUNC_STATIC(QTIME_TOSTRING)
     if (obj != NULL) {
       RQSTRING(obj->toString(PQSTRING(1)));
     }
-  }
-  else if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
+  } else if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
     // QString toString(Qt::DateFormat format = Qt::TextDate) const
     QTime *obj = static_cast<QTime *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -379,8 +377,7 @@ HB_FUNC_STATIC(QTIME_FROMSTRING)
     QTime *ptr = new QTime(
         QTime::fromString(PQSTRING(1), HB_ISNIL(2) ? (Qt::DateFormat)Qt::TextDate : (Qt::DateFormat)hb_parni(2)));
     Qt4xHb::createReturnClass(ptr, "QTIME", true);
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     // QTime fromString(const QString &string, const QString &format)
     QTime *obj = static_cast<QTime *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -402,8 +399,7 @@ HB_FUNC_STATIC(QTIME_ISVALID)
     if (obj != NULL) {
       RBOOL(obj->isValid());
     }
-  }
-  else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4)) {
+  } else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4)) {
     // static bool isValid(int h, int m, int s, int ms = 0)
 
     RBOOL(QTime::isValid(PINT(1), PINT(2), PINT(3), OPINT(4, 0)));
@@ -423,8 +419,7 @@ HB_FUNC_STATIC(QTIME_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

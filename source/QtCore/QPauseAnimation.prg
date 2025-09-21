@@ -48,8 +48,7 @@ HB_FUNC_STATIC(QPAUSEANIMATION_NEW)
     // QPauseAnimation(QObject *parent = 0)
     QPauseAnimation *obj = new QPauseAnimation(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
     // QPauseAnimation(int msecs, QObject *parent = 0)
     QPauseAnimation *obj = new QPauseAnimation(PINT(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);

@@ -522,8 +522,7 @@ HB_FUNC_STATIC(QOBJECT_FINDCHILDREN)
 {
   if (ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1))) {
     QObject_findChildren1();
-  }
-  else if (ISNUMPAR(1) && ISQREGEXP(1)) {
+  } else if (ISNUMPAR(1) && ISQREGEXP(1)) {
     QObject_findChildren2();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -930,8 +929,7 @@ void _qtxhb_processOnEventMethod(QEvent::Type event)
     } else {
       hb_retl(0);
     }
-  }
-  else if (hb_pcount() == 0)
+  } else if (hb_pcount() == 0)
   {
     // hb_retl( Events_disconnect_event( obj, QEvent::Close ) );
     hb_retl(Qt4xHb::Events_disconnect_event(obj, event));
@@ -954,8 +952,7 @@ void _qtxhb_processOnEventMethod2(QEvent::Type event)
     } else {
       hb_retl(0);
     }
-  }
-  else if (hb_pcount() == 1)
+  } else if (hb_pcount() == 1)
   {
     // hb_retl( Events_disconnect_event( obj, QEvent::Close ) );
     hb_retl(Qt4xHb::Events_disconnect_event(obj, event));
@@ -1603,8 +1600,7 @@ HB_FUNC_STATIC(QOBJECT_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

@@ -89,8 +89,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_SETMAPPING)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2)) {
     // void setMapping(QObject *sender, const QString &text)
     QSignalMapper *obj = qobject_cast<QSignalMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -99,8 +98,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_SETMAPPING)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && ISQOBJECT(1) && ISQWIDGET(2)) {
+  } else if (ISNUMPAR(2) && ISQOBJECT(1) && ISQWIDGET(2)) {
     // void setMapping(QObject *sender, QWidget *widget)
     QSignalMapper *obj = qobject_cast<QSignalMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -109,8 +107,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_SETMAPPING)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && ISQOBJECT(1) && ISQOBJECT(2)) {
+  } else if (ISNUMPAR(2) && ISQOBJECT(1) && ISQOBJECT(2)) {
     // void setMapping(QObject *sender, QObject *object)
     QSignalMapper *obj = qobject_cast<QSignalMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -154,8 +151,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_MAPPING)
       QObject *ptr = obj->mapping(PINT(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QOBJECT");
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // QObject *mapping(const QString &text) const
     QSignalMapper *obj = qobject_cast<QSignalMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -163,8 +159,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_MAPPING)
       QObject *ptr = obj->mapping(PQSTRING(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QOBJECT");
     }
-  }
-  else if (ISNUMPAR(1) && ISQWIDGET(1)) {
+  } else if (ISNUMPAR(1) && ISQWIDGET(1)) {
     // QObject *mapping(QWidget *widget) const
     QSignalMapper *obj = qobject_cast<QSignalMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -172,8 +167,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_MAPPING)
       QObject *ptr = obj->mapping(PQWIDGET(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QOBJECT");
     }
-  }
-  else if (ISNUMPAR(1) && ISQOBJECT(1)) {
+  } else if (ISNUMPAR(1) && ISQOBJECT(1)) {
     // QObject *mapping(QObject *object) const
     QSignalMapper *obj = qobject_cast<QSignalMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -197,8 +191,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_MAP)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQOBJECT(1)) {
+  } else if (ISNUMPAR(1) && ISQOBJECT(1)) {
     // void map(QObject *sender)
     QSignalMapper *obj = qobject_cast<QSignalMapper *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

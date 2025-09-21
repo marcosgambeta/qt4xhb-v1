@@ -75,16 +75,14 @@ HB_FUNC_STATIC(QREGEXP_NEW)
     // QRegExp()
     QRegExp *obj = new QRegExp();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
+  } else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     // QRegExp(const QString &pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, QRegExp::PatternSyntax syntax =
     // QRegExp::RegExp)
     QRegExp *obj = new QRegExp(
         PQSTRING(1), HB_ISNIL(2) ? (Qt::CaseSensitivity)Qt::CaseSensitive : (Qt::CaseSensitivity)hb_parni(2),
         HB_ISNIL(3) ? (QRegExp::PatternSyntax)QRegExp::RegExp : (QRegExp::PatternSyntax)hb_parni(3));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQREGEXP(1)) {
+  } else if (ISNUMPAR(1) && ISQREGEXP(1)) {
     // QRegExp(const QRegExp &rx)
     QRegExp *obj = new QRegExp(*PQREGEXP(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -485,8 +483,7 @@ HB_FUNC_STATIC(QREGEXP_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

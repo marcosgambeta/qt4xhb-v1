@@ -202,8 +202,7 @@ HB_FUNC_STATIC(QTIMER_START)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(0)) {
+  } else if (ISNUMPAR(0)) {
     // void start()
     QTimer *obj = qobject_cast<QTimer *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

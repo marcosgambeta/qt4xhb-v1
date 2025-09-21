@@ -81,13 +81,11 @@ HB_FUNC_STATIC(QXMLSTREAMWRITER_NEW)
     // QXmlStreamWriter()
     QXmlStreamWriter *obj = new QXmlStreamWriter();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQIODEVICE(1)) {
+  } else if (ISNUMPAR(1) && ISQIODEVICE(1)) {
     // QXmlStreamWriter(QIODevice *device)
     QXmlStreamWriter *obj = new QXmlStreamWriter(PQIODEVICE(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
+  } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     // QXmlStreamWriter(QByteArray *array)
     QXmlStreamWriter *obj = new QXmlStreamWriter(PQBYTEARRAY(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -254,8 +252,7 @@ HB_FUNC_STATIC(QXMLSTREAMWRITER_SETCODEC)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // void setCodec(const char *codecName)
     QXmlStreamWriter *obj = static_cast<QXmlStreamWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -300,8 +297,7 @@ HB_FUNC_STATIC(QXMLSTREAMWRITER_WRITEATTRIBUTE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     // void writeAttribute(const QString &qualifiedName, const QString &value)
     QXmlStreamWriter *obj = static_cast<QXmlStreamWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -310,8 +306,7 @@ HB_FUNC_STATIC(QXMLSTREAMWRITER_WRITEATTRIBUTE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQXMLSTREAMATTRIBUTE(1)) {
+  } else if (ISNUMPAR(1) && ISQXMLSTREAMATTRIBUTE(1)) {
     // void writeAttribute(const QXmlStreamAttribute &attribute)
     QXmlStreamWriter *obj = static_cast<QXmlStreamWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -476,8 +471,7 @@ HB_FUNC_STATIC(QXMLSTREAMWRITER_WRITEEMPTYELEMENT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // void writeEmptyElement(const QString &qualifiedName)
     QXmlStreamWriter *obj = static_cast<QXmlStreamWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -602,8 +596,7 @@ HB_FUNC_STATIC(QXMLSTREAMWRITER_WRITESTARTDOCUMENT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISLOG(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISLOG(2)) {
     // void writeStartDocument(const QString &version, bool standalone)
     QXmlStreamWriter *obj = static_cast<QXmlStreamWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -612,8 +605,7 @@ HB_FUNC_STATIC(QXMLSTREAMWRITER_WRITESTARTDOCUMENT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(0)) {
+  } else if (ISNUMPAR(0)) {
     // void writeStartDocument()
     QXmlStreamWriter *obj = static_cast<QXmlStreamWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -638,8 +630,7 @@ HB_FUNC_STATIC(QXMLSTREAMWRITER_WRITESTARTELEMENT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // void writeStartElement(const QString &qualifiedName)
     QXmlStreamWriter *obj = static_cast<QXmlStreamWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -664,8 +655,7 @@ HB_FUNC_STATIC(QXMLSTREAMWRITER_WRITETEXTELEMENT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     // void writeTextElement(const QString &qualifiedName, const QString &text)
     QXmlStreamWriter *obj = static_cast<QXmlStreamWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -690,8 +680,7 @@ HB_FUNC_STATIC(QXMLSTREAMWRITER_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

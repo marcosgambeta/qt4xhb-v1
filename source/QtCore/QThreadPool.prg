@@ -262,8 +262,7 @@ HB_FUNC_STATIC(QTHREADPOOL_WAITFORDONE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // bool waitForDone(int msecs)
     QThreadPool *obj = qobject_cast<QThreadPool *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

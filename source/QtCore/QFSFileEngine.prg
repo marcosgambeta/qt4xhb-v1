@@ -82,8 +82,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_NEW)
     // QFSFileEngine()
     QFSFileEngine *obj = new QFSFileEngine();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // QFSFileEngine(const QString &file)
     QFSFileEngine *obj = new QFSFileEngine(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -116,24 +115,21 @@ HB_FUNC_STATIC(QFSFILEENGINE_OPEN)
     if (obj != NULL) {
       RBOOL(obj->open((QIODevice::OpenMode)hb_parni(1), static_cast<FILE *>(hb_parptr(2))));
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // bool open(QIODevice::OpenMode openMode, int fd)
     QFSFileEngine *obj = static_cast<QFSFileEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL) {
       RBOOL(obj->open((QIODevice::OpenMode)hb_parni(1), PINT(2)));
     }
-  }
-  else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
+  } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
     // bool open(QIODevice::OpenMode openMode, int fd, QFile::FileHandleFlags handleFlags)
     QFSFileEngine *obj = static_cast<QFSFileEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL) {
       RBOOL(obj->open((QIODevice::OpenMode)hb_parni(1), PINT(2), (QFile::FileHandleFlags)hb_parni(3)));
     }
-  }
-  else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISPOINTER(2) && HB_ISNUM(3)) {
+  } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISPOINTER(2) && HB_ISNUM(3)) {
     // bool open(QIODevice::OpenMode openMode, FILE *fh, QFile::FileHandleFlags handleFlags)
     QFSFileEngine *obj = static_cast<QFSFileEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
 

@@ -108,18 +108,15 @@ HB_FUNC_STATIC(QRECT_NEW)
     // QRect()
     QRect *obj = new QRect();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(2) && ISQPOINT(1) && ISQPOINT(2)) {
+  } else if (ISNUMPAR(2) && ISQPOINT(1) && ISQPOINT(2)) {
     // QRect(const QPoint &topLeft, const QPoint &bottomRight)
     QRect *obj = new QRect(*PQPOINT(1), *PQPOINT(2));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(2) && ISQPOINT(1) && ISQSIZE(2)) {
+  } else if (ISNUMPAR(2) && ISQPOINT(1) && ISQSIZE(2)) {
     // QRect(const QPoint &topLeft, const QSize &size)
     QRect *obj = new QRect(*PQPOINT(1), *PQSIZE(2));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
+  } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // QRect(int x, int y, int width, int height)
     QRect *obj = new QRect(PINT(1), PINT(2), PINT(3), PINT(4));
     Qt4xHb::returnNewObject(obj, true);
@@ -266,24 +263,21 @@ HB_FUNC_STATIC(QRECT_CONTAINS)
     if (obj != NULL) {
       RBOOL(obj->contains(*PQPOINT(1), OPBOOL(2, false)));
     }
-  }
-  else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISLOG(3)) {
+  } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISLOG(3)) {
     // bool contains(int x, int y, bool proper) const
     QRect *obj = static_cast<QRect *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL) {
       RBOOL(obj->contains(PINT(1), PINT(2), PBOOL(3)));
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // bool contains(int x, int y) const
     QRect *obj = static_cast<QRect *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL) {
       RBOOL(obj->contains(PINT(1), PINT(2)));
     }
-  }
-  else if (ISBETWEEN(1, 2) && ISQRECT(1) && (HB_ISLOG(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && ISQRECT(1) && (HB_ISLOG(2) || HB_ISNIL(2))) {
     // bool contains(const QRect &rectangle, bool proper = false) const
     QRect *obj = static_cast<QRect *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -609,8 +603,7 @@ HB_FUNC_STATIC(QRECT_MOVETO)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQPOINT(1)) {
+  } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // void moveTo(const QPoint &position)
     QRect *obj = static_cast<QRect *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1107,8 +1100,7 @@ HB_FUNC_STATIC(QRECT_TRANSLATE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQPOINT(1)) {
+  } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // void translate(const QPoint &offset)
     QRect *obj = static_cast<QRect *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1132,8 +1124,7 @@ HB_FUNC_STATIC(QRECT_TRANSLATED)
       QRect *ptr = new QRect(obj->translated(PINT(1), PINT(2)));
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
-  }
-  else if (ISNUMPAR(1) && ISQPOINT(1)) {
+  } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // QRect translated(const QPoint &offset) const
     QRect *obj = static_cast<QRect *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -1230,8 +1221,7 @@ HB_FUNC_STATIC(QRECT_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

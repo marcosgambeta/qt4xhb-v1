@@ -102,8 +102,7 @@ HB_FUNC_STATIC(QTRANSLATOR_LOAD)
     if (obj != NULL) {
       RBOOL(obj->load(PQSTRING(1), OPQSTRING(2, QString()), OPQSTRING(3, QString()), OPQSTRING(4, QString())));
     }
-  }
-  else if (ISBETWEEN(2, 5) && ISQLOCALE(1) && HB_ISCHAR(2) && (HB_ISCHAR(3) || HB_ISNIL(3)) &&
+  } else if (ISBETWEEN(2, 5) && ISQLOCALE(1) && HB_ISCHAR(2) && (HB_ISCHAR(3) || HB_ISNIL(3)) &&
            (HB_ISCHAR(4) || HB_ISNIL(4)) && (HB_ISCHAR(5) || HB_ISNIL(5))) {
     // bool load(const QLocale &locale, const QString &filename, const QString &prefix = QString(), const QString
     // &directory = QString(), const QString &suffix = QString())

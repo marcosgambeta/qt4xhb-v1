@@ -52,8 +52,7 @@ HB_FUNC_STATIC(QSIGNALTRANSITION_NEW)
     // QSignalTransition(QState *sourceState = 0)
     QSignalTransition *obj = new QSignalTransition(OPQSTATE(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(2, 3) && ISQOBJECT(1) && HB_ISCHAR(2) && (ISQSTATE(3) || HB_ISNIL(3))) {
+  } else if (ISBETWEEN(2, 3) && ISQOBJECT(1) && HB_ISCHAR(2) && (ISQSTATE(3) || HB_ISNIL(3))) {
     // QSignalTransition(QObject *sender, const char *signal, QState *sourceState = 0)
     QSignalTransition *obj = new QSignalTransition(PQOBJECT(1), PCONSTCHAR(2), OPQSTATE(3, 0));
     Qt4xHb::returnNewObject(obj, false);

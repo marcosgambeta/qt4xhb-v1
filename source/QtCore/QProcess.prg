@@ -556,8 +556,7 @@ HB_FUNC_STATIC(QPROCESS_START)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
     // void start(const QString &program, QIODevice::OpenMode mode = QIODevice::ReadWrite)
     QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -836,8 +835,7 @@ HB_FUNC_STATIC(QPROCESS_EXECUTE)
     // static int execute(const QString &program, const QStringList &arguments)
 
     RINT(QProcess::execute(PQSTRING(1), PQSTRINGLIST(2)));
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // static int execute(const QString &program)
 
     RINT(QProcess::execute(PQSTRING(1)));
@@ -853,13 +851,11 @@ HB_FUNC_STATIC(QPROCESS_STARTDETACHED)
     // NULL)
 
     RBOOL(QProcess::startDetached(PQSTRING(1), PQSTRINGLIST(2), PQSTRING(3), NULL));
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
     // static bool startDetached(const QString &program, const QStringList &arguments)
 
     RBOOL(QProcess::startDetached(PQSTRING(1), PQSTRINGLIST(2)));
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // static bool startDetached(const QString &program)
 
     RBOOL(QProcess::startDetached(PQSTRING(1)));

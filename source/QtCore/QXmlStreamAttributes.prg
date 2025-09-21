@@ -88,8 +88,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_APPEND)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && ISQXMLSTREAMATTRIBUTE(1)) {
+  } else if (ISNUMPAR(1) && ISQXMLSTREAMATTRIBUTE(1)) {
     // void append(const QXmlStreamAttribute &attribute)
     QXmlStreamAttributes *obj = static_cast<QXmlStreamAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -98,8 +97,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_APPEND)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     // void append(const QString &qualifiedName, const QString &value)
     QXmlStreamAttributes *obj = static_cast<QXmlStreamAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -122,16 +120,14 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_HASATTRIBUTE)
     if (obj != NULL) {
       RBOOL(obj->hasAttribute(PQSTRING(1)));
     }
-  }
-  else if (ISNUMPAR(1) && ISQLATIN1STRING(1)) {
+  } else if (ISNUMPAR(1) && ISQLATIN1STRING(1)) {
     // bool hasAttribute(QLatin1String qualifiedName) const
     QXmlStreamAttributes *obj = static_cast<QXmlStreamAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL) {
       RBOOL(obj->hasAttribute(*PQLATIN1STRING(1)));
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     // bool hasAttribute(const QString &namespaceUri, const QString &name) const
     QXmlStreamAttributes *obj = static_cast<QXmlStreamAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -153,8 +149,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_VALUE)
       QStringRef *ptr = new QStringRef(obj->value(PQSTRING(1), PQSTRING(2)));
       Qt4xHb::createReturnClass(ptr, "QSTRINGREF", true);
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQLATIN1STRING(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQLATIN1STRING(2)) {
     // QStringRef value(const QString &namespaceUri, QLatin1String name) const
     QXmlStreamAttributes *obj = static_cast<QXmlStreamAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -162,8 +157,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_VALUE)
       QStringRef *ptr = new QStringRef(obj->value(PQSTRING(1), *PQLATIN1STRING(2)));
       Qt4xHb::createReturnClass(ptr, "QSTRINGREF", true);
     }
-  }
-  else if (ISNUMPAR(2) && ISQLATIN1STRING(1) && ISQLATIN1STRING(2)) {
+  } else if (ISNUMPAR(2) && ISQLATIN1STRING(1) && ISQLATIN1STRING(2)) {
     // QStringRef value(QLatin1String namespaceUri, QLatin1String name) const
     QXmlStreamAttributes *obj = static_cast<QXmlStreamAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -171,8 +165,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_VALUE)
       QStringRef *ptr = new QStringRef(obj->value(*PQLATIN1STRING(1), *PQLATIN1STRING(2)));
       Qt4xHb::createReturnClass(ptr, "QSTRINGREF", true);
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // QStringRef value(const QString &qualifiedName) const
     QXmlStreamAttributes *obj = static_cast<QXmlStreamAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -180,8 +173,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_VALUE)
       QStringRef *ptr = new QStringRef(obj->value(PQSTRING(1)));
       Qt4xHb::createReturnClass(ptr, "QSTRINGREF", true);
     }
-  }
-  else if (ISNUMPAR(1) && ISQLATIN1STRING(1)) {
+  } else if (ISNUMPAR(1) && ISQLATIN1STRING(1)) {
     // QStringRef value(QLatin1String qualifiedName) const
     QXmlStreamAttributes *obj = static_cast<QXmlStreamAttributes *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -205,8 +197,7 @@ HB_FUNC_STATIC(QXMLSTREAMATTRIBUTES_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

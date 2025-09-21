@@ -80,18 +80,15 @@ HB_FUNC_STATIC(QLINEF_NEW)
     // QLineF()
     QLineF *obj = new QLineF();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(2) && ISQPOINTF(1) && ISQPOINTF(2)) {
+  } else if (ISNUMPAR(2) && ISQPOINTF(1) && ISQPOINTF(2)) {
     // QLineF(const QPointF &p1, const QPointF &p2)
     QLineF *obj = new QLineF(*PQPOINTF(1), *PQPOINTF(2));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
+  } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // QLineF(qreal x1, qreal y1, qreal x2, qreal y2)
     QLineF *obj = new QLineF(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQLINE(1)) {
+  } else if (ISNUMPAR(1) && ISQLINE(1)) {
     // QLineF(const QLine &line)
     QLineF *obj = new QLineF(*PQLINE(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -521,8 +518,7 @@ HB_FUNC_STATIC(QLINEF_TRANSLATE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void translate(qreal dx, qreal dy)
     QLineF *obj = static_cast<QLineF *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -546,8 +542,7 @@ HB_FUNC_STATIC(QLINEF_TRANSLATED)
       QLineF *ptr = new QLineF(obj->translated(*PQPOINTF(1)));
       Qt4xHb::createReturnClass(ptr, "QLINEF", true);
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // QLineF translated(qreal dx, qreal dy) const
     QLineF *obj = static_cast<QLineF *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -605,8 +600,7 @@ HB_FUNC_STATIC(QLINEF_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

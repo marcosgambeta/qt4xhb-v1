@@ -66,13 +66,11 @@ HB_FUNC_STATIC(QSIZEF_NEW)
     // QSizeF()
     QSizeF *obj = new QSizeF();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQSIZE(1)) {
+  } else if (ISNUMPAR(1) && ISQSIZE(1)) {
     // QSizeF(const QSize &size)
     QSizeF *obj = new QSizeF(*PQSIZE(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // QSizeF(qreal width, qreal height)
     QSizeF *obj = new QSizeF(PQREAL(1), PQREAL(2));
     Qt4xHb::returnNewObject(obj, true);
@@ -217,8 +215,7 @@ HB_FUNC_STATIC(QSIZEF_SCALE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && ISQSIZEF(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && ISQSIZEF(1) && HB_ISNUM(2)) {
     // void scale(const QSizeF &size, Qt::AspectRatioMode mode)
     QSizeF *obj = static_cast<QSizeF *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -340,8 +337,7 @@ HB_FUNC_STATIC(QSIZEF_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

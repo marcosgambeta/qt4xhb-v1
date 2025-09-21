@@ -69,13 +69,11 @@ HB_FUNC_STATIC(QLINE_NEW)
     // QLine()
     QLine *obj = new QLine();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(2) && ISQPOINT(1) && ISQPOINT(2)) {
+  } else if (ISNUMPAR(2) && ISQPOINT(1) && ISQPOINT(2)) {
     // QLine(const QPoint &p1, const QPoint &p2)
     QLine *obj = new QLine(*PQPOINT(1), *PQPOINT(2));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
+  } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // QLine(int x1, int y1, int x2, int y2)
     QLine *obj = new QLine(PINT(1), PINT(2), PINT(3), PINT(4));
     Qt4xHb::returnNewObject(obj, true);
@@ -354,8 +352,7 @@ HB_FUNC_STATIC(QLINE_TRANSLATE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void translate(int dx, int dy)
     QLine *obj = static_cast<QLine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -379,8 +376,7 @@ HB_FUNC_STATIC(QLINE_TRANSLATED)
       QLine *ptr = new QLine(obj->translated(*PQPOINT(1)));
       Qt4xHb::createReturnClass(ptr, "QLINE", true);
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // QLine translated(int dx, int dy) const
     QLine *obj = static_cast<QLine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -404,8 +400,7 @@ HB_FUNC_STATIC(QLINE_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

@@ -141,8 +141,7 @@ HB_FUNC_STATIC(QEVENTLOOP_PROCESSEVENTS)
       RBOOL(obj->processEvents(HB_ISNIL(1) ? (QEventLoop::ProcessEventsFlags)QEventLoop::AllEvents
                                            : (QEventLoop::ProcessEventsFlags)hb_parni(1)));
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void processEvents(QEventLoop::ProcessEventsFlags flags, int maxTime)
     QEventLoop *obj = qobject_cast<QEventLoop *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

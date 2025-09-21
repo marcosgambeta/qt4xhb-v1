@@ -57,18 +57,15 @@ HB_FUNC_STATIC(QBYTEARRAYMATCHER_NEW)
     // QByteArrayMatcher()
     QByteArrayMatcher *obj = new QByteArrayMatcher();
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
+  } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     // QByteArrayMatcher(const QByteArray &pattern)
     QByteArrayMatcher *obj = new QByteArrayMatcher(*PQBYTEARRAY(1));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     // QByteArrayMatcher(const char *pattern, int length)
     QByteArrayMatcher *obj = new QByteArrayMatcher(PCONSTCHAR(1), PINT(2));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISNUMPAR(1) && ISQBYTEARRAYMATCHER(1)) {
+  } else if (ISNUMPAR(1) && ISQBYTEARRAYMATCHER(1)) {
     // QByteArrayMatcher(const QByteArrayMatcher &other)
     QByteArrayMatcher *obj = new QByteArrayMatcher(*PQBYTEARRAYMATCHER(1));
     Qt4xHb::returnNewObject(obj, true);
@@ -101,8 +98,7 @@ HB_FUNC_STATIC(QBYTEARRAYMATCHER_INDEXIN)
     if (obj != NULL) {
       RINT(obj->indexIn(*PQBYTEARRAY(1), OPINT(2, 0)));
     }
-  }
-  else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
+  } else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
     // int indexIn(const char *str, int len, int from = 0) const
     QByteArrayMatcher *obj = static_cast<QByteArrayMatcher *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -164,8 +160,7 @@ HB_FUNC_STATIC(QBYTEARRAYMATCHER_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

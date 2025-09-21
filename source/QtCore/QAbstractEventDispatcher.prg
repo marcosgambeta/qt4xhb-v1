@@ -194,8 +194,7 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_REGISTERTIMER)
     if (obj != NULL) {
       RINT(obj->registerTimer(PINT(1), PQOBJECT(2)));
     }
-  }
-  else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQOBJECT(3)) {
+  } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQOBJECT(3)) {
     // virtual void registerTimer(int timerId, int interval, QObject *object) = 0
     QAbstractEventDispatcher *obj = qobject_cast<QAbstractEventDispatcher *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
