@@ -777,8 +777,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETCONTENTS)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // virtual void setContents(const QString &contents) = 0
     QDesignerFormWindowInterface *obj =
         qobject_cast<QDesignerFormWindowInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -905,8 +904,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW)
 
     QDesignerFormWindowInterface *ptr = QDesignerFormWindowInterface::findFormWindow(PQWIDGET(1));
     Qt4xHb::createReturnQWidgetClass(ptr, "QDESIGNERFORMWINDOWINTERFACE");
-  }
-  else if (ISNUMPAR(1) && ISQOBJECT(1)) {
+  } else if (ISNUMPAR(1) && ISQOBJECT(1)) {
     // static QDesignerFormWindowInterface *findFormWindow(QObject *object)
 
     QDesignerFormWindowInterface *ptr = QDesignerFormWindowInterface::findFormWindow(PQOBJECT(1));
