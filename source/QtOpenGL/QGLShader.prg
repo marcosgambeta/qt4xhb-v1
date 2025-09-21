@@ -58,8 +58,7 @@ HB_FUNC_STATIC(QGLSHADER_NEW)
     // QGLShader(QGLShader::ShaderType type, QObject *parent = 0)
     QGLShader *obj = new QGLShader((QGLShader::ShaderType)hb_parni(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQGLCONTEXT(2) && (ISQOBJECT(3) || HB_ISNIL(3))) {
+  } else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQGLCONTEXT(2) && (ISQOBJECT(3) || HB_ISNIL(3))) {
     // QGLShader(QGLShader::ShaderType type, const QGLContext *context, QObject *parent = 0)
     QGLShader *obj = new QGLShader((QGLShader::ShaderType)hb_parni(1), PQGLCONTEXT(2), OPQOBJECT(3, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -143,11 +142,9 @@ HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     HB_FUNC_EXEC(QGLSHADER_COMPILESOURCECODE1);
-  }
-  else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
+  } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     HB_FUNC_EXEC(QGLSHADER_COMPILESOURCECODE2);
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     HB_FUNC_EXEC(QGLSHADER_COMPILESOURCECODE3);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

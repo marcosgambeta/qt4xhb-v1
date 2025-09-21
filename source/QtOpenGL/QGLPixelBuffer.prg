@@ -66,8 +66,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_NEW)
         *PQSIZE(1), HB_ISNIL(2) ? QGLFormat::defaultFormat() : *static_cast<QGLFormat *>(Qt4xHb::itemGetPtr(2)),
         OPQGLWIDGET(3, 0));
     Qt4xHb::returnNewObject(obj, true);
-  }
-  else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQGLFORMAT(3) || HB_ISNIL(3)) &&
+  } else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQGLFORMAT(3) || HB_ISNIL(3)) &&
            (ISQGLWIDGET(4) || HB_ISNIL(4))) {
     // QGLPixelBuffer(int width, int height, const QGLFormat &format = QGLFormat::defaultFormat(), QGLWidget
     // *shareWidget = 0)
@@ -104,16 +103,14 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_BINDTEXTURE)
     if (obj != NULL) {
       RGLUINT(obj->bindTexture(*PQIMAGE(1), OPGLENUM(2, GL_TEXTURE_2D)));
     }
-  }
-  else if (ISBETWEEN(1, 2) && ISQPIXMAP(1) && ISNUMORNIL(2)) {
+  } else if (ISBETWEEN(1, 2) && ISQPIXMAP(1) && ISNUMORNIL(2)) {
     // GLuint bindTexture(const QPixmap &pixmap, GLenum target = GL_TEXTURE_2D)
     QGLPixelBuffer *obj = static_cast<QGLPixelBuffer *>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if (obj != NULL) {
       RGLUINT(obj->bindTexture(*PQPIXMAP(1), OPGLENUM(2, GL_TEXTURE_2D)));
     }
-  }
-  else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+  } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // GLuint bindTexture(const QString &fileName)
     QGLPixelBuffer *obj = static_cast<QGLPixelBuffer *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -192,8 +189,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_DRAWTEXTURE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  }
-  else if (ISBETWEEN(2, 3) && ISQPOINTF(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
+  } else if (ISBETWEEN(2, 3) && ISQPOINTF(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
     // void drawTexture(const QPointF &point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D)
     QGLPixelBuffer *obj = static_cast<QGLPixelBuffer *>(Qt4xHb::itemGetPtrStackSelfItem());
 
