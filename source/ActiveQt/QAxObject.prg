@@ -68,13 +68,11 @@ HB_FUNC_STATIC(QAXOBJECT_NEW)
     // QAxObject(QObject *parent = 0)
     QAxObject *obj = new QAxObject(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
     // QAxObject(const QString &c, QObject *parent = 0)
     QAxObject *obj = new QAxObject(PQSTRING(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 2) && HB_ISPOINTER(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && HB_ISPOINTER(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
     // QAxObject(IUnknown *iface, QObject *parent = 0)
     QAxObject *obj = new QAxObject(static_cast<IUnknown *>(hb_parptr(1)), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -257,8 +255,7 @@ HB_FUNC_STATIC(QAXOBJECT_DYNAMICCALL)
                            HB_ISNIL(9) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(9))));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
     // QVariant dynamicCall(const char *function, QList<QVariant> &vars)
     QAxObject *obj = qobject_cast<QAxObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -347,8 +344,7 @@ HB_FUNC_STATIC(QAXOBJECT_QUERYSUBOBJECT)
                               HB_ISNIL(9) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(9)));
       Qt4xHb::createReturnQObjectClass(ptr, "QAXOBJECT");
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
     // QAxObject *querySubObject(const char *name, QList<QVariant> &vars)
     QAxObject *obj = qobject_cast<QAxObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

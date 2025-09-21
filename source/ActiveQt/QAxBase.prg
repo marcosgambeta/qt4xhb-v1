@@ -219,8 +219,7 @@ HB_FUNC_STATIC(QAXBASE_DYNAMICCALL)
                            HB_ISNIL(9) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(9))));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
     // QVariant dynamicCall(const char *function, QList<QVariant> &vars)
     QAxBase *obj = static_cast<QAxBase *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -309,8 +308,7 @@ HB_FUNC_STATIC(QAXBASE_QUERYSUBOBJECT)
                               HB_ISNIL(9) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(9)));
       Qt4xHb::createReturnQObjectClass(ptr, "QAXOBJECT");
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
     // QAxObject *querySubObject(const char *name, QList<QVariant> &vars)
     QAxBase *obj = static_cast<QAxBase *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -390,8 +388,7 @@ HB_FUNC_STATIC(QAXBASE_NEWFROM)
     PHB_ITEM des = hb_itemPutL(NULL, false);
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
-  }
-  else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
+  } else if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
     hb_itemRelease(ptr);

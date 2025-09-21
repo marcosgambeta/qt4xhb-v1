@@ -74,14 +74,12 @@ HB_FUNC_STATIC(QAXWIDGET_NEW)
     // QAxWidget(QWidget *parent = 0, Qt::WindowFlags f = 0)
     QAxWidget *obj = new QAxWidget(OPQWIDGET(1, 0), HB_ISNIL(2) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(2));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)) && ISNUMORNIL(3)) {
+  } else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)) && ISNUMORNIL(3)) {
     // QAxWidget(const QString &c, QWidget *parent = 0, Qt::WindowFlags f = 0)
     QAxWidget *obj =
         new QAxWidget(PQSTRING(1), OPQWIDGET(2, 0), HB_ISNIL(3) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(3));
     Qt4xHb::returnNewObject(obj, false);
-  }
-  else if (ISBETWEEN(1, 3) && HB_ISPOINTER(1) && (ISQWIDGET(2) || HB_ISNIL(2)) && ISNUMORNIL(3)) {
+  } else if (ISBETWEEN(1, 3) && HB_ISPOINTER(1) && (ISQWIDGET(2) || HB_ISNIL(2)) && ISNUMORNIL(3)) {
     // QAxWidget(IUnknown *iface, QWidget *parent = 0, Qt::WindowFlags f = 0)
     QAxWidget *obj = new QAxWidget(static_cast<IUnknown *>(hb_parptr(1)), OPQWIDGET(2, 0),
                                    HB_ISNIL(3) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(3));
@@ -322,8 +320,7 @@ HB_FUNC_STATIC(QAXWIDGET_DYNAMICCALL)
                            HB_ISNIL(9) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(9))));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
     // QVariant dynamicCall(const char *function, QList<QVariant> &vars)
     QAxWidget *obj = qobject_cast<QAxWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -412,8 +409,7 @@ HB_FUNC_STATIC(QAXWIDGET_QUERYSUBOBJECT)
                               HB_ISNIL(9) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(9)));
       Qt4xHb::createReturnQObjectClass(ptr, "QAXOBJECT");
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
     // QAxObject *querySubObject(const char *name, QList<QVariant> &vars)
     QAxWidget *obj = qobject_cast<QAxWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

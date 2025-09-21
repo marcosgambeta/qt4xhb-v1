@@ -107,8 +107,7 @@ HB_FUNC_STATIC(QAXSCRIPT_CALL)
                     HB_ISNIL(9) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(9))));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
     }
-  }
-  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
+  } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
     // QVariant call(const QString &function, QList<QVariant> &arguments)
     QAxScript *obj = static_cast<QAxScript *>(Qt4xHb::itemGetPtrStackSelfItem());
 
