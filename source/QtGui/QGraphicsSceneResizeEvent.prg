@@ -41,7 +41,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QGraphicsSceneResizeEvent()
+// QGraphicsSceneResizeEvent()
 HB_FUNC_STATIC(QGRAPHICSSCENERESIZEEVENT_NEW)
 {
   if (ISNUMPAR(0)) {

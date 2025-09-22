@@ -58,7 +58,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QHostAddress(quint32 ip4Addr)
+// QHostAddress(quint32 ip4Addr)
 HB_FUNC_STATIC(QHOSTADDRESS_NEW2)
 {
   QHostAddress *obj = new QHostAddress(PQUINT32(1));

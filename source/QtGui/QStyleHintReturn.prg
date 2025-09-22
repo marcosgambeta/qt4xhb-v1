@@ -47,7 +47,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QStyleHintReturn(int version = QStyleOption::Version, int type = QStyleHintReturn::SH_Default)
+// QStyleHintReturn(int version = QStyleOption::Version, int type = QStyleHintReturn::SH_Default)
 HB_FUNC_STATIC(QSTYLEHINTRETURN_NEW)
 {
   if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISNUMORNIL(2)) {

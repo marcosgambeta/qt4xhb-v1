@@ -51,7 +51,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QBasicTimer()
+// QBasicTimer()
 HB_FUNC_STATIC(QBASICTIMER_NEW)
 {
   if (ISNUMPAR(0)) {

@@ -54,7 +54,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // static int registerTypedef(const char *typeName, int aliasId)
+// static int registerTypedef(const char *typeName, int aliasId)
 HB_FUNC_STATIC(QMETATYPE_REGISTERTYPEDEF)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

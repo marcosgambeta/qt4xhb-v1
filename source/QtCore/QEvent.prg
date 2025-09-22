@@ -54,7 +54,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QEvent(QEvent::Type type)
+// QEvent(QEvent::Type type)
 HB_FUNC_STATIC(QEVENT_NEW)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1)) {

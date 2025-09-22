@@ -70,7 +70,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QGLContext(const QGLFormat &format)
+// QGLContext(const QGLFormat &format)
 HB_FUNC_STATIC(QGLCONTEXT_NEW)
 {
   if (ISNUMPAR(1) && ISQGLFORMAT(1)) {

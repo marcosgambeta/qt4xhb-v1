@@ -63,7 +63,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // void back()
+// void back()
 HB_FUNC_STATIC(QWEBHISTORY_BACK)
 {
   QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());

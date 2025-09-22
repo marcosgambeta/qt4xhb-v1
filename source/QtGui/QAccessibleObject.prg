@@ -45,7 +45,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // virtual QString actionText(int action, QAccessibleObject::Text t, int child) const
+// virtual QString actionText(int action, QAccessibleObject::Text t, int child) const
 HB_FUNC_STATIC(QACCESSIBLEOBJECT_ACTIONTEXT)
 {
   QAccessibleObject *obj = static_cast<QAccessibleObject *>(Qt4xHb::itemGetPtrStackSelfItem());

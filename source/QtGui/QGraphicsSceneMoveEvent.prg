@@ -41,7 +41,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QGraphicsSceneMoveEvent()
+// QGraphicsSceneMoveEvent()
 HB_FUNC_STATIC(QGRAPHICSSCENEMOVEEVENT_NEW)
 {
   if (ISNUMPAR(0)) {

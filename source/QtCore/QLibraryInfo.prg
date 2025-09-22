@@ -51,7 +51,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // static QString licensee()
+// static QString licensee()
 HB_FUNC_STATIC(QLIBRARYINFO_LICENSEE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

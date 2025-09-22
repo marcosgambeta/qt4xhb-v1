@@ -50,7 +50,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // static bool isActive()
+// static bool isActive()
 HB_FUNC_STATIC(QACCESSIBLE_ISACTIVE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

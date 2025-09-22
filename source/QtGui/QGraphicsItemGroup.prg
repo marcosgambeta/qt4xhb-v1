@@ -47,7 +47,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QGraphicsItemGroup(QGraphicsItem *parent = 0)
+// QGraphicsItemGroup(QGraphicsItem *parent = 0)
 HB_FUNC_STATIC(QGRAPHICSITEMGROUP_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1))) {

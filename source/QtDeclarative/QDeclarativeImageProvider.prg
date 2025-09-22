@@ -52,7 +52,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QDeclarativeImageProvider(QDeclarativeImageProvider::ImageType type)
+// QDeclarativeImageProvider(QDeclarativeImageProvider::ImageType type)
 HB_FUNC_STATIC(QDECLARATIVEIMAGEPROVIDER_NEW)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1)) {

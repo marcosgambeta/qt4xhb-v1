@@ -84,7 +84,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QChar()
+// QChar()
 HB_FUNC_STATIC(QCHAR_NEW1)
 {
   QChar *obj = new QChar();

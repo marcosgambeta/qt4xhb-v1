@@ -45,7 +45,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QHelpEvent(QEvent::Type type, const QPoint &pos, const QPoint &globalPos)
+// QHelpEvent(QEvent::Type type, const QPoint &pos, const QPoint &globalPos)
 HB_FUNC_STATIC(QHELPEVENT_NEW)
 {
   if (ISNUMPAR(3) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3)) {

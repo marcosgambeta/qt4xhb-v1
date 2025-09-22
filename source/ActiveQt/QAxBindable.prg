@@ -52,7 +52,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QAxBindable()
+// QAxBindable()
 HB_FUNC_STATIC(QAXBINDABLE_NEW)
 {
   if (ISNUMPAR(0)) {

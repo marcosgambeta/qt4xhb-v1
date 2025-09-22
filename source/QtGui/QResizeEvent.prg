@@ -41,7 +41,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QResizeEvent(const QSize &size, const QSize &oldSize)
+// QResizeEvent(const QSize &size, const QSize &oldSize)
 HB_FUNC_STATIC(QRESIZEEVENT_NEW)
 {
   if (ISNUMPAR(2) && ISQSIZE(1) && ISQSIZE(2)) {

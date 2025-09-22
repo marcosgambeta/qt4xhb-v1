@@ -51,7 +51,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QMetaClassInfo()
+// QMetaClassInfo()
 HB_FUNC_STATIC(QMETACLASSINFO_NEW)
 {
   if (ISNUMPAR(0)) {

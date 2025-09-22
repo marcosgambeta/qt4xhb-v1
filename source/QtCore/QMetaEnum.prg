@@ -61,7 +61,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QMetaEnum()
+// QMetaEnum()
 HB_FUNC_STATIC(QMETAENUM_NEW)
 {
   if (ISNUMPAR(0)) {

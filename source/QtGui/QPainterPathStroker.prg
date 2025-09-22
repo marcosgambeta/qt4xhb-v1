@@ -63,7 +63,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QPainterPathStroker()
+// QPainterPathStroker()
 HB_FUNC_STATIC(QPAINTERPATHSTROKER_NEW)
 {
   if (ISNUMPAR(0)) {

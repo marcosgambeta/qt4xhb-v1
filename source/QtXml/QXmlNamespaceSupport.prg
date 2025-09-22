@@ -56,7 +56,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QXmlNamespaceSupport()
+// QXmlNamespaceSupport()
 HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_NEW)
 {
   if (ISNUMPAR(0)) {

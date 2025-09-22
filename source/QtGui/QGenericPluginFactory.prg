@@ -48,7 +48,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QObject *create(const QString &key, const QString &specification)
+// QObject *create(const QString &key, const QString &specification)
 HB_FUNC_STATIC(QGENERICPLUGINFACTORY_CREATE)
 {
   QGenericPluginFactory *obj = static_cast<QGenericPluginFactory *>(Qt4xHb::itemGetPtrStackSelfItem());

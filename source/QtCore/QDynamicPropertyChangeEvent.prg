@@ -40,7 +40,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QDynamicPropertyChangeEvent(const QByteArray &name)
+// QDynamicPropertyChangeEvent(const QByteArray &name)
 HB_FUNC_STATIC(QDYNAMICPROPERTYCHANGEEVENT_NEW)
 {
   if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {

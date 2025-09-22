@@ -38,7 +38,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QCloseEvent()
+// QCloseEvent()
 HB_FUNC_STATIC(QCLOSEEVENT_NEW)
 {
   if (ISNUMPAR(0)) {

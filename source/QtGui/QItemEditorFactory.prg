@@ -54,7 +54,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QItemEditorFactory()
+// QItemEditorFactory()
 HB_FUNC_STATIC(QITEMEDITORFACTORY_NEW)
 {
   if (ISNUMPAR(0)) {

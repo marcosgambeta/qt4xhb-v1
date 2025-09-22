@@ -51,7 +51,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QGradient::CoordinateMode coordinateMode() const
+// QGradient::CoordinateMode coordinateMode() const
 HB_FUNC_STATIC(QGRADIENT_COORDINATEMODE)
 {
   QGradient *obj = static_cast<QGradient *>(Qt4xHb::itemGetPtrStackSelfItem());

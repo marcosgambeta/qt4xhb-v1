@@ -58,7 +58,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QScriptClass(QScriptEngine *engine)
+// QScriptClass(QScriptEngine *engine)
 HB_FUNC_STATIC(QSCRIPTCLASS_NEW)
 {
   if (ISNUMPAR(1) && ISQSCRIPTENGINE(1)) {

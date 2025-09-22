@@ -61,7 +61,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QUuid()
+// QUuid()
 HB_FUNC_STATIC(QUUID_NEW1)
 {
   QUuid *obj = new QUuid();

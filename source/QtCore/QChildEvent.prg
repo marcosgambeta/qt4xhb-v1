@@ -43,7 +43,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QChildEvent(QEvent::Type type, QObject *child)
+// QChildEvent(QEvent::Type type, QObject *child)
 HB_FUNC_STATIC(QCHILDEVENT_NEW)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && ISQOBJECT(2)) {

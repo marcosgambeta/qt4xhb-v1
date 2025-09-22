@@ -65,7 +65,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QXmlDefaultHandler()
+// QXmlDefaultHandler()
 HB_FUNC_STATIC(QXMLDEFAULTHANDLER_NEW)
 {
   if (ISNUMPAR(0)) {

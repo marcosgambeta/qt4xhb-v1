@@ -49,7 +49,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QWaitCondition()
+// QWaitCondition()
 HB_FUNC_STATIC(QWAITCONDITION_NEW)
 {
   if (ISNUMPAR(0)) {

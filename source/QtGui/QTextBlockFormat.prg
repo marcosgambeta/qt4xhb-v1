@@ -60,7 +60,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QTextBlockFormat()
+// QTextBlockFormat()
 HB_FUNC_STATIC(QTEXTBLOCKFORMAT_NEW)
 {
   if (ISNUMPAR(0)) {

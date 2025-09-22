@@ -50,7 +50,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // static QString displayName(QDesktopServices::StandardLocation type)
+// static QString displayName(QDesktopServices::StandardLocation type)
 HB_FUNC_STATIC(QDESKTOPSERVICES_DISPLAYNAME)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

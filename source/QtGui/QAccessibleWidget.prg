@@ -49,7 +49,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QAccessibleWidget(QWidget *w, QAccessible::Role role = QAccessible::Client, const QString &name = QString())
+// QAccessibleWidget(QWidget *w, QAccessible::Role role = QAccessible::Client, const QString &name = QString())
 HB_FUNC_STATIC(QACCESSIBLEWIDGET_NEW)
 {
   if (ISBETWEEN(1, 3) && ISQWIDGET(1) && ISNUMORNIL(2) && (HB_ISCHAR(3) || HB_ISNIL(3))) {

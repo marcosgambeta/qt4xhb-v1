@@ -50,7 +50,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QXmlFormatter(const QXmlQuery &query, QIODevice *outputDevice)
+// QXmlFormatter(const QXmlQuery &query, QIODevice *outputDevice)
 HB_FUNC_STATIC(QXMLFORMATTER_NEW)
 {
   if (ISNUMPAR(2) && ISQXMLQUERY(1) && ISQIODEVICE(2)) {

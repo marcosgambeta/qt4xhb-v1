@@ -40,7 +40,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QXmlSimpleReader()
+// QXmlSimpleReader()
 HB_FUNC_STATIC(QXMLSIMPLEREADER_NEW)
 {
   if (ISNUMPAR(0)) {

@@ -52,7 +52,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QTextTableFormat()
+// QTextTableFormat()
 HB_FUNC_STATIC(QTEXTTABLEFORMAT_NEW)
 {
   if (ISNUMPAR(0)) {

@@ -39,7 +39,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-    // QWhatsThisClickedEvent(const QString &href)
+// QWhatsThisClickedEvent(const QString &href)
 HB_FUNC_STATIC(QWHATSTHISCLICKEDEVENT_NEW)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
