@@ -19,7 +19,9 @@ CLASS QPlatformFontDatabase
    DATA pointer
    DATA self_destruction INIT .F.
 
+#if 0
    METHOD delete
+#endif
    METHOD addApplicationFont
    METHOD fontDir
    METHOD fontEngine
@@ -54,6 +56,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#if 0
 HB_FUNC_STATIC(QPLATFORMFONTDATABASE_DELETE)
 {
   QPlatformFontDatabase *obj = static_cast<QPlatformFontDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -68,6 +71,7 @@ HB_FUNC_STATIC(QPLATFORMFONTDATABASE_DELETE)
 
   hb_itemReturn(hb_stackSelfItem());
 }
+#endif
 
 // virtual QStringList addApplicationFont(const QByteArray &fontData, const QString &fileName)
 HB_FUNC_STATIC(QPLATFORMFONTDATABASE_ADDAPPLICATIONFONT)
