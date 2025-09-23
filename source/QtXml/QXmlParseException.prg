@@ -54,8 +54,7 @@ RETURN
 
 HB_FUNC_STATIC(QXMLPARSEEXCEPTION_NEW)
 {
-  if (ISBETWEEN(0, 5) && ISCHARORNIL(1) && ISNUMORNIL(2) &&
-      ISNUMORNIL(3) && ISCHARORNIL(4) && ISCHARORNIL(5)) {
+  if (ISBETWEEN(0, 5) && ISCHARORNIL(1) && ISNUMORNIL(2) && ISNUMORNIL(3) && ISCHARORNIL(4) && ISCHARORNIL(5)) {
     // QXmlParseException(const QString &name = QString(), int c = -1, int l = -1, const QString &p = QString(), const
     // QString &s = QString())
     QXmlParseException *obj = new QXmlParseException(OPQSTRING(1, QString()), OPINT(2, -1), OPINT(3, -1),
