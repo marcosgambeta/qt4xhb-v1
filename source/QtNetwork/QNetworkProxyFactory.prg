@@ -118,11 +118,9 @@ HB_FUNC_STATIC(QNETWORKPROXYFACTORY_PROXYFORQUERY)
     QList<QNetworkProxy> list = QNetworkProxyFactory::proxyForQuery(*PQNETWORKPROXYQUERY(1));
     PHB_DYNS pDynSym = hb_dynsymFindName("QNETWORKPROXY");
     PHB_ITEM pArray = hb_itemArrayNew(0);
-    if (pDynSym != NULL)
-    {
+    if (pDynSym != NULL) {
       const int count = list.count();
-      for (int i = 0; i < count; i++)
-      {
+      for (int i = 0; i < count; i++) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
@@ -190,11 +188,9 @@ HB_FUNC_STATIC(QNETWORKPROXYFACTORY_SYSTEMPROXYFORQUERY)
         HB_ISNIL(1) ? QNetworkProxyQuery() : *static_cast<QNetworkProxyQuery *>(Qt4xHb::itemGetPtr(1)));
     PHB_DYNS pDynSym = hb_dynsymFindName("QNETWORKPROXY");
     PHB_ITEM pArray = hb_itemArrayNew(0);
-    if (pDynSym != NULL)
-    {
+    if (pDynSym != NULL) {
       const int count = list.count();
-      for (int i = 0; i < count; i++)
-      {
+      for (int i = 0; i < count; i++) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
