@@ -75,8 +75,7 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_NEW)
     // QGLFramebufferObject(int width, int height, const QGLFramebufferObjectFormat &format)
     QGLFramebufferObject *obj = new QGLFramebufferObject(PINT(1), PINT(2), *PQGLFRAMEBUFFEROBJECTFORMAT(3));
     Qt4xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4) &&
-           ISNUMORNIL(5)) {
+  } else if (ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4) && ISNUMORNIL(5)) {
     // QGLFramebufferObject(int width, int height, QGLFramebufferObject::Attachment attachment, GLenum target =
     // GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8)
     QGLFramebufferObject *obj =

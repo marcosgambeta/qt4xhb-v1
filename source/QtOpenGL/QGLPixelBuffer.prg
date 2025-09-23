@@ -67,7 +67,7 @@ HB_FUNC_STATIC(QGLPIXELBUFFER_NEW)
         OPQGLWIDGET(3, 0));
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQGLFORMAT(3) || HB_ISNIL(3)) &&
-           (ISQGLWIDGET(4) || HB_ISNIL(4))) {
+             (ISQGLWIDGET(4) || HB_ISNIL(4))) {
     // QGLPixelBuffer(int width, int height, const QGLFormat &format = QGLFormat::defaultFormat(), QGLWidget
     // *shareWidget = 0)
     QGLPixelBuffer *obj = new QGLPixelBuffer(
