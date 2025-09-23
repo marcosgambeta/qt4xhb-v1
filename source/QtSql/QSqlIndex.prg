@@ -47,7 +47,7 @@ RETURN
 
 HB_FUNC_STATIC(QSQLINDEX_NEW)
 {
-  if (ISBETWEEN(0, 2) && ISCHARORNIL(1) && ISCHARORNIL(1)) {
+  if (ISBETWEEN(0, 2) && ISCHARORNIL(1) && ISCHARORNIL(2)) {
     // QSqlIndex(const QString &cursorname = QString(), const QString &name = QString())
     QSqlIndex *obj = new QSqlIndex(OPQSTRING(1, QString()), OPQSTRING(2, QString()));
     Qt4xHb::returnNewObject(obj, true);
