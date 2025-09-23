@@ -42,7 +42,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    // void activateCurrentItem()
+// void activateCurrentItem()
 HB_FUNC_STATIC(QHELPINDEXWIDGET_ACTIVATECURRENTITEM)
 {
   QHelpIndexWidget *obj = qobject_cast<QHelpIndexWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());

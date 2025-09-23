@@ -45,7 +45,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    // void createIndex(const QString &customFilterName)
+// void createIndex(const QString &customFilterName)
 HB_FUNC_STATIC(QHELPINDEXMODEL_CREATEINDEX)
 {
   QHelpIndexModel *obj = qobject_cast<QHelpIndexModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
