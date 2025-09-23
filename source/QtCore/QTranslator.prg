@@ -93,8 +93,8 @@ HB_FUNC_STATIC(QTRANSLATOR_ISEMPTY)
 
 HB_FUNC_STATIC(QTRANSLATOR_LOAD)
 {
-  if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (HB_ISCHAR(3) || HB_ISNIL(3)) &&
-      (HB_ISCHAR(4) || HB_ISNIL(4))) {
+  if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISCHARORNIL(3) &&
+      ISCHARORNIL(4)) {
     // bool load(const QString &filename, const QString &directory = QString(), const QString &search_delimiters =
     // QString(), const QString &suffix = QString())
     QTranslator *obj = qobject_cast<QTranslator *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -102,8 +102,8 @@ HB_FUNC_STATIC(QTRANSLATOR_LOAD)
     if (obj != NULL) {
       RBOOL(obj->load(PQSTRING(1), OPQSTRING(2, QString()), OPQSTRING(3, QString()), OPQSTRING(4, QString())));
     }
-  } else if (ISBETWEEN(2, 5) && ISQLOCALE(1) && HB_ISCHAR(2) && (HB_ISCHAR(3) || HB_ISNIL(3)) &&
-           (HB_ISCHAR(4) || HB_ISNIL(4)) && (HB_ISCHAR(5) || HB_ISNIL(5))) {
+  } else if (ISBETWEEN(2, 5) && ISQLOCALE(1) && HB_ISCHAR(2) && ISCHARORNIL(3) &&
+           ISCHARORNIL(4) && ISCHARORNIL(5)) {
     // bool load(const QLocale &locale, const QString &filename, const QString &prefix = QString(), const QString
     // &directory = QString(), const QString &suffix = QString())
     QTranslator *obj = qobject_cast<QTranslator *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QTRANSLATOR_TRANSLATE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISCHAR(2) && (HB_ISCHAR(3) || HB_ISNIL(3)) &&
+    if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISCHARORNIL(3) &&
         ISNUMORNIL(4)) {
 #endif
       RQSTRING(obj->translate(PCONSTCHAR(1), PCONSTCHAR(2), OPCONSTCHAR(3, 0), OPINT(4, -1)));

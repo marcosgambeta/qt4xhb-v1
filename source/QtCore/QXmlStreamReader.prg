@@ -997,7 +997,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_RAISEERROR)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISCHARORNIL(1)) {
 #endif
       obj->raiseError(OPQSTRING(1, QString()));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

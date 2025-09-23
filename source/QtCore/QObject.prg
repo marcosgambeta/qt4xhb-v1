@@ -443,7 +443,7 @@ HB_FUNC_STATIC(QOBJECT_FINDCHILD)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISCHARORNIL(1)) {
 #endif
       QObject *ptr = obj->findChild<QObject *>(OPQSTRING(1, QString()));
       Qt4xHb::createReturnQObjectClass(ptr, "QOBJECT");
@@ -520,7 +520,7 @@ void QObject_findChildren2()
 
 HB_FUNC_STATIC(QOBJECT_FINDCHILDREN)
 {
-  if (ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISCHARORNIL(1)) {
     QObject_findChildren1();
   } else if (ISNUMPAR(1) && ISQREGEXP(1)) {
     QObject_findChildren2();
