@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QFONTDATABASE_ISBITMAPSCALABLE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2)) {
 #endif
       RBOOL(obj->isBitmapScalable(PQSTRING(1), OPQSTRING(2, QString())));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QFONTDATABASE_ISFIXEDPITCH)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2)) {
 #endif
       RBOOL(obj->isFixedPitch(PQSTRING(1), OPQSTRING(2, QString())));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QFONTDATABASE_ISSCALABLE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2)) {
 #endif
       RBOOL(obj->isScalable(PQSTRING(1), OPQSTRING(2, QString())));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -200,7 +200,7 @@ HB_FUNC_STATIC(QFONTDATABASE_ISSMOOTHLYSCALABLE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2)) {
 #endif
       RBOOL(obj->isSmoothlyScalable(PQSTRING(1), OPQSTRING(2, QString())));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -236,7 +236,7 @@ HB_FUNC_STATIC(QFONTDATABASE_POINTSIZES)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2)) {
 #endif
       QList<int> list = obj->pointSizes(PQSTRING(1), OPQSTRING(2, QString()));
       Qt4xHb::convert_qlist_int_to_array(list);

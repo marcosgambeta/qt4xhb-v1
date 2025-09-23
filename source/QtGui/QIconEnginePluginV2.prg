@@ -66,7 +66,7 @@ HB_FUNC_STATIC(QICONENGINEPLUGINV2_CREATE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISCHARORNIL(1)) {
 #endif
       QIconEngineV2 *ptr = obj->create(OPQSTRING(1, QString()));
       Qt4xHb::createReturnClass(ptr, "QICONENGINEV2", false);
