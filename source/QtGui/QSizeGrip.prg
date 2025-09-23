@@ -43,7 +43,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    // QSizeGrip(QWidget *parent)
+// QSizeGrip(QWidget *parent)
 HB_FUNC_STATIC(QSIZEGRIP_NEW)
 {
   if (ISNUMPAR(1) && ISQWIDGET(1)) {

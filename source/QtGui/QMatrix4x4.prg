@@ -89,8 +89,8 @@ HB_FUNC_STATIC(QMATRIX4X4_NEW)
     QMatrix4x4 *obj = new QMatrix4x4();
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(16) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) &&
-           HB_ISNUM(7) && HB_ISNUM(8) && HB_ISNUM(9) && HB_ISNUM(10) && HB_ISNUM(11) && HB_ISNUM(12) && HB_ISNUM(13) &&
-           HB_ISNUM(14) && HB_ISNUM(15) && HB_ISNUM(16)) {
+             HB_ISNUM(7) && HB_ISNUM(8) && HB_ISNUM(9) && HB_ISNUM(10) && HB_ISNUM(11) && HB_ISNUM(12) &&
+             HB_ISNUM(13) && HB_ISNUM(14) && HB_ISNUM(15) && HB_ISNUM(16)) {
     // QMatrix4x4(qreal m11, qreal m12, qreal m13, qreal m14, qreal m21, qreal m22, qreal m23, qreal m24, qreal m31,
     // qreal m32, qreal m33, qreal m34, qreal m41, qreal m42, qreal m43, qreal m44)
     QMatrix4x4 *obj =

@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_NEW)
     QListWidgetItem *obj = new QListWidgetItem(PQSTRING(1), OPQLISTWIDGET(2, 0), OPINT(3, QListWidgetItem::Type));
     Qt4xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(2, 4) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && (ISQLISTWIDGET(3) || HB_ISNIL(3)) &&
-           ISNUMORNIL(4)) {
+             ISNUMORNIL(4)) {
     // QListWidgetItem(const QIcon &icon, const QString &text, QListWidget *parent = 0, int type =
     // QListWidgetItem::Type)
     QListWidgetItem *obj =

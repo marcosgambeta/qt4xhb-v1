@@ -219,8 +219,7 @@ HB_FUNC_STATIC(QFONTENGINEINFO_SETWRITINGSYSTEMS)
       QList<QFontDatabase::WritingSystem> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
-      for (int i1 = 0; i1 < nLen1; i1++)
-      {
+      for (int i1 = 0; i1 < nLen1; i1++) {
         par1 << (QFontDatabase::WritingSystem)hb_arrayGetNI(aList1, i1 + 1);
       }
       obj->setWritingSystems(par1);
@@ -282,8 +281,7 @@ HB_FUNC_STATIC(QFONTENGINEINFO_WRITINGSYSTEMS)
       QList<QFontDatabase::WritingSystem> list = obj->writingSystems();
       PHB_ITEM pArray = hb_itemArrayNew(0);
       const int count = list.count();
-      for (int i = 0; i < count; i++)
-      {
+      for (int i = 0; i < count; i++) {
         PHB_ITEM pItem = hb_itemPutNI(NULL, (int)list[i]);
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);

@@ -78,8 +78,7 @@ HB_FUNC_STATIC(QPOLYGONF_NEW)
     QVector<QPointF> par1;
     PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
     int nLen1 = hb_arrayLen(aList1);
-    for (int i1 = 0; i1 < nLen1; i1++)
-    {
+    for (int i1 = 0; i1 < nLen1; i1++) {
       par1 << *static_cast<QPointF *>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1 + 1), "POINTER", 0)));
     }
     QPolygonF *obj = new QPolygonF(par1);

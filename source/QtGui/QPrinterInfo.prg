@@ -153,8 +153,7 @@ HB_FUNC_STATIC(QPRINTERINFO_SUPPORTEDPAPERSIZES)
       QList<QPrinter::PaperSize> list = obj->supportedPaperSizes();
       PHB_ITEM pArray = hb_itemArrayNew(0);
       const int count = list.count();
-      for (int i = 0; i < count; i++)
-      {
+      for (int i = 0; i < count; i++) {
         PHB_ITEM pItem = hb_itemPutNI(NULL, (int)list[i]);
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);

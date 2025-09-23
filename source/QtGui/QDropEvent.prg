@@ -59,8 +59,7 @@ RETURN
     // Qt::KeyboardModifiers modifiers, QEvent::Type type = QEvent::Drop)
 HB_FUNC_STATIC(QDROPEVENT_NEW)
 {
-  if (ISBETWEEN(5, 6) && ISQPOINT(1) && HB_ISNUM(2) && ISQMIMEDATA(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
-      ISNUMORNIL(6)) {
+  if (ISBETWEEN(5, 6) && ISQPOINT(1) && HB_ISNUM(2) && ISQMIMEDATA(3) && HB_ISNUM(4) && HB_ISNUM(5) && ISNUMORNIL(6)) {
     QDropEvent *obj = new QDropEvent(*PQPOINT(1), (Qt::DropActions)hb_parni(2), PQMIMEDATA(3),
                                      (Qt::MouseButtons)hb_parni(4), (Qt::KeyboardModifiers)hb_parni(5),
                                      HB_ISNIL(6) ? (QEvent::Type)QEvent::Drop : (QEvent::Type)hb_parni(6));

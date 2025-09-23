@@ -53,7 +53,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    // bool allowsErrorInteraction()
+// bool allowsErrorInteraction()
 HB_FUNC_STATIC(QSESSIONMANAGER_ALLOWSERRORINTERACTION)
 {
   QSessionManager *obj = qobject_cast<QSessionManager *>(Qt4xHb::getQObjectPointerFromSelfItem());

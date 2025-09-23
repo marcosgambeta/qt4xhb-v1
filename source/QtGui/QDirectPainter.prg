@@ -59,7 +59,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    // QDirectPainter(QObject *parent = 0, QDirectPainter::SurfaceFlag flag = QDirectPainter::NonReserved)
+// QDirectPainter(QObject *parent = 0, QDirectPainter::SurfaceFlag flag = QDirectPainter::NonReserved)
 HB_FUNC_STATIC(QDIRECTPAINTER_NEW)
 {
   if (ISBETWEEN(0, 2) && (ISQOBJECT(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {

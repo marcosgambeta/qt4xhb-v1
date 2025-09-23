@@ -60,7 +60,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    // QColumnView(QWidget *parent = 0)
+// QColumnView(QWidget *parent = 0)
 HB_FUNC_STATIC(QCOLUMNVIEW_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1))) {
@@ -157,8 +157,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETCOLUMNWIDTHS)
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
       int temp1;
-      for (int i1 = 0; i1 < nLen1; i1++)
-      {
+      for (int i1 = 0; i1 < nLen1; i1++) {
         temp1 = hb_arrayGetNI(aList1, i1 + 1);
         par1 << temp1;
       }

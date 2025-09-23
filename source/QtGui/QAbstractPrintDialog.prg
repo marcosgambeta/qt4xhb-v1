@@ -49,7 +49,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    // virtual int exec() = 0
+// virtual int exec() = 0
 HB_FUNC_STATIC(QABSTRACTPRINTDIALOG_EXEC)
 {
   QAbstractPrintDialog *obj = qobject_cast<QAbstractPrintDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());

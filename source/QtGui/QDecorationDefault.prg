@@ -75,8 +75,7 @@ HB_FUNC_STATIC(QDECORATIONDEFAULT_PAINT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 4) && ISQPAINTER(1) && ISQWIDGET(2) && ISNUMORNIL(3) &&
-        ISNUMORNIL(4)) {
+    if (ISBETWEEN(2, 4) && ISQPAINTER(1) && ISQWIDGET(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
 #endif
       RBOOL(obj->paint(PQPAINTER(1), PQWIDGET(2), OPINT(3, QDecoration::All),
                        HB_ISNIL(4) ? (QDecoration::DecorationState)QDecoration::Normal

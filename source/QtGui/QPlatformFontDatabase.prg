@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QPLATFORMFONTDATABASE_DELETE)
 }
 #endif
 
-// virtual QStringList addApplicationFont(const QByteArray &fontData, const QString &fileName)
+    // virtual QStringList addApplicationFont(const QByteArray &fontData, const QString &fileName)
 HB_FUNC_STATIC(QPLATFORMFONTDATABASE_ADDAPPLICATIONFONT)
 {
   QPlatformFontDatabase *obj = static_cast<QPlatformFontDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());

@@ -200,8 +200,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_ADDCHILDREN)
       QList<QTreeWidgetItem *> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
-      for (int i1 = 0; i1 < nLen1; i1++)
-      {
+      for (int i1 = 0; i1 < nLen1; i1++) {
         par1 << static_cast<QTreeWidgetItem *>(
             hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1 + 1), "POINTER", 0)));
       }
@@ -489,8 +488,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEM_INSERTCHILDREN)
       QList<QTreeWidgetItem *> par2;
       PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
       int nLen2 = hb_arrayLen(aList2);
-      for (int i2 = 0; i2 < nLen2; i2++)
-      {
+      for (int i2 = 0; i2 < nLen2; i2++) {
         par2 << static_cast<QTreeWidgetItem *>(
             hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList2, i2 + 1), "POINTER", 0)));
       }

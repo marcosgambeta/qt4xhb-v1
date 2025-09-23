@@ -124,8 +124,7 @@ HB_FUNC_STATIC(QGLYPHRUN_GLYPHINDEXES)
       QVector<quint32> list = obj->glyphIndexes();
       PHB_ITEM pArray = hb_itemArrayNew(0);
       const int count = list.count();
-      for (int i = 0; i < count; i++)
-      {
+      for (int i = 0; i < count; i++) {
         PHB_ITEM pItem = hb_itemPutNI(NULL, (quint32)list[i]);
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
@@ -230,8 +229,7 @@ HB_FUNC_STATIC(QGLYPHRUN_SETGLYPHINDEXES)
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
       quint32 temp1;
-      for (int i1 = 0; i1 < nLen1; i1++)
-      {
+      for (int i1 = 0; i1 < nLen1; i1++) {
         temp1 = (quint32)hb_arrayGetNI(aList1, i1 + 1);
         par1 << temp1;
       }
@@ -278,8 +276,7 @@ HB_FUNC_STATIC(QGLYPHRUN_SETPOSITIONS)
       QVector<QPointF> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
-      for (int i1 = 0; i1 < nLen1; i1++)
-      {
+      for (int i1 = 0; i1 < nLen1; i1++) {
         par1 << *static_cast<QPointF *>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1 + 1), "POINTER", 0)));
       }
       obj->setPositions(par1);

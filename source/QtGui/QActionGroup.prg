@@ -55,7 +55,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    // QActionGroup(QObject *parent)
+// QActionGroup(QObject *parent)
 HB_FUNC_STATIC(QACTIONGROUP_NEW)
 {
   if (ISNUMPAR(1) && ISQOBJECT(1)) {

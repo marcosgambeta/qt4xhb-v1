@@ -40,7 +40,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    // QWindowsVistaStyle()
+// QWindowsVistaStyle()
 HB_FUNC_STATIC(QWINDOWSVISTASTYLE_NEW)
 {
   if (ISNUMPAR(0)) {

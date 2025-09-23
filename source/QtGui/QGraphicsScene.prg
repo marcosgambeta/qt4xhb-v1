@@ -143,7 +143,8 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_NEW)
     // QGraphicsScene(const QRectF &sceneRect, QObject *parent = 0)
     QGraphicsScene *obj = new QGraphicsScene(*PQRECTF(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISQOBJECT(5) || HB_ISNIL(5))) {
+  } else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) &&
+             (ISQOBJECT(5) || HB_ISNIL(5))) {
     // QGraphicsScene(qreal x, qreal y, qreal width, qreal height, QObject *parent = 0)
     QGraphicsScene *obj = new QGraphicsScene(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQOBJECT(5, 0));
     Qt4xHb::returnNewObject(obj, false);
@@ -219,8 +220,8 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDELLIPSE)
                           HB_ISNIL(3) ? QBrush() : *static_cast<QBrush *>(Qt4xHb::itemGetPtr(3)));
       Qt4xHb::createReturnClass(ptr, "QGRAPHICSELLIPSEITEM", false);
     }
-  } else if (ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISQPEN(5) || HB_ISNIL(5)) &&
-           (ISQBRUSH(6) || HB_ISNIL(6))) {
+  } else if (ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) &&
+             (ISQPEN(5) || HB_ISNIL(5)) && (ISQBRUSH(6) || HB_ISNIL(6))) {
     // QGraphicsEllipseItem *addEllipse(qreal x, qreal y, qreal w, qreal h, const QPen &pen = QPen(), const QBrush
     // &brush = QBrush())
     QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -268,7 +269,8 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDLINE)
           obj->addLine(*PQLINEF(1), HB_ISNIL(2) ? QPen() : *static_cast<QPen *>(Qt4xHb::itemGetPtr(2)));
       Qt4xHb::createReturnClass(ptr, "QGRAPHICSLINEITEM", false);
     }
-  } else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISQPEN(5) || HB_ISNIL(5))) {
+  } else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) &&
+             (ISQPEN(5) || HB_ISNIL(5))) {
     // QGraphicsLineItem *addLine(qreal x1, qreal y1, qreal x2, qreal y2, const QPen &pen = QPen())
     QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -355,8 +357,8 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDRECT)
                        HB_ISNIL(3) ? QBrush() : *static_cast<QBrush *>(Qt4xHb::itemGetPtr(3)));
       Qt4xHb::createReturnClass(ptr, "QGRAPHICSRECTITEM", false);
     }
-  } else if (ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISQPEN(5) || HB_ISNIL(5)) &&
-           (ISQBRUSH(6) || HB_ISNIL(6))) {
+  } else if (ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) &&
+             (ISQPEN(5) || HB_ISNIL(5)) && (ISQBRUSH(6) || HB_ISNIL(6))) {
     // QGraphicsRectItem *addRect(qreal x, qreal y, qreal w, qreal h, const QPen &pen = QPen(), const QBrush &brush =
     // QBrush())
     QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -542,8 +544,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_CREATEITEMGROUP)
       QList<QGraphicsItem *> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
-      for (int i1 = 0; i1 < nLen1; i1++)
-      {
+      for (int i1 = 0; i1 < nLen1; i1++) {
         par1 << static_cast<QGraphicsItem *>(
             hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1 + 1), "POINTER", 0)));
       }
@@ -882,8 +883,8 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ITEMS)
       }
       hb_itemReturnRelease(pArray);
     }
-  } else if (ISBETWEEN(6, 7) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) &&
-           (ISQTRANSFORM(7) || HB_ISNIL(7))) {
+  } else if (ISBETWEEN(6, 7) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
+             HB_ISNUM(6) && (ISQTRANSFORM(7) || HB_ISNIL(7))) {
     // QList<QGraphicsItem *> items(qreal x, qreal y, qreal w, qreal h, Qt::ItemSelectionMode mode, Qt::SortOrder order,
     // const QTransform &deviceTransform = QTransform()) const
     QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());

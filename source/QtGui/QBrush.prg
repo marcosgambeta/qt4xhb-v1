@@ -416,8 +416,7 @@ void QBrush_toVariant1()
 {
   QBrush *obj = static_cast<QBrush *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj)
-  {
+  if (obj) {
     QVariant *variant = new QVariant();
     variant->setValue<QBrush>(*obj);
     Qt4xHb::createReturnClass(variant, "QVARIANT", true);

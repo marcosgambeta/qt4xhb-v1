@@ -261,8 +261,8 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ENSUREVISIBLE)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) &&
-           ISNUMORNIL(5) && ISNUMORNIL(6)) {
+  } else if (ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISNUMORNIL(5) &&
+             ISNUMORNIL(6)) {
     // void ensureVisible(qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50)
     QGraphicsView *obj = qobject_cast<QGraphicsView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
@@ -1519,8 +1519,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_UPDATESCENE)
       QList<QRectF> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
-      for (int i1 = 0; i1 < nLen1; i1++)
-      {
+      for (int i1 = 0; i1 < nLen1; i1++) {
         par1 << *static_cast<QRectF *>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1 + 1), "POINTER", 0)));
       }
       obj->updateScene(par1);

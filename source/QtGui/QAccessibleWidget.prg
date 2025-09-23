@@ -128,8 +128,7 @@ HB_FUNC_STATIC(QACCESSIBLEWIDGET_DOACTION)
       QVariantList par3;
       PHB_ITEM aList3 = hb_param(3, HB_IT_ARRAY);
       int nLen3 = hb_arrayLen(aList3);
-      for (int i3 = 0; i3 < nLen3; i3++)
-      {
+      for (int i3 = 0; i3 < nLen3; i3++) {
         par3 << *static_cast<QVariant *>(
             hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList3, i3 + 1), "POINTER", 0)));
       }

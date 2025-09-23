@@ -113,8 +113,7 @@ HB_FUNC_STATIC(QFILEDIALOG_NEW)
     // QFileDialog(QWidget *parent, Qt::WindowFlags flags)
     QFileDialog *obj = new QFileDialog(PQWIDGET(1), (Qt::WindowFlags)hb_parni(2));
     Qt4xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(0, 4) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISCHARORNIL(2) &&
-           ISCHARORNIL(3) && ISCHARORNIL(4)) {
+  } else if (ISBETWEEN(0, 4) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISCHARORNIL(2) && ISCHARORNIL(3) && ISCHARORNIL(4)) {
     // QFileDialog(QWidget *parent = 0, const QString &caption = QString(), const QString &directory = QString(), const
     // QString &filter = QString())
     QFileDialog *obj =
@@ -944,8 +943,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETSIDEBARURLS)
       QList<QUrl> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
-      for (int i1 = 0; i1 < nLen1; i1++)
-      {
+      for (int i1 = 0; i1 < nLen1; i1++) {
         par1 << *static_cast<QUrl *>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1 + 1), "POINTER", 0)));
       }
       obj->setSidebarUrls(par1);
@@ -1081,8 +1079,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETVISIBLE)
 HB_FUNC_STATIC(QFILEDIALOG_GETEXISTINGDIRECTORY)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 4) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISCHARORNIL(2) &&
-      ISCHARORNIL(3) && ISNUMORNIL(4)) {
+  if (ISBETWEEN(0, 4) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISCHARORNIL(2) && ISCHARORNIL(3) && ISNUMORNIL(4)) {
 #endif
     RQSTRING(QFileDialog::getExistingDirectory(OPQWIDGET(1, 0), OPQSTRING(2, QString()), OPQSTRING(3, QString()),
                                                HB_ISNIL(4) ? (QFileDialog::Options)QFileDialog::ShowDirsOnly
@@ -1099,9 +1096,8 @@ HB_FUNC_STATIC(QFILEDIALOG_GETEXISTINGDIRECTORY)
 HB_FUNC_STATIC(QFILEDIALOG_GETOPENFILENAME)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 6) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISCHARORNIL(2) &&
-      ISCHARORNIL(3) && ISCHARORNIL(4) && ISCHARORNIL(5) &&
-      ISNUMORNIL(6)) {
+  if (ISBETWEEN(0, 6) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISCHARORNIL(2) && ISCHARORNIL(3) && ISCHARORNIL(4) &&
+      ISCHARORNIL(5) && ISNUMORNIL(6)) {
 #endif
     RQSTRING(QFileDialog::getOpenFileName(OPQWIDGET(1, 0), OPQSTRING(2, QString()), OPQSTRING(3, QString()),
                                           OPQSTRING(4, QString()), NULL,
@@ -1118,9 +1114,8 @@ HB_FUNC_STATIC(QFILEDIALOG_GETOPENFILENAME)
 HB_FUNC_STATIC(QFILEDIALOG_GETOPENFILENAMES)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 6) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISCHARORNIL(2) &&
-      ISCHARORNIL(3) && ISCHARORNIL(4) && ISCHARORNIL(5) &&
-      ISNUMORNIL(6)) {
+  if (ISBETWEEN(0, 6) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISCHARORNIL(2) && ISCHARORNIL(3) && ISCHARORNIL(4) &&
+      ISCHARORNIL(5) && ISNUMORNIL(6)) {
 #endif
     RQSTRINGLIST(QFileDialog::getOpenFileNames(
         OPQWIDGET(1, 0), OPQSTRING(2, QString()), OPQSTRING(3, QString()), OPQSTRING(4, QString()), NULL,
@@ -1137,9 +1132,8 @@ HB_FUNC_STATIC(QFILEDIALOG_GETOPENFILENAMES)
 HB_FUNC_STATIC(QFILEDIALOG_GETSAVEFILENAME)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 6) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISCHARORNIL(2) &&
-      ISCHARORNIL(3) && ISCHARORNIL(4) && ISCHARORNIL(5) &&
-      ISNUMORNIL(6)) {
+  if (ISBETWEEN(0, 6) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISCHARORNIL(2) && ISCHARORNIL(3) && ISCHARORNIL(4) &&
+      ISCHARORNIL(5) && ISNUMORNIL(6)) {
 #endif
     RQSTRING(QFileDialog::getSaveFileName(OPQWIDGET(1, 0), OPQSTRING(2, QString()), OPQSTRING(3, QString()),
                                           OPQSTRING(4, QString()), NULL,

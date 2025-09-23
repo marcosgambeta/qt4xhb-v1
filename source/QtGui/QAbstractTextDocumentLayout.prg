@@ -59,7 +59,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    // QString anchorAt(const QPointF &position) const
+// QString anchorAt(const QPointF &position) const
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ANCHORAT)
 {
   QAbstractTextDocumentLayout *obj =

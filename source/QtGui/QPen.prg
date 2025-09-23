@@ -86,8 +86,7 @@ HB_FUNC_STATIC(QPEN_NEW)
     // QPen(const QColor &color)
     QPen *obj = new QPen(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
     Qt4xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(2, 5) && ISQBRUSH(1) && HB_ISNUM(2) && ISNUMORNIL(3) &&
-           ISNUMORNIL(4) && ISNUMORNIL(5)) {
+  } else if (ISBETWEEN(2, 5) && ISQBRUSH(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4) && ISNUMORNIL(5)) {
     // QPen(const QBrush &brush, qreal width, Qt::PenStyle style = Qt::SolidLine, Qt::PenCapStyle cap = Qt::SquareCap,
     // Qt::PenJoinStyle join = Qt::BevelJoin)
     QPen *obj = new QPen(*PQBRUSH(1), PQREAL(2), HB_ISNIL(3) ? (Qt::PenStyle)Qt::SolidLine : (Qt::PenStyle)hb_parni(3),
@@ -204,8 +203,7 @@ HB_FUNC_STATIC(QPEN_DASHPATTERN)
       QVector<qreal> list = obj->dashPattern();
       PHB_ITEM pArray = hb_itemArrayNew(0);
       const int count = list.count();
-      for (int i = 0; i < count; i++)
-      {
+      for (int i = 0; i < count; i++) {
         PHB_ITEM pItem = hb_itemPutND(NULL, (qreal)list[i]);
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
@@ -404,8 +402,7 @@ HB_FUNC_STATIC(QPEN_SETDASHPATTERN)
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
       qreal temp1;
-      for (int i1 = 0; i1 < nLen1; i1++)
-      {
+      for (int i1 = 0; i1 < nLen1; i1++) {
         temp1 = hb_arrayGetND(aList1, i1 + 1);
         par1 << temp1;
       }

@@ -256,8 +256,8 @@ HB_FUNC_STATIC(QPAINTERPATH_ADDROUNDEDRECT)
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISBETWEEN(6, 7) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) &&
-           ISNUMORNIL(7)) {
+  } else if (ISBETWEEN(6, 7) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
+             HB_ISNUM(6) && ISNUMORNIL(7)) {
     // void addRoundedRect(qreal x, qreal y, qreal w, qreal h, qreal xRadius, qreal yRadius, Qt::SizeMode mode =
     // Qt::AbsoluteSize)
     QPainterPath *obj = static_cast<QPainterPath *>(Qt4xHb::itemGetPtrStackSelfItem());

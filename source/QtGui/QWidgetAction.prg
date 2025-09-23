@@ -45,7 +45,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    // QWidgetAction(QObject *parent)
+// QWidgetAction(QObject *parent)
 HB_FUNC_STATIC(QWIDGETACTION_NEW)
 {
   if (ISNUMPAR(1) && ISQOBJECT(1)) {

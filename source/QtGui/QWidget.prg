@@ -502,8 +502,7 @@ HB_FUNC_STATIC(QWIDGET_ADDACTIONS)
       QList<QAction *> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
-      for (int i1 = 0; i1 < nLen1; i1++)
-      {
+      for (int i1 = 0; i1 < nLen1; i1++) {
         par1 << static_cast<QAction *>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1 + 1), "POINTER", 0)));
       }
       obj->addActions(par1);
@@ -1306,8 +1305,7 @@ HB_FUNC_STATIC(QWIDGET_INSERTACTIONS)
       QList<QAction *> par2;
       PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
       int nLen2 = hb_arrayLen(aList2);
-      for (int i2 = 0; i2 < nLen2; i2++)
-      {
+      for (int i2 = 0; i2 < nLen2; i2++) {
         par2 << static_cast<QAction *>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList2, i2 + 1), "POINTER", 0)));
       }
       obj->insertActions(PQACTION(1), par2);
@@ -2168,7 +2166,7 @@ HB_FUNC_STATIC(QWIDGET_RENDER)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISBETWEEN(1, 4) && ISQPAINTER(1) && (ISQPOINT(2) || HB_ISNIL(2)) && (ISQREGION(3) || HB_ISNIL(3)) &&
-           ISNUMORNIL(4)) {
+             ISNUMORNIL(4)) {
     // void render(QPainter *painter, const QPoint &targetOffset = QPoint(), const QRegion &sourceRegion = QRegion(),
     // QWidget::RenderFlags renderFlags = QWidget::RenderFlags(QWidget::DrawWindowBackground | QWidget::DrawChildren))
     QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());

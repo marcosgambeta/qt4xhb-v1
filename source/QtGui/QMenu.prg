@@ -196,7 +196,7 @@ HB_FUNC_STATIC(QMENU_ADDACTION)
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
     }
   } else if (ISBETWEEN(4, 5) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && ISQOBJECT(3) && HB_ISCHAR(4) &&
-           (ISQKEYSEQUENCE(5) || HB_ISNIL(5))) {
+             (ISQKEYSEQUENCE(5) || HB_ISNIL(5))) {
     // QAction *addAction(const QIcon &icon, const QString &text, const QObject *receiver, const char *member, const
     // QKeySequence &shortcut = *(QKeySequence *) 0)
     QMenu *obj = qobject_cast<QMenu *>(Qt4xHb::getQObjectPointerFromSelfItem());
@@ -682,8 +682,7 @@ HB_FUNC_STATIC(QMENU_EXEC)
       QList<QAction *> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
-      for (int i1 = 0; i1 < nLen1; i1++)
-      {
+      for (int i1 = 0; i1 < nLen1; i1++) {
         par1 << static_cast<QAction *>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1 + 1), "POINTER", 0)));
       }
       QAction *ptr = obj->exec(par1, *PQPOINT(2), PQACTION(3), PQWIDGET(4));
@@ -697,8 +696,7 @@ HB_FUNC_STATIC(QMENU_EXEC)
       QList<QAction *> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
-      for (int i1 = 0; i1 < nLen1; i1++)
-      {
+      for (int i1 = 0; i1 < nLen1; i1++) {
         par1 << static_cast<QAction *>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1 + 1), "POINTER", 0)));
       }
       QAction *ptr = obj->exec(par1, *PQPOINT(2), OPQACTION(3, 0));

@@ -74,8 +74,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_NEW)
     // QKeySequence(QKeySequence::StandardKey key)
     QKeySequence *obj = new QKeySequence((QKeySequence::StandardKey)hb_parni(1));
     Qt4xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(1, 4) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3) &&
-           ISNUMORNIL(4)) {
+  } else if (ISBETWEEN(1, 4) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
     // QKeySequence(int k1, int k2 = 0, int k3 = 0, int k4 = 0)
     QKeySequence *obj = new QKeySequence(PINT(1), OPINT(2, 0), OPINT(3, 0), OPINT(4, 0));
     Qt4xHb::returnNewObject(obj, true);
@@ -202,11 +201,9 @@ HB_FUNC_STATIC(QKEYSEQUENCE_KEYBINDINGS)
     QList<QKeySequence> list = QKeySequence::keyBindings((QKeySequence::StandardKey)hb_parni(1));
     PHB_DYNS pDynSym = hb_dynsymFindName("QKEYSEQUENCE");
     PHB_ITEM pArray = hb_itemArrayNew(0);
-    if (pDynSym != NULL)
-    {
+    if (pDynSym != NULL) {
       const int count = list.count();
-      for (int i = 0; i < count; i++)
-      {
+      for (int i = 0; i < count; i++) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);

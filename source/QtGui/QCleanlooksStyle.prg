@@ -61,7 +61,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    // QCleanlooksStyle()
+// QCleanlooksStyle()
 HB_FUNC_STATIC(QCLEANLOOKSSTYLE_NEW)
 {
   if (ISNUMPAR(0)) {

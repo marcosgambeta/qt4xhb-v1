@@ -1819,8 +1819,7 @@ void QColor_toVariant1()
 {
   QColor *obj = static_cast<QColor *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj)
-  {
+  if (obj) {
     QVariant *variant = new QVariant();
     variant->setValue<QColor>(*obj);
     Qt4xHb::createReturnClass(variant, "QVARIANT", true);

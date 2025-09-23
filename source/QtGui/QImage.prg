@@ -300,8 +300,7 @@ HB_FUNC_STATIC(QIMAGE_COLORTABLE)
       QVector<QRgb> list = obj->colorTable();
       PHB_ITEM pArray = hb_itemArrayNew(0);
       const int count = list.count();
-      for (int i = 0; i < count; i++)
-      {
+      for (int i = 0; i < count; i++) {
         PHB_ITEM pItem = hb_itemPutNI(NULL, (QRgb)list[i]);
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
@@ -337,8 +336,7 @@ HB_FUNC_STATIC(QIMAGE_CONVERTTOFORMAT)
       PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
       int nLen2 = hb_arrayLen(aList2);
       QRgb temp2;
-      for (int i2 = 0; i2 < nLen2; i2++)
-      {
+      for (int i2 = 0; i2 < nLen2; i2++) {
         temp2 = (QRgb)hb_arrayGetNI(aList2, i2 + 1);
         par2 << temp2;
       }
@@ -826,8 +824,7 @@ HB_FUNC_STATIC(QIMAGE_SCALED)
           HB_ISNIL(3) ? (Qt::TransformationMode)Qt::FastTransformation : (Qt::TransformationMode)hb_parni(3)));
       Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
     }
-  } else if (ISBETWEEN(1, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) &&
-           ISNUMORNIL(4)) {
+  } else if (ISBETWEEN(1, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
     // QImage scaled(int width, int height, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio,
     // Qt::TransformationMode transformMode = Qt::FastTransformation) const
     QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -936,8 +933,7 @@ HB_FUNC_STATIC(QIMAGE_SETCOLORTABLE)
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
       QRgb temp1;
-      for (int i1 = 0; i1 < nLen1; i1++)
-      {
+      for (int i1 = 0; i1 < nLen1; i1++) {
         temp1 = (QRgb)hb_arrayGetNI(aList1, i1 + 1);
         par1 << temp1;
       }
@@ -1237,8 +1233,7 @@ void QImage_toVariant1()
 {
   QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj)
-  {
+  if (obj) {
     QVariant *variant = new QVariant();
     variant->setValue<QImage>(*obj);
     Qt4xHb::createReturnClass(variant, "QVARIANT", true);

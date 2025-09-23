@@ -70,8 +70,7 @@ HB_FUNC_STATIC(QCURSOR_NEW)
     // QCursor(Qt::CursorShape shape)
     QCursor *obj = new QCursor((Qt::CursorShape)hb_parni(1));
     Qt4xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(2, 4) && ISQBITMAP(1) && ISQBITMAP(2) && ISNUMORNIL(3) &&
-           ISNUMORNIL(4)) {
+  } else if (ISBETWEEN(2, 4) && ISQBITMAP(1) && ISQBITMAP(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
     // QCursor(const QBitmap &bitmap, const QBitmap &mask, int hotX = -1, int hotY = -1)
     QCursor *obj = new QCursor(*PQBITMAP(1), *PQBITMAP(2), OPINT(3, -1), OPINT(4, -1));
     Qt4xHb::returnNewObject(obj, true);

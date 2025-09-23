@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QPALETTE_NEW)
                                  HB_ISOBJECT(2) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(2)) : QColor(hb_parc(2)));
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(9) && ISQBRUSH(1) && ISQBRUSH(2) && ISQBRUSH(3) && ISQBRUSH(4) && ISQBRUSH(5) && ISQBRUSH(6) &&
-           ISQBRUSH(7) && ISQBRUSH(8) && ISQBRUSH(9)) {
+             ISQBRUSH(7) && ISQBRUSH(8) && ISQBRUSH(9)) {
     // QPalette(const QBrush &windowText, const QBrush &button, const QBrush &light, const QBrush &dark, const QBrush
     // &mid, const QBrush &text, const QBrush &bright_text, const QBrush &base, const QBrush &window)
     QPalette *obj = new QPalette(*PQBRUSH(1), *PQBRUSH(2), *PQBRUSH(3), *PQBRUSH(4), *PQBRUSH(5), *PQBRUSH(6),

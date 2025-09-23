@@ -47,7 +47,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    // QPageSetupDialog(QPrinter *printer, QWidget *parent = 0)
+// QPageSetupDialog(QPrinter *printer, QWidget *parent = 0)
 HB_FUNC_STATIC(QPAGESETUPDIALOG_NEW)
 {
   if (ISBETWEEN(1, 2) && ISQPRINTER(1) && (ISQWIDGET(2) || HB_ISNIL(2))) {

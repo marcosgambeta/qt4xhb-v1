@@ -76,7 +76,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    // bool activate()
+// bool activate()
 HB_FUNC_STATIC(QLAYOUT_ACTIVATE)
 {
   QLayout *obj = qobject_cast<QLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());

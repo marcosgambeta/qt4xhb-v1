@@ -511,8 +511,7 @@ HB_FUNC_STATIC(QPIXMAP_SCALED)
           HB_ISNIL(3) ? (Qt::TransformationMode)Qt::FastTransformation : (Qt::TransformationMode)hb_parni(3)));
       Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
     }
-  } else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) &&
-           ISNUMORNIL(4)) {
+  } else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
     // QPixmap scaled(int width, int height, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio,
     // Qt::TransformationMode transformMode = Qt::FastTransformation) const
     QPixmap *obj = static_cast<QPixmap *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -772,8 +771,7 @@ HB_FUNC_STATIC(QPIXMAP_GRABWIDGET)
 
     QPixmap *ptr = new QPixmap(QPixmap::grabWidget(PQWIDGET(1), *PQRECT(2)));
     Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
-  } else if (ISBETWEEN(1, 5) && ISQWIDGET(1) && ISNUMORNIL(2) && ISNUMORNIL(3) &&
-           ISNUMORNIL(4) && ISNUMORNIL(5)) {
+  } else if (ISBETWEEN(1, 5) && ISQWIDGET(1) && ISNUMORNIL(2) && ISNUMORNIL(3) && ISNUMORNIL(4) && ISNUMORNIL(5)) {
     // static QPixmap grabWidget(QWidget *widget, int x = 0, int y = 0, int width = -1, int height = -1)
 
     QPixmap *ptr = new QPixmap(QPixmap::grabWidget(PQWIDGET(1), OPINT(2, 0), OPINT(3, 0), OPINT(4, -1), OPINT(5, -1)));
@@ -787,8 +785,7 @@ HB_FUNC_STATIC(QPIXMAP_GRABWIDGET)
 HB_FUNC_STATIC(QPIXMAP_GRABWINDOW)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 5) && HB_ISPOINTER(1) && ISNUMORNIL(2) && ISNUMORNIL(3) &&
-      ISNUMORNIL(4) && ISNUMORNIL(5)) {
+  if (ISBETWEEN(1, 5) && HB_ISPOINTER(1) && ISNUMORNIL(2) && ISNUMORNIL(3) && ISNUMORNIL(4) && ISNUMORNIL(5)) {
 #endif
     QPixmap *ptr =
         new QPixmap(QPixmap::grabWindow((WId)hb_parptr(1), OPINT(2, 0), OPINT(3, 0), OPINT(4, -1), OPINT(5, -1)));
@@ -822,8 +819,7 @@ void QPixmap_toVariant1()
 {
   QPixmap *obj = static_cast<QPixmap *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj)
-  {
+  if (obj) {
     QVariant *variant = new QVariant();
     variant->setValue<QPixmap>(*obj);
     Qt4xHb::createReturnClass(variant, "QVARIANT", true);

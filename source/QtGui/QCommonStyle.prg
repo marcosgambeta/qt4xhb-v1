@@ -56,7 +56,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    // QCommonStyle()
+// QCommonStyle()
 HB_FUNC_STATIC(QCOMMONSTYLE_NEW)
 {
   if (ISNUMPAR(0)) {

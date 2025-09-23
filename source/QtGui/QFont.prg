@@ -116,8 +116,7 @@ HB_FUNC_STATIC(QFONT_NEW)
     // QFont()
     QFont *obj = new QFont();
     Qt4xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3) &&
-           ISNUMORNIL(4)) {
+  } else if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
     // QFont(const QString &family, int pointSize = -1, int weight = -1, bool italic = false)
     QFont *obj = new QFont(PQSTRING(1), OPINT(2, -1), OPINT(3, -1), OPBOOL(4, false));
     Qt4xHb::returnNewObject(obj, true);
@@ -1224,8 +1223,7 @@ void QFont_toVariant1()
 {
   QFont *obj = static_cast<QFont *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj)
-  {
+  if (obj) {
     QVariant *variant = new QVariant();
     variant->setValue<QFont>(*obj);
     Qt4xHb::createReturnClass(variant, "QVARIANT", true);

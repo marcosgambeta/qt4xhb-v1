@@ -403,7 +403,7 @@ HB_FUNC_STATIC(QCOMBOBOX_INSERTITEM)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && (ISQICON(2) || HB_ISCHAR(2)) && HB_ISCHAR(3) &&
-           (ISQVARIANT(4) || HB_ISNIL(4))) {
+             (ISQVARIANT(4) || HB_ISNIL(4))) {
     // void insertItem(int index, const QIcon &icon, const QString &text, const QVariant &userData = QVariant())
     QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

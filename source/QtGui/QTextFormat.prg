@@ -797,8 +797,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_SETPROPERTY)
       QVector<QTextLength> par2;
       PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
       int nLen2 = hb_arrayLen(aList2);
-      for (int i2 = 0; i2 < nLen2; i2++)
-      {
+      for (int i2 = 0; i2 < nLen2; i2++) {
         par2 << *static_cast<QTextLength *>(
             hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList2, i2 + 1), "POINTER", 0)));
       }

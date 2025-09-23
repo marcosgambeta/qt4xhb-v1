@@ -58,7 +58,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    // QDialog(QWidget *parent = 0, Qt::WindowFlags f = 0)
+// QDialog(QWidget *parent = 0, Qt::WindowFlags f = 0)
 HB_FUNC_STATIC(QDIALOG_NEW)
 {
   if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {

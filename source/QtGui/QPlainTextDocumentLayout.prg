@@ -51,7 +51,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    // QPlainTextDocumentLayout(QTextDocument *document)
+// QPlainTextDocumentLayout(QTextDocument *document)
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_NEW)
 {
   if (ISNUMPAR(1) && ISQTEXTDOCUMENT(1)) {

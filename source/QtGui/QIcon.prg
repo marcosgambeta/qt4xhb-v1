@@ -143,8 +143,7 @@ HB_FUNC_STATIC(QICON_ADDFILE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && (ISQSIZE(2) || HB_ISNIL(2)) && ISNUMORNIL(3) &&
-        ISNUMORNIL(4)) {
+    if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && (ISQSIZE(2) || HB_ISNIL(2)) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
 #endif
       obj->addFile(PQSTRING(1), HB_ISNIL(2) ? QSize() : *static_cast<QSize *>(Qt4xHb::itemGetPtr(2)),
                    HB_ISNIL(3) ? (QIcon::Mode)QIcon::Normal : (QIcon::Mode)hb_parni(3),
@@ -278,8 +277,7 @@ HB_FUNC_STATIC(QICON_NAME)
 
 HB_FUNC_STATIC(QICON_PAINT)
 {
-  if (ISBETWEEN(2, 5) && ISQPAINTER(1) && ISQRECT(2) && ISNUMORNIL(3) && ISNUMORNIL(4) &&
-      ISNUMORNIL(5)) {
+  if (ISBETWEEN(2, 5) && ISQPAINTER(1) && ISQRECT(2) && ISNUMORNIL(3) && ISNUMORNIL(4) && ISNUMORNIL(5)) {
     // void paint(QPainter *painter, const QRect &rect, Qt::Alignment alignment = Qt::AlignCenter, QIcon::Mode mode =
     // QIcon::Normal, QIcon::State state = QIcon::Off) const
     QIcon *obj = static_cast<QIcon *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -292,7 +290,7 @@ HB_FUNC_STATIC(QICON_PAINT)
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISBETWEEN(5, 8) && ISQPAINTER(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
-           ISNUMORNIL(6) && ISNUMORNIL(7) && ISNUMORNIL(8)) {
+             ISNUMORNIL(6) && ISNUMORNIL(7) && ISNUMORNIL(8)) {
     // void paint(QPainter *painter, int x, int y, int w, int h, Qt::Alignment alignment = Qt::AlignCenter, QIcon::Mode
     // mode = QIcon::Normal, QIcon::State state = QIcon::Off) const
     QIcon *obj = static_cast<QIcon *>(Qt4xHb::itemGetPtrStackSelfItem());
@@ -322,8 +320,7 @@ HB_FUNC_STATIC(QICON_PIXMAP)
                                   HB_ISNIL(3) ? (QIcon::State)QIcon::Off : (QIcon::State)hb_parni(3)));
       Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
     }
-  } else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) &&
-           ISNUMORNIL(4)) {
+  } else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
     // QPixmap pixmap(int w, int h, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off) const
     QIcon *obj = static_cast<QIcon *>(Qt4xHb::itemGetPtrStackSelfItem());
 
@@ -447,8 +444,7 @@ void QIcon_toVariant1()
 {
   QIcon *obj = static_cast<QIcon *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj)
-  {
+  if (obj) {
     QVariant *variant = new QVariant();
     variant->setValue<QIcon>(*obj);
     Qt4xHb::createReturnClass(variant, "QVARIANT", true);

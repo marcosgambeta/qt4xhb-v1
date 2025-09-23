@@ -174,8 +174,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_DASHPATTERN)
       QVector<qreal> list = obj->dashPattern();
       PHB_ITEM pArray = hb_itemArrayNew(0);
       const int count = list.count();
-      for (int i = 0; i < count; i++)
-      {
+      for (int i = 0; i < count; i++) {
         PHB_ITEM pItem = hb_itemPutND(NULL, (qreal)list[i]);
         hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
@@ -305,8 +304,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_SETDASHPATTERN)
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
       qreal temp1;
-      for (int i1 = 0; i1 < nLen1; i1++)
-      {
+      for (int i1 = 0; i1 < nLen1; i1++) {
         temp1 = hb_arrayGetND(aList1, i1 + 1);
         par1 << temp1;
       }

@@ -26,11 +26,9 @@ void QListViewSlots::indexesMoved(const QModelIndexList &indexes)
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QLISTVIEW");
     PHB_DYNS pDynSym = hb_dynsymFindName("QMODELINDEX");
     PHB_ITEM pIndexes = hb_itemArrayNew(0);
-    if (pDynSym != NULL)
-    {
+    if (pDynSym != NULL) {
       const int count = indexes.count();
-      for (int i = 0; i < count; i++)
-      {
+      for (int i = 0; i < count; i++) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);

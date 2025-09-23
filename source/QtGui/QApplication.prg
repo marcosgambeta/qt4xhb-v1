@@ -471,11 +471,9 @@ HB_FUNC_STATIC(QAPPLICATION_ALLWIDGETS)
     QWidgetList list = QApplication::allWidgets();
     PHB_DYNS pDynSym = hb_dynsymFindName("QWIDGET");
     PHB_ITEM pArray = hb_itemArrayNew(0);
-    if (pDynSym != NULL)
-    {
+    if (pDynSym != NULL) {
       const int count = list.count();
-      for (int i = 0; i < count; i++)
-      {
+      for (int i = 0; i < count; i++) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
@@ -1296,11 +1294,9 @@ HB_FUNC_STATIC(QAPPLICATION_TOPLEVELWIDGETS)
     QWidgetList list = QApplication::topLevelWidgets();
     PHB_DYNS pDynSym = hb_dynsymFindName("QWIDGET");
     PHB_ITEM pArray = hb_itemArrayNew(0);
-    if (pDynSym != NULL)
-    {
+    if (pDynSym != NULL) {
       const int count = list.count();
-      for (int i = 0; i < count; i++)
-      {
+      for (int i = 0; i < count; i++) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);

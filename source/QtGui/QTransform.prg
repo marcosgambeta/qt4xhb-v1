@@ -97,8 +97,8 @@ HB_FUNC_STATIC(QTRANSFORM_NEW)
     // QTransform()
     QTransform *obj = new QTransform();
     Qt4xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(8, 9) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) &&
-           HB_ISNUM(7) && HB_ISNUM(8) && ISNUMORNIL(9)) {
+  } else if (ISBETWEEN(8, 9) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
+             HB_ISNUM(6) && HB_ISNUM(7) && HB_ISNUM(8) && ISNUMORNIL(9)) {
     // QTransform(qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33
     // = 1.0)
     QTransform *obj = new QTransform(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6), PQREAL(7),

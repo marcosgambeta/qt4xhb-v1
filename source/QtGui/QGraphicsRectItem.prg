@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QGRAPHICSRECTITEM_NEW)
         new QGraphicsRectItem(*PQRECTF(1), HB_ISNIL(2) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(2)));
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) &&
-           (ISQGRAPHICSITEM(5) || HB_ISNIL(5))) {
+             (ISQGRAPHICSITEM(5) || HB_ISNIL(5))) {
     // QGraphicsRectItem(qreal x, qreal y, qreal width, qreal height, QGraphicsItem *parent = 0)
     QGraphicsRectItem *obj =
         new QGraphicsRectItem(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4),

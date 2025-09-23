@@ -46,7 +46,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    // QSplitterHandle(Qt::Orientation orientation, QSplitter *parent)
+// QSplitterHandle(Qt::Orientation orientation, QSplitter *parent)
 HB_FUNC_STATIC(QSPLITTERHANDLE_NEW)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSPLITTER(2)) {

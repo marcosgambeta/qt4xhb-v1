@@ -50,7 +50,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    // QDial(QWidget *parent = 0)
+// QDial(QWidget *parent = 0)
 HB_FUNC_STATIC(QDIAL_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1))) {

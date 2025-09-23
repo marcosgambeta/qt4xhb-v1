@@ -165,8 +165,7 @@ void QBitmap_toVariant1()
 {
   QBitmap *obj = static_cast<QBitmap *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if (obj)
-  {
+  if (obj) {
     QVariant *variant = new QVariant();
     variant->setValue<QBitmap>(*obj);
     Qt4xHb::createReturnClass(variant, "QVARIANT", true);

@@ -48,7 +48,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    // QSound(const QString &filename, QObject *parent = 0)
+// QSound(const QString &filename, QObject *parent = 0)
 HB_FUNC_STATIC(QSOUND_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {

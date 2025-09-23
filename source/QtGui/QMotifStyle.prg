@@ -58,7 +58,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    // QMotifStyle(bool useHighlightCols = false)
+// QMotifStyle(bool useHighlightCols = false)
 HB_FUNC_STATIC(QMOTIFSTYLE_NEW)
 {
   if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1))) {

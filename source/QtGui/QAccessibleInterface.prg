@@ -134,12 +134,10 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_DOACTION)
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISARRAY(3) || HB_ISNIL(3))) {
 #endif
       QVariantList par3;
-      if (HB_ISARRAY(3))
-      {
+      if (HB_ISARRAY(3)) {
         PHB_ITEM aList3 = hb_param(3, HB_IT_ARRAY);
         int nLen3 = hb_arrayLen(aList3);
-        for (int i3 = 0; i3 < nLen3; i3++)
-        {
+        for (int i3 = 0; i3 < nLen3; i3++) {
           par3 << *static_cast<QVariant *>(
               hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList3, i3 + 1), "POINTER", 0)));
         }
@@ -181,12 +179,10 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_INVOKEMETHOD)
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && (HB_ISARRAY(3) || HB_ISNIL(3))) {
 #endif
       QVariantList par3;
-      if (HB_ISARRAY(3))
-      {
+      if (HB_ISARRAY(3)) {
         PHB_ITEM aList3 = hb_param(3, HB_IT_ARRAY);
         int nLen3 = hb_arrayLen(aList3);
-        for (int i3 = 0; i3 < nLen3; i3++)
-        {
+        for (int i3 = 0; i3 < nLen3; i3++) {
           par3 << *static_cast<QVariant *>(
               hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList3, i3 + 1), "POINTER", 0)));
         }

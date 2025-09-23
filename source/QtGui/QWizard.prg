@@ -397,8 +397,7 @@ HB_FUNC_STATIC(QWIZARD_SETBUTTONLAYOUT)
       QList<QWizard::WizardButton> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
-      for (int i1 = 0; i1 < nLen1; i1++)
-      {
+      for (int i1 = 0; i1 < nLen1; i1++) {
         par1 << (QWizard::WizardButton)hb_arrayGetNI(aList1, i1 + 1);
       }
       obj->setButtonLayout(par1);
