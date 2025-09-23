@@ -294,7 +294,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_FILES)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISARRAY(2) && (HB_ISCHAR(3) || HB_ISNIL(3))) {
+    if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISARRAY(2) && ISCHARORNIL(3)) {
 #endif
       QList<QUrl> list = obj->files(PQSTRING(1), PQSTRINGLIST(2), OPQSTRING(3, QString()));
       PHB_DYNS pDynSym = hb_dynsymFindName("QURL");
