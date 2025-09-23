@@ -339,8 +339,8 @@ HB_FUNC_STATIC(QSQLDRIVER_OPEN)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 6) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISCHARORNIL(3) &&
-        ISCHARORNIL(4) && ISNUMORNIL(5) && ISCHARORNIL(6)) {
+    if (ISBETWEEN(1, 6) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISCHARORNIL(3) && ISCHARORNIL(4) && ISNUMORNIL(5) &&
+        ISCHARORNIL(6)) {
 #endif
       RBOOL(obj->open(PQSTRING(1), OPQSTRING(2, QString()), OPQSTRING(3, QString()), OPQSTRING(4, QString()),
                       OPINT(5, -1), OPQSTRING(6, QString())));

@@ -53,7 +53,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    // QSqlRelationalTableModel(QObject *parent = 0, QSqlDatabase db = QSqlDatabase())
+// QSqlRelationalTableModel(QObject *parent = 0, QSqlDatabase db = QSqlDatabase())
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_NEW)
 {
   if (ISBETWEEN(0, 2) && (ISQOBJECT(1) || HB_ISNIL(1)) && (ISQSQLDATABASE(2) || HB_ISNIL(2))) {
