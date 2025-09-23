@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QSQLQUERY_NEW)
     // QSqlQuery(QSqlResult *result)
     QSqlQuery *obj = new QSqlQuery(PQSQLRESULT(1));
     Qt4xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (ISQSQLDATABASE(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(0, 2) && ISCHARORNIL(1) && (ISQSQLDATABASE(2) || HB_ISNIL(2))) {
     // QSqlQuery(const QString &query = QString(), QSqlDatabase db = QSqlDatabase())
     QSqlQuery *obj = new QSqlQuery(OPQSTRING(1, QString()),
                                    HB_ISNIL(2) ? QSqlDatabase() : *static_cast<QSqlDatabase *>(Qt4xHb::itemGetPtr(2)));

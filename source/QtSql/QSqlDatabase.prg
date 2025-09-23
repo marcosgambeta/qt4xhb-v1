@@ -264,7 +264,7 @@ HB_FUNC_STATIC(QSQLDATABASE_EXEC)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISCHARORNIL(1)) {
 #endif
       QSqlQuery *ptr = new QSqlQuery(obj->exec(OPQSTRING(1, QString())));
       Qt4xHb::createReturnClass(ptr, "QSQLQUERY", true);
@@ -505,7 +505,7 @@ HB_FUNC_STATIC(QSQLDATABASE_SETCONNECTOPTIONS)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISCHARORNIL(1)) {
 #endif
       obj->setConnectOptions(OPQSTRING(1, QString()));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -694,14 +694,14 @@ HB_FUNC_STATIC(QSQLDATABASE_USERNAME)
 
 HB_FUNC_STATIC(QSQLDATABASE_ADDDATABASE)
 {
-  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2))) {
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2)) {
     // static QSqlDatabase addDatabase(const QString &type, const QString &connectionName =
     // QLatin1String(QSqlDatabase::defaultConnection))
 
     QSqlDatabase *ptr = new QSqlDatabase(
         QSqlDatabase::addDatabase(PQSTRING(1), OPQSTRING(2, QLatin1String(QSqlDatabase::defaultConnection))));
     Qt4xHb::createReturnClass(ptr, "QSQLDATABASE", true);
-  } else if (ISBETWEEN(1, 2) && ISQSQLDRIVER(1) && (HB_ISCHAR(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && ISQSQLDRIVER(1) && ISCHARORNIL(2)) {
     // static QSqlDatabase addDatabase(QSqlDriver *driver, const QString &connectionName =
     // QLatin1String(QSqlDatabase::defaultConnection))
 
@@ -746,7 +746,7 @@ HB_FUNC_STATIC(QSQLDATABASE_CONNECTIONNAMES)
 HB_FUNC_STATIC(QSQLDATABASE_CONTAINS)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISCHARORNIL(1)) {
 #endif
     RBOOL(QSqlDatabase::contains(OPQSTRING(1, QLatin1String(QSqlDatabase::defaultConnection))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -761,7 +761,7 @@ HB_FUNC_STATIC(QSQLDATABASE_CONTAINS)
 HB_FUNC_STATIC(QSQLDATABASE_DATABASE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (HB_ISLOG(2) || HB_ISNIL(2))) {
+  if (ISBETWEEN(0, 2) && ISCHARORNIL(1) && (HB_ISLOG(2) || HB_ISNIL(2))) {
 #endif
     QSqlDatabase *ptr = new QSqlDatabase(
         QSqlDatabase::database(OPQSTRING(1, QLatin1String(QSqlDatabase::defaultConnection)), OPBOOL(2, true)));

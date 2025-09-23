@@ -59,7 +59,7 @@ RETURN
 
 HB_FUNC_STATIC(QSQLERROR_NEW)
 {
-  if (ISBETWEEN(0, 4) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (HB_ISCHAR(2) || HB_ISNIL(2)) &&
+  if (ISBETWEEN(0, 4) && ISCHARORNIL(1) && ISCHARORNIL(2) &&
       ISNUMORNIL(3) && ISNUMORNIL(4)) {
     // QSqlError(const QString &driverText = QString(), const QString &databaseText = QString(), QSqlError::ErrorType
     // type = QSqlError::NoError, int number = -1)
