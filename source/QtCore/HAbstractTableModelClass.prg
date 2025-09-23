@@ -75,7 +75,7 @@ END CLASS
 #include "qt4xhb_signals.hpp"
 
 // HAbstractTableModel(QObject *parent = 0)
-HB_FUNC(HABSTRACTTABLEMODEL_NEW)
+    HB_FUNC(HABSTRACTTABLEMODEL_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1))) {
     HAbstractTableModel *obj = new HAbstractTableModel(OPQOBJECT(1, 0));

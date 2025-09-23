@@ -70,8 +70,7 @@ HB_FUNC_STATIC(QTIME_NEW)
     // QTime()
     QTime *obj = new QTime();
     Qt4xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) &&
-           ISNUMORNIL(4)) {
+  } else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
     // QTime(int h, int m, int s = 0, int ms = 0)
     QTime *obj = new QTime(PINT(1), PINT(2), OPINT(3, 0), OPINT(4, 0));
     Qt4xHb::returnNewObject(obj, true);

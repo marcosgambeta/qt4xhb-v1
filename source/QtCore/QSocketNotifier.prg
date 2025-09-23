@@ -46,7 +46,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    // QSocketNotifier(int socket, QSocketNotifier::Type, QObject *parent = 0)
+// QSocketNotifier(int socket, QSocketNotifier::Type, QObject *parent = 0)
 HB_FUNC_STATIC(QSOCKETNOTIFIER_NEW)
 {
   if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQOBJECT(3) || HB_ISNIL(3))) {

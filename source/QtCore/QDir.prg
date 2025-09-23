@@ -111,8 +111,7 @@ HB_FUNC_STATIC(QDIR_NEW)
     // QDir(const QString &path = QString())
     QDir *obj = new QDir(OPQSTRING(1, QString()));
     Qt4xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISNUMORNIL(3) &&
-           ISNUMORNIL(4)) {
+  } else if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
     // QDir(const QString &path, const QString &nameFilter, QDir::SortFlags sort = QDir::SortFlags(QDir::Name |
     // QDir::IgnoreCase), QDir::Filters filters = QDir::AllEntries)
     QDir *obj = new QDir(PQSTRING(1), PQSTRING(2),
@@ -858,11 +857,9 @@ HB_FUNC_STATIC(QDIR_DRIVES)
     QFileInfoList list = QDir::drives();
     PHB_DYNS pDynSym = hb_dynsymFindName("QFILEINFO");
     PHB_ITEM pArray = hb_itemArrayNew(0);
-    if (pDynSym != NULL)
-    {
+    if (pDynSym != NULL) {
       const int count = list.count();
-      for (int i = 0; i < count; i++)
-      {
+      for (int i = 0; i < count; i++) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);

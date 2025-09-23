@@ -1969,8 +1969,7 @@ HB_FUNC_STATIC(QBYTEARRAY_TOPERCENTENCODING)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 3) && (ISQBYTEARRAY(1) || HB_ISNIL(1)) && (ISQBYTEARRAY(2) || HB_ISNIL(2)) &&
-        ISNUMORNIL(3)) {
+    if (ISBETWEEN(0, 3) && (ISQBYTEARRAY(1) || HB_ISNIL(1)) && (ISQBYTEARRAY(2) || HB_ISNIL(2)) && ISNUMORNIL(3)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->toPercentEncoding(
           HB_ISNIL(1) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(1)),

@@ -407,8 +407,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_MATCH)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(3, 5) && ISQMODELINDEX(1) && HB_ISNUM(2) && ISQVARIANT(3) && ISNUMORNIL(4) &&
-        ISNUMORNIL(5)) {
+    if (ISBETWEEN(3, 5) && ISQMODELINDEX(1) && HB_ISNUM(2) && ISQVARIANT(3) && ISNUMORNIL(4) && ISNUMORNIL(5)) {
 #endif
       QModelIndexList list =
           obj->match(*PQMODELINDEX(1), PINT(2), *PQVARIANT(3), OPINT(4, 1),
@@ -457,8 +456,7 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_MIMEDATA)
       QModelIndexList par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
       int nLen1 = hb_arrayLen(aList1);
-      for (int i1 = 0; i1 < nLen1; i1++)
-      {
+      for (int i1 = 0; i1 < nLen1; i1++) {
         par1 << *static_cast<QModelIndex *>(
             hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1 + 1), "POINTER", 0)));
       }

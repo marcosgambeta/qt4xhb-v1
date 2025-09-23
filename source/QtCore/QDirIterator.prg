@@ -75,8 +75,7 @@ HB_FUNC_STATIC(QDIRITERATOR_NEW)
                                          HB_ISNIL(3) ? (QDirIterator::IteratorFlags)QDirIterator::NoIteratorFlags
                                                      : (QDirIterator::IteratorFlags)hb_parni(3));
     Qt4xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISARRAY(2) && ISNUMORNIL(3) &&
-           ISNUMORNIL(4)) {
+  } else if (ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISARRAY(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
     // QDirIterator(const QString &path, const QStringList &nameFilters, QDir::Filters filters = QDir::NoFilter,
     // QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags)
     QDirIterator *obj = new QDirIterator(PQSTRING(1), PQSTRINGLIST(2),

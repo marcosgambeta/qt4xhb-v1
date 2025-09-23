@@ -80,15 +80,14 @@ HB_FUNC_STATIC(QSETTINGS_NEW)
     // QSettings(const QString &organization, const QString &application = QString(), QObject *parent = 0)
     QSettings *obj = new QSettings(PQSTRING(1), OPQSTRING(2, QString()), OPQOBJECT(3, 0));
     Qt4xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && ISCHARORNIL(3) &&
-           (ISQOBJECT(4) || HB_ISNIL(4))) {
+  } else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && ISCHARORNIL(3) && (ISQOBJECT(4) || HB_ISNIL(4))) {
     // QSettings(QSettings::Scope scope, const QString &organization, const QString &application = QString(), QObject
     // *parent = 0)
     QSettings *obj =
         new QSettings((QSettings::Scope)hb_parni(1), PQSTRING(2), OPQSTRING(3, QString()), OPQOBJECT(4, 0));
     Qt4xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3) && ISCHARORNIL(4) &&
-           (ISQOBJECT(5) || HB_ISNIL(5))) {
+             (ISQOBJECT(5) || HB_ISNIL(5))) {
     // QSettings(QSettings::Format format, QSettings::Scope scope, const QString &organization, const QString
     // &application = QString(), QObject *parent = 0)
     QSettings *obj = new QSettings((QSettings::Format)hb_parni(1), (QSettings::Scope)hb_parni(2), PQSTRING(3),

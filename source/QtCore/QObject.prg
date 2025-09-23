@@ -232,7 +232,7 @@ RETURN
 #include <QtCore/QEvent>
 #include <QtCore/QThread>
 
-    void _qtxhb_processOnEventMethod(QEvent::Type event);
+void _qtxhb_processOnEventMethod(QEvent::Type event);
 void _qtxhb_processOnEventMethod2(QEvent::Type event);
 
 // QObject(QObject *parent = 0)
@@ -464,11 +464,9 @@ void QObject_findChildren1()
     QList<QObject *> list = obj->findChildren<QObject *>(OPQSTRING(1, QString()));
     PHB_DYNS pDynSym = hb_dynsymFindName("QOBJECT");
     PHB_ITEM pArray = hb_itemArrayNew(0);
-    if (pDynSym != NULL)
-    {
+    if (pDynSym != NULL) {
       const int count = list.count();
-      for (int i = 0; i < count; i++)
-      {
+      for (int i = 0; i < count; i++) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
@@ -495,11 +493,9 @@ void QObject_findChildren2()
     QList<QObject *> list = obj->findChildren<QObject *>(*PQREGEXP(1));
     PHB_DYNS pDynSym = hb_dynsymFindName("QOBJECT");
     PHB_ITEM pArray = hb_itemArrayNew(0);
-    if (pDynSym != NULL)
-    {
+    if (pDynSym != NULL) {
       const int count = list.count();
-      for (int i = 0; i < count; i++)
-      {
+      for (int i = 0; i < count; i++) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
@@ -857,14 +853,11 @@ HB_FUNC_STATIC(QOBJECT_DISCONNECTALL)
 {
   QObject *obj = (QObject *)hb_itemGetPtr(hb_objSendMsg(hb_stackSelfItem(), "POINTER", 0));
 
-  if (obj)
-  {
-    if (hb_pcount() == 0)
-    {
+  if (obj) {
+    if (hb_pcount() == 0) {
       Qt4xHb::Events_disconnect_all_events(obj, false);
       Qt4xHb::Signals_disconnect_all_signals(obj, false);
-    }
-    else if (hb_pcount() == 1 && HB_ISLOG(1)) {
+    } else if (hb_pcount() == 1 && HB_ISLOG(1)) {
       Qt4xHb::Events_disconnect_all_events(obj, PBOOL(1));
       Qt4xHb::Signals_disconnect_all_signals(obj, PBOOL(1));
     } else {
@@ -879,13 +872,10 @@ HB_FUNC_STATIC(QOBJECT_DISCONNECTALLEVENTS)
 {
   QObject *obj = (QObject *)hb_itemGetPtr(hb_objSendMsg(hb_stackSelfItem(), "POINTER", 0));
 
-  if (obj)
-  {
-    if (hb_pcount() == 0)
-    {
+  if (obj) {
+    if (hb_pcount() == 0) {
       Qt4xHb::Events_disconnect_all_events(obj, false);
-    }
-    else if (hb_pcount() == 1 && HB_ISLOG(1)) {
+    } else if (hb_pcount() == 1 && HB_ISLOG(1)) {
       Qt4xHb::Events_disconnect_all_events(obj, PBOOL(1));
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -899,13 +889,10 @@ HB_FUNC_STATIC(QOBJECT_DISCONNECTALLSIGNALS)
 {
   QObject *obj = (QObject *)hb_itemGetPtr(hb_objSendMsg(hb_stackSelfItem(), "POINTER", 0));
 
-  if (obj)
-  {
-    if (hb_pcount() == 0)
-    {
+  if (obj) {
+    if (hb_pcount() == 0) {
       Qt4xHb::Signals_disconnect_all_signals(obj, false);
-    }
-    else if (hb_pcount() == 1 && HB_ISLOG(1)) {
+    } else if (hb_pcount() == 1 && HB_ISLOG(1)) {
       Qt4xHb::Signals_disconnect_all_signals(obj, PBOOL(1));
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -919,18 +906,15 @@ void _qtxhb_processOnEventMethod(QEvent::Type event)
 {
   QObject *obj = (QObject *)hb_itemGetPtr(hb_objSendMsg(hb_stackSelfItem(), "POINTER", 0));
 
-  if (hb_pcount() == 1)
-  {
+  if (hb_pcount() == 1) {
     PHB_ITEM item = hb_itemNew(hb_param(1, HB_IT_BLOCK | HB_IT_SYMBOL));
-    if (item)
-    {
+    if (item) {
       // hb_retl( Events_connect_event( obj, QEvent::Close, item ) );
       hb_retl(Qt4xHb::Events_connect_event(obj, event, item));
     } else {
       hb_retl(0);
     }
-  } else if (hb_pcount() == 0)
-  {
+  } else if (hb_pcount() == 0) {
     // hb_retl( Events_disconnect_event( obj, QEvent::Close ) );
     hb_retl(Qt4xHb::Events_disconnect_event(obj, event));
   } else {
@@ -942,18 +926,15 @@ void _qtxhb_processOnEventMethod2(QEvent::Type event)
 {
   QObject *obj = (QObject *)hb_itemGetPtr(hb_objSendMsg(hb_stackSelfItem(), "POINTER", 0));
 
-  if (hb_pcount() == 2)
-  {
+  if (hb_pcount() == 2) {
     PHB_ITEM item = hb_itemNew(hb_param(2, HB_IT_BLOCK | HB_IT_SYMBOL));
-    if (item)
-    {
+    if (item) {
       // hb_retl( Events_connect_event( obj, QEvent::Close, item ) );
       hb_retl(Qt4xHb::Events_connect_event(obj, event, item));
     } else {
       hb_retl(0);
     }
-  } else if (hb_pcount() == 1)
-  {
+  } else if (hb_pcount() == 1) {
     // hb_retl( Events_disconnect_event( obj, QEvent::Close ) );
     hb_retl(Qt4xHb::Events_disconnect_event(obj, event));
   } else {
@@ -1506,8 +1487,7 @@ HB_FUNC_STATIC(QOBJECT_CONNECT)
 {
   QObject *obj = (QObject *)Qt4xHb::itemGetPtrStackSelfItem();
 
-  if (obj)
-  {
+  if (obj) {
     if (ISNUMPAR(2) && HB_ISCHAR(1)) {
       QString signal = hb_parc(1);
       int pos = signal.indexOf("(");
@@ -1516,8 +1496,7 @@ HB_FUNC_STATIC(QOBJECT_CONNECT)
 
       PHB_DYNS pDynSym = hb_dynsymFindName(method.toLatin1().data());
 
-      if (pDynSym)
-      {
+      if (pDynSym) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPush(hb_stackSelfItem());
         PHB_ITEM codeblock = hb_param(2, HB_IT_BLOCK | HB_IT_SYMBOL);
@@ -1526,8 +1505,7 @@ HB_FUNC_STATIC(QOBJECT_CONNECT)
       } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS);
       }
-    }
-    else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
       QString signal = hb_parc(1);
       int pos = signal.indexOf("(");
       QString method = signal.left(pos).toUpper();
@@ -1535,20 +1513,17 @@ HB_FUNC_STATIC(QOBJECT_CONNECT)
 
       PHB_DYNS pDynSym = hb_dynsymFindName(method.toLatin1().data());
 
-      if (pDynSym)
-      {
+      if (pDynSym) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPush(hb_stackSelfItem());
         hb_vmSend(0);
       } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS);
       }
-    }
-    else if (ISNUMPAR(2) && HB_ISNUM(1)) {
+    } else if (ISNUMPAR(2) && HB_ISNUM(1)) {
       int event = hb_parni(1);
       _qtxhb_processOnEventMethod2((QEvent::Type)event);
-    }
-    else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+    } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
       int event = hb_parni(1);
       _qtxhb_processOnEventMethod2((QEvent::Type)event);
     } else {
@@ -1561,8 +1536,7 @@ HB_FUNC_STATIC(QOBJECT_DISCONNECT)
 {
   QObject *obj = (QObject *)Qt4xHb::itemGetPtrStackSelfItem();
 
-  if (obj)
-  {
+  if (obj) {
     if (ISNUMPAR(1) && HB_ISCHAR(1)) {
       QString signal = hb_parc(1);
       int pos = signal.indexOf("(");
@@ -1571,16 +1545,14 @@ HB_FUNC_STATIC(QOBJECT_DISCONNECT)
 
       PHB_DYNS pDynSym = hb_dynsymFindName(method.toLatin1().data());
 
-      if (pDynSym)
-      {
+      if (pDynSym) {
         hb_vmPushDynSym(pDynSym);
         hb_vmPush(hb_stackSelfItem());
         hb_vmSend(0);
       } else {
         hb_errRT_BASE(EG_NOFUNC, 1001, NULL, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS);
       }
-    }
-    else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+    } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
       int event = hb_parni(1);
       _qtxhb_processOnEventMethod2((QEvent::Type)event);
     } else {

@@ -184,8 +184,7 @@ HB_FUNC_STATIC(QVARIANT_NEW27)
   QList<QVariant> par1;
   PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
   int nLen1 = hb_arrayLen(aList1);
-  for (int i1 = 0; i1 < nLen1; i1++)
-  {
+  for (int i1 = 0; i1 < nLen1; i1++) {
     par1 << *static_cast<QVariant *>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1 + 1), "POINTER", 0)));
   }
   QVariant *obj = new QVariant(par1);
@@ -207,14 +206,11 @@ HB_FUNC_STATIC(QVARIANT_NEW)
     QVariant *obj = new QVariant(PBOOL(1));
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
-    if (hb_param(1, HB_IT_DOUBLE) != NULL)
-    {
+    if (hb_param(1, HB_IT_DOUBLE) != NULL) {
       // QVariant(double val)
       QVariant *obj = new QVariant(PDOUBLE(1));
       Qt4xHb::returnNewObject(obj, true);
-    }
-    else if (hb_param(1, HB_IT_LONG) != NULL)
-    {
+    } else if (hb_param(1, HB_IT_LONG) != NULL) {
       // QVariant(qlonglong val)
       QVariant *obj = new QVariant(PQLONGLONG(1));
       Qt4xHb::returnNewObject(obj, true);
