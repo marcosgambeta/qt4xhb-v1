@@ -332,7 +332,7 @@ HB_FUNC_STATIC(QFTP_LIST)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISCHARORNIL(1)) {
 #endif
       RINT(obj->list(OPQSTRING(1, QString())));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -350,7 +350,7 @@ HB_FUNC_STATIC(QFTP_LOGIN)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (HB_ISCHAR(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(0, 2) && ISCHARORNIL(1) && ISCHARORNIL(2)) {
 #endif
       RINT(obj->login(OPQSTRING(1, QString()), OPQSTRING(2, QString())));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
