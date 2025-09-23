@@ -46,7 +46,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-    // QWebInspector(QWidget *parent = 0)
+// QWebInspector(QWidget *parent = 0)
 HB_FUNC_STATIC(QWEBINSPECTOR_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1))) {
