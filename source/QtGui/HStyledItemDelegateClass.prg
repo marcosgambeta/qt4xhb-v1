@@ -69,7 +69,7 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_NEW)
 // ~HStyledItemDelegate()
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_DELETE)
 {
-  HStyledItemDelegate *obj = (HStyledItemDelegate *)Qt4xHb::itemGetPtrStackSelfItem();
+  HStyledItemDelegate *obj = qobject_cast<HStyledItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -92,7 +92,7 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_DELETE)
 // void defaultPaint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_DEFAULTPAINT)
 {
-  HStyledItemDelegate *obj = (HStyledItemDelegate *)Qt4xHb::itemGetPtrStackSelfItem();
+  HStyledItemDelegate *obj = qobject_cast<HStyledItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_DEFAULTPAINT)
 // void setPaintCB(PHB_ITEM block)
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETPAINTCB)
 {
-  HStyledItemDelegate *obj = (HStyledItemDelegate *)Qt4xHb::itemGetPtrStackSelfItem();
+  HStyledItemDelegate *obj = qobject_cast<HStyledItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETPAINTCB)
 // void setSizeHintCB(PHB_ITEM block)
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETSIZEHINTCB)
 {
-  HStyledItemDelegate *obj = (HStyledItemDelegate *)Qt4xHb::itemGetPtrStackSelfItem();
+  HStyledItemDelegate *obj = qobject_cast<HStyledItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -167,7 +167,7 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETSIZEHINTCB)
 // void setDisplayTextCB(PHB_ITEM block)
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETDISPLAYTEXTCB)
 {
-  HStyledItemDelegate *obj = (HStyledItemDelegate *)Qt4xHb::itemGetPtrStackSelfItem();
+  HStyledItemDelegate *obj = qobject_cast<HStyledItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -187,7 +187,7 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETDISPLAYTEXTCB)
 // void setCreateEditorCB(PHB_ITEM block)
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETCREATEEDITORCB)
 {
-  HStyledItemDelegate *obj = (HStyledItemDelegate *)Qt4xHb::itemGetPtrStackSelfItem();
+  HStyledItemDelegate *obj = qobject_cast<HStyledItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -207,7 +207,7 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETCREATEEDITORCB)
 // void setEditorDataCB(PHB_ITEM block)
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETEDITORDATACB)
 {
-  HStyledItemDelegate *obj = (HStyledItemDelegate *)Qt4xHb::itemGetPtrStackSelfItem();
+  HStyledItemDelegate *obj = qobject_cast<HStyledItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -227,7 +227,7 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETEDITORDATACB)
 // void setModelDataCB(PHB_ITEM block)
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETMODELDATACB)
 {
-  HStyledItemDelegate *obj = (HStyledItemDelegate *)Qt4xHb::itemGetPtrStackSelfItem();
+  HStyledItemDelegate *obj = qobject_cast<HStyledItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -247,7 +247,7 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETMODELDATACB)
 // void setUpdateEditorGeometryCB(PHB_ITEM block)
 HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETUPDATEEDITORGEOMETRYCB)
 {
-  HStyledItemDelegate *obj = (HStyledItemDelegate *)Qt4xHb::itemGetPtrStackSelfItem();
+  HStyledItemDelegate *obj = qobject_cast<HStyledItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
