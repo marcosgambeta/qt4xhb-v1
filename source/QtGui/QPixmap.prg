@@ -194,7 +194,7 @@ HB_FUNC_STATIC(QPIXMAP_CREATEHEURISTICMASK)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1)) {
 #endif
       QBitmap *ptr = new QBitmap(obj->createHeuristicMask(OPBOOL(1, true)));
       Qt4xHb::createReturnClass(ptr, "QBITMAP", true);

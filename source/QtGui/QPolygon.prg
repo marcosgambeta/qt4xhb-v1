@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QPOLYGON_NEW)
     }
     QPolygon *obj = new QPolygon(par1);
     Qt4xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(1, 2) && ISQRECT(1) && (HB_ISLOG(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && ISQRECT(1) && ISLOGORNIL(2)) {
     // QPolygon(const QRect &rectangle, bool closed = false)
     QPolygon *obj = new QPolygon(*PQRECT(1), OPBOOL(2, false));
     Qt4xHb::returnNewObject(obj, true);

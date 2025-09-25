@@ -48,7 +48,7 @@ RETURN
 // QCDEStyle(bool useHighlightCols = false)
 HB_FUNC_STATIC(QCDESTYLE_NEW)
 {
-  if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISLOGORNIL(1)) {
     QCDEStyle *obj = new QCDEStyle(OPBOOL(1, false));
     Qt4xHb::returnNewObject(obj, false);
   } else {

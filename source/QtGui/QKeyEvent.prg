@@ -52,7 +52,7 @@ RETURN
     // autorep = false, ushort count = 1)
 HB_FUNC_STATIC(QKEYEVENT_NEW)
 {
-  if (ISBETWEEN(3, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISCHARORNIL(4) && (HB_ISLOG(5) || HB_ISNIL(5)) &&
+  if (ISBETWEEN(3, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISCHARORNIL(4) && ISLOGORNIL(5) &&
       ISNUMORNIL(6)) {
     QKeyEvent *obj = new QKeyEvent((QEvent::Type)hb_parni(1), PINT(2), (Qt::KeyboardModifiers)hb_parni(3),
                                    OPQSTRING(4, QString()), OPBOOL(5, false), OPUSHORT(6, 1));
@@ -246,7 +246,7 @@ HB_FUNC_STATIC(QKEYEVENT_CREATEEXTENDEDKEYEVENT)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(6, 9) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) &&
-      ISCHARORNIL(7) && (HB_ISLOG(8) || HB_ISNIL(8)) && ISNUMORNIL(9)) {
+      ISCHARORNIL(7) && ISLOGORNIL(8) && ISNUMORNIL(9)) {
 #endif
     QKeyEvent *ptr = QKeyEvent::createExtendedKeyEvent(
         (QEvent::Type)hb_parni(1), PINT(2), (Qt::KeyboardModifiers)hb_parni(3), PQUINT32(4), PQUINT32(5), PQUINT32(6),
