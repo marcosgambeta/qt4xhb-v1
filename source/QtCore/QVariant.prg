@@ -674,7 +674,7 @@ HB_FUNC_STATIC(QVARIANT_TOREAL)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISLOGORNIL(1)) {
 #endif
       bool par1;
       RQREAL(obj->toReal(&par1));

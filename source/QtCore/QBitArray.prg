@@ -65,7 +65,7 @@ HB_FUNC_STATIC(QBITARRAY_NEW)
     // QBitArray()
     QBitArray *obj = new QBitArray();
     Qt4xHb::returnNewObject(obj, true);
-  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
     // QBitArray(int size, bool value = false)
     QBitArray *obj = new QBitArray(PINT(1), OPBOOL(2, false));
     Qt4xHb::returnNewObject(obj, true);

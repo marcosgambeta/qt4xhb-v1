@@ -922,7 +922,7 @@ HB_FUNC_STATIC(QLOCALE_TODOUBLE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISLOG(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISLOGORNIL(2)) {
 #endif
       bool par2;
       RDOUBLE(obj->toDouble(PQSTRING(1), &par2));
@@ -942,7 +942,7 @@ HB_FUNC_STATIC(QLOCALE_TOFLOAT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISLOG(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISLOGORNIL(2)) {
 #endif
       bool par2;
       RFLOAT(obj->toFloat(PQSTRING(1), &par2));
@@ -962,7 +962,7 @@ HB_FUNC_STATIC(QLOCALE_TOINT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISLOG(2) || HB_ISNIL(2)) && ISNUMORNIL(3)) {
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISLOGORNIL(2) && ISNUMORNIL(3)) {
 #endif
       bool par2;
       RINT(obj->toInt(PQSTRING(1), &par2, OPINT(3, 0)));
@@ -982,7 +982,7 @@ HB_FUNC_STATIC(QLOCALE_TOLONGLONG)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISLOG(2) || HB_ISNIL(2)) && ISNUMORNIL(3)) {
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISLOGORNIL(2) && ISNUMORNIL(3)) {
 #endif
       bool par2;
       RQLONGLONG(obj->toLongLong(PQSTRING(1), &par2, OPINT(3, 0)));
@@ -1020,7 +1020,7 @@ HB_FUNC_STATIC(QLOCALE_TOSHORT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISLOG(2) || HB_ISNIL(2)) && ISNUMORNIL(3)) {
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISLOGORNIL(2) && ISNUMORNIL(3)) {
 #endif
       bool par2;
       RSHORT(obj->toShort(PQSTRING(1), &par2, OPINT(3, 0)));
@@ -1323,7 +1323,7 @@ HB_FUNC_STATIC(QLOCALE_TOUINT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISLOG(2) || HB_ISNIL(2)) && ISNUMORNIL(3)) {
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISLOGORNIL(2) && ISNUMORNIL(3)) {
 #endif
       bool par2;
       RUINT(obj->toUInt(PQSTRING(1), &par2, OPINT(3, 0)));
@@ -1343,7 +1343,7 @@ HB_FUNC_STATIC(QLOCALE_TOULONGLONG)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISLOG(2) || HB_ISNIL(2)) && ISNUMORNIL(3)) {
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISLOGORNIL(2) && ISNUMORNIL(3)) {
 #endif
       bool par2;
       RQLONGLONG(obj->toULongLong(PQSTRING(1), &par2, OPINT(3, 0)));
@@ -1363,7 +1363,7 @@ HB_FUNC_STATIC(QLOCALE_TOUSHORT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISLOG(2) || HB_ISNIL(2)) && ISNUMORNIL(3)) {
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISLOGORNIL(2) && ISNUMORNIL(3)) {
 #endif
       bool par2;
       RUSHORT(obj->toUShort(PQSTRING(1), &par2, OPINT(3, 0)));
