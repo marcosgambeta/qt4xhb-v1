@@ -761,7 +761,7 @@ HB_FUNC_STATIC(QSQLDATABASE_CONTAINS)
 HB_FUNC_STATIC(QSQLDATABASE_DATABASE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 2) && ISCHARORNIL(1) && (HB_ISLOG(2) || HB_ISNIL(2))) {
+  if (ISBETWEEN(0, 2) && ISCHARORNIL(1) && ISLOGORNIL(2)) {
 #endif
     QSqlDatabase *ptr = new QSqlDatabase(
         QSqlDatabase::database(OPQSTRING(1, QLatin1String(QSqlDatabase::defaultConnection)), OPBOOL(2, true)));
