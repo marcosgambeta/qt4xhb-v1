@@ -58,11 +58,11 @@ RETURN
 
 HB_FUNC_STATIC(QDECLARATIVECONTEXT_NEW)
 {
-  if (ISBETWEEN(1, 2) && ISQDECLARATIVEENGINE(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
+  if (ISBETWEEN(1, 2) && ISQDECLARATIVEENGINE(1) && ISQOBJECTORNIL(2)) {
     // QDeclarativeContext(QDeclarativeEngine *engine, QObject *parent = 0)
     QDeclarativeContext *obj = new QDeclarativeContext(PQDECLARATIVEENGINE(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(1, 2) && ISQDECLARATIVECONTEXT(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && ISQDECLARATIVECONTEXT(1) && ISQOBJECTORNIL(2)) {
     // QDeclarativeContext(QDeclarativeContext *parentContext, QObject *parent = 0)
     QDeclarativeContext *obj = new QDeclarativeContext(PQDECLARATIVECONTEXT(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
