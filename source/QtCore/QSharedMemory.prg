@@ -56,11 +56,11 @@ RETURN
 
 HB_FUNC_STATIC(QSHAREDMEMORY_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     // QSharedMemory(QObject *parent = 0)
     QSharedMemory *obj = new QSharedMemory(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2)) {
     // QSharedMemory(const QString &key, QObject *parent = 0)
     QSharedMemory *obj = new QSharedMemory(PQSTRING(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);

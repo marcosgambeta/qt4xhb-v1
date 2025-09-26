@@ -54,11 +54,11 @@ RETURN
 
 HB_FUNC_STATIC(QBUFFER_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     // QBuffer(QObject *parent = 0)
     QBuffer *obj = new QBuffer(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISQOBJECTORNIL(2)) {
     // QBuffer(QByteArray *byteArray, QObject *parent = 0)
     QBuffer *obj = new QBuffer(PQBYTEARRAY(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
