@@ -74,7 +74,7 @@ HB_FUNC_STATIC(QWHATSTHIS_DELETE)
 HB_FUNC_STATIC(QWHATSTHIS_CREATEACTION)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
 #endif
     QAction *ptr = QWhatsThis::createAction(OPQOBJECT(1, 0));
     Qt4xHb::createReturnQObjectClass(ptr, "QACTION");

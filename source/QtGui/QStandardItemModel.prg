@@ -98,11 +98,11 @@ RETURN
 
 HB_FUNC_STATIC(QSTANDARDITEMMODEL_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     // QStandardItemModel(QObject *parent = 0)
     QStandardItemModel *obj = new QStandardItemModel(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQOBJECT(3) || HB_ISNIL(3))) {
+  } else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQOBJECTORNIL(3)) {
     // QStandardItemModel(int rows, int columns, QObject *parent = 0)
     QStandardItemModel *obj = new QStandardItemModel(PINT(1), PINT(2), OPQOBJECT(3, 0));
     Qt4xHb::returnNewObject(obj, false);

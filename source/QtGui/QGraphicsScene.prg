@@ -135,16 +135,16 @@ RETURN
 
 HB_FUNC_STATIC(QGRAPHICSSCENE_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
     // QGraphicsScene(QObject *parent = 0)
     QGraphicsScene *obj = new QGraphicsScene(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(1, 2) && ISQRECTF(1) && (ISQOBJECT(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && ISQRECTF(1) && ISQOBJECTORNIL(2)) {
     // QGraphicsScene(const QRectF &sceneRect, QObject *parent = 0)
     QGraphicsScene *obj = new QGraphicsScene(*PQRECTF(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) &&
-             (ISQOBJECT(5) || HB_ISNIL(5))) {
+             ISQOBJECTORNIL(5)) {
     // QGraphicsScene(qreal x, qreal y, qreal width, qreal height, QObject *parent = 0)
     QGraphicsScene *obj = new QGraphicsScene(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQOBJECT(5, 0));
     Qt4xHb::returnNewObject(obj, false);
