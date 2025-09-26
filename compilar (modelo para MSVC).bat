@@ -34,6 +34,9 @@ set QTPLATFORM=win
 rem Define o compilador C++ (msvc/msvc64)
 set QTCOMP=msvc
 
+rem Ative a linha abaixo para usar a flag QT4XHB_DONT_CHECK_PARAMETERS
+rem set QT4XHB_USER_CFLAGS=-DQT4XHB_DONT_CHECK_PARAMETERS
+
 rem Define se é Harbour ou xHarbour (harbour ou xharbour)
 set HBCOMP=harbour
 
