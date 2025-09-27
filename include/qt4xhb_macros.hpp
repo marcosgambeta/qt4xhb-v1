@@ -164,5 +164,6 @@
 #define ISLOGORNIL(n) (HB_ISLOG(n) || HB_ISNIL(n))
 
 #define ISQOBJECTORNIL(n) (ISQOBJECT(n) || HB_ISNIL(n))
+#define ISQVARIANTORNIL(n) (ISQVARIANT(n) || HB_ISNIL(n))
 
 #endif // QT4XHB_MACROS_H
