@@ -6,6 +6,8 @@
 
 $(QT4XHB_OBJ_DIR)/HAbstractListModelMoc.cpp             : $(QT4XHB_SRC_DIR)/QtCore/HAbstractListModel.hpp
 	$(MOC) $^ -o $@
+$(QT4XHB_OBJ_DIR)/HAbstractListModelV2Moc.cpp           : $(QT4XHB_SRC_DIR)/QtCore/HAbstractListModelV2.hpp
+	$(MOC) $^ -o $@
 $(QT4XHB_OBJ_DIR)/HAbstractTableModelMoc.cpp            : $(QT4XHB_SRC_DIR)/QtCore/HAbstractTableModel.hpp
 	$(MOC) $^ -o $@
 $(QT4XHB_OBJ_DIR)/HAbstractTableModelV2Moc.cpp          : $(QT4XHB_SRC_DIR)/QtCore/HAbstractTableModelV2.hpp
