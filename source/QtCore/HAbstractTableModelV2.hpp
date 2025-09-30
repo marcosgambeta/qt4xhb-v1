@@ -18,7 +18,7 @@ class HAbstractTableModelV2 : public QAbstractTableModel
   Q_OBJECT
 
 public:
-  HAbstractTableModelV2(QObject *parent = 0);
+  HAbstractTableModelV2(QObject *parent = NULL);
   virtual ~HAbstractTableModelV2();
 
 private:

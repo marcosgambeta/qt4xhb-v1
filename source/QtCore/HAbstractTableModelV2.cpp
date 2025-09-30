@@ -141,7 +141,7 @@ QVariant HAbstractTableModelV2::data(const QModelIndex &index, int role) const
   QVariant data;
 
   if (m_dataBlock != NULL) {
-    // PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+    // PHB_ITEM pIndex = hb_itemPutPtr(NULL, static_cast<QModelIndex *>(&index));
     PHB_ITEM pIndex = Qt4xHb::returnQModelIndexObject((void *)&index);
     PHB_ITEM pRole = hb_itemPutNI(NULL, role);
 
@@ -194,13 +194,13 @@ Qt::ItemFlags HAbstractTableModelV2::flags(const QModelIndex &index) const
   Qt::ItemFlags flags = Qt::ItemIsSelectable | Qt::ItemIsEnabled;
 
   if (m_flagsBlock != NULL) {
-    // PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+    // PHB_ITEM pIndex = hb_itemPutPtr(NULL, static_cast<QModelIndex *>(&index));
     PHB_ITEM pIndex = Qt4xHb::returnQModelIndexObject((void *)&index);
 
     PHB_ITEM pRet = hb_itemNew(hb_vmEvalBlockV(m_flagsBlock, 1, pIndex));
 
     if (hb_itemType(pRet) & HB_IT_NUMERIC) {
-      flags = (Qt::ItemFlags)hb_itemGetNI(pRet);
+      flags = static_cast<Qt::ItemFlags>(hb_itemGetNI(pRet));
     }
 
     hb_itemRelease(pIndex);
@@ -217,9 +217,9 @@ bool HAbstractTableModelV2::setData(const QModelIndex &index, const QVariant &va
   bool success = false;
 
   if (m_setDataBlock != NULL) {
-    // PHB_ITEM pIndex = hb_itemPutPtr( NULL, (QModelIndex *) &index );
+    // PHB_ITEM pIndex = hb_itemPutPtr(NULL, static_cast<QModelIndex *>(&index));
     PHB_ITEM pIndex = Qt4xHb::returnQModelIndexObject((void *)&index);
-    // PHB_ITEM pValue = hb_itemPutPtr( NULL, (QVariant *) &value );
+    // PHB_ITEM pValue = hb_itemPutPtr(NULL, static_cast<QVariant *>(&value));
     PHB_ITEM pValue = Qt4xHb::returnQVariantObject((void *)&value);
     PHB_ITEM pRole = hb_itemPutNI(NULL, role);
 
@@ -243,11 +243,11 @@ bool HAbstractTableModelV2::setData(const QModelIndex &index, const QVariant &va
 void HAbstractTableModelV2::reloadData()
 {
   // Notas da documentação do Qt:
-  emit QAbstractTableModel::layoutAboutToBeChanged();
+  emit QAbstractItemModel::layoutAboutToBeChanged();
   // Remember the QModelIndex that will change
   // Update your internal data
   // Call changePersistentIndex()
   // emit layoutChanged
   // emit QAbstractItemModel::layoutChanged();
-  emit QAbstractTableModel::layoutChanged();
+  emit QAbstractItemModel::layoutChanged();
 }
