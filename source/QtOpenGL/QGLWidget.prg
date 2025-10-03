@@ -71,18 +71,18 @@ RETURN
 
 HB_FUNC_STATIC(QGLWIDGET_NEW)
 {
-  if (ISBETWEEN(0, 3) && (ISQWIDGET(1) || HB_ISNIL(1)) && (ISQGLWIDGET(2) || HB_ISNIL(2)) && ISNUMORNIL(3)) {
+  if (ISBETWEEN(0, 3) && ISQWIDGETORNIL(1) && (ISQGLWIDGET(2) || HB_ISNIL(2)) && ISNUMORNIL(3)) {
     // QGLWidget(QWidget *parent = 0, const QGLWidget *shareWidget = 0, Qt::WindowFlags f = 0)
     QGLWidget *obj = new QGLWidget(OPQWIDGET(1, 0), OPQGLWIDGET(2, 0),
                                    HB_ISNIL(3) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(3));
     Qt4xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(1, 4) && ISQGLCONTEXT(1) && (ISQWIDGET(2) || HB_ISNIL(2)) && (ISQGLWIDGET(3) || HB_ISNIL(3)) &&
+  } else if (ISBETWEEN(1, 4) && ISQGLCONTEXT(1) && ISQWIDGETORNIL(2) && (ISQGLWIDGET(3) || HB_ISNIL(3)) &&
              ISNUMORNIL(4)) {
     // QGLWidget(QGLContext *context, QWidget *parent = 0, const QGLWidget *shareWidget = 0, Qt::WindowFlags f = 0)
     QGLWidget *obj = new QGLWidget(PQGLCONTEXT(1), OPQWIDGET(2, 0), OPQGLWIDGET(3, 0),
                                    HB_ISNIL(4) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(4));
     Qt4xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(1, 4) && ISQGLFORMAT(1) && (ISQWIDGET(2) || HB_ISNIL(2)) && (ISQGLWIDGET(3) || HB_ISNIL(3)) &&
+  } else if (ISBETWEEN(1, 4) && ISQGLFORMAT(1) && ISQWIDGETORNIL(2) && (ISQGLWIDGET(3) || HB_ISNIL(3)) &&
              ISNUMORNIL(4)) {
     // QGLWidget(const QGLFormat &format, QWidget *parent = 0, const QGLWidget *shareWidget = 0, Qt::WindowFlags f = 0)
     QGLWidget *obj = new QGLWidget(*PQGLFORMAT(1), OPQWIDGET(2, 0), OPQGLWIDGET(3, 0),
