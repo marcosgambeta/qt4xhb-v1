@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QCDESTYLE_PIXELMETRIC)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (ISQSTYLEOPTION(2) || HB_ISNIL(2)) && ISQWIDGETORNIL(3)) {
+    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISQSTYLEOPTIONORNIL(2) && ISQWIDGETORNIL(3)) {
 #endif
       RINT(obj->pixelMetric((QStyle::PixelMetric)hb_parni(1),
                             HB_ISNIL(2) ? 0 : static_cast<QStyleOption *>(Qt4xHb::itemGetPtr(2)), OPQWIDGET(3, 0)));
