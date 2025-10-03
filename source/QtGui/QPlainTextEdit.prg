@@ -117,11 +117,11 @@ RETURN
 
 HB_FUNC_STATIC(QPLAINTEXTEDIT_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
     // QPlainTextEdit(QWidget *parent = 0)
     QPlainTextEdit *obj = new QPlainTextEdit(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQWIDGETORNIL(2)) {
     // QPlainTextEdit(const QString &text, QWidget *parent = 0)
     QPlainTextEdit *obj = new QPlainTextEdit(PQSTRING(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);

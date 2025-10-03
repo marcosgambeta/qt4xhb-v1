@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENGEOMETRY)
 
 HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENNUMBER)
 {
-  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
     // int screenNumber(const QWidget *widget = 0) const
     QDesktopWidget *obj = qobject_cast<QDesktopWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 

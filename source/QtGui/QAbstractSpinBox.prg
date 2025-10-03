@@ -79,7 +79,7 @@ RETURN
 // QAbstractSpinBox(QWidget *parent = 0)
 HB_FUNC_STATIC(QABSTRACTSPINBOX_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
     QAbstractSpinBox *obj = new QAbstractSpinBox(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   } else {

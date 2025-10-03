@@ -67,11 +67,11 @@ RETURN
 
 HB_FUNC_STATIC(QLCDNUMBER_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
     // QLCDNumber(QWidget *parent = 0)
     QLCDNumber *obj = new QLCDNumber(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQWIDGET(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQWIDGETORNIL(2)) {
     // QLCDNumber(uint numDigits, QWidget *parent = 0)
     QLCDNumber *obj = new QLCDNumber(PUINT(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);

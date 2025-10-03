@@ -107,11 +107,11 @@ RETURN
 
 HB_FUNC_STATIC(QTABLEWIDGET_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
     // QTableWidget(QWidget *parent = 0)
     QTableWidget *obj = new QTableWidget(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQWIDGET(3) || HB_ISNIL(3))) {
+  } else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQWIDGETORNIL(3)) {
     // QTableWidget(int rows, int columns, QWidget *parent = 0)
     QTableWidget *obj = new QTableWidget(PINT(1), PINT(2), OPQWIDGET(3, 0));
     Qt4xHb::returnNewObject(obj, false);

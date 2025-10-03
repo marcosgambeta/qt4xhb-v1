@@ -60,11 +60,11 @@ RETURN
 
 HB_FUNC_STATIC(QCOLORDIALOG_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
     // QColorDialog(QWidget *parent = 0)
     QColorDialog *obj = new QColorDialog(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
-  } else if (ISBETWEEN(1, 2) && (ISQCOLOR(1) || HB_ISCHAR(1)) && (ISQWIDGET(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(1, 2) && (ISQCOLOR(1) || HB_ISCHAR(1)) && ISQWIDGETORNIL(2)) {
     // QColorDialog(const QColor &initial, QWidget *parent = 0)
     QColorDialog *obj = new QColorDialog(
         HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(1)) : QColor(hb_parc(1)), OPQWIDGET(2, 0));
@@ -308,7 +308,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_GETCOLOR)
         HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(1)) : QColor(hb_parc(1)), PQWIDGET(2), PQSTRING(3),
         HB_ISNIL(4) ? (QColorDialog::ColorDialogOptions)0 : (QColorDialog::ColorDialogOptions)hb_parni(4)));
     Qt4xHb::createReturnClass(ptr, "QCOLOR", true);
-  } else if (ISBETWEEN(0, 2) && (ISQCOLOR(1) || HB_ISCHAR(1) || HB_ISNIL(1)) && (ISQWIDGET(2) || HB_ISNIL(2))) {
+  } else if (ISBETWEEN(0, 2) && (ISQCOLOR(1) || HB_ISCHAR(1) || HB_ISNIL(1)) && ISQWIDGETORNIL(2)) {
     // static QColor getColor(const QColor &initial = Qt::white, QWidget *parent = 0)
 
     QColor *ptr = new QColor(QColorDialog::getColor(
