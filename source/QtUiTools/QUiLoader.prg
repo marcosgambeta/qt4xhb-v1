@@ -232,7 +232,7 @@ HB_FUNC_STATIC(QUILOADER_CREATEWIDGET)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)) && ISCHARORNIL(3)) {
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISQWIDGETORNIL(2) && ISCHARORNIL(3)) {
 #endif
       QWidget *ptr = obj->createWidget(PQSTRING(1), OPQWIDGET(2, 0), OPQSTRING(3, QString()));
       Qt4xHb::createReturnQWidgetClass(ptr, "QWIDGET");
@@ -269,7 +269,7 @@ HB_FUNC_STATIC(QUILOADER_LOAD)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (ISQWIDGET(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && ISQWIDGETORNIL(2)) {
 #endif
       QWidget *ptr = obj->load(PQIODEVICE(1), OPQWIDGET(2, 0));
       Qt4xHb::createReturnQWidgetClass(ptr, "QWIDGET");
