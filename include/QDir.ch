@@ -16,10 +16,10 @@
 #define QDir_Files                                                   0x002
 #define QDir_Drives                                                  0x004
 #define QDir_NoSymLinks                                              0x008
-#define QDir_NoDotAndDotDot                                          hb_bitor(QDir_NoDot, QDir_NoDotDot)
+#define QDir_NoDotAndDotDot                                          hb_bitor(QDir::NoDot, QDir::NoDotDot)
 #define QDir_NoDot                                                   0x2000
 #define QDir_NoDotDot                                                0x4000
-#define QDir_AllEntries                                              hb_bitor(hb_bitor(QDir_Dirs, QDir_Files), QDir_Drives)
+#define QDir_AllEntries                                              hb_bitor(hb_bitor(QDir::Dirs, QDir::Files), QDir::Drives)
 #define QDir_Readable                                                0x010
 #define QDir_Writable                                                0x020
 #define QDir_Executable                                              0x040
