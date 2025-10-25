@@ -54,7 +54,7 @@ RETURN
 
 #include <QtCore/QStringList>
 
-    // QAxScriptManager(QObject *parent = 0)
+// QAxScriptManager(QObject *parent = 0)
 HB_FUNC_STATIC(QAXSCRIPTMANAGER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {

@@ -100,7 +100,7 @@ RETURN
 #include <QtCore/QRegExp>
 #include <QtCore/QVariant>
 
-    // QScriptValue(QScriptValue::SpecialValue value)
+// QScriptValue(QScriptValue::SpecialValue value)
 HB_FUNC_STATIC(QSCRIPTVALUE_NEW3)
 {
   QScriptValue *obj = new QScriptValue((QScriptValue::SpecialValue)hb_parni(1));

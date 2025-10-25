@@ -59,7 +59,7 @@ RETURN
 
 #include <QtGui/QItemSelection>
 
-    // QIdentityProxyModel(QObject *parent = 0)
+// QIdentityProxyModel(QObject *parent = 0)
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {

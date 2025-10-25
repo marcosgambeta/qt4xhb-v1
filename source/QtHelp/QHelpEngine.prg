@@ -56,7 +56,7 @@ RETURN
 #include <QtHelp/QHelpIndexWidget>
 #include <QtHelp/QHelpSearchEngine>
 
-    // QHelpEngine(const QString &collectionFile, QObject *parent = 0)
+// QHelpEngine(const QString &collectionFile, QObject *parent = 0)
 HB_FUNC_STATIC(QHELPENGINE_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2)) {

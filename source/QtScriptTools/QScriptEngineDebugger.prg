@@ -63,7 +63,7 @@ RETURN
 #include <QtGui/QToolBar>
 #include <QtGui/QMainWindow>
 
-    // QScriptEngineDebugger(QObject *parent = 0)
+// QScriptEngineDebugger(QObject *parent = 0)
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {

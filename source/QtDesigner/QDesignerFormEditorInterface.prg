@@ -65,7 +65,7 @@ RETURN
 #include <QtDesigner/QDesignerPropertyEditorInterface>
 #include <QtDesigner/QDesignerWidgetBoxInterface>
 
-    // QDesignerFormEditorInterface(QObject *parent = 0)
+// QDesignerFormEditorInterface(QObject *parent = 0)
 HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {

@@ -75,7 +75,7 @@ RETURN
 #include <QtCore/QModelIndex>
 #include <QtGui/QAbstractItemDelegate>
 
-    // QDataWidgetMapper(QObject *parent = 0)
+// QDataWidgetMapper(QObject *parent = 0)
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {

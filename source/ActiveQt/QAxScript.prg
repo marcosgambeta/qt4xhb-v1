@@ -57,7 +57,7 @@ RETURN
 
 #include <QtCore/QStringList>
 
-    // QAxScript(const QString &name, QAxScriptManager *manager)
+// QAxScript(const QString &name, QAxScriptManager *manager)
 HB_FUNC_STATIC(QAXSCRIPT_NEW)
 {
   if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQAXSCRIPTMANAGER(2)) {

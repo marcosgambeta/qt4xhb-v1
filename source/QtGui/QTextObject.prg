@@ -46,7 +46,7 @@ RETURN
 
 #include <QtGui/QTextDocument>
 
-    // QTextDocument *document() const
+// QTextDocument *document() const
 HB_FUNC_STATIC(QTEXTOBJECT_DOCUMENT)
 {
   QTextObject *obj = qobject_cast<QTextObject *>(Qt4xHb::getQObjectPointerFromSelfItem());

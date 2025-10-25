@@ -59,7 +59,7 @@ RETURN
 #include <QtHelp/QHelpSearchQueryWidget>
 #include <QtHelp/QHelpSearchResultWidget>
 
-    // QHelpSearchEngine(QHelpEngineCore *helpEngine, QObject *parent = 0)
+// QHelpSearchEngine(QHelpEngineCore *helpEngine, QObject *parent = 0)
 HB_FUNC_STATIC(QHELPSEARCHENGINE_NEW)
 {
   if (ISBETWEEN(1, 2) && ISQHELPENGINECORE(1) && ISQOBJECTORNIL(2)) {

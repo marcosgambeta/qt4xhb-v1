@@ -85,7 +85,7 @@ RETURN
 
 #include <QtCore/QUrl>
 
-    // QString defaultTextEncoding() const
+// QString defaultTextEncoding() const
 HB_FUNC_STATIC(QWEBSETTINGS_DEFAULTTEXTENCODING)
 {
   QWebSettings *obj = static_cast<QWebSettings *>(Qt4xHb::itemGetPtrStackSelfItem());

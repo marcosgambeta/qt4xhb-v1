@@ -67,7 +67,7 @@ RETURN
 #include <QtGui/QUndoStack>
 #include <QtGui/QAction>
 
-    // QUndoGroup(QObject *parent = 0)
+// QUndoGroup(QObject *parent = 0)
 HB_FUNC_STATIC(QUNDOGROUP_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {

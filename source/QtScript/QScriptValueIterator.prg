@@ -63,7 +63,7 @@ RETURN
 
 #include <QtScript/QScriptString>
 
-    // QScriptValueIterator(const QScriptValue &object)
+// QScriptValueIterator(const QScriptValue &object)
 HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_NEW)
 {
   if (ISNUMPAR(1) && ISQSCRIPTVALUE(1)) {

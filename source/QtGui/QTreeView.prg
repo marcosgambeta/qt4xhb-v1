@@ -105,7 +105,7 @@ RETURN
 
 #include <QtGui/QHeaderView>
 
-    // QTreeView(QWidget *parent = 0)
+// QTreeView(QWidget *parent = 0)
 HB_FUNC_STATIC(QTREEVIEW_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {

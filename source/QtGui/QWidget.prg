@@ -330,7 +330,7 @@ RETURN
 #include <QtGui/QLayout>
 #include <QtGui/QStyle>
 
-    // QWidget(QWidget *parent = 0, Qt::WindowFlags f = 0)
+// QWidget(QWidget *parent = 0, Qt::WindowFlags f = 0)
 HB_FUNC_STATIC(QWIDGET_NEW)
 {
   if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {

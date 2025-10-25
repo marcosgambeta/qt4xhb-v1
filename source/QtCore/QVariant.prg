@@ -129,7 +129,7 @@ RETURN
 #include <QtCore/QRectF>
 #include <QtCore/QUrl>
 
-    // QVariant(Qt::GlobalColor color)
+// QVariant(Qt::GlobalColor color)
 HB_FUNC_STATIC(QVARIANT_NEW5)
 {
   QVariant *obj = new QVariant((Qt::GlobalColor)hb_parni(1));

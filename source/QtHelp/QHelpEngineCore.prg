@@ -75,7 +75,7 @@ RETURN
 
 #include <QtCore/QStringList>
 
-    // QHelpEngineCore(const QString &collectionFile, QObject *parent = 0)
+// QHelpEngineCore(const QString &collectionFile, QObject *parent = 0)
 HB_FUNC_STATIC(QHELPENGINECORE_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQOBJECTORNIL(2)) {

@@ -135,7 +135,7 @@ RETURN
 
 #include <QtCore/QVariant>
 
-    // QColor(QRgb color)
+// QColor(QRgb color)
 HB_FUNC_STATIC(QCOLOR_NEW3)
 {
   QColor *obj = new QColor(PQRGB(1));

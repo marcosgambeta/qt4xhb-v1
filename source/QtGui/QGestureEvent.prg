@@ -54,7 +54,7 @@ RETURN
 
 #include <QtGui/QGesture>
 
-    // QGestureEvent(const QList<QGesture *> &gestures)
+// QGestureEvent(const QList<QGesture *> &gestures)
 HB_FUNC_STATIC(QGESTUREEVENT_NEW)
 {
   if (ISNUMPAR(1) && HB_ISARRAY(1)) {

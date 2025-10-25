@@ -100,7 +100,7 @@ RETURN
 #include <QtGui/QMenuBar>
 #include <QtGui/QStatusBar>
 
-    // QMainWindow(QWidget *parent = 0, Qt::WindowFlags flags = 0)
+// QMainWindow(QWidget *parent = 0, Qt::WindowFlags flags = 0)
 HB_FUNC_STATIC(QMAINWINDOW_NEW)
 {
   if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {

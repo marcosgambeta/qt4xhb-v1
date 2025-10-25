@@ -80,7 +80,7 @@ RETURN
 
 #include <QtCore/QStringList>
 
-    // QCoreApplication ( int & argc, char ** argv )
+// QCoreApplication ( int & argc, char ** argv )
 HB_FUNC_STATIC(QCOREAPPLICATION_NEW)
 {
   int argc;

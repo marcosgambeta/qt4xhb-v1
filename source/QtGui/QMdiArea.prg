@@ -75,7 +75,7 @@ RETURN
 
 #include <QtGui/QMdiSubWindow>
 
-    // QMdiArea(QWidget *parent = 0)
+// QMdiArea(QWidget *parent = 0)
 HB_FUNC_STATIC(QMDIAREA_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {

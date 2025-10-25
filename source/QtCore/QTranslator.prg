@@ -45,7 +45,7 @@ RETURN
 
 #include <QtCore/QLocale>
 
-    // QTranslator(QObject *parent = 0)
+// QTranslator(QObject *parent = 0)
 HB_FUNC_STATIC(QTRANSLATOR_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {

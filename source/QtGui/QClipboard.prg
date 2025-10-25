@@ -64,7 +64,7 @@ RETURN
 #include <QtCore/QMimeData>
 #include <QtGui/QPixmap>
 
-    // void clear(QClipboard::Mode mode = QClipboard::Clipboard)
+// void clear(QClipboard::Mode mode = QClipboard::Clipboard)
 HB_FUNC_STATIC(QCLIPBOARD_CLEAR)
 {
   QClipboard *obj = qobject_cast<QClipboard *>(Qt4xHb::getQObjectPointerFromSelfItem());

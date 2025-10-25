@@ -77,7 +77,7 @@ RETURN
 #include <QtNetwork/QNetworkCookieJar>
 #include <QtNetwork/QNetworkReply>
 
-    // QNetworkAccessManager(QObject *parent = 0)
+// QNetworkAccessManager(QObject *parent = 0)
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {

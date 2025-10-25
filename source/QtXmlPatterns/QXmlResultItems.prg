@@ -53,7 +53,7 @@ RETURN
 
 #include <QtXmlPatterns/QXmlItem>
 
-    // QXmlResultItems()
+// QXmlResultItems()
 HB_FUNC_STATIC(QXMLRESULTITEMS_NEW)
 {
   if (ISNUMPAR(0)) {

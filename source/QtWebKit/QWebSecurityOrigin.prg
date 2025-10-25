@@ -62,7 +62,7 @@ RETURN
 #include <QtCore/QStringList>
 #include <QtWebKit/QWebDatabase>
 
-    // QWebSecurityOrigin(const QWebSecurityOrigin &other)
+// QWebSecurityOrigin(const QWebSecurityOrigin &other)
 HB_FUNC_STATIC(QWEBSECURITYORIGIN_NEW)
 {
   if (ISNUMPAR(1) && ISQWEBSECURITYORIGIN(1)) {

@@ -61,7 +61,7 @@ RETURN
 #include <QtGui/QPixmap>
 #include <QtCore/QMimeData>
 
-    // QDrag(QWidget *dragSource)
+// QDrag(QWidget *dragSource)
 HB_FUNC_STATIC(QDRAG_NEW)
 {
   if (ISNUMPAR(1) && ISQWIDGET(1)) {

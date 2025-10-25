@@ -64,7 +64,7 @@ RETURN
 #include <QtGui/QAction>
 #include <QtGui/QLayout>
 
-    // QUiLoader(QObject *parent = 0)
+// QUiLoader(QObject *parent = 0)
 HB_FUNC_STATIC(QUILOADER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
