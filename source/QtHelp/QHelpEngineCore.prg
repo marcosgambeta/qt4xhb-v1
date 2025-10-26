@@ -75,6 +75,9 @@ RETURN
 
 #include <QtCore/QStringList>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QHelpEngineCore *p = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QHelpEngineCore(const QString &collectionFile, QObject *parent = 0)
 HB_FUNC_STATIC(QHELPENGINECORE_NEW)
 {
@@ -88,7 +91,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_NEW)
 
 HB_FUNC_STATIC(QHELPENGINECORE_DELETE)
 {
-  QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -106,7 +109,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_DELETE)
 // bool addCustomFilter(const QString &filterName, const QStringList &attributes)
 HB_FUNC_STATIC(QHELPENGINECORE_ADDCUSTOMFILTER)
 {
-  QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -124,7 +127,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_ADDCUSTOMFILTER)
 // bool autoSaveFilter() const
 HB_FUNC_STATIC(QHELPENGINECORE_AUTOSAVEFILTER)
 {
-  QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -142,7 +145,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_AUTOSAVEFILTER)
 // QString collectionFile() const
 HB_FUNC_STATIC(QHELPENGINECORE_COLLECTIONFILE)
 {
-  QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -160,7 +163,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_COLLECTIONFILE)
 // bool copyCollectionFile(const QString &fileName)
 HB_FUNC_STATIC(QHELPENGINECORE_COPYCOLLECTIONFILE)
 {
-  QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -178,7 +181,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_COPYCOLLECTIONFILE)
 // QString currentFilter() const
 HB_FUNC_STATIC(QHELPENGINECORE_CURRENTFILTER)
 {
-  QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -196,7 +199,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_CURRENTFILTER)
 // QStringList customFilters() const
 HB_FUNC_STATIC(QHELPENGINECORE_CUSTOMFILTERS)
 {
-  QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -214,7 +217,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_CUSTOMFILTERS)
 // QVariant customValue(const QString &key, const QVariant &defaultValue = QVariant()) const
 HB_FUNC_STATIC(QHELPENGINECORE_CUSTOMVALUE)
 {
-  QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -234,7 +237,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_CUSTOMVALUE)
 // QString documentationFileName(const QString &namespaceName)
 HB_FUNC_STATIC(QHELPENGINECORE_DOCUMENTATIONFILENAME)
 {
-  QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -252,7 +255,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_DOCUMENTATIONFILENAME)
 // QString error() const
 HB_FUNC_STATIC(QHELPENGINECORE_ERROR)
 {
-  QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -270,7 +273,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_ERROR)
 // QByteArray fileData(const QUrl &url) const
 HB_FUNC_STATIC(QHELPENGINECORE_FILEDATA)
 {
-  QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -290,7 +293,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_FILEDATA)
 // QString())
 HB_FUNC_STATIC(QHELPENGINECORE_FILES)
 {
-  QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -332,14 +335,14 @@ HB_FUNC_STATIC(QHELPENGINECORE_FILTERATTRIBUTES)
 {
   if (ISNUMPAR(0)) {
     // QStringList filterAttributes() const
-    QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RQSTRINGLIST(obj->filterAttributes());
     }
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // QStringList filterAttributes(const QString &filterName) const
-    QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RQSTRINGLIST(obj->filterAttributes(PQSTRING(1)));
@@ -352,7 +355,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_FILTERATTRIBUTES)
 // QUrl findFile(const QUrl &url) const
 HB_FUNC_STATIC(QHELPENGINECORE_FINDFILE)
 {
-  QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -371,7 +374,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_FINDFILE)
 // bool registerDocumentation(const QString &documentationFileName)
 HB_FUNC_STATIC(QHELPENGINECORE_REGISTERDOCUMENTATION)
 {
-  QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -389,7 +392,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_REGISTERDOCUMENTATION)
 // QStringList registeredDocumentations() const
 HB_FUNC_STATIC(QHELPENGINECORE_REGISTEREDDOCUMENTATIONS)
 {
-  QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -407,7 +410,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_REGISTEREDDOCUMENTATIONS)
 // bool removeCustomFilter(const QString &filterName)
 HB_FUNC_STATIC(QHELPENGINECORE_REMOVECUSTOMFILTER)
 {
-  QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -425,7 +428,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_REMOVECUSTOMFILTER)
 // bool removeCustomValue(const QString &key)
 HB_FUNC_STATIC(QHELPENGINECORE_REMOVECUSTOMVALUE)
 {
-  QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -443,7 +446,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_REMOVECUSTOMVALUE)
 // void setAutoSaveFilter(bool save)
 HB_FUNC_STATIC(QHELPENGINECORE_SETAUTOSAVEFILTER)
 {
-  QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -463,7 +466,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_SETAUTOSAVEFILTER)
 // void setCollectionFile(const QString &fileName)
 HB_FUNC_STATIC(QHELPENGINECORE_SETCOLLECTIONFILE)
 {
-  QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -483,7 +486,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_SETCOLLECTIONFILE)
 // void setCurrentFilter(const QString &filterName)
 HB_FUNC_STATIC(QHELPENGINECORE_SETCURRENTFILTER)
 {
-  QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -503,7 +506,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_SETCURRENTFILTER)
 // bool setCustomValue(const QString &key, const QVariant &value)
 HB_FUNC_STATIC(QHELPENGINECORE_SETCUSTOMVALUE)
 {
-  QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -521,7 +524,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_SETCUSTOMVALUE)
 // bool setupData()
 HB_FUNC_STATIC(QHELPENGINECORE_SETUPDATA)
 {
-  QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -539,7 +542,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_SETUPDATA)
 // bool unregisterDocumentation(const QString &namespaceName)
 HB_FUNC_STATIC(QHELPENGINECORE_UNREGISTERDOCUMENTATION)
 {
-  QHelpEngineCore *obj = qobject_cast<QHelpEngineCore *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

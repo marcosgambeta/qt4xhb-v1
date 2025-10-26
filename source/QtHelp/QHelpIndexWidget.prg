@@ -42,10 +42,13 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QHelpIndexWidget *p = qobject_cast<QHelpIndexWidget *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // void activateCurrentItem()
 HB_FUNC_STATIC(QHELPINDEXWIDGET_ACTIVATECURRENTITEM)
 {
-  QHelpIndexWidget *obj = qobject_cast<QHelpIndexWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -65,7 +68,7 @@ HB_FUNC_STATIC(QHELPINDEXWIDGET_ACTIVATECURRENTITEM)
 // void filterIndices(const QString &filter, const QString &wildcard = QString())
 HB_FUNC_STATIC(QHELPINDEXWIDGET_FILTERINDICES)
 {
-  QHelpIndexWidget *obj = qobject_cast<QHelpIndexWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

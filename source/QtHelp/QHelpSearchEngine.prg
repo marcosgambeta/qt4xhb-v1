@@ -59,6 +59,9 @@ RETURN
 #include <QtHelp/QHelpSearchQueryWidget>
 #include <QtHelp/QHelpSearchResultWidget>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QHelpSearchEngine *p = qobject_cast<QHelpSearchEngine *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QHelpSearchEngine(QHelpEngineCore *helpEngine, QObject *parent = 0)
 HB_FUNC_STATIC(QHELPSEARCHENGINE_NEW)
 {
@@ -72,7 +75,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_NEW)
 
 HB_FUNC_STATIC(QHELPSEARCHENGINE_DELETE)
 {
-  QHelpSearchEngine *obj = qobject_cast<QHelpSearchEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -90,7 +93,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_DELETE)
 // int hitCount() const
 HB_FUNC_STATIC(QHELPSEARCHENGINE_HITCOUNT)
 {
-  QHelpSearchEngine *obj = qobject_cast<QHelpSearchEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -108,7 +111,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_HITCOUNT)
 // QList<QHelpSearchQuery> query() const
 HB_FUNC_STATIC(QHELPSEARCHENGINE_QUERY)
 {
-  QHelpSearchEngine *obj = qobject_cast<QHelpSearchEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -149,7 +152,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_QUERY)
 // QHelpSearchQueryWidget *queryWidget()
 HB_FUNC_STATIC(QHELPSEARCHENGINE_QUERYWIDGET)
 {
-  QHelpSearchEngine *obj = qobject_cast<QHelpSearchEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -168,7 +171,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_QUERYWIDGET)
 // QHelpSearchResultWidget *resultWidget()
 HB_FUNC_STATIC(QHELPSEARCHENGINE_RESULTWIDGET)
 {
-  QHelpSearchEngine *obj = qobject_cast<QHelpSearchEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -187,7 +190,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_RESULTWIDGET)
 // void cancelIndexing()
 HB_FUNC_STATIC(QHELPSEARCHENGINE_CANCELINDEXING)
 {
-  QHelpSearchEngine *obj = qobject_cast<QHelpSearchEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -207,7 +210,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_CANCELINDEXING)
 // void cancelSearching()
 HB_FUNC_STATIC(QHELPSEARCHENGINE_CANCELSEARCHING)
 {
-  QHelpSearchEngine *obj = qobject_cast<QHelpSearchEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -227,7 +230,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_CANCELSEARCHING)
 // void reindexDocumentation()
 HB_FUNC_STATIC(QHELPSEARCHENGINE_REINDEXDOCUMENTATION)
 {
-  QHelpSearchEngine *obj = qobject_cast<QHelpSearchEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -247,7 +250,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_REINDEXDOCUMENTATION)
 // void search(const QList<QHelpSearchQuery> &queryList)
 HB_FUNC_STATIC(QHELPSEARCHENGINE_SEARCH)
 {
-  QHelpSearchEngine *obj = qobject_cast<QHelpSearchEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

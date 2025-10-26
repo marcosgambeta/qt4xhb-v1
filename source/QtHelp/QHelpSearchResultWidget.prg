@@ -43,9 +43,12 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QHelpSearchResultWidget *p = qobject_cast<QHelpSearchResultWidget *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QHELPSEARCHRESULTWIDGET_DELETE)
 {
-  QHelpSearchResultWidget *obj = qobject_cast<QHelpSearchResultWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -63,7 +66,7 @@ HB_FUNC_STATIC(QHELPSEARCHRESULTWIDGET_DELETE)
 // QUrl linkAt(const QPoint &point)
 HB_FUNC_STATIC(QHELPSEARCHRESULTWIDGET_LINKAT)
 {
-  QHelpSearchResultWidget *obj = qobject_cast<QHelpSearchResultWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

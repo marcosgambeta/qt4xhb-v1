@@ -45,10 +45,13 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QHelpIndexModel *p = qobject_cast<QHelpIndexModel *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // void createIndex(const QString &customFilterName)
 HB_FUNC_STATIC(QHELPINDEXMODEL_CREATEINDEX)
 {
-  QHelpIndexModel *obj = qobject_cast<QHelpIndexModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -68,7 +71,7 @@ HB_FUNC_STATIC(QHELPINDEXMODEL_CREATEINDEX)
 // QModelIndex filter(const QString &filter, const QString &wildcard = QString())
 HB_FUNC_STATIC(QHELPINDEXMODEL_FILTER)
 {
-  QHelpIndexModel *obj = qobject_cast<QHelpIndexModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -87,7 +90,7 @@ HB_FUNC_STATIC(QHELPINDEXMODEL_FILTER)
 // bool isCreatingIndex() const
 HB_FUNC_STATIC(QHELPINDEXMODEL_ISCREATINGINDEX)
 {
-  QHelpIndexModel *obj = qobject_cast<QHelpIndexModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

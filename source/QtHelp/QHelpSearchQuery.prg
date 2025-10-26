@@ -46,6 +46,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QHelpSearchQuery *p = static_cast<QHelpSearchQuery *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QHELPSEARCHQUERY_NEW)
 {
   if (ISNUMPAR(0)) {

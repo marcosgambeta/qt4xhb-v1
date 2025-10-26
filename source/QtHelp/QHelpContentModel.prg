@@ -53,9 +53,12 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QHelpContentModel *p = qobject_cast<QHelpContentModel *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QHELPCONTENTMODEL_DELETE)
 {
-  QHelpContentModel *obj = qobject_cast<QHelpContentModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -73,7 +76,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_DELETE)
 // QHelpContentItem *contentItemAt(const QModelIndex &index) const
 HB_FUNC_STATIC(QHELPCONTENTMODEL_CONTENTITEMAT)
 {
-  QHelpContentModel *obj = qobject_cast<QHelpContentModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -92,7 +95,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_CONTENTITEMAT)
 // void createContents(const QString &customFilterName)
 HB_FUNC_STATIC(QHELPCONTENTMODEL_CREATECONTENTS)
 {
-  QHelpContentModel *obj = qobject_cast<QHelpContentModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -112,7 +115,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_CREATECONTENTS)
 // bool isCreatingContents() const
 HB_FUNC_STATIC(QHELPCONTENTMODEL_ISCREATINGCONTENTS)
 {
-  QHelpContentModel *obj = qobject_cast<QHelpContentModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -130,7 +133,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_ISCREATINGCONTENTS)
 // virtual int columnCount(const QModelIndex &parent = QModelIndex()) const
 HB_FUNC_STATIC(QHELPCONTENTMODEL_COLUMNCOUNT)
 {
-  QHelpContentModel *obj = qobject_cast<QHelpContentModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -148,7 +151,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_COLUMNCOUNT)
 // virtual QVariant data(const QModelIndex &index, int role) const
 HB_FUNC_STATIC(QHELPCONTENTMODEL_DATA)
 {
-  QHelpContentModel *obj = qobject_cast<QHelpContentModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -167,7 +170,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_DATA)
 // virtual QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
 HB_FUNC_STATIC(QHELPCONTENTMODEL_INDEX)
 {
-  QHelpContentModel *obj = qobject_cast<QHelpContentModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -187,7 +190,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_INDEX)
 // virtual QModelIndex parent(const QModelIndex &index) const
 HB_FUNC_STATIC(QHELPCONTENTMODEL_PARENT)
 {
-  QHelpContentModel *obj = qobject_cast<QHelpContentModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -206,7 +209,7 @@ HB_FUNC_STATIC(QHELPCONTENTMODEL_PARENT)
 // virtual int rowCount(const QModelIndex &parent = QModelIndex()) const
 HB_FUNC_STATIC(QHELPCONTENTMODEL_ROWCOUNT)
 {
-  QHelpContentModel *obj = qobject_cast<QHelpContentModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

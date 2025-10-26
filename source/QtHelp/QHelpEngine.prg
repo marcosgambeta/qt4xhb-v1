@@ -56,6 +56,8 @@ RETURN
 #include <QtHelp/QHelpIndexWidget>
 #include <QtHelp/QHelpSearchEngine>
 
+#define GET_PTR_FROM_SELF(p) QHelpEngine *p = qobject_cast<QHelpEngine *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QHelpEngine(const QString &collectionFile, QObject *parent = 0)
 HB_FUNC_STATIC(QHELPENGINE_NEW)
 {
@@ -69,7 +71,7 @@ HB_FUNC_STATIC(QHELPENGINE_NEW)
 
 HB_FUNC_STATIC(QHELPENGINE_DELETE)
 {
-  QHelpEngine *obj = qobject_cast<QHelpEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -87,7 +89,7 @@ HB_FUNC_STATIC(QHELPENGINE_DELETE)
 // QHelpContentModel *contentModel() const
 HB_FUNC_STATIC(QHELPENGINE_CONTENTMODEL)
 {
-  QHelpEngine *obj = qobject_cast<QHelpEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -106,7 +108,7 @@ HB_FUNC_STATIC(QHELPENGINE_CONTENTMODEL)
 // QHelpContentWidget *contentWidget()
 HB_FUNC_STATIC(QHELPENGINE_CONTENTWIDGET)
 {
-  QHelpEngine *obj = qobject_cast<QHelpEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -125,7 +127,7 @@ HB_FUNC_STATIC(QHELPENGINE_CONTENTWIDGET)
 // QHelpIndexModel *indexModel() const
 HB_FUNC_STATIC(QHELPENGINE_INDEXMODEL)
 {
-  QHelpEngine *obj = qobject_cast<QHelpEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -144,7 +146,7 @@ HB_FUNC_STATIC(QHELPENGINE_INDEXMODEL)
 // QHelpIndexWidget *indexWidget()
 HB_FUNC_STATIC(QHELPENGINE_INDEXWIDGET)
 {
-  QHelpEngine *obj = qobject_cast<QHelpEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -163,7 +165,7 @@ HB_FUNC_STATIC(QHELPENGINE_INDEXWIDGET)
 // QHelpSearchEngine *searchEngine()
 HB_FUNC_STATIC(QHELPENGINE_SEARCHENGINE)
 {
-  QHelpEngine *obj = qobject_cast<QHelpEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

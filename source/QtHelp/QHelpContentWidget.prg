@@ -42,10 +42,13 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QHelpContentWidget *p = qobject_cast<QHelpContentWidget *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QModelIndex indexOf(const QUrl &link)
 HB_FUNC_STATIC(QHELPCONTENTWIDGET_INDEXOF)
 {
-  QHelpContentWidget *obj = qobject_cast<QHelpContentWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
