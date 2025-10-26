@@ -46,6 +46,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QWebInspector *p = qobject_cast<QWebInspector *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QWebInspector(QWidget *parent = 0)
 HB_FUNC_STATIC(QWEBINSPECTOR_NEW)
 {
@@ -59,7 +61,7 @@ HB_FUNC_STATIC(QWEBINSPECTOR_NEW)
 
 HB_FUNC_STATIC(QWEBINSPECTOR_DELETE)
 {
-  QWebInspector *obj = qobject_cast<QWebInspector *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -77,7 +79,7 @@ HB_FUNC_STATIC(QWEBINSPECTOR_DELETE)
 // QWebPage *page() const
 HB_FUNC_STATIC(QWEBINSPECTOR_PAGE)
 {
-  QWebInspector *obj = qobject_cast<QWebInspector *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -96,7 +98,7 @@ HB_FUNC_STATIC(QWEBINSPECTOR_PAGE)
 // void setPage(QWebPage *page)
 HB_FUNC_STATIC(QWEBINSPECTOR_SETPAGE)
 {
-  QWebInspector *obj = qobject_cast<QWebInspector *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -116,7 +118,7 @@ HB_FUNC_STATIC(QWEBINSPECTOR_SETPAGE)
 // virtual bool event(QEvent *ev)
 HB_FUNC_STATIC(QWEBINSPECTOR_EVENT)
 {
-  QWebInspector *obj = qobject_cast<QWebInspector *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -134,7 +136,7 @@ HB_FUNC_STATIC(QWEBINSPECTOR_EVENT)
 // virtual QSize sizeHint() const
 HB_FUNC_STATIC(QWEBINSPECTOR_SIZEHINT)
 {
-  QWebInspector *obj = qobject_cast<QWebInspector *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

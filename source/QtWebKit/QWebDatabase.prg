@@ -58,6 +58,8 @@ RETURN
 
 #include <QtWebKit/QWebSecurityOrigin>
 
+#define GET_PTR_FROM_SELF(p) QWebDatabase *p = static_cast<QWebDatabase *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QWebDatabase(const QWebDatabase &other)
 HB_FUNC_STATIC(QWEBDATABASE_NEW)
 {
@@ -71,7 +73,7 @@ HB_FUNC_STATIC(QWEBDATABASE_NEW)
 
 HB_FUNC_STATIC(QWEBDATABASE_DELETE)
 {
-  QWebDatabase *obj = static_cast<QWebDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -87,7 +89,7 @@ HB_FUNC_STATIC(QWEBDATABASE_DELETE)
 // QString displayName() const
 HB_FUNC_STATIC(QWEBDATABASE_DISPLAYNAME)
 {
-  QWebDatabase *obj = static_cast<QWebDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -105,7 +107,7 @@ HB_FUNC_STATIC(QWEBDATABASE_DISPLAYNAME)
 // qint64 expectedSize() const
 HB_FUNC_STATIC(QWEBDATABASE_EXPECTEDSIZE)
 {
-  QWebDatabase *obj = static_cast<QWebDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -123,7 +125,7 @@ HB_FUNC_STATIC(QWEBDATABASE_EXPECTEDSIZE)
 // QString fileName() const
 HB_FUNC_STATIC(QWEBDATABASE_FILENAME)
 {
-  QWebDatabase *obj = static_cast<QWebDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -141,7 +143,7 @@ HB_FUNC_STATIC(QWEBDATABASE_FILENAME)
 // QString name() const
 HB_FUNC_STATIC(QWEBDATABASE_NAME)
 {
-  QWebDatabase *obj = static_cast<QWebDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -159,7 +161,7 @@ HB_FUNC_STATIC(QWEBDATABASE_NAME)
 // QWebSecurityOrigin origin() const
 HB_FUNC_STATIC(QWEBDATABASE_ORIGIN)
 {
-  QWebDatabase *obj = static_cast<QWebDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -178,7 +180,7 @@ HB_FUNC_STATIC(QWEBDATABASE_ORIGIN)
 // qint64 size() const
 HB_FUNC_STATIC(QWEBDATABASE_SIZE)
 {
-  QWebDatabase *obj = static_cast<QWebDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

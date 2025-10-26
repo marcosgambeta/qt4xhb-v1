@@ -63,10 +63,12 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QWebHistory *p = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // void back()
 HB_FUNC_STATIC(QWEBHISTORY_BACK)
 {
-  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -86,7 +88,7 @@ HB_FUNC_STATIC(QWEBHISTORY_BACK)
 // QWebHistoryItem backItem() const
 HB_FUNC_STATIC(QWEBHISTORY_BACKITEM)
 {
-  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -105,7 +107,7 @@ HB_FUNC_STATIC(QWEBHISTORY_BACKITEM)
 // QList<QWebHistoryItem> backItems(int maxItems) const
 HB_FUNC_STATIC(QWEBHISTORY_BACKITEMS)
 {
-  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -146,7 +148,7 @@ HB_FUNC_STATIC(QWEBHISTORY_BACKITEMS)
 // bool canGoBack() const
 HB_FUNC_STATIC(QWEBHISTORY_CANGOBACK)
 {
-  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -164,7 +166,7 @@ HB_FUNC_STATIC(QWEBHISTORY_CANGOBACK)
 // bool canGoForward() const
 HB_FUNC_STATIC(QWEBHISTORY_CANGOFORWARD)
 {
-  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -182,7 +184,7 @@ HB_FUNC_STATIC(QWEBHISTORY_CANGOFORWARD)
 // void clear()
 HB_FUNC_STATIC(QWEBHISTORY_CLEAR)
 {
-  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -202,7 +204,7 @@ HB_FUNC_STATIC(QWEBHISTORY_CLEAR)
 // int count() const
 HB_FUNC_STATIC(QWEBHISTORY_COUNT)
 {
-  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -220,7 +222,7 @@ HB_FUNC_STATIC(QWEBHISTORY_COUNT)
 // QWebHistoryItem currentItem() const
 HB_FUNC_STATIC(QWEBHISTORY_CURRENTITEM)
 {
-  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -239,7 +241,7 @@ HB_FUNC_STATIC(QWEBHISTORY_CURRENTITEM)
 // int currentItemIndex() const
 HB_FUNC_STATIC(QWEBHISTORY_CURRENTITEMINDEX)
 {
-  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -257,7 +259,7 @@ HB_FUNC_STATIC(QWEBHISTORY_CURRENTITEMINDEX)
 // void forward()
 HB_FUNC_STATIC(QWEBHISTORY_FORWARD)
 {
-  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -277,7 +279,7 @@ HB_FUNC_STATIC(QWEBHISTORY_FORWARD)
 // QWebHistoryItem forwardItem() const
 HB_FUNC_STATIC(QWEBHISTORY_FORWARDITEM)
 {
-  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -296,7 +298,7 @@ HB_FUNC_STATIC(QWEBHISTORY_FORWARDITEM)
 // QList<QWebHistoryItem> forwardItems(int maxItems) const
 HB_FUNC_STATIC(QWEBHISTORY_FORWARDITEMS)
 {
-  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -337,7 +339,7 @@ HB_FUNC_STATIC(QWEBHISTORY_FORWARDITEMS)
 // void goToItem(const QWebHistoryItem &item)
 HB_FUNC_STATIC(QWEBHISTORY_GOTOITEM)
 {
-  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -357,7 +359,7 @@ HB_FUNC_STATIC(QWEBHISTORY_GOTOITEM)
 // QWebHistoryItem itemAt(int i) const
 HB_FUNC_STATIC(QWEBHISTORY_ITEMAT)
 {
-  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -376,7 +378,7 @@ HB_FUNC_STATIC(QWEBHISTORY_ITEMAT)
 // QList<QWebHistoryItem> items() const
 HB_FUNC_STATIC(QWEBHISTORY_ITEMS)
 {
-  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -417,7 +419,7 @@ HB_FUNC_STATIC(QWEBHISTORY_ITEMS)
 // int maximumItemCount() const
 HB_FUNC_STATIC(QWEBHISTORY_MAXIMUMITEMCOUNT)
 {
-  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -435,7 +437,7 @@ HB_FUNC_STATIC(QWEBHISTORY_MAXIMUMITEMCOUNT)
 // void setMaximumItemCount(int count)
 HB_FUNC_STATIC(QWEBHISTORY_SETMAXIMUMITEMCOUNT)
 {
-  QWebHistory *obj = static_cast<QWebHistory *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

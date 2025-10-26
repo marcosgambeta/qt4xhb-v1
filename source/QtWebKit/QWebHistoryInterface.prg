@@ -43,9 +43,12 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QWebHistoryInterface *p = qobject_cast<QWebHistoryInterface *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QWEBHISTORYINTERFACE_DELETE)
 {
-  QWebHistoryInterface *obj = qobject_cast<QWebHistoryInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -63,7 +66,7 @@ HB_FUNC_STATIC(QWEBHISTORYINTERFACE_DELETE)
 // virtual void addHistoryEntry(const QString &url) = 0
 HB_FUNC_STATIC(QWEBHISTORYINTERFACE_ADDHISTORYENTRY)
 {
-  QWebHistoryInterface *obj = qobject_cast<QWebHistoryInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -83,7 +86,7 @@ HB_FUNC_STATIC(QWEBHISTORYINTERFACE_ADDHISTORYENTRY)
 // virtual bool historyContains(const QString &url) const = 0
 HB_FUNC_STATIC(QWEBHISTORYINTERFACE_HISTORYCONTAINS)
 {
-  QWebHistoryInterface *obj = qobject_cast<QWebHistoryInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

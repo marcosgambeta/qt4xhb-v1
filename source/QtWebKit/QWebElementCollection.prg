@@ -54,6 +54,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QWebElementCollection *p = static_cast<QWebElementCollection *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -75,7 +78,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_NEW)
 
 HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_DELETE)
 {
-  QWebElementCollection *obj = static_cast<QWebElementCollection *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -91,7 +94,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_DELETE)
 // void append(const QWebElementCollection &other)
 HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_APPEND)
 {
-  QWebElementCollection *obj = static_cast<QWebElementCollection *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -111,7 +114,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_APPEND)
 // QWebElement at(int i) const
 HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_AT)
 {
-  QWebElementCollection *obj = static_cast<QWebElementCollection *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -130,7 +133,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_AT)
 // int count() const
 HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_COUNT)
 {
-  QWebElementCollection *obj = static_cast<QWebElementCollection *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -148,7 +151,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_COUNT)
 // QWebElement first() const
 HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_FIRST)
 {
-  QWebElementCollection *obj = static_cast<QWebElementCollection *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -167,7 +170,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_FIRST)
 // QWebElement last() const
 HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_LAST)
 {
-  QWebElementCollection *obj = static_cast<QWebElementCollection *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -186,7 +189,7 @@ HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_LAST)
 // QList<QWebElement> toList() const
 HB_FUNC_STATIC(QWEBELEMENTCOLLECTION_TOLIST)
 {
-  QWebElementCollection *obj = static_cast<QWebElementCollection *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
