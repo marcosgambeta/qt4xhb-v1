@@ -82,6 +82,8 @@ RETURN
 
 #include <QtCore/QStringList>
 
+#define GET_PTR_FROM_SELF(p) QScriptEngine *p = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QSCRIPTENGINE_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -99,7 +101,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEW)
 
 HB_FUNC_STATIC(QSCRIPTENGINE_DELETE)
 {
-  QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -117,7 +119,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_DELETE)
 // void abortEvaluation(const QScriptValue &result = QScriptValue())
 HB_FUNC_STATIC(QSCRIPTENGINE_ABORTEVALUATION)
 {
-  QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -137,7 +139,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_ABORTEVALUATION)
 // QScriptEngineAgent *agent() const
 HB_FUNC_STATIC(QSCRIPTENGINE_AGENT)
 {
-  QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -156,7 +158,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_AGENT)
 // QStringList availableExtensions() const
 HB_FUNC_STATIC(QSCRIPTENGINE_AVAILABLEEXTENSIONS)
 {
-  QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -174,7 +176,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_AVAILABLEEXTENSIONS)
 // void clearExceptions()
 HB_FUNC_STATIC(QSCRIPTENGINE_CLEAREXCEPTIONS)
 {
-  QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -194,7 +196,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_CLEAREXCEPTIONS)
 // void collectGarbage()
 HB_FUNC_STATIC(QSCRIPTENGINE_COLLECTGARBAGE)
 {
-  QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -214,7 +216,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_COLLECTGARBAGE)
 // QScriptContext *currentContext() const
 HB_FUNC_STATIC(QSCRIPTENGINE_CURRENTCONTEXT)
 {
-  QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -233,7 +235,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_CURRENTCONTEXT)
 // QScriptValue defaultPrototype(int metaTypeId) const
 HB_FUNC_STATIC(QSCRIPTENGINE_DEFAULTPROTOTYPE)
 {
-  QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -253,7 +255,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_EVALUATE)
 {
   if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISNUMORNIL(3)) {
     // QScriptValue evaluate(const QString &program, const QString &fileName = QString(), int lineNumber = 1)
-    QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QScriptValue *ptr = new QScriptValue(obj->evaluate(PQSTRING(1), OPQSTRING(2, QString()), OPINT(3, 1)));
@@ -261,7 +263,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_EVALUATE)
     }
   } else if (ISNUMPAR(1) && ISQSCRIPTPROGRAM(1)) {
     // QScriptValue evaluate(const QScriptProgram &program)
-    QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QScriptValue *ptr = new QScriptValue(obj->evaluate(*PQSCRIPTPROGRAM(1)));
@@ -275,7 +277,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_EVALUATE)
 // QScriptValue globalObject() const
 HB_FUNC_STATIC(QSCRIPTENGINE_GLOBALOBJECT)
 {
-  QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -294,7 +296,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_GLOBALOBJECT)
 // bool hasUncaughtException() const
 HB_FUNC_STATIC(QSCRIPTENGINE_HASUNCAUGHTEXCEPTION)
 {
-  QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -312,7 +314,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_HASUNCAUGHTEXCEPTION)
 // QScriptValue importExtension(const QString &extension)
 HB_FUNC_STATIC(QSCRIPTENGINE_IMPORTEXTENSION)
 {
-  QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -331,7 +333,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_IMPORTEXTENSION)
 // QStringList importedExtensions() const
 HB_FUNC_STATIC(QSCRIPTENGINE_IMPORTEDEXTENSIONS)
 {
-  QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -349,7 +351,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_IMPORTEDEXTENSIONS)
 // void installTranslatorFunctions(const QScriptValue &object = QScriptValue())
 HB_FUNC_STATIC(QSCRIPTENGINE_INSTALLTRANSLATORFUNCTIONS)
 {
-  QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -370,7 +372,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_INSTALLTRANSLATORFUNCTIONS)
 // bool isEvaluating() const
 HB_FUNC_STATIC(QSCRIPTENGINE_ISEVALUATING)
 {
-  QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -388,7 +390,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_ISEVALUATING)
 // QScriptValue newArray(uint length = 0)
 HB_FUNC_STATIC(QSCRIPTENGINE_NEWARRAY)
 {
-  QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -408,7 +410,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWREGEXP)
 {
   if (ISNUMPAR(1) && ISQREGEXP(1)) {
     // QScriptValue newRegExp(const QRegExp &regexp)
-    QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QScriptValue *ptr = new QScriptValue(obj->newRegExp(*PQREGEXP(1)));
@@ -416,7 +418,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWREGEXP)
     }
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     // QScriptValue newRegExp(const QString &pattern, const QString &flags)
-    QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QScriptValue *ptr = new QScriptValue(obj->newRegExp(PQSTRING(1), PQSTRING(2)));
@@ -431,7 +433,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWVARIANT)
 {
   if (ISNUMPAR(1) && ISQVARIANT(1)) {
     // QScriptValue newVariant(const QVariant &value)
-    QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QScriptValue *ptr = new QScriptValue(obj->newVariant(*PQVARIANT(1)));
@@ -439,7 +441,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWVARIANT)
     }
   } else if (ISNUMPAR(2) && ISQSCRIPTVALUE(1) && ISQVARIANT(2)) {
     // QScriptValue newVariant(const QScriptValue &object, const QVariant &value)
-    QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QScriptValue *ptr = new QScriptValue(obj->newVariant(*PQSCRIPTVALUE(1), *PQVARIANT(2)));
@@ -453,7 +455,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NEWVARIANT)
 // QScriptValue nullValue()
 HB_FUNC_STATIC(QSCRIPTENGINE_NULLVALUE)
 {
-  QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -472,7 +474,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_NULLVALUE)
 // void popContext()
 HB_FUNC_STATIC(QSCRIPTENGINE_POPCONTEXT)
 {
-  QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -492,7 +494,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_POPCONTEXT)
 // int processEventsInterval() const
 HB_FUNC_STATIC(QSCRIPTENGINE_PROCESSEVENTSINTERVAL)
 {
-  QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -510,7 +512,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_PROCESSEVENTSINTERVAL)
 // QScriptContext *pushContext()
 HB_FUNC_STATIC(QSCRIPTENGINE_PUSHCONTEXT)
 {
-  QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -529,7 +531,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_PUSHCONTEXT)
 // void reportAdditionalMemoryCost(int size)
 HB_FUNC_STATIC(QSCRIPTENGINE_REPORTADDITIONALMEMORYCOST)
 {
-  QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -549,7 +551,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_REPORTADDITIONALMEMORYCOST)
 // void setAgent(QScriptEngineAgent *agent)
 HB_FUNC_STATIC(QSCRIPTENGINE_SETAGENT)
 {
-  QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -569,7 +571,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_SETAGENT)
 // void setDefaultPrototype(int metaTypeId, const QScriptValue &prototype)
 HB_FUNC_STATIC(QSCRIPTENGINE_SETDEFAULTPROTOTYPE)
 {
-  QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -589,7 +591,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_SETDEFAULTPROTOTYPE)
 // void setGlobalObject(const QScriptValue &object)
 HB_FUNC_STATIC(QSCRIPTENGINE_SETGLOBALOBJECT)
 {
-  QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -609,7 +611,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_SETGLOBALOBJECT)
 // void setProcessEventsInterval(int interval)
 HB_FUNC_STATIC(QSCRIPTENGINE_SETPROCESSEVENTSINTERVAL)
 {
-  QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -629,7 +631,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_SETPROCESSEVENTSINTERVAL)
 // QScriptValue toObject(const QScriptValue &value)
 HB_FUNC_STATIC(QSCRIPTENGINE_TOOBJECT)
 {
-  QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -648,7 +650,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_TOOBJECT)
 // QScriptString toStringHandle(const QString &str)
 HB_FUNC_STATIC(QSCRIPTENGINE_TOSTRINGHANDLE)
 {
-  QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -667,7 +669,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_TOSTRINGHANDLE)
 // QScriptValue uncaughtException() const
 HB_FUNC_STATIC(QSCRIPTENGINE_UNCAUGHTEXCEPTION)
 {
-  QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -686,7 +688,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_UNCAUGHTEXCEPTION)
 // QStringList uncaughtExceptionBacktrace() const
 HB_FUNC_STATIC(QSCRIPTENGINE_UNCAUGHTEXCEPTIONBACKTRACE)
 {
-  QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -704,7 +706,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_UNCAUGHTEXCEPTIONBACKTRACE)
 // int uncaughtExceptionLineNumber() const
 HB_FUNC_STATIC(QSCRIPTENGINE_UNCAUGHTEXCEPTIONLINENUMBER)
 {
-  QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -722,7 +724,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_UNCAUGHTEXCEPTIONLINENUMBER)
 // QScriptValue undefinedValue()
 HB_FUNC_STATIC(QSCRIPTENGINE_UNDEFINEDVALUE)
 {
-  QScriptEngine *obj = qobject_cast<QScriptEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

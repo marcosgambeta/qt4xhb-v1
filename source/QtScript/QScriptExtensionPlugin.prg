@@ -45,9 +45,12 @@ RETURN
 
 #include <QtScript/QScriptValue>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QScriptExtensionPlugin *p = qobject_cast<QScriptExtensionPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QSCRIPTEXTENSIONPLUGIN_DELETE)
 {
-  QScriptExtensionPlugin *obj = qobject_cast<QScriptExtensionPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -65,7 +68,7 @@ HB_FUNC_STATIC(QSCRIPTEXTENSIONPLUGIN_DELETE)
 // QScriptValue setupPackage(const QString &key, QScriptEngine *engine) const
 HB_FUNC_STATIC(QSCRIPTEXTENSIONPLUGIN_SETUPPACKAGE)
 {
-  QScriptExtensionPlugin *obj = qobject_cast<QScriptExtensionPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -84,7 +87,7 @@ HB_FUNC_STATIC(QSCRIPTEXTENSIONPLUGIN_SETUPPACKAGE)
 // virtual void initialize(const QString &key, QScriptEngine *engine) = 0
 HB_FUNC_STATIC(QSCRIPTEXTENSIONPLUGIN_INITIALIZE)
 {
-  QScriptExtensionPlugin *obj = qobject_cast<QScriptExtensionPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -104,7 +107,7 @@ HB_FUNC_STATIC(QSCRIPTEXTENSIONPLUGIN_INITIALIZE)
 // virtual QStringList keys() const = 0
 HB_FUNC_STATIC(QSCRIPTEXTENSIONPLUGIN_KEYS)
 {
-  QScriptExtensionPlugin *obj = qobject_cast<QScriptExtensionPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

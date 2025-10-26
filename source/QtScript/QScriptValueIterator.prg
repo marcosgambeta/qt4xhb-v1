@@ -63,6 +63,9 @@ RETURN
 
 #include <QtScript/QScriptString>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QScriptValueIterator *p = static_cast<QScriptValueIterator *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QScriptValueIterator(const QScriptValue &object)
 HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_NEW)
 {
@@ -76,7 +79,7 @@ HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_NEW)
 
 HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_DELETE)
 {
-  QScriptValueIterator *obj = static_cast<QScriptValueIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -92,7 +95,7 @@ HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_DELETE)
 // QScriptValue::PropertyFlags flags() const
 HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_FLAGS)
 {
-  QScriptValueIterator *obj = static_cast<QScriptValueIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -110,7 +113,7 @@ HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_FLAGS)
 // bool hasNext() const
 HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_HASNEXT)
 {
-  QScriptValueIterator *obj = static_cast<QScriptValueIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -128,7 +131,7 @@ HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_HASNEXT)
 // bool hasPrevious() const
 HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_HASPREVIOUS)
 {
-  QScriptValueIterator *obj = static_cast<QScriptValueIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -146,7 +149,7 @@ HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_HASPREVIOUS)
 // QString name() const
 HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_NAME)
 {
-  QScriptValueIterator *obj = static_cast<QScriptValueIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -164,7 +167,7 @@ HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_NAME)
 // void next()
 HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_NEXT)
 {
-  QScriptValueIterator *obj = static_cast<QScriptValueIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -184,7 +187,7 @@ HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_NEXT)
 // void previous()
 HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_PREVIOUS)
 {
-  QScriptValueIterator *obj = static_cast<QScriptValueIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -204,7 +207,7 @@ HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_PREVIOUS)
 // void remove()
 HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_REMOVE)
 {
-  QScriptValueIterator *obj = static_cast<QScriptValueIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -224,7 +227,7 @@ HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_REMOVE)
 // QScriptString scriptName() const
 HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_SCRIPTNAME)
 {
-  QScriptValueIterator *obj = static_cast<QScriptValueIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -243,7 +246,7 @@ HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_SCRIPTNAME)
 // void setValue(const QScriptValue &value)
 HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_SETVALUE)
 {
-  QScriptValueIterator *obj = static_cast<QScriptValueIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -263,7 +266,7 @@ HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_SETVALUE)
 // void toBack()
 HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_TOBACK)
 {
-  QScriptValueIterator *obj = static_cast<QScriptValueIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -283,7 +286,7 @@ HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_TOBACK)
 // void toFront()
 HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_TOFRONT)
 {
-  QScriptValueIterator *obj = static_cast<QScriptValueIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -303,7 +306,7 @@ HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_TOFRONT)
 // QScriptValue value() const
 HB_FUNC_STATIC(QSCRIPTVALUEITERATOR_VALUE)
 {
-  QScriptValueIterator *obj = static_cast<QScriptValueIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -67,9 +67,11 @@ RETURN
 #include <QtCore/QStringList>
 #include <QtScript/QScriptEngine>
 
+#define GET_PTR_FROM_SELF(p) QScriptContext *p = static_cast<QScriptContext *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSCRIPTCONTEXT_DELETE)
 {
-  QScriptContext *obj = static_cast<QScriptContext *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -85,7 +87,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_DELETE)
 // QScriptValue activationObject() const
 HB_FUNC_STATIC(QSCRIPTCONTEXT_ACTIVATIONOBJECT)
 {
-  QScriptContext *obj = static_cast<QScriptContext *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -104,7 +106,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_ACTIVATIONOBJECT)
 // QScriptValue argument(int index) const
 HB_FUNC_STATIC(QSCRIPTCONTEXT_ARGUMENT)
 {
-  QScriptContext *obj = static_cast<QScriptContext *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -123,7 +125,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_ARGUMENT)
 // int argumentCount() const
 HB_FUNC_STATIC(QSCRIPTCONTEXT_ARGUMENTCOUNT)
 {
-  QScriptContext *obj = static_cast<QScriptContext *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -141,7 +143,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_ARGUMENTCOUNT)
 // QScriptValue argumentsObject() const
 HB_FUNC_STATIC(QSCRIPTCONTEXT_ARGUMENTSOBJECT)
 {
-  QScriptContext *obj = static_cast<QScriptContext *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -160,7 +162,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_ARGUMENTSOBJECT)
 // QStringList backtrace() const
 HB_FUNC_STATIC(QSCRIPTCONTEXT_BACKTRACE)
 {
-  QScriptContext *obj = static_cast<QScriptContext *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -178,7 +180,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_BACKTRACE)
 // QScriptValue callee() const
 HB_FUNC_STATIC(QSCRIPTCONTEXT_CALLEE)
 {
-  QScriptContext *obj = static_cast<QScriptContext *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -197,7 +199,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_CALLEE)
 // QScriptEngine *engine() const
 HB_FUNC_STATIC(QSCRIPTCONTEXT_ENGINE)
 {
-  QScriptContext *obj = static_cast<QScriptContext *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -216,7 +218,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_ENGINE)
 // bool isCalledAsConstructor() const
 HB_FUNC_STATIC(QSCRIPTCONTEXT_ISCALLEDASCONSTRUCTOR)
 {
-  QScriptContext *obj = static_cast<QScriptContext *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -234,7 +236,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_ISCALLEDASCONSTRUCTOR)
 // QScriptContext *parentContext() const
 HB_FUNC_STATIC(QSCRIPTCONTEXT_PARENTCONTEXT)
 {
-  QScriptContext *obj = static_cast<QScriptContext *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -253,7 +255,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_PARENTCONTEXT)
 // void setActivationObject(const QScriptValue &activation)
 HB_FUNC_STATIC(QSCRIPTCONTEXT_SETACTIVATIONOBJECT)
 {
-  QScriptContext *obj = static_cast<QScriptContext *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -273,7 +275,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_SETACTIVATIONOBJECT)
 // void setThisObject(const QScriptValue &thisObject)
 HB_FUNC_STATIC(QSCRIPTCONTEXT_SETTHISOBJECT)
 {
-  QScriptContext *obj = static_cast<QScriptContext *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -293,7 +295,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_SETTHISOBJECT)
 // QScriptContext::ExecutionState state() const
 HB_FUNC_STATIC(QSCRIPTCONTEXT_STATE)
 {
-  QScriptContext *obj = static_cast<QScriptContext *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -311,7 +313,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_STATE)
 // QScriptValue thisObject() const
 HB_FUNC_STATIC(QSCRIPTCONTEXT_THISOBJECT)
 {
-  QScriptContext *obj = static_cast<QScriptContext *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -331,7 +333,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_THROWERROR)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
     // QScriptValue throwError(QScriptContext::Error error, const QString &text)
-    QScriptContext *obj = static_cast<QScriptContext *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QScriptValue *ptr = new QScriptValue(obj->throwError((QScriptContext::Error)hb_parni(1), PQSTRING(2)));
@@ -339,7 +341,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_THROWERROR)
     }
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // QScriptValue throwError(const QString &text)
-    QScriptContext *obj = static_cast<QScriptContext *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QScriptValue *ptr = new QScriptValue(obj->throwError(PQSTRING(1)));
@@ -353,7 +355,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_THROWERROR)
 // QScriptValue throwValue(const QScriptValue &value)
 HB_FUNC_STATIC(QSCRIPTCONTEXT_THROWVALUE)
 {
-  QScriptContext *obj = static_cast<QScriptContext *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -372,7 +374,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_THROWVALUE)
 // QString toString() const
 HB_FUNC_STATIC(QSCRIPTCONTEXT_TOSTRING)
 {
-  QScriptContext *obj = static_cast<QScriptContext *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

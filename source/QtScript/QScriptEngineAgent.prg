@@ -63,6 +63,9 @@ RETURN
 
 #include <QtScript/QScriptEngine>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QScriptEngineAgent *p = static_cast<QScriptEngineAgent *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QScriptEngineAgent(QScriptEngine *engine)
 HB_FUNC_STATIC(QSCRIPTENGINEAGENT_NEW)
 {
@@ -76,7 +79,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_NEW)
 
 HB_FUNC_STATIC(QSCRIPTENGINEAGENT_DELETE)
 {
-  QScriptEngineAgent *obj = static_cast<QScriptEngineAgent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -92,7 +95,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_DELETE)
 // virtual void contextPop()
 HB_FUNC_STATIC(QSCRIPTENGINEAGENT_CONTEXTPOP)
 {
-  QScriptEngineAgent *obj = static_cast<QScriptEngineAgent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -112,7 +115,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_CONTEXTPOP)
 // virtual void contextPush()
 HB_FUNC_STATIC(QSCRIPTENGINEAGENT_CONTEXTPUSH)
 {
-  QScriptEngineAgent *obj = static_cast<QScriptEngineAgent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -132,7 +135,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_CONTEXTPUSH)
 // QScriptEngine *engine() const
 HB_FUNC_STATIC(QSCRIPTENGINEAGENT_ENGINE)
 {
-  QScriptEngineAgent *obj = static_cast<QScriptEngineAgent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -151,7 +154,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_ENGINE)
 // virtual void exceptionCatch(qint64 scriptId, const QScriptValue &exception)
 HB_FUNC_STATIC(QSCRIPTENGINEAGENT_EXCEPTIONCATCH)
 {
-  QScriptEngineAgent *obj = static_cast<QScriptEngineAgent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -171,7 +174,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_EXCEPTIONCATCH)
 // virtual void exceptionThrow(qint64 scriptId, const QScriptValue &exception, bool hasHandler)
 HB_FUNC_STATIC(QSCRIPTENGINEAGENT_EXCEPTIONTHROW)
 {
-  QScriptEngineAgent *obj = static_cast<QScriptEngineAgent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -191,7 +194,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_EXCEPTIONTHROW)
 // virtual QVariant extension(QScriptEngineAgent::Extension extension, const QVariant &argument = QVariant())
 HB_FUNC_STATIC(QSCRIPTENGINEAGENT_EXTENSION)
 {
-  QScriptEngineAgent *obj = static_cast<QScriptEngineAgent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -212,7 +215,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_EXTENSION)
 // virtual void functionEntry(qint64 scriptId)
 HB_FUNC_STATIC(QSCRIPTENGINEAGENT_FUNCTIONENTRY)
 {
-  QScriptEngineAgent *obj = static_cast<QScriptEngineAgent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -232,7 +235,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_FUNCTIONENTRY)
 // virtual void functionExit(qint64 scriptId, const QScriptValue &returnValue)
 HB_FUNC_STATIC(QSCRIPTENGINEAGENT_FUNCTIONEXIT)
 {
-  QScriptEngineAgent *obj = static_cast<QScriptEngineAgent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -252,7 +255,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_FUNCTIONEXIT)
 // virtual void positionChange(qint64 scriptId, int lineNumber, int columnNumber)
 HB_FUNC_STATIC(QSCRIPTENGINEAGENT_POSITIONCHANGE)
 {
-  QScriptEngineAgent *obj = static_cast<QScriptEngineAgent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -272,7 +275,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_POSITIONCHANGE)
 // virtual void scriptLoad(qint64 id, const QString &program, const QString &fileName, int baseLineNumber)
 HB_FUNC_STATIC(QSCRIPTENGINEAGENT_SCRIPTLOAD)
 {
-  QScriptEngineAgent *obj = static_cast<QScriptEngineAgent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -292,7 +295,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_SCRIPTLOAD)
 // virtual void scriptUnload(qint64 id)
 HB_FUNC_STATIC(QSCRIPTENGINEAGENT_SCRIPTUNLOAD)
 {
-  QScriptEngineAgent *obj = static_cast<QScriptEngineAgent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -312,7 +315,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEAGENT_SCRIPTUNLOAD)
 // virtual bool supportsExtension(QScriptEngineAgent::Extension extension) const
 HB_FUNC_STATIC(QSCRIPTENGINEAGENT_SUPPORTSEXTENSION)
 {
-  QScriptEngineAgent *obj = static_cast<QScriptEngineAgent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

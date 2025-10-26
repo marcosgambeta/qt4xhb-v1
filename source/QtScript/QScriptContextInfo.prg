@@ -57,6 +57,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QScriptContextInfo *p = static_cast<QScriptContextInfo *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_NEW)
 {
   if (ISNUMPAR(1) && ISQSCRIPTCONTEXT(1)) {
@@ -78,7 +81,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_NEW)
 
 HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_DELETE)
 {
-  QScriptContextInfo *obj = static_cast<QScriptContextInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -94,7 +97,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_DELETE)
 // QString fileName() const
 HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FILENAME)
 {
-  QScriptContextInfo *obj = static_cast<QScriptContextInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -112,7 +115,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FILENAME)
 // int functionEndLineNumber() const
 HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONENDLINENUMBER)
 {
-  QScriptContextInfo *obj = static_cast<QScriptContextInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -130,7 +133,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONENDLINENUMBER)
 // int functionMetaIndex() const
 HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONMETAINDEX)
 {
-  QScriptContextInfo *obj = static_cast<QScriptContextInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -148,7 +151,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONMETAINDEX)
 // QString functionName() const
 HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONNAME)
 {
-  QScriptContextInfo *obj = static_cast<QScriptContextInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -166,7 +169,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONNAME)
 // QStringList functionParameterNames() const
 HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONPARAMETERNAMES)
 {
-  QScriptContextInfo *obj = static_cast<QScriptContextInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -184,7 +187,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONPARAMETERNAMES)
 // int functionStartLineNumber() const
 HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONSTARTLINENUMBER)
 {
-  QScriptContextInfo *obj = static_cast<QScriptContextInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -202,7 +205,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONSTARTLINENUMBER)
 // QScriptContextInfo::FunctionType functionType() const
 HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONTYPE)
 {
-  QScriptContextInfo *obj = static_cast<QScriptContextInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -220,7 +223,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_FUNCTIONTYPE)
 // bool isNull() const
 HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_ISNULL)
 {
-  QScriptContextInfo *obj = static_cast<QScriptContextInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -238,7 +241,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_ISNULL)
 // int lineNumber() const
 HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_LINENUMBER)
 {
-  QScriptContextInfo *obj = static_cast<QScriptContextInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -256,7 +259,7 @@ HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_LINENUMBER)
 // qint64 scriptId() const
 HB_FUNC_STATIC(QSCRIPTCONTEXTINFO_SCRIPTID)
 {
-  QScriptContextInfo *obj = static_cast<QScriptContextInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -57,9 +57,11 @@ RETURN
 #include <QtScript/QScriptValue>
 #include <QtScript/QScriptEngine>
 
+#define GET_PTR_FROM_SELF(p) QScriptable *p = static_cast<QScriptable *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSCRIPTABLE_DELETE)
 {
-  QScriptable *obj = static_cast<QScriptable *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -75,7 +77,7 @@ HB_FUNC_STATIC(QSCRIPTABLE_DELETE)
 // QScriptValue argument(int index) const
 HB_FUNC_STATIC(QSCRIPTABLE_ARGUMENT)
 {
-  QScriptable *obj = static_cast<QScriptable *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -94,7 +96,7 @@ HB_FUNC_STATIC(QSCRIPTABLE_ARGUMENT)
 // int argumentCount() const
 HB_FUNC_STATIC(QSCRIPTABLE_ARGUMENTCOUNT)
 {
-  QScriptable *obj = static_cast<QScriptable *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -112,7 +114,7 @@ HB_FUNC_STATIC(QSCRIPTABLE_ARGUMENTCOUNT)
 // QScriptContext *context() const
 HB_FUNC_STATIC(QSCRIPTABLE_CONTEXT)
 {
-  QScriptable *obj = static_cast<QScriptable *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -131,7 +133,7 @@ HB_FUNC_STATIC(QSCRIPTABLE_CONTEXT)
 // QScriptEngine *engine() const
 HB_FUNC_STATIC(QSCRIPTABLE_ENGINE)
 {
-  QScriptable *obj = static_cast<QScriptable *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -150,7 +152,7 @@ HB_FUNC_STATIC(QSCRIPTABLE_ENGINE)
 // QScriptValue thisObject() const
 HB_FUNC_STATIC(QSCRIPTABLE_THISOBJECT)
 {
-  QScriptable *obj = static_cast<QScriptable *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

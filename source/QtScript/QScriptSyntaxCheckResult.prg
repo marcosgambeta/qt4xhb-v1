@@ -51,6 +51,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QScriptSyntaxCheckResult *p = static_cast<QScriptSyntaxCheckResult *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QScriptSyntaxCheckResult(const QScriptSyntaxCheckResult &other)
 HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_NEW)
 {
@@ -64,7 +67,7 @@ HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_NEW)
 
 HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_DELETE)
 {
-  QScriptSyntaxCheckResult *obj = static_cast<QScriptSyntaxCheckResult *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -80,7 +83,7 @@ HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_DELETE)
 // int errorColumnNumber() const
 HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_ERRORCOLUMNNUMBER)
 {
-  QScriptSyntaxCheckResult *obj = static_cast<QScriptSyntaxCheckResult *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -98,7 +101,7 @@ HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_ERRORCOLUMNNUMBER)
 // int errorLineNumber() const
 HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_ERRORLINENUMBER)
 {
-  QScriptSyntaxCheckResult *obj = static_cast<QScriptSyntaxCheckResult *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -116,7 +119,7 @@ HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_ERRORLINENUMBER)
 // QString errorMessage() const
 HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_ERRORMESSAGE)
 {
-  QScriptSyntaxCheckResult *obj = static_cast<QScriptSyntaxCheckResult *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -134,7 +137,7 @@ HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_ERRORMESSAGE)
 // QScriptSyntaxCheckResult::State state() const
 HB_FUNC_STATIC(QSCRIPTSYNTAXCHECKRESULT_STATE)
 {
-  QScriptSyntaxCheckResult *obj = static_cast<QScriptSyntaxCheckResult *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
