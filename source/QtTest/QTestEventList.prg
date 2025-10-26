@@ -65,6 +65,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QTestEventList *p = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QTESTEVENTLIST_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -82,7 +84,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_NEW)
 
 HB_FUNC_STATIC(QTESTEVENTLIST_DELETE)
 {
-  QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -98,7 +100,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_DELETE)
 // void addDelay(int msecs)
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDDELAY)
 {
-  QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -118,7 +120,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDDELAY)
 // void addKeyClick(Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1)
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYCLICK1)
 {
-  QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -140,7 +142,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYCLICK1)
 // void addKeyClick(char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1)
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYCLICK2)
 {
-  QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -173,7 +175,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYCLICK)
 // void addKeyClicks(const QString &keys, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1)
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYCLICKS)
 {
-  QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -195,7 +197,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYCLICKS)
 // void addKeyPress(Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1)
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYPRESS1)
 {
-  QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -217,7 +219,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYPRESS1)
 // void addKeyPress(char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1)
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYPRESS2)
 {
-  QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -250,7 +252,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYPRESS)
 // void addKeyRelease(Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1)
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYRELEASE1)
 {
-  QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -272,7 +274,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYRELEASE1)
 // void addKeyRelease(char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1)
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYRELEASE2)
 {
-  QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -306,7 +308,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYRELEASE)
 // -1)
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSECLICK)
 {
-  QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -329,7 +331,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSECLICK)
 // -1)
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSEDCLICK)
 {
-  QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -351,7 +353,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSEDCLICK)
 // void addMouseMove(QPoint pos = QPoint(), int delay = -1)
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSEMOVE)
 {
-  QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -372,7 +374,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSEMOVE)
 // -1)
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSEPRESS)
 {
-  QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -395,7 +397,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSEPRESS)
 // -1)
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSERELEASE)
 {
-  QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -417,7 +419,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSERELEASE)
 // void clear()
 HB_FUNC_STATIC(QTESTEVENTLIST_CLEAR)
 {
-  QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -437,7 +439,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_CLEAR)
 // void simulate(QWidget *w)
 HB_FUNC_STATIC(QTESTEVENTLIST_SIMULATE)
 {
-  QTestEventList *obj = static_cast<QTestEventList *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
