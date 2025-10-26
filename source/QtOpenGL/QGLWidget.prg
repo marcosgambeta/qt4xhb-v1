@@ -69,6 +69,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QGLWidget *p = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QGLWIDGET_NEW)
 {
   if (ISBETWEEN(0, 3) && ISQWIDGETORNIL(1) && (ISQGLWIDGET(2) || HB_ISNIL(2)) && ISNUMORNIL(3)) {
@@ -95,7 +97,7 @@ HB_FUNC_STATIC(QGLWIDGET_NEW)
 
 HB_FUNC_STATIC(QGLWIDGET_DELETE)
 {
-  QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -114,35 +116,35 @@ HB_FUNC_STATIC(QGLWIDGET_BINDTEXTURE)
 {
   if (ISBETWEEN(1, 3) && ISQIMAGE(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     // GLuint bindTexture(const QImage &image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA)
-    QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RGLUINT(obj->bindTexture(*PQIMAGE(1), OPGLENUM(2, GL_TEXTURE_2D), OPGLINT(3, GL_RGBA)));
     }
   } else if (ISBETWEEN(1, 3) && ISQPIXMAP(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     // GLuint bindTexture(const QPixmap &pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA)
-    QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RGLUINT(obj->bindTexture(*PQPIXMAP(1), OPGLENUM(2, GL_TEXTURE_2D), OPGLINT(3, GL_RGBA)));
     }
   } else if (ISBETWEEN(3, 4) && ISQIMAGE(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4)) {
     // GLuint bindTexture(const QImage &image, GLenum target, GLint format, QGLContext::BindOptions options)
-    QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RGLUINT(obj->bindTexture(*PQIMAGE(1), PGLENUM(2), PGLINT(3), (QGLContext::BindOptions)hb_parni(4)));
     }
   } else if (ISBETWEEN(3, 4) && ISQPIXMAP(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4)) {
     // GLuint bindTexture(const QPixmap &pixmap, GLenum target, GLint format, QGLContext::BindOptions options)
-    QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RGLUINT(obj->bindTexture(*PQPIXMAP(1), PGLENUM(2), PGLINT(3), (QGLContext::BindOptions)hb_parni(4)));
     }
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // GLuint bindTexture(const QString &fileName)
-    QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RGLUINT(obj->bindTexture(PQSTRING(1)));
@@ -155,7 +157,7 @@ HB_FUNC_STATIC(QGLWIDGET_BINDTEXTURE)
 // const QGLColormap &colormap() const
 HB_FUNC_STATIC(QGLWIDGET_COLORMAP)
 {
-  QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -174,7 +176,7 @@ HB_FUNC_STATIC(QGLWIDGET_COLORMAP)
 // const QGLContext *context() const
 HB_FUNC_STATIC(QGLWIDGET_CONTEXT)
 {
-  QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -193,7 +195,7 @@ HB_FUNC_STATIC(QGLWIDGET_CONTEXT)
 // void deleteTexture(GLuint id)
 HB_FUNC_STATIC(QGLWIDGET_DELETETEXTURE)
 {
-  QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -213,7 +215,7 @@ HB_FUNC_STATIC(QGLWIDGET_DELETETEXTURE)
 // void doneCurrent()
 HB_FUNC_STATIC(QGLWIDGET_DONECURRENT)
 {
-  QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -233,7 +235,7 @@ HB_FUNC_STATIC(QGLWIDGET_DONECURRENT)
 // bool doubleBuffer() const
 HB_FUNC_STATIC(QGLWIDGET_DOUBLEBUFFER)
 {
-  QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -252,7 +254,7 @@ HB_FUNC_STATIC(QGLWIDGET_DRAWTEXTURE)
 {
   if (ISBETWEEN(2, 3) && ISQRECTF(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
     // void drawTexture(const QRectF &target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D)
-    QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->drawTexture(*PQRECTF(1), PGLUINT(2), OPGLENUM(3, GL_TEXTURE_2D));
@@ -261,7 +263,7 @@ HB_FUNC_STATIC(QGLWIDGET_DRAWTEXTURE)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISBETWEEN(2, 3) && ISQPOINTF(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
     // void drawTexture(const QPointF &point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D)
-    QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->drawTexture(*PQPOINTF(1), PGLUINT(2), OPGLENUM(3, GL_TEXTURE_2D));
@@ -276,7 +278,7 @@ HB_FUNC_STATIC(QGLWIDGET_DRAWTEXTURE)
 // QGLFormat format() const
 HB_FUNC_STATIC(QGLWIDGET_FORMAT)
 {
-  QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -295,7 +297,7 @@ HB_FUNC_STATIC(QGLWIDGET_FORMAT)
 // QImage grabFrameBuffer(bool withAlpha = false)
 HB_FUNC_STATIC(QGLWIDGET_GRABFRAMEBUFFER)
 {
-  QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -314,7 +316,7 @@ HB_FUNC_STATIC(QGLWIDGET_GRABFRAMEBUFFER)
 // bool isSharing() const
 HB_FUNC_STATIC(QGLWIDGET_ISSHARING)
 {
-  QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -332,7 +334,7 @@ HB_FUNC_STATIC(QGLWIDGET_ISSHARING)
 // bool isValid() const
 HB_FUNC_STATIC(QGLWIDGET_ISVALID)
 {
-  QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -350,7 +352,7 @@ HB_FUNC_STATIC(QGLWIDGET_ISVALID)
 // void makeCurrent()
 HB_FUNC_STATIC(QGLWIDGET_MAKECURRENT)
 {
-  QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -370,7 +372,7 @@ HB_FUNC_STATIC(QGLWIDGET_MAKECURRENT)
 // void makeOverlayCurrent()
 HB_FUNC_STATIC(QGLWIDGET_MAKEOVERLAYCURRENT)
 {
-  QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -390,7 +392,7 @@ HB_FUNC_STATIC(QGLWIDGET_MAKEOVERLAYCURRENT)
 // const QGLContext *overlayContext() const
 HB_FUNC_STATIC(QGLWIDGET_OVERLAYCONTEXT)
 {
-  QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -409,7 +411,7 @@ HB_FUNC_STATIC(QGLWIDGET_OVERLAYCONTEXT)
 // void qglClearColor(const QColor &c) const
 HB_FUNC_STATIC(QGLWIDGET_QGLCLEARCOLOR)
 {
-  QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -429,7 +431,7 @@ HB_FUNC_STATIC(QGLWIDGET_QGLCLEARCOLOR)
 // void qglColor(const QColor &c) const
 HB_FUNC_STATIC(QGLWIDGET_QGLCOLOR)
 {
-  QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -449,7 +451,7 @@ HB_FUNC_STATIC(QGLWIDGET_QGLCOLOR)
 // QPixmap renderPixmap(int w = 0, int h = 0, bool useContext = false)
 HB_FUNC_STATIC(QGLWIDGET_RENDERPIXMAP)
 {
-  QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -469,7 +471,7 @@ HB_FUNC_STATIC(QGLWIDGET_RENDERTEXT)
 {
   if (ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3) && (ISQFONT(4) || HB_ISNIL(4)) && ISNUMORNIL(5)) {
     // void renderText(int x, int y, const QString &str, const QFont &font = QFont(), int listBase = 2000)
-    QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->renderText(PINT(1), PINT(2), PQSTRING(3),
@@ -481,7 +483,7 @@ HB_FUNC_STATIC(QGLWIDGET_RENDERTEXT)
              (ISQFONT(5) || HB_ISNIL(5)) && ISNUMORNIL(6)) {
     // void renderText(double x, double y, double z, const QString &str, const QFont &font = QFont(), int listBase =
     // 2000)
-    QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->renderText(PDOUBLE(1), PDOUBLE(2), PDOUBLE(3), PQSTRING(4),
@@ -497,7 +499,7 @@ HB_FUNC_STATIC(QGLWIDGET_RENDERTEXT)
 // void setColormap(const QGLColormap &cmap)
 HB_FUNC_STATIC(QGLWIDGET_SETCOLORMAP)
 {
-  QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -517,7 +519,7 @@ HB_FUNC_STATIC(QGLWIDGET_SETCOLORMAP)
 // void setMouseTracking(bool enable)
 HB_FUNC_STATIC(QGLWIDGET_SETMOUSETRACKING)
 {
-  QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -537,7 +539,7 @@ HB_FUNC_STATIC(QGLWIDGET_SETMOUSETRACKING)
 // void swapBuffers()
 HB_FUNC_STATIC(QGLWIDGET_SWAPBUFFERS)
 {
-  QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -557,7 +559,7 @@ HB_FUNC_STATIC(QGLWIDGET_SWAPBUFFERS)
 // virtual void updateGL()
 HB_FUNC_STATIC(QGLWIDGET_UPDATEGL)
 {
-  QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -577,7 +579,7 @@ HB_FUNC_STATIC(QGLWIDGET_UPDATEGL)
 // virtual void updateOverlayGL()
 HB_FUNC_STATIC(QGLWIDGET_UPDATEOVERLAYGL)
 {
-  QGLWidget *obj = qobject_cast<QGLWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

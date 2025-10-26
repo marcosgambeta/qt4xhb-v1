@@ -55,6 +55,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QGLColormap *p = static_cast<QGLColormap *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QGLCOLORMAP_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -72,7 +74,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_NEW)
 
 HB_FUNC_STATIC(QGLCOLORMAP_DELETE)
 {
-  QGLColormap *obj = static_cast<QGLColormap *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -88,7 +90,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_DELETE)
 // QColor entryColor(int idx) const
 HB_FUNC_STATIC(QGLCOLORMAP_ENTRYCOLOR)
 {
-  QGLColormap *obj = static_cast<QGLColormap *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -107,7 +109,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_ENTRYCOLOR)
 // QRgb entryRgb(int idx) const
 HB_FUNC_STATIC(QGLCOLORMAP_ENTRYRGB)
 {
-  QGLColormap *obj = static_cast<QGLColormap *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -125,7 +127,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_ENTRYRGB)
 // int find(QRgb color) const
 HB_FUNC_STATIC(QGLCOLORMAP_FIND)
 {
-  QGLColormap *obj = static_cast<QGLColormap *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -143,7 +145,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_FIND)
 // int findNearest(QRgb color) const
 HB_FUNC_STATIC(QGLCOLORMAP_FINDNEAREST)
 {
-  QGLColormap *obj = static_cast<QGLColormap *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -161,7 +163,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_FINDNEAREST)
 // bool isEmpty() const
 HB_FUNC_STATIC(QGLCOLORMAP_ISEMPTY)
 {
-  QGLColormap *obj = static_cast<QGLColormap *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -180,7 +182,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_SETENTRY)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setEntry(int idx, QRgb color)
-    QGLColormap *obj = static_cast<QGLColormap *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setEntry(PINT(1), PQRGB(2));
@@ -189,7 +191,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_SETENTRY)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2) || HB_ISCHAR(2))) {
     // void setEntry(int idx, const QColor &color)
-    QGLColormap *obj = static_cast<QGLColormap *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setEntry(PINT(1), HB_ISOBJECT(2) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(2)) : QColor(hb_parc(2)));
@@ -204,7 +206,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_SETENTRY)
 // int size() const
 HB_FUNC_STATIC(QGLCOLORMAP_SIZE)
 {
-  QGLColormap *obj = static_cast<QGLColormap *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

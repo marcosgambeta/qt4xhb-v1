@@ -52,6 +52,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QGLShader *p = qobject_cast<QGLShader *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QGLSHADER_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQOBJECTORNIL(2)) {
@@ -69,7 +71,7 @@ HB_FUNC_STATIC(QGLSHADER_NEW)
 
 HB_FUNC_STATIC(QGLSHADER_DELETE)
 {
-  QGLShader *obj = qobject_cast<QGLShader *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -87,7 +89,7 @@ HB_FUNC_STATIC(QGLSHADER_DELETE)
 // bool compileSourceCode(const char *source)
 HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE1)
 {
-  QGLShader *obj = qobject_cast<QGLShader *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -105,7 +107,7 @@ HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE1)
 // bool compileSourceCode(const QByteArray &source)
 HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE2)
 {
-  QGLShader *obj = qobject_cast<QGLShader *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -123,7 +125,7 @@ HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE2)
 // bool compileSourceCode(const QString &source)
 HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE3)
 {
-  QGLShader *obj = qobject_cast<QGLShader *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -154,7 +156,7 @@ HB_FUNC_STATIC(QGLSHADER_COMPILESOURCECODE)
 // bool compileSourceFile(const QString &fileName)
 HB_FUNC_STATIC(QGLSHADER_COMPILESOURCEFILE)
 {
-  QGLShader *obj = qobject_cast<QGLShader *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -172,7 +174,7 @@ HB_FUNC_STATIC(QGLSHADER_COMPILESOURCEFILE)
 // bool isCompiled() const
 HB_FUNC_STATIC(QGLSHADER_ISCOMPILED)
 {
-  QGLShader *obj = qobject_cast<QGLShader *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -190,7 +192,7 @@ HB_FUNC_STATIC(QGLSHADER_ISCOMPILED)
 // QString log() const
 HB_FUNC_STATIC(QGLSHADER_LOG)
 {
-  QGLShader *obj = qobject_cast<QGLShader *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -208,7 +210,7 @@ HB_FUNC_STATIC(QGLSHADER_LOG)
 // GLuint shaderId() const
 HB_FUNC_STATIC(QGLSHADER_SHADERID)
 {
-  QGLShader *obj = qobject_cast<QGLShader *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -226,7 +228,7 @@ HB_FUNC_STATIC(QGLSHADER_SHADERID)
 // QGLShader::ShaderType shaderType() const
 HB_FUNC_STATIC(QGLSHADER_SHADERTYPE)
 {
-  QGLShader *obj = qobject_cast<QGLShader *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -244,7 +246,7 @@ HB_FUNC_STATIC(QGLSHADER_SHADERTYPE)
 // QByteArray sourceCode() const
 HB_FUNC_STATIC(QGLSHADER_SOURCECODE)
 {
-  QGLShader *obj = qobject_cast<QGLShader *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

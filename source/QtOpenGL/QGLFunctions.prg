@@ -105,6 +105,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QGLFunctions *p = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QGLFUNCTIONS_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -122,7 +124,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_NEW)
 
 HB_FUNC_STATIC(QGLFUNCTIONS_DELETE)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -138,7 +140,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_DELETE)
 // void glActiveTexture(GLenum texture)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLACTIVETEXTURE)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -158,7 +160,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLACTIVETEXTURE)
 // void glAttachShader(GLuint program, GLuint shader)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLATTACHSHADER)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -178,7 +180,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLATTACHSHADER)
 // void glBindAttribLocation(GLuint program, GLuint index, const char *name)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLBINDATTRIBLOCATION)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -198,7 +200,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBINDATTRIBLOCATION)
 // void glBindBuffer(GLenum target, GLuint buffer)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLBINDBUFFER)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -218,7 +220,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBINDBUFFER)
 // void glBindFramebuffer(GLenum target, GLuint framebuffer)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLBINDFRAMEBUFFER)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -238,7 +240,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBINDFRAMEBUFFER)
 // void glBindRenderbuffer(GLenum target, GLuint renderbuffer)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLBINDRENDERBUFFER)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -258,7 +260,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBINDRENDERBUFFER)
 // void glBlendColor(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLBLENDCOLOR)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -278,7 +280,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBLENDCOLOR)
 // void glBlendEquation(GLenum mode)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLBLENDEQUATION)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -298,7 +300,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBLENDEQUATION)
 // void glBlendEquationSeparate(GLenum modeRGB, GLenum modeAlpha)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLBLENDEQUATIONSEPARATE)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -318,7 +320,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBLENDEQUATIONSEPARATE)
 // void glBlendFuncSeparate(GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLBLENDFUNCSEPARATE)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -338,7 +340,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLBLENDFUNCSEPARATE)
 // GLenum glCheckFramebufferStatus(GLenum target)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLCHECKFRAMEBUFFERSTATUS)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -356,7 +358,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLCHECKFRAMEBUFFERSTATUS)
 // void glClearDepthf(GLclampf depth)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLCLEARDEPTHF)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -376,7 +378,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLCLEARDEPTHF)
 // void glCompileShader(GLuint shader)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLCOMPILESHADER)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -397,7 +399,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLCOMPILESHADER)
 // border, GLsizei imageSize, const void *data)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLCOMPRESSEDTEXIMAGE2D)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -420,7 +422,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLCOMPRESSEDTEXIMAGE2D)
 // height, GLenum format, GLsizei imageSize, const void *data)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLCOMPRESSEDTEXSUBIMAGE2D)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -442,7 +444,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLCOMPRESSEDTEXSUBIMAGE2D)
 // GLuint glCreateProgram()
 HB_FUNC_STATIC(QGLFUNCTIONS_GLCREATEPROGRAM)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -460,7 +462,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLCREATEPROGRAM)
 // GLuint glCreateShader(GLenum type)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLCREATESHADER)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -478,7 +480,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLCREATESHADER)
 // void glDeleteProgram(GLuint program)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLDELETEPROGRAM)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -498,7 +500,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLDELETEPROGRAM)
 // void glDeleteShader(GLuint shader)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLDELETESHADER)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -518,7 +520,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLDELETESHADER)
 // void glDepthRangef(GLclampf zNear, GLclampf zFar)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLDEPTHRANGEF)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -538,7 +540,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLDEPTHRANGEF)
 // void glDetachShader(GLuint program, GLuint shader)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLDETACHSHADER)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -558,7 +560,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLDETACHSHADER)
 // void glDisableVertexAttribArray(GLuint index)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLDISABLEVERTEXATTRIBARRAY)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -578,7 +580,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLDISABLEVERTEXATTRIBARRAY)
 // void glEnableVertexAttribArray(GLuint index)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLENABLEVERTEXATTRIBARRAY)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -598,7 +600,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLENABLEVERTEXATTRIBARRAY)
 // void glFramebufferRenderbuffer(GLenum target, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLFRAMEBUFFERRENDERBUFFER)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -618,7 +620,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLFRAMEBUFFERRENDERBUFFER)
 // void glFramebufferTexture2D(GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLFRAMEBUFFERTEXTURE2D)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -638,7 +640,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLFRAMEBUFFERTEXTURE2D)
 // void glGenerateMipmap(GLenum target)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLGENERATEMIPMAP)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -658,7 +660,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLGENERATEMIPMAP)
 // int glGetAttribLocation(GLuint program, const char *name)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLGETATTRIBLOCATION)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -676,7 +678,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLGETATTRIBLOCATION)
 // int glGetUniformLocation(GLuint program, const char *name)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLGETUNIFORMLOCATION)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -694,7 +696,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLGETUNIFORMLOCATION)
 // GLboolean glIsBuffer(GLuint buffer)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLISBUFFER)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -712,7 +714,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLISBUFFER)
 // GLboolean glIsFramebuffer(GLuint framebuffer)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLISFRAMEBUFFER)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -730,7 +732,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLISFRAMEBUFFER)
 // GLboolean glIsProgram(GLuint program)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLISPROGRAM)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -748,7 +750,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLISPROGRAM)
 // GLboolean glIsRenderbuffer(GLuint renderbuffer)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLISRENDERBUFFER)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -766,7 +768,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLISRENDERBUFFER)
 // GLboolean glIsShader(GLuint shader)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLISSHADER)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -784,7 +786,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLISSHADER)
 // void glLinkProgram(GLuint program)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLLINKPROGRAM)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -804,7 +806,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLLINKPROGRAM)
 // void glReleaseShaderCompiler()
 HB_FUNC_STATIC(QGLFUNCTIONS_GLRELEASESHADERCOMPILER)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -824,7 +826,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLRELEASESHADERCOMPILER)
 // void glRenderbufferStorage(GLenum target, GLenum internalformat, GLsizei width, GLsizei height)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLRENDERBUFFERSTORAGE)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -844,7 +846,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLRENDERBUFFERSTORAGE)
 // void glSampleCoverage(GLclampf value, GLboolean invert)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLSAMPLECOVERAGE)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -864,7 +866,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLSAMPLECOVERAGE)
 // void glStencilFuncSeparate(GLenum face, GLenum func, GLint ref, GLuint mask)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLSTENCILFUNCSEPARATE)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -884,7 +886,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLSTENCILFUNCSEPARATE)
 // void glStencilMaskSeparate(GLenum face, GLuint mask)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLSTENCILMASKSEPARATE)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -904,7 +906,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLSTENCILMASKSEPARATE)
 // void glStencilOpSeparate(GLenum face, GLenum fail, GLenum zfail, GLenum zpass)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLSTENCILOPSEPARATE)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -924,7 +926,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLSTENCILOPSEPARATE)
 // void glUniform1f(GLint location, GLfloat x)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM1F)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -944,7 +946,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM1F)
 // void glUniform1i(GLint location, GLint x)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM1I)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -964,7 +966,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM1I)
 // void glUniform2f(GLint location, GLfloat x, GLfloat y)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM2F)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -984,7 +986,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM2F)
 // void glUniform2i(GLint location, GLint x, GLint y)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM2I)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1004,7 +1006,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM2I)
 // void glUniform3f(GLint location, GLfloat x, GLfloat y, GLfloat z)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM3F)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1024,7 +1026,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM3F)
 // void glUniform3i(GLint location, GLint x, GLint y, GLint z)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM3I)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1044,7 +1046,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM3I)
 // void glUniform4f(GLint location, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM4F)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1064,7 +1066,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM4F)
 // void glUniform4i(GLint location, GLint x, GLint y, GLint z, GLint w)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM4I)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1084,7 +1086,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUNIFORM4I)
 // void glUseProgram(GLuint program)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLUSEPROGRAM)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1104,7 +1106,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLUSEPROGRAM)
 // void glValidateProgram(GLuint program)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLVALIDATEPROGRAM)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1124,7 +1126,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLVALIDATEPROGRAM)
 // void glVertexAttrib1f(GLuint indx, GLfloat x)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIB1F)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1144,7 +1146,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIB1F)
 // void glVertexAttrib2f(GLuint indx, GLfloat x, GLfloat y)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIB2F)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1164,7 +1166,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIB2F)
 // void glVertexAttrib3f(GLuint indx, GLfloat x, GLfloat y, GLfloat z)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIB3F)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1184,7 +1186,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIB3F)
 // void glVertexAttrib4f(GLuint indx, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIB4F)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1205,7 +1207,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIB4F)
 // *ptr)
 HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIBPOINTER)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1226,7 +1228,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_GLVERTEXATTRIBPOINTER)
 // bool hasOpenGLFeature(QGLFunctions::OpenGLFeature feature) const
 HB_FUNC_STATIC(QGLFUNCTIONS_HASOPENGLFEATURE)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1244,7 +1246,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_HASOPENGLFEATURE)
 // void initializeGLFunctions(const QGLContext *context = 0)
 HB_FUNC_STATIC(QGLFUNCTIONS_INITIALIZEGLFUNCTIONS)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1264,7 +1266,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_INITIALIZEGLFUNCTIONS)
 // QGLFunctions::OpenGLFeatures openGLFeatures() const
 HB_FUNC_STATIC(QGLFUNCTIONS_OPENGLFEATURES)
 {
-  QGLFunctions *obj = static_cast<QGLFunctions *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

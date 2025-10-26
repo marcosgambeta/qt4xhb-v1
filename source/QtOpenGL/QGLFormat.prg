@@ -104,6 +104,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QGLFormat *p = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QGLFORMAT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -126,7 +128,7 @@ HB_FUNC_STATIC(QGLFORMAT_NEW)
 // ~QGLFormat()
 HB_FUNC_STATIC(QGLFORMAT_DELETE)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -142,7 +144,7 @@ HB_FUNC_STATIC(QGLFORMAT_DELETE)
 // bool accum() const
 HB_FUNC_STATIC(QGLFORMAT_ACCUM)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -160,7 +162,7 @@ HB_FUNC_STATIC(QGLFORMAT_ACCUM)
 // int accumBufferSize() const
 HB_FUNC_STATIC(QGLFORMAT_ACCUMBUFFERSIZE)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -178,7 +180,7 @@ HB_FUNC_STATIC(QGLFORMAT_ACCUMBUFFERSIZE)
 // bool alpha() const
 HB_FUNC_STATIC(QGLFORMAT_ALPHA)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -196,7 +198,7 @@ HB_FUNC_STATIC(QGLFORMAT_ALPHA)
 // int alphaBufferSize() const
 HB_FUNC_STATIC(QGLFORMAT_ALPHABUFFERSIZE)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -214,7 +216,7 @@ HB_FUNC_STATIC(QGLFORMAT_ALPHABUFFERSIZE)
 // int blueBufferSize() const
 HB_FUNC_STATIC(QGLFORMAT_BLUEBUFFERSIZE)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -232,7 +234,7 @@ HB_FUNC_STATIC(QGLFORMAT_BLUEBUFFERSIZE)
 // bool depth() const
 HB_FUNC_STATIC(QGLFORMAT_DEPTH)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -250,7 +252,7 @@ HB_FUNC_STATIC(QGLFORMAT_DEPTH)
 // int depthBufferSize() const
 HB_FUNC_STATIC(QGLFORMAT_DEPTHBUFFERSIZE)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -268,7 +270,7 @@ HB_FUNC_STATIC(QGLFORMAT_DEPTHBUFFERSIZE)
 // bool directRendering() const
 HB_FUNC_STATIC(QGLFORMAT_DIRECTRENDERING)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -286,7 +288,7 @@ HB_FUNC_STATIC(QGLFORMAT_DIRECTRENDERING)
 // bool doubleBuffer() const
 HB_FUNC_STATIC(QGLFORMAT_DOUBLEBUFFER)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -304,7 +306,7 @@ HB_FUNC_STATIC(QGLFORMAT_DOUBLEBUFFER)
 // int greenBufferSize() const
 HB_FUNC_STATIC(QGLFORMAT_GREENBUFFERSIZE)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -322,7 +324,7 @@ HB_FUNC_STATIC(QGLFORMAT_GREENBUFFERSIZE)
 // bool hasOverlay() const
 HB_FUNC_STATIC(QGLFORMAT_HASOVERLAY)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -340,7 +342,7 @@ HB_FUNC_STATIC(QGLFORMAT_HASOVERLAY)
 // int majorVersion() const
 HB_FUNC_STATIC(QGLFORMAT_MAJORVERSION)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -358,7 +360,7 @@ HB_FUNC_STATIC(QGLFORMAT_MAJORVERSION)
 // int minorVersion() const
 HB_FUNC_STATIC(QGLFORMAT_MINORVERSION)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -376,7 +378,7 @@ HB_FUNC_STATIC(QGLFORMAT_MINORVERSION)
 // int plane() const
 HB_FUNC_STATIC(QGLFORMAT_PLANE)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -394,7 +396,7 @@ HB_FUNC_STATIC(QGLFORMAT_PLANE)
 // QGLFormat::OpenGLContextProfile profile() const
 HB_FUNC_STATIC(QGLFORMAT_PROFILE)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -412,7 +414,7 @@ HB_FUNC_STATIC(QGLFORMAT_PROFILE)
 // int redBufferSize() const
 HB_FUNC_STATIC(QGLFORMAT_REDBUFFERSIZE)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -430,7 +432,7 @@ HB_FUNC_STATIC(QGLFORMAT_REDBUFFERSIZE)
 // bool rgba() const
 HB_FUNC_STATIC(QGLFORMAT_RGBA)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -448,7 +450,7 @@ HB_FUNC_STATIC(QGLFORMAT_RGBA)
 // bool sampleBuffers() const
 HB_FUNC_STATIC(QGLFORMAT_SAMPLEBUFFERS)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -466,7 +468,7 @@ HB_FUNC_STATIC(QGLFORMAT_SAMPLEBUFFERS)
 // int samples() const
 HB_FUNC_STATIC(QGLFORMAT_SAMPLES)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -484,7 +486,7 @@ HB_FUNC_STATIC(QGLFORMAT_SAMPLES)
 // void setAccum(bool enable)
 HB_FUNC_STATIC(QGLFORMAT_SETACCUM)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -504,7 +506,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETACCUM)
 // void setAccumBufferSize(int size)
 HB_FUNC_STATIC(QGLFORMAT_SETACCUMBUFFERSIZE)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -524,7 +526,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETACCUMBUFFERSIZE)
 // void setAlpha(bool enable)
 HB_FUNC_STATIC(QGLFORMAT_SETALPHA)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -544,7 +546,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETALPHA)
 // void setAlphaBufferSize(int size)
 HB_FUNC_STATIC(QGLFORMAT_SETALPHABUFFERSIZE)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -564,7 +566,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETALPHABUFFERSIZE)
 // void setBlueBufferSize(int size)
 HB_FUNC_STATIC(QGLFORMAT_SETBLUEBUFFERSIZE)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -584,7 +586,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETBLUEBUFFERSIZE)
 // void setDepth(bool enable)
 HB_FUNC_STATIC(QGLFORMAT_SETDEPTH)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -604,7 +606,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETDEPTH)
 // void setDepthBufferSize(int size)
 HB_FUNC_STATIC(QGLFORMAT_SETDEPTHBUFFERSIZE)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -624,7 +626,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETDEPTHBUFFERSIZE)
 // void setDirectRendering(bool enable)
 HB_FUNC_STATIC(QGLFORMAT_SETDIRECTRENDERING)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -644,7 +646,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETDIRECTRENDERING)
 // void setDoubleBuffer(bool enable)
 HB_FUNC_STATIC(QGLFORMAT_SETDOUBLEBUFFER)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -664,7 +666,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETDOUBLEBUFFER)
 // void setGreenBufferSize(int size)
 HB_FUNC_STATIC(QGLFORMAT_SETGREENBUFFERSIZE)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -684,7 +686,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETGREENBUFFERSIZE)
 // void setOption(QGL::FormatOptions opt)
 HB_FUNC_STATIC(QGLFORMAT_SETOPTION)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -704,7 +706,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETOPTION)
 // void setOverlay(bool enable)
 HB_FUNC_STATIC(QGLFORMAT_SETOVERLAY)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -724,7 +726,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETOVERLAY)
 // void setPlane(int plane)
 HB_FUNC_STATIC(QGLFORMAT_SETPLANE)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -744,7 +746,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETPLANE)
 // void setProfile(QGLFormat::OpenGLContextProfile profile)
 HB_FUNC_STATIC(QGLFORMAT_SETPROFILE)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -764,7 +766,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETPROFILE)
 // void setRedBufferSize(int size)
 HB_FUNC_STATIC(QGLFORMAT_SETREDBUFFERSIZE)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -784,7 +786,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETREDBUFFERSIZE)
 // void setRgba(bool enable)
 HB_FUNC_STATIC(QGLFORMAT_SETRGBA)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -804,7 +806,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETRGBA)
 // void setSampleBuffers(bool enable)
 HB_FUNC_STATIC(QGLFORMAT_SETSAMPLEBUFFERS)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -824,7 +826,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSAMPLEBUFFERS)
 // void setSamples(int numSamples)
 HB_FUNC_STATIC(QGLFORMAT_SETSAMPLES)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -844,7 +846,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSAMPLES)
 // void setStencil(bool enable)
 HB_FUNC_STATIC(QGLFORMAT_SETSTENCIL)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -864,7 +866,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSTENCIL)
 // void setStencilBufferSize(int size)
 HB_FUNC_STATIC(QGLFORMAT_SETSTENCILBUFFERSIZE)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -884,7 +886,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSTENCILBUFFERSIZE)
 // void setStereo(bool enable)
 HB_FUNC_STATIC(QGLFORMAT_SETSTEREO)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -904,7 +906,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSTEREO)
 // void setSwapInterval(int interval)
 HB_FUNC_STATIC(QGLFORMAT_SETSWAPINTERVAL)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -924,7 +926,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETSWAPINTERVAL)
 // void setVersion(int major, int minor)
 HB_FUNC_STATIC(QGLFORMAT_SETVERSION)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -944,7 +946,7 @@ HB_FUNC_STATIC(QGLFORMAT_SETVERSION)
 // bool stencil() const
 HB_FUNC_STATIC(QGLFORMAT_STENCIL)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -962,7 +964,7 @@ HB_FUNC_STATIC(QGLFORMAT_STENCIL)
 // int stencilBufferSize() const
 HB_FUNC_STATIC(QGLFORMAT_STENCILBUFFERSIZE)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -980,7 +982,7 @@ HB_FUNC_STATIC(QGLFORMAT_STENCILBUFFERSIZE)
 // bool stereo() const
 HB_FUNC_STATIC(QGLFORMAT_STEREO)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -998,7 +1000,7 @@ HB_FUNC_STATIC(QGLFORMAT_STEREO)
 // int swapInterval() const
 HB_FUNC_STATIC(QGLFORMAT_SWAPINTERVAL)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1016,7 +1018,7 @@ HB_FUNC_STATIC(QGLFORMAT_SWAPINTERVAL)
 // bool testOption(QGL::FormatOptions opt) const
 HB_FUNC_STATIC(QGLFORMAT_TESTOPTION)
 {
-  QGLFormat *obj = static_cast<QGLFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

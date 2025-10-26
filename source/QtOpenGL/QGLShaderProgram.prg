@@ -115,6 +115,9 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QGLShaderProgram *p = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QGLSHADERPROGRAM_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -132,7 +135,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_NEW)
 
 HB_FUNC_STATIC(QGLSHADERPROGRAM_DELETE)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -150,7 +153,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_DELETE)
 // bool addShader(QGLShader *shader)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_ADDSHADER)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -168,7 +171,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_ADDSHADER)
 // bool addShaderFromSourceCode(QGLShader::ShaderType type, const char *source)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE1)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -186,7 +189,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE1)
 // bool addShaderFromSourceCode(QGLShader::ShaderType type, const QByteArray &source)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE2)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -204,7 +207,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE2)
 // bool addShaderFromSourceCode(QGLShader::ShaderType type, const QString &source)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE3)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -235,7 +238,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE)
 // bool addShaderFromSourceFile(QGLShader::ShaderType type, const QString &fileName)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_ADDSHADERFROMSOURCEFILE)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -253,7 +256,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_ADDSHADERFROMSOURCEFILE)
 // int attributeLocation(const char *name) const
 HB_FUNC_STATIC(QGLSHADERPROGRAM_ATTRIBUTELOCATION1)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -271,7 +274,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_ATTRIBUTELOCATION1)
 // int attributeLocation(const QByteArray &name) const
 HB_FUNC_STATIC(QGLSHADERPROGRAM_ATTRIBUTELOCATION2)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -289,7 +292,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_ATTRIBUTELOCATION2)
 // int attributeLocation(const QString &name) const
 HB_FUNC_STATIC(QGLSHADERPROGRAM_ATTRIBUTELOCATION3)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -320,7 +323,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_ATTRIBUTELOCATION)
 // bool bind()
 HB_FUNC_STATIC(QGLSHADERPROGRAM_BIND)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -338,7 +341,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_BIND)
 // void bindAttributeLocation(const char *name, int location)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_BINDATTRIBUTELOCATION1)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -358,7 +361,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_BINDATTRIBUTELOCATION1)
 // void bindAttributeLocation(const QByteArray &name, int location)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_BINDATTRIBUTELOCATION2)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -378,7 +381,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_BINDATTRIBUTELOCATION2)
 // void bindAttributeLocation(const QString &name, int location)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_BINDATTRIBUTELOCATION3)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -412,7 +415,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_DISABLEATTRIBUTEARRAY)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void disableAttributeArray(int location)
-    QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->disableAttributeArray(PINT(1));
@@ -421,7 +424,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_DISABLEATTRIBUTEARRAY)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // void disableAttributeArray(const char *name)
-    QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->disableAttributeArray(PCONSTCHAR(1));
@@ -437,7 +440,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_ENABLEATTRIBUTEARRAY)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void enableAttributeArray(int location)
-    QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->enableAttributeArray(PINT(1));
@@ -446,7 +449,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_ENABLEATTRIBUTEARRAY)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // void enableAttributeArray(const char *name)
-    QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->enableAttributeArray(PCONSTCHAR(1));
@@ -461,7 +464,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_ENABLEATTRIBUTEARRAY)
 // GLenum geometryInputType() const
 HB_FUNC_STATIC(QGLSHADERPROGRAM_GEOMETRYINPUTTYPE)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -479,7 +482,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_GEOMETRYINPUTTYPE)
 // GLenum geometryOutputType() const
 HB_FUNC_STATIC(QGLSHADERPROGRAM_GEOMETRYOUTPUTTYPE)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -497,7 +500,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_GEOMETRYOUTPUTTYPE)
 // int geometryOutputVertexCount() const
 HB_FUNC_STATIC(QGLSHADERPROGRAM_GEOMETRYOUTPUTVERTEXCOUNT)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -515,7 +518,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_GEOMETRYOUTPUTVERTEXCOUNT)
 // bool isLinked() const
 HB_FUNC_STATIC(QGLSHADERPROGRAM_ISLINKED)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -533,7 +536,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_ISLINKED)
 // virtual bool link()
 HB_FUNC_STATIC(QGLSHADERPROGRAM_LINK)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -551,7 +554,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_LINK)
 // QString log() const
 HB_FUNC_STATIC(QGLSHADERPROGRAM_LOG)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -569,7 +572,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_LOG)
 // int maxGeometryOutputVertices() const
 HB_FUNC_STATIC(QGLSHADERPROGRAM_MAXGEOMETRYOUTPUTVERTICES)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -587,7 +590,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_MAXGEOMETRYOUTPUTVERTICES)
 // GLuint programId() const
 HB_FUNC_STATIC(QGLSHADERPROGRAM_PROGRAMID)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -605,7 +608,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_PROGRAMID)
 // void release()
 HB_FUNC_STATIC(QGLSHADERPROGRAM_RELEASE)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -625,7 +628,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_RELEASE)
 // void removeAllShaders()
 HB_FUNC_STATIC(QGLSHADERPROGRAM_REMOVEALLSHADERS)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -645,7 +648,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_REMOVEALLSHADERS)
 // void removeShader(QGLShader *shader)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_REMOVESHADER)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -666,7 +669,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEBUFFER)
 {
   if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISNUMORNIL(5)) {
     // void setAttributeBuffer(int location, GLenum type, int offset, int tupleSize, int stride = 0)
-    QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setAttributeBuffer(PINT(1), PGLENUM(2), PINT(3), PINT(4), OPINT(5, 0));
@@ -675,7 +678,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEBUFFER)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISBETWEEN(4, 5) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISNUMORNIL(5)) {
     // void setAttributeBuffer(const char *name, GLenum type, int offset, int tupleSize, int stride = 0)
-    QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setAttributeBuffer(PCONSTCHAR(1), PGLENUM(2), PINT(3), PINT(4), OPINT(5, 0));
@@ -690,7 +693,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEBUFFER)
 // void setAttributeValue(int location, GLfloat value)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE1)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -710,7 +713,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE1)
 // void setAttributeValue(int location, GLfloat x, GLfloat y)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE2)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -730,7 +733,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE2)
 // void setAttributeValue(int location, GLfloat x, GLfloat y, GLfloat z)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE3)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -750,7 +753,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE3)
 // void setAttributeValue(int location, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE4)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -770,7 +773,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE4)
 // void setAttributeValue(int location, const QColor &value)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE8)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -791,7 +794,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE8)
 // void setAttributeValue(const char *name, GLfloat value)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE10)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -811,7 +814,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE10)
 // void setAttributeValue(const char *name, GLfloat x, GLfloat y)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE11)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -831,7 +834,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE11)
 // void setAttributeValue(const char *name, GLfloat x, GLfloat y, GLfloat z)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE12)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -851,7 +854,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE12)
 // void setAttributeValue(const char *name, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE13)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -871,7 +874,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE13)
 // void setAttributeValue(const char *name, const QColor &value)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE17)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -919,7 +922,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE)
 // void setGeometryInputType(GLenum inputType)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETGEOMETRYINPUTTYPE)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -939,7 +942,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETGEOMETRYINPUTTYPE)
 // void setGeometryOutputType(GLenum outputType)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETGEOMETRYOUTPUTTYPE)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -959,7 +962,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETGEOMETRYOUTPUTTYPE)
 // void setGeometryOutputVertexCount(int count)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETGEOMETRYOUTPUTVERTEXCOUNT)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -979,7 +982,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETGEOMETRYOUTPUTVERTEXCOUNT)
 // void setUniformValue(int location, GLfloat value)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE1)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -999,7 +1002,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE1)
 // void setUniformValue(const char *name, const QPointF &point)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE2)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1019,7 +1022,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE2)
 // void setUniformValue(const char *name, const QSize &size)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE3)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1039,7 +1042,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE3)
 // void setUniformValue(const char *name, const QSizeF &size)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE4)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1059,7 +1062,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE4)
 // void setUniformValue(const char *name, const QTransform &value)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE20)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1079,7 +1082,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE20)
 // void setUniformValue(int location, GLint value)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE21)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1099,7 +1102,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE21)
 // void setUniformValue(int location, GLuint value)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE22)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1119,7 +1122,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE22)
 // void setUniformValue(int location, GLfloat x, GLfloat y)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE23)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1139,7 +1142,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE23)
 // void setUniformValue(int location, GLfloat x, GLfloat y, GLfloat z)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE24)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1159,7 +1162,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE24)
 // void setUniformValue(int location, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE25)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1179,7 +1182,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE25)
 // void setUniformValue(int location, const QColor &color)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE29)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1200,7 +1203,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE29)
 // void setUniformValue(int location, const QPoint &point)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE30)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1220,7 +1223,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE30)
 // void setUniformValue(int location, const QPointF &point)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE31)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1240,7 +1243,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE31)
 // void setUniformValue(int location, const QSize &size)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE32)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1260,7 +1263,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE32)
 // void setUniformValue(int location, const QSizeF &size)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE33)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1280,7 +1283,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE33)
 // void setUniformValue(int location, const QTransform &value)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE43)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1300,7 +1303,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE43)
 // void setUniformValue(const char *name, GLfloat value)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE44)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1320,7 +1323,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE44)
 // void setUniformValue(const char *name, GLint value)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE45)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1340,7 +1343,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE45)
 // void setUniformValue(const char *name, GLuint value)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE46)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1360,7 +1363,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE46)
 // void setUniformValue(const char *name, GLfloat x, GLfloat y)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE47)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1380,7 +1383,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE47)
 // void setUniformValue(const char *name, GLfloat x, GLfloat y, GLfloat z)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE48)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1400,7 +1403,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE48)
 // void setUniformValue(const char *name, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE49)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1420,7 +1423,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE49)
 // void setUniformValue(const char *name, const QColor &color)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE53)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1441,7 +1444,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE53)
 // void setUniformValue(const char *name, const QPoint &point)
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE54)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1472,7 +1475,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE)
 // QList<QGLShader *> shaders() const
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SHADERS)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1510,7 +1513,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SHADERS)
 // int uniformLocation(const char *name) const
 HB_FUNC_STATIC(QGLSHADERPROGRAM_UNIFORMLOCATION1)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1528,7 +1531,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_UNIFORMLOCATION1)
 // int uniformLocation(const QByteArray &name) const
 HB_FUNC_STATIC(QGLSHADERPROGRAM_UNIFORMLOCATION2)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1546,7 +1549,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_UNIFORMLOCATION2)
 // int uniformLocation(const QString &name) const
 HB_FUNC_STATIC(QGLSHADERPROGRAM_UNIFORMLOCATION3)
 {
-  QGLShaderProgram *obj = qobject_cast<QGLShaderProgram *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
