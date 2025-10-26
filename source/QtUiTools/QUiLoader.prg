@@ -64,6 +64,8 @@ RETURN
 #include <QtGui/QAction>
 #include <QtGui/QLayout>
 
+#define GET_PTR_FROM_SELF(p) QUiLoader *p = qobject_cast<QUiLoader *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QUiLoader(QObject *parent = 0)
 HB_FUNC_STATIC(QUILOADER_NEW)
 {
@@ -77,7 +79,7 @@ HB_FUNC_STATIC(QUILOADER_NEW)
 
 HB_FUNC_STATIC(QUILOADER_DELETE)
 {
-  QUiLoader *obj = qobject_cast<QUiLoader *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -95,7 +97,7 @@ HB_FUNC_STATIC(QUILOADER_DELETE)
 // void addPluginPath(const QString &path)
 HB_FUNC_STATIC(QUILOADER_ADDPLUGINPATH)
 {
-  QUiLoader *obj = qobject_cast<QUiLoader *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -115,7 +117,7 @@ HB_FUNC_STATIC(QUILOADER_ADDPLUGINPATH)
 // QStringList availableLayouts() const
 HB_FUNC_STATIC(QUILOADER_AVAILABLELAYOUTS)
 {
-  QUiLoader *obj = qobject_cast<QUiLoader *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -133,7 +135,7 @@ HB_FUNC_STATIC(QUILOADER_AVAILABLELAYOUTS)
 // QStringList availableWidgets() const
 HB_FUNC_STATIC(QUILOADER_AVAILABLEWIDGETS)
 {
-  QUiLoader *obj = qobject_cast<QUiLoader *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -151,7 +153,7 @@ HB_FUNC_STATIC(QUILOADER_AVAILABLEWIDGETS)
 // void clearPluginPaths()
 HB_FUNC_STATIC(QUILOADER_CLEARPLUGINPATHS)
 {
-  QUiLoader *obj = qobject_cast<QUiLoader *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -171,7 +173,7 @@ HB_FUNC_STATIC(QUILOADER_CLEARPLUGINPATHS)
 // virtual QAction *createAction(QObject *parent = 0, const QString &name = QString())
 HB_FUNC_STATIC(QUILOADER_CREATEACTION)
 {
-  QUiLoader *obj = qobject_cast<QUiLoader *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -190,7 +192,7 @@ HB_FUNC_STATIC(QUILOADER_CREATEACTION)
 // virtual QActionGroup *createActionGroup(QObject *parent = 0, const QString &name = QString())
 HB_FUNC_STATIC(QUILOADER_CREATEACTIONGROUP)
 {
-  QUiLoader *obj = qobject_cast<QUiLoader *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -209,7 +211,7 @@ HB_FUNC_STATIC(QUILOADER_CREATEACTIONGROUP)
 // virtual QLayout *createLayout(const QString &className, QObject *parent = 0, const QString &name = QString())
 HB_FUNC_STATIC(QUILOADER_CREATELAYOUT)
 {
-  QUiLoader *obj = qobject_cast<QUiLoader *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -228,7 +230,7 @@ HB_FUNC_STATIC(QUILOADER_CREATELAYOUT)
 // virtual QWidget *createWidget(const QString &className, QWidget *parent = 0, const QString &name = QString())
 HB_FUNC_STATIC(QUILOADER_CREATEWIDGET)
 {
-  QUiLoader *obj = qobject_cast<QUiLoader *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -247,7 +249,7 @@ HB_FUNC_STATIC(QUILOADER_CREATEWIDGET)
 // bool isLanguageChangeEnabled() const
 HB_FUNC_STATIC(QUILOADER_ISLANGUAGECHANGEENABLED)
 {
-  QUiLoader *obj = qobject_cast<QUiLoader *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -265,7 +267,7 @@ HB_FUNC_STATIC(QUILOADER_ISLANGUAGECHANGEENABLED)
 // QWidget *load(QIODevice *device, QWidget *parentWidget = 0)
 HB_FUNC_STATIC(QUILOADER_LOAD)
 {
-  QUiLoader *obj = qobject_cast<QUiLoader *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -284,7 +286,7 @@ HB_FUNC_STATIC(QUILOADER_LOAD)
 // QStringList pluginPaths() const
 HB_FUNC_STATIC(QUILOADER_PLUGINPATHS)
 {
-  QUiLoader *obj = qobject_cast<QUiLoader *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -302,7 +304,7 @@ HB_FUNC_STATIC(QUILOADER_PLUGINPATHS)
 // void setLanguageChangeEnabled(bool enabled)
 HB_FUNC_STATIC(QUILOADER_SETLANGUAGECHANGEENABLED)
 {
-  QUiLoader *obj = qobject_cast<QUiLoader *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -322,7 +324,7 @@ HB_FUNC_STATIC(QUILOADER_SETLANGUAGECHANGEENABLED)
 // void setWorkingDirectory(const QDir &dir)
 HB_FUNC_STATIC(QUILOADER_SETWORKINGDIRECTORY)
 {
-  QUiLoader *obj = qobject_cast<QUiLoader *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -342,7 +344,7 @@ HB_FUNC_STATIC(QUILOADER_SETWORKINGDIRECTORY)
 // QDir workingDirectory() const
 HB_FUNC_STATIC(QUILOADER_WORKINGDIRECTORY)
 {
-  QUiLoader *obj = qobject_cast<QUiLoader *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
