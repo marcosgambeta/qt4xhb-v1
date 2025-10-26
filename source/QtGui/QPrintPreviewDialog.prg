@@ -47,6 +47,9 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QPrintPreviewDialog *p = qobject_cast<QPrintPreviewDialog *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_NEW)
 {
   if (ISBETWEEN(1, 3) && ISQPRINTER(1) && ISQWIDGETORNIL(2) && ISNUMORNIL(3)) {
@@ -66,7 +69,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_NEW)
 
 HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_DELETE)
 {
-  QPrintPreviewDialog *obj = qobject_cast<QPrintPreviewDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -84,7 +87,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_DELETE)
 // void open(QObject *receiver, const char *member)
 HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_OPEN)
 {
-  QPrintPreviewDialog *obj = qobject_cast<QPrintPreviewDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -104,7 +107,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_OPEN)
 // QPrinter *printer()
 HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_PRINTER)
 {
-  QPrintPreviewDialog *obj = qobject_cast<QPrintPreviewDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -123,7 +126,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_PRINTER)
 // virtual void done(int result)
 HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_DONE)
 {
-  QPrintPreviewDialog *obj = qobject_cast<QPrintPreviewDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -143,7 +146,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_DONE)
 // virtual void setVisible(bool visible)
 HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_SETVISIBLE)
 {
-  QPrintPreviewDialog *obj = qobject_cast<QPrintPreviewDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

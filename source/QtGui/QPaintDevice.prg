@@ -60,9 +60,11 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QPaintDevice *p = static_cast<QPaintDevice *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QPAINTDEVICE_DELETE)
 {
-  QPaintDevice *obj = static_cast<QPaintDevice *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -78,7 +80,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_DELETE)
 // int colorCount() const
 HB_FUNC_STATIC(QPAINTDEVICE_COLORCOUNT)
 {
-  QPaintDevice *obj = static_cast<QPaintDevice *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -96,7 +98,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_COLORCOUNT)
 // int depth() const
 HB_FUNC_STATIC(QPAINTDEVICE_DEPTH)
 {
-  QPaintDevice *obj = static_cast<QPaintDevice *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -114,7 +116,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_DEPTH)
 // int height() const
 HB_FUNC_STATIC(QPAINTDEVICE_HEIGHT)
 {
-  QPaintDevice *obj = static_cast<QPaintDevice *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -132,7 +134,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_HEIGHT)
 // int heightMM() const
 HB_FUNC_STATIC(QPAINTDEVICE_HEIGHTMM)
 {
-  QPaintDevice *obj = static_cast<QPaintDevice *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -150,7 +152,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_HEIGHTMM)
 // int logicalDpiX() const
 HB_FUNC_STATIC(QPAINTDEVICE_LOGICALDPIX)
 {
-  QPaintDevice *obj = static_cast<QPaintDevice *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -168,7 +170,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_LOGICALDPIX)
 // int logicalDpiY() const
 HB_FUNC_STATIC(QPAINTDEVICE_LOGICALDPIY)
 {
-  QPaintDevice *obj = static_cast<QPaintDevice *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -186,7 +188,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_LOGICALDPIY)
 // int numColors() const
 HB_FUNC_STATIC(QPAINTDEVICE_NUMCOLORS)
 {
-  QPaintDevice *obj = static_cast<QPaintDevice *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -204,7 +206,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_NUMCOLORS)
 // virtual QPaintEngine *paintEngine() const = 0
 HB_FUNC_STATIC(QPAINTDEVICE_PAINTENGINE)
 {
-  QPaintDevice *obj = static_cast<QPaintDevice *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -223,7 +225,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_PAINTENGINE)
 // bool paintingActive() const
 HB_FUNC_STATIC(QPAINTDEVICE_PAINTINGACTIVE)
 {
-  QPaintDevice *obj = static_cast<QPaintDevice *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -241,7 +243,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_PAINTINGACTIVE)
 // int physicalDpiX() const
 HB_FUNC_STATIC(QPAINTDEVICE_PHYSICALDPIX)
 {
-  QPaintDevice *obj = static_cast<QPaintDevice *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -259,7 +261,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_PHYSICALDPIX)
 // int physicalDpiY() const
 HB_FUNC_STATIC(QPAINTDEVICE_PHYSICALDPIY)
 {
-  QPaintDevice *obj = static_cast<QPaintDevice *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -277,7 +279,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_PHYSICALDPIY)
 // int width() const
 HB_FUNC_STATIC(QPAINTDEVICE_WIDTH)
 {
-  QPaintDevice *obj = static_cast<QPaintDevice *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -295,7 +297,7 @@ HB_FUNC_STATIC(QPAINTDEVICE_WIDTH)
 // int widthMM() const
 HB_FUNC_STATIC(QPAINTDEVICE_WIDTHMM)
 {
-  QPaintDevice *obj = static_cast<QPaintDevice *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

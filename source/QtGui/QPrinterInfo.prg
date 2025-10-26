@@ -53,6 +53,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QPrinterInfo *p = static_cast<QPrinterInfo *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QPRINTERINFO_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -74,7 +76,7 @@ HB_FUNC_STATIC(QPRINTERINFO_NEW)
 
 HB_FUNC_STATIC(QPRINTERINFO_DELETE)
 {
-  QPrinterInfo *obj = static_cast<QPrinterInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -90,7 +92,7 @@ HB_FUNC_STATIC(QPRINTERINFO_DELETE)
 // bool isDefault() const
 HB_FUNC_STATIC(QPRINTERINFO_ISDEFAULT)
 {
-  QPrinterInfo *obj = static_cast<QPrinterInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -108,7 +110,7 @@ HB_FUNC_STATIC(QPRINTERINFO_ISDEFAULT)
 // bool isNull() const
 HB_FUNC_STATIC(QPRINTERINFO_ISNULL)
 {
-  QPrinterInfo *obj = static_cast<QPrinterInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -126,7 +128,7 @@ HB_FUNC_STATIC(QPRINTERINFO_ISNULL)
 // QString printerName() const
 HB_FUNC_STATIC(QPRINTERINFO_PRINTERNAME)
 {
-  QPrinterInfo *obj = static_cast<QPrinterInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -144,7 +146,7 @@ HB_FUNC_STATIC(QPRINTERINFO_PRINTERNAME)
 // QList<QPrinter::PaperSize> supportedPaperSizes() const
 HB_FUNC_STATIC(QPRINTERINFO_SUPPORTEDPAPERSIZES)
 {
-  QPrinterInfo *obj = static_cast<QPrinterInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -170,7 +172,7 @@ HB_FUNC_STATIC(QPRINTERINFO_SUPPORTEDPAPERSIZES)
 // QList<QPrinterInfo> availablePrinters()
 HB_FUNC_STATIC(QPRINTERINFO_AVAILABLEPRINTERS)
 {
-  QPrinterInfo *obj = static_cast<QPrinterInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

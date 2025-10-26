@@ -49,6 +49,9 @@ RETURN
 
 #include <QtGui/QPainterPath>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QMouseEventTransition *p = qobject_cast<QMouseEventTransition *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQSTATE(1) || HB_ISNIL(1))) {
@@ -67,7 +70,7 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_NEW)
 
 HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_DELETE)
 {
-  QMouseEventTransition *obj = qobject_cast<QMouseEventTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -85,7 +88,7 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_DELETE)
 // Qt::MouseButton button() const
 HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_BUTTON)
 {
-  QMouseEventTransition *obj = qobject_cast<QMouseEventTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -103,7 +106,7 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_BUTTON)
 // QPainterPath hitTestPath() const
 HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_HITTESTPATH)
 {
-  QMouseEventTransition *obj = qobject_cast<QMouseEventTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -122,7 +125,7 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_HITTESTPATH)
 // Qt::KeyboardModifiers modifierMask() const
 HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_MODIFIERMASK)
 {
-  QMouseEventTransition *obj = qobject_cast<QMouseEventTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -140,7 +143,7 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_MODIFIERMASK)
 // void setButton(Qt::MouseButton button)
 HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_SETBUTTON)
 {
-  QMouseEventTransition *obj = qobject_cast<QMouseEventTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -160,7 +163,7 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_SETBUTTON)
 // void setHitTestPath(const QPainterPath &path)
 HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_SETHITTESTPATH)
 {
-  QMouseEventTransition *obj = qobject_cast<QMouseEventTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -180,7 +183,7 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_SETHITTESTPATH)
 // void setModifierMask(Qt::KeyboardModifiers modifierMask)
 HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_SETMODIFIERMASK)
 {
-  QMouseEventTransition *obj = qobject_cast<QMouseEventTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

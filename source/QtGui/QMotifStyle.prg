@@ -58,6 +58,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QMotifStyle *p = qobject_cast<QMotifStyle *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QMotifStyle(bool useHighlightCols = false)
 HB_FUNC_STATIC(QMOTIFSTYLE_NEW)
 {
@@ -71,7 +73,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_NEW)
 
 HB_FUNC_STATIC(QMOTIFSTYLE_DELETE)
 {
-  QMotifStyle *obj = qobject_cast<QMotifStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -89,7 +91,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_DELETE)
 // void setUseHighlightColors(bool arg)
 HB_FUNC_STATIC(QMOTIFSTYLE_SETUSEHIGHLIGHTCOLORS)
 {
-  QMotifStyle *obj = qobject_cast<QMotifStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -109,7 +111,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_SETUSEHIGHLIGHTCOLORS)
 // bool useHighlightColors() const
 HB_FUNC_STATIC(QMOTIFSTYLE_USEHIGHLIGHTCOLORS)
 {
-  QMotifStyle *obj = qobject_cast<QMotifStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -128,7 +130,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_USEHIGHLIGHTCOLORS)
 // *widget = 0) const
 HB_FUNC_STATIC(QMOTIFSTYLE_DRAWCOMPLEXCONTROL)
 {
-  QMotifStyle *obj = qobject_cast<QMotifStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -150,7 +152,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_DRAWCOMPLEXCONTROL)
 // = 0) const
 HB_FUNC_STATIC(QMOTIFSTYLE_DRAWCONTROL)
 {
-  QMotifStyle *obj = qobject_cast<QMotifStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -171,7 +173,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_DRAWCONTROL)
 // const
 HB_FUNC_STATIC(QMOTIFSTYLE_DRAWPRIMITIVE)
 {
-  QMotifStyle *obj = qobject_cast<QMotifStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -191,7 +193,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_DRAWPRIMITIVE)
 // virtual bool event(QEvent *e)
 HB_FUNC_STATIC(QMOTIFSTYLE_EVENT)
 {
-  QMotifStyle *obj = qobject_cast<QMotifStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -209,7 +211,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_EVENT)
 // virtual int pixelMetric(QStyle::PixelMetric pm, const QStyleOption *opt = 0, const QWidget *widget = 0) const
 HB_FUNC_STATIC(QMOTIFSTYLE_PIXELMETRIC)
 {
-  QMotifStyle *obj = qobject_cast<QMotifStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -228,7 +230,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_PIXELMETRIC)
 // virtual void polish(QPalette &pal)
 HB_FUNC_STATIC(QMOTIFSTYLE_POLISH)
 {
-  QMotifStyle *obj = qobject_cast<QMotifStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -249,7 +251,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_POLISH)
 // QWidget *widget = 0) const
 HB_FUNC_STATIC(QMOTIFSTYLE_SIZEFROMCONTENTS)
 {
-  QMotifStyle *obj = qobject_cast<QMotifStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -269,7 +271,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_SIZEFROMCONTENTS)
 // virtual QPalette standardPalette() const
 HB_FUNC_STATIC(QMOTIFSTYLE_STANDARDPALETTE)
 {
-  QMotifStyle *obj = qobject_cast<QMotifStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -289,7 +291,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_STANDARDPALETTE)
 // = 0) const
 HB_FUNC_STATIC(QMOTIFSTYLE_STANDARDPIXMAP)
 {
-  QMotifStyle *obj = qobject_cast<QMotifStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -310,7 +312,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_STANDARDPIXMAP)
 // QStyleHintReturn *returnData = 0) const
 HB_FUNC_STATIC(QMOTIFSTYLE_STYLEHINT)
 {
-  QMotifStyle *obj = qobject_cast<QMotifStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -332,7 +334,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_STYLEHINT)
 // QWidget *widget = 0) const
 HB_FUNC_STATIC(QMOTIFSTYLE_SUBCONTROLRECT)
 {
-  QMotifStyle *obj = qobject_cast<QMotifStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -352,7 +354,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_SUBCONTROLRECT)
 // virtual QRect subElementRect(QStyle::SubElement sr, const QStyleOption *opt, const QWidget *widget = 0) const
 HB_FUNC_STATIC(QMOTIFSTYLE_SUBELEMENTRECT)
 {
-  QMotifStyle *obj = qobject_cast<QMotifStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -66,6 +66,9 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QPrintPreviewWidget *p = qobject_cast<QPrintPreviewWidget *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_NEW)
 {
   if (ISBETWEEN(1, 3) && ISQPRINTER(1) && ISQWIDGETORNIL(2) && ISNUMORNIL(3)) {
@@ -85,7 +88,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_NEW)
 
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_DELETE)
 {
-  QPrintPreviewWidget *obj = qobject_cast<QPrintPreviewWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -103,7 +106,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_DELETE)
 // int currentPage() const
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_CURRENTPAGE)
 {
-  QPrintPreviewWidget *obj = qobject_cast<QPrintPreviewWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -121,7 +124,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_CURRENTPAGE)
 // QPrinter::Orientation orientation() const
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_ORIENTATION)
 {
-  QPrintPreviewWidget *obj = qobject_cast<QPrintPreviewWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -139,7 +142,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_ORIENTATION)
 // int pageCount() const
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_PAGECOUNT)
 {
-  QPrintPreviewWidget *obj = qobject_cast<QPrintPreviewWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -157,7 +160,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_PAGECOUNT)
 // QPrintPreviewWidget::ViewMode viewMode() const
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_VIEWMODE)
 {
-  QPrintPreviewWidget *obj = qobject_cast<QPrintPreviewWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -175,7 +178,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_VIEWMODE)
 // qreal zoomFactor() const
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_ZOOMFACTOR)
 {
-  QPrintPreviewWidget *obj = qobject_cast<QPrintPreviewWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -193,7 +196,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_ZOOMFACTOR)
 // QPrintPreviewWidget::ZoomMode zoomMode() const
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_ZOOMMODE)
 {
-  QPrintPreviewWidget *obj = qobject_cast<QPrintPreviewWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -211,7 +214,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_ZOOMMODE)
 // virtual void setVisible(bool visible)
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETVISIBLE)
 {
-  QPrintPreviewWidget *obj = qobject_cast<QPrintPreviewWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -231,7 +234,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETVISIBLE)
 // void fitInView()
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_FITINVIEW)
 {
-  QPrintPreviewWidget *obj = qobject_cast<QPrintPreviewWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -251,7 +254,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_FITINVIEW)
 // void fitToWidth()
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_FITTOWIDTH)
 {
-  QPrintPreviewWidget *obj = qobject_cast<QPrintPreviewWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -271,7 +274,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_FITTOWIDTH)
 // void print()
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_PRINT)
 {
-  QPrintPreviewWidget *obj = qobject_cast<QPrintPreviewWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -291,7 +294,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_PRINT)
 // void setAllPagesViewMode()
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETALLPAGESVIEWMODE)
 {
-  QPrintPreviewWidget *obj = qobject_cast<QPrintPreviewWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -311,7 +314,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETALLPAGESVIEWMODE)
 // void setCurrentPage(int page)
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETCURRENTPAGE)
 {
-  QPrintPreviewWidget *obj = qobject_cast<QPrintPreviewWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -331,7 +334,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETCURRENTPAGE)
 // void setFacingPagesViewMode()
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETFACINGPAGESVIEWMODE)
 {
-  QPrintPreviewWidget *obj = qobject_cast<QPrintPreviewWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -351,7 +354,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETFACINGPAGESVIEWMODE)
 // void setLandscapeOrientation()
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETLANDSCAPEORIENTATION)
 {
-  QPrintPreviewWidget *obj = qobject_cast<QPrintPreviewWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -371,7 +374,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETLANDSCAPEORIENTATION)
 // void setOrientation(QPrinter::Orientation orientation)
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETORIENTATION)
 {
-  QPrintPreviewWidget *obj = qobject_cast<QPrintPreviewWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -391,7 +394,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETORIENTATION)
 // void setPortraitOrientation()
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETPORTRAITORIENTATION)
 {
-  QPrintPreviewWidget *obj = qobject_cast<QPrintPreviewWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -411,7 +414,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETPORTRAITORIENTATION)
 // void setSinglePageViewMode()
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETSINGLEPAGEVIEWMODE)
 {
-  QPrintPreviewWidget *obj = qobject_cast<QPrintPreviewWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -431,7 +434,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETSINGLEPAGEVIEWMODE)
 // void setViewMode(QPrintPreviewWidget::ViewMode mode)
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETVIEWMODE)
 {
-  QPrintPreviewWidget *obj = qobject_cast<QPrintPreviewWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -451,7 +454,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETVIEWMODE)
 // void setZoomFactor(qreal factor)
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETZOOMFACTOR)
 {
-  QPrintPreviewWidget *obj = qobject_cast<QPrintPreviewWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -471,7 +474,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETZOOMFACTOR)
 // void setZoomMode(QPrintPreviewWidget::ZoomMode zoomMode)
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETZOOMMODE)
 {
-  QPrintPreviewWidget *obj = qobject_cast<QPrintPreviewWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -491,7 +494,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETZOOMMODE)
 // void updatePreview()
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_UPDATEPREVIEW)
 {
-  QPrintPreviewWidget *obj = qobject_cast<QPrintPreviewWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -511,7 +514,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_UPDATEPREVIEW)
 // void zoomIn(qreal factor = 1.1)
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_ZOOMIN)
 {
-  QPrintPreviewWidget *obj = qobject_cast<QPrintPreviewWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -531,7 +534,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_ZOOMIN)
 // void zoomOut(qreal factor = 1.1)
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_ZOOMOUT)
 {
-  QPrintPreviewWidget *obj = qobject_cast<QPrintPreviewWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

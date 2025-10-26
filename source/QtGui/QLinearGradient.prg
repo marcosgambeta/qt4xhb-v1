@@ -43,6 +43,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QLinearGradient *p = static_cast<QLinearGradient *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QLINEARGRADIENT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -64,7 +66,7 @@ HB_FUNC_STATIC(QLINEARGRADIENT_NEW)
 
 HB_FUNC_STATIC(QLINEARGRADIENT_DELETE)
 {
-  QLinearGradient *obj = static_cast<QLinearGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -80,7 +82,7 @@ HB_FUNC_STATIC(QLINEARGRADIENT_DELETE)
 // QPointF finalStop() const
 HB_FUNC_STATIC(QLINEARGRADIENT_FINALSTOP)
 {
-  QLinearGradient *obj = static_cast<QLinearGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -100,7 +102,7 @@ HB_FUNC_STATIC(QLINEARGRADIENT_SETFINALSTOP)
 {
   if (ISNUMPAR(1) && ISQPOINTF(1)) {
     // void setFinalStop(const QPointF &stop)
-    QLinearGradient *obj = static_cast<QLinearGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setFinalStop(*PQPOINTF(1));
@@ -109,7 +111,7 @@ HB_FUNC_STATIC(QLINEARGRADIENT_SETFINALSTOP)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setFinalStop(qreal x, qreal y)
-    QLinearGradient *obj = static_cast<QLinearGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setFinalStop(PQREAL(1), PQREAL(2));
@@ -125,7 +127,7 @@ HB_FUNC_STATIC(QLINEARGRADIENT_SETSTART)
 {
   if (ISNUMPAR(1) && ISQPOINTF(1)) {
     // void setStart(const QPointF &start)
-    QLinearGradient *obj = static_cast<QLinearGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setStart(*PQPOINTF(1));
@@ -134,7 +136,7 @@ HB_FUNC_STATIC(QLINEARGRADIENT_SETSTART)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setStart(qreal x, qreal y)
-    QLinearGradient *obj = static_cast<QLinearGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setStart(PQREAL(1), PQREAL(2));
@@ -149,7 +151,7 @@ HB_FUNC_STATIC(QLINEARGRADIENT_SETSTART)
 // QPointF start() const
 HB_FUNC_STATIC(QLINEARGRADIENT_START)
 {
-  QLinearGradient *obj = static_cast<QLinearGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

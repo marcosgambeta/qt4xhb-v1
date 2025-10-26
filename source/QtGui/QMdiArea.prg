@@ -75,6 +75,8 @@ RETURN
 
 #include <QtGui/QMdiSubWindow>
 
+#define GET_PTR_FROM_SELF(p) QMdiArea *p = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QMdiArea(QWidget *parent = 0)
 HB_FUNC_STATIC(QMDIAREA_NEW)
 {
@@ -88,7 +90,7 @@ HB_FUNC_STATIC(QMDIAREA_NEW)
 
 HB_FUNC_STATIC(QMDIAREA_DELETE)
 {
-  QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -106,7 +108,7 @@ HB_FUNC_STATIC(QMDIAREA_DELETE)
 // QMdiArea::WindowOrder activationOrder() const
 HB_FUNC_STATIC(QMDIAREA_ACTIVATIONORDER)
 {
-  QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -124,7 +126,7 @@ HB_FUNC_STATIC(QMDIAREA_ACTIVATIONORDER)
 // QMdiSubWindow *activeSubWindow() const
 HB_FUNC_STATIC(QMDIAREA_ACTIVESUBWINDOW)
 {
-  QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -143,7 +145,7 @@ HB_FUNC_STATIC(QMDIAREA_ACTIVESUBWINDOW)
 // QMdiSubWindow *addSubWindow(QWidget *widget, Qt::WindowFlags windowFlags = 0)
 HB_FUNC_STATIC(QMDIAREA_ADDSUBWINDOW)
 {
-  QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -163,7 +165,7 @@ HB_FUNC_STATIC(QMDIAREA_ADDSUBWINDOW)
 // QBrush background() const
 HB_FUNC_STATIC(QMDIAREA_BACKGROUND)
 {
-  QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -182,7 +184,7 @@ HB_FUNC_STATIC(QMDIAREA_BACKGROUND)
 // QMdiSubWindow *currentSubWindow() const
 HB_FUNC_STATIC(QMDIAREA_CURRENTSUBWINDOW)
 {
-  QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -201,7 +203,7 @@ HB_FUNC_STATIC(QMDIAREA_CURRENTSUBWINDOW)
 // bool documentMode() const
 HB_FUNC_STATIC(QMDIAREA_DOCUMENTMODE)
 {
-  QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -219,7 +221,7 @@ HB_FUNC_STATIC(QMDIAREA_DOCUMENTMODE)
 // void removeSubWindow(QWidget *widget)
 HB_FUNC_STATIC(QMDIAREA_REMOVESUBWINDOW)
 {
-  QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -239,7 +241,7 @@ HB_FUNC_STATIC(QMDIAREA_REMOVESUBWINDOW)
 // void setActivationOrder(QMdiArea::WindowOrder order)
 HB_FUNC_STATIC(QMDIAREA_SETACTIVATIONORDER)
 {
-  QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -259,7 +261,7 @@ HB_FUNC_STATIC(QMDIAREA_SETACTIVATIONORDER)
 // void setBackground(const QBrush &background)
 HB_FUNC_STATIC(QMDIAREA_SETBACKGROUND)
 {
-  QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -279,7 +281,7 @@ HB_FUNC_STATIC(QMDIAREA_SETBACKGROUND)
 // void setDocumentMode(bool enabled)
 HB_FUNC_STATIC(QMDIAREA_SETDOCUMENTMODE)
 {
-  QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -299,7 +301,7 @@ HB_FUNC_STATIC(QMDIAREA_SETDOCUMENTMODE)
 // void setOption(QMdiArea::AreaOption option, bool on = true)
 HB_FUNC_STATIC(QMDIAREA_SETOPTION)
 {
-  QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -319,7 +321,7 @@ HB_FUNC_STATIC(QMDIAREA_SETOPTION)
 // void setTabPosition(QTabWidget::TabPosition position)
 HB_FUNC_STATIC(QMDIAREA_SETTABPOSITION)
 {
-  QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -339,7 +341,7 @@ HB_FUNC_STATIC(QMDIAREA_SETTABPOSITION)
 // void setTabShape(QTabWidget::TabShape shape)
 HB_FUNC_STATIC(QMDIAREA_SETTABSHAPE)
 {
-  QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -359,7 +361,7 @@ HB_FUNC_STATIC(QMDIAREA_SETTABSHAPE)
 // void setViewMode(QMdiArea::ViewMode mode)
 HB_FUNC_STATIC(QMDIAREA_SETVIEWMODE)
 {
-  QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -379,7 +381,7 @@ HB_FUNC_STATIC(QMDIAREA_SETVIEWMODE)
 // QList<QMdiSubWindow *> subWindowList(QMdiArea::WindowOrder order = QMdiArea::CreationOrder) const
 HB_FUNC_STATIC(QMDIAREA_SUBWINDOWLIST)
 {
-  QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -418,7 +420,7 @@ HB_FUNC_STATIC(QMDIAREA_SUBWINDOWLIST)
 // QTabWidget::TabPosition tabPosition() const
 HB_FUNC_STATIC(QMDIAREA_TABPOSITION)
 {
-  QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -436,7 +438,7 @@ HB_FUNC_STATIC(QMDIAREA_TABPOSITION)
 // QTabWidget::TabShape tabShape() const
 HB_FUNC_STATIC(QMDIAREA_TABSHAPE)
 {
-  QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -454,7 +456,7 @@ HB_FUNC_STATIC(QMDIAREA_TABSHAPE)
 // bool testOption(QMdiArea::AreaOption option) const
 HB_FUNC_STATIC(QMDIAREA_TESTOPTION)
 {
-  QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -472,7 +474,7 @@ HB_FUNC_STATIC(QMDIAREA_TESTOPTION)
 // QMdiArea::ViewMode viewMode() const
 HB_FUNC_STATIC(QMDIAREA_VIEWMODE)
 {
-  QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -490,7 +492,7 @@ HB_FUNC_STATIC(QMDIAREA_VIEWMODE)
 // virtual QSize minimumSizeHint() const
 HB_FUNC_STATIC(QMDIAREA_MINIMUMSIZEHINT)
 {
-  QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -509,7 +511,7 @@ HB_FUNC_STATIC(QMDIAREA_MINIMUMSIZEHINT)
 // virtual QSize sizeHint() const
 HB_FUNC_STATIC(QMDIAREA_SIZEHINT)
 {
-  QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -528,7 +530,7 @@ HB_FUNC_STATIC(QMDIAREA_SIZEHINT)
 // void activateNextSubWindow()
 HB_FUNC_STATIC(QMDIAREA_ACTIVATENEXTSUBWINDOW)
 {
-  QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -548,7 +550,7 @@ HB_FUNC_STATIC(QMDIAREA_ACTIVATENEXTSUBWINDOW)
 // void activatePreviousSubWindow()
 HB_FUNC_STATIC(QMDIAREA_ACTIVATEPREVIOUSSUBWINDOW)
 {
-  QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -568,7 +570,7 @@ HB_FUNC_STATIC(QMDIAREA_ACTIVATEPREVIOUSSUBWINDOW)
 // void cascadeSubWindows()
 HB_FUNC_STATIC(QMDIAREA_CASCADESUBWINDOWS)
 {
-  QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -588,7 +590,7 @@ HB_FUNC_STATIC(QMDIAREA_CASCADESUBWINDOWS)
 // void closeActiveSubWindow()
 HB_FUNC_STATIC(QMDIAREA_CLOSEACTIVESUBWINDOW)
 {
-  QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -608,7 +610,7 @@ HB_FUNC_STATIC(QMDIAREA_CLOSEACTIVESUBWINDOW)
 // void closeAllSubWindows()
 HB_FUNC_STATIC(QMDIAREA_CLOSEALLSUBWINDOWS)
 {
-  QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -628,7 +630,7 @@ HB_FUNC_STATIC(QMDIAREA_CLOSEALLSUBWINDOWS)
 // void setActiveSubWindow(QMdiSubWindow *window)
 HB_FUNC_STATIC(QMDIAREA_SETACTIVESUBWINDOW)
 {
-  QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -648,7 +650,7 @@ HB_FUNC_STATIC(QMDIAREA_SETACTIVESUBWINDOW)
 // void tileSubWindows()
 HB_FUNC_STATIC(QMDIAREA_TILESUBWINDOWS)
 {
-  QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

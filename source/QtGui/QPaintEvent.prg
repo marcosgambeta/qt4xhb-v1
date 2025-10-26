@@ -42,6 +42,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QPaintEvent *p = static_cast<QPaintEvent *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QPAINTEVENT_NEW)
 {
   if (ISNUMPAR(1) && ISQREGION(1)) {
@@ -59,7 +61,7 @@ HB_FUNC_STATIC(QPAINTEVENT_NEW)
 
 HB_FUNC_STATIC(QPAINTEVENT_DELETE)
 {
-  QPaintEvent *obj = static_cast<QPaintEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -75,7 +77,7 @@ HB_FUNC_STATIC(QPAINTEVENT_DELETE)
 // const QRect &rect() const
 HB_FUNC_STATIC(QPAINTEVENT_RECT)
 {
-  QPaintEvent *obj = static_cast<QPaintEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -94,7 +96,7 @@ HB_FUNC_STATIC(QPAINTEVENT_RECT)
 // const QRegion &region() const
 HB_FUNC_STATIC(QPAINTEVENT_REGION)
 {
-  QPaintEvent *obj = static_cast<QPaintEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

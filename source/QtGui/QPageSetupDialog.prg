@@ -47,6 +47,9 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QPageSetupDialog *p = qobject_cast<QPageSetupDialog *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QPageSetupDialog(QPrinter *printer, QWidget *parent = 0)
 HB_FUNC_STATIC(QPAGESETUPDIALOG_NEW)
 {
@@ -61,7 +64,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_NEW)
 // void open(QObject *receiver, const char *member)
 HB_FUNC_STATIC(QPAGESETUPDIALOG_OPEN)
 {
-  QPageSetupDialog *obj = qobject_cast<QPageSetupDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -81,7 +84,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_OPEN)
 // QPageSetupDialog::PageSetupDialogOptions options() const
 HB_FUNC_STATIC(QPAGESETUPDIALOG_OPTIONS)
 {
-  QPageSetupDialog *obj = qobject_cast<QPageSetupDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -99,7 +102,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_OPTIONS)
 // QPrinter *printer()
 HB_FUNC_STATIC(QPAGESETUPDIALOG_PRINTER)
 {
-  QPageSetupDialog *obj = qobject_cast<QPageSetupDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -118,7 +121,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_PRINTER)
 // void setOption(QPageSetupDialog::PageSetupDialogOption option, bool on = true)
 HB_FUNC_STATIC(QPAGESETUPDIALOG_SETOPTION)
 {
-  QPageSetupDialog *obj = qobject_cast<QPageSetupDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -138,7 +141,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_SETOPTION)
 // void setOptions(QPageSetupDialog::PageSetupDialogOptions options)
 HB_FUNC_STATIC(QPAGESETUPDIALOG_SETOPTIONS)
 {
-  QPageSetupDialog *obj = qobject_cast<QPageSetupDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -158,7 +161,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_SETOPTIONS)
 // bool testOption(QPageSetupDialog::PageSetupDialogOption option) const
 HB_FUNC_STATIC(QPAGESETUPDIALOG_TESTOPTION)
 {
-  QPageSetupDialog *obj = qobject_cast<QPageSetupDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -176,7 +179,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_TESTOPTION)
 // virtual void setVisible(bool visible)
 HB_FUNC_STATIC(QPAGESETUPDIALOG_SETVISIBLE)
 {
-  QPageSetupDialog *obj = qobject_cast<QPageSetupDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -41,6 +41,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QMoveEvent *p = static_cast<QMoveEvent *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QMoveEvent(const QPoint &pos, const QPoint &oldPos)
 HB_FUNC_STATIC(QMOVEEVENT_NEW)
 {
@@ -54,7 +56,7 @@ HB_FUNC_STATIC(QMOVEEVENT_NEW)
 
 HB_FUNC_STATIC(QMOVEEVENT_DELETE)
 {
-  QMoveEvent *obj = static_cast<QMoveEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -70,7 +72,7 @@ HB_FUNC_STATIC(QMOVEEVENT_DELETE)
 // const QPoint &oldPos() const
 HB_FUNC_STATIC(QMOVEEVENT_OLDPOS)
 {
-  QMoveEvent *obj = static_cast<QMoveEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -89,7 +91,7 @@ HB_FUNC_STATIC(QMOVEEVENT_OLDPOS)
 // const QPoint &pos() const
 HB_FUNC_STATIC(QMOVEEVENT_POS)
 {
-  QMoveEvent *obj = static_cast<QMoveEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

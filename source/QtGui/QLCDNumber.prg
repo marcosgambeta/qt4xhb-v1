@@ -65,6 +65,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QLCDNumber *p = qobject_cast<QLCDNumber *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QLCDNUMBER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
@@ -82,7 +84,7 @@ HB_FUNC_STATIC(QLCDNUMBER_NEW)
 
 HB_FUNC_STATIC(QLCDNUMBER_DELETE)
 {
-  QLCDNumber *obj = qobject_cast<QLCDNumber *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -100,7 +102,7 @@ HB_FUNC_STATIC(QLCDNUMBER_DELETE)
 // bool checkOverflow(double num) const
 HB_FUNC_STATIC(QLCDNUMBER_CHECKOVERFLOW1)
 {
-  QLCDNumber *obj = qobject_cast<QLCDNumber *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -118,7 +120,7 @@ HB_FUNC_STATIC(QLCDNUMBER_CHECKOVERFLOW1)
 // bool checkOverflow(int num) const
 HB_FUNC_STATIC(QLCDNUMBER_CHECKOVERFLOW2)
 {
-  QLCDNumber *obj = qobject_cast<QLCDNumber *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -145,7 +147,7 @@ HB_FUNC_STATIC(QLCDNUMBER_CHECKOVERFLOW)
 // int digitCount() const
 HB_FUNC_STATIC(QLCDNUMBER_DIGITCOUNT)
 {
-  QLCDNumber *obj = qobject_cast<QLCDNumber *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -163,7 +165,7 @@ HB_FUNC_STATIC(QLCDNUMBER_DIGITCOUNT)
 // int intValue() const
 HB_FUNC_STATIC(QLCDNUMBER_INTVALUE)
 {
-  QLCDNumber *obj = qobject_cast<QLCDNumber *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -181,7 +183,7 @@ HB_FUNC_STATIC(QLCDNUMBER_INTVALUE)
 // QLCDNumber::Mode mode() const
 HB_FUNC_STATIC(QLCDNUMBER_MODE)
 {
-  QLCDNumber *obj = qobject_cast<QLCDNumber *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -199,7 +201,7 @@ HB_FUNC_STATIC(QLCDNUMBER_MODE)
 // QLCDNumber::SegmentStyle segmentStyle() const
 HB_FUNC_STATIC(QLCDNUMBER_SEGMENTSTYLE)
 {
-  QLCDNumber *obj = qobject_cast<QLCDNumber *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -217,7 +219,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SEGMENTSTYLE)
 // void setDigitCount(int numDigits)
 HB_FUNC_STATIC(QLCDNUMBER_SETDIGITCOUNT)
 {
-  QLCDNumber *obj = qobject_cast<QLCDNumber *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -237,7 +239,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETDIGITCOUNT)
 // void setMode(QLCDNumber::Mode)
 HB_FUNC_STATIC(QLCDNUMBER_SETMODE)
 {
-  QLCDNumber *obj = qobject_cast<QLCDNumber *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -257,7 +259,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETMODE)
 // void setSegmentStyle(QLCDNumber::SegmentStyle)
 HB_FUNC_STATIC(QLCDNUMBER_SETSEGMENTSTYLE)
 {
-  QLCDNumber *obj = qobject_cast<QLCDNumber *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -277,7 +279,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETSEGMENTSTYLE)
 // bool smallDecimalPoint() const
 HB_FUNC_STATIC(QLCDNUMBER_SMALLDECIMALPOINT)
 {
-  QLCDNumber *obj = qobject_cast<QLCDNumber *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -295,7 +297,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SMALLDECIMALPOINT)
 // double value() const
 HB_FUNC_STATIC(QLCDNUMBER_VALUE)
 {
-  QLCDNumber *obj = qobject_cast<QLCDNumber *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -313,7 +315,7 @@ HB_FUNC_STATIC(QLCDNUMBER_VALUE)
 // virtual QSize sizeHint() const
 HB_FUNC_STATIC(QLCDNUMBER_SIZEHINT)
 {
-  QLCDNumber *obj = qobject_cast<QLCDNumber *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -332,7 +334,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SIZEHINT)
 // void display(const QString &s)
 HB_FUNC_STATIC(QLCDNUMBER_DISPLAY1)
 {
-  QLCDNumber *obj = qobject_cast<QLCDNumber *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -352,7 +354,7 @@ HB_FUNC_STATIC(QLCDNUMBER_DISPLAY1)
 // void display(double num)
 HB_FUNC_STATIC(QLCDNUMBER_DISPLAY2)
 {
-  QLCDNumber *obj = qobject_cast<QLCDNumber *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -372,7 +374,7 @@ HB_FUNC_STATIC(QLCDNUMBER_DISPLAY2)
 // void display(int num)
 HB_FUNC_STATIC(QLCDNUMBER_DISPLAY3)
 {
-  QLCDNumber *obj = qobject_cast<QLCDNumber *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -403,7 +405,7 @@ HB_FUNC_STATIC(QLCDNUMBER_DISPLAY)
 // void setBinMode()
 HB_FUNC_STATIC(QLCDNUMBER_SETBINMODE)
 {
-  QLCDNumber *obj = qobject_cast<QLCDNumber *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -423,7 +425,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETBINMODE)
 // void setDecMode()
 HB_FUNC_STATIC(QLCDNUMBER_SETDECMODE)
 {
-  QLCDNumber *obj = qobject_cast<QLCDNumber *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -443,7 +445,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETDECMODE)
 // void setHexMode()
 HB_FUNC_STATIC(QLCDNUMBER_SETHEXMODE)
 {
-  QLCDNumber *obj = qobject_cast<QLCDNumber *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -463,7 +465,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETHEXMODE)
 // void setOctMode()
 HB_FUNC_STATIC(QLCDNUMBER_SETOCTMODE)
 {
-  QLCDNumber *obj = qobject_cast<QLCDNumber *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -483,7 +485,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETOCTMODE)
 // void setSmallDecimalPoint(bool)
 HB_FUNC_STATIC(QLCDNUMBER_SETSMALLDECIMALPOINT)
 {
-  QLCDNumber *obj = qobject_cast<QLCDNumber *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

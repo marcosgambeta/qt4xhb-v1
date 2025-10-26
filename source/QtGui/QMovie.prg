@@ -87,6 +87,8 @@ RETURN
 #include <QtGui/QColor>
 #include <QtGui/QPixmap>
 
+#define GET_PTR_FROM_SELF(p) QMovie *p = qobject_cast<QMovie *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QMOVIE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -110,7 +112,7 @@ HB_FUNC_STATIC(QMOVIE_NEW)
 
 HB_FUNC_STATIC(QMOVIE_DELETE)
 {
-  QMovie *obj = qobject_cast<QMovie *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -128,7 +130,7 @@ HB_FUNC_STATIC(QMOVIE_DELETE)
 // QColor backgroundColor() const
 HB_FUNC_STATIC(QMOVIE_BACKGROUNDCOLOR)
 {
-  QMovie *obj = qobject_cast<QMovie *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -147,7 +149,7 @@ HB_FUNC_STATIC(QMOVIE_BACKGROUNDCOLOR)
 // QMovie::CacheMode cacheMode() const
 HB_FUNC_STATIC(QMOVIE_CACHEMODE)
 {
-  QMovie *obj = qobject_cast<QMovie *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -165,7 +167,7 @@ HB_FUNC_STATIC(QMOVIE_CACHEMODE)
 // int currentFrameNumber() const
 HB_FUNC_STATIC(QMOVIE_CURRENTFRAMENUMBER)
 {
-  QMovie *obj = qobject_cast<QMovie *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -183,7 +185,7 @@ HB_FUNC_STATIC(QMOVIE_CURRENTFRAMENUMBER)
 // QImage currentImage() const
 HB_FUNC_STATIC(QMOVIE_CURRENTIMAGE)
 {
-  QMovie *obj = qobject_cast<QMovie *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -202,7 +204,7 @@ HB_FUNC_STATIC(QMOVIE_CURRENTIMAGE)
 // QPixmap currentPixmap() const
 HB_FUNC_STATIC(QMOVIE_CURRENTPIXMAP)
 {
-  QMovie *obj = qobject_cast<QMovie *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -221,7 +223,7 @@ HB_FUNC_STATIC(QMOVIE_CURRENTPIXMAP)
 // QIODevice *device() const
 HB_FUNC_STATIC(QMOVIE_DEVICE)
 {
-  QMovie *obj = qobject_cast<QMovie *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -240,7 +242,7 @@ HB_FUNC_STATIC(QMOVIE_DEVICE)
 // QString fileName() const
 HB_FUNC_STATIC(QMOVIE_FILENAME)
 {
-  QMovie *obj = qobject_cast<QMovie *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -258,7 +260,7 @@ HB_FUNC_STATIC(QMOVIE_FILENAME)
 // QByteArray format() const
 HB_FUNC_STATIC(QMOVIE_FORMAT)
 {
-  QMovie *obj = qobject_cast<QMovie *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -277,7 +279,7 @@ HB_FUNC_STATIC(QMOVIE_FORMAT)
 // int frameCount() const
 HB_FUNC_STATIC(QMOVIE_FRAMECOUNT)
 {
-  QMovie *obj = qobject_cast<QMovie *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -295,7 +297,7 @@ HB_FUNC_STATIC(QMOVIE_FRAMECOUNT)
 // QRect frameRect() const
 HB_FUNC_STATIC(QMOVIE_FRAMERECT)
 {
-  QMovie *obj = qobject_cast<QMovie *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -314,7 +316,7 @@ HB_FUNC_STATIC(QMOVIE_FRAMERECT)
 // bool isValid() const
 HB_FUNC_STATIC(QMOVIE_ISVALID)
 {
-  QMovie *obj = qobject_cast<QMovie *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -332,7 +334,7 @@ HB_FUNC_STATIC(QMOVIE_ISVALID)
 // bool jumpToFrame(int frameNumber)
 HB_FUNC_STATIC(QMOVIE_JUMPTOFRAME)
 {
-  QMovie *obj = qobject_cast<QMovie *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -350,7 +352,7 @@ HB_FUNC_STATIC(QMOVIE_JUMPTOFRAME)
 // int loopCount() const
 HB_FUNC_STATIC(QMOVIE_LOOPCOUNT)
 {
-  QMovie *obj = qobject_cast<QMovie *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -368,7 +370,7 @@ HB_FUNC_STATIC(QMOVIE_LOOPCOUNT)
 // int nextFrameDelay() const
 HB_FUNC_STATIC(QMOVIE_NEXTFRAMEDELAY)
 {
-  QMovie *obj = qobject_cast<QMovie *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -386,7 +388,7 @@ HB_FUNC_STATIC(QMOVIE_NEXTFRAMEDELAY)
 // QSize scaledSize()
 HB_FUNC_STATIC(QMOVIE_SCALEDSIZE)
 {
-  QMovie *obj = qobject_cast<QMovie *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -405,7 +407,7 @@ HB_FUNC_STATIC(QMOVIE_SCALEDSIZE)
 // void setBackgroundColor(const QColor &color)
 HB_FUNC_STATIC(QMOVIE_SETBACKGROUNDCOLOR)
 {
-  QMovie *obj = qobject_cast<QMovie *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -425,7 +427,7 @@ HB_FUNC_STATIC(QMOVIE_SETBACKGROUNDCOLOR)
 // void setCacheMode(QMovie::CacheMode mode)
 HB_FUNC_STATIC(QMOVIE_SETCACHEMODE)
 {
-  QMovie *obj = qobject_cast<QMovie *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -445,7 +447,7 @@ HB_FUNC_STATIC(QMOVIE_SETCACHEMODE)
 // void setDevice(QIODevice *device)
 HB_FUNC_STATIC(QMOVIE_SETDEVICE)
 {
-  QMovie *obj = qobject_cast<QMovie *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -465,7 +467,7 @@ HB_FUNC_STATIC(QMOVIE_SETDEVICE)
 // void setFileName(const QString &fileName)
 HB_FUNC_STATIC(QMOVIE_SETFILENAME)
 {
-  QMovie *obj = qobject_cast<QMovie *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -485,7 +487,7 @@ HB_FUNC_STATIC(QMOVIE_SETFILENAME)
 // void setFormat(const QByteArray &format)
 HB_FUNC_STATIC(QMOVIE_SETFORMAT)
 {
-  QMovie *obj = qobject_cast<QMovie *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -505,7 +507,7 @@ HB_FUNC_STATIC(QMOVIE_SETFORMAT)
 // void setScaledSize(const QSize &size)
 HB_FUNC_STATIC(QMOVIE_SETSCALEDSIZE)
 {
-  QMovie *obj = qobject_cast<QMovie *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -525,7 +527,7 @@ HB_FUNC_STATIC(QMOVIE_SETSCALEDSIZE)
 // int speed() const
 HB_FUNC_STATIC(QMOVIE_SPEED)
 {
-  QMovie *obj = qobject_cast<QMovie *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -543,7 +545,7 @@ HB_FUNC_STATIC(QMOVIE_SPEED)
 // QMovie::MovieState state() const
 HB_FUNC_STATIC(QMOVIE_STATE)
 {
-  QMovie *obj = qobject_cast<QMovie *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -561,7 +563,7 @@ HB_FUNC_STATIC(QMOVIE_STATE)
 // bool jumpToNextFrame()
 HB_FUNC_STATIC(QMOVIE_JUMPTONEXTFRAME)
 {
-  QMovie *obj = qobject_cast<QMovie *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -579,7 +581,7 @@ HB_FUNC_STATIC(QMOVIE_JUMPTONEXTFRAME)
 // void setPaused(bool paused)
 HB_FUNC_STATIC(QMOVIE_SETPAUSED)
 {
-  QMovie *obj = qobject_cast<QMovie *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -599,7 +601,7 @@ HB_FUNC_STATIC(QMOVIE_SETPAUSED)
 // void setSpeed(int percentSpeed)
 HB_FUNC_STATIC(QMOVIE_SETSPEED)
 {
-  QMovie *obj = qobject_cast<QMovie *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -619,7 +621,7 @@ HB_FUNC_STATIC(QMOVIE_SETSPEED)
 // void start()
 HB_FUNC_STATIC(QMOVIE_START)
 {
-  QMovie *obj = qobject_cast<QMovie *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -639,7 +641,7 @@ HB_FUNC_STATIC(QMOVIE_START)
 // void stop()
 HB_FUNC_STATIC(QMOVIE_STOP)
 {
-  QMovie *obj = qobject_cast<QMovie *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

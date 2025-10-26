@@ -65,6 +65,8 @@ RETURN
 #include <QtGui/QMdiArea>
 #include <QtGui/QMenu>
 
+#define GET_PTR_FROM_SELF(p) QMdiSubWindow *p = qobject_cast<QMdiSubWindow *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QMdiSubWindow(QWidget *parent = 0, Qt::WindowFlags flags = 0)
 HB_FUNC_STATIC(QMDISUBWINDOW_NEW)
 {
@@ -80,7 +82,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_NEW)
 // bool isShaded() const
 HB_FUNC_STATIC(QMDISUBWINDOW_ISSHADED)
 {
-  QMdiSubWindow *obj = qobject_cast<QMdiSubWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -98,7 +100,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_ISSHADED)
 // int keyboardPageStep() const
 HB_FUNC_STATIC(QMDISUBWINDOW_KEYBOARDPAGESTEP)
 {
-  QMdiSubWindow *obj = qobject_cast<QMdiSubWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -116,7 +118,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_KEYBOARDPAGESTEP)
 // int keyboardSingleStep() const
 HB_FUNC_STATIC(QMDISUBWINDOW_KEYBOARDSINGLESTEP)
 {
-  QMdiSubWindow *obj = qobject_cast<QMdiSubWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -134,7 +136,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_KEYBOARDSINGLESTEP)
 // QMdiArea *mdiArea() const
 HB_FUNC_STATIC(QMDISUBWINDOW_MDIAREA)
 {
-  QMdiSubWindow *obj = qobject_cast<QMdiSubWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -153,7 +155,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_MDIAREA)
 // void setKeyboardPageStep(int step)
 HB_FUNC_STATIC(QMDISUBWINDOW_SETKEYBOARDPAGESTEP)
 {
-  QMdiSubWindow *obj = qobject_cast<QMdiSubWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -173,7 +175,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_SETKEYBOARDPAGESTEP)
 // void setKeyboardSingleStep(int step)
 HB_FUNC_STATIC(QMDISUBWINDOW_SETKEYBOARDSINGLESTEP)
 {
-  QMdiSubWindow *obj = qobject_cast<QMdiSubWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -193,7 +195,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_SETKEYBOARDSINGLESTEP)
 // void setOption(QMdiSubWindow::SubWindowOption option, bool on = true)
 HB_FUNC_STATIC(QMDISUBWINDOW_SETOPTION)
 {
-  QMdiSubWindow *obj = qobject_cast<QMdiSubWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -213,7 +215,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_SETOPTION)
 // void setSystemMenu(QMenu *systemMenu)
 HB_FUNC_STATIC(QMDISUBWINDOW_SETSYSTEMMENU)
 {
-  QMdiSubWindow *obj = qobject_cast<QMdiSubWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -233,7 +235,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_SETSYSTEMMENU)
 // void setWidget(QWidget *widget)
 HB_FUNC_STATIC(QMDISUBWINDOW_SETWIDGET)
 {
-  QMdiSubWindow *obj = qobject_cast<QMdiSubWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -253,7 +255,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_SETWIDGET)
 // QMenu *systemMenu() const
 HB_FUNC_STATIC(QMDISUBWINDOW_SYSTEMMENU)
 {
-  QMdiSubWindow *obj = qobject_cast<QMdiSubWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -272,7 +274,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_SYSTEMMENU)
 // bool testOption(QMdiSubWindow::SubWindowOption option) const
 HB_FUNC_STATIC(QMDISUBWINDOW_TESTOPTION)
 {
-  QMdiSubWindow *obj = qobject_cast<QMdiSubWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -290,7 +292,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_TESTOPTION)
 // QWidget *widget() const
 HB_FUNC_STATIC(QMDISUBWINDOW_WIDGET)
 {
-  QMdiSubWindow *obj = qobject_cast<QMdiSubWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -309,7 +311,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_WIDGET)
 // virtual QSize minimumSizeHint() const
 HB_FUNC_STATIC(QMDISUBWINDOW_MINIMUMSIZEHINT)
 {
-  QMdiSubWindow *obj = qobject_cast<QMdiSubWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -328,7 +330,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_MINIMUMSIZEHINT)
 // virtual QSize sizeHint() const
 HB_FUNC_STATIC(QMDISUBWINDOW_SIZEHINT)
 {
-  QMdiSubWindow *obj = qobject_cast<QMdiSubWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -347,7 +349,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_SIZEHINT)
 // void showShaded()
 HB_FUNC_STATIC(QMDISUBWINDOW_SHOWSHADED)
 {
-  QMdiSubWindow *obj = qobject_cast<QMdiSubWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -367,7 +369,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_SHOWSHADED)
 // void showSystemMenu()
 HB_FUNC_STATIC(QMDISUBWINDOW_SHOWSYSTEMMENU)
 {
-  QMdiSubWindow *obj = qobject_cast<QMdiSubWindow *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

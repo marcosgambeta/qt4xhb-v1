@@ -86,6 +86,8 @@ RETURN
 
 #include <QtGui/QMovie>
 
+#define GET_PTR_FROM_SELF(p) QLabel *p = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QLABEL_NEW)
 {
   if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
@@ -104,7 +106,7 @@ HB_FUNC_STATIC(QLABEL_NEW)
 
 HB_FUNC_STATIC(QLABEL_DELETE)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -122,7 +124,7 @@ HB_FUNC_STATIC(QLABEL_DELETE)
 // Qt::Alignment alignment() const
 HB_FUNC_STATIC(QLABEL_ALIGNMENT)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -140,7 +142,7 @@ HB_FUNC_STATIC(QLABEL_ALIGNMENT)
 // QWidget *buddy() const
 HB_FUNC_STATIC(QLABEL_BUDDY)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -159,7 +161,7 @@ HB_FUNC_STATIC(QLABEL_BUDDY)
 // bool hasScaledContents() const
 HB_FUNC_STATIC(QLABEL_HASSCALEDCONTENTS)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -177,7 +179,7 @@ HB_FUNC_STATIC(QLABEL_HASSCALEDCONTENTS)
 // bool hasSelectedText() const
 HB_FUNC_STATIC(QLABEL_HASSELECTEDTEXT)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -195,7 +197,7 @@ HB_FUNC_STATIC(QLABEL_HASSELECTEDTEXT)
 // int indent() const
 HB_FUNC_STATIC(QLABEL_INDENT)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -213,7 +215,7 @@ HB_FUNC_STATIC(QLABEL_INDENT)
 // int margin() const
 HB_FUNC_STATIC(QLABEL_MARGIN)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -231,7 +233,7 @@ HB_FUNC_STATIC(QLABEL_MARGIN)
 // QMovie *movie() const
 HB_FUNC_STATIC(QLABEL_MOVIE)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -250,7 +252,7 @@ HB_FUNC_STATIC(QLABEL_MOVIE)
 // bool openExternalLinks() const
 HB_FUNC_STATIC(QLABEL_OPENEXTERNALLINKS)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -268,7 +270,7 @@ HB_FUNC_STATIC(QLABEL_OPENEXTERNALLINKS)
 // const QPicture *picture() const
 HB_FUNC_STATIC(QLABEL_PICTURE)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -287,7 +289,7 @@ HB_FUNC_STATIC(QLABEL_PICTURE)
 // const QPixmap *pixmap() const
 HB_FUNC_STATIC(QLABEL_PIXMAP)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -306,7 +308,7 @@ HB_FUNC_STATIC(QLABEL_PIXMAP)
 // QString selectedText() const
 HB_FUNC_STATIC(QLABEL_SELECTEDTEXT)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -324,7 +326,7 @@ HB_FUNC_STATIC(QLABEL_SELECTEDTEXT)
 // void setAlignment(Qt::Alignment)
 HB_FUNC_STATIC(QLABEL_SETALIGNMENT)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -344,7 +346,7 @@ HB_FUNC_STATIC(QLABEL_SETALIGNMENT)
 // void setBuddy(QWidget *buddy)
 HB_FUNC_STATIC(QLABEL_SETBUDDY)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -364,7 +366,7 @@ HB_FUNC_STATIC(QLABEL_SETBUDDY)
 // void setIndent(int)
 HB_FUNC_STATIC(QLABEL_SETINDENT)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -384,7 +386,7 @@ HB_FUNC_STATIC(QLABEL_SETINDENT)
 // void setMargin(int)
 HB_FUNC_STATIC(QLABEL_SETMARGIN)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -404,7 +406,7 @@ HB_FUNC_STATIC(QLABEL_SETMARGIN)
 // void setOpenExternalLinks(bool open)
 HB_FUNC_STATIC(QLABEL_SETOPENEXTERNALLINKS)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -424,7 +426,7 @@ HB_FUNC_STATIC(QLABEL_SETOPENEXTERNALLINKS)
 // void setScaledContents(bool)
 HB_FUNC_STATIC(QLABEL_SETSCALEDCONTENTS)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -444,7 +446,7 @@ HB_FUNC_STATIC(QLABEL_SETSCALEDCONTENTS)
 // void setSelection(int start, int length)
 HB_FUNC_STATIC(QLABEL_SETSELECTION)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -464,7 +466,7 @@ HB_FUNC_STATIC(QLABEL_SETSELECTION)
 // void setTextFormat(Qt::TextFormat)
 HB_FUNC_STATIC(QLABEL_SETTEXTFORMAT)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -484,7 +486,7 @@ HB_FUNC_STATIC(QLABEL_SETTEXTFORMAT)
 // void setTextInteractionFlags(Qt::TextInteractionFlags flags)
 HB_FUNC_STATIC(QLABEL_SETTEXTINTERACTIONFLAGS)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -504,7 +506,7 @@ HB_FUNC_STATIC(QLABEL_SETTEXTINTERACTIONFLAGS)
 // void setWordWrap(bool on)
 HB_FUNC_STATIC(QLABEL_SETWORDWRAP)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -524,7 +526,7 @@ HB_FUNC_STATIC(QLABEL_SETWORDWRAP)
 // QString text() const
 HB_FUNC_STATIC(QLABEL_TEXT)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -542,7 +544,7 @@ HB_FUNC_STATIC(QLABEL_TEXT)
 // Qt::TextFormat textFormat() const
 HB_FUNC_STATIC(QLABEL_TEXTFORMAT)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -560,7 +562,7 @@ HB_FUNC_STATIC(QLABEL_TEXTFORMAT)
 // Qt::TextInteractionFlags textInteractionFlags() const
 HB_FUNC_STATIC(QLABEL_TEXTINTERACTIONFLAGS)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -578,7 +580,7 @@ HB_FUNC_STATIC(QLABEL_TEXTINTERACTIONFLAGS)
 // bool wordWrap() const
 HB_FUNC_STATIC(QLABEL_WORDWRAP)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -596,7 +598,7 @@ HB_FUNC_STATIC(QLABEL_WORDWRAP)
 // virtual int heightForWidth(int w) const
 HB_FUNC_STATIC(QLABEL_HEIGHTFORWIDTH)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -614,7 +616,7 @@ HB_FUNC_STATIC(QLABEL_HEIGHTFORWIDTH)
 // virtual QSize minimumSizeHint() const
 HB_FUNC_STATIC(QLABEL_MINIMUMSIZEHINT)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -633,7 +635,7 @@ HB_FUNC_STATIC(QLABEL_MINIMUMSIZEHINT)
 // virtual QSize sizeHint() const
 HB_FUNC_STATIC(QLABEL_SIZEHINT)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -652,7 +654,7 @@ HB_FUNC_STATIC(QLABEL_SIZEHINT)
 // void clear()
 HB_FUNC_STATIC(QLABEL_CLEAR)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -672,7 +674,7 @@ HB_FUNC_STATIC(QLABEL_CLEAR)
 // void setMovie(QMovie *movie)
 HB_FUNC_STATIC(QLABEL_SETMOVIE)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -692,7 +694,7 @@ HB_FUNC_STATIC(QLABEL_SETMOVIE)
 // void setNum(int num)
 HB_FUNC_STATIC(QLABEL_SETNUM1)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -712,7 +714,7 @@ HB_FUNC_STATIC(QLABEL_SETNUM1)
 // void setNum(double num)
 HB_FUNC_STATIC(QLABEL_SETNUM2)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -741,7 +743,7 @@ HB_FUNC_STATIC(QLABEL_SETNUM)
 // void setPicture(const QPicture &picture)
 HB_FUNC_STATIC(QLABEL_SETPICTURE)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -761,7 +763,7 @@ HB_FUNC_STATIC(QLABEL_SETPICTURE)
 // void setPixmap(const QPixmap &)
 HB_FUNC_STATIC(QLABEL_SETPIXMAP)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -781,7 +783,7 @@ HB_FUNC_STATIC(QLABEL_SETPIXMAP)
 // void setText(const QString &)
 HB_FUNC_STATIC(QLABEL_SETTEXT)
 {
-  QLabel *obj = qobject_cast<QLabel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

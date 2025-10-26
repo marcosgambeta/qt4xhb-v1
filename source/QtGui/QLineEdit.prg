@@ -117,6 +117,8 @@ RETURN
 #include <QtGui/QMenu>
 #include <QtGui/QValidator>
 
+#define GET_PTR_FROM_SELF(p) QLineEdit *p = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QLINEEDIT_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
@@ -134,7 +136,7 @@ HB_FUNC_STATIC(QLINEEDIT_NEW)
 
 HB_FUNC_STATIC(QLINEEDIT_DELETE)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -152,7 +154,7 @@ HB_FUNC_STATIC(QLINEEDIT_DELETE)
 // Qt::Alignment alignment() const
 HB_FUNC_STATIC(QLINEEDIT_ALIGNMENT)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -170,7 +172,7 @@ HB_FUNC_STATIC(QLINEEDIT_ALIGNMENT)
 // void backspace()
 HB_FUNC_STATIC(QLINEEDIT_BACKSPACE)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -190,7 +192,7 @@ HB_FUNC_STATIC(QLINEEDIT_BACKSPACE)
 // QCompleter *completer() const
 HB_FUNC_STATIC(QLINEEDIT_COMPLETER)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -209,7 +211,7 @@ HB_FUNC_STATIC(QLINEEDIT_COMPLETER)
 // QMenu *createStandardContextMenu()
 HB_FUNC_STATIC(QLINEEDIT_CREATESTANDARDCONTEXTMENU)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -228,7 +230,7 @@ HB_FUNC_STATIC(QLINEEDIT_CREATESTANDARDCONTEXTMENU)
 // void cursorBackward(bool mark, int steps = 1)
 HB_FUNC_STATIC(QLINEEDIT_CURSORBACKWARD)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -248,7 +250,7 @@ HB_FUNC_STATIC(QLINEEDIT_CURSORBACKWARD)
 // void cursorForward(bool mark, int steps = 1)
 HB_FUNC_STATIC(QLINEEDIT_CURSORFORWARD)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -268,7 +270,7 @@ HB_FUNC_STATIC(QLINEEDIT_CURSORFORWARD)
 // int cursorPosition() const
 HB_FUNC_STATIC(QLINEEDIT_CURSORPOSITION)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -286,7 +288,7 @@ HB_FUNC_STATIC(QLINEEDIT_CURSORPOSITION)
 // int cursorPositionAt(const QPoint &pos)
 HB_FUNC_STATIC(QLINEEDIT_CURSORPOSITIONAT)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -304,7 +306,7 @@ HB_FUNC_STATIC(QLINEEDIT_CURSORPOSITIONAT)
 // void cursorWordBackward(bool mark)
 HB_FUNC_STATIC(QLINEEDIT_CURSORWORDBACKWARD)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -324,7 +326,7 @@ HB_FUNC_STATIC(QLINEEDIT_CURSORWORDBACKWARD)
 // void cursorWordForward(bool mark)
 HB_FUNC_STATIC(QLINEEDIT_CURSORWORDFORWARD)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -344,7 +346,7 @@ HB_FUNC_STATIC(QLINEEDIT_CURSORWORDFORWARD)
 // void del()
 HB_FUNC_STATIC(QLINEEDIT_DEL)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -364,7 +366,7 @@ HB_FUNC_STATIC(QLINEEDIT_DEL)
 // void deselect()
 HB_FUNC_STATIC(QLINEEDIT_DESELECT)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -384,7 +386,7 @@ HB_FUNC_STATIC(QLINEEDIT_DESELECT)
 // QString displayText() const
 HB_FUNC_STATIC(QLINEEDIT_DISPLAYTEXT)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -402,7 +404,7 @@ HB_FUNC_STATIC(QLINEEDIT_DISPLAYTEXT)
 // bool dragEnabled() const
 HB_FUNC_STATIC(QLINEEDIT_DRAGENABLED)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -420,7 +422,7 @@ HB_FUNC_STATIC(QLINEEDIT_DRAGENABLED)
 // QLineEdit::EchoMode echoMode() const
 HB_FUNC_STATIC(QLINEEDIT_ECHOMODE)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -438,7 +440,7 @@ HB_FUNC_STATIC(QLINEEDIT_ECHOMODE)
 // void end(bool mark)
 HB_FUNC_STATIC(QLINEEDIT_END)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -458,7 +460,7 @@ HB_FUNC_STATIC(QLINEEDIT_END)
 // void getTextMargins(int *left, int *top, int *right, int *bottom) const
 HB_FUNC_STATIC(QLINEEDIT_GETTEXTMARGINS)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -486,7 +488,7 @@ HB_FUNC_STATIC(QLINEEDIT_GETTEXTMARGINS)
 // bool hasAcceptableInput() const
 HB_FUNC_STATIC(QLINEEDIT_HASACCEPTABLEINPUT)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -504,7 +506,7 @@ HB_FUNC_STATIC(QLINEEDIT_HASACCEPTABLEINPUT)
 // bool hasFrame() const
 HB_FUNC_STATIC(QLINEEDIT_HASFRAME)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -522,7 +524,7 @@ HB_FUNC_STATIC(QLINEEDIT_HASFRAME)
 // bool hasSelectedText() const
 HB_FUNC_STATIC(QLINEEDIT_HASSELECTEDTEXT)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -540,7 +542,7 @@ HB_FUNC_STATIC(QLINEEDIT_HASSELECTEDTEXT)
 // void home(bool mark)
 HB_FUNC_STATIC(QLINEEDIT_HOME)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -560,7 +562,7 @@ HB_FUNC_STATIC(QLINEEDIT_HOME)
 // QString inputMask() const
 HB_FUNC_STATIC(QLINEEDIT_INPUTMASK)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -578,7 +580,7 @@ HB_FUNC_STATIC(QLINEEDIT_INPUTMASK)
 // void insert(const QString &newText)
 HB_FUNC_STATIC(QLINEEDIT_INSERT)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -598,7 +600,7 @@ HB_FUNC_STATIC(QLINEEDIT_INSERT)
 // bool isModified() const
 HB_FUNC_STATIC(QLINEEDIT_ISMODIFIED)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -616,7 +618,7 @@ HB_FUNC_STATIC(QLINEEDIT_ISMODIFIED)
 // bool isReadOnly() const
 HB_FUNC_STATIC(QLINEEDIT_ISREADONLY)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -634,7 +636,7 @@ HB_FUNC_STATIC(QLINEEDIT_ISREADONLY)
 // bool isRedoAvailable() const
 HB_FUNC_STATIC(QLINEEDIT_ISREDOAVAILABLE)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -652,7 +654,7 @@ HB_FUNC_STATIC(QLINEEDIT_ISREDOAVAILABLE)
 // bool isUndoAvailable() const
 HB_FUNC_STATIC(QLINEEDIT_ISUNDOAVAILABLE)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -670,7 +672,7 @@ HB_FUNC_STATIC(QLINEEDIT_ISUNDOAVAILABLE)
 // int maxLength() const
 HB_FUNC_STATIC(QLINEEDIT_MAXLENGTH)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -688,7 +690,7 @@ HB_FUNC_STATIC(QLINEEDIT_MAXLENGTH)
 // QString placeholderText() const
 HB_FUNC_STATIC(QLINEEDIT_PLACEHOLDERTEXT)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -706,7 +708,7 @@ HB_FUNC_STATIC(QLINEEDIT_PLACEHOLDERTEXT)
 // virtual QSize minimumSizeHint() const
 HB_FUNC_STATIC(QLINEEDIT_MINIMUMSIZEHINT)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -725,7 +727,7 @@ HB_FUNC_STATIC(QLINEEDIT_MINIMUMSIZEHINT)
 // QString selectedText() const
 HB_FUNC_STATIC(QLINEEDIT_SELECTEDTEXT)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -743,7 +745,7 @@ HB_FUNC_STATIC(QLINEEDIT_SELECTEDTEXT)
 // int selectionStart() const
 HB_FUNC_STATIC(QLINEEDIT_SELECTIONSTART)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -761,7 +763,7 @@ HB_FUNC_STATIC(QLINEEDIT_SELECTIONSTART)
 // void setAlignment(Qt::Alignment flag)
 HB_FUNC_STATIC(QLINEEDIT_SETALIGNMENT)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -781,7 +783,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETALIGNMENT)
 // void setCompleter(QCompleter *c)
 HB_FUNC_STATIC(QLINEEDIT_SETCOMPLETER)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -801,7 +803,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETCOMPLETER)
 // void setCursorPosition(int)
 HB_FUNC_STATIC(QLINEEDIT_SETCURSORPOSITION)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -821,7 +823,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETCURSORPOSITION)
 // void setDragEnabled(bool b)
 HB_FUNC_STATIC(QLINEEDIT_SETDRAGENABLED)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -841,7 +843,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETDRAGENABLED)
 // void setEchoMode(QLineEdit::EchoMode)
 HB_FUNC_STATIC(QLINEEDIT_SETECHOMODE)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -861,7 +863,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETECHOMODE)
 // void setFrame(bool)
 HB_FUNC_STATIC(QLINEEDIT_SETFRAME)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -881,7 +883,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETFRAME)
 // void setInputMask(const QString &inputMask)
 HB_FUNC_STATIC(QLINEEDIT_SETINPUTMASK)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -901,7 +903,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETINPUTMASK)
 // void setMaxLength(int)
 HB_FUNC_STATIC(QLINEEDIT_SETMAXLENGTH)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -921,7 +923,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETMAXLENGTH)
 // void setModified(bool)
 HB_FUNC_STATIC(QLINEEDIT_SETMODIFIED)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -941,7 +943,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETMODIFIED)
 // void setPlaceholderText(const QString &)
 HB_FUNC_STATIC(QLINEEDIT_SETPLACEHOLDERTEXT)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -961,7 +963,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETPLACEHOLDERTEXT)
 // void setReadOnly(bool)
 HB_FUNC_STATIC(QLINEEDIT_SETREADONLY)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -981,7 +983,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETREADONLY)
 // void setSelection(int start, int length)
 HB_FUNC_STATIC(QLINEEDIT_SETSELECTION)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1002,7 +1004,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETTEXTMARGINS)
 {
   if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // void setTextMargins(int left, int top, int right, int bottom)
-    QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setTextMargins(PINT(1), PINT(2), PINT(3), PINT(4));
@@ -1011,7 +1013,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETTEXTMARGINS)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && ISQMARGINS(1)) {
     // void setTextMargins(const QMargins &margins)
-    QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setTextMargins(*PQMARGINS(1));
@@ -1026,7 +1028,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETTEXTMARGINS)
 // void setValidator(const QValidator *v)
 HB_FUNC_STATIC(QLINEEDIT_SETVALIDATOR)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1046,7 +1048,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETVALIDATOR)
 // virtual QSize sizeHint() const
 HB_FUNC_STATIC(QLINEEDIT_SIZEHINT)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1065,7 +1067,7 @@ HB_FUNC_STATIC(QLINEEDIT_SIZEHINT)
 // QString text() const
 HB_FUNC_STATIC(QLINEEDIT_TEXT)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1083,7 +1085,7 @@ HB_FUNC_STATIC(QLINEEDIT_TEXT)
 // QMargins textMargins() const
 HB_FUNC_STATIC(QLINEEDIT_TEXTMARGINS)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1102,7 +1104,7 @@ HB_FUNC_STATIC(QLINEEDIT_TEXTMARGINS)
 // const QValidator *validator() const
 HB_FUNC_STATIC(QLINEEDIT_VALIDATOR)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1121,7 +1123,7 @@ HB_FUNC_STATIC(QLINEEDIT_VALIDATOR)
 // virtual bool event(QEvent *e)
 HB_FUNC_STATIC(QLINEEDIT_EVENT)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1139,7 +1141,7 @@ HB_FUNC_STATIC(QLINEEDIT_EVENT)
 // virtual QVariant inputMethodQuery(Qt::InputMethodQuery property) const
 HB_FUNC_STATIC(QLINEEDIT_INPUTMETHODQUERY)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1158,7 +1160,7 @@ HB_FUNC_STATIC(QLINEEDIT_INPUTMETHODQUERY)
 // void copy() const
 HB_FUNC_STATIC(QLINEEDIT_COPY)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1178,7 +1180,7 @@ HB_FUNC_STATIC(QLINEEDIT_COPY)
 // void cut()
 HB_FUNC_STATIC(QLINEEDIT_CUT)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1198,7 +1200,7 @@ HB_FUNC_STATIC(QLINEEDIT_CUT)
 // void paste()
 HB_FUNC_STATIC(QLINEEDIT_PASTE)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1218,7 +1220,7 @@ HB_FUNC_STATIC(QLINEEDIT_PASTE)
 // void redo()
 HB_FUNC_STATIC(QLINEEDIT_REDO)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1238,7 +1240,7 @@ HB_FUNC_STATIC(QLINEEDIT_REDO)
 // void selectAll()
 HB_FUNC_STATIC(QLINEEDIT_SELECTALL)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1258,7 +1260,7 @@ HB_FUNC_STATIC(QLINEEDIT_SELECTALL)
 // void setText(const QString &)
 HB_FUNC_STATIC(QLINEEDIT_SETTEXT)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1278,7 +1280,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETTEXT)
 // void undo()
 HB_FUNC_STATIC(QLINEEDIT_UNDO)
 {
-  QLineEdit *obj = qobject_cast<QLineEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

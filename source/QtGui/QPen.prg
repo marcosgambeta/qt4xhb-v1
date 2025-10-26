@@ -72,6 +72,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QPen *p = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QPEN_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -104,7 +106,7 @@ HB_FUNC_STATIC(QPEN_NEW)
 
 HB_FUNC_STATIC(QPEN_DELETE)
 {
-  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -120,7 +122,7 @@ HB_FUNC_STATIC(QPEN_DELETE)
 // QBrush brush() const
 HB_FUNC_STATIC(QPEN_BRUSH)
 {
-  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -139,7 +141,7 @@ HB_FUNC_STATIC(QPEN_BRUSH)
 // Qt::PenCapStyle capStyle() const
 HB_FUNC_STATIC(QPEN_CAPSTYLE)
 {
-  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -157,7 +159,7 @@ HB_FUNC_STATIC(QPEN_CAPSTYLE)
 // QColor color() const
 HB_FUNC_STATIC(QPEN_COLOR)
 {
-  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -176,7 +178,7 @@ HB_FUNC_STATIC(QPEN_COLOR)
 // qreal dashOffset() const
 HB_FUNC_STATIC(QPEN_DASHOFFSET)
 {
-  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -194,7 +196,7 @@ HB_FUNC_STATIC(QPEN_DASHOFFSET)
 // QVector<qreal> dashPattern() const
 HB_FUNC_STATIC(QPEN_DASHPATTERN)
 {
-  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -220,7 +222,7 @@ HB_FUNC_STATIC(QPEN_DASHPATTERN)
 // bool isCosmetic() const
 HB_FUNC_STATIC(QPEN_ISCOSMETIC)
 {
-  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -238,7 +240,7 @@ HB_FUNC_STATIC(QPEN_ISCOSMETIC)
 // bool isSolid() const
 HB_FUNC_STATIC(QPEN_ISSOLID)
 {
-  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -256,7 +258,7 @@ HB_FUNC_STATIC(QPEN_ISSOLID)
 // Qt::PenJoinStyle joinStyle() const
 HB_FUNC_STATIC(QPEN_JOINSTYLE)
 {
-  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -274,7 +276,7 @@ HB_FUNC_STATIC(QPEN_JOINSTYLE)
 // qreal miterLimit() const
 HB_FUNC_STATIC(QPEN_MITERLIMIT)
 {
-  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -292,7 +294,7 @@ HB_FUNC_STATIC(QPEN_MITERLIMIT)
 // void setBrush(const QBrush &brush)
 HB_FUNC_STATIC(QPEN_SETBRUSH)
 {
-  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -312,7 +314,7 @@ HB_FUNC_STATIC(QPEN_SETBRUSH)
 // void setCapStyle(Qt::PenCapStyle style)
 HB_FUNC_STATIC(QPEN_SETCAPSTYLE)
 {
-  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -332,7 +334,7 @@ HB_FUNC_STATIC(QPEN_SETCAPSTYLE)
 // void setColor(const QColor &color)
 HB_FUNC_STATIC(QPEN_SETCOLOR)
 {
-  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -352,7 +354,7 @@ HB_FUNC_STATIC(QPEN_SETCOLOR)
 // void setCosmetic(bool cosmetic)
 HB_FUNC_STATIC(QPEN_SETCOSMETIC)
 {
-  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -372,7 +374,7 @@ HB_FUNC_STATIC(QPEN_SETCOSMETIC)
 // void setDashOffset(qreal offset)
 HB_FUNC_STATIC(QPEN_SETDASHOFFSET)
 {
-  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -392,7 +394,7 @@ HB_FUNC_STATIC(QPEN_SETDASHOFFSET)
 // void setDashPattern(const QVector<qreal> &pattern)
 HB_FUNC_STATIC(QPEN_SETDASHPATTERN)
 {
-  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -420,7 +422,7 @@ HB_FUNC_STATIC(QPEN_SETDASHPATTERN)
 // void setJoinStyle(Qt::PenJoinStyle style)
 HB_FUNC_STATIC(QPEN_SETJOINSTYLE)
 {
-  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -440,7 +442,7 @@ HB_FUNC_STATIC(QPEN_SETJOINSTYLE)
 // void setMiterLimit(qreal limit)
 HB_FUNC_STATIC(QPEN_SETMITERLIMIT)
 {
-  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -460,7 +462,7 @@ HB_FUNC_STATIC(QPEN_SETMITERLIMIT)
 // void setStyle(Qt::PenStyle style)
 HB_FUNC_STATIC(QPEN_SETSTYLE)
 {
-  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -480,7 +482,7 @@ HB_FUNC_STATIC(QPEN_SETSTYLE)
 // void setWidth(int width)
 HB_FUNC_STATIC(QPEN_SETWIDTH)
 {
-  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -500,7 +502,7 @@ HB_FUNC_STATIC(QPEN_SETWIDTH)
 // void setWidthF(qreal width)
 HB_FUNC_STATIC(QPEN_SETWIDTHF)
 {
-  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -520,7 +522,7 @@ HB_FUNC_STATIC(QPEN_SETWIDTHF)
 // Qt::PenStyle style() const
 HB_FUNC_STATIC(QPEN_STYLE)
 {
-  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -538,7 +540,7 @@ HB_FUNC_STATIC(QPEN_STYLE)
 // int width() const
 HB_FUNC_STATIC(QPEN_WIDTH)
 {
-  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -556,7 +558,7 @@ HB_FUNC_STATIC(QPEN_WIDTH)
 // qreal widthF() const
 HB_FUNC_STATIC(QPEN_WIDTHF)
 {
-  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

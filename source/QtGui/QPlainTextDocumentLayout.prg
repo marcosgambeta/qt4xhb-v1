@@ -51,6 +51,9 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QPlainTextDocumentLayout *p = qobject_cast<QPlainTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QPlainTextDocumentLayout(QTextDocument *document)
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_NEW)
 {
@@ -64,7 +67,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_NEW)
 
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_DELETE)
 {
-  QPlainTextDocumentLayout *obj = qobject_cast<QPlainTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -82,7 +85,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_DELETE)
 // int cursorWidth() const
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_CURSORWIDTH)
 {
-  QPlainTextDocumentLayout *obj = qobject_cast<QPlainTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -100,7 +103,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_CURSORWIDTH)
 // void ensureBlockLayout(const QTextBlock &block) const
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_ENSUREBLOCKLAYOUT)
 {
-  QPlainTextDocumentLayout *obj = qobject_cast<QPlainTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -120,7 +123,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_ENSUREBLOCKLAYOUT)
 // void requestUpdate()
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_REQUESTUPDATE)
 {
-  QPlainTextDocumentLayout *obj = qobject_cast<QPlainTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -140,7 +143,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_REQUESTUPDATE)
 // void setCursorWidth(int width)
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_SETCURSORWIDTH)
 {
-  QPlainTextDocumentLayout *obj = qobject_cast<QPlainTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -160,7 +163,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_SETCURSORWIDTH)
 // virtual QRectF blockBoundingRect(const QTextBlock &block) const
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT)
 {
-  QPlainTextDocumentLayout *obj = qobject_cast<QPlainTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -179,7 +182,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT)
 // virtual QSizeF documentSize() const
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_DOCUMENTSIZE)
 {
-  QPlainTextDocumentLayout *obj = qobject_cast<QPlainTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -198,7 +201,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_DOCUMENTSIZE)
 // virtual QRectF frameBoundingRect(QTextFrame *) const
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT)
 {
-  QPlainTextDocumentLayout *obj = qobject_cast<QPlainTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -217,7 +220,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT)
 // virtual int hitTest(const QPointF &, Qt::HitTestAccuracy) const
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_HITTEST)
 {
-  QPlainTextDocumentLayout *obj = qobject_cast<QPlainTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -235,7 +238,7 @@ HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_HITTEST)
 // virtual int pageCount() const
 HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_PAGECOUNT)
 {
-  QPlainTextDocumentLayout *obj = qobject_cast<QPlainTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

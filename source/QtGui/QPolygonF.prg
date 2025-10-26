@@ -59,6 +59,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QPolygonF *p = static_cast<QPolygonF *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QPOLYGONF_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -98,7 +100,7 @@ HB_FUNC_STATIC(QPOLYGONF_NEW)
 
 HB_FUNC_STATIC(QPOLYGONF_DELETE)
 {
-  QPolygonF *obj = static_cast<QPolygonF *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -114,7 +116,7 @@ HB_FUNC_STATIC(QPOLYGONF_DELETE)
 // QRectF boundingRect() const
 HB_FUNC_STATIC(QPOLYGONF_BOUNDINGRECT)
 {
-  QPolygonF *obj = static_cast<QPolygonF *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -133,7 +135,7 @@ HB_FUNC_STATIC(QPOLYGONF_BOUNDINGRECT)
 // bool containsPoint(const QPointF &point, Qt::FillRule fillRule) const
 HB_FUNC_STATIC(QPOLYGONF_CONTAINSPOINT)
 {
-  QPolygonF *obj = static_cast<QPolygonF *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -151,7 +153,7 @@ HB_FUNC_STATIC(QPOLYGONF_CONTAINSPOINT)
 // QPolygonF intersected(const QPolygonF &r) const
 HB_FUNC_STATIC(QPOLYGONF_INTERSECTED)
 {
-  QPolygonF *obj = static_cast<QPolygonF *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -170,7 +172,7 @@ HB_FUNC_STATIC(QPOLYGONF_INTERSECTED)
 // bool isClosed() const
 HB_FUNC_STATIC(QPOLYGONF_ISCLOSED)
 {
-  QPolygonF *obj = static_cast<QPolygonF *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -188,7 +190,7 @@ HB_FUNC_STATIC(QPOLYGONF_ISCLOSED)
 // QPolygonF subtracted(const QPolygonF &r) const
 HB_FUNC_STATIC(QPOLYGONF_SUBTRACTED)
 {
-  QPolygonF *obj = static_cast<QPolygonF *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -207,7 +209,7 @@ HB_FUNC_STATIC(QPOLYGONF_SUBTRACTED)
 // void swap(QPolygonF &other)
 HB_FUNC_STATIC(QPOLYGONF_SWAP)
 {
-  QPolygonF *obj = static_cast<QPolygonF *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -227,7 +229,7 @@ HB_FUNC_STATIC(QPOLYGONF_SWAP)
 // QPolygon toPolygon() const
 HB_FUNC_STATIC(QPOLYGONF_TOPOLYGON)
 {
-  QPolygonF *obj = static_cast<QPolygonF *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -247,7 +249,7 @@ HB_FUNC_STATIC(QPOLYGONF_TRANSLATE)
 {
   if (ISNUMPAR(1) && ISQPOINTF(1)) {
     // void translate(const QPointF &offset)
-    QPolygonF *obj = static_cast<QPolygonF *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->translate(*PQPOINTF(1));
@@ -256,7 +258,7 @@ HB_FUNC_STATIC(QPOLYGONF_TRANSLATE)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void translate(qreal dx, qreal dy)
-    QPolygonF *obj = static_cast<QPolygonF *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->translate(PQREAL(1), PQREAL(2));
@@ -272,7 +274,7 @@ HB_FUNC_STATIC(QPOLYGONF_TRANSLATED)
 {
   if (ISNUMPAR(1) && ISQPOINTF(1)) {
     // QPolygonF translated(const QPointF &offset) const
-    QPolygonF *obj = static_cast<QPolygonF *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QPolygonF *ptr = new QPolygonF(obj->translated(*PQPOINTF(1)));
@@ -280,7 +282,7 @@ HB_FUNC_STATIC(QPOLYGONF_TRANSLATED)
     }
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // QPolygonF translated(qreal dx, qreal dy) const
-    QPolygonF *obj = static_cast<QPolygonF *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QPolygonF *ptr = new QPolygonF(obj->translated(PQREAL(1), PQREAL(2)));
@@ -294,7 +296,7 @@ HB_FUNC_STATIC(QPOLYGONF_TRANSLATED)
 // QPolygonF united(const QPolygonF &r) const
 HB_FUNC_STATIC(QPOLYGONF_UNITED)
 {
-  QPolygonF *obj = static_cast<QPolygonF *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

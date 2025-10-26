@@ -49,6 +49,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QPicture *p = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QPICTURE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
@@ -66,7 +68,7 @@ HB_FUNC_STATIC(QPICTURE_NEW)
 
 HB_FUNC_STATIC(QPICTURE_DELETE)
 {
-  QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -82,7 +84,7 @@ HB_FUNC_STATIC(QPICTURE_DELETE)
 // QRect boundingRect() const
 HB_FUNC_STATIC(QPICTURE_BOUNDINGRECT)
 {
-  QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -101,7 +103,7 @@ HB_FUNC_STATIC(QPICTURE_BOUNDINGRECT)
 // const char *data() const
 HB_FUNC_STATIC(QPICTURE_DATA)
 {
-  QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -119,7 +121,7 @@ HB_FUNC_STATIC(QPICTURE_DATA)
 // bool isNull() const
 HB_FUNC_STATIC(QPICTURE_ISNULL)
 {
-  QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -138,14 +140,14 @@ HB_FUNC_STATIC(QPICTURE_LOAD)
 {
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2)) {
     // bool load(const QString &fileName, const char *format = 0)
-    QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->load(PQSTRING(1), OPCONSTCHAR(2, 0)));
     }
   } else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && ISCHARORNIL(2)) {
     // bool load(QIODevice *dev, const char *format = 0)
-    QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->load(PQIODEVICE(1), OPCONSTCHAR(2, 0)));
@@ -158,7 +160,7 @@ HB_FUNC_STATIC(QPICTURE_LOAD)
 // bool play(QPainter *painter)
 HB_FUNC_STATIC(QPICTURE_PLAY)
 {
-  QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -177,14 +179,14 @@ HB_FUNC_STATIC(QPICTURE_SAVE)
 {
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2)) {
     // bool save(const QString &fileName, const char *format = 0)
-    QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->save(PQSTRING(1), OPCONSTCHAR(2, 0)));
     }
   } else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && ISCHARORNIL(2)) {
     // bool save(QIODevice *dev, const char *format = 0)
-    QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->save(PQIODEVICE(1), OPCONSTCHAR(2, 0)));
@@ -197,7 +199,7 @@ HB_FUNC_STATIC(QPICTURE_SAVE)
 // void setBoundingRect(const QRect &r)
 HB_FUNC_STATIC(QPICTURE_SETBOUNDINGRECT)
 {
-  QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -217,7 +219,7 @@ HB_FUNC_STATIC(QPICTURE_SETBOUNDINGRECT)
 // virtual void setData(const char *data, uint size)
 HB_FUNC_STATIC(QPICTURE_SETDATA)
 {
-  QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -237,7 +239,7 @@ HB_FUNC_STATIC(QPICTURE_SETDATA)
 // uint size() const
 HB_FUNC_STATIC(QPICTURE_SIZE)
 {
-  QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -255,7 +257,7 @@ HB_FUNC_STATIC(QPICTURE_SIZE)
 // void swap(QPicture &other)
 HB_FUNC_STATIC(QPICTURE_SWAP)
 {
-  QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

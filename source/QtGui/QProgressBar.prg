@@ -66,6 +66,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QProgressBar *p = qobject_cast<QProgressBar *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QProgressBar(QWidget *parent = 0)
 HB_FUNC_STATIC(QPROGRESSBAR_NEW)
 {
@@ -79,7 +81,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_NEW)
 
 HB_FUNC_STATIC(QPROGRESSBAR_DELETE)
 {
-  QProgressBar *obj = qobject_cast<QProgressBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -97,7 +99,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_DELETE)
 // Qt::Alignment alignment() const
 HB_FUNC_STATIC(QPROGRESSBAR_ALIGNMENT)
 {
-  QProgressBar *obj = qobject_cast<QProgressBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -115,7 +117,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_ALIGNMENT)
 // QString format() const
 HB_FUNC_STATIC(QPROGRESSBAR_FORMAT)
 {
-  QProgressBar *obj = qobject_cast<QProgressBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -133,7 +135,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_FORMAT)
 // bool invertedAppearance()
 HB_FUNC_STATIC(QPROGRESSBAR_INVERTEDAPPEARANCE)
 {
-  QProgressBar *obj = qobject_cast<QProgressBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -151,7 +153,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_INVERTEDAPPEARANCE)
 // bool isTextVisible() const
 HB_FUNC_STATIC(QPROGRESSBAR_ISTEXTVISIBLE)
 {
-  QProgressBar *obj = qobject_cast<QProgressBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -169,7 +171,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_ISTEXTVISIBLE)
 // int maximum() const
 HB_FUNC_STATIC(QPROGRESSBAR_MAXIMUM)
 {
-  QProgressBar *obj = qobject_cast<QProgressBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -187,7 +189,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_MAXIMUM)
 // int minimum() const
 HB_FUNC_STATIC(QPROGRESSBAR_MINIMUM)
 {
-  QProgressBar *obj = qobject_cast<QProgressBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -205,7 +207,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_MINIMUM)
 // Qt::Orientation orientation() const
 HB_FUNC_STATIC(QPROGRESSBAR_ORIENTATION)
 {
-  QProgressBar *obj = qobject_cast<QProgressBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -223,7 +225,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_ORIENTATION)
 // void setAlignment(Qt::Alignment alignment)
 HB_FUNC_STATIC(QPROGRESSBAR_SETALIGNMENT)
 {
-  QProgressBar *obj = qobject_cast<QProgressBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -243,7 +245,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_SETALIGNMENT)
 // void setFormat(const QString &format)
 HB_FUNC_STATIC(QPROGRESSBAR_SETFORMAT)
 {
-  QProgressBar *obj = qobject_cast<QProgressBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -263,7 +265,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_SETFORMAT)
 // void setInvertedAppearance(bool invert)
 HB_FUNC_STATIC(QPROGRESSBAR_SETINVERTEDAPPEARANCE)
 {
-  QProgressBar *obj = qobject_cast<QProgressBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -283,7 +285,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_SETINVERTEDAPPEARANCE)
 // void setTextDirection(QProgressBar::Direction textDirection)
 HB_FUNC_STATIC(QPROGRESSBAR_SETTEXTDIRECTION)
 {
-  QProgressBar *obj = qobject_cast<QProgressBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -303,7 +305,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_SETTEXTDIRECTION)
 // void setTextVisible(bool visible)
 HB_FUNC_STATIC(QPROGRESSBAR_SETTEXTVISIBLE)
 {
-  QProgressBar *obj = qobject_cast<QProgressBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -323,7 +325,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_SETTEXTVISIBLE)
 // virtual QString text() const
 HB_FUNC_STATIC(QPROGRESSBAR_TEXT)
 {
-  QProgressBar *obj = qobject_cast<QProgressBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -341,7 +343,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_TEXT)
 // QProgressBar::Direction textDirection()
 HB_FUNC_STATIC(QPROGRESSBAR_TEXTDIRECTION)
 {
-  QProgressBar *obj = qobject_cast<QProgressBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -359,7 +361,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_TEXTDIRECTION)
 // int value() const
 HB_FUNC_STATIC(QPROGRESSBAR_VALUE)
 {
-  QProgressBar *obj = qobject_cast<QProgressBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -377,7 +379,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_VALUE)
 // virtual QSize minimumSizeHint() const
 HB_FUNC_STATIC(QPROGRESSBAR_MINIMUMSIZEHINT)
 {
-  QProgressBar *obj = qobject_cast<QProgressBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -396,7 +398,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_MINIMUMSIZEHINT)
 // virtual QSize sizeHint() const
 HB_FUNC_STATIC(QPROGRESSBAR_SIZEHINT)
 {
-  QProgressBar *obj = qobject_cast<QProgressBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -415,7 +417,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_SIZEHINT)
 // void reset()
 HB_FUNC_STATIC(QPROGRESSBAR_RESET)
 {
-  QProgressBar *obj = qobject_cast<QProgressBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -435,7 +437,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_RESET)
 // void setMaximum(int maximum)
 HB_FUNC_STATIC(QPROGRESSBAR_SETMAXIMUM)
 {
-  QProgressBar *obj = qobject_cast<QProgressBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -455,7 +457,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_SETMAXIMUM)
 // void setMinimum(int minimum)
 HB_FUNC_STATIC(QPROGRESSBAR_SETMINIMUM)
 {
-  QProgressBar *obj = qobject_cast<QProgressBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -475,7 +477,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_SETMINIMUM)
 // void setOrientation(Qt::Orientation)
 HB_FUNC_STATIC(QPROGRESSBAR_SETORIENTATION)
 {
-  QProgressBar *obj = qobject_cast<QProgressBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -495,7 +497,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_SETORIENTATION)
 // void setRange(int minimum, int maximum)
 HB_FUNC_STATIC(QPROGRESSBAR_SETRANGE)
 {
-  QProgressBar *obj = qobject_cast<QProgressBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -515,7 +517,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_SETRANGE)
 // void setValue(int value)
 HB_FUNC_STATIC(QPROGRESSBAR_SETVALUE)
 {
-  QProgressBar *obj = qobject_cast<QProgressBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
