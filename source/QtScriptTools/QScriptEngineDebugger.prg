@@ -63,6 +63,9 @@ RETURN
 #include <QtGui/QToolBar>
 #include <QtGui/QMainWindow>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QScriptEngineDebugger *p = qobject_cast<QScriptEngineDebugger *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QScriptEngineDebugger(QObject *parent = 0)
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_NEW)
 {
@@ -76,7 +79,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_NEW)
 
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_DELETE)
 {
-  QScriptEngineDebugger *obj = qobject_cast<QScriptEngineDebugger *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -94,7 +97,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_DELETE)
 // QAction *action(QScriptEngineDebugger::DebuggerAction action) const
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_ACTION)
 {
-  QScriptEngineDebugger *obj = qobject_cast<QScriptEngineDebugger *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -113,7 +116,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_ACTION)
 // void attachTo(QScriptEngine *engine)
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_ATTACHTO)
 {
-  QScriptEngineDebugger *obj = qobject_cast<QScriptEngineDebugger *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -133,7 +136,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_ATTACHTO)
 // bool autoShowStandardWindow() const
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_AUTOSHOWSTANDARDWINDOW)
 {
-  QScriptEngineDebugger *obj = qobject_cast<QScriptEngineDebugger *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -151,7 +154,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_AUTOSHOWSTANDARDWINDOW)
 // QMenu *createStandardMenu(QWidget *parent = 0)
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_CREATESTANDARDMENU)
 {
-  QScriptEngineDebugger *obj = qobject_cast<QScriptEngineDebugger *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -170,7 +173,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_CREATESTANDARDMENU)
 // QToolBar *createStandardToolBar(QWidget *parent = 0)
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_CREATESTANDARDTOOLBAR)
 {
-  QScriptEngineDebugger *obj = qobject_cast<QScriptEngineDebugger *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -189,7 +192,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_CREATESTANDARDTOOLBAR)
 // void detach()
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_DETACH)
 {
-  QScriptEngineDebugger *obj = qobject_cast<QScriptEngineDebugger *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -209,7 +212,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_DETACH)
 // void setAutoShowStandardWindow(bool autoShow)
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_SETAUTOSHOWSTANDARDWINDOW)
 {
-  QScriptEngineDebugger *obj = qobject_cast<QScriptEngineDebugger *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -229,7 +232,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_SETAUTOSHOWSTANDARDWINDOW)
 // QMainWindow *standardWindow() const
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_STANDARDWINDOW)
 {
-  QScriptEngineDebugger *obj = qobject_cast<QScriptEngineDebugger *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -248,7 +251,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_STANDARDWINDOW)
 // QScriptEngineDebugger::DebuggerState state() const
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_STATE)
 {
-  QScriptEngineDebugger *obj = qobject_cast<QScriptEngineDebugger *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -266,7 +269,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_STATE)
 // QWidget *widget(QScriptEngineDebugger::DebuggerWidget widget) const
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_WIDGET)
 {
-  QScriptEngineDebugger *obj = qobject_cast<QScriptEngineDebugger *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
