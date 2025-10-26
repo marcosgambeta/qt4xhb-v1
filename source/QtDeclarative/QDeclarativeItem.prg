@@ -61,6 +61,9 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QDeclarativeItem *p = qobject_cast<QDeclarativeItem *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QDeclarativeItem(QDeclarativeItem *parent = 0)
 HB_FUNC_STATIC(QDECLARATIVEITEM_NEW)
 {
@@ -74,7 +77,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_NEW)
 
 HB_FUNC_STATIC(QDECLARATIVEITEM_DELETE)
 {
-  QDeclarativeItem *obj = qobject_cast<QDeclarativeItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -92,7 +95,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_DELETE)
 // qreal baselineOffset() const
 HB_FUNC_STATIC(QDECLARATIVEITEM_BASELINEOFFSET)
 {
-  QDeclarativeItem *obj = qobject_cast<QDeclarativeItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -110,7 +113,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_BASELINEOFFSET)
 // QDeclarativeItem *childAt(qreal x, qreal y) const
 HB_FUNC_STATIC(QDECLARATIVEITEM_CHILDAT)
 {
-  QDeclarativeItem *obj = qobject_cast<QDeclarativeItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -129,7 +132,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_CHILDAT)
 // QRectF childrenRect()
 HB_FUNC_STATIC(QDECLARATIVEITEM_CHILDRENRECT)
 {
-  QDeclarativeItem *obj = qobject_cast<QDeclarativeItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -148,7 +151,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_CHILDRENRECT)
 // bool clip() const
 HB_FUNC_STATIC(QDECLARATIVEITEM_CLIP)
 {
-  QDeclarativeItem *obj = qobject_cast<QDeclarativeItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -166,7 +169,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_CLIP)
 // void forceActiveFocus()
 HB_FUNC_STATIC(QDECLARATIVEITEM_FORCEACTIVEFOCUS)
 {
-  QDeclarativeItem *obj = qobject_cast<QDeclarativeItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -186,7 +189,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_FORCEACTIVEFOCUS)
 // qreal implicitHeight() const
 HB_FUNC_STATIC(QDECLARATIVEITEM_IMPLICITHEIGHT)
 {
-  QDeclarativeItem *obj = qobject_cast<QDeclarativeItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -204,7 +207,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_IMPLICITHEIGHT)
 // qreal implicitWidth() const
 HB_FUNC_STATIC(QDECLARATIVEITEM_IMPLICITWIDTH)
 {
-  QDeclarativeItem *obj = qobject_cast<QDeclarativeItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -222,7 +225,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_IMPLICITWIDTH)
 // bool keepMouseGrab() const
 HB_FUNC_STATIC(QDECLARATIVEITEM_KEEPMOUSEGRAB)
 {
-  QDeclarativeItem *obj = qobject_cast<QDeclarativeItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -240,7 +243,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_KEEPMOUSEGRAB)
 // QScriptValue mapFromItem(const QScriptValue &item, qreal x, qreal y) const
 HB_FUNC_STATIC(QDECLARATIVEITEM_MAPFROMITEM)
 {
-  QDeclarativeItem *obj = qobject_cast<QDeclarativeItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -259,7 +262,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_MAPFROMITEM)
 // QScriptValue mapToItem(const QScriptValue &item, qreal x, qreal y) const
 HB_FUNC_STATIC(QDECLARATIVEITEM_MAPTOITEM)
 {
-  QDeclarativeItem *obj = qobject_cast<QDeclarativeItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -278,7 +281,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_MAPTOITEM)
 // QDeclarativeItem *parentItem() const
 HB_FUNC_STATIC(QDECLARATIVEITEM_PARENTITEM)
 {
-  QDeclarativeItem *obj = qobject_cast<QDeclarativeItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -297,7 +300,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_PARENTITEM)
 // void setBaselineOffset(qreal)
 HB_FUNC_STATIC(QDECLARATIVEITEM_SETBASELINEOFFSET)
 {
-  QDeclarativeItem *obj = qobject_cast<QDeclarativeItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -317,7 +320,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_SETBASELINEOFFSET)
 // void setClip(bool)
 HB_FUNC_STATIC(QDECLARATIVEITEM_SETCLIP)
 {
-  QDeclarativeItem *obj = qobject_cast<QDeclarativeItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -337,7 +340,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_SETCLIP)
 // void setKeepMouseGrab(bool keep)
 HB_FUNC_STATIC(QDECLARATIVEITEM_SETKEEPMOUSEGRAB)
 {
-  QDeclarativeItem *obj = qobject_cast<QDeclarativeItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -357,7 +360,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_SETKEEPMOUSEGRAB)
 // void setParentItem(QDeclarativeItem *parent)
 HB_FUNC_STATIC(QDECLARATIVEITEM_SETPARENTITEM)
 {
-  QDeclarativeItem *obj = qobject_cast<QDeclarativeItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -377,7 +380,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_SETPARENTITEM)
 // void setSmooth(bool smooth)
 HB_FUNC_STATIC(QDECLARATIVEITEM_SETSMOOTH)
 {
-  QDeclarativeItem *obj = qobject_cast<QDeclarativeItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -397,7 +400,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_SETSMOOTH)
 // void setTransformOrigin(QDeclarativeItem::TransformOrigin origin)
 HB_FUNC_STATIC(QDECLARATIVEITEM_SETTRANSFORMORIGIN)
 {
-  QDeclarativeItem *obj = qobject_cast<QDeclarativeItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -417,7 +420,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_SETTRANSFORMORIGIN)
 // bool smooth() const
 HB_FUNC_STATIC(QDECLARATIVEITEM_SMOOTH)
 {
-  QDeclarativeItem *obj = qobject_cast<QDeclarativeItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -435,7 +438,7 @@ HB_FUNC_STATIC(QDECLARATIVEITEM_SMOOTH)
 // QDeclarativeItem::TransformOrigin transformOrigin() const
 HB_FUNC_STATIC(QDECLARATIVEITEM_TRANSFORMORIGIN)
 {
-  QDeclarativeItem *obj = qobject_cast<QDeclarativeItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

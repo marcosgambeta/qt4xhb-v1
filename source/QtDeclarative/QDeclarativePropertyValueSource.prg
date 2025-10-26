@@ -47,10 +47,12 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QDeclarativePropertyValueSource *p = static_cast<QDeclarativePropertyValueSource *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYVALUESOURCE_DELETE)
 {
-  QDeclarativePropertyValueSource *obj =
-      static_cast<QDeclarativePropertyValueSource *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -66,8 +68,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYVALUESOURCE_DELETE)
 // virtual void setTarget(const QDeclarativeProperty &property) = 0
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYVALUESOURCE_SETTARGET)
 {
-  QDeclarativePropertyValueSource *obj =
-      static_cast<QDeclarativePropertyValueSource *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

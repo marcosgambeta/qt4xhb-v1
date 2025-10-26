@@ -40,11 +40,13 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QDeclarativeExtensionPlugin *p = qobject_cast<QDeclarativeExtensionPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // virtual void initializeEngine(QDeclarativeEngine *engine, const char *uri)
 HB_FUNC_STATIC(QDECLARATIVEEXTENSIONPLUGIN_INITIALIZEENGINE)
 {
-  QDeclarativeExtensionPlugin *obj =
-      qobject_cast<QDeclarativeExtensionPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -64,8 +66,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXTENSIONPLUGIN_INITIALIZEENGINE)
 // virtual void registerTypes(const char *uri) = 0
 HB_FUNC_STATIC(QDECLARATIVEEXTENSIONPLUGIN_REGISTERTYPES)
 {
-  QDeclarativeExtensionPlugin *obj =
-      qobject_cast<QDeclarativeExtensionPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
