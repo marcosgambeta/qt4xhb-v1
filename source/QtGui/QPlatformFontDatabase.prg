@@ -19,9 +19,6 @@ CLASS QPlatformFontDatabase
    DATA pointer
    DATA self_destruction INIT .F.
 
-#if 0
-   METHOD delete
-#endif
    METHOD addApplicationFont
    METHOD fontDir
    METHOD fontEngine
@@ -56,27 +53,13 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-#if 0
-HB_FUNC_STATIC(QPLATFORMFONTDATABASE_DELETE)
-{
-  QPlatformFontDatabase *obj = static_cast<QPlatformFontDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QPlatformFontDatabase *p = static_cast<QPlatformFontDatabase *>(Qt4xHb::itemGetPtrStackSelfItem())
 
-  if (obj != NULL) {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
-    hb_objSendMsg(hb_stackSelfItem(), "_POINTER", 1, ptr);
-    hb_itemRelease(ptr);
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-#endif
-
-    // virtual QStringList addApplicationFont(const QByteArray &fontData, const QString &fileName)
+// virtual QStringList addApplicationFont(const QByteArray &fontData, const QString &fileName)
 HB_FUNC_STATIC(QPLATFORMFONTDATABASE_ADDAPPLICATIONFONT)
 {
-  QPlatformFontDatabase *obj = static_cast<QPlatformFontDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -94,7 +77,7 @@ HB_FUNC_STATIC(QPLATFORMFONTDATABASE_ADDAPPLICATIONFONT)
 // virtual QString fontDir() const
 HB_FUNC_STATIC(QPLATFORMFONTDATABASE_FONTDIR)
 {
-  QPlatformFontDatabase *obj = static_cast<QPlatformFontDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -113,7 +96,7 @@ HB_FUNC_STATIC(QPLATFORMFONTDATABASE_FONTDIR)
 // hintingPreference)
 HB_FUNC_STATIC(QPLATFORMFONTDATABASE_FONTENGINE)
 {
-  QPlatformFontDatabase *obj = static_cast<QPlatformFontDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -132,7 +115,7 @@ HB_FUNC_STATIC(QPLATFORMFONTDATABASE_FONTENGINE)
 // virtual void populateFontDatabase()
 HB_FUNC_STATIC(QPLATFORMFONTDATABASE_POPULATEFONTDATABASE)
 {
-  QPlatformFontDatabase *obj = static_cast<QPlatformFontDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -152,7 +135,7 @@ HB_FUNC_STATIC(QPLATFORMFONTDATABASE_POPULATEFONTDATABASE)
 // virtual void releaseHandle(void *handle)
 HB_FUNC_STATIC(QPLATFORMFONTDATABASE_RELEASEHANDLE)
 {
-  QPlatformFontDatabase *obj = static_cast<QPlatformFontDatabase *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
