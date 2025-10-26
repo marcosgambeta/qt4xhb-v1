@@ -69,6 +69,9 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QNetworkSession *p = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QNetworkSession(const QNetworkConfiguration &connectionConfig, QObject *parent = 0)
 HB_FUNC_STATIC(QNETWORKSESSION_NEW)
 {
@@ -82,7 +85,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_NEW)
 
 HB_FUNC_STATIC(QNETWORKSESSION_DELETE)
 {
-  QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -100,7 +103,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_DELETE)
 // quint64 activeTime() const
 HB_FUNC_STATIC(QNETWORKSESSION_ACTIVETIME)
 {
-  QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -118,7 +121,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_ACTIVETIME)
 // quint64 bytesReceived() const
 HB_FUNC_STATIC(QNETWORKSESSION_BYTESRECEIVED)
 {
-  QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -136,7 +139,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_BYTESRECEIVED)
 // quint64 bytesWritten() const
 HB_FUNC_STATIC(QNETWORKSESSION_BYTESWRITTEN)
 {
-  QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -154,7 +157,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_BYTESWRITTEN)
 // QNetworkConfiguration configuration() const
 HB_FUNC_STATIC(QNETWORKSESSION_CONFIGURATION)
 {
-  QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -173,7 +176,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_CONFIGURATION)
 // QNetworkSession::SessionError error() const
 HB_FUNC_STATIC(QNETWORKSESSION_ERROR)
 {
-  QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -191,7 +194,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_ERROR)
 // QString errorString() const
 HB_FUNC_STATIC(QNETWORKSESSION_ERRORSTRING)
 {
-  QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -209,7 +212,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_ERRORSTRING)
 // QNetworkInterface interface() const
 HB_FUNC_STATIC(QNETWORKSESSION_INTERFACE)
 {
-  QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -228,7 +231,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_INTERFACE)
 // bool isOpen() const
 HB_FUNC_STATIC(QNETWORKSESSION_ISOPEN)
 {
-  QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -246,7 +249,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_ISOPEN)
 // QVariant sessionProperty(const QString &key) const
 HB_FUNC_STATIC(QNETWORKSESSION_SESSIONPROPERTY)
 {
-  QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -265,7 +268,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_SESSIONPROPERTY)
 // void setSessionProperty(const QString &key, const QVariant &value)
 HB_FUNC_STATIC(QNETWORKSESSION_SETSESSIONPROPERTY)
 {
-  QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -285,7 +288,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_SETSESSIONPROPERTY)
 // QNetworkSession::State state() const
 HB_FUNC_STATIC(QNETWORKSESSION_STATE)
 {
-  QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -303,7 +306,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_STATE)
 // bool waitForOpened(int msecs = 30000)
 HB_FUNC_STATIC(QNETWORKSESSION_WAITFOROPENED)
 {
-  QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -321,7 +324,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_WAITFOROPENED)
 // void accept()
 HB_FUNC_STATIC(QNETWORKSESSION_ACCEPT)
 {
-  QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -341,7 +344,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_ACCEPT)
 // void close()
 HB_FUNC_STATIC(QNETWORKSESSION_CLOSE)
 {
-  QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -361,7 +364,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_CLOSE)
 // void ignore()
 HB_FUNC_STATIC(QNETWORKSESSION_IGNORE)
 {
-  QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -381,7 +384,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_IGNORE)
 // void migrate()
 HB_FUNC_STATIC(QNETWORKSESSION_MIGRATE)
 {
-  QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -401,7 +404,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_MIGRATE)
 // void open()
 HB_FUNC_STATIC(QNETWORKSESSION_OPEN)
 {
-  QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -421,7 +424,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_OPEN)
 // void reject()
 HB_FUNC_STATIC(QNETWORKSESSION_REJECT)
 {
-  QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -441,7 +444,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_REJECT)
 // void stop()
 HB_FUNC_STATIC(QNETWORKSESSION_STOP)
 {
-  QNetworkSession *obj = qobject_cast<QNetworkSession *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

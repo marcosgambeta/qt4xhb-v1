@@ -68,6 +68,8 @@ RETURN
 
 #include <QtCore/QDateTime>
 
+#define GET_PTR_FROM_SELF(p) QNetworkCookie *p = static_cast<QNetworkCookie *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QNETWORKCOOKIE_NEW)
 {
   if (ISBETWEEN(0, 2) && (ISQBYTEARRAY(1) || HB_ISNIL(1)) && (ISQBYTEARRAY(2) || HB_ISNIL(2))) {
@@ -87,7 +89,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_NEW)
 
 HB_FUNC_STATIC(QNETWORKCOOKIE_DELETE)
 {
-  QNetworkCookie *obj = static_cast<QNetworkCookie *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -103,7 +105,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_DELETE)
 // QString domain() const
 HB_FUNC_STATIC(QNETWORKCOOKIE_DOMAIN)
 {
-  QNetworkCookie *obj = static_cast<QNetworkCookie *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -121,7 +123,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_DOMAIN)
 // QDateTime expirationDate() const
 HB_FUNC_STATIC(QNETWORKCOOKIE_EXPIRATIONDATE)
 {
-  QNetworkCookie *obj = static_cast<QNetworkCookie *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -140,7 +142,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_EXPIRATIONDATE)
 // bool isHttpOnly() const
 HB_FUNC_STATIC(QNETWORKCOOKIE_ISHTTPONLY)
 {
-  QNetworkCookie *obj = static_cast<QNetworkCookie *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -158,7 +160,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_ISHTTPONLY)
 // bool isSecure() const
 HB_FUNC_STATIC(QNETWORKCOOKIE_ISSECURE)
 {
-  QNetworkCookie *obj = static_cast<QNetworkCookie *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -176,7 +178,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_ISSECURE)
 // bool isSessionCookie() const
 HB_FUNC_STATIC(QNETWORKCOOKIE_ISSESSIONCOOKIE)
 {
-  QNetworkCookie *obj = static_cast<QNetworkCookie *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -194,7 +196,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_ISSESSIONCOOKIE)
 // QByteArray name() const
 HB_FUNC_STATIC(QNETWORKCOOKIE_NAME)
 {
-  QNetworkCookie *obj = static_cast<QNetworkCookie *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -213,7 +215,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_NAME)
 // QString path() const
 HB_FUNC_STATIC(QNETWORKCOOKIE_PATH)
 {
-  QNetworkCookie *obj = static_cast<QNetworkCookie *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -231,7 +233,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_PATH)
 // void setDomain(const QString &domain)
 HB_FUNC_STATIC(QNETWORKCOOKIE_SETDOMAIN)
 {
-  QNetworkCookie *obj = static_cast<QNetworkCookie *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -251,7 +253,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETDOMAIN)
 // void setExpirationDate(const QDateTime &date)
 HB_FUNC_STATIC(QNETWORKCOOKIE_SETEXPIRATIONDATE)
 {
-  QNetworkCookie *obj = static_cast<QNetworkCookie *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -271,7 +273,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETEXPIRATIONDATE)
 // void setHttpOnly(bool enable)
 HB_FUNC_STATIC(QNETWORKCOOKIE_SETHTTPONLY)
 {
-  QNetworkCookie *obj = static_cast<QNetworkCookie *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -291,7 +293,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETHTTPONLY)
 // void setName(const QByteArray &cookieName)
 HB_FUNC_STATIC(QNETWORKCOOKIE_SETNAME)
 {
-  QNetworkCookie *obj = static_cast<QNetworkCookie *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -311,7 +313,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETNAME)
 // void setPath(const QString &path)
 HB_FUNC_STATIC(QNETWORKCOOKIE_SETPATH)
 {
-  QNetworkCookie *obj = static_cast<QNetworkCookie *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -331,7 +333,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETPATH)
 // void setSecure(bool enable)
 HB_FUNC_STATIC(QNETWORKCOOKIE_SETSECURE)
 {
-  QNetworkCookie *obj = static_cast<QNetworkCookie *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -351,7 +353,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETSECURE)
 // void setValue(const QByteArray &value)
 HB_FUNC_STATIC(QNETWORKCOOKIE_SETVALUE)
 {
-  QNetworkCookie *obj = static_cast<QNetworkCookie *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -371,7 +373,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETVALUE)
 // QByteArray toRawForm(QNetworkCookie::RawForm form = QNetworkCookie::Full) const
 HB_FUNC_STATIC(QNETWORKCOOKIE_TORAWFORM)
 {
-  QNetworkCookie *obj = static_cast<QNetworkCookie *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -391,7 +393,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_TORAWFORM)
 // QByteArray value() const
 HB_FUNC_STATIC(QNETWORKCOOKIE_VALUE)
 {
-  QNetworkCookie *obj = static_cast<QNetworkCookie *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -410,7 +412,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_VALUE)
 // QList<QNetworkCookie> parseCookies(const QByteArray &cookieString)
 HB_FUNC_STATIC(QNETWORKCOOKIE_PARSECOOKIES)
 {
-  QNetworkCookie *obj = static_cast<QNetworkCookie *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

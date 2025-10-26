@@ -58,6 +58,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QHostAddress *p = static_cast<QHostAddress *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QHostAddress(quint32 ip4Addr)
 HB_FUNC_STATIC(QHOSTADDRESS_NEW2)
 {
@@ -97,7 +99,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_NEW)
 
 HB_FUNC_STATIC(QHOSTADDRESS_DELETE)
 {
-  QHostAddress *obj = static_cast<QHostAddress *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -113,7 +115,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_DELETE)
 // void clear()
 HB_FUNC_STATIC(QHOSTADDRESS_CLEAR)
 {
-  QHostAddress *obj = static_cast<QHostAddress *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -133,7 +135,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_CLEAR)
 // bool isInSubnet(const QHostAddress &subnet, int netmask) const
 HB_FUNC_STATIC(QHOSTADDRESS_ISINSUBNET)
 {
-  QHostAddress *obj = static_cast<QHostAddress *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -151,7 +153,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_ISINSUBNET)
 // bool isNull() const
 HB_FUNC_STATIC(QHOSTADDRESS_ISNULL)
 {
-  QHostAddress *obj = static_cast<QHostAddress *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -169,7 +171,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_ISNULL)
 // QAbstractSocket::NetworkLayerProtocol protocol() const
 HB_FUNC_STATIC(QHOSTADDRESS_PROTOCOL)
 {
-  QHostAddress *obj = static_cast<QHostAddress *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -187,7 +189,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_PROTOCOL)
 // QString scopeId() const
 HB_FUNC_STATIC(QHOSTADDRESS_SCOPEID)
 {
-  QHostAddress *obj = static_cast<QHostAddress *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -206,7 +208,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SETADDRESS)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void setAddress(quint32 ip4Addr)
-    QHostAddress *obj = static_cast<QHostAddress *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setAddress(PQUINT32(1));
@@ -215,7 +217,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SETADDRESS)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // bool setAddress(const QString &address)
-    QHostAddress *obj = static_cast<QHostAddress *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->setAddress(PQSTRING(1)));
@@ -228,7 +230,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SETADDRESS)
 // void setScopeId(const QString &id)
 HB_FUNC_STATIC(QHOSTADDRESS_SETSCOPEID)
 {
-  QHostAddress *obj = static_cast<QHostAddress *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -248,7 +250,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SETSCOPEID)
 // quint32 toIPv4Address() const
 HB_FUNC_STATIC(QHOSTADDRESS_TOIPV4ADDRESS)
 {
-  QHostAddress *obj = static_cast<QHostAddress *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -266,7 +268,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_TOIPV4ADDRESS)
 // QString toString() const
 HB_FUNC_STATIC(QHOSTADDRESS_TOSTRING)
 {
-  QHostAddress *obj = static_cast<QHostAddress *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

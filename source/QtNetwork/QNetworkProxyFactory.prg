@@ -52,9 +52,12 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QNetworkProxyFactory *p = static_cast<QNetworkProxyFactory *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QNETWORKPROXYFACTORY_DELETE)
 {
-  QNetworkProxyFactory *obj = static_cast<QNetworkProxyFactory *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -70,7 +73,7 @@ HB_FUNC_STATIC(QNETWORKPROXYFACTORY_DELETE)
 // virtual QList<QNetworkProxy> queryProxy(const QNetworkProxyQuery &query = QNetworkProxyQuery()) = 0
 HB_FUNC_STATIC(QNETWORKPROXYFACTORY_QUERYPROXY)
 {
-  QNetworkProxyFactory *obj = static_cast<QNetworkProxyFactory *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

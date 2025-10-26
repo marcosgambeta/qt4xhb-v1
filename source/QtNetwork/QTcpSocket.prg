@@ -40,6 +40,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QTcpSocket *p = qobject_cast<QTcpSocket *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QTcpSocket(QObject *parent = 0)
 HB_FUNC_STATIC(QTCPSOCKET_NEW)
 {
@@ -53,7 +55,7 @@ HB_FUNC_STATIC(QTCPSOCKET_NEW)
 
 HB_FUNC_STATIC(QTCPSOCKET_DELETE)
 {
-  QTcpSocket *obj = qobject_cast<QTcpSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);

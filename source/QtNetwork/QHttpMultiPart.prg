@@ -45,6 +45,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QHttpMultiPart *p = qobject_cast<QHttpMultiPart *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QHTTPMULTIPART_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -62,7 +64,7 @@ HB_FUNC_STATIC(QHTTPMULTIPART_NEW)
 
 HB_FUNC_STATIC(QHTTPMULTIPART_DELETE)
 {
-  QHttpMultiPart *obj = qobject_cast<QHttpMultiPart *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -80,7 +82,7 @@ HB_FUNC_STATIC(QHTTPMULTIPART_DELETE)
 // void append(const QHttpPart &httpPart)
 HB_FUNC_STATIC(QHTTPMULTIPART_APPEND)
 {
-  QHttpMultiPart *obj = qobject_cast<QHttpMultiPart *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -100,7 +102,7 @@ HB_FUNC_STATIC(QHTTPMULTIPART_APPEND)
 // QByteArray boundary() const
 HB_FUNC_STATIC(QHTTPMULTIPART_BOUNDARY)
 {
-  QHttpMultiPart *obj = qobject_cast<QHttpMultiPart *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -119,7 +121,7 @@ HB_FUNC_STATIC(QHTTPMULTIPART_BOUNDARY)
 // void setBoundary(const QByteArray &boundary)
 HB_FUNC_STATIC(QHTTPMULTIPART_SETBOUNDARY)
 {
-  QHttpMultiPart *obj = qobject_cast<QHttpMultiPart *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -139,7 +141,7 @@ HB_FUNC_STATIC(QHTTPMULTIPART_SETBOUNDARY)
 // void setContentType(QHttpMultiPart::ContentType contentType)
 HB_FUNC_STATIC(QHTTPMULTIPART_SETCONTENTTYPE)
 {
-  QHttpMultiPart *obj = qobject_cast<QHttpMultiPart *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

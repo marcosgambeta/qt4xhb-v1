@@ -63,6 +63,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QNetworkProxy *p = static_cast<QNetworkProxy *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QNETWORKPROXY_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -86,7 +88,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_NEW)
 
 HB_FUNC_STATIC(QNETWORKPROXY_DELETE)
 {
-  QNetworkProxy *obj = static_cast<QNetworkProxy *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -102,7 +104,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_DELETE)
 // QNetworkProxy::Capabilities capabilities() const
 HB_FUNC_STATIC(QNETWORKPROXY_CAPABILITIES)
 {
-  QNetworkProxy *obj = static_cast<QNetworkProxy *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -120,7 +122,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_CAPABILITIES)
 // QString hostName() const
 HB_FUNC_STATIC(QNETWORKPROXY_HOSTNAME)
 {
-  QNetworkProxy *obj = static_cast<QNetworkProxy *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -138,7 +140,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_HOSTNAME)
 // bool isCachingProxy() const
 HB_FUNC_STATIC(QNETWORKPROXY_ISCACHINGPROXY)
 {
-  QNetworkProxy *obj = static_cast<QNetworkProxy *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -156,7 +158,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_ISCACHINGPROXY)
 // bool isTransparentProxy() const
 HB_FUNC_STATIC(QNETWORKPROXY_ISTRANSPARENTPROXY)
 {
-  QNetworkProxy *obj = static_cast<QNetworkProxy *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -174,7 +176,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_ISTRANSPARENTPROXY)
 // QString password() const
 HB_FUNC_STATIC(QNETWORKPROXY_PASSWORD)
 {
-  QNetworkProxy *obj = static_cast<QNetworkProxy *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -192,7 +194,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_PASSWORD)
 // quint16 port() const
 HB_FUNC_STATIC(QNETWORKPROXY_PORT)
 {
-  QNetworkProxy *obj = static_cast<QNetworkProxy *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -210,7 +212,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_PORT)
 // void setCapabilities(QNetworkProxy::Capabilities capabilities)
 HB_FUNC_STATIC(QNETWORKPROXY_SETCAPABILITIES)
 {
-  QNetworkProxy *obj = static_cast<QNetworkProxy *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -230,7 +232,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_SETCAPABILITIES)
 // void setHostName(const QString &hostName)
 HB_FUNC_STATIC(QNETWORKPROXY_SETHOSTNAME)
 {
-  QNetworkProxy *obj = static_cast<QNetworkProxy *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -250,7 +252,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_SETHOSTNAME)
 // void setPassword(const QString &password)
 HB_FUNC_STATIC(QNETWORKPROXY_SETPASSWORD)
 {
-  QNetworkProxy *obj = static_cast<QNetworkProxy *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -270,7 +272,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_SETPASSWORD)
 // void setPort(quint16 port)
 HB_FUNC_STATIC(QNETWORKPROXY_SETPORT)
 {
-  QNetworkProxy *obj = static_cast<QNetworkProxy *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -290,7 +292,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_SETPORT)
 // void setType(QNetworkProxy::ProxyType type)
 HB_FUNC_STATIC(QNETWORKPROXY_SETTYPE)
 {
-  QNetworkProxy *obj = static_cast<QNetworkProxy *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -310,7 +312,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_SETTYPE)
 // void setUser(const QString &user)
 HB_FUNC_STATIC(QNETWORKPROXY_SETUSER)
 {
-  QNetworkProxy *obj = static_cast<QNetworkProxy *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -330,7 +332,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_SETUSER)
 // QNetworkProxy::ProxyType type() const
 HB_FUNC_STATIC(QNETWORKPROXY_TYPE)
 {
-  QNetworkProxy *obj = static_cast<QNetworkProxy *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -348,7 +350,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_TYPE)
 // QString user() const
 HB_FUNC_STATIC(QNETWORKPROXY_USER)
 {
-  QNetworkProxy *obj = static_cast<QNetworkProxy *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

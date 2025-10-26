@@ -77,6 +77,9 @@ RETURN
 #include <QtNetwork/QNetworkCookieJar>
 #include <QtNetwork/QNetworkReply>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QNetworkAccessManager *p = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QNetworkAccessManager(QObject *parent = 0)
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_NEW)
 {
@@ -90,7 +93,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_NEW)
 
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_DELETE)
 {
-  QNetworkAccessManager *obj = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -108,7 +111,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_DELETE)
 // QNetworkConfiguration activeConfiguration() const
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ACTIVECONFIGURATION)
 {
-  QNetworkAccessManager *obj = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -127,7 +130,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ACTIVECONFIGURATION)
 // QAbstractNetworkCache *cache() const
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_CACHE)
 {
-  QNetworkAccessManager *obj = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -146,7 +149,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_CACHE)
 // QNetworkConfiguration configuration() const
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_CONFIGURATION)
 {
-  QNetworkAccessManager *obj = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -165,7 +168,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_CONFIGURATION)
 // QNetworkCookieJar *cookieJar() const
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_COOKIEJAR)
 {
-  QNetworkAccessManager *obj = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -184,7 +187,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_COOKIEJAR)
 // QNetworkReply *deleteResource(const QNetworkRequest &request)
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_DELETERESOURCE)
 {
-  QNetworkAccessManager *obj = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -203,7 +206,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_DELETERESOURCE)
 // QNetworkReply *get(const QNetworkRequest &request)
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_GET)
 {
-  QNetworkAccessManager *obj = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -222,7 +225,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_GET)
 // QNetworkReply *head(const QNetworkRequest &request)
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_HEAD)
 {
-  QNetworkAccessManager *obj = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -241,7 +244,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_HEAD)
 // QNetworkAccessManager::NetworkAccessibility networkAccessible() const
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_NETWORKACCESSIBLE)
 {
-  QNetworkAccessManager *obj = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -260,7 +263,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_POST)
 {
   if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQIODEVICE(2)) {
     // QNetworkReply *post(const QNetworkRequest &request, QIODevice *data)
-    QNetworkAccessManager *obj = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QNetworkReply *ptr = obj->post(*PQNETWORKREQUEST(1), PQIODEVICE(2));
@@ -268,7 +271,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_POST)
     }
   } else if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2)) {
     // QNetworkReply *post(const QNetworkRequest &request, const QByteArray &data)
-    QNetworkAccessManager *obj = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QNetworkReply *ptr = obj->post(*PQNETWORKREQUEST(1), *PQBYTEARRAY(2));
@@ -282,7 +285,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_POST)
 // QNetworkProxy proxy() const
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_PROXY)
 {
-  QNetworkAccessManager *obj = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -301,7 +304,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_PROXY)
 // QNetworkProxyFactory *proxyFactory() const
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_PROXYFACTORY)
 {
-  QNetworkAccessManager *obj = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -321,7 +324,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_PUT)
 {
   if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQIODEVICE(2)) {
     // QNetworkReply *put(const QNetworkRequest &request, QIODevice *data)
-    QNetworkAccessManager *obj = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QNetworkReply *ptr = obj->put(*PQNETWORKREQUEST(1), PQIODEVICE(2));
@@ -329,7 +332,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_PUT)
     }
   } else if (ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2)) {
     // QNetworkReply *put(const QNetworkRequest &request, const QByteArray &data)
-    QNetworkAccessManager *obj = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QNetworkReply *ptr = obj->put(*PQNETWORKREQUEST(1), *PQBYTEARRAY(2));
@@ -343,7 +346,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_PUT)
 // QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, QIODevice *data = 0)
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST)
 {
-  QNetworkAccessManager *obj = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -362,7 +365,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST)
 // void setCache(QAbstractNetworkCache *cache)
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETCACHE)
 {
-  QNetworkAccessManager *obj = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -382,7 +385,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETCACHE)
 // void setConfiguration(const QNetworkConfiguration &config)
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETCONFIGURATION)
 {
-  QNetworkAccessManager *obj = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -402,7 +405,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETCONFIGURATION)
 // void setCookieJar(QNetworkCookieJar *cookieJar)
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETCOOKIEJAR)
 {
-  QNetworkAccessManager *obj = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -422,7 +425,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETCOOKIEJAR)
 // void setNetworkAccessible(QNetworkAccessManager::NetworkAccessibility accessible)
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETNETWORKACCESSIBLE)
 {
-  QNetworkAccessManager *obj = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -442,7 +445,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETNETWORKACCESSIBLE)
 // void setProxy(const QNetworkProxy &proxy)
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETPROXY)
 {
-  QNetworkAccessManager *obj = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -462,7 +465,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETPROXY)
 // void setProxyFactory(QNetworkProxyFactory *factory)
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETPROXYFACTORY)
 {
-  QNetworkAccessManager *obj = qobject_cast<QNetworkAccessManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

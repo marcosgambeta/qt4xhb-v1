@@ -58,6 +58,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QNetworkConfiguration *p = static_cast<QNetworkConfiguration *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -75,7 +78,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_NEW)
 
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_DELETE)
 {
-  QNetworkConfiguration *obj = static_cast<QNetworkConfiguration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -91,7 +94,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_DELETE)
 // QString bearerName() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_BEARERNAME)
 {
-  QNetworkConfiguration *obj = static_cast<QNetworkConfiguration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -109,7 +112,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_BEARERNAME)
 // QNetworkConfiguration::BearerType bearerType() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_BEARERTYPE)
 {
-  QNetworkConfiguration *obj = static_cast<QNetworkConfiguration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -127,7 +130,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_BEARERTYPE)
 // QString bearerTypeName() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_BEARERTYPENAME)
 {
-  QNetworkConfiguration *obj = static_cast<QNetworkConfiguration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -145,7 +148,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_BEARERTYPENAME)
 // QList<QNetworkConfiguration> children() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_CHILDREN)
 {
-  QNetworkConfiguration *obj = static_cast<QNetworkConfiguration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -186,7 +189,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_CHILDREN)
 // QString identifier() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_IDENTIFIER)
 {
-  QNetworkConfiguration *obj = static_cast<QNetworkConfiguration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -204,7 +207,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_IDENTIFIER)
 // bool isRoamingAvailable() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_ISROAMINGAVAILABLE)
 {
-  QNetworkConfiguration *obj = static_cast<QNetworkConfiguration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -222,7 +225,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_ISROAMINGAVAILABLE)
 // bool isValid() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_ISVALID)
 {
-  QNetworkConfiguration *obj = static_cast<QNetworkConfiguration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -240,7 +243,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_ISVALID)
 // QString name() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_NAME)
 {
-  QNetworkConfiguration *obj = static_cast<QNetworkConfiguration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -258,7 +261,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_NAME)
 // QNetworkConfiguration::Purpose purpose() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_PURPOSE)
 {
-  QNetworkConfiguration *obj = static_cast<QNetworkConfiguration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -276,7 +279,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_PURPOSE)
 // QNetworkConfiguration::StateFlags state() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_STATE)
 {
-  QNetworkConfiguration *obj = static_cast<QNetworkConfiguration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -294,7 +297,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATION_STATE)
 // QNetworkConfiguration::Type type() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATION_TYPE)
 {
-  QNetworkConfiguration *obj = static_cast<QNetworkConfiguration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

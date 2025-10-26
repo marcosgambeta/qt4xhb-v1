@@ -63,6 +63,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QHostInfo *p = static_cast<QHostInfo *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QHOSTINFO_NEW)
 {
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
@@ -80,7 +82,7 @@ HB_FUNC_STATIC(QHOSTINFO_NEW)
 
 HB_FUNC_STATIC(QHOSTINFO_DELETE)
 {
-  QHostInfo *obj = static_cast<QHostInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -96,7 +98,7 @@ HB_FUNC_STATIC(QHOSTINFO_DELETE)
 // QList<QHostAddress> addresses() const
 HB_FUNC_STATIC(QHOSTINFO_ADDRESSES)
 {
-  QHostInfo *obj = static_cast<QHostInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -137,7 +139,7 @@ HB_FUNC_STATIC(QHOSTINFO_ADDRESSES)
 // QHostInfo::HostInfoError error() const
 HB_FUNC_STATIC(QHOSTINFO_ERROR)
 {
-  QHostInfo *obj = static_cast<QHostInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -155,7 +157,7 @@ HB_FUNC_STATIC(QHOSTINFO_ERROR)
 // QString errorString() const
 HB_FUNC_STATIC(QHOSTINFO_ERRORSTRING)
 {
-  QHostInfo *obj = static_cast<QHostInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -173,7 +175,7 @@ HB_FUNC_STATIC(QHOSTINFO_ERRORSTRING)
 // QString hostName() const
 HB_FUNC_STATIC(QHOSTINFO_HOSTNAME)
 {
-  QHostInfo *obj = static_cast<QHostInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -191,7 +193,7 @@ HB_FUNC_STATIC(QHOSTINFO_HOSTNAME)
 // int lookupId() const
 HB_FUNC_STATIC(QHOSTINFO_LOOKUPID)
 {
-  QHostInfo *obj = static_cast<QHostInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -209,7 +211,7 @@ HB_FUNC_STATIC(QHOSTINFO_LOOKUPID)
 // void setAddresses(const QList<QHostAddress> &addresses)
 HB_FUNC_STATIC(QHOSTINFO_SETADDRESSES)
 {
-  QHostInfo *obj = static_cast<QHostInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -236,7 +238,7 @@ HB_FUNC_STATIC(QHOSTINFO_SETADDRESSES)
 // void setError(QHostInfo::HostInfoError error)
 HB_FUNC_STATIC(QHOSTINFO_SETERROR)
 {
-  QHostInfo *obj = static_cast<QHostInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -256,7 +258,7 @@ HB_FUNC_STATIC(QHOSTINFO_SETERROR)
 // void setErrorString(const QString &str)
 HB_FUNC_STATIC(QHOSTINFO_SETERRORSTRING)
 {
-  QHostInfo *obj = static_cast<QHostInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -276,7 +278,7 @@ HB_FUNC_STATIC(QHOSTINFO_SETERRORSTRING)
 // void setHostName(const QString &hostName)
 HB_FUNC_STATIC(QHOSTINFO_SETHOSTNAME)
 {
-  QHostInfo *obj = static_cast<QHostInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -296,7 +298,7 @@ HB_FUNC_STATIC(QHOSTINFO_SETHOSTNAME)
 // void setLookupId(int id)
 HB_FUNC_STATIC(QHOSTINFO_SETLOOKUPID)
 {
-  QHostInfo *obj = static_cast<QHostInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

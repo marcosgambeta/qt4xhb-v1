@@ -55,6 +55,9 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QNetworkDiskCache *p = qobject_cast<QNetworkDiskCache *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QNetworkDiskCache(QObject *parent = 0)
 HB_FUNC_STATIC(QNETWORKDISKCACHE_NEW)
 {
@@ -68,7 +71,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_NEW)
 
 HB_FUNC_STATIC(QNETWORKDISKCACHE_DELETE)
 {
-  QNetworkDiskCache *obj = qobject_cast<QNetworkDiskCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -86,7 +89,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_DELETE)
 // QString cacheDirectory() const
 HB_FUNC_STATIC(QNETWORKDISKCACHE_CACHEDIRECTORY)
 {
-  QNetworkDiskCache *obj = qobject_cast<QNetworkDiskCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -104,7 +107,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_CACHEDIRECTORY)
 // QNetworkCacheMetaData fileMetaData(const QString &fileName) const
 HB_FUNC_STATIC(QNETWORKDISKCACHE_FILEMETADATA)
 {
-  QNetworkDiskCache *obj = qobject_cast<QNetworkDiskCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -123,7 +126,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_FILEMETADATA)
 // qint64 maximumCacheSize() const
 HB_FUNC_STATIC(QNETWORKDISKCACHE_MAXIMUMCACHESIZE)
 {
-  QNetworkDiskCache *obj = qobject_cast<QNetworkDiskCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -141,7 +144,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_MAXIMUMCACHESIZE)
 // void setCacheDirectory(const QString &cacheDir)
 HB_FUNC_STATIC(QNETWORKDISKCACHE_SETCACHEDIRECTORY)
 {
-  QNetworkDiskCache *obj = qobject_cast<QNetworkDiskCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -161,7 +164,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_SETCACHEDIRECTORY)
 // void setMaximumCacheSize(qint64 size)
 HB_FUNC_STATIC(QNETWORKDISKCACHE_SETMAXIMUMCACHESIZE)
 {
-  QNetworkDiskCache *obj = qobject_cast<QNetworkDiskCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -181,7 +184,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_SETMAXIMUMCACHESIZE)
 // virtual qint64 cacheSize() const
 HB_FUNC_STATIC(QNETWORKDISKCACHE_CACHESIZE)
 {
-  QNetworkDiskCache *obj = qobject_cast<QNetworkDiskCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -199,7 +202,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_CACHESIZE)
 // virtual QIODevice *data(const QUrl &url)
 HB_FUNC_STATIC(QNETWORKDISKCACHE_DATA)
 {
-  QNetworkDiskCache *obj = qobject_cast<QNetworkDiskCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -218,7 +221,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_DATA)
 // virtual void insert(QIODevice *device)
 HB_FUNC_STATIC(QNETWORKDISKCACHE_INSERT)
 {
-  QNetworkDiskCache *obj = qobject_cast<QNetworkDiskCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -238,7 +241,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_INSERT)
 // virtual QNetworkCacheMetaData metaData(const QUrl &url)
 HB_FUNC_STATIC(QNETWORKDISKCACHE_METADATA)
 {
-  QNetworkDiskCache *obj = qobject_cast<QNetworkDiskCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -257,7 +260,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_METADATA)
 // virtual QIODevice *prepare(const QNetworkCacheMetaData &metaData)
 HB_FUNC_STATIC(QNETWORKDISKCACHE_PREPARE)
 {
-  QNetworkDiskCache *obj = qobject_cast<QNetworkDiskCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -276,7 +279,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_PREPARE)
 // virtual bool remove(const QUrl &url)
 HB_FUNC_STATIC(QNETWORKDISKCACHE_REMOVE)
 {
-  QNetworkDiskCache *obj = qobject_cast<QNetworkDiskCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -294,7 +297,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_REMOVE)
 // virtual void updateMetaData(const QNetworkCacheMetaData &metaData)
 HB_FUNC_STATIC(QNETWORKDISKCACHE_UPDATEMETADATA)
 {
-  QNetworkDiskCache *obj = qobject_cast<QNetworkDiskCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -314,7 +317,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_UPDATEMETADATA)
 // virtual void clear()
 HB_FUNC_STATIC(QNETWORKDISKCACHE_CLEAR)
 {
-  QNetworkDiskCache *obj = qobject_cast<QNetworkDiskCache *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

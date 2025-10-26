@@ -73,6 +73,8 @@ RETURN
 #include <QtNetwork/QSslKey>
 #include <QtNetwork/QSslCipher>
 
+#define GET_PTR_FROM_SELF(p) QSslConfiguration *p = static_cast<QSslConfiguration *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSSLCONFIGURATION_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -91,7 +93,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_NEW)
 
 HB_FUNC_STATIC(QSSLCONFIGURATION_DELETE)
 {
-  QSslConfiguration *obj = static_cast<QSslConfiguration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -107,7 +109,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_DELETE)
 // QList<QSslCertificate> caCertificates() const
 HB_FUNC_STATIC(QSSLCONFIGURATION_CACERTIFICATES)
 {
-  QSslConfiguration *obj = static_cast<QSslConfiguration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -148,7 +150,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_CACERTIFICATES)
 // QList<QSslCipher> ciphers() const
 HB_FUNC_STATIC(QSSLCONFIGURATION_CIPHERS)
 {
-  QSslConfiguration *obj = static_cast<QSslConfiguration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -189,7 +191,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_CIPHERS)
 // bool isNull() const
 HB_FUNC_STATIC(QSSLCONFIGURATION_ISNULL)
 {
-  QSslConfiguration *obj = static_cast<QSslConfiguration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -207,7 +209,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_ISNULL)
 // QSslCertificate localCertificate() const
 HB_FUNC_STATIC(QSSLCONFIGURATION_LOCALCERTIFICATE)
 {
-  QSslConfiguration *obj = static_cast<QSslConfiguration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -226,7 +228,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_LOCALCERTIFICATE)
 // QSslCertificate peerCertificate() const
 HB_FUNC_STATIC(QSSLCONFIGURATION_PEERCERTIFICATE)
 {
-  QSslConfiguration *obj = static_cast<QSslConfiguration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -245,7 +247,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_PEERCERTIFICATE)
 // QList<QSslCertificate> peerCertificateChain() const
 HB_FUNC_STATIC(QSSLCONFIGURATION_PEERCERTIFICATECHAIN)
 {
-  QSslConfiguration *obj = static_cast<QSslConfiguration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -286,7 +288,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_PEERCERTIFICATECHAIN)
 // int peerVerifyDepth() const
 HB_FUNC_STATIC(QSSLCONFIGURATION_PEERVERIFYDEPTH)
 {
-  QSslConfiguration *obj = static_cast<QSslConfiguration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -304,7 +306,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_PEERVERIFYDEPTH)
 // QSslSocket::PeerVerifyMode peerVerifyMode() const
 HB_FUNC_STATIC(QSSLCONFIGURATION_PEERVERIFYMODE)
 {
-  QSslConfiguration *obj = static_cast<QSslConfiguration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -322,7 +324,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_PEERVERIFYMODE)
 // QSslKey privateKey() const
 HB_FUNC_STATIC(QSSLCONFIGURATION_PRIVATEKEY)
 {
-  QSslConfiguration *obj = static_cast<QSslConfiguration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -341,7 +343,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_PRIVATEKEY)
 // QSsl::SslProtocol protocol() const
 HB_FUNC_STATIC(QSSLCONFIGURATION_PROTOCOL)
 {
-  QSslConfiguration *obj = static_cast<QSslConfiguration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -359,7 +361,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_PROTOCOL)
 // QSslCipher sessionCipher() const
 HB_FUNC_STATIC(QSSLCONFIGURATION_SESSIONCIPHER)
 {
-  QSslConfiguration *obj = static_cast<QSslConfiguration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -378,7 +380,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SESSIONCIPHER)
 // void setCaCertificates(const QList<QSslCertificate> &certificates)
 HB_FUNC_STATIC(QSSLCONFIGURATION_SETCACERTIFICATES)
 {
-  QSslConfiguration *obj = static_cast<QSslConfiguration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -405,7 +407,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SETCACERTIFICATES)
 // void setCiphers(const QList<QSslCipher> &ciphers)
 HB_FUNC_STATIC(QSSLCONFIGURATION_SETCIPHERS)
 {
-  QSslConfiguration *obj = static_cast<QSslConfiguration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -432,7 +434,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SETCIPHERS)
 // void setLocalCertificate(const QSslCertificate &certificate)
 HB_FUNC_STATIC(QSSLCONFIGURATION_SETLOCALCERTIFICATE)
 {
-  QSslConfiguration *obj = static_cast<QSslConfiguration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -452,7 +454,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SETLOCALCERTIFICATE)
 // void setPeerVerifyDepth(int depth)
 HB_FUNC_STATIC(QSSLCONFIGURATION_SETPEERVERIFYDEPTH)
 {
-  QSslConfiguration *obj = static_cast<QSslConfiguration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -472,7 +474,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SETPEERVERIFYDEPTH)
 // void setPeerVerifyMode(QSslSocket::PeerVerifyMode mode)
 HB_FUNC_STATIC(QSSLCONFIGURATION_SETPEERVERIFYMODE)
 {
-  QSslConfiguration *obj = static_cast<QSslConfiguration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -492,7 +494,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SETPEERVERIFYMODE)
 // void setPrivateKey(const QSslKey &key)
 HB_FUNC_STATIC(QSSLCONFIGURATION_SETPRIVATEKEY)
 {
-  QSslConfiguration *obj = static_cast<QSslConfiguration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -512,7 +514,7 @@ HB_FUNC_STATIC(QSSLCONFIGURATION_SETPRIVATEKEY)
 // void setProtocol(QSsl::SslProtocol protocol)
 HB_FUNC_STATIC(QSSLCONFIGURATION_SETPROTOCOL)
 {
-  QSslConfiguration *obj = static_cast<QSslConfiguration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

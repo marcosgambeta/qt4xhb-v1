@@ -70,6 +70,8 @@ RETURN
 
 #include <QtNetwork/QSslConfiguration>
 
+#define GET_PTR_FROM_SELF(p) QNetworkRequest *p = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QNETWORKREQUEST_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQURL(1) || HB_ISNIL(1))) {
@@ -87,7 +89,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_NEW)
 
 HB_FUNC_STATIC(QNETWORKREQUEST_DELETE)
 {
-  QNetworkRequest *obj = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -103,7 +105,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_DELETE)
 // QVariant attribute(QNetworkRequest::Attribute code, const QVariant &defaultValue = QVariant()) const
 HB_FUNC_STATIC(QNETWORKREQUEST_ATTRIBUTE)
 {
-  QNetworkRequest *obj = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -124,7 +126,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_ATTRIBUTE)
 // bool hasRawHeader(const QByteArray &headerName) const
 HB_FUNC_STATIC(QNETWORKREQUEST_HASRAWHEADER)
 {
-  QNetworkRequest *obj = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -142,7 +144,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_HASRAWHEADER)
 // QVariant header(QNetworkRequest::KnownHeaders header) const
 HB_FUNC_STATIC(QNETWORKREQUEST_HEADER)
 {
-  QNetworkRequest *obj = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -161,7 +163,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_HEADER)
 // QObject *originatingObject() const
 HB_FUNC_STATIC(QNETWORKREQUEST_ORIGINATINGOBJECT)
 {
-  QNetworkRequest *obj = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -180,7 +182,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_ORIGINATINGOBJECT)
 // QNetworkRequest::Priority priority() const
 HB_FUNC_STATIC(QNETWORKREQUEST_PRIORITY)
 {
-  QNetworkRequest *obj = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -198,7 +200,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_PRIORITY)
 // QByteArray rawHeader(const QByteArray &headerName) const
 HB_FUNC_STATIC(QNETWORKREQUEST_RAWHEADER)
 {
-  QNetworkRequest *obj = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -217,7 +219,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_RAWHEADER)
 // QList<QByteArray> rawHeaderList() const
 HB_FUNC_STATIC(QNETWORKREQUEST_RAWHEADERLIST)
 {
-  QNetworkRequest *obj = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -258,7 +260,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_RAWHEADERLIST)
 // void setAttribute(QNetworkRequest::Attribute code, const QVariant &value)
 HB_FUNC_STATIC(QNETWORKREQUEST_SETATTRIBUTE)
 {
-  QNetworkRequest *obj = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -278,7 +280,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETATTRIBUTE)
 // void setHeader(QNetworkRequest::KnownHeaders header, const QVariant &value)
 HB_FUNC_STATIC(QNETWORKREQUEST_SETHEADER)
 {
-  QNetworkRequest *obj = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -298,7 +300,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETHEADER)
 // void setOriginatingObject(QObject *object)
 HB_FUNC_STATIC(QNETWORKREQUEST_SETORIGINATINGOBJECT)
 {
-  QNetworkRequest *obj = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -318,7 +320,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETORIGINATINGOBJECT)
 // void setPriority(QNetworkRequest::Priority priority)
 HB_FUNC_STATIC(QNETWORKREQUEST_SETPRIORITY)
 {
-  QNetworkRequest *obj = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -338,7 +340,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETPRIORITY)
 // void setRawHeader(const QByteArray &headerName, const QByteArray &headerValue)
 HB_FUNC_STATIC(QNETWORKREQUEST_SETRAWHEADER)
 {
-  QNetworkRequest *obj = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -358,7 +360,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETRAWHEADER)
 // void setSslConfiguration(const QSslConfiguration &config)
 HB_FUNC_STATIC(QNETWORKREQUEST_SETSSLCONFIGURATION)
 {
-  QNetworkRequest *obj = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -378,7 +380,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETSSLCONFIGURATION)
 // void setUrl(const QUrl &url)
 HB_FUNC_STATIC(QNETWORKREQUEST_SETURL)
 {
-  QNetworkRequest *obj = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -398,7 +400,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SETURL)
 // QSslConfiguration sslConfiguration() const
 HB_FUNC_STATIC(QNETWORKREQUEST_SSLCONFIGURATION)
 {
-  QNetworkRequest *obj = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -417,7 +419,7 @@ HB_FUNC_STATIC(QNETWORKREQUEST_SSLCONFIGURATION)
 // QUrl url() const
 HB_FUNC_STATIC(QNETWORKREQUEST_URL)
 {
-  QNetworkRequest *obj = static_cast<QNetworkRequest *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

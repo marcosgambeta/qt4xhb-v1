@@ -55,6 +55,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QSslKey *p = static_cast<QSslKey *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSSLKEY_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -90,7 +92,7 @@ HB_FUNC_STATIC(QSSLKEY_NEW)
 
 HB_FUNC_STATIC(QSSLKEY_DELETE)
 {
-  QSslKey *obj = static_cast<QSslKey *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -106,7 +108,7 @@ HB_FUNC_STATIC(QSSLKEY_DELETE)
 // QSsl::KeyAlgorithm algorithm() const
 HB_FUNC_STATIC(QSSLKEY_ALGORITHM)
 {
-  QSslKey *obj = static_cast<QSslKey *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -124,7 +126,7 @@ HB_FUNC_STATIC(QSSLKEY_ALGORITHM)
 // void clear()
 HB_FUNC_STATIC(QSSLKEY_CLEAR)
 {
-  QSslKey *obj = static_cast<QSslKey *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -144,7 +146,7 @@ HB_FUNC_STATIC(QSSLKEY_CLEAR)
 // bool isNull() const
 HB_FUNC_STATIC(QSSLKEY_ISNULL)
 {
-  QSslKey *obj = static_cast<QSslKey *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -162,7 +164,7 @@ HB_FUNC_STATIC(QSSLKEY_ISNULL)
 // int length() const
 HB_FUNC_STATIC(QSSLKEY_LENGTH)
 {
-  QSslKey *obj = static_cast<QSslKey *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -180,7 +182,7 @@ HB_FUNC_STATIC(QSSLKEY_LENGTH)
 // QByteArray toDer(const QByteArray &passPhrase = QByteArray()) const
 HB_FUNC_STATIC(QSSLKEY_TODER)
 {
-  QSslKey *obj = static_cast<QSslKey *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -200,7 +202,7 @@ HB_FUNC_STATIC(QSSLKEY_TODER)
 // QByteArray toPem(const QByteArray &passPhrase = QByteArray()) const
 HB_FUNC_STATIC(QSSLKEY_TOPEM)
 {
-  QSslKey *obj = static_cast<QSslKey *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -220,7 +222,7 @@ HB_FUNC_STATIC(QSSLKEY_TOPEM)
 // QSsl::KeyType type() const
 HB_FUNC_STATIC(QSSLKEY_TYPE)
 {
-  QSslKey *obj = static_cast<QSslKey *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

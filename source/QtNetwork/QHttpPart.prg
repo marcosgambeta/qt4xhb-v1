@@ -51,6 +51,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QHttpPart *p = static_cast<QHttpPart *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QHTTPPART_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -68,7 +70,7 @@ HB_FUNC_STATIC(QHTTPPART_NEW)
 
 HB_FUNC_STATIC(QHTTPPART_DELETE)
 {
-  QHttpPart *obj = static_cast<QHttpPart *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -84,7 +86,7 @@ HB_FUNC_STATIC(QHTTPPART_DELETE)
 // void setBody(const QByteArray &body)
 HB_FUNC_STATIC(QHTTPPART_SETBODY)
 {
-  QHttpPart *obj = static_cast<QHttpPart *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -104,7 +106,7 @@ HB_FUNC_STATIC(QHTTPPART_SETBODY)
 // void setBodyDevice(QIODevice *device)
 HB_FUNC_STATIC(QHTTPPART_SETBODYDEVICE)
 {
-  QHttpPart *obj = static_cast<QHttpPart *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -124,7 +126,7 @@ HB_FUNC_STATIC(QHTTPPART_SETBODYDEVICE)
 // void setHeader(QNetworkRequest::KnownHeaders header, const QVariant &value)
 HB_FUNC_STATIC(QHTTPPART_SETHEADER)
 {
-  QHttpPart *obj = static_cast<QHttpPart *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -144,7 +146,7 @@ HB_FUNC_STATIC(QHTTPPART_SETHEADER)
 // void setRawHeader(const QByteArray &headerName, const QByteArray &headerValue)
 HB_FUNC_STATIC(QHTTPPART_SETRAWHEADER)
 {
-  QHttpPart *obj = static_cast<QHttpPart *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

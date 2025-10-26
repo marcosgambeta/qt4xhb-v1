@@ -53,6 +53,10 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QNetworkConfigurationManager *p =                                                                                    \
+      qobject_cast<QNetworkConfigurationManager *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QNetworkConfigurationManager(QObject *parent = 0)
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_NEW)
 {
@@ -66,8 +70,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_NEW)
 
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_DELETE)
 {
-  QNetworkConfigurationManager *obj =
-      qobject_cast<QNetworkConfigurationManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -85,8 +88,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_DELETE)
 // QList<QNetworkConfiguration> allConfigurations(QNetworkConfiguration::StateFlags filter = 0) const
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS)
 {
-  QNetworkConfigurationManager *obj =
-      qobject_cast<QNetworkConfigurationManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -128,8 +130,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS)
 // QNetworkConfigurationManager::Capabilities capabilities() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_CAPABILITIES)
 {
-  QNetworkConfigurationManager *obj =
-      qobject_cast<QNetworkConfigurationManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -147,8 +148,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_CAPABILITIES)
 // QNetworkConfiguration configurationFromIdentifier(const QString &identifier) const
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_CONFIGURATIONFROMIDENTIFIER)
 {
-  QNetworkConfigurationManager *obj =
-      qobject_cast<QNetworkConfigurationManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -167,8 +167,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_CONFIGURATIONFROMIDENTIFIER)
 // QNetworkConfiguration defaultConfiguration() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_DEFAULTCONFIGURATION)
 {
-  QNetworkConfigurationManager *obj =
-      qobject_cast<QNetworkConfigurationManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -187,8 +186,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_DEFAULTCONFIGURATION)
 // bool isOnline() const
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ISONLINE)
 {
-  QNetworkConfigurationManager *obj =
-      qobject_cast<QNetworkConfigurationManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -206,8 +204,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ISONLINE)
 // void updateConfigurations()
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_UPDATECONFIGURATIONS)
 {
-  QNetworkConfigurationManager *obj =
-      qobject_cast<QNetworkConfigurationManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
