@@ -11,6 +11,8 @@
 
 #define ISQUILOADER(n)                                      Qt4xHb::isObjectDerivedFrom(n, "QUiLoader")
 
+#define ISQUILOADERORNIL(n)                                 (ISQUILOADER(n) || HB_ISNIL(n))
+
 #define PQUILOADER(n)                                       static_cast<QUiLoader *>(Qt4xHb::itemGetPtr(n))
 
 #define OPQUILOADER(n, v)                                   HB_ISNIL(n) ? v : static_cast<QUiLoader *>(Qt4xHb::itemGetPtr(n))

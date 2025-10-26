@@ -11,6 +11,8 @@
 
 #define ISQTESTEVENTLIST(n)                                 Qt4xHb::isObjectDerivedFrom(n, "QTestEventList")
 
+#define ISQTESTEVENTLISTORNIL(n)                            (ISQTESTEVENTLIST(n) || HB_ISNIL(n))
+
 #define PQTESTEVENTLIST(n)                                  static_cast<QTestEventList *>(Qt4xHb::itemGetPtr(n))
 
 #define OPQTESTEVENTLIST(n, v)                              HB_ISNIL(n) ? v : static_cast<QTestEventList *>(Qt4xHb::itemGetPtr(n))

@@ -18,6 +18,15 @@
 #define ISQAXSCRIPTMANAGER(n)                               Qt4xHb::isObjectDerivedFrom(n, "QAxScriptManager")
 #define ISQAXWIDGET(n)                                      Qt4xHb::isObjectDerivedFrom(n, "QAxWidget")
 
+#define ISQAXBASEORNIL(n)                                   (ISQAXBASE(n) || HB_ISNIL(n))
+#define ISQAXBINDABLEORNIL(n)                               (ISQAXBINDABLE(n) || HB_ISNIL(n))
+#define ISQAXFACTORYORNIL(n)                                (ISQAXFACTORY(n) || HB_ISNIL(n))
+#define ISQAXOBJECTORNIL(n)                                 (ISQAXOBJECT(n) || HB_ISNIL(n))
+#define ISQAXSCRIPTORNIL(n)                                 (ISQAXSCRIPT(n) || HB_ISNIL(n))
+#define ISQAXSCRIPTENGINEORNIL(n)                           (ISQAXSCRIPTENGINE(n) || HB_ISNIL(n))
+#define ISQAXSCRIPTMANAGERORNIL(n)                          (ISQAXSCRIPTMANAGER(n) || HB_ISNIL(n))
+#define ISQAXWIDGETORNIL(n)                                 (ISQAXWIDGET(n) || HB_ISNIL(n))
+
 #define PQAXBASE(n)                                         static_cast<QAxBase *>(Qt4xHb::itemGetPtr(n))
 #define PQAXBINDABLE(n)                                     static_cast<QAxBindable *>(Qt4xHb::itemGetPtr(n))
 #define PQAXFACTORY(n)                                      static_cast<QAxFactory *>(Qt4xHb::itemGetPtr(n))

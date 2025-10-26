@@ -14,6 +14,11 @@
 #define ISQSVGRENDERER(n)                                   Qt4xHb::isObjectDerivedFrom(n, "QSvgRenderer")
 #define ISQSVGWIDGET(n)                                     Qt4xHb::isObjectDerivedFrom(n, "QSvgWidget")
 
+#define ISQGRAPHICSSVGITEMORNIL(n)                          (ISQGRAPHICSSVGITEM(n) || HB_ISNIL(n))
+#define ISQSVGGENERATORORNIL(n)                             (ISQSVGGENERATOR(n) || HB_ISNIL(n))
+#define ISQSVGRENDERERORNIL(n)                              (ISQSVGRENDERER(n) || HB_ISNIL(n))
+#define ISQSVGWIDGETORNIL(n)                                (ISQSVGWIDGET(n) || HB_ISNIL(n))
+
 #define PQGRAPHICSSVGITEM(n)                                static_cast<QGraphicsSvgItem *>(Qt4xHb::itemGetPtr(n))
 #define PQSVGGENERATOR(n)                                   static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtr(n))
 #define PQSVGRENDERER(n)                                    static_cast<QSvgRenderer *>(Qt4xHb::itemGetPtr(n))

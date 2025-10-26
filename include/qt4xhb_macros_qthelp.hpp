@@ -21,6 +21,18 @@
 #define ISQHELPSEARCHQUERYWIDGET(n)                         Qt4xHb::isObjectDerivedFrom(n, "QHelpSearchQueryWidget")
 #define ISQHELPSEARCHRESULTWIDGET(n)                        Qt4xHb::isObjectDerivedFrom(n, "QHelpSearchResultWidget")
 
+#define ISQHELPCONTENTITEMORNIL(n)                          (ISQHELPCONTENTITEM(n) || HB_ISNIL(n))
+#define ISQHELPCONTENTMODELORNIL(n)                         (ISQHELPCONTENTMODEL(n) || HB_ISNIL(n))
+#define ISQHELPCONTENTWIDGETORNIL(n)                        (ISQHELPCONTENTWIDGET(n) || HB_ISNIL(n))
+#define ISQHELPENGINEORNIL(n)                               (ISQHELPENGINE(n) || HB_ISNIL(n))
+#define ISQHELPENGINECOREORNIL(n)                           (ISQHELPENGINECORE(n) || HB_ISNIL(n))
+#define ISQHELPINDEXMODELORNIL(n)                           (ISQHELPINDEXMODEL(n) || HB_ISNIL(n))
+#define ISQHELPINDEXWIDGETORNIL(n)                          (ISQHELPINDEXWIDGET(n) || HB_ISNIL(n))
+#define ISQHELPSEARCHENGINEORNIL(n)                         (ISQHELPSEARCHENGINE(n) || HB_ISNIL(n))
+#define ISQHELPSEARCHQUERYORNIL(n)                          (ISQHELPSEARCHQUERY(n) || HB_ISNIL(n))
+#define ISQHELPSEARCHQUERYWIDGETORNIL(n)                    (ISQHELPSEARCHQUERYWIDGET(n) || HB_ISNIL(n))
+#define ISQHELPSEARCHRESULTWIDGETORNIL(n)                   (ISQHELPSEARCHRESULTWIDGET(n) || HB_ISNIL(n))
+
 #define PQHELPCONTENTITEM(n)                                static_cast<QHelpContentItem *>(Qt4xHb::itemGetPtr(n))
 #define PQHELPCONTENTMODEL(n)                               static_cast<QHelpContentModel *>(Qt4xHb::itemGetPtr(n))
 #define PQHELPCONTENTWIDGET(n)                              static_cast<QHelpContentWidget *>(Qt4xHb::itemGetPtr(n))

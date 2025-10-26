@@ -21,6 +21,18 @@
 #define ISQGLSHADERPROGRAM(n)                               Qt4xHb::isObjectDerivedFrom(n, "QGLShaderProgram")
 #define ISQGLWIDGET(n)                                      Qt4xHb::isObjectDerivedFrom(n, "QGLWidget")
 
+#define ISQGLBUFFERORNIL(n)                                 (ISQGLBUFFER(n) || HB_ISNIL(n))
+#define ISQGLCOLORMAPORNIL(n)                               (ISQGLCOLORMAP(n) || HB_ISNIL(n))
+#define ISQGLCONTEXTORNIL(n)                                (ISQGLCONTEXT(n) || HB_ISNIL(n))
+#define ISQGLFORMATORNIL(n)                                 (ISQGLFORMAT(n) || HB_ISNIL(n))
+#define ISQGLFRAMEBUFFEROBJECTORNIL(n)                      (ISQGLFRAMEBUFFEROBJECT(n) || HB_ISNIL(n))
+#define ISQGLFRAMEBUFFEROBJECTFORMATORNIL(n)                (ISQGLFRAMEBUFFEROBJECTFORMAT(n) || HB_ISNIL(n))
+#define ISQGLFUNCTIONSORNIL(n)                              (ISQGLFUNCTIONS(n) || HB_ISNIL(n))
+#define ISQGLPIXELBUFFERORNIL(n)                            (ISQGLPIXELBUFFER(n) || HB_ISNIL(n))
+#define ISQGLSHADERORNIL(n)                                 (ISQGLSHADER(n) || HB_ISNIL(n))
+#define ISQGLSHADERPROGRAMORNIL(n)                          (ISQGLSHADERPROGRAM(n) || HB_ISNIL(n))
+#define ISQGLWIDGETORNIL(n)                                 (ISQGLWIDGET(n) || HB_ISNIL(n))
+
 #define PQGLBUFFER(n)                                       static_cast<QGLBuffer *>(Qt4xHb::itemGetPtr(n))
 #define PQGLCOLORMAP(n)                                     static_cast<QGLColormap *>(Qt4xHb::itemGetPtr(n))
 #define PQGLCONTEXT(n)                                      static_cast<QGLContext *>(Qt4xHb::itemGetPtr(n))

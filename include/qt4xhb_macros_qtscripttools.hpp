@@ -11,6 +11,8 @@
 
 #define ISQSCRIPTENGINEDEBUGGER(n)                          Qt4xHb::isObjectDerivedFrom(n, "QScriptEngineDebugger")
 
+#define ISQSCRIPTENGINEDEBUGGERORNIL(n)                     (ISQSCRIPTENGINEDEBUGGER(n) || HB_ISNIL(n))
+
 #define PQSCRIPTENGINEDEBUGGER(n)                           static_cast<QScriptEngineDebugger *>(Qt4xHb::itemGetPtr(n))
 
 #define OPQSCRIPTENGINEDEBUGGER(n, v)                       HB_ISNIL(n) ? v : static_cast<QScriptEngineDebugger *>(Qt4xHb::itemGetPtr(n))

@@ -18,6 +18,15 @@
 #define ISQVIDEOFRAME(n)                                    Qt4xHb::isObjectDerivedFrom(n, "QVideoFrame")
 #define ISQVIDEOSURFACEFORMAT(n)                            Qt4xHb::isObjectDerivedFrom(n, "QVideoSurfaceFormat")
 
+#define ISQABSTRACTVIDEOBUFFERORNIL(n)                      (ISQABSTRACTVIDEOBUFFER(n) || HB_ISNIL(n))
+#define ISQABSTRACTVIDEOSURFACEORNIL(n)                     (ISQABSTRACTVIDEOSURFACE(n) || HB_ISNIL(n))
+#define ISQAUDIODEVICEINFOORNIL(n)                          (ISQAUDIODEVICEINFO(n) || HB_ISNIL(n))
+#define ISQAUDIOFORMATORNIL(n)                              (ISQAUDIOFORMAT(n) || HB_ISNIL(n))
+#define ISQAUDIOINPUTORNIL(n)                               (ISQAUDIOINPUT(n) || HB_ISNIL(n))
+#define ISQAUDIOOUTPUTORNIL(n)                              (ISQAUDIOOUTPUT(n) || HB_ISNIL(n))
+#define ISQVIDEOFRAMEORNIL(n)                               (ISQVIDEOFRAME(n) || HB_ISNIL(n))
+#define ISQVIDEOSURFACEFORMATORNIL(n)                       (ISQVIDEOSURFACEFORMAT(n) || HB_ISNIL(n))
+
 #define PQABSTRACTVIDEOBUFFER(n)                            static_cast<QAbstractVideoBuffer *>(Qt4xHb::itemGetPtr(n))
 #define PQABSTRACTVIDEOSURFACE(n)                           static_cast<QAbstractVideoSurface *>(Qt4xHb::itemGetPtr(n))
 #define PQAUDIODEVICEINFO(n)                                static_cast<QAudioDeviceInfo *>(Qt4xHb::itemGetPtr(n))
