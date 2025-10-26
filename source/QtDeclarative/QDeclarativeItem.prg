@@ -67,7 +67,7 @@ RETURN
 // QDeclarativeItem(QDeclarativeItem *parent = 0)
 HB_FUNC_STATIC(QDECLARATIVEITEM_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQDECLARATIVEITEM(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISQDECLARATIVEITEMORNIL(1)) {
     QDeclarativeItem *obj = new QDeclarativeItem(OPQDECLARATIVEITEM(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   } else {
