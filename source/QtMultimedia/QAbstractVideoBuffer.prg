@@ -53,9 +53,12 @@ RETURN
 
 #include <QtCore/QVariant>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QAbstractVideoBuffer *p = static_cast<QAbstractVideoBuffer *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_DELETE)
 {
-  QAbstractVideoBuffer *obj = static_cast<QAbstractVideoBuffer *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -71,7 +74,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_DELETE)
 // virtual QVariant handle() const
 HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_HANDLE)
 {
-  QAbstractVideoBuffer *obj = static_cast<QAbstractVideoBuffer *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -90,7 +93,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_HANDLE)
 // QAbstractVideoBuffer::HandleType handleType() const
 HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_HANDLETYPE)
 {
-  QAbstractVideoBuffer *obj = static_cast<QAbstractVideoBuffer *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -108,7 +111,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_HANDLETYPE)
 // virtual QAbstractVideoBuffer::MapMode mapMode() const = 0
 HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_MAPMODE)
 {
-  QAbstractVideoBuffer *obj = static_cast<QAbstractVideoBuffer *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -126,7 +129,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_MAPMODE)
 // virtual void unmap() = 0
 HB_FUNC_STATIC(QABSTRACTVIDEOBUFFER_UNMAP)
 {
-  QAbstractVideoBuffer *obj = static_cast<QAbstractVideoBuffer *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

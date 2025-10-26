@@ -64,6 +64,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QAudioFormat *p = static_cast<QAudioFormat *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QAUDIOFORMAT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -81,7 +83,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_NEW)
 
 HB_FUNC_STATIC(QAUDIOFORMAT_DELETE)
 {
-  QAudioFormat *obj = static_cast<QAudioFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -97,7 +99,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_DELETE)
 // bool isValid() const
 HB_FUNC_STATIC(QAUDIOFORMAT_ISVALID)
 {
-  QAudioFormat *obj = static_cast<QAudioFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -115,7 +117,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_ISVALID)
 // void setFrequency(int frequency)
 HB_FUNC_STATIC(QAUDIOFORMAT_SETFREQUENCY)
 {
-  QAudioFormat *obj = static_cast<QAudioFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -135,7 +137,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_SETFREQUENCY)
 // int frequency() const
 HB_FUNC_STATIC(QAUDIOFORMAT_FREQUENCY)
 {
-  QAudioFormat *obj = static_cast<QAudioFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -153,7 +155,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_FREQUENCY)
 // void setSampleRate(int samplerate)
 HB_FUNC_STATIC(QAUDIOFORMAT_SETSAMPLERATE)
 {
-  QAudioFormat *obj = static_cast<QAudioFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -173,7 +175,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_SETSAMPLERATE)
 // int sampleRate() const
 HB_FUNC_STATIC(QAUDIOFORMAT_SAMPLERATE)
 {
-  QAudioFormat *obj = static_cast<QAudioFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -191,7 +193,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_SAMPLERATE)
 // void setChannels(int channels)
 HB_FUNC_STATIC(QAUDIOFORMAT_SETCHANNELS)
 {
-  QAudioFormat *obj = static_cast<QAudioFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -211,7 +213,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_SETCHANNELS)
 // int channels() const
 HB_FUNC_STATIC(QAUDIOFORMAT_CHANNELS)
 {
-  QAudioFormat *obj = static_cast<QAudioFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -229,7 +231,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_CHANNELS)
 // void setChannelCount(int channelCount)
 HB_FUNC_STATIC(QAUDIOFORMAT_SETCHANNELCOUNT)
 {
-  QAudioFormat *obj = static_cast<QAudioFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -249,7 +251,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_SETCHANNELCOUNT)
 // int channelCount() const
 HB_FUNC_STATIC(QAUDIOFORMAT_CHANNELCOUNT)
 {
-  QAudioFormat *obj = static_cast<QAudioFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -267,7 +269,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_CHANNELCOUNT)
 // void setSampleSize(int sampleSize)
 HB_FUNC_STATIC(QAUDIOFORMAT_SETSAMPLESIZE)
 {
-  QAudioFormat *obj = static_cast<QAudioFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -287,7 +289,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_SETSAMPLESIZE)
 // int sampleSize() const
 HB_FUNC_STATIC(QAUDIOFORMAT_SAMPLESIZE)
 {
-  QAudioFormat *obj = static_cast<QAudioFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -305,7 +307,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_SAMPLESIZE)
 // void setCodec(const QString &codec)
 HB_FUNC_STATIC(QAUDIOFORMAT_SETCODEC)
 {
-  QAudioFormat *obj = static_cast<QAudioFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -325,7 +327,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_SETCODEC)
 // QString codec() const
 HB_FUNC_STATIC(QAUDIOFORMAT_CODEC)
 {
-  QAudioFormat *obj = static_cast<QAudioFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -343,7 +345,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_CODEC)
 // void setByteOrder(QAudioFormat::Endian byteOrder)
 HB_FUNC_STATIC(QAUDIOFORMAT_SETBYTEORDER)
 {
-  QAudioFormat *obj = static_cast<QAudioFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -363,7 +365,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_SETBYTEORDER)
 // QAudioFormat::Endian byteOrder() const
 HB_FUNC_STATIC(QAUDIOFORMAT_BYTEORDER)
 {
-  QAudioFormat *obj = static_cast<QAudioFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -381,7 +383,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_BYTEORDER)
 // QAudioFormat::SampleType sampleType() const
 HB_FUNC_STATIC(QAUDIOFORMAT_SAMPLETYPE)
 {
-  QAudioFormat *obj = static_cast<QAudioFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -399,7 +401,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_SAMPLETYPE)
 // void setSampleType(QAudioFormat::SampleType sampleType)
 HB_FUNC_STATIC(QAUDIOFORMAT_SETSAMPLETYPE)
 {
-  QAudioFormat *obj = static_cast<QAudioFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -74,6 +74,8 @@ RETURN
 
 #include <QtCore/QVariant>
 
+#define GET_PTR_FROM_SELF(p) QVideoFrame *p = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QVIDEOFRAME_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -103,7 +105,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_NEW)
 
 HB_FUNC_STATIC(QVIDEOFRAME_DELETE)
 {
-  QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -119,7 +121,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_DELETE)
 // int bytesPerLine() const
 HB_FUNC_STATIC(QVIDEOFRAME_BYTESPERLINE)
 {
-  QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -137,7 +139,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_BYTESPERLINE)
 // qint64 endTime() const
 HB_FUNC_STATIC(QVIDEOFRAME_ENDTIME)
 {
-  QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -155,7 +157,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_ENDTIME)
 // QVideoFrame::FieldType fieldType() const
 HB_FUNC_STATIC(QVIDEOFRAME_FIELDTYPE)
 {
-  QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -173,7 +175,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_FIELDTYPE)
 // QVariant handle() const
 HB_FUNC_STATIC(QVIDEOFRAME_HANDLE)
 {
-  QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -192,7 +194,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_HANDLE)
 // QAbstractVideoBuffer::HandleType handleType() const
 HB_FUNC_STATIC(QVIDEOFRAME_HANDLETYPE)
 {
-  QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -210,7 +212,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_HANDLETYPE)
 // int height() const
 HB_FUNC_STATIC(QVIDEOFRAME_HEIGHT)
 {
-  QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -228,7 +230,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_HEIGHT)
 // bool isMapped() const
 HB_FUNC_STATIC(QVIDEOFRAME_ISMAPPED)
 {
-  QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -246,7 +248,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_ISMAPPED)
 // bool isReadable() const
 HB_FUNC_STATIC(QVIDEOFRAME_ISREADABLE)
 {
-  QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -264,7 +266,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_ISREADABLE)
 // bool isValid() const
 HB_FUNC_STATIC(QVIDEOFRAME_ISVALID)
 {
-  QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -282,7 +284,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_ISVALID)
 // bool isWritable() const
 HB_FUNC_STATIC(QVIDEOFRAME_ISWRITABLE)
 {
-  QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -300,7 +302,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_ISWRITABLE)
 // bool map(QAbstractVideoBuffer::MapMode mode)
 HB_FUNC_STATIC(QVIDEOFRAME_MAP)
 {
-  QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -318,7 +320,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_MAP)
 // QAbstractVideoBuffer::MapMode mapMode() const
 HB_FUNC_STATIC(QVIDEOFRAME_MAPMODE)
 {
-  QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -336,7 +338,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_MAPMODE)
 // int mappedBytes() const
 HB_FUNC_STATIC(QVIDEOFRAME_MAPPEDBYTES)
 {
-  QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -354,7 +356,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_MAPPEDBYTES)
 // QVideoFrame::PixelFormat pixelFormat() const
 HB_FUNC_STATIC(QVIDEOFRAME_PIXELFORMAT)
 {
-  QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -372,7 +374,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_PIXELFORMAT)
 // void setEndTime(qint64 time)
 HB_FUNC_STATIC(QVIDEOFRAME_SETENDTIME)
 {
-  QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -392,7 +394,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_SETENDTIME)
 // void setFieldType(QVideoFrame::FieldType field)
 HB_FUNC_STATIC(QVIDEOFRAME_SETFIELDTYPE)
 {
-  QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -412,7 +414,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_SETFIELDTYPE)
 // void setStartTime(qint64 time)
 HB_FUNC_STATIC(QVIDEOFRAME_SETSTARTTIME)
 {
-  QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -432,7 +434,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_SETSTARTTIME)
 // QSize size() const
 HB_FUNC_STATIC(QVIDEOFRAME_SIZE)
 {
-  QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -451,7 +453,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_SIZE)
 // qint64 startTime() const
 HB_FUNC_STATIC(QVIDEOFRAME_STARTTIME)
 {
-  QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -469,7 +471,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_STARTTIME)
 // void unmap()
 HB_FUNC_STATIC(QVIDEOFRAME_UNMAP)
 {
-  QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -489,7 +491,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_UNMAP)
 // int width() const
 HB_FUNC_STATIC(QVIDEOFRAME_WIDTH)
 {
-  QVideoFrame *obj = static_cast<QVideoFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

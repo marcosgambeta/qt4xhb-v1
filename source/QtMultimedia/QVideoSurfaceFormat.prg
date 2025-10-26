@@ -74,6 +74,9 @@ RETURN
 
 #include <QtCore/QVariant>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QVideoSurfaceFormat *p = static_cast<QVideoSurfaceFormat *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -99,7 +102,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_NEW)
 
 HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_DELETE)
 {
-  QVideoSurfaceFormat *obj = static_cast<QVideoSurfaceFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -115,7 +118,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_DELETE)
 // int frameHeight() const
 HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_FRAMEHEIGHT)
 {
-  QVideoSurfaceFormat *obj = static_cast<QVideoSurfaceFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -133,7 +136,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_FRAMEHEIGHT)
 // qreal frameRate() const
 HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_FRAMERATE)
 {
-  QVideoSurfaceFormat *obj = static_cast<QVideoSurfaceFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -151,7 +154,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_FRAMERATE)
 // QSize frameSize() const
 HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_FRAMESIZE)
 {
-  QVideoSurfaceFormat *obj = static_cast<QVideoSurfaceFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -170,7 +173,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_FRAMESIZE)
 // int frameWidth() const
 HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_FRAMEWIDTH)
 {
-  QVideoSurfaceFormat *obj = static_cast<QVideoSurfaceFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -188,7 +191,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_FRAMEWIDTH)
 // QAbstractVideoBuffer::HandleType handleType() const
 HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_HANDLETYPE)
 {
-  QVideoSurfaceFormat *obj = static_cast<QVideoSurfaceFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -206,7 +209,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_HANDLETYPE)
 // bool isValid() const
 HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_ISVALID)
 {
-  QVideoSurfaceFormat *obj = static_cast<QVideoSurfaceFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -224,7 +227,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_ISVALID)
 // QSize pixelAspectRatio() const
 HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_PIXELASPECTRATIO)
 {
-  QVideoSurfaceFormat *obj = static_cast<QVideoSurfaceFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -243,7 +246,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_PIXELASPECTRATIO)
 // QVideoFrame::PixelFormat pixelFormat() const
 HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_PIXELFORMAT)
 {
-  QVideoSurfaceFormat *obj = static_cast<QVideoSurfaceFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -261,7 +264,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_PIXELFORMAT)
 // QVariant property(const char *name) const
 HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_PROPERTY)
 {
-  QVideoSurfaceFormat *obj = static_cast<QVideoSurfaceFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -280,7 +283,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_PROPERTY)
 // QList<QByteArray> propertyNames() const
 HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_PROPERTYNAMES)
 {
-  QVideoSurfaceFormat *obj = static_cast<QVideoSurfaceFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -321,7 +324,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_PROPERTYNAMES)
 // QVideoSurfaceFormat::Direction scanLineDirection() const
 HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SCANLINEDIRECTION)
 {
-  QVideoSurfaceFormat *obj = static_cast<QVideoSurfaceFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -339,7 +342,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SCANLINEDIRECTION)
 // void setFrameRate(qreal rate)
 HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETFRAMERATE)
 {
-  QVideoSurfaceFormat *obj = static_cast<QVideoSurfaceFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -360,7 +363,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETFRAMESIZE)
 {
   if (ISNUMPAR(1) && ISQSIZE(1)) {
     // void setFrameSize(const QSize &size)
-    QVideoSurfaceFormat *obj = static_cast<QVideoSurfaceFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setFrameSize(*PQSIZE(1));
@@ -369,7 +372,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETFRAMESIZE)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setFrameSize(int width, int height)
-    QVideoSurfaceFormat *obj = static_cast<QVideoSurfaceFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setFrameSize(PINT(1), PINT(2));
@@ -385,7 +388,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETPIXELASPECTRATIO)
 {
   if (ISNUMPAR(1) && ISQSIZE(1)) {
     // void setPixelAspectRatio(const QSize &ratio)
-    QVideoSurfaceFormat *obj = static_cast<QVideoSurfaceFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setPixelAspectRatio(*PQSIZE(1));
@@ -394,7 +397,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETPIXELASPECTRATIO)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setPixelAspectRatio(int horizontal, int vertical)
-    QVideoSurfaceFormat *obj = static_cast<QVideoSurfaceFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setPixelAspectRatio(PINT(1), PINT(2));
@@ -409,7 +412,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETPIXELASPECTRATIO)
 // void setProperty(const char *name, const QVariant &value)
 HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETPROPERTY)
 {
-  QVideoSurfaceFormat *obj = static_cast<QVideoSurfaceFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -429,7 +432,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETPROPERTY)
 // void setScanLineDirection(QVideoSurfaceFormat::Direction direction)
 HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETSCANLINEDIRECTION)
 {
-  QVideoSurfaceFormat *obj = static_cast<QVideoSurfaceFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -449,7 +452,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETSCANLINEDIRECTION)
 // void setViewport(const QRect &viewport)
 HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETVIEWPORT)
 {
-  QVideoSurfaceFormat *obj = static_cast<QVideoSurfaceFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -469,7 +472,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETVIEWPORT)
 // void setYCbCrColorSpace(QVideoSurfaceFormat::YCbCrColorSpace space)
 HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETYCBCRCOLORSPACE)
 {
-  QVideoSurfaceFormat *obj = static_cast<QVideoSurfaceFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -489,7 +492,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SETYCBCRCOLORSPACE)
 // QSize sizeHint() const
 HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SIZEHINT)
 {
-  QVideoSurfaceFormat *obj = static_cast<QVideoSurfaceFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -508,7 +511,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_SIZEHINT)
 // QRect viewport() const
 HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_VIEWPORT)
 {
-  QVideoSurfaceFormat *obj = static_cast<QVideoSurfaceFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -527,7 +530,7 @@ HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_VIEWPORT)
 // QVideoSurfaceFormat::YCbCrColorSpace yCbCrColorSpace() const
 HB_FUNC_STATIC(QVIDEOSURFACEFORMAT_YCBCRCOLORSPACE)
 {
-  QVideoSurfaceFormat *obj = static_cast<QVideoSurfaceFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

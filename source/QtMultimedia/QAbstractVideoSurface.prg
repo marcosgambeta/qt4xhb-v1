@@ -55,9 +55,12 @@ RETURN
 
 #include <QtMultimedia/QVideoSurfaceFormat>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QAbstractVideoSurface *p = qobject_cast<QAbstractVideoSurface *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_DELETE)
 {
-  QAbstractVideoSurface *obj = qobject_cast<QAbstractVideoSurface *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -75,7 +78,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_DELETE)
 // QAbstractVideoSurface::Error error() const
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ERROR)
 {
-  QAbstractVideoSurface *obj = qobject_cast<QAbstractVideoSurface *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -93,7 +96,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ERROR)
 // bool isActive() const
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ISACTIVE)
 {
-  QAbstractVideoSurface *obj = qobject_cast<QAbstractVideoSurface *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -111,7 +114,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ISACTIVE)
 // virtual bool isFormatSupported(const QVideoSurfaceFormat &format) const
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ISFORMATSUPPORTED)
 {
-  QAbstractVideoSurface *obj = qobject_cast<QAbstractVideoSurface *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -129,7 +132,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ISFORMATSUPPORTED)
 // virtual QVideoSurfaceFormat nearestFormat(const QVideoSurfaceFormat &format) const
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_NEARESTFORMAT)
 {
-  QAbstractVideoSurface *obj = qobject_cast<QAbstractVideoSurface *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -148,7 +151,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_NEARESTFORMAT)
 // virtual bool present(const QVideoFrame &frame) = 0
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_PRESENT)
 {
-  QAbstractVideoSurface *obj = qobject_cast<QAbstractVideoSurface *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -166,7 +169,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_PRESENT)
 // virtual bool start(const QVideoSurfaceFormat &format)
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_START)
 {
-  QAbstractVideoSurface *obj = qobject_cast<QAbstractVideoSurface *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -184,7 +187,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_START)
 // virtual void stop()
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_STOP)
 {
-  QAbstractVideoSurface *obj = qobject_cast<QAbstractVideoSurface *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -205,7 +208,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_STOP)
 // QAbstractVideoBuffer::NoHandle) const = 0
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_SUPPORTEDPIXELFORMATS)
 {
-  QAbstractVideoSurface *obj = qobject_cast<QAbstractVideoSurface *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -233,7 +236,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_SUPPORTEDPIXELFORMATS)
 // QVideoSurfaceFormat surfaceFormat() const
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_SURFACEFORMAT)
 {
-  QAbstractVideoSurface *obj = qobject_cast<QAbstractVideoSurface *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
