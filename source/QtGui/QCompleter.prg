@@ -83,6 +83,8 @@ RETURN
 #include <QtCore/QStringList>
 #include <QtGui/QAbstractItemView>
 
+#define GET_PTR_FROM_SELF(p) QCompleter *p = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QCOMPLETER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -104,7 +106,7 @@ HB_FUNC_STATIC(QCOMPLETER_NEW)
 
 HB_FUNC_STATIC(QCOMPLETER_DELETE)
 {
-  QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -122,7 +124,7 @@ HB_FUNC_STATIC(QCOMPLETER_DELETE)
 // Qt::CaseSensitivity caseSensitivity() const
 HB_FUNC_STATIC(QCOMPLETER_CASESENSITIVITY)
 {
-  QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -140,7 +142,7 @@ HB_FUNC_STATIC(QCOMPLETER_CASESENSITIVITY)
 // int completionColumn() const
 HB_FUNC_STATIC(QCOMPLETER_COMPLETIONCOLUMN)
 {
-  QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -158,7 +160,7 @@ HB_FUNC_STATIC(QCOMPLETER_COMPLETIONCOLUMN)
 // int completionCount() const
 HB_FUNC_STATIC(QCOMPLETER_COMPLETIONCOUNT)
 {
-  QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -176,7 +178,7 @@ HB_FUNC_STATIC(QCOMPLETER_COMPLETIONCOUNT)
 // QCompleter::CompletionMode completionMode() const
 HB_FUNC_STATIC(QCOMPLETER_COMPLETIONMODE)
 {
-  QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -194,7 +196,7 @@ HB_FUNC_STATIC(QCOMPLETER_COMPLETIONMODE)
 // QAbstractItemModel *completionModel() const
 HB_FUNC_STATIC(QCOMPLETER_COMPLETIONMODEL)
 {
-  QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -213,7 +215,7 @@ HB_FUNC_STATIC(QCOMPLETER_COMPLETIONMODEL)
 // QString completionPrefix() const
 HB_FUNC_STATIC(QCOMPLETER_COMPLETIONPREFIX)
 {
-  QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -231,7 +233,7 @@ HB_FUNC_STATIC(QCOMPLETER_COMPLETIONPREFIX)
 // int completionRole() const
 HB_FUNC_STATIC(QCOMPLETER_COMPLETIONROLE)
 {
-  QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -249,7 +251,7 @@ HB_FUNC_STATIC(QCOMPLETER_COMPLETIONROLE)
 // QString currentCompletion() const
 HB_FUNC_STATIC(QCOMPLETER_CURRENTCOMPLETION)
 {
-  QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -267,7 +269,7 @@ HB_FUNC_STATIC(QCOMPLETER_CURRENTCOMPLETION)
 // QModelIndex currentIndex() const
 HB_FUNC_STATIC(QCOMPLETER_CURRENTINDEX)
 {
-  QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -286,7 +288,7 @@ HB_FUNC_STATIC(QCOMPLETER_CURRENTINDEX)
 // int currentRow() const
 HB_FUNC_STATIC(QCOMPLETER_CURRENTROW)
 {
-  QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -304,7 +306,7 @@ HB_FUNC_STATIC(QCOMPLETER_CURRENTROW)
 // int maxVisibleItems() const
 HB_FUNC_STATIC(QCOMPLETER_MAXVISIBLEITEMS)
 {
-  QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -322,7 +324,7 @@ HB_FUNC_STATIC(QCOMPLETER_MAXVISIBLEITEMS)
 // QAbstractItemModel *model() const
 HB_FUNC_STATIC(QCOMPLETER_MODEL)
 {
-  QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -341,7 +343,7 @@ HB_FUNC_STATIC(QCOMPLETER_MODEL)
 // QCompleter::ModelSorting modelSorting() const
 HB_FUNC_STATIC(QCOMPLETER_MODELSORTING)
 {
-  QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -359,7 +361,7 @@ HB_FUNC_STATIC(QCOMPLETER_MODELSORTING)
 // virtual QString pathFromIndex(const QModelIndex &index) const
 HB_FUNC_STATIC(QCOMPLETER_PATHFROMINDEX)
 {
-  QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -377,7 +379,7 @@ HB_FUNC_STATIC(QCOMPLETER_PATHFROMINDEX)
 // QAbstractItemView *popup() const
 HB_FUNC_STATIC(QCOMPLETER_POPUP)
 {
-  QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -396,7 +398,7 @@ HB_FUNC_STATIC(QCOMPLETER_POPUP)
 // void setCaseSensitivity(Qt::CaseSensitivity caseSensitivity)
 HB_FUNC_STATIC(QCOMPLETER_SETCASESENSITIVITY)
 {
-  QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -416,7 +418,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETCASESENSITIVITY)
 // void setCompletionColumn(int column)
 HB_FUNC_STATIC(QCOMPLETER_SETCOMPLETIONCOLUMN)
 {
-  QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -436,7 +438,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETCOMPLETIONCOLUMN)
 // void setCompletionMode(QCompleter::CompletionMode mode)
 HB_FUNC_STATIC(QCOMPLETER_SETCOMPLETIONMODE)
 {
-  QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -456,7 +458,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETCOMPLETIONMODE)
 // void setCompletionRole(int role)
 HB_FUNC_STATIC(QCOMPLETER_SETCOMPLETIONROLE)
 {
-  QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -476,7 +478,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETCOMPLETIONROLE)
 // bool setCurrentRow(int row)
 HB_FUNC_STATIC(QCOMPLETER_SETCURRENTROW)
 {
-  QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -494,7 +496,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETCURRENTROW)
 // void setMaxVisibleItems(int maxItems)
 HB_FUNC_STATIC(QCOMPLETER_SETMAXVISIBLEITEMS)
 {
-  QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -514,7 +516,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETMAXVISIBLEITEMS)
 // void setModel(QAbstractItemModel *model)
 HB_FUNC_STATIC(QCOMPLETER_SETMODEL)
 {
-  QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -534,7 +536,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETMODEL)
 // void setModelSorting(QCompleter::ModelSorting sorting)
 HB_FUNC_STATIC(QCOMPLETER_SETMODELSORTING)
 {
-  QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -554,7 +556,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETMODELSORTING)
 // void setPopup(QAbstractItemView *popup)
 HB_FUNC_STATIC(QCOMPLETER_SETPOPUP)
 {
-  QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -574,7 +576,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETPOPUP)
 // void setWidget(QWidget *widget)
 HB_FUNC_STATIC(QCOMPLETER_SETWIDGET)
 {
-  QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -594,7 +596,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETWIDGET)
 // virtual QStringList splitPath(const QString &path) const
 HB_FUNC_STATIC(QCOMPLETER_SPLITPATH)
 {
-  QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -612,7 +614,7 @@ HB_FUNC_STATIC(QCOMPLETER_SPLITPATH)
 // QWidget *widget() const
 HB_FUNC_STATIC(QCOMPLETER_WIDGET)
 {
-  QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -631,7 +633,7 @@ HB_FUNC_STATIC(QCOMPLETER_WIDGET)
 // bool wrapAround() const
 HB_FUNC_STATIC(QCOMPLETER_WRAPAROUND)
 {
-  QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -649,7 +651,7 @@ HB_FUNC_STATIC(QCOMPLETER_WRAPAROUND)
 // void complete(const QRect &rect = QRect())
 HB_FUNC_STATIC(QCOMPLETER_COMPLETE)
 {
-  QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -669,7 +671,7 @@ HB_FUNC_STATIC(QCOMPLETER_COMPLETE)
 // void setCompletionPrefix(const QString &prefix)
 HB_FUNC_STATIC(QCOMPLETER_SETCOMPLETIONPREFIX)
 {
-  QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -689,7 +691,7 @@ HB_FUNC_STATIC(QCOMPLETER_SETCOMPLETIONPREFIX)
 // void setWrapAround(bool wrap)
 HB_FUNC_STATIC(QCOMPLETER_SETWRAPAROUND)
 {
-  QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

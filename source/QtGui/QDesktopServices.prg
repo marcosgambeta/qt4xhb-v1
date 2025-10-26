@@ -50,6 +50,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QDesktopServices *p = static_cast<QDesktopServices *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // static QString displayName(QDesktopServices::StandardLocation type)
 HB_FUNC_STATIC(QDESKTOPSERVICES_DISPLAYNAME)
 {

@@ -72,9 +72,12 @@ RETURN
 #include <QtCore/QSize>
 #include <QtCore/QMimeData>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QAbstractProxyModel *p = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_DELETE)
 {
-  QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -92,7 +95,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_DELETE)
 // virtual QModelIndex mapFromSource(const QModelIndex &sourceIndex) const = 0
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_MAPFROMSOURCE)
 {
-  QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -111,7 +114,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_MAPFROMSOURCE)
 // virtual QItemSelection mapSelectionFromSource(const QItemSelection &sourceSelection) const
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_MAPSELECTIONFROMSOURCE)
 {
-  QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -130,7 +133,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_MAPSELECTIONFROMSOURCE)
 // virtual QItemSelection mapSelectionToSource(const QItemSelection &proxySelection) const
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_MAPSELECTIONTOSOURCE)
 {
-  QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -149,7 +152,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_MAPSELECTIONTOSOURCE)
 // virtual QModelIndex mapToSource(const QModelIndex &proxyIndex) const = 0
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_MAPTOSOURCE)
 {
-  QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -168,7 +171,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_MAPTOSOURCE)
 // virtual void setSourceModel(QAbstractItemModel *sourceModel)
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SETSOURCEMODEL)
 {
-  QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -188,7 +191,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SETSOURCEMODEL)
 // QAbstractItemModel *sourceModel() const
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SOURCEMODEL)
 {
-  QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -207,7 +210,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SOURCEMODEL)
 // virtual QModelIndex buddy(const QModelIndex &index) const
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_BUDDY)
 {
-  QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -226,7 +229,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_BUDDY)
 // virtual bool canFetchMore(const QModelIndex &parent) const
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_CANFETCHMORE)
 {
-  QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -244,7 +247,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_CANFETCHMORE)
 // virtual QVariant data(const QModelIndex &proxyIndex, int role = Qt::DisplayRole) const
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_DATA)
 {
-  QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -263,7 +266,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_DATA)
 // virtual void fetchMore(const QModelIndex &parent)
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_FETCHMORE)
 {
-  QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -283,7 +286,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_FETCHMORE)
 // virtual Qt::ItemFlags flags(const QModelIndex &index) const
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_FLAGS)
 {
-  QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -301,7 +304,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_FLAGS)
 // virtual bool hasChildren(const QModelIndex &parent = QModelIndex()) const
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_HASCHILDREN)
 {
-  QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -319,7 +322,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_HASCHILDREN)
 // virtual QVariant headerData(int section, Qt::Orientation orientation, int role) const
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_HEADERDATA)
 {
-  QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -338,7 +341,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_HEADERDATA)
 // virtual QMimeData *mimeData(const QModelIndexList &indexes) const
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_MIMEDATA)
 {
-  QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -364,7 +367,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_MIMEDATA)
 // virtual QStringList mimeTypes() const
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_MIMETYPES)
 {
-  QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -382,7 +385,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_MIMETYPES)
 // virtual void revert()
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_REVERT)
 {
-  QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -402,7 +405,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_REVERT)
 // virtual bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole)
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SETDATA)
 {
-  QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -420,7 +423,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SETDATA)
 // virtual bool setHeaderData(int section, Qt::Orientation orientation, const QVariant &value, int role = Qt::EditRole)
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SETHEADERDATA)
 {
-  QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -438,7 +441,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SETHEADERDATA)
 // virtual void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SORT)
 {
-  QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -458,7 +461,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SORT)
 // virtual QSize span(const QModelIndex &index) const
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SPAN)
 {
-  QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -477,7 +480,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SPAN)
 // virtual bool submit()
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SUBMIT)
 {
-  QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -495,7 +498,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SUBMIT)
 // virtual Qt::DropActions supportedDropActions() const
 HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SUPPORTEDDROPACTIONS)
 {
-  QAbstractProxyModel *obj = qobject_cast<QAbstractProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

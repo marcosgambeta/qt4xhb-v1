@@ -42,6 +42,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QDragMoveEvent *p = static_cast<QDragMoveEvent *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QDragMoveEvent(const QPoint &pos, Qt::DropActions actions, const QMimeData *data, Qt::MouseButtons buttons,
     // Qt::KeyboardModifiers modifiers, QEvent::Type type = QEvent::DragMove)
 HB_FUNC_STATIC(QDRAGMOVEEVENT_NEW)
@@ -58,7 +60,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_NEW)
 
 HB_FUNC_STATIC(QDRAGMOVEEVENT_DELETE)
 {
-  QDragMoveEvent *obj = static_cast<QDragMoveEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -75,7 +77,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_ACCEPT)
 {
   if (ISNUMPAR(1) && ISQRECT(1)) {
     // void accept(const QRect &rectangle)
-    QDragMoveEvent *obj = static_cast<QDragMoveEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->accept(*PQRECT(1));
@@ -84,7 +86,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_ACCEPT)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(0)) {
     // void accept()
-    QDragMoveEvent *obj = static_cast<QDragMoveEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->accept();
@@ -99,7 +101,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_ACCEPT)
 // QRect answerRect() const
 HB_FUNC_STATIC(QDRAGMOVEEVENT_ANSWERRECT)
 {
-  QDragMoveEvent *obj = static_cast<QDragMoveEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -119,7 +121,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_IGNORE)
 {
   if (ISNUMPAR(1) && ISQRECT(1)) {
     // void ignore(const QRect &rectangle)
-    QDragMoveEvent *obj = static_cast<QDragMoveEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->ignore(*PQRECT(1));
@@ -128,7 +130,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_IGNORE)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(0)) {
     // void ignore()
-    QDragMoveEvent *obj = static_cast<QDragMoveEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->ignore();

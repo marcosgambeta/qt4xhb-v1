@@ -38,6 +38,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QDragEnterEvent *p = static_cast<QDragEnterEvent *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QDragEnterEvent(const QPoint &point, Qt::DropActions actions, const QMimeData *data, Qt::MouseButtons buttons,
     // Qt::KeyboardModifiers modifiers)
 HB_FUNC_STATIC(QDRAGENTEREVENT_NEW)
@@ -53,7 +55,7 @@ HB_FUNC_STATIC(QDRAGENTEREVENT_NEW)
 
 HB_FUNC_STATIC(QDRAGENTEREVENT_DELETE)
 {
-  QDragEnterEvent *obj = static_cast<QDragEnterEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;

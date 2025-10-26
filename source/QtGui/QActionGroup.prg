@@ -55,6 +55,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QActionGroup *p = qobject_cast<QActionGroup *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QActionGroup(QObject *parent)
 HB_FUNC_STATIC(QACTIONGROUP_NEW)
 {
@@ -68,7 +70,7 @@ HB_FUNC_STATIC(QACTIONGROUP_NEW)
 
 HB_FUNC_STATIC(QACTIONGROUP_DELETE)
 {
-  QActionGroup *obj = qobject_cast<QActionGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -86,7 +88,7 @@ HB_FUNC_STATIC(QACTIONGROUP_DELETE)
 // QList<QAction *> actions() const
 HB_FUNC_STATIC(QACTIONGROUP_ACTIONS)
 {
-  QActionGroup *obj = qobject_cast<QActionGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -125,7 +127,7 @@ HB_FUNC_STATIC(QACTIONGROUP_ADDACTION)
 {
   if (ISNUMPAR(1) && ISQACTION(1)) {
     // QAction *addAction(QAction *action)
-    QActionGroup *obj = qobject_cast<QActionGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QAction *ptr = obj->addAction(PQACTION(1));
@@ -133,7 +135,7 @@ HB_FUNC_STATIC(QACTIONGROUP_ADDACTION)
     }
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // QAction *addAction(const QString &text)
-    QActionGroup *obj = qobject_cast<QActionGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QAction *ptr = obj->addAction(PQSTRING(1));
@@ -141,7 +143,7 @@ HB_FUNC_STATIC(QACTIONGROUP_ADDACTION)
     }
   } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2)) {
     // QAction *addAction(const QIcon &icon, const QString &text)
-    QActionGroup *obj = qobject_cast<QActionGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QAction *ptr = obj->addAction(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt4xHb::itemGetPtr(1)) : QIcon(hb_parc(1)),
@@ -156,7 +158,7 @@ HB_FUNC_STATIC(QACTIONGROUP_ADDACTION)
 // QAction *checkedAction() const
 HB_FUNC_STATIC(QACTIONGROUP_CHECKEDACTION)
 {
-  QActionGroup *obj = qobject_cast<QActionGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -175,7 +177,7 @@ HB_FUNC_STATIC(QACTIONGROUP_CHECKEDACTION)
 // bool isEnabled() const
 HB_FUNC_STATIC(QACTIONGROUP_ISENABLED)
 {
-  QActionGroup *obj = qobject_cast<QActionGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -193,7 +195,7 @@ HB_FUNC_STATIC(QACTIONGROUP_ISENABLED)
 // bool isExclusive() const
 HB_FUNC_STATIC(QACTIONGROUP_ISEXCLUSIVE)
 {
-  QActionGroup *obj = qobject_cast<QActionGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -211,7 +213,7 @@ HB_FUNC_STATIC(QACTIONGROUP_ISEXCLUSIVE)
 // bool isVisible() const
 HB_FUNC_STATIC(QACTIONGROUP_ISVISIBLE)
 {
-  QActionGroup *obj = qobject_cast<QActionGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -229,7 +231,7 @@ HB_FUNC_STATIC(QACTIONGROUP_ISVISIBLE)
 // void removeAction(QAction *action)
 HB_FUNC_STATIC(QACTIONGROUP_REMOVEACTION)
 {
-  QActionGroup *obj = qobject_cast<QActionGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -249,7 +251,7 @@ HB_FUNC_STATIC(QACTIONGROUP_REMOVEACTION)
 // void setDisabled(bool b)
 HB_FUNC_STATIC(QACTIONGROUP_SETDISABLED)
 {
-  QActionGroup *obj = qobject_cast<QActionGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -269,7 +271,7 @@ HB_FUNC_STATIC(QACTIONGROUP_SETDISABLED)
 // void setEnabled(bool)
 HB_FUNC_STATIC(QACTIONGROUP_SETENABLED)
 {
-  QActionGroup *obj = qobject_cast<QActionGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -289,7 +291,7 @@ HB_FUNC_STATIC(QACTIONGROUP_SETENABLED)
 // void setExclusive(bool)
 HB_FUNC_STATIC(QACTIONGROUP_SETEXCLUSIVE)
 {
-  QActionGroup *obj = qobject_cast<QActionGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -309,7 +311,7 @@ HB_FUNC_STATIC(QACTIONGROUP_SETEXCLUSIVE)
 // void setVisible(bool)
 HB_FUNC_STATIC(QACTIONGROUP_SETVISIBLE)
 {
-  QActionGroup *obj = qobject_cast<QActionGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

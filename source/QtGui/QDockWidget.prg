@@ -62,6 +62,8 @@ RETURN
 
 #include <QtGui/QAction>
 
+#define GET_PTR_FROM_SELF(p) QDockWidget *p = qobject_cast<QDockWidget *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QDOCKWIDGET_NEW)
 {
   if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISQWIDGETORNIL(2) && ISNUMORNIL(3)) {
@@ -81,7 +83,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_NEW)
 
 HB_FUNC_STATIC(QDOCKWIDGET_DELETE)
 {
-  QDockWidget *obj = qobject_cast<QDockWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -99,7 +101,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_DELETE)
 // Qt::DockWidgetAreas allowedAreas() const
 HB_FUNC_STATIC(QDOCKWIDGET_ALLOWEDAREAS)
 {
-  QDockWidget *obj = qobject_cast<QDockWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -117,7 +119,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_ALLOWEDAREAS)
 // QDockWidget::DockWidgetFeatures features() const
 HB_FUNC_STATIC(QDOCKWIDGET_FEATURES)
 {
-  QDockWidget *obj = qobject_cast<QDockWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -135,7 +137,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_FEATURES)
 // bool isAreaAllowed(Qt::DockWidgetArea area) const
 HB_FUNC_STATIC(QDOCKWIDGET_ISAREAALLOWED)
 {
-  QDockWidget *obj = qobject_cast<QDockWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -153,7 +155,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_ISAREAALLOWED)
 // bool isFloating() const
 HB_FUNC_STATIC(QDOCKWIDGET_ISFLOATING)
 {
-  QDockWidget *obj = qobject_cast<QDockWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -171,7 +173,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_ISFLOATING)
 // void setAllowedAreas(Qt::DockWidgetAreas areas)
 HB_FUNC_STATIC(QDOCKWIDGET_SETALLOWEDAREAS)
 {
-  QDockWidget *obj = qobject_cast<QDockWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -191,7 +193,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_SETALLOWEDAREAS)
 // void setFeatures(QDockWidget::DockWidgetFeatures features)
 HB_FUNC_STATIC(QDOCKWIDGET_SETFEATURES)
 {
-  QDockWidget *obj = qobject_cast<QDockWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -211,7 +213,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_SETFEATURES)
 // void setFloating(bool floating)
 HB_FUNC_STATIC(QDOCKWIDGET_SETFLOATING)
 {
-  QDockWidget *obj = qobject_cast<QDockWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -231,7 +233,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_SETFLOATING)
 // void setTitleBarWidget(QWidget *widget)
 HB_FUNC_STATIC(QDOCKWIDGET_SETTITLEBARWIDGET)
 {
-  QDockWidget *obj = qobject_cast<QDockWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -251,7 +253,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_SETTITLEBARWIDGET)
 // void setWidget(QWidget *widget)
 HB_FUNC_STATIC(QDOCKWIDGET_SETWIDGET)
 {
-  QDockWidget *obj = qobject_cast<QDockWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -271,7 +273,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_SETWIDGET)
 // QWidget *titleBarWidget() const
 HB_FUNC_STATIC(QDOCKWIDGET_TITLEBARWIDGET)
 {
-  QDockWidget *obj = qobject_cast<QDockWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -290,7 +292,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_TITLEBARWIDGET)
 // QAction *toggleViewAction() const
 HB_FUNC_STATIC(QDOCKWIDGET_TOGGLEVIEWACTION)
 {
-  QDockWidget *obj = qobject_cast<QDockWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -309,7 +311,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_TOGGLEVIEWACTION)
 // QWidget *widget() const
 HB_FUNC_STATIC(QDOCKWIDGET_WIDGET)
 {
-  QDockWidget *obj = qobject_cast<QDockWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

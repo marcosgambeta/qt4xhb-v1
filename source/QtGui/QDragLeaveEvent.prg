@@ -38,6 +38,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QDragLeaveEvent *p = static_cast<QDragLeaveEvent *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QDragLeaveEvent()
 HB_FUNC_STATIC(QDRAGLEAVEEVENT_NEW)
 {
@@ -51,7 +53,7 @@ HB_FUNC_STATIC(QDRAGLEAVEEVENT_NEW)
 
 HB_FUNC_STATIC(QDRAGLEAVEEVENT_DELETE)
 {
-  QDragLeaveEvent *obj = static_cast<QDragLeaveEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;

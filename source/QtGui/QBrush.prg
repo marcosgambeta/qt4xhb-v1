@@ -71,6 +71,8 @@ RETURN
 
 #include <QtCore/QVariant>
 
+#define GET_PTR_FROM_SELF(p) QBrush *p = static_cast<QBrush *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QBRUSH_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -123,7 +125,7 @@ HB_FUNC_STATIC(QBRUSH_NEW)
 
 HB_FUNC_STATIC(QBRUSH_DELETE)
 {
-  QBrush *obj = static_cast<QBrush *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -139,7 +141,7 @@ HB_FUNC_STATIC(QBRUSH_DELETE)
 // const QColor &color() const
 HB_FUNC_STATIC(QBRUSH_COLOR)
 {
-  QBrush *obj = static_cast<QBrush *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -158,7 +160,7 @@ HB_FUNC_STATIC(QBRUSH_COLOR)
 // const QGradient *gradient() const
 HB_FUNC_STATIC(QBRUSH_GRADIENT)
 {
-  QBrush *obj = static_cast<QBrush *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -177,7 +179,7 @@ HB_FUNC_STATIC(QBRUSH_GRADIENT)
 // bool isOpaque() const
 HB_FUNC_STATIC(QBRUSH_ISOPAQUE)
 {
-  QBrush *obj = static_cast<QBrush *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -195,7 +197,7 @@ HB_FUNC_STATIC(QBRUSH_ISOPAQUE)
 // const QMatrix &matrix() const
 HB_FUNC_STATIC(QBRUSH_MATRIX)
 {
-  QBrush *obj = static_cast<QBrush *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -215,7 +217,7 @@ HB_FUNC_STATIC(QBRUSH_SETCOLOR)
 {
   if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1))) {
     // void setColor(const QColor &color)
-    QBrush *obj = static_cast<QBrush *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setColor(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
@@ -224,7 +226,7 @@ HB_FUNC_STATIC(QBRUSH_SETCOLOR)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void setColor(Qt::GlobalColor color)
-    QBrush *obj = static_cast<QBrush *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setColor((Qt::GlobalColor)hb_parni(1));
@@ -239,7 +241,7 @@ HB_FUNC_STATIC(QBRUSH_SETCOLOR)
 // void setMatrix(const QMatrix &matrix)
 HB_FUNC_STATIC(QBRUSH_SETMATRIX)
 {
-  QBrush *obj = static_cast<QBrush *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -259,7 +261,7 @@ HB_FUNC_STATIC(QBRUSH_SETMATRIX)
 // void setStyle(Qt::BrushStyle style)
 HB_FUNC_STATIC(QBRUSH_SETSTYLE)
 {
-  QBrush *obj = static_cast<QBrush *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -279,7 +281,7 @@ HB_FUNC_STATIC(QBRUSH_SETSTYLE)
 // void setTexture(const QPixmap &pixmap)
 HB_FUNC_STATIC(QBRUSH_SETTEXTURE)
 {
-  QBrush *obj = static_cast<QBrush *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -299,7 +301,7 @@ HB_FUNC_STATIC(QBRUSH_SETTEXTURE)
 // void setTextureImage(const QImage &image)
 HB_FUNC_STATIC(QBRUSH_SETTEXTUREIMAGE)
 {
-  QBrush *obj = static_cast<QBrush *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -319,7 +321,7 @@ HB_FUNC_STATIC(QBRUSH_SETTEXTUREIMAGE)
 // void setTransform(const QTransform &matrix)
 HB_FUNC_STATIC(QBRUSH_SETTRANSFORM)
 {
-  QBrush *obj = static_cast<QBrush *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -339,7 +341,7 @@ HB_FUNC_STATIC(QBRUSH_SETTRANSFORM)
 // Qt::BrushStyle style() const
 HB_FUNC_STATIC(QBRUSH_STYLE)
 {
-  QBrush *obj = static_cast<QBrush *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -357,7 +359,7 @@ HB_FUNC_STATIC(QBRUSH_STYLE)
 // QPixmap texture() const
 HB_FUNC_STATIC(QBRUSH_TEXTURE)
 {
-  QBrush *obj = static_cast<QBrush *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -376,7 +378,7 @@ HB_FUNC_STATIC(QBRUSH_TEXTURE)
 // QImage textureImage() const
 HB_FUNC_STATIC(QBRUSH_TEXTUREIMAGE)
 {
-  QBrush *obj = static_cast<QBrush *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -395,7 +397,7 @@ HB_FUNC_STATIC(QBRUSH_TEXTUREIMAGE)
 // QTransform transform() const
 HB_FUNC_STATIC(QBRUSH_TRANSFORM)
 {
-  QBrush *obj = static_cast<QBrush *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

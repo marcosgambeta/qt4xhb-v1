@@ -46,6 +46,8 @@ RETURN
 
 #include <QtCore/QVariant>
 
+#define GET_PTR_FROM_SELF(p) QBitmap *p = static_cast<QBitmap *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QBITMAP_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -75,7 +77,7 @@ HB_FUNC_STATIC(QBITMAP_NEW)
 
 HB_FUNC_STATIC(QBITMAP_DELETE)
 {
-  QBitmap *obj = static_cast<QBitmap *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -91,7 +93,7 @@ HB_FUNC_STATIC(QBITMAP_DELETE)
 // void clear()
 HB_FUNC_STATIC(QBITMAP_CLEAR)
 {
-  QBitmap *obj = static_cast<QBitmap *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -111,7 +113,7 @@ HB_FUNC_STATIC(QBITMAP_CLEAR)
 // QBitmap transformed(const QTransform &matrix) const
 HB_FUNC_STATIC(QBITMAP_TRANSFORMED)
 {
-  QBitmap *obj = static_cast<QBitmap *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

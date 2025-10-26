@@ -42,6 +42,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QErrorMessage *p = qobject_cast<QErrorMessage *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QErrorMessage(QWidget *parent = 0)
 HB_FUNC_STATIC(QERRORMESSAGE_NEW)
 {
@@ -55,7 +57,7 @@ HB_FUNC_STATIC(QERRORMESSAGE_NEW)
 
 HB_FUNC_STATIC(QERRORMESSAGE_DELETE)
 {
-  QErrorMessage *obj = qobject_cast<QErrorMessage *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -74,7 +76,7 @@ HB_FUNC_STATIC(QERRORMESSAGE_SHOWMESSAGE)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // void showMessage(const QString &message)
-    QErrorMessage *obj = qobject_cast<QErrorMessage *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->showMessage(PQSTRING(1));
@@ -83,7 +85,7 @@ HB_FUNC_STATIC(QERRORMESSAGE_SHOWMESSAGE)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     // void showMessage(const QString &message, const QString &type)
-    QErrorMessage *obj = qobject_cast<QErrorMessage *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->showMessage(PQSTRING(1), PQSTRING(2));
@@ -98,7 +100,7 @@ HB_FUNC_STATIC(QERRORMESSAGE_SHOWMESSAGE)
 // QErrorMessage *qtHandler()
 HB_FUNC_STATIC(QERRORMESSAGE_QTHANDLER)
 {
-  QErrorMessage *obj = qobject_cast<QErrorMessage *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

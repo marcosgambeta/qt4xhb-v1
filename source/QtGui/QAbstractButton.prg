@@ -76,9 +76,12 @@ RETURN
 
 #include <QtGui/QButtonGroup>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QAbstractButton *p = qobject_cast<QAbstractButton *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QABSTRACTBUTTON_DELETE)
 {
-  QAbstractButton *obj = qobject_cast<QAbstractButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -96,7 +99,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_DELETE)
 // bool autoExclusive() const
 HB_FUNC_STATIC(QABSTRACTBUTTON_AUTOEXCLUSIVE)
 {
-  QAbstractButton *obj = qobject_cast<QAbstractButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -114,7 +117,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_AUTOEXCLUSIVE)
 // bool autoRepeat() const
 HB_FUNC_STATIC(QABSTRACTBUTTON_AUTOREPEAT)
 {
-  QAbstractButton *obj = qobject_cast<QAbstractButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -132,7 +135,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_AUTOREPEAT)
 // int autoRepeatDelay() const
 HB_FUNC_STATIC(QABSTRACTBUTTON_AUTOREPEATDELAY)
 {
-  QAbstractButton *obj = qobject_cast<QAbstractButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -150,7 +153,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_AUTOREPEATDELAY)
 // int autoRepeatInterval() const
 HB_FUNC_STATIC(QABSTRACTBUTTON_AUTOREPEATINTERVAL)
 {
-  QAbstractButton *obj = qobject_cast<QAbstractButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -168,7 +171,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_AUTOREPEATINTERVAL)
 // QButtonGroup *group() const
 HB_FUNC_STATIC(QABSTRACTBUTTON_GROUP)
 {
-  QAbstractButton *obj = qobject_cast<QAbstractButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -187,7 +190,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_GROUP)
 // QIcon icon() const
 HB_FUNC_STATIC(QABSTRACTBUTTON_ICON)
 {
-  QAbstractButton *obj = qobject_cast<QAbstractButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -206,7 +209,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_ICON)
 // QSize iconSize() const
 HB_FUNC_STATIC(QABSTRACTBUTTON_ICONSIZE)
 {
-  QAbstractButton *obj = qobject_cast<QAbstractButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -225,7 +228,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_ICONSIZE)
 // bool isCheckable() const
 HB_FUNC_STATIC(QABSTRACTBUTTON_ISCHECKABLE)
 {
-  QAbstractButton *obj = qobject_cast<QAbstractButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -243,7 +246,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_ISCHECKABLE)
 // bool isChecked() const
 HB_FUNC_STATIC(QABSTRACTBUTTON_ISCHECKED)
 {
-  QAbstractButton *obj = qobject_cast<QAbstractButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -261,7 +264,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_ISCHECKED)
 // bool isDown() const
 HB_FUNC_STATIC(QABSTRACTBUTTON_ISDOWN)
 {
-  QAbstractButton *obj = qobject_cast<QAbstractButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -279,7 +282,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_ISDOWN)
 // void setAutoExclusive(bool)
 HB_FUNC_STATIC(QABSTRACTBUTTON_SETAUTOEXCLUSIVE)
 {
-  QAbstractButton *obj = qobject_cast<QAbstractButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -299,7 +302,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETAUTOEXCLUSIVE)
 // void setAutoRepeat(bool)
 HB_FUNC_STATIC(QABSTRACTBUTTON_SETAUTOREPEAT)
 {
-  QAbstractButton *obj = qobject_cast<QAbstractButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -319,7 +322,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETAUTOREPEAT)
 // void setAutoRepeatDelay(int)
 HB_FUNC_STATIC(QABSTRACTBUTTON_SETAUTOREPEATDELAY)
 {
-  QAbstractButton *obj = qobject_cast<QAbstractButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -339,7 +342,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETAUTOREPEATDELAY)
 // void setAutoRepeatInterval(int)
 HB_FUNC_STATIC(QABSTRACTBUTTON_SETAUTOREPEATINTERVAL)
 {
-  QAbstractButton *obj = qobject_cast<QAbstractButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -359,7 +362,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETAUTOREPEATINTERVAL)
 // void setCheckable(bool)
 HB_FUNC_STATIC(QABSTRACTBUTTON_SETCHECKABLE)
 {
-  QAbstractButton *obj = qobject_cast<QAbstractButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -379,7 +382,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETCHECKABLE)
 // void setDown(bool)
 HB_FUNC_STATIC(QABSTRACTBUTTON_SETDOWN)
 {
-  QAbstractButton *obj = qobject_cast<QAbstractButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -399,7 +402,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETDOWN)
 // void setIcon(const QIcon &icon)
 HB_FUNC_STATIC(QABSTRACTBUTTON_SETICON)
 {
-  QAbstractButton *obj = qobject_cast<QAbstractButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -419,7 +422,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETICON)
 // void setShortcut(const QKeySequence &key)
 HB_FUNC_STATIC(QABSTRACTBUTTON_SETSHORTCUT)
 {
-  QAbstractButton *obj = qobject_cast<QAbstractButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -439,7 +442,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETSHORTCUT)
 // void setText(const QString &text)
 HB_FUNC_STATIC(QABSTRACTBUTTON_SETTEXT)
 {
-  QAbstractButton *obj = qobject_cast<QAbstractButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -459,7 +462,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETTEXT)
 // QKeySequence shortcut() const
 HB_FUNC_STATIC(QABSTRACTBUTTON_SHORTCUT)
 {
-  QAbstractButton *obj = qobject_cast<QAbstractButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -478,7 +481,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SHORTCUT)
 // QString text() const
 HB_FUNC_STATIC(QABSTRACTBUTTON_TEXT)
 {
-  QAbstractButton *obj = qobject_cast<QAbstractButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -496,7 +499,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_TEXT)
 // void animateClick(int msec = 100)
 HB_FUNC_STATIC(QABSTRACTBUTTON_ANIMATECLICK)
 {
-  QAbstractButton *obj = qobject_cast<QAbstractButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -516,7 +519,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_ANIMATECLICK)
 // void click()
 HB_FUNC_STATIC(QABSTRACTBUTTON_CLICK)
 {
-  QAbstractButton *obj = qobject_cast<QAbstractButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -536,7 +539,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_CLICK)
 // void setChecked(bool)
 HB_FUNC_STATIC(QABSTRACTBUTTON_SETCHECKED)
 {
-  QAbstractButton *obj = qobject_cast<QAbstractButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -556,7 +559,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETCHECKED)
 // void setIconSize(const QSize &size)
 HB_FUNC_STATIC(QABSTRACTBUTTON_SETICONSIZE)
 {
-  QAbstractButton *obj = qobject_cast<QAbstractButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -576,7 +579,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETICONSIZE)
 // void toggle()
 HB_FUNC_STATIC(QABSTRACTBUTTON_TOGGLE)
 {
-  QAbstractButton *obj = qobject_cast<QAbstractButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

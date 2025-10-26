@@ -38,6 +38,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QCloseEvent *p = static_cast<QCloseEvent *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QCloseEvent()
 HB_FUNC_STATIC(QCLOSEEVENT_NEW)
 {
@@ -51,7 +53,7 @@ HB_FUNC_STATIC(QCLOSEEVENT_NEW)
 
 HB_FUNC_STATIC(QCLOSEEVENT_DELETE)
 {
-  QCloseEvent *obj = static_cast<QCloseEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;

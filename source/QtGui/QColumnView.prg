@@ -60,6 +60,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QColumnView *p = qobject_cast<QColumnView *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QColumnView(QWidget *parent = 0)
 HB_FUNC_STATIC(QCOLUMNVIEW_NEW)
 {
@@ -73,7 +75,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_NEW)
 
 HB_FUNC_STATIC(QCOLUMNVIEW_DELETE)
 {
-  QColumnView *obj = qobject_cast<QColumnView *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -91,7 +93,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_DELETE)
 // QList<int> columnWidths() const
 HB_FUNC_STATIC(QCOLUMNVIEW_COLUMNWIDTHS)
 {
-  QColumnView *obj = qobject_cast<QColumnView *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -110,7 +112,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_COLUMNWIDTHS)
 // QWidget *previewWidget() const
 HB_FUNC_STATIC(QCOLUMNVIEW_PREVIEWWIDGET)
 {
-  QColumnView *obj = qobject_cast<QColumnView *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -129,7 +131,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_PREVIEWWIDGET)
 // bool resizeGripsVisible() const
 HB_FUNC_STATIC(QCOLUMNVIEW_RESIZEGRIPSVISIBLE)
 {
-  QColumnView *obj = qobject_cast<QColumnView *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -147,7 +149,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_RESIZEGRIPSVISIBLE)
 // void setColumnWidths(const QList<int> &list)
 HB_FUNC_STATIC(QCOLUMNVIEW_SETCOLUMNWIDTHS)
 {
-  QColumnView *obj = qobject_cast<QColumnView *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -175,7 +177,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETCOLUMNWIDTHS)
 // void setPreviewWidget(QWidget *widget)
 HB_FUNC_STATIC(QCOLUMNVIEW_SETPREVIEWWIDGET)
 {
-  QColumnView *obj = qobject_cast<QColumnView *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -195,7 +197,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETPREVIEWWIDGET)
 // void setResizeGripsVisible(bool visible)
 HB_FUNC_STATIC(QCOLUMNVIEW_SETRESIZEGRIPSVISIBLE)
 {
-  QColumnView *obj = qobject_cast<QColumnView *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -215,7 +217,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETRESIZEGRIPSVISIBLE)
 // virtual QModelIndex indexAt(const QPoint &point) const
 HB_FUNC_STATIC(QCOLUMNVIEW_INDEXAT)
 {
-  QColumnView *obj = qobject_cast<QColumnView *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -234,7 +236,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_INDEXAT)
 // virtual void scrollTo(const QModelIndex &index, QColumnView::ScrollHint hint = QColumnView::EnsureVisible)
 HB_FUNC_STATIC(QCOLUMNVIEW_SCROLLTO)
 {
-  QColumnView *obj = qobject_cast<QColumnView *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -255,7 +257,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SCROLLTO)
 // virtual void selectAll()
 HB_FUNC_STATIC(QCOLUMNVIEW_SELECTALL)
 {
-  QColumnView *obj = qobject_cast<QColumnView *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -275,7 +277,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SELECTALL)
 // virtual void setModel(QAbstractItemModel *model)
 HB_FUNC_STATIC(QCOLUMNVIEW_SETMODEL)
 {
-  QColumnView *obj = qobject_cast<QColumnView *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -295,7 +297,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETMODEL)
 // virtual void setRootIndex(const QModelIndex &index)
 HB_FUNC_STATIC(QCOLUMNVIEW_SETROOTINDEX)
 {
-  QColumnView *obj = qobject_cast<QColumnView *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -315,7 +317,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETROOTINDEX)
 // virtual void setSelectionModel(QItemSelectionModel *newSelectionModel)
 HB_FUNC_STATIC(QCOLUMNVIEW_SETSELECTIONMODEL)
 {
-  QColumnView *obj = qobject_cast<QColumnView *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -335,7 +337,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETSELECTIONMODEL)
 // virtual QSize sizeHint() const
 HB_FUNC_STATIC(QCOLUMNVIEW_SIZEHINT)
 {
-  QColumnView *obj = qobject_cast<QColumnView *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -354,7 +356,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SIZEHINT)
 // virtual QRect visualRect(const QModelIndex &index) const
 HB_FUNC_STATIC(QCOLUMNVIEW_VISUALRECT)
 {
-  QColumnView *obj = qobject_cast<QColumnView *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

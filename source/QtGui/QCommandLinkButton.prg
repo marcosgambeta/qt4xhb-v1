@@ -43,6 +43,9 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QCommandLinkButton *p = qobject_cast<QCommandLinkButton *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QCOMMANDLINKBUTTON_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
@@ -65,7 +68,7 @@ HB_FUNC_STATIC(QCOMMANDLINKBUTTON_NEW)
 // QString description() const
 HB_FUNC_STATIC(QCOMMANDLINKBUTTON_DESCRIPTION)
 {
-  QCommandLinkButton *obj = qobject_cast<QCommandLinkButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -83,7 +86,7 @@ HB_FUNC_STATIC(QCOMMANDLINKBUTTON_DESCRIPTION)
 // void setDescription(const QString &description)
 HB_FUNC_STATIC(QCOMMANDLINKBUTTON_SETDESCRIPTION)
 {
-  QCommandLinkButton *obj = qobject_cast<QCommandLinkButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -103,7 +106,7 @@ HB_FUNC_STATIC(QCOMMANDLINKBUTTON_SETDESCRIPTION)
 // bool isFlat() const
 HB_FUNC_STATIC(QCOMMANDLINKBUTTON_ISFLAT)
 {
-  QCommandLinkButton *obj = qobject_cast<QCommandLinkButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -121,7 +124,7 @@ HB_FUNC_STATIC(QCOMMANDLINKBUTTON_ISFLAT)
 // void setFlat(bool)
 HB_FUNC_STATIC(QCOMMANDLINKBUTTON_SETFLAT)
 {
-  QCommandLinkButton *obj = qobject_cast<QCommandLinkButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

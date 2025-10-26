@@ -46,6 +46,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QContextMenuEvent *p = static_cast<QContextMenuEvent *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QCONTEXTMENUEVENT_NEW)
 {
   if (ISNUMPAR(4) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) && HB_ISNUM(4)) {
@@ -69,7 +71,7 @@ HB_FUNC_STATIC(QCONTEXTMENUEVENT_NEW)
 
 HB_FUNC_STATIC(QCONTEXTMENUEVENT_DELETE)
 {
-  QContextMenuEvent *obj = static_cast<QContextMenuEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -85,7 +87,7 @@ HB_FUNC_STATIC(QCONTEXTMENUEVENT_DELETE)
 // const QPoint &globalPos() const
 HB_FUNC_STATIC(QCONTEXTMENUEVENT_GLOBALPOS)
 {
-  QContextMenuEvent *obj = static_cast<QContextMenuEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -104,7 +106,7 @@ HB_FUNC_STATIC(QCONTEXTMENUEVENT_GLOBALPOS)
 // int globalX() const
 HB_FUNC_STATIC(QCONTEXTMENUEVENT_GLOBALX)
 {
-  QContextMenuEvent *obj = static_cast<QContextMenuEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -122,7 +124,7 @@ HB_FUNC_STATIC(QCONTEXTMENUEVENT_GLOBALX)
 // int globalY() const
 HB_FUNC_STATIC(QCONTEXTMENUEVENT_GLOBALY)
 {
-  QContextMenuEvent *obj = static_cast<QContextMenuEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -140,7 +142,7 @@ HB_FUNC_STATIC(QCONTEXTMENUEVENT_GLOBALY)
 // const QPoint &pos() const
 HB_FUNC_STATIC(QCONTEXTMENUEVENT_POS)
 {
-  QContextMenuEvent *obj = static_cast<QContextMenuEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -159,7 +161,7 @@ HB_FUNC_STATIC(QCONTEXTMENUEVENT_POS)
 // QContextMenuEvent::Reason reason() const
 HB_FUNC_STATIC(QCONTEXTMENUEVENT_REASON)
 {
-  QContextMenuEvent *obj = static_cast<QContextMenuEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -177,7 +179,7 @@ HB_FUNC_STATIC(QCONTEXTMENUEVENT_REASON)
 // int x() const
 HB_FUNC_STATIC(QCONTEXTMENUEVENT_X)
 {
-  QContextMenuEvent *obj = static_cast<QContextMenuEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -195,7 +197,7 @@ HB_FUNC_STATIC(QCONTEXTMENUEVENT_X)
 // int y() const
 HB_FUNC_STATIC(QCONTEXTMENUEVENT_Y)
 {
-  QContextMenuEvent *obj = static_cast<QContextMenuEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

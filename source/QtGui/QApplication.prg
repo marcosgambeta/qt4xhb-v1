@@ -144,6 +144,8 @@ RETURN
 #include <QtGui/QDesktopWidget>
 #include <QtGui/QStyle>
 
+#define GET_PTR_FROM_SELF(p) QApplication *p = qobject_cast<QApplication *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QApplication( int & argc, char ** argv )
 HB_FUNC_STATIC(QAPPLICATION_NEW)
 {
@@ -157,7 +159,7 @@ HB_FUNC_STATIC(QAPPLICATION_NEW)
 
 HB_FUNC_STATIC(QAPPLICATION_DELETE)
 {
-  QApplication *obj = qobject_cast<QApplication *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -175,7 +177,7 @@ HB_FUNC_STATIC(QAPPLICATION_DELETE)
 // virtual void commitData(QSessionManager &manager)
 HB_FUNC_STATIC(QAPPLICATION_COMMITDATA)
 {
-  QApplication *obj = qobject_cast<QApplication *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -195,7 +197,7 @@ HB_FUNC_STATIC(QAPPLICATION_COMMITDATA)
 // QInputContext *inputContext() const
 HB_FUNC_STATIC(QAPPLICATION_INPUTCONTEXT)
 {
-  QApplication *obj = qobject_cast<QApplication *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -214,7 +216,7 @@ HB_FUNC_STATIC(QAPPLICATION_INPUTCONTEXT)
 // bool isSessionRestored() const
 HB_FUNC_STATIC(QAPPLICATION_ISSESSIONRESTORED)
 {
-  QApplication *obj = qobject_cast<QApplication *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -232,7 +234,7 @@ HB_FUNC_STATIC(QAPPLICATION_ISSESSIONRESTORED)
 // virtual void saveState(QSessionManager &manager)
 HB_FUNC_STATIC(QAPPLICATION_SAVESTATE)
 {
-  QApplication *obj = qobject_cast<QApplication *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -252,7 +254,7 @@ HB_FUNC_STATIC(QAPPLICATION_SAVESTATE)
 // QString sessionId() const
 HB_FUNC_STATIC(QAPPLICATION_SESSIONID)
 {
-  QApplication *obj = qobject_cast<QApplication *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -270,7 +272,7 @@ HB_FUNC_STATIC(QAPPLICATION_SESSIONID)
 // QString sessionKey() const
 HB_FUNC_STATIC(QAPPLICATION_SESSIONKEY)
 {
-  QApplication *obj = qobject_cast<QApplication *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -288,7 +290,7 @@ HB_FUNC_STATIC(QAPPLICATION_SESSIONKEY)
 // void setInputContext(QInputContext *inputContext)
 HB_FUNC_STATIC(QAPPLICATION_SETINPUTCONTEXT)
 {
-  QApplication *obj = qobject_cast<QApplication *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -308,7 +310,7 @@ HB_FUNC_STATIC(QAPPLICATION_SETINPUTCONTEXT)
 // QString styleSheet() const
 HB_FUNC_STATIC(QAPPLICATION_STYLESHEET)
 {
-  QApplication *obj = qobject_cast<QApplication *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -326,7 +328,7 @@ HB_FUNC_STATIC(QAPPLICATION_STYLESHEET)
 // virtual bool notify(QObject *receiver, QEvent *e)
 HB_FUNC_STATIC(QAPPLICATION_NOTIFY)
 {
-  QApplication *obj = qobject_cast<QApplication *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -344,7 +346,7 @@ HB_FUNC_STATIC(QAPPLICATION_NOTIFY)
 // void aboutQt()
 HB_FUNC_STATIC(QAPPLICATION_ABOUTQT)
 {
-  QApplication *obj = qobject_cast<QApplication *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -364,7 +366,7 @@ HB_FUNC_STATIC(QAPPLICATION_ABOUTQT)
 // void closeAllWindows()
 HB_FUNC_STATIC(QAPPLICATION_CLOSEALLWINDOWS)
 {
-  QApplication *obj = qobject_cast<QApplication *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -384,7 +386,7 @@ HB_FUNC_STATIC(QAPPLICATION_CLOSEALLWINDOWS)
 // void setStyleSheet(const QString &sheet)
 HB_FUNC_STATIC(QAPPLICATION_SETSTYLESHEET)
 {
-  QApplication *obj = qobject_cast<QApplication *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

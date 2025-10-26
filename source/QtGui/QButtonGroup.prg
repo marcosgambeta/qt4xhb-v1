@@ -60,6 +60,8 @@ RETURN
 
 #include <QtGui/QAbstractButton>
 
+#define GET_PTR_FROM_SELF(p) QButtonGroup *p = qobject_cast<QButtonGroup *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QButtonGroup(QObject *parent = 0)
 HB_FUNC_STATIC(QBUTTONGROUP_NEW)
 {
@@ -73,7 +75,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_NEW)
 
 HB_FUNC_STATIC(QBUTTONGROUP_DELETE)
 {
-  QButtonGroup *obj = qobject_cast<QButtonGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -92,7 +94,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ADDBUTTON)
 {
   if (ISNUMPAR(1) && ISQABSTRACTBUTTON(1)) {
     // void addButton(QAbstractButton *button)
-    QButtonGroup *obj = qobject_cast<QButtonGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->addButton(PQABSTRACTBUTTON(1));
@@ -101,7 +103,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ADDBUTTON)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && ISQABSTRACTBUTTON(1) && HB_ISNUM(2)) {
     // void addButton(QAbstractButton *button, int id)
-    QButtonGroup *obj = qobject_cast<QButtonGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->addButton(PQABSTRACTBUTTON(1), PINT(2));
@@ -116,7 +118,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ADDBUTTON)
 // QAbstractButton *button(int id) const
 HB_FUNC_STATIC(QBUTTONGROUP_BUTTON)
 {
-  QButtonGroup *obj = qobject_cast<QButtonGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -135,7 +137,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_BUTTON)
 // QList<QAbstractButton *> buttons() const
 HB_FUNC_STATIC(QBUTTONGROUP_BUTTONS)
 {
-  QButtonGroup *obj = qobject_cast<QButtonGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -173,7 +175,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_BUTTONS)
 // QAbstractButton *checkedButton() const
 HB_FUNC_STATIC(QBUTTONGROUP_CHECKEDBUTTON)
 {
-  QButtonGroup *obj = qobject_cast<QButtonGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -192,7 +194,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_CHECKEDBUTTON)
 // int checkedId() const
 HB_FUNC_STATIC(QBUTTONGROUP_CHECKEDID)
 {
-  QButtonGroup *obj = qobject_cast<QButtonGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -210,7 +212,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_CHECKEDID)
 // bool exclusive() const
 HB_FUNC_STATIC(QBUTTONGROUP_EXCLUSIVE)
 {
-  QButtonGroup *obj = qobject_cast<QButtonGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -228,7 +230,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_EXCLUSIVE)
 // int id(QAbstractButton *button) const
 HB_FUNC_STATIC(QBUTTONGROUP_ID)
 {
-  QButtonGroup *obj = qobject_cast<QButtonGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -246,7 +248,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_ID)
 // void removeButton(QAbstractButton *button)
 HB_FUNC_STATIC(QBUTTONGROUP_REMOVEBUTTON)
 {
-  QButtonGroup *obj = qobject_cast<QButtonGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -266,7 +268,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_REMOVEBUTTON)
 // void setExclusive(bool)
 HB_FUNC_STATIC(QBUTTONGROUP_SETEXCLUSIVE)
 {
-  QButtonGroup *obj = qobject_cast<QButtonGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -286,7 +288,7 @@ HB_FUNC_STATIC(QBUTTONGROUP_SETEXCLUSIVE)
 // void setId(QAbstractButton *button, int id)
 HB_FUNC_STATIC(QBUTTONGROUP_SETID)
 {
-  QButtonGroup *obj = qobject_cast<QButtonGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

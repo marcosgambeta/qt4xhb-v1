@@ -56,6 +56,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QFrame *p = qobject_cast<QFrame *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QFrame(QWidget *parent = 0, Qt::WindowFlags f = 0)
 HB_FUNC_STATIC(QFRAME_NEW)
 {
@@ -69,7 +71,7 @@ HB_FUNC_STATIC(QFRAME_NEW)
 
 HB_FUNC_STATIC(QFRAME_DELETE)
 {
-  QFrame *obj = qobject_cast<QFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -87,7 +89,7 @@ HB_FUNC_STATIC(QFRAME_DELETE)
 // QRect frameRect() const
 HB_FUNC_STATIC(QFRAME_FRAMERECT)
 {
-  QFrame *obj = qobject_cast<QFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -106,7 +108,7 @@ HB_FUNC_STATIC(QFRAME_FRAMERECT)
 // QFrame::Shadow frameShadow() const
 HB_FUNC_STATIC(QFRAME_FRAMESHADOW)
 {
-  QFrame *obj = qobject_cast<QFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -124,7 +126,7 @@ HB_FUNC_STATIC(QFRAME_FRAMESHADOW)
 // QFrame::Shape frameShape() const
 HB_FUNC_STATIC(QFRAME_FRAMESHAPE)
 {
-  QFrame *obj = qobject_cast<QFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -142,7 +144,7 @@ HB_FUNC_STATIC(QFRAME_FRAMESHAPE)
 // int frameStyle() const
 HB_FUNC_STATIC(QFRAME_FRAMESTYLE)
 {
-  QFrame *obj = qobject_cast<QFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -160,7 +162,7 @@ HB_FUNC_STATIC(QFRAME_FRAMESTYLE)
 // int frameWidth() const
 HB_FUNC_STATIC(QFRAME_FRAMEWIDTH)
 {
-  QFrame *obj = qobject_cast<QFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -178,7 +180,7 @@ HB_FUNC_STATIC(QFRAME_FRAMEWIDTH)
 // int lineWidth() const
 HB_FUNC_STATIC(QFRAME_LINEWIDTH)
 {
-  QFrame *obj = qobject_cast<QFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -196,7 +198,7 @@ HB_FUNC_STATIC(QFRAME_LINEWIDTH)
 // int midLineWidth() const
 HB_FUNC_STATIC(QFRAME_MIDLINEWIDTH)
 {
-  QFrame *obj = qobject_cast<QFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -214,7 +216,7 @@ HB_FUNC_STATIC(QFRAME_MIDLINEWIDTH)
 // void setFrameRect(const QRect &)
 HB_FUNC_STATIC(QFRAME_SETFRAMERECT)
 {
-  QFrame *obj = qobject_cast<QFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -234,7 +236,7 @@ HB_FUNC_STATIC(QFRAME_SETFRAMERECT)
 // void setFrameShadow(QFrame::Shadow)
 HB_FUNC_STATIC(QFRAME_SETFRAMESHADOW)
 {
-  QFrame *obj = qobject_cast<QFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -254,7 +256,7 @@ HB_FUNC_STATIC(QFRAME_SETFRAMESHADOW)
 // void setFrameShape(QFrame::Shape)
 HB_FUNC_STATIC(QFRAME_SETFRAMESHAPE)
 {
-  QFrame *obj = qobject_cast<QFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -274,7 +276,7 @@ HB_FUNC_STATIC(QFRAME_SETFRAMESHAPE)
 // void setFrameStyle(int style)
 HB_FUNC_STATIC(QFRAME_SETFRAMESTYLE)
 {
-  QFrame *obj = qobject_cast<QFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -294,7 +296,7 @@ HB_FUNC_STATIC(QFRAME_SETFRAMESTYLE)
 // void setLineWidth(int)
 HB_FUNC_STATIC(QFRAME_SETLINEWIDTH)
 {
-  QFrame *obj = qobject_cast<QFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -314,7 +316,7 @@ HB_FUNC_STATIC(QFRAME_SETLINEWIDTH)
 // void setMidLineWidth(int)
 HB_FUNC_STATIC(QFRAME_SETMIDLINEWIDTH)
 {
-  QFrame *obj = qobject_cast<QFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -334,7 +336,7 @@ HB_FUNC_STATIC(QFRAME_SETMIDLINEWIDTH)
 // virtual QSize sizeHint() const
 HB_FUNC_STATIC(QFRAME_SIZEHINT)
 {
-  QFrame *obj = qobject_cast<QFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

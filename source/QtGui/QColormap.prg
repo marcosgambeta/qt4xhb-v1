@@ -57,6 +57,8 @@ RETURN
 
 #include <QtGui/QColor>
 
+#define GET_PTR_FROM_SELF(p) QColormap *p = static_cast<QColormap *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QColormap(const QColormap &colormap)
 HB_FUNC_STATIC(QCOLORMAP_NEW)
 {
@@ -70,7 +72,7 @@ HB_FUNC_STATIC(QCOLORMAP_NEW)
 
 HB_FUNC_STATIC(QCOLORMAP_DELETE)
 {
-  QColormap *obj = static_cast<QColormap *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -86,7 +88,7 @@ HB_FUNC_STATIC(QCOLORMAP_DELETE)
 // const QColor colorAt(uint pixel) const
 HB_FUNC_STATIC(QCOLORMAP_COLORAT)
 {
-  QColormap *obj = static_cast<QColormap *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -105,7 +107,7 @@ HB_FUNC_STATIC(QCOLORMAP_COLORAT)
 // const QVector<QColor> colormap() const
 HB_FUNC_STATIC(QCOLORMAP_COLORMAP)
 {
-  QColormap *obj = static_cast<QColormap *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -146,7 +148,7 @@ HB_FUNC_STATIC(QCOLORMAP_COLORMAP)
 // int depth() const
 HB_FUNC_STATIC(QCOLORMAP_DEPTH)
 {
-  QColormap *obj = static_cast<QColormap *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -164,7 +166,7 @@ HB_FUNC_STATIC(QCOLORMAP_DEPTH)
 // QColormap::Mode mode() const
 HB_FUNC_STATIC(QCOLORMAP_MODE)
 {
-  QColormap *obj = static_cast<QColormap *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -182,7 +184,7 @@ HB_FUNC_STATIC(QCOLORMAP_MODE)
 // uint pixel(const QColor &color) const
 HB_FUNC_STATIC(QCOLORMAP_PIXEL)
 {
-  QColormap *obj = static_cast<QColormap *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -200,7 +202,7 @@ HB_FUNC_STATIC(QCOLORMAP_PIXEL)
 // int size() const
 HB_FUNC_STATIC(QCOLORMAP_SIZE)
 {
-  QColormap *obj = static_cast<QColormap *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

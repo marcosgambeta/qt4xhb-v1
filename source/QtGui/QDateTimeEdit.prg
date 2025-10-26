@@ -99,6 +99,8 @@ RETURN
 
 #include <QtGui/QCalendarWidget>
 
+#define GET_PTR_FROM_SELF(p) QDateTimeEdit *p = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QDATETIMEEDIT_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
@@ -124,7 +126,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_NEW)
 
 HB_FUNC_STATIC(QDATETIMEEDIT_DELETE)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -142,7 +144,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_DELETE)
 // bool calendarPopup() const
 HB_FUNC_STATIC(QDATETIMEEDIT_CALENDARPOPUP)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -160,7 +162,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CALENDARPOPUP)
 // QCalendarWidget *calendarWidget() const
 HB_FUNC_STATIC(QDATETIMEEDIT_CALENDARWIDGET)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -179,7 +181,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CALENDARWIDGET)
 // void clearMaximumDate()
 HB_FUNC_STATIC(QDATETIMEEDIT_CLEARMAXIMUMDATE)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -199,7 +201,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CLEARMAXIMUMDATE)
 // void clearMaximumDateTime()
 HB_FUNC_STATIC(QDATETIMEEDIT_CLEARMAXIMUMDATETIME)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -219,7 +221,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CLEARMAXIMUMDATETIME)
 // void clearMaximumTime()
 HB_FUNC_STATIC(QDATETIMEEDIT_CLEARMAXIMUMTIME)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -239,7 +241,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CLEARMAXIMUMTIME)
 // void clearMinimumDate()
 HB_FUNC_STATIC(QDATETIMEEDIT_CLEARMINIMUMDATE)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -259,7 +261,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CLEARMINIMUMDATE)
 // void clearMinimumDateTime()
 HB_FUNC_STATIC(QDATETIMEEDIT_CLEARMINIMUMDATETIME)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -279,7 +281,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CLEARMINIMUMDATETIME)
 // void clearMinimumTime()
 HB_FUNC_STATIC(QDATETIMEEDIT_CLEARMINIMUMTIME)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -299,7 +301,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CLEARMINIMUMTIME)
 // QDateTimeEdit::Section currentSection() const
 HB_FUNC_STATIC(QDATETIMEEDIT_CURRENTSECTION)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -317,7 +319,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CURRENTSECTION)
 // int currentSectionIndex() const
 HB_FUNC_STATIC(QDATETIMEEDIT_CURRENTSECTIONINDEX)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -335,7 +337,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CURRENTSECTIONINDEX)
 // QDate date() const
 HB_FUNC_STATIC(QDATETIMEEDIT_DATE)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -354,7 +356,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_DATE)
 // QDateTime dateTime() const
 HB_FUNC_STATIC(QDATETIMEEDIT_DATETIME)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -373,7 +375,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_DATETIME)
 // QString displayFormat() const
 HB_FUNC_STATIC(QDATETIMEEDIT_DISPLAYFORMAT)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -391,7 +393,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_DISPLAYFORMAT)
 // QDateTimeEdit::Sections displayedSections() const
 HB_FUNC_STATIC(QDATETIMEEDIT_DISPLAYEDSECTIONS)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -409,7 +411,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_DISPLAYEDSECTIONS)
 // QDate maximumDate() const
 HB_FUNC_STATIC(QDATETIMEEDIT_MAXIMUMDATE)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -428,7 +430,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_MAXIMUMDATE)
 // QDateTime maximumDateTime() const
 HB_FUNC_STATIC(QDATETIMEEDIT_MAXIMUMDATETIME)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -447,7 +449,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_MAXIMUMDATETIME)
 // QTime maximumTime() const
 HB_FUNC_STATIC(QDATETIMEEDIT_MAXIMUMTIME)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -466,7 +468,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_MAXIMUMTIME)
 // QDate minimumDate() const
 HB_FUNC_STATIC(QDATETIMEEDIT_MINIMUMDATE)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -485,7 +487,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_MINIMUMDATE)
 // QDateTime minimumDateTime() const
 HB_FUNC_STATIC(QDATETIMEEDIT_MINIMUMDATETIME)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -504,7 +506,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_MINIMUMDATETIME)
 // QTime minimumTime() const
 HB_FUNC_STATIC(QDATETIMEEDIT_MINIMUMTIME)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -523,7 +525,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_MINIMUMTIME)
 // QDateTimeEdit::Section sectionAt(int index) const
 HB_FUNC_STATIC(QDATETIMEEDIT_SECTIONAT)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -541,7 +543,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SECTIONAT)
 // int sectionCount() const
 HB_FUNC_STATIC(QDATETIMEEDIT_SECTIONCOUNT)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -559,7 +561,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SECTIONCOUNT)
 // QString sectionText(QDateTimeEdit::Section section) const
 HB_FUNC_STATIC(QDATETIMEEDIT_SECTIONTEXT)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -577,7 +579,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SECTIONTEXT)
 // void setCalendarPopup(bool enable)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETCALENDARPOPUP)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -597,7 +599,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETCALENDARPOPUP)
 // void setCalendarWidget(QCalendarWidget *calendarWidget)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETCALENDARWIDGET)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -617,7 +619,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETCALENDARWIDGET)
 // void setCurrentSection(QDateTimeEdit::Section section)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETCURRENTSECTION)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -637,7 +639,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETCURRENTSECTION)
 // void setCurrentSectionIndex(int index)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETCURRENTSECTIONINDEX)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -657,7 +659,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETCURRENTSECTIONINDEX)
 // void setDateRange(const QDate &min, const QDate &max)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETDATERANGE)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -677,7 +679,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETDATERANGE)
 // void setDateTimeRange(const QDateTime &min, const QDateTime &max)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETDATETIMERANGE)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -697,7 +699,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETDATETIMERANGE)
 // void setDisplayFormat(const QString &format)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETDISPLAYFORMAT)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -717,7 +719,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETDISPLAYFORMAT)
 // void setMaximumDate(const QDate &max)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETMAXIMUMDATE)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -737,7 +739,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETMAXIMUMDATE)
 // void setMaximumDateTime(const QDateTime &dt)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETMAXIMUMDATETIME)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -757,7 +759,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETMAXIMUMDATETIME)
 // void setMaximumTime(const QTime &max)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETMAXIMUMTIME)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -777,7 +779,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETMAXIMUMTIME)
 // void setMinimumDate(const QDate &min)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETMINIMUMDATE)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -797,7 +799,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETMINIMUMDATE)
 // void setMinimumDateTime(const QDateTime &dt)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETMINIMUMDATETIME)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -817,7 +819,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETMINIMUMDATETIME)
 // void setMinimumTime(const QTime &min)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETMINIMUMTIME)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -837,7 +839,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETMINIMUMTIME)
 // void setSelectedSection(QDateTimeEdit::Section section)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETSELECTEDSECTION)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -857,7 +859,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETSELECTEDSECTION)
 // void setTimeRange(const QTime &min, const QTime &max)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETTIMERANGE)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -877,7 +879,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETTIMERANGE)
 // void setTimeSpec(Qt::TimeSpec spec)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETTIMESPEC)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -897,7 +899,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETTIMESPEC)
 // QTime time() const
 HB_FUNC_STATIC(QDATETIMEEDIT_TIME)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -916,7 +918,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_TIME)
 // Qt::TimeSpec timeSpec() const
 HB_FUNC_STATIC(QDATETIMEEDIT_TIMESPEC)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -934,7 +936,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_TIMESPEC)
 // virtual void clear()
 HB_FUNC_STATIC(QDATETIMEEDIT_CLEAR)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -954,7 +956,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_CLEAR)
 // virtual bool event(QEvent *event)
 HB_FUNC_STATIC(QDATETIMEEDIT_EVENT)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -972,7 +974,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_EVENT)
 // virtual QSize sizeHint() const
 HB_FUNC_STATIC(QDATETIMEEDIT_SIZEHINT)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -991,7 +993,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SIZEHINT)
 // virtual void stepBy(int steps)
 HB_FUNC_STATIC(QDATETIMEEDIT_STEPBY)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1011,7 +1013,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_STEPBY)
 // void setDate(const QDate &date)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETDATE)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1031,7 +1033,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETDATE)
 // void setDateTime(const QDateTime &dateTime)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETDATETIME)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1051,7 +1053,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETDATETIME)
 // void setTime(const QTime &time)
 HB_FUNC_STATIC(QDATETIMEEDIT_SETTIME)
 {
-  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

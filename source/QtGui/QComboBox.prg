@@ -129,6 +129,8 @@ RETURN
 #include <QtGui/QLineEdit>
 #include <QtGui/QAbstractItemView>
 
+#define GET_PTR_FROM_SELF(p) QComboBox *p = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QComboBox(QWidget *parent = 0)
 HB_FUNC_STATIC(QCOMBOBOX_NEW)
 {
@@ -142,7 +144,7 @@ HB_FUNC_STATIC(QCOMBOBOX_NEW)
 
 HB_FUNC_STATIC(QCOMBOBOX_DELETE)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -161,7 +163,7 @@ HB_FUNC_STATIC(QCOMBOBOX_ADDITEM)
 {
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQVARIANTORNIL(2)) {
     // void addItem(const QString &text, const QVariant &userData = QVariant())
-    QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->addItem(PQSTRING(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(2)));
@@ -170,7 +172,7 @@ HB_FUNC_STATIC(QCOMBOBOX_ADDITEM)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISBETWEEN(2, 3) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && ISQVARIANTORNIL(3)) {
     // void addItem(const QIcon &icon, const QString &text, const QVariant &userData = QVariant())
-    QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->addItem(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt4xHb::itemGetPtr(1)) : QIcon(hb_parc(1)), PQSTRING(2),
@@ -186,7 +188,7 @@ HB_FUNC_STATIC(QCOMBOBOX_ADDITEM)
 // void addItems(const QStringList &texts)
 HB_FUNC_STATIC(QCOMBOBOX_ADDITEMS)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -206,7 +208,7 @@ HB_FUNC_STATIC(QCOMBOBOX_ADDITEMS)
 // QCompleter *completer() const
 HB_FUNC_STATIC(QCOMBOBOX_COMPLETER)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -225,7 +227,7 @@ HB_FUNC_STATIC(QCOMBOBOX_COMPLETER)
 // int count() const
 HB_FUNC_STATIC(QCOMBOBOX_COUNT)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -243,7 +245,7 @@ HB_FUNC_STATIC(QCOMBOBOX_COUNT)
 // int currentIndex() const
 HB_FUNC_STATIC(QCOMBOBOX_CURRENTINDEX)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -261,7 +263,7 @@ HB_FUNC_STATIC(QCOMBOBOX_CURRENTINDEX)
 // QString currentText() const
 HB_FUNC_STATIC(QCOMBOBOX_CURRENTTEXT)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -279,7 +281,7 @@ HB_FUNC_STATIC(QCOMBOBOX_CURRENTTEXT)
 // bool duplicatesEnabled() const
 HB_FUNC_STATIC(QCOMBOBOX_DUPLICATESENABLED)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -298,7 +300,7 @@ HB_FUNC_STATIC(QCOMBOBOX_DUPLICATESENABLED)
 // Qt::MatchCaseSensitive) const
 HB_FUNC_STATIC(QCOMBOBOX_FINDDATA)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -318,7 +320,7 @@ HB_FUNC_STATIC(QCOMBOBOX_FINDDATA)
 // int findText(const QString &text, Qt::MatchFlags flags = Qt::MatchExactly | Qt::MatchCaseSensitive) const
 HB_FUNC_STATIC(QCOMBOBOX_FINDTEXT)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -337,7 +339,7 @@ HB_FUNC_STATIC(QCOMBOBOX_FINDTEXT)
 // bool hasFrame() const
 HB_FUNC_STATIC(QCOMBOBOX_HASFRAME)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -355,7 +357,7 @@ HB_FUNC_STATIC(QCOMBOBOX_HASFRAME)
 // virtual void hidePopup()
 HB_FUNC_STATIC(QCOMBOBOX_HIDEPOPUP)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -375,7 +377,7 @@ HB_FUNC_STATIC(QCOMBOBOX_HIDEPOPUP)
 // QSize iconSize() const
 HB_FUNC_STATIC(QCOMBOBOX_ICONSIZE)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -395,17 +397,16 @@ HB_FUNC_STATIC(QCOMBOBOX_INSERTITEM)
 {
   if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQVARIANTORNIL(3)) {
     // void insertItem(int index, const QString &text, const QVariant &userData = QVariant())
-    QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->insertItem(PINT(1), PQSTRING(2), HB_ISNIL(3) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(3)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
-  } else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && (ISQICON(2) || HB_ISCHAR(2)) && HB_ISCHAR(3) &&
-             ISQVARIANTORNIL(4)) {
+  } else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && (ISQICON(2) || HB_ISCHAR(2)) && HB_ISCHAR(3) && ISQVARIANTORNIL(4)) {
     // void insertItem(int index, const QIcon &icon, const QString &text, const QVariant &userData = QVariant())
-    QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->insertItem(PINT(1), HB_ISOBJECT(2) ? *static_cast<QIcon *>(Qt4xHb::itemGetPtr(2)) : QIcon(hb_parc(2)),
@@ -421,7 +422,7 @@ HB_FUNC_STATIC(QCOMBOBOX_INSERTITEM)
 // void insertItems(int index, const QStringList &list)
 HB_FUNC_STATIC(QCOMBOBOX_INSERTITEMS)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -441,7 +442,7 @@ HB_FUNC_STATIC(QCOMBOBOX_INSERTITEMS)
 // QComboBox::InsertPolicy insertPolicy() const
 HB_FUNC_STATIC(QCOMBOBOX_INSERTPOLICY)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -459,7 +460,7 @@ HB_FUNC_STATIC(QCOMBOBOX_INSERTPOLICY)
 // void insertSeparator(int index)
 HB_FUNC_STATIC(QCOMBOBOX_INSERTSEPARATOR)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -479,7 +480,7 @@ HB_FUNC_STATIC(QCOMBOBOX_INSERTSEPARATOR)
 // bool isEditable() const
 HB_FUNC_STATIC(QCOMBOBOX_ISEDITABLE)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -497,7 +498,7 @@ HB_FUNC_STATIC(QCOMBOBOX_ISEDITABLE)
 // QVariant itemData(int index, int role = Qt::UserRole) const
 HB_FUNC_STATIC(QCOMBOBOX_ITEMDATA)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -516,7 +517,7 @@ HB_FUNC_STATIC(QCOMBOBOX_ITEMDATA)
 // QAbstractItemDelegate *itemDelegate() const
 HB_FUNC_STATIC(QCOMBOBOX_ITEMDELEGATE)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -535,7 +536,7 @@ HB_FUNC_STATIC(QCOMBOBOX_ITEMDELEGATE)
 // QIcon itemIcon(int index) const
 HB_FUNC_STATIC(QCOMBOBOX_ITEMICON)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -554,7 +555,7 @@ HB_FUNC_STATIC(QCOMBOBOX_ITEMICON)
 // QString itemText(int index) const
 HB_FUNC_STATIC(QCOMBOBOX_ITEMTEXT)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -572,7 +573,7 @@ HB_FUNC_STATIC(QCOMBOBOX_ITEMTEXT)
 // QLineEdit *lineEdit() const
 HB_FUNC_STATIC(QCOMBOBOX_LINEEDIT)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -591,7 +592,7 @@ HB_FUNC_STATIC(QCOMBOBOX_LINEEDIT)
 // int maxCount() const
 HB_FUNC_STATIC(QCOMBOBOX_MAXCOUNT)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -609,7 +610,7 @@ HB_FUNC_STATIC(QCOMBOBOX_MAXCOUNT)
 // int maxVisibleItems() const
 HB_FUNC_STATIC(QCOMBOBOX_MAXVISIBLEITEMS)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -627,7 +628,7 @@ HB_FUNC_STATIC(QCOMBOBOX_MAXVISIBLEITEMS)
 // int minimumContentsLength() const
 HB_FUNC_STATIC(QCOMBOBOX_MINIMUMCONTENTSLENGTH)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -645,7 +646,7 @@ HB_FUNC_STATIC(QCOMBOBOX_MINIMUMCONTENTSLENGTH)
 // QAbstractItemModel *model() const
 HB_FUNC_STATIC(QCOMBOBOX_MODEL)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -664,7 +665,7 @@ HB_FUNC_STATIC(QCOMBOBOX_MODEL)
 // int modelColumn() const
 HB_FUNC_STATIC(QCOMBOBOX_MODELCOLUMN)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -682,7 +683,7 @@ HB_FUNC_STATIC(QCOMBOBOX_MODELCOLUMN)
 // void removeItem(int index)
 HB_FUNC_STATIC(QCOMBOBOX_REMOVEITEM)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -702,7 +703,7 @@ HB_FUNC_STATIC(QCOMBOBOX_REMOVEITEM)
 // QModelIndex rootModelIndex() const
 HB_FUNC_STATIC(QCOMBOBOX_ROOTMODELINDEX)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -721,7 +722,7 @@ HB_FUNC_STATIC(QCOMBOBOX_ROOTMODELINDEX)
 // void setCompleter(QCompleter *completer)
 HB_FUNC_STATIC(QCOMBOBOX_SETCOMPLETER)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -741,7 +742,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETCOMPLETER)
 // void setDuplicatesEnabled(bool enable)
 HB_FUNC_STATIC(QCOMBOBOX_SETDUPLICATESENABLED)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -761,7 +762,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETDUPLICATESENABLED)
 // void setEditable(bool editable)
 HB_FUNC_STATIC(QCOMBOBOX_SETEDITABLE)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -781,7 +782,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETEDITABLE)
 // void setFrame(bool)
 HB_FUNC_STATIC(QCOMBOBOX_SETFRAME)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -801,7 +802,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETFRAME)
 // void setIconSize(const QSize &size)
 HB_FUNC_STATIC(QCOMBOBOX_SETICONSIZE)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -821,7 +822,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETICONSIZE)
 // void setInsertPolicy(QComboBox::InsertPolicy policy)
 HB_FUNC_STATIC(QCOMBOBOX_SETINSERTPOLICY)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -841,7 +842,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETINSERTPOLICY)
 // void setItemData(int index, const QVariant &value, int role = Qt::UserRole)
 HB_FUNC_STATIC(QCOMBOBOX_SETITEMDATA)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -861,7 +862,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETITEMDATA)
 // void setItemDelegate(QAbstractItemDelegate *delegate)
 HB_FUNC_STATIC(QCOMBOBOX_SETITEMDELEGATE)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -881,7 +882,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETITEMDELEGATE)
 // void setItemIcon(int index, const QIcon &icon)
 HB_FUNC_STATIC(QCOMBOBOX_SETITEMICON)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -901,7 +902,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETITEMICON)
 // void setItemText(int index, const QString &text)
 HB_FUNC_STATIC(QCOMBOBOX_SETITEMTEXT)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -921,7 +922,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETITEMTEXT)
 // void setLineEdit(QLineEdit *edit)
 HB_FUNC_STATIC(QCOMBOBOX_SETLINEEDIT)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -941,7 +942,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETLINEEDIT)
 // void setMaxCount(int max)
 HB_FUNC_STATIC(QCOMBOBOX_SETMAXCOUNT)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -961,7 +962,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETMAXCOUNT)
 // void setMaxVisibleItems(int maxItems)
 HB_FUNC_STATIC(QCOMBOBOX_SETMAXVISIBLEITEMS)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -981,7 +982,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETMAXVISIBLEITEMS)
 // void setMinimumContentsLength(int characters)
 HB_FUNC_STATIC(QCOMBOBOX_SETMINIMUMCONTENTSLENGTH)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1001,7 +1002,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETMINIMUMCONTENTSLENGTH)
 // void setModel(QAbstractItemModel *model)
 HB_FUNC_STATIC(QCOMBOBOX_SETMODEL)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1021,7 +1022,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETMODEL)
 // void setModelColumn(int visibleColumn)
 HB_FUNC_STATIC(QCOMBOBOX_SETMODELCOLUMN)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1041,7 +1042,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETMODELCOLUMN)
 // void setRootModelIndex(const QModelIndex &index)
 HB_FUNC_STATIC(QCOMBOBOX_SETROOTMODELINDEX)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1061,7 +1062,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETROOTMODELINDEX)
 // void setSizeAdjustPolicy(QComboBox::SizeAdjustPolicy policy)
 HB_FUNC_STATIC(QCOMBOBOX_SETSIZEADJUSTPOLICY)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1081,7 +1082,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETSIZEADJUSTPOLICY)
 // void setValidator(const QValidator *validator)
 HB_FUNC_STATIC(QCOMBOBOX_SETVALIDATOR)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1101,7 +1102,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETVALIDATOR)
 // void setView(QAbstractItemView *itemView)
 HB_FUNC_STATIC(QCOMBOBOX_SETVIEW)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1121,7 +1122,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETVIEW)
 // virtual void showPopup()
 HB_FUNC_STATIC(QCOMBOBOX_SHOWPOPUP)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1141,7 +1142,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SHOWPOPUP)
 // QComboBox::SizeAdjustPolicy sizeAdjustPolicy() const
 HB_FUNC_STATIC(QCOMBOBOX_SIZEADJUSTPOLICY)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1159,7 +1160,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SIZEADJUSTPOLICY)
 // const QValidator *validator() const
 HB_FUNC_STATIC(QCOMBOBOX_VALIDATOR)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1178,7 +1179,7 @@ HB_FUNC_STATIC(QCOMBOBOX_VALIDATOR)
 // QAbstractItemView *view() const
 HB_FUNC_STATIC(QCOMBOBOX_VIEW)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1197,7 +1198,7 @@ HB_FUNC_STATIC(QCOMBOBOX_VIEW)
 // virtual bool event(QEvent *event)
 HB_FUNC_STATIC(QCOMBOBOX_EVENT)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1215,7 +1216,7 @@ HB_FUNC_STATIC(QCOMBOBOX_EVENT)
 // virtual QSize minimumSizeHint() const
 HB_FUNC_STATIC(QCOMBOBOX_MINIMUMSIZEHINT)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1234,7 +1235,7 @@ HB_FUNC_STATIC(QCOMBOBOX_MINIMUMSIZEHINT)
 // virtual QSize sizeHint() const
 HB_FUNC_STATIC(QCOMBOBOX_SIZEHINT)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1253,7 +1254,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SIZEHINT)
 // void clear()
 HB_FUNC_STATIC(QCOMBOBOX_CLEAR)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1273,7 +1274,7 @@ HB_FUNC_STATIC(QCOMBOBOX_CLEAR)
 // void clearEditText()
 HB_FUNC_STATIC(QCOMBOBOX_CLEAREDITTEXT)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1293,7 +1294,7 @@ HB_FUNC_STATIC(QCOMBOBOX_CLEAREDITTEXT)
 // void setCurrentIndex(int index)
 HB_FUNC_STATIC(QCOMBOBOX_SETCURRENTINDEX)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1313,7 +1314,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETCURRENTINDEX)
 // void setEditText(const QString &text)
 HB_FUNC_STATIC(QCOMBOBOX_SETEDITTEXT)
 {
-  QComboBox *obj = qobject_cast<QComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

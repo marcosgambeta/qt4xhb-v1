@@ -43,6 +43,8 @@ RETURN
 
 #include <QtGui/QAction>
 
+#define GET_PTR_FROM_SELF(p) QActionEvent *p = static_cast<QActionEvent *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QActionEvent(int type, QAction *action, QAction *before = 0)
 HB_FUNC_STATIC(QACTIONEVENT_NEW)
 {
@@ -56,7 +58,7 @@ HB_FUNC_STATIC(QACTIONEVENT_NEW)
 
 HB_FUNC_STATIC(QACTIONEVENT_DELETE)
 {
-  QActionEvent *obj = static_cast<QActionEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -72,7 +74,7 @@ HB_FUNC_STATIC(QACTIONEVENT_DELETE)
 // QAction *action() const
 HB_FUNC_STATIC(QACTIONEVENT_ACTION)
 {
-  QActionEvent *obj = static_cast<QActionEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -91,7 +93,7 @@ HB_FUNC_STATIC(QACTIONEVENT_ACTION)
 // QAction *before() const
 HB_FUNC_STATIC(QACTIONEVENT_BEFORE)
 {
-  QActionEvent *obj = static_cast<QActionEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

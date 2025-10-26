@@ -44,9 +44,12 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QFontEnginePlugin *p = qobject_cast<QFontEnginePlugin *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QFONTENGINEPLUGIN_DELETE)
 {
-  QFontEnginePlugin *obj = qobject_cast<QFontEnginePlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -64,7 +67,7 @@ HB_FUNC_STATIC(QFONTENGINEPLUGIN_DELETE)
 // virtual QList<QFontEngineInfo> availableFontEngines() const = 0
 HB_FUNC_STATIC(QFONTENGINEPLUGIN_AVAILABLEFONTENGINES)
 {
-  QFontEnginePlugin *obj = qobject_cast<QFontEnginePlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -105,7 +108,7 @@ HB_FUNC_STATIC(QFONTENGINEPLUGIN_AVAILABLEFONTENGINES)
 // virtual QAbstractFontEngine *create(const QFontEngineInfo &info) = 0
 HB_FUNC_STATIC(QFONTENGINEPLUGIN_CREATE)
 {
-  QFontEnginePlugin *obj = qobject_cast<QFontEnginePlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -124,7 +127,7 @@ HB_FUNC_STATIC(QFONTENGINEPLUGIN_CREATE)
 // virtual QStringList keys() const
 HB_FUNC_STATIC(QFONTENGINEPLUGIN_KEYS)
 {
-  QFontEnginePlugin *obj = qobject_cast<QFontEnginePlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -61,6 +61,8 @@ RETURN
 #include <QtGui/QPixmap>
 #include <QtCore/QMimeData>
 
+#define GET_PTR_FROM_SELF(p) QDrag *p = qobject_cast<QDrag *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QDrag(QWidget *dragSource)
 HB_FUNC_STATIC(QDRAG_NEW)
 {
@@ -74,7 +76,7 @@ HB_FUNC_STATIC(QDRAG_NEW)
 
 HB_FUNC_STATIC(QDRAG_DELETE)
 {
-  QDrag *obj = qobject_cast<QDrag *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -93,14 +95,14 @@ HB_FUNC_STATIC(QDRAG_EXEC)
 {
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
     // Qt::DropAction exec(Qt::DropActions supportedActions = Qt::MoveAction)
-    QDrag *obj = qobject_cast<QDrag *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RENUM(obj->exec(HB_ISNIL(1) ? (Qt::DropActions)Qt::MoveAction : (Qt::DropActions)hb_parni(1)));
     }
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // Qt::DropAction exec(Qt::DropActions supportedActions, Qt::DropAction defaultDropAction)
-    QDrag *obj = qobject_cast<QDrag *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RENUM(obj->exec((Qt::DropActions)hb_parni(1), (Qt::DropAction)hb_parni(2)));
@@ -113,7 +115,7 @@ HB_FUNC_STATIC(QDRAG_EXEC)
 // QPoint hotSpot() const
 HB_FUNC_STATIC(QDRAG_HOTSPOT)
 {
-  QDrag *obj = qobject_cast<QDrag *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -132,7 +134,7 @@ HB_FUNC_STATIC(QDRAG_HOTSPOT)
 // QMimeData *mimeData() const
 HB_FUNC_STATIC(QDRAG_MIMEDATA)
 {
-  QDrag *obj = qobject_cast<QDrag *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -151,7 +153,7 @@ HB_FUNC_STATIC(QDRAG_MIMEDATA)
 // QPixmap pixmap() const
 HB_FUNC_STATIC(QDRAG_PIXMAP)
 {
-  QDrag *obj = qobject_cast<QDrag *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -170,7 +172,7 @@ HB_FUNC_STATIC(QDRAG_PIXMAP)
 // void setDragCursor(const QPixmap &cursor, Qt::DropAction action)
 HB_FUNC_STATIC(QDRAG_SETDRAGCURSOR)
 {
-  QDrag *obj = qobject_cast<QDrag *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -190,7 +192,7 @@ HB_FUNC_STATIC(QDRAG_SETDRAGCURSOR)
 // void setHotSpot(const QPoint &hotspot)
 HB_FUNC_STATIC(QDRAG_SETHOTSPOT)
 {
-  QDrag *obj = qobject_cast<QDrag *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -210,7 +212,7 @@ HB_FUNC_STATIC(QDRAG_SETHOTSPOT)
 // void setMimeData(QMimeData *data)
 HB_FUNC_STATIC(QDRAG_SETMIMEDATA)
 {
-  QDrag *obj = qobject_cast<QDrag *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -230,7 +232,7 @@ HB_FUNC_STATIC(QDRAG_SETMIMEDATA)
 // void setPixmap(const QPixmap &pixmap)
 HB_FUNC_STATIC(QDRAG_SETPIXMAP)
 {
-  QDrag *obj = qobject_cast<QDrag *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -250,7 +252,7 @@ HB_FUNC_STATIC(QDRAG_SETPIXMAP)
 // QWidget *source() const
 HB_FUNC_STATIC(QDRAG_SOURCE)
 {
-  QDrag *obj = qobject_cast<QDrag *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -269,7 +271,7 @@ HB_FUNC_STATIC(QDRAG_SOURCE)
 // QWidget *target() const
 HB_FUNC_STATIC(QDRAG_TARGET)
 {
-  QDrag *obj = qobject_cast<QDrag *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

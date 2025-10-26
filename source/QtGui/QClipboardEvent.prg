@@ -37,9 +37,11 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QClipboardEvent *p = static_cast<QClipboardEvent *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QCLIPBOARDEVENT_DELETE)
 {
-  QClipboardEvent *obj = static_cast<QClipboardEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;

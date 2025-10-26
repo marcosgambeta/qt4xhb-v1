@@ -42,6 +42,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QFocusFrame *p = qobject_cast<QFocusFrame *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QFocusFrame(QWidget *parent = 0)
 HB_FUNC_STATIC(QFOCUSFRAME_NEW)
 {
@@ -56,7 +58,7 @@ HB_FUNC_STATIC(QFOCUSFRAME_NEW)
 // void setWidget(QWidget *widget)
 HB_FUNC_STATIC(QFOCUSFRAME_SETWIDGET)
 {
-  QFocusFrame *obj = qobject_cast<QFocusFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -76,7 +78,7 @@ HB_FUNC_STATIC(QFOCUSFRAME_SETWIDGET)
 // QWidget *widget() const
 HB_FUNC_STATIC(QFOCUSFRAME_WIDGET)
 {
-  QFocusFrame *obj = qobject_cast<QFocusFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -43,9 +43,12 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QAbstractFontEngine *p = qobject_cast<QAbstractFontEngine *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QABSTRACTFONTENGINE_DELETE)
 {
-  QAbstractFontEngine *obj = qobject_cast<QAbstractFontEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -63,7 +66,7 @@ HB_FUNC_STATIC(QABSTRACTFONTENGINE_DELETE)
 // virtual QAbstractFontEngine::Capabilities capabilities() const = 0
 HB_FUNC_STATIC(QABSTRACTFONTENGINE_CAPABILITIES)
 {
-  QAbstractFontEngine *obj = qobject_cast<QAbstractFontEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -81,7 +84,7 @@ HB_FUNC_STATIC(QABSTRACTFONTENGINE_CAPABILITIES)
 // virtual QVariant fontProperty(QAbstractFontEngine::FontProperty property) const = 0
 HB_FUNC_STATIC(QABSTRACTFONTENGINE_FONTPROPERTY)
 {
-  QAbstractFontEngine *obj = qobject_cast<QAbstractFontEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -100,7 +103,7 @@ HB_FUNC_STATIC(QABSTRACTFONTENGINE_FONTPROPERTY)
 // virtual bool renderGlyph(uint glyph, int depth, int bytesPerLine, int height, uchar *buffer)
 HB_FUNC_STATIC(QABSTRACTFONTENGINE_RENDERGLYPH)
 {
-  QAbstractFontEngine *obj = qobject_cast<QAbstractFontEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -41,6 +41,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QDecorationDefault *p = static_cast<QDecorationDefault *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QDecorationDefault()
 HB_FUNC_STATIC(QDECORATIONDEFAULT_NEW)
 {
@@ -54,7 +57,7 @@ HB_FUNC_STATIC(QDECORATIONDEFAULT_NEW)
 
 HB_FUNC_STATIC(QDECORATIONDEFAULT_DELETE)
 {
-  QDecorationDefault *obj = static_cast<QDecorationDefault *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -71,7 +74,7 @@ HB_FUNC_STATIC(QDECORATIONDEFAULT_DELETE)
 // QDecoration::DecorationState state = QDecoration::Normal)
 HB_FUNC_STATIC(QDECORATIONDEFAULT_PAINT)
 {
-  QDecorationDefault *obj = static_cast<QDecorationDefault *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -91,7 +94,7 @@ HB_FUNC_STATIC(QDECORATIONDEFAULT_PAINT)
 // virtual QRegion region(const QWidget *widget, const QRect &rect, int decorationRegion = QDecoration::All)
 HB_FUNC_STATIC(QDECORATIONDEFAULT_REGION)
 {
-  QDecorationDefault *obj = static_cast<QDecorationDefault *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

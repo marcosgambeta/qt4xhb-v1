@@ -48,6 +48,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QDecorationFactory *p = static_cast<QDecorationFactory *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // static QDecoration *create(const QString &key)
 HB_FUNC_STATIC(QDECORATIONFACTORY_CREATE)
 {

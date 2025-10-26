@@ -50,6 +50,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QFileIconProvider *p = static_cast<QFileIconProvider *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QFileIconProvider()
 HB_FUNC_STATIC(QFILEICONPROVIDER_NEW)
 {
@@ -63,7 +65,7 @@ HB_FUNC_STATIC(QFILEICONPROVIDER_NEW)
 
 HB_FUNC_STATIC(QFILEICONPROVIDER_DELETE)
 {
-  QFileIconProvider *obj = static_cast<QFileIconProvider *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -80,7 +82,7 @@ HB_FUNC_STATIC(QFILEICONPROVIDER_ICON)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // virtual QIcon icon(QFileIconProvider::IconType type) const
-    QFileIconProvider *obj = static_cast<QFileIconProvider *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QIcon *ptr = new QIcon(obj->icon((QFileIconProvider::IconType)hb_parni(1)));
@@ -88,7 +90,7 @@ HB_FUNC_STATIC(QFILEICONPROVIDER_ICON)
     }
   } else if (ISNUMPAR(1) && ISQFILEINFO(1)) {
     // virtual QIcon icon(const QFileInfo &info) const
-    QFileIconProvider *obj = static_cast<QFileIconProvider *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QIcon *ptr = new QIcon(obj->icon(*PQFILEINFO(1)));
@@ -102,7 +104,7 @@ HB_FUNC_STATIC(QFILEICONPROVIDER_ICON)
 // virtual QString type(const QFileInfo &info) const
 HB_FUNC_STATIC(QFILEICONPROVIDER_TYPE)
 {
-  QFileIconProvider *obj = static_cast<QFileIconProvider *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

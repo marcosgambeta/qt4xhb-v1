@@ -40,6 +40,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QAccessibleEvent *p = static_cast<QAccessibleEvent *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QAccessibleEvent(QAccessibleEvent::Type type, int child)
 HB_FUNC_STATIC(QACCESSIBLEEVENT_NEW)
 {
@@ -54,7 +56,7 @@ HB_FUNC_STATIC(QACCESSIBLEEVENT_NEW)
 // int child() const
 HB_FUNC_STATIC(QACCESSIBLEEVENT_CHILD)
 {
-  QAccessibleEvent *obj = static_cast<QAccessibleEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -72,7 +74,7 @@ HB_FUNC_STATIC(QACCESSIBLEEVENT_CHILD)
 // void setValue(const QString &text)
 HB_FUNC_STATIC(QACCESSIBLEEVENT_SETVALUE)
 {
-  QAccessibleEvent *obj = static_cast<QAccessibleEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -92,7 +94,7 @@ HB_FUNC_STATIC(QACCESSIBLEEVENT_SETVALUE)
 // QString value() const
 HB_FUNC_STATIC(QACCESSIBLEEVENT_VALUE)
 {
-  QAccessibleEvent *obj = static_cast<QAccessibleEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

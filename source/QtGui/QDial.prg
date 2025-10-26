@@ -50,6 +50,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QDial *p = qobject_cast<QDial *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QDial(QWidget *parent = 0)
 HB_FUNC_STATIC(QDIAL_NEW)
 {
@@ -63,7 +65,7 @@ HB_FUNC_STATIC(QDIAL_NEW)
 
 HB_FUNC_STATIC(QDIAL_DELETE)
 {
-  QDial *obj = qobject_cast<QDial *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -81,7 +83,7 @@ HB_FUNC_STATIC(QDIAL_DELETE)
 // int notchSize() const
 HB_FUNC_STATIC(QDIAL_NOTCHSIZE)
 {
-  QDial *obj = qobject_cast<QDial *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -99,7 +101,7 @@ HB_FUNC_STATIC(QDIAL_NOTCHSIZE)
 // qreal notchTarget() const
 HB_FUNC_STATIC(QDIAL_NOTCHTARGET)
 {
-  QDial *obj = qobject_cast<QDial *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -117,7 +119,7 @@ HB_FUNC_STATIC(QDIAL_NOTCHTARGET)
 // bool notchesVisible() const
 HB_FUNC_STATIC(QDIAL_NOTCHESVISIBLE)
 {
-  QDial *obj = qobject_cast<QDial *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -135,7 +137,7 @@ HB_FUNC_STATIC(QDIAL_NOTCHESVISIBLE)
 // void setNotchTarget(double target)
 HB_FUNC_STATIC(QDIAL_SETNOTCHTARGET)
 {
-  QDial *obj = qobject_cast<QDial *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -155,7 +157,7 @@ HB_FUNC_STATIC(QDIAL_SETNOTCHTARGET)
 // bool wrapping() const
 HB_FUNC_STATIC(QDIAL_WRAPPING)
 {
-  QDial *obj = qobject_cast<QDial *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -173,7 +175,7 @@ HB_FUNC_STATIC(QDIAL_WRAPPING)
 // virtual QSize minimumSizeHint() const
 HB_FUNC_STATIC(QDIAL_MINIMUMSIZEHINT)
 {
-  QDial *obj = qobject_cast<QDial *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -192,7 +194,7 @@ HB_FUNC_STATIC(QDIAL_MINIMUMSIZEHINT)
 // virtual QSize sizeHint() const
 HB_FUNC_STATIC(QDIAL_SIZEHINT)
 {
-  QDial *obj = qobject_cast<QDial *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -211,7 +213,7 @@ HB_FUNC_STATIC(QDIAL_SIZEHINT)
 // void setNotchesVisible(bool visible)
 HB_FUNC_STATIC(QDIAL_SETNOTCHESVISIBLE)
 {
-  QDial *obj = qobject_cast<QDial *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -231,7 +233,7 @@ HB_FUNC_STATIC(QDIAL_SETNOTCHESVISIBLE)
 // void setWrapping(bool on)
 HB_FUNC_STATIC(QDIAL_SETWRAPPING)
 {
-  QDial *obj = qobject_cast<QDial *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

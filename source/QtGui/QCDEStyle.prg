@@ -45,6 +45,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QCDEStyle *p = qobject_cast<QCDEStyle *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QCDEStyle(bool useHighlightCols = false)
 HB_FUNC_STATIC(QCDESTYLE_NEW)
 {
@@ -58,7 +60,7 @@ HB_FUNC_STATIC(QCDESTYLE_NEW)
 
 HB_FUNC_STATIC(QCDESTYLE_DELETE)
 {
-  QCDEStyle *obj = qobject_cast<QCDEStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -77,7 +79,7 @@ HB_FUNC_STATIC(QCDESTYLE_DELETE)
 // = 0) const
 HB_FUNC_STATIC(QCDESTYLE_DRAWCONTROL)
 {
-  QCDEStyle *obj = qobject_cast<QCDEStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -98,7 +100,7 @@ HB_FUNC_STATIC(QCDESTYLE_DRAWCONTROL)
 // 0) const
 HB_FUNC_STATIC(QCDESTYLE_DRAWPRIMITIVE)
 {
-  QCDEStyle *obj = qobject_cast<QCDEStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -118,7 +120,7 @@ HB_FUNC_STATIC(QCDESTYLE_DRAWPRIMITIVE)
 // virtual int pixelMetric(QStyle::PixelMetric metric, const QStyleOption *option = 0, const QWidget *widget = 0) const
 HB_FUNC_STATIC(QCDESTYLE_PIXELMETRIC)
 {
-  QCDEStyle *obj = qobject_cast<QCDEStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -137,7 +139,7 @@ HB_FUNC_STATIC(QCDESTYLE_PIXELMETRIC)
 // virtual QPalette standardPalette() const
 HB_FUNC_STATIC(QCDESTYLE_STANDARDPALETTE)
 {
-  QCDEStyle *obj = qobject_cast<QCDEStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

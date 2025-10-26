@@ -48,6 +48,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QCheckBox *p = qobject_cast<QCheckBox *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QCHECKBOX_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
@@ -66,7 +68,7 @@ HB_FUNC_STATIC(QCHECKBOX_NEW)
 // Qt::CheckState checkState() const
 HB_FUNC_STATIC(QCHECKBOX_CHECKSTATE)
 {
-  QCheckBox *obj = qobject_cast<QCheckBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -84,7 +86,7 @@ HB_FUNC_STATIC(QCHECKBOX_CHECKSTATE)
 // bool isTristate() const
 HB_FUNC_STATIC(QCHECKBOX_ISTRISTATE)
 {
-  QCheckBox *obj = qobject_cast<QCheckBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -102,7 +104,7 @@ HB_FUNC_STATIC(QCHECKBOX_ISTRISTATE)
 // void setCheckState(Qt::CheckState state)
 HB_FUNC_STATIC(QCHECKBOX_SETCHECKSTATE)
 {
-  QCheckBox *obj = qobject_cast<QCheckBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -122,7 +124,7 @@ HB_FUNC_STATIC(QCHECKBOX_SETCHECKSTATE)
 // void setTristate(bool y = true)
 HB_FUNC_STATIC(QCHECKBOX_SETTRISTATE)
 {
-  QCheckBox *obj = qobject_cast<QCheckBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -142,7 +144,7 @@ HB_FUNC_STATIC(QCHECKBOX_SETTRISTATE)
 // virtual QSize minimumSizeHint() const
 HB_FUNC_STATIC(QCHECKBOX_MINIMUMSIZEHINT)
 {
-  QCheckBox *obj = qobject_cast<QCheckBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -161,7 +163,7 @@ HB_FUNC_STATIC(QCHECKBOX_MINIMUMSIZEHINT)
 // virtual QSize sizeHint() const
 HB_FUNC_STATIC(QCHECKBOX_SIZEHINT)
 {
-  QCheckBox *obj = qobject_cast<QCheckBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

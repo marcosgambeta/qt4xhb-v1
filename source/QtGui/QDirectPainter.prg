@@ -59,6 +59,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QDirectPainter *p = qobject_cast<QDirectPainter *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QDirectPainter(QObject *parent = 0, QDirectPainter::SurfaceFlag flag = QDirectPainter::NonReserved)
 HB_FUNC_STATIC(QDIRECTPAINTER_NEW)
 {
@@ -74,7 +76,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_NEW)
 
 HB_FUNC_STATIC(QDIRECTPAINTER_DELETE)
 {
-  QDirectPainter *obj = qobject_cast<QDirectPainter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -92,7 +94,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_DELETE)
 // QRegion allocatedRegion() const
 HB_FUNC_STATIC(QDIRECTPAINTER_ALLOCATEDREGION)
 {
-  QDirectPainter *obj = qobject_cast<QDirectPainter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -112,7 +114,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_ENDPAINTING)
 {
   if (ISNUMPAR(0)) {
     // void endPainting()
-    QDirectPainter *obj = qobject_cast<QDirectPainter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->endPainting();
@@ -121,7 +123,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_ENDPAINTING)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && ISQREGION(1)) {
     // void endPainting(const QRegion &region)
-    QDirectPainter *obj = qobject_cast<QDirectPainter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->endPainting(*PQREGION(1));
@@ -136,7 +138,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_ENDPAINTING)
 // void flush(const QRegion &region)
 HB_FUNC_STATIC(QDIRECTPAINTER_FLUSH)
 {
-  QDirectPainter *obj = qobject_cast<QDirectPainter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -156,7 +158,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_FLUSH)
 // QRect geometry() const
 HB_FUNC_STATIC(QDIRECTPAINTER_GEOMETRY)
 {
-  QDirectPainter *obj = qobject_cast<QDirectPainter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -175,7 +177,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_GEOMETRY)
 // void lower()
 HB_FUNC_STATIC(QDIRECTPAINTER_LOWER)
 {
-  QDirectPainter *obj = qobject_cast<QDirectPainter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -195,7 +197,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_LOWER)
 // void raise()
 HB_FUNC_STATIC(QDIRECTPAINTER_RAISE)
 {
-  QDirectPainter *obj = qobject_cast<QDirectPainter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -215,7 +217,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_RAISE)
 // virtual void regionChanged(const QRegion &newRegion)
 HB_FUNC_STATIC(QDIRECTPAINTER_REGIONCHANGED)
 {
-  QDirectPainter *obj = qobject_cast<QDirectPainter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -235,7 +237,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_REGIONCHANGED)
 // QRegion requestedRegion() const
 HB_FUNC_STATIC(QDIRECTPAINTER_REQUESTEDREGION)
 {
-  QDirectPainter *obj = qobject_cast<QDirectPainter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -254,7 +256,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_REQUESTEDREGION)
 // void setGeometry(const QRect &rectangle)
 HB_FUNC_STATIC(QDIRECTPAINTER_SETGEOMETRY)
 {
-  QDirectPainter *obj = qobject_cast<QDirectPainter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -274,7 +276,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_SETGEOMETRY)
 // void setRegion(const QRegion &region)
 HB_FUNC_STATIC(QDIRECTPAINTER_SETREGION)
 {
-  QDirectPainter *obj = qobject_cast<QDirectPainter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -294,7 +296,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_SETREGION)
 // void startPainting(bool lockDisplay = true)
 HB_FUNC_STATIC(QDIRECTPAINTER_STARTPAINTING)
 {
-  QDirectPainter *obj = qobject_cast<QDirectPainter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

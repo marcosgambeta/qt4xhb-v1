@@ -60,6 +60,8 @@ RETURN
 
 #include <QtGui/QPixmap>
 
+#define GET_PTR_FROM_SELF(p) QCursor *p = static_cast<QCursor *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QCURSOR_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -89,7 +91,7 @@ HB_FUNC_STATIC(QCURSOR_NEW)
 
 HB_FUNC_STATIC(QCURSOR_DELETE)
 {
-  QCursor *obj = static_cast<QCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -105,7 +107,7 @@ HB_FUNC_STATIC(QCURSOR_DELETE)
 // const QBitmap *bitmap() const
 HB_FUNC_STATIC(QCURSOR_BITMAP)
 {
-  QCursor *obj = static_cast<QCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -124,7 +126,7 @@ HB_FUNC_STATIC(QCURSOR_BITMAP)
 // QPoint hotSpot() const
 HB_FUNC_STATIC(QCURSOR_HOTSPOT)
 {
-  QCursor *obj = static_cast<QCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -143,7 +145,7 @@ HB_FUNC_STATIC(QCURSOR_HOTSPOT)
 // const QBitmap *mask() const
 HB_FUNC_STATIC(QCURSOR_MASK)
 {
-  QCursor *obj = static_cast<QCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -162,7 +164,7 @@ HB_FUNC_STATIC(QCURSOR_MASK)
 // QPixmap pixmap() const
 HB_FUNC_STATIC(QCURSOR_PIXMAP)
 {
-  QCursor *obj = static_cast<QCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -181,7 +183,7 @@ HB_FUNC_STATIC(QCURSOR_PIXMAP)
 // void setShape(Qt::CursorShape shape)
 HB_FUNC_STATIC(QCURSOR_SETSHAPE)
 {
-  QCursor *obj = static_cast<QCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -201,7 +203,7 @@ HB_FUNC_STATIC(QCURSOR_SETSHAPE)
 // Qt::CursorShape shape() const
 HB_FUNC_STATIC(QCURSOR_SHAPE)
 {
-  QCursor *obj = static_cast<QCursor *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

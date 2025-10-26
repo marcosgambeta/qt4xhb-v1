@@ -49,9 +49,12 @@ RETURN
 #include <QtGui/QBrush>
 #include <QtGui/QPen>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QAbstractGraphicsShapeItem *p = static_cast<QAbstractGraphicsShapeItem *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_DELETE)
 {
-  QAbstractGraphicsShapeItem *obj = static_cast<QAbstractGraphicsShapeItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -67,7 +70,7 @@ HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_DELETE)
 // QBrush brush() const
 HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_BRUSH)
 {
-  QAbstractGraphicsShapeItem *obj = static_cast<QAbstractGraphicsShapeItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -86,7 +89,7 @@ HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_BRUSH)
 // QPen pen() const
 HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_PEN)
 {
-  QAbstractGraphicsShapeItem *obj = static_cast<QAbstractGraphicsShapeItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -105,7 +108,7 @@ HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_PEN)
 // void setBrush(const QBrush &brush)
 HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_SETBRUSH)
 {
-  QAbstractGraphicsShapeItem *obj = static_cast<QAbstractGraphicsShapeItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -125,7 +128,7 @@ HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_SETBRUSH)
 // void setPen(const QPen &pen)
 HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_SETPEN)
 {
-  QAbstractGraphicsShapeItem *obj = static_cast<QAbstractGraphicsShapeItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -145,7 +148,7 @@ HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_SETPEN)
 // virtual bool isObscuredBy(const QGraphicsItem *item) const
 HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_ISOBSCUREDBY)
 {
-  QAbstractGraphicsShapeItem *obj = static_cast<QAbstractGraphicsShapeItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -163,7 +166,7 @@ HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_ISOBSCUREDBY)
 // virtual QPainterPath opaqueArea() const
 HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_OPAQUEAREA)
 {
-  QAbstractGraphicsShapeItem *obj = static_cast<QAbstractGraphicsShapeItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

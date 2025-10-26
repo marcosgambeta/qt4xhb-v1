@@ -53,6 +53,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QFontDialog *p = qobject_cast<QFontDialog *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QFONTDIALOG_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
@@ -71,7 +73,7 @@ HB_FUNC_STATIC(QFONTDIALOG_NEW)
 // QFont currentFont() const
 HB_FUNC_STATIC(QFONTDIALOG_CURRENTFONT)
 {
-  QFontDialog *obj = qobject_cast<QFontDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -90,7 +92,7 @@ HB_FUNC_STATIC(QFONTDIALOG_CURRENTFONT)
 // void open(QObject *receiver, const char *member)
 HB_FUNC_STATIC(QFONTDIALOG_OPEN)
 {
-  QFontDialog *obj = qobject_cast<QFontDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -110,7 +112,7 @@ HB_FUNC_STATIC(QFONTDIALOG_OPEN)
 // QFontDialog::FontDialogOptions options() const
 HB_FUNC_STATIC(QFONTDIALOG_OPTIONS)
 {
-  QFontDialog *obj = qobject_cast<QFontDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -128,7 +130,7 @@ HB_FUNC_STATIC(QFONTDIALOG_OPTIONS)
 // QFont selectedFont() const
 HB_FUNC_STATIC(QFONTDIALOG_SELECTEDFONT)
 {
-  QFontDialog *obj = qobject_cast<QFontDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -147,7 +149,7 @@ HB_FUNC_STATIC(QFONTDIALOG_SELECTEDFONT)
 // void setCurrentFont(const QFont &font)
 HB_FUNC_STATIC(QFONTDIALOG_SETCURRENTFONT)
 {
-  QFontDialog *obj = qobject_cast<QFontDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -167,7 +169,7 @@ HB_FUNC_STATIC(QFONTDIALOG_SETCURRENTFONT)
 // void setOption(QFontDialog::FontDialogOption option, bool on = true)
 HB_FUNC_STATIC(QFONTDIALOG_SETOPTION)
 {
-  QFontDialog *obj = qobject_cast<QFontDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -187,7 +189,7 @@ HB_FUNC_STATIC(QFONTDIALOG_SETOPTION)
 // void setOptions(QFontDialog::FontDialogOptions options)
 HB_FUNC_STATIC(QFONTDIALOG_SETOPTIONS)
 {
-  QFontDialog *obj = qobject_cast<QFontDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -207,7 +209,7 @@ HB_FUNC_STATIC(QFONTDIALOG_SETOPTIONS)
 // bool testOption(QFontDialog::FontDialogOption option) const
 HB_FUNC_STATIC(QFONTDIALOG_TESTOPTION)
 {
-  QFontDialog *obj = qobject_cast<QFontDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -225,7 +227,7 @@ HB_FUNC_STATIC(QFONTDIALOG_TESTOPTION)
 // virtual void setVisible(bool visible)
 HB_FUNC_STATIC(QFONTDIALOG_SETVISIBLE)
 {
-  QFontDialog *obj = qobject_cast<QFontDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

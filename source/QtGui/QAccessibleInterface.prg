@@ -55,9 +55,12 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QAccessibleInterface *p = static_cast<QAccessibleInterface *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_DELETE)
 {
-  QAccessibleInterface *obj = static_cast<QAccessibleInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -73,7 +76,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_DELETE)
 // virtual QString actionText(int action, QAccessible::Text t, int child) const = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_ACTIONTEXT)
 {
-  QAccessibleInterface *obj = static_cast<QAccessibleInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -91,7 +94,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_ACTIONTEXT)
 // virtual int childAt(int x, int y) const = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_CHILDAT)
 {
-  QAccessibleInterface *obj = static_cast<QAccessibleInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -109,7 +112,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_CHILDAT)
 // virtual int childCount() const = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_CHILDCOUNT)
 {
-  QAccessibleInterface *obj = static_cast<QAccessibleInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -127,7 +130,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_CHILDCOUNT)
 // virtual bool doAction(int action, int child, const QVariantList &params = QVariantList()) = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_DOACTION)
 {
-  QAccessibleInterface *obj = static_cast<QAccessibleInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -154,7 +157,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_DOACTION)
 // virtual int indexOfChild(const QAccessibleInterface *child) const = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_INDEXOFCHILD)
 {
-  QAccessibleInterface *obj = static_cast<QAccessibleInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -172,7 +175,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_INDEXOFCHILD)
 // QVariant invokeMethod(QAccessible::Method method, int child = 0, const QVariantList &params = QVariantList())
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_INVOKEMETHOD)
 {
-  QAccessibleInterface *obj = static_cast<QAccessibleInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -200,7 +203,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_INVOKEMETHOD)
 // virtual bool isValid() const = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_ISVALID)
 {
-  QAccessibleInterface *obj = static_cast<QAccessibleInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -218,7 +221,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_ISVALID)
 // virtual QObject *object() const = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_OBJECT)
 {
-  QAccessibleInterface *obj = static_cast<QAccessibleInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -237,7 +240,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_OBJECT)
 // virtual QRect rect(int child) const = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_RECT)
 {
-  QAccessibleInterface *obj = static_cast<QAccessibleInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -256,7 +259,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_RECT)
 // virtual QAccessible::Relation relationTo(int child, const QAccessibleInterface *other, int otherChild) const = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_RELATIONTO)
 {
-  QAccessibleInterface *obj = static_cast<QAccessibleInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -274,7 +277,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_RELATIONTO)
 // virtual QAccessible::Role role(int child) const = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_ROLE)
 {
-  QAccessibleInterface *obj = static_cast<QAccessibleInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -292,7 +295,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_ROLE)
 // virtual void setText(QAccessible::Text t, int child, const QString &text) = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_SETTEXT)
 {
-  QAccessibleInterface *obj = static_cast<QAccessibleInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -312,7 +315,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_SETTEXT)
 // virtual QAccessible::State state(int child) const = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_STATE)
 {
-  QAccessibleInterface *obj = static_cast<QAccessibleInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -330,7 +333,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_STATE)
 // virtual QString text(QAccessible::Text t, int child) const = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_TEXT)
 {
-  QAccessibleInterface *obj = static_cast<QAccessibleInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -348,7 +351,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_TEXT)
 // virtual int userActionCount(int child) const = 0
 HB_FUNC_STATIC(QACCESSIBLEINTERFACE_USERACTIONCOUNT)
 {
-  QAccessibleInterface *obj = static_cast<QAccessibleInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

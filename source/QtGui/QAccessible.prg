@@ -50,6 +50,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QAccessible *p = static_cast<QAccessible *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // static bool isActive()
 HB_FUNC_STATIC(QACCESSIBLE_ISACTIVE)
 {

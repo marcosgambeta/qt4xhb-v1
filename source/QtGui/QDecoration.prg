@@ -56,9 +56,11 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QDecoration *p = static_cast<QDecoration *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QDECORATION_DELETE)
 {
-  QDecoration *obj = static_cast<QDecoration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -74,7 +76,7 @@ HB_FUNC_STATIC(QDECORATION_DELETE)
 // virtual void buildSysMenu(QWidget *widget, QMenu *menu)
 HB_FUNC_STATIC(QDECORATION_BUILDSYSMENU)
 {
-  QDecoration *obj = static_cast<QDecoration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -94,7 +96,7 @@ HB_FUNC_STATIC(QDECORATION_BUILDSYSMENU)
 // void menuTriggered(QWidget *widget, QAction *action)
 HB_FUNC_STATIC(QDECORATION_MENUTRIGGERED)
 {
-  QDecoration *obj = static_cast<QDecoration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -115,7 +117,7 @@ HB_FUNC_STATIC(QDECORATION_MENUTRIGGERED)
 // QDecoration::DecorationState state = QDecoration::Normal) = 0
 HB_FUNC_STATIC(QDECORATION_PAINT)
 {
-  QDecoration *obj = static_cast<QDecoration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -137,7 +139,7 @@ HB_FUNC_STATIC(QDECORATION_REGION)
   if (ISBETWEEN(2, 3) && ISQWIDGET(1) && ISQRECT(2) && ISNUMORNIL(3)) {
     // virtual QRegion region(const QWidget *widget, const QRect &rectangle, int decorationRegion = QDecoration::All) =
     // 0
-    QDecoration *obj = static_cast<QDecoration *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QRegion *ptr = new QRegion(obj->region(PQWIDGET(1), *PQRECT(2), OPINT(3, QDecoration::All)));
@@ -145,7 +147,7 @@ HB_FUNC_STATIC(QDECORATION_REGION)
     }
   } else if (ISBETWEEN(1, 2) && ISQWIDGET(1) && ISNUMORNIL(2)) {
     // QRegion region(const QWidget *widget, int decorationRegion = QDecoration::All)
-    QDecoration *obj = static_cast<QDecoration *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QRegion *ptr = new QRegion(obj->region(PQWIDGET(1), OPINT(2, QDecoration::All)));
@@ -159,7 +161,7 @@ HB_FUNC_STATIC(QDECORATION_REGION)
 // virtual int regionAt(const QWidget *widget, const QPoint &point)
 HB_FUNC_STATIC(QDECORATION_REGIONAT)
 {
-  QDecoration *obj = static_cast<QDecoration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -177,7 +179,7 @@ HB_FUNC_STATIC(QDECORATION_REGIONAT)
 // virtual void regionClicked(QWidget *widget, int region)
 HB_FUNC_STATIC(QDECORATION_REGIONCLICKED)
 {
-  QDecoration *obj = static_cast<QDecoration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -197,7 +199,7 @@ HB_FUNC_STATIC(QDECORATION_REGIONCLICKED)
 // virtual void regionDoubleClicked(QWidget *widget, int region)
 HB_FUNC_STATIC(QDECORATION_REGIONDOUBLECLICKED)
 {
-  QDecoration *obj = static_cast<QDecoration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

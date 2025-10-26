@@ -41,6 +41,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QFocusEvent *p = static_cast<QFocusEvent *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QFocusEvent(QEvent::Type type, Qt::FocusReason reason = Qt::OtherFocusReason)
 HB_FUNC_STATIC(QFOCUSEVENT_NEW)
 {
@@ -55,7 +57,7 @@ HB_FUNC_STATIC(QFOCUSEVENT_NEW)
 
 HB_FUNC_STATIC(QFOCUSEVENT_DELETE)
 {
-  QFocusEvent *obj = static_cast<QFocusEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -71,7 +73,7 @@ HB_FUNC_STATIC(QFOCUSEVENT_DELETE)
 // bool gotFocus() const
 HB_FUNC_STATIC(QFOCUSEVENT_GOTFOCUS)
 {
-  QFocusEvent *obj = static_cast<QFocusEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -89,7 +91,7 @@ HB_FUNC_STATIC(QFOCUSEVENT_GOTFOCUS)
 // bool lostFocus() const
 HB_FUNC_STATIC(QFOCUSEVENT_LOSTFOCUS)
 {
-  QFocusEvent *obj = static_cast<QFocusEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -107,7 +109,7 @@ HB_FUNC_STATIC(QFOCUSEVENT_LOSTFOCUS)
 // Qt::FocusReason reason() const
 HB_FUNC_STATIC(QFOCUSEVENT_REASON)
 {
-  QFocusEvent *obj = static_cast<QFocusEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -48,9 +48,11 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QAccessibleBridge *p = static_cast<QAccessibleBridge *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QACCESSIBLEBRIDGE_DELETE)
 {
-  QAccessibleBridge *obj = static_cast<QAccessibleBridge *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -66,7 +68,7 @@ HB_FUNC_STATIC(QACCESSIBLEBRIDGE_DELETE)
 // virtual void notifyAccessibilityUpdate(int reason, QAccessibleInterface *interface, int child) = 0
 HB_FUNC_STATIC(QACCESSIBLEBRIDGE_NOTIFYACCESSIBILITYUPDATE)
 {
-  QAccessibleBridge *obj = static_cast<QAccessibleBridge *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -86,7 +88,7 @@ HB_FUNC_STATIC(QACCESSIBLEBRIDGE_NOTIFYACCESSIBILITYUPDATE)
 // virtual void setRootObject(QAccessibleInterface *object) = 0
 HB_FUNC_STATIC(QACCESSIBLEBRIDGE_SETROOTOBJECT)
 {
-  QAccessibleBridge *obj = static_cast<QAccessibleBridge *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -70,9 +70,12 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QAbstractSlider *p = qobject_cast<QAbstractSlider *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QABSTRACTSLIDER_DELETE)
 {
-  QAbstractSlider *obj = qobject_cast<QAbstractSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -90,7 +93,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_DELETE)
 // bool hasTracking() const
 HB_FUNC_STATIC(QABSTRACTSLIDER_HASTRACKING)
 {
-  QAbstractSlider *obj = qobject_cast<QAbstractSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -108,7 +111,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_HASTRACKING)
 // bool invertedAppearance() const
 HB_FUNC_STATIC(QABSTRACTSLIDER_INVERTEDAPPEARANCE)
 {
-  QAbstractSlider *obj = qobject_cast<QAbstractSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -126,7 +129,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_INVERTEDAPPEARANCE)
 // bool invertedControls() const
 HB_FUNC_STATIC(QABSTRACTSLIDER_INVERTEDCONTROLS)
 {
-  QAbstractSlider *obj = qobject_cast<QAbstractSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -144,7 +147,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_INVERTEDCONTROLS)
 // bool isSliderDown() const
 HB_FUNC_STATIC(QABSTRACTSLIDER_ISSLIDERDOWN)
 {
-  QAbstractSlider *obj = qobject_cast<QAbstractSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -162,7 +165,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_ISSLIDERDOWN)
 // int maximum() const
 HB_FUNC_STATIC(QABSTRACTSLIDER_MAXIMUM)
 {
-  QAbstractSlider *obj = qobject_cast<QAbstractSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -180,7 +183,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_MAXIMUM)
 // int minimum() const
 HB_FUNC_STATIC(QABSTRACTSLIDER_MINIMUM)
 {
-  QAbstractSlider *obj = qobject_cast<QAbstractSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -198,7 +201,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_MINIMUM)
 // Qt::Orientation orientation() const
 HB_FUNC_STATIC(QABSTRACTSLIDER_ORIENTATION)
 {
-  QAbstractSlider *obj = qobject_cast<QAbstractSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -216,7 +219,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_ORIENTATION)
 // int pageStep() const
 HB_FUNC_STATIC(QABSTRACTSLIDER_PAGESTEP)
 {
-  QAbstractSlider *obj = qobject_cast<QAbstractSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -234,7 +237,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_PAGESTEP)
 // void setInvertedAppearance(bool)
 HB_FUNC_STATIC(QABSTRACTSLIDER_SETINVERTEDAPPEARANCE)
 {
-  QAbstractSlider *obj = qobject_cast<QAbstractSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -254,7 +257,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETINVERTEDAPPEARANCE)
 // void setInvertedControls(bool)
 HB_FUNC_STATIC(QABSTRACTSLIDER_SETINVERTEDCONTROLS)
 {
-  QAbstractSlider *obj = qobject_cast<QAbstractSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -274,7 +277,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETINVERTEDCONTROLS)
 // void setMaximum(int)
 HB_FUNC_STATIC(QABSTRACTSLIDER_SETMAXIMUM)
 {
-  QAbstractSlider *obj = qobject_cast<QAbstractSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -294,7 +297,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETMAXIMUM)
 // void setMinimum(int)
 HB_FUNC_STATIC(QABSTRACTSLIDER_SETMINIMUM)
 {
-  QAbstractSlider *obj = qobject_cast<QAbstractSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -314,7 +317,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETMINIMUM)
 // void setPageStep(int)
 HB_FUNC_STATIC(QABSTRACTSLIDER_SETPAGESTEP)
 {
-  QAbstractSlider *obj = qobject_cast<QAbstractSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -334,7 +337,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETPAGESTEP)
 // void setRange(int min, int max)
 HB_FUNC_STATIC(QABSTRACTSLIDER_SETRANGE)
 {
-  QAbstractSlider *obj = qobject_cast<QAbstractSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -354,7 +357,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETRANGE)
 // void setSingleStep(int)
 HB_FUNC_STATIC(QABSTRACTSLIDER_SETSINGLESTEP)
 {
-  QAbstractSlider *obj = qobject_cast<QAbstractSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -374,7 +377,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETSINGLESTEP)
 // void setSliderDown(bool)
 HB_FUNC_STATIC(QABSTRACTSLIDER_SETSLIDERDOWN)
 {
-  QAbstractSlider *obj = qobject_cast<QAbstractSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -394,7 +397,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETSLIDERDOWN)
 // void setSliderPosition(int)
 HB_FUNC_STATIC(QABSTRACTSLIDER_SETSLIDERPOSITION)
 {
-  QAbstractSlider *obj = qobject_cast<QAbstractSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -414,7 +417,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETSLIDERPOSITION)
 // void setTracking(bool enable)
 HB_FUNC_STATIC(QABSTRACTSLIDER_SETTRACKING)
 {
-  QAbstractSlider *obj = qobject_cast<QAbstractSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -434,7 +437,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETTRACKING)
 // int singleStep() const
 HB_FUNC_STATIC(QABSTRACTSLIDER_SINGLESTEP)
 {
-  QAbstractSlider *obj = qobject_cast<QAbstractSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -452,7 +455,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SINGLESTEP)
 // int sliderPosition() const
 HB_FUNC_STATIC(QABSTRACTSLIDER_SLIDERPOSITION)
 {
-  QAbstractSlider *obj = qobject_cast<QAbstractSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -470,7 +473,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SLIDERPOSITION)
 // void triggerAction(QAbstractSlider::SliderAction action)
 HB_FUNC_STATIC(QABSTRACTSLIDER_TRIGGERACTION)
 {
-  QAbstractSlider *obj = qobject_cast<QAbstractSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -490,7 +493,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_TRIGGERACTION)
 // int value() const
 HB_FUNC_STATIC(QABSTRACTSLIDER_VALUE)
 {
-  QAbstractSlider *obj = qobject_cast<QAbstractSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -508,7 +511,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_VALUE)
 // void setOrientation(Qt::Orientation)
 HB_FUNC_STATIC(QABSTRACTSLIDER_SETORIENTATION)
 {
-  QAbstractSlider *obj = qobject_cast<QAbstractSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -528,7 +531,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETORIENTATION)
 // void setValue(int)
 HB_FUNC_STATIC(QABSTRACTSLIDER_SETVALUE)
 {
-  QAbstractSlider *obj = qobject_cast<QAbstractSlider *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

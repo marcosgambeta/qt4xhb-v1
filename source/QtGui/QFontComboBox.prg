@@ -51,6 +51,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QFontComboBox *p = qobject_cast<QFontComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QFontComboBox(QWidget *parent = 0)
 HB_FUNC_STATIC(QFONTCOMBOBOX_NEW)
 {
@@ -64,7 +66,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_NEW)
 
 HB_FUNC_STATIC(QFONTCOMBOBOX_DELETE)
 {
-  QFontComboBox *obj = qobject_cast<QFontComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -82,7 +84,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_DELETE)
 // QFont currentFont() const
 HB_FUNC_STATIC(QFONTCOMBOBOX_CURRENTFONT)
 {
-  QFontComboBox *obj = qobject_cast<QFontComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -101,7 +103,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_CURRENTFONT)
 // QFontComboBox::FontFilters fontFilters() const
 HB_FUNC_STATIC(QFONTCOMBOBOX_FONTFILTERS)
 {
-  QFontComboBox *obj = qobject_cast<QFontComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -119,7 +121,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_FONTFILTERS)
 // void setFontFilters(QFontComboBox::FontFilters filters)
 HB_FUNC_STATIC(QFONTCOMBOBOX_SETFONTFILTERS)
 {
-  QFontComboBox *obj = qobject_cast<QFontComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -139,7 +141,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_SETFONTFILTERS)
 // void setWritingSystem(QFontDatabase::WritingSystem script)
 HB_FUNC_STATIC(QFONTCOMBOBOX_SETWRITINGSYSTEM)
 {
-  QFontComboBox *obj = qobject_cast<QFontComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -159,7 +161,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_SETWRITINGSYSTEM)
 // QFontDatabase::WritingSystem writingSystem() const
 HB_FUNC_STATIC(QFONTCOMBOBOX_WRITINGSYSTEM)
 {
-  QFontComboBox *obj = qobject_cast<QFontComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -177,7 +179,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_WRITINGSYSTEM)
 // virtual QSize sizeHint() const
 HB_FUNC_STATIC(QFONTCOMBOBOX_SIZEHINT)
 {
-  QFontComboBox *obj = qobject_cast<QFontComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -196,7 +198,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_SIZEHINT)
 // void setCurrentFont(const QFont &font)
 HB_FUNC_STATIC(QFONTCOMBOBOX_SETCURRENTFONT)
 {
-  QFontComboBox *obj = qobject_cast<QFontComboBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
