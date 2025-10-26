@@ -56,6 +56,8 @@ RETURN
 
 #include <QtCore/QVariant>
 
+#define GET_PTR_FROM_SELF(p) QXmlItem *p = static_cast<QXmlItem *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QXMLITEM_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -81,7 +83,7 @@ HB_FUNC_STATIC(QXMLITEM_NEW)
 
 HB_FUNC_STATIC(QXMLITEM_DELETE)
 {
-  QXmlItem *obj = static_cast<QXmlItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -97,7 +99,7 @@ HB_FUNC_STATIC(QXMLITEM_DELETE)
 // bool isAtomicValue() const
 HB_FUNC_STATIC(QXMLITEM_ISATOMICVALUE)
 {
-  QXmlItem *obj = static_cast<QXmlItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -115,7 +117,7 @@ HB_FUNC_STATIC(QXMLITEM_ISATOMICVALUE)
 // bool isNode() const
 HB_FUNC_STATIC(QXMLITEM_ISNODE)
 {
-  QXmlItem *obj = static_cast<QXmlItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -133,7 +135,7 @@ HB_FUNC_STATIC(QXMLITEM_ISNODE)
 // bool isNull() const
 HB_FUNC_STATIC(QXMLITEM_ISNULL)
 {
-  QXmlItem *obj = static_cast<QXmlItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -151,7 +153,7 @@ HB_FUNC_STATIC(QXMLITEM_ISNULL)
 // QVariant toAtomicValue() const
 HB_FUNC_STATIC(QXMLITEM_TOATOMICVALUE)
 {
-  QXmlItem *obj = static_cast<QXmlItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -170,7 +172,7 @@ HB_FUNC_STATIC(QXMLITEM_TOATOMICVALUE)
 // QXmlNodeModelIndex toNodeModelIndex() const
 HB_FUNC_STATIC(QXMLITEM_TONODEMODELINDEX)
 {
-  QXmlItem *obj = static_cast<QXmlItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -66,6 +66,8 @@ RETURN
 #include <QtNetwork/QNetworkAccessManager>
 #include <QtXmlPatterns/QAbstractUriResolver>
 
+#define GET_PTR_FROM_SELF(p) QXmlSchema *p = static_cast<QXmlSchema *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QXMLSCHEMA_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -83,7 +85,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_NEW)
 
 HB_FUNC_STATIC(QXMLSCHEMA_DELETE)
 {
-  QXmlSchema *obj = static_cast<QXmlSchema *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -99,7 +101,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_DELETE)
 // QUrl documentUri() const
 HB_FUNC_STATIC(QXMLSCHEMA_DOCUMENTURI)
 {
-  QXmlSchema *obj = static_cast<QXmlSchema *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -118,7 +120,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_DOCUMENTURI)
 // bool isValid() const
 HB_FUNC_STATIC(QXMLSCHEMA_ISVALID)
 {
-  QXmlSchema *obj = static_cast<QXmlSchema *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -137,21 +139,21 @@ HB_FUNC_STATIC(QXMLSCHEMA_LOAD)
 {
   if (ISNUMPAR(1) && ISQURL(1)) {
     // bool load(const QUrl &source)
-    QXmlSchema *obj = static_cast<QXmlSchema *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->load(*PQURL(1)));
     }
   } else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (ISQURL(2) || HB_ISNIL(2))) {
     // bool load(QIODevice *source, const QUrl &documentUri = QUrl())
-    QXmlSchema *obj = static_cast<QXmlSchema *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->load(PQIODEVICE(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl *>(Qt4xHb::itemGetPtr(2))));
     }
   } else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (ISQURL(2) || HB_ISNIL(2))) {
     // bool load(const QByteArray &data, const QUrl &documentUri = QUrl())
-    QXmlSchema *obj = static_cast<QXmlSchema *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->load(*PQBYTEARRAY(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl *>(Qt4xHb::itemGetPtr(2))));
@@ -164,7 +166,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_LOAD)
 // QAbstractMessageHandler *messageHandler() const
 HB_FUNC_STATIC(QXMLSCHEMA_MESSAGEHANDLER)
 {
-  QXmlSchema *obj = static_cast<QXmlSchema *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -183,7 +185,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_MESSAGEHANDLER)
 // QXmlNamePool namePool() const
 HB_FUNC_STATIC(QXMLSCHEMA_NAMEPOOL)
 {
-  QXmlSchema *obj = static_cast<QXmlSchema *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -202,7 +204,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_NAMEPOOL)
 // QNetworkAccessManager *networkAccessManager() const
 HB_FUNC_STATIC(QXMLSCHEMA_NETWORKACCESSMANAGER)
 {
-  QXmlSchema *obj = static_cast<QXmlSchema *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -221,7 +223,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_NETWORKACCESSMANAGER)
 // void setMessageHandler(QAbstractMessageHandler *handler)
 HB_FUNC_STATIC(QXMLSCHEMA_SETMESSAGEHANDLER)
 {
-  QXmlSchema *obj = static_cast<QXmlSchema *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -241,7 +243,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_SETMESSAGEHANDLER)
 // void setNetworkAccessManager(QNetworkAccessManager *manager)
 HB_FUNC_STATIC(QXMLSCHEMA_SETNETWORKACCESSMANAGER)
 {
-  QXmlSchema *obj = static_cast<QXmlSchema *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -261,7 +263,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_SETNETWORKACCESSMANAGER)
 // void setUriResolver(const QAbstractUriResolver *resolver)
 HB_FUNC_STATIC(QXMLSCHEMA_SETURIRESOLVER)
 {
-  QXmlSchema *obj = static_cast<QXmlSchema *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -281,7 +283,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_SETURIRESOLVER)
 // const QAbstractUriResolver *uriResolver() const
 HB_FUNC_STATIC(QXMLSCHEMA_URIRESOLVER)
 {
-  QXmlSchema *obj = static_cast<QXmlSchema *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

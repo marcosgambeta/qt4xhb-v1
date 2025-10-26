@@ -53,6 +53,8 @@ RETURN
 
 #include <QtXmlPatterns/QXmlItem>
 
+#define GET_PTR_FROM_SELF(p) QXmlResultItems *p = static_cast<QXmlResultItems *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QXmlResultItems()
 HB_FUNC_STATIC(QXMLRESULTITEMS_NEW)
 {
@@ -66,7 +68,7 @@ HB_FUNC_STATIC(QXMLRESULTITEMS_NEW)
 
 HB_FUNC_STATIC(QXMLRESULTITEMS_DELETE)
 {
-  QXmlResultItems *obj = static_cast<QXmlResultItems *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -82,7 +84,7 @@ HB_FUNC_STATIC(QXMLRESULTITEMS_DELETE)
 // QXmlItem current() const
 HB_FUNC_STATIC(QXMLRESULTITEMS_CURRENT)
 {
-  QXmlResultItems *obj = static_cast<QXmlResultItems *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -101,7 +103,7 @@ HB_FUNC_STATIC(QXMLRESULTITEMS_CURRENT)
 // bool hasError() const
 HB_FUNC_STATIC(QXMLRESULTITEMS_HASERROR)
 {
-  QXmlResultItems *obj = static_cast<QXmlResultItems *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -119,7 +121,7 @@ HB_FUNC_STATIC(QXMLRESULTITEMS_HASERROR)
 // QXmlItem next()
 HB_FUNC_STATIC(QXMLRESULTITEMS_NEXT)
 {
-  QXmlResultItems *obj = static_cast<QXmlResultItems *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

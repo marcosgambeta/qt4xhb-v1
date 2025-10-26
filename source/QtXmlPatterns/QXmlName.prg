@@ -55,6 +55,8 @@ RETURN
 
 #include <QtXmlPatterns/QXmlNamePool>
 
+#define GET_PTR_FROM_SELF(p) QXmlName *p = static_cast<QXmlName *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QXMLNAME_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -74,7 +76,7 @@ HB_FUNC_STATIC(QXMLNAME_NEW)
 // bool isNull() const
 HB_FUNC_STATIC(QXMLNAME_ISNULL)
 {
-  QXmlName *obj = static_cast<QXmlName *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -92,7 +94,7 @@ HB_FUNC_STATIC(QXMLNAME_ISNULL)
 // QString localName(const QXmlNamePool &namePool) const
 HB_FUNC_STATIC(QXMLNAME_LOCALNAME)
 {
-  QXmlName *obj = static_cast<QXmlName *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -110,7 +112,7 @@ HB_FUNC_STATIC(QXMLNAME_LOCALNAME)
 // QString namespaceUri(const QXmlNamePool &namePool) const
 HB_FUNC_STATIC(QXMLNAME_NAMESPACEURI)
 {
-  QXmlName *obj = static_cast<QXmlName *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -128,7 +130,7 @@ HB_FUNC_STATIC(QXMLNAME_NAMESPACEURI)
 // QString prefix(const QXmlNamePool &namePool) const
 HB_FUNC_STATIC(QXMLNAME_PREFIX)
 {
-  QXmlName *obj = static_cast<QXmlName *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -146,7 +148,7 @@ HB_FUNC_STATIC(QXMLNAME_PREFIX)
 // QString toClarkName(const QXmlNamePool &namePool) const
 HB_FUNC_STATIC(QXMLNAME_TOCLARKNAME)
 {
-  QXmlName *obj = static_cast<QXmlName *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

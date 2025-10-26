@@ -43,9 +43,12 @@ RETURN
 
 #include <QtCore/QUrl>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QAbstractUriResolver *p = qobject_cast<QAbstractUriResolver *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QABSTRACTURIRESOLVER_DELETE)
 {
-  QAbstractUriResolver *obj = qobject_cast<QAbstractUriResolver *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -63,7 +66,7 @@ HB_FUNC_STATIC(QABSTRACTURIRESOLVER_DELETE)
 // virtual QUrl resolve(const QUrl &relative, const QUrl &baseURI) const = 0
 HB_FUNC_STATIC(QABSTRACTURIRESOLVER_RESOLVE)
 {
-  QAbstractUriResolver *obj = qobject_cast<QAbstractUriResolver *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -50,6 +50,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QXmlFormatter *p = static_cast<QXmlFormatter *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QXmlFormatter(const QXmlQuery &query, QIODevice *outputDevice)
 HB_FUNC_STATIC(QXMLFORMATTER_NEW)
 {
@@ -64,7 +66,7 @@ HB_FUNC_STATIC(QXMLFORMATTER_NEW)
 // int indentationDepth() const
 HB_FUNC_STATIC(QXMLFORMATTER_INDENTATIONDEPTH)
 {
-  QXmlFormatter *obj = static_cast<QXmlFormatter *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -82,7 +84,7 @@ HB_FUNC_STATIC(QXMLFORMATTER_INDENTATIONDEPTH)
 // void setIndentationDepth(int depth)
 HB_FUNC_STATIC(QXMLFORMATTER_SETINDENTATIONDEPTH)
 {
-  QXmlFormatter *obj = static_cast<QXmlFormatter *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -102,7 +104,7 @@ HB_FUNC_STATIC(QXMLFORMATTER_SETINDENTATIONDEPTH)
 // virtual void atomicValue(const QVariant &value)
 HB_FUNC_STATIC(QXMLFORMATTER_ATOMICVALUE)
 {
-  QXmlFormatter *obj = static_cast<QXmlFormatter *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -122,7 +124,7 @@ HB_FUNC_STATIC(QXMLFORMATTER_ATOMICVALUE)
 // virtual void attribute(const QXmlName &name, const QStringRef &value)
 HB_FUNC_STATIC(QXMLFORMATTER_ATTRIBUTE)
 {
-  QXmlFormatter *obj = static_cast<QXmlFormatter *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -142,7 +144,7 @@ HB_FUNC_STATIC(QXMLFORMATTER_ATTRIBUTE)
 // virtual void characters(const QStringRef &value)
 HB_FUNC_STATIC(QXMLFORMATTER_CHARACTERS)
 {
-  QXmlFormatter *obj = static_cast<QXmlFormatter *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -162,7 +164,7 @@ HB_FUNC_STATIC(QXMLFORMATTER_CHARACTERS)
 // virtual void comment(const QString &value)
 HB_FUNC_STATIC(QXMLFORMATTER_COMMENT)
 {
-  QXmlFormatter *obj = static_cast<QXmlFormatter *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -182,7 +184,7 @@ HB_FUNC_STATIC(QXMLFORMATTER_COMMENT)
 // virtual void endDocument()
 HB_FUNC_STATIC(QXMLFORMATTER_ENDDOCUMENT)
 {
-  QXmlFormatter *obj = static_cast<QXmlFormatter *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -202,7 +204,7 @@ HB_FUNC_STATIC(QXMLFORMATTER_ENDDOCUMENT)
 // virtual void endElement()
 HB_FUNC_STATIC(QXMLFORMATTER_ENDELEMENT)
 {
-  QXmlFormatter *obj = static_cast<QXmlFormatter *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -222,7 +224,7 @@ HB_FUNC_STATIC(QXMLFORMATTER_ENDELEMENT)
 // virtual void endOfSequence()
 HB_FUNC_STATIC(QXMLFORMATTER_ENDOFSEQUENCE)
 {
-  QXmlFormatter *obj = static_cast<QXmlFormatter *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -242,7 +244,7 @@ HB_FUNC_STATIC(QXMLFORMATTER_ENDOFSEQUENCE)
 // virtual void processingInstruction(const QXmlName &name, const QString &value)
 HB_FUNC_STATIC(QXMLFORMATTER_PROCESSINGINSTRUCTION)
 {
-  QXmlFormatter *obj = static_cast<QXmlFormatter *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -262,7 +264,7 @@ HB_FUNC_STATIC(QXMLFORMATTER_PROCESSINGINSTRUCTION)
 // virtual void startDocument()
 HB_FUNC_STATIC(QXMLFORMATTER_STARTDOCUMENT)
 {
-  QXmlFormatter *obj = static_cast<QXmlFormatter *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -282,7 +284,7 @@ HB_FUNC_STATIC(QXMLFORMATTER_STARTDOCUMENT)
 // virtual void startElement(const QXmlName &name)
 HB_FUNC_STATIC(QXMLFORMATTER_STARTELEMENT)
 {
-  QXmlFormatter *obj = static_cast<QXmlFormatter *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -302,7 +304,7 @@ HB_FUNC_STATIC(QXMLFORMATTER_STARTELEMENT)
 // virtual void startOfSequence()
 HB_FUNC_STATIC(QXMLFORMATTER_STARTOFSEQUENCE)
 {
-  QXmlFormatter *obj = static_cast<QXmlFormatter *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

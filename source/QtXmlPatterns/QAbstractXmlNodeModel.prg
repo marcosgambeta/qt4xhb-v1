@@ -59,9 +59,12 @@ RETURN
 #include <QtCore/QVector>
 #include <QtXmlPatterns/QSourceLocation>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QAbstractXmlNodeModel *p = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_DELETE)
 {
-  QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -77,7 +80,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_DELETE)
 // virtual QUrl baseUri(const QXmlNodeModelIndex &n) const = 0
 HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_BASEURI)
 {
-  QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -97,7 +100,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_BASEURI)
 // const = 0
 HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_COMPAREORDER)
 {
-  QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -115,7 +118,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_COMPAREORDER)
 // virtual QUrl documentUri(const QXmlNodeModelIndex &n) const = 0
 HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_DOCUMENTURI)
 {
-  QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -134,7 +137,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_DOCUMENTURI)
 // virtual QXmlNodeModelIndex elementById(const QXmlName &id) const = 0
 HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_ELEMENTBYID)
 {
-  QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -153,7 +156,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_ELEMENTBYID)
 // virtual QXmlNodeModelIndex::NodeKind kind(const QXmlNodeModelIndex &ni) const = 0
 HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_KIND)
 {
-  QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -171,7 +174,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_KIND)
 // virtual QXmlName name(const QXmlNodeModelIndex &ni) const = 0
 HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_NAME)
 {
-  QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -190,7 +193,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_NAME)
 // virtual QVector<QXmlName> namespaceBindings(const QXmlNodeModelIndex &n) const = 0
 HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_NAMESPACEBINDINGS)
 {
-  QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -231,7 +234,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_NAMESPACEBINDINGS)
 // virtual QVector<QXmlNodeModelIndex> nodesByIdref(const QXmlName &idref) const = 0
 HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_NODESBYIDREF)
 {
-  QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -272,7 +275,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_NODESBYIDREF)
 // virtual QXmlNodeModelIndex root(const QXmlNodeModelIndex &n) const = 0
 HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_ROOT)
 {
-  QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -291,7 +294,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_ROOT)
 // QSourceLocation sourceLocation(const QXmlNodeModelIndex &index) const
 HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_SOURCELOCATION)
 {
-  QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -310,7 +313,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_SOURCELOCATION)
 // virtual QString stringValue(const QXmlNodeModelIndex &n) const = 0
 HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_STRINGVALUE)
 {
-  QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -328,7 +331,7 @@ HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_STRINGVALUE)
 // virtual QVariant typedValue(const QXmlNodeModelIndex &node) const = 0
 HB_FUNC_STATIC(QABSTRACTXMLNODEMODEL_TYPEDVALUE)
 {
-  QAbstractXmlNodeModel *obj = static_cast<QAbstractXmlNodeModel *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

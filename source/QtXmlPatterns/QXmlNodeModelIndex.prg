@@ -52,6 +52,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QXmlNodeModelIndex *p = static_cast<QXmlNodeModelIndex *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QXMLNODEMODELINDEX_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -70,7 +73,7 @@ HB_FUNC_STATIC(QXMLNODEMODELINDEX_NEW)
 // qint64 additionalData() const
 HB_FUNC_STATIC(QXMLNODEMODELINDEX_ADDITIONALDATA)
 {
-  QXmlNodeModelIndex *obj = static_cast<QXmlNodeModelIndex *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -88,7 +91,7 @@ HB_FUNC_STATIC(QXMLNODEMODELINDEX_ADDITIONALDATA)
 // qint64 data() const
 HB_FUNC_STATIC(QXMLNODEMODELINDEX_DATA)
 {
-  QXmlNodeModelIndex *obj = static_cast<QXmlNodeModelIndex *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -106,7 +109,7 @@ HB_FUNC_STATIC(QXMLNODEMODELINDEX_DATA)
 // void *internalPointer() const
 HB_FUNC_STATIC(QXMLNODEMODELINDEX_INTERNALPOINTER)
 {
-  QXmlNodeModelIndex *obj = static_cast<QXmlNodeModelIndex *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -124,7 +127,7 @@ HB_FUNC_STATIC(QXMLNODEMODELINDEX_INTERNALPOINTER)
 // bool isNull() const
 HB_FUNC_STATIC(QXMLNODEMODELINDEX_ISNULL)
 {
-  QXmlNodeModelIndex *obj = static_cast<QXmlNodeModelIndex *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -142,7 +145,7 @@ HB_FUNC_STATIC(QXMLNODEMODELINDEX_ISNULL)
 // const QAbstractXmlNodeModel *model() const
 HB_FUNC_STATIC(QXMLNODEMODELINDEX_MODEL)
 {
-  QXmlNodeModelIndex *obj = static_cast<QXmlNodeModelIndex *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

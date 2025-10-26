@@ -55,6 +55,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QSourceLocation *p = static_cast<QSourceLocation *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSOURCELOCATION_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -76,7 +78,7 @@ HB_FUNC_STATIC(QSOURCELOCATION_NEW)
 
 HB_FUNC_STATIC(QSOURCELOCATION_DELETE)
 {
-  QSourceLocation *obj = static_cast<QSourceLocation *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -92,7 +94,7 @@ HB_FUNC_STATIC(QSOURCELOCATION_DELETE)
 // qint64 column() const
 HB_FUNC_STATIC(QSOURCELOCATION_COLUMN)
 {
-  QSourceLocation *obj = static_cast<QSourceLocation *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -110,7 +112,7 @@ HB_FUNC_STATIC(QSOURCELOCATION_COLUMN)
 // bool isNull() const
 HB_FUNC_STATIC(QSOURCELOCATION_ISNULL)
 {
-  QSourceLocation *obj = static_cast<QSourceLocation *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -128,7 +130,7 @@ HB_FUNC_STATIC(QSOURCELOCATION_ISNULL)
 // qint64 line() const
 HB_FUNC_STATIC(QSOURCELOCATION_LINE)
 {
-  QSourceLocation *obj = static_cast<QSourceLocation *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -146,7 +148,7 @@ HB_FUNC_STATIC(QSOURCELOCATION_LINE)
 // void setColumn(qint64 newColumn)
 HB_FUNC_STATIC(QSOURCELOCATION_SETCOLUMN)
 {
-  QSourceLocation *obj = static_cast<QSourceLocation *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -166,7 +168,7 @@ HB_FUNC_STATIC(QSOURCELOCATION_SETCOLUMN)
 // void setLine(qint64 newLine)
 HB_FUNC_STATIC(QSOURCELOCATION_SETLINE)
 {
-  QSourceLocation *obj = static_cast<QSourceLocation *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -186,7 +188,7 @@ HB_FUNC_STATIC(QSOURCELOCATION_SETLINE)
 // void setUri(const QUrl &newUri)
 HB_FUNC_STATIC(QSOURCELOCATION_SETURI)
 {
-  QSourceLocation *obj = static_cast<QSourceLocation *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -206,7 +208,7 @@ HB_FUNC_STATIC(QSOURCELOCATION_SETURI)
 // QUrl uri() const
 HB_FUNC_STATIC(QSOURCELOCATION_URI)
 {
-  QSourceLocation *obj = static_cast<QSourceLocation *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
