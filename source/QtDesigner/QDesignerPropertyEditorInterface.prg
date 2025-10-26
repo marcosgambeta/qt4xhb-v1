@@ -52,10 +52,13 @@ RETURN
 
 #include <QtDesigner/QDesignerFormEditorInterface>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QDesignerPropertyEditorInterface *p =                                                                                \
+      qobject_cast<QDesignerPropertyEditorInterface *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_DELETE)
 {
-  QDesignerPropertyEditorInterface *obj =
-      qobject_cast<QDesignerPropertyEditorInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -73,8 +76,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_DELETE)
 // virtual QDesignerFormEditorInterface *core() const
 HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_CORE)
 {
-  QDesignerPropertyEditorInterface *obj =
-      qobject_cast<QDesignerPropertyEditorInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -93,8 +95,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_CORE)
 // virtual QString currentPropertyName() const = 0
 HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_CURRENTPROPERTYNAME)
 {
-  QDesignerPropertyEditorInterface *obj =
-      qobject_cast<QDesignerPropertyEditorInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -112,8 +113,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_CURRENTPROPERTYNAME)
 // virtual bool isReadOnly() const = 0
 HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_ISREADONLY)
 {
-  QDesignerPropertyEditorInterface *obj =
-      qobject_cast<QDesignerPropertyEditorInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -131,8 +131,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_ISREADONLY)
 // virtual QObject *object() const = 0
 HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_OBJECT)
 {
-  QDesignerPropertyEditorInterface *obj =
-      qobject_cast<QDesignerPropertyEditorInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -151,8 +150,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_OBJECT)
 // virtual void setObject(QObject *object) = 0
 HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_SETOBJECT)
 {
-  QDesignerPropertyEditorInterface *obj =
-      qobject_cast<QDesignerPropertyEditorInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -172,8 +170,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_SETOBJECT)
 // virtual void setPropertyValue(const QString &name, const QVariant &value, bool changed = true) = 0
 HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_SETPROPERTYVALUE)
 {
-  QDesignerPropertyEditorInterface *obj =
-      qobject_cast<QDesignerPropertyEditorInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -193,8 +190,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_SETPROPERTYVALUE)
 // virtual void setReadOnly(bool readOnly) = 0
 HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_SETREADONLY)
 {
-  QDesignerPropertyEditorInterface *obj =
-      qobject_cast<QDesignerPropertyEditorInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

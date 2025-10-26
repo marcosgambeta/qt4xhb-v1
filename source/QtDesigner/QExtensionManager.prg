@@ -44,6 +44,9 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QExtensionManager *p = qobject_cast<QExtensionManager *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QExtensionManager(QObject *parent = 0)
 HB_FUNC_STATIC(QEXTENSIONMANAGER_NEW)
 {
@@ -57,7 +60,7 @@ HB_FUNC_STATIC(QEXTENSIONMANAGER_NEW)
 
 HB_FUNC_STATIC(QEXTENSIONMANAGER_DELETE)
 {
-  QExtensionManager *obj = qobject_cast<QExtensionManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -75,7 +78,7 @@ HB_FUNC_STATIC(QEXTENSIONMANAGER_DELETE)
 // virtual QObject *extension(QObject *object, const QString &iid) const
 HB_FUNC_STATIC(QEXTENSIONMANAGER_EXTENSION)
 {
-  QExtensionManager *obj = qobject_cast<QExtensionManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -94,7 +97,7 @@ HB_FUNC_STATIC(QEXTENSIONMANAGER_EXTENSION)
 // virtual void registerExtensions(QAbstractExtensionFactory *factory, const QString &iid = QString())
 HB_FUNC_STATIC(QEXTENSIONMANAGER_REGISTEREXTENSIONS)
 {
-  QExtensionManager *obj = qobject_cast<QExtensionManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -114,7 +117,7 @@ HB_FUNC_STATIC(QEXTENSIONMANAGER_REGISTEREXTENSIONS)
 // virtual void unregisterExtensions(QAbstractExtensionFactory *factory, const QString &iid = QString())
 HB_FUNC_STATIC(QEXTENSIONMANAGER_UNREGISTEREXTENSIONS)
 {
-  QExtensionManager *obj = qobject_cast<QExtensionManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

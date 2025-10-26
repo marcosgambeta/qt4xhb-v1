@@ -48,9 +48,12 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QAbstractExtensionFactory *p = static_cast<QAbstractExtensionFactory *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QABSTRACTEXTENSIONFACTORY_DELETE)
 {
-  QAbstractExtensionFactory *obj = static_cast<QAbstractExtensionFactory *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -66,7 +69,7 @@ HB_FUNC_STATIC(QABSTRACTEXTENSIONFACTORY_DELETE)
 // virtual QObject *extension(QObject *object, const QString &iid) const = 0
 HB_FUNC_STATIC(QABSTRACTEXTENSIONFACTORY_EXTENSION)
 {
-  QAbstractExtensionFactory *obj = static_cast<QAbstractExtensionFactory *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

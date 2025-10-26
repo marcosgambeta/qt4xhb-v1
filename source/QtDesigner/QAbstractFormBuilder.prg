@@ -53,6 +53,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QAbstractFormBuilder *p = static_cast<QAbstractFormBuilder *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QAbstractFormBuilder()
 HB_FUNC_STATIC(QABSTRACTFORMBUILDER_NEW)
 {
@@ -66,7 +69,7 @@ HB_FUNC_STATIC(QABSTRACTFORMBUILDER_NEW)
 
 HB_FUNC_STATIC(QABSTRACTFORMBUILDER_DELETE)
 {
-  QAbstractFormBuilder *obj = static_cast<QAbstractFormBuilder *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -82,7 +85,7 @@ HB_FUNC_STATIC(QABSTRACTFORMBUILDER_DELETE)
 // virtual QWidget *load(QIODevice *device, QWidget *parent = 0)
 HB_FUNC_STATIC(QABSTRACTFORMBUILDER_LOAD)
 {
-  QAbstractFormBuilder *obj = static_cast<QAbstractFormBuilder *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -101,7 +104,7 @@ HB_FUNC_STATIC(QABSTRACTFORMBUILDER_LOAD)
 // virtual void save(QIODevice *device, QWidget *widget)
 HB_FUNC_STATIC(QABSTRACTFORMBUILDER_SAVE)
 {
-  QAbstractFormBuilder *obj = static_cast<QAbstractFormBuilder *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -121,7 +124,7 @@ HB_FUNC_STATIC(QABSTRACTFORMBUILDER_SAVE)
 // void setWorkingDirectory(const QDir &directory)
 HB_FUNC_STATIC(QABSTRACTFORMBUILDER_SETWORKINGDIRECTORY)
 {
-  QAbstractFormBuilder *obj = static_cast<QAbstractFormBuilder *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -141,7 +144,7 @@ HB_FUNC_STATIC(QABSTRACTFORMBUILDER_SETWORKINGDIRECTORY)
 // QDir workingDirectory() const
 HB_FUNC_STATIC(QABSTRACTFORMBUILDER_WORKINGDIRECTORY)
 {
-  QAbstractFormBuilder *obj = static_cast<QAbstractFormBuilder *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

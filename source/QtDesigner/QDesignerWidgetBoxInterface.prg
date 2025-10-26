@@ -43,10 +43,12 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QDesignerWidgetBoxInterface *p = qobject_cast<QDesignerWidgetBoxInterface *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_DELETE)
 {
-  QDesignerWidgetBoxInterface *obj =
-      qobject_cast<QDesignerWidgetBoxInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -64,8 +66,7 @@ HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_DELETE)
 // virtual QString fileName() const = 0
 HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_FILENAME)
 {
-  QDesignerWidgetBoxInterface *obj =
-      qobject_cast<QDesignerWidgetBoxInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -83,8 +84,7 @@ HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_FILENAME)
 // virtual bool load() = 0
 HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_LOAD)
 {
-  QDesignerWidgetBoxInterface *obj =
-      qobject_cast<QDesignerWidgetBoxInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -102,8 +102,7 @@ HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_LOAD)
 // virtual bool save() = 0
 HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_SAVE)
 {
-  QDesignerWidgetBoxInterface *obj =
-      qobject_cast<QDesignerWidgetBoxInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -121,8 +120,7 @@ HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_SAVE)
 // virtual void setFileName(const QString &fileName) = 0
 HB_FUNC_STATIC(QDESIGNERWIDGETBOXINTERFACE_SETFILENAME)
 {
-  QDesignerWidgetBoxInterface *obj =
-      qobject_cast<QDesignerWidgetBoxInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

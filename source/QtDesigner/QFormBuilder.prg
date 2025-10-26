@@ -44,6 +44,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QFormBuilder *p = static_cast<QFormBuilder *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QFormBuilder()
 HB_FUNC_STATIC(QFORMBUILDER_NEW)
 {
@@ -57,7 +59,7 @@ HB_FUNC_STATIC(QFORMBUILDER_NEW)
 
 HB_FUNC_STATIC(QFORMBUILDER_DELETE)
 {
-  QFormBuilder *obj = static_cast<QFormBuilder *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -73,7 +75,7 @@ HB_FUNC_STATIC(QFORMBUILDER_DELETE)
 // void addPluginPath(const QString &pluginPath)
 HB_FUNC_STATIC(QFORMBUILDER_ADDPLUGINPATH)
 {
-  QFormBuilder *obj = static_cast<QFormBuilder *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -93,7 +95,7 @@ HB_FUNC_STATIC(QFORMBUILDER_ADDPLUGINPATH)
 // void clearPluginPaths()
 HB_FUNC_STATIC(QFORMBUILDER_CLEARPLUGINPATHS)
 {
-  QFormBuilder *obj = static_cast<QFormBuilder *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -113,7 +115,7 @@ HB_FUNC_STATIC(QFORMBUILDER_CLEARPLUGINPATHS)
 // QList<QDesignerCustomWidgetInterface *> customWidgets() const
 HB_FUNC_STATIC(QFORMBUILDER_CUSTOMWIDGETS)
 {
-  QFormBuilder *obj = static_cast<QFormBuilder *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -151,7 +153,7 @@ HB_FUNC_STATIC(QFORMBUILDER_CUSTOMWIDGETS)
 // QStringList pluginPaths() const
 HB_FUNC_STATIC(QFORMBUILDER_PLUGINPATHS)
 {
-  QFormBuilder *obj = static_cast<QFormBuilder *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -169,7 +171,7 @@ HB_FUNC_STATIC(QFORMBUILDER_PLUGINPATHS)
 // void setPluginPath(const QStringList &pluginPaths)
 HB_FUNC_STATIC(QFORMBUILDER_SETPLUGINPATH)
 {
-  QFormBuilder *obj = static_cast<QFormBuilder *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -61,9 +61,12 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QDesignerMemberSheetExtension *p = static_cast<QDesignerMemberSheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_DELETE)
 {
-  QDesignerMemberSheetExtension *obj = static_cast<QDesignerMemberSheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -79,7 +82,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_DELETE)
 // virtual int count() const = 0
 HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_COUNT)
 {
-  QDesignerMemberSheetExtension *obj = static_cast<QDesignerMemberSheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -97,7 +100,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_COUNT)
 // virtual QString declaredInClass(int index) const = 0
 HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_DECLAREDINCLASS)
 {
-  QDesignerMemberSheetExtension *obj = static_cast<QDesignerMemberSheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -115,7 +118,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_DECLAREDINCLASS)
 // virtual int indexOf(const QString &name) const = 0
 HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_INDEXOF)
 {
-  QDesignerMemberSheetExtension *obj = static_cast<QDesignerMemberSheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -133,7 +136,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_INDEXOF)
 // virtual bool inheritedFromWidget(int index) const = 0
 HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_INHERITEDFROMWIDGET)
 {
-  QDesignerMemberSheetExtension *obj = static_cast<QDesignerMemberSheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -151,7 +154,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_INHERITEDFROMWIDGET)
 // virtual bool isSignal(int index) const = 0
 HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_ISSIGNAL)
 {
-  QDesignerMemberSheetExtension *obj = static_cast<QDesignerMemberSheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -169,7 +172,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_ISSIGNAL)
 // virtual bool isSlot(int index) const = 0
 HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_ISSLOT)
 {
-  QDesignerMemberSheetExtension *obj = static_cast<QDesignerMemberSheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -187,7 +190,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_ISSLOT)
 // virtual bool isVisible(int index) const = 0
 HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_ISVISIBLE)
 {
-  QDesignerMemberSheetExtension *obj = static_cast<QDesignerMemberSheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -205,7 +208,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_ISVISIBLE)
 // virtual QString memberGroup(int index) const = 0
 HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_MEMBERGROUP)
 {
-  QDesignerMemberSheetExtension *obj = static_cast<QDesignerMemberSheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -223,7 +226,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_MEMBERGROUP)
 // virtual QString memberName(int index) const = 0
 HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_MEMBERNAME)
 {
-  QDesignerMemberSheetExtension *obj = static_cast<QDesignerMemberSheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -241,7 +244,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_MEMBERNAME)
 // virtual QList<QByteArray> parameterNames(int index) const = 0
 HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_PARAMETERNAMES)
 {
-  QDesignerMemberSheetExtension *obj = static_cast<QDesignerMemberSheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -282,7 +285,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_PARAMETERNAMES)
 // virtual QList<QByteArray> parameterTypes(int index) const = 0
 HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_PARAMETERTYPES)
 {
-  QDesignerMemberSheetExtension *obj = static_cast<QDesignerMemberSheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -323,7 +326,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_PARAMETERTYPES)
 // virtual void setMemberGroup(int index, const QString &group) = 0
 HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_SETMEMBERGROUP)
 {
-  QDesignerMemberSheetExtension *obj = static_cast<QDesignerMemberSheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -343,7 +346,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_SETMEMBERGROUP)
 // virtual void setVisible(int index, bool visible) = 0
 HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_SETVISIBLE)
 {
-  QDesignerMemberSheetExtension *obj = static_cast<QDesignerMemberSheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -363,7 +366,7 @@ HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_SETVISIBLE)
 // virtual QString signature(int index) const = 0
 HB_FUNC_STATIC(QDESIGNERMEMBERSHEETEXTENSION_SIGNATURE)
 {
-  QDesignerMemberSheetExtension *obj = static_cast<QDesignerMemberSheetExtension *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
