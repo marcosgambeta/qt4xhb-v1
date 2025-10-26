@@ -71,6 +71,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QSplitter *p = qobject_cast<QSplitter *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QSPLITTER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
@@ -88,7 +90,7 @@ HB_FUNC_STATIC(QSPLITTER_NEW)
 
 HB_FUNC_STATIC(QSPLITTER_DELETE)
 {
-  QSplitter *obj = qobject_cast<QSplitter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -106,7 +108,7 @@ HB_FUNC_STATIC(QSPLITTER_DELETE)
 // void addWidget(QWidget *widget)
 HB_FUNC_STATIC(QSPLITTER_ADDWIDGET)
 {
-  QSplitter *obj = qobject_cast<QSplitter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -126,7 +128,7 @@ HB_FUNC_STATIC(QSPLITTER_ADDWIDGET)
 // bool childrenCollapsible() const
 HB_FUNC_STATIC(QSPLITTER_CHILDRENCOLLAPSIBLE)
 {
-  QSplitter *obj = qobject_cast<QSplitter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -144,7 +146,7 @@ HB_FUNC_STATIC(QSPLITTER_CHILDRENCOLLAPSIBLE)
 // int count() const
 HB_FUNC_STATIC(QSPLITTER_COUNT)
 {
-  QSplitter *obj = qobject_cast<QSplitter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -162,7 +164,7 @@ HB_FUNC_STATIC(QSPLITTER_COUNT)
 // void getRange(int index, int *min, int *max) const
 HB_FUNC_STATIC(QSPLITTER_GETRANGE)
 {
-  QSplitter *obj = qobject_cast<QSplitter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -186,7 +188,7 @@ HB_FUNC_STATIC(QSPLITTER_GETRANGE)
 // QSplitterHandle *handle(int index) const
 HB_FUNC_STATIC(QSPLITTER_HANDLE)
 {
-  QSplitter *obj = qobject_cast<QSplitter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -205,7 +207,7 @@ HB_FUNC_STATIC(QSPLITTER_HANDLE)
 // int handleWidth() const
 HB_FUNC_STATIC(QSPLITTER_HANDLEWIDTH)
 {
-  QSplitter *obj = qobject_cast<QSplitter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -223,7 +225,7 @@ HB_FUNC_STATIC(QSPLITTER_HANDLEWIDTH)
 // int indexOf(QWidget *widget) const
 HB_FUNC_STATIC(QSPLITTER_INDEXOF)
 {
-  QSplitter *obj = qobject_cast<QSplitter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -241,7 +243,7 @@ HB_FUNC_STATIC(QSPLITTER_INDEXOF)
 // void insertWidget(int index, QWidget *widget)
 HB_FUNC_STATIC(QSPLITTER_INSERTWIDGET)
 {
-  QSplitter *obj = qobject_cast<QSplitter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -261,7 +263,7 @@ HB_FUNC_STATIC(QSPLITTER_INSERTWIDGET)
 // bool isCollapsible(int index) const
 HB_FUNC_STATIC(QSPLITTER_ISCOLLAPSIBLE)
 {
-  QSplitter *obj = qobject_cast<QSplitter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -279,7 +281,7 @@ HB_FUNC_STATIC(QSPLITTER_ISCOLLAPSIBLE)
 // bool opaqueResize() const
 HB_FUNC_STATIC(QSPLITTER_OPAQUERESIZE)
 {
-  QSplitter *obj = qobject_cast<QSplitter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -297,7 +299,7 @@ HB_FUNC_STATIC(QSPLITTER_OPAQUERESIZE)
 // Qt::Orientation orientation() const
 HB_FUNC_STATIC(QSPLITTER_ORIENTATION)
 {
-  QSplitter *obj = qobject_cast<QSplitter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -315,7 +317,7 @@ HB_FUNC_STATIC(QSPLITTER_ORIENTATION)
 // void refresh()
 HB_FUNC_STATIC(QSPLITTER_REFRESH)
 {
-  QSplitter *obj = qobject_cast<QSplitter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -335,7 +337,7 @@ HB_FUNC_STATIC(QSPLITTER_REFRESH)
 // bool restoreState(const QByteArray &state)
 HB_FUNC_STATIC(QSPLITTER_RESTORESTATE)
 {
-  QSplitter *obj = qobject_cast<QSplitter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -353,7 +355,7 @@ HB_FUNC_STATIC(QSPLITTER_RESTORESTATE)
 // QByteArray saveState() const
 HB_FUNC_STATIC(QSPLITTER_SAVESTATE)
 {
-  QSplitter *obj = qobject_cast<QSplitter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -372,7 +374,7 @@ HB_FUNC_STATIC(QSPLITTER_SAVESTATE)
 // void setChildrenCollapsible(bool)
 HB_FUNC_STATIC(QSPLITTER_SETCHILDRENCOLLAPSIBLE)
 {
-  QSplitter *obj = qobject_cast<QSplitter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -392,7 +394,7 @@ HB_FUNC_STATIC(QSPLITTER_SETCHILDRENCOLLAPSIBLE)
 // void setCollapsible(int index, bool collapse)
 HB_FUNC_STATIC(QSPLITTER_SETCOLLAPSIBLE)
 {
-  QSplitter *obj = qobject_cast<QSplitter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -412,7 +414,7 @@ HB_FUNC_STATIC(QSPLITTER_SETCOLLAPSIBLE)
 // void setHandleWidth(int)
 HB_FUNC_STATIC(QSPLITTER_SETHANDLEWIDTH)
 {
-  QSplitter *obj = qobject_cast<QSplitter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -432,7 +434,7 @@ HB_FUNC_STATIC(QSPLITTER_SETHANDLEWIDTH)
 // void setOpaqueResize(bool opaque = true)
 HB_FUNC_STATIC(QSPLITTER_SETOPAQUERESIZE)
 {
-  QSplitter *obj = qobject_cast<QSplitter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -452,7 +454,7 @@ HB_FUNC_STATIC(QSPLITTER_SETOPAQUERESIZE)
 // void setOrientation(Qt::Orientation)
 HB_FUNC_STATIC(QSPLITTER_SETORIENTATION)
 {
-  QSplitter *obj = qobject_cast<QSplitter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -472,7 +474,7 @@ HB_FUNC_STATIC(QSPLITTER_SETORIENTATION)
 // void setSizes(const QList<int> &list)
 HB_FUNC_STATIC(QSPLITTER_SETSIZES)
 {
-  QSplitter *obj = qobject_cast<QSplitter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -500,7 +502,7 @@ HB_FUNC_STATIC(QSPLITTER_SETSIZES)
 // void setStretchFactor(int index, int stretch)
 HB_FUNC_STATIC(QSPLITTER_SETSTRETCHFACTOR)
 {
-  QSplitter *obj = qobject_cast<QSplitter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -520,7 +522,7 @@ HB_FUNC_STATIC(QSPLITTER_SETSTRETCHFACTOR)
 // QList<int> sizes() const
 HB_FUNC_STATIC(QSPLITTER_SIZES)
 {
-  QSplitter *obj = qobject_cast<QSplitter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -539,7 +541,7 @@ HB_FUNC_STATIC(QSPLITTER_SIZES)
 // QWidget *widget(int index) const
 HB_FUNC_STATIC(QSPLITTER_WIDGET)
 {
-  QSplitter *obj = qobject_cast<QSplitter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -558,7 +560,7 @@ HB_FUNC_STATIC(QSPLITTER_WIDGET)
 // virtual QSize minimumSizeHint() const
 HB_FUNC_STATIC(QSPLITTER_MINIMUMSIZEHINT)
 {
-  QSplitter *obj = qobject_cast<QSplitter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -577,7 +579,7 @@ HB_FUNC_STATIC(QSPLITTER_MINIMUMSIZEHINT)
 // virtual QSize sizeHint() const
 HB_FUNC_STATIC(QSPLITTER_SIZEHINT)
 {
-  QSplitter *obj = qobject_cast<QSplitter *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

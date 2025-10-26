@@ -46,6 +46,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QStyleOptionGraphicsItem *p = static_cast<QStyleOptionGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -78,7 +81,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_LEVELOFDETAILFROMTRANSFORM)
 // QRectF exposedRect
 HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_EXPOSEDRECT)
 {
-  QStyleOptionGraphicsItem *obj = static_cast<QStyleOptionGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -91,7 +94,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_EXPOSEDRECT)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_SETEXPOSEDRECT)
 {
-  QStyleOptionGraphicsItem *obj = static_cast<QStyleOptionGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && ISQRECTF(1)) {
@@ -107,7 +110,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_SETEXPOSEDRECT)
 // QMatrix matrix
 HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_MATRIX)
 {
-  QStyleOptionGraphicsItem *obj = static_cast<QStyleOptionGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -120,7 +123,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_MATRIX)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_SETMATRIX)
 {
-  QStyleOptionGraphicsItem *obj = static_cast<QStyleOptionGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && ISQMATRIX(1)) {
@@ -136,7 +139,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_SETMATRIX)
 // qreal levelOfDetail
 HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_LEVELOFDETAIL)
 {
-  QStyleOptionGraphicsItem *obj = static_cast<QStyleOptionGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -148,7 +151,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_LEVELOFDETAIL)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_SETLEVELOFDETAIL)
 {
-  QStyleOptionGraphicsItem *obj = static_cast<QStyleOptionGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {

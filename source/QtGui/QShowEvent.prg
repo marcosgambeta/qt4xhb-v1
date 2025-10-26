@@ -38,6 +38,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QShowEvent *p = static_cast<QShowEvent *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QShowEvent()
 HB_FUNC_STATIC(QSHOWEVENT_NEW)
 {
@@ -51,7 +53,7 @@ HB_FUNC_STATIC(QSHOWEVENT_NEW)
 
 HB_FUNC_STATIC(QSHOWEVENT_DELETE)
 {
-  QShowEvent *obj = static_cast<QShowEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;

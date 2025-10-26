@@ -39,6 +39,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QStyleOptionSizeGrip *p = static_cast<QStyleOptionSizeGrip *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSTYLEOPTIONSIZEGRIP_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -57,7 +60,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSIZEGRIP_NEW)
 // Qt::Corner corner
 HB_FUNC_STATIC(QSTYLEOPTIONSIZEGRIP_CORNER)
 {
-  QStyleOptionSizeGrip *obj = static_cast<QStyleOptionSizeGrip *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -69,7 +72,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSIZEGRIP_CORNER)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONSIZEGRIP_SETCORNER)
 {
-  QStyleOptionSizeGrip *obj = static_cast<QStyleOptionSizeGrip *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {

@@ -44,6 +44,9 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QRegExpValidator *p = qobject_cast<QRegExpValidator *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QREGEXPVALIDATOR_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -61,7 +64,7 @@ HB_FUNC_STATIC(QREGEXPVALIDATOR_NEW)
 
 HB_FUNC_STATIC(QREGEXPVALIDATOR_DELETE)
 {
-  QRegExpValidator *obj = qobject_cast<QRegExpValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -79,7 +82,7 @@ HB_FUNC_STATIC(QREGEXPVALIDATOR_DELETE)
 // const QRegExp &regExp() const
 HB_FUNC_STATIC(QREGEXPVALIDATOR_REGEXP)
 {
-  QRegExpValidator *obj = qobject_cast<QRegExpValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -98,7 +101,7 @@ HB_FUNC_STATIC(QREGEXPVALIDATOR_REGEXP)
 // void setRegExp(const QRegExp &rx)
 HB_FUNC_STATIC(QREGEXPVALIDATOR_SETREGEXP)
 {
-  QRegExpValidator *obj = qobject_cast<QRegExpValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -118,7 +121,7 @@ HB_FUNC_STATIC(QREGEXPVALIDATOR_SETREGEXP)
 // virtual QValidator::State validate(QString &input, int &pos) const
 HB_FUNC_STATIC(QREGEXPVALIDATOR_VALIDATE)
 {
-  QRegExpValidator *obj = qobject_cast<QRegExpValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

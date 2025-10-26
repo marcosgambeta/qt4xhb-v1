@@ -46,6 +46,9 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QSplitterHandle *p = qobject_cast<QSplitterHandle *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QSplitterHandle(Qt::Orientation orientation, QSplitter *parent)
 HB_FUNC_STATIC(QSPLITTERHANDLE_NEW)
 {
@@ -60,7 +63,7 @@ HB_FUNC_STATIC(QSPLITTERHANDLE_NEW)
 // bool opaqueResize() const
 HB_FUNC_STATIC(QSPLITTERHANDLE_OPAQUERESIZE)
 {
-  QSplitterHandle *obj = qobject_cast<QSplitterHandle *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -78,7 +81,7 @@ HB_FUNC_STATIC(QSPLITTERHANDLE_OPAQUERESIZE)
 // Qt::Orientation orientation() const
 HB_FUNC_STATIC(QSPLITTERHANDLE_ORIENTATION)
 {
-  QSplitterHandle *obj = qobject_cast<QSplitterHandle *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -96,7 +99,7 @@ HB_FUNC_STATIC(QSPLITTERHANDLE_ORIENTATION)
 // void setOrientation(Qt::Orientation orientation)
 HB_FUNC_STATIC(QSPLITTERHANDLE_SETORIENTATION)
 {
-  QSplitterHandle *obj = qobject_cast<QSplitterHandle *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -116,7 +119,7 @@ HB_FUNC_STATIC(QSPLITTERHANDLE_SETORIENTATION)
 // QSplitter *splitter() const
 HB_FUNC_STATIC(QSPLITTERHANDLE_SPLITTER)
 {
-  QSplitterHandle *obj = qobject_cast<QSplitterHandle *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -135,7 +138,7 @@ HB_FUNC_STATIC(QSPLITTERHANDLE_SPLITTER)
 // virtual QSize sizeHint() const
 HB_FUNC_STATIC(QSPLITTERHANDLE_SIZEHINT)
 {
-  QSplitterHandle *obj = qobject_cast<QSplitterHandle *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

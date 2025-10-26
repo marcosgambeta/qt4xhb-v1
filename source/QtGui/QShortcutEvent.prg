@@ -42,6 +42,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QShortcutEvent *p = static_cast<QShortcutEvent *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QShortcutEvent(const QKeySequence &key, int id, bool ambiguous = false)
 HB_FUNC_STATIC(QSHORTCUTEVENT_NEW)
 {
@@ -55,7 +57,7 @@ HB_FUNC_STATIC(QSHORTCUTEVENT_NEW)
 
 HB_FUNC_STATIC(QSHORTCUTEVENT_DELETE)
 {
-  QShortcutEvent *obj = static_cast<QShortcutEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -71,7 +73,7 @@ HB_FUNC_STATIC(QSHORTCUTEVENT_DELETE)
 // const QKeySequence &key()
 HB_FUNC_STATIC(QSHORTCUTEVENT_KEY)
 {
-  QShortcutEvent *obj = static_cast<QShortcutEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -90,7 +92,7 @@ HB_FUNC_STATIC(QSHORTCUTEVENT_KEY)
 // int shortcutId()
 HB_FUNC_STATIC(QSHORTCUTEVENT_SHORTCUTID)
 {
-  QShortcutEvent *obj = static_cast<QShortcutEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -108,7 +110,7 @@ HB_FUNC_STATIC(QSHORTCUTEVENT_SHORTCUTID)
 // bool isAmbiguous()
 HB_FUNC_STATIC(QSHORTCUTEVENT_ISAMBIGUOUS)
 {
-  QShortcutEvent *obj = static_cast<QShortcutEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

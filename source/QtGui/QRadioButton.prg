@@ -42,6 +42,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QRadioButton *p = qobject_cast<QRadioButton *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QRADIOBUTTON_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
@@ -60,7 +62,7 @@ HB_FUNC_STATIC(QRADIOBUTTON_NEW)
 // virtual QSize minimumSizeHint() const
 HB_FUNC_STATIC(QRADIOBUTTON_MINIMUMSIZEHINT)
 {
-  QRadioButton *obj = qobject_cast<QRadioButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -79,7 +81,7 @@ HB_FUNC_STATIC(QRADIOBUTTON_MINIMUMSIZEHINT)
 // virtual QSize sizeHint() const
 HB_FUNC_STATIC(QRADIOBUTTON_SIZEHINT)
 {
-  QRadioButton *obj = qobject_cast<QRadioButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

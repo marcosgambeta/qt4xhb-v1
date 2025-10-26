@@ -49,6 +49,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QSplashScreen *p = qobject_cast<QSplashScreen *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QSPLASHSCREEN_NEW)
 {
   if (ISBETWEEN(0, 2) && (ISQPIXMAP(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {
@@ -69,7 +71,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_NEW)
 
 HB_FUNC_STATIC(QSPLASHSCREEN_DELETE)
 {
-  QSplashScreen *obj = qobject_cast<QSplashScreen *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -87,7 +89,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_DELETE)
 // void finish(QWidget *mainWin)
 HB_FUNC_STATIC(QSPLASHSCREEN_FINISH)
 {
-  QSplashScreen *obj = qobject_cast<QSplashScreen *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -107,7 +109,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_FINISH)
 // const QPixmap pixmap() const
 HB_FUNC_STATIC(QSPLASHSCREEN_PIXMAP)
 {
-  QSplashScreen *obj = qobject_cast<QSplashScreen *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -126,7 +128,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_PIXMAP)
 // void repaint()
 HB_FUNC_STATIC(QSPLASHSCREEN_REPAINT)
 {
-  QSplashScreen *obj = qobject_cast<QSplashScreen *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -146,7 +148,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_REPAINT)
 // void setPixmap(const QPixmap &pixmap)
 HB_FUNC_STATIC(QSPLASHSCREEN_SETPIXMAP)
 {
-  QSplashScreen *obj = qobject_cast<QSplashScreen *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -166,7 +168,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_SETPIXMAP)
 // void clearMessage()
 HB_FUNC_STATIC(QSPLASHSCREEN_CLEARMESSAGE)
 {
-  QSplashScreen *obj = qobject_cast<QSplashScreen *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -186,7 +188,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_CLEARMESSAGE)
 // void showMessage(const QString &message, int alignment = Qt::AlignLeft, const QColor &color = Qt::black)
 HB_FUNC_STATIC(QSPLASHSCREEN_SHOWMESSAGE)
 {
-  QSplashScreen *obj = qobject_cast<QSplashScreen *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

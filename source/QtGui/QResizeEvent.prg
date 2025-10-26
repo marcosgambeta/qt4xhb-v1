@@ -41,6 +41,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QResizeEvent *p = static_cast<QResizeEvent *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QResizeEvent(const QSize &size, const QSize &oldSize)
 HB_FUNC_STATIC(QRESIZEEVENT_NEW)
 {
@@ -54,7 +56,7 @@ HB_FUNC_STATIC(QRESIZEEVENT_NEW)
 
 HB_FUNC_STATIC(QRESIZEEVENT_DELETE)
 {
-  QResizeEvent *obj = static_cast<QResizeEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -70,7 +72,7 @@ HB_FUNC_STATIC(QRESIZEEVENT_DELETE)
 // const QSize &size() const
 HB_FUNC_STATIC(QRESIZEEVENT_SIZE)
 {
-  QResizeEvent *obj = static_cast<QResizeEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -89,7 +91,7 @@ HB_FUNC_STATIC(QRESIZEEVENT_SIZE)
 // const QSize &oldSize() const
 HB_FUNC_STATIC(QRESIZEEVENT_OLDSIZE)
 {
-  QResizeEvent *obj = static_cast<QResizeEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

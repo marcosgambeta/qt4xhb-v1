@@ -48,6 +48,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QSpacerItem *p = static_cast<QSpacerItem *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QSpacerItem(int w, int h, QSizePolicy::Policy hPolicy = QSizePolicy::Minimum, QSizePolicy::Policy vPolicy =
     // QSizePolicy::Minimum)
 HB_FUNC_STATIC(QSPACERITEM_NEW)
@@ -66,7 +68,7 @@ HB_FUNC_STATIC(QSPACERITEM_NEW)
 // QSizePolicy::Minimum)
 HB_FUNC_STATIC(QSPACERITEM_CHANGESIZE)
 {
-  QSpacerItem *obj = static_cast<QSpacerItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -88,7 +90,7 @@ HB_FUNC_STATIC(QSPACERITEM_CHANGESIZE)
 // virtual Qt::Orientations expandingDirections() const
 HB_FUNC_STATIC(QSPACERITEM_EXPANDINGDIRECTIONS)
 {
-  QSpacerItem *obj = static_cast<QSpacerItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -106,7 +108,7 @@ HB_FUNC_STATIC(QSPACERITEM_EXPANDINGDIRECTIONS)
 // virtual QRect geometry() const
 HB_FUNC_STATIC(QSPACERITEM_GEOMETRY)
 {
-  QSpacerItem *obj = static_cast<QSpacerItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -125,7 +127,7 @@ HB_FUNC_STATIC(QSPACERITEM_GEOMETRY)
 // virtual bool isEmpty() const
 HB_FUNC_STATIC(QSPACERITEM_ISEMPTY)
 {
-  QSpacerItem *obj = static_cast<QSpacerItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -143,7 +145,7 @@ HB_FUNC_STATIC(QSPACERITEM_ISEMPTY)
 // virtual QSize maximumSize() const
 HB_FUNC_STATIC(QSPACERITEM_MAXIMUMSIZE)
 {
-  QSpacerItem *obj = static_cast<QSpacerItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -162,7 +164,7 @@ HB_FUNC_STATIC(QSPACERITEM_MAXIMUMSIZE)
 // virtual QSize minimumSize() const
 HB_FUNC_STATIC(QSPACERITEM_MINIMUMSIZE)
 {
-  QSpacerItem *obj = static_cast<QSpacerItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -181,7 +183,7 @@ HB_FUNC_STATIC(QSPACERITEM_MINIMUMSIZE)
 // virtual void setGeometry(const QRect &r)
 HB_FUNC_STATIC(QSPACERITEM_SETGEOMETRY)
 {
-  QSpacerItem *obj = static_cast<QSpacerItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -201,7 +203,7 @@ HB_FUNC_STATIC(QSPACERITEM_SETGEOMETRY)
 // virtual QSize sizeHint() const
 HB_FUNC_STATIC(QSPACERITEM_SIZEHINT)
 {
-  QSpacerItem *obj = static_cast<QSpacerItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -220,7 +222,7 @@ HB_FUNC_STATIC(QSPACERITEM_SIZEHINT)
 // virtual QSpacerItem *spacerItem()
 HB_FUNC_STATIC(QSPACERITEM_SPACERITEM)
 {
-  QSpacerItem *obj = static_cast<QSpacerItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

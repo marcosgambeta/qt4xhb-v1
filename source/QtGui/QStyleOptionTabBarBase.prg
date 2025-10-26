@@ -44,6 +44,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QStyleOptionTabBarBase *p = static_cast<QStyleOptionTabBarBase *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -62,7 +65,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_NEW)
 // QTabBar::Shape shape
 HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SHAPE)
 {
-  QStyleOptionTabBarBase *obj = static_cast<QStyleOptionTabBarBase *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -74,7 +77,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SHAPE)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SETSHAPE)
 {
-  QStyleOptionTabBarBase *obj = static_cast<QStyleOptionTabBarBase *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -90,7 +93,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SETSHAPE)
 // QRect tabBarRect
 HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_TABBARRECT)
 {
-  QStyleOptionTabBarBase *obj = static_cast<QStyleOptionTabBarBase *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -103,7 +106,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_TABBARRECT)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SETTABBARRECT)
 {
-  QStyleOptionTabBarBase *obj = static_cast<QStyleOptionTabBarBase *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && ISQRECT(1)) {
@@ -119,7 +122,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SETTABBARRECT)
 // QRect selectedTabRect
 HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SELECTEDTABRECT)
 {
-  QStyleOptionTabBarBase *obj = static_cast<QStyleOptionTabBarBase *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -132,7 +135,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SELECTEDTABRECT)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SETSELECTEDTABRECT)
 {
-  QStyleOptionTabBarBase *obj = static_cast<QStyleOptionTabBarBase *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && ISQRECT(1)) {

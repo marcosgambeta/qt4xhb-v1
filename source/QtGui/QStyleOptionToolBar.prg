@@ -49,6 +49,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QStyleOptionToolBar *p = static_cast<QStyleOptionToolBar *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -67,7 +70,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_NEW)
 // ToolBarPosition positionOfLine
 HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_POSITIONOFLINE)
 {
-  QStyleOptionToolBar *obj = static_cast<QStyleOptionToolBar *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -79,7 +82,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_POSITIONOFLINE)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_SETPOSITIONOFLINE)
 {
-  QStyleOptionToolBar *obj = static_cast<QStyleOptionToolBar *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -95,7 +98,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_SETPOSITIONOFLINE)
 // ToolBarPosition positionWithinLine
 HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_POSITIONWITHINLINE)
 {
-  QStyleOptionToolBar *obj = static_cast<QStyleOptionToolBar *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -107,7 +110,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_POSITIONWITHINLINE)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_SETPOSITIONWITHINLINE)
 {
-  QStyleOptionToolBar *obj = static_cast<QStyleOptionToolBar *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -123,7 +126,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_SETPOSITIONWITHINLINE)
 // Qt::ToolBarArea toolBarArea
 HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_TOOLBARAREA)
 {
-  QStyleOptionToolBar *obj = static_cast<QStyleOptionToolBar *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -135,7 +138,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_TOOLBARAREA)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_SETTOOLBARAREA)
 {
-  QStyleOptionToolBar *obj = static_cast<QStyleOptionToolBar *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -151,7 +154,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_SETTOOLBARAREA)
 // ToolBarFeatures features
 HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_FEATURES)
 {
-  QStyleOptionToolBar *obj = static_cast<QStyleOptionToolBar *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -163,7 +166,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_FEATURES)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_SETFEATURES)
 {
-  QStyleOptionToolBar *obj = static_cast<QStyleOptionToolBar *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -179,7 +182,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_SETFEATURES)
 // int lineWidth
 HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_LINEWIDTH)
 {
-  QStyleOptionToolBar *obj = static_cast<QStyleOptionToolBar *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -191,7 +194,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_LINEWIDTH)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_SETLINEWIDTH)
 {
-  QStyleOptionToolBar *obj = static_cast<QStyleOptionToolBar *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -207,7 +210,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_SETLINEWIDTH)
 // int midLineWidth
 HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_MIDLINEWIDTH)
 {
-  QStyleOptionToolBar *obj = static_cast<QStyleOptionToolBar *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -219,7 +222,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_MIDLINEWIDTH)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_SETMIDLINEWIDTH)
 {
-  QStyleOptionToolBar *obj = static_cast<QStyleOptionToolBar *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {

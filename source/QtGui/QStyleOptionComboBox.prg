@@ -52,6 +52,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QStyleOptionComboBox *p = static_cast<QStyleOptionComboBox *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -70,7 +73,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_NEW)
 // bool editable
 HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_EDITABLE)
 {
-  QStyleOptionComboBox *obj = static_cast<QStyleOptionComboBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -82,7 +85,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_EDITABLE)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_SETEDITABLE)
 {
-  QStyleOptionComboBox *obj = static_cast<QStyleOptionComboBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISLOG(1)) {
@@ -98,7 +101,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_SETEDITABLE)
 // QRect popupRect
 HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_POPUPRECT)
 {
-  QStyleOptionComboBox *obj = static_cast<QStyleOptionComboBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -111,7 +114,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_POPUPRECT)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_SETPOPUPRECT)
 {
-  QStyleOptionComboBox *obj = static_cast<QStyleOptionComboBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && ISQRECT(1)) {
@@ -127,7 +130,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_SETPOPUPRECT)
 // bool frame
 HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_FRAME)
 {
-  QStyleOptionComboBox *obj = static_cast<QStyleOptionComboBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -139,7 +142,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_FRAME)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_SETFRAME)
 {
-  QStyleOptionComboBox *obj = static_cast<QStyleOptionComboBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISLOG(1)) {
@@ -155,7 +158,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_SETFRAME)
 // QString currentText
 HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_CURRENTTEXT)
 {
-  QStyleOptionComboBox *obj = static_cast<QStyleOptionComboBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -167,7 +170,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_CURRENTTEXT)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_SETCURRENTTEXT)
 {
-  QStyleOptionComboBox *obj = static_cast<QStyleOptionComboBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISCHAR(1)) {
@@ -183,7 +186,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_SETCURRENTTEXT)
 // QIcon currentIcon
 HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_CURRENTICON)
 {
-  QStyleOptionComboBox *obj = static_cast<QStyleOptionComboBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -196,7 +199,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_CURRENTICON)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_SETCURRENTICON)
 {
-  QStyleOptionComboBox *obj = static_cast<QStyleOptionComboBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && ISQICON(1)) {
@@ -212,7 +215,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_SETCURRENTICON)
 // QSize iconSize
 HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_ICONSIZE)
 {
-  QStyleOptionComboBox *obj = static_cast<QStyleOptionComboBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -225,7 +228,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_ICONSIZE)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_SETICONSIZE)
 {
-  QStyleOptionComboBox *obj = static_cast<QStyleOptionComboBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && ISQSIZE(1)) {

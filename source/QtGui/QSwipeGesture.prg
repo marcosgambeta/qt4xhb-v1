@@ -43,9 +43,11 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QSwipeGesture *p = qobject_cast<QSwipeGesture *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QSWIPEGESTURE_DELETE)
 {
-  QSwipeGesture *obj = qobject_cast<QSwipeGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -63,7 +65,7 @@ HB_FUNC_STATIC(QSWIPEGESTURE_DELETE)
 // QSwipeGesture::SwipeDirection horizontalDirection() const
 HB_FUNC_STATIC(QSWIPEGESTURE_HORIZONTALDIRECTION)
 {
-  QSwipeGesture *obj = qobject_cast<QSwipeGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -81,7 +83,7 @@ HB_FUNC_STATIC(QSWIPEGESTURE_HORIZONTALDIRECTION)
 // void setSwipeAngle(qreal value)
 HB_FUNC_STATIC(QSWIPEGESTURE_SETSWIPEANGLE)
 {
-  QSwipeGesture *obj = qobject_cast<QSwipeGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -101,7 +103,7 @@ HB_FUNC_STATIC(QSWIPEGESTURE_SETSWIPEANGLE)
 // qreal swipeAngle() const
 HB_FUNC_STATIC(QSWIPEGESTURE_SWIPEANGLE)
 {
-  QSwipeGesture *obj = qobject_cast<QSwipeGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -119,7 +121,7 @@ HB_FUNC_STATIC(QSWIPEGESTURE_SWIPEANGLE)
 // QSwipeGesture::SwipeDirection verticalDirection() const
 HB_FUNC_STATIC(QSWIPEGESTURE_VERTICALDIRECTION)
 {
-  QSwipeGesture *obj = qobject_cast<QSwipeGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

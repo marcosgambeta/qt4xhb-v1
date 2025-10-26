@@ -53,6 +53,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QScrollArea *p = qobject_cast<QScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QScrollArea(QWidget *parent = 0)
 HB_FUNC_STATIC(QSCROLLAREA_NEW)
 {
@@ -66,7 +68,7 @@ HB_FUNC_STATIC(QSCROLLAREA_NEW)
 
 HB_FUNC_STATIC(QSCROLLAREA_DELETE)
 {
-  QScrollArea *obj = qobject_cast<QScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -84,7 +86,7 @@ HB_FUNC_STATIC(QSCROLLAREA_DELETE)
 // Qt::Alignment alignment() const
 HB_FUNC_STATIC(QSCROLLAREA_ALIGNMENT)
 {
-  QScrollArea *obj = qobject_cast<QScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -102,7 +104,7 @@ HB_FUNC_STATIC(QSCROLLAREA_ALIGNMENT)
 // void ensureVisible(int x, int y, int xmargin = 50, int ymargin = 50)
 HB_FUNC_STATIC(QSCROLLAREA_ENSUREVISIBLE)
 {
-  QScrollArea *obj = qobject_cast<QScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -122,7 +124,7 @@ HB_FUNC_STATIC(QSCROLLAREA_ENSUREVISIBLE)
 // void ensureWidgetVisible(QWidget *childWidget, int xmargin = 50, int ymargin = 50)
 HB_FUNC_STATIC(QSCROLLAREA_ENSUREWIDGETVISIBLE)
 {
-  QScrollArea *obj = qobject_cast<QScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -142,7 +144,7 @@ HB_FUNC_STATIC(QSCROLLAREA_ENSUREWIDGETVISIBLE)
 // void setAlignment(Qt::Alignment)
 HB_FUNC_STATIC(QSCROLLAREA_SETALIGNMENT)
 {
-  QScrollArea *obj = qobject_cast<QScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -162,7 +164,7 @@ HB_FUNC_STATIC(QSCROLLAREA_SETALIGNMENT)
 // void setWidget(QWidget *widget)
 HB_FUNC_STATIC(QSCROLLAREA_SETWIDGET)
 {
-  QScrollArea *obj = qobject_cast<QScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -182,7 +184,7 @@ HB_FUNC_STATIC(QSCROLLAREA_SETWIDGET)
 // void setWidgetResizable(bool resizable)
 HB_FUNC_STATIC(QSCROLLAREA_SETWIDGETRESIZABLE)
 {
-  QScrollArea *obj = qobject_cast<QScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -202,7 +204,7 @@ HB_FUNC_STATIC(QSCROLLAREA_SETWIDGETRESIZABLE)
 // QWidget *takeWidget()
 HB_FUNC_STATIC(QSCROLLAREA_TAKEWIDGET)
 {
-  QScrollArea *obj = qobject_cast<QScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -221,7 +223,7 @@ HB_FUNC_STATIC(QSCROLLAREA_TAKEWIDGET)
 // QWidget *widget() const
 HB_FUNC_STATIC(QSCROLLAREA_WIDGET)
 {
-  QScrollArea *obj = qobject_cast<QScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -240,7 +242,7 @@ HB_FUNC_STATIC(QSCROLLAREA_WIDGET)
 // bool widgetResizable() const
 HB_FUNC_STATIC(QSCROLLAREA_WIDGETRESIZABLE)
 {
-  QScrollArea *obj = qobject_cast<QScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -258,7 +260,7 @@ HB_FUNC_STATIC(QSCROLLAREA_WIDGETRESIZABLE)
 // virtual bool focusNextPrevChild(bool next)
 HB_FUNC_STATIC(QSCROLLAREA_FOCUSNEXTPREVCHILD)
 {
-  QScrollArea *obj = qobject_cast<QScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -276,7 +278,7 @@ HB_FUNC_STATIC(QSCROLLAREA_FOCUSNEXTPREVCHILD)
 // virtual QSize sizeHint() const
 HB_FUNC_STATIC(QSCROLLAREA_SIZEHINT)
 {
-  QScrollArea *obj = qobject_cast<QScrollArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

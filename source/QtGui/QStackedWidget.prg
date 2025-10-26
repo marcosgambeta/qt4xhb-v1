@@ -54,6 +54,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QStackedWidget *p = qobject_cast<QStackedWidget *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QStackedWidget(QWidget *parent = 0)
 HB_FUNC_STATIC(QSTACKEDWIDGET_NEW)
 {
@@ -67,7 +69,7 @@ HB_FUNC_STATIC(QSTACKEDWIDGET_NEW)
 
 HB_FUNC_STATIC(QSTACKEDWIDGET_DELETE)
 {
-  QStackedWidget *obj = qobject_cast<QStackedWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -85,7 +87,7 @@ HB_FUNC_STATIC(QSTACKEDWIDGET_DELETE)
 // int addWidget(QWidget *widget)
 HB_FUNC_STATIC(QSTACKEDWIDGET_ADDWIDGET)
 {
-  QStackedWidget *obj = qobject_cast<QStackedWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -103,7 +105,7 @@ HB_FUNC_STATIC(QSTACKEDWIDGET_ADDWIDGET)
 // int count() const
 HB_FUNC_STATIC(QSTACKEDWIDGET_COUNT)
 {
-  QStackedWidget *obj = qobject_cast<QStackedWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -121,7 +123,7 @@ HB_FUNC_STATIC(QSTACKEDWIDGET_COUNT)
 // int currentIndex() const
 HB_FUNC_STATIC(QSTACKEDWIDGET_CURRENTINDEX)
 {
-  QStackedWidget *obj = qobject_cast<QStackedWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -139,7 +141,7 @@ HB_FUNC_STATIC(QSTACKEDWIDGET_CURRENTINDEX)
 // QWidget *currentWidget() const
 HB_FUNC_STATIC(QSTACKEDWIDGET_CURRENTWIDGET)
 {
-  QStackedWidget *obj = qobject_cast<QStackedWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -158,7 +160,7 @@ HB_FUNC_STATIC(QSTACKEDWIDGET_CURRENTWIDGET)
 // int indexOf(QWidget *widget) const
 HB_FUNC_STATIC(QSTACKEDWIDGET_INDEXOF)
 {
-  QStackedWidget *obj = qobject_cast<QStackedWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -176,7 +178,7 @@ HB_FUNC_STATIC(QSTACKEDWIDGET_INDEXOF)
 // int insertWidget(int index, QWidget *widget)
 HB_FUNC_STATIC(QSTACKEDWIDGET_INSERTWIDGET)
 {
-  QStackedWidget *obj = qobject_cast<QStackedWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -194,7 +196,7 @@ HB_FUNC_STATIC(QSTACKEDWIDGET_INSERTWIDGET)
 // void removeWidget(QWidget *widget)
 HB_FUNC_STATIC(QSTACKEDWIDGET_REMOVEWIDGET)
 {
-  QStackedWidget *obj = qobject_cast<QStackedWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -214,7 +216,7 @@ HB_FUNC_STATIC(QSTACKEDWIDGET_REMOVEWIDGET)
 // QWidget *widget(int index) const
 HB_FUNC_STATIC(QSTACKEDWIDGET_WIDGET)
 {
-  QStackedWidget *obj = qobject_cast<QStackedWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -233,7 +235,7 @@ HB_FUNC_STATIC(QSTACKEDWIDGET_WIDGET)
 // void setCurrentIndex(int index)
 HB_FUNC_STATIC(QSTACKEDWIDGET_SETCURRENTINDEX)
 {
-  QStackedWidget *obj = qobject_cast<QStackedWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -253,7 +255,7 @@ HB_FUNC_STATIC(QSTACKEDWIDGET_SETCURRENTINDEX)
 // void setCurrentWidget(QWidget *widget)
 HB_FUNC_STATIC(QSTACKEDWIDGET_SETCURRENTWIDGET)
 {
-  QStackedWidget *obj = qobject_cast<QStackedWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

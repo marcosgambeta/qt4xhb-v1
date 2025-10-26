@@ -44,6 +44,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QRubberBand *p = qobject_cast<QRubberBand *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QRubberBand(QRubberBand::Shape s, QWidget *p = 0)
 HB_FUNC_STATIC(QRUBBERBAND_NEW)
 {
@@ -57,7 +59,7 @@ HB_FUNC_STATIC(QRUBBERBAND_NEW)
 
 HB_FUNC_STATIC(QRUBBERBAND_DELETE)
 {
-  QRubberBand *obj = qobject_cast<QRubberBand *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -76,7 +78,7 @@ HB_FUNC_STATIC(QRUBBERBAND_MOVE)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void move(int x, int y)
-    QRubberBand *obj = qobject_cast<QRubberBand *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->move(PINT(1), PINT(2));
@@ -85,7 +87,7 @@ HB_FUNC_STATIC(QRUBBERBAND_MOVE)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // void move(const QPoint &p)
-    QRubberBand *obj = qobject_cast<QRubberBand *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->move(*PQPOINT(1));
@@ -101,7 +103,7 @@ HB_FUNC_STATIC(QRUBBERBAND_RESIZE)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void resize(int width, int height)
-    QRubberBand *obj = qobject_cast<QRubberBand *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->resize(PINT(1), PINT(2));
@@ -110,7 +112,7 @@ HB_FUNC_STATIC(QRUBBERBAND_RESIZE)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && ISQSIZE(1)) {
     // void resize(const QSize &size)
-    QRubberBand *obj = qobject_cast<QRubberBand *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->resize(*PQSIZE(1));
@@ -126,7 +128,7 @@ HB_FUNC_STATIC(QRUBBERBAND_SETGEOMETRY)
 {
   if (ISNUMPAR(1) && ISQRECT(1)) {
     // void setGeometry(const QRect &rect)
-    QRubberBand *obj = qobject_cast<QRubberBand *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setGeometry(*PQRECT(1));
@@ -135,7 +137,7 @@ HB_FUNC_STATIC(QRUBBERBAND_SETGEOMETRY)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // void setGeometry(int x, int y, int width, int height)
-    QRubberBand *obj = qobject_cast<QRubberBand *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setGeometry(PINT(1), PINT(2), PINT(3), PINT(4));
@@ -150,7 +152,7 @@ HB_FUNC_STATIC(QRUBBERBAND_SETGEOMETRY)
 // QRubberBand::Shape shape() const
 HB_FUNC_STATIC(QRUBBERBAND_SHAPE)
 {
-  QRubberBand *obj = qobject_cast<QRubberBand *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

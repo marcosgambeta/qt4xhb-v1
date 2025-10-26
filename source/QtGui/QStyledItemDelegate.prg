@@ -52,6 +52,9 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QStyledItemDelegate *p = qobject_cast<QStyledItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QStyledItemDelegate(QObject *parent = 0)
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_NEW)
 {
@@ -65,7 +68,7 @@ HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_NEW)
 
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_DELETE)
 {
-  QStyledItemDelegate *obj = qobject_cast<QStyledItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -83,7 +86,7 @@ HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_DELETE)
 // virtual QString displayText(const QVariant &value, const QLocale &locale) const
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_DISPLAYTEXT)
 {
-  QStyledItemDelegate *obj = qobject_cast<QStyledItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -101,7 +104,7 @@ HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_DISPLAYTEXT)
 // QItemEditorFactory *itemEditorFactory() const
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_ITEMEDITORFACTORY)
 {
-  QStyledItemDelegate *obj = qobject_cast<QStyledItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -120,7 +123,7 @@ HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_ITEMEDITORFACTORY)
 // void setItemEditorFactory(QItemEditorFactory *factory)
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_SETITEMEDITORFACTORY)
 {
-  QStyledItemDelegate *obj = qobject_cast<QStyledItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -140,7 +143,7 @@ HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_SETITEMEDITORFACTORY)
 // virtual QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_CREATEEDITOR)
 {
-  QStyledItemDelegate *obj = qobject_cast<QStyledItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -159,7 +162,7 @@ HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_CREATEEDITOR)
 // virtual void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_PAINT)
 {
-  QStyledItemDelegate *obj = qobject_cast<QStyledItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -179,7 +182,7 @@ HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_PAINT)
 // virtual void setEditorData(QWidget *editor, const QModelIndex &index) const
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_SETEDITORDATA)
 {
-  QStyledItemDelegate *obj = qobject_cast<QStyledItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -199,7 +202,7 @@ HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_SETEDITORDATA)
 // virtual void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_SETMODELDATA)
 {
-  QStyledItemDelegate *obj = qobject_cast<QStyledItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -219,7 +222,7 @@ HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_SETMODELDATA)
 // virtual QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_SIZEHINT)
 {
-  QStyledItemDelegate *obj = qobject_cast<QStyledItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -239,7 +242,7 @@ HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_SIZEHINT)
 // const
 HB_FUNC_STATIC(QSTYLEDITEMDELEGATE_UPDATEEDITORGEOMETRY)
 {
-  QStyledItemDelegate *obj = qobject_cast<QStyledItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

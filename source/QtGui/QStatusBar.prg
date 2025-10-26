@@ -52,6 +52,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QStatusBar *p = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QStatusBar(QWidget *parent = 0)
 HB_FUNC_STATIC(QSTATUSBAR_NEW)
 {
@@ -65,7 +67,7 @@ HB_FUNC_STATIC(QSTATUSBAR_NEW)
 
 HB_FUNC_STATIC(QSTATUSBAR_DELETE)
 {
-  QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -83,7 +85,7 @@ HB_FUNC_STATIC(QSTATUSBAR_DELETE)
 // void addPermanentWidget(QWidget *widget, int stretch = 0)
 HB_FUNC_STATIC(QSTATUSBAR_ADDPERMANENTWIDGET)
 {
-  QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -103,7 +105,7 @@ HB_FUNC_STATIC(QSTATUSBAR_ADDPERMANENTWIDGET)
 // void addWidget(QWidget *widget, int stretch = 0)
 HB_FUNC_STATIC(QSTATUSBAR_ADDWIDGET)
 {
-  QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -123,7 +125,7 @@ HB_FUNC_STATIC(QSTATUSBAR_ADDWIDGET)
 // QString currentMessage() const
 HB_FUNC_STATIC(QSTATUSBAR_CURRENTMESSAGE)
 {
-  QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -141,7 +143,7 @@ HB_FUNC_STATIC(QSTATUSBAR_CURRENTMESSAGE)
 // int insertPermanentWidget(int index, QWidget *widget, int stretch = 0)
 HB_FUNC_STATIC(QSTATUSBAR_INSERTPERMANENTWIDGET)
 {
-  QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -159,7 +161,7 @@ HB_FUNC_STATIC(QSTATUSBAR_INSERTPERMANENTWIDGET)
 // int insertWidget(int index, QWidget *widget, int stretch = 0)
 HB_FUNC_STATIC(QSTATUSBAR_INSERTWIDGET)
 {
-  QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -177,7 +179,7 @@ HB_FUNC_STATIC(QSTATUSBAR_INSERTWIDGET)
 // bool isSizeGripEnabled() const
 HB_FUNC_STATIC(QSTATUSBAR_ISSIZEGRIPENABLED)
 {
-  QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -195,7 +197,7 @@ HB_FUNC_STATIC(QSTATUSBAR_ISSIZEGRIPENABLED)
 // void removeWidget(QWidget *widget)
 HB_FUNC_STATIC(QSTATUSBAR_REMOVEWIDGET)
 {
-  QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -215,7 +217,7 @@ HB_FUNC_STATIC(QSTATUSBAR_REMOVEWIDGET)
 // void setSizeGripEnabled(bool)
 HB_FUNC_STATIC(QSTATUSBAR_SETSIZEGRIPENABLED)
 {
-  QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -235,7 +237,7 @@ HB_FUNC_STATIC(QSTATUSBAR_SETSIZEGRIPENABLED)
 // void clearMessage()
 HB_FUNC_STATIC(QSTATUSBAR_CLEARMESSAGE)
 {
-  QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -255,7 +257,7 @@ HB_FUNC_STATIC(QSTATUSBAR_CLEARMESSAGE)
 // void showMessage(const QString &message, int timeout = 0)
 HB_FUNC_STATIC(QSTATUSBAR_SHOWMESSAGE)
 {
-  QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

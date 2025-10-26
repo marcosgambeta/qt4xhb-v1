@@ -57,6 +57,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QShortcut *p = qobject_cast<QShortcut *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QSHORTCUT_NEW)
 {
   if (ISNUMPAR(1) && ISQWIDGET(1)) {
@@ -78,7 +80,7 @@ HB_FUNC_STATIC(QSHORTCUT_NEW)
 
 HB_FUNC_STATIC(QSHORTCUT_DELETE)
 {
-  QShortcut *obj = qobject_cast<QShortcut *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -96,7 +98,7 @@ HB_FUNC_STATIC(QSHORTCUT_DELETE)
 // bool autoRepeat() const
 HB_FUNC_STATIC(QSHORTCUT_AUTOREPEAT)
 {
-  QShortcut *obj = qobject_cast<QShortcut *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -114,7 +116,7 @@ HB_FUNC_STATIC(QSHORTCUT_AUTOREPEAT)
 // Qt::ShortcutContext context() const
 HB_FUNC_STATIC(QSHORTCUT_CONTEXT)
 {
-  QShortcut *obj = qobject_cast<QShortcut *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -132,7 +134,7 @@ HB_FUNC_STATIC(QSHORTCUT_CONTEXT)
 // int id() const
 HB_FUNC_STATIC(QSHORTCUT_ID)
 {
-  QShortcut *obj = qobject_cast<QShortcut *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -150,7 +152,7 @@ HB_FUNC_STATIC(QSHORTCUT_ID)
 // bool isEnabled() const
 HB_FUNC_STATIC(QSHORTCUT_ISENABLED)
 {
-  QShortcut *obj = qobject_cast<QShortcut *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -168,7 +170,7 @@ HB_FUNC_STATIC(QSHORTCUT_ISENABLED)
 // QKeySequence key() const
 HB_FUNC_STATIC(QSHORTCUT_KEY)
 {
-  QShortcut *obj = qobject_cast<QShortcut *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -187,7 +189,7 @@ HB_FUNC_STATIC(QSHORTCUT_KEY)
 // QWidget *parentWidget() const
 HB_FUNC_STATIC(QSHORTCUT_PARENTWIDGET)
 {
-  QShortcut *obj = qobject_cast<QShortcut *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -206,7 +208,7 @@ HB_FUNC_STATIC(QSHORTCUT_PARENTWIDGET)
 // void setAutoRepeat(bool on)
 HB_FUNC_STATIC(QSHORTCUT_SETAUTOREPEAT)
 {
-  QShortcut *obj = qobject_cast<QShortcut *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -226,7 +228,7 @@ HB_FUNC_STATIC(QSHORTCUT_SETAUTOREPEAT)
 // void setContext(Qt::ShortcutContext context)
 HB_FUNC_STATIC(QSHORTCUT_SETCONTEXT)
 {
-  QShortcut *obj = qobject_cast<QShortcut *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -246,7 +248,7 @@ HB_FUNC_STATIC(QSHORTCUT_SETCONTEXT)
 // void setEnabled(bool enable)
 HB_FUNC_STATIC(QSHORTCUT_SETENABLED)
 {
-  QShortcut *obj = qobject_cast<QShortcut *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -266,7 +268,7 @@ HB_FUNC_STATIC(QSHORTCUT_SETENABLED)
 // void setKey(const QKeySequence &key)
 HB_FUNC_STATIC(QSHORTCUT_SETKEY)
 {
-  QShortcut *obj = qobject_cast<QShortcut *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -286,7 +288,7 @@ HB_FUNC_STATIC(QSHORTCUT_SETKEY)
 // void setWhatsThis(const QString &text)
 HB_FUNC_STATIC(QSHORTCUT_SETWHATSTHIS)
 {
-  QShortcut *obj = qobject_cast<QShortcut *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -306,7 +308,7 @@ HB_FUNC_STATIC(QSHORTCUT_SETWHATSTHIS)
 // QString whatsThis() const
 HB_FUNC_STATIC(QSHORTCUT_WHATSTHIS)
 {
-  QShortcut *obj = qobject_cast<QShortcut *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -50,6 +50,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QStyleOptionGroupBox *p = static_cast<QStyleOptionGroupBox *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -68,7 +71,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_NEW)
 // QStyleOptionFrame::FrameFeatures features
 HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_FEATURES)
 {
-  QStyleOptionGroupBox *obj = static_cast<QStyleOptionGroupBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -80,7 +83,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_FEATURES)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETFEATURES)
 {
-  QStyleOptionGroupBox *obj = static_cast<QStyleOptionGroupBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -96,7 +99,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETFEATURES)
 // QString text
 HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_TEXT)
 {
-  QStyleOptionGroupBox *obj = static_cast<QStyleOptionGroupBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -108,7 +111,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_TEXT)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETTEXT)
 {
-  QStyleOptionGroupBox *obj = static_cast<QStyleOptionGroupBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISCHAR(1)) {
@@ -124,7 +127,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETTEXT)
 // Qt::Alignment textAlignment
 HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_TEXTALIGNMENT)
 {
-  QStyleOptionGroupBox *obj = static_cast<QStyleOptionGroupBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -136,7 +139,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_TEXTALIGNMENT)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETTEXTALIGNMENT)
 {
-  QStyleOptionGroupBox *obj = static_cast<QStyleOptionGroupBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -152,7 +155,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETTEXTALIGNMENT)
 // QColor textColor
 HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_TEXTCOLOR)
 {
-  QStyleOptionGroupBox *obj = static_cast<QStyleOptionGroupBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -165,7 +168,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_TEXTCOLOR)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETTEXTCOLOR)
 {
-  QStyleOptionGroupBox *obj = static_cast<QStyleOptionGroupBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && ISQCOLOR(1)) {
@@ -181,7 +184,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETTEXTCOLOR)
 // int lineWidth
 HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_LINEWIDTH)
 {
-  QStyleOptionGroupBox *obj = static_cast<QStyleOptionGroupBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -193,7 +196,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_LINEWIDTH)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETLINEWIDTH)
 {
-  QStyleOptionGroupBox *obj = static_cast<QStyleOptionGroupBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -209,7 +212,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETLINEWIDTH)
 // int midLineWidth
 HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_MIDLINEWIDTH)
 {
-  QStyleOptionGroupBox *obj = static_cast<QStyleOptionGroupBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -221,7 +224,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_MIDLINEWIDTH)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONGROUPBOX_SETMIDLINEWIDTH)
 {
-  QStyleOptionGroupBox *obj = static_cast<QStyleOptionGroupBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {

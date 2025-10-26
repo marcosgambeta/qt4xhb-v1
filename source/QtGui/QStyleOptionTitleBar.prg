@@ -46,6 +46,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QStyleOptionTitleBar *p = static_cast<QStyleOptionTitleBar *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -64,7 +67,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_NEW)
 // QString text
 HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_TEXT)
 {
-  QStyleOptionTitleBar *obj = static_cast<QStyleOptionTitleBar *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -76,7 +79,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_TEXT)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_SETTEXT)
 {
-  QStyleOptionTitleBar *obj = static_cast<QStyleOptionTitleBar *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISCHAR(1)) {
@@ -92,7 +95,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_SETTEXT)
 // QIcon icon
 HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_ICON)
 {
-  QStyleOptionTitleBar *obj = static_cast<QStyleOptionTitleBar *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -105,7 +108,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_ICON)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_SETICON)
 {
-  QStyleOptionTitleBar *obj = static_cast<QStyleOptionTitleBar *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && ISQICON(1)) {
@@ -121,7 +124,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_SETICON)
 // int titleBarState
 HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_TITLEBARSTATE)
 {
-  QStyleOptionTitleBar *obj = static_cast<QStyleOptionTitleBar *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -133,7 +136,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_TITLEBARSTATE)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_SETTITLEBARSTATE)
 {
-  QStyleOptionTitleBar *obj = static_cast<QStyleOptionTitleBar *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -149,7 +152,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_SETTITLEBARSTATE)
 // Qt::WindowFlags titleBarFlags
 HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_TITLEBARFLAGS)
 {
-  QStyleOptionTitleBar *obj = static_cast<QStyleOptionTitleBar *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -161,7 +164,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_TITLEBARFLAGS)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONTITLEBAR_SETTITLEBARFLAGS)
 {
-  QStyleOptionTitleBar *obj = static_cast<QStyleOptionTitleBar *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {

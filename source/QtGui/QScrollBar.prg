@@ -43,6 +43,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QScrollBar *p = qobject_cast<QScrollBar *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QSCROLLBAR_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
@@ -60,7 +62,7 @@ HB_FUNC_STATIC(QSCROLLBAR_NEW)
 
 HB_FUNC_STATIC(QSCROLLBAR_DELETE)
 {
-  QScrollBar *obj = qobject_cast<QScrollBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -78,7 +80,7 @@ HB_FUNC_STATIC(QSCROLLBAR_DELETE)
 // virtual bool event(QEvent *event)
 HB_FUNC_STATIC(QSCROLLBAR_EVENT)
 {
-  QScrollBar *obj = qobject_cast<QScrollBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -96,7 +98,7 @@ HB_FUNC_STATIC(QSCROLLBAR_EVENT)
 // virtual QSize sizeHint() const
 HB_FUNC_STATIC(QSCROLLBAR_SIZEHINT)
 {
-  QScrollBar *obj = qobject_cast<QScrollBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

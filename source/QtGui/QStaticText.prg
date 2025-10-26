@@ -61,6 +61,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QStaticText *p = static_cast<QStaticText *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSTATICTEXT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -82,7 +84,7 @@ HB_FUNC_STATIC(QSTATICTEXT_NEW)
 
 HB_FUNC_STATIC(QSTATICTEXT_DELETE)
 {
-  QStaticText *obj = static_cast<QStaticText *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -98,7 +100,7 @@ HB_FUNC_STATIC(QSTATICTEXT_DELETE)
 // QStaticText::PerformanceHint performanceHint() const
 HB_FUNC_STATIC(QSTATICTEXT_PERFORMANCEHINT)
 {
-  QStaticText *obj = static_cast<QStaticText *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -116,7 +118,7 @@ HB_FUNC_STATIC(QSTATICTEXT_PERFORMANCEHINT)
 // void prepare(const QTransform &matrix = QTransform(), const QFont &font = QFont())
 HB_FUNC_STATIC(QSTATICTEXT_PREPARE)
 {
-  QStaticText *obj = static_cast<QStaticText *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -137,7 +139,7 @@ HB_FUNC_STATIC(QSTATICTEXT_PREPARE)
 // void setPerformanceHint(QStaticText::PerformanceHint performanceHint)
 HB_FUNC_STATIC(QSTATICTEXT_SETPERFORMANCEHINT)
 {
-  QStaticText *obj = static_cast<QStaticText *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -157,7 +159,7 @@ HB_FUNC_STATIC(QSTATICTEXT_SETPERFORMANCEHINT)
 // void setText(const QString &text)
 HB_FUNC_STATIC(QSTATICTEXT_SETTEXT)
 {
-  QStaticText *obj = static_cast<QStaticText *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -177,7 +179,7 @@ HB_FUNC_STATIC(QSTATICTEXT_SETTEXT)
 // void setTextFormat(Qt::TextFormat textFormat)
 HB_FUNC_STATIC(QSTATICTEXT_SETTEXTFORMAT)
 {
-  QStaticText *obj = static_cast<QStaticText *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -197,7 +199,7 @@ HB_FUNC_STATIC(QSTATICTEXT_SETTEXTFORMAT)
 // void setTextOption(const QTextOption &textOption)
 HB_FUNC_STATIC(QSTATICTEXT_SETTEXTOPTION)
 {
-  QStaticText *obj = static_cast<QStaticText *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -217,7 +219,7 @@ HB_FUNC_STATIC(QSTATICTEXT_SETTEXTOPTION)
 // void setTextWidth(qreal textWidth)
 HB_FUNC_STATIC(QSTATICTEXT_SETTEXTWIDTH)
 {
-  QStaticText *obj = static_cast<QStaticText *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -237,7 +239,7 @@ HB_FUNC_STATIC(QSTATICTEXT_SETTEXTWIDTH)
 // QSizeF size() const
 HB_FUNC_STATIC(QSTATICTEXT_SIZE)
 {
-  QStaticText *obj = static_cast<QStaticText *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -256,7 +258,7 @@ HB_FUNC_STATIC(QSTATICTEXT_SIZE)
 // QString text() const
 HB_FUNC_STATIC(QSTATICTEXT_TEXT)
 {
-  QStaticText *obj = static_cast<QStaticText *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -274,7 +276,7 @@ HB_FUNC_STATIC(QSTATICTEXT_TEXT)
 // Qt::TextFormat textFormat() const
 HB_FUNC_STATIC(QSTATICTEXT_TEXTFORMAT)
 {
-  QStaticText *obj = static_cast<QStaticText *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -292,7 +294,7 @@ HB_FUNC_STATIC(QSTATICTEXT_TEXTFORMAT)
 // QTextOption textOption() const
 HB_FUNC_STATIC(QSTATICTEXT_TEXTOPTION)
 {
-  QStaticText *obj = static_cast<QStaticText *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -311,7 +313,7 @@ HB_FUNC_STATIC(QSTATICTEXT_TEXTOPTION)
 // qreal textWidth() const
 HB_FUNC_STATIC(QSTATICTEXT_TEXTWIDTH)
 {
-  QStaticText *obj = static_cast<QStaticText *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

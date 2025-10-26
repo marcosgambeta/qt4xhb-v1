@@ -62,6 +62,9 @@ RETURN
 
 #include <QtGui/QMenu>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QSystemTrayIcon *p = qobject_cast<QSystemTrayIcon *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QSYSTEMTRAYICON_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -80,7 +83,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_NEW)
 
 HB_FUNC_STATIC(QSYSTEMTRAYICON_DELETE)
 {
-  QSystemTrayIcon *obj = qobject_cast<QSystemTrayIcon *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -98,7 +101,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_DELETE)
 // QMenu *contextMenu() const
 HB_FUNC_STATIC(QSYSTEMTRAYICON_CONTEXTMENU)
 {
-  QSystemTrayIcon *obj = qobject_cast<QSystemTrayIcon *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -117,7 +120,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_CONTEXTMENU)
 // QRect geometry() const
 HB_FUNC_STATIC(QSYSTEMTRAYICON_GEOMETRY)
 {
-  QSystemTrayIcon *obj = qobject_cast<QSystemTrayIcon *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -136,7 +139,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_GEOMETRY)
 // QIcon icon() const
 HB_FUNC_STATIC(QSYSTEMTRAYICON_ICON)
 {
-  QSystemTrayIcon *obj = qobject_cast<QSystemTrayIcon *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -155,7 +158,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_ICON)
 // bool isVisible() const
 HB_FUNC_STATIC(QSYSTEMTRAYICON_ISVISIBLE)
 {
-  QSystemTrayIcon *obj = qobject_cast<QSystemTrayIcon *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -173,7 +176,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_ISVISIBLE)
 // void setContextMenu(QMenu *menu)
 HB_FUNC_STATIC(QSYSTEMTRAYICON_SETCONTEXTMENU)
 {
-  QSystemTrayIcon *obj = qobject_cast<QSystemTrayIcon *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -193,7 +196,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_SETCONTEXTMENU)
 // void setIcon(const QIcon &icon)
 HB_FUNC_STATIC(QSYSTEMTRAYICON_SETICON)
 {
-  QSystemTrayIcon *obj = qobject_cast<QSystemTrayIcon *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -213,7 +216,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_SETICON)
 // void setToolTip(const QString &tip)
 HB_FUNC_STATIC(QSYSTEMTRAYICON_SETTOOLTIP)
 {
-  QSystemTrayIcon *obj = qobject_cast<QSystemTrayIcon *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -234,7 +237,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_SETTOOLTIP)
 // QSystemTrayIcon::Information, int millisecondsTimeoutHint = 10000)
 HB_FUNC_STATIC(QSYSTEMTRAYICON_SHOWMESSAGE)
 {
-  QSystemTrayIcon *obj = qobject_cast<QSystemTrayIcon *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -257,7 +260,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_SHOWMESSAGE)
 // QString toolTip() const
 HB_FUNC_STATIC(QSYSTEMTRAYICON_TOOLTIP)
 {
-  QSystemTrayIcon *obj = qobject_cast<QSystemTrayIcon *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -275,7 +278,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_TOOLTIP)
 // void hide()
 HB_FUNC_STATIC(QSYSTEMTRAYICON_HIDE)
 {
-  QSystemTrayIcon *obj = qobject_cast<QSystemTrayIcon *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -295,7 +298,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_HIDE)
 // void setVisible(bool visible)
 HB_FUNC_STATIC(QSYSTEMTRAYICON_SETVISIBLE)
 {
-  QSystemTrayIcon *obj = qobject_cast<QSystemTrayIcon *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -315,7 +318,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_SETVISIBLE)
 // void show()
 HB_FUNC_STATIC(QSYSTEMTRAYICON_SHOW)
 {
-  QSystemTrayIcon *obj = qobject_cast<QSystemTrayIcon *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

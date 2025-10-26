@@ -42,6 +42,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QStyleOptionComplex *p = static_cast<QStyleOptionComplex *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_NEW)
 {
   if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISNUMORNIL(2)) {
@@ -60,7 +63,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_NEW)
 
 HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_DELETE)
 {
-  QStyleOptionComplex *obj = static_cast<QStyleOptionComplex *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -76,7 +79,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_DELETE)
 // QStyle::SubControls subControls
 HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_SUBCONTROLS)
 {
-  QStyleOptionComplex *obj = static_cast<QStyleOptionComplex *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -88,7 +91,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_SUBCONTROLS)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_SETSUBCONTROLS)
 {
-  QStyleOptionComplex *obj = static_cast<QStyleOptionComplex *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -104,7 +107,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_SETSUBCONTROLS)
 // QStyle::SubControls activeSubControls
 HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_ACTIVESUBCONTROLS)
 {
-  QStyleOptionComplex *obj = static_cast<QStyleOptionComplex *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -116,7 +119,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_ACTIVESUBCONTROLS)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_SETACTIVESUBCONTROLS)
 {
-  QStyleOptionComplex *obj = static_cast<QStyleOptionComplex *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {

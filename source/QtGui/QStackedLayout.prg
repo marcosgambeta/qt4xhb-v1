@@ -53,6 +53,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QStackedLayout *p = qobject_cast<QStackedLayout *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QSTACKEDLAYOUT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -74,7 +76,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_NEW)
 
 HB_FUNC_STATIC(QSTACKEDLAYOUT_DELETE)
 {
-  QStackedLayout *obj = qobject_cast<QStackedLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -92,7 +94,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_DELETE)
 // int addWidget(QWidget *widget)
 HB_FUNC_STATIC(QSTACKEDLAYOUT_ADDWIDGET)
 {
-  QStackedLayout *obj = qobject_cast<QStackedLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -110,7 +112,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_ADDWIDGET)
 // int currentIndex() const
 HB_FUNC_STATIC(QSTACKEDLAYOUT_CURRENTINDEX)
 {
-  QStackedLayout *obj = qobject_cast<QStackedLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -128,7 +130,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_CURRENTINDEX)
 // QWidget *currentWidget() const
 HB_FUNC_STATIC(QSTACKEDLAYOUT_CURRENTWIDGET)
 {
-  QStackedLayout *obj = qobject_cast<QStackedLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -147,7 +149,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_CURRENTWIDGET)
 // int insertWidget(int index, QWidget *widget)
 HB_FUNC_STATIC(QSTACKEDLAYOUT_INSERTWIDGET)
 {
-  QStackedLayout *obj = qobject_cast<QStackedLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -165,7 +167,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_INSERTWIDGET)
 // void setStackingMode(QStackedLayout::StackingMode stackingMode)
 HB_FUNC_STATIC(QSTACKEDLAYOUT_SETSTACKINGMODE)
 {
-  QStackedLayout *obj = qobject_cast<QStackedLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -185,7 +187,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_SETSTACKINGMODE)
 // QStackedLayout::StackingMode stackingMode() const
 HB_FUNC_STATIC(QSTACKEDLAYOUT_STACKINGMODE)
 {
-  QStackedLayout *obj = qobject_cast<QStackedLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -203,7 +205,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_STACKINGMODE)
 // QWidget *widget(int index) const
 HB_FUNC_STATIC(QSTACKEDLAYOUT_WIDGET)
 {
-  QStackedLayout *obj = qobject_cast<QStackedLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -222,7 +224,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_WIDGET)
 // void setCurrentIndex(int index)
 HB_FUNC_STATIC(QSTACKEDLAYOUT_SETCURRENTINDEX)
 {
-  QStackedLayout *obj = qobject_cast<QStackedLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -242,7 +244,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_SETCURRENTINDEX)
 // void setCurrentWidget(QWidget *widget)
 HB_FUNC_STATIC(QSTACKEDLAYOUT_SETCURRENTWIDGET)
 {
-  QStackedLayout *obj = qobject_cast<QStackedLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

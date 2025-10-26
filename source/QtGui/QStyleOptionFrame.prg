@@ -41,6 +41,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QStyleOptionFrame *p = static_cast<QStyleOptionFrame *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSTYLEOPTIONFRAME_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -59,7 +61,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFRAME_NEW)
 // int lineWidth
 HB_FUNC_STATIC(QSTYLEOPTIONFRAME_LINEWIDTH)
 {
-  QStyleOptionFrame *obj = static_cast<QStyleOptionFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -71,7 +73,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFRAME_LINEWIDTH)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONFRAME_SETLINEWIDTH)
 {
-  QStyleOptionFrame *obj = static_cast<QStyleOptionFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -87,7 +89,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFRAME_SETLINEWIDTH)
 // int midLineWidth
 HB_FUNC_STATIC(QSTYLEOPTIONFRAME_MIDLINEWIDTH)
 {
-  QStyleOptionFrame *obj = static_cast<QStyleOptionFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -99,7 +101,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONFRAME_MIDLINEWIDTH)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONFRAME_SETMIDLINEWIDTH)
 {
-  QStyleOptionFrame *obj = static_cast<QStyleOptionFrame *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {

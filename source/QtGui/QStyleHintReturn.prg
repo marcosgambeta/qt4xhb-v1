@@ -47,6 +47,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QStyleHintReturn *p = static_cast<QStyleHintReturn *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QStyleHintReturn(int version = QStyleOption::Version, int type = QStyleHintReturn::SH_Default)
 HB_FUNC_STATIC(QSTYLEHINTRETURN_NEW)
 {
@@ -61,7 +63,7 @@ HB_FUNC_STATIC(QSTYLEHINTRETURN_NEW)
 
 HB_FUNC_STATIC(QSTYLEHINTRETURN_DELETE)
 {
-  QStyleHintReturn *obj = static_cast<QStyleHintReturn *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;

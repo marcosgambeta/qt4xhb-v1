@@ -56,6 +56,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QStyleOptionHeader *p = static_cast<QStyleOptionHeader *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSTYLEOPTIONHEADER_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -74,7 +77,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_NEW)
 // int section
 HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SECTION)
 {
-  QStyleOptionHeader *obj = static_cast<QStyleOptionHeader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -86,7 +89,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SECTION)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SETSECTION)
 {
-  QStyleOptionHeader *obj = static_cast<QStyleOptionHeader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -102,7 +105,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SETSECTION)
 // QString text
 HB_FUNC_STATIC(QSTYLEOPTIONHEADER_TEXT)
 {
-  QStyleOptionHeader *obj = static_cast<QStyleOptionHeader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -114,7 +117,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_TEXT)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SETTEXT)
 {
-  QStyleOptionHeader *obj = static_cast<QStyleOptionHeader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISCHAR(1)) {
@@ -130,7 +133,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SETTEXT)
 // Qt::Alignment textAlignment
 HB_FUNC_STATIC(QSTYLEOPTIONHEADER_TEXTALIGNMENT)
 {
-  QStyleOptionHeader *obj = static_cast<QStyleOptionHeader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -142,7 +145,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_TEXTALIGNMENT)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SETTEXTALIGNMENT)
 {
-  QStyleOptionHeader *obj = static_cast<QStyleOptionHeader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -158,7 +161,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SETTEXTALIGNMENT)
 // QIcon icon
 HB_FUNC_STATIC(QSTYLEOPTIONHEADER_ICON)
 {
-  QStyleOptionHeader *obj = static_cast<QStyleOptionHeader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -171,7 +174,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_ICON)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SETICON)
 {
-  QStyleOptionHeader *obj = static_cast<QStyleOptionHeader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && ISQICON(1)) {
@@ -187,7 +190,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SETICON)
 // Qt::Alignment iconAlignment
 HB_FUNC_STATIC(QSTYLEOPTIONHEADER_ICONALIGNMENT)
 {
-  QStyleOptionHeader *obj = static_cast<QStyleOptionHeader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -199,7 +202,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_ICONALIGNMENT)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SETICONALIGNMENT)
 {
-  QStyleOptionHeader *obj = static_cast<QStyleOptionHeader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -215,7 +218,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SETICONALIGNMENT)
 // SectionPosition position
 HB_FUNC_STATIC(QSTYLEOPTIONHEADER_POSITION)
 {
-  QStyleOptionHeader *obj = static_cast<QStyleOptionHeader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -227,7 +230,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_POSITION)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SETPOSITION)
 {
-  QStyleOptionHeader *obj = static_cast<QStyleOptionHeader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -243,7 +246,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SETPOSITION)
 // SelectedPosition selectedPosition
 HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SELECTEDPOSITION)
 {
-  QStyleOptionHeader *obj = static_cast<QStyleOptionHeader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -255,7 +258,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SELECTEDPOSITION)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SETSELECTEDPOSITION)
 {
-  QStyleOptionHeader *obj = static_cast<QStyleOptionHeader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -271,7 +274,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SETSELECTEDPOSITION)
 // SortIndicator sortIndicator
 HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SORTINDICATOR)
 {
-  QStyleOptionHeader *obj = static_cast<QStyleOptionHeader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -283,7 +286,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SORTINDICATOR)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SETSORTINDICATOR)
 {
-  QStyleOptionHeader *obj = static_cast<QStyleOptionHeader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -299,7 +302,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SETSORTINDICATOR)
 // Qt::Orientation orientation
 HB_FUNC_STATIC(QSTYLEOPTIONHEADER_ORIENTATION)
 {
-  QStyleOptionHeader *obj = static_cast<QStyleOptionHeader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -311,7 +314,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONHEADER_ORIENTATION)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONHEADER_SETORIENTATION)
 {
-  QStyleOptionHeader *obj = static_cast<QStyleOptionHeader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {

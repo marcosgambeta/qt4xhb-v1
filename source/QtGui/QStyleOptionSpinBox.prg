@@ -43,6 +43,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QStyleOptionSpinBox *p = static_cast<QStyleOptionSpinBox *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -61,7 +64,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_NEW)
 // QAbstractSpinBox::ButtonSymbols buttonSymbols
 HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_BUTTONSYMBOLS)
 {
-  QStyleOptionSpinBox *obj = static_cast<QStyleOptionSpinBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -73,7 +76,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_BUTTONSYMBOLS)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_SETBUTTONSYMBOLS)
 {
-  QStyleOptionSpinBox *obj = static_cast<QStyleOptionSpinBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -89,7 +92,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_SETBUTTONSYMBOLS)
 // QAbstractSpinBox::StepEnabled stepEnabled
 HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_STEPENABLED)
 {
-  QStyleOptionSpinBox *obj = static_cast<QStyleOptionSpinBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -101,7 +104,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_STEPENABLED)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_SETSTEPENABLED)
 {
-  QStyleOptionSpinBox *obj = static_cast<QStyleOptionSpinBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
@@ -117,7 +120,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_SETSTEPENABLED)
 // bool frame
 HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_FRAME)
 {
-  QStyleOptionSpinBox *obj = static_cast<QStyleOptionSpinBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -129,7 +132,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_FRAME)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONSPINBOX_SETFRAME)
 {
-  QStyleOptionSpinBox *obj = static_cast<QStyleOptionSpinBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISLOG(1)) {

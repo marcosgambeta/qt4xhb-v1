@@ -42,6 +42,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QStyleOptionToolBox *p = static_cast<QStyleOptionToolBox *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -60,7 +63,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_NEW)
 // QString text
 HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_TEXT)
 {
-  QStyleOptionToolBox *obj = static_cast<QStyleOptionToolBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -72,7 +75,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_TEXT)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_SETTEXT)
 {
-  QStyleOptionToolBox *obj = static_cast<QStyleOptionToolBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISCHAR(1)) {
@@ -88,7 +91,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_SETTEXT)
 // QIcon icon
 HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_ICON)
 {
-  QStyleOptionToolBox *obj = static_cast<QStyleOptionToolBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
@@ -101,7 +104,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_ICON)
 }
 HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_SETICON)
 {
-  QStyleOptionToolBox *obj = static_cast<QStyleOptionToolBox *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && ISQICON(1)) {
