@@ -56,7 +56,7 @@ RETURN
 #define GET_PTR_FROM_SELF(p) QSystemSemaphore *p = static_cast<QSystemSemaphore *>(Qt4xHb::itemGetPtrStackSelfItem())
 
 // QSystemSemaphore(const QString &key, int initialValue = 0, QSystemSemaphore::AccessMode mode =
-    // QSystemSemaphore::Open)
+// QSystemSemaphore::Open)
 HB_FUNC_STATIC(QSYSTEMSEMAPHORE_NEW)
 {
   if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
