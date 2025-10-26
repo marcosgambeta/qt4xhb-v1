@@ -44,10 +44,12 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QGraphicsSceneContextMenuEvent *p = static_cast<QGraphicsSceneContextMenuEvent *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QGRAPHICSSCENECONTEXTMENUEVENT_DELETE)
 {
-  QGraphicsSceneContextMenuEvent *obj =
-      static_cast<QGraphicsSceneContextMenuEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -63,8 +65,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENECONTEXTMENUEVENT_DELETE)
 // Qt::KeyboardModifiers modifiers() const
 HB_FUNC_STATIC(QGRAPHICSSCENECONTEXTMENUEVENT_MODIFIERS)
 {
-  QGraphicsSceneContextMenuEvent *obj =
-      static_cast<QGraphicsSceneContextMenuEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -82,8 +83,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENECONTEXTMENUEVENT_MODIFIERS)
 // QPointF pos() const
 HB_FUNC_STATIC(QGRAPHICSSCENECONTEXTMENUEVENT_POS)
 {
-  QGraphicsSceneContextMenuEvent *obj =
-      static_cast<QGraphicsSceneContextMenuEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -102,8 +102,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENECONTEXTMENUEVENT_POS)
 // QGraphicsSceneContextMenuEvent::Reason reason() const
 HB_FUNC_STATIC(QGRAPHICSSCENECONTEXTMENUEVENT_REASON)
 {
-  QGraphicsSceneContextMenuEvent *obj =
-      static_cast<QGraphicsSceneContextMenuEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -121,8 +120,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENECONTEXTMENUEVENT_REASON)
 // QPointF scenePos() const
 HB_FUNC_STATIC(QGRAPHICSSCENECONTEXTMENUEVENT_SCENEPOS)
 {
-  QGraphicsSceneContextMenuEvent *obj =
-      static_cast<QGraphicsSceneContextMenuEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -141,8 +139,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENECONTEXTMENUEVENT_SCENEPOS)
 // QPoint screenPos() const
 HB_FUNC_STATIC(QGRAPHICSSCENECONTEXTMENUEVENT_SCREENPOS)
 {
-  QGraphicsSceneContextMenuEvent *obj =
-      static_cast<QGraphicsSceneContextMenuEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

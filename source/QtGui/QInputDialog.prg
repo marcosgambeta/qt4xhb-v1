@@ -95,6 +95,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QInputDialog *p = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QInputDialog(QWidget *parent = 0, Qt::WindowFlags flags = 0)
 HB_FUNC_STATIC(QINPUTDIALOG_NEW)
 {
@@ -109,7 +111,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_NEW)
 
 HB_FUNC_STATIC(QINPUTDIALOG_DELETE)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -127,7 +129,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_DELETE)
 // QString cancelButtonText() const
 HB_FUNC_STATIC(QINPUTDIALOG_CANCELBUTTONTEXT)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -145,7 +147,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_CANCELBUTTONTEXT)
 // QStringList comboBoxItems() const
 HB_FUNC_STATIC(QINPUTDIALOG_COMBOBOXITEMS)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -163,7 +165,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_COMBOBOXITEMS)
 // int doubleDecimals() const
 HB_FUNC_STATIC(QINPUTDIALOG_DOUBLEDECIMALS)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -181,7 +183,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_DOUBLEDECIMALS)
 // double doubleMaximum() const
 HB_FUNC_STATIC(QINPUTDIALOG_DOUBLEMAXIMUM)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -199,7 +201,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_DOUBLEMAXIMUM)
 // double doubleMinimum() const
 HB_FUNC_STATIC(QINPUTDIALOG_DOUBLEMINIMUM)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -217,7 +219,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_DOUBLEMINIMUM)
 // double doubleValue() const
 HB_FUNC_STATIC(QINPUTDIALOG_DOUBLEVALUE)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -235,7 +237,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_DOUBLEVALUE)
 // QInputDialog::InputMode inputMode() const
 HB_FUNC_STATIC(QINPUTDIALOG_INPUTMODE)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -253,7 +255,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_INPUTMODE)
 // int intMaximum() const
 HB_FUNC_STATIC(QINPUTDIALOG_INTMAXIMUM)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -271,7 +273,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_INTMAXIMUM)
 // int intMinimum() const
 HB_FUNC_STATIC(QINPUTDIALOG_INTMINIMUM)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -289,7 +291,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_INTMINIMUM)
 // int intStep() const
 HB_FUNC_STATIC(QINPUTDIALOG_INTSTEP)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -307,7 +309,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_INTSTEP)
 // int intValue() const
 HB_FUNC_STATIC(QINPUTDIALOG_INTVALUE)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -325,7 +327,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_INTVALUE)
 // bool isComboBoxEditable() const
 HB_FUNC_STATIC(QINPUTDIALOG_ISCOMBOBOXEDITABLE)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -343,7 +345,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_ISCOMBOBOXEDITABLE)
 // QString labelText() const
 HB_FUNC_STATIC(QINPUTDIALOG_LABELTEXT)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -361,7 +363,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_LABELTEXT)
 // QString okButtonText() const
 HB_FUNC_STATIC(QINPUTDIALOG_OKBUTTONTEXT)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -379,7 +381,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_OKBUTTONTEXT)
 // void open(QObject *receiver, const char *member)
 HB_FUNC_STATIC(QINPUTDIALOG_OPEN)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -399,7 +401,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_OPEN)
 // QInputDialog::InputDialogOptions options() const
 HB_FUNC_STATIC(QINPUTDIALOG_OPTIONS)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -417,7 +419,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_OPTIONS)
 // void setCancelButtonText(const QString &text)
 HB_FUNC_STATIC(QINPUTDIALOG_SETCANCELBUTTONTEXT)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -437,7 +439,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETCANCELBUTTONTEXT)
 // void setComboBoxEditable(bool editable)
 HB_FUNC_STATIC(QINPUTDIALOG_SETCOMBOBOXEDITABLE)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -457,7 +459,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETCOMBOBOXEDITABLE)
 // void setComboBoxItems(const QStringList &items)
 HB_FUNC_STATIC(QINPUTDIALOG_SETCOMBOBOXITEMS)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -477,7 +479,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETCOMBOBOXITEMS)
 // void setDoubleDecimals(int decimals)
 HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEDECIMALS)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -497,7 +499,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEDECIMALS)
 // void setDoubleMaximum(double max)
 HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEMAXIMUM)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -517,7 +519,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEMAXIMUM)
 // void setDoubleMinimum(double min)
 HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEMINIMUM)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -537,7 +539,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEMINIMUM)
 // void setDoubleRange(double min, double max)
 HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLERANGE)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -557,7 +559,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLERANGE)
 // void setDoubleValue(double value)
 HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEVALUE)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -577,7 +579,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETDOUBLEVALUE)
 // void setInputMode(QInputDialog::InputMode mode)
 HB_FUNC_STATIC(QINPUTDIALOG_SETINPUTMODE)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -597,7 +599,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINPUTMODE)
 // void setIntMaximum(int max)
 HB_FUNC_STATIC(QINPUTDIALOG_SETINTMAXIMUM)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -617,7 +619,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINTMAXIMUM)
 // void setIntMinimum(int min)
 HB_FUNC_STATIC(QINPUTDIALOG_SETINTMINIMUM)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -637,7 +639,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINTMINIMUM)
 // void setIntRange(int min, int max)
 HB_FUNC_STATIC(QINPUTDIALOG_SETINTRANGE)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -657,7 +659,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINTRANGE)
 // void setIntStep(int step)
 HB_FUNC_STATIC(QINPUTDIALOG_SETINTSTEP)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -677,7 +679,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINTSTEP)
 // void setIntValue(int value)
 HB_FUNC_STATIC(QINPUTDIALOG_SETINTVALUE)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -697,7 +699,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETINTVALUE)
 // void setLabelText(const QString &text)
 HB_FUNC_STATIC(QINPUTDIALOG_SETLABELTEXT)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -717,7 +719,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETLABELTEXT)
 // void setOkButtonText(const QString &text)
 HB_FUNC_STATIC(QINPUTDIALOG_SETOKBUTTONTEXT)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -737,7 +739,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETOKBUTTONTEXT)
 // void setOption(QInputDialog::InputDialogOption option, bool on = true)
 HB_FUNC_STATIC(QINPUTDIALOG_SETOPTION)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -757,7 +759,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETOPTION)
 // void setOptions(QInputDialog::InputDialogOptions options)
 HB_FUNC_STATIC(QINPUTDIALOG_SETOPTIONS)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -777,7 +779,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETOPTIONS)
 // void setTextEchoMode(QLineEdit::EchoMode mode)
 HB_FUNC_STATIC(QINPUTDIALOG_SETTEXTECHOMODE)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -797,7 +799,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETTEXTECHOMODE)
 // void setTextValue(const QString &text)
 HB_FUNC_STATIC(QINPUTDIALOG_SETTEXTVALUE)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -817,7 +819,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETTEXTVALUE)
 // bool testOption(QInputDialog::InputDialogOption option) const
 HB_FUNC_STATIC(QINPUTDIALOG_TESTOPTION)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -835,7 +837,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_TESTOPTION)
 // QLineEdit::EchoMode textEchoMode() const
 HB_FUNC_STATIC(QINPUTDIALOG_TEXTECHOMODE)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -853,7 +855,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_TEXTECHOMODE)
 // QString textValue() const
 HB_FUNC_STATIC(QINPUTDIALOG_TEXTVALUE)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -871,7 +873,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_TEXTVALUE)
 // virtual void done(int result)
 HB_FUNC_STATIC(QINPUTDIALOG_DONE)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -891,7 +893,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_DONE)
 // virtual QSize minimumSizeHint() const
 HB_FUNC_STATIC(QINPUTDIALOG_MINIMUMSIZEHINT)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -910,7 +912,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_MINIMUMSIZEHINT)
 // virtual void setVisible(bool visible)
 HB_FUNC_STATIC(QINPUTDIALOG_SETVISIBLE)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -930,7 +932,7 @@ HB_FUNC_STATIC(QINPUTDIALOG_SETVISIBLE)
 // virtual QSize sizeHint() const
 HB_FUNC_STATIC(QINPUTDIALOG_SIZEHINT)
 {
-  QInputDialog *obj = qobject_cast<QInputDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

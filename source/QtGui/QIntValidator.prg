@@ -47,6 +47,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QIntValidator *p = qobject_cast<QIntValidator *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QINTVALIDATOR_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -64,7 +66,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_NEW)
 
 HB_FUNC_STATIC(QINTVALIDATOR_DELETE)
 {
-  QIntValidator *obj = qobject_cast<QIntValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -82,7 +84,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_DELETE)
 // int bottom() const
 HB_FUNC_STATIC(QINTVALIDATOR_BOTTOM)
 {
-  QIntValidator *obj = qobject_cast<QIntValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -100,7 +102,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_BOTTOM)
 // void setBottom(int)
 HB_FUNC_STATIC(QINTVALIDATOR_SETBOTTOM)
 {
-  QIntValidator *obj = qobject_cast<QIntValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -120,7 +122,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_SETBOTTOM)
 // virtual void setRange(int bottom, int top)
 HB_FUNC_STATIC(QINTVALIDATOR_SETRANGE)
 {
-  QIntValidator *obj = qobject_cast<QIntValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -140,7 +142,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_SETRANGE)
 // void setTop(int)
 HB_FUNC_STATIC(QINTVALIDATOR_SETTOP)
 {
-  QIntValidator *obj = qobject_cast<QIntValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -160,7 +162,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_SETTOP)
 // int top() const
 HB_FUNC_STATIC(QINTVALIDATOR_TOP)
 {
-  QIntValidator *obj = qobject_cast<QIntValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -178,7 +180,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_TOP)
 // virtual void fixup(QString &input) const
 HB_FUNC_STATIC(QINTVALIDATOR_FIXUP)
 {
-  QIntValidator *obj = qobject_cast<QIntValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -200,7 +202,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_FIXUP)
 // virtual QValidator::State validate(QString &input, int &pos) const
 HB_FUNC_STATIC(QINTVALIDATOR_VALIDATE)
 {
-  QIntValidator *obj = qobject_cast<QIntValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

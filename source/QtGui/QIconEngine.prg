@@ -53,9 +53,11 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QIconEngine *p = static_cast<QIconEngine *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QICONENGINE_DELETE)
 {
-  QIconEngine *obj = static_cast<QIconEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -71,7 +73,7 @@ HB_FUNC_STATIC(QICONENGINE_DELETE)
 // virtual QSize actualSize(const QSize &size, QIcon::Mode mode, QIcon::State state)
 HB_FUNC_STATIC(QICONENGINE_ACTUALSIZE)
 {
-  QIconEngine *obj = static_cast<QIconEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -90,7 +92,7 @@ HB_FUNC_STATIC(QICONENGINE_ACTUALSIZE)
 // virtual void addFile(const QString &fileName, const QSize &size, QIcon::Mode mode, QIcon::State state)
 HB_FUNC_STATIC(QICONENGINE_ADDFILE)
 {
-  QIconEngine *obj = static_cast<QIconEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -110,7 +112,7 @@ HB_FUNC_STATIC(QICONENGINE_ADDFILE)
 // virtual void addPixmap(const QPixmap &pixmap, QIcon::Mode mode, QIcon::State state)
 HB_FUNC_STATIC(QICONENGINE_ADDPIXMAP)
 {
-  QIconEngine *obj = static_cast<QIconEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -130,7 +132,7 @@ HB_FUNC_STATIC(QICONENGINE_ADDPIXMAP)
 // virtual void paint(QPainter *painter, const QRect &rect, QIcon::Mode mode, QIcon::State state) = 0
 HB_FUNC_STATIC(QICONENGINE_PAINT)
 {
-  QIconEngine *obj = static_cast<QIconEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -150,7 +152,7 @@ HB_FUNC_STATIC(QICONENGINE_PAINT)
 // virtual QPixmap pixmap(const QSize &size, QIcon::Mode mode, QIcon::State state)
 HB_FUNC_STATIC(QICONENGINE_PIXMAP)
 {
-  QIconEngine *obj = static_cast<QIconEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

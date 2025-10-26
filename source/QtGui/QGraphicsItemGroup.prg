@@ -47,6 +47,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QGraphicsItemGroup *p = static_cast<QGraphicsItemGroup *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QGraphicsItemGroup(QGraphicsItem *parent = 0)
 HB_FUNC_STATIC(QGRAPHICSITEMGROUP_NEW)
 {
@@ -61,7 +64,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMGROUP_NEW)
 
 HB_FUNC_STATIC(QGRAPHICSITEMGROUP_DELETE)
 {
-  QGraphicsItemGroup *obj = static_cast<QGraphicsItemGroup *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -77,7 +80,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMGROUP_DELETE)
 // void addToGroup(QGraphicsItem *item)
 HB_FUNC_STATIC(QGRAPHICSITEMGROUP_ADDTOGROUP)
 {
-  QGraphicsItemGroup *obj = static_cast<QGraphicsItemGroup *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -97,7 +100,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMGROUP_ADDTOGROUP)
 // void removeFromGroup(QGraphicsItem *item)
 HB_FUNC_STATIC(QGRAPHICSITEMGROUP_REMOVEFROMGROUP)
 {
-  QGraphicsItemGroup *obj = static_cast<QGraphicsItemGroup *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -117,7 +120,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMGROUP_REMOVEFROMGROUP)
 // virtual QRectF boundingRect() const
 HB_FUNC_STATIC(QGRAPHICSITEMGROUP_BOUNDINGRECT)
 {
-  QGraphicsItemGroup *obj = static_cast<QGraphicsItemGroup *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -136,7 +139,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMGROUP_BOUNDINGRECT)
 // virtual bool isObscuredBy(const QGraphicsItem *item) const
 HB_FUNC_STATIC(QGRAPHICSITEMGROUP_ISOBSCUREDBY)
 {
-  QGraphicsItemGroup *obj = static_cast<QGraphicsItemGroup *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -154,7 +157,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMGROUP_ISOBSCUREDBY)
 // virtual QPainterPath opaqueArea() const
 HB_FUNC_STATIC(QGRAPHICSITEMGROUP_OPAQUEAREA)
 {
-  QGraphicsItemGroup *obj = static_cast<QGraphicsItemGroup *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -173,7 +176,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMGROUP_OPAQUEAREA)
 // virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0)
 HB_FUNC_STATIC(QGRAPHICSITEMGROUP_PAINT)
 {
-  QGraphicsItemGroup *obj = static_cast<QGraphicsItemGroup *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -193,7 +196,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMGROUP_PAINT)
 // virtual int type() const
 HB_FUNC_STATIC(QGRAPHICSITEMGROUP_TYPE)
 {
-  QGraphicsItemGroup *obj = static_cast<QGraphicsItemGroup *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

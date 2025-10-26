@@ -52,6 +52,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QGraphicsPolygonItem *p = static_cast<QGraphicsPolygonItem *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1))) {
@@ -71,7 +74,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_NEW)
 
 HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_DELETE)
 {
-  QGraphicsPolygonItem *obj = static_cast<QGraphicsPolygonItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -87,7 +90,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_DELETE)
 // Qt::FillRule fillRule() const
 HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_FILLRULE)
 {
-  QGraphicsPolygonItem *obj = static_cast<QGraphicsPolygonItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -105,7 +108,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_FILLRULE)
 // QPolygonF polygon() const
 HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_POLYGON)
 {
-  QGraphicsPolygonItem *obj = static_cast<QGraphicsPolygonItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -124,7 +127,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_POLYGON)
 // void setFillRule(Qt::FillRule rule)
 HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_SETFILLRULE)
 {
-  QGraphicsPolygonItem *obj = static_cast<QGraphicsPolygonItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -144,7 +147,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_SETFILLRULE)
 // void setPolygon(const QPolygonF &polygon)
 HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_SETPOLYGON)
 {
-  QGraphicsPolygonItem *obj = static_cast<QGraphicsPolygonItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -164,7 +167,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_SETPOLYGON)
 // virtual QRectF boundingRect() const
 HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_BOUNDINGRECT)
 {
-  QGraphicsPolygonItem *obj = static_cast<QGraphicsPolygonItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -183,7 +186,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_BOUNDINGRECT)
 // virtual bool contains(const QPointF &point) const
 HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_CONTAINS)
 {
-  QGraphicsPolygonItem *obj = static_cast<QGraphicsPolygonItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -201,7 +204,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_CONTAINS)
 // virtual bool isObscuredBy(const QGraphicsItem *item) const
 HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_ISOBSCUREDBY)
 {
-  QGraphicsPolygonItem *obj = static_cast<QGraphicsPolygonItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -219,7 +222,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_ISOBSCUREDBY)
 // virtual QPainterPath opaqueArea() const
 HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_OPAQUEAREA)
 {
-  QGraphicsPolygonItem *obj = static_cast<QGraphicsPolygonItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -238,7 +241,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_OPAQUEAREA)
 // virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0)
 HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_PAINT)
 {
-  QGraphicsPolygonItem *obj = static_cast<QGraphicsPolygonItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -258,7 +261,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_PAINT)
 // virtual QPainterPath shape() const
 HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_SHAPE)
 {
-  QGraphicsPolygonItem *obj = static_cast<QGraphicsPolygonItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -277,7 +280,7 @@ HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_SHAPE)
 // virtual int type() const
 HB_FUNC_STATIC(QGRAPHICSPOLYGONITEM_TYPE)
 {
-  QGraphicsPolygonItem *obj = static_cast<QGraphicsPolygonItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

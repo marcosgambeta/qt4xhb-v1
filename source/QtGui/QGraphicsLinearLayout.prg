@@ -61,6 +61,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QGraphicsLinearLayout *p = static_cast<QGraphicsLinearLayout *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQGRAPHICSLAYOUTITEM(1) || HB_ISNIL(1))) {
@@ -80,7 +83,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_NEW)
 
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_DELETE)
 {
-  QGraphicsLinearLayout *obj = static_cast<QGraphicsLinearLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -96,7 +99,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_DELETE)
 // void addItem(QGraphicsLayoutItem *item)
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_ADDITEM)
 {
-  QGraphicsLinearLayout *obj = static_cast<QGraphicsLinearLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -116,7 +119,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_ADDITEM)
 // void addStretch(int stretch = 1)
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_ADDSTRETCH)
 {
-  QGraphicsLinearLayout *obj = static_cast<QGraphicsLinearLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -136,7 +139,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_ADDSTRETCH)
 // Qt::Alignment alignment(QGraphicsLayoutItem *item) const
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_ALIGNMENT)
 {
-  QGraphicsLinearLayout *obj = static_cast<QGraphicsLinearLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -154,7 +157,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_ALIGNMENT)
 // void insertItem(int index, QGraphicsLayoutItem *item)
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_INSERTITEM)
 {
-  QGraphicsLinearLayout *obj = static_cast<QGraphicsLinearLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -174,7 +177,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_INSERTITEM)
 // void insertStretch(int index, int stretch = 1)
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_INSERTSTRETCH)
 {
-  QGraphicsLinearLayout *obj = static_cast<QGraphicsLinearLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -194,7 +197,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_INSERTSTRETCH)
 // qreal itemSpacing(int index) const
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_ITEMSPACING)
 {
-  QGraphicsLinearLayout *obj = static_cast<QGraphicsLinearLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -212,7 +215,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_ITEMSPACING)
 // Qt::Orientation orientation() const
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_ORIENTATION)
 {
-  QGraphicsLinearLayout *obj = static_cast<QGraphicsLinearLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -230,7 +233,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_ORIENTATION)
 // void removeItem(QGraphicsLayoutItem *item)
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_REMOVEITEM)
 {
-  QGraphicsLinearLayout *obj = static_cast<QGraphicsLinearLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -250,7 +253,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_REMOVEITEM)
 // void setAlignment(QGraphicsLayoutItem *item, Qt::Alignment alignment)
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETALIGNMENT)
 {
-  QGraphicsLinearLayout *obj = static_cast<QGraphicsLinearLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -270,7 +273,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETALIGNMENT)
 // void setItemSpacing(int index, qreal spacing)
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETITEMSPACING)
 {
-  QGraphicsLinearLayout *obj = static_cast<QGraphicsLinearLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -290,7 +293,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETITEMSPACING)
 // void setOrientation(Qt::Orientation orientation)
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETORIENTATION)
 {
-  QGraphicsLinearLayout *obj = static_cast<QGraphicsLinearLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -310,7 +313,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETORIENTATION)
 // void setSpacing(qreal spacing)
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETSPACING)
 {
-  QGraphicsLinearLayout *obj = static_cast<QGraphicsLinearLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -330,7 +333,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETSPACING)
 // void setStretchFactor(QGraphicsLayoutItem *item, int stretch)
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETSTRETCHFACTOR)
 {
-  QGraphicsLinearLayout *obj = static_cast<QGraphicsLinearLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -350,7 +353,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETSTRETCHFACTOR)
 // qreal spacing() const
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SPACING)
 {
-  QGraphicsLinearLayout *obj = static_cast<QGraphicsLinearLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -368,7 +371,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SPACING)
 // int stretchFactor(QGraphicsLayoutItem *item) const
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_STRETCHFACTOR)
 {
-  QGraphicsLinearLayout *obj = static_cast<QGraphicsLinearLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -386,7 +389,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_STRETCHFACTOR)
 // virtual int count() const
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_COUNT)
 {
-  QGraphicsLinearLayout *obj = static_cast<QGraphicsLinearLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -404,7 +407,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_COUNT)
 // virtual void invalidate()
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_INVALIDATE)
 {
-  QGraphicsLinearLayout *obj = static_cast<QGraphicsLinearLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -424,7 +427,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_INVALIDATE)
 // virtual QGraphicsLayoutItem *itemAt(int index) const
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_ITEMAT)
 {
-  QGraphicsLinearLayout *obj = static_cast<QGraphicsLinearLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -443,7 +446,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_ITEMAT)
 // virtual void removeAt(int index)
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_REMOVEAT)
 {
-  QGraphicsLinearLayout *obj = static_cast<QGraphicsLinearLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -463,7 +466,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_REMOVEAT)
 // virtual void setGeometry(const QRectF &rect)
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETGEOMETRY)
 {
-  QGraphicsLinearLayout *obj = static_cast<QGraphicsLinearLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -483,7 +486,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SETGEOMETRY)
 // virtual QSizeF sizeHint(Qt::SizeHint which, const QSizeF &constraint = QSizeF()) const
 HB_FUNC_STATIC(QGRAPHICSLINEARLAYOUT_SIZEHINT)
 {
-  QGraphicsLinearLayout *obj = static_cast<QGraphicsLinearLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

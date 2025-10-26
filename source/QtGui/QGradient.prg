@@ -51,10 +51,12 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QGradient *p = static_cast<QGradient *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QGradient::CoordinateMode coordinateMode() const
 HB_FUNC_STATIC(QGRADIENT_COORDINATEMODE)
 {
-  QGradient *obj = static_cast<QGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -72,7 +74,7 @@ HB_FUNC_STATIC(QGRADIENT_COORDINATEMODE)
 // void setColorAt(qreal position, const QColor &color)
 HB_FUNC_STATIC(QGRADIENT_SETCOLORAT)
 {
-  QGradient *obj = static_cast<QGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -92,7 +94,7 @@ HB_FUNC_STATIC(QGRADIENT_SETCOLORAT)
 // void setCoordinateMode(QGradient::CoordinateMode mode)
 HB_FUNC_STATIC(QGRADIENT_SETCOORDINATEMODE)
 {
-  QGradient *obj = static_cast<QGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -112,7 +114,7 @@ HB_FUNC_STATIC(QGRADIENT_SETCOORDINATEMODE)
 // void setSpread(QGradient::Spread method)
 HB_FUNC_STATIC(QGRADIENT_SETSPREAD)
 {
-  QGradient *obj = static_cast<QGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -132,7 +134,7 @@ HB_FUNC_STATIC(QGRADIENT_SETSPREAD)
 // QGradient::Spread spread() const
 HB_FUNC_STATIC(QGRADIENT_SPREAD)
 {
-  QGradient *obj = static_cast<QGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -150,7 +152,7 @@ HB_FUNC_STATIC(QGRADIENT_SPREAD)
 // QGradient::Type type() const
 HB_FUNC_STATIC(QGRADIENT_TYPE)
 {
-  QGradient *obj = static_cast<QGradient *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

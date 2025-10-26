@@ -48,10 +48,13 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QGenericPluginFactory *p = static_cast<QGenericPluginFactory *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QObject *create(const QString &key, const QString &specification)
 HB_FUNC_STATIC(QGENERICPLUGINFACTORY_CREATE)
 {
-  QGenericPluginFactory *obj = static_cast<QGenericPluginFactory *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -59,6 +59,9 @@ RETURN
 
 #include <QtGui/QItemSelection>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QIdentityProxyModel *p = qobject_cast<QIdentityProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QIdentityProxyModel(QObject *parent = 0)
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_NEW)
 {
@@ -72,7 +75,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_NEW)
 
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_DELETE)
 {
-  QIdentityProxyModel *obj = qobject_cast<QIdentityProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -90,7 +93,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_DELETE)
 // virtual int columnCount(const QModelIndex &parent = QModelIndex()) const
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_COLUMNCOUNT)
 {
-  QIdentityProxyModel *obj = qobject_cast<QIdentityProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -109,7 +112,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_COLUMNCOUNT)
 // &parent)
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_DROPMIMEDATA)
 {
-  QIdentityProxyModel *obj = qobject_cast<QIdentityProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -127,7 +130,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_DROPMIMEDATA)
 // virtual QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_INDEX)
 {
-  QIdentityProxyModel *obj = qobject_cast<QIdentityProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -147,7 +150,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_INDEX)
 // virtual bool insertColumns(int column, int count, const QModelIndex &parent = QModelIndex())
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_INSERTCOLUMNS)
 {
-  QIdentityProxyModel *obj = qobject_cast<QIdentityProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -166,7 +169,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_INSERTCOLUMNS)
 // virtual bool insertRows(int row, int count, const QModelIndex &parent = QModelIndex())
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_INSERTROWS)
 {
-  QIdentityProxyModel *obj = qobject_cast<QIdentityProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -185,7 +188,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_INSERTROWS)
 // virtual QModelIndex mapFromSource(const QModelIndex &sourceIndex) const
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_MAPFROMSOURCE)
 {
-  QIdentityProxyModel *obj = qobject_cast<QIdentityProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -204,7 +207,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_MAPFROMSOURCE)
 // virtual QItemSelection mapSelectionFromSource(const QItemSelection &selection) const
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_MAPSELECTIONFROMSOURCE)
 {
-  QIdentityProxyModel *obj = qobject_cast<QIdentityProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -223,7 +226,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_MAPSELECTIONFROMSOURCE)
 // virtual QItemSelection mapSelectionToSource(const QItemSelection &selection) const
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_MAPSELECTIONTOSOURCE)
 {
-  QIdentityProxyModel *obj = qobject_cast<QIdentityProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -242,7 +245,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_MAPSELECTIONTOSOURCE)
 // virtual QModelIndex mapToSource(const QModelIndex &proxyIndex) const
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_MAPTOSOURCE)
 {
-  QIdentityProxyModel *obj = qobject_cast<QIdentityProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -262,7 +265,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_MAPTOSOURCE)
 // flags = Qt::MatchFlags(Qt::MatchStartsWith | Qt::MatchWrap)) const
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_MATCH)
 {
-  QIdentityProxyModel *obj = qobject_cast<QIdentityProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -306,7 +309,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_MATCH)
 // virtual QModelIndex parent(const QModelIndex &child) const
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_PARENT)
 {
-  QIdentityProxyModel *obj = qobject_cast<QIdentityProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -325,7 +328,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_PARENT)
 // virtual bool removeColumns(int column, int count, const QModelIndex &parent = QModelIndex())
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_REMOVECOLUMNS)
 {
-  QIdentityProxyModel *obj = qobject_cast<QIdentityProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -344,7 +347,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_REMOVECOLUMNS)
 // virtual bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex())
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_REMOVEROWS)
 {
-  QIdentityProxyModel *obj = qobject_cast<QIdentityProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -363,7 +366,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_REMOVEROWS)
 // virtual int rowCount(const QModelIndex &parent = QModelIndex()) const
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_ROWCOUNT)
 {
-  QIdentityProxyModel *obj = qobject_cast<QIdentityProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -381,7 +384,7 @@ HB_FUNC_STATIC(QIDENTITYPROXYMODEL_ROWCOUNT)
 // virtual void setSourceModel(QAbstractItemModel *newSourceModel)
 HB_FUNC_STATIC(QIDENTITYPROXYMODEL_SETSOURCEMODEL)
 {
-  QIdentityProxyModel *obj = qobject_cast<QIdentityProxyModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

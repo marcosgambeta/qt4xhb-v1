@@ -44,9 +44,12 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QGraphicsAnchor *p = qobject_cast<QGraphicsAnchor *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QGRAPHICSANCHOR_DELETE)
 {
-  QGraphicsAnchor *obj = qobject_cast<QGraphicsAnchor *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -64,7 +67,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHOR_DELETE)
 // void setSizePolicy(QSizePolicy::Policy policy)
 HB_FUNC_STATIC(QGRAPHICSANCHOR_SETSIZEPOLICY)
 {
-  QGraphicsAnchor *obj = qobject_cast<QGraphicsAnchor *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -84,7 +87,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHOR_SETSIZEPOLICY)
 // void setSpacing(qreal spacing)
 HB_FUNC_STATIC(QGRAPHICSANCHOR_SETSPACING)
 {
-  QGraphicsAnchor *obj = qobject_cast<QGraphicsAnchor *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -104,7 +107,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHOR_SETSPACING)
 // QSizePolicy::Policy sizePolicy() const
 HB_FUNC_STATIC(QGRAPHICSANCHOR_SIZEPOLICY)
 {
-  QGraphicsAnchor *obj = qobject_cast<QGraphicsAnchor *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -122,7 +125,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHOR_SIZEPOLICY)
 // qreal spacing() const
 HB_FUNC_STATIC(QGRAPHICSANCHOR_SPACING)
 {
-  QGraphicsAnchor *obj = qobject_cast<QGraphicsAnchor *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -140,7 +143,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHOR_SPACING)
 // void unsetSpacing()
 HB_FUNC_STATIC(QGRAPHICSANCHOR_UNSETSPACING)
 {
-  QGraphicsAnchor *obj = qobject_cast<QGraphicsAnchor *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

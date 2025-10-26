@@ -100,6 +100,8 @@ RETURN
 #include <QtCore/QStringList>
 #include <QtGui/QColor>
 
+#define GET_PTR_FROM_SELF(p) QImage *p = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QIMAGE_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -149,7 +151,7 @@ HB_FUNC_STATIC(QIMAGE_NEW)
 
 HB_FUNC_STATIC(QIMAGE_DELETE)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -165,7 +167,7 @@ HB_FUNC_STATIC(QIMAGE_DELETE)
 // bool allGray() const
 HB_FUNC_STATIC(QIMAGE_ALLGRAY)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -183,7 +185,7 @@ HB_FUNC_STATIC(QIMAGE_ALLGRAY)
 // int bitPlaneCount() const
 HB_FUNC_STATIC(QIMAGE_BITPLANECOUNT)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -201,7 +203,7 @@ HB_FUNC_STATIC(QIMAGE_BITPLANECOUNT)
 // int byteCount() const
 HB_FUNC_STATIC(QIMAGE_BYTECOUNT)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -219,7 +221,7 @@ HB_FUNC_STATIC(QIMAGE_BYTECOUNT)
 // int bytesPerLine() const
 HB_FUNC_STATIC(QIMAGE_BYTESPERLINE)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -237,7 +239,7 @@ HB_FUNC_STATIC(QIMAGE_BYTESPERLINE)
 // qint64 cacheKey() const
 HB_FUNC_STATIC(QIMAGE_CACHEKEY)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -255,7 +257,7 @@ HB_FUNC_STATIC(QIMAGE_CACHEKEY)
 // QRgb color(int i) const
 HB_FUNC_STATIC(QIMAGE_COLOR)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -273,7 +275,7 @@ HB_FUNC_STATIC(QIMAGE_COLOR)
 // int colorCount() const
 HB_FUNC_STATIC(QIMAGE_COLORCOUNT)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -291,7 +293,7 @@ HB_FUNC_STATIC(QIMAGE_COLORCOUNT)
 // QVector<QRgb> colorTable() const
 HB_FUNC_STATIC(QIMAGE_COLORTABLE)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -318,7 +320,7 @@ HB_FUNC_STATIC(QIMAGE_CONVERTTOFORMAT)
 {
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
     // QImage convertToFormat(QImage::Format format, Qt::ImageConversionFlags flags = Qt::AutoColor) const
-    QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QImage *ptr = new QImage(
@@ -329,7 +331,7 @@ HB_FUNC_STATIC(QIMAGE_CONVERTTOFORMAT)
   } else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && HB_ISARRAY(2) && ISNUMORNIL(3)) {
     // QImage convertToFormat(QImage::Format format, const QVector<QRgb> &colorTable, Qt::ImageConversionFlags flags =
     // Qt::AutoColor) const
-    QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QVector<QRgb> par2;
@@ -354,7 +356,7 @@ HB_FUNC_STATIC(QIMAGE_COPY)
 {
   if (ISBETWEEN(0, 1) && (ISQRECT(1) || HB_ISNIL(1))) {
     // QImage copy(const QRect &rectangle = QRect()) const
-    QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QImage *ptr = new QImage(obj->copy(HB_ISNIL(1) ? QRect() : *static_cast<QRect *>(Qt4xHb::itemGetPtr(1))));
@@ -362,7 +364,7 @@ HB_FUNC_STATIC(QIMAGE_COPY)
     }
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // QImage copy(int x, int y, int width, int height) const
-    QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QImage *ptr = new QImage(obj->copy(PINT(1), PINT(2), PINT(3), PINT(4)));
@@ -376,7 +378,7 @@ HB_FUNC_STATIC(QIMAGE_COPY)
 // QImage createAlphaMask(Qt::ImageConversionFlags flags = Qt::AutoColor) const
 HB_FUNC_STATIC(QIMAGE_CREATEALPHAMASK)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -396,7 +398,7 @@ HB_FUNC_STATIC(QIMAGE_CREATEALPHAMASK)
 // QImage createHeuristicMask(bool clipTight = true) const
 HB_FUNC_STATIC(QIMAGE_CREATEHEURISTICMASK)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -415,7 +417,7 @@ HB_FUNC_STATIC(QIMAGE_CREATEHEURISTICMASK)
 // QImage createMaskFromColor(QRgb color, Qt::MaskMode mode = Qt::MaskInColor) const
 HB_FUNC_STATIC(QIMAGE_CREATEMASKFROMCOLOR)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -435,7 +437,7 @@ HB_FUNC_STATIC(QIMAGE_CREATEMASKFROMCOLOR)
 // int depth() const
 HB_FUNC_STATIC(QIMAGE_DEPTH)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -453,7 +455,7 @@ HB_FUNC_STATIC(QIMAGE_DEPTH)
 // int dotsPerMeterX() const
 HB_FUNC_STATIC(QIMAGE_DOTSPERMETERX)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -471,7 +473,7 @@ HB_FUNC_STATIC(QIMAGE_DOTSPERMETERX)
 // int dotsPerMeterY() const
 HB_FUNC_STATIC(QIMAGE_DOTSPERMETERY)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -490,7 +492,7 @@ HB_FUNC_STATIC(QIMAGE_FILL)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void fill(uint pixelValue)
-    QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->fill(PUINT(1));
@@ -499,7 +501,7 @@ HB_FUNC_STATIC(QIMAGE_FILL)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void fill(Qt::GlobalColor color)
-    QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->fill((Qt::GlobalColor)hb_parni(1));
@@ -508,7 +510,7 @@ HB_FUNC_STATIC(QIMAGE_FILL)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1))) {
     // void fill(const QColor &color)
-    QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->fill(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
@@ -523,7 +525,7 @@ HB_FUNC_STATIC(QIMAGE_FILL)
 // QImage::Format format() const
 HB_FUNC_STATIC(QIMAGE_FORMAT)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -541,7 +543,7 @@ HB_FUNC_STATIC(QIMAGE_FORMAT)
 // bool hasAlphaChannel() const
 HB_FUNC_STATIC(QIMAGE_HASALPHACHANNEL)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -559,7 +561,7 @@ HB_FUNC_STATIC(QIMAGE_HASALPHACHANNEL)
 // int height() const
 HB_FUNC_STATIC(QIMAGE_HEIGHT)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -577,7 +579,7 @@ HB_FUNC_STATIC(QIMAGE_HEIGHT)
 // void invertPixels(QImage::InvertMode mode = QImage::InvertRgb)
 HB_FUNC_STATIC(QIMAGE_INVERTPIXELS)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -597,7 +599,7 @@ HB_FUNC_STATIC(QIMAGE_INVERTPIXELS)
 // bool isGrayscale() const
 HB_FUNC_STATIC(QIMAGE_ISGRAYSCALE)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -615,7 +617,7 @@ HB_FUNC_STATIC(QIMAGE_ISGRAYSCALE)
 // bool isNull() const
 HB_FUNC_STATIC(QIMAGE_ISNULL)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -634,14 +636,14 @@ HB_FUNC_STATIC(QIMAGE_LOAD)
 {
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISCHARORNIL(2)) {
     // bool load(const QString &fileName, const char *format = 0)
-    QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->load(PQSTRING(1), OPCONSTCHAR(2, 0)));
     }
   } else if (ISNUMPAR(2) && ISQIODEVICE(1) && HB_ISCHAR(2)) {
     // bool load(QIODevice *device, const char *format)
-    QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->load(PQIODEVICE(1), PCONSTCHAR(2)));
@@ -655,14 +657,14 @@ HB_FUNC_STATIC(QIMAGE_LOADFROMDATA)
 {
   if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISCHARORNIL(3)) {
     // bool loadFromData(const uchar *data, int len, const char *format = 0)
-    QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->loadFromData(PCONSTUCHAR(1), PINT(2), OPCONSTCHAR(3, 0)));
     }
   } else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISCHARORNIL(2)) {
     // bool loadFromData(const QByteArray &data, const char *format = 0)
-    QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->loadFromData(*PQBYTEARRAY(1), OPCONSTCHAR(2, 0)));
@@ -675,7 +677,7 @@ HB_FUNC_STATIC(QIMAGE_LOADFROMDATA)
 // QImage mirrored(bool horizontal = false, bool vertical = true) const
 HB_FUNC_STATIC(QIMAGE_MIRRORED)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -694,7 +696,7 @@ HB_FUNC_STATIC(QIMAGE_MIRRORED)
 // QPoint offset() const
 HB_FUNC_STATIC(QIMAGE_OFFSET)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -714,14 +716,14 @@ HB_FUNC_STATIC(QIMAGE_PIXEL)
 {
   if (ISNUMPAR(1) && ISQPOINT(1)) {
     // QRgb pixel(const QPoint &position) const
-    QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RQRGB(obj->pixel(*PQPOINT(1)));
     }
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // QRgb pixel(int x, int y) const
-    QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RQRGB(obj->pixel(PINT(1), PINT(2)));
@@ -735,14 +737,14 @@ HB_FUNC_STATIC(QIMAGE_PIXELINDEX)
 {
   if (ISNUMPAR(1) && ISQPOINT(1)) {
     // int pixelIndex(const QPoint &position) const
-    QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RINT(obj->pixelIndex(*PQPOINT(1)));
     }
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // int pixelIndex(int x, int y) const
-    QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RINT(obj->pixelIndex(PINT(1), PINT(2)));
@@ -755,7 +757,7 @@ HB_FUNC_STATIC(QIMAGE_PIXELINDEX)
 // QRect rect() const
 HB_FUNC_STATIC(QIMAGE_RECT)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -774,7 +776,7 @@ HB_FUNC_STATIC(QIMAGE_RECT)
 // QImage rgbSwapped() const
 HB_FUNC_STATIC(QIMAGE_RGBSWAPPED)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -794,14 +796,14 @@ HB_FUNC_STATIC(QIMAGE_SAVE)
 {
   if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISNUMORNIL(3)) {
     // bool save(const QString &fileName, const char *format = 0, int quality = -1) const
-    QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->save(PQSTRING(1), OPCONSTCHAR(2, 0), OPINT(3, -1)));
     }
   } else if (ISBETWEEN(1, 3) && ISQIODEVICE(1) && ISCHARORNIL(2) && ISNUMORNIL(3)) {
     // bool save(QIODevice *device, const char *format = 0, int quality = -1) const
-    QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->save(PQIODEVICE(1), OPCONSTCHAR(2, 0), OPINT(3, -1)));
@@ -816,7 +818,7 @@ HB_FUNC_STATIC(QIMAGE_SCALED)
   if (ISBETWEEN(1, 3) && ISQSIZE(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     // QImage scaled(const QSize &size, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio,
     // Qt::TransformationMode transformMode = Qt::FastTransformation) const
-    QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QImage *ptr = new QImage(obj->scaled(
@@ -827,7 +829,7 @@ HB_FUNC_STATIC(QIMAGE_SCALED)
   } else if (ISBETWEEN(1, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
     // QImage scaled(int width, int height, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio,
     // Qt::TransformationMode transformMode = Qt::FastTransformation) const
-    QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QImage *ptr = new QImage(obj->scaled(
@@ -843,7 +845,7 @@ HB_FUNC_STATIC(QIMAGE_SCALED)
 // QImage scaledToHeight(int height, Qt::TransformationMode mode = Qt::FastTransformation) const
 HB_FUNC_STATIC(QIMAGE_SCALEDTOHEIGHT)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -863,7 +865,7 @@ HB_FUNC_STATIC(QIMAGE_SCALEDTOHEIGHT)
 // QImage scaledToWidth(int width, Qt::TransformationMode mode = Qt::FastTransformation) const
 HB_FUNC_STATIC(QIMAGE_SCALEDTOWIDTH)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -883,7 +885,7 @@ HB_FUNC_STATIC(QIMAGE_SCALEDTOWIDTH)
 // void setColor(int index, QRgb colorValue)
 HB_FUNC_STATIC(QIMAGE_SETCOLOR)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -903,7 +905,7 @@ HB_FUNC_STATIC(QIMAGE_SETCOLOR)
 // void setColorCount(int colorCount)
 HB_FUNC_STATIC(QIMAGE_SETCOLORCOUNT)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -923,7 +925,7 @@ HB_FUNC_STATIC(QIMAGE_SETCOLORCOUNT)
 // void setColorTable(const QVector<QRgb> colors)
 HB_FUNC_STATIC(QIMAGE_SETCOLORTABLE)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -951,7 +953,7 @@ HB_FUNC_STATIC(QIMAGE_SETCOLORTABLE)
 // void setDotsPerMeterX(int x)
 HB_FUNC_STATIC(QIMAGE_SETDOTSPERMETERX)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -971,7 +973,7 @@ HB_FUNC_STATIC(QIMAGE_SETDOTSPERMETERX)
 // void setDotsPerMeterY(int y)
 HB_FUNC_STATIC(QIMAGE_SETDOTSPERMETERY)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -991,7 +993,7 @@ HB_FUNC_STATIC(QIMAGE_SETDOTSPERMETERY)
 // void setOffset(const QPoint &offset)
 HB_FUNC_STATIC(QIMAGE_SETOFFSET)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1012,7 +1014,7 @@ HB_FUNC_STATIC(QIMAGE_SETPIXEL)
 {
   if (ISNUMPAR(2) && ISQPOINT(1) && HB_ISNUM(2)) {
     // void setPixel(const QPoint &position, uint index_or_rgb)
-    QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setPixel(*PQPOINT(1), PUINT(2));
@@ -1021,7 +1023,7 @@ HB_FUNC_STATIC(QIMAGE_SETPIXEL)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
     // void setPixel(int x, int y, uint index_or_rgb)
-    QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setPixel(PINT(1), PINT(2), PUINT(3));
@@ -1036,7 +1038,7 @@ HB_FUNC_STATIC(QIMAGE_SETPIXEL)
 // void setText(const QString &key, const QString &text)
 HB_FUNC_STATIC(QIMAGE_SETTEXT)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1056,7 +1058,7 @@ HB_FUNC_STATIC(QIMAGE_SETTEXT)
 // QSize size() const
 HB_FUNC_STATIC(QIMAGE_SIZE)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1075,7 +1077,7 @@ HB_FUNC_STATIC(QIMAGE_SIZE)
 // void swap(QImage &other)
 HB_FUNC_STATIC(QIMAGE_SWAP)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1095,7 +1097,7 @@ HB_FUNC_STATIC(QIMAGE_SWAP)
 // QString text(const QString &key = QString()) const
 HB_FUNC_STATIC(QIMAGE_TEXT)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1113,7 +1115,7 @@ HB_FUNC_STATIC(QIMAGE_TEXT)
 // QStringList textKeys() const
 HB_FUNC_STATIC(QIMAGE_TEXTKEYS)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1132,7 +1134,7 @@ HB_FUNC_STATIC(QIMAGE_TRANSFORMED)
 {
   if (ISBETWEEN(1, 2) && ISQMATRIX(1) && ISNUMORNIL(2)) {
     // QImage transformed(const QMatrix &matrix, Qt::TransformationMode mode = Qt::FastTransformation) const
-    QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QImage *ptr =
@@ -1142,7 +1144,7 @@ HB_FUNC_STATIC(QIMAGE_TRANSFORMED)
     }
   } else if (ISBETWEEN(1, 2) && ISQTRANSFORM(1) && ISNUMORNIL(2)) {
     // QImage transformed(const QTransform &matrix, Qt::TransformationMode mode = Qt::FastTransformation) const
-    QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QImage *ptr =
@@ -1159,14 +1161,14 @@ HB_FUNC_STATIC(QIMAGE_VALID)
 {
   if (ISNUMPAR(1) && ISQPOINT(1)) {
     // bool valid(const QPoint &pos) const
-    QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->valid(*PQPOINT(1)));
     }
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // bool valid(int x, int y) const
-    QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->valid(PINT(1), PINT(2)));
@@ -1179,7 +1181,7 @@ HB_FUNC_STATIC(QIMAGE_VALID)
 // int width() const
 HB_FUNC_STATIC(QIMAGE_WIDTH)
 {
-  QImage *obj = static_cast<QImage *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

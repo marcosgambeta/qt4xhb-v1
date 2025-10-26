@@ -50,10 +50,13 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QGraphicsObject *p = qobject_cast<QGraphicsObject *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // void grabGesture(Qt::GestureType gesture, Qt::GestureFlags flags = Qt::GestureFlags())
 HB_FUNC_STATIC(QGRAPHICSOBJECT_GRABGESTURE)
 {
-  QGraphicsObject *obj = qobject_cast<QGraphicsObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -74,7 +77,7 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_GRABGESTURE)
 // void ungrabGesture(Qt::GestureType gesture)
 HB_FUNC_STATIC(QGRAPHICSOBJECT_UNGRABGESTURE)
 {
-  QGraphicsObject *obj = qobject_cast<QGraphicsObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

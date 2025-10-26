@@ -43,9 +43,11 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QImageIOPlugin *p = qobject_cast<QImageIOPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QIMAGEIOPLUGIN_DELETE)
 {
-  QImageIOPlugin *obj = qobject_cast<QImageIOPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -63,7 +65,7 @@ HB_FUNC_STATIC(QIMAGEIOPLUGIN_DELETE)
 // virtual QImageIOPlugin::Capabilities capabilities(QIODevice *device, const QByteArray &format) const = 0
 HB_FUNC_STATIC(QIMAGEIOPLUGIN_CAPABILITIES)
 {
-  QImageIOPlugin *obj = qobject_cast<QImageIOPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -81,7 +83,7 @@ HB_FUNC_STATIC(QIMAGEIOPLUGIN_CAPABILITIES)
 // virtual QImageIOHandler *create(QIODevice *device, const QByteArray &format = QByteArray()) const = 0
 HB_FUNC_STATIC(QIMAGEIOPLUGIN_CREATE)
 {
-  QImageIOPlugin *obj = qobject_cast<QImageIOPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -101,7 +103,7 @@ HB_FUNC_STATIC(QIMAGEIOPLUGIN_CREATE)
 // virtual QStringList keys() const = 0
 HB_FUNC_STATIC(QIMAGEIOPLUGIN_KEYS)
 {
-  QImageIOPlugin *obj = qobject_cast<QImageIOPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

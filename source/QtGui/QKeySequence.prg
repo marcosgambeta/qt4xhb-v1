@@ -56,6 +56,8 @@ RETURN
 
 #include <QtCore/QList>
 
+#define GET_PTR_FROM_SELF(p) QKeySequence *p = static_cast<QKeySequence *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QKEYSEQUENCE_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -89,7 +91,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_NEW)
 
 HB_FUNC_STATIC(QKEYSEQUENCE_DELETE)
 {
-  QKeySequence *obj = static_cast<QKeySequence *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -105,7 +107,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_DELETE)
 // uint count() const
 HB_FUNC_STATIC(QKEYSEQUENCE_COUNT)
 {
-  QKeySequence *obj = static_cast<QKeySequence *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -123,7 +125,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_COUNT)
 // bool isEmpty() const
 HB_FUNC_STATIC(QKEYSEQUENCE_ISEMPTY)
 {
-  QKeySequence *obj = static_cast<QKeySequence *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -141,7 +143,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_ISEMPTY)
 // QKeySequence::SequenceMatch matches(const QKeySequence &seq) const
 HB_FUNC_STATIC(QKEYSEQUENCE_MATCHES)
 {
-  QKeySequence *obj = static_cast<QKeySequence *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -159,7 +161,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_MATCHES)
 // QString toString(QKeySequence::SequenceFormat format = QKeySequence::PortableText) const
 HB_FUNC_STATIC(QKEYSEQUENCE_TOSTRING)
 {
-  QKeySequence *obj = static_cast<QKeySequence *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -44,6 +44,9 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QKeyEventTransition *p = qobject_cast<QKeyEventTransition *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QKEYEVENTTRANSITION_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQSTATE(1) || HB_ISNIL(1))) {
@@ -61,7 +64,7 @@ HB_FUNC_STATIC(QKEYEVENTTRANSITION_NEW)
 
 HB_FUNC_STATIC(QKEYEVENTTRANSITION_DELETE)
 {
-  QKeyEventTransition *obj = qobject_cast<QKeyEventTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -79,7 +82,7 @@ HB_FUNC_STATIC(QKEYEVENTTRANSITION_DELETE)
 // int key() const
 HB_FUNC_STATIC(QKEYEVENTTRANSITION_KEY)
 {
-  QKeyEventTransition *obj = qobject_cast<QKeyEventTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -97,7 +100,7 @@ HB_FUNC_STATIC(QKEYEVENTTRANSITION_KEY)
 // Qt::KeyboardModifiers modifierMask() const
 HB_FUNC_STATIC(QKEYEVENTTRANSITION_MODIFIERMASK)
 {
-  QKeyEventTransition *obj = qobject_cast<QKeyEventTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -115,7 +118,7 @@ HB_FUNC_STATIC(QKEYEVENTTRANSITION_MODIFIERMASK)
 // void setKey(int key)
 HB_FUNC_STATIC(QKEYEVENTTRANSITION_SETKEY)
 {
-  QKeyEventTransition *obj = qobject_cast<QKeyEventTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -135,7 +138,7 @@ HB_FUNC_STATIC(QKEYEVENTTRANSITION_SETKEY)
 // void setModifierMask(Qt::KeyboardModifiers modifierMask)
 HB_FUNC_STATIC(QKEYEVENTTRANSITION_SETMODIFIERMASK)
 {
-  QKeyEventTransition *obj = qobject_cast<QKeyEventTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

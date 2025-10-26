@@ -70,9 +70,11 @@ RETURN
 #include <QtCore/QRect>
 #include <QtCore/QVariant>
 
+#define GET_PTR_FROM_SELF(p) QImageIOHandler *p = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QIMAGEIOHANDLER_DELETE)
 {
-  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -88,7 +90,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_DELETE)
 // virtual bool canRead() const = 0
 HB_FUNC_STATIC(QIMAGEIOHANDLER_CANREAD)
 {
-  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -106,7 +108,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_CANREAD)
 // virtual int currentImageNumber() const
 HB_FUNC_STATIC(QIMAGEIOHANDLER_CURRENTIMAGENUMBER)
 {
-  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -124,7 +126,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_CURRENTIMAGENUMBER)
 // virtual QRect currentImageRect() const
 HB_FUNC_STATIC(QIMAGEIOHANDLER_CURRENTIMAGERECT)
 {
-  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -143,7 +145,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_CURRENTIMAGERECT)
 // QIODevice *device() const
 HB_FUNC_STATIC(QIMAGEIOHANDLER_DEVICE)
 {
-  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -162,7 +164,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_DEVICE)
 // QByteArray format() const
 HB_FUNC_STATIC(QIMAGEIOHANDLER_FORMAT)
 {
-  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -181,7 +183,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_FORMAT)
 // virtual int imageCount() const
 HB_FUNC_STATIC(QIMAGEIOHANDLER_IMAGECOUNT)
 {
-  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -199,7 +201,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_IMAGECOUNT)
 // virtual bool jumpToImage(int imageNumber)
 HB_FUNC_STATIC(QIMAGEIOHANDLER_JUMPTOIMAGE)
 {
-  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -217,7 +219,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_JUMPTOIMAGE)
 // virtual bool jumpToNextImage()
 HB_FUNC_STATIC(QIMAGEIOHANDLER_JUMPTONEXTIMAGE)
 {
-  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -235,7 +237,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_JUMPTONEXTIMAGE)
 // virtual int loopCount() const
 HB_FUNC_STATIC(QIMAGEIOHANDLER_LOOPCOUNT)
 {
-  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -253,7 +255,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_LOOPCOUNT)
 // virtual int nextImageDelay() const
 HB_FUNC_STATIC(QIMAGEIOHANDLER_NEXTIMAGEDELAY)
 {
-  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -271,7 +273,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_NEXTIMAGEDELAY)
 // virtual QVariant option(QImageIOHandler::ImageOption option) const
 HB_FUNC_STATIC(QIMAGEIOHANDLER_OPTION)
 {
-  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -290,7 +292,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_OPTION)
 // virtual bool read(QImage *image) = 0
 HB_FUNC_STATIC(QIMAGEIOHANDLER_READ)
 {
-  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -308,7 +310,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_READ)
 // void setDevice(QIODevice *device)
 HB_FUNC_STATIC(QIMAGEIOHANDLER_SETDEVICE)
 {
-  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -328,7 +330,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_SETDEVICE)
 // void setFormat(const QByteArray &format)
 HB_FUNC_STATIC(QIMAGEIOHANDLER_SETFORMAT)
 {
-  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -348,7 +350,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_SETFORMAT)
 // virtual void setOption(QImageIOHandler::ImageOption option, const QVariant &value)
 HB_FUNC_STATIC(QIMAGEIOHANDLER_SETOPTION)
 {
-  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -368,7 +370,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_SETOPTION)
 // virtual bool supportsOption(QImageIOHandler::ImageOption option) const
 HB_FUNC_STATIC(QIMAGEIOHANDLER_SUPPORTSOPTION)
 {
-  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -386,7 +388,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_SUPPORTSOPTION)
 // virtual bool write(const QImage &image)
 HB_FUNC_STATIC(QIMAGEIOHANDLER_WRITE)
 {
-  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

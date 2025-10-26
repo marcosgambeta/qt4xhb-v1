@@ -38,6 +38,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QIconDragEvent *p = static_cast<QIconDragEvent *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QIconDragEvent()
 HB_FUNC_STATIC(QICONDRAGEVENT_NEW)
 {
@@ -51,7 +53,7 @@ HB_FUNC_STATIC(QICONDRAGEVENT_NEW)
 
 HB_FUNC_STATIC(QICONDRAGEVENT_DELETE)
 {
-  QIconDragEvent *obj = static_cast<QIconDragEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;

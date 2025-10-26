@@ -54,9 +54,12 @@ RETURN
 
 #include <QtGui/QInputContext>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QInputContextFactory *p = static_cast<QInputContextFactory *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_DELETE)
 {
-  QInputContextFactory *obj = static_cast<QInputContextFactory *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -72,7 +75,7 @@ HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_DELETE)
 // QInputContext *create(const QString &key, QObject *parent)
 HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_CREATE)
 {
-  QInputContextFactory *obj = static_cast<QInputContextFactory *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

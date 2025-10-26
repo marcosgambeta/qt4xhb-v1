@@ -93,6 +93,8 @@ RETURN
 
 #include <QtGui/QColor>
 
+#define GET_PTR_FROM_SELF(p) QImageReader *p = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QIMAGEREADER_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -116,7 +118,7 @@ HB_FUNC_STATIC(QIMAGEREADER_NEW)
 
 HB_FUNC_STATIC(QIMAGEREADER_DELETE)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -132,7 +134,7 @@ HB_FUNC_STATIC(QIMAGEREADER_DELETE)
 // bool autoDetectImageFormat() const
 HB_FUNC_STATIC(QIMAGEREADER_AUTODETECTIMAGEFORMAT)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -150,7 +152,7 @@ HB_FUNC_STATIC(QIMAGEREADER_AUTODETECTIMAGEFORMAT)
 // QColor backgroundColor() const
 HB_FUNC_STATIC(QIMAGEREADER_BACKGROUNDCOLOR)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -169,7 +171,7 @@ HB_FUNC_STATIC(QIMAGEREADER_BACKGROUNDCOLOR)
 // bool canRead() const
 HB_FUNC_STATIC(QIMAGEREADER_CANREAD)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -187,7 +189,7 @@ HB_FUNC_STATIC(QIMAGEREADER_CANREAD)
 // QRect clipRect() const
 HB_FUNC_STATIC(QIMAGEREADER_CLIPRECT)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -206,7 +208,7 @@ HB_FUNC_STATIC(QIMAGEREADER_CLIPRECT)
 // int currentImageNumber() const
 HB_FUNC_STATIC(QIMAGEREADER_CURRENTIMAGENUMBER)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -224,7 +226,7 @@ HB_FUNC_STATIC(QIMAGEREADER_CURRENTIMAGENUMBER)
 // QRect currentImageRect() const
 HB_FUNC_STATIC(QIMAGEREADER_CURRENTIMAGERECT)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -243,7 +245,7 @@ HB_FUNC_STATIC(QIMAGEREADER_CURRENTIMAGERECT)
 // bool decideFormatFromContent() const
 HB_FUNC_STATIC(QIMAGEREADER_DECIDEFORMATFROMCONTENT)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -261,7 +263,7 @@ HB_FUNC_STATIC(QIMAGEREADER_DECIDEFORMATFROMCONTENT)
 // QIODevice *device() const
 HB_FUNC_STATIC(QIMAGEREADER_DEVICE)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -280,7 +282,7 @@ HB_FUNC_STATIC(QIMAGEREADER_DEVICE)
 // QImageReader::ImageReaderError error() const
 HB_FUNC_STATIC(QIMAGEREADER_ERROR)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -298,7 +300,7 @@ HB_FUNC_STATIC(QIMAGEREADER_ERROR)
 // QString errorString() const
 HB_FUNC_STATIC(QIMAGEREADER_ERRORSTRING)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -316,7 +318,7 @@ HB_FUNC_STATIC(QIMAGEREADER_ERRORSTRING)
 // QString fileName() const
 HB_FUNC_STATIC(QIMAGEREADER_FILENAME)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -334,7 +336,7 @@ HB_FUNC_STATIC(QIMAGEREADER_FILENAME)
 // QByteArray format() const
 HB_FUNC_STATIC(QIMAGEREADER_FORMAT)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -353,7 +355,7 @@ HB_FUNC_STATIC(QIMAGEREADER_FORMAT)
 // int imageCount() const
 HB_FUNC_STATIC(QIMAGEREADER_IMAGECOUNT)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -371,7 +373,7 @@ HB_FUNC_STATIC(QIMAGEREADER_IMAGECOUNT)
 // bool jumpToImage(int imageNumber)
 HB_FUNC_STATIC(QIMAGEREADER_JUMPTOIMAGE)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -389,7 +391,7 @@ HB_FUNC_STATIC(QIMAGEREADER_JUMPTOIMAGE)
 // bool jumpToNextImage()
 HB_FUNC_STATIC(QIMAGEREADER_JUMPTONEXTIMAGE)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -407,7 +409,7 @@ HB_FUNC_STATIC(QIMAGEREADER_JUMPTONEXTIMAGE)
 // int loopCount() const
 HB_FUNC_STATIC(QIMAGEREADER_LOOPCOUNT)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -425,7 +427,7 @@ HB_FUNC_STATIC(QIMAGEREADER_LOOPCOUNT)
 // int nextImageDelay() const
 HB_FUNC_STATIC(QIMAGEREADER_NEXTIMAGEDELAY)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -443,7 +445,7 @@ HB_FUNC_STATIC(QIMAGEREADER_NEXTIMAGEDELAY)
 // int quality() const
 HB_FUNC_STATIC(QIMAGEREADER_QUALITY)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -462,7 +464,7 @@ HB_FUNC_STATIC(QIMAGEREADER_READ)
 {
   if (ISNUMPAR(0)) {
     // QImage read()
-    QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QImage *ptr = new QImage(obj->read());
@@ -470,7 +472,7 @@ HB_FUNC_STATIC(QIMAGEREADER_READ)
     }
   } else if (ISNUMPAR(1) && ISQIMAGE(1)) {
     // bool read(QImage *image)
-    QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->read(PQIMAGE(1)));
@@ -483,7 +485,7 @@ HB_FUNC_STATIC(QIMAGEREADER_READ)
 // QRect scaledClipRect() const
 HB_FUNC_STATIC(QIMAGEREADER_SCALEDCLIPRECT)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -502,7 +504,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SCALEDCLIPRECT)
 // QSize scaledSize() const
 HB_FUNC_STATIC(QIMAGEREADER_SCALEDSIZE)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -521,7 +523,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SCALEDSIZE)
 // void setAutoDetectImageFormat(bool enabled)
 HB_FUNC_STATIC(QIMAGEREADER_SETAUTODETECTIMAGEFORMAT)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -541,7 +543,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETAUTODETECTIMAGEFORMAT)
 // void setBackgroundColor(const QColor &color)
 HB_FUNC_STATIC(QIMAGEREADER_SETBACKGROUNDCOLOR)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -561,7 +563,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETBACKGROUNDCOLOR)
 // void setClipRect(const QRect &rect)
 HB_FUNC_STATIC(QIMAGEREADER_SETCLIPRECT)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -581,7 +583,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETCLIPRECT)
 // void setDecideFormatFromContent(bool ignored)
 HB_FUNC_STATIC(QIMAGEREADER_SETDECIDEFORMATFROMCONTENT)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -601,7 +603,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETDECIDEFORMATFROMCONTENT)
 // void setDevice(QIODevice *device)
 HB_FUNC_STATIC(QIMAGEREADER_SETDEVICE)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -621,7 +623,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETDEVICE)
 // void setFileName(const QString &fileName)
 HB_FUNC_STATIC(QIMAGEREADER_SETFILENAME)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -641,7 +643,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETFILENAME)
 // void setFormat(const QByteArray &format)
 HB_FUNC_STATIC(QIMAGEREADER_SETFORMAT)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -661,7 +663,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETFORMAT)
 // void setQuality(int quality)
 HB_FUNC_STATIC(QIMAGEREADER_SETQUALITY)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -681,7 +683,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETQUALITY)
 // void setScaledClipRect(const QRect &rect)
 HB_FUNC_STATIC(QIMAGEREADER_SETSCALEDCLIPRECT)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -701,7 +703,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETSCALEDCLIPRECT)
 // void setScaledSize(const QSize &size)
 HB_FUNC_STATIC(QIMAGEREADER_SETSCALEDSIZE)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -721,7 +723,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SETSCALEDSIZE)
 // QSize size() const
 HB_FUNC_STATIC(QIMAGEREADER_SIZE)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -740,7 +742,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SIZE)
 // bool supportsAnimation() const
 HB_FUNC_STATIC(QIMAGEREADER_SUPPORTSANIMATION)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -758,7 +760,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SUPPORTSANIMATION)
 // bool supportsOption(QImageIOHandler::ImageOption option) const
 HB_FUNC_STATIC(QIMAGEREADER_SUPPORTSOPTION)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -776,7 +778,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SUPPORTSOPTION)
 // QString text(const QString &key) const
 HB_FUNC_STATIC(QIMAGEREADER_TEXT)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -794,7 +796,7 @@ HB_FUNC_STATIC(QIMAGEREADER_TEXT)
 // QStringList textKeys() const
 HB_FUNC_STATIC(QIMAGEREADER_TEXTKEYS)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -813,7 +815,7 @@ HB_FUNC_STATIC(QIMAGEREADER_IMAGEFORMAT)
 {
   if (ISNUMPAR(0)) {
     // QImage::Format imageFormat() const
-    QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RENUM(obj->imageFormat());
@@ -836,7 +838,7 @@ HB_FUNC_STATIC(QIMAGEREADER_IMAGEFORMAT)
 // QList<QByteArray> supportedImageFormats()
 HB_FUNC_STATIC(QIMAGEREADER_SUPPORTEDIMAGEFORMATS)
 {
-  QImageReader *obj = static_cast<QImageReader *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

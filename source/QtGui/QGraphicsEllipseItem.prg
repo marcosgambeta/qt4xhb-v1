@@ -53,6 +53,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QGraphicsEllipseItem *p = static_cast<QGraphicsEllipseItem *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1))) {
@@ -79,7 +82,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_NEW)
 
 HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_DELETE)
 {
-  QGraphicsEllipseItem *obj = static_cast<QGraphicsEllipseItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -95,7 +98,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_DELETE)
 // QRectF rect() const
 HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_RECT)
 {
-  QGraphicsEllipseItem *obj = static_cast<QGraphicsEllipseItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -115,7 +118,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_SETRECT)
 {
   if (ISNUMPAR(1) && ISQRECTF(1)) {
     // void setRect(const QRectF &rect)
-    QGraphicsEllipseItem *obj = static_cast<QGraphicsEllipseItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setRect(*PQRECTF(1));
@@ -124,7 +127,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_SETRECT)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // void setRect(qreal x, qreal y, qreal width, qreal height)
-    QGraphicsEllipseItem *obj = static_cast<QGraphicsEllipseItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setRect(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4));
@@ -139,7 +142,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_SETRECT)
 // void setSpanAngle(int angle)
 HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_SETSPANANGLE)
 {
-  QGraphicsEllipseItem *obj = static_cast<QGraphicsEllipseItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -159,7 +162,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_SETSPANANGLE)
 // void setStartAngle(int angle)
 HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_SETSTARTANGLE)
 {
-  QGraphicsEllipseItem *obj = static_cast<QGraphicsEllipseItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -179,7 +182,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_SETSTARTANGLE)
 // int spanAngle() const
 HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_SPANANGLE)
 {
-  QGraphicsEllipseItem *obj = static_cast<QGraphicsEllipseItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -197,7 +200,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_SPANANGLE)
 // int startAngle() const
 HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_STARTANGLE)
 {
-  QGraphicsEllipseItem *obj = static_cast<QGraphicsEllipseItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -215,7 +218,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_STARTANGLE)
 // virtual QRectF boundingRect() const
 HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_BOUNDINGRECT)
 {
-  QGraphicsEllipseItem *obj = static_cast<QGraphicsEllipseItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -234,7 +237,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_BOUNDINGRECT)
 // virtual bool contains(const QPointF &point) const
 HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_CONTAINS)
 {
-  QGraphicsEllipseItem *obj = static_cast<QGraphicsEllipseItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -252,7 +255,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_CONTAINS)
 // virtual bool isObscuredBy(const QGraphicsItem *item) const
 HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_ISOBSCUREDBY)
 {
-  QGraphicsEllipseItem *obj = static_cast<QGraphicsEllipseItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -270,7 +273,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_ISOBSCUREDBY)
 // virtual QPainterPath opaqueArea() const
 HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_OPAQUEAREA)
 {
-  QGraphicsEllipseItem *obj = static_cast<QGraphicsEllipseItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -289,7 +292,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_OPAQUEAREA)
 // virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0)
 HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_PAINT)
 {
-  QGraphicsEllipseItem *obj = static_cast<QGraphicsEllipseItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -309,7 +312,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_PAINT)
 // virtual QPainterPath shape() const
 HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_SHAPE)
 {
-  QGraphicsEllipseItem *obj = static_cast<QGraphicsEllipseItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -328,7 +331,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_SHAPE)
 // virtual int type() const
 HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_TYPE)
 {
-  QGraphicsEllipseItem *obj = static_cast<QGraphicsEllipseItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

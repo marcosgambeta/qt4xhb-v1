@@ -47,9 +47,12 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QGraphicsEffect *p = qobject_cast<QGraphicsEffect *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QGRAPHICSEFFECT_DELETE)
 {
-  QGraphicsEffect *obj = qobject_cast<QGraphicsEffect *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -67,7 +70,7 @@ HB_FUNC_STATIC(QGRAPHICSEFFECT_DELETE)
 // QRectF boundingRect() const
 HB_FUNC_STATIC(QGRAPHICSEFFECT_BOUNDINGRECT)
 {
-  QGraphicsEffect *obj = qobject_cast<QGraphicsEffect *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -86,7 +89,7 @@ HB_FUNC_STATIC(QGRAPHICSEFFECT_BOUNDINGRECT)
 // virtual QRectF boundingRectFor(const QRectF &rect) const
 HB_FUNC_STATIC(QGRAPHICSEFFECT_BOUNDINGRECTFOR)
 {
-  QGraphicsEffect *obj = qobject_cast<QGraphicsEffect *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -105,7 +108,7 @@ HB_FUNC_STATIC(QGRAPHICSEFFECT_BOUNDINGRECTFOR)
 // bool isEnabled() const
 HB_FUNC_STATIC(QGRAPHICSEFFECT_ISENABLED)
 {
-  QGraphicsEffect *obj = qobject_cast<QGraphicsEffect *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -123,7 +126,7 @@ HB_FUNC_STATIC(QGRAPHICSEFFECT_ISENABLED)
 // void setEnabled(bool enable)
 HB_FUNC_STATIC(QGRAPHICSEFFECT_SETENABLED)
 {
-  QGraphicsEffect *obj = qobject_cast<QGraphicsEffect *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -143,7 +146,7 @@ HB_FUNC_STATIC(QGRAPHICSEFFECT_SETENABLED)
 // void update()
 HB_FUNC_STATIC(QGRAPHICSEFFECT_UPDATE)
 {
-  QGraphicsEffect *obj = qobject_cast<QGraphicsEffect *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

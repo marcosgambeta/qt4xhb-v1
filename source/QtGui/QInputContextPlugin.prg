@@ -47,9 +47,12 @@ RETURN
 
 #include <QtGui/QInputContext>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QInputContextPlugin *p = qobject_cast<QInputContextPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QINPUTCONTEXTPLUGIN_DELETE)
 {
-  QInputContextPlugin *obj = qobject_cast<QInputContextPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -67,7 +70,7 @@ HB_FUNC_STATIC(QINPUTCONTEXTPLUGIN_DELETE)
 // virtual QInputContext *create(const QString &key) = 0
 HB_FUNC_STATIC(QINPUTCONTEXTPLUGIN_CREATE)
 {
-  QInputContextPlugin *obj = qobject_cast<QInputContextPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -86,7 +89,7 @@ HB_FUNC_STATIC(QINPUTCONTEXTPLUGIN_CREATE)
 // virtual QString description(const QString &key) = 0
 HB_FUNC_STATIC(QINPUTCONTEXTPLUGIN_DESCRIPTION)
 {
-  QInputContextPlugin *obj = qobject_cast<QInputContextPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -104,7 +107,7 @@ HB_FUNC_STATIC(QINPUTCONTEXTPLUGIN_DESCRIPTION)
 // virtual QString displayName(const QString &key) = 0
 HB_FUNC_STATIC(QINPUTCONTEXTPLUGIN_DISPLAYNAME)
 {
-  QInputContextPlugin *obj = qobject_cast<QInputContextPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -122,7 +125,7 @@ HB_FUNC_STATIC(QINPUTCONTEXTPLUGIN_DISPLAYNAME)
 // virtual QStringList keys() const = 0
 HB_FUNC_STATIC(QINPUTCONTEXTPLUGIN_KEYS)
 {
-  QInputContextPlugin *obj = qobject_cast<QInputContextPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -140,7 +143,7 @@ HB_FUNC_STATIC(QINPUTCONTEXTPLUGIN_KEYS)
 // virtual QStringList languages(const QString &key) = 0
 HB_FUNC_STATIC(QINPUTCONTEXTPLUGIN_LANGUAGES)
 {
-  QInputContextPlugin *obj = qobject_cast<QInputContextPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -35,4 +35,7 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QItemEditorCreator *p = static_cast<QItemEditorCreator *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 #pragma ENDDUMP

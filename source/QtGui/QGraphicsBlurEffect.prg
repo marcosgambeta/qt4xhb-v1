@@ -49,6 +49,9 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QGraphicsBlurEffect *p = qobject_cast<QGraphicsBlurEffect *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QGraphicsBlurEffect(QObject *parent = 0)
 HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_NEW)
 {
@@ -62,7 +65,7 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_NEW)
 
 HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_DELETE)
 {
-  QGraphicsBlurEffect *obj = qobject_cast<QGraphicsBlurEffect *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -80,7 +83,7 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_DELETE)
 // QGraphicsBlurEffect::BlurHints blurHints() const
 HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_BLURHINTS)
 {
-  QGraphicsBlurEffect *obj = qobject_cast<QGraphicsBlurEffect *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -98,7 +101,7 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_BLURHINTS)
 // qreal blurRadius() const
 HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_BLURRADIUS)
 {
-  QGraphicsBlurEffect *obj = qobject_cast<QGraphicsBlurEffect *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -116,7 +119,7 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_BLURRADIUS)
 // virtual QRectF boundingRectFor(const QRectF &rect) const
 HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_BOUNDINGRECTFOR)
 {
-  QGraphicsBlurEffect *obj = qobject_cast<QGraphicsBlurEffect *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -135,7 +138,7 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_BOUNDINGRECTFOR)
 // void setBlurHints(QGraphicsBlurEffect::BlurHints hints)
 HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_SETBLURHINTS)
 {
-  QGraphicsBlurEffect *obj = qobject_cast<QGraphicsBlurEffect *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -155,7 +158,7 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_SETBLURHINTS)
 // void setBlurRadius(qreal blurRadius)
 HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_SETBLURRADIUS)
 {
-  QGraphicsBlurEffect *obj = qobject_cast<QGraphicsBlurEffect *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

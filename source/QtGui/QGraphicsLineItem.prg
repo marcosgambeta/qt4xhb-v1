@@ -55,6 +55,8 @@ RETURN
 
 #include <QtGui/QPen>
 
+#define GET_PTR_FROM_SELF(p) QGraphicsLineItem *p = static_cast<QGraphicsLineItem *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QGRAPHICSLINEITEM_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1))) {
@@ -81,7 +83,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_NEW)
 
 HB_FUNC_STATIC(QGRAPHICSLINEITEM_DELETE)
 {
-  QGraphicsLineItem *obj = static_cast<QGraphicsLineItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -97,7 +99,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_DELETE)
 // QLineF line() const
 HB_FUNC_STATIC(QGRAPHICSLINEITEM_LINE)
 {
-  QGraphicsLineItem *obj = static_cast<QGraphicsLineItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -116,7 +118,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_LINE)
 // QPen pen() const
 HB_FUNC_STATIC(QGRAPHICSLINEITEM_PEN)
 {
-  QGraphicsLineItem *obj = static_cast<QGraphicsLineItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -136,7 +138,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_SETLINE)
 {
   if (ISNUMPAR(1) && ISQLINEF(1)) {
     // void setLine(const QLineF &line)
-    QGraphicsLineItem *obj = static_cast<QGraphicsLineItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setLine(*PQLINEF(1));
@@ -145,7 +147,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_SETLINE)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // void setLine(qreal x1, qreal y1, qreal x2, qreal y2)
-    QGraphicsLineItem *obj = static_cast<QGraphicsLineItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setLine(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4));
@@ -160,7 +162,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_SETLINE)
 // void setPen(const QPen &pen)
 HB_FUNC_STATIC(QGRAPHICSLINEITEM_SETPEN)
 {
-  QGraphicsLineItem *obj = static_cast<QGraphicsLineItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -180,7 +182,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_SETPEN)
 // virtual QRectF boundingRect() const
 HB_FUNC_STATIC(QGRAPHICSLINEITEM_BOUNDINGRECT)
 {
-  QGraphicsLineItem *obj = static_cast<QGraphicsLineItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -199,7 +201,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_BOUNDINGRECT)
 // virtual bool contains(const QPointF &point) const
 HB_FUNC_STATIC(QGRAPHICSLINEITEM_CONTAINS)
 {
-  QGraphicsLineItem *obj = static_cast<QGraphicsLineItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -217,7 +219,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_CONTAINS)
 // virtual bool isObscuredBy(const QGraphicsItem *item) const
 HB_FUNC_STATIC(QGRAPHICSLINEITEM_ISOBSCUREDBY)
 {
-  QGraphicsLineItem *obj = static_cast<QGraphicsLineItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -235,7 +237,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_ISOBSCUREDBY)
 // virtual QPainterPath opaqueArea() const
 HB_FUNC_STATIC(QGRAPHICSLINEITEM_OPAQUEAREA)
 {
-  QGraphicsLineItem *obj = static_cast<QGraphicsLineItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -254,7 +256,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_OPAQUEAREA)
 // virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0)
 HB_FUNC_STATIC(QGRAPHICSLINEITEM_PAINT)
 {
-  QGraphicsLineItem *obj = static_cast<QGraphicsLineItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -274,7 +276,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_PAINT)
 // virtual QPainterPath shape() const
 HB_FUNC_STATIC(QGRAPHICSLINEITEM_SHAPE)
 {
-  QGraphicsLineItem *obj = static_cast<QGraphicsLineItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -293,7 +295,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_SHAPE)
 // virtual int type() const
 HB_FUNC_STATIC(QGRAPHICSLINEITEM_TYPE)
 {
-  QGraphicsLineItem *obj = static_cast<QGraphicsLineItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

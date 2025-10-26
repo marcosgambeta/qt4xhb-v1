@@ -59,9 +59,11 @@ RETURN
 
 #include <QtGui/QTextFormat>
 
+#define GET_PTR_FROM_SELF(p) QInputContext *p = qobject_cast<QInputContext *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QINPUTCONTEXT_DELETE)
 {
-  QInputContext *obj = qobject_cast<QInputContext *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -79,7 +81,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_DELETE)
 // virtual QList<QAction *> actions()
 HB_FUNC_STATIC(QINPUTCONTEXT_ACTIONS)
 {
-  QInputContext *obj = qobject_cast<QInputContext *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -117,7 +119,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_ACTIONS)
 // virtual bool filterEvent(const QEvent *event)
 HB_FUNC_STATIC(QINPUTCONTEXT_FILTEREVENT)
 {
-  QInputContext *obj = qobject_cast<QInputContext *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -135,7 +137,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_FILTEREVENT)
 // QWidget *focusWidget() const
 HB_FUNC_STATIC(QINPUTCONTEXT_FOCUSWIDGET)
 {
-  QInputContext *obj = qobject_cast<QInputContext *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -154,7 +156,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_FOCUSWIDGET)
 // virtual QFont font() const
 HB_FUNC_STATIC(QINPUTCONTEXT_FONT)
 {
-  QInputContext *obj = qobject_cast<QInputContext *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -173,7 +175,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_FONT)
 // virtual QString identifierName() = 0
 HB_FUNC_STATIC(QINPUTCONTEXT_IDENTIFIERNAME)
 {
-  QInputContext *obj = qobject_cast<QInputContext *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -191,7 +193,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_IDENTIFIERNAME)
 // virtual bool isComposing() const = 0
 HB_FUNC_STATIC(QINPUTCONTEXT_ISCOMPOSING)
 {
-  QInputContext *obj = qobject_cast<QInputContext *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -209,7 +211,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_ISCOMPOSING)
 // virtual QString language() = 0
 HB_FUNC_STATIC(QINPUTCONTEXT_LANGUAGE)
 {
-  QInputContext *obj = qobject_cast<QInputContext *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -227,7 +229,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_LANGUAGE)
 // virtual void mouseHandler(int x, QMouseEvent *event)
 HB_FUNC_STATIC(QINPUTCONTEXT_MOUSEHANDLER)
 {
-  QInputContext *obj = qobject_cast<QInputContext *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -247,7 +249,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_MOUSEHANDLER)
 // virtual void reset() = 0
 HB_FUNC_STATIC(QINPUTCONTEXT_RESET)
 {
-  QInputContext *obj = qobject_cast<QInputContext *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -267,7 +269,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_RESET)
 // void sendEvent(const QInputMethodEvent &event)
 HB_FUNC_STATIC(QINPUTCONTEXT_SENDEVENT)
 {
-  QInputContext *obj = qobject_cast<QInputContext *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -287,7 +289,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_SENDEVENT)
 // virtual void setFocusWidget(QWidget *widget)
 HB_FUNC_STATIC(QINPUTCONTEXT_SETFOCUSWIDGET)
 {
-  QInputContext *obj = qobject_cast<QInputContext *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -307,7 +309,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_SETFOCUSWIDGET)
 // QTextFormat standardFormat(QInputContext::StandardFormat s) const
 HB_FUNC_STATIC(QINPUTCONTEXT_STANDARDFORMAT)
 {
-  QInputContext *obj = qobject_cast<QInputContext *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -326,7 +328,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_STANDARDFORMAT)
 // virtual void update()
 HB_FUNC_STATIC(QINPUTCONTEXT_UPDATE)
 {
-  QInputContext *obj = qobject_cast<QInputContext *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -346,7 +348,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_UPDATE)
 // virtual void widgetDestroyed(QWidget *widget)
 HB_FUNC_STATIC(QINPUTCONTEXT_WIDGETDESTROYED)
 {
-  QInputContext *obj = qobject_cast<QInputContext *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

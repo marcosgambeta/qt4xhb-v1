@@ -45,9 +45,11 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QIconEngineV2 *p = static_cast<QIconEngineV2 *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QICONENGINEV2_DELETE)
 {
-  QIconEngineV2 *obj = static_cast<QIconEngineV2 *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -63,7 +65,7 @@ HB_FUNC_STATIC(QICONENGINEV2_DELETE)
 // QList<QSize> availableSizes(QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off)
 HB_FUNC_STATIC(QICONENGINEV2_AVAILABLESIZES)
 {
-  QIconEngineV2 *obj = static_cast<QIconEngineV2 *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -105,7 +107,7 @@ HB_FUNC_STATIC(QICONENGINEV2_AVAILABLESIZES)
 // virtual QIconEngineV2 *clone() const
 HB_FUNC_STATIC(QICONENGINEV2_CLONE)
 {
-  QIconEngineV2 *obj = static_cast<QIconEngineV2 *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -124,7 +126,7 @@ HB_FUNC_STATIC(QICONENGINEV2_CLONE)
 // QString iconName()
 HB_FUNC_STATIC(QICONENGINEV2_ICONNAME)
 {
-  QIconEngineV2 *obj = static_cast<QIconEngineV2 *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -142,7 +144,7 @@ HB_FUNC_STATIC(QICONENGINEV2_ICONNAME)
 // virtual QString key() const
 HB_FUNC_STATIC(QICONENGINEV2_KEY)
 {
-  QIconEngineV2 *obj = static_cast<QIconEngineV2 *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -160,7 +162,7 @@ HB_FUNC_STATIC(QICONENGINEV2_KEY)
 // virtual bool read(QDataStream &in)
 HB_FUNC_STATIC(QICONENGINEV2_READ)
 {
-  QIconEngineV2 *obj = static_cast<QIconEngineV2 *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -178,7 +180,7 @@ HB_FUNC_STATIC(QICONENGINEV2_READ)
 // virtual void virtual_hook(int id, void *data)
 HB_FUNC_STATIC(QICONENGINEV2_VIRTUAL_HOOK)
 {
-  QIconEngineV2 *obj = static_cast<QIconEngineV2 *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -198,7 +200,7 @@ HB_FUNC_STATIC(QICONENGINEV2_VIRTUAL_HOOK)
 // virtual bool write(QDataStream &out) const
 HB_FUNC_STATIC(QICONENGINEV2_WRITE)
 {
-  QIconEngineV2 *obj = static_cast<QIconEngineV2 *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -40,6 +40,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QInputEvent *p = static_cast<QInputEvent *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QInputEvent(QEvent::Type type, Qt::KeyboardModifiers modifiers = Qt::NoModifier)
 HB_FUNC_STATIC(QINPUTEVENT_NEW)
 {
@@ -54,7 +56,7 @@ HB_FUNC_STATIC(QINPUTEVENT_NEW)
 
 HB_FUNC_STATIC(QINPUTEVENT_DELETE)
 {
-  QInputEvent *obj = static_cast<QInputEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -70,7 +72,7 @@ HB_FUNC_STATIC(QINPUTEVENT_DELETE)
 // Qt::KeyboardModifiers modifiers() const
 HB_FUNC_STATIC(QINPUTEVENT_MODIFIERS)
 {
-  QInputEvent *obj = static_cast<QInputEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -88,7 +90,7 @@ HB_FUNC_STATIC(QINPUTEVENT_MODIFIERS)
 // void setModifiers(Qt::KeyboardModifiers amodifiers)
 HB_FUNC_STATIC(QINPUTEVENT_SETMODIFIERS)
 {
-  QInputEvent *obj = static_cast<QInputEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -50,9 +50,11 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QGraphicsLayout *p = static_cast<QGraphicsLayout *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QGRAPHICSLAYOUT_DELETE)
 {
-  QGraphicsLayout *obj = static_cast<QGraphicsLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -68,7 +70,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_DELETE)
 // void activate()
 HB_FUNC_STATIC(QGRAPHICSLAYOUT_ACTIVATE)
 {
-  QGraphicsLayout *obj = static_cast<QGraphicsLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -88,7 +90,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_ACTIVATE)
 // virtual int count() const = 0
 HB_FUNC_STATIC(QGRAPHICSLAYOUT_COUNT)
 {
-  QGraphicsLayout *obj = static_cast<QGraphicsLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -106,7 +108,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_COUNT)
 // virtual void invalidate()
 HB_FUNC_STATIC(QGRAPHICSLAYOUT_INVALIDATE)
 {
-  QGraphicsLayout *obj = static_cast<QGraphicsLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -126,7 +128,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_INVALIDATE)
 // bool isActivated() const
 HB_FUNC_STATIC(QGRAPHICSLAYOUT_ISACTIVATED)
 {
-  QGraphicsLayout *obj = static_cast<QGraphicsLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -144,7 +146,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_ISACTIVATED)
 // virtual QGraphicsLayoutItem *itemAt(int i) const = 0
 HB_FUNC_STATIC(QGRAPHICSLAYOUT_ITEMAT)
 {
-  QGraphicsLayout *obj = static_cast<QGraphicsLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -163,7 +165,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_ITEMAT)
 // virtual void removeAt(int index) = 0
 HB_FUNC_STATIC(QGRAPHICSLAYOUT_REMOVEAT)
 {
-  QGraphicsLayout *obj = static_cast<QGraphicsLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -183,7 +185,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_REMOVEAT)
 // void setContentsMargins(qreal left, qreal top, qreal right, qreal bottom)
 HB_FUNC_STATIC(QGRAPHICSLAYOUT_SETCONTENTSMARGINS)
 {
-  QGraphicsLayout *obj = static_cast<QGraphicsLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -203,7 +205,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_SETCONTENTSMARGINS)
 // virtual void widgetEvent(QEvent *e)
 HB_FUNC_STATIC(QGRAPHICSLAYOUT_WIDGETEVENT)
 {
-  QGraphicsLayout *obj = static_cast<QGraphicsLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -223,7 +225,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_WIDGETEVENT)
 // virtual void getContentsMargins(qreal *left, qreal *top, qreal *right, qreal *bottom) const
 HB_FUNC_STATIC(QGRAPHICSLAYOUT_GETCONTENTSMARGINS)
 {
-  QGraphicsLayout *obj = static_cast<QGraphicsLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -251,7 +253,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUT_GETCONTENTSMARGINS)
 // virtual void updateGeometry()
 HB_FUNC_STATIC(QGRAPHICSLAYOUT_UPDATEGEOMETRY)
 {
-  QGraphicsLayout *obj = static_cast<QGraphicsLayout *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

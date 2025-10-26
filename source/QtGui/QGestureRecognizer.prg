@@ -54,9 +54,12 @@ RETURN
 
 #include <QtGui/QGesture>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QGestureRecognizer *p = static_cast<QGestureRecognizer *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QGESTURERECOGNIZER_DELETE)
 {
-  QGestureRecognizer *obj = static_cast<QGestureRecognizer *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -72,7 +75,7 @@ HB_FUNC_STATIC(QGESTURERECOGNIZER_DELETE)
 // virtual QGesture *create(QObject *target)
 HB_FUNC_STATIC(QGESTURERECOGNIZER_CREATE)
 {
-  QGestureRecognizer *obj = static_cast<QGestureRecognizer *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -91,7 +94,7 @@ HB_FUNC_STATIC(QGESTURERECOGNIZER_CREATE)
 // virtual QGestureRecognizer::Result recognize(QGesture *gesture, QObject *watched, QEvent *event) = 0
 HB_FUNC_STATIC(QGESTURERECOGNIZER_RECOGNIZE)
 {
-  QGestureRecognizer *obj = static_cast<QGestureRecognizer *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -109,7 +112,7 @@ HB_FUNC_STATIC(QGESTURERECOGNIZER_RECOGNIZE)
 // virtual void reset(QGesture *gesture)
 HB_FUNC_STATIC(QGESTURERECOGNIZER_RESET)
 {
-  QGestureRecognizer *obj = static_cast<QGestureRecognizer *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -54,6 +54,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QGroupBox *p = qobject_cast<QGroupBox *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QGROUPBOX_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
@@ -72,7 +74,7 @@ HB_FUNC_STATIC(QGROUPBOX_NEW)
 // Qt::Alignment alignment() const
 HB_FUNC_STATIC(QGROUPBOX_ALIGNMENT)
 {
-  QGroupBox *obj = qobject_cast<QGroupBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -90,7 +92,7 @@ HB_FUNC_STATIC(QGROUPBOX_ALIGNMENT)
 // bool isCheckable() const
 HB_FUNC_STATIC(QGROUPBOX_ISCHECKABLE)
 {
-  QGroupBox *obj = qobject_cast<QGroupBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -108,7 +110,7 @@ HB_FUNC_STATIC(QGROUPBOX_ISCHECKABLE)
 // bool isChecked() const
 HB_FUNC_STATIC(QGROUPBOX_ISCHECKED)
 {
-  QGroupBox *obj = qobject_cast<QGroupBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -126,7 +128,7 @@ HB_FUNC_STATIC(QGROUPBOX_ISCHECKED)
 // bool isFlat() const
 HB_FUNC_STATIC(QGROUPBOX_ISFLAT)
 {
-  QGroupBox *obj = qobject_cast<QGroupBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -144,7 +146,7 @@ HB_FUNC_STATIC(QGROUPBOX_ISFLAT)
 // void setAlignment(int alignment)
 HB_FUNC_STATIC(QGROUPBOX_SETALIGNMENT)
 {
-  QGroupBox *obj = qobject_cast<QGroupBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -164,7 +166,7 @@ HB_FUNC_STATIC(QGROUPBOX_SETALIGNMENT)
 // void setCheckable(bool checkable)
 HB_FUNC_STATIC(QGROUPBOX_SETCHECKABLE)
 {
-  QGroupBox *obj = qobject_cast<QGroupBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -184,7 +186,7 @@ HB_FUNC_STATIC(QGROUPBOX_SETCHECKABLE)
 // void setFlat(bool flat)
 HB_FUNC_STATIC(QGROUPBOX_SETFLAT)
 {
-  QGroupBox *obj = qobject_cast<QGroupBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -204,7 +206,7 @@ HB_FUNC_STATIC(QGROUPBOX_SETFLAT)
 // void setTitle(const QString &title)
 HB_FUNC_STATIC(QGROUPBOX_SETTITLE)
 {
-  QGroupBox *obj = qobject_cast<QGroupBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -224,7 +226,7 @@ HB_FUNC_STATIC(QGROUPBOX_SETTITLE)
 // QString title() const
 HB_FUNC_STATIC(QGROUPBOX_TITLE)
 {
-  QGroupBox *obj = qobject_cast<QGroupBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -242,7 +244,7 @@ HB_FUNC_STATIC(QGROUPBOX_TITLE)
 // virtual QSize minimumSizeHint() const
 HB_FUNC_STATIC(QGROUPBOX_MINIMUMSIZEHINT)
 {
-  QGroupBox *obj = qobject_cast<QGroupBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -261,7 +263,7 @@ HB_FUNC_STATIC(QGROUPBOX_MINIMUMSIZEHINT)
 // void setChecked(bool checked)
 HB_FUNC_STATIC(QGROUPBOX_SETCHECKED)
 {
-  QGroupBox *obj = qobject_cast<QGroupBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

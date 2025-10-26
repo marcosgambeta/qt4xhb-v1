@@ -40,9 +40,12 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QGraphicsTransform *p = qobject_cast<QGraphicsTransform *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QGRAPHICSTRANSFORM_DELETE)
 {
-  QGraphicsTransform *obj = qobject_cast<QGraphicsTransform *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -60,7 +63,7 @@ HB_FUNC_STATIC(QGRAPHICSTRANSFORM_DELETE)
 // virtual void applyTo(QMatrix4x4 *matrix) const = 0
 HB_FUNC_STATIC(QGRAPHICSTRANSFORM_APPLYTO)
 {
-  QGraphicsTransform *obj = qobject_cast<QGraphicsTransform *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
