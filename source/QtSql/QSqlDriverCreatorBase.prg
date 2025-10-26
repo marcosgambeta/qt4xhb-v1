@@ -50,9 +50,12 @@ RETURN
 
 #include <QtSql/QSqlDriver>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QSqlDriverCreatorBase *p = static_cast<QSqlDriverCreatorBase *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSQLDRIVERCREATORBASE_DELETE)
 {
-  QSqlDriverCreatorBase *obj = static_cast<QSqlDriverCreatorBase *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -68,7 +71,7 @@ HB_FUNC_STATIC(QSQLDRIVERCREATORBASE_DELETE)
 // virtual QSqlDriver *createObject() const = 0
 HB_FUNC_STATIC(QSQLDRIVERCREATORBASE_CREATEOBJECT)
 {
-  QSqlDriverCreatorBase *obj = static_cast<QSqlDriverCreatorBase *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

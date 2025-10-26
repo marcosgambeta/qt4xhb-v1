@@ -53,6 +53,9 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QSqlRelationalTableModel *p = qobject_cast<QSqlRelationalTableModel *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QSqlRelationalTableModel(QObject *parent = 0, QSqlDatabase db = QSqlDatabase())
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_NEW)
 {
@@ -67,7 +70,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_NEW)
 
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_DELETE)
 {
-  QSqlRelationalTableModel *obj = qobject_cast<QSqlRelationalTableModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -85,7 +88,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_DELETE)
 // QSqlRelation relation(int column) const
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_RELATION)
 {
-  QSqlRelationalTableModel *obj = qobject_cast<QSqlRelationalTableModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -104,7 +107,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_RELATION)
 // virtual QSqlTableModel *relationModel(int column) const
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_RELATIONMODEL)
 {
-  QSqlRelationalTableModel *obj = qobject_cast<QSqlRelationalTableModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -123,7 +126,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_RELATIONMODEL)
 // virtual void setRelation(int column, const QSqlRelation &relation)
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETRELATION)
 {
-  QSqlRelationalTableModel *obj = qobject_cast<QSqlRelationalTableModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -143,7 +146,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETRELATION)
 // virtual void clear()
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_CLEAR)
 {
-  QSqlRelationalTableModel *obj = qobject_cast<QSqlRelationalTableModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -163,7 +166,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_CLEAR)
 // virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_DATA)
 {
-  QSqlRelationalTableModel *obj = qobject_cast<QSqlRelationalTableModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -182,7 +185,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_DATA)
 // virtual bool removeColumns(int column, int count, const QModelIndex &parent = QModelIndex())
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_REMOVECOLUMNS)
 {
-  QSqlRelationalTableModel *obj = qobject_cast<QSqlRelationalTableModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -201,7 +204,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_REMOVECOLUMNS)
 // virtual bool select()
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SELECT)
 {
-  QSqlRelationalTableModel *obj = qobject_cast<QSqlRelationalTableModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -219,7 +222,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SELECT)
 // virtual bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole)
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETDATA)
 {
-  QSqlRelationalTableModel *obj = qobject_cast<QSqlRelationalTableModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -237,7 +240,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETDATA)
 // virtual void setTable(const QString &table)
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETTABLE)
 {
-  QSqlRelationalTableModel *obj = qobject_cast<QSqlRelationalTableModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -257,7 +260,7 @@ HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_SETTABLE)
 // virtual void revertRow(int row)
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_REVERTROW)
 {
-  QSqlRelationalTableModel *obj = qobject_cast<QSqlRelationalTableModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

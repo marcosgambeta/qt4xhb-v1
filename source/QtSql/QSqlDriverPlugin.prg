@@ -44,9 +44,12 @@ RETURN
 
 #include <QtSql/QSqlDriver>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QSqlDriverPlugin *p = qobject_cast<QSqlDriverPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QSQLDRIVERPLUGIN_DELETE)
 {
-  QSqlDriverPlugin *obj = qobject_cast<QSqlDriverPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -64,7 +67,7 @@ HB_FUNC_STATIC(QSQLDRIVERPLUGIN_DELETE)
 // virtual QSqlDriver *create(const QString &key) = 0
 HB_FUNC_STATIC(QSQLDRIVERPLUGIN_CREATE)
 {
-  QSqlDriverPlugin *obj = qobject_cast<QSqlDriverPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -83,7 +86,7 @@ HB_FUNC_STATIC(QSQLDRIVERPLUGIN_CREATE)
 // virtual QStringList keys() const = 0
 HB_FUNC_STATIC(QSQLDRIVERPLUGIN_KEYS)
 {
-  QSqlDriverPlugin *obj = qobject_cast<QSqlDriverPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

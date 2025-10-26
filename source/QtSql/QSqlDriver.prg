@@ -75,9 +75,11 @@ RETURN
 #include <QtSql/QSqlRecord>
 #include <QtCore/QVariant>
 
+#define GET_PTR_FROM_SELF(p) QSqlDriver *p = qobject_cast<QSqlDriver *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QSQLDRIVER_DELETE)
 {
-  QSqlDriver *obj = qobject_cast<QSqlDriver *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -95,7 +97,7 @@ HB_FUNC_STATIC(QSQLDRIVER_DELETE)
 // virtual bool beginTransaction()
 HB_FUNC_STATIC(QSQLDRIVER_BEGINTRANSACTION)
 {
-  QSqlDriver *obj = qobject_cast<QSqlDriver *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -113,7 +115,7 @@ HB_FUNC_STATIC(QSQLDRIVER_BEGINTRANSACTION)
 // virtual void close() = 0
 HB_FUNC_STATIC(QSQLDRIVER_CLOSE)
 {
-  QSqlDriver *obj = qobject_cast<QSqlDriver *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -133,7 +135,7 @@ HB_FUNC_STATIC(QSQLDRIVER_CLOSE)
 // virtual bool commitTransaction()
 HB_FUNC_STATIC(QSQLDRIVER_COMMITTRANSACTION)
 {
-  QSqlDriver *obj = qobject_cast<QSqlDriver *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -151,7 +153,7 @@ HB_FUNC_STATIC(QSQLDRIVER_COMMITTRANSACTION)
 // virtual QSqlResult *createResult() const = 0
 HB_FUNC_STATIC(QSQLDRIVER_CREATERESULT)
 {
-  QSqlDriver *obj = qobject_cast<QSqlDriver *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -170,7 +172,7 @@ HB_FUNC_STATIC(QSQLDRIVER_CREATERESULT)
 // virtual QString escapeIdentifier(const QString &identifier, QSqlDriver::IdentifierType type) const
 HB_FUNC_STATIC(QSQLDRIVER_ESCAPEIDENTIFIER)
 {
-  QSqlDriver *obj = qobject_cast<QSqlDriver *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -188,7 +190,7 @@ HB_FUNC_STATIC(QSQLDRIVER_ESCAPEIDENTIFIER)
 // virtual QString formatValue(const QSqlField &field, bool trimStrings = false) const
 HB_FUNC_STATIC(QSQLDRIVER_FORMATVALUE)
 {
-  QSqlDriver *obj = qobject_cast<QSqlDriver *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -206,7 +208,7 @@ HB_FUNC_STATIC(QSQLDRIVER_FORMATVALUE)
 // virtual QVariant handle() const
 HB_FUNC_STATIC(QSQLDRIVER_HANDLE)
 {
-  QSqlDriver *obj = qobject_cast<QSqlDriver *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -225,7 +227,7 @@ HB_FUNC_STATIC(QSQLDRIVER_HANDLE)
 // virtual bool hasFeature(QSqlDriver::DriverFeature feature) const = 0
 HB_FUNC_STATIC(QSQLDRIVER_HASFEATURE)
 {
-  QSqlDriver *obj = qobject_cast<QSqlDriver *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -243,7 +245,7 @@ HB_FUNC_STATIC(QSQLDRIVER_HASFEATURE)
 // bool isIdentifierEscaped(const QString &identifier, QSqlDriver::IdentifierType type) const
 HB_FUNC_STATIC(QSQLDRIVER_ISIDENTIFIERESCAPED)
 {
-  QSqlDriver *obj = qobject_cast<QSqlDriver *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -261,7 +263,7 @@ HB_FUNC_STATIC(QSQLDRIVER_ISIDENTIFIERESCAPED)
 // virtual bool isOpen() const
 HB_FUNC_STATIC(QSQLDRIVER_ISOPEN)
 {
-  QSqlDriver *obj = qobject_cast<QSqlDriver *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -279,7 +281,7 @@ HB_FUNC_STATIC(QSQLDRIVER_ISOPEN)
 // bool isOpenError() const
 HB_FUNC_STATIC(QSQLDRIVER_ISOPENERROR)
 {
-  QSqlDriver *obj = qobject_cast<QSqlDriver *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -297,7 +299,7 @@ HB_FUNC_STATIC(QSQLDRIVER_ISOPENERROR)
 // QSqlError lastError() const
 HB_FUNC_STATIC(QSQLDRIVER_LASTERROR)
 {
-  QSqlDriver *obj = qobject_cast<QSqlDriver *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -316,7 +318,7 @@ HB_FUNC_STATIC(QSQLDRIVER_LASTERROR)
 // QSql::NumericalPrecisionPolicy numericalPrecisionPolicy() const
 HB_FUNC_STATIC(QSQLDRIVER_NUMERICALPRECISIONPOLICY)
 {
-  QSqlDriver *obj = qobject_cast<QSqlDriver *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -335,7 +337,7 @@ HB_FUNC_STATIC(QSQLDRIVER_NUMERICALPRECISIONPOLICY)
 // QString &host = QString(), int port = -1, const QString &options = QString()) = 0
 HB_FUNC_STATIC(QSQLDRIVER_OPEN)
 {
-  QSqlDriver *obj = qobject_cast<QSqlDriver *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -355,7 +357,7 @@ HB_FUNC_STATIC(QSQLDRIVER_OPEN)
 // virtual QSqlIndex primaryIndex(const QString &tableName) const
 HB_FUNC_STATIC(QSQLDRIVER_PRIMARYINDEX)
 {
-  QSqlDriver *obj = qobject_cast<QSqlDriver *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -374,7 +376,7 @@ HB_FUNC_STATIC(QSQLDRIVER_PRIMARYINDEX)
 // virtual QSqlRecord record(const QString &tableName) const
 HB_FUNC_STATIC(QSQLDRIVER_RECORD)
 {
-  QSqlDriver *obj = qobject_cast<QSqlDriver *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -393,7 +395,7 @@ HB_FUNC_STATIC(QSQLDRIVER_RECORD)
 // virtual bool rollbackTransaction()
 HB_FUNC_STATIC(QSQLDRIVER_ROLLBACKTRANSACTION)
 {
-  QSqlDriver *obj = qobject_cast<QSqlDriver *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -411,7 +413,7 @@ HB_FUNC_STATIC(QSQLDRIVER_ROLLBACKTRANSACTION)
 // void setNumericalPrecisionPolicy(QSql::NumericalPrecisionPolicy precisionPolicy)
 HB_FUNC_STATIC(QSQLDRIVER_SETNUMERICALPRECISIONPOLICY)
 {
-  QSqlDriver *obj = qobject_cast<QSqlDriver *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -432,7 +434,7 @@ HB_FUNC_STATIC(QSQLDRIVER_SETNUMERICALPRECISIONPOLICY)
 // preparedStatement) const
 HB_FUNC_STATIC(QSQLDRIVER_SQLSTATEMENT)
 {
-  QSqlDriver *obj = qobject_cast<QSqlDriver *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -450,7 +452,7 @@ HB_FUNC_STATIC(QSQLDRIVER_SQLSTATEMENT)
 // QString stripDelimiters(const QString &identifier, QSqlDriver::IdentifierType type) const
 HB_FUNC_STATIC(QSQLDRIVER_STRIPDELIMITERS)
 {
-  QSqlDriver *obj = qobject_cast<QSqlDriver *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -468,7 +470,7 @@ HB_FUNC_STATIC(QSQLDRIVER_STRIPDELIMITERS)
 // bool subscribeToNotification(const QString &name)
 HB_FUNC_STATIC(QSQLDRIVER_SUBSCRIBETONOTIFICATION)
 {
-  QSqlDriver *obj = qobject_cast<QSqlDriver *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -486,7 +488,7 @@ HB_FUNC_STATIC(QSQLDRIVER_SUBSCRIBETONOTIFICATION)
 // QStringList subscribedToNotifications() const
 HB_FUNC_STATIC(QSQLDRIVER_SUBSCRIBEDTONOTIFICATIONS)
 {
-  QSqlDriver *obj = qobject_cast<QSqlDriver *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -504,7 +506,7 @@ HB_FUNC_STATIC(QSQLDRIVER_SUBSCRIBEDTONOTIFICATIONS)
 // virtual QStringList tables(QSql::TableType tableType) const
 HB_FUNC_STATIC(QSQLDRIVER_TABLES)
 {
-  QSqlDriver *obj = qobject_cast<QSqlDriver *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -522,7 +524,7 @@ HB_FUNC_STATIC(QSQLDRIVER_TABLES)
 // bool unsubscribeFromNotification(const QString &name)
 HB_FUNC_STATIC(QSQLDRIVER_UNSUBSCRIBEFROMNOTIFICATION)
 {
-  QSqlDriver *obj = qobject_cast<QSqlDriver *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

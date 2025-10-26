@@ -48,9 +48,11 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QSqlResult *p = static_cast<QSqlResult *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QSQLRESULT_DELETE)
 {
-  QSqlResult *obj = static_cast<QSqlResult *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -66,7 +68,7 @@ HB_FUNC_STATIC(QSQLRESULT_DELETE)
 // virtual QVariant handle() const
 HB_FUNC_STATIC(QSQLRESULT_HANDLE)
 {
-  QSqlResult *obj = static_cast<QSqlResult *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -35,4 +35,6 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QSqlDriverCreator *p = static_cast<QSqlDriverCreator *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 #pragma ENDDUMP

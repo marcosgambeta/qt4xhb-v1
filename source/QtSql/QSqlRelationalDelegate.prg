@@ -44,6 +44,9 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QSqlRelationalDelegate *p = static_cast<QSqlRelationalDelegate *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QSqlRelationalDelegate(QObject *parent = 0)
 HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_NEW)
 {
@@ -57,7 +60,7 @@ HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_NEW)
 
 HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_DELETE)
 {
-  QSqlRelationalDelegate *obj = static_cast<QSqlRelationalDelegate *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -75,7 +78,7 @@ HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_DELETE)
 // virtual QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
 HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_CREATEEDITOR)
 {
-  QSqlRelationalDelegate *obj = static_cast<QSqlRelationalDelegate *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -94,7 +97,7 @@ HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_CREATEEDITOR)
 // virtual void setEditorData(QWidget *editor, const QModelIndex &index) const
 HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_SETEDITORDATA)
 {
-  QSqlRelationalDelegate *obj = static_cast<QSqlRelationalDelegate *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -114,7 +117,7 @@ HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_SETEDITORDATA)
 // virtual void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
 HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_SETMODELDATA)
 {
-  QSqlRelationalDelegate *obj = static_cast<QSqlRelationalDelegate *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
