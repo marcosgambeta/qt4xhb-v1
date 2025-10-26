@@ -47,6 +47,8 @@ RETURN
 
 #include <QtSvg/QSvgRenderer>
 
+#define GET_PTR_FROM_SELF(p) QSvgWidget *p = qobject_cast<QSvgWidget *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QSVGWIDGET_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQWIDGETORNIL(1)) {
@@ -64,7 +66,7 @@ HB_FUNC_STATIC(QSVGWIDGET_NEW)
 
 HB_FUNC_STATIC(QSVGWIDGET_DELETE)
 {
-  QSvgWidget *obj = qobject_cast<QSvgWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -82,7 +84,7 @@ HB_FUNC_STATIC(QSVGWIDGET_DELETE)
 // QSvgRenderer *renderer() const
 HB_FUNC_STATIC(QSVGWIDGET_RENDERER)
 {
-  QSvgWidget *obj = qobject_cast<QSvgWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -101,7 +103,7 @@ HB_FUNC_STATIC(QSVGWIDGET_RENDERER)
 // virtual QSize sizeHint() const
 HB_FUNC_STATIC(QSVGWIDGET_SIZEHINT)
 {
-  QSvgWidget *obj = qobject_cast<QSvgWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -121,7 +123,7 @@ HB_FUNC_STATIC(QSVGWIDGET_LOAD)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // void load(const QString &file)
-    QSvgWidget *obj = qobject_cast<QSvgWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->load(PQSTRING(1));
@@ -130,7 +132,7 @@ HB_FUNC_STATIC(QSVGWIDGET_LOAD)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     // void load(const QByteArray &contents)
-    QSvgWidget *obj = qobject_cast<QSvgWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->load(*PQBYTEARRAY(1));

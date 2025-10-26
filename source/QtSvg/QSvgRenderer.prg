@@ -59,6 +59,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QSvgRenderer *p = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QSVGRENDERER_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -84,7 +86,7 @@ HB_FUNC_STATIC(QSVGRENDERER_NEW)
 
 HB_FUNC_STATIC(QSVGRENDERER_DELETE)
 {
-  QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -102,7 +104,7 @@ HB_FUNC_STATIC(QSVGRENDERER_DELETE)
 // bool animated() const
 HB_FUNC_STATIC(QSVGRENDERER_ANIMATED)
 {
-  QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -120,7 +122,7 @@ HB_FUNC_STATIC(QSVGRENDERER_ANIMATED)
 // QRectF boundsOnElement(const QString &id) const
 HB_FUNC_STATIC(QSVGRENDERER_BOUNDSONELEMENT)
 {
-  QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -139,7 +141,7 @@ HB_FUNC_STATIC(QSVGRENDERER_BOUNDSONELEMENT)
 // QSize defaultSize() const
 HB_FUNC_STATIC(QSVGRENDERER_DEFAULTSIZE)
 {
-  QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -158,7 +160,7 @@ HB_FUNC_STATIC(QSVGRENDERER_DEFAULTSIZE)
 // bool elementExists(const QString &id) const
 HB_FUNC_STATIC(QSVGRENDERER_ELEMENTEXISTS)
 {
-  QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -176,7 +178,7 @@ HB_FUNC_STATIC(QSVGRENDERER_ELEMENTEXISTS)
 // int framesPerSecond() const
 HB_FUNC_STATIC(QSVGRENDERER_FRAMESPERSECOND)
 {
-  QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -194,7 +196,7 @@ HB_FUNC_STATIC(QSVGRENDERER_FRAMESPERSECOND)
 // bool isValid() const
 HB_FUNC_STATIC(QSVGRENDERER_ISVALID)
 {
-  QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -212,7 +214,7 @@ HB_FUNC_STATIC(QSVGRENDERER_ISVALID)
 // QMatrix matrixForElement(const QString &id) const
 HB_FUNC_STATIC(QSVGRENDERER_MATRIXFORELEMENT)
 {
-  QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -231,7 +233,7 @@ HB_FUNC_STATIC(QSVGRENDERER_MATRIXFORELEMENT)
 // void setFramesPerSecond(int num)
 HB_FUNC_STATIC(QSVGRENDERER_SETFRAMESPERSECOND)
 {
-  QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -252,7 +254,7 @@ HB_FUNC_STATIC(QSVGRENDERER_SETVIEWBOX)
 {
   if (ISNUMPAR(1) && ISQRECT(1)) {
     // void setViewBox(const QRect &viewbox)
-    QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setViewBox(*PQRECT(1));
@@ -261,7 +263,7 @@ HB_FUNC_STATIC(QSVGRENDERER_SETVIEWBOX)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && ISQRECTF(1)) {
     // void setViewBox(const QRectF &viewbox)
-    QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setViewBox(*PQRECTF(1));
@@ -276,7 +278,7 @@ HB_FUNC_STATIC(QSVGRENDERER_SETVIEWBOX)
 // QRect viewBox() const
 HB_FUNC_STATIC(QSVGRENDERER_VIEWBOX)
 {
-  QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -295,7 +297,7 @@ HB_FUNC_STATIC(QSVGRENDERER_VIEWBOX)
 // QRectF viewBoxF() const
 HB_FUNC_STATIC(QSVGRENDERER_VIEWBOXF)
 {
-  QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -315,21 +317,21 @@ HB_FUNC_STATIC(QSVGRENDERER_LOAD)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // bool load(const QString &filename)
-    QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->load(PQSTRING(1)));
     }
   } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     // bool load(const QByteArray &contents)
-    QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->load(*PQBYTEARRAY(1)));
     }
   } else if (ISNUMPAR(1) && ISQXMLSTREAMREADER(1)) {
     // bool load(QXmlStreamReader *contents)
-    QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->load(PQXMLSTREAMREADER(1)));
@@ -343,7 +345,7 @@ HB_FUNC_STATIC(QSVGRENDERER_RENDER)
 {
   if (ISNUMPAR(1) && ISQPAINTER(1)) {
     // void render(QPainter *painter)
-    QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->render(PQPAINTER(1));
@@ -352,7 +354,7 @@ HB_FUNC_STATIC(QSVGRENDERER_RENDER)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && ISQPAINTER(1) && ISQRECTF(2)) {
     // void render(QPainter *painter, const QRectF &bounds)
-    QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->render(PQPAINTER(1), *PQRECTF(2));
@@ -361,7 +363,7 @@ HB_FUNC_STATIC(QSVGRENDERER_RENDER)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISBETWEEN(2, 3) && ISQPAINTER(1) && HB_ISCHAR(2) && (ISQRECTF(3) || HB_ISNIL(3))) {
     // void render(QPainter *painter, const QString &elementId, const QRectF &bounds = QRectF())
-    QSvgRenderer *obj = qobject_cast<QSvgRenderer *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->render(PQPAINTER(1), PQSTRING(2), HB_ISNIL(3) ? QRectF() : *static_cast<QRectF *>(Qt4xHb::itemGetPtr(3)));

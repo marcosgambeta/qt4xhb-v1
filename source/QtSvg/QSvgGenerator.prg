@@ -57,6 +57,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QSvgGenerator *p = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QSvgGenerator()
 HB_FUNC_STATIC(QSVGGENERATOR_NEW)
 {
@@ -70,7 +72,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_NEW)
 
 HB_FUNC_STATIC(QSVGGENERATOR_DELETE)
 {
-  QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -86,7 +88,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_DELETE)
 // QString description() const
 HB_FUNC_STATIC(QSVGGENERATOR_DESCRIPTION)
 {
-  QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -104,7 +106,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_DESCRIPTION)
 // QString fileName() const
 HB_FUNC_STATIC(QSVGGENERATOR_FILENAME)
 {
-  QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -122,7 +124,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_FILENAME)
 // QIODevice *outputDevice() const
 HB_FUNC_STATIC(QSVGGENERATOR_OUTPUTDEVICE)
 {
-  QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -141,7 +143,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_OUTPUTDEVICE)
 // int resolution() const
 HB_FUNC_STATIC(QSVGGENERATOR_RESOLUTION)
 {
-  QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -159,7 +161,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_RESOLUTION)
 // void setDescription(const QString &description)
 HB_FUNC_STATIC(QSVGGENERATOR_SETDESCRIPTION)
 {
-  QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -179,7 +181,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETDESCRIPTION)
 // void setFileName(const QString &fileName)
 HB_FUNC_STATIC(QSVGGENERATOR_SETFILENAME)
 {
-  QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -199,7 +201,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETFILENAME)
 // void setOutputDevice(QIODevice *outputDevice)
 HB_FUNC_STATIC(QSVGGENERATOR_SETOUTPUTDEVICE)
 {
-  QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -219,7 +221,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETOUTPUTDEVICE)
 // void setResolution(int dpi)
 HB_FUNC_STATIC(QSVGGENERATOR_SETRESOLUTION)
 {
-  QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -239,7 +241,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETRESOLUTION)
 // void setSize(const QSize &size)
 HB_FUNC_STATIC(QSVGGENERATOR_SETSIZE)
 {
-  QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -259,7 +261,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETSIZE)
 // void setTitle(const QString &title)
 HB_FUNC_STATIC(QSVGGENERATOR_SETTITLE)
 {
-  QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -280,7 +282,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETVIEWBOX)
 {
   if (ISNUMPAR(1) && ISQRECT(1)) {
     // void setViewBox(const QRect &viewBox)
-    QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setViewBox(*PQRECT(1));
@@ -289,7 +291,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETVIEWBOX)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && ISQRECTF(1)) {
     // void setViewBox(const QRectF &viewBox)
-    QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setViewBox(*PQRECTF(1));
@@ -304,7 +306,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SETVIEWBOX)
 // QSize size() const
 HB_FUNC_STATIC(QSVGGENERATOR_SIZE)
 {
-  QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -323,7 +325,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_SIZE)
 // QString title() const
 HB_FUNC_STATIC(QSVGGENERATOR_TITLE)
 {
-  QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -341,7 +343,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_TITLE)
 // QRect viewBox() const
 HB_FUNC_STATIC(QSVGGENERATOR_VIEWBOX)
 {
-  QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -360,7 +362,7 @@ HB_FUNC_STATIC(QSVGGENERATOR_VIEWBOX)
 // QRectF viewBoxF() const
 HB_FUNC_STATIC(QSVGGENERATOR_VIEWBOXF)
 {
-  QSvgGenerator *obj = static_cast<QSvgGenerator *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
