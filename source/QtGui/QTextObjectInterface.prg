@@ -49,9 +49,12 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QTextObjectInterface *p = static_cast<QTextObjectInterface *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_DELETE)
 {
-  QTextObjectInterface *obj = static_cast<QTextObjectInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -68,7 +71,7 @@ HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_DELETE)
 // QTextFormat &format) = 0
 HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_DRAWOBJECT)
 {
-  QTextObjectInterface *obj = static_cast<QTextObjectInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -88,7 +91,7 @@ HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_DRAWOBJECT)
 // virtual QSizeF intrinsicSize(QTextDocument *doc, int posInDocument, const QTextFormat &format) = 0
 HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_INTRINSICSIZE)
 {
-  QTextObjectInterface *obj = static_cast<QTextObjectInterface *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

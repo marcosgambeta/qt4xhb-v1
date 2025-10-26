@@ -39,6 +39,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QWhatsThisClickedEvent *p = static_cast<QWhatsThisClickedEvent *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QWhatsThisClickedEvent(const QString &href)
 HB_FUNC_STATIC(QWHATSTHISCLICKEDEVENT_NEW)
 {
@@ -52,7 +55,7 @@ HB_FUNC_STATIC(QWHATSTHISCLICKEDEVENT_NEW)
 
 HB_FUNC_STATIC(QWHATSTHISCLICKEDEVENT_DELETE)
 {
-  QWhatsThisClickedEvent *obj = static_cast<QWhatsThisClickedEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -68,7 +71,7 @@ HB_FUNC_STATIC(QWHATSTHISCLICKEDEVENT_DELETE)
 // QString href() const
 HB_FUNC_STATIC(QWHATSTHISCLICKEDEVENT_HREF)
 {
-  QWhatsThisClickedEvent *obj = static_cast<QWhatsThisClickedEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

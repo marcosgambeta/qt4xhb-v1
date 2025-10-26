@@ -61,6 +61,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QTextOption *p = static_cast<QTextOption *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QTEXTOPTION_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -82,7 +84,7 @@ HB_FUNC_STATIC(QTEXTOPTION_NEW)
 
 HB_FUNC_STATIC(QTEXTOPTION_DELETE)
 {
-  QTextOption *obj = static_cast<QTextOption *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -98,7 +100,7 @@ HB_FUNC_STATIC(QTEXTOPTION_DELETE)
 // Qt::Alignment alignment() const
 HB_FUNC_STATIC(QTEXTOPTION_ALIGNMENT)
 {
-  QTextOption *obj = static_cast<QTextOption *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -116,7 +118,7 @@ HB_FUNC_STATIC(QTEXTOPTION_ALIGNMENT)
 // QTextOption::Flags flags() const
 HB_FUNC_STATIC(QTEXTOPTION_FLAGS)
 {
-  QTextOption *obj = static_cast<QTextOption *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -134,7 +136,7 @@ HB_FUNC_STATIC(QTEXTOPTION_FLAGS)
 // void setAlignment(Qt::Alignment alignment)
 HB_FUNC_STATIC(QTEXTOPTION_SETALIGNMENT)
 {
-  QTextOption *obj = static_cast<QTextOption *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -154,7 +156,7 @@ HB_FUNC_STATIC(QTEXTOPTION_SETALIGNMENT)
 // void setFlags(QTextOption::Flags flags)
 HB_FUNC_STATIC(QTEXTOPTION_SETFLAGS)
 {
-  QTextOption *obj = static_cast<QTextOption *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -174,7 +176,7 @@ HB_FUNC_STATIC(QTEXTOPTION_SETFLAGS)
 // void setTabArray(QList<qreal> tabStops)
 HB_FUNC_STATIC(QTEXTOPTION_SETTABARRAY)
 {
-  QTextOption *obj = static_cast<QTextOption *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -202,7 +204,7 @@ HB_FUNC_STATIC(QTEXTOPTION_SETTABARRAY)
 // void setTabStop(qreal tabStop)
 HB_FUNC_STATIC(QTEXTOPTION_SETTABSTOP)
 {
-  QTextOption *obj = static_cast<QTextOption *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -222,7 +224,7 @@ HB_FUNC_STATIC(QTEXTOPTION_SETTABSTOP)
 // void setTextDirection(Qt::LayoutDirection direction)
 HB_FUNC_STATIC(QTEXTOPTION_SETTEXTDIRECTION)
 {
-  QTextOption *obj = static_cast<QTextOption *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -242,7 +244,7 @@ HB_FUNC_STATIC(QTEXTOPTION_SETTEXTDIRECTION)
 // void setUseDesignMetrics(bool enable)
 HB_FUNC_STATIC(QTEXTOPTION_SETUSEDESIGNMETRICS)
 {
-  QTextOption *obj = static_cast<QTextOption *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -262,7 +264,7 @@ HB_FUNC_STATIC(QTEXTOPTION_SETUSEDESIGNMETRICS)
 // void setWrapMode(QTextOption::WrapMode mode)
 HB_FUNC_STATIC(QTEXTOPTION_SETWRAPMODE)
 {
-  QTextOption *obj = static_cast<QTextOption *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -282,7 +284,7 @@ HB_FUNC_STATIC(QTEXTOPTION_SETWRAPMODE)
 // QList<qreal> tabArray() const
 HB_FUNC_STATIC(QTEXTOPTION_TABARRAY)
 {
-  QTextOption *obj = static_cast<QTextOption *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -301,7 +303,7 @@ HB_FUNC_STATIC(QTEXTOPTION_TABARRAY)
 // qreal tabStop() const
 HB_FUNC_STATIC(QTEXTOPTION_TABSTOP)
 {
-  QTextOption *obj = static_cast<QTextOption *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -319,7 +321,7 @@ HB_FUNC_STATIC(QTEXTOPTION_TABSTOP)
 // Qt::LayoutDirection textDirection() const
 HB_FUNC_STATIC(QTEXTOPTION_TEXTDIRECTION)
 {
-  QTextOption *obj = static_cast<QTextOption *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -337,7 +339,7 @@ HB_FUNC_STATIC(QTEXTOPTION_TEXTDIRECTION)
 // bool useDesignMetrics() const
 HB_FUNC_STATIC(QTEXTOPTION_USEDESIGNMETRICS)
 {
-  QTextOption *obj = static_cast<QTextOption *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -355,7 +357,7 @@ HB_FUNC_STATIC(QTEXTOPTION_USEDESIGNMETRICS)
 // QTextOption::WrapMode wrapMode() const
 HB_FUNC_STATIC(QTEXTOPTION_WRAPMODE)
 {
-  QTextOption *obj = static_cast<QTextOption *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

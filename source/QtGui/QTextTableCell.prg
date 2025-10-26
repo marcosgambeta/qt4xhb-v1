@@ -61,6 +61,8 @@ RETURN
 
 #include <QtGui/QTextCursor>
 
+#define GET_PTR_FROM_SELF(p) QTextTableCell *p = static_cast<QTextTableCell *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QTEXTTABLECELL_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -78,7 +80,7 @@ HB_FUNC_STATIC(QTEXTTABLECELL_NEW)
 
 HB_FUNC_STATIC(QTEXTTABLECELL_DELETE)
 {
-  QTextTableCell *obj = static_cast<QTextTableCell *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -94,7 +96,7 @@ HB_FUNC_STATIC(QTEXTTABLECELL_DELETE)
 // int column() const
 HB_FUNC_STATIC(QTEXTTABLECELL_COLUMN)
 {
-  QTextTableCell *obj = static_cast<QTextTableCell *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -112,7 +114,7 @@ HB_FUNC_STATIC(QTEXTTABLECELL_COLUMN)
 // int columnSpan() const
 HB_FUNC_STATIC(QTEXTTABLECELL_COLUMNSPAN)
 {
-  QTextTableCell *obj = static_cast<QTextTableCell *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -130,7 +132,7 @@ HB_FUNC_STATIC(QTEXTTABLECELL_COLUMNSPAN)
 // QTextCursor firstCursorPosition() const
 HB_FUNC_STATIC(QTEXTTABLECELL_FIRSTCURSORPOSITION)
 {
-  QTextTableCell *obj = static_cast<QTextTableCell *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -149,7 +151,7 @@ HB_FUNC_STATIC(QTEXTTABLECELL_FIRSTCURSORPOSITION)
 // QTextCharFormat format() const
 HB_FUNC_STATIC(QTEXTTABLECELL_FORMAT)
 {
-  QTextTableCell *obj = static_cast<QTextTableCell *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -168,7 +170,7 @@ HB_FUNC_STATIC(QTEXTTABLECELL_FORMAT)
 // bool isValid() const
 HB_FUNC_STATIC(QTEXTTABLECELL_ISVALID)
 {
-  QTextTableCell *obj = static_cast<QTextTableCell *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -186,7 +188,7 @@ HB_FUNC_STATIC(QTEXTTABLECELL_ISVALID)
 // QTextCursor lastCursorPosition() const
 HB_FUNC_STATIC(QTEXTTABLECELL_LASTCURSORPOSITION)
 {
-  QTextTableCell *obj = static_cast<QTextTableCell *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -205,7 +207,7 @@ HB_FUNC_STATIC(QTEXTTABLECELL_LASTCURSORPOSITION)
 // int row() const
 HB_FUNC_STATIC(QTEXTTABLECELL_ROW)
 {
-  QTextTableCell *obj = static_cast<QTextTableCell *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -223,7 +225,7 @@ HB_FUNC_STATIC(QTEXTTABLECELL_ROW)
 // int rowSpan() const
 HB_FUNC_STATIC(QTEXTTABLECELL_ROWSPAN)
 {
-  QTextTableCell *obj = static_cast<QTextTableCell *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -241,7 +243,7 @@ HB_FUNC_STATIC(QTEXTTABLECELL_ROWSPAN)
 // void setFormat(const QTextCharFormat &format)
 HB_FUNC_STATIC(QTEXTTABLECELL_SETFORMAT)
 {
-  QTextTableCell *obj = static_cast<QTextTableCell *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -261,7 +263,7 @@ HB_FUNC_STATIC(QTEXTTABLECELL_SETFORMAT)
 // int tableCellFormatIndex() const
 HB_FUNC_STATIC(QTEXTTABLECELL_TABLECELLFORMATINDEX)
 {
-  QTextTableCell *obj = static_cast<QTextTableCell *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

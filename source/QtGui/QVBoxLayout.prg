@@ -40,6 +40,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QVBoxLayout *p = qobject_cast<QVBoxLayout *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QVBOXLAYOUT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -57,7 +59,7 @@ HB_FUNC_STATIC(QVBOXLAYOUT_NEW)
 
 HB_FUNC_STATIC(QVBOXLAYOUT_DELETE)
 {
-  QVBoxLayout *obj = qobject_cast<QVBoxLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);

@@ -62,6 +62,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QToolBox *p = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QToolBox(QWidget *parent = 0, Qt::WindowFlags f = 0)
 HB_FUNC_STATIC(QTOOLBOX_NEW)
 {
@@ -75,7 +77,7 @@ HB_FUNC_STATIC(QTOOLBOX_NEW)
 
 HB_FUNC_STATIC(QTOOLBOX_DELETE)
 {
-  QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -94,7 +96,7 @@ HB_FUNC_STATIC(QTOOLBOX_ADDITEM)
 {
   if (ISNUMPAR(3) && ISQWIDGET(1) && (ISQICON(2) || HB_ISCHAR(2)) && HB_ISCHAR(3)) {
     // int addItem(QWidget *widget, const QIcon &iconSet, const QString &text)
-    QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RINT(obj->addItem(PQWIDGET(1), HB_ISOBJECT(2) ? *static_cast<QIcon *>(Qt4xHb::itemGetPtr(2)) : QIcon(hb_parc(2)),
@@ -102,7 +104,7 @@ HB_FUNC_STATIC(QTOOLBOX_ADDITEM)
     }
   } else if (ISNUMPAR(2) && ISQWIDGET(1) && HB_ISCHAR(2)) {
     // int addItem(QWidget *w, const QString &text)
-    QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RINT(obj->addItem(PQWIDGET(1), PQSTRING(2)));
@@ -115,7 +117,7 @@ HB_FUNC_STATIC(QTOOLBOX_ADDITEM)
 // int count() const
 HB_FUNC_STATIC(QTOOLBOX_COUNT)
 {
-  QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -133,7 +135,7 @@ HB_FUNC_STATIC(QTOOLBOX_COUNT)
 // int currentIndex() const
 HB_FUNC_STATIC(QTOOLBOX_CURRENTINDEX)
 {
-  QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -151,7 +153,7 @@ HB_FUNC_STATIC(QTOOLBOX_CURRENTINDEX)
 // QWidget *currentWidget() const
 HB_FUNC_STATIC(QTOOLBOX_CURRENTWIDGET)
 {
-  QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -170,7 +172,7 @@ HB_FUNC_STATIC(QTOOLBOX_CURRENTWIDGET)
 // int indexOf(QWidget *widget) const
 HB_FUNC_STATIC(QTOOLBOX_INDEXOF)
 {
-  QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -189,7 +191,7 @@ HB_FUNC_STATIC(QTOOLBOX_INSERTITEM)
 {
   if (ISNUMPAR(4) && HB_ISNUM(1) && ISQWIDGET(2) && (ISQICON(3) || HB_ISCHAR(3)) && HB_ISCHAR(4)) {
     // int insertItem(int index, QWidget *widget, const QIcon &icon, const QString &text)
-    QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RINT(obj->insertItem(PINT(1), PQWIDGET(2),
@@ -198,7 +200,7 @@ HB_FUNC_STATIC(QTOOLBOX_INSERTITEM)
     }
   } else if (ISNUMPAR(3) && HB_ISNUM(1) && ISQWIDGET(2) && HB_ISCHAR(3)) {
     // int insertItem(int index, QWidget *widget, const QString &text)
-    QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RINT(obj->insertItem(PINT(1), PQWIDGET(2), PQSTRING(3)));
@@ -211,7 +213,7 @@ HB_FUNC_STATIC(QTOOLBOX_INSERTITEM)
 // bool isItemEnabled(int index) const
 HB_FUNC_STATIC(QTOOLBOX_ISITEMENABLED)
 {
-  QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -229,7 +231,7 @@ HB_FUNC_STATIC(QTOOLBOX_ISITEMENABLED)
 // QIcon itemIcon(int index) const
 HB_FUNC_STATIC(QTOOLBOX_ITEMICON)
 {
-  QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -248,7 +250,7 @@ HB_FUNC_STATIC(QTOOLBOX_ITEMICON)
 // QString itemText(int index) const
 HB_FUNC_STATIC(QTOOLBOX_ITEMTEXT)
 {
-  QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -266,7 +268,7 @@ HB_FUNC_STATIC(QTOOLBOX_ITEMTEXT)
 // QString itemToolTip(int index) const
 HB_FUNC_STATIC(QTOOLBOX_ITEMTOOLTIP)
 {
-  QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -284,7 +286,7 @@ HB_FUNC_STATIC(QTOOLBOX_ITEMTOOLTIP)
 // void removeItem(int index)
 HB_FUNC_STATIC(QTOOLBOX_REMOVEITEM)
 {
-  QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -304,7 +306,7 @@ HB_FUNC_STATIC(QTOOLBOX_REMOVEITEM)
 // void setItemEnabled(int index, bool enabled)
 HB_FUNC_STATIC(QTOOLBOX_SETITEMENABLED)
 {
-  QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -324,7 +326,7 @@ HB_FUNC_STATIC(QTOOLBOX_SETITEMENABLED)
 // void setItemIcon(int index, const QIcon &icon)
 HB_FUNC_STATIC(QTOOLBOX_SETITEMICON)
 {
-  QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -344,7 +346,7 @@ HB_FUNC_STATIC(QTOOLBOX_SETITEMICON)
 // void setItemText(int index, const QString &text)
 HB_FUNC_STATIC(QTOOLBOX_SETITEMTEXT)
 {
-  QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -364,7 +366,7 @@ HB_FUNC_STATIC(QTOOLBOX_SETITEMTEXT)
 // void setItemToolTip(int index, const QString &toolTip)
 HB_FUNC_STATIC(QTOOLBOX_SETITEMTOOLTIP)
 {
-  QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -384,7 +386,7 @@ HB_FUNC_STATIC(QTOOLBOX_SETITEMTOOLTIP)
 // QWidget *widget(int index) const
 HB_FUNC_STATIC(QTOOLBOX_WIDGET)
 {
-  QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -403,7 +405,7 @@ HB_FUNC_STATIC(QTOOLBOX_WIDGET)
 // void setCurrentIndex(int index)
 HB_FUNC_STATIC(QTOOLBOX_SETCURRENTINDEX)
 {
-  QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -423,7 +425,7 @@ HB_FUNC_STATIC(QTOOLBOX_SETCURRENTINDEX)
 // void setCurrentWidget(QWidget *widget)
 HB_FUNC_STATIC(QTOOLBOX_SETCURRENTWIDGET)
 {
-  QToolBox *obj = qobject_cast<QToolBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

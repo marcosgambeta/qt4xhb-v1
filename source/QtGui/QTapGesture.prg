@@ -42,9 +42,11 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QTapGesture *p = qobject_cast<QTapGesture *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QTAPGESTURE_DELETE)
 {
-  QTapGesture *obj = qobject_cast<QTapGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -62,7 +64,7 @@ HB_FUNC_STATIC(QTAPGESTURE_DELETE)
 // QPointF position() const
 HB_FUNC_STATIC(QTAPGESTURE_POSITION)
 {
-  QTapGesture *obj = qobject_cast<QTapGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -81,7 +83,7 @@ HB_FUNC_STATIC(QTAPGESTURE_POSITION)
 // void setPosition(const QPointF &pos)
 HB_FUNC_STATIC(QTAPGESTURE_SETPOSITION)
 {
-  QTapGesture *obj = qobject_cast<QTapGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -53,9 +53,11 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QTextItem *p = static_cast<QTextItem *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QTEXTITEM_DELETE)
 {
-  QTextItem *obj = static_cast<QTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -71,7 +73,7 @@ HB_FUNC_STATIC(QTEXTITEM_DELETE)
 // qreal ascent() const
 HB_FUNC_STATIC(QTEXTITEM_ASCENT)
 {
-  QTextItem *obj = static_cast<QTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -89,7 +91,7 @@ HB_FUNC_STATIC(QTEXTITEM_ASCENT)
 // qreal descent() const
 HB_FUNC_STATIC(QTEXTITEM_DESCENT)
 {
-  QTextItem *obj = static_cast<QTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -107,7 +109,7 @@ HB_FUNC_STATIC(QTEXTITEM_DESCENT)
 // QFont font() const
 HB_FUNC_STATIC(QTEXTITEM_FONT)
 {
-  QTextItem *obj = static_cast<QTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -126,7 +128,7 @@ HB_FUNC_STATIC(QTEXTITEM_FONT)
 // QTextItem::RenderFlags renderFlags() const
 HB_FUNC_STATIC(QTEXTITEM_RENDERFLAGS)
 {
-  QTextItem *obj = static_cast<QTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -144,7 +146,7 @@ HB_FUNC_STATIC(QTEXTITEM_RENDERFLAGS)
 // QString text() const
 HB_FUNC_STATIC(QTEXTITEM_TEXT)
 {
-  QTextItem *obj = static_cast<QTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -162,7 +164,7 @@ HB_FUNC_STATIC(QTEXTITEM_TEXT)
 // qreal width() const
 HB_FUNC_STATIC(QTEXTITEM_WIDTH)
 {
-  QTextItem *obj = static_cast<QTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

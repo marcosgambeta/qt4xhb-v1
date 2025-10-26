@@ -52,6 +52,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QTextDocumentFragment *p = static_cast<QTextDocumentFragment *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -77,7 +80,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_NEW)
 
 HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_DELETE)
 {
-  QTextDocumentFragment *obj = static_cast<QTextDocumentFragment *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -93,7 +96,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_DELETE)
 // bool isEmpty() const
 HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_ISEMPTY)
 {
-  QTextDocumentFragment *obj = static_cast<QTextDocumentFragment *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -112,14 +115,14 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_TOHTML)
 {
   if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     // QString toHtml(const QByteArray &encoding) const
-    QTextDocumentFragment *obj = static_cast<QTextDocumentFragment *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RQSTRING(obj->toHtml(*PQBYTEARRAY(1)));
     }
   } else if (ISNUMPAR(0)) {
     // QString toHtml() const
-    QTextDocumentFragment *obj = static_cast<QTextDocumentFragment *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RQSTRING(obj->toHtml());
@@ -132,7 +135,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_TOHTML)
 // QString toPlainText() const
 HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_TOPLAINTEXT)
 {
-  QTextDocumentFragment *obj = static_cast<QTextDocumentFragment *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

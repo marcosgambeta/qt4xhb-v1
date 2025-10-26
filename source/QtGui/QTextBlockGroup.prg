@@ -37,4 +37,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QTextBlockGroup *p = qobject_cast<QTextBlockGroup *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 #pragma ENDDUMP

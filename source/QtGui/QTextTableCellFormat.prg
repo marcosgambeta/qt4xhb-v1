@@ -48,6 +48,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QTextTableCellFormat *p = static_cast<QTextTableCellFormat *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QTextTableCellFormat()
 HB_FUNC_STATIC(QTEXTTABLECELLFORMAT_NEW)
 {
@@ -61,7 +64,7 @@ HB_FUNC_STATIC(QTEXTTABLECELLFORMAT_NEW)
 
 HB_FUNC_STATIC(QTEXTTABLECELLFORMAT_DELETE)
 {
-  QTextTableCellFormat *obj = static_cast<QTextTableCellFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -77,7 +80,7 @@ HB_FUNC_STATIC(QTEXTTABLECELLFORMAT_DELETE)
 // qreal bottomPadding() const
 HB_FUNC_STATIC(QTEXTTABLECELLFORMAT_BOTTOMPADDING)
 {
-  QTextTableCellFormat *obj = static_cast<QTextTableCellFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -95,7 +98,7 @@ HB_FUNC_STATIC(QTEXTTABLECELLFORMAT_BOTTOMPADDING)
 // bool isValid() const
 HB_FUNC_STATIC(QTEXTTABLECELLFORMAT_ISVALID)
 {
-  QTextTableCellFormat *obj = static_cast<QTextTableCellFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -113,7 +116,7 @@ HB_FUNC_STATIC(QTEXTTABLECELLFORMAT_ISVALID)
 // qreal leftPadding() const
 HB_FUNC_STATIC(QTEXTTABLECELLFORMAT_LEFTPADDING)
 {
-  QTextTableCellFormat *obj = static_cast<QTextTableCellFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -131,7 +134,7 @@ HB_FUNC_STATIC(QTEXTTABLECELLFORMAT_LEFTPADDING)
 // qreal rightPadding() const
 HB_FUNC_STATIC(QTEXTTABLECELLFORMAT_RIGHTPADDING)
 {
-  QTextTableCellFormat *obj = static_cast<QTextTableCellFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -149,7 +152,7 @@ HB_FUNC_STATIC(QTEXTTABLECELLFORMAT_RIGHTPADDING)
 // void setBottomPadding(qreal padding)
 HB_FUNC_STATIC(QTEXTTABLECELLFORMAT_SETBOTTOMPADDING)
 {
-  QTextTableCellFormat *obj = static_cast<QTextTableCellFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -169,7 +172,7 @@ HB_FUNC_STATIC(QTEXTTABLECELLFORMAT_SETBOTTOMPADDING)
 // void setLeftPadding(qreal padding)
 HB_FUNC_STATIC(QTEXTTABLECELLFORMAT_SETLEFTPADDING)
 {
-  QTextTableCellFormat *obj = static_cast<QTextTableCellFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -189,7 +192,7 @@ HB_FUNC_STATIC(QTEXTTABLECELLFORMAT_SETLEFTPADDING)
 // void setPadding(qreal padding)
 HB_FUNC_STATIC(QTEXTTABLECELLFORMAT_SETPADDING)
 {
-  QTextTableCellFormat *obj = static_cast<QTextTableCellFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -209,7 +212,7 @@ HB_FUNC_STATIC(QTEXTTABLECELLFORMAT_SETPADDING)
 // void setRightPadding(qreal padding)
 HB_FUNC_STATIC(QTEXTTABLECELLFORMAT_SETRIGHTPADDING)
 {
-  QTextTableCellFormat *obj = static_cast<QTextTableCellFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -229,7 +232,7 @@ HB_FUNC_STATIC(QTEXTTABLECELLFORMAT_SETRIGHTPADDING)
 // void setTopPadding(qreal padding)
 HB_FUNC_STATIC(QTEXTTABLECELLFORMAT_SETTOPPADDING)
 {
-  QTextTableCellFormat *obj = static_cast<QTextTableCellFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -249,7 +252,7 @@ HB_FUNC_STATIC(QTEXTTABLECELLFORMAT_SETTOPPADDING)
 // qreal topPadding() const
 HB_FUNC_STATIC(QTEXTTABLECELLFORMAT_TOPPADDING)
 {
-  QTextTableCellFormat *obj = static_cast<QTextTableCellFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

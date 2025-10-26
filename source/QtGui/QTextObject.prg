@@ -46,10 +46,12 @@ RETURN
 
 #include <QtGui/QTextDocument>
 
+#define GET_PTR_FROM_SELF(p) QTextObject *p = qobject_cast<QTextObject *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QTextDocument *document() const
 HB_FUNC_STATIC(QTEXTOBJECT_DOCUMENT)
 {
-  QTextObject *obj = qobject_cast<QTextObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -68,7 +70,7 @@ HB_FUNC_STATIC(QTEXTOBJECT_DOCUMENT)
 // QTextFormat format() const
 HB_FUNC_STATIC(QTEXTOBJECT_FORMAT)
 {
-  QTextObject *obj = qobject_cast<QTextObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -87,7 +89,7 @@ HB_FUNC_STATIC(QTEXTOBJECT_FORMAT)
 // int formatIndex() const
 HB_FUNC_STATIC(QTEXTOBJECT_FORMATINDEX)
 {
-  QTextObject *obj = qobject_cast<QTextObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -105,7 +107,7 @@ HB_FUNC_STATIC(QTEXTOBJECT_FORMATINDEX)
 // int objectIndex() const
 HB_FUNC_STATIC(QTEXTOBJECT_OBJECTINDEX)
 {
-  QTextObject *obj = qobject_cast<QTextObject *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

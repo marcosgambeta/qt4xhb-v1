@@ -55,9 +55,11 @@ RETURN
 
 #include <QtGui/QAction>
 
+#define GET_PTR_FROM_SELF(p) QWhatsThis *p = static_cast<QWhatsThis *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QWHATSTHIS_DELETE)
 {
-  QWhatsThis *obj = static_cast<QWhatsThis *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;

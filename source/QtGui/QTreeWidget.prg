@@ -93,6 +93,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QTreeWidget *p = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QTreeWidget(QWidget *parent = 0)
 HB_FUNC_STATIC(QTREEWIDGET_NEW)
 {
@@ -106,7 +108,7 @@ HB_FUNC_STATIC(QTREEWIDGET_NEW)
 
 HB_FUNC_STATIC(QTREEWIDGET_DELETE)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -124,7 +126,7 @@ HB_FUNC_STATIC(QTREEWIDGET_DELETE)
 // void addTopLevelItem(QTreeWidgetItem *item)
 HB_FUNC_STATIC(QTREEWIDGET_ADDTOPLEVELITEM)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -144,7 +146,7 @@ HB_FUNC_STATIC(QTREEWIDGET_ADDTOPLEVELITEM)
 // void addTopLevelItems(const QList<QTreeWidgetItem *> &items)
 HB_FUNC_STATIC(QTREEWIDGET_ADDTOPLEVELITEMS)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -171,7 +173,7 @@ HB_FUNC_STATIC(QTREEWIDGET_ADDTOPLEVELITEMS)
 // void closePersistentEditor(QTreeWidgetItem *item, int column = 0)
 HB_FUNC_STATIC(QTREEWIDGET_CLOSEPERSISTENTEDITOR)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -191,7 +193,7 @@ HB_FUNC_STATIC(QTREEWIDGET_CLOSEPERSISTENTEDITOR)
 // int columnCount() const
 HB_FUNC_STATIC(QTREEWIDGET_COLUMNCOUNT)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -209,7 +211,7 @@ HB_FUNC_STATIC(QTREEWIDGET_COLUMNCOUNT)
 // int currentColumn() const
 HB_FUNC_STATIC(QTREEWIDGET_CURRENTCOLUMN)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -227,7 +229,7 @@ HB_FUNC_STATIC(QTREEWIDGET_CURRENTCOLUMN)
 // QTreeWidgetItem *currentItem() const
 HB_FUNC_STATIC(QTREEWIDGET_CURRENTITEM)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -246,7 +248,7 @@ HB_FUNC_STATIC(QTREEWIDGET_CURRENTITEM)
 // void editItem(QTreeWidgetItem *item, int column = 0)
 HB_FUNC_STATIC(QTREEWIDGET_EDITITEM)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -266,7 +268,7 @@ HB_FUNC_STATIC(QTREEWIDGET_EDITITEM)
 // QList<QTreeWidgetItem *> findItems(const QString &text, Qt::MatchFlags flags, int column = 0) const
 HB_FUNC_STATIC(QTREEWIDGET_FINDITEMS)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -304,7 +306,7 @@ HB_FUNC_STATIC(QTREEWIDGET_FINDITEMS)
 // QTreeWidgetItem *headerItem() const
 HB_FUNC_STATIC(QTREEWIDGET_HEADERITEM)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -323,7 +325,7 @@ HB_FUNC_STATIC(QTREEWIDGET_HEADERITEM)
 // int indexOfTopLevelItem(QTreeWidgetItem *item) const
 HB_FUNC_STATIC(QTREEWIDGET_INDEXOFTOPLEVELITEM)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -341,7 +343,7 @@ HB_FUNC_STATIC(QTREEWIDGET_INDEXOFTOPLEVELITEM)
 // void insertTopLevelItem(int index, QTreeWidgetItem *item)
 HB_FUNC_STATIC(QTREEWIDGET_INSERTTOPLEVELITEM)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -361,7 +363,7 @@ HB_FUNC_STATIC(QTREEWIDGET_INSERTTOPLEVELITEM)
 // void insertTopLevelItems(int index, const QList<QTreeWidgetItem *> &items)
 HB_FUNC_STATIC(QTREEWIDGET_INSERTTOPLEVELITEMS)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -388,7 +390,7 @@ HB_FUNC_STATIC(QTREEWIDGET_INSERTTOPLEVELITEMS)
 // QTreeWidgetItem *invisibleRootItem() const
 HB_FUNC_STATIC(QTREEWIDGET_INVISIBLEROOTITEM)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -407,7 +409,7 @@ HB_FUNC_STATIC(QTREEWIDGET_INVISIBLEROOTITEM)
 // bool isFirstItemColumnSpanned(const QTreeWidgetItem *item) const
 HB_FUNC_STATIC(QTREEWIDGET_ISFIRSTITEMCOLUMNSPANNED)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -425,7 +427,7 @@ HB_FUNC_STATIC(QTREEWIDGET_ISFIRSTITEMCOLUMNSPANNED)
 // QTreeWidgetItem *itemAbove(const QTreeWidgetItem *item) const
 HB_FUNC_STATIC(QTREEWIDGET_ITEMABOVE)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -445,7 +447,7 @@ HB_FUNC_STATIC(QTREEWIDGET_ITEMAT)
 {
   if (ISNUMPAR(1) && ISQPOINT(1)) {
     // QTreeWidgetItem *itemAt(const QPoint &p) const
-    QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QTreeWidgetItem *ptr = obj->itemAt(*PQPOINT(1));
@@ -453,7 +455,7 @@ HB_FUNC_STATIC(QTREEWIDGET_ITEMAT)
     }
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // QTreeWidgetItem *itemAt(int x, int y) const
-    QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QTreeWidgetItem *ptr = obj->itemAt(PINT(1), PINT(2));
@@ -467,7 +469,7 @@ HB_FUNC_STATIC(QTREEWIDGET_ITEMAT)
 // QTreeWidgetItem *itemBelow(const QTreeWidgetItem *item) const
 HB_FUNC_STATIC(QTREEWIDGET_ITEMBELOW)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -486,7 +488,7 @@ HB_FUNC_STATIC(QTREEWIDGET_ITEMBELOW)
 // QWidget *itemWidget(QTreeWidgetItem *item, int column) const
 HB_FUNC_STATIC(QTREEWIDGET_ITEMWIDGET)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -505,7 +507,7 @@ HB_FUNC_STATIC(QTREEWIDGET_ITEMWIDGET)
 // void openPersistentEditor(QTreeWidgetItem *item, int column = 0)
 HB_FUNC_STATIC(QTREEWIDGET_OPENPERSISTENTEDITOR)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -525,7 +527,7 @@ HB_FUNC_STATIC(QTREEWIDGET_OPENPERSISTENTEDITOR)
 // void removeItemWidget(QTreeWidgetItem *item, int column)
 HB_FUNC_STATIC(QTREEWIDGET_REMOVEITEMWIDGET)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -545,7 +547,7 @@ HB_FUNC_STATIC(QTREEWIDGET_REMOVEITEMWIDGET)
 // QList<QTreeWidgetItem *> selectedItems() const
 HB_FUNC_STATIC(QTREEWIDGET_SELECTEDITEMS)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -583,7 +585,7 @@ HB_FUNC_STATIC(QTREEWIDGET_SELECTEDITEMS)
 // void setColumnCount(int columns)
 HB_FUNC_STATIC(QTREEWIDGET_SETCOLUMNCOUNT)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -604,7 +606,7 @@ HB_FUNC_STATIC(QTREEWIDGET_SETCURRENTITEM)
 {
   if (ISNUMPAR(1) && ISQTREEWIDGETITEM(1)) {
     // void setCurrentItem(QTreeWidgetItem *item)
-    QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setCurrentItem(PQTREEWIDGETITEM(1));
@@ -613,7 +615,7 @@ HB_FUNC_STATIC(QTREEWIDGET_SETCURRENTITEM)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && ISQTREEWIDGETITEM(1) && HB_ISNUM(2)) {
     // void setCurrentItem(QTreeWidgetItem *item, int column)
-    QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setCurrentItem(PQTREEWIDGETITEM(1), PINT(2));
@@ -622,7 +624,7 @@ HB_FUNC_STATIC(QTREEWIDGET_SETCURRENTITEM)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(3) && ISQTREEWIDGETITEM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
     // void setCurrentItem(QTreeWidgetItem *item, int column, QItemSelectionModel::SelectionFlags command)
-    QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setCurrentItem(PQTREEWIDGETITEM(1), PINT(2), (QItemSelectionModel::SelectionFlags)hb_parni(3));
@@ -637,7 +639,7 @@ HB_FUNC_STATIC(QTREEWIDGET_SETCURRENTITEM)
 // void setFirstItemColumnSpanned(const QTreeWidgetItem *item, bool span)
 HB_FUNC_STATIC(QTREEWIDGET_SETFIRSTITEMCOLUMNSPANNED)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -657,7 +659,7 @@ HB_FUNC_STATIC(QTREEWIDGET_SETFIRSTITEMCOLUMNSPANNED)
 // void setHeaderItem(QTreeWidgetItem *item)
 HB_FUNC_STATIC(QTREEWIDGET_SETHEADERITEM)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -677,7 +679,7 @@ HB_FUNC_STATIC(QTREEWIDGET_SETHEADERITEM)
 // void setHeaderLabel(const QString &label)
 HB_FUNC_STATIC(QTREEWIDGET_SETHEADERLABEL)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -697,7 +699,7 @@ HB_FUNC_STATIC(QTREEWIDGET_SETHEADERLABEL)
 // void setHeaderLabels(const QStringList &labels)
 HB_FUNC_STATIC(QTREEWIDGET_SETHEADERLABELS)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -717,7 +719,7 @@ HB_FUNC_STATIC(QTREEWIDGET_SETHEADERLABELS)
 // void setItemWidget(QTreeWidgetItem *item, int column, QWidget *widget)
 HB_FUNC_STATIC(QTREEWIDGET_SETITEMWIDGET)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -737,7 +739,7 @@ HB_FUNC_STATIC(QTREEWIDGET_SETITEMWIDGET)
 // int sortColumn() const
 HB_FUNC_STATIC(QTREEWIDGET_SORTCOLUMN)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -755,7 +757,7 @@ HB_FUNC_STATIC(QTREEWIDGET_SORTCOLUMN)
 // void sortItems(int column, Qt::SortOrder order)
 HB_FUNC_STATIC(QTREEWIDGET_SORTITEMS)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -775,7 +777,7 @@ HB_FUNC_STATIC(QTREEWIDGET_SORTITEMS)
 // QTreeWidgetItem *takeTopLevelItem(int index)
 HB_FUNC_STATIC(QTREEWIDGET_TAKETOPLEVELITEM)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -794,7 +796,7 @@ HB_FUNC_STATIC(QTREEWIDGET_TAKETOPLEVELITEM)
 // QTreeWidgetItem *topLevelItem(int index) const
 HB_FUNC_STATIC(QTREEWIDGET_TOPLEVELITEM)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -813,7 +815,7 @@ HB_FUNC_STATIC(QTREEWIDGET_TOPLEVELITEM)
 // int topLevelItemCount() const
 HB_FUNC_STATIC(QTREEWIDGET_TOPLEVELITEMCOUNT)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -831,7 +833,7 @@ HB_FUNC_STATIC(QTREEWIDGET_TOPLEVELITEMCOUNT)
 // QRect visualItemRect(const QTreeWidgetItem *item) const
 HB_FUNC_STATIC(QTREEWIDGET_VISUALITEMRECT)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -850,7 +852,7 @@ HB_FUNC_STATIC(QTREEWIDGET_VISUALITEMRECT)
 // virtual void setSelectionModel(QItemSelectionModel *selectionModel)
 HB_FUNC_STATIC(QTREEWIDGET_SETSELECTIONMODEL)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -870,7 +872,7 @@ HB_FUNC_STATIC(QTREEWIDGET_SETSELECTIONMODEL)
 // void clear()
 HB_FUNC_STATIC(QTREEWIDGET_CLEAR)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -890,7 +892,7 @@ HB_FUNC_STATIC(QTREEWIDGET_CLEAR)
 // void collapseItem(const QTreeWidgetItem *item)
 HB_FUNC_STATIC(QTREEWIDGET_COLLAPSEITEM)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -910,7 +912,7 @@ HB_FUNC_STATIC(QTREEWIDGET_COLLAPSEITEM)
 // void expandItem(const QTreeWidgetItem *item)
 HB_FUNC_STATIC(QTREEWIDGET_EXPANDITEM)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -930,7 +932,7 @@ HB_FUNC_STATIC(QTREEWIDGET_EXPANDITEM)
 // void scrollToItem(const QTreeWidgetItem *item, QAbstractItemView::ScrollHint hint = QAbstractItemView::EnsureVisible)
 HB_FUNC_STATIC(QTREEWIDGET_SCROLLTOITEM)
 {
-  QTreeWidget *obj = qobject_cast<QTreeWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

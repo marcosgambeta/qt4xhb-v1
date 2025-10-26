@@ -52,6 +52,8 @@ RETURN
 
 #include <QtGui/QTextCursor>
 
+#define GET_PTR_FROM_SELF(p) QTextFrame *p = qobject_cast<QTextFrame *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QTextFrame(QTextDocument *document)
 HB_FUNC_STATIC(QTEXTFRAME_NEW)
 {
@@ -65,7 +67,7 @@ HB_FUNC_STATIC(QTEXTFRAME_NEW)
 
 HB_FUNC_STATIC(QTEXTFRAME_DELETE)
 {
-  QTextFrame *obj = qobject_cast<QTextFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -83,7 +85,7 @@ HB_FUNC_STATIC(QTEXTFRAME_DELETE)
 // QList<QTextFrame *> childFrames() const
 HB_FUNC_STATIC(QTEXTFRAME_CHILDFRAMES)
 {
-  QTextFrame *obj = qobject_cast<QTextFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -121,7 +123,7 @@ HB_FUNC_STATIC(QTEXTFRAME_CHILDFRAMES)
 // QTextCursor firstCursorPosition() const
 HB_FUNC_STATIC(QTEXTFRAME_FIRSTCURSORPOSITION)
 {
-  QTextFrame *obj = qobject_cast<QTextFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -140,7 +142,7 @@ HB_FUNC_STATIC(QTEXTFRAME_FIRSTCURSORPOSITION)
 // int firstPosition() const
 HB_FUNC_STATIC(QTEXTFRAME_FIRSTPOSITION)
 {
-  QTextFrame *obj = qobject_cast<QTextFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -158,7 +160,7 @@ HB_FUNC_STATIC(QTEXTFRAME_FIRSTPOSITION)
 // QTextFrameFormat frameFormat() const
 HB_FUNC_STATIC(QTEXTFRAME_FRAMEFORMAT)
 {
-  QTextFrame *obj = qobject_cast<QTextFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -177,7 +179,7 @@ HB_FUNC_STATIC(QTEXTFRAME_FRAMEFORMAT)
 // QTextCursor lastCursorPosition() const
 HB_FUNC_STATIC(QTEXTFRAME_LASTCURSORPOSITION)
 {
-  QTextFrame *obj = qobject_cast<QTextFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -196,7 +198,7 @@ HB_FUNC_STATIC(QTEXTFRAME_LASTCURSORPOSITION)
 // int lastPosition() const
 HB_FUNC_STATIC(QTEXTFRAME_LASTPOSITION)
 {
-  QTextFrame *obj = qobject_cast<QTextFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -214,7 +216,7 @@ HB_FUNC_STATIC(QTEXTFRAME_LASTPOSITION)
 // QTextFrame *parentFrame() const
 HB_FUNC_STATIC(QTEXTFRAME_PARENTFRAME)
 {
-  QTextFrame *obj = qobject_cast<QTextFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -233,7 +235,7 @@ HB_FUNC_STATIC(QTEXTFRAME_PARENTFRAME)
 // void setFrameFormat(const QTextFrameFormat &format)
 HB_FUNC_STATIC(QTEXTFRAME_SETFRAMEFORMAT)
 {
-  QTextFrame *obj = qobject_cast<QTextFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

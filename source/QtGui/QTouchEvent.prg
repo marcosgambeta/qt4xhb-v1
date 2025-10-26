@@ -41,9 +41,11 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QTouchEvent *p = static_cast<QTouchEvent *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QTOUCHEVENT_DELETE)
 {
-  QTouchEvent *obj = static_cast<QTouchEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -59,7 +61,7 @@ HB_FUNC_STATIC(QTOUCHEVENT_DELETE)
 // QWidget *widget() const
 HB_FUNC_STATIC(QTOUCHEVENT_WIDGET)
 {
-  QTouchEvent *obj = static_cast<QTouchEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -78,7 +80,7 @@ HB_FUNC_STATIC(QTOUCHEVENT_WIDGET)
 // QTouchEvent::DeviceType deviceType() const
 HB_FUNC_STATIC(QTOUCHEVENT_DEVICETYPE)
 {
-  QTouchEvent *obj = static_cast<QTouchEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -96,7 +98,7 @@ HB_FUNC_STATIC(QTOUCHEVENT_DEVICETYPE)
 // Qt::TouchPointStates touchPointStates() const
 HB_FUNC_STATIC(QTOUCHEVENT_TOUCHPOINTSTATES)
 {
-  QTouchEvent *obj = static_cast<QTouchEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

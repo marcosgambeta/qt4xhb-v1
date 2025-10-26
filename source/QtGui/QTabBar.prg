@@ -101,6 +101,8 @@ RETURN
 #include <QtCore/QVariant>
 #include <QtGui/QIcon>
 
+#define GET_PTR_FROM_SELF(p) QTabBar *p = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QTabBar(QWidget *parent = 0)
 HB_FUNC_STATIC(QTABBAR_NEW)
 {
@@ -114,7 +116,7 @@ HB_FUNC_STATIC(QTABBAR_NEW)
 
 HB_FUNC_STATIC(QTABBAR_DELETE)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -133,14 +135,14 @@ HB_FUNC_STATIC(QTABBAR_ADDTAB)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // int addTab(const QString &text)
-    QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RINT(obj->addTab(PQSTRING(1)));
     }
   } else if (ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2)) {
     // int addTab(const QIcon &icon, const QString &text)
-    QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RINT(obj->addTab(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt4xHb::itemGetPtr(1)) : QIcon(hb_parc(1)), PQSTRING(2)));
@@ -153,7 +155,7 @@ HB_FUNC_STATIC(QTABBAR_ADDTAB)
 // int count() const
 HB_FUNC_STATIC(QTABBAR_COUNT)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -171,7 +173,7 @@ HB_FUNC_STATIC(QTABBAR_COUNT)
 // int currentIndex() const
 HB_FUNC_STATIC(QTABBAR_CURRENTINDEX)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -189,7 +191,7 @@ HB_FUNC_STATIC(QTABBAR_CURRENTINDEX)
 // bool documentMode() const
 HB_FUNC_STATIC(QTABBAR_DOCUMENTMODE)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -207,7 +209,7 @@ HB_FUNC_STATIC(QTABBAR_DOCUMENTMODE)
 // bool drawBase() const
 HB_FUNC_STATIC(QTABBAR_DRAWBASE)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -225,7 +227,7 @@ HB_FUNC_STATIC(QTABBAR_DRAWBASE)
 // Qt::TextElideMode elideMode() const
 HB_FUNC_STATIC(QTABBAR_ELIDEMODE)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -243,7 +245,7 @@ HB_FUNC_STATIC(QTABBAR_ELIDEMODE)
 // bool expanding() const
 HB_FUNC_STATIC(QTABBAR_EXPANDING)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -261,7 +263,7 @@ HB_FUNC_STATIC(QTABBAR_EXPANDING)
 // QSize iconSize() const
 HB_FUNC_STATIC(QTABBAR_ICONSIZE)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -281,14 +283,14 @@ HB_FUNC_STATIC(QTABBAR_INSERTTAB)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(1)) {
     // int insertTab(int index, const QString &text)
-    QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RINT(obj->insertTab(PINT(1), PQSTRING(2)));
     }
   } else if (ISNUMPAR(3) && HB_ISNUM(1) && (ISQICON(2) || HB_ISCHAR(2)) && HB_ISCHAR(3)) {
     // int insertTab(int index, const QIcon &icon, const QString &text)
-    QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RINT(obj->insertTab(PINT(1), HB_ISOBJECT(2) ? *static_cast<QIcon *>(Qt4xHb::itemGetPtr(2)) : QIcon(hb_parc(2)),
@@ -302,7 +304,7 @@ HB_FUNC_STATIC(QTABBAR_INSERTTAB)
 // bool isMovable() const
 HB_FUNC_STATIC(QTABBAR_ISMOVABLE)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -320,7 +322,7 @@ HB_FUNC_STATIC(QTABBAR_ISMOVABLE)
 // bool isTabEnabled(int index) const
 HB_FUNC_STATIC(QTABBAR_ISTABENABLED)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -338,7 +340,7 @@ HB_FUNC_STATIC(QTABBAR_ISTABENABLED)
 // void moveTab(int from, int to)
 HB_FUNC_STATIC(QTABBAR_MOVETAB)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -358,7 +360,7 @@ HB_FUNC_STATIC(QTABBAR_MOVETAB)
 // void removeTab(int index)
 HB_FUNC_STATIC(QTABBAR_REMOVETAB)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -378,7 +380,7 @@ HB_FUNC_STATIC(QTABBAR_REMOVETAB)
 // QTabBar::SelectionBehavior selectionBehaviorOnRemove() const
 HB_FUNC_STATIC(QTABBAR_SELECTIONBEHAVIORONREMOVE)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -396,7 +398,7 @@ HB_FUNC_STATIC(QTABBAR_SELECTIONBEHAVIORONREMOVE)
 // void setDocumentMode(bool set)
 HB_FUNC_STATIC(QTABBAR_SETDOCUMENTMODE)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -416,7 +418,7 @@ HB_FUNC_STATIC(QTABBAR_SETDOCUMENTMODE)
 // void setDrawBase(bool drawTheBase)
 HB_FUNC_STATIC(QTABBAR_SETDRAWBASE)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -436,7 +438,7 @@ HB_FUNC_STATIC(QTABBAR_SETDRAWBASE)
 // void setElideMode(Qt::TextElideMode)
 HB_FUNC_STATIC(QTABBAR_SETELIDEMODE)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -456,7 +458,7 @@ HB_FUNC_STATIC(QTABBAR_SETELIDEMODE)
 // void setExpanding(bool enabled)
 HB_FUNC_STATIC(QTABBAR_SETEXPANDING)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -476,7 +478,7 @@ HB_FUNC_STATIC(QTABBAR_SETEXPANDING)
 // void setIconSize(const QSize &size)
 HB_FUNC_STATIC(QTABBAR_SETICONSIZE)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -496,7 +498,7 @@ HB_FUNC_STATIC(QTABBAR_SETICONSIZE)
 // void setMovable(bool movable)
 HB_FUNC_STATIC(QTABBAR_SETMOVABLE)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -516,7 +518,7 @@ HB_FUNC_STATIC(QTABBAR_SETMOVABLE)
 // void setSelectionBehaviorOnRemove(QTabBar::SelectionBehavior behavior)
 HB_FUNC_STATIC(QTABBAR_SETSELECTIONBEHAVIORONREMOVE)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -536,7 +538,7 @@ HB_FUNC_STATIC(QTABBAR_SETSELECTIONBEHAVIORONREMOVE)
 // void setShape(QTabBar::Shape shape)
 HB_FUNC_STATIC(QTABBAR_SETSHAPE)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -556,7 +558,7 @@ HB_FUNC_STATIC(QTABBAR_SETSHAPE)
 // void setTabButton(int index, QTabBar::ButtonPosition position, QWidget *widget)
 HB_FUNC_STATIC(QTABBAR_SETTABBUTTON)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -576,7 +578,7 @@ HB_FUNC_STATIC(QTABBAR_SETTABBUTTON)
 // void setTabData(int index, const QVariant &data)
 HB_FUNC_STATIC(QTABBAR_SETTABDATA)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -596,7 +598,7 @@ HB_FUNC_STATIC(QTABBAR_SETTABDATA)
 // void setTabEnabled(int index, bool enabled)
 HB_FUNC_STATIC(QTABBAR_SETTABENABLED)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -616,7 +618,7 @@ HB_FUNC_STATIC(QTABBAR_SETTABENABLED)
 // void setTabIcon(int index, const QIcon &icon)
 HB_FUNC_STATIC(QTABBAR_SETTABICON)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -636,7 +638,7 @@ HB_FUNC_STATIC(QTABBAR_SETTABICON)
 // void setTabText(int index, const QString &text)
 HB_FUNC_STATIC(QTABBAR_SETTABTEXT)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -656,7 +658,7 @@ HB_FUNC_STATIC(QTABBAR_SETTABTEXT)
 // void setTabTextColor(int index, const QColor &color)
 HB_FUNC_STATIC(QTABBAR_SETTABTEXTCOLOR)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -677,7 +679,7 @@ HB_FUNC_STATIC(QTABBAR_SETTABTEXTCOLOR)
 // void setTabToolTip(int index, const QString &tip)
 HB_FUNC_STATIC(QTABBAR_SETTABTOOLTIP)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -697,7 +699,7 @@ HB_FUNC_STATIC(QTABBAR_SETTABTOOLTIP)
 // void setTabWhatsThis(int index, const QString &text)
 HB_FUNC_STATIC(QTABBAR_SETTABWHATSTHIS)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -717,7 +719,7 @@ HB_FUNC_STATIC(QTABBAR_SETTABWHATSTHIS)
 // void setTabsClosable(bool closable)
 HB_FUNC_STATIC(QTABBAR_SETTABSCLOSABLE)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -737,7 +739,7 @@ HB_FUNC_STATIC(QTABBAR_SETTABSCLOSABLE)
 // void setUsesScrollButtons(bool useButtons)
 HB_FUNC_STATIC(QTABBAR_SETUSESSCROLLBUTTONS)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -757,7 +759,7 @@ HB_FUNC_STATIC(QTABBAR_SETUSESSCROLLBUTTONS)
 // QTabBar::Shape shape() const
 HB_FUNC_STATIC(QTABBAR_SHAPE)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -775,7 +777,7 @@ HB_FUNC_STATIC(QTABBAR_SHAPE)
 // int tabAt(const QPoint &position) const
 HB_FUNC_STATIC(QTABBAR_TABAT)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -793,7 +795,7 @@ HB_FUNC_STATIC(QTABBAR_TABAT)
 // QWidget *tabButton(int index, QTabBar::ButtonPosition position) const
 HB_FUNC_STATIC(QTABBAR_TABBUTTON)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -812,7 +814,7 @@ HB_FUNC_STATIC(QTABBAR_TABBUTTON)
 // QVariant tabData(int index) const
 HB_FUNC_STATIC(QTABBAR_TABDATA)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -831,7 +833,7 @@ HB_FUNC_STATIC(QTABBAR_TABDATA)
 // QIcon tabIcon(int index) const
 HB_FUNC_STATIC(QTABBAR_TABICON)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -850,7 +852,7 @@ HB_FUNC_STATIC(QTABBAR_TABICON)
 // QRect tabRect(int index) const
 HB_FUNC_STATIC(QTABBAR_TABRECT)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -869,7 +871,7 @@ HB_FUNC_STATIC(QTABBAR_TABRECT)
 // QString tabText(int index) const
 HB_FUNC_STATIC(QTABBAR_TABTEXT)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -887,7 +889,7 @@ HB_FUNC_STATIC(QTABBAR_TABTEXT)
 // QColor tabTextColor(int index) const
 HB_FUNC_STATIC(QTABBAR_TABTEXTCOLOR)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -906,7 +908,7 @@ HB_FUNC_STATIC(QTABBAR_TABTEXTCOLOR)
 // QString tabToolTip(int index) const
 HB_FUNC_STATIC(QTABBAR_TABTOOLTIP)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -924,7 +926,7 @@ HB_FUNC_STATIC(QTABBAR_TABTOOLTIP)
 // QString tabWhatsThis(int index) const
 HB_FUNC_STATIC(QTABBAR_TABWHATSTHIS)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -942,7 +944,7 @@ HB_FUNC_STATIC(QTABBAR_TABWHATSTHIS)
 // bool tabsClosable() const
 HB_FUNC_STATIC(QTABBAR_TABSCLOSABLE)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -960,7 +962,7 @@ HB_FUNC_STATIC(QTABBAR_TABSCLOSABLE)
 // bool usesScrollButtons() const
 HB_FUNC_STATIC(QTABBAR_USESSCROLLBUTTONS)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -978,7 +980,7 @@ HB_FUNC_STATIC(QTABBAR_USESSCROLLBUTTONS)
 // virtual QSize minimumSizeHint() const
 HB_FUNC_STATIC(QTABBAR_MINIMUMSIZEHINT)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -997,7 +999,7 @@ HB_FUNC_STATIC(QTABBAR_MINIMUMSIZEHINT)
 // virtual QSize sizeHint() const
 HB_FUNC_STATIC(QTABBAR_SIZEHINT)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1016,7 +1018,7 @@ HB_FUNC_STATIC(QTABBAR_SIZEHINT)
 // void setCurrentIndex(int index)
 HB_FUNC_STATIC(QTABBAR_SETCURRENTINDEX)
 {
-  QTabBar *obj = qobject_cast<QTabBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -47,6 +47,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QTreeWidgetItemIterator *p = static_cast<QTreeWidgetItemIterator *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QTREEWIDGETITEMITERATOR_NEW)
 {
   if (ISNUMPAR(1) && ISQTREEWIDGETITEMITERATOR(1)) {
@@ -74,7 +77,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEMITERATOR_NEW)
 
 HB_FUNC_STATIC(QTREEWIDGETITEMITERATOR_DELETE)
 {
-  QTreeWidgetItemIterator *obj = static_cast<QTreeWidgetItemIterator *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;

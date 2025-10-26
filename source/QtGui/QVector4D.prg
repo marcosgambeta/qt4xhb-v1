@@ -74,6 +74,8 @@ RETURN
 #include <QtGui/QVector2D>
 #include <QtGui/QVector3D>
 
+#define GET_PTR_FROM_SELF(p) QVector4D *p = static_cast<QVector4D *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QVECTOR4D_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -115,7 +117,7 @@ HB_FUNC_STATIC(QVECTOR4D_NEW)
 
 HB_FUNC_STATIC(QVECTOR4D_DELETE)
 {
-  QVector4D *obj = static_cast<QVector4D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -131,7 +133,7 @@ HB_FUNC_STATIC(QVECTOR4D_DELETE)
 // bool isNull() const
 HB_FUNC_STATIC(QVECTOR4D_ISNULL)
 {
-  QVector4D *obj = static_cast<QVector4D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -149,7 +151,7 @@ HB_FUNC_STATIC(QVECTOR4D_ISNULL)
 // qreal length() const
 HB_FUNC_STATIC(QVECTOR4D_LENGTH)
 {
-  QVector4D *obj = static_cast<QVector4D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -167,7 +169,7 @@ HB_FUNC_STATIC(QVECTOR4D_LENGTH)
 // qreal lengthSquared() const
 HB_FUNC_STATIC(QVECTOR4D_LENGTHSQUARED)
 {
-  QVector4D *obj = static_cast<QVector4D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -185,7 +187,7 @@ HB_FUNC_STATIC(QVECTOR4D_LENGTHSQUARED)
 // void normalize()
 HB_FUNC_STATIC(QVECTOR4D_NORMALIZE)
 {
-  QVector4D *obj = static_cast<QVector4D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -205,7 +207,7 @@ HB_FUNC_STATIC(QVECTOR4D_NORMALIZE)
 // QVector4D normalized() const
 HB_FUNC_STATIC(QVECTOR4D_NORMALIZED)
 {
-  QVector4D *obj = static_cast<QVector4D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -224,7 +226,7 @@ HB_FUNC_STATIC(QVECTOR4D_NORMALIZED)
 // void setW(qreal w)
 HB_FUNC_STATIC(QVECTOR4D_SETW)
 {
-  QVector4D *obj = static_cast<QVector4D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -244,7 +246,7 @@ HB_FUNC_STATIC(QVECTOR4D_SETW)
 // void setX(qreal x)
 HB_FUNC_STATIC(QVECTOR4D_SETX)
 {
-  QVector4D *obj = static_cast<QVector4D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -264,7 +266,7 @@ HB_FUNC_STATIC(QVECTOR4D_SETX)
 // void setY(qreal y)
 HB_FUNC_STATIC(QVECTOR4D_SETY)
 {
-  QVector4D *obj = static_cast<QVector4D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -284,7 +286,7 @@ HB_FUNC_STATIC(QVECTOR4D_SETY)
 // void setZ(qreal z)
 HB_FUNC_STATIC(QVECTOR4D_SETZ)
 {
-  QVector4D *obj = static_cast<QVector4D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -304,7 +306,7 @@ HB_FUNC_STATIC(QVECTOR4D_SETZ)
 // QPoint toPoint() const
 HB_FUNC_STATIC(QVECTOR4D_TOPOINT)
 {
-  QVector4D *obj = static_cast<QVector4D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -323,7 +325,7 @@ HB_FUNC_STATIC(QVECTOR4D_TOPOINT)
 // QPointF toPointF() const
 HB_FUNC_STATIC(QVECTOR4D_TOPOINTF)
 {
-  QVector4D *obj = static_cast<QVector4D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -342,7 +344,7 @@ HB_FUNC_STATIC(QVECTOR4D_TOPOINTF)
 // QVector2D toVector2D() const
 HB_FUNC_STATIC(QVECTOR4D_TOVECTOR2D)
 {
-  QVector4D *obj = static_cast<QVector4D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -361,7 +363,7 @@ HB_FUNC_STATIC(QVECTOR4D_TOVECTOR2D)
 // QVector2D toVector2DAffine() const
 HB_FUNC_STATIC(QVECTOR4D_TOVECTOR2DAFFINE)
 {
-  QVector4D *obj = static_cast<QVector4D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -380,7 +382,7 @@ HB_FUNC_STATIC(QVECTOR4D_TOVECTOR2DAFFINE)
 // QVector3D toVector3D() const
 HB_FUNC_STATIC(QVECTOR4D_TOVECTOR3D)
 {
-  QVector4D *obj = static_cast<QVector4D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -399,7 +401,7 @@ HB_FUNC_STATIC(QVECTOR4D_TOVECTOR3D)
 // QVector3D toVector3DAffine() const
 HB_FUNC_STATIC(QVECTOR4D_TOVECTOR3DAFFINE)
 {
-  QVector4D *obj = static_cast<QVector4D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -418,7 +420,7 @@ HB_FUNC_STATIC(QVECTOR4D_TOVECTOR3DAFFINE)
 // qreal w() const
 HB_FUNC_STATIC(QVECTOR4D_W)
 {
-  QVector4D *obj = static_cast<QVector4D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -436,7 +438,7 @@ HB_FUNC_STATIC(QVECTOR4D_W)
 // qreal x() const
 HB_FUNC_STATIC(QVECTOR4D_X)
 {
-  QVector4D *obj = static_cast<QVector4D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -454,7 +456,7 @@ HB_FUNC_STATIC(QVECTOR4D_X)
 // qreal y() const
 HB_FUNC_STATIC(QVECTOR4D_Y)
 {
-  QVector4D *obj = static_cast<QVector4D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -472,7 +474,7 @@ HB_FUNC_STATIC(QVECTOR4D_Y)
 // qreal z() const
 HB_FUNC_STATIC(QVECTOR4D_Z)
 {
-  QVector4D *obj = static_cast<QVector4D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

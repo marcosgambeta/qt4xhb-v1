@@ -75,6 +75,8 @@ RETURN
 
 #include <QtGui/QAction>
 
+#define GET_PTR_FROM_SELF(p) QUndoStack *p = qobject_cast<QUndoStack *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QUndoStack(QObject *parent = 0)
 HB_FUNC_STATIC(QUNDOSTACK_NEW)
 {
@@ -88,7 +90,7 @@ HB_FUNC_STATIC(QUNDOSTACK_NEW)
 
 HB_FUNC_STATIC(QUNDOSTACK_DELETE)
 {
-  QUndoStack *obj = qobject_cast<QUndoStack *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -106,7 +108,7 @@ HB_FUNC_STATIC(QUNDOSTACK_DELETE)
 // void beginMacro(const QString &text)
 HB_FUNC_STATIC(QUNDOSTACK_BEGINMACRO)
 {
-  QUndoStack *obj = qobject_cast<QUndoStack *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -126,7 +128,7 @@ HB_FUNC_STATIC(QUNDOSTACK_BEGINMACRO)
 // bool canRedo() const
 HB_FUNC_STATIC(QUNDOSTACK_CANREDO)
 {
-  QUndoStack *obj = qobject_cast<QUndoStack *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -144,7 +146,7 @@ HB_FUNC_STATIC(QUNDOSTACK_CANREDO)
 // bool canUndo() const
 HB_FUNC_STATIC(QUNDOSTACK_CANUNDO)
 {
-  QUndoStack *obj = qobject_cast<QUndoStack *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -162,7 +164,7 @@ HB_FUNC_STATIC(QUNDOSTACK_CANUNDO)
 // int cleanIndex() const
 HB_FUNC_STATIC(QUNDOSTACK_CLEANINDEX)
 {
-  QUndoStack *obj = qobject_cast<QUndoStack *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -180,7 +182,7 @@ HB_FUNC_STATIC(QUNDOSTACK_CLEANINDEX)
 // void clear()
 HB_FUNC_STATIC(QUNDOSTACK_CLEAR)
 {
-  QUndoStack *obj = qobject_cast<QUndoStack *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -200,7 +202,7 @@ HB_FUNC_STATIC(QUNDOSTACK_CLEAR)
 // const QUndoCommand *command(int index) const
 HB_FUNC_STATIC(QUNDOSTACK_COMMAND)
 {
-  QUndoStack *obj = qobject_cast<QUndoStack *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -219,7 +221,7 @@ HB_FUNC_STATIC(QUNDOSTACK_COMMAND)
 // int count() const
 HB_FUNC_STATIC(QUNDOSTACK_COUNT)
 {
-  QUndoStack *obj = qobject_cast<QUndoStack *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -237,7 +239,7 @@ HB_FUNC_STATIC(QUNDOSTACK_COUNT)
 // QAction *createRedoAction(QObject *parent, const QString &prefix = QString()) const
 HB_FUNC_STATIC(QUNDOSTACK_CREATEREDOACTION)
 {
-  QUndoStack *obj = qobject_cast<QUndoStack *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -256,7 +258,7 @@ HB_FUNC_STATIC(QUNDOSTACK_CREATEREDOACTION)
 // QAction *createUndoAction(QObject *parent, const QString &prefix = QString()) const
 HB_FUNC_STATIC(QUNDOSTACK_CREATEUNDOACTION)
 {
-  QUndoStack *obj = qobject_cast<QUndoStack *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -275,7 +277,7 @@ HB_FUNC_STATIC(QUNDOSTACK_CREATEUNDOACTION)
 // void endMacro()
 HB_FUNC_STATIC(QUNDOSTACK_ENDMACRO)
 {
-  QUndoStack *obj = qobject_cast<QUndoStack *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -295,7 +297,7 @@ HB_FUNC_STATIC(QUNDOSTACK_ENDMACRO)
 // int index() const
 HB_FUNC_STATIC(QUNDOSTACK_INDEX)
 {
-  QUndoStack *obj = qobject_cast<QUndoStack *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -313,7 +315,7 @@ HB_FUNC_STATIC(QUNDOSTACK_INDEX)
 // bool isActive() const
 HB_FUNC_STATIC(QUNDOSTACK_ISACTIVE)
 {
-  QUndoStack *obj = qobject_cast<QUndoStack *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -331,7 +333,7 @@ HB_FUNC_STATIC(QUNDOSTACK_ISACTIVE)
 // bool isClean() const
 HB_FUNC_STATIC(QUNDOSTACK_ISCLEAN)
 {
-  QUndoStack *obj = qobject_cast<QUndoStack *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -349,7 +351,7 @@ HB_FUNC_STATIC(QUNDOSTACK_ISCLEAN)
 // void push(QUndoCommand *cmd)
 HB_FUNC_STATIC(QUNDOSTACK_PUSH)
 {
-  QUndoStack *obj = qobject_cast<QUndoStack *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -369,7 +371,7 @@ HB_FUNC_STATIC(QUNDOSTACK_PUSH)
 // QString redoText() const
 HB_FUNC_STATIC(QUNDOSTACK_REDOTEXT)
 {
-  QUndoStack *obj = qobject_cast<QUndoStack *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -387,7 +389,7 @@ HB_FUNC_STATIC(QUNDOSTACK_REDOTEXT)
 // void setUndoLimit(int limit)
 HB_FUNC_STATIC(QUNDOSTACK_SETUNDOLIMIT)
 {
-  QUndoStack *obj = qobject_cast<QUndoStack *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -407,7 +409,7 @@ HB_FUNC_STATIC(QUNDOSTACK_SETUNDOLIMIT)
 // QString text(int idx) const
 HB_FUNC_STATIC(QUNDOSTACK_TEXT)
 {
-  QUndoStack *obj = qobject_cast<QUndoStack *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -425,7 +427,7 @@ HB_FUNC_STATIC(QUNDOSTACK_TEXT)
 // int undoLimit() const
 HB_FUNC_STATIC(QUNDOSTACK_UNDOLIMIT)
 {
-  QUndoStack *obj = qobject_cast<QUndoStack *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -443,7 +445,7 @@ HB_FUNC_STATIC(QUNDOSTACK_UNDOLIMIT)
 // QString undoText() const
 HB_FUNC_STATIC(QUNDOSTACK_UNDOTEXT)
 {
-  QUndoStack *obj = qobject_cast<QUndoStack *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -461,7 +463,7 @@ HB_FUNC_STATIC(QUNDOSTACK_UNDOTEXT)
 // void redo()
 HB_FUNC_STATIC(QUNDOSTACK_REDO)
 {
-  QUndoStack *obj = qobject_cast<QUndoStack *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -481,7 +483,7 @@ HB_FUNC_STATIC(QUNDOSTACK_REDO)
 // void setActive(bool active = true)
 HB_FUNC_STATIC(QUNDOSTACK_SETACTIVE)
 {
-  QUndoStack *obj = qobject_cast<QUndoStack *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -501,7 +503,7 @@ HB_FUNC_STATIC(QUNDOSTACK_SETACTIVE)
 // void setClean()
 HB_FUNC_STATIC(QUNDOSTACK_SETCLEAN)
 {
-  QUndoStack *obj = qobject_cast<QUndoStack *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -521,7 +523,7 @@ HB_FUNC_STATIC(QUNDOSTACK_SETCLEAN)
 // void setIndex(int idx)
 HB_FUNC_STATIC(QUNDOSTACK_SETINDEX)
 {
-  QUndoStack *obj = qobject_cast<QUndoStack *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -541,7 +543,7 @@ HB_FUNC_STATIC(QUNDOSTACK_SETINDEX)
 // void undo()
 HB_FUNC_STATIC(QUNDOSTACK_UNDO)
 {
-  QUndoStack *obj = qobject_cast<QUndoStack *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

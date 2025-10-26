@@ -50,9 +50,11 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QTextList *p = qobject_cast<QTextList *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QTEXTLIST_DELETE)
 {
-  QTextList *obj = qobject_cast<QTextList *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -70,7 +72,7 @@ HB_FUNC_STATIC(QTEXTLIST_DELETE)
 // void add(const QTextBlock &block)
 HB_FUNC_STATIC(QTEXTLIST_ADD)
 {
-  QTextList *obj = qobject_cast<QTextList *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -90,7 +92,7 @@ HB_FUNC_STATIC(QTEXTLIST_ADD)
 // int count() const
 HB_FUNC_STATIC(QTEXTLIST_COUNT)
 {
-  QTextList *obj = qobject_cast<QTextList *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -108,7 +110,7 @@ HB_FUNC_STATIC(QTEXTLIST_COUNT)
 // QTextListFormat format() const
 HB_FUNC_STATIC(QTEXTLIST_FORMAT)
 {
-  QTextList *obj = qobject_cast<QTextList *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -127,7 +129,7 @@ HB_FUNC_STATIC(QTEXTLIST_FORMAT)
 // QTextBlock item(int i) const
 HB_FUNC_STATIC(QTEXTLIST_ITEM)
 {
-  QTextList *obj = qobject_cast<QTextList *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -146,7 +148,7 @@ HB_FUNC_STATIC(QTEXTLIST_ITEM)
 // int itemNumber(const QTextBlock &block) const
 HB_FUNC_STATIC(QTEXTLIST_ITEMNUMBER)
 {
-  QTextList *obj = qobject_cast<QTextList *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -164,7 +166,7 @@ HB_FUNC_STATIC(QTEXTLIST_ITEMNUMBER)
 // QString itemText(const QTextBlock &block) const
 HB_FUNC_STATIC(QTEXTLIST_ITEMTEXT)
 {
-  QTextList *obj = qobject_cast<QTextList *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -182,7 +184,7 @@ HB_FUNC_STATIC(QTEXTLIST_ITEMTEXT)
 // void remove(const QTextBlock &block)
 HB_FUNC_STATIC(QTEXTLIST_REMOVE)
 {
-  QTextList *obj = qobject_cast<QTextList *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -202,7 +204,7 @@ HB_FUNC_STATIC(QTEXTLIST_REMOVE)
 // void removeItem(int i)
 HB_FUNC_STATIC(QTEXTLIST_REMOVEITEM)
 {
-  QTextList *obj = qobject_cast<QTextList *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -222,7 +224,7 @@ HB_FUNC_STATIC(QTEXTLIST_REMOVEITEM)
 // void setFormat(const QTextListFormat &format)
 HB_FUNC_STATIC(QTEXTLIST_SETFORMAT)
 {
-  QTextList *obj = qobject_cast<QTextList *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

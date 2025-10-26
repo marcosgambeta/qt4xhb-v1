@@ -48,6 +48,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QWheelEvent *p = static_cast<QWheelEvent *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QWHEELEVENT_NEW)
 {
   if (ISBETWEEN(4, 5) && ISQPOINT(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISNUMORNIL(5)) {
@@ -72,7 +74,7 @@ HB_FUNC_STATIC(QWHEELEVENT_NEW)
 
 HB_FUNC_STATIC(QWHEELEVENT_DELETE)
 {
-  QWheelEvent *obj = static_cast<QWheelEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -88,7 +90,7 @@ HB_FUNC_STATIC(QWHEELEVENT_DELETE)
 // int delta() const
 HB_FUNC_STATIC(QWHEELEVENT_DELTA)
 {
-  QWheelEvent *obj = static_cast<QWheelEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -106,7 +108,7 @@ HB_FUNC_STATIC(QWHEELEVENT_DELTA)
 // const QPoint &pos() const
 HB_FUNC_STATIC(QWHEELEVENT_POS)
 {
-  QWheelEvent *obj = static_cast<QWheelEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -125,7 +127,7 @@ HB_FUNC_STATIC(QWHEELEVENT_POS)
 // const QPoint &globalPos() const
 HB_FUNC_STATIC(QWHEELEVENT_GLOBALPOS)
 {
-  QWheelEvent *obj = static_cast<QWheelEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -144,7 +146,7 @@ HB_FUNC_STATIC(QWHEELEVENT_GLOBALPOS)
 // int x() const
 HB_FUNC_STATIC(QWHEELEVENT_X)
 {
-  QWheelEvent *obj = static_cast<QWheelEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -162,7 +164,7 @@ HB_FUNC_STATIC(QWHEELEVENT_X)
 // int y() const
 HB_FUNC_STATIC(QWHEELEVENT_Y)
 {
-  QWheelEvent *obj = static_cast<QWheelEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -180,7 +182,7 @@ HB_FUNC_STATIC(QWHEELEVENT_Y)
 // int globalX() const
 HB_FUNC_STATIC(QWHEELEVENT_GLOBALX)
 {
-  QWheelEvent *obj = static_cast<QWheelEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -198,7 +200,7 @@ HB_FUNC_STATIC(QWHEELEVENT_GLOBALX)
 // int globalY() const
 HB_FUNC_STATIC(QWHEELEVENT_GLOBALY)
 {
-  QWheelEvent *obj = static_cast<QWheelEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -216,7 +218,7 @@ HB_FUNC_STATIC(QWHEELEVENT_GLOBALY)
 // Qt::MouseButtons buttons() const
 HB_FUNC_STATIC(QWHEELEVENT_BUTTONS)
 {
-  QWheelEvent *obj = static_cast<QWheelEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -234,7 +236,7 @@ HB_FUNC_STATIC(QWHEELEVENT_BUTTONS)
 // Qt::Orientation orientation() const
 HB_FUNC_STATIC(QWHEELEVENT_ORIENTATION)
 {
-  QWheelEvent *obj = static_cast<QWheelEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

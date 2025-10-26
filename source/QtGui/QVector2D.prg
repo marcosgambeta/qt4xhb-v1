@@ -68,6 +68,8 @@ RETURN
 #include <QtGui/QVector3D>
 #include <QtGui/QVector4D>
 
+#define GET_PTR_FROM_SELF(p) QVector2D *p = static_cast<QVector2D *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QVECTOR2D_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -101,7 +103,7 @@ HB_FUNC_STATIC(QVECTOR2D_NEW)
 
 HB_FUNC_STATIC(QVECTOR2D_DELETE)
 {
-  QVector2D *obj = static_cast<QVector2D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -117,7 +119,7 @@ HB_FUNC_STATIC(QVECTOR2D_DELETE)
 // bool isNull() const
 HB_FUNC_STATIC(QVECTOR2D_ISNULL)
 {
-  QVector2D *obj = static_cast<QVector2D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -135,7 +137,7 @@ HB_FUNC_STATIC(QVECTOR2D_ISNULL)
 // qreal length() const
 HB_FUNC_STATIC(QVECTOR2D_LENGTH)
 {
-  QVector2D *obj = static_cast<QVector2D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -153,7 +155,7 @@ HB_FUNC_STATIC(QVECTOR2D_LENGTH)
 // qreal lengthSquared() const
 HB_FUNC_STATIC(QVECTOR2D_LENGTHSQUARED)
 {
-  QVector2D *obj = static_cast<QVector2D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -171,7 +173,7 @@ HB_FUNC_STATIC(QVECTOR2D_LENGTHSQUARED)
 // void normalize()
 HB_FUNC_STATIC(QVECTOR2D_NORMALIZE)
 {
-  QVector2D *obj = static_cast<QVector2D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -191,7 +193,7 @@ HB_FUNC_STATIC(QVECTOR2D_NORMALIZE)
 // QVector2D normalized() const
 HB_FUNC_STATIC(QVECTOR2D_NORMALIZED)
 {
-  QVector2D *obj = static_cast<QVector2D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -210,7 +212,7 @@ HB_FUNC_STATIC(QVECTOR2D_NORMALIZED)
 // void setX(qreal x)
 HB_FUNC_STATIC(QVECTOR2D_SETX)
 {
-  QVector2D *obj = static_cast<QVector2D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -230,7 +232,7 @@ HB_FUNC_STATIC(QVECTOR2D_SETX)
 // void setY(qreal y)
 HB_FUNC_STATIC(QVECTOR2D_SETY)
 {
-  QVector2D *obj = static_cast<QVector2D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -250,7 +252,7 @@ HB_FUNC_STATIC(QVECTOR2D_SETY)
 // QPoint toPoint() const
 HB_FUNC_STATIC(QVECTOR2D_TOPOINT)
 {
-  QVector2D *obj = static_cast<QVector2D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -269,7 +271,7 @@ HB_FUNC_STATIC(QVECTOR2D_TOPOINT)
 // QPointF toPointF() const
 HB_FUNC_STATIC(QVECTOR2D_TOPOINTF)
 {
-  QVector2D *obj = static_cast<QVector2D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -288,7 +290,7 @@ HB_FUNC_STATIC(QVECTOR2D_TOPOINTF)
 // QVector3D toVector3D() const
 HB_FUNC_STATIC(QVECTOR2D_TOVECTOR3D)
 {
-  QVector2D *obj = static_cast<QVector2D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -307,7 +309,7 @@ HB_FUNC_STATIC(QVECTOR2D_TOVECTOR3D)
 // QVector4D toVector4D() const
 HB_FUNC_STATIC(QVECTOR2D_TOVECTOR4D)
 {
-  QVector2D *obj = static_cast<QVector2D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -326,7 +328,7 @@ HB_FUNC_STATIC(QVECTOR2D_TOVECTOR4D)
 // qreal x() const
 HB_FUNC_STATIC(QVECTOR2D_X)
 {
-  QVector2D *obj = static_cast<QVector2D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -344,7 +346,7 @@ HB_FUNC_STATIC(QVECTOR2D_X)
 // qreal y() const
 HB_FUNC_STATIC(QVECTOR2D_Y)
 {
-  QVector2D *obj = static_cast<QVector2D *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

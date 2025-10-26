@@ -87,6 +87,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QTabWidget *p = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QTabWidget(QWidget *parent = 0)
 HB_FUNC_STATIC(QTABWIDGET_NEW)
 {
@@ -100,7 +102,7 @@ HB_FUNC_STATIC(QTABWIDGET_NEW)
 
 HB_FUNC_STATIC(QTABWIDGET_DELETE)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -119,14 +121,14 @@ HB_FUNC_STATIC(QTABWIDGET_ADDTAB)
 {
   if (ISNUMPAR(2) && ISQWIDGET(1) && HB_ISCHAR(2)) {
     // int addTab(QWidget *page, const QString &label)
-    QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RINT(obj->addTab(PQWIDGET(1), PQSTRING(2)));
     }
   } else if (ISNUMPAR(3) && ISQWIDGET(1) && (ISQICON(2) || HB_ISCHAR(2)) && HB_ISCHAR(3)) {
     // int addTab(QWidget *page, const QIcon &icon, const QString &label)
-    QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RINT(obj->addTab(PQWIDGET(1), HB_ISOBJECT(2) ? *static_cast<QIcon *>(Qt4xHb::itemGetPtr(2)) : QIcon(hb_parc(2)),
@@ -140,7 +142,7 @@ HB_FUNC_STATIC(QTABWIDGET_ADDTAB)
 // void clear()
 HB_FUNC_STATIC(QTABWIDGET_CLEAR)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -160,7 +162,7 @@ HB_FUNC_STATIC(QTABWIDGET_CLEAR)
 // QWidget *cornerWidget(Qt::Corner corner = Qt::TopRightCorner) const
 HB_FUNC_STATIC(QTABWIDGET_CORNERWIDGET)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -179,7 +181,7 @@ HB_FUNC_STATIC(QTABWIDGET_CORNERWIDGET)
 // int count() const
 HB_FUNC_STATIC(QTABWIDGET_COUNT)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -197,7 +199,7 @@ HB_FUNC_STATIC(QTABWIDGET_COUNT)
 // int currentIndex() const
 HB_FUNC_STATIC(QTABWIDGET_CURRENTINDEX)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -215,7 +217,7 @@ HB_FUNC_STATIC(QTABWIDGET_CURRENTINDEX)
 // QWidget *currentWidget() const
 HB_FUNC_STATIC(QTABWIDGET_CURRENTWIDGET)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -234,7 +236,7 @@ HB_FUNC_STATIC(QTABWIDGET_CURRENTWIDGET)
 // bool documentMode() const
 HB_FUNC_STATIC(QTABWIDGET_DOCUMENTMODE)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -252,7 +254,7 @@ HB_FUNC_STATIC(QTABWIDGET_DOCUMENTMODE)
 // Qt::TextElideMode elideMode() const
 HB_FUNC_STATIC(QTABWIDGET_ELIDEMODE)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -270,7 +272,7 @@ HB_FUNC_STATIC(QTABWIDGET_ELIDEMODE)
 // QSize iconSize() const
 HB_FUNC_STATIC(QTABWIDGET_ICONSIZE)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -289,7 +291,7 @@ HB_FUNC_STATIC(QTABWIDGET_ICONSIZE)
 // int indexOf(QWidget *w) const
 HB_FUNC_STATIC(QTABWIDGET_INDEXOF)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -308,14 +310,14 @@ HB_FUNC_STATIC(QTABWIDGET_INSERTTAB)
 {
   if (ISNUMPAR(3) && HB_ISNUM(1) && ISQWIDGET(2) && HB_ISCHAR(3)) {
     // int insertTab(int index, QWidget *page, const QString &label)
-    QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RINT(obj->insertTab(PINT(1), PQWIDGET(2), PQSTRING(3)));
     }
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && ISQWIDGET(2) && (ISQICON(3) || HB_ISCHAR(3)) && HB_ISCHAR(4)) {
     // int insertTab(int index, QWidget *page, const QIcon &icon, const QString &label)
-    QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RINT(obj->insertTab(PINT(1), PQWIDGET(2),
@@ -330,7 +332,7 @@ HB_FUNC_STATIC(QTABWIDGET_INSERTTAB)
 // bool isMovable() const
 HB_FUNC_STATIC(QTABWIDGET_ISMOVABLE)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -348,7 +350,7 @@ HB_FUNC_STATIC(QTABWIDGET_ISMOVABLE)
 // bool isTabEnabled(int index) const
 HB_FUNC_STATIC(QTABWIDGET_ISTABENABLED)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -366,7 +368,7 @@ HB_FUNC_STATIC(QTABWIDGET_ISTABENABLED)
 // void removeTab(int index)
 HB_FUNC_STATIC(QTABWIDGET_REMOVETAB)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -386,7 +388,7 @@ HB_FUNC_STATIC(QTABWIDGET_REMOVETAB)
 // void setCornerWidget(QWidget *widget, Qt::Corner corner = Qt::TopRightCorner)
 HB_FUNC_STATIC(QTABWIDGET_SETCORNERWIDGET)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -406,7 +408,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETCORNERWIDGET)
 // void setDocumentMode(bool set)
 HB_FUNC_STATIC(QTABWIDGET_SETDOCUMENTMODE)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -426,7 +428,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETDOCUMENTMODE)
 // void setElideMode(Qt::TextElideMode)
 HB_FUNC_STATIC(QTABWIDGET_SETELIDEMODE)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -446,7 +448,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETELIDEMODE)
 // void setIconSize(const QSize &size)
 HB_FUNC_STATIC(QTABWIDGET_SETICONSIZE)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -466,7 +468,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETICONSIZE)
 // void setMovable(bool movable)
 HB_FUNC_STATIC(QTABWIDGET_SETMOVABLE)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -486,7 +488,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETMOVABLE)
 // void setTabEnabled(int index, bool enable)
 HB_FUNC_STATIC(QTABWIDGET_SETTABENABLED)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -506,7 +508,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETTABENABLED)
 // void setTabIcon(int index, const QIcon &icon)
 HB_FUNC_STATIC(QTABWIDGET_SETTABICON)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -526,7 +528,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETTABICON)
 // void setTabPosition(QTabWidget::TabPosition)
 HB_FUNC_STATIC(QTABWIDGET_SETTABPOSITION)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -546,7 +548,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETTABPOSITION)
 // void setTabShape(QTabWidget::TabShape s)
 HB_FUNC_STATIC(QTABWIDGET_SETTABSHAPE)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -566,7 +568,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETTABSHAPE)
 // void setTabText(int index, const QString &label)
 HB_FUNC_STATIC(QTABWIDGET_SETTABTEXT)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -586,7 +588,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETTABTEXT)
 // void setTabToolTip(int index, const QString &tip)
 HB_FUNC_STATIC(QTABWIDGET_SETTABTOOLTIP)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -606,7 +608,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETTABTOOLTIP)
 // void setTabWhatsThis(int index, const QString &text)
 HB_FUNC_STATIC(QTABWIDGET_SETTABWHATSTHIS)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -626,7 +628,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETTABWHATSTHIS)
 // void setTabsClosable(bool closeable)
 HB_FUNC_STATIC(QTABWIDGET_SETTABSCLOSABLE)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -646,7 +648,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETTABSCLOSABLE)
 // void setUsesScrollButtons(bool useButtons)
 HB_FUNC_STATIC(QTABWIDGET_SETUSESSCROLLBUTTONS)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -666,7 +668,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETUSESSCROLLBUTTONS)
 // QIcon tabIcon(int index) const
 HB_FUNC_STATIC(QTABWIDGET_TABICON)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -685,7 +687,7 @@ HB_FUNC_STATIC(QTABWIDGET_TABICON)
 // QTabWidget::TabPosition tabPosition() const
 HB_FUNC_STATIC(QTABWIDGET_TABPOSITION)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -703,7 +705,7 @@ HB_FUNC_STATIC(QTABWIDGET_TABPOSITION)
 // QTabWidget::TabShape tabShape() const
 HB_FUNC_STATIC(QTABWIDGET_TABSHAPE)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -721,7 +723,7 @@ HB_FUNC_STATIC(QTABWIDGET_TABSHAPE)
 // QString tabText(int index) const
 HB_FUNC_STATIC(QTABWIDGET_TABTEXT)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -739,7 +741,7 @@ HB_FUNC_STATIC(QTABWIDGET_TABTEXT)
 // QString tabToolTip(int index) const
 HB_FUNC_STATIC(QTABWIDGET_TABTOOLTIP)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -757,7 +759,7 @@ HB_FUNC_STATIC(QTABWIDGET_TABTOOLTIP)
 // QString tabWhatsThis(int index) const
 HB_FUNC_STATIC(QTABWIDGET_TABWHATSTHIS)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -775,7 +777,7 @@ HB_FUNC_STATIC(QTABWIDGET_TABWHATSTHIS)
 // bool tabsClosable() const
 HB_FUNC_STATIC(QTABWIDGET_TABSCLOSABLE)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -793,7 +795,7 @@ HB_FUNC_STATIC(QTABWIDGET_TABSCLOSABLE)
 // bool usesScrollButtons() const
 HB_FUNC_STATIC(QTABWIDGET_USESSCROLLBUTTONS)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -811,7 +813,7 @@ HB_FUNC_STATIC(QTABWIDGET_USESSCROLLBUTTONS)
 // QWidget *widget(int index) const
 HB_FUNC_STATIC(QTABWIDGET_WIDGET)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -830,7 +832,7 @@ HB_FUNC_STATIC(QTABWIDGET_WIDGET)
 // virtual QSize minimumSizeHint() const
 HB_FUNC_STATIC(QTABWIDGET_MINIMUMSIZEHINT)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -849,7 +851,7 @@ HB_FUNC_STATIC(QTABWIDGET_MINIMUMSIZEHINT)
 // virtual QSize sizeHint() const
 HB_FUNC_STATIC(QTABWIDGET_SIZEHINT)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -868,7 +870,7 @@ HB_FUNC_STATIC(QTABWIDGET_SIZEHINT)
 // void setCurrentIndex(int index)
 HB_FUNC_STATIC(QTABWIDGET_SETCURRENTINDEX)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -888,7 +890,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETCURRENTINDEX)
 // void setCurrentWidget(QWidget *widget)
 HB_FUNC_STATIC(QTABWIDGET_SETCURRENTWIDGET)
 {
-  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

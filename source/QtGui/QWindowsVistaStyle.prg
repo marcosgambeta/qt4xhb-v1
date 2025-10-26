@@ -40,6 +40,9 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QWindowsVistaStyle *p = qobject_cast<QWindowsVistaStyle *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QWindowsVistaStyle()
 HB_FUNC_STATIC(QWINDOWSVISTASTYLE_NEW)
 {
@@ -53,7 +56,7 @@ HB_FUNC_STATIC(QWINDOWSVISTASTYLE_NEW)
 
 HB_FUNC_STATIC(QWINDOWSVISTASTYLE_DELETE)
 {
-  QWindowsVistaStyle *obj = qobject_cast<QWindowsVistaStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);

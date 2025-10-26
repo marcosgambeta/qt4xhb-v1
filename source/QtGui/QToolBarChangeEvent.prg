@@ -39,6 +39,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QToolBarChangeEvent *p = static_cast<QToolBarChangeEvent *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QToolBarChangeEvent(bool t)
 HB_FUNC_STATIC(QTOOLBARCHANGEEVENT_NEW)
 {
@@ -52,7 +55,7 @@ HB_FUNC_STATIC(QTOOLBARCHANGEEVENT_NEW)
 
 HB_FUNC_STATIC(QTOOLBARCHANGEEVENT_DELETE)
 {
-  QToolBarChangeEvent *obj = static_cast<QToolBarChangeEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -68,7 +71,7 @@ HB_FUNC_STATIC(QTOOLBARCHANGEEVENT_DELETE)
 // bool toggle() const
 HB_FUNC_STATIC(QTOOLBARCHANGEEVENT_TOGGLE)
 {
-  QToolBarChangeEvent *obj = static_cast<QToolBarChangeEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

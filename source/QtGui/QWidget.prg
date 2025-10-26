@@ -330,6 +330,8 @@ RETURN
 #include <QtGui/QLayout>
 #include <QtGui/QStyle>
 
+#define GET_PTR_FROM_SELF(p) QWidget *p = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QWidget(QWidget *parent = 0, Qt::WindowFlags f = 0)
 HB_FUNC_STATIC(QWIDGET_NEW)
 {
@@ -343,7 +345,7 @@ HB_FUNC_STATIC(QWIDGET_NEW)
 
 HB_FUNC_STATIC(QWIDGET_DELETE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -361,7 +363,7 @@ HB_FUNC_STATIC(QWIDGET_DELETE)
 // bool acceptDrops() const
 HB_FUNC_STATIC(QWIDGET_ACCEPTDROPS)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -379,7 +381,7 @@ HB_FUNC_STATIC(QWIDGET_ACCEPTDROPS)
 // QString accessibleDescription() const
 HB_FUNC_STATIC(QWIDGET_ACCESSIBLEDESCRIPTION)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -397,7 +399,7 @@ HB_FUNC_STATIC(QWIDGET_ACCESSIBLEDESCRIPTION)
 // QString accessibleName() const
 HB_FUNC_STATIC(QWIDGET_ACCESSIBLENAME)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -415,7 +417,7 @@ HB_FUNC_STATIC(QWIDGET_ACCESSIBLENAME)
 // QList<QAction *> actions() const
 HB_FUNC_STATIC(QWIDGET_ACTIONS)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -453,7 +455,7 @@ HB_FUNC_STATIC(QWIDGET_ACTIONS)
 // void activateWindow()
 HB_FUNC_STATIC(QWIDGET_ACTIVATEWINDOW)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -473,7 +475,7 @@ HB_FUNC_STATIC(QWIDGET_ACTIVATEWINDOW)
 // void addAction(QAction *action)
 HB_FUNC_STATIC(QWIDGET_ADDACTION)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -493,7 +495,7 @@ HB_FUNC_STATIC(QWIDGET_ADDACTION)
 // void addActions(QList<QAction *> actions)
 HB_FUNC_STATIC(QWIDGET_ADDACTIONS)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -519,7 +521,7 @@ HB_FUNC_STATIC(QWIDGET_ADDACTIONS)
 // void adjustSize()
 HB_FUNC_STATIC(QWIDGET_ADJUSTSIZE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -539,7 +541,7 @@ HB_FUNC_STATIC(QWIDGET_ADJUSTSIZE)
 // bool autoFillBackground() const
 HB_FUNC_STATIC(QWIDGET_AUTOFILLBACKGROUND)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -557,7 +559,7 @@ HB_FUNC_STATIC(QWIDGET_AUTOFILLBACKGROUND)
 // QPalette::ColorRole backgroundRole() const
 HB_FUNC_STATIC(QWIDGET_BACKGROUNDROLE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -575,7 +577,7 @@ HB_FUNC_STATIC(QWIDGET_BACKGROUNDROLE)
 // QSize baseSize() const
 HB_FUNC_STATIC(QWIDGET_BASESIZE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -595,7 +597,7 @@ HB_FUNC_STATIC(QWIDGET_CHILDAT)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // QWidget *childAt(int x, int y) const
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QWidget *ptr = obj->childAt(PINT(1), PINT(2));
@@ -603,7 +605,7 @@ HB_FUNC_STATIC(QWIDGET_CHILDAT)
     }
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // QWidget *childAt(const QPoint &p) const
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QWidget *ptr = obj->childAt(*PQPOINT(1));
@@ -617,7 +619,7 @@ HB_FUNC_STATIC(QWIDGET_CHILDAT)
 // QRect childrenRect() const
 HB_FUNC_STATIC(QWIDGET_CHILDRENRECT)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -636,7 +638,7 @@ HB_FUNC_STATIC(QWIDGET_CHILDRENRECT)
 // QRegion childrenRegion() const
 HB_FUNC_STATIC(QWIDGET_CHILDRENREGION)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -655,7 +657,7 @@ HB_FUNC_STATIC(QWIDGET_CHILDRENREGION)
 // void clearFocus()
 HB_FUNC_STATIC(QWIDGET_CLEARFOCUS)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -675,7 +677,7 @@ HB_FUNC_STATIC(QWIDGET_CLEARFOCUS)
 // void clearMask()
 HB_FUNC_STATIC(QWIDGET_CLEARMASK)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -695,7 +697,7 @@ HB_FUNC_STATIC(QWIDGET_CLEARMASK)
 // QMargins contentsMargins() const
 HB_FUNC_STATIC(QWIDGET_CONTENTSMARGINS)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -714,7 +716,7 @@ HB_FUNC_STATIC(QWIDGET_CONTENTSMARGINS)
 // QRect contentsRect() const
 HB_FUNC_STATIC(QWIDGET_CONTENTSRECT)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -733,7 +735,7 @@ HB_FUNC_STATIC(QWIDGET_CONTENTSRECT)
 // Qt::ContextMenuPolicy contextMenuPolicy() const
 HB_FUNC_STATIC(QWIDGET_CONTEXTMENUPOLICY)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -751,7 +753,7 @@ HB_FUNC_STATIC(QWIDGET_CONTEXTMENUPOLICY)
 // QCursor cursor() const
 HB_FUNC_STATIC(QWIDGET_CURSOR)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -771,7 +773,7 @@ HB_FUNC_STATIC(QWIDGET_CURSOR)
 HB_FUNC_STATIC(QWIDGET_EFFECTIVEWINID)
 {
 #ifdef Q_OS_WIN
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -789,7 +791,7 @@ HB_FUNC_STATIC(QWIDGET_EFFECTIVEWINID)
 // void ensurePolished() const
 HB_FUNC_STATIC(QWIDGET_ENSUREPOLISHED)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -809,7 +811,7 @@ HB_FUNC_STATIC(QWIDGET_ENSUREPOLISHED)
 // Qt::FocusPolicy focusPolicy() const
 HB_FUNC_STATIC(QWIDGET_FOCUSPOLICY)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -827,7 +829,7 @@ HB_FUNC_STATIC(QWIDGET_FOCUSPOLICY)
 // QWidget *focusProxy() const
 HB_FUNC_STATIC(QWIDGET_FOCUSPROXY)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -846,7 +848,7 @@ HB_FUNC_STATIC(QWIDGET_FOCUSPROXY)
 // QWidget *focusWidget() const
 HB_FUNC_STATIC(QWIDGET_FOCUSWIDGET)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -865,7 +867,7 @@ HB_FUNC_STATIC(QWIDGET_FOCUSWIDGET)
 // const QFont &font() const
 HB_FUNC_STATIC(QWIDGET_FONT)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -884,7 +886,7 @@ HB_FUNC_STATIC(QWIDGET_FONT)
 // QFontInfo fontInfo() const
 HB_FUNC_STATIC(QWIDGET_FONTINFO)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -903,7 +905,7 @@ HB_FUNC_STATIC(QWIDGET_FONTINFO)
 // QFontMetrics fontMetrics() const
 HB_FUNC_STATIC(QWIDGET_FONTMETRICS)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -922,7 +924,7 @@ HB_FUNC_STATIC(QWIDGET_FONTMETRICS)
 // QPalette::ColorRole foregroundRole() const
 HB_FUNC_STATIC(QWIDGET_FOREGROUNDROLE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -940,7 +942,7 @@ HB_FUNC_STATIC(QWIDGET_FOREGROUNDROLE)
 // QRect frameGeometry() const
 HB_FUNC_STATIC(QWIDGET_FRAMEGEOMETRY)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -959,7 +961,7 @@ HB_FUNC_STATIC(QWIDGET_FRAMEGEOMETRY)
 // QSize frameSize() const
 HB_FUNC_STATIC(QWIDGET_FRAMESIZE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -978,7 +980,7 @@ HB_FUNC_STATIC(QWIDGET_FRAMESIZE)
 // const QRect &geometry() const
 HB_FUNC_STATIC(QWIDGET_GEOMETRY)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -997,7 +999,7 @@ HB_FUNC_STATIC(QWIDGET_GEOMETRY)
 // void getContentsMargins(int *left, int *top, int *right, int *bottom) const
 HB_FUNC_STATIC(QWIDGET_GETCONTENTSMARGINS)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1025,7 +1027,7 @@ HB_FUNC_STATIC(QWIDGET_GETCONTENTSMARGINS)
 // void grabGesture(Qt::GestureType gesture, Qt::GestureFlags flags = Qt::GestureFlags())
 HB_FUNC_STATIC(QWIDGET_GRABGESTURE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1046,7 +1048,7 @@ HB_FUNC_STATIC(QWIDGET_GRABGESTURE)
 // void grabKeyboard()
 HB_FUNC_STATIC(QWIDGET_GRABKEYBOARD)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1067,7 +1069,7 @@ HB_FUNC_STATIC(QWIDGET_GRABMOUSE)
 {
   if (ISNUMPAR(0)) {
     // void grabMouse()
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->grabMouse();
@@ -1076,7 +1078,7 @@ HB_FUNC_STATIC(QWIDGET_GRABMOUSE)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && ISQCURSOR(1)) {
     // void grabMouse(const QCursor &cursor)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->grabMouse(*PQCURSOR(1));
@@ -1091,7 +1093,7 @@ HB_FUNC_STATIC(QWIDGET_GRABMOUSE)
 // int grabShortcut(const QKeySequence &key, Qt::ShortcutContext context = Qt::WindowShortcut)
 HB_FUNC_STATIC(QWIDGET_GRABSHORTCUT)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1110,7 +1112,7 @@ HB_FUNC_STATIC(QWIDGET_GRABSHORTCUT)
 // QGraphicsEffect *graphicsEffect() const
 HB_FUNC_STATIC(QWIDGET_GRAPHICSEFFECT)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1129,7 +1131,7 @@ HB_FUNC_STATIC(QWIDGET_GRAPHICSEFFECT)
 // QGraphicsProxyWidget *graphicsProxyWidget() const
 HB_FUNC_STATIC(QWIDGET_GRAPHICSPROXYWIDGET)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1148,7 +1150,7 @@ HB_FUNC_STATIC(QWIDGET_GRAPHICSPROXYWIDGET)
 // bool hasFocus() const
 HB_FUNC_STATIC(QWIDGET_HASFOCUS)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1166,7 +1168,7 @@ HB_FUNC_STATIC(QWIDGET_HASFOCUS)
 // bool hasMouseTracking() const
 HB_FUNC_STATIC(QWIDGET_HASMOUSETRACKING)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1184,7 +1186,7 @@ HB_FUNC_STATIC(QWIDGET_HASMOUSETRACKING)
 // int height() const
 HB_FUNC_STATIC(QWIDGET_HEIGHT)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1202,7 +1204,7 @@ HB_FUNC_STATIC(QWIDGET_HEIGHT)
 // virtual int heightForWidth(int w) const
 HB_FUNC_STATIC(QWIDGET_HEIGHTFORWIDTH)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1220,7 +1222,7 @@ HB_FUNC_STATIC(QWIDGET_HEIGHTFORWIDTH)
 // QInputContext *inputContext()
 HB_FUNC_STATIC(QWIDGET_INPUTCONTEXT)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1239,7 +1241,7 @@ HB_FUNC_STATIC(QWIDGET_INPUTCONTEXT)
 // Qt::InputMethodHints inputMethodHints() const
 HB_FUNC_STATIC(QWIDGET_INPUTMETHODHINTS)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1257,7 +1259,7 @@ HB_FUNC_STATIC(QWIDGET_INPUTMETHODHINTS)
 // virtual QVariant inputMethodQuery(Qt::InputMethodQuery query) const
 HB_FUNC_STATIC(QWIDGET_INPUTMETHODQUERY)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1276,7 +1278,7 @@ HB_FUNC_STATIC(QWIDGET_INPUTMETHODQUERY)
 // void insertAction(QAction *before, QAction *action)
 HB_FUNC_STATIC(QWIDGET_INSERTACTION)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1296,7 +1298,7 @@ HB_FUNC_STATIC(QWIDGET_INSERTACTION)
 // void insertActions(QAction *before, QList<QAction *> actions)
 HB_FUNC_STATIC(QWIDGET_INSERTACTIONS)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1322,7 +1324,7 @@ HB_FUNC_STATIC(QWIDGET_INSERTACTIONS)
 // bool isActiveWindow() const
 HB_FUNC_STATIC(QWIDGET_ISACTIVEWINDOW)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1340,7 +1342,7 @@ HB_FUNC_STATIC(QWIDGET_ISACTIVEWINDOW)
 // bool isAncestorOf(const QWidget *child) const
 HB_FUNC_STATIC(QWIDGET_ISANCESTOROF)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1358,7 +1360,7 @@ HB_FUNC_STATIC(QWIDGET_ISANCESTOROF)
 // bool isEnabled() const
 HB_FUNC_STATIC(QWIDGET_ISENABLED)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1376,7 +1378,7 @@ HB_FUNC_STATIC(QWIDGET_ISENABLED)
 // bool isEnabledTo(QWidget *ancestor) const
 HB_FUNC_STATIC(QWIDGET_ISENABLEDTO)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1394,7 +1396,7 @@ HB_FUNC_STATIC(QWIDGET_ISENABLEDTO)
 // bool isFullScreen() const
 HB_FUNC_STATIC(QWIDGET_ISFULLSCREEN)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1412,7 +1414,7 @@ HB_FUNC_STATIC(QWIDGET_ISFULLSCREEN)
 // bool isHidden() const
 HB_FUNC_STATIC(QWIDGET_ISHIDDEN)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1430,7 +1432,7 @@ HB_FUNC_STATIC(QWIDGET_ISHIDDEN)
 // bool isMaximized() const
 HB_FUNC_STATIC(QWIDGET_ISMAXIMIZED)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1448,7 +1450,7 @@ HB_FUNC_STATIC(QWIDGET_ISMAXIMIZED)
 // bool isMinimized() const
 HB_FUNC_STATIC(QWIDGET_ISMINIMIZED)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1466,7 +1468,7 @@ HB_FUNC_STATIC(QWIDGET_ISMINIMIZED)
 // bool isModal() const
 HB_FUNC_STATIC(QWIDGET_ISMODAL)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1484,7 +1486,7 @@ HB_FUNC_STATIC(QWIDGET_ISMODAL)
 // bool isVisible() const
 HB_FUNC_STATIC(QWIDGET_ISVISIBLE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1502,7 +1504,7 @@ HB_FUNC_STATIC(QWIDGET_ISVISIBLE)
 // bool isVisibleTo(QWidget *ancestor) const
 HB_FUNC_STATIC(QWIDGET_ISVISIBLETO)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1520,7 +1522,7 @@ HB_FUNC_STATIC(QWIDGET_ISVISIBLETO)
 // bool isWindow() const
 HB_FUNC_STATIC(QWIDGET_ISWINDOW)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1538,7 +1540,7 @@ HB_FUNC_STATIC(QWIDGET_ISWINDOW)
 // bool isWindowModified() const
 HB_FUNC_STATIC(QWIDGET_ISWINDOWMODIFIED)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1556,7 +1558,7 @@ HB_FUNC_STATIC(QWIDGET_ISWINDOWMODIFIED)
 // QLayout *layout() const
 HB_FUNC_STATIC(QWIDGET_LAYOUT)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1575,7 +1577,7 @@ HB_FUNC_STATIC(QWIDGET_LAYOUT)
 // Qt::LayoutDirection layoutDirection() const
 HB_FUNC_STATIC(QWIDGET_LAYOUTDIRECTION)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1593,7 +1595,7 @@ HB_FUNC_STATIC(QWIDGET_LAYOUTDIRECTION)
 // QLocale locale() const
 HB_FUNC_STATIC(QWIDGET_LOCALE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1612,7 +1614,7 @@ HB_FUNC_STATIC(QWIDGET_LOCALE)
 // QPoint mapFrom(QWidget *parent, const QPoint &pos) const
 HB_FUNC_STATIC(QWIDGET_MAPFROM)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1631,7 +1633,7 @@ HB_FUNC_STATIC(QWIDGET_MAPFROM)
 // QPoint mapFromGlobal(const QPoint &pos) const
 HB_FUNC_STATIC(QWIDGET_MAPFROMGLOBAL)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1650,7 +1652,7 @@ HB_FUNC_STATIC(QWIDGET_MAPFROMGLOBAL)
 // QPoint mapFromParent(const QPoint &pos) const
 HB_FUNC_STATIC(QWIDGET_MAPFROMPARENT)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1669,7 +1671,7 @@ HB_FUNC_STATIC(QWIDGET_MAPFROMPARENT)
 // QPoint mapTo(QWidget *parent, const QPoint &pos) const
 HB_FUNC_STATIC(QWIDGET_MAPTO)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1688,7 +1690,7 @@ HB_FUNC_STATIC(QWIDGET_MAPTO)
 // QPoint mapToGlobal(const QPoint &pos) const
 HB_FUNC_STATIC(QWIDGET_MAPTOGLOBAL)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1707,7 +1709,7 @@ HB_FUNC_STATIC(QWIDGET_MAPTOGLOBAL)
 // QPoint mapToParent(const QPoint &pos) const
 HB_FUNC_STATIC(QWIDGET_MAPTOPARENT)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1726,7 +1728,7 @@ HB_FUNC_STATIC(QWIDGET_MAPTOPARENT)
 // QRegion mask() const
 HB_FUNC_STATIC(QWIDGET_MASK)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1745,7 +1747,7 @@ HB_FUNC_STATIC(QWIDGET_MASK)
 // int maximumHeight() const
 HB_FUNC_STATIC(QWIDGET_MAXIMUMHEIGHT)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1763,7 +1765,7 @@ HB_FUNC_STATIC(QWIDGET_MAXIMUMHEIGHT)
 // QSize maximumSize() const
 HB_FUNC_STATIC(QWIDGET_MAXIMUMSIZE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1782,7 +1784,7 @@ HB_FUNC_STATIC(QWIDGET_MAXIMUMSIZE)
 // int maximumWidth() const
 HB_FUNC_STATIC(QWIDGET_MAXIMUMWIDTH)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1800,7 +1802,7 @@ HB_FUNC_STATIC(QWIDGET_MAXIMUMWIDTH)
 // int minimumHeight() const
 HB_FUNC_STATIC(QWIDGET_MINIMUMHEIGHT)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1818,7 +1820,7 @@ HB_FUNC_STATIC(QWIDGET_MINIMUMHEIGHT)
 // QSize minimumSize() const
 HB_FUNC_STATIC(QWIDGET_MINIMUMSIZE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1837,7 +1839,7 @@ HB_FUNC_STATIC(QWIDGET_MINIMUMSIZE)
 // virtual QSize minimumSizeHint() const
 HB_FUNC_STATIC(QWIDGET_MINIMUMSIZEHINT)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1856,7 +1858,7 @@ HB_FUNC_STATIC(QWIDGET_MINIMUMSIZEHINT)
 // int minimumWidth() const
 HB_FUNC_STATIC(QWIDGET_MINIMUMWIDTH)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1875,7 +1877,7 @@ HB_FUNC_STATIC(QWIDGET_MOVE)
 {
   if (ISNUMPAR(1) && ISQPOINT(1)) {
     // void move(const QPoint &)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->move(*PQPOINT(1));
@@ -1884,7 +1886,7 @@ HB_FUNC_STATIC(QWIDGET_MOVE)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void move(int x, int y)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->move(PINT(1), PINT(2));
@@ -1899,7 +1901,7 @@ HB_FUNC_STATIC(QWIDGET_MOVE)
 // QWidget *nativeParentWidget() const
 HB_FUNC_STATIC(QWIDGET_NATIVEPARENTWIDGET)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1918,7 +1920,7 @@ HB_FUNC_STATIC(QWIDGET_NATIVEPARENTWIDGET)
 // QWidget *nextInFocusChain() const
 HB_FUNC_STATIC(QWIDGET_NEXTINFOCUSCHAIN)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1937,7 +1939,7 @@ HB_FUNC_STATIC(QWIDGET_NEXTINFOCUSCHAIN)
 // QRect normalGeometry() const
 HB_FUNC_STATIC(QWIDGET_NORMALGEOMETRY)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1956,7 +1958,7 @@ HB_FUNC_STATIC(QWIDGET_NORMALGEOMETRY)
 // void overrideWindowFlags(Qt::WindowFlags flags)
 HB_FUNC_STATIC(QWIDGET_OVERRIDEWINDOWFLAGS)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1976,7 +1978,7 @@ HB_FUNC_STATIC(QWIDGET_OVERRIDEWINDOWFLAGS)
 // const QPalette &palette() const
 HB_FUNC_STATIC(QWIDGET_PALETTE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1995,7 +1997,7 @@ HB_FUNC_STATIC(QWIDGET_PALETTE)
 // QWidget *parentWidget() const
 HB_FUNC_STATIC(QWIDGET_PARENTWIDGET)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2014,7 +2016,7 @@ HB_FUNC_STATIC(QWIDGET_PARENTWIDGET)
 // QPoint pos() const
 HB_FUNC_STATIC(QWIDGET_POS)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2033,7 +2035,7 @@ HB_FUNC_STATIC(QWIDGET_POS)
 // QWidget *previousInFocusChain() const
 HB_FUNC_STATIC(QWIDGET_PREVIOUSINFOCUSCHAIN)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2052,7 +2054,7 @@ HB_FUNC_STATIC(QWIDGET_PREVIOUSINFOCUSCHAIN)
 // QRect rect() const
 HB_FUNC_STATIC(QWIDGET_RECT)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2071,7 +2073,7 @@ HB_FUNC_STATIC(QWIDGET_RECT)
 // void releaseKeyboard()
 HB_FUNC_STATIC(QWIDGET_RELEASEKEYBOARD)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2091,7 +2093,7 @@ HB_FUNC_STATIC(QWIDGET_RELEASEKEYBOARD)
 // void releaseMouse()
 HB_FUNC_STATIC(QWIDGET_RELEASEMOUSE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2111,7 +2113,7 @@ HB_FUNC_STATIC(QWIDGET_RELEASEMOUSE)
 // void releaseShortcut(int id)
 HB_FUNC_STATIC(QWIDGET_RELEASESHORTCUT)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2131,7 +2133,7 @@ HB_FUNC_STATIC(QWIDGET_RELEASESHORTCUT)
 // void removeAction(QAction *action)
 HB_FUNC_STATIC(QWIDGET_REMOVEACTION)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2154,7 +2156,7 @@ HB_FUNC_STATIC(QWIDGET_RENDER)
       ISNUMORNIL(4)) {
     // void render(QPaintDevice *target, const QPoint &targetOffset = QPoint(), const QRegion &sourceRegion = QRegion(),
     // QWidget::RenderFlags renderFlags = QWidget::RenderFlags(QWidget::DrawWindowBackground | QWidget::DrawChildren))
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->render(PQPAINTDEVICE(1), HB_ISNIL(2) ? QPoint() : *static_cast<QPoint *>(Qt4xHb::itemGetPtr(2)),
@@ -2169,7 +2171,7 @@ HB_FUNC_STATIC(QWIDGET_RENDER)
              ISNUMORNIL(4)) {
     // void render(QPainter *painter, const QPoint &targetOffset = QPoint(), const QRegion &sourceRegion = QRegion(),
     // QWidget::RenderFlags renderFlags = QWidget::RenderFlags(QWidget::DrawWindowBackground | QWidget::DrawChildren))
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->render(PQPAINTER(1), HB_ISNIL(2) ? QPoint() : *static_cast<QPoint *>(Qt4xHb::itemGetPtr(2)),
@@ -2189,7 +2191,7 @@ HB_FUNC_STATIC(QWIDGET_REPAINT)
 {
   if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // void repaint(int x, int y, int w, int h)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->repaint(PINT(1), PINT(2), PINT(3), PINT(4));
@@ -2198,7 +2200,7 @@ HB_FUNC_STATIC(QWIDGET_REPAINT)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && ISQRECT(1)) {
     // void repaint(const QRect &rect)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->repaint(*PQRECT(1));
@@ -2207,7 +2209,7 @@ HB_FUNC_STATIC(QWIDGET_REPAINT)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && ISQREGION(1)) {
     // void repaint(const QRegion &rgn)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->repaint(*PQREGION(1));
@@ -2223,7 +2225,7 @@ HB_FUNC_STATIC(QWIDGET_RESIZE)
 {
   if (ISNUMPAR(1) && ISQSIZE(1)) {
     // void resize(const QSize &)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->resize(*PQSIZE(1));
@@ -2232,7 +2234,7 @@ HB_FUNC_STATIC(QWIDGET_RESIZE)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void resize(int w, int h)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->resize(PINT(1), PINT(2));
@@ -2247,7 +2249,7 @@ HB_FUNC_STATIC(QWIDGET_RESIZE)
 // bool restoreGeometry(const QByteArray &geometry)
 HB_FUNC_STATIC(QWIDGET_RESTOREGEOMETRY)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2265,7 +2267,7 @@ HB_FUNC_STATIC(QWIDGET_RESTOREGEOMETRY)
 // QByteArray saveGeometry() const
 HB_FUNC_STATIC(QWIDGET_SAVEGEOMETRY)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2285,7 +2287,7 @@ HB_FUNC_STATIC(QWIDGET_SCROLL)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void scroll(int dx, int dy)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->scroll(PINT(1), PINT(2));
@@ -2294,7 +2296,7 @@ HB_FUNC_STATIC(QWIDGET_SCROLL)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQRECT(3)) {
     // void scroll(int dx, int dy, const QRect &r)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->scroll(PINT(1), PINT(2), *PQRECT(3));
@@ -2309,7 +2311,7 @@ HB_FUNC_STATIC(QWIDGET_SCROLL)
 // void setAcceptDrops(bool on)
 HB_FUNC_STATIC(QWIDGET_SETACCEPTDROPS)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2329,7 +2331,7 @@ HB_FUNC_STATIC(QWIDGET_SETACCEPTDROPS)
 // void setAccessibleDescription(const QString &description)
 HB_FUNC_STATIC(QWIDGET_SETACCESSIBLEDESCRIPTION)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2349,7 +2351,7 @@ HB_FUNC_STATIC(QWIDGET_SETACCESSIBLEDESCRIPTION)
 // void setAccessibleName(const QString &name)
 HB_FUNC_STATIC(QWIDGET_SETACCESSIBLENAME)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2369,7 +2371,7 @@ HB_FUNC_STATIC(QWIDGET_SETACCESSIBLENAME)
 // void setAttribute(Qt::WidgetAttribute attribute, bool on = true)
 HB_FUNC_STATIC(QWIDGET_SETATTRIBUTE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2389,7 +2391,7 @@ HB_FUNC_STATIC(QWIDGET_SETATTRIBUTE)
 // void setAutoFillBackground(bool enabled)
 HB_FUNC_STATIC(QWIDGET_SETAUTOFILLBACKGROUND)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2409,7 +2411,7 @@ HB_FUNC_STATIC(QWIDGET_SETAUTOFILLBACKGROUND)
 // void setBackgroundRole(QPalette::ColorRole role)
 HB_FUNC_STATIC(QWIDGET_SETBACKGROUNDROLE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2430,7 +2432,7 @@ HB_FUNC_STATIC(QWIDGET_SETBASESIZE)
 {
   if (ISNUMPAR(1) && ISQSIZE(1)) {
     // void setBaseSize(const QSize &)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setBaseSize(*PQSIZE(1));
@@ -2439,7 +2441,7 @@ HB_FUNC_STATIC(QWIDGET_SETBASESIZE)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setBaseSize(int basew, int baseh)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setBaseSize(PINT(1), PINT(2));
@@ -2455,7 +2457,7 @@ HB_FUNC_STATIC(QWIDGET_SETCONTENTSMARGINS)
 {
   if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // void setContentsMargins(int left, int top, int right, int bottom)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setContentsMargins(PINT(1), PINT(2), PINT(3), PINT(4));
@@ -2464,7 +2466,7 @@ HB_FUNC_STATIC(QWIDGET_SETCONTENTSMARGINS)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && ISQMARGINS(1)) {
     // void setContentsMargins(const QMargins &margins)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setContentsMargins(*PQMARGINS(1));
@@ -2479,7 +2481,7 @@ HB_FUNC_STATIC(QWIDGET_SETCONTENTSMARGINS)
 // void setContextMenuPolicy(Qt::ContextMenuPolicy policy)
 HB_FUNC_STATIC(QWIDGET_SETCONTEXTMENUPOLICY)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2499,7 +2501,7 @@ HB_FUNC_STATIC(QWIDGET_SETCONTEXTMENUPOLICY)
 // void setCursor(const QCursor &)
 HB_FUNC_STATIC(QWIDGET_SETCURSOR)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2519,7 +2521,7 @@ HB_FUNC_STATIC(QWIDGET_SETCURSOR)
 // void setFixedHeight(int h)
 HB_FUNC_STATIC(QWIDGET_SETFIXEDHEIGHT)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2540,7 +2542,7 @@ HB_FUNC_STATIC(QWIDGET_SETFIXEDSIZE)
 {
   if (ISNUMPAR(1) && ISQSIZE(1)) {
     // void setFixedSize(const QSize &s)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setFixedSize(*PQSIZE(1));
@@ -2549,7 +2551,7 @@ HB_FUNC_STATIC(QWIDGET_SETFIXEDSIZE)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setFixedSize(int w, int h)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setFixedSize(PINT(1), PINT(2));
@@ -2564,7 +2566,7 @@ HB_FUNC_STATIC(QWIDGET_SETFIXEDSIZE)
 // void setFixedWidth(int w)
 HB_FUNC_STATIC(QWIDGET_SETFIXEDWIDTH)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2585,7 +2587,7 @@ HB_FUNC_STATIC(QWIDGET_SETFOCUS)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void setFocus(Qt::FocusReason reason)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setFocus((Qt::FocusReason)hb_parni(1));
@@ -2594,7 +2596,7 @@ HB_FUNC_STATIC(QWIDGET_SETFOCUS)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(0)) {
     // void setFocus()
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setFocus();
@@ -2609,7 +2611,7 @@ HB_FUNC_STATIC(QWIDGET_SETFOCUS)
 // void setFocusPolicy(Qt::FocusPolicy policy)
 HB_FUNC_STATIC(QWIDGET_SETFOCUSPOLICY)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2629,7 +2631,7 @@ HB_FUNC_STATIC(QWIDGET_SETFOCUSPOLICY)
 // void setFocusProxy(QWidget *w)
 HB_FUNC_STATIC(QWIDGET_SETFOCUSPROXY)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2649,7 +2651,7 @@ HB_FUNC_STATIC(QWIDGET_SETFOCUSPROXY)
 // void setFont(const QFont &)
 HB_FUNC_STATIC(QWIDGET_SETFONT)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2669,7 +2671,7 @@ HB_FUNC_STATIC(QWIDGET_SETFONT)
 // void setForegroundRole(QPalette::ColorRole role)
 HB_FUNC_STATIC(QWIDGET_SETFOREGROUNDROLE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2690,7 +2692,7 @@ HB_FUNC_STATIC(QWIDGET_SETGEOMETRY)
 {
   if (ISNUMPAR(1) && ISQRECT(1)) {
     // void setGeometry(const QRect &)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setGeometry(*PQRECT(1));
@@ -2699,7 +2701,7 @@ HB_FUNC_STATIC(QWIDGET_SETGEOMETRY)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // void setGeometry(int x, int y, int w, int h)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setGeometry(PINT(1), PINT(2), PINT(3), PINT(4));
@@ -2714,7 +2716,7 @@ HB_FUNC_STATIC(QWIDGET_SETGEOMETRY)
 // void setGraphicsEffect(QGraphicsEffect *effect)
 HB_FUNC_STATIC(QWIDGET_SETGRAPHICSEFFECT)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2734,7 +2736,7 @@ HB_FUNC_STATIC(QWIDGET_SETGRAPHICSEFFECT)
 // void setInputContext(QInputContext *context)
 HB_FUNC_STATIC(QWIDGET_SETINPUTCONTEXT)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2754,7 +2756,7 @@ HB_FUNC_STATIC(QWIDGET_SETINPUTCONTEXT)
 // void setInputMethodHints(Qt::InputMethodHints hints)
 HB_FUNC_STATIC(QWIDGET_SETINPUTMETHODHINTS)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2774,7 +2776,7 @@ HB_FUNC_STATIC(QWIDGET_SETINPUTMETHODHINTS)
 // void setLayout(QLayout *layout)
 HB_FUNC_STATIC(QWIDGET_SETLAYOUT)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2794,7 +2796,7 @@ HB_FUNC_STATIC(QWIDGET_SETLAYOUT)
 // void setLayoutDirection(Qt::LayoutDirection direction)
 HB_FUNC_STATIC(QWIDGET_SETLAYOUTDIRECTION)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2814,7 +2816,7 @@ HB_FUNC_STATIC(QWIDGET_SETLAYOUTDIRECTION)
 // void setLocale(const QLocale &locale)
 HB_FUNC_STATIC(QWIDGET_SETLOCALE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2835,7 +2837,7 @@ HB_FUNC_STATIC(QWIDGET_SETMASK)
 {
   if (ISNUMPAR(1) && ISQBITMAP(1)) {
     // void setMask(const QBitmap &bitmap)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setMask(*PQBITMAP(1));
@@ -2844,7 +2846,7 @@ HB_FUNC_STATIC(QWIDGET_SETMASK)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && ISQREGION(1)) {
     // void setMask(const QRegion &region)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setMask(*PQREGION(1));
@@ -2859,7 +2861,7 @@ HB_FUNC_STATIC(QWIDGET_SETMASK)
 // void setMaximumHeight(int maxh)
 HB_FUNC_STATIC(QWIDGET_SETMAXIMUMHEIGHT)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2880,7 +2882,7 @@ HB_FUNC_STATIC(QWIDGET_SETMAXIMUMSIZE)
 {
   if (ISNUMPAR(1) && ISQSIZE(1)) {
     // void setMaximumSize(const QSize &)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setMaximumSize(*PQSIZE(1));
@@ -2889,7 +2891,7 @@ HB_FUNC_STATIC(QWIDGET_SETMAXIMUMSIZE)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setMaximumSize(int maxw, int maxh)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setMaximumSize(PINT(1), PINT(2));
@@ -2904,7 +2906,7 @@ HB_FUNC_STATIC(QWIDGET_SETMAXIMUMSIZE)
 // void setMaximumWidth(int maxw)
 HB_FUNC_STATIC(QWIDGET_SETMAXIMUMWIDTH)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2924,7 +2926,7 @@ HB_FUNC_STATIC(QWIDGET_SETMAXIMUMWIDTH)
 // void setMinimumHeight(int minh)
 HB_FUNC_STATIC(QWIDGET_SETMINIMUMHEIGHT)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2945,7 +2947,7 @@ HB_FUNC_STATIC(QWIDGET_SETMINIMUMSIZE)
 {
   if (ISNUMPAR(1) && ISQSIZE(1)) {
     // void setMinimumSize(const QSize &)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setMinimumSize(*PQSIZE(1));
@@ -2954,7 +2956,7 @@ HB_FUNC_STATIC(QWIDGET_SETMINIMUMSIZE)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setMinimumSize(int minw, int minh)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setMinimumSize(PINT(1), PINT(2));
@@ -2969,7 +2971,7 @@ HB_FUNC_STATIC(QWIDGET_SETMINIMUMSIZE)
 // void setMinimumWidth(int minw)
 HB_FUNC_STATIC(QWIDGET_SETMINIMUMWIDTH)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2989,7 +2991,7 @@ HB_FUNC_STATIC(QWIDGET_SETMINIMUMWIDTH)
 // void setMouseTracking(bool enable)
 HB_FUNC_STATIC(QWIDGET_SETMOUSETRACKING)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3009,7 +3011,7 @@ HB_FUNC_STATIC(QWIDGET_SETMOUSETRACKING)
 // void setPalette(const QPalette &)
 HB_FUNC_STATIC(QWIDGET_SETPALETTE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3030,7 +3032,7 @@ HB_FUNC_STATIC(QWIDGET_SETPARENT)
 {
   if (ISNUMPAR(1) && ISQWIDGET(1)) {
     // void setParent(QWidget *parent)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setParent(PQWIDGET(1));
@@ -3039,7 +3041,7 @@ HB_FUNC_STATIC(QWIDGET_SETPARENT)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && ISQWIDGET(1) && HB_ISNUM(2)) {
     // void setParent(QWidget *parent, Qt::WindowFlags f)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setParent(PQWIDGET(1), (Qt::WindowFlags)hb_parni(2));
@@ -3054,7 +3056,7 @@ HB_FUNC_STATIC(QWIDGET_SETPARENT)
 // void setShortcutAutoRepeat(int id, bool enable = true)
 HB_FUNC_STATIC(QWIDGET_SETSHORTCUTAUTOREPEAT)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3074,7 +3076,7 @@ HB_FUNC_STATIC(QWIDGET_SETSHORTCUTAUTOREPEAT)
 // void setShortcutEnabled(int id, bool enable = true)
 HB_FUNC_STATIC(QWIDGET_SETSHORTCUTENABLED)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3095,7 +3097,7 @@ HB_FUNC_STATIC(QWIDGET_SETSIZEINCREMENT)
 {
   if (ISNUMPAR(1) && ISQSIZE(1)) {
     // void setSizeIncrement(const QSize &)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setSizeIncrement(*PQSIZE(1));
@@ -3104,7 +3106,7 @@ HB_FUNC_STATIC(QWIDGET_SETSIZEINCREMENT)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setSizeIncrement(int w, int h)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setSizeIncrement(PINT(1), PINT(2));
@@ -3120,7 +3122,7 @@ HB_FUNC_STATIC(QWIDGET_SETSIZEPOLICY)
 {
   if (ISNUMPAR(1) && ISQSIZEPOLICY(1)) {
     // void setSizePolicy(QSizePolicy &)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setSizePolicy(*PQSIZEPOLICY(1));
@@ -3129,7 +3131,7 @@ HB_FUNC_STATIC(QWIDGET_SETSIZEPOLICY)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setSizePolicy(QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->setSizePolicy((QSizePolicy::Policy)hb_parni(1), (QSizePolicy::Policy)hb_parni(2));
@@ -3144,7 +3146,7 @@ HB_FUNC_STATIC(QWIDGET_SETSIZEPOLICY)
 // void setStatusTip(const QString &)
 HB_FUNC_STATIC(QWIDGET_SETSTATUSTIP)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3164,7 +3166,7 @@ HB_FUNC_STATIC(QWIDGET_SETSTATUSTIP)
 // void setStyle(QStyle *style)
 HB_FUNC_STATIC(QWIDGET_SETSTYLE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3184,7 +3186,7 @@ HB_FUNC_STATIC(QWIDGET_SETSTYLE)
 // void setToolTip(const QString &)
 HB_FUNC_STATIC(QWIDGET_SETTOOLTIP)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3204,7 +3206,7 @@ HB_FUNC_STATIC(QWIDGET_SETTOOLTIP)
 // void setUpdatesEnabled(bool enable)
 HB_FUNC_STATIC(QWIDGET_SETUPDATESENABLED)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3224,7 +3226,7 @@ HB_FUNC_STATIC(QWIDGET_SETUPDATESENABLED)
 // void setWhatsThis(const QString &)
 HB_FUNC_STATIC(QWIDGET_SETWHATSTHIS)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3244,7 +3246,7 @@ HB_FUNC_STATIC(QWIDGET_SETWHATSTHIS)
 // void setWindowFilePath(const QString &filePath)
 HB_FUNC_STATIC(QWIDGET_SETWINDOWFILEPATH)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3264,7 +3266,7 @@ HB_FUNC_STATIC(QWIDGET_SETWINDOWFILEPATH)
 // void setWindowFlags(Qt::WindowFlags type)
 HB_FUNC_STATIC(QWIDGET_SETWINDOWFLAGS)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3284,7 +3286,7 @@ HB_FUNC_STATIC(QWIDGET_SETWINDOWFLAGS)
 // void setWindowIcon(const QIcon &icon)
 HB_FUNC_STATIC(QWIDGET_SETWINDOWICON)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3304,7 +3306,7 @@ HB_FUNC_STATIC(QWIDGET_SETWINDOWICON)
 // void setWindowIconText(const QString &)
 HB_FUNC_STATIC(QWIDGET_SETWINDOWICONTEXT)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3324,7 +3326,7 @@ HB_FUNC_STATIC(QWIDGET_SETWINDOWICONTEXT)
 // void setWindowModality(Qt::WindowModality windowModality)
 HB_FUNC_STATIC(QWIDGET_SETWINDOWMODALITY)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3344,7 +3346,7 @@ HB_FUNC_STATIC(QWIDGET_SETWINDOWMODALITY)
 // void setWindowOpacity(qreal level)
 HB_FUNC_STATIC(QWIDGET_SETWINDOWOPACITY)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3364,7 +3366,7 @@ HB_FUNC_STATIC(QWIDGET_SETWINDOWOPACITY)
 // void setWindowRole(const QString &role)
 HB_FUNC_STATIC(QWIDGET_SETWINDOWROLE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3384,7 +3386,7 @@ HB_FUNC_STATIC(QWIDGET_SETWINDOWROLE)
 // void setWindowState(Qt::WindowStates windowState)
 HB_FUNC_STATIC(QWIDGET_SETWINDOWSTATE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3404,7 +3406,7 @@ HB_FUNC_STATIC(QWIDGET_SETWINDOWSTATE)
 // QSize size() const
 HB_FUNC_STATIC(QWIDGET_SIZE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3423,7 +3425,7 @@ HB_FUNC_STATIC(QWIDGET_SIZE)
 // virtual QSize sizeHint() const
 HB_FUNC_STATIC(QWIDGET_SIZEHINT)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3442,7 +3444,7 @@ HB_FUNC_STATIC(QWIDGET_SIZEHINT)
 // QSize sizeIncrement() const
 HB_FUNC_STATIC(QWIDGET_SIZEINCREMENT)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3461,7 +3463,7 @@ HB_FUNC_STATIC(QWIDGET_SIZEINCREMENT)
 // QSizePolicy sizePolicy() const
 HB_FUNC_STATIC(QWIDGET_SIZEPOLICY)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3480,7 +3482,7 @@ HB_FUNC_STATIC(QWIDGET_SIZEPOLICY)
 // void stackUnder(QWidget *w)
 HB_FUNC_STATIC(QWIDGET_STACKUNDER)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3500,7 +3502,7 @@ HB_FUNC_STATIC(QWIDGET_STACKUNDER)
 // QString statusTip() const
 HB_FUNC_STATIC(QWIDGET_STATUSTIP)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3518,7 +3520,7 @@ HB_FUNC_STATIC(QWIDGET_STATUSTIP)
 // QStyle *style() const
 HB_FUNC_STATIC(QWIDGET_STYLE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3537,7 +3539,7 @@ HB_FUNC_STATIC(QWIDGET_STYLE)
 // QString styleSheet() const
 HB_FUNC_STATIC(QWIDGET_STYLESHEET)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3555,7 +3557,7 @@ HB_FUNC_STATIC(QWIDGET_STYLESHEET)
 // bool testAttribute(Qt::WidgetAttribute attribute) const
 HB_FUNC_STATIC(QWIDGET_TESTATTRIBUTE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3573,7 +3575,7 @@ HB_FUNC_STATIC(QWIDGET_TESTATTRIBUTE)
 // QString toolTip() const
 HB_FUNC_STATIC(QWIDGET_TOOLTIP)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3591,7 +3593,7 @@ HB_FUNC_STATIC(QWIDGET_TOOLTIP)
 // bool underMouse() const
 HB_FUNC_STATIC(QWIDGET_UNDERMOUSE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3609,7 +3611,7 @@ HB_FUNC_STATIC(QWIDGET_UNDERMOUSE)
 // void ungrabGesture(Qt::GestureType gesture)
 HB_FUNC_STATIC(QWIDGET_UNGRABGESTURE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3629,7 +3631,7 @@ HB_FUNC_STATIC(QWIDGET_UNGRABGESTURE)
 // void unsetCursor()
 HB_FUNC_STATIC(QWIDGET_UNSETCURSOR)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3649,7 +3651,7 @@ HB_FUNC_STATIC(QWIDGET_UNSETCURSOR)
 // void unsetLayoutDirection()
 HB_FUNC_STATIC(QWIDGET_UNSETLAYOUTDIRECTION)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3669,7 +3671,7 @@ HB_FUNC_STATIC(QWIDGET_UNSETLAYOUTDIRECTION)
 // void unsetLocale()
 HB_FUNC_STATIC(QWIDGET_UNSETLOCALE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3690,7 +3692,7 @@ HB_FUNC_STATIC(QWIDGET_UPDATE)
 {
   if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // void update(int x, int y, int w, int h)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->update(PINT(1), PINT(2), PINT(3), PINT(4));
@@ -3699,7 +3701,7 @@ HB_FUNC_STATIC(QWIDGET_UPDATE)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && ISQRECT(1)) {
     // void update(const QRect &rect)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->update(*PQRECT(1));
@@ -3708,7 +3710,7 @@ HB_FUNC_STATIC(QWIDGET_UPDATE)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && ISQREGION(1)) {
     // void update(const QRegion &rgn)
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->update(*PQREGION(1));
@@ -3717,7 +3719,7 @@ HB_FUNC_STATIC(QWIDGET_UPDATE)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(0)) {
     // void update()
-    QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->update();
@@ -3732,7 +3734,7 @@ HB_FUNC_STATIC(QWIDGET_UPDATE)
 // void updateGeometry()
 HB_FUNC_STATIC(QWIDGET_UPDATEGEOMETRY)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3752,7 +3754,7 @@ HB_FUNC_STATIC(QWIDGET_UPDATEGEOMETRY)
 // bool updatesEnabled() const
 HB_FUNC_STATIC(QWIDGET_UPDATESENABLED)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3770,7 +3772,7 @@ HB_FUNC_STATIC(QWIDGET_UPDATESENABLED)
 // QRegion visibleRegion() const
 HB_FUNC_STATIC(QWIDGET_VISIBLEREGION)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3789,7 +3791,7 @@ HB_FUNC_STATIC(QWIDGET_VISIBLEREGION)
 // QString whatsThis() const
 HB_FUNC_STATIC(QWIDGET_WHATSTHIS)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3807,7 +3809,7 @@ HB_FUNC_STATIC(QWIDGET_WHATSTHIS)
 // int width() const
 HB_FUNC_STATIC(QWIDGET_WIDTH)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3826,7 +3828,7 @@ HB_FUNC_STATIC(QWIDGET_WIDTH)
 HB_FUNC_STATIC(QWIDGET_WINID)
 {
 #ifdef Q_OS_WIN
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3844,7 +3846,7 @@ HB_FUNC_STATIC(QWIDGET_WINID)
 // QWidget *window() const
 HB_FUNC_STATIC(QWIDGET_WINDOW)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3863,7 +3865,7 @@ HB_FUNC_STATIC(QWIDGET_WINDOW)
 // QString windowFilePath() const
 HB_FUNC_STATIC(QWIDGET_WINDOWFILEPATH)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3881,7 +3883,7 @@ HB_FUNC_STATIC(QWIDGET_WINDOWFILEPATH)
 // Qt::WindowFlags windowFlags() const
 HB_FUNC_STATIC(QWIDGET_WINDOWFLAGS)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3899,7 +3901,7 @@ HB_FUNC_STATIC(QWIDGET_WINDOWFLAGS)
 // QIcon windowIcon() const
 HB_FUNC_STATIC(QWIDGET_WINDOWICON)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3918,7 +3920,7 @@ HB_FUNC_STATIC(QWIDGET_WINDOWICON)
 // QString windowIconText() const
 HB_FUNC_STATIC(QWIDGET_WINDOWICONTEXT)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3936,7 +3938,7 @@ HB_FUNC_STATIC(QWIDGET_WINDOWICONTEXT)
 // Qt::WindowModality windowModality() const
 HB_FUNC_STATIC(QWIDGET_WINDOWMODALITY)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3954,7 +3956,7 @@ HB_FUNC_STATIC(QWIDGET_WINDOWMODALITY)
 // qreal windowOpacity() const
 HB_FUNC_STATIC(QWIDGET_WINDOWOPACITY)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3972,7 +3974,7 @@ HB_FUNC_STATIC(QWIDGET_WINDOWOPACITY)
 // QString windowRole() const
 HB_FUNC_STATIC(QWIDGET_WINDOWROLE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3990,7 +3992,7 @@ HB_FUNC_STATIC(QWIDGET_WINDOWROLE)
 // Qt::WindowStates windowState() const
 HB_FUNC_STATIC(QWIDGET_WINDOWSTATE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -4008,7 +4010,7 @@ HB_FUNC_STATIC(QWIDGET_WINDOWSTATE)
 // QString windowTitle() const
 HB_FUNC_STATIC(QWIDGET_WINDOWTITLE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -4026,7 +4028,7 @@ HB_FUNC_STATIC(QWIDGET_WINDOWTITLE)
 // Qt::WindowType windowType() const
 HB_FUNC_STATIC(QWIDGET_WINDOWTYPE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -4044,7 +4046,7 @@ HB_FUNC_STATIC(QWIDGET_WINDOWTYPE)
 // int x() const
 HB_FUNC_STATIC(QWIDGET_X)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -4062,7 +4064,7 @@ HB_FUNC_STATIC(QWIDGET_X)
 // int y() const
 HB_FUNC_STATIC(QWIDGET_Y)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -4080,7 +4082,7 @@ HB_FUNC_STATIC(QWIDGET_Y)
 // virtual QPaintEngine *paintEngine() const
 HB_FUNC_STATIC(QWIDGET_PAINTENGINE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -4099,7 +4101,7 @@ HB_FUNC_STATIC(QWIDGET_PAINTENGINE)
 // bool close()
 HB_FUNC_STATIC(QWIDGET_CLOSE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -4117,7 +4119,7 @@ HB_FUNC_STATIC(QWIDGET_CLOSE)
 // void hide()
 HB_FUNC_STATIC(QWIDGET_HIDE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -4137,7 +4139,7 @@ HB_FUNC_STATIC(QWIDGET_HIDE)
 // void lower()
 HB_FUNC_STATIC(QWIDGET_LOWER)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -4157,7 +4159,7 @@ HB_FUNC_STATIC(QWIDGET_LOWER)
 // void raise()
 HB_FUNC_STATIC(QWIDGET_RAISE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -4177,7 +4179,7 @@ HB_FUNC_STATIC(QWIDGET_RAISE)
 // void setDisabled(bool disable)
 HB_FUNC_STATIC(QWIDGET_SETDISABLED)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -4197,7 +4199,7 @@ HB_FUNC_STATIC(QWIDGET_SETDISABLED)
 // void setEnabled(bool)
 HB_FUNC_STATIC(QWIDGET_SETENABLED)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -4217,7 +4219,7 @@ HB_FUNC_STATIC(QWIDGET_SETENABLED)
 // void setHidden(bool hidden)
 HB_FUNC_STATIC(QWIDGET_SETHIDDEN)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -4237,7 +4239,7 @@ HB_FUNC_STATIC(QWIDGET_SETHIDDEN)
 // void setStyleSheet(const QString &styleSheet)
 HB_FUNC_STATIC(QWIDGET_SETSTYLESHEET)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -4257,7 +4259,7 @@ HB_FUNC_STATIC(QWIDGET_SETSTYLESHEET)
 // virtual void setVisible(bool visible)
 HB_FUNC_STATIC(QWIDGET_SETVISIBLE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -4277,7 +4279,7 @@ HB_FUNC_STATIC(QWIDGET_SETVISIBLE)
 // void setWindowModified(bool)
 HB_FUNC_STATIC(QWIDGET_SETWINDOWMODIFIED)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -4297,7 +4299,7 @@ HB_FUNC_STATIC(QWIDGET_SETWINDOWMODIFIED)
 // void setWindowTitle(const QString &)
 HB_FUNC_STATIC(QWIDGET_SETWINDOWTITLE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -4317,7 +4319,7 @@ HB_FUNC_STATIC(QWIDGET_SETWINDOWTITLE)
 // void show()
 HB_FUNC_STATIC(QWIDGET_SHOW)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -4337,7 +4339,7 @@ HB_FUNC_STATIC(QWIDGET_SHOW)
 // void showFullScreen()
 HB_FUNC_STATIC(QWIDGET_SHOWFULLSCREEN)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -4357,7 +4359,7 @@ HB_FUNC_STATIC(QWIDGET_SHOWFULLSCREEN)
 // void showMaximized()
 HB_FUNC_STATIC(QWIDGET_SHOWMAXIMIZED)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -4377,7 +4379,7 @@ HB_FUNC_STATIC(QWIDGET_SHOWMAXIMIZED)
 // void showMinimized()
 HB_FUNC_STATIC(QWIDGET_SHOWMINIMIZED)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -4397,7 +4399,7 @@ HB_FUNC_STATIC(QWIDGET_SHOWMINIMIZED)
 // void showNormal()
 HB_FUNC_STATIC(QWIDGET_SHOWNORMAL)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -4421,7 +4423,7 @@ HB_FUNC_STATIC(QWIDGET_SHOWNORMAL)
 // int colorCount() const
 HB_FUNC_STATIC(QWIDGET_COLORCOUNT)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -4439,7 +4441,7 @@ HB_FUNC_STATIC(QWIDGET_COLORCOUNT)
 // int depth() const
 HB_FUNC_STATIC(QWIDGET_DEPTH)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -4457,7 +4459,7 @@ HB_FUNC_STATIC(QWIDGET_DEPTH)
 // int heightMM() const
 HB_FUNC_STATIC(QWIDGET_HEIGHTMM)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -4475,7 +4477,7 @@ HB_FUNC_STATIC(QWIDGET_HEIGHTMM)
 // int logicalDpiX() const
 HB_FUNC_STATIC(QWIDGET_LOGICALDPIX)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -4493,7 +4495,7 @@ HB_FUNC_STATIC(QWIDGET_LOGICALDPIX)
 // int logicalDpiY() const
 HB_FUNC_STATIC(QWIDGET_LOGICALDPIY)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -4511,7 +4513,7 @@ HB_FUNC_STATIC(QWIDGET_LOGICALDPIY)
 // int numColors() const
 HB_FUNC_STATIC(QWIDGET_NUMCOLORS)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -4529,7 +4531,7 @@ HB_FUNC_STATIC(QWIDGET_NUMCOLORS)
 // bool paintingActive() const
 HB_FUNC_STATIC(QWIDGET_PAINTINGACTIVE)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -4547,7 +4549,7 @@ HB_FUNC_STATIC(QWIDGET_PAINTINGACTIVE)
 // int physicalDpiX() const
 HB_FUNC_STATIC(QWIDGET_PHYSICALDPIX)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -4565,7 +4567,7 @@ HB_FUNC_STATIC(QWIDGET_PHYSICALDPIX)
 // int physicalDpiY() const
 HB_FUNC_STATIC(QWIDGET_PHYSICALDPIY)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -4583,7 +4585,7 @@ HB_FUNC_STATIC(QWIDGET_PHYSICALDPIY)
 // int widthMM() const
 HB_FUNC_STATIC(QWIDGET_WIDTHMM)
 {
-  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

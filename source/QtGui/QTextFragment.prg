@@ -57,6 +57,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QTextFragment *p = static_cast<QTextFragment *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QTEXTFRAGMENT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -74,7 +76,7 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_NEW)
 
 HB_FUNC_STATIC(QTEXTFRAGMENT_DELETE)
 {
-  QTextFragment *obj = static_cast<QTextFragment *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -90,7 +92,7 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_DELETE)
 // QTextCharFormat charFormat() const
 HB_FUNC_STATIC(QTEXTFRAGMENT_CHARFORMAT)
 {
-  QTextFragment *obj = static_cast<QTextFragment *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -109,7 +111,7 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_CHARFORMAT)
 // int charFormatIndex() const
 HB_FUNC_STATIC(QTEXTFRAGMENT_CHARFORMATINDEX)
 {
-  QTextFragment *obj = static_cast<QTextFragment *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -127,7 +129,7 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_CHARFORMATINDEX)
 // bool contains(int position) const
 HB_FUNC_STATIC(QTEXTFRAGMENT_CONTAINS)
 {
-  QTextFragment *obj = static_cast<QTextFragment *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -145,7 +147,7 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_CONTAINS)
 // QList<QGlyphRun> glyphRuns() const
 HB_FUNC_STATIC(QTEXTFRAGMENT_GLYPHRUNS)
 {
-  QTextFragment *obj = static_cast<QTextFragment *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -186,7 +188,7 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_GLYPHRUNS)
 // bool isValid() const
 HB_FUNC_STATIC(QTEXTFRAGMENT_ISVALID)
 {
-  QTextFragment *obj = static_cast<QTextFragment *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -204,7 +206,7 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_ISVALID)
 // int length() const
 HB_FUNC_STATIC(QTEXTFRAGMENT_LENGTH)
 {
-  QTextFragment *obj = static_cast<QTextFragment *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -222,7 +224,7 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_LENGTH)
 // int position() const
 HB_FUNC_STATIC(QTEXTFRAGMENT_POSITION)
 {
-  QTextFragment *obj = static_cast<QTextFragment *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -240,7 +242,7 @@ HB_FUNC_STATIC(QTEXTFRAGMENT_POSITION)
 // QString text() const
 HB_FUNC_STATIC(QTEXTFRAGMENT_TEXT)
 {
-  QTextFragment *obj = static_cast<QTextFragment *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

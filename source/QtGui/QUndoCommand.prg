@@ -55,6 +55,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QUndoCommand *p = static_cast<QUndoCommand *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QUNDOCOMMAND_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQUNDOCOMMAND(1) || HB_ISNIL(1))) {
@@ -73,7 +75,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_NEW)
 
 HB_FUNC_STATIC(QUNDOCOMMAND_DELETE)
 {
-  QUndoCommand *obj = static_cast<QUndoCommand *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -89,7 +91,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_DELETE)
 // const QUndoCommand *child(int index) const
 HB_FUNC_STATIC(QUNDOCOMMAND_CHILD)
 {
-  QUndoCommand *obj = static_cast<QUndoCommand *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -108,7 +110,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_CHILD)
 // int childCount() const
 HB_FUNC_STATIC(QUNDOCOMMAND_CHILDCOUNT)
 {
-  QUndoCommand *obj = static_cast<QUndoCommand *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -126,7 +128,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_CHILDCOUNT)
 // virtual int id() const
 HB_FUNC_STATIC(QUNDOCOMMAND_ID)
 {
-  QUndoCommand *obj = static_cast<QUndoCommand *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -144,7 +146,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_ID)
 // virtual bool mergeWith(const QUndoCommand *command)
 HB_FUNC_STATIC(QUNDOCOMMAND_MERGEWITH)
 {
-  QUndoCommand *obj = static_cast<QUndoCommand *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -162,7 +164,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_MERGEWITH)
 // virtual void redo()
 HB_FUNC_STATIC(QUNDOCOMMAND_REDO)
 {
-  QUndoCommand *obj = static_cast<QUndoCommand *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -182,7 +184,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_REDO)
 // void setText(const QString &text)
 HB_FUNC_STATIC(QUNDOCOMMAND_SETTEXT)
 {
-  QUndoCommand *obj = static_cast<QUndoCommand *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -202,7 +204,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_SETTEXT)
 // QString text() const
 HB_FUNC_STATIC(QUNDOCOMMAND_TEXT)
 {
-  QUndoCommand *obj = static_cast<QUndoCommand *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -220,7 +222,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_TEXT)
 // virtual void undo()
 HB_FUNC_STATIC(QUNDOCOMMAND_UNDO)
 {
-  QUndoCommand *obj = static_cast<QUndoCommand *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

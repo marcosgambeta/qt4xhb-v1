@@ -46,6 +46,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QWindowsMime *p = static_cast<QWindowsMime *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // static int registerMimeType(const QString &mime)
 HB_FUNC_STATIC(QWINDOWSMIME_REGISTERMIMETYPE)
 {

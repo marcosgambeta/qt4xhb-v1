@@ -84,6 +84,8 @@ RETURN
 #include <QtGui/QTextDocument>
 #include <QtGui/QTextList>
 
+#define GET_PTR_FROM_SELF(p) QTextBlock *p = static_cast<QTextBlock *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QTextBlock(const QTextBlock &other)
 HB_FUNC_STATIC(QTEXTBLOCK_NEW)
 {
@@ -97,7 +99,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_NEW)
 
 HB_FUNC_STATIC(QTEXTBLOCK_DELETE)
 {
-  QTextBlock *obj = static_cast<QTextBlock *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -113,7 +115,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_DELETE)
 // QTextBlockFormat blockFormat() const
 HB_FUNC_STATIC(QTEXTBLOCK_BLOCKFORMAT)
 {
-  QTextBlock *obj = static_cast<QTextBlock *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -132,7 +134,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_BLOCKFORMAT)
 // int blockFormatIndex() const
 HB_FUNC_STATIC(QTEXTBLOCK_BLOCKFORMATINDEX)
 {
-  QTextBlock *obj = static_cast<QTextBlock *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -150,7 +152,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_BLOCKFORMATINDEX)
 // int blockNumber() const
 HB_FUNC_STATIC(QTEXTBLOCK_BLOCKNUMBER)
 {
-  QTextBlock *obj = static_cast<QTextBlock *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -168,7 +170,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_BLOCKNUMBER)
 // QTextCharFormat charFormat() const
 HB_FUNC_STATIC(QTEXTBLOCK_CHARFORMAT)
 {
-  QTextBlock *obj = static_cast<QTextBlock *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -187,7 +189,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_CHARFORMAT)
 // int charFormatIndex() const
 HB_FUNC_STATIC(QTEXTBLOCK_CHARFORMATINDEX)
 {
-  QTextBlock *obj = static_cast<QTextBlock *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -205,7 +207,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_CHARFORMATINDEX)
 // void clearLayout()
 HB_FUNC_STATIC(QTEXTBLOCK_CLEARLAYOUT)
 {
-  QTextBlock *obj = static_cast<QTextBlock *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -225,7 +227,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_CLEARLAYOUT)
 // bool contains(int position) const
 HB_FUNC_STATIC(QTEXTBLOCK_CONTAINS)
 {
-  QTextBlock *obj = static_cast<QTextBlock *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -243,7 +245,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_CONTAINS)
 // const QTextDocument *document() const
 HB_FUNC_STATIC(QTEXTBLOCK_DOCUMENT)
 {
-  QTextBlock *obj = static_cast<QTextBlock *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -262,7 +264,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_DOCUMENT)
 // int firstLineNumber() const
 HB_FUNC_STATIC(QTEXTBLOCK_FIRSTLINENUMBER)
 {
-  QTextBlock *obj = static_cast<QTextBlock *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -280,7 +282,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_FIRSTLINENUMBER)
 // bool isValid() const
 HB_FUNC_STATIC(QTEXTBLOCK_ISVALID)
 {
-  QTextBlock *obj = static_cast<QTextBlock *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -298,7 +300,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_ISVALID)
 // bool isVisible() const
 HB_FUNC_STATIC(QTEXTBLOCK_ISVISIBLE)
 {
-  QTextBlock *obj = static_cast<QTextBlock *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -316,7 +318,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_ISVISIBLE)
 // QTextLayout *layout() const
 HB_FUNC_STATIC(QTEXTBLOCK_LAYOUT)
 {
-  QTextBlock *obj = static_cast<QTextBlock *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -335,7 +337,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_LAYOUT)
 // int length() const
 HB_FUNC_STATIC(QTEXTBLOCK_LENGTH)
 {
-  QTextBlock *obj = static_cast<QTextBlock *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -353,7 +355,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_LENGTH)
 // int lineCount() const
 HB_FUNC_STATIC(QTEXTBLOCK_LINECOUNT)
 {
-  QTextBlock *obj = static_cast<QTextBlock *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -371,7 +373,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_LINECOUNT)
 // QTextBlock next() const
 HB_FUNC_STATIC(QTEXTBLOCK_NEXT)
 {
-  QTextBlock *obj = static_cast<QTextBlock *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -390,7 +392,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_NEXT)
 // int position() const
 HB_FUNC_STATIC(QTEXTBLOCK_POSITION)
 {
-  QTextBlock *obj = static_cast<QTextBlock *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -408,7 +410,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_POSITION)
 // QTextBlock previous() const
 HB_FUNC_STATIC(QTEXTBLOCK_PREVIOUS)
 {
-  QTextBlock *obj = static_cast<QTextBlock *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -427,7 +429,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_PREVIOUS)
 // int revision() const
 HB_FUNC_STATIC(QTEXTBLOCK_REVISION)
 {
-  QTextBlock *obj = static_cast<QTextBlock *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -445,7 +447,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_REVISION)
 // void setLineCount(int count)
 HB_FUNC_STATIC(QTEXTBLOCK_SETLINECOUNT)
 {
-  QTextBlock *obj = static_cast<QTextBlock *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -465,7 +467,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_SETLINECOUNT)
 // void setRevision(int rev)
 HB_FUNC_STATIC(QTEXTBLOCK_SETREVISION)
 {
-  QTextBlock *obj = static_cast<QTextBlock *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -485,7 +487,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_SETREVISION)
 // void setUserData(QTextBlockUserData *data)
 HB_FUNC_STATIC(QTEXTBLOCK_SETUSERDATA)
 {
-  QTextBlock *obj = static_cast<QTextBlock *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -505,7 +507,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_SETUSERDATA)
 // void setUserState(int state)
 HB_FUNC_STATIC(QTEXTBLOCK_SETUSERSTATE)
 {
-  QTextBlock *obj = static_cast<QTextBlock *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -525,7 +527,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_SETUSERSTATE)
 // void setVisible(bool visible)
 HB_FUNC_STATIC(QTEXTBLOCK_SETVISIBLE)
 {
-  QTextBlock *obj = static_cast<QTextBlock *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -545,7 +547,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_SETVISIBLE)
 // QString text() const
 HB_FUNC_STATIC(QTEXTBLOCK_TEXT)
 {
-  QTextBlock *obj = static_cast<QTextBlock *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -563,7 +565,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_TEXT)
 // Qt::LayoutDirection textDirection() const
 HB_FUNC_STATIC(QTEXTBLOCK_TEXTDIRECTION)
 {
-  QTextBlock *obj = static_cast<QTextBlock *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -581,7 +583,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_TEXTDIRECTION)
 // QTextList *textList() const
 HB_FUNC_STATIC(QTEXTBLOCK_TEXTLIST)
 {
-  QTextBlock *obj = static_cast<QTextBlock *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -600,7 +602,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_TEXTLIST)
 // QTextBlockUserData *userData() const
 HB_FUNC_STATIC(QTEXTBLOCK_USERDATA)
 {
-  QTextBlock *obj = static_cast<QTextBlock *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -619,7 +621,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_USERDATA)
 // int userState() const
 HB_FUNC_STATIC(QTEXTBLOCK_USERSTATE)
 {
-  QTextBlock *obj = static_cast<QTextBlock *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
