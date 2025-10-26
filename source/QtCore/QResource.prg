@@ -64,7 +64,7 @@ RETURN
 // QResource(const QString &file = QString(), const QLocale &locale = QLocale())
 HB_FUNC_STATIC(QRESOURCE_NEW)
 {
-  if (ISBETWEEN(0, 2) && ISCHARORNIL(1) && (ISQLOCALE(2) || HB_ISNIL(2))) {
+  if (ISBETWEEN(0, 2) && ISCHARORNIL(1) && ISQLOCALEORNIL(2)) {
     QResource *obj = new QResource(OPQSTRING(1, QString()),
                                    HB_ISNIL(2) ? QLocale() : *static_cast<QLocale *>(Qt4xHb::itemGetPtr(2)));
     Qt4xHb::returnNewObject(obj, true);

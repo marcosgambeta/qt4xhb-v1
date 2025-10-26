@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QMETATYPE_ISREGISTERED)
 HB_FUNC_STATIC(QMETATYPE_CONSTRUCT)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISNUMPAR(2) && HB_ISNUM(1) && (HB_ISPOINTER(2) || HB_ISNIL(2))) {
+  if (ISNUMPAR(2) && HB_ISNUM(1) && ISPOINTERORNIL(2)) {
 #endif
     hb_retptr(
         static_cast<void *>(QMetaType::construct(PINT(1), HB_ISNIL(2) ? (const void *)0 : (const void *)hb_parptr(2))));
