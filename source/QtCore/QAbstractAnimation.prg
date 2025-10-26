@@ -64,9 +64,12 @@ RETURN
 
 #include <QtCore/QAnimationGroup>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QAbstractAnimation *p = qobject_cast<QAbstractAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QABSTRACTANIMATION_DELETE)
 {
-  QAbstractAnimation *obj = qobject_cast<QAbstractAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -84,7 +87,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_DELETE)
 // int currentLoop() const
 HB_FUNC_STATIC(QABSTRACTANIMATION_CURRENTLOOP)
 {
-  QAbstractAnimation *obj = qobject_cast<QAbstractAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -102,7 +105,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_CURRENTLOOP)
 // int currentLoopTime() const
 HB_FUNC_STATIC(QABSTRACTANIMATION_CURRENTLOOPTIME)
 {
-  QAbstractAnimation *obj = qobject_cast<QAbstractAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -120,7 +123,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_CURRENTLOOPTIME)
 // int currentTime() const
 HB_FUNC_STATIC(QABSTRACTANIMATION_CURRENTTIME)
 {
-  QAbstractAnimation *obj = qobject_cast<QAbstractAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -138,7 +141,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_CURRENTTIME)
 // QAbstractAnimation::Direction direction() const
 HB_FUNC_STATIC(QABSTRACTANIMATION_DIRECTION)
 {
-  QAbstractAnimation *obj = qobject_cast<QAbstractAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -156,7 +159,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_DIRECTION)
 // virtual int duration() const = 0
 HB_FUNC_STATIC(QABSTRACTANIMATION_DURATION)
 {
-  QAbstractAnimation *obj = qobject_cast<QAbstractAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -174,7 +177,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_DURATION)
 // QAnimationGroup *group() const
 HB_FUNC_STATIC(QABSTRACTANIMATION_GROUP)
 {
-  QAbstractAnimation *obj = qobject_cast<QAbstractAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -193,7 +196,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_GROUP)
 // int loopCount() const
 HB_FUNC_STATIC(QABSTRACTANIMATION_LOOPCOUNT)
 {
-  QAbstractAnimation *obj = qobject_cast<QAbstractAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -211,7 +214,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_LOOPCOUNT)
 // void setDirection(QAbstractAnimation::Direction direction)
 HB_FUNC_STATIC(QABSTRACTANIMATION_SETDIRECTION)
 {
-  QAbstractAnimation *obj = qobject_cast<QAbstractAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -231,7 +234,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_SETDIRECTION)
 // void setLoopCount(int loopCount)
 HB_FUNC_STATIC(QABSTRACTANIMATION_SETLOOPCOUNT)
 {
-  QAbstractAnimation *obj = qobject_cast<QAbstractAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -251,7 +254,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_SETLOOPCOUNT)
 // QAbstractAnimation::State state() const
 HB_FUNC_STATIC(QABSTRACTANIMATION_STATE)
 {
-  QAbstractAnimation *obj = qobject_cast<QAbstractAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -269,7 +272,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_STATE)
 // int totalDuration() const
 HB_FUNC_STATIC(QABSTRACTANIMATION_TOTALDURATION)
 {
-  QAbstractAnimation *obj = qobject_cast<QAbstractAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -287,7 +290,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_TOTALDURATION)
 // void pause()
 HB_FUNC_STATIC(QABSTRACTANIMATION_PAUSE)
 {
-  QAbstractAnimation *obj = qobject_cast<QAbstractAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -307,7 +310,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_PAUSE)
 // void resume()
 HB_FUNC_STATIC(QABSTRACTANIMATION_RESUME)
 {
-  QAbstractAnimation *obj = qobject_cast<QAbstractAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -327,7 +330,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_RESUME)
 // void setCurrentTime(int msecs)
 HB_FUNC_STATIC(QABSTRACTANIMATION_SETCURRENTTIME)
 {
-  QAbstractAnimation *obj = qobject_cast<QAbstractAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -347,7 +350,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_SETCURRENTTIME)
 // void setPaused(bool paused)
 HB_FUNC_STATIC(QABSTRACTANIMATION_SETPAUSED)
 {
-  QAbstractAnimation *obj = qobject_cast<QAbstractAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -367,7 +370,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_SETPAUSED)
 // void start(QAbstractAnimation::DeletionPolicy policy = QAbstractAnimation::KeepWhenStopped)
 HB_FUNC_STATIC(QABSTRACTANIMATION_START)
 {
-  QAbstractAnimation *obj = qobject_cast<QAbstractAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -388,7 +391,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_START)
 // void stop()
 HB_FUNC_STATIC(QABSTRACTANIMATION_STOP)
 {
-  QAbstractAnimation *obj = qobject_cast<QAbstractAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

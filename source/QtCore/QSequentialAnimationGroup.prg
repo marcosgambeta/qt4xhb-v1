@@ -50,6 +50,9 @@ RETURN
 
 #include <QtCore/QPauseAnimation>
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QSequentialAnimationGroup *p = qobject_cast<QSequentialAnimationGroup *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QSequentialAnimationGroup(QObject *parent = 0)
 HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_NEW)
 {
@@ -63,7 +66,7 @@ HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_NEW)
 
 HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_DELETE)
 {
-  QSequentialAnimationGroup *obj = qobject_cast<QSequentialAnimationGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -81,7 +84,7 @@ HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_DELETE)
 // QPauseAnimation *addPause(int msecs)
 HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_ADDPAUSE)
 {
-  QSequentialAnimationGroup *obj = qobject_cast<QSequentialAnimationGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -100,7 +103,7 @@ HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_ADDPAUSE)
 // QAbstractAnimation *currentAnimation() const
 HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_CURRENTANIMATION)
 {
-  QSequentialAnimationGroup *obj = qobject_cast<QSequentialAnimationGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -119,7 +122,7 @@ HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_CURRENTANIMATION)
 // QPauseAnimation *insertPause(int index, int msecs)
 HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_INSERTPAUSE)
 {
-  QSequentialAnimationGroup *obj = qobject_cast<QSequentialAnimationGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -138,7 +141,7 @@ HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_INSERTPAUSE)
 // virtual int duration() const
 HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_DURATION)
 {
-  QSequentialAnimationGroup *obj = qobject_cast<QSequentialAnimationGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

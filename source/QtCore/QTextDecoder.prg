@@ -48,6 +48,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QTextDecoder *p = static_cast<QTextDecoder *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QTEXTDECODER_NEW)
 {
   if (ISNUMPAR(1) && ISQTEXTCODEC(1)) {
@@ -65,7 +67,7 @@ HB_FUNC_STATIC(QTEXTDECODER_NEW)
 
 HB_FUNC_STATIC(QTEXTDECODER_DELETE)
 {
-  QTextDecoder *obj = static_cast<QTextDecoder *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -82,14 +84,14 @@ HB_FUNC_STATIC(QTEXTDECODER_TOUNICODE)
 {
   if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     // QString toUnicode(const char *chars, int len)
-    QTextDecoder *obj = static_cast<QTextDecoder *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RQSTRING(obj->toUnicode(PCONSTCHAR(1), PINT(2)));
     }
   } else if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3)) {
     // void toUnicode(QString *target, const char *chars, int len)
-    QTextDecoder *obj = static_cast<QTextDecoder *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->toUnicode(NULL, PCONSTCHAR(2), PINT(3));
@@ -98,7 +100,7 @@ HB_FUNC_STATIC(QTEXTDECODER_TOUNICODE)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     // QString toUnicode(const QByteArray &ba)
-    QTextDecoder *obj = static_cast<QTextDecoder *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RQSTRING(obj->toUnicode(*PQBYTEARRAY(1)));

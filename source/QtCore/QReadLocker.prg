@@ -51,6 +51,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QReadLocker *p = static_cast<QReadLocker *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QReadLocker(QReadWriteLock *lock)
 HB_FUNC_STATIC(QREADLOCKER_NEW)
 {
@@ -64,7 +66,7 @@ HB_FUNC_STATIC(QREADLOCKER_NEW)
 
 HB_FUNC_STATIC(QREADLOCKER_DELETE)
 {
-  QReadLocker *obj = static_cast<QReadLocker *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -80,7 +82,7 @@ HB_FUNC_STATIC(QREADLOCKER_DELETE)
 // QReadWriteLock *readWriteLock() const
 HB_FUNC_STATIC(QREADLOCKER_READWRITELOCK)
 {
-  QReadLocker *obj = static_cast<QReadLocker *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -99,7 +101,7 @@ HB_FUNC_STATIC(QREADLOCKER_READWRITELOCK)
 // void relock()
 HB_FUNC_STATIC(QREADLOCKER_RELOCK)
 {
-  QReadLocker *obj = static_cast<QReadLocker *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -119,7 +121,7 @@ HB_FUNC_STATIC(QREADLOCKER_RELOCK)
 // void unlock()
 HB_FUNC_STATIC(QREADLOCKER_UNLOCK)
 {
-  QReadLocker *obj = static_cast<QReadLocker *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -51,6 +51,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QThreadPool *p = qobject_cast<QThreadPool *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QThreadPool(QObject *parent = 0)
 HB_FUNC_STATIC(QTHREADPOOL_NEW)
 {
@@ -64,7 +66,7 @@ HB_FUNC_STATIC(QTHREADPOOL_NEW)
 
 HB_FUNC_STATIC(QTHREADPOOL_DELETE)
 {
-  QThreadPool *obj = qobject_cast<QThreadPool *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -82,7 +84,7 @@ HB_FUNC_STATIC(QTHREADPOOL_DELETE)
 // int activeThreadCount() const
 HB_FUNC_STATIC(QTHREADPOOL_ACTIVETHREADCOUNT)
 {
-  QThreadPool *obj = qobject_cast<QThreadPool *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -100,7 +102,7 @@ HB_FUNC_STATIC(QTHREADPOOL_ACTIVETHREADCOUNT)
 // int expiryTimeout() const
 HB_FUNC_STATIC(QTHREADPOOL_EXPIRYTIMEOUT)
 {
-  QThreadPool *obj = qobject_cast<QThreadPool *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -118,7 +120,7 @@ HB_FUNC_STATIC(QTHREADPOOL_EXPIRYTIMEOUT)
 // int maxThreadCount() const
 HB_FUNC_STATIC(QTHREADPOOL_MAXTHREADCOUNT)
 {
-  QThreadPool *obj = qobject_cast<QThreadPool *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -136,7 +138,7 @@ HB_FUNC_STATIC(QTHREADPOOL_MAXTHREADCOUNT)
 // void releaseThread()
 HB_FUNC_STATIC(QTHREADPOOL_RELEASETHREAD)
 {
-  QThreadPool *obj = qobject_cast<QThreadPool *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -156,7 +158,7 @@ HB_FUNC_STATIC(QTHREADPOOL_RELEASETHREAD)
 // void reserveThread()
 HB_FUNC_STATIC(QTHREADPOOL_RESERVETHREAD)
 {
-  QThreadPool *obj = qobject_cast<QThreadPool *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -176,7 +178,7 @@ HB_FUNC_STATIC(QTHREADPOOL_RESERVETHREAD)
 // void setExpiryTimeout(int expiryTimeout)
 HB_FUNC_STATIC(QTHREADPOOL_SETEXPIRYTIMEOUT)
 {
-  QThreadPool *obj = qobject_cast<QThreadPool *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -196,7 +198,7 @@ HB_FUNC_STATIC(QTHREADPOOL_SETEXPIRYTIMEOUT)
 // void setMaxThreadCount(int maxThreadCount)
 HB_FUNC_STATIC(QTHREADPOOL_SETMAXTHREADCOUNT)
 {
-  QThreadPool *obj = qobject_cast<QThreadPool *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -216,7 +218,7 @@ HB_FUNC_STATIC(QTHREADPOOL_SETMAXTHREADCOUNT)
 // void start(QRunnable *runnable, int priority = 0)
 HB_FUNC_STATIC(QTHREADPOOL_START)
 {
-  QThreadPool *obj = qobject_cast<QThreadPool *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -236,7 +238,7 @@ HB_FUNC_STATIC(QTHREADPOOL_START)
 // bool tryStart(QRunnable *runnable)
 HB_FUNC_STATIC(QTHREADPOOL_TRYSTART)
 {
-  QThreadPool *obj = qobject_cast<QThreadPool *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -255,7 +257,7 @@ HB_FUNC_STATIC(QTHREADPOOL_WAITFORDONE)
 {
   if (ISNUMPAR(0)) {
     // void waitForDone()
-    QThreadPool *obj = qobject_cast<QThreadPool *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->waitForDone();
@@ -264,7 +266,7 @@ HB_FUNC_STATIC(QTHREADPOOL_WAITFORDONE)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // bool waitForDone(int msecs)
-    QThreadPool *obj = qobject_cast<QThreadPool *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->waitForDone(PINT(1)));

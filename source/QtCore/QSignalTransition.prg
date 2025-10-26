@@ -46,6 +46,9 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QSignalTransition *p = qobject_cast<QSignalTransition *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QSIGNALTRANSITION_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQSTATE(1) || HB_ISNIL(1))) {
@@ -63,7 +66,7 @@ HB_FUNC_STATIC(QSIGNALTRANSITION_NEW)
 
 HB_FUNC_STATIC(QSIGNALTRANSITION_DELETE)
 {
-  QSignalTransition *obj = qobject_cast<QSignalTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -81,7 +84,7 @@ HB_FUNC_STATIC(QSIGNALTRANSITION_DELETE)
 // QObject *senderObject() const
 HB_FUNC_STATIC(QSIGNALTRANSITION_SENDEROBJECT)
 {
-  QSignalTransition *obj = qobject_cast<QSignalTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -100,7 +103,7 @@ HB_FUNC_STATIC(QSIGNALTRANSITION_SENDEROBJECT)
 // void setSenderObject(QObject *sender)
 HB_FUNC_STATIC(QSIGNALTRANSITION_SETSENDEROBJECT)
 {
-  QSignalTransition *obj = qobject_cast<QSignalTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -120,7 +123,7 @@ HB_FUNC_STATIC(QSIGNALTRANSITION_SETSENDEROBJECT)
 // QByteArray signal() const
 HB_FUNC_STATIC(QSIGNALTRANSITION_SIGNAL)
 {
-  QSignalTransition *obj = qobject_cast<QSignalTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -139,7 +142,7 @@ HB_FUNC_STATIC(QSIGNALTRANSITION_SIGNAL)
 // void setSignal(const QByteArray &signal)
 HB_FUNC_STATIC(QSIGNALTRANSITION_SETSIGNAL)
 {
-  QSignalTransition *obj = qobject_cast<QSignalTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

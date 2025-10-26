@@ -51,6 +51,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QMutexLocker *p = static_cast<QMutexLocker *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QMutexLocker(QMutex *mutex)
 HB_FUNC_STATIC(QMUTEXLOCKER_NEW)
 {
@@ -64,7 +66,7 @@ HB_FUNC_STATIC(QMUTEXLOCKER_NEW)
 
 HB_FUNC_STATIC(QMUTEXLOCKER_DELETE)
 {
-  QMutexLocker *obj = static_cast<QMutexLocker *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -80,7 +82,7 @@ HB_FUNC_STATIC(QMUTEXLOCKER_DELETE)
 // QMutex *mutex() const
 HB_FUNC_STATIC(QMUTEXLOCKER_MUTEX)
 {
-  QMutexLocker *obj = static_cast<QMutexLocker *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -99,7 +101,7 @@ HB_FUNC_STATIC(QMUTEXLOCKER_MUTEX)
 // void relock()
 HB_FUNC_STATIC(QMUTEXLOCKER_RELOCK)
 {
-  QMutexLocker *obj = static_cast<QMutexLocker *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -119,7 +121,7 @@ HB_FUNC_STATIC(QMUTEXLOCKER_RELOCK)
 // void unlock()
 HB_FUNC_STATIC(QMUTEXLOCKER_UNLOCK)
 {
-  QMutexLocker *obj = static_cast<QMutexLocker *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

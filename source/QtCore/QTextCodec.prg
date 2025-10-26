@@ -68,18 +68,20 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QTextCodec *p = static_cast<QTextCodec *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QTEXTCODEC_CANENCODE)
 {
   if (ISNUMPAR(1) && ISQCHAR(1)) {
     // bool canEncode(QChar) const
-    QTextCodec *obj = static_cast<QTextCodec *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->canEncode(*PQCHAR(1)));
     }
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // bool canEncode(const QString &) const
-    QTextCodec *obj = static_cast<QTextCodec *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->canEncode(PQSTRING(1)));
@@ -95,14 +97,14 @@ HB_FUNC_STATIC(QTEXTCODEC_TOUNICODE)
 {
   if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     // QString toUnicode(const QByteArray &) const
-    QTextCodec *obj = static_cast<QTextCodec *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RQSTRING(obj->toUnicode(*PQBYTEARRAY(1)));
     }
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // QString toUnicode(const char *chars) const
-    QTextCodec *obj = static_cast<QTextCodec *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RQSTRING(obj->toUnicode(PCONSTCHAR(1)));
@@ -115,7 +117,7 @@ HB_FUNC_STATIC(QTEXTCODEC_TOUNICODE)
 // QByteArray fromUnicode(const QString &uc) const
 HB_FUNC_STATIC(QTEXTCODEC_FROMUNICODE)
 {
-  QTextCodec *obj = static_cast<QTextCodec *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -135,7 +137,7 @@ HB_FUNC_STATIC(QTEXTCODEC_MAKEDECODER)
 {
   if (ISNUMPAR(0)) {
     // QTextDecoder *makeDecoder() const
-    QTextCodec *obj = static_cast<QTextCodec *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QTextDecoder *ptr = obj->makeDecoder();
@@ -143,7 +145,7 @@ HB_FUNC_STATIC(QTEXTCODEC_MAKEDECODER)
     }
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QTextDecoder *makeDecoder(QTextCodec::ConversionFlags flags) const
-    QTextCodec *obj = static_cast<QTextCodec *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QTextDecoder *ptr = obj->makeDecoder((QTextCodec::ConversionFlags)hb_parni(1));
@@ -158,7 +160,7 @@ HB_FUNC_STATIC(QTEXTCODEC_MAKEENCODER)
 {
   if (ISNUMPAR(0)) {
     // QTextEncoder *makeEncoder() const
-    QTextCodec *obj = static_cast<QTextCodec *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QTextEncoder *ptr = obj->makeEncoder();
@@ -166,7 +168,7 @@ HB_FUNC_STATIC(QTEXTCODEC_MAKEENCODER)
     }
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QTextEncoder *makeEncoder(QTextCodec::ConversionFlags flags) const
-    QTextCodec *obj = static_cast<QTextCodec *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QTextEncoder *ptr = obj->makeEncoder((QTextCodec::ConversionFlags)hb_parni(1));
@@ -180,7 +182,7 @@ HB_FUNC_STATIC(QTEXTCODEC_MAKEENCODER)
 // virtual QByteArray name() const = 0
 HB_FUNC_STATIC(QTEXTCODEC_NAME)
 {
-  QTextCodec *obj = static_cast<QTextCodec *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -199,7 +201,7 @@ HB_FUNC_STATIC(QTEXTCODEC_NAME)
 // virtual QList<QByteArray> aliases() const
 HB_FUNC_STATIC(QTEXTCODEC_ALIASES)
 {
-  QTextCodec *obj = static_cast<QTextCodec *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -240,7 +242,7 @@ HB_FUNC_STATIC(QTEXTCODEC_ALIASES)
 // virtual int mibEnum() const = 0
 HB_FUNC_STATIC(QTEXTCODEC_MIBENUM)
 {
-  QTextCodec *obj = static_cast<QTextCodec *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

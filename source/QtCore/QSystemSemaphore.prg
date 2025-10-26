@@ -53,6 +53,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QSystemSemaphore *p = static_cast<QSystemSemaphore *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QSystemSemaphore(const QString &key, int initialValue = 0, QSystemSemaphore::AccessMode mode =
     // QSystemSemaphore::Open)
 HB_FUNC_STATIC(QSYSTEMSEMAPHORE_NEW)
@@ -69,7 +71,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_NEW)
 
 HB_FUNC_STATIC(QSYSTEMSEMAPHORE_DELETE)
 {
-  QSystemSemaphore *obj = static_cast<QSystemSemaphore *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -85,7 +87,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_DELETE)
 // bool acquire()
 HB_FUNC_STATIC(QSYSTEMSEMAPHORE_ACQUIRE)
 {
-  QSystemSemaphore *obj = static_cast<QSystemSemaphore *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -103,7 +105,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_ACQUIRE)
 // QSystemSemaphore::SystemSemaphoreError error() const
 HB_FUNC_STATIC(QSYSTEMSEMAPHORE_ERROR)
 {
-  QSystemSemaphore *obj = static_cast<QSystemSemaphore *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -121,7 +123,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_ERROR)
 // QString errorString() const
 HB_FUNC_STATIC(QSYSTEMSEMAPHORE_ERRORSTRING)
 {
-  QSystemSemaphore *obj = static_cast<QSystemSemaphore *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -139,7 +141,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_ERRORSTRING)
 // QString key() const
 HB_FUNC_STATIC(QSYSTEMSEMAPHORE_KEY)
 {
-  QSystemSemaphore *obj = static_cast<QSystemSemaphore *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -157,7 +159,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_KEY)
 // bool release(int n = 1)
 HB_FUNC_STATIC(QSYSTEMSEMAPHORE_RELEASE)
 {
-  QSystemSemaphore *obj = static_cast<QSystemSemaphore *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -175,7 +177,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_RELEASE)
 // void setKey(const QString &key, int initialValue = 0, QSystemSemaphore::AccessMode mode = QSystemSemaphore::Open)
 HB_FUNC_STATIC(QSYSTEMSEMAPHORE_SETKEY)
 {
-  QSystemSemaphore *obj = static_cast<QSystemSemaphore *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

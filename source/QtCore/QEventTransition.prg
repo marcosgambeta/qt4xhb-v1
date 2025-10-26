@@ -45,6 +45,9 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QEventTransition *p = qobject_cast<QEventTransition *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QEVENTTRANSITION_NEW)
 {
   if (ISBETWEEN(0, 1) && (ISQSTATE(1) || HB_ISNIL(1))) {
@@ -62,7 +65,7 @@ HB_FUNC_STATIC(QEVENTTRANSITION_NEW)
 
 HB_FUNC_STATIC(QEVENTTRANSITION_DELETE)
 {
-  QEventTransition *obj = qobject_cast<QEventTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -80,7 +83,7 @@ HB_FUNC_STATIC(QEVENTTRANSITION_DELETE)
 // QObject *eventSource() const
 HB_FUNC_STATIC(QEVENTTRANSITION_EVENTSOURCE)
 {
-  QEventTransition *obj = qobject_cast<QEventTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -99,7 +102,7 @@ HB_FUNC_STATIC(QEVENTTRANSITION_EVENTSOURCE)
 // QEvent::Type eventType() const
 HB_FUNC_STATIC(QEVENTTRANSITION_EVENTTYPE)
 {
-  QEventTransition *obj = qobject_cast<QEventTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -117,7 +120,7 @@ HB_FUNC_STATIC(QEVENTTRANSITION_EVENTTYPE)
 // void setEventSource(QObject *object)
 HB_FUNC_STATIC(QEVENTTRANSITION_SETEVENTSOURCE)
 {
-  QEventTransition *obj = qobject_cast<QEventTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -137,7 +140,7 @@ HB_FUNC_STATIC(QEVENTTRANSITION_SETEVENTSOURCE)
 // void setEventType(QEvent::Type type)
 HB_FUNC_STATIC(QEVENTTRANSITION_SETEVENTTYPE)
 {
-  QEventTransition *obj = qobject_cast<QEventTransition *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

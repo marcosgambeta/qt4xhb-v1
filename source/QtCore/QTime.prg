@@ -64,6 +64,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QTime *p = static_cast<QTime *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QTIME_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -81,7 +83,7 @@ HB_FUNC_STATIC(QTIME_NEW)
 
 HB_FUNC_STATIC(QTIME_DELETE)
 {
-  QTime *obj = static_cast<QTime *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -97,7 +99,7 @@ HB_FUNC_STATIC(QTIME_DELETE)
 // QTime addMSecs(int ms) const
 HB_FUNC_STATIC(QTIME_ADDMSECS)
 {
-  QTime *obj = static_cast<QTime *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -116,7 +118,7 @@ HB_FUNC_STATIC(QTIME_ADDMSECS)
 // QTime addSecs(int s) const
 HB_FUNC_STATIC(QTIME_ADDSECS)
 {
-  QTime *obj = static_cast<QTime *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -135,7 +137,7 @@ HB_FUNC_STATIC(QTIME_ADDSECS)
 // int elapsed() const
 HB_FUNC_STATIC(QTIME_ELAPSED)
 {
-  QTime *obj = static_cast<QTime *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -153,7 +155,7 @@ HB_FUNC_STATIC(QTIME_ELAPSED)
 // int hour() const
 HB_FUNC_STATIC(QTIME_HOUR)
 {
-  QTime *obj = static_cast<QTime *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -171,7 +173,7 @@ HB_FUNC_STATIC(QTIME_HOUR)
 // bool isNull() const
 HB_FUNC_STATIC(QTIME_ISNULL)
 {
-  QTime *obj = static_cast<QTime *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -189,7 +191,7 @@ HB_FUNC_STATIC(QTIME_ISNULL)
 // int minute() const
 HB_FUNC_STATIC(QTIME_MINUTE)
 {
-  QTime *obj = static_cast<QTime *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -207,7 +209,7 @@ HB_FUNC_STATIC(QTIME_MINUTE)
 // int msec() const
 HB_FUNC_STATIC(QTIME_MSEC)
 {
-  QTime *obj = static_cast<QTime *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -225,7 +227,7 @@ HB_FUNC_STATIC(QTIME_MSEC)
 // int msecsTo(const QTime &t) const
 HB_FUNC_STATIC(QTIME_MSECSTO)
 {
-  QTime *obj = static_cast<QTime *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -243,7 +245,7 @@ HB_FUNC_STATIC(QTIME_MSECSTO)
 // int restart()
 HB_FUNC_STATIC(QTIME_RESTART)
 {
-  QTime *obj = static_cast<QTime *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -261,7 +263,7 @@ HB_FUNC_STATIC(QTIME_RESTART)
 // int second() const
 HB_FUNC_STATIC(QTIME_SECOND)
 {
-  QTime *obj = static_cast<QTime *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -279,7 +281,7 @@ HB_FUNC_STATIC(QTIME_SECOND)
 // int secsTo(const QTime &t) const
 HB_FUNC_STATIC(QTIME_SECSTO)
 {
-  QTime *obj = static_cast<QTime *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -297,7 +299,7 @@ HB_FUNC_STATIC(QTIME_SECSTO)
 // bool setHMS(int h, int m, int s, int ms = 0)
 HB_FUNC_STATIC(QTIME_SETHMS)
 {
-  QTime *obj = static_cast<QTime *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -315,7 +317,7 @@ HB_FUNC_STATIC(QTIME_SETHMS)
 // void start()
 HB_FUNC_STATIC(QTIME_START)
 {
-  QTime *obj = static_cast<QTime *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -336,14 +338,14 @@ HB_FUNC_STATIC(QTIME_TOSTRING)
 {
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // QString toString(const QString &format) const
-    QTime *obj = static_cast<QTime *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RQSTRING(obj->toString(PQSTRING(1)));
     }
   } else if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
     // QString toString(Qt::DateFormat format = Qt::TextDate) const
-    QTime *obj = static_cast<QTime *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RQSTRING(obj->toString(HB_ISNIL(1) ? (Qt::DateFormat)Qt::TextDate : (Qt::DateFormat)hb_parni(1)));
@@ -378,7 +380,7 @@ HB_FUNC_STATIC(QTIME_FROMSTRING)
     Qt4xHb::createReturnClass(ptr, "QTIME", true);
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     // QTime fromString(const QString &string, const QString &format)
-    QTime *obj = static_cast<QTime *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       QTime *ptr = new QTime(obj->fromString(PQSTRING(1), PQSTRING(2)));
@@ -393,7 +395,7 @@ HB_FUNC_STATIC(QTIME_ISVALID)
 {
   if (ISNUMPAR(0)) {
     // bool isValid() const
-    QTime *obj = static_cast<QTime *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->isValid());

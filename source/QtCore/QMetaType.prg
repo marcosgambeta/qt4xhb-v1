@@ -54,6 +54,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QMetaType *p = static_cast<QMetaType *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // static int registerTypedef(const char *typeName, int aliasId)
 HB_FUNC_STATIC(QMETATYPE_REGISTERTYPEDEF)
 {

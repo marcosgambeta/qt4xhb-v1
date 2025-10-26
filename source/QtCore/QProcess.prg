@@ -89,6 +89,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QProcess *p = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QProcess(QObject *parent = 0)
 HB_FUNC_STATIC(QPROCESS_NEW)
 {
@@ -102,7 +104,7 @@ HB_FUNC_STATIC(QPROCESS_NEW)
 
 HB_FUNC_STATIC(QPROCESS_DELETE)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -120,7 +122,7 @@ HB_FUNC_STATIC(QPROCESS_DELETE)
 // void closeReadChannel(QProcess::ProcessChannel channel)
 HB_FUNC_STATIC(QPROCESS_CLOSEREADCHANNEL)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -140,7 +142,7 @@ HB_FUNC_STATIC(QPROCESS_CLOSEREADCHANNEL)
 // void closeWriteChannel()
 HB_FUNC_STATIC(QPROCESS_CLOSEWRITECHANNEL)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -160,7 +162,7 @@ HB_FUNC_STATIC(QPROCESS_CLOSEWRITECHANNEL)
 // QStringList environment() const
 HB_FUNC_STATIC(QPROCESS_ENVIRONMENT)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -178,7 +180,7 @@ HB_FUNC_STATIC(QPROCESS_ENVIRONMENT)
 // QProcess::ProcessError error() const
 HB_FUNC_STATIC(QPROCESS_ERROR)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -196,7 +198,7 @@ HB_FUNC_STATIC(QPROCESS_ERROR)
 // int exitCode() const
 HB_FUNC_STATIC(QPROCESS_EXITCODE)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -214,7 +216,7 @@ HB_FUNC_STATIC(QPROCESS_EXITCODE)
 // QProcess::ExitStatus exitStatus() const
 HB_FUNC_STATIC(QPROCESS_EXITSTATUS)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -233,7 +235,7 @@ HB_FUNC_STATIC(QPROCESS_EXITSTATUS)
 HB_FUNC_STATIC(QPROCESS_NATIVEARGUMENTS)
 {
 #if defined(Q_OS_WIN)
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -251,7 +253,7 @@ HB_FUNC_STATIC(QPROCESS_NATIVEARGUMENTS)
 // QProcess::ProcessChannelMode processChannelMode() const
 HB_FUNC_STATIC(QPROCESS_PROCESSCHANNELMODE)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -269,7 +271,7 @@ HB_FUNC_STATIC(QPROCESS_PROCESSCHANNELMODE)
 // QProcessEnvironment processEnvironment() const
 HB_FUNC_STATIC(QPROCESS_PROCESSENVIRONMENT)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -288,7 +290,7 @@ HB_FUNC_STATIC(QPROCESS_PROCESSENVIRONMENT)
 // QByteArray readAllStandardError()
 HB_FUNC_STATIC(QPROCESS_READALLSTANDARDERROR)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -307,7 +309,7 @@ HB_FUNC_STATIC(QPROCESS_READALLSTANDARDERROR)
 // QByteArray readAllStandardOutput()
 HB_FUNC_STATIC(QPROCESS_READALLSTANDARDOUTPUT)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -326,7 +328,7 @@ HB_FUNC_STATIC(QPROCESS_READALLSTANDARDOUTPUT)
 // QProcess::ProcessChannel readChannel() const
 HB_FUNC_STATIC(QPROCESS_READCHANNEL)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -344,7 +346,7 @@ HB_FUNC_STATIC(QPROCESS_READCHANNEL)
 // void setEnvironment(const QStringList &environment)
 HB_FUNC_STATIC(QPROCESS_SETENVIRONMENT)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -365,7 +367,7 @@ HB_FUNC_STATIC(QPROCESS_SETENVIRONMENT)
 HB_FUNC_STATIC(QPROCESS_SETNATIVEARGUMENTS)
 {
 #if defined(Q_OS_WIN)
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -385,7 +387,7 @@ HB_FUNC_STATIC(QPROCESS_SETNATIVEARGUMENTS)
 // void setProcessChannelMode(QProcess::ProcessChannelMode mode)
 HB_FUNC_STATIC(QPROCESS_SETPROCESSCHANNELMODE)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -405,7 +407,7 @@ HB_FUNC_STATIC(QPROCESS_SETPROCESSCHANNELMODE)
 // void setProcessEnvironment(const QProcessEnvironment &environment)
 HB_FUNC_STATIC(QPROCESS_SETPROCESSENVIRONMENT)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -425,7 +427,7 @@ HB_FUNC_STATIC(QPROCESS_SETPROCESSENVIRONMENT)
 // void setReadChannel(QProcess::ProcessChannel channel)
 HB_FUNC_STATIC(QPROCESS_SETREADCHANNEL)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -445,7 +447,7 @@ HB_FUNC_STATIC(QPROCESS_SETREADCHANNEL)
 // void setStandardErrorFile(const QString &fileName, QIODevice::OpenMode mode = QIODevice::Truncate)
 HB_FUNC_STATIC(QPROCESS_SETSTANDARDERRORFILE)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -466,7 +468,7 @@ HB_FUNC_STATIC(QPROCESS_SETSTANDARDERRORFILE)
 // void setStandardInputFile(const QString &fileName)
 HB_FUNC_STATIC(QPROCESS_SETSTANDARDINPUTFILE)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -486,7 +488,7 @@ HB_FUNC_STATIC(QPROCESS_SETSTANDARDINPUTFILE)
 // void setStandardOutputFile(const QString &fileName, QIODevice::OpenMode mode = QIODevice::Truncate)
 HB_FUNC_STATIC(QPROCESS_SETSTANDARDOUTPUTFILE)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -507,7 +509,7 @@ HB_FUNC_STATIC(QPROCESS_SETSTANDARDOUTPUTFILE)
 // void setStandardOutputProcess(QProcess *destination)
 HB_FUNC_STATIC(QPROCESS_SETSTANDARDOUTPUTPROCESS)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -527,7 +529,7 @@ HB_FUNC_STATIC(QPROCESS_SETSTANDARDOUTPUTPROCESS)
 // void setWorkingDirectory(const QString &dir)
 HB_FUNC_STATIC(QPROCESS_SETWORKINGDIRECTORY)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -548,7 +550,7 @@ HB_FUNC_STATIC(QPROCESS_START)
 {
   if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISARRAY(2) && ISNUMORNIL(3)) {
     // void start(const QString &program, const QStringList &arguments, QIODevice::OpenMode mode = QIODevice::ReadWrite)
-    QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->start(PQSTRING(1), PQSTRINGLIST(2),
@@ -558,7 +560,7 @@ HB_FUNC_STATIC(QPROCESS_START)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
     // void start(const QString &program, QIODevice::OpenMode mode = QIODevice::ReadWrite)
-    QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->start(PQSTRING(1),
@@ -574,7 +576,7 @@ HB_FUNC_STATIC(QPROCESS_START)
 // QProcess::ProcessState state() const
 HB_FUNC_STATIC(QPROCESS_STATE)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -592,7 +594,7 @@ HB_FUNC_STATIC(QPROCESS_STATE)
 // bool waitForFinished(int msecs = 30000)
 HB_FUNC_STATIC(QPROCESS_WAITFORFINISHED)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -610,7 +612,7 @@ HB_FUNC_STATIC(QPROCESS_WAITFORFINISHED)
 // bool waitForStarted(int msecs = 30000)
 HB_FUNC_STATIC(QPROCESS_WAITFORSTARTED)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -628,7 +630,7 @@ HB_FUNC_STATIC(QPROCESS_WAITFORSTARTED)
 // QString workingDirectory() const
 HB_FUNC_STATIC(QPROCESS_WORKINGDIRECTORY)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -646,7 +648,7 @@ HB_FUNC_STATIC(QPROCESS_WORKINGDIRECTORY)
 // virtual bool atEnd() const
 HB_FUNC_STATIC(QPROCESS_ATEND)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -664,7 +666,7 @@ HB_FUNC_STATIC(QPROCESS_ATEND)
 // virtual qint64 bytesAvailable() const
 HB_FUNC_STATIC(QPROCESS_BYTESAVAILABLE)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -682,7 +684,7 @@ HB_FUNC_STATIC(QPROCESS_BYTESAVAILABLE)
 // virtual qint64 bytesToWrite() const
 HB_FUNC_STATIC(QPROCESS_BYTESTOWRITE)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -700,7 +702,7 @@ HB_FUNC_STATIC(QPROCESS_BYTESTOWRITE)
 // virtual bool canReadLine() const
 HB_FUNC_STATIC(QPROCESS_CANREADLINE)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -718,7 +720,7 @@ HB_FUNC_STATIC(QPROCESS_CANREADLINE)
 // virtual void close()
 HB_FUNC_STATIC(QPROCESS_CLOSE)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -738,7 +740,7 @@ HB_FUNC_STATIC(QPROCESS_CLOSE)
 // virtual bool isSequential() const
 HB_FUNC_STATIC(QPROCESS_ISSEQUENTIAL)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -756,7 +758,7 @@ HB_FUNC_STATIC(QPROCESS_ISSEQUENTIAL)
 // virtual bool waitForBytesWritten(int msecs = 30000)
 HB_FUNC_STATIC(QPROCESS_WAITFORBYTESWRITTEN)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -774,7 +776,7 @@ HB_FUNC_STATIC(QPROCESS_WAITFORBYTESWRITTEN)
 // virtual bool waitForReadyRead(int msecs = 30000)
 HB_FUNC_STATIC(QPROCESS_WAITFORREADYREAD)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -792,7 +794,7 @@ HB_FUNC_STATIC(QPROCESS_WAITFORREADYREAD)
 // void kill()
 HB_FUNC_STATIC(QPROCESS_KILL)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -812,7 +814,7 @@ HB_FUNC_STATIC(QPROCESS_KILL)
 // void terminate()
 HB_FUNC_STATIC(QPROCESS_TERMINATE)
 {
-  QProcess *obj = qobject_cast<QProcess *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

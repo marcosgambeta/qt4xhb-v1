@@ -63,6 +63,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QDataStream *p = static_cast<QDataStream *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QDATASTREAM_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -88,7 +90,7 @@ HB_FUNC_STATIC(QDATASTREAM_NEW)
 
 HB_FUNC_STATIC(QDATASTREAM_DELETE)
 {
-  QDataStream *obj = static_cast<QDataStream *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -104,7 +106,7 @@ HB_FUNC_STATIC(QDATASTREAM_DELETE)
 // bool atEnd() const
 HB_FUNC_STATIC(QDATASTREAM_ATEND)
 {
-  QDataStream *obj = static_cast<QDataStream *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -122,7 +124,7 @@ HB_FUNC_STATIC(QDATASTREAM_ATEND)
 // QDataStream::ByteOrder byteOrder() const
 HB_FUNC_STATIC(QDATASTREAM_BYTEORDER)
 {
-  QDataStream *obj = static_cast<QDataStream *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -140,7 +142,7 @@ HB_FUNC_STATIC(QDATASTREAM_BYTEORDER)
 // QIODevice *device() const
 HB_FUNC_STATIC(QDATASTREAM_DEVICE)
 {
-  QDataStream *obj = static_cast<QDataStream *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -159,7 +161,7 @@ HB_FUNC_STATIC(QDATASTREAM_DEVICE)
 // QDataStream::FloatingPointPrecision floatingPointPrecision() const
 HB_FUNC_STATIC(QDATASTREAM_FLOATINGPOINTPRECISION)
 {
-  QDataStream *obj = static_cast<QDataStream *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -177,7 +179,7 @@ HB_FUNC_STATIC(QDATASTREAM_FLOATINGPOINTPRECISION)
 // int readRawData(char *s, int len)
 HB_FUNC_STATIC(QDATASTREAM_READRAWDATA)
 {
-  QDataStream *obj = static_cast<QDataStream *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -195,7 +197,7 @@ HB_FUNC_STATIC(QDATASTREAM_READRAWDATA)
 // void resetStatus()
 HB_FUNC_STATIC(QDATASTREAM_RESETSTATUS)
 {
-  QDataStream *obj = static_cast<QDataStream *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -215,7 +217,7 @@ HB_FUNC_STATIC(QDATASTREAM_RESETSTATUS)
 // void setByteOrder(QDataStream::ByteOrder bo)
 HB_FUNC_STATIC(QDATASTREAM_SETBYTEORDER)
 {
-  QDataStream *obj = static_cast<QDataStream *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -235,7 +237,7 @@ HB_FUNC_STATIC(QDATASTREAM_SETBYTEORDER)
 // void setDevice(QIODevice *d)
 HB_FUNC_STATIC(QDATASTREAM_SETDEVICE)
 {
-  QDataStream *obj = static_cast<QDataStream *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -255,7 +257,7 @@ HB_FUNC_STATIC(QDATASTREAM_SETDEVICE)
 // void setFloatingPointPrecision(QDataStream::FloatingPointPrecision precision)
 HB_FUNC_STATIC(QDATASTREAM_SETFLOATINGPOINTPRECISION)
 {
-  QDataStream *obj = static_cast<QDataStream *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -275,7 +277,7 @@ HB_FUNC_STATIC(QDATASTREAM_SETFLOATINGPOINTPRECISION)
 // void setStatus(QDataStream::Status status)
 HB_FUNC_STATIC(QDATASTREAM_SETSTATUS)
 {
-  QDataStream *obj = static_cast<QDataStream *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -295,7 +297,7 @@ HB_FUNC_STATIC(QDATASTREAM_SETSTATUS)
 // void setVersion(int v)
 HB_FUNC_STATIC(QDATASTREAM_SETVERSION)
 {
-  QDataStream *obj = static_cast<QDataStream *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -315,7 +317,7 @@ HB_FUNC_STATIC(QDATASTREAM_SETVERSION)
 // int skipRawData(int len)
 HB_FUNC_STATIC(QDATASTREAM_SKIPRAWDATA)
 {
-  QDataStream *obj = static_cast<QDataStream *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -333,7 +335,7 @@ HB_FUNC_STATIC(QDATASTREAM_SKIPRAWDATA)
 // QDataStream::Status status() const
 HB_FUNC_STATIC(QDATASTREAM_STATUS)
 {
-  QDataStream *obj = static_cast<QDataStream *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -351,7 +353,7 @@ HB_FUNC_STATIC(QDATASTREAM_STATUS)
 // int version() const
 HB_FUNC_STATIC(QDATASTREAM_VERSION)
 {
-  QDataStream *obj = static_cast<QDataStream *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -369,7 +371,7 @@ HB_FUNC_STATIC(QDATASTREAM_VERSION)
 // int writeRawData(const char *s, int len)
 HB_FUNC_STATIC(QDATASTREAM_WRITERAWDATA)
 {
-  QDataStream *obj = static_cast<QDataStream *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

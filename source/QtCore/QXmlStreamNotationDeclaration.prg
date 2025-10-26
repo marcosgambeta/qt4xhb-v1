@@ -51,6 +51,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QXmlStreamNotationDeclaration *p = static_cast<QXmlStreamNotationDeclaration *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -68,7 +71,7 @@ HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_NEW)
 
 HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_DELETE)
 {
-  QXmlStreamNotationDeclaration *obj = static_cast<QXmlStreamNotationDeclaration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -84,7 +87,7 @@ HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_DELETE)
 // QStringRef name() const
 HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_NAME)
 {
-  QXmlStreamNotationDeclaration *obj = static_cast<QXmlStreamNotationDeclaration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -103,7 +106,7 @@ HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_NAME)
 // QStringRef publicId() const
 HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_PUBLICID)
 {
-  QXmlStreamNotationDeclaration *obj = static_cast<QXmlStreamNotationDeclaration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -122,7 +125,7 @@ HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_PUBLICID)
 // QStringRef systemId() const
 HB_FUNC_STATIC(QXMLSTREAMNOTATIONDECLARATION_SYSTEMID)
 {
-  QXmlStreamNotationDeclaration *obj = static_cast<QXmlStreamNotationDeclaration *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

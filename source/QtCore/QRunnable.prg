@@ -49,9 +49,11 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QRunnable *p = static_cast<QRunnable *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QRUNNABLE_DELETE)
 {
-  QRunnable *obj = static_cast<QRunnable *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -67,7 +69,7 @@ HB_FUNC_STATIC(QRUNNABLE_DELETE)
 // bool autoDelete() const
 HB_FUNC_STATIC(QRUNNABLE_AUTODELETE)
 {
-  QRunnable *obj = static_cast<QRunnable *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -85,7 +87,7 @@ HB_FUNC_STATIC(QRUNNABLE_AUTODELETE)
 // virtual void run() = 0
 HB_FUNC_STATIC(QRUNNABLE_RUN)
 {
-  QRunnable *obj = static_cast<QRunnable *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -105,7 +107,7 @@ HB_FUNC_STATIC(QRUNNABLE_RUN)
 // void setAutoDelete(bool autoDelete)
 HB_FUNC_STATIC(QRUNNABLE_SETAUTODELETE)
 {
-  QRunnable *obj = static_cast<QRunnable *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

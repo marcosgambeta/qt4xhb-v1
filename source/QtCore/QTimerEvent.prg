@@ -39,6 +39,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QTimerEvent *p = static_cast<QTimerEvent *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QTimerEvent(int timerId)
 HB_FUNC_STATIC(QTIMEREVENT_NEW)
 {
@@ -52,7 +54,7 @@ HB_FUNC_STATIC(QTIMEREVENT_NEW)
 
 HB_FUNC_STATIC(QTIMEREVENT_DELETE)
 {
-  QTimerEvent *obj = static_cast<QTimerEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -68,7 +70,7 @@ HB_FUNC_STATIC(QTIMEREVENT_DELETE)
 // int timerId() const
 HB_FUNC_STATIC(QTIMEREVENT_TIMERID)
 {
-  QTimerEvent *obj = static_cast<QTimerEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

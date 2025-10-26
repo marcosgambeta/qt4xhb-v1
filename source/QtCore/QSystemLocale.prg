@@ -50,6 +50,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QSystemLocale *p = static_cast<QSystemLocale *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QSystemLocale()
 HB_FUNC_STATIC(QSYSTEMLOCALE_NEW)
 {
@@ -64,7 +66,7 @@ HB_FUNC_STATIC(QSYSTEMLOCALE_NEW)
 // virtual QLocale fallbackLocale() const
 HB_FUNC_STATIC(QSYSTEMLOCALE_FALLBACKLOCALE)
 {
-  QSystemLocale *obj = static_cast<QSystemLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -83,7 +85,7 @@ HB_FUNC_STATIC(QSYSTEMLOCALE_FALLBACKLOCALE)
 // virtual QVariant query(QSystemLocale::QueryType type, QVariant in) const
 HB_FUNC_STATIC(QSYSTEMLOCALE_QUERY)
 {
-  QSystemLocale *obj = static_cast<QSystemLocale *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -51,6 +51,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QByteArrayMatcher *p = static_cast<QByteArrayMatcher *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QBYTEARRAYMATCHER_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -76,7 +78,7 @@ HB_FUNC_STATIC(QBYTEARRAYMATCHER_NEW)
 
 HB_FUNC_STATIC(QBYTEARRAYMATCHER_DELETE)
 {
-  QByteArrayMatcher *obj = static_cast<QByteArrayMatcher *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -93,14 +95,14 @@ HB_FUNC_STATIC(QBYTEARRAYMATCHER_INDEXIN)
 {
   if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISNUMORNIL(2)) {
     // int indexIn(const QByteArray &ba, int from = 0) const
-    QByteArrayMatcher *obj = static_cast<QByteArrayMatcher *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RINT(obj->indexIn(*PQBYTEARRAY(1), OPINT(2, 0)));
     }
   } else if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
     // int indexIn(const char *str, int len, int from = 0) const
-    QByteArrayMatcher *obj = static_cast<QByteArrayMatcher *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RINT(obj->indexIn(PCONSTCHAR(1), PINT(2), OPINT(3, 0)));
@@ -113,7 +115,7 @@ HB_FUNC_STATIC(QBYTEARRAYMATCHER_INDEXIN)
 // QByteArray pattern() const
 HB_FUNC_STATIC(QBYTEARRAYMATCHER_PATTERN)
 {
-  QByteArrayMatcher *obj = static_cast<QByteArrayMatcher *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -132,7 +134,7 @@ HB_FUNC_STATIC(QBYTEARRAYMATCHER_PATTERN)
 // void setPattern(const QByteArray &pattern)
 HB_FUNC_STATIC(QBYTEARRAYMATCHER_SETPATTERN)
 {
-  QByteArrayMatcher *obj = static_cast<QByteArrayMatcher *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

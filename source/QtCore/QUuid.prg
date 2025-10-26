@@ -61,6 +61,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QUuid *p = static_cast<QUuid *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QUuid()
 HB_FUNC_STATIC(QUUID_NEW1)
 {
@@ -116,7 +118,7 @@ HB_FUNC_STATIC(QUUID_NEW)
 
 HB_FUNC_STATIC(QUUID_DELETE)
 {
-  QUuid *obj = static_cast<QUuid *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -132,7 +134,7 @@ HB_FUNC_STATIC(QUUID_DELETE)
 // QString toString() const
 HB_FUNC_STATIC(QUUID_TOSTRING)
 {
-  QUuid *obj = static_cast<QUuid *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -150,7 +152,7 @@ HB_FUNC_STATIC(QUUID_TOSTRING)
 // QByteArray toByteArray() const
 HB_FUNC_STATIC(QUUID_TOBYTEARRAY)
 {
-  QUuid *obj = static_cast<QUuid *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -169,7 +171,7 @@ HB_FUNC_STATIC(QUUID_TOBYTEARRAY)
 // QByteArray toRfc4122() const
 HB_FUNC_STATIC(QUUID_TORFC4122)
 {
-  QUuid *obj = static_cast<QUuid *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -188,7 +190,7 @@ HB_FUNC_STATIC(QUUID_TORFC4122)
 // bool isNull() const
 HB_FUNC_STATIC(QUUID_ISNULL)
 {
-  QUuid *obj = static_cast<QUuid *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -206,7 +208,7 @@ HB_FUNC_STATIC(QUUID_ISNULL)
 // QUuid::Variant variant() const
 HB_FUNC_STATIC(QUUID_VARIANT)
 {
-  QUuid *obj = static_cast<QUuid *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -224,7 +226,7 @@ HB_FUNC_STATIC(QUUID_VARIANT)
 // QUuid::Version version() const
 HB_FUNC_STATIC(QUUID_VERSION)
 {
-  QUuid *obj = static_cast<QUuid *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

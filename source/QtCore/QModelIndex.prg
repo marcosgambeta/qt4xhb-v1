@@ -60,6 +60,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QModelIndex *p = static_cast<QModelIndex *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QMODELINDEX_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -77,7 +79,7 @@ HB_FUNC_STATIC(QMODELINDEX_NEW)
 
 HB_FUNC_STATIC(QMODELINDEX_DELETE)
 {
-  QModelIndex *obj = static_cast<QModelIndex *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -93,7 +95,7 @@ HB_FUNC_STATIC(QMODELINDEX_DELETE)
 // QModelIndex child(int row, int column) const
 HB_FUNC_STATIC(QMODELINDEX_CHILD)
 {
-  QModelIndex *obj = static_cast<QModelIndex *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -112,7 +114,7 @@ HB_FUNC_STATIC(QMODELINDEX_CHILD)
 // int column() const
 HB_FUNC_STATIC(QMODELINDEX_COLUMN)
 {
-  QModelIndex *obj = static_cast<QModelIndex *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -130,7 +132,7 @@ HB_FUNC_STATIC(QMODELINDEX_COLUMN)
 // QVariant data(int role = Qt::DisplayRole) const
 HB_FUNC_STATIC(QMODELINDEX_DATA)
 {
-  QModelIndex *obj = static_cast<QModelIndex *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -149,7 +151,7 @@ HB_FUNC_STATIC(QMODELINDEX_DATA)
 // Qt::ItemFlags flags() const
 HB_FUNC_STATIC(QMODELINDEX_FLAGS)
 {
-  QModelIndex *obj = static_cast<QModelIndex *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -167,7 +169,7 @@ HB_FUNC_STATIC(QMODELINDEX_FLAGS)
 // qint64 internalId() const
 HB_FUNC_STATIC(QMODELINDEX_INTERNALID)
 {
-  QModelIndex *obj = static_cast<QModelIndex *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -185,7 +187,7 @@ HB_FUNC_STATIC(QMODELINDEX_INTERNALID)
 // void *internalPointer() const
 HB_FUNC_STATIC(QMODELINDEX_INTERNALPOINTER)
 {
-  QModelIndex *obj = static_cast<QModelIndex *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -203,7 +205,7 @@ HB_FUNC_STATIC(QMODELINDEX_INTERNALPOINTER)
 // bool isValid() const
 HB_FUNC_STATIC(QMODELINDEX_ISVALID)
 {
-  QModelIndex *obj = static_cast<QModelIndex *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -221,7 +223,7 @@ HB_FUNC_STATIC(QMODELINDEX_ISVALID)
 // const QAbstractItemModel *model() const
 HB_FUNC_STATIC(QMODELINDEX_MODEL)
 {
-  QModelIndex *obj = static_cast<QModelIndex *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -240,7 +242,7 @@ HB_FUNC_STATIC(QMODELINDEX_MODEL)
 // QModelIndex parent() const
 HB_FUNC_STATIC(QMODELINDEX_PARENT)
 {
-  QModelIndex *obj = static_cast<QModelIndex *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -259,7 +261,7 @@ HB_FUNC_STATIC(QMODELINDEX_PARENT)
 // int row() const
 HB_FUNC_STATIC(QMODELINDEX_ROW)
 {
-  QModelIndex *obj = static_cast<QModelIndex *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -277,7 +279,7 @@ HB_FUNC_STATIC(QMODELINDEX_ROW)
 // QModelIndex sibling(int row, int column) const
 HB_FUNC_STATIC(QMODELINDEX_SIBLING)
 {
-  QModelIndex *obj = static_cast<QModelIndex *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

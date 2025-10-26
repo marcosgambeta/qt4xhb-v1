@@ -51,6 +51,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QTimer *p = qobject_cast<QTimer *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QTimer(QObject *parent = 0)
 HB_FUNC_STATIC(QTIMER_NEW)
 {
@@ -64,7 +66,7 @@ HB_FUNC_STATIC(QTIMER_NEW)
 
 HB_FUNC_STATIC(QTIMER_DELETE)
 {
-  QTimer *obj = qobject_cast<QTimer *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -82,7 +84,7 @@ HB_FUNC_STATIC(QTIMER_DELETE)
 // int interval() const
 HB_FUNC_STATIC(QTIMER_INTERVAL)
 {
-  QTimer *obj = qobject_cast<QTimer *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -100,7 +102,7 @@ HB_FUNC_STATIC(QTIMER_INTERVAL)
 // bool isActive() const
 HB_FUNC_STATIC(QTIMER_ISACTIVE)
 {
-  QTimer *obj = qobject_cast<QTimer *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -118,7 +120,7 @@ HB_FUNC_STATIC(QTIMER_ISACTIVE)
 // bool isSingleShot() const
 HB_FUNC_STATIC(QTIMER_ISSINGLESHOT)
 {
-  QTimer *obj = qobject_cast<QTimer *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -136,7 +138,7 @@ HB_FUNC_STATIC(QTIMER_ISSINGLESHOT)
 // void setInterval(int msec)
 HB_FUNC_STATIC(QTIMER_SETINTERVAL)
 {
-  QTimer *obj = qobject_cast<QTimer *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -156,7 +158,7 @@ HB_FUNC_STATIC(QTIMER_SETINTERVAL)
 // void setSingleShot(bool singleShot)
 HB_FUNC_STATIC(QTIMER_SETSINGLESHOT)
 {
-  QTimer *obj = qobject_cast<QTimer *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -176,7 +178,7 @@ HB_FUNC_STATIC(QTIMER_SETSINGLESHOT)
 // int timerId() const
 HB_FUNC_STATIC(QTIMER_TIMERID)
 {
-  QTimer *obj = qobject_cast<QTimer *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -195,7 +197,7 @@ HB_FUNC_STATIC(QTIMER_START)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void start(int msec)
-    QTimer *obj = qobject_cast<QTimer *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->start(PINT(1));
@@ -204,7 +206,7 @@ HB_FUNC_STATIC(QTIMER_START)
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(0)) {
     // void start()
-    QTimer *obj = qobject_cast<QTimer *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->start();
@@ -219,7 +221,7 @@ HB_FUNC_STATIC(QTIMER_START)
 // void stop()
 HB_FUNC_STATIC(QTIMER_STOP)
 {
-  QTimer *obj = qobject_cast<QTimer *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

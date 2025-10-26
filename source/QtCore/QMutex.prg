@@ -50,6 +50,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QMutex *p = static_cast<QMutex *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QMutex(QMutex::RecursionMode mode = QMutex::NonRecursive)
 HB_FUNC_STATIC(QMUTEX_NEW)
 {
@@ -64,7 +66,7 @@ HB_FUNC_STATIC(QMUTEX_NEW)
 
 HB_FUNC_STATIC(QMUTEX_DELETE)
 {
-  QMutex *obj = static_cast<QMutex *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -80,7 +82,7 @@ HB_FUNC_STATIC(QMUTEX_DELETE)
 // void lock()
 HB_FUNC_STATIC(QMUTEX_LOCK)
 {
-  QMutex *obj = static_cast<QMutex *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -101,14 +103,14 @@ HB_FUNC_STATIC(QMUTEX_TRYLOCK)
 {
   if (ISNUMPAR(0)) {
     // bool tryLock()
-    QMutex *obj = static_cast<QMutex *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->tryLock());
     }
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // bool tryLock(int timeout)
-    QMutex *obj = static_cast<QMutex *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->tryLock(PINT(1)));
@@ -121,7 +123,7 @@ HB_FUNC_STATIC(QMUTEX_TRYLOCK)
 // void unlock()
 HB_FUNC_STATIC(QMUTEX_UNLOCK)
 {
-  QMutex *obj = static_cast<QMutex *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

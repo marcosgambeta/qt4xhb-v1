@@ -42,6 +42,9 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QPauseAnimation *p = qobject_cast<QPauseAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 HB_FUNC_STATIC(QPAUSEANIMATION_NEW)
 {
   if (ISBETWEEN(0, 1) && ISQOBJECTORNIL(1)) {
@@ -59,7 +62,7 @@ HB_FUNC_STATIC(QPAUSEANIMATION_NEW)
 
 HB_FUNC_STATIC(QPAUSEANIMATION_DELETE)
 {
-  QPauseAnimation *obj = qobject_cast<QPauseAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -77,7 +80,7 @@ HB_FUNC_STATIC(QPAUSEANIMATION_DELETE)
 // void setDuration(int msecs)
 HB_FUNC_STATIC(QPAUSEANIMATION_SETDURATION)
 {
-  QPauseAnimation *obj = qobject_cast<QPauseAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -97,7 +100,7 @@ HB_FUNC_STATIC(QPAUSEANIMATION_SETDURATION)
 // virtual int duration() const
 HB_FUNC_STATIC(QPAUSEANIMATION_DURATION)
 {
-  QPauseAnimation *obj = qobject_cast<QPauseAnimation *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

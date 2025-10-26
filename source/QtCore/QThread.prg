@@ -57,6 +57,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QThread *p = qobject_cast<QThread *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QThread(QObject *parent = 0)
 HB_FUNC_STATIC(QTHREAD_NEW)
 {
@@ -70,7 +72,7 @@ HB_FUNC_STATIC(QTHREAD_NEW)
 
 HB_FUNC_STATIC(QTHREAD_DELETE)
 {
-  QThread *obj = qobject_cast<QThread *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -88,7 +90,7 @@ HB_FUNC_STATIC(QTHREAD_DELETE)
 // void exit(int returnCode = 0)
 HB_FUNC_STATIC(QTHREAD_EXIT)
 {
-  QThread *obj = qobject_cast<QThread *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -108,7 +110,7 @@ HB_FUNC_STATIC(QTHREAD_EXIT)
 // bool isFinished() const
 HB_FUNC_STATIC(QTHREAD_ISFINISHED)
 {
-  QThread *obj = qobject_cast<QThread *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -126,7 +128,7 @@ HB_FUNC_STATIC(QTHREAD_ISFINISHED)
 // bool isRunning() const
 HB_FUNC_STATIC(QTHREAD_ISRUNNING)
 {
-  QThread *obj = qobject_cast<QThread *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -144,7 +146,7 @@ HB_FUNC_STATIC(QTHREAD_ISRUNNING)
 // QThread::Priority priority() const
 HB_FUNC_STATIC(QTHREAD_PRIORITY)
 {
-  QThread *obj = qobject_cast<QThread *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -162,7 +164,7 @@ HB_FUNC_STATIC(QTHREAD_PRIORITY)
 // void setPriority(QThread::Priority priority)
 HB_FUNC_STATIC(QTHREAD_SETPRIORITY)
 {
-  QThread *obj = qobject_cast<QThread *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -182,7 +184,7 @@ HB_FUNC_STATIC(QTHREAD_SETPRIORITY)
 // void setStackSize(uint stackSize)
 HB_FUNC_STATIC(QTHREAD_SETSTACKSIZE)
 {
-  QThread *obj = qobject_cast<QThread *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -202,7 +204,7 @@ HB_FUNC_STATIC(QTHREAD_SETSTACKSIZE)
 // uint stackSize() const
 HB_FUNC_STATIC(QTHREAD_STACKSIZE)
 {
-  QThread *obj = qobject_cast<QThread *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -220,7 +222,7 @@ HB_FUNC_STATIC(QTHREAD_STACKSIZE)
 // virtual bool event(QEvent *event)
 HB_FUNC_STATIC(QTHREAD_EVENT)
 {
-  QThread *obj = qobject_cast<QThread *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -238,7 +240,7 @@ HB_FUNC_STATIC(QTHREAD_EVENT)
 // void quit()
 HB_FUNC_STATIC(QTHREAD_QUIT)
 {
-  QThread *obj = qobject_cast<QThread *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -258,7 +260,7 @@ HB_FUNC_STATIC(QTHREAD_QUIT)
 // void start(QThread::Priority priority = QThread::InheritPriority)
 HB_FUNC_STATIC(QTHREAD_START)
 {
-  QThread *obj = qobject_cast<QThread *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -278,7 +280,7 @@ HB_FUNC_STATIC(QTHREAD_START)
 // void terminate()
 HB_FUNC_STATIC(QTHREAD_TERMINATE)
 {
-  QThread *obj = qobject_cast<QThread *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -327,7 +329,7 @@ HB_FUNC_STATIC(QTHREAD_IDEALTHREADCOUNT)
 // void yieldCurrentThread()
 HB_FUNC_STATIC(QTHREAD_YIELDCURRENTTHREAD)
 {
-  QThread *obj = qobject_cast<QThread *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

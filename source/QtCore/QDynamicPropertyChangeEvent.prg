@@ -40,6 +40,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QDynamicPropertyChangeEvent *p = static_cast<QDynamicPropertyChangeEvent *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QDynamicPropertyChangeEvent(const QByteArray &name)
 HB_FUNC_STATIC(QDYNAMICPROPERTYCHANGEEVENT_NEW)
 {
@@ -53,7 +56,7 @@ HB_FUNC_STATIC(QDYNAMICPROPERTYCHANGEEVENT_NEW)
 
 HB_FUNC_STATIC(QDYNAMICPROPERTYCHANGEEVENT_DELETE)
 {
-  QDynamicPropertyChangeEvent *obj = static_cast<QDynamicPropertyChangeEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -69,7 +72,7 @@ HB_FUNC_STATIC(QDYNAMICPROPERTYCHANGEEVENT_DELETE)
 // QByteArray propertyName() const
 HB_FUNC_STATIC(QDYNAMICPROPERTYCHANGEEVENT_PROPERTYNAME)
 {
-  QDynamicPropertyChangeEvent *obj = static_cast<QDynamicPropertyChangeEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

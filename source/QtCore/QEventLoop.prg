@@ -46,6 +46,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) QEventLoop *p = qobject_cast<QEventLoop *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QEventLoop(QObject *parent = 0)
 HB_FUNC_STATIC(QEVENTLOOP_NEW)
 {
@@ -59,7 +61,7 @@ HB_FUNC_STATIC(QEVENTLOOP_NEW)
 
 HB_FUNC_STATIC(QEVENTLOOP_DELETE)
 {
-  QEventLoop *obj = qobject_cast<QEventLoop *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -77,7 +79,7 @@ HB_FUNC_STATIC(QEVENTLOOP_DELETE)
 // int exec(QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents)
 HB_FUNC_STATIC(QEVENTLOOP_EXEC)
 {
-  QEventLoop *obj = qobject_cast<QEventLoop *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -96,7 +98,7 @@ HB_FUNC_STATIC(QEVENTLOOP_EXEC)
 // void exit(int returnCode = 0)
 HB_FUNC_STATIC(QEVENTLOOP_EXIT)
 {
-  QEventLoop *obj = qobject_cast<QEventLoop *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -116,7 +118,7 @@ HB_FUNC_STATIC(QEVENTLOOP_EXIT)
 // bool isRunning() const
 HB_FUNC_STATIC(QEVENTLOOP_ISRUNNING)
 {
-  QEventLoop *obj = qobject_cast<QEventLoop *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -135,7 +137,7 @@ HB_FUNC_STATIC(QEVENTLOOP_PROCESSEVENTS)
 {
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
     // bool processEvents(QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents)
-    QEventLoop *obj = qobject_cast<QEventLoop *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->processEvents(HB_ISNIL(1) ? (QEventLoop::ProcessEventsFlags)QEventLoop::AllEvents
@@ -143,7 +145,7 @@ HB_FUNC_STATIC(QEVENTLOOP_PROCESSEVENTS)
     }
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void processEvents(QEventLoop::ProcessEventsFlags flags, int maxTime)
-    QEventLoop *obj = qobject_cast<QEventLoop *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       obj->processEvents((QEventLoop::ProcessEventsFlags)hb_parni(1), PINT(2));
@@ -158,7 +160,7 @@ HB_FUNC_STATIC(QEVENTLOOP_PROCESSEVENTS)
 // void wakeUp()
 HB_FUNC_STATIC(QEVENTLOOP_WAKEUP)
 {
-  QEventLoop *obj = qobject_cast<QEventLoop *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -178,7 +180,7 @@ HB_FUNC_STATIC(QEVENTLOOP_WAKEUP)
 // void quit()
 HB_FUNC_STATIC(QEVENTLOOP_QUIT)
 {
-  QEventLoop *obj = qobject_cast<QEventLoop *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

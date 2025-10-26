@@ -55,6 +55,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QEasingCurve *p = static_cast<QEasingCurve *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QEASINGCURVE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
@@ -73,7 +75,7 @@ HB_FUNC_STATIC(QEASINGCURVE_NEW)
 
 HB_FUNC_STATIC(QEASINGCURVE_DELETE)
 {
-  QEasingCurve *obj = static_cast<QEasingCurve *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -89,7 +91,7 @@ HB_FUNC_STATIC(QEASINGCURVE_DELETE)
 // qreal amplitude() const
 HB_FUNC_STATIC(QEASINGCURVE_AMPLITUDE)
 {
-  QEasingCurve *obj = static_cast<QEasingCurve *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -107,7 +109,7 @@ HB_FUNC_STATIC(QEASINGCURVE_AMPLITUDE)
 // qreal overshoot() const
 HB_FUNC_STATIC(QEASINGCURVE_OVERSHOOT)
 {
-  QEasingCurve *obj = static_cast<QEasingCurve *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -125,7 +127,7 @@ HB_FUNC_STATIC(QEASINGCURVE_OVERSHOOT)
 // qreal period() const
 HB_FUNC_STATIC(QEASINGCURVE_PERIOD)
 {
-  QEasingCurve *obj = static_cast<QEasingCurve *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -143,7 +145,7 @@ HB_FUNC_STATIC(QEASINGCURVE_PERIOD)
 // void setAmplitude(qreal amplitude)
 HB_FUNC_STATIC(QEASINGCURVE_SETAMPLITUDE)
 {
-  QEasingCurve *obj = static_cast<QEasingCurve *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -163,7 +165,7 @@ HB_FUNC_STATIC(QEASINGCURVE_SETAMPLITUDE)
 // void setOvershoot(qreal overshoot)
 HB_FUNC_STATIC(QEASINGCURVE_SETOVERSHOOT)
 {
-  QEasingCurve *obj = static_cast<QEasingCurve *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -183,7 +185,7 @@ HB_FUNC_STATIC(QEASINGCURVE_SETOVERSHOOT)
 // void setPeriod(qreal period)
 HB_FUNC_STATIC(QEASINGCURVE_SETPERIOD)
 {
-  QEasingCurve *obj = static_cast<QEasingCurve *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -203,7 +205,7 @@ HB_FUNC_STATIC(QEASINGCURVE_SETPERIOD)
 // void setType(QEasingCurve::Type type)
 HB_FUNC_STATIC(QEASINGCURVE_SETTYPE)
 {
-  QEasingCurve *obj = static_cast<QEasingCurve *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -223,7 +225,7 @@ HB_FUNC_STATIC(QEASINGCURVE_SETTYPE)
 // QEasingCurve::Type type() const
 HB_FUNC_STATIC(QEASINGCURVE_TYPE)
 {
-  QEasingCurve *obj = static_cast<QEasingCurve *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

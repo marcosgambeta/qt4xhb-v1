@@ -45,6 +45,8 @@ RETURN
 
 #include <QtCore/QLocale>
 
+#define GET_PTR_FROM_SELF(p) QTranslator *p = qobject_cast<QTranslator *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // QTranslator(QObject *parent = 0)
 HB_FUNC_STATIC(QTRANSLATOR_NEW)
 {
@@ -58,7 +60,7 @@ HB_FUNC_STATIC(QTRANSLATOR_NEW)
 
 HB_FUNC_STATIC(QTRANSLATOR_DELETE)
 {
-  QTranslator *obj = qobject_cast<QTranslator *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -76,7 +78,7 @@ HB_FUNC_STATIC(QTRANSLATOR_DELETE)
 // virtual bool isEmpty() const
 HB_FUNC_STATIC(QTRANSLATOR_ISEMPTY)
 {
-  QTranslator *obj = qobject_cast<QTranslator *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -96,7 +98,7 @@ HB_FUNC_STATIC(QTRANSLATOR_LOAD)
   if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISCHARORNIL(2) && ISCHARORNIL(3) && ISCHARORNIL(4)) {
     // bool load(const QString &filename, const QString &directory = QString(), const QString &search_delimiters =
     // QString(), const QString &suffix = QString())
-    QTranslator *obj = qobject_cast<QTranslator *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->load(PQSTRING(1), OPQSTRING(2, QString()), OPQSTRING(3, QString()), OPQSTRING(4, QString())));
@@ -104,7 +106,7 @@ HB_FUNC_STATIC(QTRANSLATOR_LOAD)
   } else if (ISBETWEEN(2, 5) && ISQLOCALE(1) && HB_ISCHAR(2) && ISCHARORNIL(3) && ISCHARORNIL(4) && ISCHARORNIL(5)) {
     // bool load(const QLocale &locale, const QString &filename, const QString &prefix = QString(), const QString
     // &directory = QString(), const QString &suffix = QString())
-    QTranslator *obj = qobject_cast<QTranslator *>(Qt4xHb::getQObjectPointerFromSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RBOOL(obj->load(*PQLOCALE(1), PQSTRING(2), OPQSTRING(3, QString()), OPQSTRING(4, QString()),
@@ -119,7 +121,7 @@ HB_FUNC_STATIC(QTRANSLATOR_LOAD)
 // const
 HB_FUNC_STATIC(QTRANSLATOR_TRANSLATE)
 {
-  QTranslator *obj = qobject_cast<QTranslator *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

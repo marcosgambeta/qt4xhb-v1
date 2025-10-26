@@ -129,6 +129,8 @@ RETURN
 #include <QtCore/QRectF>
 #include <QtCore/QUrl>
 
+#define GET_PTR_FROM_SELF(p) QVariant *p = static_cast<QVariant *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QVariant(Qt::GlobalColor color)
 HB_FUNC_STATIC(QVARIANT_NEW5)
 {
@@ -317,7 +319,7 @@ HB_FUNC_STATIC(QVARIANT_NEW)
 
 HB_FUNC_STATIC(QVARIANT_DELETE)
 {
-  QVariant *obj = static_cast<QVariant *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -333,7 +335,7 @@ HB_FUNC_STATIC(QVARIANT_DELETE)
 // bool canConvert(QVariant::Type t) const
 HB_FUNC_STATIC(QVARIANT_CANCONVERT)
 {
-  QVariant *obj = static_cast<QVariant *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -351,7 +353,7 @@ HB_FUNC_STATIC(QVARIANT_CANCONVERT)
 // void clear()
 HB_FUNC_STATIC(QVARIANT_CLEAR)
 {
-  QVariant *obj = static_cast<QVariant *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -371,7 +373,7 @@ HB_FUNC_STATIC(QVARIANT_CLEAR)
 // bool convert(QVariant::Type t)
 HB_FUNC_STATIC(QVARIANT_CONVERT)
 {
-  QVariant *obj = static_cast<QVariant *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -389,7 +391,7 @@ HB_FUNC_STATIC(QVARIANT_CONVERT)
 // bool isNull() const
 HB_FUNC_STATIC(QVARIANT_ISNULL)
 {
-  QVariant *obj = static_cast<QVariant *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -407,7 +409,7 @@ HB_FUNC_STATIC(QVARIANT_ISNULL)
 // bool isValid() const
 HB_FUNC_STATIC(QVARIANT_ISVALID)
 {
-  QVariant *obj = static_cast<QVariant *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -425,7 +427,7 @@ HB_FUNC_STATIC(QVARIANT_ISVALID)
 // QBitArray toBitArray() const
 HB_FUNC_STATIC(QVARIANT_TOBITARRAY)
 {
-  QVariant *obj = static_cast<QVariant *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -444,7 +446,7 @@ HB_FUNC_STATIC(QVARIANT_TOBITARRAY)
 // bool toBool() const
 HB_FUNC_STATIC(QVARIANT_TOBOOL)
 {
-  QVariant *obj = static_cast<QVariant *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -462,7 +464,7 @@ HB_FUNC_STATIC(QVARIANT_TOBOOL)
 // QByteArray toByteArray() const
 HB_FUNC_STATIC(QVARIANT_TOBYTEARRAY)
 {
-  QVariant *obj = static_cast<QVariant *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -481,7 +483,7 @@ HB_FUNC_STATIC(QVARIANT_TOBYTEARRAY)
 // QChar toChar() const
 HB_FUNC_STATIC(QVARIANT_TOCHAR)
 {
-  QVariant *obj = static_cast<QVariant *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -500,7 +502,7 @@ HB_FUNC_STATIC(QVARIANT_TOCHAR)
 // QDate toDate() const
 HB_FUNC_STATIC(QVARIANT_TODATE)
 {
-  QVariant *obj = static_cast<QVariant *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -519,7 +521,7 @@ HB_FUNC_STATIC(QVARIANT_TODATE)
 // QDateTime toDateTime() const
 HB_FUNC_STATIC(QVARIANT_TODATETIME)
 {
-  QVariant *obj = static_cast<QVariant *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -538,7 +540,7 @@ HB_FUNC_STATIC(QVARIANT_TODATETIME)
 // QEasingCurve toEasingCurve() const
 HB_FUNC_STATIC(QVARIANT_TOEASINGCURVE)
 {
-  QVariant *obj = static_cast<QVariant *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -557,7 +559,7 @@ HB_FUNC_STATIC(QVARIANT_TOEASINGCURVE)
 // QLine toLine() const
 HB_FUNC_STATIC(QVARIANT_TOLINE)
 {
-  QVariant *obj = static_cast<QVariant *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -576,7 +578,7 @@ HB_FUNC_STATIC(QVARIANT_TOLINE)
 // QLineF toLineF() const
 HB_FUNC_STATIC(QVARIANT_TOLINEF)
 {
-  QVariant *obj = static_cast<QVariant *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -595,7 +597,7 @@ HB_FUNC_STATIC(QVARIANT_TOLINEF)
 // QList<QVariant> toList() const
 HB_FUNC_STATIC(QVARIANT_TOLIST)
 {
-  QVariant *obj = static_cast<QVariant *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -613,7 +615,7 @@ HB_FUNC_STATIC(QVARIANT_TOLIST)
 // QLocale toLocale() const
 HB_FUNC_STATIC(QVARIANT_TOLOCALE)
 {
-  QVariant *obj = static_cast<QVariant *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -632,7 +634,7 @@ HB_FUNC_STATIC(QVARIANT_TOLOCALE)
 // QPoint toPoint() const
 HB_FUNC_STATIC(QVARIANT_TOPOINT)
 {
-  QVariant *obj = static_cast<QVariant *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -651,7 +653,7 @@ HB_FUNC_STATIC(QVARIANT_TOPOINT)
 // QPointF toPointF() const
 HB_FUNC_STATIC(QVARIANT_TOPOINTF)
 {
-  QVariant *obj = static_cast<QVariant *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -670,7 +672,7 @@ HB_FUNC_STATIC(QVARIANT_TOPOINTF)
 // qreal toReal(bool *ok = 0) const
 HB_FUNC_STATIC(QVARIANT_TOREAL)
 {
-  QVariant *obj = static_cast<QVariant *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -690,7 +692,7 @@ HB_FUNC_STATIC(QVARIANT_TOREAL)
 // QRect toRect() const
 HB_FUNC_STATIC(QVARIANT_TORECT)
 {
-  QVariant *obj = static_cast<QVariant *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -709,7 +711,7 @@ HB_FUNC_STATIC(QVARIANT_TORECT)
 // QRectF toRectF() const
 HB_FUNC_STATIC(QVARIANT_TORECTF)
 {
-  QVariant *obj = static_cast<QVariant *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -728,7 +730,7 @@ HB_FUNC_STATIC(QVARIANT_TORECTF)
 // QRegExp toRegExp() const
 HB_FUNC_STATIC(QVARIANT_TOREGEXP)
 {
-  QVariant *obj = static_cast<QVariant *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -747,7 +749,7 @@ HB_FUNC_STATIC(QVARIANT_TOREGEXP)
 // QSize toSize() const
 HB_FUNC_STATIC(QVARIANT_TOSIZE)
 {
-  QVariant *obj = static_cast<QVariant *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -766,7 +768,7 @@ HB_FUNC_STATIC(QVARIANT_TOSIZE)
 // QSizeF toSizeF() const
 HB_FUNC_STATIC(QVARIANT_TOSIZEF)
 {
-  QVariant *obj = static_cast<QVariant *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -785,7 +787,7 @@ HB_FUNC_STATIC(QVARIANT_TOSIZEF)
 // QString toString() const
 HB_FUNC_STATIC(QVARIANT_TOSTRING)
 {
-  QVariant *obj = static_cast<QVariant *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -803,7 +805,7 @@ HB_FUNC_STATIC(QVARIANT_TOSTRING)
 // QStringList toStringList() const
 HB_FUNC_STATIC(QVARIANT_TOSTRINGLIST)
 {
-  QVariant *obj = static_cast<QVariant *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -821,7 +823,7 @@ HB_FUNC_STATIC(QVARIANT_TOSTRINGLIST)
 // QTime toTime() const
 HB_FUNC_STATIC(QVARIANT_TOTIME)
 {
-  QVariant *obj = static_cast<QVariant *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -840,7 +842,7 @@ HB_FUNC_STATIC(QVARIANT_TOTIME)
 // QUrl toUrl() const
 HB_FUNC_STATIC(QVARIANT_TOURL)
 {
-  QVariant *obj = static_cast<QVariant *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -859,7 +861,7 @@ HB_FUNC_STATIC(QVARIANT_TOURL)
 // QVariant::Type type() const
 HB_FUNC_STATIC(QVARIANT_TYPE)
 {
-  QVariant *obj = static_cast<QVariant *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -877,7 +879,7 @@ HB_FUNC_STATIC(QVARIANT_TYPE)
 // const char *typeName() const
 HB_FUNC_STATIC(QVARIANT_TYPENAME)
 {
-  QVariant *obj = static_cast<QVariant *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -895,7 +897,7 @@ HB_FUNC_STATIC(QVARIANT_TYPENAME)
 // int userType() const
 HB_FUNC_STATIC(QVARIANT_USERTYPE)
 {
-  QVariant *obj = static_cast<QVariant *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

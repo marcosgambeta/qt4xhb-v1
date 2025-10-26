@@ -51,6 +51,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QLibraryInfo *p = static_cast<QLibraryInfo *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // static QString licensee()
 HB_FUNC_STATIC(QLIBRARYINFO_LICENSEE)
 {
