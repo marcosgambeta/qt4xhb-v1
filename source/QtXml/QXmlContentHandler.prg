@@ -58,9 +58,12 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QXmlContentHandler *p = static_cast<QXmlContentHandler *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QXMLCONTENTHANDLER_DELETE)
 {
-  QXmlContentHandler *obj = static_cast<QXmlContentHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -76,7 +79,7 @@ HB_FUNC_STATIC(QXMLCONTENTHANDLER_DELETE)
 // virtual bool characters(const QString &ch) = 0
 HB_FUNC_STATIC(QXMLCONTENTHANDLER_CHARACTERS)
 {
-  QXmlContentHandler *obj = static_cast<QXmlContentHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -94,7 +97,7 @@ HB_FUNC_STATIC(QXMLCONTENTHANDLER_CHARACTERS)
 // virtual bool endDocument() = 0
 HB_FUNC_STATIC(QXMLCONTENTHANDLER_ENDDOCUMENT)
 {
-  QXmlContentHandler *obj = static_cast<QXmlContentHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -112,7 +115,7 @@ HB_FUNC_STATIC(QXMLCONTENTHANDLER_ENDDOCUMENT)
 // virtual bool endElement(const QString &namespaceURI, const QString &localName, const QString &qName) = 0
 HB_FUNC_STATIC(QXMLCONTENTHANDLER_ENDELEMENT)
 {
-  QXmlContentHandler *obj = static_cast<QXmlContentHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -130,7 +133,7 @@ HB_FUNC_STATIC(QXMLCONTENTHANDLER_ENDELEMENT)
 // virtual bool endPrefixMapping(const QString &prefix) = 0
 HB_FUNC_STATIC(QXMLCONTENTHANDLER_ENDPREFIXMAPPING)
 {
-  QXmlContentHandler *obj = static_cast<QXmlContentHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -148,7 +151,7 @@ HB_FUNC_STATIC(QXMLCONTENTHANDLER_ENDPREFIXMAPPING)
 // virtual QString errorString() const = 0
 HB_FUNC_STATIC(QXMLCONTENTHANDLER_ERRORSTRING)
 {
-  QXmlContentHandler *obj = static_cast<QXmlContentHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -166,7 +169,7 @@ HB_FUNC_STATIC(QXMLCONTENTHANDLER_ERRORSTRING)
 // virtual bool ignorableWhitespace(const QString &ch) = 0
 HB_FUNC_STATIC(QXMLCONTENTHANDLER_IGNORABLEWHITESPACE)
 {
-  QXmlContentHandler *obj = static_cast<QXmlContentHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -184,7 +187,7 @@ HB_FUNC_STATIC(QXMLCONTENTHANDLER_IGNORABLEWHITESPACE)
 // virtual bool processingInstruction(const QString &target, const QString &data) = 0
 HB_FUNC_STATIC(QXMLCONTENTHANDLER_PROCESSINGINSTRUCTION)
 {
-  QXmlContentHandler *obj = static_cast<QXmlContentHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -202,7 +205,7 @@ HB_FUNC_STATIC(QXMLCONTENTHANDLER_PROCESSINGINSTRUCTION)
 // virtual void setDocumentLocator(QXmlLocator *locator) = 0
 HB_FUNC_STATIC(QXMLCONTENTHANDLER_SETDOCUMENTLOCATOR)
 {
-  QXmlContentHandler *obj = static_cast<QXmlContentHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -222,7 +225,7 @@ HB_FUNC_STATIC(QXMLCONTENTHANDLER_SETDOCUMENTLOCATOR)
 // virtual bool skippedEntity(const QString &name) = 0
 HB_FUNC_STATIC(QXMLCONTENTHANDLER_SKIPPEDENTITY)
 {
-  QXmlContentHandler *obj = static_cast<QXmlContentHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -240,7 +243,7 @@ HB_FUNC_STATIC(QXMLCONTENTHANDLER_SKIPPEDENTITY)
 // virtual bool startDocument() = 0
 HB_FUNC_STATIC(QXMLCONTENTHANDLER_STARTDOCUMENT)
 {
-  QXmlContentHandler *obj = static_cast<QXmlContentHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -259,7 +262,7 @@ HB_FUNC_STATIC(QXMLCONTENTHANDLER_STARTDOCUMENT)
 // QXmlAttributes &atts) = 0
 HB_FUNC_STATIC(QXMLCONTENTHANDLER_STARTELEMENT)
 {
-  QXmlContentHandler *obj = static_cast<QXmlContentHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -277,7 +280,7 @@ HB_FUNC_STATIC(QXMLCONTENTHANDLER_STARTELEMENT)
 // virtual bool startPrefixMapping(const QString &prefix, const QString &uri) = 0
 HB_FUNC_STATIC(QXMLCONTENTHANDLER_STARTPREFIXMAPPING)
 {
-  QXmlContentHandler *obj = static_cast<QXmlContentHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -50,9 +50,11 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QXmlDeclHandler *p = static_cast<QXmlDeclHandler *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QXMLDECLHANDLER_DELETE)
 {
-  QXmlDeclHandler *obj = static_cast<QXmlDeclHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -69,7 +71,7 @@ HB_FUNC_STATIC(QXMLDECLHANDLER_DELETE)
 // &valueDefault, const QString &value) = 0
 HB_FUNC_STATIC(QXMLDECLHANDLER_ATTRIBUTEDECL)
 {
-  QXmlDeclHandler *obj = static_cast<QXmlDeclHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -87,7 +89,7 @@ HB_FUNC_STATIC(QXMLDECLHANDLER_ATTRIBUTEDECL)
 // virtual QString errorString() const = 0
 HB_FUNC_STATIC(QXMLDECLHANDLER_ERRORSTRING)
 {
-  QXmlDeclHandler *obj = static_cast<QXmlDeclHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -105,7 +107,7 @@ HB_FUNC_STATIC(QXMLDECLHANDLER_ERRORSTRING)
 // virtual bool externalEntityDecl(const QString &name, const QString &publicId, const QString &systemId) = 0
 HB_FUNC_STATIC(QXMLDECLHANDLER_EXTERNALENTITYDECL)
 {
-  QXmlDeclHandler *obj = static_cast<QXmlDeclHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -123,7 +125,7 @@ HB_FUNC_STATIC(QXMLDECLHANDLER_EXTERNALENTITYDECL)
 // virtual bool internalEntityDecl(const QString &name, const QString &value) = 0
 HB_FUNC_STATIC(QXMLDECLHANDLER_INTERNALENTITYDECL)
 {
-  QXmlDeclHandler *obj = static_cast<QXmlDeclHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

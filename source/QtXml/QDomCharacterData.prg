@@ -46,6 +46,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QDomCharacterData *p = static_cast<QDomCharacterData *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QDOMCHARACTERDATA_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -64,7 +66,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_NEW)
 // void appendData(const QString &arg)
 HB_FUNC_STATIC(QDOMCHARACTERDATA_APPENDDATA)
 {
-  QDomCharacterData *obj = static_cast<QDomCharacterData *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -84,7 +86,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_APPENDDATA)
 // QString data() const
 HB_FUNC_STATIC(QDOMCHARACTERDATA_DATA)
 {
-  QDomCharacterData *obj = static_cast<QDomCharacterData *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -102,7 +104,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_DATA)
 // void deleteData(unsigned long offset, unsigned long count)
 HB_FUNC_STATIC(QDOMCHARACTERDATA_DELETEDATA)
 {
-  QDomCharacterData *obj = static_cast<QDomCharacterData *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -122,7 +124,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_DELETEDATA)
 // void insertData(unsigned long offset, const QString &arg)
 HB_FUNC_STATIC(QDOMCHARACTERDATA_INSERTDATA)
 {
-  QDomCharacterData *obj = static_cast<QDomCharacterData *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -142,7 +144,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_INSERTDATA)
 // uint length() const
 HB_FUNC_STATIC(QDOMCHARACTERDATA_LENGTH)
 {
-  QDomCharacterData *obj = static_cast<QDomCharacterData *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -160,7 +162,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_LENGTH)
 // QDomNode::NodeType nodeType() const
 HB_FUNC_STATIC(QDOMCHARACTERDATA_NODETYPE)
 {
-  QDomCharacterData *obj = static_cast<QDomCharacterData *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -178,7 +180,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_NODETYPE)
 // void replaceData(unsigned long offset, unsigned long count, const QString &arg)
 HB_FUNC_STATIC(QDOMCHARACTERDATA_REPLACEDATA)
 {
-  QDomCharacterData *obj = static_cast<QDomCharacterData *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -198,7 +200,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_REPLACEDATA)
 // void setData(const QString &v)
 HB_FUNC_STATIC(QDOMCHARACTERDATA_SETDATA)
 {
-  QDomCharacterData *obj = static_cast<QDomCharacterData *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -218,7 +220,7 @@ HB_FUNC_STATIC(QDOMCHARACTERDATA_SETDATA)
 // QString substringData(unsigned long offset, unsigned long count)
 HB_FUNC_STATIC(QDOMCHARACTERDATA_SUBSTRINGDATA)
 {
-  QDomCharacterData *obj = static_cast<QDomCharacterData *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

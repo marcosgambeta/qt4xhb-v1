@@ -52,6 +52,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QXmlParseException *p = static_cast<QXmlParseException *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QXMLPARSEEXCEPTION_NEW)
 {
   if (ISBETWEEN(0, 5) && ISCHARORNIL(1) && ISNUMORNIL(2) && ISNUMORNIL(3) && ISCHARORNIL(4) && ISCHARORNIL(5)) {
@@ -71,7 +74,7 @@ HB_FUNC_STATIC(QXMLPARSEEXCEPTION_NEW)
 
 HB_FUNC_STATIC(QXMLPARSEEXCEPTION_DELETE)
 {
-  QXmlParseException *obj = static_cast<QXmlParseException *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -87,7 +90,7 @@ HB_FUNC_STATIC(QXMLPARSEEXCEPTION_DELETE)
 // int columnNumber() const
 HB_FUNC_STATIC(QXMLPARSEEXCEPTION_COLUMNNUMBER)
 {
-  QXmlParseException *obj = static_cast<QXmlParseException *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -105,7 +108,7 @@ HB_FUNC_STATIC(QXMLPARSEEXCEPTION_COLUMNNUMBER)
 // int lineNumber() const
 HB_FUNC_STATIC(QXMLPARSEEXCEPTION_LINENUMBER)
 {
-  QXmlParseException *obj = static_cast<QXmlParseException *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -123,7 +126,7 @@ HB_FUNC_STATIC(QXMLPARSEEXCEPTION_LINENUMBER)
 // QString message() const
 HB_FUNC_STATIC(QXMLPARSEEXCEPTION_MESSAGE)
 {
-  QXmlParseException *obj = static_cast<QXmlParseException *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -141,7 +144,7 @@ HB_FUNC_STATIC(QXMLPARSEEXCEPTION_MESSAGE)
 // QString publicId() const
 HB_FUNC_STATIC(QXMLPARSEEXCEPTION_PUBLICID)
 {
-  QXmlParseException *obj = static_cast<QXmlParseException *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -159,7 +162,7 @@ HB_FUNC_STATIC(QXMLPARSEEXCEPTION_PUBLICID)
 // QString systemId() const
 HB_FUNC_STATIC(QXMLPARSEEXCEPTION_SYSTEMID)
 {
-  QXmlParseException *obj = static_cast<QXmlParseException *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

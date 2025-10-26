@@ -41,6 +41,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QDomProcessingInstruction *p = static_cast<QDomProcessingInstruction *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -59,7 +62,7 @@ HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_NEW)
 // QString data() const
 HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_DATA)
 {
-  QDomProcessingInstruction *obj = static_cast<QDomProcessingInstruction *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -77,7 +80,7 @@ HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_DATA)
 // QDomNode::NodeType nodeType() const
 HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_NODETYPE)
 {
-  QDomProcessingInstruction *obj = static_cast<QDomProcessingInstruction *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -95,7 +98,7 @@ HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_NODETYPE)
 // void setData(const QString &d)
 HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_SETDATA)
 {
-  QDomProcessingInstruction *obj = static_cast<QDomProcessingInstruction *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -115,7 +118,7 @@ HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_SETDATA)
 // QString target() const
 HB_FUNC_STATIC(QDOMPROCESSINGINSTRUCTION_TARGET)
 {
-  QDomProcessingInstruction *obj = static_cast<QDomProcessingInstruction *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -45,6 +45,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QDomDocumentType *p = static_cast<QDomDocumentType *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -63,7 +65,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NEW)
 // QDomNamedNodeMap entities() const
 HB_FUNC_STATIC(QDOMDOCUMENTTYPE_ENTITIES)
 {
-  QDomDocumentType *obj = static_cast<QDomDocumentType *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -82,7 +84,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_ENTITIES)
 // QString internalSubset() const
 HB_FUNC_STATIC(QDOMDOCUMENTTYPE_INTERNALSUBSET)
 {
-  QDomDocumentType *obj = static_cast<QDomDocumentType *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -100,7 +102,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_INTERNALSUBSET)
 // QString name() const
 HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NAME)
 {
-  QDomDocumentType *obj = static_cast<QDomDocumentType *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -118,7 +120,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NAME)
 // QDomNode::NodeType nodeType() const
 HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NODETYPE)
 {
-  QDomDocumentType *obj = static_cast<QDomDocumentType *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -136,7 +138,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NODETYPE)
 // QDomNamedNodeMap notations() const
 HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NOTATIONS)
 {
-  QDomDocumentType *obj = static_cast<QDomDocumentType *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -155,7 +157,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_NOTATIONS)
 // QString publicId() const
 HB_FUNC_STATIC(QDOMDOCUMENTTYPE_PUBLICID)
 {
-  QDomDocumentType *obj = static_cast<QDomDocumentType *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -173,7 +175,7 @@ HB_FUNC_STATIC(QDOMDOCUMENTTYPE_PUBLICID)
 // QString systemId() const
 HB_FUNC_STATIC(QDOMDOCUMENTTYPE_SYSTEMID)
 {
-  QDomDocumentType *obj = static_cast<QDomDocumentType *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

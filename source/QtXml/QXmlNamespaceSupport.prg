@@ -56,6 +56,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QXmlNamespaceSupport *p = static_cast<QXmlNamespaceSupport *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // QXmlNamespaceSupport()
 HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_NEW)
 {
@@ -69,7 +72,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_NEW)
 
 HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_DELETE)
 {
-  QXmlNamespaceSupport *obj = static_cast<QXmlNamespaceSupport *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -85,7 +88,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_DELETE)
 // void popContext()
 HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_POPCONTEXT)
 {
-  QXmlNamespaceSupport *obj = static_cast<QXmlNamespaceSupport *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -105,7 +108,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_POPCONTEXT)
 // QString prefix(const QString &uri) const
 HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_PREFIX)
 {
-  QXmlNamespaceSupport *obj = static_cast<QXmlNamespaceSupport *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -124,14 +127,14 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_PREFIXES)
 {
   if (ISNUMPAR(0)) {
     // QStringList prefixes() const
-    QXmlNamespaceSupport *obj = static_cast<QXmlNamespaceSupport *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RQSTRINGLIST(obj->prefixes());
     }
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // QStringList prefixes(const QString &uri) const
-    QXmlNamespaceSupport *obj = static_cast<QXmlNamespaceSupport *>(Qt4xHb::itemGetPtrStackSelfItem());
+    GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
       RQSTRINGLIST(obj->prefixes(PQSTRING(1)));
@@ -144,7 +147,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_PREFIXES)
 // void processName(const QString &qname, bool isAttribute, QString &nsuri, QString &localname) const
 HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_PROCESSNAME)
 {
-  QXmlNamespaceSupport *obj = static_cast<QXmlNamespaceSupport *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -168,7 +171,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_PROCESSNAME)
 // void pushContext()
 HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_PUSHCONTEXT)
 {
-  QXmlNamespaceSupport *obj = static_cast<QXmlNamespaceSupport *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -188,7 +191,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_PUSHCONTEXT)
 // void reset()
 HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_RESET)
 {
-  QXmlNamespaceSupport *obj = static_cast<QXmlNamespaceSupport *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -208,7 +211,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_RESET)
 // void setPrefix(const QString &pre, const QString &uri)
 HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_SETPREFIX)
 {
-  QXmlNamespaceSupport *obj = static_cast<QXmlNamespaceSupport *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -228,7 +231,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_SETPREFIX)
 // void splitName(const QString &qname, QString &prefix, QString &localname) const
 HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_SPLITNAME)
 {
-  QXmlNamespaceSupport *obj = static_cast<QXmlNamespaceSupport *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -252,7 +255,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_SPLITNAME)
 // QString uri(const QString &prefix) const
 HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_URI)
 {
-  QXmlNamespaceSupport *obj = static_cast<QXmlNamespaceSupport *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

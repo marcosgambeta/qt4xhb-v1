@@ -73,6 +73,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QDomElement *p = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QDOMELEMENT_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -91,7 +93,7 @@ HB_FUNC_STATIC(QDOMELEMENT_NEW)
 // QString attribute(const QString &name, const QString &defValue = QString()) const
 HB_FUNC_STATIC(QDOMELEMENT_ATTRIBUTE)
 {
-  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -109,7 +111,7 @@ HB_FUNC_STATIC(QDOMELEMENT_ATTRIBUTE)
 // QString attributeNS(const QString nsURI, const QString &localName, const QString &defValue = QString()) const
 HB_FUNC_STATIC(QDOMELEMENT_ATTRIBUTENS)
 {
-  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -127,7 +129,7 @@ HB_FUNC_STATIC(QDOMELEMENT_ATTRIBUTENS)
 // QDomAttr attributeNode(const QString &name)
 HB_FUNC_STATIC(QDOMELEMENT_ATTRIBUTENODE)
 {
-  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -146,7 +148,7 @@ HB_FUNC_STATIC(QDOMELEMENT_ATTRIBUTENODE)
 // QDomAttr attributeNodeNS(const QString &nsURI, const QString &localName)
 HB_FUNC_STATIC(QDOMELEMENT_ATTRIBUTENODENS)
 {
-  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -165,7 +167,7 @@ HB_FUNC_STATIC(QDOMELEMENT_ATTRIBUTENODENS)
 // QDomNamedNodeMap attributes() const
 HB_FUNC_STATIC(QDOMELEMENT_ATTRIBUTES)
 {
-  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -184,7 +186,7 @@ HB_FUNC_STATIC(QDOMELEMENT_ATTRIBUTES)
 // QDomNodeList elementsByTagName(const QString &tagname) const
 HB_FUNC_STATIC(QDOMELEMENT_ELEMENTSBYTAGNAME)
 {
-  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -203,7 +205,7 @@ HB_FUNC_STATIC(QDOMELEMENT_ELEMENTSBYTAGNAME)
 // QDomNodeList elementsByTagNameNS(const QString &nsURI, const QString &localName) const
 HB_FUNC_STATIC(QDOMELEMENT_ELEMENTSBYTAGNAMENS)
 {
-  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -222,7 +224,7 @@ HB_FUNC_STATIC(QDOMELEMENT_ELEMENTSBYTAGNAMENS)
 // bool hasAttribute(const QString &name) const
 HB_FUNC_STATIC(QDOMELEMENT_HASATTRIBUTE)
 {
-  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -240,7 +242,7 @@ HB_FUNC_STATIC(QDOMELEMENT_HASATTRIBUTE)
 // bool hasAttributeNS(const QString &nsURI, const QString &localName) const
 HB_FUNC_STATIC(QDOMELEMENT_HASATTRIBUTENS)
 {
-  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -258,7 +260,7 @@ HB_FUNC_STATIC(QDOMELEMENT_HASATTRIBUTENS)
 // QDomNode::NodeType nodeType() const
 HB_FUNC_STATIC(QDOMELEMENT_NODETYPE)
 {
-  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -276,7 +278,7 @@ HB_FUNC_STATIC(QDOMELEMENT_NODETYPE)
 // void removeAttribute(const QString &name)
 HB_FUNC_STATIC(QDOMELEMENT_REMOVEATTRIBUTE)
 {
-  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -296,7 +298,7 @@ HB_FUNC_STATIC(QDOMELEMENT_REMOVEATTRIBUTE)
 // void removeAttributeNS(const QString &nsURI, const QString &localName)
 HB_FUNC_STATIC(QDOMELEMENT_REMOVEATTRIBUTENS)
 {
-  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -316,7 +318,7 @@ HB_FUNC_STATIC(QDOMELEMENT_REMOVEATTRIBUTENS)
 // QDomAttr removeAttributeNode(const QDomAttr &oldAttr)
 HB_FUNC_STATIC(QDOMELEMENT_REMOVEATTRIBUTENODE)
 {
-  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -335,7 +337,7 @@ HB_FUNC_STATIC(QDOMELEMENT_REMOVEATTRIBUTENODE)
 // void setAttribute(const QString &name, const QString &value)
 HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE1)
 {
-  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -355,7 +357,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE1)
 // void setAttribute(const QString &name, int value)
 HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE2)
 {
-  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -375,7 +377,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE2)
 // void setAttribute(const QString &name, uint value)
 HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE3)
 {
-  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -395,7 +397,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE3)
 // void setAttribute(const QString &name, qlonglong value)
 HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE4)
 {
-  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -415,7 +417,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE4)
 // void setAttribute(const QString &name, qulonglong value)
 HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE5)
 {
-  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -435,7 +437,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE5)
 // void setAttribute(const QString &name, float value)
 HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE6)
 {
-  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -455,7 +457,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE6)
 // void setAttribute(const QString &name, double value)
 HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE7)
 {
-  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -486,7 +488,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTE)
 // void setAttributeNS(const QString nsURI, const QString &qName, const QString &value)
 HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS1)
 {
-  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -506,7 +508,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS1)
 // void setAttributeNS(const QString nsURI, const QString &qName, int value)
 HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS2)
 {
-  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -526,7 +528,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS2)
 // void setAttributeNS(const QString nsURI, const QString &qName, uint value)
 HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS3)
 {
-  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -546,7 +548,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS3)
 // void setAttributeNS(const QString nsURI, const QString &qName, qlonglong value)
 HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS4)
 {
-  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -566,7 +568,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS4)
 // void setAttributeNS(const QString nsURI, const QString &qName, qulonglong value)
 HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS5)
 {
-  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -586,7 +588,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS5)
 // void setAttributeNS(const QString nsURI, const QString &qName, double value)
 HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS6)
 {
-  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -617,7 +619,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENS)
 // QDomAttr setAttributeNode(const QDomAttr &newAttr)
 HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENODE)
 {
-  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -636,7 +638,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENODE)
 // QDomAttr setAttributeNodeNS(const QDomAttr &newAttr)
 HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENODENS)
 {
-  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -655,7 +657,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETATTRIBUTENODENS)
 // void setTagName(const QString &name)
 HB_FUNC_STATIC(QDOMELEMENT_SETTAGNAME)
 {
-  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -675,7 +677,7 @@ HB_FUNC_STATIC(QDOMELEMENT_SETTAGNAME)
 // QString tagName() const
 HB_FUNC_STATIC(QDOMELEMENT_TAGNAME)
 {
-  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -693,7 +695,7 @@ HB_FUNC_STATIC(QDOMELEMENT_TAGNAME)
 // QString text() const
 HB_FUNC_STATIC(QDOMELEMENT_TEXT)
 {
-  QDomElement *obj = static_cast<QDomElement *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

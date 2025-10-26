@@ -47,9 +47,12 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QXmlEntityResolver *p = static_cast<QXmlEntityResolver *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QXMLENTITYRESOLVER_DELETE)
 {
-  QXmlEntityResolver *obj = static_cast<QXmlEntityResolver *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -65,7 +68,7 @@ HB_FUNC_STATIC(QXMLENTITYRESOLVER_DELETE)
 // virtual QString errorString() const = 0
 HB_FUNC_STATIC(QXMLENTITYRESOLVER_ERRORSTRING)
 {
-  QXmlEntityResolver *obj = static_cast<QXmlEntityResolver *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

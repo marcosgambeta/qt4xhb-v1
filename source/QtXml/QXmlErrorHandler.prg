@@ -50,9 +50,11 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QXmlErrorHandler *p = static_cast<QXmlErrorHandler *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QXMLERRORHANDLER_DELETE)
 {
-  QXmlErrorHandler *obj = static_cast<QXmlErrorHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -68,7 +70,7 @@ HB_FUNC_STATIC(QXMLERRORHANDLER_DELETE)
 // virtual bool error(const QXmlParseException &exception) = 0
 HB_FUNC_STATIC(QXMLERRORHANDLER_ERROR)
 {
-  QXmlErrorHandler *obj = static_cast<QXmlErrorHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -86,7 +88,7 @@ HB_FUNC_STATIC(QXMLERRORHANDLER_ERROR)
 // virtual QString errorString() const = 0
 HB_FUNC_STATIC(QXMLERRORHANDLER_ERRORSTRING)
 {
-  QXmlErrorHandler *obj = static_cast<QXmlErrorHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -104,7 +106,7 @@ HB_FUNC_STATIC(QXMLERRORHANDLER_ERRORSTRING)
 // virtual bool fatalError(const QXmlParseException &exception) = 0
 HB_FUNC_STATIC(QXMLERRORHANDLER_FATALERROR)
 {
-  QXmlErrorHandler *obj = static_cast<QXmlErrorHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -122,7 +124,7 @@ HB_FUNC_STATIC(QXMLERRORHANDLER_FATALERROR)
 // virtual bool warning(const QXmlParseException &exception) = 0
 HB_FUNC_STATIC(QXMLERRORHANDLER_WARNING)
 {
-  QXmlErrorHandler *obj = static_cast<QXmlErrorHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

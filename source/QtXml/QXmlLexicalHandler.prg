@@ -54,9 +54,12 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QXmlLexicalHandler *p = static_cast<QXmlLexicalHandler *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QXMLLEXICALHANDLER_DELETE)
 {
-  QXmlLexicalHandler *obj = static_cast<QXmlLexicalHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -72,7 +75,7 @@ HB_FUNC_STATIC(QXMLLEXICALHANDLER_DELETE)
 // virtual bool comment(const QString &ch) = 0
 HB_FUNC_STATIC(QXMLLEXICALHANDLER_COMMENT)
 {
-  QXmlLexicalHandler *obj = static_cast<QXmlLexicalHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -90,7 +93,7 @@ HB_FUNC_STATIC(QXMLLEXICALHANDLER_COMMENT)
 // virtual bool endCDATA() = 0
 HB_FUNC_STATIC(QXMLLEXICALHANDLER_ENDCDATA)
 {
-  QXmlLexicalHandler *obj = static_cast<QXmlLexicalHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -108,7 +111,7 @@ HB_FUNC_STATIC(QXMLLEXICALHANDLER_ENDCDATA)
 // virtual bool endDTD() = 0
 HB_FUNC_STATIC(QXMLLEXICALHANDLER_ENDDTD)
 {
-  QXmlLexicalHandler *obj = static_cast<QXmlLexicalHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -126,7 +129,7 @@ HB_FUNC_STATIC(QXMLLEXICALHANDLER_ENDDTD)
 // virtual bool endEntity(const QString &name) = 0
 HB_FUNC_STATIC(QXMLLEXICALHANDLER_ENDENTITY)
 {
-  QXmlLexicalHandler *obj = static_cast<QXmlLexicalHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -144,7 +147,7 @@ HB_FUNC_STATIC(QXMLLEXICALHANDLER_ENDENTITY)
 // virtual QString errorString() const = 0
 HB_FUNC_STATIC(QXMLLEXICALHANDLER_ERRORSTRING)
 {
-  QXmlLexicalHandler *obj = static_cast<QXmlLexicalHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -162,7 +165,7 @@ HB_FUNC_STATIC(QXMLLEXICALHANDLER_ERRORSTRING)
 // virtual bool startCDATA() = 0
 HB_FUNC_STATIC(QXMLLEXICALHANDLER_STARTCDATA)
 {
-  QXmlLexicalHandler *obj = static_cast<QXmlLexicalHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -180,7 +183,7 @@ HB_FUNC_STATIC(QXMLLEXICALHANDLER_STARTCDATA)
 // virtual bool startDTD(const QString &name, const QString &publicId, const QString &systemId) = 0
 HB_FUNC_STATIC(QXMLLEXICALHANDLER_STARTDTD)
 {
-  QXmlLexicalHandler *obj = static_cast<QXmlLexicalHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -198,7 +201,7 @@ HB_FUNC_STATIC(QXMLLEXICALHANDLER_STARTDTD)
 // virtual bool startEntity(const QString &name) = 0
 HB_FUNC_STATIC(QXMLLEXICALHANDLER_STARTENTITY)
 {
-  QXmlLexicalHandler *obj = static_cast<QXmlLexicalHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

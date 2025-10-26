@@ -55,6 +55,9 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  QDomImplementation *p = static_cast<QDomImplementation *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QDOMIMPLEMENTATION_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -72,7 +75,7 @@ HB_FUNC_STATIC(QDOMIMPLEMENTATION_NEW)
 
 HB_FUNC_STATIC(QDOMIMPLEMENTATION_DELETE)
 {
-  QDomImplementation *obj = static_cast<QDomImplementation *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -88,7 +91,7 @@ HB_FUNC_STATIC(QDOMIMPLEMENTATION_DELETE)
 // QDomDocument createDocument(const QString &nsURI, const QString &qName, const QDomDocumentType &doctype)
 HB_FUNC_STATIC(QDOMIMPLEMENTATION_CREATEDOCUMENT)
 {
-  QDomImplementation *obj = static_cast<QDomImplementation *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -107,7 +110,7 @@ HB_FUNC_STATIC(QDOMIMPLEMENTATION_CREATEDOCUMENT)
 // QDomDocumentType createDocumentType(const QString &qName, const QString &publicId, const QString &systemId)
 HB_FUNC_STATIC(QDOMIMPLEMENTATION_CREATEDOCUMENTTYPE)
 {
-  QDomImplementation *obj = static_cast<QDomImplementation *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -126,7 +129,7 @@ HB_FUNC_STATIC(QDOMIMPLEMENTATION_CREATEDOCUMENTTYPE)
 // bool hasFeature(const QString &feature, const QString &version) const
 HB_FUNC_STATIC(QDOMIMPLEMENTATION_HASFEATURE)
 {
-  QDomImplementation *obj = static_cast<QDomImplementation *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -144,7 +147,7 @@ HB_FUNC_STATIC(QDOMIMPLEMENTATION_HASFEATURE)
 // bool isNull()
 HB_FUNC_STATIC(QDOMIMPLEMENTATION_ISNULL)
 {
-  QDomImplementation *obj = static_cast<QDomImplementation *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -60,6 +60,8 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
+#define GET_PTR_FROM_SELF(p) QDomNamedNodeMap *p = static_cast<QDomNamedNodeMap *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 HB_FUNC_STATIC(QDOMNAMEDNODEMAP_NEW)
 {
   if (ISNUMPAR(0)) {
@@ -77,7 +79,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_NEW)
 
 HB_FUNC_STATIC(QDOMNAMEDNODEMAP_DELETE)
 {
-  QDomNamedNodeMap *obj = static_cast<QDomNamedNodeMap *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     delete obj;
@@ -93,7 +95,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_DELETE)
 // bool contains(const QString &name) const
 HB_FUNC_STATIC(QDOMNAMEDNODEMAP_CONTAINS)
 {
-  QDomNamedNodeMap *obj = static_cast<QDomNamedNodeMap *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -111,7 +113,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_CONTAINS)
 // int count() const
 HB_FUNC_STATIC(QDOMNAMEDNODEMAP_COUNT)
 {
-  QDomNamedNodeMap *obj = static_cast<QDomNamedNodeMap *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -129,7 +131,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_COUNT)
 // bool isEmpty() const
 HB_FUNC_STATIC(QDOMNAMEDNODEMAP_ISEMPTY)
 {
-  QDomNamedNodeMap *obj = static_cast<QDomNamedNodeMap *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -147,7 +149,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_ISEMPTY)
 // QDomNode item(int index) const
 HB_FUNC_STATIC(QDOMNAMEDNODEMAP_ITEM)
 {
-  QDomNamedNodeMap *obj = static_cast<QDomNamedNodeMap *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -166,7 +168,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_ITEM)
 // uint length() const
 HB_FUNC_STATIC(QDOMNAMEDNODEMAP_LENGTH)
 {
-  QDomNamedNodeMap *obj = static_cast<QDomNamedNodeMap *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -184,7 +186,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_LENGTH)
 // QDomNode namedItem(const QString &name) const
 HB_FUNC_STATIC(QDOMNAMEDNODEMAP_NAMEDITEM)
 {
-  QDomNamedNodeMap *obj = static_cast<QDomNamedNodeMap *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -203,7 +205,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_NAMEDITEM)
 // QDomNode namedItemNS(const QString &nsURI, const QString &localName) const
 HB_FUNC_STATIC(QDOMNAMEDNODEMAP_NAMEDITEMNS)
 {
-  QDomNamedNodeMap *obj = static_cast<QDomNamedNodeMap *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -222,7 +224,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_NAMEDITEMNS)
 // QDomNode removeNamedItem(const QString &name)
 HB_FUNC_STATIC(QDOMNAMEDNODEMAP_REMOVENAMEDITEM)
 {
-  QDomNamedNodeMap *obj = static_cast<QDomNamedNodeMap *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -241,7 +243,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_REMOVENAMEDITEM)
 // QDomNode removeNamedItemNS(const QString &nsURI, const QString &localName)
 HB_FUNC_STATIC(QDOMNAMEDNODEMAP_REMOVENAMEDITEMNS)
 {
-  QDomNamedNodeMap *obj = static_cast<QDomNamedNodeMap *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -260,7 +262,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_REMOVENAMEDITEMNS)
 // QDomNode setNamedItem(const QDomNode &newNode)
 HB_FUNC_STATIC(QDOMNAMEDNODEMAP_SETNAMEDITEM)
 {
-  QDomNamedNodeMap *obj = static_cast<QDomNamedNodeMap *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -279,7 +281,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_SETNAMEDITEM)
 // QDomNode setNamedItemNS(const QDomNode &newNode)
 HB_FUNC_STATIC(QDOMNAMEDNODEMAP_SETNAMEDITEMNS)
 {
-  QDomNamedNodeMap *obj = static_cast<QDomNamedNodeMap *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -298,7 +300,7 @@ HB_FUNC_STATIC(QDOMNAMEDNODEMAP_SETNAMEDITEMNS)
 // int size() const
 HB_FUNC_STATIC(QDOMNAMEDNODEMAP_SIZE)
 {
-  QDomNamedNodeMap *obj = static_cast<QDomNamedNodeMap *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
