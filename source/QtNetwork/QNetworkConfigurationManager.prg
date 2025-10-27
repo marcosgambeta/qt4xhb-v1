@@ -94,8 +94,9 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      QList<QNetworkConfiguration> list = obj->allConfigurations(
-          HB_ISNIL(1) ? (QNetworkConfiguration::StateFlags)0 : (QNetworkConfiguration::StateFlags)hb_parni(1));
+      QList<QNetworkConfiguration> list =
+          obj->allConfigurations(HB_ISNIL(1) ? static_cast<QNetworkConfiguration::StateFlags>(0)
+                                             : static_cast<QNetworkConfiguration::StateFlags>(hb_parni(1)));
       PHB_DYNS pDynSym = hb_dynsymFindName("QNETWORKCONFIGURATION");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if (pDynSym != NULL) {

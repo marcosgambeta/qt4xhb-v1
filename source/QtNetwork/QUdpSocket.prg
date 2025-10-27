@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QUDPSOCKET_BIND)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RBOOL(obj->bind(*PQHOSTADDRESS(1), PQUINT16(2), (QUdpSocket::BindMode)hb_parni(3)));
+      RBOOL(obj->bind(*PQHOSTADDRESS(1), PQUINT16(2), static_cast<QUdpSocket::BindMode>(hb_parni(3))));
     }
   } else if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
     // bool bind(quint16 port = 0)
@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QUDPSOCKET_BIND)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RBOOL(obj->bind(PQUINT16(1), (QUdpSocket::BindMode)hb_parni(2)));
+      RBOOL(obj->bind(PQUINT16(1), static_cast<QUdpSocket::BindMode>(hb_parni(2))));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -91,7 +91,7 @@ RETURN
 HB_FUNC_STATIC(QABSTRACTSOCKET_NEW)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && ISQOBJECT(2)) {
-    QAbstractSocket *obj = new QAbstractSocket((QAbstractSocket::SocketType)hb_parni(1), PQOBJECT(2));
+    QAbstractSocket *obj = new QAbstractSocket(static_cast<QAbstractSocket::SocketType>(hb_parni(1)), PQOBJECT(2));
     Qt4xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -143,7 +143,8 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_CONNECTTOHOST)
 
     if (obj != NULL) {
       obj->connectToHost(PQSTRING(1), PQUINT16(2),
-                         HB_ISNIL(3) ? (QIODevice::OpenMode)QIODevice::ReadWrite : (QIODevice::OpenMode)hb_parni(3));
+                         HB_ISNIL(3) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
+                                     : static_cast<QIODevice::OpenMode>(hb_parni(3)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -154,7 +155,8 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_CONNECTTOHOST)
 
     if (obj != NULL) {
       obj->connectToHost(*PQHOSTADDRESS(1), PQUINT16(2),
-                         HB_ISNIL(3) ? (QIODevice::OpenMode)QIODevice::ReadWrite : (QIODevice::OpenMode)hb_parni(3));
+                         HB_ISNIL(3) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
+                                     : static_cast<QIODevice::OpenMode>(hb_parni(3)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -417,10 +419,11 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_SETSOCKETDESCRIPTOR)
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
       RBOOL(obj->setSocketDescriptor(PINT(1),
-                                     HB_ISNIL(2) ? (QAbstractSocket::SocketState)QAbstractSocket::ConnectedState
-                                                 : (QAbstractSocket::SocketState)hb_parni(2),
-                                     HB_ISNIL(3) ? (QIODevice::OpenMode)QIODevice::ReadWrite
-                                                 : (QIODevice::OpenMode)hb_parni(3)));
+                                     HB_ISNIL(2)
+                                         ? static_cast<QAbstractSocket::SocketState>(QAbstractSocket::ConnectedState)
+                                         : static_cast<QAbstractSocket::SocketState>(hb_parni(2)),
+                                     HB_ISNIL(3) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
+                                                 : static_cast<QIODevice::OpenMode>(hb_parni(3))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -438,7 +441,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_SETSOCKETOPTION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2)) {
 #endif
-      obj->setSocketOption((QAbstractSocket::SocketOption)hb_parni(1), *PQVARIANT(2));
+      obj->setSocketOption(static_cast<QAbstractSocket::SocketOption>(hb_parni(1)), *PQVARIANT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -476,7 +479,7 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_SOCKETOPTION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QVariant *ptr = new QVariant(obj->socketOption((QAbstractSocket::SocketOption)hb_parni(1)));
+      QVariant *ptr = new QVariant(obj->socketOption(static_cast<QAbstractSocket::SocketOption>(hb_parni(1))));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {

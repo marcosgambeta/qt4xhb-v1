@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_ATTRIBUTE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QVariant *ptr = new QVariant(obj->attribute((QNetworkRequest::Attribute)hb_parni(1)));
+      QVariant *ptr = new QVariant(obj->attribute(static_cast<QNetworkRequest::Attribute>(hb_parni(1))));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_HEADER)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QVariant *ptr = new QVariant(obj->header((QNetworkRequest::KnownHeaders)hb_parni(1)));
+      QVariant *ptr = new QVariant(obj->header(static_cast<QNetworkRequest::KnownHeaders>(hb_parni(1))));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
