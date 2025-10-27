@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_BUTTONTEXT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RQSTRING(obj->buttonText((QWizard::WizardButton)hb_parni(1)));
+      RQSTRING(obj->buttonText(static_cast<QWizard::WizardButton>(hb_parni(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -211,7 +211,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_PIXMAP)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QPixmap *ptr = new QPixmap(obj->pixmap((QWizard::WizardPixmap)hb_parni(1)));
+      QPixmap *ptr = new QPixmap(obj->pixmap(static_cast<QWizard::WizardPixmap>(hb_parni(1))));
       Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -230,7 +230,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_SETBUTTONTEXT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
 #endif
-      obj->setButtonText((QWizard::WizardButton)hb_parni(1), PQSTRING(2));
+      obj->setButtonText(static_cast<QWizard::WizardButton>(hb_parni(1)), PQSTRING(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -290,7 +290,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_SETPIXMAP)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPIXMAP(2)) {
 #endif
-      obj->setPixmap((QWizard::WizardPixmap)hb_parni(1), *PQPIXMAP(2));
+      obj->setPixmap(static_cast<QWizard::WizardPixmap>(hb_parni(1)), *PQPIXMAP(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

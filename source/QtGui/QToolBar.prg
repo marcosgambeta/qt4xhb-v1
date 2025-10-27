@@ -327,7 +327,7 @@ HB_FUNC_STATIC(QTOOLBAR_ISAREAALLOWED)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->isAreaAllowed((Qt::ToolBarArea)hb_parni(1)));
+      RBOOL(obj->isAreaAllowed(static_cast<Qt::ToolBarArea>(hb_parni(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -417,7 +417,7 @@ HB_FUNC_STATIC(QTOOLBAR_SETALLOWEDAREAS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setAllowedAreas((Qt::ToolBarAreas)hb_parni(1));
+      obj->setAllowedAreas(static_cast<Qt::ToolBarAreas>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -477,7 +477,7 @@ HB_FUNC_STATIC(QTOOLBAR_SETORIENTATION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setOrientation((Qt::Orientation)hb_parni(1));
+      obj->setOrientation(static_cast<Qt::Orientation>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -573,7 +573,7 @@ HB_FUNC_STATIC(QTOOLBAR_SETTOOLBUTTONSTYLE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setToolButtonStyle((Qt::ToolButtonStyle)hb_parni(1));
+      obj->setToolButtonStyle(static_cast<Qt::ToolButtonStyle>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -101,7 +101,8 @@ RETURN
 HB_FUNC_STATIC(QWIZARD_NEW)
 {
   if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
-    QWizard *obj = new QWizard(OPQWIDGET(1, 0), HB_ISNIL(2) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(2));
+    QWizard *obj = new QWizard(OPQWIDGET(1, 0), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0)
+                                                            : static_cast<Qt::WindowFlags>(hb_parni(2)));
     Qt4xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -152,7 +153,7 @@ HB_FUNC_STATIC(QWIZARD_BUTTON)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QAbstractButton *ptr = obj->button((QWizard::WizardButton)hb_parni(1));
+      QAbstractButton *ptr = obj->button(static_cast<QWizard::WizardButton>(hb_parni(1)));
       Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTBUTTON");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -171,7 +172,7 @@ HB_FUNC_STATIC(QWIZARD_BUTTONTEXT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RQSTRING(obj->buttonText((QWizard::WizardButton)hb_parni(1)));
+      RQSTRING(obj->buttonText(static_cast<QWizard::WizardButton>(hb_parni(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -337,7 +338,7 @@ HB_FUNC_STATIC(QWIZARD_PIXMAP)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QPixmap *ptr = new QPixmap(obj->pixmap((QWizard::WizardPixmap)hb_parni(1)));
+      QPixmap *ptr = new QPixmap(obj->pixmap(static_cast<QWizard::WizardPixmap>(hb_parni(1))));
       Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -376,7 +377,7 @@ HB_FUNC_STATIC(QWIZARD_SETBUTTON)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQABSTRACTBUTTON(2)) {
 #endif
-      obj->setButton((QWizard::WizardButton)hb_parni(1), PQABSTRACTBUTTON(2));
+      obj->setButton(static_cast<QWizard::WizardButton>(hb_parni(1)), PQABSTRACTBUTTON(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -422,7 +423,7 @@ HB_FUNC_STATIC(QWIZARD_SETBUTTONTEXT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
 #endif
-      obj->setButtonText((QWizard::WizardButton)hb_parni(1), PQSTRING(2));
+      obj->setButtonText(static_cast<QWizard::WizardButton>(hb_parni(1)), PQSTRING(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -482,7 +483,7 @@ HB_FUNC_STATIC(QWIZARD_SETOPTION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
 #endif
-      obj->setOption((QWizard::WizardOption)hb_parni(1), OPBOOL(2, true));
+      obj->setOption(static_cast<QWizard::WizardOption>(hb_parni(1)), OPBOOL(2, true));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -502,7 +503,7 @@ HB_FUNC_STATIC(QWIZARD_SETOPTIONS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setOptions((QWizard::WizardOptions)hb_parni(1));
+      obj->setOptions(static_cast<QWizard::WizardOptions>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -542,7 +543,7 @@ HB_FUNC_STATIC(QWIZARD_SETPIXMAP)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQPIXMAP(2)) {
 #endif
-      obj->setPixmap((QWizard::WizardPixmap)hb_parni(1), *PQPIXMAP(2));
+      obj->setPixmap(static_cast<QWizard::WizardPixmap>(hb_parni(1)), *PQPIXMAP(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -602,7 +603,7 @@ HB_FUNC_STATIC(QWIZARD_SETSUBTITLEFORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setSubTitleFormat((Qt::TextFormat)hb_parni(1));
+      obj->setSubTitleFormat(static_cast<Qt::TextFormat>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -622,7 +623,7 @@ HB_FUNC_STATIC(QWIZARD_SETTITLEFORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setTitleFormat((Qt::TextFormat)hb_parni(1));
+      obj->setTitleFormat(static_cast<Qt::TextFormat>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -642,7 +643,7 @@ HB_FUNC_STATIC(QWIZARD_SETWIZARDSTYLE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setWizardStyle((QWizard::WizardStyle)hb_parni(1));
+      obj->setWizardStyle(static_cast<QWizard::WizardStyle>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -717,7 +718,7 @@ HB_FUNC_STATIC(QWIZARD_TESTOPTION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->testOption((QWizard::WizardOption)hb_parni(1)));
+      RBOOL(obj->testOption(static_cast<QWizard::WizardOption>(hb_parni(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

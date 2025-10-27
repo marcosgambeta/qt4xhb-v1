@@ -130,7 +130,8 @@ HB_FUNC_STATIC(QTEXTLINE_CURSORTOX1)
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       int par1;
-      RQREAL(obj->cursorToX(&par1, HB_ISNIL(2) ? (QTextLine::Edge)QTextLine::Leading : (QTextLine::Edge)hb_parni(2)));
+      RQREAL(obj->cursorToX(&par1, HB_ISNIL(2) ? static_cast<QTextLine::Edge>(QTextLine::Leading)
+                                               : static_cast<QTextLine::Edge>(hb_parni(2))));
       hb_storni(par1, 1);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -149,7 +150,8 @@ HB_FUNC_STATIC(QTEXTLINE_CURSORTOX2)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
-      RQREAL(obj->cursorToX(PINT(1), HB_ISNIL(2) ? (QTextLine::Edge)QTextLine::Leading : (QTextLine::Edge)hb_parni(2)));
+      RQREAL(obj->cursorToX(PINT(1), HB_ISNIL(2) ? static_cast<QTextLine::Edge>(QTextLine::Leading)
+                                                 : static_cast<QTextLine::Edge>(hb_parni(2))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -536,8 +538,9 @@ HB_FUNC_STATIC(QTEXTLINE_XTOCURSOR)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
-      RINT(obj->xToCursor(PQREAL(1), HB_ISNIL(2) ? (QTextLine::CursorPosition)QTextLine::CursorBetweenCharacters
-                                                 : (QTextLine::CursorPosition)hb_parni(2)));
+      RINT(obj->xToCursor(PQREAL(1), HB_ISNIL(2)
+                                         ? static_cast<QTextLine::CursorPosition>(QTextLine::CursorBetweenCharacters)
+                                         : static_cast<QTextLine::CursorPosition>(hb_parni(2))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

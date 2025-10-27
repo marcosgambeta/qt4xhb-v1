@@ -389,8 +389,8 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_CLEARUNDOREDOSTACKS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      obj->clearUndoRedoStacks(HB_ISNIL(1) ? (QTextDocument::Stacks)QTextDocument::UndoAndRedoStacks
-                                           : (QTextDocument::Stacks)hb_parni(1));
+      obj->clearUndoRedoStacks(HB_ISNIL(1) ? static_cast<QTextDocument::Stacks>(QTextDocument::UndoAndRedoStacks)
+                                           : static_cast<QTextDocument::Stacks>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -577,9 +577,9 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QTextCursor *ptr =
-          new QTextCursor(obj->find(PQSTRING(1), *PQTEXTCURSOR(2),
-                                    HB_ISNIL(3) ? (QTextDocument::FindFlags)0 : (QTextDocument::FindFlags)hb_parni(3)));
+      QTextCursor *ptr = new QTextCursor(obj->find(PQSTRING(1), *PQTEXTCURSOR(2),
+                                                   HB_ISNIL(3) ? static_cast<QTextDocument::FindFlags>(0)
+                                                               : static_cast<QTextDocument::FindFlags>(hb_parni(3))));
       Qt4xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
     }
   } else if (ISBETWEEN(2, 3) && ISQREGEXP(1) && ISQTEXTCURSOR(2) && ISNUMORNIL(3)) {
@@ -587,9 +587,9 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QTextCursor *ptr =
-          new QTextCursor(obj->find(*PQREGEXP(1), *PQTEXTCURSOR(2),
-                                    HB_ISNIL(3) ? (QTextDocument::FindFlags)0 : (QTextDocument::FindFlags)hb_parni(3)));
+      QTextCursor *ptr = new QTextCursor(obj->find(*PQREGEXP(1), *PQTEXTCURSOR(2),
+                                                   HB_ISNIL(3) ? static_cast<QTextDocument::FindFlags>(0)
+                                                               : static_cast<QTextDocument::FindFlags>(hb_parni(3))));
       Qt4xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
     }
   } else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
@@ -597,8 +597,9 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QTextCursor *ptr = new QTextCursor(obj->find(
-          PQSTRING(1), OPINT(2, 0), HB_ISNIL(3) ? (QTextDocument::FindFlags)0 : (QTextDocument::FindFlags)hb_parni(3)));
+      QTextCursor *ptr = new QTextCursor(obj->find(PQSTRING(1), OPINT(2, 0),
+                                                   HB_ISNIL(3) ? static_cast<QTextDocument::FindFlags>(0)
+                                                               : static_cast<QTextDocument::FindFlags>(hb_parni(3))));
       Qt4xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
     }
   } else if (ISBETWEEN(1, 3) && ISQREGEXP(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
@@ -606,9 +607,9 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_FIND)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QTextCursor *ptr =
-          new QTextCursor(obj->find(*PQREGEXP(1), OPINT(2, 0),
-                                    HB_ISNIL(3) ? (QTextDocument::FindFlags)0 : (QTextDocument::FindFlags)hb_parni(3)));
+      QTextCursor *ptr = new QTextCursor(obj->find(*PQREGEXP(1), OPINT(2, 0),
+                                                   HB_ISNIL(3) ? static_cast<QTextDocument::FindFlags>(0)
+                                                               : static_cast<QTextDocument::FindFlags>(hb_parni(3))));
       Qt4xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
     }
   } else {
@@ -902,7 +903,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_METAINFORMATION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RQSTRING(obj->metaInformation((QTextDocument::MetaInformation)hb_parni(1)));
+      RQSTRING(obj->metaInformation(static_cast<QTextDocument::MetaInformation>(hb_parni(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1071,7 +1072,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETDEFAULTCURSORMOVESTYLE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setDefaultCursorMoveStyle((Qt::CursorMoveStyle)hb_parni(1));
+      obj->setDefaultCursorMoveStyle(static_cast<Qt::CursorMoveStyle>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1251,7 +1252,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_SETMETAINFORMATION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
 #endif
-      obj->setMetaInformation((QTextDocument::MetaInformation)hb_parni(1), PQSTRING(2));
+      obj->setMetaInformation(static_cast<QTextDocument::MetaInformation>(hb_parni(1)), PQSTRING(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -274,7 +274,8 @@ HB_FUNC_STATIC(QTREEWIDGET_FINDITEMS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
 #endif
-      QList<QTreeWidgetItem *> list = obj->findItems(PQSTRING(1), (Qt::MatchFlags)hb_parni(2), OPINT(3, 0));
+      QList<QTreeWidgetItem *> list =
+          obj->findItems(PQSTRING(1), static_cast<Qt::MatchFlags>(hb_parni(2)), OPINT(3, 0));
       PHB_DYNS pDynSym = hb_dynsymFindName("QTREEWIDGETITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if (pDynSym != NULL) {
@@ -627,7 +628,7 @@ HB_FUNC_STATIC(QTREEWIDGET_SETCURRENTITEM)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->setCurrentItem(PQTREEWIDGETITEM(1), PINT(2), (QItemSelectionModel::SelectionFlags)hb_parni(3));
+      obj->setCurrentItem(PQTREEWIDGETITEM(1), PINT(2), static_cast<QItemSelectionModel::SelectionFlags>(hb_parni(3)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -763,7 +764,7 @@ HB_FUNC_STATIC(QTREEWIDGET_SORTITEMS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-      obj->sortItems(PINT(1), (Qt::SortOrder)hb_parni(2));
+      obj->sortItems(PINT(1), static_cast<Qt::SortOrder>(hb_parni(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -938,9 +939,9 @@ HB_FUNC_STATIC(QTREEWIDGET_SCROLLTOITEM)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQTREEWIDGETITEM(1) && ISNUMORNIL(2)) {
 #endif
-      obj->scrollToItem(PQTREEWIDGETITEM(1), HB_ISNIL(2)
-                                                 ? (QAbstractItemView::ScrollHint)QAbstractItemView::EnsureVisible
-                                                 : (QAbstractItemView::ScrollHint)hb_parni(2));
+      obj->scrollToItem(PQTREEWIDGETITEM(1),
+                        HB_ISNIL(2) ? static_cast<QAbstractItemView::ScrollHint>(QAbstractItemView::EnsureVisible)
+                                    : static_cast<QAbstractItemView::ScrollHint>(hb_parni(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
