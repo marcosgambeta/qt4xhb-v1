@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_ABORTEVALUATION)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQSCRIPTVALUE(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISQSCRIPTVALUEORNIL(1)) {
 #endif
       obj->abortEvaluation(HB_ISNIL(1) ? QScriptValue() : *static_cast<QScriptValue *>(Qt4xHb::itemGetPtr(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -355,7 +355,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_INSTALLTRANSLATORFUNCTIONS)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQSCRIPTVALUE(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISQSCRIPTVALUEORNIL(1)) {
 #endif
       obj->installTranslatorFunctions(HB_ISNIL(1) ? QScriptValue()
                                                   : *static_cast<QScriptValue *>(Qt4xHb::itemGetPtr(1)));
