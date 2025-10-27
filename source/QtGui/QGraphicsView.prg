@@ -487,8 +487,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ITEMS)
     }
   } else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISNUMORNIL(5)) {
     // QList<QGraphicsItem *> items(int x, int y, int w, int h, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape)
-
-// const
+    // const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
@@ -575,8 +574,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ITEMS)
     }
   } else if (ISBETWEEN(1, 2) && ISQPAINTERPATH(1) && ISNUMORNIL(2)) {
     // QList<QGraphicsItem *> items(const QPainterPath &path, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape)
-
-// const
+    // const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
@@ -764,8 +762,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_RENDER)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 4) && ISQPAINTER(1) && (ISQRECTF(2) || HB_ISNIL(2)) && (ISQRECT(3) || HB_ISNIL(3)) &&
-        ISNUMORNIL(4)) {
+    if (ISBETWEEN(1, 4) && ISQPAINTER(1) && ISQRECTFORNIL(2) && ISQRECTORNIL(3) && ISNUMORNIL(4)) {
 #endif
       obj->render(PQPAINTER(1), HB_ISNIL(2) ? QRectF() : *static_cast<QRectF *>(Qt4xHb::itemGetPtr(2)),
                   HB_ISNIL(3) ? QRect() : *static_cast<QRect *>(Qt4xHb::itemGetPtr(3)),
@@ -1496,7 +1493,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_INVALIDATESCENE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (ISQRECTF(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {
+    if (ISBETWEEN(0, 2) && ISQRECTFORNIL(1) && ISNUMORNIL(2)) {
 #endif
       obj->invalidateScene(HB_ISNIL(1) ? QRectF() : *static_cast<QRectF *>(Qt4xHb::itemGetPtr(1)),
                            HB_ISNIL(2) ? (QGraphicsScene::SceneLayers)QGraphicsScene::AllLayers

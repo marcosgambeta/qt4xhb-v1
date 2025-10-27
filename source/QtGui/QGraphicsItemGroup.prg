@@ -53,7 +53,7 @@ RETURN
 // QGraphicsItemGroup(QGraphicsItem *parent = 0)
 HB_FUNC_STATIC(QGRAPHICSITEMGROUP_NEW)
 {
-  if (ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1))) {
+  if (ISBETWEEN(0, 1) && ISQGRAPHICSITEMORNIL(1)) {
     QGraphicsItemGroup *obj =
         new QGraphicsItemGroup(HB_ISNIL(1) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(1)));
     Qt4xHb::returnNewObject(obj, true);

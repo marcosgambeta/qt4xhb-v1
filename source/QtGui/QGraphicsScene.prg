@@ -292,7 +292,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDPATH)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && ISQPAINTERPATH(1) && (ISQPEN(2) || HB_ISNIL(2)) && (ISQBRUSH(3) || HB_ISNIL(3))) {
+    if (ISBETWEEN(1, 3) && ISQPAINTERPATH(1) && ISQPENORNIL(2) && ISQBRUSHORNIL(3)) {
 #endif
       QGraphicsPathItem *ptr =
           obj->addPath(*PQPAINTERPATH(1), HB_ISNIL(2) ? QPen() : *static_cast<QPen *>(Qt4xHb::itemGetPtr(2)),
@@ -332,7 +332,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDPOLYGON)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && ISQPOLYGONF(1) && (ISQPEN(2) || HB_ISNIL(2)) && (ISQBRUSH(3) || HB_ISNIL(3))) {
+    if (ISBETWEEN(1, 3) && ISQPOLYGONF(1) && ISQPENORNIL(2) && ISQBRUSHORNIL(3)) {
 #endif
       QGraphicsPolygonItem *ptr =
           obj->addPolygon(*PQPOLYGONF(1), HB_ISNIL(2) ? QPen() : *static_cast<QPen *>(Qt4xHb::itemGetPtr(2)),
@@ -382,7 +382,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDSIMPLETEXT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQFONT(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQFONTORNIL(2)) {
 #endif
       QGraphicsSimpleTextItem *ptr =
           obj->addSimpleText(PQSTRING(1), HB_ISNIL(2) ? QFont() : *static_cast<QFont *>(Qt4xHb::itemGetPtr(2)));
@@ -402,7 +402,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_ADDTEXT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQFONT(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQFONTORNIL(2)) {
 #endif
       QGraphicsTextItem *ptr =
           obj->addText(PQSTRING(1), HB_ISNIL(2) ? QFont() : *static_cast<QFont *>(Qt4xHb::itemGetPtr(2)));
@@ -1095,8 +1095,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_RENDER)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 4) && ISQPAINTER(1) && (ISQRECTF(2) || HB_ISNIL(2)) && (ISQRECTF(3) || HB_ISNIL(3)) &&
-        ISNUMORNIL(4)) {
+    if (ISBETWEEN(1, 4) && ISQPAINTER(1) && ISQRECTFORNIL(2) && ISQRECTFORNIL(3) && ISNUMORNIL(4)) {
 #endif
       obj->render(PQPAINTER(1), HB_ISNIL(2) ? QRectF() : *static_cast<QRectF *>(Qt4xHb::itemGetPtr(2)),
                   HB_ISNIL(3) ? QRectF() : *static_cast<QRectF *>(Qt4xHb::itemGetPtr(3)),

@@ -48,7 +48,7 @@ RETURN
 // QActionEvent(int type, QAction *action, QAction *before = 0)
 HB_FUNC_STATIC(QACTIONEVENT_NEW)
 {
-  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQACTION(2) && (ISQACTION(3) || HB_ISNIL(3))) {
+  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQACTION(2) && ISQACTIONORNIL(3)) {
     QActionEvent *obj = new QActionEvent(PINT(1), PQACTION(2), OPQACTION(3, 0));
     Qt4xHb::returnNewObject(obj, false);
   } else {

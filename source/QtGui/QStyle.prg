@@ -103,8 +103,7 @@ HB_FUNC_STATIC(QSTYLE_COMBINEDLAYOUTSPACING)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISQSTYLEOPTIONORNIL(4) &&
-        ISQWIDGETORNIL(5)) {
+    if (ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISQSTYLEOPTIONORNIL(4) && ISQWIDGETORNIL(5)) {
 #endif
       RINT(obj->combinedLayoutSpacing(
           (QSizePolicy::ControlTypes)hb_parni(1), (QSizePolicy::ControlTypes)hb_parni(2), (Qt::Orientation)hb_parni(3),
@@ -311,8 +310,7 @@ HB_FUNC_STATIC(QSTYLE_LAYOUTSPACING)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISQSTYLEOPTIONORNIL(4) &&
-        ISQWIDGETORNIL(5)) {
+    if (ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISQSTYLEOPTIONORNIL(4) && ISQWIDGETORNIL(5)) {
 #endif
       RINT(obj->layoutSpacing((QSizePolicy::ControlType)hb_parni(1), (QSizePolicy::ControlType)hb_parni(2),
                               (Qt::Orientation)hb_parni(3),
@@ -468,8 +466,7 @@ HB_FUNC_STATIC(QSTYLE_STYLEHINT)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 4) && HB_ISNUM(1) && ISQSTYLEOPTIONORNIL(2) && ISQWIDGETORNIL(3) &&
-        (ISQSTYLEHINTRETURN(4) || HB_ISNIL(4))) {
+    if (ISBETWEEN(1, 4) && HB_ISNUM(1) && ISQSTYLEOPTIONORNIL(2) && ISQWIDGETORNIL(3) && ISQSTYLEHINTRETURNORNIL(4)) {
 #endif
       RINT(obj->styleHint((QStyle::StyleHint)hb_parni(1),
                           HB_ISNIL(2) ? 0 : static_cast<QStyleOption *>(Qt4xHb::itemGetPtr(2)), OPQWIDGET(3, 0),

@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QICON_ADDFILE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && (ISQSIZE(2) || HB_ISNIL(2)) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
+    if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISQSIZEORNIL(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
 #endif
       obj->addFile(PQSTRING(1), HB_ISNIL(2) ? QSize() : *static_cast<QSize *>(Qt4xHb::itemGetPtr(2)),
                    HB_ISNIL(3) ? (QIcon::Mode)QIcon::Normal : (QIcon::Mode)hb_parni(3),
@@ -354,7 +354,7 @@ HB_FUNC_STATIC(QICON_FROMTHEME)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQICON(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISQICONORNIL(2)) {
 #endif
       QIcon *ptr =
           new QIcon(obj->fromTheme(PQSTRING(1), HB_ISNIL(2) ? QIcon() : *static_cast<QIcon *>(Qt4xHb::itemGetPtr(2))));

@@ -2021,7 +2021,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_SCROLL)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQRECTF(3) || HB_ISNIL(3))) {
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQRECTFORNIL(3)) {
 #endif
       obj->scroll(PQREAL(1), PQREAL(2), HB_ISNIL(3) ? QRectF() : *static_cast<QRectF *>(Qt4xHb::itemGetPtr(3)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -2161,7 +2161,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_SETCACHEMODE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQSIZE(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQSIZEORNIL(2)) {
 #endif
       obj->setCacheMode((QGraphicsItem::CacheMode)hb_parni(1),
                         HB_ISNIL(2) ? QSize() : *static_cast<QSize *>(Qt4xHb::itemGetPtr(2)));

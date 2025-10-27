@@ -54,6 +54,7 @@ RETURN
   QGraphicsObject *p = qobject_cast<QGraphicsObject *>(Qt4xHb::getQObjectPointerFromSelfItem())
 
 // void grabGesture(Qt::GestureType gesture, Qt::GestureFlags flags = Qt::GestureFlags())
+
 HB_FUNC_STATIC(QGRAPHICSOBJECT_GRABGESTURE)
 {
   GET_PTR_FROM_SELF(obj);

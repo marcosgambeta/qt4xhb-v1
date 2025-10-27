@@ -169,8 +169,7 @@ HB_FUNC_STATIC(QFONTMETRICSF_BOUNDINGRECT)
   } else if (ISBETWEEN(3, 5) && ISQRECTF(1) && HB_ISNUM(2) && HB_ISCHAR(3) && ISNUMORNIL(4) &&
              (HB_ISARRAY(5) || HB_ISNIL(5))) {
     // QRectF boundingRect(const QRectF &rect, int flags, const QString &text, int tabStops = 0, int *tabArray = 0)
-
-// const
+    // const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {

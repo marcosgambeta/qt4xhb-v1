@@ -655,7 +655,7 @@ HB_FUNC_STATIC(QCOMPLETER_COMPLETE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQRECT(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISQRECTORNIL(1)) {
 #endif
       obj->complete(HB_ISNIL(1) ? QRect() : *static_cast<QRect *>(Qt4xHb::itemGetPtr(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

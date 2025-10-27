@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_SHOWMESSAGE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && (ISQCOLOR(3) || HB_ISNIL(3))) {
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISNUMORNIL(2) && ISQCOLORORNIL(3)) {
 #endif
       obj->showMessage(PQSTRING(1), OPINT(2, Qt::AlignLeft),
                        HB_ISNIL(3) ? Qt::black : *static_cast<QColor *>(Qt4xHb::itemGetPtr(3)));

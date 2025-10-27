@@ -538,7 +538,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_DRAWCONTENTS)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQPAINTER(1) && (ISQRECTF(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && ISQPAINTER(1) && ISQRECTFORNIL(2)) {
 #endif
       obj->drawContents(PQPAINTER(1), HB_ISNIL(2) ? QRectF() : *static_cast<QRectF *>(Qt4xHb::itemGetPtr(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1406,7 +1406,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_TOHTML)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQBYTEARRAY(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISQBYTEARRAYORNIL(1)) {
 #endif
       RQSTRING(obj->toHtml(HB_ISNIL(1) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

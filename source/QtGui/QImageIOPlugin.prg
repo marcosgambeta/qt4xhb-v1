@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QIMAGEIOPLUGIN_CREATE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2))) {
+    if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && ISQBYTEARRAYORNIL(2)) {
 #endif
       QImageIOHandler *ptr =
           obj->create(PQIODEVICE(1), HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(2)));
