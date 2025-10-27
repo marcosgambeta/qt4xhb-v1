@@ -336,7 +336,8 @@ HB_FUNC_STATIC(QSCRIPTCONTEXT_THROWERROR)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QScriptValue *ptr = new QScriptValue(obj->throwError((QScriptContext::Error)hb_parni(1), PQSTRING(2)));
+      QScriptValue *ptr =
+          new QScriptValue(obj->throwError(static_cast<QScriptContext::Error>(hb_parni(1)), PQSTRING(2)));
       Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
