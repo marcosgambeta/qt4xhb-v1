@@ -154,7 +154,7 @@ HB_FUNC_STATIC(QCOLOR_NEW5)
 // QColor(Qt::GlobalColor color)
 HB_FUNC_STATIC(QCOLOR_NEW7)
 {
-  QColor *obj = new QColor((Qt::GlobalColor)hb_parni(1));
+  QColor *obj = new QColor(static_cast<Qt::GlobalColor>(hb_parni(1)));
   Qt4xHb::returnNewObject(obj, true);
 }
 
@@ -319,7 +319,7 @@ HB_FUNC_STATIC(QCOLOR_CONVERTTO)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QColor *ptr = new QColor(obj->convertTo((QColor::Spec)hb_parni(1)));
+      QColor *ptr = new QColor(obj->convertTo(static_cast<QColor::Spec>(hb_parni(1))));
       Qt4xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {

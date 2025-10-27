@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QFILEICONPROVIDER_ICON)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QIcon *ptr = new QIcon(obj->icon((QFileIconProvider::IconType)hb_parni(1)));
+      QIcon *ptr = new QIcon(obj->icon(static_cast<QFileIconProvider::IconType>(hb_parni(1))));
       Qt4xHb::createReturnClass(ptr, "QICON", true);
     }
   } else if (ISNUMPAR(1) && ISQFILEINFO(1)) {

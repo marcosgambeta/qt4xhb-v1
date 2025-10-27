@@ -124,8 +124,8 @@ HB_FUNC_STATIC(QDECORATION_PAINT)
     if (ISBETWEEN(2, 4) && ISQPAINTER(1) && ISQWIDGET(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
 #endif
       RBOOL(obj->paint(PQPAINTER(1), PQWIDGET(2), OPINT(3, QDecoration::All),
-                       HB_ISNIL(4) ? (QDecoration::DecorationState)QDecoration::Normal
-                                   : (QDecoration::DecorationState)hb_parni(4)));
+                       HB_ISNIL(4) ? static_cast<QDecoration::DecorationState>(QDecoration::Normal)
+                                   : static_cast<QDecoration::DecorationState>(hb_parni(4))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

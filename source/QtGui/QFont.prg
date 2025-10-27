@@ -576,7 +576,7 @@ HB_FUNC_STATIC(QFONT_SETCAPITALIZATION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setCapitalization((QFont::Capitalization)hb_parni(1));
+      obj->setCapitalization(static_cast<QFont::Capitalization>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -676,7 +676,7 @@ HB_FUNC_STATIC(QFONT_SETLETTERSPACING)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-      obj->setLetterSpacing((QFont::SpacingType)hb_parni(1), PQREAL(2));
+      obj->setLetterSpacing(static_cast<QFont::SpacingType>(hb_parni(1)), PQREAL(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -856,7 +856,7 @@ HB_FUNC_STATIC(QFONT_SETSTYLE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setStyle((QFont::Style)hb_parni(1));
+      obj->setStyle(static_cast<QFont::Style>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -876,8 +876,9 @@ HB_FUNC_STATIC(QFONT_SETSTYLEHINT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
-      obj->setStyleHint((QFont::StyleHint)hb_parni(1),
-                        HB_ISNIL(2) ? (QFont::StyleStrategy)QFont::PreferDefault : (QFont::StyleStrategy)hb_parni(2));
+      obj->setStyleHint(static_cast<QFont::StyleHint>(hb_parni(1)),
+                        HB_ISNIL(2) ? static_cast<QFont::StyleStrategy>(QFont::PreferDefault)
+                                    : static_cast<QFont::StyleStrategy>(hb_parni(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -897,7 +898,7 @@ HB_FUNC_STATIC(QFONT_SETSTYLESTRATEGY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setStyleStrategy((QFont::StyleStrategy)hb_parni(1));
+      obj->setStyleStrategy(static_cast<QFont::StyleStrategy>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

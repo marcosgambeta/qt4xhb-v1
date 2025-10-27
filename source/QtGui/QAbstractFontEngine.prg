@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QABSTRACTFONTENGINE_FONTPROPERTY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QVariant *ptr = new QVariant(obj->fontProperty((QAbstractFontEngine::FontProperty)hb_parni(1)));
+      QVariant *ptr = new QVariant(obj->fontProperty(static_cast<QAbstractFontEngine::FontProperty>(hb_parni(1))));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {

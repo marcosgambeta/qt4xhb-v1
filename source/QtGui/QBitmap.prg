@@ -135,9 +135,9 @@ HB_FUNC_STATIC(QBITMAP_FROMDATA)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(2, 3) && ISQSIZE(1) && HB_ISCHAR(2) && ISNUMORNIL(3)) {
 #endif
-    QBitmap *ptr = new QBitmap(
-        QBitmap::fromData(*PQSIZE(1), PCONSTUCHAR(2),
-                          HB_ISNIL(3) ? (QImage::Format)QImage::Format_MonoLSB : (QImage::Format)hb_parni(3)));
+    QBitmap *ptr = new QBitmap(QBitmap::fromData(*PQSIZE(1), PCONSTUCHAR(2),
+                                                 HB_ISNIL(3) ? static_cast<QImage::Format>(QImage::Format_MonoLSB)
+                                                             : static_cast<QImage::Format>(hb_parni(3))));
     Qt4xHb::createReturnClass(ptr, "QBITMAP", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
@@ -152,8 +152,9 @@ HB_FUNC_STATIC(QBITMAP_FROMIMAGE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(1, 2) && ISQIMAGE(1) && ISNUMORNIL(2)) {
 #endif
-    QBitmap *ptr = new QBitmap(QBitmap::fromImage(*PQIMAGE(1), HB_ISNIL(2) ? (Qt::ImageConversionFlags)Qt::AutoColor
-                                                                           : (Qt::ImageConversionFlags)hb_parni(2)));
+    QBitmap *ptr =
+        new QBitmap(QBitmap::fromImage(*PQIMAGE(1), HB_ISNIL(2) ? static_cast<Qt::ImageConversionFlags>(Qt::AutoColor)
+                                                                : static_cast<Qt::ImageConversionFlags>(hb_parni(2))));
     Qt4xHb::createReturnClass(ptr, "QBITMAP", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {

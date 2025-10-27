@@ -75,7 +75,8 @@ HB_FUNC_STATIC(QCLIPBOARD_CLEAR)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      obj->clear(HB_ISNIL(1) ? (QClipboard::Mode)QClipboard::Clipboard : (QClipboard::Mode)hb_parni(1));
+      obj->clear(HB_ISNIL(1) ? static_cast<QClipboard::Mode>(QClipboard::Clipboard)
+                             : static_cast<QClipboard::Mode>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -95,8 +96,8 @@ HB_FUNC_STATIC(QCLIPBOARD_IMAGE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      QImage *ptr =
-          new QImage(obj->image(HB_ISNIL(1) ? (QClipboard::Mode)QClipboard::Clipboard : (QClipboard::Mode)hb_parni(1)));
+      QImage *ptr = new QImage(obj->image(HB_ISNIL(1) ? static_cast<QClipboard::Mode>(QClipboard::Clipboard)
+                                                      : static_cast<QClipboard::Mode>(hb_parni(1))));
       Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -115,8 +116,8 @@ HB_FUNC_STATIC(QCLIPBOARD_MIMEDATA)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      const QMimeData *ptr =
-          obj->mimeData(HB_ISNIL(1) ? (QClipboard::Mode)QClipboard::Clipboard : (QClipboard::Mode)hb_parni(1));
+      const QMimeData *ptr = obj->mimeData(HB_ISNIL(1) ? static_cast<QClipboard::Mode>(QClipboard::Clipboard)
+                                                       : static_cast<QClipboard::Mode>(hb_parni(1)));
       Qt4xHb::createReturnQObjectClass(ptr, "QMIMEDATA");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -189,8 +190,8 @@ HB_FUNC_STATIC(QCLIPBOARD_PIXMAP)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      QPixmap *ptr = new QPixmap(
-          obj->pixmap(HB_ISNIL(1) ? (QClipboard::Mode)QClipboard::Clipboard : (QClipboard::Mode)hb_parni(1)));
+      QPixmap *ptr = new QPixmap(obj->pixmap(HB_ISNIL(1) ? static_cast<QClipboard::Mode>(QClipboard::Clipboard)
+                                                         : static_cast<QClipboard::Mode>(hb_parni(1))));
       Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -209,7 +210,8 @@ HB_FUNC_STATIC(QCLIPBOARD_SETIMAGE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQIMAGE(1) && ISNUMORNIL(2)) {
 #endif
-      obj->setImage(*PQIMAGE(1), HB_ISNIL(2) ? (QClipboard::Mode)QClipboard::Clipboard : (QClipboard::Mode)hb_parni(2));
+      obj->setImage(*PQIMAGE(1), HB_ISNIL(2) ? static_cast<QClipboard::Mode>(QClipboard::Clipboard)
+                                             : static_cast<QClipboard::Mode>(hb_parni(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -229,8 +231,8 @@ HB_FUNC_STATIC(QCLIPBOARD_SETMIMEDATA)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQMIMEDATA(1) && ISNUMORNIL(2)) {
 #endif
-      obj->setMimeData(PQMIMEDATA(1),
-                       HB_ISNIL(2) ? (QClipboard::Mode)QClipboard::Clipboard : (QClipboard::Mode)hb_parni(2));
+      obj->setMimeData(PQMIMEDATA(1), HB_ISNIL(2) ? static_cast<QClipboard::Mode>(QClipboard::Clipboard)
+                                                  : static_cast<QClipboard::Mode>(hb_parni(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -250,8 +252,8 @@ HB_FUNC_STATIC(QCLIPBOARD_SETPIXMAP)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQPIXMAP(1) && ISNUMORNIL(2)) {
 #endif
-      obj->setPixmap(*PQPIXMAP(1),
-                     HB_ISNIL(2) ? (QClipboard::Mode)QClipboard::Clipboard : (QClipboard::Mode)hb_parni(2));
+      obj->setPixmap(*PQPIXMAP(1), HB_ISNIL(2) ? static_cast<QClipboard::Mode>(QClipboard::Clipboard)
+                                               : static_cast<QClipboard::Mode>(hb_parni(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -271,7 +273,8 @@ HB_FUNC_STATIC(QCLIPBOARD_SETTEXT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
 #endif
-      obj->setText(PQSTRING(1), HB_ISNIL(2) ? (QClipboard::Mode)QClipboard::Clipboard : (QClipboard::Mode)hb_parni(2));
+      obj->setText(PQSTRING(1), HB_ISNIL(2) ? static_cast<QClipboard::Mode>(QClipboard::Clipboard)
+                                            : static_cast<QClipboard::Mode>(hb_parni(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -325,7 +328,8 @@ HB_FUNC_STATIC(QCLIPBOARD_TEXT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RQSTRING(obj->text(HB_ISNIL(1) ? (QClipboard::Mode)QClipboard::Clipboard : (QClipboard::Mode)hb_parni(1)));
+      RQSTRING(obj->text(HB_ISNIL(1) ? static_cast<QClipboard::Mode>(QClipboard::Clipboard)
+                                     : static_cast<QClipboard::Mode>(hb_parni(1))));
     }
   } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
     // QString text(QString &subtype, QClipboard::Mode mode = QClipboard::Clipboard) const
@@ -333,7 +337,8 @@ HB_FUNC_STATIC(QCLIPBOARD_TEXT)
 
     if (obj != NULL) {
       QString par1 = hb_parc(1);
-      RQSTRING(obj->text(par1, HB_ISNIL(2) ? (QClipboard::Mode)QClipboard::Clipboard : (QClipboard::Mode)hb_parni(2)));
+      RQSTRING(obj->text(par1, HB_ISNIL(2) ? static_cast<QClipboard::Mode>(QClipboard::Clipboard)
+                                           : static_cast<QClipboard::Mode>(hb_parni(2))));
       hb_storc(QSTRINGTOSTRING(par1), 1);
     }
   } else {

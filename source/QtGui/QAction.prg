@@ -177,7 +177,7 @@ HB_FUNC_STATIC(QACTION_ACTIVATE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->activate((QAction::ActionEvent)hb_parni(1));
+      obj->activate(static_cast<QAction::ActionEvent>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -728,7 +728,7 @@ HB_FUNC_STATIC(QACTION_SETMENUROLE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setMenuRole((QAction::MenuRole)hb_parni(1));
+      obj->setMenuRole(static_cast<QAction::MenuRole>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -748,7 +748,7 @@ HB_FUNC_STATIC(QACTION_SETPRIORITY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setPriority((QAction::Priority)hb_parni(1));
+      obj->setPriority(static_cast<QAction::Priority>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -808,7 +808,7 @@ HB_FUNC_STATIC(QACTION_SETSHORTCUTCONTEXT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setShortcutContext((Qt::ShortcutContext)hb_parni(1));
+      obj->setShortcutContext(static_cast<Qt::ShortcutContext>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -842,7 +842,7 @@ HB_FUNC_STATIC(QACTION_SETSHORTCUTS)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->setShortcuts((QKeySequence::StandardKey)hb_parni(1));
+      obj->setShortcuts(static_cast<QKeySequence::StandardKey>(hb_parni(1)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -860,7 +860,7 @@ HB_FUNC_STATIC(QACTION_SETSOFTKEYROLE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setSoftKeyRole((QAction::SoftKeyRole)hb_parni(1));
+      obj->setSoftKeyRole(static_cast<QAction::SoftKeyRole>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

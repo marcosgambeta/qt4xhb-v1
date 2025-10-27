@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_SETFONTFILTERS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setFontFilters((QFontComboBox::FontFilters)hb_parni(1));
+      obj->setFontFilters(static_cast<QFontComboBox::FontFilters>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_SETWRITINGSYSTEM)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setWritingSystem((QFontDatabase::WritingSystem)hb_parni(1));
+      obj->setWritingSystem(static_cast<QFontDatabase::WritingSystem>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

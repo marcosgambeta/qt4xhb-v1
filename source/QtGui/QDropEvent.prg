@@ -62,9 +62,10 @@ RETURN
 HB_FUNC_STATIC(QDROPEVENT_NEW)
 {
   if (ISBETWEEN(5, 6) && ISQPOINT(1) && HB_ISNUM(2) && ISQMIMEDATA(3) && HB_ISNUM(4) && HB_ISNUM(5) && ISNUMORNIL(6)) {
-    QDropEvent *obj = new QDropEvent(*PQPOINT(1), (Qt::DropActions)hb_parni(2), PQMIMEDATA(3),
-                                     (Qt::MouseButtons)hb_parni(4), (Qt::KeyboardModifiers)hb_parni(5),
-                                     HB_ISNIL(6) ? (QEvent::Type)QEvent::Drop : (QEvent::Type)hb_parni(6));
+    QDropEvent *obj =
+        new QDropEvent(*PQPOINT(1), static_cast<Qt::DropActions>(hb_parni(2)), PQMIMEDATA(3),
+                       static_cast<Qt::MouseButtons>(hb_parni(4)), static_cast<Qt::KeyboardModifiers>(hb_parni(5)),
+                       HB_ISNIL(6) ? static_cast<QEvent::Type>(QEvent::Drop) : static_cast<QEvent::Type>(hb_parni(6)));
     Qt4xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -243,7 +244,7 @@ HB_FUNC_STATIC(QDROPEVENT_SETDROPACTION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setDropAction((Qt::DropAction)hb_parni(1));
+      obj->setDropAction(static_cast<Qt::DropAction>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

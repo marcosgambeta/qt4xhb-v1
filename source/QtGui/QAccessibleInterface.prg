@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_ACTIONTEXT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
-      RQSTRING(obj->actionText(PINT(1), (QAccessible::Text)hb_parni(2), PINT(3)));
+      RQSTRING(obj->actionText(PINT(1), static_cast<QAccessible::Text>(hb_parni(2)), PINT(3)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_INVOKEMETHOD)
               hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList3, i3 + 1), "POINTER", 0)));
         }
       }
-      QVariant *ptr = new QVariant(obj->invokeMethod((QAccessible::Method)hb_parni(1), OPINT(2, 0), par3));
+      QVariant *ptr = new QVariant(obj->invokeMethod(static_cast<QAccessible::Method>(hb_parni(1)), OPINT(2, 0), par3));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -301,7 +301,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_SETTEXT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3)) {
 #endif
-      obj->setText((QAccessible::Text)hb_parni(1), PINT(2), PQSTRING(3));
+      obj->setText(static_cast<QAccessible::Text>(hb_parni(1)), PINT(2), PQSTRING(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -339,7 +339,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_TEXT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-      RQSTRING(obj->text((QAccessible::Text)hb_parni(1), PINT(2)));
+      RQSTRING(obj->text(static_cast<QAccessible::Text>(hb_parni(1)), PINT(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

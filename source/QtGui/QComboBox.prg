@@ -307,8 +307,8 @@ HB_FUNC_STATIC(QCOMBOBOX_FINDDATA)
     if (ISBETWEEN(1, 3) && ISQVARIANT(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
       RINT(obj->findData(*PQVARIANT(1), OPINT(2, Qt::UserRole),
-                         HB_ISNIL(3) ? (Qt::MatchFlags)Qt::MatchExactly | Qt::MatchCaseSensitive
-                                     : (Qt::MatchFlags)hb_parni(3)));
+                         HB_ISNIL(3) ? static_cast<Qt::MatchFlags>(Qt::MatchExactly | Qt::MatchCaseSensitive)
+                                     : static_cast<Qt::MatchFlags>(hb_parni(3))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -326,8 +326,9 @@ HB_FUNC_STATIC(QCOMBOBOX_FINDTEXT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
 #endif
-      RINT(obj->findText(PQSTRING(1), HB_ISNIL(2) ? (Qt::MatchFlags)Qt::MatchExactly | Qt::MatchCaseSensitive
-                                                  : (Qt::MatchFlags)hb_parni(2)));
+      RINT(obj->findText(PQSTRING(1), HB_ISNIL(2)
+                                          ? static_cast<Qt::MatchFlags>(Qt::MatchExactly | Qt::MatchCaseSensitive)
+                                          : static_cast<Qt::MatchFlags>(hb_parni(2))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -828,7 +829,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETINSERTPOLICY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setInsertPolicy((QComboBox::InsertPolicy)hb_parni(1));
+      obj->setInsertPolicy(static_cast<QComboBox::InsertPolicy>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1068,7 +1069,7 @@ HB_FUNC_STATIC(QCOMBOBOX_SETSIZEADJUSTPOLICY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setSizeAdjustPolicy((QComboBox::SizeAdjustPolicy)hb_parni(1));
+      obj->setSizeAdjustPolicy(static_cast<QComboBox::SizeAdjustPolicy>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

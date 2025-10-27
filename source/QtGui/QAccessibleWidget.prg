@@ -55,9 +55,10 @@ RETURN
 HB_FUNC_STATIC(QACCESSIBLEWIDGET_NEW)
 {
   if (ISBETWEEN(1, 3) && ISQWIDGET(1) && ISNUMORNIL(2) && ISCHARORNIL(3)) {
-    QAccessibleWidget *obj = new QAccessibleWidget(
-        PQWIDGET(1), HB_ISNIL(2) ? (QAccessible::Role)QAccessible::Client : (QAccessible::Role)hb_parni(2),
-        OPQSTRING(3, QString()));
+    QAccessibleWidget *obj = new QAccessibleWidget(PQWIDGET(1),
+                                                   HB_ISNIL(2) ? static_cast<QAccessible::Role>(QAccessible::Client)
+                                                               : static_cast<QAccessible::Role>(hb_parni(2)),
+                                                   OPQSTRING(3, QString()));
     Qt4xHb::returnNewObject(obj, true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -73,7 +74,7 @@ HB_FUNC_STATIC(QACCESSIBLEWIDGET_ACTIONTEXT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
-      RQSTRING(obj->actionText(PINT(1), (QAccessible::Text)hb_parni(2), PINT(3)));
+      RQSTRING(obj->actionText(PINT(1), static_cast<QAccessible::Text>(hb_parni(2)), PINT(3)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -243,7 +244,7 @@ HB_FUNC_STATIC(QACCESSIBLEWIDGET_TEXT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-      RQSTRING(obj->text((QAccessible::Text)hb_parni(1), PINT(2)));
+      RQSTRING(obj->text(static_cast<QAccessible::Text>(hb_parni(1)), PINT(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

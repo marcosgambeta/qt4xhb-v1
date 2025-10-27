@@ -546,8 +546,9 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SCROLLTO)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ISNUMORNIL(2)) {
 #endif
-      obj->scrollTo(*PQMODELINDEX(1), HB_ISNIL(2) ? (QAbstractItemView::ScrollHint)QAbstractItemView::EnsureVisible
-                                                  : (QAbstractItemView::ScrollHint)hb_parni(2));
+      obj->scrollTo(*PQMODELINDEX(1), HB_ISNIL(2)
+                                          ? static_cast<QAbstractItemView::ScrollHint>(QAbstractItemView::EnsureVisible)
+                                          : static_cast<QAbstractItemView::ScrollHint>(hb_parni(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -682,7 +683,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETDEFAULTDROPACTION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setDefaultDropAction((Qt::DropAction)hb_parni(1));
+      obj->setDefaultDropAction(static_cast<Qt::DropAction>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -702,7 +703,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETDRAGDROPMODE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setDragDropMode((QAbstractItemView::DragDropMode)hb_parni(1));
+      obj->setDragDropMode(static_cast<QAbstractItemView::DragDropMode>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -782,7 +783,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETEDITTRIGGERS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setEditTriggers((QAbstractItemView::EditTriggers)hb_parni(1));
+      obj->setEditTriggers(static_cast<QAbstractItemView::EditTriggers>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -802,7 +803,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETHORIZONTALSCROLLMODE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setHorizontalScrollMode((QAbstractItemView::ScrollMode)hb_parni(1));
+      obj->setHorizontalScrollMode(static_cast<QAbstractItemView::ScrollMode>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -942,7 +943,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETSELECTIONBEHAVIOR)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setSelectionBehavior((QAbstractItemView::SelectionBehavior)hb_parni(1));
+      obj->setSelectionBehavior(static_cast<QAbstractItemView::SelectionBehavior>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -962,7 +963,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETSELECTIONMODE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setSelectionMode((QAbstractItemView::SelectionMode)hb_parni(1));
+      obj->setSelectionMode(static_cast<QAbstractItemView::SelectionMode>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1022,7 +1023,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETTEXTELIDEMODE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setTextElideMode((Qt::TextElideMode)hb_parni(1));
+      obj->setTextElideMode(static_cast<Qt::TextElideMode>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1042,7 +1043,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_SETVERTICALSCROLLMODE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setVerticalScrollMode((QAbstractItemView::ScrollMode)hb_parni(1));
+      obj->setVerticalScrollMode(static_cast<QAbstractItemView::ScrollMode>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1208,7 +1209,7 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_INPUTMETHODQUERY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QVariant *ptr = new QVariant(obj->inputMethodQuery((Qt::InputMethodQuery)hb_parni(1)));
+      QVariant *ptr = new QVariant(obj->inputMethodQuery(static_cast<Qt::InputMethodQuery>(hb_parni(1))));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {

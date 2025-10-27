@@ -45,8 +45,9 @@ RETURN
 HB_FUNC_STATIC(QDRAGENTEREVENT_NEW)
 {
   if (ISNUMPAR(5) && ISQPOINT(1) && HB_ISNUM(2) && ISQMIMEDATA(3) && HB_ISNUM(4) && HB_ISNUM(5)) {
-    QDragEnterEvent *obj = new QDragEnterEvent(*PQPOINT(1), (Qt::DropActions)hb_parni(2), PQMIMEDATA(3),
-                                               (Qt::MouseButtons)hb_parni(4), (Qt::KeyboardModifiers)hb_parni(5));
+    QDragEnterEvent *obj = new QDragEnterEvent(*PQPOINT(1), static_cast<Qt::DropActions>(hb_parni(2)), PQMIMEDATA(3),
+                                               static_cast<Qt::MouseButtons>(hb_parni(4)),
+                                               static_cast<Qt::KeyboardModifiers>(hb_parni(5)));
     Qt4xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

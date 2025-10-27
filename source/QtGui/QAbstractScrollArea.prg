@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_ADDSCROLLBARWIDGET)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQWIDGET(1) && HB_ISNUM(2)) {
 #endif
-      obj->addScrollBarWidget(PQWIDGET(1), (Qt::Alignment)hb_parni(2));
+      obj->addScrollBarWidget(PQWIDGET(1), static_cast<Qt::Alignment>(hb_parni(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -185,7 +185,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SCROLLBARWIDGETS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QWidgetList list = obj->scrollBarWidgets((Qt::Alignment)hb_parni(1));
+      QWidgetList list = obj->scrollBarWidgets(static_cast<Qt::Alignment>(hb_parni(1)));
       PHB_DYNS pDynSym = hb_dynsymFindName("QWIDGET");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if (pDynSym != NULL) {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBARPOLICY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setHorizontalScrollBarPolicy((Qt::ScrollBarPolicy)hb_parni(1));
+      obj->setHorizontalScrollBarPolicy(static_cast<Qt::ScrollBarPolicy>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -303,7 +303,7 @@ HB_FUNC_STATIC(QABSTRACTSCROLLAREA_SETVERTICALSCROLLBARPOLICY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setVerticalScrollBarPolicy((Qt::ScrollBarPolicy)hb_parni(1));
+      obj->setVerticalScrollBarPolicy(static_cast<Qt::ScrollBarPolicy>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
