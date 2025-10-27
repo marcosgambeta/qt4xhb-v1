@@ -236,7 +236,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_SETCAPSTYLE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setCapStyle((Qt::PenCapStyle)hb_parni(1));
+      obj->setCapStyle(static_cast<Qt::PenCapStyle>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -294,7 +294,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_SETDASHPATTERN)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->setDashPattern((Qt::PenStyle)hb_parni(1));
+      obj->setDashPattern(static_cast<Qt::PenStyle>(hb_parni(1)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -329,7 +329,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_SETJOINSTYLE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setJoinStyle((Qt::PenJoinStyle)hb_parni(1));
+      obj->setJoinStyle(static_cast<Qt::PenJoinStyle>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

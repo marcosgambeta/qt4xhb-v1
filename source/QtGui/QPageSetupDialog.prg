@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_SETOPTION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
 #endif
-      obj->setOption((QPageSetupDialog::PageSetupDialogOption)hb_parni(1), OPBOOL(2, true));
+      obj->setOption(static_cast<QPageSetupDialog::PageSetupDialogOption>(hb_parni(1)), OPBOOL(2, true));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_SETOPTIONS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setOptions((QPageSetupDialog::PageSetupDialogOptions)hb_parni(1));
+      obj->setOptions(static_cast<QPageSetupDialog::PageSetupDialogOptions>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_TESTOPTION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->testOption((QPageSetupDialog::PageSetupDialogOption)hb_parni(1)));
+      RBOOL(obj->testOption(static_cast<QPageSetupDialog::PageSetupDialogOption>(hb_parni(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

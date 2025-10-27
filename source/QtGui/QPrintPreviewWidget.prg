@@ -74,12 +74,13 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_NEW)
   if (ISBETWEEN(1, 3) && ISQPRINTER(1) && ISQWIDGETORNIL(2) && ISNUMORNIL(3)) {
     // QPrintPreviewWidget(QPrinter *printer, QWidget *parent = 0, Qt::WindowFlags flags = 0)
     QPrintPreviewWidget *obj = new QPrintPreviewWidget(PQPRINTER(1), OPQWIDGET(2, 0),
-                                                       HB_ISNIL(3) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(3));
+                                                       HB_ISNIL(3) ? static_cast<Qt::WindowFlags>(0)
+                                                                   : static_cast<Qt::WindowFlags>(hb_parni(3)));
     Qt4xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
     // QPrintPreviewWidget(QWidget *parent = 0, Qt::WindowFlags flags = 0)
-    QPrintPreviewWidget *obj =
-        new QPrintPreviewWidget(OPQWIDGET(1, 0), HB_ISNIL(2) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(2));
+    QPrintPreviewWidget *obj = new QPrintPreviewWidget(
+        OPQWIDGET(1, 0), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : static_cast<Qt::WindowFlags>(hb_parni(2)));
     Qt4xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -380,7 +381,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETORIENTATION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setOrientation((QPrinter::Orientation)hb_parni(1));
+      obj->setOrientation(static_cast<QPrinter::Orientation>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -440,7 +441,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETVIEWMODE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setViewMode((QPrintPreviewWidget::ViewMode)hb_parni(1));
+      obj->setViewMode(static_cast<QPrintPreviewWidget::ViewMode>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -480,7 +481,7 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_SETZOOMMODE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setZoomMode((QPrintPreviewWidget::ZoomMode)hb_parni(1));
+      obj->setZoomMode(static_cast<QPrintPreviewWidget::ZoomMode>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

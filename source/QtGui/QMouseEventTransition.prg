@@ -60,8 +60,8 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_NEW)
     Qt4xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(3, 4) && ISQOBJECT(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISQSTATE(4) || HB_ISNIL(4))) {
     // QMouseEventTransition(QObject *object, QEvent::Type type, Qt::MouseButton button, QState *sourceState = 0)
-    QMouseEventTransition *obj =
-        new QMouseEventTransition(PQOBJECT(1), (QEvent::Type)hb_parni(2), (Qt::MouseButton)hb_parni(3), OPQSTATE(4, 0));
+    QMouseEventTransition *obj = new QMouseEventTransition(PQOBJECT(1), static_cast<QEvent::Type>(hb_parni(2)),
+                                                           static_cast<Qt::MouseButton>(hb_parni(3)), OPQSTATE(4, 0));
     Qt4xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_SETBUTTON)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setButton((Qt::MouseButton)hb_parni(1));
+      obj->setButton(static_cast<Qt::MouseButton>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_SETMODIFIERMASK)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setModifierMask((Qt::KeyboardModifiers)hb_parni(1));
+      obj->setModifierMask(static_cast<Qt::KeyboardModifiers>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

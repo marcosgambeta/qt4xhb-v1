@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QPLATFORMCURSORIMAGE_SET)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->set((Qt::CursorShape)hb_parni(1));
+      obj->set(static_cast<Qt::CursorShape>(hb_parni(1)));
     }
 
     hb_itemReturn(hb_stackSelfItem());

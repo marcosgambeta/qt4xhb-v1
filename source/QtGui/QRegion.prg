@@ -73,13 +73,14 @@ HB_FUNC_STATIC(QREGION_NEW)
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISNUMORNIL(5)) {
     // QRegion(int x, int y, int w, int h, QRegion::RegionType t = QRegion::Rectangle)
-    QRegion *obj =
-        new QRegion(PINT(1), PINT(2), PINT(3), PINT(4),
-                    HB_ISNIL(5) ? (QRegion::RegionType)QRegion::Rectangle : (QRegion::RegionType)hb_parni(5));
+    QRegion *obj = new QRegion(PINT(1), PINT(2), PINT(3), PINT(4),
+                               HB_ISNIL(5) ? static_cast<QRegion::RegionType>(QRegion::Rectangle)
+                                           : static_cast<QRegion::RegionType>(hb_parni(5)));
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 2) && ISQPOLYGON(1) && ISNUMORNIL(2)) {
     // QRegion(const QPolygon &a, Qt::FillRule fillRule = Qt::OddEvenFill)
-    QRegion *obj = new QRegion(*PQPOLYGON(1), HB_ISNIL(2) ? (Qt::FillRule)Qt::OddEvenFill : (Qt::FillRule)hb_parni(2));
+    QRegion *obj = new QRegion(*PQPOLYGON(1), HB_ISNIL(2) ? static_cast<Qt::FillRule>(Qt::OddEvenFill)
+                                                          : static_cast<Qt::FillRule>(hb_parni(2)));
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQREGION(1)) {
     // QRegion(const QRegion &r)
@@ -91,8 +92,8 @@ HB_FUNC_STATIC(QREGION_NEW)
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 2) && ISQRECT(1) && ISNUMORNIL(2)) {
     // QRegion(const QRect &r, QRegion::RegionType t = QRegion::Rectangle)
-    QRegion *obj = new QRegion(*PQRECT(1), HB_ISNIL(2) ? (QRegion::RegionType)QRegion::Rectangle
-                                                       : (QRegion::RegionType)hb_parni(2));
+    QRegion *obj = new QRegion(*PQRECT(1), HB_ISNIL(2) ? static_cast<QRegion::RegionType>(QRegion::Rectangle)
+                                                       : static_cast<QRegion::RegionType>(hb_parni(2)));
     Qt4xHb::returnNewObject(obj, true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

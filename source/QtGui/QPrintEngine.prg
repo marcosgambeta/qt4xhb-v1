@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QPRINTENGINE_METRIC)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RINT(obj->metric((QPaintDevice::PaintDeviceMetric)hb_parni(1)));
+      RINT(obj->metric(static_cast<QPaintDevice::PaintDeviceMetric>(hb_parni(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QPRINTENGINE_PROPERTY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QVariant *ptr = new QVariant(obj->property((QPrintEngine::PrintEnginePropertyKey)hb_parni(1)));
+      QVariant *ptr = new QVariant(obj->property(static_cast<QPrintEngine::PrintEnginePropertyKey>(hb_parni(1))));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QPRINTENGINE_SETPROPERTY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2)) {
 #endif
-      obj->setProperty((QPrintEngine::PrintEnginePropertyKey)hb_parni(1), *PQVARIANT(2));
+      obj->setProperty(static_cast<QPrintEngine::PrintEnginePropertyKey>(hb_parni(1)), *PQVARIANT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

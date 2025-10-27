@@ -231,7 +231,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_SETALIGNMENT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setAlignment((Qt::Alignment)hb_parni(1));
+      obj->setAlignment(static_cast<Qt::Alignment>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -291,7 +291,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_SETTEXTDIRECTION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setTextDirection((QProgressBar::Direction)hb_parni(1));
+      obj->setTextDirection(static_cast<QProgressBar::Direction>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -483,7 +483,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_SETORIENTATION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setOrientation((Qt::Orientation)hb_parni(1));
+      obj->setOrientation(static_cast<Qt::Orientation>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
