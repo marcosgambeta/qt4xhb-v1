@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QGLCONTEXT_BINDTEXTURE)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RGLUINT(obj->bindTexture(*PQIMAGE(1), PGLENUM(2), PGLINT(3), (QGLContext::BindOptions)hb_parni(4)));
+      RGLUINT(obj->bindTexture(*PQIMAGE(1), PGLENUM(2), PGLINT(3), static_cast<QGLContext::BindOptions>(hb_parni(4))));
     }
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // GLuint bindTexture(const QString &fileName)
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QGLCONTEXT_BINDTEXTURE)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RGLUINT(obj->bindTexture(*PQPIXMAP(1), PGLENUM(2), PGLINT(3), (QGLContext::BindOptions)hb_parni(4)));
+      RGLUINT(obj->bindTexture(*PQPIXMAP(1), PGLENUM(2), PGLINT(3), static_cast<QGLContext::BindOptions>(hb_parni(4))));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

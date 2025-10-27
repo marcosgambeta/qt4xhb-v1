@@ -82,14 +82,15 @@ HB_FUNC_STATIC(QGLFRAMEBUFFEROBJECT_NEW)
     // QGLFramebufferObject(int width, int height, QGLFramebufferObject::Attachment attachment, GLenum target =
     // GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8)
     QGLFramebufferObject *obj =
-        new QGLFramebufferObject(PINT(1), PINT(2), (QGLFramebufferObject::Attachment)hb_parni(3),
+        new QGLFramebufferObject(PINT(1), PINT(2), static_cast<QGLFramebufferObject::Attachment>(hb_parni(3)),
                                  OPGLENUM(4, GL_TEXTURE_2D), OPGLENUM(5, GL_RGBA8));
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(3, 4) && ISQSIZE(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
     // QGLFramebufferObject(const QSize &size, QGLFramebufferObject::Attachment attachment, GLenum target =
     // GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8)
-    QGLFramebufferObject *obj = new QGLFramebufferObject(*PQSIZE(1), (QGLFramebufferObject::Attachment)hb_parni(2),
-                                                         OPGLENUM(3, GL_TEXTURE_2D), OPGLENUM(4, GL_RGBA8));
+    QGLFramebufferObject *obj =
+        new QGLFramebufferObject(*PQSIZE(1), static_cast<QGLFramebufferObject::Attachment>(hb_parni(2)),
+                                 OPGLENUM(3, GL_TEXTURE_2D), OPGLENUM(4, GL_RGBA8));
     Qt4xHb::returnNewObject(obj, true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
