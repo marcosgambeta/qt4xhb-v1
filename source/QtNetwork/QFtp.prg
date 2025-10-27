@@ -297,7 +297,7 @@ HB_FUNC_STATIC(QFTP_GET)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQIODEVICE(2) || HB_ISNIL(2)) && ISNUMORNIL(3)) {
+    if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISQIODEVICEORNIL(2) && ISNUMORNIL(3)) {
 #endif
       RINT(obj->get(PQSTRING(1), OPQIODEVICE(2, 0),
                     HB_ISNIL(3) ? (QFtp::TransferType)QFtp::Binary : (QFtp::TransferType)hb_parni(3)));
