@@ -74,17 +74,20 @@ HB_FUNC_STATIC(QAXWIDGET_NEW)
 {
   if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
     // QAxWidget(QWidget *parent = 0, Qt::WindowFlags f = 0)
-    QAxWidget *obj = new QAxWidget(OPQWIDGET(1, 0), HB_ISNIL(2) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(2));
+    QAxWidget *obj = new QAxWidget(OPQWIDGET(1, 0), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0)
+                                                                : static_cast<Qt::WindowFlags>(hb_parni(2)));
     Qt4xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISQWIDGETORNIL(2) && ISNUMORNIL(3)) {
     // QAxWidget(const QString &c, QWidget *parent = 0, Qt::WindowFlags f = 0)
     QAxWidget *obj =
-        new QAxWidget(PQSTRING(1), OPQWIDGET(2, 0), HB_ISNIL(3) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(3));
+        new QAxWidget(PQSTRING(1), OPQWIDGET(2, 0),
+                      HB_ISNIL(3) ? static_cast<Qt::WindowFlags>(0) : static_cast<Qt::WindowFlags>(hb_parni(3)));
     Qt4xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(1, 3) && HB_ISPOINTER(1) && ISQWIDGETORNIL(2) && ISNUMORNIL(3)) {
     // QAxWidget(IUnknown *iface, QWidget *parent = 0, Qt::WindowFlags f = 0)
-    QAxWidget *obj = new QAxWidget(static_cast<IUnknown *>(hb_parptr(1)), OPQWIDGET(2, 0),
-                                   HB_ISNIL(3) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(3));
+    QAxWidget *obj =
+        new QAxWidget(static_cast<IUnknown *>(hb_parptr(1)), OPQWIDGET(2, 0),
+                      HB_ISNIL(3) ? static_cast<Qt::WindowFlags>(0) : static_cast<Qt::WindowFlags>(hb_parni(3)));
     Qt4xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
