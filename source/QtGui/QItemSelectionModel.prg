@@ -455,7 +455,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->select(*PQMODELINDEX(1), (QItemSelectionModel::SelectionFlags)hb_parni(2));
+      obj->select(*PQMODELINDEX(1), static_cast<QItemSelectionModel::SelectionFlags>(hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -464,7 +464,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->select(*PQITEMSELECTION(1), (QItemSelectionModel::SelectionFlags)hb_parni(2));
+      obj->select(*PQITEMSELECTION(1), static_cast<QItemSelectionModel::SelectionFlags>(hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -482,7 +482,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SETCURRENTINDEX)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISNUM(2)) {
 #endif
-      obj->setCurrentIndex(*PQMODELINDEX(1), (QItemSelectionModel::SelectionFlags)hb_parni(2));
+      obj->setCurrentIndex(*PQMODELINDEX(1), static_cast<QItemSelectionModel::SelectionFlags>(hb_parni(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

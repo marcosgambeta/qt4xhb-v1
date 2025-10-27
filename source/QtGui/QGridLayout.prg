@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ADDITEM)
         ISNUMORNIL(6)) {
 #endif
       obj->addItem(PQLAYOUTITEM(1), PINT(2), PINT(3), OPINT(4, 1), OPINT(5, 1),
-                   HB_ISNIL(6) ? (Qt::Alignment)0 : (Qt::Alignment)hb_parni(6));
+                   HB_ISNIL(6) ? static_cast<Qt::Alignment>(0) : static_cast<Qt::Alignment>(hb_parni(6)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -143,7 +143,8 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ADDLAYOUT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->addLayout(PQLAYOUT(1), PINT(2), PINT(3), HB_ISNIL(4) ? (Qt::Alignment)0 : (Qt::Alignment)hb_parni(4));
+      obj->addLayout(PQLAYOUT(1), PINT(2), PINT(3),
+                     HB_ISNIL(4) ? static_cast<Qt::Alignment>(0) : static_cast<Qt::Alignment>(hb_parni(4)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -154,7 +155,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ADDLAYOUT)
 
     if (obj != NULL) {
       obj->addLayout(PQLAYOUT(1), PINT(2), PINT(3), PINT(4), PINT(5),
-                     HB_ISNIL(6) ? (Qt::Alignment)0 : (Qt::Alignment)hb_parni(6));
+                     HB_ISNIL(6) ? static_cast<Qt::Alignment>(0) : static_cast<Qt::Alignment>(hb_parni(6)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -170,7 +171,8 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ADDWIDGET)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->addWidget(PQWIDGET(1), PINT(2), PINT(3), HB_ISNIL(4) ? (Qt::Alignment)0 : (Qt::Alignment)hb_parni(4));
+      obj->addWidget(PQWIDGET(1), PINT(2), PINT(3),
+                     HB_ISNIL(4) ? static_cast<Qt::Alignment>(0) : static_cast<Qt::Alignment>(hb_parni(4)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -182,7 +184,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ADDWIDGET)
 
     if (obj != NULL) {
       obj->addWidget(PQWIDGET(1), PINT(2), PINT(3), PINT(4), PINT(5),
-                     HB_ISNIL(6) ? (Qt::Alignment)0 : (Qt::Alignment)hb_parni(6));
+                     HB_ISNIL(6) ? static_cast<Qt::Alignment>(0) : static_cast<Qt::Alignment>(hb_parni(6)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -470,7 +472,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_SETORIGINCORNER)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setOriginCorner((Qt::Corner)hb_parni(1));
+      obj->setOriginCorner(static_cast<Qt::Corner>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

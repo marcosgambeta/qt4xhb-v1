@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ADDITEM)
 
     if (obj != NULL) {
       obj->addItem(PQGRAPHICSLAYOUTITEM(1), PINT(2), PINT(3), PINT(4), PINT(5),
-                   HB_ISNIL(6) ? (Qt::Alignment)0 : (Qt::Alignment)hb_parni(6));
+                   HB_ISNIL(6) ? static_cast<Qt::Alignment>(0) : static_cast<Qt::Alignment>(hb_parni(6)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_ADDITEM)
 
     if (obj != NULL) {
       obj->addItem(PQGRAPHICSLAYOUTITEM(1), PINT(2), PINT(3),
-                   HB_ISNIL(4) ? (Qt::Alignment)0 : (Qt::Alignment)hb_parni(4));
+                   HB_ISNIL(4) ? static_cast<Qt::Alignment>(0) : static_cast<Qt::Alignment>(hb_parni(4)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -482,7 +482,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETALIGNMENT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2)) {
 #endif
-      obj->setAlignment(PQGRAPHICSLAYOUTITEM(1), (Qt::Alignment)hb_parni(2));
+      obj->setAlignment(PQGRAPHICSLAYOUTITEM(1), static_cast<Qt::Alignment>(hb_parni(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -502,7 +502,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETCOLUMNALIGNMENT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-      obj->setColumnAlignment(PINT(1), (Qt::Alignment)hb_parni(2));
+      obj->setColumnAlignment(PINT(1), static_cast<Qt::Alignment>(hb_parni(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -662,7 +662,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SETROWALIGNMENT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-      obj->setRowAlignment(PINT(1), (Qt::Alignment)hb_parni(2));
+      obj->setRowAlignment(PINT(1), static_cast<Qt::Alignment>(hb_parni(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -938,7 +938,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SIZEHINT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQSIZEFORNIL(2)) {
 #endif
-      QSizeF *ptr = new QSizeF(obj->sizeHint((Qt::SizeHint)hb_parni(1),
+      QSizeF *ptr = new QSizeF(obj->sizeHint(static_cast<Qt::SizeHint>(hb_parni(1)),
                                              HB_ISNIL(2) ? QSizeF() : *static_cast<QSizeF *>(Qt4xHb::itemGetPtr(2))));
       Qt4xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

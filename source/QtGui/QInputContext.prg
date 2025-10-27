@@ -315,7 +315,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_STANDARDFORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QTextFormat *ptr = new QTextFormat(obj->standardFormat((QInputContext::StandardFormat)hb_parni(1)));
+      QTextFormat *ptr = new QTextFormat(obj->standardFormat(static_cast<QInputContext::StandardFormat>(hb_parni(1))));
       Qt4xHb::createReturnClass(ptr, "QTEXTFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {

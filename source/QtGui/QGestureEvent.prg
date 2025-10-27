@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_ACCEPT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->accept((Qt::GestureType)hb_parni(1));
+      obj->accept(static_cast<Qt::GestureType>(hb_parni(1)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_GESTURE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QGesture *ptr = obj->gesture((Qt::GestureType)hb_parni(1));
+      QGesture *ptr = obj->gesture(static_cast<Qt::GestureType>(hb_parni(1)));
       Qt4xHb::createReturnQObjectClass(ptr, "QGESTURE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -280,7 +280,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_IGNORE)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->ignore((Qt::GestureType)hb_parni(1));
+      obj->ignore(static_cast<Qt::GestureType>(hb_parni(1)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -310,7 +310,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_ISACCEPTED)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RBOOL(obj->isAccepted((Qt::GestureType)hb_parni(1)));
+      RBOOL(obj->isAccepted(static_cast<Qt::GestureType>(hb_parni(1))));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -361,7 +361,7 @@ HB_FUNC_STATIC(QGESTUREEVENT_SETACCEPTED)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->setAccepted((Qt::GestureType)hb_parni(1), PBOOL(2));
+      obj->setAccepted(static_cast<Qt::GestureType>(hb_parni(1)), PBOOL(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());

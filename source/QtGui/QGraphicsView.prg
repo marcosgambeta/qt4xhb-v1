@@ -294,8 +294,8 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_FITINVIEW)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->fitInView(*PQRECTF(1),
-                     HB_ISNIL(2) ? (Qt::AspectRatioMode)Qt::IgnoreAspectRatio : (Qt::AspectRatioMode)hb_parni(2));
+      obj->fitInView(*PQRECTF(1), HB_ISNIL(2) ? static_cast<Qt::AspectRatioMode>(Qt::IgnoreAspectRatio)
+                                              : static_cast<Qt::AspectRatioMode>(hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -305,7 +305,8 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_FITINVIEW)
 
     if (obj != NULL) {
       obj->fitInView(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4),
-                     HB_ISNIL(5) ? (Qt::AspectRatioMode)Qt::IgnoreAspectRatio : (Qt::AspectRatioMode)hb_parni(5));
+                     HB_ISNIL(5) ? static_cast<Qt::AspectRatioMode>(Qt::IgnoreAspectRatio)
+                                 : static_cast<Qt::AspectRatioMode>(hb_parni(5)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -314,8 +315,8 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_FITINVIEW)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->fitInView(PQGRAPHICSITEM(1),
-                     HB_ISNIL(2) ? (Qt::AspectRatioMode)Qt::IgnoreAspectRatio : (Qt::AspectRatioMode)hb_parni(2));
+      obj->fitInView(PQGRAPHICSITEM(1), HB_ISNIL(2) ? static_cast<Qt::AspectRatioMode>(Qt::IgnoreAspectRatio)
+                                                    : static_cast<Qt::AspectRatioMode>(hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -491,9 +492,9 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ITEMS)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QList<QGraphicsItem *> list =
-          obj->items(PINT(1), PINT(2), PINT(3), PINT(4),
-                     HB_ISNIL(5) ? (Qt::ItemSelectionMode)Qt::IntersectsItemShape : (Qt::ItemSelectionMode)hb_parni(5));
+      QList<QGraphicsItem *> list = obj->items(PINT(1), PINT(2), PINT(3), PINT(4),
+                                               HB_ISNIL(5) ? static_cast<Qt::ItemSelectionMode>(Qt::IntersectsItemShape)
+                                                           : static_cast<Qt::ItemSelectionMode>(hb_parni(5)));
       PHB_DYNS pDynSym = hb_dynsymFindName("QGRAPHICSITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if (pDynSym != NULL) {
@@ -520,8 +521,9 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ITEMS)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QList<QGraphicsItem *> list = obj->items(*PQRECT(1), HB_ISNIL(2) ? (Qt::ItemSelectionMode)Qt::IntersectsItemShape
-                                                                       : (Qt::ItemSelectionMode)hb_parni(2));
+      QList<QGraphicsItem *> list =
+          obj->items(*PQRECT(1), HB_ISNIL(2) ? static_cast<Qt::ItemSelectionMode>(Qt::IntersectsItemShape)
+                                             : static_cast<Qt::ItemSelectionMode>(hb_parni(2)));
       PHB_DYNS pDynSym = hb_dynsymFindName("QGRAPHICSITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if (pDynSym != NULL) {
@@ -549,8 +551,8 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ITEMS)
 
     if (obj != NULL) {
       QList<QGraphicsItem *> list =
-          obj->items(*PQPOLYGON(1),
-                     HB_ISNIL(2) ? (Qt::ItemSelectionMode)Qt::IntersectsItemShape : (Qt::ItemSelectionMode)hb_parni(2));
+          obj->items(*PQPOLYGON(1), HB_ISNIL(2) ? static_cast<Qt::ItemSelectionMode>(Qt::IntersectsItemShape)
+                                                : static_cast<Qt::ItemSelectionMode>(hb_parni(2)));
       PHB_DYNS pDynSym = hb_dynsymFindName("QGRAPHICSITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if (pDynSym != NULL) {
@@ -579,8 +581,8 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_ITEMS)
 
     if (obj != NULL) {
       QList<QGraphicsItem *> list =
-          obj->items(*PQPAINTERPATH(1),
-                     HB_ISNIL(2) ? (Qt::ItemSelectionMode)Qt::IntersectsItemShape : (Qt::ItemSelectionMode)hb_parni(2));
+          obj->items(*PQPAINTERPATH(1), HB_ISNIL(2) ? static_cast<Qt::ItemSelectionMode>(Qt::IntersectsItemShape)
+                                                    : static_cast<Qt::ItemSelectionMode>(hb_parni(2)));
       PHB_DYNS pDynSym = hb_dynsymFindName("QGRAPHICSITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if (pDynSym != NULL) {
@@ -766,7 +768,8 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_RENDER)
 #endif
       obj->render(PQPAINTER(1), HB_ISNIL(2) ? QRectF() : *static_cast<QRectF *>(Qt4xHb::itemGetPtr(2)),
                   HB_ISNIL(3) ? QRect() : *static_cast<QRect *>(Qt4xHb::itemGetPtr(3)),
-                  HB_ISNIL(4) ? (Qt::AspectRatioMode)Qt::KeepAspectRatio : (Qt::AspectRatioMode)hb_parni(4));
+                  HB_ISNIL(4) ? static_cast<Qt::AspectRatioMode>(Qt::KeepAspectRatio)
+                              : static_cast<Qt::AspectRatioMode>(hb_parni(4)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -978,7 +981,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETALIGNMENT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setAlignment((Qt::Alignment)hb_parni(1));
+      obj->setAlignment(static_cast<Qt::Alignment>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1018,7 +1021,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETCACHEMODE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setCacheMode((QGraphicsView::CacheMode)hb_parni(1));
+      obj->setCacheMode(static_cast<QGraphicsView::CacheMode>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1038,7 +1041,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETDRAGMODE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setDragMode((QGraphicsView::DragMode)hb_parni(1));
+      obj->setDragMode(static_cast<QGraphicsView::DragMode>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1118,7 +1121,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETOPTIMIZATIONFLAG)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
 #endif
-      obj->setOptimizationFlag((QGraphicsView::OptimizationFlag)hb_parni(1), OPBOOL(2, true));
+      obj->setOptimizationFlag(static_cast<QGraphicsView::OptimizationFlag>(hb_parni(1)), OPBOOL(2, true));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1138,7 +1141,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETOPTIMIZATIONFLAGS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setOptimizationFlags((QGraphicsView::OptimizationFlags)hb_parni(1));
+      obj->setOptimizationFlags(static_cast<QGraphicsView::OptimizationFlags>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1158,7 +1161,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETRENDERHINT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
 #endif
-      obj->setRenderHint((QPainter::RenderHint)hb_parni(1), OPBOOL(2, true));
+      obj->setRenderHint(static_cast<QPainter::RenderHint>(hb_parni(1)), OPBOOL(2, true));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1178,7 +1181,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETRENDERHINTS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setRenderHints((QPainter::RenderHints)hb_parni(1));
+      obj->setRenderHints(static_cast<QPainter::RenderHints>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1198,7 +1201,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETRESIZEANCHOR)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setResizeAnchor((QGraphicsView::ViewportAnchor)hb_parni(1));
+      obj->setResizeAnchor(static_cast<QGraphicsView::ViewportAnchor>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1218,7 +1221,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETRUBBERBANDSELECTIONMODE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setRubberBandSelectionMode((Qt::ItemSelectionMode)hb_parni(1));
+      obj->setRubberBandSelectionMode(static_cast<Qt::ItemSelectionMode>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1303,7 +1306,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETTRANSFORMATIONANCHOR)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setTransformationAnchor((QGraphicsView::ViewportAnchor)hb_parni(1));
+      obj->setTransformationAnchor(static_cast<QGraphicsView::ViewportAnchor>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1323,7 +1326,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_SETVIEWPORTUPDATEMODE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setViewportUpdateMode((QGraphicsView::ViewportUpdateMode)hb_parni(1));
+      obj->setViewportUpdateMode(static_cast<QGraphicsView::ViewportUpdateMode>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1457,7 +1460,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_INPUTMETHODQUERY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QVariant *ptr = new QVariant(obj->inputMethodQuery((Qt::InputMethodQuery)hb_parni(1)));
+      QVariant *ptr = new QVariant(obj->inputMethodQuery(static_cast<Qt::InputMethodQuery>(hb_parni(1))));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -1496,8 +1499,8 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_INVALIDATESCENE)
     if (ISBETWEEN(0, 2) && ISQRECTFORNIL(1) && ISNUMORNIL(2)) {
 #endif
       obj->invalidateScene(HB_ISNIL(1) ? QRectF() : *static_cast<QRectF *>(Qt4xHb::itemGetPtr(1)),
-                           HB_ISNIL(2) ? (QGraphicsScene::SceneLayers)QGraphicsScene::AllLayers
-                                       : (QGraphicsScene::SceneLayers)hb_parni(2));
+                           HB_ISNIL(2) ? static_cast<QGraphicsScene::SceneLayers>(QGraphicsScene::AllLayers)
+                                       : static_cast<QGraphicsScene::SceneLayers>(hb_parni(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

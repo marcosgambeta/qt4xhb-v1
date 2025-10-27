@@ -125,9 +125,9 @@ HB_FUNC_STATIC(QICON_ACTUALSIZE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && ISQSIZE(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
-      QSize *ptr =
-          new QSize(obj->actualSize(*PQSIZE(1), HB_ISNIL(2) ? (QIcon::Mode)QIcon::Normal : (QIcon::Mode)hb_parni(2),
-                                    HB_ISNIL(3) ? (QIcon::State)QIcon::Off : (QIcon::State)hb_parni(3)));
+      QSize *ptr = new QSize(obj->actualSize(
+          *PQSIZE(1), HB_ISNIL(2) ? static_cast<QIcon::Mode>(QIcon::Normal) : static_cast<QIcon::Mode>(hb_parni(2)),
+          HB_ISNIL(3) ? static_cast<QIcon::State>(QIcon::Off) : static_cast<QIcon::State>(hb_parni(3))));
       Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -148,8 +148,8 @@ HB_FUNC_STATIC(QICON_ADDFILE)
     if (ISBETWEEN(1, 4) && HB_ISCHAR(1) && ISQSIZEORNIL(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
 #endif
       obj->addFile(PQSTRING(1), HB_ISNIL(2) ? QSize() : *static_cast<QSize *>(Qt4xHb::itemGetPtr(2)),
-                   HB_ISNIL(3) ? (QIcon::Mode)QIcon::Normal : (QIcon::Mode)hb_parni(3),
-                   HB_ISNIL(4) ? (QIcon::State)QIcon::Off : (QIcon::State)hb_parni(4));
+                   HB_ISNIL(3) ? static_cast<QIcon::Mode>(QIcon::Normal) : static_cast<QIcon::Mode>(hb_parni(3)),
+                   HB_ISNIL(4) ? static_cast<QIcon::State>(QIcon::Off) : static_cast<QIcon::State>(hb_parni(4)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -169,8 +169,9 @@ HB_FUNC_STATIC(QICON_ADDPIXMAP)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && ISQPIXMAP(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
-      obj->addPixmap(*PQPIXMAP(1), HB_ISNIL(2) ? (QIcon::Mode)QIcon::Normal : (QIcon::Mode)hb_parni(2),
-                     HB_ISNIL(3) ? (QIcon::State)QIcon::Off : (QIcon::State)hb_parni(3));
+      obj->addPixmap(*PQPIXMAP(1),
+                     HB_ISNIL(2) ? static_cast<QIcon::Mode>(QIcon::Normal) : static_cast<QIcon::Mode>(hb_parni(2)),
+                     HB_ISNIL(3) ? static_cast<QIcon::State>(QIcon::Off) : static_cast<QIcon::State>(hb_parni(3)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -190,8 +191,9 @@ HB_FUNC_STATIC(QICON_AVAILABLESIZES)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISNUMORNIL(2)) {
 #endif
-      QList<QSize> list = obj->availableSizes(HB_ISNIL(1) ? (QIcon::Mode)QIcon::Normal : (QIcon::Mode)hb_parni(1),
-                                              HB_ISNIL(2) ? (QIcon::State)QIcon::Off : (QIcon::State)hb_parni(2));
+      QList<QSize> list = obj->availableSizes(
+          HB_ISNIL(1) ? static_cast<QIcon::Mode>(QIcon::Normal) : static_cast<QIcon::Mode>(hb_parni(1)),
+          HB_ISNIL(2) ? static_cast<QIcon::State>(QIcon::Off) : static_cast<QIcon::State>(hb_parni(2)));
       PHB_DYNS pDynSym = hb_dynsymFindName("QSIZE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if (pDynSym != NULL) {
@@ -285,9 +287,10 @@ HB_FUNC_STATIC(QICON_PAINT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->paint(PQPAINTER(1), *PQRECT(2), HB_ISNIL(3) ? (Qt::Alignment)Qt::AlignCenter : (Qt::Alignment)hb_parni(3),
-                 HB_ISNIL(4) ? (QIcon::Mode)QIcon::Normal : (QIcon::Mode)hb_parni(4),
-                 HB_ISNIL(5) ? (QIcon::State)QIcon::Off : (QIcon::State)hb_parni(5));
+      obj->paint(PQPAINTER(1), *PQRECT(2),
+                 HB_ISNIL(3) ? static_cast<Qt::Alignment>(Qt::AlignCenter) : static_cast<Qt::Alignment>(hb_parni(3)),
+                 HB_ISNIL(4) ? static_cast<QIcon::Mode>(QIcon::Normal) : static_cast<QIcon::Mode>(hb_parni(4)),
+                 HB_ISNIL(5) ? static_cast<QIcon::State>(QIcon::Off) : static_cast<QIcon::State>(hb_parni(5)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -299,9 +302,9 @@ HB_FUNC_STATIC(QICON_PAINT)
 
     if (obj != NULL) {
       obj->paint(PQPAINTER(1), PINT(2), PINT(3), PINT(4), PINT(5),
-                 HB_ISNIL(6) ? (Qt::Alignment)Qt::AlignCenter : (Qt::Alignment)hb_parni(6),
-                 HB_ISNIL(7) ? (QIcon::Mode)QIcon::Normal : (QIcon::Mode)hb_parni(7),
-                 HB_ISNIL(8) ? (QIcon::State)QIcon::Off : (QIcon::State)hb_parni(8));
+                 HB_ISNIL(6) ? static_cast<Qt::Alignment>(Qt::AlignCenter) : static_cast<Qt::Alignment>(hb_parni(6)),
+                 HB_ISNIL(7) ? static_cast<QIcon::Mode>(QIcon::Normal) : static_cast<QIcon::Mode>(hb_parni(7)),
+                 HB_ISNIL(8) ? static_cast<QIcon::State>(QIcon::Off) : static_cast<QIcon::State>(hb_parni(8)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -317,9 +320,9 @@ HB_FUNC_STATIC(QICON_PIXMAP)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QPixmap *ptr =
-          new QPixmap(obj->pixmap(*PQSIZE(1), HB_ISNIL(2) ? (QIcon::Mode)QIcon::Normal : (QIcon::Mode)hb_parni(2),
-                                  HB_ISNIL(3) ? (QIcon::State)QIcon::Off : (QIcon::State)hb_parni(3)));
+      QPixmap *ptr = new QPixmap(obj->pixmap(
+          *PQSIZE(1), HB_ISNIL(2) ? static_cast<QIcon::Mode>(QIcon::Normal) : static_cast<QIcon::Mode>(hb_parni(2)),
+          HB_ISNIL(3) ? static_cast<QIcon::State>(QIcon::Off) : static_cast<QIcon::State>(hb_parni(3))));
       Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
     }
   } else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
@@ -327,9 +330,10 @@ HB_FUNC_STATIC(QICON_PIXMAP)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QPixmap *ptr =
-          new QPixmap(obj->pixmap(PINT(1), PINT(2), HB_ISNIL(3) ? (QIcon::Mode)QIcon::Normal : (QIcon::Mode)hb_parni(3),
-                                  HB_ISNIL(4) ? (QIcon::State)QIcon::Off : (QIcon::State)hb_parni(4)));
+      QPixmap *ptr = new QPixmap(
+          obj->pixmap(PINT(1), PINT(2),
+                      HB_ISNIL(3) ? static_cast<QIcon::Mode>(QIcon::Normal) : static_cast<QIcon::Mode>(hb_parni(3)),
+                      HB_ISNIL(4) ? static_cast<QIcon::State>(QIcon::Off) : static_cast<QIcon::State>(hb_parni(4))));
       Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
     }
   } else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
@@ -337,9 +341,9 @@ HB_FUNC_STATIC(QICON_PIXMAP)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QPixmap *ptr =
-          new QPixmap(obj->pixmap(PINT(1), HB_ISNIL(2) ? (QIcon::Mode)QIcon::Normal : (QIcon::Mode)hb_parni(2),
-                                  HB_ISNIL(3) ? (QIcon::State)QIcon::Off : (QIcon::State)hb_parni(3)));
+      QPixmap *ptr = new QPixmap(obj->pixmap(
+          PINT(1), HB_ISNIL(2) ? static_cast<QIcon::Mode>(QIcon::Normal) : static_cast<QIcon::Mode>(hb_parni(2)),
+          HB_ISNIL(3) ? static_cast<QIcon::State>(QIcon::Off) : static_cast<QIcon::State>(hb_parni(3))));
       Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
     }
   } else {

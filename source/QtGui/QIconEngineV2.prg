@@ -71,8 +71,9 @@ HB_FUNC_STATIC(QICONENGINEV2_AVAILABLESIZES)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 2) && ISNUMORNIL(1) && ISNUMORNIL(2)) {
 #endif
-      QList<QSize> list = obj->availableSizes(HB_ISNIL(1) ? (QIcon::Mode)QIcon::Normal : (QIcon::Mode)hb_parni(1),
-                                              HB_ISNIL(2) ? (QIcon::State)QIcon::Off : (QIcon::State)hb_parni(2));
+      QList<QSize> list = obj->availableSizes(
+          HB_ISNIL(1) ? static_cast<QIcon::Mode>(QIcon::Normal) : static_cast<QIcon::Mode>(hb_parni(1)),
+          HB_ISNIL(2) ? static_cast<QIcon::State>(QIcon::Off) : static_cast<QIcon::State>(hb_parni(2)));
       PHB_DYNS pDynSym = hb_dynsymFindName("QSIZE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if (pDynSym != NULL) {

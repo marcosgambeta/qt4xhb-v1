@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_SETAXIS)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->setAxis((Qt::Axis)hb_parni(1));
+      obj->setAxis(static_cast<Qt::Axis>(hb_parni(1)));
     }
 
     hb_itemReturn(hb_stackSelfItem());

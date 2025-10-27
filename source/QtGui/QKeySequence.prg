@@ -70,11 +70,11 @@ HB_FUNC_STATIC(QKEYSEQUENCE_NEW)
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     // QKeySequence(const QString &key, QKeySequence::SequenceFormat format)
-    QKeySequence *obj = new QKeySequence(PQSTRING(1), (QKeySequence::SequenceFormat)hb_parni(2));
+    QKeySequence *obj = new QKeySequence(PQSTRING(1), static_cast<QKeySequence::SequenceFormat>(hb_parni(2)));
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QKeySequence(QKeySequence::StandardKey key)
-    QKeySequence *obj = new QKeySequence((QKeySequence::StandardKey)hb_parni(1));
+    QKeySequence *obj = new QKeySequence(static_cast<QKeySequence::StandardKey>(hb_parni(1)));
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 4) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
     // QKeySequence(int k1, int k2 = 0, int k3 = 0, int k4 = 0)
@@ -167,8 +167,8 @@ HB_FUNC_STATIC(QKEYSEQUENCE_TOSTRING)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      RQSTRING(obj->toString(HB_ISNIL(1) ? (QKeySequence::SequenceFormat)QKeySequence::PortableText
-                                         : (QKeySequence::SequenceFormat)hb_parni(1)));
+      RQSTRING(obj->toString(HB_ISNIL(1) ? static_cast<QKeySequence::SequenceFormat>(QKeySequence::PortableText)
+                                         : static_cast<QKeySequence::SequenceFormat>(hb_parni(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -183,9 +183,9 @@ HB_FUNC_STATIC(QKEYSEQUENCE_FROMSTRING)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
 #endif
-    QKeySequence *ptr = new QKeySequence(
-        QKeySequence::fromString(PQSTRING(1), HB_ISNIL(2) ? (QKeySequence::SequenceFormat)QKeySequence::PortableText
-                                                          : (QKeySequence::SequenceFormat)hb_parni(2)));
+    QKeySequence *ptr = new QKeySequence(QKeySequence::fromString(
+        PQSTRING(1), HB_ISNIL(2) ? static_cast<QKeySequence::SequenceFormat>(QKeySequence::PortableText)
+                                 : static_cast<QKeySequence::SequenceFormat>(hb_parni(2))));
     Qt4xHb::createReturnClass(ptr, "QKEYSEQUENCE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
@@ -200,7 +200,7 @@ HB_FUNC_STATIC(QKEYSEQUENCE_KEYBINDINGS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-    QList<QKeySequence> list = QKeySequence::keyBindings((QKeySequence::StandardKey)hb_parni(1));
+    QList<QKeySequence> list = QKeySequence::keyBindings(static_cast<QKeySequence::StandardKey>(hb_parni(1)));
     PHB_DYNS pDynSym = hb_dynsymFindName("QKEYSEQUENCE");
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if (pDynSym != NULL) {

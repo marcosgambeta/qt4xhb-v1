@@ -51,7 +51,7 @@ RETURN
 HB_FUNC_STATIC(QHELPEVENT_NEW)
 {
   if (ISNUMPAR(3) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3)) {
-    QHelpEvent *obj = new QHelpEvent((QEvent::Type)hb_parni(1), *PQPOINT(2), *PQPOINT(3));
+    QHelpEvent *obj = new QHelpEvent(static_cast<QEvent::Type>(hb_parni(1)), *PQPOINT(2), *PQPOINT(3));
     Qt4xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
