@@ -82,7 +82,6 @@ RETURN
 #define GET_PTR_FROM_SELF(p) QSqlTableModel *p = qobject_cast<QSqlTableModel *>(Qt4xHb::getQObjectPointerFromSelfItem())
 
 // QSqlTableModel(QObject *parent = 0, QSqlDatabase db = QSqlDatabase())
-
 HB_FUNC_STATIC(QSQLTABLEMODEL_NEW)
 {
   if (ISBETWEEN(0, 2) && ISQOBJECTORNIL(1) && ISQSQLDATABASEORNIL(2)) {
@@ -286,7 +285,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETEDITSTRATEGY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setEditStrategy((QSqlTableModel::EditStrategy)hb_parni(1));
+      obj->setEditStrategy(static_cast<QSqlTableModel::EditStrategy>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -344,7 +343,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETSORT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-      obj->setSort(PINT(1), (Qt::SortOrder)hb_parni(2));
+      obj->setSort(PINT(1), static_cast<Qt::SortOrder>(hb_parni(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -459,7 +458,8 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_HEADERDATA)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
 #endif
-      QVariant *ptr = new QVariant(obj->headerData(PINT(1), (Qt::Orientation)hb_parni(2), OPINT(3, Qt::DisplayRole)));
+      QVariant *ptr =
+          new QVariant(obj->headerData(PINT(1), static_cast<Qt::Orientation>(hb_parni(2)), OPINT(3, Qt::DisplayRole)));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -571,7 +571,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SORT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-      obj->sort(PINT(1), (Qt::SortOrder)hb_parni(2));
+      obj->sort(PINT(1), static_cast<Qt::SortOrder>(hb_parni(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

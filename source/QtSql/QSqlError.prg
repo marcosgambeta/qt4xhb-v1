@@ -64,9 +64,10 @@ HB_FUNC_STATIC(QSQLERROR_NEW)
   if (ISBETWEEN(0, 4) && ISCHARORNIL(1) && ISCHARORNIL(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
     // QSqlError(const QString &driverText = QString(), const QString &databaseText = QString(), QSqlError::ErrorType
     // type = QSqlError::NoError, int number = -1)
-    QSqlError *obj = new QSqlError(
-        OPQSTRING(1, QString()), OPQSTRING(2, QString()),
-        HB_ISNIL(3) ? (QSqlError::ErrorType)QSqlError::NoError : (QSqlError::ErrorType)hb_parni(3), OPINT(4, -1));
+    QSqlError *obj = new QSqlError(OPQSTRING(1, QString()), OPQSTRING(2, QString()),
+                                   HB_ISNIL(3) ? static_cast<QSqlError::ErrorType>(QSqlError::NoError)
+                                               : static_cast<QSqlError::ErrorType>(hb_parni(3)),
+                                   OPINT(4, -1));
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQSQLERROR(1)) {
     // QSqlError(const QSqlError &other)
@@ -233,7 +234,7 @@ HB_FUNC_STATIC(QSQLERROR_SETTYPE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setType((QSqlError::ErrorType)hb_parni(1));
+      obj->setType(static_cast<QSqlError::ErrorType>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

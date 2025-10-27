@@ -57,7 +57,6 @@ RETURN
   QSqlRelationalTableModel *p = qobject_cast<QSqlRelationalTableModel *>(Qt4xHb::getQObjectPointerFromSelfItem())
 
 // QSqlRelationalTableModel(QObject *parent = 0, QSqlDatabase db = QSqlDatabase())
-
 HB_FUNC_STATIC(QSQLRELATIONALTABLEMODEL_NEW)
 {
   if (ISBETWEEN(0, 2) && ISQOBJECTORNIL(1) && ISQSQLDATABASEORNIL(2)) {
