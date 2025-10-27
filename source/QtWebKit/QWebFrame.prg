@@ -126,7 +126,8 @@ HB_FUNC_STATIC(QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->addToJavaScriptWindowObject(PQSTRING(1), PQOBJECT(2), (QScriptEngine::ValueOwnership)hb_parni(3));
+      obj->addToJavaScriptWindowObject(PQSTRING(1), PQOBJECT(2),
+                                       static_cast<QScriptEngine::ValueOwnership>(hb_parni(3)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -379,8 +380,8 @@ HB_FUNC_STATIC(QWEBFRAME_LOAD)
 
     if (obj != NULL) {
       obj->load(*PQNETWORKREQUEST(1),
-                HB_ISNIL(2) ? (QNetworkAccessManager::Operation)QNetworkAccessManager::GetOperation
-                            : (QNetworkAccessManager::Operation)hb_parni(2),
+                HB_ISNIL(2) ? static_cast<QNetworkAccessManager::Operation>(QNetworkAccessManager::GetOperation)
+                            : static_cast<QNetworkAccessManager::Operation>(hb_parni(2)),
                 HB_ISNIL(3) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(3)));
     }
 
@@ -472,7 +473,7 @@ HB_FUNC_STATIC(QWEBFRAME_RENDER)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->render(PQPAINTER(1), (QWebFrame::RenderLayer)hb_parni(2),
+      obj->render(PQPAINTER(1), static_cast<QWebFrame::RenderLayer>(hb_parni(2)),
                   HB_ISNIL(3) ? QRegion() : *static_cast<QRegion *>(Qt4xHb::itemGetPtr(3)));
     }
 
@@ -548,7 +549,7 @@ HB_FUNC_STATIC(QWEBFRAME_SCROLLBARGEOMETRY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QRect *ptr = new QRect(obj->scrollBarGeometry((Qt::Orientation)hb_parni(1)));
+      QRect *ptr = new QRect(obj->scrollBarGeometry(static_cast<Qt::Orientation>(hb_parni(1))));
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -567,7 +568,7 @@ HB_FUNC_STATIC(QWEBFRAME_SCROLLBARMAXIMUM)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RINT(obj->scrollBarMaximum((Qt::Orientation)hb_parni(1)));
+      RINT(obj->scrollBarMaximum(static_cast<Qt::Orientation>(hb_parni(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -585,7 +586,7 @@ HB_FUNC_STATIC(QWEBFRAME_SCROLLBARMINIMUM)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RINT(obj->scrollBarMinimum((Qt::Orientation)hb_parni(1)));
+      RINT(obj->scrollBarMinimum(static_cast<Qt::Orientation>(hb_parni(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -603,7 +604,7 @@ HB_FUNC_STATIC(QWEBFRAME_SCROLLBARPOLICY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RENUM(obj->scrollBarPolicy((Qt::Orientation)hb_parni(1)));
+      RENUM(obj->scrollBarPolicy(static_cast<Qt::Orientation>(hb_parni(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -621,7 +622,7 @@ HB_FUNC_STATIC(QWEBFRAME_SCROLLBARVALUE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RINT(obj->scrollBarValue((Qt::Orientation)hb_parni(1)));
+      RINT(obj->scrollBarValue(static_cast<Qt::Orientation>(hb_parni(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -758,7 +759,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETSCROLLBARPOLICY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-      obj->setScrollBarPolicy((Qt::Orientation)hb_parni(1), (Qt::ScrollBarPolicy)hb_parni(2));
+      obj->setScrollBarPolicy(static_cast<Qt::Orientation>(hb_parni(1)), static_cast<Qt::ScrollBarPolicy>(hb_parni(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -778,7 +779,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETSCROLLBARVALUE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-      obj->setScrollBarValue((Qt::Orientation)hb_parni(1), PINT(2));
+      obj->setScrollBarValue(static_cast<Qt::Orientation>(hb_parni(1)), PINT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
