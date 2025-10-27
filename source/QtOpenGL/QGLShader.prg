@@ -266,7 +266,7 @@ HB_FUNC_STATIC(QGLSHADER_SOURCECODE)
 HB_FUNC_STATIC(QGLSHADER_HASOPENGLSHADERS)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQGLCONTEXT(2) || HB_ISNIL(2))) {
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQGLCONTEXTORNIL(2)) {
 #endif
     RBOOL(QGLShader::hasOpenGLShaders((QGLShader::ShaderType)hb_parni(1),
                                       HB_ISNIL(2) ? 0 : static_cast<QGLContext *>(Qt4xHb::itemGetPtr(2))));

@@ -1250,7 +1250,7 @@ HB_FUNC_STATIC(QGLFUNCTIONS_INITIALIZEGLFUNCTIONS)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 1) && (ISQGLCONTEXT(1) || HB_ISNIL(1))) {
+    if (ISBETWEEN(0, 1) && ISQGLCONTEXTORNIL(1)) {
 #endif
       obj->initializeGLFunctions(HB_ISNIL(1) ? 0 : static_cast<QGLContext *>(Qt4xHb::itemGetPtr(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
