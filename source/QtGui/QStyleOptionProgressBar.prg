@@ -198,7 +198,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONPROGRESSBAR_SETTEXTALIGNMENT)
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->textAlignment = (Qt::Alignment)hb_parni(1);
+      obj->textAlignment = static_cast<Qt::Alignment>(hb_parni(1));
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }

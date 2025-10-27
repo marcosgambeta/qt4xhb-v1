@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_SETPOSITIONOFLINE)
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->positionOfLine = (QStyleOptionToolBar::ToolBarPosition)hb_parni(1);
+      obj->positionOfLine = static_cast<QStyleOptionToolBar::ToolBarPosition>(hb_parni(1));
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_SETPOSITIONWITHINLINE)
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->positionWithinLine = (QStyleOptionToolBar::ToolBarPosition)hb_parni(1);
+      obj->positionWithinLine = static_cast<QStyleOptionToolBar::ToolBarPosition>(hb_parni(1));
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_SETTOOLBARAREA)
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->toolBarArea = (Qt::ToolBarArea)hb_parni(1);
+      obj->toolBarArea = static_cast<Qt::ToolBarArea>(hb_parni(1));
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTOOLBAR_SETFEATURES)
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->features = (QStyleOptionToolBar::ToolBarFeatures)hb_parni(1);
+      obj->features = static_cast<QStyleOptionToolBar::ToolBarFeatures>(hb_parni(1));
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }

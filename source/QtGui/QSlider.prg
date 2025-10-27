@@ -58,7 +58,7 @@ HB_FUNC_STATIC(QSLIDER_NEW)
     Qt4xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQWIDGETORNIL(2)) {
     // QSlider(Qt::Orientation orientation, QWidget *parent = 0)
-    QSlider *obj = new QSlider((Qt::Orientation)hb_parni(1), OPQWIDGET(2, 0));
+    QSlider *obj = new QSlider(static_cast<Qt::Orientation>(hb_parni(1)), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QSLIDER_SETTICKPOSITION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setTickPosition((QSlider::TickPosition)hb_parni(1));
+      obj->setTickPosition(static_cast<QSlider::TickPosition>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
