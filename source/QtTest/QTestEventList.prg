@@ -312,7 +312,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSECLICK)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 4) && HB_ISNUM(1) && ISNUMORNIL(2) && (ISQPOINT(3) || HB_ISNIL(3)) && ISNUMORNIL(4)) {
+    if (ISBETWEEN(1, 4) && HB_ISNUM(1) && ISNUMORNIL(2) && ISQPOINTORNIL(3) && ISNUMORNIL(4)) {
 #endif
       obj->addMouseClick((Qt::MouseButton)hb_parni(1),
                          HB_ISNIL(2) ? (Qt::KeyboardModifiers)0 : (Qt::KeyboardModifiers)hb_parni(2),
@@ -335,7 +335,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSEDCLICK)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 4) && HB_ISNUM(1) && ISNUMORNIL(2) && (ISQPOINT(3) || HB_ISNIL(3)) && ISNUMORNIL(4)) {
+    if (ISBETWEEN(1, 4) && HB_ISNUM(1) && ISNUMORNIL(2) && ISQPOINTORNIL(3) && ISNUMORNIL(4)) {
 #endif
       obj->addMouseDClick((Qt::MouseButton)hb_parni(1),
                           HB_ISNIL(2) ? (Qt::KeyboardModifiers)0 : (Qt::KeyboardModifiers)hb_parni(2),
@@ -357,7 +357,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSEMOVE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(0, 2) && (ISQPOINT(1) || HB_ISNIL(1)) && ISNUMORNIL(2)) {
+    if (ISBETWEEN(0, 2) && ISQPOINTORNIL(1) && ISNUMORNIL(2)) {
 #endif
       obj->addMouseMove(HB_ISNIL(1) ? QPoint() : *static_cast<QPoint *>(Qt4xHb::itemGetPtr(1)), OPINT(2, -1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -378,7 +378,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSEPRESS)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 4) && HB_ISNUM(1) && ISNUMORNIL(2) && (ISQPOINT(3) || HB_ISNIL(3)) && ISNUMORNIL(4)) {
+    if (ISBETWEEN(1, 4) && HB_ISNUM(1) && ISNUMORNIL(2) && ISQPOINTORNIL(3) && ISNUMORNIL(4)) {
 #endif
       obj->addMousePress((Qt::MouseButton)hb_parni(1),
                          HB_ISNIL(2) ? (Qt::KeyboardModifiers)0 : (Qt::KeyboardModifiers)hb_parni(2),
@@ -401,7 +401,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSERELEASE)
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if (ISBETWEEN(1, 4) && HB_ISNUM(1) && ISNUMORNIL(2) && (ISQPOINT(3) || HB_ISNIL(3)) && ISNUMORNIL(4)) {
+    if (ISBETWEEN(1, 4) && HB_ISNUM(1) && ISNUMORNIL(2) && ISQPOINTORNIL(3) && ISNUMORNIL(4)) {
 #endif
       obj->addMouseRelease((Qt::MouseButton)hb_parni(1),
                            HB_ISNIL(2) ? (Qt::KeyboardModifiers)0 : (Qt::KeyboardModifiers)hb_parni(2),
