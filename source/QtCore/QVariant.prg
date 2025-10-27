@@ -134,14 +134,14 @@ RETURN
 // QVariant(Qt::GlobalColor color)
 HB_FUNC_STATIC(QVARIANT_NEW5)
 {
-  QVariant *obj = new QVariant((Qt::GlobalColor)hb_parni(1));
+  QVariant *obj = new QVariant(static_cast<Qt::GlobalColor>(hb_parni(1)));
   Qt4xHb::returnNewObject(obj, true);
 }
 
 // QVariant(QVariant::Type type)
 HB_FUNC_STATIC(QVARIANT_NEW6)
 {
-  QVariant *obj = new QVariant((QVariant::Type)hb_parni(1));
+  QVariant *obj = new QVariant(static_cast<QVariant::Type>(hb_parni(1)));
   Qt4xHb::returnNewObject(obj, true);
 }
 
@@ -341,7 +341,7 @@ HB_FUNC_STATIC(QVARIANT_CANCONVERT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->canConvert((QVariant::Type)hb_parni(1)));
+      RBOOL(obj->canConvert(static_cast<QVariant::Type>(hb_parni(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -379,7 +379,7 @@ HB_FUNC_STATIC(QVARIANT_CONVERT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->convert((QVariant::Type)hb_parni(1)));
+      RBOOL(obj->convert(static_cast<QVariant::Type>(hb_parni(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -932,7 +932,7 @@ HB_FUNC_STATIC(QVARIANT_TYPETONAME)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-    hb_retc((const char *)QVariant::typeToName((QVariant::Type)hb_parni(1)));
+    hb_retc((const char *)QVariant::typeToName(static_cast<QVariant::Type>(hb_parni(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

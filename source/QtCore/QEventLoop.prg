@@ -85,8 +85,8 @@ HB_FUNC_STATIC(QEVENTLOOP_EXEC)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      RINT(obj->exec(HB_ISNIL(1) ? (QEventLoop::ProcessEventsFlags)QEventLoop::AllEvents
-                                 : (QEventLoop::ProcessEventsFlags)hb_parni(1)));
+      RINT(obj->exec(HB_ISNIL(1) ? static_cast<QEventLoop::ProcessEventsFlags>(QEventLoop::AllEvents)
+                                 : static_cast<QEventLoop::ProcessEventsFlags>(hb_parni(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -140,15 +140,15 @@ HB_FUNC_STATIC(QEVENTLOOP_PROCESSEVENTS)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RBOOL(obj->processEvents(HB_ISNIL(1) ? (QEventLoop::ProcessEventsFlags)QEventLoop::AllEvents
-                                           : (QEventLoop::ProcessEventsFlags)hb_parni(1)));
+      RBOOL(obj->processEvents(HB_ISNIL(1) ? static_cast<QEventLoop::ProcessEventsFlags>(QEventLoop::AllEvents)
+                                           : static_cast<QEventLoop::ProcessEventsFlags>(hb_parni(1))));
     }
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void processEvents(QEventLoop::ProcessEventsFlags flags, int maxTime)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->processEvents((QEventLoop::ProcessEventsFlags)hb_parni(1), PINT(2));
+      obj->processEvents(static_cast<QEventLoop::ProcessEventsFlags>(hb_parni(1)), PINT(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());

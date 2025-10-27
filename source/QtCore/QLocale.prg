@@ -143,13 +143,14 @@ HB_FUNC_STATIC(QLOCALE_NEW)
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
     // QLocale(QLocale::Language language, QLocale::Country country = QLocale::AnyCountry)
-    QLocale *obj = new QLocale((QLocale::Language)hb_parni(1),
-                               HB_ISNIL(2) ? (QLocale::Country)QLocale::AnyCountry : (QLocale::Country)hb_parni(2));
+    QLocale *obj = new QLocale(static_cast<QLocale::Language>(hb_parni(1)),
+                               HB_ISNIL(2) ? static_cast<QLocale::Country>(QLocale::AnyCountry)
+                                           : static_cast<QLocale::Country>(hb_parni(2)));
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
     // QLocale(QLocale::Language language, QLocale::Script script, QLocale::Country country)
-    QLocale *obj =
-        new QLocale((QLocale::Language)hb_parni(1), (QLocale::Script)hb_parni(2), (QLocale::Country)hb_parni(3));
+    QLocale *obj = new QLocale(static_cast<QLocale::Language>(hb_parni(1)), static_cast<QLocale::Script>(hb_parni(2)),
+                               static_cast<QLocale::Country>(hb_parni(3)));
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQLOCALE(1)) {
     // QLocale(const QLocale &other)
@@ -241,8 +242,8 @@ HB_FUNC_STATIC(QLOCALE_CURRENCYSYMBOL)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      RQSTRING(obj->currencySymbol(HB_ISNIL(1) ? (QLocale::CurrencySymbolFormat)QLocale::CurrencySymbol
-                                               : (QLocale::CurrencySymbolFormat)hb_parni(1)));
+      RQSTRING(obj->currencySymbol(HB_ISNIL(1) ? static_cast<QLocale::CurrencySymbolFormat>(QLocale::CurrencySymbol)
+                                               : static_cast<QLocale::CurrencySymbolFormat>(hb_parni(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -260,8 +261,8 @@ HB_FUNC_STATIC(QLOCALE_DATEFORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      RQSTRING(
-          obj->dateFormat(HB_ISNIL(1) ? (QLocale::FormatType)QLocale::LongFormat : (QLocale::FormatType)hb_parni(1)));
+      RQSTRING(obj->dateFormat(HB_ISNIL(1) ? static_cast<QLocale::FormatType>(QLocale::LongFormat)
+                                           : static_cast<QLocale::FormatType>(hb_parni(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -279,8 +280,8 @@ HB_FUNC_STATIC(QLOCALE_DATETIMEFORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      RQSTRING(obj->dateTimeFormat(HB_ISNIL(1) ? (QLocale::FormatType)QLocale::LongFormat
-                                               : (QLocale::FormatType)hb_parni(1)));
+      RQSTRING(obj->dateTimeFormat(HB_ISNIL(1) ? static_cast<QLocale::FormatType>(QLocale::LongFormat)
+                                               : static_cast<QLocale::FormatType>(hb_parni(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -298,8 +299,8 @@ HB_FUNC_STATIC(QLOCALE_DAYNAME)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
-      RQSTRING(obj->dayName(PINT(1),
-                            HB_ISNIL(2) ? (QLocale::FormatType)QLocale::LongFormat : (QLocale::FormatType)hb_parni(2)));
+      RQSTRING(obj->dayName(PINT(1), HB_ISNIL(2) ? static_cast<QLocale::FormatType>(QLocale::LongFormat)
+                                                 : static_cast<QLocale::FormatType>(hb_parni(2))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -428,8 +429,8 @@ HB_FUNC_STATIC(QLOCALE_MONTHNAME)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
-      RQSTRING(obj->monthName(PINT(1), HB_ISNIL(2) ? (QLocale::FormatType)QLocale::LongFormat
-                                                   : (QLocale::FormatType)hb_parni(2)));
+      RQSTRING(obj->monthName(PINT(1), HB_ISNIL(2) ? static_cast<QLocale::FormatType>(QLocale::LongFormat)
+                                                   : static_cast<QLocale::FormatType>(hb_parni(2))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -592,16 +593,18 @@ HB_FUNC_STATIC(QLOCALE_QUOTESTRING)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RQSTRING(obj->quoteString(PQSTRING(1), HB_ISNIL(2) ? (QLocale::QuotationStyle)QLocale::StandardQuotation
-                                                         : (QLocale::QuotationStyle)hb_parni(2)));
+      RQSTRING(obj->quoteString(PQSTRING(1), HB_ISNIL(2)
+                                                 ? static_cast<QLocale::QuotationStyle>(QLocale::StandardQuotation)
+                                                 : static_cast<QLocale::QuotationStyle>(hb_parni(2))));
     }
   } else if (ISBETWEEN(1, 2) && ISQSTRINGREF(1) && ISNUMORNIL(2)) {
     // QString quoteString(const QStringRef &str, QLocale::QuotationStyle style = QLocale::StandardQuotation) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RQSTRING(obj->quoteString(*PQSTRINGREF(1), HB_ISNIL(2) ? (QLocale::QuotationStyle)QLocale::StandardQuotation
-                                                             : (QLocale::QuotationStyle)hb_parni(2)));
+      RQSTRING(obj->quoteString(*PQSTRINGREF(1), HB_ISNIL(2)
+                                                     ? static_cast<QLocale::QuotationStyle>(QLocale::StandardQuotation)
+                                                     : static_cast<QLocale::QuotationStyle>(hb_parni(2))));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -635,7 +638,7 @@ HB_FUNC_STATIC(QLOCALE_SETNUMBEROPTIONS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setNumberOptions((QLocale::NumberOptions)hb_parni(1));
+      obj->setNumberOptions(static_cast<QLocale::NumberOptions>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -655,8 +658,8 @@ HB_FUNC_STATIC(QLOCALE_STANDALONEDAYNAME)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
-      RQSTRING(obj->standaloneDayName(PINT(1), HB_ISNIL(2) ? (QLocale::FormatType)QLocale::LongFormat
-                                                           : (QLocale::FormatType)hb_parni(2)));
+      RQSTRING(obj->standaloneDayName(PINT(1), HB_ISNIL(2) ? static_cast<QLocale::FormatType>(QLocale::LongFormat)
+                                                           : static_cast<QLocale::FormatType>(hb_parni(2))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -674,8 +677,8 @@ HB_FUNC_STATIC(QLOCALE_STANDALONEMONTHNAME)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
-      RQSTRING(obj->standaloneMonthName(PINT(1), HB_ISNIL(2) ? (QLocale::FormatType)QLocale::LongFormat
-                                                             : (QLocale::FormatType)hb_parni(2)));
+      RQSTRING(obj->standaloneMonthName(PINT(1), HB_ISNIL(2) ? static_cast<QLocale::FormatType>(QLocale::LongFormat)
+                                                             : static_cast<QLocale::FormatType>(hb_parni(2))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -711,8 +714,8 @@ HB_FUNC_STATIC(QLOCALE_TIMEFORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      RQSTRING(
-          obj->timeFormat(HB_ISNIL(1) ? (QLocale::FormatType)QLocale::LongFormat : (QLocale::FormatType)hb_parni(1)));
+      RQSTRING(obj->timeFormat(HB_ISNIL(1) ? static_cast<QLocale::FormatType>(QLocale::LongFormat)
+                                           : static_cast<QLocale::FormatType>(hb_parni(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -876,8 +879,9 @@ HB_FUNC_STATIC(QLOCALE_TODATE)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QDate *ptr = new QDate(obj->toDate(PQSTRING(1), HB_ISNIL(2) ? (QLocale::FormatType)QLocale::LongFormat
-                                                                  : (QLocale::FormatType)hb_parni(2)));
+      QDate *ptr =
+          new QDate(obj->toDate(PQSTRING(1), HB_ISNIL(2) ? static_cast<QLocale::FormatType>(QLocale::LongFormat)
+                                                         : static_cast<QLocale::FormatType>(hb_parni(2))));
       Qt4xHb::createReturnClass(ptr, "QDATE", true);
     }
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
@@ -900,8 +904,9 @@ HB_FUNC_STATIC(QLOCALE_TODATETIME)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QDateTime *ptr = new QDateTime(obj->toDateTime(PQSTRING(1), HB_ISNIL(2) ? (QLocale::FormatType)QLocale::LongFormat
-                                                                              : (QLocale::FormatType)hb_parni(2)));
+      QDateTime *ptr =
+          new QDateTime(obj->toDateTime(PQSTRING(1), HB_ISNIL(2) ? static_cast<QLocale::FormatType>(QLocale::LongFormat)
+                                                                 : static_cast<QLocale::FormatType>(hb_parni(2))));
       Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
     }
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
@@ -1080,8 +1085,8 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING3)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQDATE(1) && ISNUMORNIL(2)) {
 #endif
-      RQSTRING(obj->toString(*PQDATE(1), HB_ISNIL(2) ? (QLocale::FormatType)QLocale::LongFormat
-                                                     : (QLocale::FormatType)hb_parni(2)));
+      RQSTRING(obj->toString(*PQDATE(1), HB_ISNIL(2) ? static_cast<QLocale::FormatType>(QLocale::LongFormat)
+                                                     : static_cast<QLocale::FormatType>(hb_parni(2))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1117,8 +1122,8 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING5)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQTIME(1) && ISNUMORNIL(2)) {
 #endif
-      RQSTRING(obj->toString(*PQTIME(1), HB_ISNIL(2) ? (QLocale::FormatType)QLocale::LongFormat
-                                                     : (QLocale::FormatType)hb_parni(2)));
+      RQSTRING(obj->toString(*PQTIME(1), HB_ISNIL(2) ? static_cast<QLocale::FormatType>(QLocale::LongFormat)
+                                                     : static_cast<QLocale::FormatType>(hb_parni(2))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1136,8 +1141,8 @@ HB_FUNC_STATIC(QLOCALE_TOSTRING6)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQDATETIME(1) && ISNUMORNIL(2)) {
 #endif
-      RQSTRING(obj->toString(*PQDATETIME(1), HB_ISNIL(2) ? (QLocale::FormatType)QLocale::LongFormat
-                                                         : (QLocale::FormatType)hb_parni(2)));
+      RQSTRING(obj->toString(*PQDATETIME(1), HB_ISNIL(2) ? static_cast<QLocale::FormatType>(QLocale::LongFormat)
+                                                         : static_cast<QLocale::FormatType>(hb_parni(2))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1301,8 +1306,9 @@ HB_FUNC_STATIC(QLOCALE_TOTIME)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QTime *ptr = new QTime(obj->toTime(PQSTRING(1), HB_ISNIL(2) ? (QLocale::FormatType)QLocale::LongFormat
-                                                                  : (QLocale::FormatType)hb_parni(2)));
+      QTime *ptr =
+          new QTime(obj->toTime(PQSTRING(1), HB_ISNIL(2) ? static_cast<QLocale::FormatType>(QLocale::LongFormat)
+                                                         : static_cast<QLocale::FormatType>(hb_parni(2))));
       Qt4xHb::createReturnClass(ptr, "QTIME", true);
     }
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
@@ -1461,7 +1467,7 @@ HB_FUNC_STATIC(QLOCALE_COUNTRYTOSTRING)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-    RQSTRING(QLocale::countryToString((QLocale::Country)hb_parni(1)));
+    RQSTRING(QLocale::countryToString(static_cast<QLocale::Country>(hb_parni(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1475,7 +1481,7 @@ HB_FUNC_STATIC(QLOCALE_LANGUAGETOSTRING)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-    RQSTRING(QLocale::languageToString((QLocale::Language)hb_parni(1)));
+    RQSTRING(QLocale::languageToString(static_cast<QLocale::Language>(hb_parni(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1489,8 +1495,9 @@ HB_FUNC_STATIC(QLOCALE_MATCHINGLOCALES)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
-    QList<QLocale> list = QLocale::matchingLocales((QLocale::Language)hb_parni(1), (QLocale::Script)hb_parni(2),
-                                                   (QLocale::Country)hb_parni(3));
+    QList<QLocale> list =
+        QLocale::matchingLocales(static_cast<QLocale::Language>(hb_parni(1)), static_cast<QLocale::Script>(hb_parni(2)),
+                                 static_cast<QLocale::Country>(hb_parni(3)));
     PHB_DYNS pDynSym = hb_dynsymFindName("QLOCALE");
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if (pDynSym != NULL) {
@@ -1527,7 +1534,7 @@ HB_FUNC_STATIC(QLOCALE_SCRIPTTOSTRING)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-    RQSTRING(QLocale::scriptToString((QLocale::Script)hb_parni(1)));
+    RQSTRING(QLocale::scriptToString(static_cast<QLocale::Script>(hb_parni(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

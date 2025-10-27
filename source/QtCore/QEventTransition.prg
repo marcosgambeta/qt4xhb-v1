@@ -56,7 +56,7 @@ HB_FUNC_STATIC(QEVENTTRANSITION_NEW)
     Qt4xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(2, 3) && ISQOBJECT(1) && HB_ISNUM(2) && (ISQSTATE(3) || HB_ISNIL(3))) {
     // QEventTransition(QObject *object, QEvent::Type type, QState *sourceState = 0)
-    QEventTransition *obj = new QEventTransition(PQOBJECT(1), (QEvent::Type)hb_parni(2), OPQSTATE(3, 0));
+    QEventTransition *obj = new QEventTransition(PQOBJECT(1), static_cast<QEvent::Type>(hb_parni(2)), OPQSTATE(3, 0));
     Qt4xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QEVENTTRANSITION_SETEVENTTYPE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setEventType((QEvent::Type)hb_parni(1));
+      obj->setEventType(static_cast<QEvent::Type>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

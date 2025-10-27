@@ -55,7 +55,7 @@ HB_FUNC_STATIC(QHISTORYSTATE_NEW)
     Qt4xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQSTATE(2) || HB_ISNIL(2))) {
     // QHistoryState(QHistoryState::HistoryType type, QState *parent = 0)
-    QHistoryState *obj = new QHistoryState((QHistoryState::HistoryType)hb_parni(1), OPQSTATE(2, 0));
+    QHistoryState *obj = new QHistoryState(static_cast<QHistoryState::HistoryType>(hb_parni(1)), OPQSTATE(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QHISTORYSTATE_SETHISTORYTYPE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setHistoryType((QHistoryState::HistoryType)hb_parni(1));
+      obj->setHistoryType(static_cast<QHistoryState::HistoryType>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -94,7 +94,8 @@ HB_FUNC_STATIC(QDATETIME_NEW)
   } else if (ISBETWEEN(2, 3) && ISQDATE(1) && ISQTIME(2) && ISNUMORNIL(3)) {
     // QDateTime(const QDate &date, const QTime &time, Qt::TimeSpec spec = Qt::LocalTime)
     QDateTime *obj =
-        new QDateTime(*PQDATE(1), *PQTIME(2), HB_ISNIL(3) ? (Qt::TimeSpec)Qt::LocalTime : (Qt::TimeSpec)hb_parni(3));
+        new QDateTime(*PQDATE(1), *PQTIME(2),
+                      HB_ISNIL(3) ? static_cast<Qt::TimeSpec>(Qt::LocalTime) : static_cast<Qt::TimeSpec>(hb_parni(3)));
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQDATETIME(1)) {
     // QDateTime(const QDateTime &other)
@@ -393,7 +394,7 @@ HB_FUNC_STATIC(QDATETIME_SETTIMESPEC)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setTimeSpec((Qt::TimeSpec)hb_parni(1));
+      obj->setTimeSpec(static_cast<Qt::TimeSpec>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -512,7 +513,8 @@ HB_FUNC_STATIC(QDATETIME_TOSTRING)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RQSTRING(obj->toString(HB_ISNIL(1) ? (Qt::DateFormat)Qt::TextDate : (Qt::DateFormat)hb_parni(1)));
+      RQSTRING(obj->toString(HB_ISNIL(1) ? static_cast<Qt::DateFormat>(Qt::TextDate)
+                                         : static_cast<Qt::DateFormat>(hb_parni(1))));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -528,7 +530,7 @@ HB_FUNC_STATIC(QDATETIME_TOTIMESPEC)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QDateTime *ptr = new QDateTime(obj->toTimeSpec((Qt::TimeSpec)hb_parni(1)));
+      QDateTime *ptr = new QDateTime(obj->toTimeSpec(static_cast<Qt::TimeSpec>(hb_parni(1))));
       Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -639,8 +641,9 @@ HB_FUNC_STATIC(QDATETIME_FROMSTRING)
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
     // static QDateTime fromString(const QString &string, Qt::DateFormat format = Qt::TextDate)
 
-    QDateTime *ptr = new QDateTime(
-        QDateTime::fromString(PQSTRING(1), HB_ISNIL(2) ? (Qt::DateFormat)Qt::TextDate : (Qt::DateFormat)hb_parni(2)));
+    QDateTime *ptr =
+        new QDateTime(QDateTime::fromString(PQSTRING(1), HB_ISNIL(2) ? static_cast<Qt::DateFormat>(Qt::TextDate)
+                                                                     : static_cast<Qt::DateFormat>(hb_parni(2))));
     Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     // static QDateTime fromString(const QString &string, const QString &format)

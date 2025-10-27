@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QSYSTEMLOCALE_QUERY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2)) {
 #endif
-      QVariant *ptr = new QVariant(obj->query((QSystemLocale::QueryType)hb_parni(1), *PQVARIANT(2)));
+      QVariant *ptr = new QVariant(obj->query(static_cast<QSystemLocale::QueryType>(hb_parni(1)), *PQVARIANT(2)));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {

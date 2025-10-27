@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QCHAR_NEW9)
 // QChar(QChar::SpecialCharacter ch)
 HB_FUNC_STATIC(QCHAR_NEW10)
 {
-  QChar *obj = new QChar((QChar::SpecialCharacter)hb_parni(1));
+  QChar *obj = new QChar(static_cast<QChar::SpecialCharacter>(hb_parni(1)));
   Qt4xHb::returnNewObject(obj, true);
 }
 

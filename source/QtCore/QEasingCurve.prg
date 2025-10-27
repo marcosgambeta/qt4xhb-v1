@@ -61,8 +61,8 @@ HB_FUNC_STATIC(QEASINGCURVE_NEW)
 {
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
     // QEasingCurve(QEasingCurve::Type type = QEasingCurve::Linear)
-    QEasingCurve *obj =
-        new QEasingCurve(HB_ISNIL(1) ? (QEasingCurve::Type)QEasingCurve::Linear : (QEasingCurve::Type)hb_parni(1));
+    QEasingCurve *obj = new QEasingCurve(HB_ISNIL(1) ? static_cast<QEasingCurve::Type>(QEasingCurve::Linear)
+                                                     : static_cast<QEasingCurve::Type>(hb_parni(1)));
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQEASINGCURVE(1)) {
     // QEasingCurve(const QEasingCurve &other)
@@ -211,7 +211,7 @@ HB_FUNC_STATIC(QEASINGCURVE_SETTYPE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setType((QEasingCurve::Type)hb_parni(1));
+      obj->setType(static_cast<QEasingCurve::Type>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

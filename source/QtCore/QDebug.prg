@@ -60,7 +60,7 @@ HB_FUNC_STATIC(QDEBUG_NEW)
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QDebug(QtMsgType type)
-    QDebug *obj = new QDebug((QtMsgType)hb_parni(1));
+    QDebug *obj = new QDebug(static_cast<QtMsgType>(hb_parni(1)));
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQDEBUG(1)) {
     // QDebug(const QDebug &other)

@@ -53,7 +53,8 @@ RETURN
 HB_FUNC_STATIC(QSOCKETNOTIFIER_NEW)
 {
   if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQOBJECTORNIL(3)) {
-    QSocketNotifier *obj = new QSocketNotifier(PINT(1), (QSocketNotifier::Type)hb_parni(2), OPQOBJECT(3, 0));
+    QSocketNotifier *obj =
+        new QSocketNotifier(PINT(1), static_cast<QSocketNotifier::Type>(hb_parni(2)), OPQOBJECT(3, 0));
     Qt4xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

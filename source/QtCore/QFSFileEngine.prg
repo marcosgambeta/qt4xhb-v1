@@ -115,29 +115,30 @@ HB_FUNC_STATIC(QFSFILEENGINE_OPEN)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RBOOL(obj->open((QIODevice::OpenMode)hb_parni(1), static_cast<FILE *>(hb_parptr(2))));
+      RBOOL(obj->open(static_cast<QIODevice::OpenMode>(hb_parni(1)), static_cast<FILE *>(hb_parptr(2))));
     }
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // bool open(QIODevice::OpenMode openMode, int fd)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RBOOL(obj->open((QIODevice::OpenMode)hb_parni(1), PINT(2)));
+      RBOOL(obj->open(static_cast<QIODevice::OpenMode>(hb_parni(1)), PINT(2)));
     }
   } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
     // bool open(QIODevice::OpenMode openMode, int fd, QFile::FileHandleFlags handleFlags)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RBOOL(obj->open((QIODevice::OpenMode)hb_parni(1), PINT(2), (QFile::FileHandleFlags)hb_parni(3)));
+      RBOOL(obj->open(static_cast<QIODevice::OpenMode>(hb_parni(1)), PINT(2),
+                      static_cast<QFile::FileHandleFlags>(hb_parni(3))));
     }
   } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISPOINTER(2) && HB_ISNUM(3)) {
     // bool open(QIODevice::OpenMode openMode, FILE *fh, QFile::FileHandleFlags handleFlags)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RBOOL(obj->open((QIODevice::OpenMode)hb_parni(1), static_cast<FILE *>(hb_parptr(2)),
-                      (QFile::FileHandleFlags)hb_parni(3)));
+      RBOOL(obj->open(static_cast<QIODevice::OpenMode>(hb_parni(1)), static_cast<FILE *>(hb_parptr(2)),
+                      static_cast<QFile::FileHandleFlags>(hb_parni(3))));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -207,7 +208,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_FILEFLAGS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RENUM(obj->fileFlags((QAbstractFileEngine::FileFlags)hb_parni(1)));
+      RENUM(obj->fileFlags(static_cast<QAbstractFileEngine::FileFlags>(hb_parni(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -225,7 +226,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_FILENAME)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RQSTRING(obj->fileName((QAbstractFileEngine::FileName)hb_parni(1)));
+      RQSTRING(obj->fileName(static_cast<QAbstractFileEngine::FileName>(hb_parni(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -243,7 +244,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_FILETIME)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QDateTime *ptr = new QDateTime(obj->fileTime((QAbstractFileEngine::FileTime)hb_parni(1)));
+      QDateTime *ptr = new QDateTime(obj->fileTime(static_cast<QAbstractFileEngine::FileTime>(hb_parni(1))));
       Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -370,7 +371,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_OWNER)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RQSTRING(obj->owner((QAbstractFileEngine::FileOwner)hb_parni(1)));
+      RQSTRING(obj->owner(static_cast<QAbstractFileEngine::FileOwner>(hb_parni(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -388,7 +389,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_OWNERID)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RUINT(obj->ownerId((QAbstractFileEngine::FileOwner)hb_parni(1)));
+      RUINT(obj->ownerId(static_cast<QAbstractFileEngine::FileOwner>(hb_parni(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -606,7 +607,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_SUPPORTSEXTENSION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->supportsExtension((QAbstractFileEngine::Extension)hb_parni(1)));
+      RBOOL(obj->supportsExtension(static_cast<QAbstractFileEngine::Extension>(hb_parni(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

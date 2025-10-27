@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QSIZE_SCALE)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->scale(PINT(1), PINT(2), (Qt::AspectRatioMode)hb_parni(3));
+      obj->scale(PINT(1), PINT(2), static_cast<Qt::AspectRatioMode>(hb_parni(3)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -216,7 +216,7 @@ HB_FUNC_STATIC(QSIZE_SCALE)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->scale(*PQSIZE(1), (Qt::AspectRatioMode)hb_parni(2));
+      obj->scale(*PQSIZE(1), static_cast<Qt::AspectRatioMode>(hb_parni(2)));
     }
 
     hb_itemReturn(hb_stackSelfItem());

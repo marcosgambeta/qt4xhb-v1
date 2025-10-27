@@ -326,8 +326,8 @@ HB_FUNC_STATIC(QSTATEMACHINE_POSTEVENT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQEVENT(1) && ISNUMORNIL(2)) {
 #endif
-      obj->postEvent(PQEVENT(1), HB_ISNIL(2) ? (QStateMachine::EventPriority)QStateMachine::NormalPriority
-                                             : (QStateMachine::EventPriority)hb_parni(2));
+      obj->postEvent(PQEVENT(1), HB_ISNIL(2) ? static_cast<QStateMachine::EventPriority>(QStateMachine::NormalPriority)
+                                             : static_cast<QStateMachine::EventPriority>(hb_parni(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -407,7 +407,7 @@ HB_FUNC_STATIC(QSTATEMACHINE_SETGLOBALRESTOREPOLICY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setGlobalRestorePolicy((QStateMachine::RestorePolicy)hb_parni(1));
+      obj->setGlobalRestorePolicy(static_cast<QStateMachine::RestorePolicy>(hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

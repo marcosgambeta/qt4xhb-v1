@@ -56,8 +56,8 @@ RETURN
 HB_FUNC_STATIC(QMUTEX_NEW)
 {
   if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
-    QMutex *obj =
-        new QMutex(HB_ISNIL(1) ? (QMutex::RecursionMode)QMutex::NonRecursive : (QMutex::RecursionMode)hb_parni(1));
+    QMutex *obj = new QMutex(HB_ISNIL(1) ? static_cast<QMutex::RecursionMode>(QMutex::NonRecursive)
+                                         : static_cast<QMutex::RecursionMode>(hb_parni(1)));
     Qt4xHb::returnNewObject(obj, true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

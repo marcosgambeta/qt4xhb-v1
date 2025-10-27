@@ -173,8 +173,8 @@ HB_FUNC_STATIC(QSHAREDMEMORY_CREATE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
-      RBOOL(obj->create(PINT(1), HB_ISNIL(2) ? (QSharedMemory::AccessMode)QSharedMemory::ReadWrite
-                                             : (QSharedMemory::AccessMode)hb_parni(2)));
+      RBOOL(obj->create(PINT(1), HB_ISNIL(2) ? static_cast<QSharedMemory::AccessMode>(QSharedMemory::ReadWrite)
+                                             : static_cast<QSharedMemory::AccessMode>(hb_parni(2))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -210,8 +210,8 @@ HB_FUNC_STATIC(QSHAREDMEMORY_ATTACH)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      RBOOL(obj->attach(HB_ISNIL(1) ? (QSharedMemory::AccessMode)QSharedMemory::ReadWrite
-                                    : (QSharedMemory::AccessMode)hb_parni(1)));
+      RBOOL(obj->attach(HB_ISNIL(1) ? static_cast<QSharedMemory::AccessMode>(QSharedMemory::ReadWrite)
+                                    : static_cast<QSharedMemory::AccessMode>(hb_parni(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
