@@ -483,19 +483,21 @@ HB_FUNC_STATIC(QAXWIDGET_VERBS)
 
 void QAxWidgetSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QAxWidgetSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QAXWIDGET_ONEXCEPTION)
 {
-  QAxWidgetSlots_connect_signal("exception(int,QString,QString,QString)", "exception(int,QString,QString,QString)");
+  CONNECT_SIGNAL("exception(int,QString,QString,QString)");
 }
 
 HB_FUNC_STATIC(QAXWIDGET_ONPROPERTYCHANGED)
 {
-  QAxWidgetSlots_connect_signal("propertyChanged(QString)", "propertyChanged(QString)");
+  CONNECT_SIGNAL("propertyChanged(QString)");
 }
 
 HB_FUNC_STATIC(QAXWIDGET_ONSIGNAL)
 {
-  QAxWidgetSlots_connect_signal("signal(QString,int,void*)", "signal(QString,int,void*)");
+  CONNECT_SIGNAL("signal(QString,int,void*)");
 }
 
 #pragma ENDDUMP

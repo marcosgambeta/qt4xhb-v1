@@ -253,10 +253,11 @@ HB_FUNC_STATIC(QAXSCRIPTMANAGER_SCRIPTFILEFILTER)
 
 void QAxScriptManagerSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QAxScriptManagerSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QAXSCRIPTMANAGER_ONERROR)
 {
-  QAxScriptManagerSlots_connect_signal("error(QAxScript*,int,QString,int,QString)",
-                                       "error(QAxScript*,int,QString,int,QString)");
+  CONNECT_SIGNAL("error(QAxScript*,int,QString,int,QString)");
 }
 
 #pragma ENDDUMP
