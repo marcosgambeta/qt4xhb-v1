@@ -660,24 +660,26 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SUBMITALL)
 
 void QSqlTableModelSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QSqlTableModelSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QSQLTABLEMODEL_ONBEFOREDELETE)
 {
-  QSqlTableModelSlots_connect_signal("beforeDelete(int)", "beforeDelete(int)");
+  CONNECT_SIGNAL("beforeDelete(int)");
 }
 
 HB_FUNC_STATIC(QSQLTABLEMODEL_ONBEFOREINSERT)
 {
-  QSqlTableModelSlots_connect_signal("beforeInsert(QSqlRecord)", "beforeInsert(QSqlRecord)");
+  CONNECT_SIGNAL("beforeInsert(QSqlRecord)");
 }
 
 HB_FUNC_STATIC(QSQLTABLEMODEL_ONBEFOREUPDATE)
 {
-  QSqlTableModelSlots_connect_signal("beforeUpdate(int,QSqlRecord)", "beforeUpdate(int,QSqlRecord)");
+  CONNECT_SIGNAL("beforeUpdate(int,QSqlRecord)");
 }
 
 HB_FUNC_STATIC(QSQLTABLEMODEL_ONPRIMEINSERT)
 {
-  QSqlTableModelSlots_connect_signal("primeInsert(int,QSqlRecord)", "primeInsert(int,QSqlRecord)");
+  CONNECT_SIGNAL("primeInsert(int,QSqlRecord)");
 }
 
 #pragma ENDDUMP

@@ -542,9 +542,11 @@ HB_FUNC_STATIC(QSQLDRIVER_UNSUBSCRIBEFROMNOTIFICATION)
 
 void QSqlDriverSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QSqlDriverSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QSQLDRIVER_ONNOTIFICATION)
 {
-  QSqlDriverSlots_connect_signal("notification(QString)", "notification(QString)");
+  CONNECT_SIGNAL("notification(QString)");
 }
 
 #pragma ENDDUMP
