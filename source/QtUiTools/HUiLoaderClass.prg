@@ -47,7 +47,7 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-#define GET_PTR_FROM_SELF(p) HUiLoader *p = (HUiLoader *)Qt4xHb::itemGetPtrStackSelfItem()
+#define GET_PTR_FROM_SELF(p) HUiLoader *p = qobject_cast<HUiLoader *>(Qt4xHb::getQObjectPointerFromSelfItem())
 
 // HUiLoader(QObject *parent = 0)
 HB_FUNC_STATIC(HUILOADER_NEW)
