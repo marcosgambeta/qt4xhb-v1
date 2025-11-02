@@ -287,14 +287,16 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_WIDGET)
 
 void QScriptEngineDebuggerSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QScriptEngineDebuggerSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_ONEVALUATIONRESUMED)
 {
-  QScriptEngineDebuggerSlots_connect_signal("evaluationResumed()", "evaluationResumed()");
+  CONNECT_SIGNAL("evaluationResumed()");
 }
 
 HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_ONEVALUATIONSUSPENDED)
 {
-  QScriptEngineDebuggerSlots_connect_signal("evaluationSuspended()", "evaluationSuspended()");
+  CONNECT_SIGNAL("evaluationSuspended()");
 }
 
 #pragma ENDDUMP
