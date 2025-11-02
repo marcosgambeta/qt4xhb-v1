@@ -254,20 +254,21 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_SURFACEFORMAT)
 
 void QAbstractVideoSurfaceSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QAbstractVideoSurfaceSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ONACTIVECHANGED)
 {
-  QAbstractVideoSurfaceSlots_connect_signal("activeChanged(bool)", "activeChanged(bool)");
+  CONNECT_SIGNAL("activeChanged(bool)");
 }
 
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ONSURFACEFORMATCHANGED)
 {
-  QAbstractVideoSurfaceSlots_connect_signal("surfaceFormatChanged(QVideoSurfaceFormat)",
-                                            "surfaceFormatChanged(QVideoSurfaceFormat)");
+  CONNECT_SIGNAL("surfaceFormatChanged(QVideoSurfaceFormat)");
 }
 
 HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_ONSUPPORTEDFORMATSCHANGED)
 {
-  QAbstractVideoSurfaceSlots_connect_signal("supportedFormatsChanged()", "supportedFormatsChanged()");
+  CONNECT_SIGNAL("supportedFormatsChanged()");
 }
 
 #pragma ENDDUMP
