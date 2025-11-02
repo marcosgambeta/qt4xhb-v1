@@ -412,15 +412,16 @@ HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ERRORSTRING)
 
 void QDeclarativeComponentSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QDeclarativeComponentSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ONPROGRESSCHANGED)
 {
-  QDeclarativeComponentSlots_connect_signal("progressChanged(qreal)", "progressChanged(qreal)");
+  CONNECT_SIGNAL("progressChanged(qreal)");
 }
 
 HB_FUNC_STATIC(QDECLARATIVECOMPONENT_ONSTATUSCHANGED)
 {
-  QDeclarativeComponentSlots_connect_signal("statusChanged(QDeclarativeComponent::Status)",
-                                            "statusChanged(QDeclarativeComponent::Status)");
+  CONNECT_SIGNAL("statusChanged(QDeclarativeComponent::Status)");
 }
 
 #pragma ENDDUMP
