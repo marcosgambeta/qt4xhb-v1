@@ -84,9 +84,11 @@ HB_FUNC_STATIC(QHELPSEARCHRESULTWIDGET_LINKAT)
 
 void QHelpSearchResultWidgetSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QHelpSearchResultWidgetSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QHELPSEARCHRESULTWIDGET_ONREQUESTSHOWLINK)
 {
-  QHelpSearchResultWidgetSlots_connect_signal("requestShowLink(QUrl)", "requestShowLink(QUrl)");
+  CONNECT_SIGNAL("requestShowLink(QUrl)");
 }
 
 #pragma ENDDUMP

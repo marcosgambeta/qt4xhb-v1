@@ -588,24 +588,26 @@ HB_FUNC_STATIC(QHELPENGINECORE_NAMESPACENAME)
 
 void QHelpEngineCoreSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QHelpEngineCoreSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QHELPENGINECORE_ONCURRENTFILTERCHANGED)
 {
-  QHelpEngineCoreSlots_connect_signal("currentFilterChanged(QString)", "currentFilterChanged(QString)");
+  CONNECT_SIGNAL("currentFilterChanged(QString)");
 }
 
 HB_FUNC_STATIC(QHELPENGINECORE_ONSETUPFINISHED)
 {
-  QHelpEngineCoreSlots_connect_signal("setupFinished()", "setupFinished()");
+  CONNECT_SIGNAL("setupFinished()");
 }
 
 HB_FUNC_STATIC(QHELPENGINECORE_ONSETUPSTARTED)
 {
-  QHelpEngineCoreSlots_connect_signal("setupStarted()", "setupStarted()");
+  CONNECT_SIGNAL("setupStarted()");
 }
 
 HB_FUNC_STATIC(QHELPENGINECORE_ONWARNING)
 {
-  QHelpEngineCoreSlots_connect_signal("warning(QString)", "warning(QString)");
+  CONNECT_SIGNAL("warning(QString)");
 }
 
 #pragma ENDDUMP

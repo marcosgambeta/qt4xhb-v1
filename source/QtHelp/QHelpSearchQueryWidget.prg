@@ -118,9 +118,11 @@ HB_FUNC_STATIC(QHELPSEARCHQUERYWIDGET_QUERY)
 
 void QHelpSearchQueryWidgetSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QHelpSearchQueryWidgetSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QHELPSEARCHQUERYWIDGET_ONSEARCH)
 {
-  QHelpSearchQueryWidgetSlots_connect_signal("search()", "search()");
+  CONNECT_SIGNAL("search()");
 }
 
 #pragma ENDDUMP

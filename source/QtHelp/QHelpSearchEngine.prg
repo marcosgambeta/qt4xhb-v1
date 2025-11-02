@@ -276,24 +276,26 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_SEARCH)
 
 void QHelpSearchEngineSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QHelpSearchEngineSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QHELPSEARCHENGINE_ONINDEXINGFINISHED)
 {
-  QHelpSearchEngineSlots_connect_signal("indexingFinished()", "indexingFinished()");
+  CONNECT_SIGNAL("indexingFinished()");
 }
 
 HB_FUNC_STATIC(QHELPSEARCHENGINE_ONINDEXINGSTARTED)
 {
-  QHelpSearchEngineSlots_connect_signal("indexingStarted()", "indexingStarted()");
+  CONNECT_SIGNAL("indexingStarted()");
 }
 
 HB_FUNC_STATIC(QHELPSEARCHENGINE_ONSEARCHINGFINISHED)
 {
-  QHelpSearchEngineSlots_connect_signal("searchingFinished(int)", "searchingFinished(int)");
+  CONNECT_SIGNAL("searchingFinished(int)");
 }
 
 HB_FUNC_STATIC(QHELPSEARCHENGINE_ONSEARCHINGSTARTED)
 {
-  QHelpSearchEngineSlots_connect_signal("searchingStarted()", "searchingStarted()");
+  CONNECT_SIGNAL("searchingStarted()");
 }
 
 #pragma ENDDUMP

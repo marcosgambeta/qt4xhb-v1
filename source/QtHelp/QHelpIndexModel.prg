@@ -107,14 +107,16 @@ HB_FUNC_STATIC(QHELPINDEXMODEL_ISCREATINGINDEX)
 
 void QHelpIndexModelSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QHelpIndexModelSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QHELPINDEXMODEL_ONINDEXCREATED)
 {
-  QHelpIndexModelSlots_connect_signal("indexCreated()", "indexCreated()");
+  CONNECT_SIGNAL("indexCreated()");
 }
 
 HB_FUNC_STATIC(QHELPINDEXMODEL_ONINDEXCREATIONSTARTED)
 {
-  QHelpIndexModelSlots_connect_signal("indexCreationStarted()", "indexCreationStarted()");
+  CONNECT_SIGNAL("indexCreationStarted()");
 }
 
 #pragma ENDDUMP

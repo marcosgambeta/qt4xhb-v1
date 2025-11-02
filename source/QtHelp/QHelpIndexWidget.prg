@@ -87,9 +87,11 @@ HB_FUNC_STATIC(QHELPINDEXWIDGET_FILTERINDICES)
 
 void QHelpIndexWidgetSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QHelpIndexWidgetSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QHELPINDEXWIDGET_ONLINKACTIVATED)
 {
-  QHelpIndexWidgetSlots_connect_signal("linkActivated(QUrl,QString)", "linkActivated(QUrl,QString)");
+  CONNECT_SIGNAL("linkActivated(QUrl,QString)");
 }
 
 #pragma ENDDUMP
