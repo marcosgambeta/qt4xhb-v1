@@ -757,9 +757,11 @@ HB_FUNC_STATIC(QSCRIPTENGINE_CHECKSYNTAX)
 
 void QScriptEngineSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QScriptEngineSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QSCRIPTENGINE_ONSIGNALHANDLEREXCEPTION)
 {
-  QScriptEngineSlots_connect_signal("signalHandlerException(QScriptValue)", "signalHandlerException(QScriptValue)");
+  CONNECT_SIGNAL("signalHandlerException(QScriptValue)");
 }
 
 #pragma ENDDUMP
