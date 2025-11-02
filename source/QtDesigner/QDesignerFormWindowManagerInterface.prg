@@ -595,22 +595,21 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_SETACTIVEFORMWINDOW)
 
 void QDesignerFormWindowManagerInterfaceSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QDesignerFormWindowManagerInterfaceSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ONACTIVEFORMWINDOWCHANGED)
 {
-  QDesignerFormWindowManagerInterfaceSlots_connect_signal("activeFormWindowChanged(QDesignerFormWindowInterface*)",
-                                                          "activeFormWindowChanged(QDesignerFormWindowInterface*)");
+  CONNECT_SIGNAL("activeFormWindowChanged(QDesignerFormWindowInterface*)");
 }
 
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWADDED)
 {
-  QDesignerFormWindowManagerInterfaceSlots_connect_signal("formWindowAdded(QDesignerFormWindowInterface*)",
-                                                          "formWindowAdded(QDesignerFormWindowInterface*)");
+  CONNECT_SIGNAL("formWindowAdded(QDesignerFormWindowInterface*)");
 }
 
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWREMOVED)
 {
-  QDesignerFormWindowManagerInterfaceSlots_connect_signal("formWindowRemoved(QDesignerFormWindowInterface*)",
-                                                          "formWindowRemoved(QDesignerFormWindowInterface*)");
+  CONNECT_SIGNAL("formWindowRemoved(QDesignerFormWindowInterface*)");
 }
 
 #pragma ENDDUMP

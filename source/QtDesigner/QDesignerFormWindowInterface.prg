@@ -880,71 +880,71 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW)
 
 void QDesignerFormWindowInterfaceSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QDesignerFormWindowInterfaceSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_ONABOUTTOUNMANAGEWIDGET)
 {
-  QDesignerFormWindowInterfaceSlots_connect_signal("aboutToUnmanageWidget(QWidget*)",
-                                                   "aboutToUnmanageWidget(QWidget*)");
+  CONNECT_SIGNAL("aboutToUnmanageWidget(QWidget*)");
 }
 
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_ONACTIVATED)
 {
-  QDesignerFormWindowInterfaceSlots_connect_signal("activated(QWidget*)", "activated(QWidget*)");
+  CONNECT_SIGNAL("activated(QWidget*)");
 }
 
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_ONCHANGED)
 {
-  QDesignerFormWindowInterfaceSlots_connect_signal("changed()", "changed()");
+  CONNECT_SIGNAL("changed()");
 }
 
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_ONFEATURECHANGED)
 {
-  QDesignerFormWindowInterfaceSlots_connect_signal("featureChanged(QDesignerFormWindowInterface::Feature)",
-                                                   "featureChanged(QDesignerFormWindowInterface::Feature)");
+  CONNECT_SIGNAL("featureChanged(QDesignerFormWindowInterface::Feature)");
 }
 
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_ONFILENAMECHANGED)
 {
-  QDesignerFormWindowInterfaceSlots_connect_signal("fileNameChanged(QString)", "fileNameChanged(QString)");
+  CONNECT_SIGNAL("fileNameChanged(QString)");
 }
 
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_ONGEOMETRYCHANGED)
 {
-  QDesignerFormWindowInterfaceSlots_connect_signal("geometryChanged()", "geometryChanged()");
+  CONNECT_SIGNAL("geometryChanged()");
 }
 
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_ONMAINCONTAINERCHANGED)
 {
-  QDesignerFormWindowInterfaceSlots_connect_signal("mainContainerChanged(QWidget*)", "mainContainerChanged(QWidget*)");
+  CONNECT_SIGNAL("mainContainerChanged(QWidget*)");
 }
 
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_ONOBJECTREMOVED)
 {
-  QDesignerFormWindowInterfaceSlots_connect_signal("objectRemoved(QObject*)", "objectRemoved(QObject*)");
+  CONNECT_SIGNAL("objectRemoved(QObject*)");
 }
 
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_ONRESOURCEFILESCHANGED)
 {
-  QDesignerFormWindowInterfaceSlots_connect_signal("resourceFilesChanged()", "resourceFilesChanged()");
+  CONNECT_SIGNAL("resourceFilesChanged()");
 }
 
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_ONSELECTIONCHANGED)
 {
-  QDesignerFormWindowInterfaceSlots_connect_signal("selectionChanged()", "selectionChanged()");
+  CONNECT_SIGNAL("selectionChanged()");
 }
 
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_ONWIDGETMANAGED)
 {
-  QDesignerFormWindowInterfaceSlots_connect_signal("widgetManaged(QWidget*)", "widgetManaged(QWidget*)");
+  CONNECT_SIGNAL("widgetManaged(QWidget*)");
 }
 
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_ONWIDGETREMOVED)
 {
-  QDesignerFormWindowInterfaceSlots_connect_signal("widgetRemoved(QWidget*)", "widgetRemoved(QWidget*)");
+  CONNECT_SIGNAL("widgetRemoved(QWidget*)");
 }
 
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_ONWIDGETUNMANAGED)
 {
-  QDesignerFormWindowInterfaceSlots_connect_signal("widgetUnmanaged(QWidget*)", "widgetUnmanaged(QWidget*)");
+  CONNECT_SIGNAL("widgetUnmanaged(QWidget*)");
 }
 
 #pragma ENDDUMP

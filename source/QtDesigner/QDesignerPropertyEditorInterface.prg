@@ -209,10 +209,11 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_SETREADONLY)
 
 void QDesignerPropertyEditorInterfaceSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QDesignerPropertyEditorInterfaceSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QDESIGNERPROPERTYEDITORINTERFACE_ONPROPERTYCHANGED)
 {
-  QDesignerPropertyEditorInterfaceSlots_connect_signal("propertyChanged(QString,QVariant)",
-                                                       "propertyChanged(QString,QVariant)");
+  CONNECT_SIGNAL("propertyChanged(QString,QVariant)");
 }
 
 #pragma ENDDUMP
