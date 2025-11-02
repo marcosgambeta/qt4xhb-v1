@@ -47,6 +47,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) HUiLoader *p = (HUiLoader *)Qt4xHb::itemGetPtrStackSelfItem()
+
 // HUiLoader(QObject *parent = 0)
 HB_FUNC_STATIC(HUILOADER_NEW)
 {
@@ -61,7 +63,7 @@ HB_FUNC_STATIC(HUILOADER_NEW)
 // ~HUiLoader()
 HB_FUNC_STATIC(HUILOADER_DELETE)
 {
-  HUiLoader *obj = (HUiLoader *)Qt4xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -87,7 +89,7 @@ HB_FUNC_STATIC(HUILOADER_DELETE)
 // void setCreateActionCB (PHB_ITEM block)
 HB_FUNC_STATIC(HUILOADER_SETCREATEACTIONCB)
 {
-  HUiLoader *obj = (HUiLoader *)Qt4xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -107,7 +109,7 @@ HB_FUNC_STATIC(HUILOADER_SETCREATEACTIONCB)
 // void setCreateActionGroupCB (PHB_ITEM block)
 HB_FUNC_STATIC(HUILOADER_SETCREATEACTIONGROUPCB)
 {
-  HUiLoader *obj = (HUiLoader *)Qt4xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -127,7 +129,7 @@ HB_FUNC_STATIC(HUILOADER_SETCREATEACTIONGROUPCB)
 // void setCreateLayoutCB (PHB_ITEM block)
 HB_FUNC_STATIC(HUILOADER_SETCREATELAYOUTCB)
 {
-  HUiLoader *obj = (HUiLoader *)Qt4xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -147,7 +149,7 @@ HB_FUNC_STATIC(HUILOADER_SETCREATELAYOUTCB)
 // void setCreateWidgetCB (PHB_ITEM block)
 HB_FUNC_STATIC(HUILOADER_SETCREATEWIDGETCB)
 {
-  HUiLoader *obj = (HUiLoader *)Qt4xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
