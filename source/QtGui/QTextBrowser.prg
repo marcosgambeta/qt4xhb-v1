@@ -465,39 +465,41 @@ HB_FUNC_STATIC(QTEXTBROWSER_SETSOURCE)
 
 void QTextBrowserSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QTextBrowserSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QTEXTBROWSER_ONANCHORCLICKED)
 {
-  QTextBrowserSlots_connect_signal("anchorClicked(QUrl)", "anchorClicked(QUrl)");
+  CONNECT_SIGNAL("anchorClicked(QUrl)");
 }
 
 HB_FUNC_STATIC(QTEXTBROWSER_ONBACKWARDAVAILABLE)
 {
-  QTextBrowserSlots_connect_signal("backwardAvailable(bool)", "backwardAvailable(bool)");
+  CONNECT_SIGNAL("backwardAvailable(bool)");
 }
 
 HB_FUNC_STATIC(QTEXTBROWSER_ONFORWARDAVAILABLE)
 {
-  QTextBrowserSlots_connect_signal("forwardAvailable(bool)", "forwardAvailable(bool)");
+  CONNECT_SIGNAL("forwardAvailable(bool)");
 }
 
 HB_FUNC_STATIC(QTEXTBROWSER_ONHIGHLIGHTED1)
 {
-  QTextBrowserSlots_connect_signal("highlighted(QUrl)", "highlighted(QUrl)");
+  CONNECT_SIGNAL("highlighted(QUrl)");
 }
 
 HB_FUNC_STATIC(QTEXTBROWSER_ONHIGHLIGHTED2)
 {
-  QTextBrowserSlots_connect_signal("highlighted(QString)", "highlighted(QString)");
+  CONNECT_SIGNAL("highlighted(QString)");
 }
 
 HB_FUNC_STATIC(QTEXTBROWSER_ONHISTORYCHANGED)
 {
-  QTextBrowserSlots_connect_signal("historyChanged()", "historyChanged()");
+  CONNECT_SIGNAL("historyChanged()");
 }
 
 HB_FUNC_STATIC(QTEXTBROWSER_ONSOURCECHANGED)
 {
-  QTextBrowserSlots_connect_signal("sourceChanged(QUrl)", "sourceChanged(QUrl)");
+  CONNECT_SIGNAL("sourceChanged(QUrl)");
 }
 
 #pragma ENDDUMP

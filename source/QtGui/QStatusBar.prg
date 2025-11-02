@@ -276,9 +276,11 @@ HB_FUNC_STATIC(QSTATUSBAR_SHOWMESSAGE)
 
 void QStatusBarSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QStatusBarSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QSTATUSBAR_ONMESSAGECHANGED)
 {
-  QStatusBarSlots_connect_signal("messageChanged(QString)", "messageChanged(QString)");
+  CONNECT_SIGNAL("messageChanged(QString)");
 }
 
 #pragma ENDDUMP

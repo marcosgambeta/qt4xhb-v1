@@ -158,14 +158,16 @@ HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_SETOPACITYMASK)
 
 void QGraphicsOpacityEffectSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QGraphicsOpacityEffectSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_ONOPACITYCHANGED)
 {
-  QGraphicsOpacityEffectSlots_connect_signal("opacityChanged(qreal)", "opacityChanged(qreal)");
+  CONNECT_SIGNAL("opacityChanged(qreal)");
 }
 
 HB_FUNC_STATIC(QGRAPHICSOPACITYEFFECT_ONOPACITYMASKCHANGED)
 {
-  QGraphicsOpacityEffectSlots_connect_signal("opacityMaskChanged(QBrush)", "opacityMaskChanged(QBrush)");
+  CONNECT_SIGNAL("opacityMaskChanged(QBrush)");
 }
 
 #pragma ENDDUMP

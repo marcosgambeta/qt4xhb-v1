@@ -550,34 +550,36 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETVALUE)
 
 void QAbstractSliderSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QAbstractSliderSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QABSTRACTSLIDER_ONACTIONTRIGGERED)
 {
-  QAbstractSliderSlots_connect_signal("actionTriggered(int)", "actionTriggered(int)");
+  CONNECT_SIGNAL("actionTriggered(int)");
 }
 
 HB_FUNC_STATIC(QABSTRACTSLIDER_ONRANGECHANGED)
 {
-  QAbstractSliderSlots_connect_signal("rangeChanged(int,int)", "rangeChanged(int,int)");
+  CONNECT_SIGNAL("rangeChanged(int,int)");
 }
 
 HB_FUNC_STATIC(QABSTRACTSLIDER_ONSLIDERMOVED)
 {
-  QAbstractSliderSlots_connect_signal("sliderMoved(int)", "sliderMoved(int)");
+  CONNECT_SIGNAL("sliderMoved(int)");
 }
 
 HB_FUNC_STATIC(QABSTRACTSLIDER_ONSLIDERPRESSED)
 {
-  QAbstractSliderSlots_connect_signal("sliderPressed()", "sliderPressed()");
+  CONNECT_SIGNAL("sliderPressed()");
 }
 
 HB_FUNC_STATIC(QABSTRACTSLIDER_ONSLIDERRELEASED)
 {
-  QAbstractSliderSlots_connect_signal("sliderReleased()", "sliderReleased()");
+  CONNECT_SIGNAL("sliderReleased()");
 }
 
 HB_FUNC_STATIC(QABSTRACTSLIDER_ONVALUECHANGED)
 {
-  QAbstractSliderSlots_connect_signal("valueChanged(int)", "valueChanged(int)");
+  CONNECT_SIGNAL("valueChanged(int)");
 }
 
 #pragma ENDDUMP

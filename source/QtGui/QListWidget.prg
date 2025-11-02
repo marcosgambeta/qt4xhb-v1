@@ -723,55 +723,56 @@ HB_FUNC_STATIC(QLISTWIDGET_SCROLLTOITEM)
 
 void QListWidgetSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QListWidgetSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QLISTWIDGET_ONCURRENTITEMCHANGED)
 {
-  QListWidgetSlots_connect_signal("currentItemChanged(QListWidgetItem*,QListWidgetItem*)",
-                                  "currentItemChanged(QListWidgetItem*,QListWidgetItem*)");
+  CONNECT_SIGNAL("currentItemChanged(QListWidgetItem*,QListWidgetItem*)");
 }
 
 HB_FUNC_STATIC(QLISTWIDGET_ONCURRENTROWCHANGED)
 {
-  QListWidgetSlots_connect_signal("currentRowChanged(int)", "currentRowChanged(int)");
+  CONNECT_SIGNAL("currentRowChanged(int)");
 }
 
 HB_FUNC_STATIC(QLISTWIDGET_ONCURRENTTEXTCHANGED)
 {
-  QListWidgetSlots_connect_signal("currentTextChanged(QString)", "currentTextChanged(QString)");
+  CONNECT_SIGNAL("currentTextChanged(QString)");
 }
 
 HB_FUNC_STATIC(QLISTWIDGET_ONITEMACTIVATED)
 {
-  QListWidgetSlots_connect_signal("itemActivated(QListWidgetItem*)", "itemActivated(QListWidgetItem*)");
+  CONNECT_SIGNAL("itemActivated(QListWidgetItem*)");
 }
 
 HB_FUNC_STATIC(QLISTWIDGET_ONITEMCHANGED)
 {
-  QListWidgetSlots_connect_signal("itemChanged(QListWidgetItem*)", "itemChanged(QListWidgetItem*)");
+  CONNECT_SIGNAL("itemChanged(QListWidgetItem*)");
 }
 
 HB_FUNC_STATIC(QLISTWIDGET_ONITEMCLICKED)
 {
-  QListWidgetSlots_connect_signal("itemClicked(QListWidgetItem*)", "itemClicked(QListWidgetItem*)");
+  CONNECT_SIGNAL("itemClicked(QListWidgetItem*)");
 }
 
 HB_FUNC_STATIC(QLISTWIDGET_ONITEMDOUBLECLICKED)
 {
-  QListWidgetSlots_connect_signal("itemDoubleClicked(QListWidgetItem*)", "itemDoubleClicked(QListWidgetItem*)");
+  CONNECT_SIGNAL("itemDoubleClicked(QListWidgetItem*)");
 }
 
 HB_FUNC_STATIC(QLISTWIDGET_ONITEMENTERED)
 {
-  QListWidgetSlots_connect_signal("itemEntered(QListWidgetItem*)", "itemEntered(QListWidgetItem*)");
+  CONNECT_SIGNAL("itemEntered(QListWidgetItem*)");
 }
 
 HB_FUNC_STATIC(QLISTWIDGET_ONITEMPRESSED)
 {
-  QListWidgetSlots_connect_signal("itemPressed(QListWidgetItem*)", "itemPressed(QListWidgetItem*)");
+  CONNECT_SIGNAL("itemPressed(QListWidgetItem*)");
 }
 
 HB_FUNC_STATIC(QLISTWIDGET_ONITEMSELECTIONCHANGED)
 {
-  QListWidgetSlots_connect_signal("itemSelectionChanged()", "itemSelectionChanged()");
+  CONNECT_SIGNAL("itemSelectionChanged()");
 }
 
 #pragma ENDDUMP

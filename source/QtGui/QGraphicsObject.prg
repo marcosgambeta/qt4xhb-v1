@@ -97,49 +97,51 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_UNGRABGESTURE)
 
 void QGraphicsObjectSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QGraphicsObjectSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QGRAPHICSOBJECT_ONENABLEDCHANGED)
 {
-  QGraphicsObjectSlots_connect_signal("enabledChanged()", "enabledChanged()");
+  CONNECT_SIGNAL("enabledChanged()");
 }
 
 HB_FUNC_STATIC(QGRAPHICSOBJECT_ONOPACITYCHANGED)
 {
-  QGraphicsObjectSlots_connect_signal("opacityChanged()", "opacityChanged()");
+  CONNECT_SIGNAL("opacityChanged()");
 }
 
 HB_FUNC_STATIC(QGRAPHICSOBJECT_ONPARENTCHANGED)
 {
-  QGraphicsObjectSlots_connect_signal("parentChanged()", "parentChanged()");
+  CONNECT_SIGNAL("parentChanged()");
 }
 
 HB_FUNC_STATIC(QGRAPHICSOBJECT_ONROTATIONCHANGED)
 {
-  QGraphicsObjectSlots_connect_signal("rotationChanged()", "rotationChanged()");
+  CONNECT_SIGNAL("rotationChanged()");
 }
 
 HB_FUNC_STATIC(QGRAPHICSOBJECT_ONSCALECHANGED)
 {
-  QGraphicsObjectSlots_connect_signal("scaleChanged()", "scaleChanged()");
+  CONNECT_SIGNAL("scaleChanged()");
 }
 
 HB_FUNC_STATIC(QGRAPHICSOBJECT_ONVISIBLECHANGED)
 {
-  QGraphicsObjectSlots_connect_signal("visibleChanged()", "visibleChanged()");
+  CONNECT_SIGNAL("visibleChanged()");
 }
 
 HB_FUNC_STATIC(QGRAPHICSOBJECT_ONXCHANGED)
 {
-  QGraphicsObjectSlots_connect_signal("xChanged()", "xChanged()");
+  CONNECT_SIGNAL("xChanged()");
 }
 
 HB_FUNC_STATIC(QGRAPHICSOBJECT_ONYCHANGED)
 {
-  QGraphicsObjectSlots_connect_signal("yChanged()", "yChanged()");
+  CONNECT_SIGNAL("yChanged()");
 }
 
 HB_FUNC_STATIC(QGRAPHICSOBJECT_ONZCHANGED)
 {
-  QGraphicsObjectSlots_connect_signal("zChanged()", "zChanged()");
+  CONNECT_SIGNAL("zChanged()");
 }
 
 #pragma ENDDUMP

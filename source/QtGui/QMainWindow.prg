@@ -1019,15 +1019,16 @@ HB_FUNC_STATIC(QMAINWINDOW_SETDOCKNESTINGENABLED)
 
 void QMainWindowSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QMainWindowSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QMAINWINDOW_ONICONSIZECHANGED)
 {
-  QMainWindowSlots_connect_signal("iconSizeChanged(QSize)", "iconSizeChanged(QSize)");
+  CONNECT_SIGNAL("iconSizeChanged(QSize)");
 }
 
 HB_FUNC_STATIC(QMAINWINDOW_ONTOOLBUTTONSTYLECHANGED)
 {
-  QMainWindowSlots_connect_signal("toolButtonStyleChanged(Qt::ToolButtonStyle)",
-                                  "toolButtonStyleChanged(Qt::ToolButtonStyle)");
+  CONNECT_SIGNAL("toolButtonStyleChanged(Qt::ToolButtonStyle)");
 }
 
 #pragma ENDDUMP

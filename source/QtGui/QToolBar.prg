@@ -586,45 +586,46 @@ HB_FUNC_STATIC(QTOOLBAR_SETTOOLBUTTONSTYLE)
 
 void QToolBarSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QToolBarSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QTOOLBAR_ONACTIONTRIGGERED)
 {
-  QToolBarSlots_connect_signal("actionTriggered(QAction*)", "actionTriggered(QAction*)");
+  CONNECT_SIGNAL("actionTriggered(QAction*)");
 }
 
 HB_FUNC_STATIC(QTOOLBAR_ONALLOWEDAREASCHANGED)
 {
-  QToolBarSlots_connect_signal("allowedAreasChanged(Qt::ToolBarAreas)", "allowedAreasChanged(Qt::ToolBarAreas)");
+  CONNECT_SIGNAL("allowedAreasChanged(Qt::ToolBarAreas)");
 }
 
 HB_FUNC_STATIC(QTOOLBAR_ONICONSIZECHANGED)
 {
-  QToolBarSlots_connect_signal("iconSizeChanged(QSize)", "iconSizeChanged(QSize)");
+  CONNECT_SIGNAL("iconSizeChanged(QSize)");
 }
 
 HB_FUNC_STATIC(QTOOLBAR_ONMOVABLECHANGED)
 {
-  QToolBarSlots_connect_signal("movableChanged(bool)", "movableChanged(bool)");
+  CONNECT_SIGNAL("movableChanged(bool)");
 }
 
 HB_FUNC_STATIC(QTOOLBAR_ONORIENTATIONCHANGED)
 {
-  QToolBarSlots_connect_signal("orientationChanged(Qt::Orientation)", "orientationChanged(Qt::Orientation)");
+  CONNECT_SIGNAL("orientationChanged(Qt::Orientation)");
 }
 
 HB_FUNC_STATIC(QTOOLBAR_ONTOOLBUTTONSTYLECHANGED)
 {
-  QToolBarSlots_connect_signal("toolButtonStyleChanged(Qt::ToolButtonStyle)",
-                               "toolButtonStyleChanged(Qt::ToolButtonStyle)");
+  CONNECT_SIGNAL("toolButtonStyleChanged(Qt::ToolButtonStyle)");
 }
 
 HB_FUNC_STATIC(QTOOLBAR_ONTOPLEVELCHANGED)
 {
-  QToolBarSlots_connect_signal("topLevelChanged(bool)", "topLevelChanged(bool)");
+  CONNECT_SIGNAL("topLevelChanged(bool)");
 }
 
 HB_FUNC_STATIC(QTOOLBAR_ONVISIBILITYCHANGED)
 {
-  QToolBarSlots_connect_signal("visibilityChanged(bool)", "visibilityChanged(bool)");
+  CONNECT_SIGNAL("visibilityChanged(bool)");
 }
 
 #pragma ENDDUMP

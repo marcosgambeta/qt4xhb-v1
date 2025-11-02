@@ -1150,29 +1150,31 @@ HB_FUNC_STATIC(QFILEDIALOG_GETSAVEFILENAME)
 
 void QFileDialogSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QFileDialogSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QFILEDIALOG_ONCURRENTCHANGED)
 {
-  QFileDialogSlots_connect_signal("currentChanged(QString)", "currentChanged(QString)");
+  CONNECT_SIGNAL("currentChanged(QString)");
 }
 
 HB_FUNC_STATIC(QFILEDIALOG_ONDIRECTORYENTERED)
 {
-  QFileDialogSlots_connect_signal("directoryEntered(QString)", "directoryEntered(QString)");
+  CONNECT_SIGNAL("directoryEntered(QString)");
 }
 
 HB_FUNC_STATIC(QFILEDIALOG_ONFILESELECTED)
 {
-  QFileDialogSlots_connect_signal("fileSelected(QString)", "fileSelected(QString)");
+  CONNECT_SIGNAL("fileSelected(QString)");
 }
 
 HB_FUNC_STATIC(QFILEDIALOG_ONFILESSELECTED)
 {
-  QFileDialogSlots_connect_signal("filesSelected(QStringList)", "filesSelected(QStringList)");
+  CONNECT_SIGNAL("filesSelected(QStringList)");
 }
 
 HB_FUNC_STATIC(QFILEDIALOG_ONFILTERSELECTED)
 {
-  QFileDialogSlots_connect_signal("filterSelected(QString)", "filterSelected(QString)");
+  CONNECT_SIGNAL("filterSelected(QString)");
 }
 
 #pragma ENDDUMP

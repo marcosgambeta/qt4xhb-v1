@@ -1033,34 +1033,36 @@ HB_FUNC_STATIC(QINPUTDIALOG_GETTEXT)
 
 void QInputDialogSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QInputDialogSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QINPUTDIALOG_ONDOUBLEVALUECHANGED)
 {
-  QInputDialogSlots_connect_signal("doubleValueChanged(double)", "doubleValueChanged(double)");
+  CONNECT_SIGNAL("doubleValueChanged(double)");
 }
 
 HB_FUNC_STATIC(QINPUTDIALOG_ONDOUBLEVALUESELECTED)
 {
-  QInputDialogSlots_connect_signal("doubleValueSelected(double)", "doubleValueSelected(double)");
+  CONNECT_SIGNAL("doubleValueSelected(double)");
 }
 
 HB_FUNC_STATIC(QINPUTDIALOG_ONINTVALUECHANGED)
 {
-  QInputDialogSlots_connect_signal("intValueChanged(int)", "intValueChanged(int)");
+  CONNECT_SIGNAL("intValueChanged(int)");
 }
 
 HB_FUNC_STATIC(QINPUTDIALOG_ONINTVALUESELECTED)
 {
-  QInputDialogSlots_connect_signal("intValueSelected(int)", "intValueSelected(int)");
+  CONNECT_SIGNAL("intValueSelected(int)");
 }
 
 HB_FUNC_STATIC(QINPUTDIALOG_ONTEXTVALUECHANGED)
 {
-  QInputDialogSlots_connect_signal("textValueChanged(QString)", "textValueChanged(QString)");
+  CONNECT_SIGNAL("textValueChanged(QString)");
 }
 
 HB_FUNC_STATIC(QINPUTDIALOG_ONTEXTVALUESELECTED)
 {
-  QInputDialogSlots_connect_signal("textValueSelected(QString)", "textValueSelected(QString)");
+  CONNECT_SIGNAL("textValueSelected(QString)");
 }
 
 #pragma ENDDUMP

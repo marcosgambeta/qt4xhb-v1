@@ -1299,34 +1299,36 @@ HB_FUNC_STATIC(QLINEEDIT_UNDO)
 
 void QLineEditSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QLineEditSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QLINEEDIT_ONCURSORPOSITIONCHANGED)
 {
-  QLineEditSlots_connect_signal("cursorPositionChanged(int,int)", "cursorPositionChanged(int,int)");
+  CONNECT_SIGNAL("cursorPositionChanged(int,int)");
 }
 
 HB_FUNC_STATIC(QLINEEDIT_ONEDITINGFINISHED)
 {
-  QLineEditSlots_connect_signal("editingFinished()", "editingFinished()");
+  CONNECT_SIGNAL("editingFinished()");
 }
 
 HB_FUNC_STATIC(QLINEEDIT_ONRETURNPRESSED)
 {
-  QLineEditSlots_connect_signal("returnPressed()", "returnPressed()");
+  CONNECT_SIGNAL("returnPressed()");
 }
 
 HB_FUNC_STATIC(QLINEEDIT_ONSELECTIONCHANGED)
 {
-  QLineEditSlots_connect_signal("selectionChanged()", "selectionChanged()");
+  CONNECT_SIGNAL("selectionChanged()");
 }
 
 HB_FUNC_STATIC(QLINEEDIT_ONTEXTCHANGED)
 {
-  QLineEditSlots_connect_signal("textChanged(QString)", "textChanged(QString)");
+  CONNECT_SIGNAL("textChanged(QString)");
 }
 
 HB_FUNC_STATIC(QLINEEDIT_ONTEXTEDITED)
 {
-  QLineEditSlots_connect_signal("textEdited(QString)", "textEdited(QString)");
+  CONNECT_SIGNAL("textEdited(QString)");
 }
 
 #pragma ENDDUMP

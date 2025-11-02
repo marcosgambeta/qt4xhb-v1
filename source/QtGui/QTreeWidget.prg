@@ -954,55 +954,56 @@ HB_FUNC_STATIC(QTREEWIDGET_SCROLLTOITEM)
 
 void QTreeWidgetSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QTreeWidgetSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QTREEWIDGET_ONCURRENTITEMCHANGED)
 {
-  QTreeWidgetSlots_connect_signal("currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)",
-                                  "currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)");
+  CONNECT_SIGNAL("currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)");
 }
 
 HB_FUNC_STATIC(QTREEWIDGET_ONITEMACTIVATED)
 {
-  QTreeWidgetSlots_connect_signal("itemActivated(QTreeWidgetItem*,int)", "itemActivated(QTreeWidgetItem*,int)");
+  CONNECT_SIGNAL("itemActivated(QTreeWidgetItem*,int)");
 }
 
 HB_FUNC_STATIC(QTREEWIDGET_ONITEMCHANGED)
 {
-  QTreeWidgetSlots_connect_signal("itemChanged(QTreeWidgetItem*,int)", "itemChanged(QTreeWidgetItem*,int)");
+  CONNECT_SIGNAL("itemChanged(QTreeWidgetItem*,int)");
 }
 
 HB_FUNC_STATIC(QTREEWIDGET_ONITEMCLICKED)
 {
-  QTreeWidgetSlots_connect_signal("itemClicked(QTreeWidgetItem*,int)", "itemClicked(QTreeWidgetItem*,int)");
+  CONNECT_SIGNAL("itemClicked(QTreeWidgetItem*,int)");
 }
 
 HB_FUNC_STATIC(QTREEWIDGET_ONITEMCOLLAPSED)
 {
-  QTreeWidgetSlots_connect_signal("itemCollapsed(QTreeWidgetItem*)", "itemCollapsed(QTreeWidgetItem*)");
+  CONNECT_SIGNAL("itemCollapsed(QTreeWidgetItem*)");
 }
 
 HB_FUNC_STATIC(QTREEWIDGET_ONITEMDOUBLECLICKED)
 {
-  QTreeWidgetSlots_connect_signal("itemDoubleClicked(QTreeWidgetItem*,int)", "itemDoubleClicked(QTreeWidgetItem*,int)");
+  CONNECT_SIGNAL("itemDoubleClicked(QTreeWidgetItem*,int)");
 }
 
 HB_FUNC_STATIC(QTREEWIDGET_ONITEMENTERED)
 {
-  QTreeWidgetSlots_connect_signal("itemEntered(QTreeWidgetItem*,int)", "itemEntered(QTreeWidgetItem*,int)");
+  CONNECT_SIGNAL("itemEntered(QTreeWidgetItem*,int)");
 }
 
 HB_FUNC_STATIC(QTREEWIDGET_ONITEMEXPANDED)
 {
-  QTreeWidgetSlots_connect_signal("itemExpanded(QTreeWidgetItem*)", "itemExpanded(QTreeWidgetItem*)");
+  CONNECT_SIGNAL("itemExpanded(QTreeWidgetItem*)");
 }
 
 HB_FUNC_STATIC(QTREEWIDGET_ONITEMPRESSED)
 {
-  QTreeWidgetSlots_connect_signal("itemPressed(QTreeWidgetItem*,int)", "itemPressed(QTreeWidgetItem*,int)");
+  CONNECT_SIGNAL("itemPressed(QTreeWidgetItem*,int)");
 }
 
 HB_FUNC_STATIC(QTREEWIDGET_ONITEMSELECTIONCHANGED)
 {
-  QTreeWidgetSlots_connect_signal("itemSelectionChanged()", "itemSelectionChanged()");
+  CONNECT_SIGNAL("itemSelectionChanged()");
 }
 
 #pragma ENDDUMP

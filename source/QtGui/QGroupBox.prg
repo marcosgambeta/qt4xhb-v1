@@ -282,14 +282,16 @@ HB_FUNC_STATIC(QGROUPBOX_SETCHECKED)
 
 void QGroupBoxSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QGroupBoxSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QGROUPBOX_ONCLICKED)
 {
-  QGroupBoxSlots_connect_signal("clicked(bool)", "clicked(bool)");
+  CONNECT_SIGNAL("clicked(bool)");
 }
 
 HB_FUNC_STATIC(QGROUPBOX_ONTOGGLED)
 {
-  QGroupBoxSlots_connect_signal("toggled(bool)", "toggled(bool)");
+  CONNECT_SIGNAL("toggled(bool)");
 }
 
 #pragma ENDDUMP

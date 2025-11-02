@@ -598,9 +598,11 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_TOPREVIOUS)
 
 void QDataWidgetMapperSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QDataWidgetMapperSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_ONCURRENTINDEXCHANGED)
 {
-  QDataWidgetMapperSlots_connect_signal("currentIndexChanged(int)", "currentIndexChanged(int)");
+  CONNECT_SIGNAL("currentIndexChanged(int)");
 }
 
 #pragma ENDDUMP

@@ -181,9 +181,11 @@ HB_FUNC_STATIC(QCHECKBOX_SIZEHINT)
 
 void QCheckBoxSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QCheckBoxSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QCHECKBOX_ONSTATECHANGED)
 {
-  QCheckBoxSlots_connect_signal("stateChanged(int)", "stateChanged(int)");
+  CONNECT_SIGNAL("stateChanged(int)");
 }
 
 #pragma ENDDUMP

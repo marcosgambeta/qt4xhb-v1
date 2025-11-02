@@ -261,9 +261,11 @@ HB_FUNC_STATIC(QPRINTDIALOG_SETVISIBLE)
 
 void QPrintDialogSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QPrintDialogSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QPRINTDIALOG_ONACCEPTED)
 {
-  QPrintDialogSlots_connect_signal("accepted(QPrinter*)", "accepted(QPrinter*)");
+  CONNECT_SIGNAL("accepted(QPrinter*)");
 }
 
 #pragma ENDDUMP

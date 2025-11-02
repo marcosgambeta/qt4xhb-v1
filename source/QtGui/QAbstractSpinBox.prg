@@ -726,9 +726,11 @@ HB_FUNC_STATIC(QABSTRACTSPINBOX_STEPUP)
 
 void QAbstractSpinBoxSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QAbstractSpinBoxSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QABSTRACTSPINBOX_ONEDITINGFINISHED)
 {
-  QAbstractSpinBoxSlots_connect_signal("editingFinished()", "editingFinished()");
+  CONNECT_SIGNAL("editingFinished()");
 }
 
 #pragma ENDDUMP

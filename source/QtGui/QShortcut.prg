@@ -325,14 +325,16 @@ HB_FUNC_STATIC(QSHORTCUT_WHATSTHIS)
 
 void QShortcutSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QShortcutSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QSHORTCUT_ONACTIVATED)
 {
-  QShortcutSlots_connect_signal("activated()", "activated()");
+  CONNECT_SIGNAL("activated()");
 }
 
 HB_FUNC_STATIC(QSHORTCUT_ONACTIVATEDAMBIGUOUSLY)
 {
-  QShortcutSlots_connect_signal("activatedAmbiguously()", "activatedAmbiguously()");
+  CONNECT_SIGNAL("activatedAmbiguously()");
 }
 
 #pragma ENDDUMP

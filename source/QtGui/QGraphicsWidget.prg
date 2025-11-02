@@ -1220,9 +1220,11 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_SETTABORDER)
 
 void QGraphicsWidgetSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QGraphicsWidgetSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QGRAPHICSWIDGET_ONGEOMETRYCHANGED)
 {
-  QGraphicsWidgetSlots_connect_signal("geometryChanged()", "geometryChanged()");
+  CONNECT_SIGNAL("geometryChanged()");
 }
 
 #pragma ENDDUMP

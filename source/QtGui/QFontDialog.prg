@@ -283,14 +283,16 @@ HB_FUNC_STATIC(QFONTDIALOG_GETFONT)
 
 void QFontDialogSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QFontDialogSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QFONTDIALOG_ONCURRENTFONTCHANGED)
 {
-  QFontDialogSlots_connect_signal("currentFontChanged(QFont)", "currentFontChanged(QFont)");
+  CONNECT_SIGNAL("currentFontChanged(QFont)");
 }
 
 HB_FUNC_STATIC(QFONTDIALOG_ONFONTSELECTED)
 {
-  QFontDialogSlots_connect_signal("fontSelected(QFont)", "fontSelected(QFont)");
+  CONNECT_SIGNAL("fontSelected(QFont)");
 }
 
 #pragma ENDDUMP

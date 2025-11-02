@@ -383,9 +383,11 @@ HB_FUNC_STATIC(QTOOLBUTTON_SHOWMENU)
 
 void QToolButtonSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QToolButtonSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QTOOLBUTTON_ONTRIGGERED)
 {
-  QToolButtonSlots_connect_signal("triggered(QAction*)", "triggered(QAction*)");
+  CONNECT_SIGNAL("triggered(QAction*)");
 }
 
 #pragma ENDDUMP

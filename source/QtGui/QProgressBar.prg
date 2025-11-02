@@ -536,9 +536,11 @@ HB_FUNC_STATIC(QPROGRESSBAR_SETVALUE)
 
 void QProgressBarSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QProgressBarSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QPROGRESSBAR_ONVALUECHANGED)
 {
-  QProgressBarSlots_connect_signal("valueChanged(int)", "valueChanged(int)");
+  CONNECT_SIGNAL("valueChanged(int)");
 }
 
 #pragma ENDDUMP

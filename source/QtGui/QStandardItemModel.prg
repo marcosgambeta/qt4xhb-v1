@@ -1161,9 +1161,11 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_DROPMIMEDATA)
 
 void QStandardItemModelSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QStandardItemModelSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QSTANDARDITEMMODEL_ONITEMCHANGED)
 {
-  QStandardItemModelSlots_connect_signal("itemChanged(QStandardItem*)", "itemChanged(QStandardItem*)");
+  CONNECT_SIGNAL("itemChanged(QStandardItem*)");
 }
 
 #pragma ENDDUMP

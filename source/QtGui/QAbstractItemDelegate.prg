@@ -232,20 +232,21 @@ HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_HELPEVENT)
 
 void QAbstractItemDelegateSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QAbstractItemDelegateSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_ONCLOSEEDITOR)
 {
-  QAbstractItemDelegateSlots_connect_signal("closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)",
-                                            "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)");
+  CONNECT_SIGNAL("closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_ONCOMMITDATA)
 {
-  QAbstractItemDelegateSlots_connect_signal("commitData(QWidget*)", "commitData(QWidget*)");
+  CONNECT_SIGNAL("commitData(QWidget*)");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_ONSIZEHINTCHANGED)
 {
-  QAbstractItemDelegateSlots_connect_signal("sizeHintChanged(QModelIndex)", "sizeHintChanged(QModelIndex)");
+  CONNECT_SIGNAL("sizeHintChanged(QModelIndex)");
 }
 
 #pragma ENDDUMP

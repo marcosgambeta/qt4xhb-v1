@@ -445,9 +445,11 @@ HB_FUNC_STATIC(QTOOLBOX_SETCURRENTWIDGET)
 
 void QToolBoxSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QToolBoxSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QTOOLBOX_ONCURRENTCHANGED)
 {
-  QToolBoxSlots_connect_signal("currentChanged(int)", "currentChanged(int)");
+  CONNECT_SIGNAL("currentChanged(int)");
 }
 
 #pragma ENDDUMP

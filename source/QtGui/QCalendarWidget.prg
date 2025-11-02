@@ -895,24 +895,26 @@ HB_FUNC_STATIC(QCALENDARWIDGET_SHOWTODAY)
 
 void QCalendarWidgetSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QCalendarWidgetSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QCALENDARWIDGET_ONACTIVATED)
 {
-  QCalendarWidgetSlots_connect_signal("activated(QDate)", "activated(QDate)");
+  CONNECT_SIGNAL("activated(QDate)");
 }
 
 HB_FUNC_STATIC(QCALENDARWIDGET_ONCLICKED)
 {
-  QCalendarWidgetSlots_connect_signal("clicked(QDate)", "clicked(QDate)");
+  CONNECT_SIGNAL("clicked(QDate)");
 }
 
 HB_FUNC_STATIC(QCALENDARWIDGET_ONCURRENTPAGECHANGED)
 {
-  QCalendarWidgetSlots_connect_signal("currentPageChanged(int,int)", "currentPageChanged(int,int)");
+  CONNECT_SIGNAL("currentPageChanged(int,int)");
 }
 
 HB_FUNC_STATIC(QCALENDARWIDGET_ONSELECTIONCHANGED)
 {
-  QCalendarWidgetSlots_connect_signal("selectionChanged()", "selectionChanged()");
+  CONNECT_SIGNAL("selectionChanged()");
 }
 
 #pragma ENDDUMP

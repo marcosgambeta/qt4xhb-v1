@@ -721,9 +721,11 @@ HB_FUNC_STATIC(QLISTVIEW_VISUALRECT)
 
 void QListViewSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QListViewSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QLISTVIEW_ONINDEXESMOVED)
 {
-  QListViewSlots_connect_signal("indexesMoved(QModelIndexList)", "indexesMoved(QModelIndexList)");
+  CONNECT_SIGNAL("indexesMoved(QModelIndexList)");
 }
 
 #pragma ENDDUMP

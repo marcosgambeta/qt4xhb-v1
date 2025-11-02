@@ -554,14 +554,16 @@ HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_ZOOMOUT)
 
 void QPrintPreviewWidgetSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QPrintPreviewWidgetSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_ONPAINTREQUESTED)
 {
-  QPrintPreviewWidgetSlots_connect_signal("paintRequested(QPrinter*)", "paintRequested(QPrinter*)");
+  CONNECT_SIGNAL("paintRequested(QPrinter*)");
 }
 
 HB_FUNC_STATIC(QPRINTPREVIEWWIDGET_ONPREVIEWCHANGED)
 {
-  QPrintPreviewWidgetSlots_connect_signal("previewChanged()", "previewChanged()");
+  CONNECT_SIGNAL("previewChanged()");
 }
 
 #pragma ENDDUMP

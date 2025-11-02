@@ -911,14 +911,16 @@ HB_FUNC_STATIC(QTABWIDGET_SETCURRENTWIDGET)
 
 void QTabWidgetSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QTabWidgetSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QTABWIDGET_ONCURRENTCHANGED)
 {
-  QTabWidgetSlots_connect_signal("currentChanged(int)", "currentChanged(int)");
+  CONNECT_SIGNAL("currentChanged(int)");
 }
 
 HB_FUNC_STATIC(QTABWIDGET_ONTABCLOSEREQUESTED)
 {
-  QTabWidgetSlots_connect_signal("tabCloseRequested(int)", "tabCloseRequested(int)");
+  CONNECT_SIGNAL("tabCloseRequested(int)");
 }
 
 #pragma ENDDUMP

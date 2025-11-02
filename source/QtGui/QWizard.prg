@@ -901,29 +901,31 @@ HB_FUNC_STATIC(QWIZARD_RESTART)
 
 void QWizardSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QWizardSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QWIZARD_ONCURRENTIDCHANGED)
 {
-  QWizardSlots_connect_signal("currentIdChanged(int)", "currentIdChanged(int)");
+  CONNECT_SIGNAL("currentIdChanged(int)");
 }
 
 HB_FUNC_STATIC(QWIZARD_ONCUSTOMBUTTONCLICKED)
 {
-  QWizardSlots_connect_signal("customButtonClicked(int)", "customButtonClicked(int)");
+  CONNECT_SIGNAL("customButtonClicked(int)");
 }
 
 HB_FUNC_STATIC(QWIZARD_ONHELPREQUESTED)
 {
-  QWizardSlots_connect_signal("helpRequested()", "helpRequested()");
+  CONNECT_SIGNAL("helpRequested()");
 }
 
 HB_FUNC_STATIC(QWIZARD_ONPAGEADDED)
 {
-  QWizardSlots_connect_signal("pageAdded(int)", "pageAdded(int)");
+  CONNECT_SIGNAL("pageAdded(int)");
 }
 
 HB_FUNC_STATIC(QWIZARD_ONPAGEREMOVED)
 {
-  QWizardSlots_connect_signal("pageRemoved(int)", "pageRemoved(int)");
+  CONNECT_SIGNAL("pageRemoved(int)");
 }
 
 #pragma ENDDUMP

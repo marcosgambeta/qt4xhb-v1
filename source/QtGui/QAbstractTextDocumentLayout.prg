@@ -272,24 +272,26 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_SETPAINTDEVICE)
 
 void QAbstractTextDocumentLayoutSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QAbstractTextDocumentLayoutSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ONDOCUMENTSIZECHANGED)
 {
-  QAbstractTextDocumentLayoutSlots_connect_signal("documentSizeChanged(QSizeF)", "documentSizeChanged(QSizeF)");
+  CONNECT_SIGNAL("documentSizeChanged(QSizeF)");
 }
 
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ONPAGECOUNTCHANGED)
 {
-  QAbstractTextDocumentLayoutSlots_connect_signal("pageCountChanged(int)", "pageCountChanged(int)");
+  CONNECT_SIGNAL("pageCountChanged(int)");
 }
 
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATE)
 {
-  QAbstractTextDocumentLayoutSlots_connect_signal("update(QRectF)", "update(QRectF)");
+  CONNECT_SIGNAL("update(QRectF)");
 }
 
 HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATEBLOCK)
 {
-  QAbstractTextDocumentLayoutSlots_connect_signal("updateBlock(QTextBlock)", "updateBlock(QTextBlock)");
+  CONNECT_SIGNAL("updateBlock(QTextBlock)");
 }
 
 #pragma ENDDUMP

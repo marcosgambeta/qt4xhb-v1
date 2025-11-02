@@ -1037,19 +1037,21 @@ HB_FUNC_STATIC(QTABBAR_SETCURRENTINDEX)
 
 void QTabBarSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QTabBarSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QTABBAR_ONCURRENTCHANGED)
 {
-  QTabBarSlots_connect_signal("currentChanged(int)", "currentChanged(int)");
+  CONNECT_SIGNAL("currentChanged(int)");
 }
 
 HB_FUNC_STATIC(QTABBAR_ONTABCLOSEREQUESTED)
 {
-  QTabBarSlots_connect_signal("tabCloseRequested(int)", "tabCloseRequested(int)");
+  CONNECT_SIGNAL("tabCloseRequested(int)");
 }
 
 HB_FUNC_STATIC(QTABBAR_ONTABMOVED)
 {
-  QTabBarSlots_connect_signal("tabMoved(int,int)", "tabMoved(int,int)");
+  CONNECT_SIGNAL("tabMoved(int,int)");
 }
 
 #pragma ENDDUMP

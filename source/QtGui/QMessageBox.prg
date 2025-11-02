@@ -858,9 +858,11 @@ HB_FUNC_STATIC(QMESSAGEBOX_WARNING)
 
 void QMessageBoxSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QMessageBoxSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QMESSAGEBOX_ONBUTTONCLICKED)
 {
-  QMessageBoxSlots_connect_signal("buttonClicked(QAbstractButton*)", "buttonClicked(QAbstractButton*)");
+  CONNECT_SIGNAL("buttonClicked(QAbstractButton*)");
 }
 
 #pragma ENDDUMP

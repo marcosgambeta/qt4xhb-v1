@@ -1279,24 +1279,26 @@ HB_FUNC_STATIC(QACTION_TRIGGER)
 
 void QActionSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QActionSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QACTION_ONCHANGED)
 {
-  QActionSlots_connect_signal("changed()", "changed()");
+  CONNECT_SIGNAL("changed()");
 }
 
 HB_FUNC_STATIC(QACTION_ONHOVERED)
 {
-  QActionSlots_connect_signal("hovered()", "hovered()");
+  CONNECT_SIGNAL("hovered()");
 }
 
 HB_FUNC_STATIC(QACTION_ONTOGGLED)
 {
-  QActionSlots_connect_signal("toggled(bool)", "toggled(bool)");
+  CONNECT_SIGNAL("toggled(bool)");
 }
 
 HB_FUNC_STATIC(QACTION_ONTRIGGERED)
 {
-  QActionSlots_connect_signal("triggered(bool)", "triggered(bool)");
+  CONNECT_SIGNAL("triggered(bool)");
 }
 
 #pragma ENDDUMP

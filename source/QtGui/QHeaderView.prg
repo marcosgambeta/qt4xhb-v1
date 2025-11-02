@@ -1215,60 +1215,61 @@ HB_FUNC_STATIC(QHEADERVIEW_SETOFFSETTOSECTIONPOSITION)
 
 void QHeaderViewSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QHeaderViewSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QHEADERVIEW_ONGEOMETRIESCHANGED)
 {
-  QHeaderViewSlots_connect_signal("geometriesChanged()", "geometriesChanged()");
+  CONNECT_SIGNAL("geometriesChanged()");
 }
 
 HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONAUTORESIZE)
 {
-  QHeaderViewSlots_connect_signal("sectionAutoResize(int,QHeaderView::ResizeMode)",
-                                  "sectionAutoResize(int,QHeaderView::ResizeMode)");
+  CONNECT_SIGNAL("sectionAutoResize(int,QHeaderView::ResizeMode)");
 }
 
 HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONCLICKED)
 {
-  QHeaderViewSlots_connect_signal("sectionClicked(int)", "sectionClicked(int)");
+  CONNECT_SIGNAL("sectionClicked(int)");
 }
 
 HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONCOUNTCHANGED)
 {
-  QHeaderViewSlots_connect_signal("sectionCountChanged(int,int)", "sectionCountChanged(int,int)");
+  CONNECT_SIGNAL("sectionCountChanged(int,int)");
 }
 
 HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONDOUBLECLICKED)
 {
-  QHeaderViewSlots_connect_signal("sectionDoubleClicked(int)", "sectionDoubleClicked(int)");
+  CONNECT_SIGNAL("sectionDoubleClicked(int)");
 }
 
 HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONENTERED)
 {
-  QHeaderViewSlots_connect_signal("sectionEntered(int)", "sectionEntered(int)");
+  CONNECT_SIGNAL("sectionEntered(int)");
 }
 
 HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONHANDLEDOUBLECLICKED)
 {
-  QHeaderViewSlots_connect_signal("sectionHandleDoubleClicked(int)", "sectionHandleDoubleClicked(int)");
+  CONNECT_SIGNAL("sectionHandleDoubleClicked(int)");
 }
 
 HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONMOVED)
 {
-  QHeaderViewSlots_connect_signal("sectionMoved(int,int,int)", "sectionMoved(int,int,int)");
+  CONNECT_SIGNAL("sectionMoved(int,int,int)");
 }
 
 HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONPRESSED)
 {
-  QHeaderViewSlots_connect_signal("sectionPressed(int)", "sectionPressed(int)");
+  CONNECT_SIGNAL("sectionPressed(int)");
 }
 
 HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONRESIZED)
 {
-  QHeaderViewSlots_connect_signal("sectionResized(int,int,int)", "sectionResized(int,int,int)");
+  CONNECT_SIGNAL("sectionResized(int,int,int)");
 }
 
 HB_FUNC_STATIC(QHEADERVIEW_ONSORTINDICATORCHANGED)
 {
-  QHeaderViewSlots_connect_signal("sortIndicatorChanged(int,Qt::SortOrder)", "sortIndicatorChanged(int,Qt::SortOrder)");
+  CONNECT_SIGNAL("sortIndicatorChanged(int,Qt::SortOrder)");
 }
 
 #pragma ENDDUMP

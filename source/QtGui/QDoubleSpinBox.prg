@@ -461,14 +461,16 @@ HB_FUNC_STATIC(QDOUBLESPINBOX_SETVALUE)
 
 void QDoubleSpinBoxSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QDoubleSpinBoxSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QDOUBLESPINBOX_ONVALUECHANGED1)
 {
-  QDoubleSpinBoxSlots_connect_signal("valueChanged(double)", "valueChanged(double)");
+  CONNECT_SIGNAL("valueChanged(double)");
 }
 
 HB_FUNC_STATIC(QDOUBLESPINBOX_ONVALUECHANGED2)
 {
-  QDoubleSpinBoxSlots_connect_signal("valueChanged(QString)", "valueChanged(QString)");
+  CONNECT_SIGNAL("valueChanged(QString)");
 }
 
 #pragma ENDDUMP

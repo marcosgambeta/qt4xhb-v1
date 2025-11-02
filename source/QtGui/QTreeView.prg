@@ -1237,14 +1237,16 @@ HB_FUNC_STATIC(QTREEVIEW_SHOWCOLUMN)
 
 void QTreeViewSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QTreeViewSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QTREEVIEW_ONCOLLAPSED)
 {
-  QTreeViewSlots_connect_signal("collapsed(QModelIndex)", "collapsed(QModelIndex)");
+  CONNECT_SIGNAL("collapsed(QModelIndex)");
 }
 
 HB_FUNC_STATIC(QTREEVIEW_ONEXPANDED)
 {
-  QTreeViewSlots_connect_signal("expanded(QModelIndex)", "expanded(QModelIndex)");
+  CONNECT_SIGNAL("expanded(QModelIndex)");
 }
 
 #pragma ENDDUMP

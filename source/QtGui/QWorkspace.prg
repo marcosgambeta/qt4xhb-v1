@@ -427,9 +427,11 @@ HB_FUNC_STATIC(QWORKSPACE_TILE)
 
 void QWorkspaceSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QWorkspaceSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QWORKSPACE_ONWINDOWACTIVATED)
 {
-  QWorkspaceSlots_connect_signal("windowActivated(QWidget*)", "windowActivated(QWidget*)");
+  CONNECT_SIGNAL("windowActivated(QWidget*)");
 }
 
 #pragma ENDDUMP

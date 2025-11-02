@@ -710,24 +710,26 @@ HB_FUNC_STATIC(QCOMPLETER_SETWRAPAROUND)
 
 void QCompleterSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QCompleterSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QCOMPLETER_ONACTIVATED1)
 {
-  QCompleterSlots_connect_signal("activated(QString)", "activated(QString)");
+  CONNECT_SIGNAL("activated(QString)");
 }
 
 HB_FUNC_STATIC(QCOMPLETER_ONACTIVATED2)
 {
-  QCompleterSlots_connect_signal("activated(QModelIndex)", "activated(QModelIndex)");
+  CONNECT_SIGNAL("activated(QModelIndex)");
 }
 
 HB_FUNC_STATIC(QCOMPLETER_ONHIGHLIGHTED1)
 {
-  QCompleterSlots_connect_signal("highlighted(QString)", "highlighted(QString)");
+  CONNECT_SIGNAL("highlighted(QString)");
 }
 
 HB_FUNC_STATIC(QCOMPLETER_ONHIGHLIGHTED2)
 {
-  QCompleterSlots_connect_signal("highlighted(QModelIndex)", "highlighted(QModelIndex)");
+  CONNECT_SIGNAL("highlighted(QModelIndex)");
 }
 
 #pragma ENDDUMP

@@ -343,19 +343,21 @@ HB_FUNC_STATIC(QDIALOG_REJECT)
 
 void QDialogSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QDialogSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QDIALOG_ONACCEPTED)
 {
-  QDialogSlots_connect_signal("accepted()", "accepted()");
+  CONNECT_SIGNAL("accepted()");
 }
 
 HB_FUNC_STATIC(QDIALOG_ONFINISHED)
 {
-  QDialogSlots_connect_signal("finished(int)", "finished(int)");
+  CONNECT_SIGNAL("finished(int)");
 }
 
 HB_FUNC_STATIC(QDIALOG_ONREJECTED)
 {
-  QDialogSlots_connect_signal("rejected()", "rejected()");
+  CONNECT_SIGNAL("rejected()");
 }
 
 #pragma ENDDUMP

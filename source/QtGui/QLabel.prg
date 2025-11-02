@@ -803,14 +803,16 @@ HB_FUNC_STATIC(QLABEL_SETTEXT)
 
 void QLabelSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QLabelSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QLABEL_ONLINKACTIVATED)
 {
-  QLabelSlots_connect_signal("linkActivated(QString)", "linkActivated(QString)");
+  CONNECT_SIGNAL("linkActivated(QString)");
 }
 
 HB_FUNC_STATIC(QLABEL_ONLINKHOVERED)
 {
-  QLabelSlots_connect_signal("linkHovered(QString)", "linkHovered(QString)");
+  CONNECT_SIGNAL("linkHovered(QString)");
 }
 
 #pragma ENDDUMP

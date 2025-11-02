@@ -356,14 +356,16 @@ HB_FUNC_STATIC(QCOLORDIALOG_SETSTANDARDCOLOR)
 
 void QColorDialogSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QColorDialogSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QCOLORDIALOG_ONCOLORSELECTED)
 {
-  QColorDialogSlots_connect_signal("colorSelected(QColor)", "colorSelected(QColor)");
+  CONNECT_SIGNAL("colorSelected(QColor)");
 }
 
 HB_FUNC_STATIC(QCOLORDIALOG_ONCURRENTCOLORCHANGED)
 {
-  QColorDialogSlots_connect_signal("currentColorChanged(QColor)", "currentColorChanged(QColor)");
+  CONNECT_SIGNAL("currentColorChanged(QColor)");
 }
 
 #pragma ENDDUMP

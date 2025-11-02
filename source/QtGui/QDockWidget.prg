@@ -330,31 +330,31 @@ HB_FUNC_STATIC(QDOCKWIDGET_WIDGET)
 
 void QDockWidgetSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QDockWidgetSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QDOCKWIDGET_ONALLOWEDAREASCHANGED)
 {
-  QDockWidgetSlots_connect_signal("allowedAreasChanged(Qt::DockWidgetAreas)",
-                                  "allowedAreasChanged(Qt::DockWidgetAreas)");
+  CONNECT_SIGNAL("allowedAreasChanged(Qt::DockWidgetAreas)");
 }
 
 HB_FUNC_STATIC(QDOCKWIDGET_ONDOCKLOCATIONCHANGED)
 {
-  QDockWidgetSlots_connect_signal("dockLocationChanged(Qt::DockWidgetArea)", "dockLocationChanged(Qt::DockWidgetArea)");
+  CONNECT_SIGNAL("dockLocationChanged(Qt::DockWidgetArea)");
 }
 
 HB_FUNC_STATIC(QDOCKWIDGET_ONFEATURESCHANGED)
 {
-  QDockWidgetSlots_connect_signal("featuresChanged(QDockWidget::DockWidgetFeatures)",
-                                  "featuresChanged(QDockWidget::DockWidgetFeatures)");
+  CONNECT_SIGNAL("featuresChanged(QDockWidget::DockWidgetFeatures)");
 }
 
 HB_FUNC_STATIC(QDOCKWIDGET_ONTOPLEVELCHANGED)
 {
-  QDockWidgetSlots_connect_signal("topLevelChanged(bool)", "topLevelChanged(bool)");
+  CONNECT_SIGNAL("topLevelChanged(bool)");
 }
 
 HB_FUNC_STATIC(QDOCKWIDGET_ONVISIBILITYCHANGED)
 {
-  QDockWidgetSlots_connect_signal("visibilityChanged(bool)", "visibilityChanged(bool)");
+  CONNECT_SIGNAL("visibilityChanged(bool)");
 }
 
 #pragma ENDDUMP

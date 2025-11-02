@@ -384,39 +384,41 @@ HB_FUNC_STATIC(QUNDOGROUP_UNDO)
 
 void QUndoGroupSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QUndoGroupSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QUNDOGROUP_ONACTIVESTACKCHANGED)
 {
-  QUndoGroupSlots_connect_signal("activeStackChanged(QUndoStack*)", "activeStackChanged(QUndoStack*)");
+  CONNECT_SIGNAL("activeStackChanged(QUndoStack*)");
 }
 
 HB_FUNC_STATIC(QUNDOGROUP_ONCANREDOCHANGED)
 {
-  QUndoGroupSlots_connect_signal("canRedoChanged(bool)", "canRedoChanged(bool)");
+  CONNECT_SIGNAL("canRedoChanged(bool)");
 }
 
 HB_FUNC_STATIC(QUNDOGROUP_ONCANUNDOCHANGED)
 {
-  QUndoGroupSlots_connect_signal("canUndoChanged(bool)", "canUndoChanged(bool)");
+  CONNECT_SIGNAL("canUndoChanged(bool)");
 }
 
 HB_FUNC_STATIC(QUNDOGROUP_ONCLEANCHANGED)
 {
-  QUndoGroupSlots_connect_signal("cleanChanged(bool)", "cleanChanged(bool)");
+  CONNECT_SIGNAL("cleanChanged(bool)");
 }
 
 HB_FUNC_STATIC(QUNDOGROUP_ONINDEXCHANGED)
 {
-  QUndoGroupSlots_connect_signal("indexChanged(int)", "indexChanged(int)");
+  CONNECT_SIGNAL("indexChanged(int)");
 }
 
 HB_FUNC_STATIC(QUNDOGROUP_ONREDOTEXTCHANGED)
 {
-  QUndoGroupSlots_connect_signal("redoTextChanged(QString)", "redoTextChanged(QString)");
+  CONNECT_SIGNAL("redoTextChanged(QString)");
 }
 
 HB_FUNC_STATIC(QUNDOGROUP_ONUNDOTEXTCHANGED)
 {
-  QUndoGroupSlots_connect_signal("undoTextChanged(QString)", "undoTextChanged(QString)");
+  CONNECT_SIGNAL("undoTextChanged(QString)");
 }
 
 #pragma ENDDUMP

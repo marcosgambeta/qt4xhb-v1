@@ -969,19 +969,21 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SUPPORTEDDROPACTIONS)
 
 void QFileSystemModelSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QFileSystemModelSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QFILESYSTEMMODEL_ONDIRECTORYLOADED)
 {
-  QFileSystemModelSlots_connect_signal("directoryLoaded(QString)", "directoryLoaded(QString)");
+  CONNECT_SIGNAL("directoryLoaded(QString)");
 }
 
 HB_FUNC_STATIC(QFILESYSTEMMODEL_ONFILERENAMED)
 {
-  QFileSystemModelSlots_connect_signal("fileRenamed(QString,QString,QString)", "fileRenamed(QString,QString,QString)");
+  CONNECT_SIGNAL("fileRenamed(QString,QString,QString)");
 }
 
 HB_FUNC_STATIC(QFILESYSTEMMODEL_ONROOTPATHCHANGED)
 {
-  QFileSystemModelSlots_connect_signal("rootPathChanged(QString)", "rootPathChanged(QString)");
+  CONNECT_SIGNAL("rootPathChanged(QString)");
 }
 
 #pragma ENDDUMP

@@ -1383,39 +1383,41 @@ HB_FUNC_STATIC(QAPPLICATION_WINDOWICON)
 
 void QApplicationSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QApplicationSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QAPPLICATION_ONABOUTTORELEASEGPURESOURCES)
 {
-  QApplicationSlots_connect_signal("aboutToReleaseGpuResources()", "aboutToReleaseGpuResources()");
+  CONNECT_SIGNAL("aboutToReleaseGpuResources()");
 }
 
 HB_FUNC_STATIC(QAPPLICATION_ONABOUTTOUSEGPURESOURCES)
 {
-  QApplicationSlots_connect_signal("aboutToUseGpuResources()", "aboutToUseGpuResources()");
+  CONNECT_SIGNAL("aboutToUseGpuResources()");
 }
 
 HB_FUNC_STATIC(QAPPLICATION_ONCOMMITDATAREQUEST)
 {
-  QApplicationSlots_connect_signal("commitDataRequest(QSessionManager)", "commitDataRequest(QSessionManager)");
+  CONNECT_SIGNAL("commitDataRequest(QSessionManager)");
 }
 
 HB_FUNC_STATIC(QAPPLICATION_ONFOCUSCHANGED)
 {
-  QApplicationSlots_connect_signal("focusChanged(QWidget*,QWidget*)", "focusChanged(QWidget*,QWidget*)");
+  CONNECT_SIGNAL("focusChanged(QWidget*,QWidget*)");
 }
 
 HB_FUNC_STATIC(QAPPLICATION_ONFONTDATABASECHANGED)
 {
-  QApplicationSlots_connect_signal("fontDatabaseChanged()", "fontDatabaseChanged()");
+  CONNECT_SIGNAL("fontDatabaseChanged()");
 }
 
 HB_FUNC_STATIC(QAPPLICATION_ONLASTWINDOWCLOSED)
 {
-  QApplicationSlots_connect_signal("lastWindowClosed()", "lastWindowClosed()");
+  CONNECT_SIGNAL("lastWindowClosed()");
 }
 
 HB_FUNC_STATIC(QAPPLICATION_ONSAVESTATEREQUEST)
 {
-  QApplicationSlots_connect_signal("saveStateRequest(QSessionManager)", "saveStateRequest(QSessionManager)");
+  CONNECT_SIGNAL("saveStateRequest(QSessionManager)");
 }
 
 #pragma ENDDUMP

@@ -316,19 +316,21 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_SETYOFFSET)
 
 void QGraphicsDropShadowEffectSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QGraphicsDropShadowEffectSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_ONBLURRADIUSCHANGED)
 {
-  QGraphicsDropShadowEffectSlots_connect_signal("blurRadiusChanged(qreal)", "blurRadiusChanged(qreal)");
+  CONNECT_SIGNAL("blurRadiusChanged(qreal)");
 }
 
 HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_ONCOLORCHANGED)
 {
-  QGraphicsDropShadowEffectSlots_connect_signal("colorChanged(QColor)", "colorChanged(QColor)");
+  CONNECT_SIGNAL("colorChanged(QColor)");
 }
 
 HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_ONOFFSETCHANGED)
 {
-  QGraphicsDropShadowEffectSlots_connect_signal("offsetChanged(QPointF)", "offsetChanged(QPointF)");
+  CONNECT_SIGNAL("offsetChanged(QPointF)");
 }
 
 #pragma ENDDUMP

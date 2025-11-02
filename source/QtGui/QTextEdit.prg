@@ -1706,40 +1706,41 @@ HB_FUNC_STATIC(QTEXTEDIT_ZOOMOUT)
 
 void QTextEditSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QTextEditSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QTEXTEDIT_ONCOPYAVAILABLE)
 {
-  QTextEditSlots_connect_signal("copyAvailable(bool)", "copyAvailable(bool)");
+  CONNECT_SIGNAL("copyAvailable(bool)");
 }
 
 HB_FUNC_STATIC(QTEXTEDIT_ONCURRENTCHARFORMATCHANGED)
 {
-  QTextEditSlots_connect_signal("currentCharFormatChanged(QTextCharFormat)",
-                                "currentCharFormatChanged(QTextCharFormat)");
+  CONNECT_SIGNAL("currentCharFormatChanged(QTextCharFormat)");
 }
 
 HB_FUNC_STATIC(QTEXTEDIT_ONCURSORPOSITIONCHANGED)
 {
-  QTextEditSlots_connect_signal("cursorPositionChanged()", "cursorPositionChanged()");
+  CONNECT_SIGNAL("cursorPositionChanged()");
 }
 
 HB_FUNC_STATIC(QTEXTEDIT_ONREDOAVAILABLE)
 {
-  QTextEditSlots_connect_signal("redoAvailable(bool)", "redoAvailable(bool)");
+  CONNECT_SIGNAL("redoAvailable(bool)");
 }
 
 HB_FUNC_STATIC(QTEXTEDIT_ONSELECTIONCHANGED)
 {
-  QTextEditSlots_connect_signal("selectionChanged()", "selectionChanged()");
+  CONNECT_SIGNAL("selectionChanged()");
 }
 
 HB_FUNC_STATIC(QTEXTEDIT_ONTEXTCHANGED)
 {
-  QTextEditSlots_connect_signal("textChanged()", "textChanged()");
+  CONNECT_SIGNAL("textChanged()");
 }
 
 HB_FUNC_STATIC(QTEXTEDIT_ONUNDOAVAILABLE)
 {
-  QTextEditSlots_connect_signal("undoAvailable(bool)", "undoAvailable(bool)");
+  CONNECT_SIGNAL("undoAvailable(bool)");
 }
 
 #pragma ENDDUMP

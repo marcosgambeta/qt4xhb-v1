@@ -1526,49 +1526,51 @@ HB_FUNC_STATIC(QTEXTDOCUMENT_UNDO)
 
 void QTextDocumentSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QTextDocumentSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QTEXTDOCUMENT_ONBLOCKCOUNTCHANGED)
 {
-  QTextDocumentSlots_connect_signal("blockCountChanged(int)", "blockCountChanged(int)");
+  CONNECT_SIGNAL("blockCountChanged(int)");
 }
 
 HB_FUNC_STATIC(QTEXTDOCUMENT_ONCONTENTSCHANGE)
 {
-  QTextDocumentSlots_connect_signal("contentsChange(int,int,int)", "contentsChange(int,int,int)");
+  CONNECT_SIGNAL("contentsChange(int,int,int)");
 }
 
 HB_FUNC_STATIC(QTEXTDOCUMENT_ONCONTENTSCHANGED)
 {
-  QTextDocumentSlots_connect_signal("contentsChanged()", "contentsChanged()");
+  CONNECT_SIGNAL("contentsChanged()");
 }
 
 HB_FUNC_STATIC(QTEXTDOCUMENT_ONCURSORPOSITIONCHANGED)
 {
-  QTextDocumentSlots_connect_signal("cursorPositionChanged(QTextCursor)", "cursorPositionChanged(QTextCursor)");
+  CONNECT_SIGNAL("cursorPositionChanged(QTextCursor)");
 }
 
 HB_FUNC_STATIC(QTEXTDOCUMENT_ONDOCUMENTLAYOUTCHANGED)
 {
-  QTextDocumentSlots_connect_signal("documentLayoutChanged()", "documentLayoutChanged()");
+  CONNECT_SIGNAL("documentLayoutChanged()");
 }
 
 HB_FUNC_STATIC(QTEXTDOCUMENT_ONMODIFICATIONCHANGED)
 {
-  QTextDocumentSlots_connect_signal("modificationChanged(bool)", "modificationChanged(bool)");
+  CONNECT_SIGNAL("modificationChanged(bool)");
 }
 
 HB_FUNC_STATIC(QTEXTDOCUMENT_ONREDOAVAILABLE)
 {
-  QTextDocumentSlots_connect_signal("redoAvailable(bool)", "redoAvailable(bool)");
+  CONNECT_SIGNAL("redoAvailable(bool)");
 }
 
 HB_FUNC_STATIC(QTEXTDOCUMENT_ONUNDOAVAILABLE)
 {
-  QTextDocumentSlots_connect_signal("undoAvailable(bool)", "undoAvailable(bool)");
+  CONNECT_SIGNAL("undoAvailable(bool)");
 }
 
 HB_FUNC_STATIC(QTEXTDOCUMENT_ONUNDOCOMMANDADDED)
 {
-  QTextDocumentSlots_connect_signal("undoCommandAdded()", "undoCommandAdded()");
+  CONNECT_SIGNAL("undoCommandAdded()");
 }
 
 #pragma ENDDUMP

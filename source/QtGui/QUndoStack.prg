@@ -562,34 +562,36 @@ HB_FUNC_STATIC(QUNDOSTACK_UNDO)
 
 void QUndoStackSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QUndoStackSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QUNDOSTACK_ONCANREDOCHANGED)
 {
-  QUndoStackSlots_connect_signal("canRedoChanged(bool)", "canRedoChanged(bool)");
+  CONNECT_SIGNAL("canRedoChanged(bool)");
 }
 
 HB_FUNC_STATIC(QUNDOSTACK_ONCANUNDOCHANGED)
 {
-  QUndoStackSlots_connect_signal("canUndoChanged(bool)", "canUndoChanged(bool)");
+  CONNECT_SIGNAL("canUndoChanged(bool)");
 }
 
 HB_FUNC_STATIC(QUNDOSTACK_ONCLEANCHANGED)
 {
-  QUndoStackSlots_connect_signal("cleanChanged(bool)", "cleanChanged(bool)");
+  CONNECT_SIGNAL("cleanChanged(bool)");
 }
 
 HB_FUNC_STATIC(QUNDOSTACK_ONINDEXCHANGED)
 {
-  QUndoStackSlots_connect_signal("indexChanged(int)", "indexChanged(int)");
+  CONNECT_SIGNAL("indexChanged(int)");
 }
 
 HB_FUNC_STATIC(QUNDOSTACK_ONREDOTEXTCHANGED)
 {
-  QUndoStackSlots_connect_signal("redoTextChanged(QString)", "redoTextChanged(QString)");
+  CONNECT_SIGNAL("redoTextChanged(QString)");
 }
 
 HB_FUNC_STATIC(QUNDOSTACK_ONUNDOTEXTCHANGED)
 {
-  QUndoStackSlots_connect_signal("undoTextChanged(QString)", "undoTextChanged(QString)");
+  CONNECT_SIGNAL("undoTextChanged(QString)");
 }
 
 #pragma ENDDUMP

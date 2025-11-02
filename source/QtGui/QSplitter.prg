@@ -597,9 +597,11 @@ HB_FUNC_STATIC(QSPLITTER_SIZEHINT)
 
 void QSplitterSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QSplitterSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QSPLITTER_ONSPLITTERMOVED)
 {
-  QSplitterSlots_connect_signal("splitterMoved(int,int)", "splitterMoved(int,int)");
+  CONNECT_SIGNAL("splitterMoved(int,int)");
 }
 
 #pragma ENDDUMP

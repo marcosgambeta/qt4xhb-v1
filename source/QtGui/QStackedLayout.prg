@@ -263,14 +263,16 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_SETCURRENTWIDGET)
 
 void QStackedLayoutSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QStackedLayoutSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QSTACKEDLAYOUT_ONSETCURRENTINDEX)
 {
-  QStackedLayoutSlots_connect_signal("setCurrentIndex(int)", "setCurrentIndex(int)");
+  CONNECT_SIGNAL("setCurrentIndex(int)");
 }
 
 HB_FUNC_STATIC(QSTACKEDLAYOUT_ONSETCURRENTWIDGET)
 {
-  QStackedLayoutSlots_connect_signal("setCurrentWidget(QWidget*)", "setCurrentWidget(QWidget*)");
+  CONNECT_SIGNAL("setCurrentWidget(QWidget*)");
 }
 
 #pragma ENDDUMP

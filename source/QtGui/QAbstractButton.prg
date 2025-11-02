@@ -598,24 +598,26 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_TOGGLE)
 
 void QAbstractButtonSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QAbstractButtonSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QABSTRACTBUTTON_ONCLICKED)
 {
-  QAbstractButtonSlots_connect_signal("clicked(bool)", "clicked(bool)");
+  CONNECT_SIGNAL("clicked(bool)");
 }
 
 HB_FUNC_STATIC(QABSTRACTBUTTON_ONPRESSED)
 {
-  QAbstractButtonSlots_connect_signal("pressed()", "pressed()");
+  CONNECT_SIGNAL("pressed()");
 }
 
 HB_FUNC_STATIC(QABSTRACTBUTTON_ONRELEASED)
 {
-  QAbstractButtonSlots_connect_signal("released()", "released()");
+  CONNECT_SIGNAL("released()");
 }
 
 HB_FUNC_STATIC(QABSTRACTBUTTON_ONTOGGLED)
 {
-  QAbstractButtonSlots_connect_signal("toggled(bool)", "toggled(bool)");
+  CONNECT_SIGNAL("toggled(bool)");
 }
 
 #pragma ENDDUMP

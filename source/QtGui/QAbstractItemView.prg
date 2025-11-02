@@ -1401,34 +1401,36 @@ HB_FUNC_STATIC(QABSTRACTITEMVIEW_UPDATE)
 
 void QAbstractItemViewSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QAbstractItemViewSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONACTIVATED)
 {
-  QAbstractItemViewSlots_connect_signal("activated(QModelIndex)", "activated(QModelIndex)");
+  CONNECT_SIGNAL("activated(QModelIndex)");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONCLICKED)
 {
-  QAbstractItemViewSlots_connect_signal("clicked(QModelIndex)", "clicked(QModelIndex)");
+  CONNECT_SIGNAL("clicked(QModelIndex)");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONDOUBLECLICKED)
 {
-  QAbstractItemViewSlots_connect_signal("doubleClicked(QModelIndex)", "doubleClicked(QModelIndex)");
+  CONNECT_SIGNAL("doubleClicked(QModelIndex)");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONENTERED)
 {
-  QAbstractItemViewSlots_connect_signal("entered(QModelIndex)", "entered(QModelIndex)");
+  CONNECT_SIGNAL("entered(QModelIndex)");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONPRESSED)
 {
-  QAbstractItemViewSlots_connect_signal("pressed(QModelIndex)", "pressed(QModelIndex)");
+  CONNECT_SIGNAL("pressed(QModelIndex)");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMVIEW_ONVIEWPORTENTERED)
 {
-  QAbstractItemViewSlots_connect_signal("viewportEntered()", "viewportEntered()");
+  CONNECT_SIGNAL("viewportEntered()");
 }
 
 #pragma ENDDUMP

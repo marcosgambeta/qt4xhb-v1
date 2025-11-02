@@ -711,24 +711,26 @@ HB_FUNC_STATIC(QMENU_EXEC)
 
 void QMenuSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QMenuSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QMENU_ONABOUTTOHIDE)
 {
-  QMenuSlots_connect_signal("aboutToHide()", "aboutToHide()");
+  CONNECT_SIGNAL("aboutToHide()");
 }
 
 HB_FUNC_STATIC(QMENU_ONABOUTTOSHOW)
 {
-  QMenuSlots_connect_signal("aboutToShow()", "aboutToShow()");
+  CONNECT_SIGNAL("aboutToShow()");
 }
 
 HB_FUNC_STATIC(QMENU_ONHOVERED)
 {
-  QMenuSlots_connect_signal("hovered(QAction*)", "hovered(QAction*)");
+  CONNECT_SIGNAL("hovered(QAction*)");
 }
 
 HB_FUNC_STATIC(QMENU_ONTRIGGERED)
 {
-  QMenuSlots_connect_signal("triggered(QAction*)", "triggered(QAction*)");
+  CONNECT_SIGNAL("triggered(QAction*)");
 }
 
 #pragma ENDDUMP

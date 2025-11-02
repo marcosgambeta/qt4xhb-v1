@@ -426,14 +426,16 @@ HB_FUNC_STATIC(QMENUBAR_SETVISIBLE)
 
 void QMenuBarSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QMenuBarSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QMENUBAR_ONHOVERED)
 {
-  QMenuBarSlots_connect_signal("hovered(QAction*)", "hovered(QAction*)");
+  CONNECT_SIGNAL("hovered(QAction*)");
 }
 
 HB_FUNC_STATIC(QMENUBAR_ONTRIGGERED)
 {
-  QMenuBarSlots_connect_signal("triggered(QAction*)", "triggered(QAction*)");
+  CONNECT_SIGNAL("triggered(QAction*)");
 }
 
 #pragma ENDDUMP

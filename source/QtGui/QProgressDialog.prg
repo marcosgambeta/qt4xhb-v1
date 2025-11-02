@@ -572,9 +572,11 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETVALUE)
 
 void QProgressDialogSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QProgressDialogSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QPROGRESSDIALOG_ONCANCELED)
 {
-  QProgressDialogSlots_connect_signal("canceled()", "canceled()");
+  CONNECT_SIGNAL("canceled()");
 }
 
 #pragma ENDDUMP

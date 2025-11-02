@@ -4670,9 +4670,11 @@ HB_FUNC_STATIC(QWIDGET_SETTABORDER)
 
 void QWidgetSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QWidgetSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QWIDGET_ONCUSTOMCONTEXTMENUREQUESTED)
 {
-  QWidgetSlots_connect_signal("customContextMenuRequested(QPoint)", "customContextMenuRequested(QPoint)");
+  CONNECT_SIGNAL("customContextMenuRequested(QPoint)");
 }
 
 #pragma ENDDUMP

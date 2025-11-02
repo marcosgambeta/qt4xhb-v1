@@ -165,9 +165,11 @@ HB_FUNC_STATIC(QGRAPHICSEFFECT_UPDATE)
 
 void QGraphicsEffectSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QGraphicsEffectSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QGRAPHICSEFFECT_ONENABLEDCHANGED)
 {
-  QGraphicsEffectSlots_connect_signal("enabledChanged(bool)", "enabledChanged(bool)");
+  CONNECT_SIGNAL("enabledChanged(bool)");
 }
 
 #pragma ENDDUMP

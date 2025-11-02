@@ -211,19 +211,21 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENNUMBER)
 
 void QDesktopWidgetSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QDesktopWidgetSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QDESKTOPWIDGET_ONRESIZED)
 {
-  QDesktopWidgetSlots_connect_signal("resized(int)", "resized(int)");
+  CONNECT_SIGNAL("resized(int)");
 }
 
 HB_FUNC_STATIC(QDESKTOPWIDGET_ONSCREENCOUNTCHANGED)
 {
-  QDesktopWidgetSlots_connect_signal("screenCountChanged(int)", "screenCountChanged(int)");
+  CONNECT_SIGNAL("screenCountChanged(int)");
 }
 
 HB_FUNC_STATIC(QDESKTOPWIDGET_ONWORKAREARESIZED)
 {
-  QDesktopWidgetSlots_connect_signal("workAreaResized(int)", "workAreaResized(int)");
+  CONNECT_SIGNAL("workAreaResized(int)");
 }
 
 #pragma ENDDUMP

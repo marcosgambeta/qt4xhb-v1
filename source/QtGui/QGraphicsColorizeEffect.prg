@@ -158,14 +158,16 @@ HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_SETSTRENGTH)
 
 void QGraphicsColorizeEffectSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QGraphicsColorizeEffectSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_ONCOLORCHANGED)
 {
-  QGraphicsColorizeEffectSlots_connect_signal("colorChanged(QColor)", "colorChanged(QColor)");
+  CONNECT_SIGNAL("colorChanged(QColor)");
 }
 
 HB_FUNC_STATIC(QGRAPHICSCOLORIZEEFFECT_ONSTRENGTHCHANGED)
 {
-  QGraphicsColorizeEffectSlots_connect_signal("strengthChanged(qreal)", "strengthChanged(qreal)");
+  CONNECT_SIGNAL("strengthChanged(qreal)");
 }
 
 #pragma ENDDUMP

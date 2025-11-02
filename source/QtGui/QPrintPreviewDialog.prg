@@ -166,9 +166,11 @@ HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_SETVISIBLE)
 
 void QPrintPreviewDialogSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QPrintPreviewDialogSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_ONPAINTREQUESTED)
 {
-  QPrintPreviewDialogSlots_connect_signal("paintRequested(QPrinter*)", "paintRequested(QPrinter*)");
+  CONNECT_SIGNAL("paintRequested(QPrinter*)");
 }
 
 #pragma ENDDUMP

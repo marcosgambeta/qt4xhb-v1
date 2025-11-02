@@ -504,9 +504,11 @@ HB_FUNC_STATIC(QLCDNUMBER_SETSMALLDECIMALPOINT)
 
 void QLCDNumberSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QLCDNumberSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QLCDNUMBER_ONOVERFLOW)
 {
-  QLCDNumberSlots_connect_signal("overflow()", "overflow()");
+  CONNECT_SIGNAL("overflow()");
 }
 
 #pragma ENDDUMP

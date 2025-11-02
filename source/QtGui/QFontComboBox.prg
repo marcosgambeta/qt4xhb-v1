@@ -217,9 +217,11 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_SETCURRENTFONT)
 
 void QFontComboBoxSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QFontComboBoxSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QFONTCOMBOBOX_ONCURRENTFONTCHANGED)
 {
-  QFontComboBoxSlots_connect_signal("currentFontChanged(QFont)", "currentFontChanged(QFont)");
+  CONNECT_SIGNAL("currentFontChanged(QFont)");
 }
 
 #pragma ENDDUMP

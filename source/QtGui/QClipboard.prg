@@ -348,24 +348,26 @@ HB_FUNC_STATIC(QCLIPBOARD_TEXT)
 
 void QClipboardSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QClipboardSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QCLIPBOARD_ONCHANGED)
 {
-  QClipboardSlots_connect_signal("changed(QClipboard::Mode)", "changed(QClipboard::Mode)");
+  CONNECT_SIGNAL("changed(QClipboard::Mode)");
 }
 
 HB_FUNC_STATIC(QCLIPBOARD_ONDATACHANGED)
 {
-  QClipboardSlots_connect_signal("dataChanged()", "dataChanged()");
+  CONNECT_SIGNAL("dataChanged()");
 }
 
 HB_FUNC_STATIC(QCLIPBOARD_ONFINDBUFFERCHANGED)
 {
-  QClipboardSlots_connect_signal("findBufferChanged()", "findBufferChanged()");
+  CONNECT_SIGNAL("findBufferChanged()");
 }
 
 HB_FUNC_STATIC(QCLIPBOARD_ONSELECTIONCHANGED)
 {
-  QClipboardSlots_connect_signal("selectionChanged()", "selectionChanged()");
+  CONNECT_SIGNAL("selectionChanged()");
 }
 
 #pragma ENDDUMP

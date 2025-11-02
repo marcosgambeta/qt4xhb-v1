@@ -670,9 +670,11 @@ HB_FUNC_STATIC(QMDIAREA_TILESUBWINDOWS)
 
 void QMdiAreaSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QMdiAreaSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QMDIAREA_ONSUBWINDOWACTIVATED)
 {
-  QMdiAreaSlots_connect_signal("subWindowActivated(QMdiSubWindow*)", "subWindowActivated(QMdiSubWindow*)");
+  CONNECT_SIGNAL("subWindowActivated(QMdiSubWindow*)");
 }
 
 #pragma ENDDUMP

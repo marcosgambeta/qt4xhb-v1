@@ -1334,39 +1334,41 @@ HB_FUNC_STATIC(QCOMBOBOX_SETEDITTEXT)
 
 void QComboBoxSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QComboBoxSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QCOMBOBOX_ONACTIVATED1)
 {
-  QComboBoxSlots_connect_signal("activated(int)", "activated(int)");
+  CONNECT_SIGNAL("activated(int)");
 }
 
 HB_FUNC_STATIC(QCOMBOBOX_ONACTIVATED2)
 {
-  QComboBoxSlots_connect_signal("activated(QString)", "activated(QString)");
+  CONNECT_SIGNAL("activated(QString)");
 }
 
 HB_FUNC_STATIC(QCOMBOBOX_ONCURRENTINDEXCHANGED1)
 {
-  QComboBoxSlots_connect_signal("currentIndexChanged(int)", "currentIndexChanged(int)");
+  CONNECT_SIGNAL("currentIndexChanged(int)");
 }
 
 HB_FUNC_STATIC(QCOMBOBOX_ONCURRENTINDEXCHANGED2)
 {
-  QComboBoxSlots_connect_signal("currentIndexChanged(QString)", "currentIndexChanged(QString)");
+  CONNECT_SIGNAL("currentIndexChanged(QString)");
 }
 
 HB_FUNC_STATIC(QCOMBOBOX_ONEDITTEXTCHANGED)
 {
-  QComboBoxSlots_connect_signal("editTextChanged(QString)", "editTextChanged(QString)");
+  CONNECT_SIGNAL("editTextChanged(QString)");
 }
 
 HB_FUNC_STATIC(QCOMBOBOX_ONHIGHLIGHTED1)
 {
-  QComboBoxSlots_connect_signal("highlighted(int)", "highlighted(int)");
+  CONNECT_SIGNAL("highlighted(int)");
 }
 
 HB_FUNC_STATIC(QCOMBOBOX_ONHIGHLIGHTED2)
 {
-  QComboBoxSlots_connect_signal("highlighted(QString)", "highlighted(QString)");
+  CONNECT_SIGNAL("highlighted(QString)");
 }
 
 // for compatibility

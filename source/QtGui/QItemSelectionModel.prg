@@ -495,28 +495,26 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SETCURRENTINDEX)
 
 void QItemSelectionModelSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QItemSelectionModelSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_ONCURRENTCHANGED)
 {
-  QItemSelectionModelSlots_connect_signal("currentChanged(QModelIndex,QModelIndex)",
-                                          "currentChanged(QModelIndex,QModelIndex)");
+  CONNECT_SIGNAL("currentChanged(QModelIndex,QModelIndex)");
 }
 
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_ONCURRENTCOLUMNCHANGED)
 {
-  QItemSelectionModelSlots_connect_signal("currentColumnChanged(QModelIndex,QModelIndex)",
-                                          "currentColumnChanged(QModelIndex,QModelIndex)");
+  CONNECT_SIGNAL("currentColumnChanged(QModelIndex,QModelIndex)");
 }
 
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_ONCURRENTROWCHANGED)
 {
-  QItemSelectionModelSlots_connect_signal("currentRowChanged(QModelIndex,QModelIndex)",
-                                          "currentRowChanged(QModelIndex,QModelIndex)");
+  CONNECT_SIGNAL("currentRowChanged(QModelIndex,QModelIndex)");
 }
 
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_ONSELECTIONCHANGED)
 {
-  QItemSelectionModelSlots_connect_signal("selectionChanged(QItemSelection,QItemSelection)",
-                                          "selectionChanged(QItemSelection,QItemSelection)");
+  CONNECT_SIGNAL("selectionChanged(QItemSelection,QItemSelection)");
 }
 
 #pragma ENDDUMP

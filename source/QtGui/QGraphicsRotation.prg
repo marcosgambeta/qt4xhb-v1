@@ -226,19 +226,21 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_APPLYTO)
 
 void QGraphicsRotationSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QGraphicsRotationSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QGRAPHICSROTATION_ONANGLECHANGED)
 {
-  QGraphicsRotationSlots_connect_signal("angleChanged()", "angleChanged()");
+  CONNECT_SIGNAL("angleChanged()");
 }
 
 HB_FUNC_STATIC(QGRAPHICSROTATION_ONAXISCHANGED)
 {
-  QGraphicsRotationSlots_connect_signal("axisChanged()", "axisChanged()");
+  CONNECT_SIGNAL("axisChanged()");
 }
 
 HB_FUNC_STATIC(QGRAPHICSROTATION_ONORIGINCHANGED)
 {
-  QGraphicsRotationSlots_connect_signal("originChanged()", "originChanged()");
+  CONNECT_SIGNAL("originChanged()");
 }
 
 #pragma ENDDUMP

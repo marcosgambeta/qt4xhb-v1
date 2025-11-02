@@ -177,15 +177,16 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_SETBLURRADIUS)
 
 void QGraphicsBlurEffectSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QGraphicsBlurEffectSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_ONBLURHINTSCHANGED)
 {
-  QGraphicsBlurEffectSlots_connect_signal("blurHintsChanged(QGraphicsBlurEffect::BlurHints)",
-                                          "blurHintsChanged(QGraphicsBlurEffect::BlurHints)");
+  CONNECT_SIGNAL("blurHintsChanged(QGraphicsBlurEffect::BlurHints)");
 }
 
 HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_ONBLURRADIUSCHANGED)
 {
-  QGraphicsBlurEffectSlots_connect_signal("blurRadiusChanged(qreal)", "blurRadiusChanged(qreal)");
+  CONNECT_SIGNAL("blurRadiusChanged(qreal)");
 }
 
 #pragma ENDDUMP

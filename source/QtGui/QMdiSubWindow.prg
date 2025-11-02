@@ -388,15 +388,16 @@ HB_FUNC_STATIC(QMDISUBWINDOW_SHOWSYSTEMMENU)
 
 void QMdiSubWindowSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QMdiSubWindowSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QMDISUBWINDOW_ONABOUTTOACTIVATE)
 {
-  QMdiSubWindowSlots_connect_signal("aboutToActivate()", "aboutToActivate()");
+  CONNECT_SIGNAL("aboutToActivate()");
 }
 
 HB_FUNC_STATIC(QMDISUBWINDOW_ONWINDOWSTATECHANGED)
 {
-  QMdiSubWindowSlots_connect_signal("windowStateChanged(Qt::WindowStates,Qt::WindowStates)",
-                                    "windowStateChanged(Qt::WindowStates,Qt::WindowStates)");
+  CONNECT_SIGNAL("windowStateChanged(Qt::WindowStates,Qt::WindowStates)");
 }
 
 #pragma ENDDUMP

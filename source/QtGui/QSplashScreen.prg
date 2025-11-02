@@ -209,9 +209,11 @@ HB_FUNC_STATIC(QSPLASHSCREEN_SHOWMESSAGE)
 
 void QSplashScreenSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QSplashScreenSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QSPLASHSCREEN_ONMESSAGECHANGED)
 {
-  QSplashScreenSlots_connect_signal("messageChanged(QString)", "messageChanged(QString)");
+  CONNECT_SIGNAL("messageChanged(QString)");
 }
 
 #pragma ENDDUMP

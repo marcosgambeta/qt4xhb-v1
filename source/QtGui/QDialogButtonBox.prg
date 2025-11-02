@@ -386,24 +386,26 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_STANDARDBUTTONS)
 
 void QDialogButtonBoxSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QDialogButtonBoxSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QDIALOGBUTTONBOX_ONACCEPTED)
 {
-  QDialogButtonBoxSlots_connect_signal("accepted()", "accepted()");
+  CONNECT_SIGNAL("accepted()");
 }
 
 HB_FUNC_STATIC(QDIALOGBUTTONBOX_ONCLICKED)
 {
-  QDialogButtonBoxSlots_connect_signal("clicked(QAbstractButton*)", "clicked(QAbstractButton*)");
+  CONNECT_SIGNAL("clicked(QAbstractButton*)");
 }
 
 HB_FUNC_STATIC(QDIALOGBUTTONBOX_ONHELPREQUESTED)
 {
-  QDialogButtonBoxSlots_connect_signal("helpRequested()", "helpRequested()");
+  CONNECT_SIGNAL("helpRequested()");
 }
 
 HB_FUNC_STATIC(QDIALOGBUTTONBOX_ONREJECTED)
 {
-  QDialogButtonBoxSlots_connect_signal("rejected()", "rejected()");
+  CONNECT_SIGNAL("rejected()");
 }
 
 #pragma ENDDUMP

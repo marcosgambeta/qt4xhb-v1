@@ -365,15 +365,16 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_SUPPORTSMESSAGES)
 
 void QSystemTrayIconSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QSystemTrayIconSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QSYSTEMTRAYICON_ONACTIVATED)
 {
-  QSystemTrayIconSlots_connect_signal("activated(QSystemTrayIcon::ActivationReason)",
-                                      "activated(QSystemTrayIcon::ActivationReason)");
+  CONNECT_SIGNAL("activated(QSystemTrayIcon::ActivationReason)");
 }
 
 HB_FUNC_STATIC(QSYSTEMTRAYICON_ONMESSAGECLICKED)
 {
-  QSystemTrayIconSlots_connect_signal("messageClicked()", "messageClicked()");
+  CONNECT_SIGNAL("messageClicked()");
 }
 
 #pragma ENDDUMP

@@ -261,29 +261,31 @@ HB_FUNC_STATIC(QGRAPHICSSCALE_APPLYTO)
 
 void QGraphicsScaleSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QGraphicsScaleSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QGRAPHICSSCALE_ONORIGINCHANGED)
 {
-  QGraphicsScaleSlots_connect_signal("originChanged()", "originChanged()");
+  CONNECT_SIGNAL("originChanged()");
 }
 
 HB_FUNC_STATIC(QGRAPHICSSCALE_ONSCALECHANGED)
 {
-  QGraphicsScaleSlots_connect_signal("scaleChanged()", "scaleChanged()");
+  CONNECT_SIGNAL("scaleChanged()");
 }
 
 HB_FUNC_STATIC(QGRAPHICSSCALE_ONXSCALECHANGED)
 {
-  QGraphicsScaleSlots_connect_signal("xScaleChanged()", "xScaleChanged()");
+  CONNECT_SIGNAL("xScaleChanged()");
 }
 
 HB_FUNC_STATIC(QGRAPHICSSCALE_ONYSCALECHANGED)
 {
-  QGraphicsScaleSlots_connect_signal("yScaleChanged()", "yScaleChanged()");
+  CONNECT_SIGNAL("yScaleChanged()");
 }
 
 HB_FUNC_STATIC(QGRAPHICSSCALE_ONZSCALECHANGED)
 {
-  QGraphicsScaleSlots_connect_signal("zScaleChanged()", "zScaleChanged()");
+  CONNECT_SIGNAL("zScaleChanged()");
 }
 
 #pragma ENDDUMP

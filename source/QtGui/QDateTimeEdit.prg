@@ -1072,19 +1072,21 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETTIME)
 
 void QDateTimeEditSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QDateTimeEditSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QDATETIMEEDIT_ONDATECHANGED)
 {
-  QDateTimeEditSlots_connect_signal("dateChanged(QDate)", "dateChanged(QDate)");
+  CONNECT_SIGNAL("dateChanged(QDate)");
 }
 
 HB_FUNC_STATIC(QDATETIMEEDIT_ONDATETIMECHANGED)
 {
-  QDateTimeEditSlots_connect_signal("dateTimeChanged(QDateTime)", "dateTimeChanged(QDateTime)");
+  CONNECT_SIGNAL("dateTimeChanged(QDateTime)");
 }
 
 HB_FUNC_STATIC(QDATETIMEEDIT_ONTIMECHANGED)
 {
-  QDateTimeEditSlots_connect_signal("timeChanged(QTime)", "timeChanged(QTime)");
+  CONNECT_SIGNAL("timeChanged(QTime)");
 }
 
 #pragma ENDDUMP

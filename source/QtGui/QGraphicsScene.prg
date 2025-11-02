@@ -1698,19 +1698,21 @@ HB_FUNC_STATIC(QGRAPHICSSCENE_CLEARSELECTION)
 
 void QGraphicsSceneSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QGraphicsSceneSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QGRAPHICSSCENE_ONCHANGED)
 {
-  QGraphicsSceneSlots_connect_signal("changed(QList<QRectF>)", "changed(QList<QRectF>)");
+  CONNECT_SIGNAL("changed(QList<QRectF>)");
 }
 
 HB_FUNC_STATIC(QGRAPHICSSCENE_ONSCENERECTCHANGED)
 {
-  QGraphicsSceneSlots_connect_signal("sceneRectChanged(QRectF)", "sceneRectChanged(QRectF)");
+  CONNECT_SIGNAL("sceneRectChanged(QRectF)");
 }
 
 HB_FUNC_STATIC(QGRAPHICSSCENE_ONSELECTIONCHANGED)
 {
-  QGraphicsSceneSlots_connect_signal("selectionChanged()", "selectionChanged()");
+  CONNECT_SIGNAL("selectionChanged()");
 }
 
 #pragma ENDDUMP

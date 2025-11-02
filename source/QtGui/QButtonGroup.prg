@@ -307,34 +307,36 @@ HB_FUNC_STATIC(QBUTTONGROUP_SETID)
 
 void QButtonGroupSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QButtonGroupSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONCLICKED1)
 {
-  QButtonGroupSlots_connect_signal("buttonClicked(QAbstractButton*)", "buttonClicked(QAbstractButton*)");
+  CONNECT_SIGNAL("buttonClicked(QAbstractButton*)");
 }
 
 HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONCLICKED2)
 {
-  QButtonGroupSlots_connect_signal("buttonClicked(int)", "buttonClicked(int)");
+  CONNECT_SIGNAL("buttonClicked(int)");
 }
 
 HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONPRESSED1)
 {
-  QButtonGroupSlots_connect_signal("buttonPressed(QAbstractButton*)", "buttonPressed(QAbstractButton*)");
+  CONNECT_SIGNAL("buttonPressed(QAbstractButton*)");
 }
 
 HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONPRESSED2)
 {
-  QButtonGroupSlots_connect_signal("buttonPressed(int)", "buttonPressed(int)");
+  CONNECT_SIGNAL("buttonPressed(int)");
 }
 
 HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONRELEASED1)
 {
-  QButtonGroupSlots_connect_signal("buttonReleased(QAbstractButton*)", "buttonReleased(QAbstractButton*)");
+  CONNECT_SIGNAL("buttonReleased(QAbstractButton*)");
 }
 
 HB_FUNC_STATIC(QBUTTONGROUP_ONBUTTONRELEASED2)
 {
-  QButtonGroupSlots_connect_signal("buttonReleased(int)", "buttonReleased(int)");
+  CONNECT_SIGNAL("buttonReleased(int)");
 }
 
 #pragma ENDDUMP
