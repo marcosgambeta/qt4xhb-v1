@@ -410,26 +410,26 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_STOP)
 
 void QAbstractAnimationSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QAbstractAnimationSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QABSTRACTANIMATION_ONCURRENTLOOPCHANGED)
 {
-  QAbstractAnimationSlots_connect_signal("currentLoopChanged(int)", "currentLoopChanged(int)");
+  CONNECT_SIGNAL("currentLoopChanged(int)");
 }
 
 HB_FUNC_STATIC(QABSTRACTANIMATION_ONDIRECTIONCHANGED)
 {
-  QAbstractAnimationSlots_connect_signal("directionChanged(QAbstractAnimation::Direction)",
-                                         "directionChanged(QAbstractAnimation::Direction)");
+  CONNECT_SIGNAL("directionChanged(QAbstractAnimation::Direction)");
 }
 
 HB_FUNC_STATIC(QABSTRACTANIMATION_ONFINISHED)
 {
-  QAbstractAnimationSlots_connect_signal("finished()", "finished()");
+  CONNECT_SIGNAL("finished()");
 }
 
 HB_FUNC_STATIC(QABSTRACTANIMATION_ONSTATECHANGED)
 {
-  QAbstractAnimationSlots_connect_signal("stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)",
-                                         "stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)");
+  CONNECT_SIGNAL("stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)");
 }
 
 #pragma ENDDUMP

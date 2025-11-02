@@ -108,14 +108,16 @@ HB_FUNC_STATIC(QABSTRACTSTATE_PARENTSTATE)
 
 void QAbstractStateSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QAbstractStateSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QABSTRACTSTATE_ONENTERED)
 {
-  QAbstractStateSlots_connect_signal("entered()", "entered()");
+  CONNECT_SIGNAL("entered()");
 }
 
 HB_FUNC_STATIC(QABSTRACTSTATE_ONEXITED)
 {
-  QAbstractStateSlots_connect_signal("exited()", "exited()");
+  CONNECT_SIGNAL("exited()");
 }
 
 #pragma ENDDUMP

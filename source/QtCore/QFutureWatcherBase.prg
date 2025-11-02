@@ -409,54 +409,56 @@ HB_FUNC_STATIC(QFUTUREWATCHERBASE_TOGGLEPAUSED)
 
 void QFutureWatcherBaseSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QFutureWatcherBaseSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QFUTUREWATCHERBASE_ONSTARTED)
 {
-  QFutureWatcherBaseSlots_connect_signal("started()", "started()");
+  CONNECT_SIGNAL("started()");
 }
 
 HB_FUNC_STATIC(QFUTUREWATCHERBASE_ONFINISHED)
 {
-  QFutureWatcherBaseSlots_connect_signal("finished()", "finished()");
+  CONNECT_SIGNAL("finished()");
 }
 
 HB_FUNC_STATIC(QFUTUREWATCHERBASE_ONCANCELED)
 {
-  QFutureWatcherBaseSlots_connect_signal("canceled()", "canceled()");
+  CONNECT_SIGNAL("canceled()");
 }
 
 HB_FUNC_STATIC(QFUTUREWATCHERBASE_ONPAUSED)
 {
-  QFutureWatcherBaseSlots_connect_signal("paused()", "paused()");
+  CONNECT_SIGNAL("paused()");
 }
 
 HB_FUNC_STATIC(QFUTUREWATCHERBASE_ONRESUMED)
 {
-  QFutureWatcherBaseSlots_connect_signal("resumed()", "resumed()");
+  CONNECT_SIGNAL("resumed()");
 }
 
 HB_FUNC_STATIC(QFUTUREWATCHERBASE_ONRESULTREADYAT)
 {
-  QFutureWatcherBaseSlots_connect_signal("resultReadyAt(int)", "resultReadyAt(int)");
+  CONNECT_SIGNAL("resultReadyAt(int)");
 }
 
 HB_FUNC_STATIC(QFUTUREWATCHERBASE_ONRESULTSREADYAT)
 {
-  QFutureWatcherBaseSlots_connect_signal("resultsReadyAt(int,int)", "resultsReadyAt(int,int)");
+  CONNECT_SIGNAL("resultsReadyAt(int,int)");
 }
 
 HB_FUNC_STATIC(QFUTUREWATCHERBASE_ONPROGRESSRANGECHANGED)
 {
-  QFutureWatcherBaseSlots_connect_signal("progressRangeChanged(int,int)", "progressRangeChanged(int,int)");
+  CONNECT_SIGNAL("progressRangeChanged(int,int)");
 }
 
 HB_FUNC_STATIC(QFUTUREWATCHERBASE_ONPROGRESSVALUECHANGED)
 {
-  QFutureWatcherBaseSlots_connect_signal("progressValueChanged(int)", "progressValueChanged(int)");
+  CONNECT_SIGNAL("progressValueChanged(int)");
 }
 
 HB_FUNC_STATIC(QFUTUREWATCHERBASE_ONPROGRESSTEXTCHANGED)
 {
-  QFutureWatcherBaseSlots_connect_signal("progressTextChanged(QString)", "progressTextChanged(QString)");
+  CONNECT_SIGNAL("progressTextChanged(QString)");
 }
 
 #pragma ENDDUMP

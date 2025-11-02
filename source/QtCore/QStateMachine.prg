@@ -478,14 +478,16 @@ HB_FUNC_STATIC(QSTATEMACHINE_STOP)
 
 void QStateMachineSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QStateMachineSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QSTATEMACHINE_ONSTARTED)
 {
-  QStateMachineSlots_connect_signal("started()", "started()");
+  CONNECT_SIGNAL("started()");
 }
 
 HB_FUNC_STATIC(QSTATEMACHINE_ONSTOPPED)
 {
-  QStateMachineSlots_connect_signal("stopped()", "stopped()");
+  CONNECT_SIGNAL("stopped()");
 }
 
 #pragma ENDDUMP

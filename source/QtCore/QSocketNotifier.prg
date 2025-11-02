@@ -154,9 +154,11 @@ HB_FUNC_STATIC(QSOCKETNOTIFIER_SETENABLED)
 
 void QSocketNotifierSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QSocketNotifierSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QSOCKETNOTIFIER_ONACTIVATED)
 {
-  QSocketNotifierSlots_connect_signal("activated(int)", "activated(int)");
+  CONNECT_SIGNAL("activated(int)");
 }
 
 #pragma ENDDUMP

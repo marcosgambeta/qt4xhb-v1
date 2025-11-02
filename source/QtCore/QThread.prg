@@ -349,14 +349,16 @@ HB_FUNC_STATIC(QTHREAD_YIELDCURRENTTHREAD)
 
 void QThreadSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QThreadSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QTHREAD_ONFINISHED)
 {
-  QThreadSlots_connect_signal("finished()", "finished()");
+  CONNECT_SIGNAL("finished()");
 }
 
 HB_FUNC_STATIC(QTHREAD_ONSTARTED)
 {
-  QThreadSlots_connect_signal("started()", "started()");
+  CONNECT_SIGNAL("started()");
 }
 
 #pragma ENDDUMP

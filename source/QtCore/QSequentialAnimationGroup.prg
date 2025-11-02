@@ -158,10 +158,11 @@ HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_DURATION)
 
 void QSequentialAnimationGroupSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QSequentialAnimationGroupSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QSEQUENTIALANIMATIONGROUP_ONCURRENTANIMATIONCHANGED)
 {
-  QSequentialAnimationGroupSlots_connect_signal("currentAnimationChanged(QAbstractAnimation*)",
-                                                "currentAnimationChanged(QAbstractAnimation*)");
+  CONNECT_SIGNAL("currentAnimationChanged(QAbstractAnimation*)");
 }
 
 #pragma ENDDUMP

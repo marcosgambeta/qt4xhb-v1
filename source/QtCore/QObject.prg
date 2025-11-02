@@ -1620,9 +1620,11 @@ HB_FUNC_STATIC(QOBJECT_SETSELFDESTRUCTION)
 
 void QObjectSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QObjectSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QOBJECT_ONDESTROYED)
 {
-  QObjectSlots_connect_signal("destroyed(QObject*)", "destroyed(QObject*)");
+  CONNECT_SIGNAL("destroyed(QObject*)");
 }
 
 #pragma ENDDUMP

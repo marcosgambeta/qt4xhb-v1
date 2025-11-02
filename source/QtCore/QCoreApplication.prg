@@ -686,9 +686,11 @@ HB_FUNC_STATIC(QCOREAPPLICATION_TRANSLATE)
 
 void QCoreApplicationSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QCoreApplicationSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QCOREAPPLICATION_ONABOUTTOQUIT)
 {
-  QCoreApplicationSlots_connect_signal("aboutToQuit()", "aboutToQuit()");
+  CONNECT_SIGNAL("aboutToQuit()");
 }
 
 #pragma ENDDUMP

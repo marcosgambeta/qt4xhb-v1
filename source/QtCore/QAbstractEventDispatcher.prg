@@ -304,14 +304,16 @@ HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_INSTANCE)
 
 void QAbstractEventDispatcherSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QAbstractEventDispatcherSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_ONABOUTTOBLOCK)
 {
-  QAbstractEventDispatcherSlots_connect_signal("aboutToBlock()", "aboutToBlock()");
+  CONNECT_SIGNAL("aboutToBlock()");
 }
 
 HB_FUNC_STATIC(QABSTRACTEVENTDISPATCHER_ONAWAKE)
 {
-  QAbstractEventDispatcherSlots_connect_signal("awake()", "awake()");
+  CONNECT_SIGNAL("awake()");
 }
 
 #pragma ENDDUMP

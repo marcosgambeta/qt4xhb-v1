@@ -300,9 +300,11 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_TARGETSTATES)
 
 void QAbstractTransitionSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QAbstractTransitionSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QABSTRACTTRANSITION_ONTRIGGERED)
 {
-  QAbstractTransitionSlots_connect_signal("triggered()", "triggered()");
+  CONNECT_SIGNAL("triggered()");
 }
 
 #pragma ENDDUMP

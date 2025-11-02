@@ -256,9 +256,11 @@ HB_FUNC_STATIC(QTIMER_SINGLESHOT)
 
 void QTimerSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QTimerSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QTIMER_ONTIMEOUT)
 {
-  QTimerSlots_connect_signal("timeout()", "timeout()");
+  CONNECT_SIGNAL("timeout()");
 }
 
 #pragma ENDDUMP

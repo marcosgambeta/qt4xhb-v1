@@ -797,105 +797,96 @@ HB_FUNC_STATIC(QABSTRACTITEMMODEL_SUBMIT)
 
 void QAbstractItemModelSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QAbstractItemModelSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEINSERTED)
 {
-  QAbstractItemModelSlots_connect_signal("columnsAboutToBeInserted(QModelIndex,int,int)",
-                                         "columnsAboutToBeInserted(QModelIndex,int,int)");
+  CONNECT_SIGNAL("columnsAboutToBeInserted(QModelIndex,int,int)");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEMOVED)
 {
-  QAbstractItemModelSlots_connect_signal("columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)",
-                                         "columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)");
+  CONNECT_SIGNAL("columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEREMOVED)
 {
-  QAbstractItemModelSlots_connect_signal("columnsAboutToBeRemoved(QModelIndex,int,int)",
-                                         "columnsAboutToBeRemoved(QModelIndex,int,int)");
+  CONNECT_SIGNAL("columnsAboutToBeRemoved(QModelIndex,int,int)");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONCOLUMNSINSERTED)
 {
-  QAbstractItemModelSlots_connect_signal("columnsInserted(QModelIndex,int,int)",
-                                         "columnsInserted(QModelIndex,int,int)");
+  CONNECT_SIGNAL("columnsInserted(QModelIndex,int,int)");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONCOLUMNSMOVED)
 {
-  QAbstractItemModelSlots_connect_signal("columnsMoved(QModelIndex,int,int,QModelIndex,int)",
-                                         "columnsMoved(QModelIndex,int,int,QModelIndex,int)");
+  CONNECT_SIGNAL("columnsMoved(QModelIndex,int,int,QModelIndex,int)");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONCOLUMNSREMOVED)
 {
-  QAbstractItemModelSlots_connect_signal("columnsRemoved(QModelIndex,int,int)", "columnsRemoved(QModelIndex,int,int)");
+  CONNECT_SIGNAL("columnsRemoved(QModelIndex,int,int)");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONDATACHANGED)
 {
-  QAbstractItemModelSlots_connect_signal("dataChanged(QModelIndex,QModelIndex)",
-                                         "dataChanged(QModelIndex,QModelIndex)");
+  CONNECT_SIGNAL("dataChanged(QModelIndex,QModelIndex)");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONHEADERDATACHANGED)
 {
-  QAbstractItemModelSlots_connect_signal("headerDataChanged(Qt::Orientation,int,int)",
-                                         "headerDataChanged(Qt::Orientation,int,int)");
+  CONNECT_SIGNAL("headerDataChanged(Qt::Orientation,int,int)");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONLAYOUTABOUTTOBECHANGED)
 {
-  QAbstractItemModelSlots_connect_signal("layoutAboutToBeChanged()", "layoutAboutToBeChanged()");
+  CONNECT_SIGNAL("layoutAboutToBeChanged()");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONLAYOUTCHANGED)
 {
-  QAbstractItemModelSlots_connect_signal("layoutChanged()", "layoutChanged()");
+  CONNECT_SIGNAL("layoutChanged()");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONMODELABOUTTOBERESET)
 {
-  QAbstractItemModelSlots_connect_signal("modelAboutToBeReset()", "modelAboutToBeReset()");
+  CONNECT_SIGNAL("modelAboutToBeReset()");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONMODELRESET)
 {
-  QAbstractItemModelSlots_connect_signal("modelReset()", "modelReset()");
+  CONNECT_SIGNAL("modelReset()");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONROWSABOUTTOBEINSERTED)
 {
-  QAbstractItemModelSlots_connect_signal("rowsAboutToBeInserted(QModelIndex,int,int)",
-                                         "rowsAboutToBeInserted(QModelIndex,int,int)");
+  CONNECT_SIGNAL("rowsAboutToBeInserted(QModelIndex,int,int)");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONROWSABOUTTOBEMOVED)
 {
-  QAbstractItemModelSlots_connect_signal("rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)",
-                                         "rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)");
+  CONNECT_SIGNAL("rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONROWSABOUTTOBEREMOVED)
 {
-  QAbstractItemModelSlots_connect_signal("rowsAboutToBeRemoved(QModelIndex,int,int)",
-                                         "rowsAboutToBeRemoved(QModelIndex,int,int)");
+  CONNECT_SIGNAL("rowsAboutToBeRemoved(QModelIndex,int,int)");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONROWSINSERTED)
 {
-  QAbstractItemModelSlots_connect_signal("rowsInserted(QModelIndex,int,int)", "rowsInserted(QModelIndex,int,int)");
+  CONNECT_SIGNAL("rowsInserted(QModelIndex,int,int)");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONROWSMOVED)
 {
-  QAbstractItemModelSlots_connect_signal("rowsMoved(QModelIndex,int,int,QModelIndex,int)",
-                                         "rowsMoved(QModelIndex,int,int,QModelIndex,int)");
+  CONNECT_SIGNAL("rowsMoved(QModelIndex,int,int,QModelIndex,int)");
 }
 
 HB_FUNC_STATIC(QABSTRACTITEMMODEL_ONROWSREMOVED)
 {
-  QAbstractItemModelSlots_connect_signal("rowsRemoved(QModelIndex,int,int)", "rowsRemoved(QModelIndex,int,int)");
+  CONNECT_SIGNAL("rowsRemoved(QModelIndex,int,int)");
 }
 
 #pragma ENDDUMP

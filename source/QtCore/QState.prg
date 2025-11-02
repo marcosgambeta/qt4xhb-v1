@@ -322,14 +322,16 @@ HB_FUNC_STATIC(QSTATE_TRANSITIONS)
 
 void QStateSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QStateSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QSTATE_ONFINISHED)
 {
-  QStateSlots_connect_signal("finished()", "finished()");
+  CONNECT_SIGNAL("finished()");
 }
 
 HB_FUNC_STATIC(QSTATE_ONPROPERTIESASSIGNED)
 {
-  QStateSlots_connect_signal("propertiesAssigned()", "propertiesAssigned()");
+  CONNECT_SIGNAL("propertiesAssigned()");
 }
 
 #pragma ENDDUMP

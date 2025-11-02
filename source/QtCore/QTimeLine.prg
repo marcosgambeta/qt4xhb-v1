@@ -639,24 +639,26 @@ HB_FUNC_STATIC(QTIMELINE_TOGGLEDIRECTION)
 
 void QTimeLineSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QTimeLineSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QTIMELINE_ONFINISHED)
 {
-  QTimeLineSlots_connect_signal("finished()", "finished()");
+  CONNECT_SIGNAL("finished()");
 }
 
 HB_FUNC_STATIC(QTIMELINE_ONFRAMECHANGED)
 {
-  QTimeLineSlots_connect_signal("frameChanged(int)", "frameChanged(int)");
+  CONNECT_SIGNAL("frameChanged(int)");
 }
 
 HB_FUNC_STATIC(QTIMELINE_ONSTATECHANGED)
 {
-  QTimeLineSlots_connect_signal("stateChanged(QTimeLine::State)", "stateChanged(QTimeLine::State)");
+  CONNECT_SIGNAL("stateChanged(QTimeLine::State)");
 }
 
 HB_FUNC_STATIC(QTIMELINE_ONVALUECHANGED)
 {
-  QTimeLineSlots_connect_signal("valueChanged(qreal)", "valueChanged(qreal)");
+  CONNECT_SIGNAL("valueChanged(qreal)");
 }
 
 #pragma ENDDUMP

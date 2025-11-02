@@ -204,14 +204,16 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_REMOVEPATHS)
 
 void QFileSystemWatcherSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QFileSystemWatcherSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QFILESYSTEMWATCHER_ONDIRECTORYCHANGED)
 {
-  QFileSystemWatcherSlots_connect_signal("directoryChanged(QString)", "directoryChanged(QString)");
+  CONNECT_SIGNAL("directoryChanged(QString)");
 }
 
 HB_FUNC_STATIC(QFILESYSTEMWATCHER_ONFILECHANGED)
 {
-  QFileSystemWatcherSlots_connect_signal("fileChanged(QString)", "fileChanged(QString)");
+  CONNECT_SIGNAL("fileChanged(QString)");
 }
 
 #pragma ENDDUMP
