@@ -894,121 +894,121 @@ HB_FUNC_STATIC(QWEBPAGE_SHOULDINTERRUPTJAVASCRIPT)
 
 void QWebPageSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QWebPageSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QWEBPAGE_ONCONTENTSCHANGED)
 {
-  QWebPageSlots_connect_signal("contentsChanged()", "contentsChanged()");
+  CONNECT_SIGNAL("contentsChanged()");
 }
 
 HB_FUNC_STATIC(QWEBPAGE_ONDATABASEQUOTAEXCEEDED)
 {
-  QWebPageSlots_connect_signal("databaseQuotaExceeded(QWebFrame*,QString)",
-                               "databaseQuotaExceeded(QWebFrame*,QString)");
+  CONNECT_SIGNAL("databaseQuotaExceeded(QWebFrame*,QString)");
 }
 
 HB_FUNC_STATIC(QWEBPAGE_ONDOWNLOADREQUESTED)
 {
-  QWebPageSlots_connect_signal("downloadRequested(QNetworkRequest)", "downloadRequested(QNetworkRequest)");
+  CONNECT_SIGNAL("downloadRequested(QNetworkRequest)");
 }
 
 HB_FUNC_STATIC(QWEBPAGE_ONFRAMECREATED)
 {
-  QWebPageSlots_connect_signal("frameCreated(QWebFrame*)", "frameCreated(QWebFrame*)");
+  CONNECT_SIGNAL("frameCreated(QWebFrame*)");
 }
 
 HB_FUNC_STATIC(QWEBPAGE_ONGEOMETRYCHANGEREQUESTED)
 {
-  QWebPageSlots_connect_signal("geometryChangeRequested(QRect)", "geometryChangeRequested(QRect)");
+  CONNECT_SIGNAL("geometryChangeRequested(QRect)");
 }
 
 HB_FUNC_STATIC(QWEBPAGE_ONLINKCLICKED)
 {
-  QWebPageSlots_connect_signal("linkClicked(QUrl)", "linkClicked(QUrl)");
+  CONNECT_SIGNAL("linkClicked(QUrl)");
 }
 
 HB_FUNC_STATIC(QWEBPAGE_ONLINKHOVERED)
 {
-  QWebPageSlots_connect_signal("linkHovered(QString,QString,QString)", "linkHovered(QString,QString,QString)");
+  CONNECT_SIGNAL("linkHovered(QString,QString,QString)");
 }
 
 HB_FUNC_STATIC(QWEBPAGE_ONLOADFINISHED)
 {
-  QWebPageSlots_connect_signal("loadFinished(bool)", "loadFinished(bool)");
+  CONNECT_SIGNAL("loadFinished(bool)");
 }
 
 HB_FUNC_STATIC(QWEBPAGE_ONLOADPROGRESS)
 {
-  QWebPageSlots_connect_signal("loadProgress(int)", "loadProgress(int)");
+  CONNECT_SIGNAL("loadProgress(int)");
 }
 
 HB_FUNC_STATIC(QWEBPAGE_ONLOADSTARTED)
 {
-  QWebPageSlots_connect_signal("loadStarted()", "loadStarted()");
+  CONNECT_SIGNAL("loadStarted()");
 }
 
 HB_FUNC_STATIC(QWEBPAGE_ONMENUBARVISIBILITYCHANGEREQUESTED)
 {
-  QWebPageSlots_connect_signal("menuBarVisibilityChangeRequested(bool)", "menuBarVisibilityChangeRequested(bool)");
+  CONNECT_SIGNAL("menuBarVisibilityChangeRequested(bool)");
 }
 
 HB_FUNC_STATIC(QWEBPAGE_ONMICROFOCUSCHANGED)
 {
-  QWebPageSlots_connect_signal("microFocusChanged()", "microFocusChanged()");
+  CONNECT_SIGNAL("microFocusChanged()");
 }
 
 HB_FUNC_STATIC(QWEBPAGE_ONPRINTREQUESTED)
 {
-  QWebPageSlots_connect_signal("printRequested(QWebFrame*)", "printRequested(QWebFrame*)");
+  CONNECT_SIGNAL("printRequested(QWebFrame*)");
 }
 
 HB_FUNC_STATIC(QWEBPAGE_ONREPAINTREQUESTED)
 {
-  QWebPageSlots_connect_signal("repaintRequested(QRect)", "repaintRequested(QRect)");
+  CONNECT_SIGNAL("repaintRequested(QRect)");
 }
 
 HB_FUNC_STATIC(QWEBPAGE_ONRESTOREFRAMESTATEREQUESTED)
 {
-  QWebPageSlots_connect_signal("restoreFrameStateRequested(QWebFrame*)", "restoreFrameStateRequested(QWebFrame*)");
+  CONNECT_SIGNAL("restoreFrameStateRequested(QWebFrame*)");
 }
 
 HB_FUNC_STATIC(QWEBPAGE_ONSAVEFRAMESTATEREQUESTED)
 {
-  QWebPageSlots_connect_signal("saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)",
-                               "saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)");
+  CONNECT_SIGNAL("saveFrameStateRequested(QWebFrame*,QWebHistoryItem*)");
 }
 
 HB_FUNC_STATIC(QWEBPAGE_ONSCROLLREQUESTED)
 {
-  QWebPageSlots_connect_signal("scrollRequested(int,int,QRect)", "scrollRequested(int,int,QRect)");
+  CONNECT_SIGNAL("scrollRequested(int,int,QRect)");
 }
 
 HB_FUNC_STATIC(QWEBPAGE_ONSELECTIONCHANGED)
 {
-  QWebPageSlots_connect_signal("selectionChanged()", "selectionChanged()");
+  CONNECT_SIGNAL("selectionChanged()");
 }
 
 HB_FUNC_STATIC(QWEBPAGE_ONSTATUSBARMESSAGE)
 {
-  QWebPageSlots_connect_signal("statusBarMessage(QString)", "statusBarMessage(QString)");
+  CONNECT_SIGNAL("statusBarMessage(QString)");
 }
 
 HB_FUNC_STATIC(QWEBPAGE_ONSTATUSBARVISIBILITYCHANGEREQUESTED)
 {
-  QWebPageSlots_connect_signal("statusBarVisibilityChangeRequested(bool)", "statusBarVisibilityChangeRequested(bool)");
+  CONNECT_SIGNAL("statusBarVisibilityChangeRequested(bool)");
 }
 
 HB_FUNC_STATIC(QWEBPAGE_ONTOOLBARVISIBILITYCHANGEREQUESTED)
 {
-  QWebPageSlots_connect_signal("toolBarVisibilityChangeRequested(bool)", "toolBarVisibilityChangeRequested(bool)");
+  CONNECT_SIGNAL("toolBarVisibilityChangeRequested(bool)");
 }
 
 HB_FUNC_STATIC(QWEBPAGE_ONUNSUPPORTEDCONTENT)
 {
-  QWebPageSlots_connect_signal("unsupportedContent(QNetworkReply*)", "unsupportedContent(QNetworkReply*)");
+  CONNECT_SIGNAL("unsupportedContent(QNetworkReply*)");
 }
 
 HB_FUNC_STATIC(QWEBPAGE_ONWINDOWCLOSEREQUESTED)
 {
-  QWebPageSlots_connect_signal("windowCloseRequested()", "windowCloseRequested()");
+  CONNECT_SIGNAL("windowCloseRequested()");
 }
 
 #pragma ENDDUMP

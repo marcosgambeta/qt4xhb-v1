@@ -1020,49 +1020,51 @@ HB_FUNC_STATIC(QWEBFRAME_PRINT)
 
 void QWebFrameSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QWebFrameSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QWEBFRAME_ONCONTENTSSIZECHANGED)
 {
-  QWebFrameSlots_connect_signal("contentsSizeChanged(QSize)", "contentsSizeChanged(QSize)");
+  CONNECT_SIGNAL("contentsSizeChanged(QSize)");
 }
 
 HB_FUNC_STATIC(QWEBFRAME_ONICONCHANGED)
 {
-  QWebFrameSlots_connect_signal("iconChanged()", "iconChanged()");
+  CONNECT_SIGNAL("iconChanged()");
 }
 
 HB_FUNC_STATIC(QWEBFRAME_ONINITIALLAYOUTCOMPLETED)
 {
-  QWebFrameSlots_connect_signal("initialLayoutCompleted()", "initialLayoutCompleted()");
+  CONNECT_SIGNAL("initialLayoutCompleted()");
 }
 
 HB_FUNC_STATIC(QWEBFRAME_ONJAVASCRIPTWINDOWOBJECTCLEARED)
 {
-  QWebFrameSlots_connect_signal("javaScriptWindowObjectCleared()", "javaScriptWindowObjectCleared()");
+  CONNECT_SIGNAL("javaScriptWindowObjectCleared()");
 }
 
 HB_FUNC_STATIC(QWEBFRAME_ONLOADFINISHED)
 {
-  QWebFrameSlots_connect_signal("loadFinished(bool)", "loadFinished(bool)");
+  CONNECT_SIGNAL("loadFinished(bool)");
 }
 
 HB_FUNC_STATIC(QWEBFRAME_ONLOADSTARTED)
 {
-  QWebFrameSlots_connect_signal("loadStarted()", "loadStarted()");
+  CONNECT_SIGNAL("loadStarted()");
 }
 
 HB_FUNC_STATIC(QWEBFRAME_ONPAGECHANGED)
 {
-  QWebFrameSlots_connect_signal("pageChanged()", "pageChanged()");
+  CONNECT_SIGNAL("pageChanged()");
 }
 
 HB_FUNC_STATIC(QWEBFRAME_ONTITLECHANGED)
 {
-  QWebFrameSlots_connect_signal("titleChanged(QString)", "titleChanged(QString)");
+  CONNECT_SIGNAL("titleChanged(QString)");
 }
 
 HB_FUNC_STATIC(QWEBFRAME_ONURLCHANGED)
 {
-  QWebFrameSlots_connect_signal("urlChanged(QUrl)", "urlChanged(QUrl)");
+  CONNECT_SIGNAL("urlChanged(QUrl)");
 }
 
 #pragma ENDDUMP

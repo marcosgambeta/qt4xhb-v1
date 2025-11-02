@@ -608,44 +608,46 @@ HB_FUNC_STATIC(QGRAPHICSWEBVIEW_STOP)
 
 void QGraphicsWebViewSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QGraphicsWebViewSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ONICONCHANGED)
 {
-  QGraphicsWebViewSlots_connect_signal("iconChanged()", "iconChanged()");
+  CONNECT_SIGNAL("iconChanged()");
 }
 
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ONLINKCLICKED)
 {
-  QGraphicsWebViewSlots_connect_signal("linkClicked(QUrl)", "linkClicked(QUrl)");
+  CONNECT_SIGNAL("linkClicked(QUrl)");
 }
 
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ONLOADFINISHED)
 {
-  QGraphicsWebViewSlots_connect_signal("loadFinished(bool)", "loadFinished(bool)");
+  CONNECT_SIGNAL("loadFinished(bool)");
 }
 
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ONLOADPROGRESS)
 {
-  QGraphicsWebViewSlots_connect_signal("loadProgress(int)", "loadProgress(int)");
+  CONNECT_SIGNAL("loadProgress(int)");
 }
 
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ONLOADSTARTED)
 {
-  QGraphicsWebViewSlots_connect_signal("loadStarted()", "loadStarted()");
+  CONNECT_SIGNAL("loadStarted()");
 }
 
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ONSTATUSBARMESSAGE)
 {
-  QGraphicsWebViewSlots_connect_signal("statusBarMessage(QString)", "statusBarMessage(QString)");
+  CONNECT_SIGNAL("statusBarMessage(QString)");
 }
 
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ONTITLECHANGED)
 {
-  QGraphicsWebViewSlots_connect_signal("titleChanged(QString)", "titleChanged(QString)");
+  CONNECT_SIGNAL("titleChanged(QString)");
 }
 
 HB_FUNC_STATIC(QGRAPHICSWEBVIEW_ONURLCHANGED)
 {
-  QGraphicsWebViewSlots_connect_signal("urlChanged(QUrl)", "urlChanged(QUrl)");
+  CONNECT_SIGNAL("urlChanged(QUrl)");
 }
 
 #pragma ENDDUMP
