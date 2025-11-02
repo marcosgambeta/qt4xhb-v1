@@ -49,6 +49,9 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p)                                                                                           \
+  HAbstractTableModelV2 *p = qobject_cast<HAbstractTableModelV2 *>(Qt4xHb::getQObjectPointerFromSelfItem())
+
 // HAbstractTableModelV2(QObject * parent = NULL)
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_NEW)
 {
@@ -63,7 +66,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_NEW)
 // virtual ~HAbstractTableModelV2()
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_DELETE)
 {
-  HAbstractTableModelV2 *obj = qobject_cast<HAbstractTableModelV2 *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -81,7 +84,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_DELETE)
 // void setRowCountCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETROWCOUNTCB)
 {
-  HAbstractTableModelV2 *obj = qobject_cast<HAbstractTableModelV2 *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -101,7 +104,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETROWCOUNTCB)
 // void setColumnCountCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETCOLUMNCOUNTCB)
 {
-  HAbstractTableModelV2 *obj = qobject_cast<HAbstractTableModelV2 *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -121,7 +124,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETCOLUMNCOUNTCB)
 // void setDataCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETDATACB)
 {
-  HAbstractTableModelV2 *obj = qobject_cast<HAbstractTableModelV2 *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -141,7 +144,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETDATACB)
 // void setHeaderDataCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETHEADERDATACB)
 {
-  HAbstractTableModelV2 *obj = qobject_cast<HAbstractTableModelV2 *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -161,7 +164,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETHEADERDATACB)
 // void setFlagsCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETFLAGSCB)
 {
-  HAbstractTableModelV2 *obj = qobject_cast<HAbstractTableModelV2 *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -181,7 +184,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETFLAGSCB)
 // void setSetDataCB(PHB_ITEM block)
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETSETDATACB)
 {
-  HAbstractTableModelV2 *obj = qobject_cast<HAbstractTableModelV2 *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -213,7 +216,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_SETSETDATACB)
 // void reloadData()
 HB_FUNC_STATIC(HABSTRACTTABLEMODELV2_RELOADDATA)
 {
-  HAbstractTableModelV2 *obj = qobject_cast<HAbstractTableModelV2 *>(Qt4xHb::getQObjectPointerFromSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

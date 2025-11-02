@@ -40,6 +40,8 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
+#define GET_PTR_FROM_SELF(p) HEventFilter *p = static_cast<HEventFilter *>(Qt4xHb::itemGetPtrStackSelfItem())
+
 // HEventFilter(QObject *parent = NULL)
 HB_FUNC_STATIC(HEVENTFILTER_NEW)
 {
@@ -54,7 +56,7 @@ HB_FUNC_STATIC(HEVENTFILTER_NEW)
 // ~HEventFilter()
 HB_FUNC_STATIC(HEVENTFILTER_DELETE)
 {
-  HEventFilter *obj = static_cast<HEventFilter *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
     Qt4xHb::Events_disconnect_all_events(obj, true);
@@ -72,7 +74,7 @@ HB_FUNC_STATIC(HEVENTFILTER_DELETE)
 // void setEventFilterCB (PHB_ITEM block)
 HB_FUNC_STATIC(HEVENTFILTER_SETEVENTFILTERCB)
 {
-  HEventFilter *obj = static_cast<HEventFilter *>(Qt4xHb::itemGetPtrStackSelfItem());
+  GET_PTR_FROM_SELF(obj);
 
   if (obj != NULL) {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
