@@ -377,9 +377,11 @@ HB_FUNC_STATIC(QSVGRENDERER_RENDER)
 
 void QSvgRendererSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QSvgRendererSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QSVGRENDERER_ONREPAINTNEEDED)
 {
-  QSvgRendererSlots_connect_signal("repaintNeeded()", "repaintNeeded()");
+  CONNECT_SIGNAL("repaintNeeded()");
 }
 
 #pragma ENDDUMP
