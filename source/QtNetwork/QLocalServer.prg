@@ -327,9 +327,11 @@ HB_FUNC_STATIC(QLOCALSERVER_REMOVESERVER)
 
 void QLocalServerSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QLocalServerSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QLOCALSERVER_ONNEWCONNECTION)
 {
-  QLocalServerSlots_connect_signal("newConnection()", "newConnection()");
+  CONNECT_SIGNAL("newConnection()");
 }
 
 #pragma ENDDUMP

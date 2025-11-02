@@ -224,32 +224,31 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_UPDATECONFIGURATIONS)
 
 void QNetworkConfigurationManagerSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QNetworkConfigurationManagerSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONADDED)
 {
-  QNetworkConfigurationManagerSlots_connect_signal("configurationAdded(QNetworkConfiguration)",
-                                                   "configurationAdded(QNetworkConfiguration)");
+  CONNECT_SIGNAL("configurationAdded(QNetworkConfiguration)");
 }
 
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONCHANGED)
 {
-  QNetworkConfigurationManagerSlots_connect_signal("configurationChanged(QNetworkConfiguration)",
-                                                   "configurationChanged(QNetworkConfiguration)");
+  CONNECT_SIGNAL("configurationChanged(QNetworkConfiguration)");
 }
 
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONREMOVED)
 {
-  QNetworkConfigurationManagerSlots_connect_signal("configurationRemoved(QNetworkConfiguration)",
-                                                   "configurationRemoved(QNetworkConfiguration)");
+  CONNECT_SIGNAL("configurationRemoved(QNetworkConfiguration)");
 }
 
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONONLINESTATECHANGED)
 {
-  QNetworkConfigurationManagerSlots_connect_signal("onlineStateChanged(bool)", "onlineStateChanged(bool)");
+  CONNECT_SIGNAL("onlineStateChanged(bool)");
 }
 
 HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_ONUPDATECOMPLETED)
 {
-  QNetworkConfigurationManagerSlots_connect_signal("updateCompleted()", "updateCompleted()");
+  CONNECT_SIGNAL("updateCompleted()");
 }
 
 #pragma ENDDUMP

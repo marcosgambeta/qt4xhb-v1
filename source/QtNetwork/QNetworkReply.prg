@@ -488,34 +488,36 @@ HB_FUNC_STATIC(QNETWORKREPLY_CLOSE)
 
 void QNetworkReplySlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QNetworkReplySlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QNETWORKREPLY_ONDOWNLOADPROGRESS)
 {
-  QNetworkReplySlots_connect_signal("downloadProgress(qint64,qint64)", "downloadProgress(qint64,qint64)");
+  CONNECT_SIGNAL("downloadProgress(qint64,qint64)");
 }
 
 HB_FUNC_STATIC(QNETWORKREPLY_ONERROR)
 {
-  QNetworkReplySlots_connect_signal("error(QNetworkReply::NetworkError)", "error(QNetworkReply::NetworkError)");
+  CONNECT_SIGNAL("error(QNetworkReply::NetworkError)");
 }
 
 HB_FUNC_STATIC(QNETWORKREPLY_ONFINISHED)
 {
-  QNetworkReplySlots_connect_signal("finished()", "finished()");
+  CONNECT_SIGNAL("finished()");
 }
 
 HB_FUNC_STATIC(QNETWORKREPLY_ONMETADATACHANGED)
 {
-  QNetworkReplySlots_connect_signal("metaDataChanged()", "metaDataChanged()");
+  CONNECT_SIGNAL("metaDataChanged()");
 }
 
 HB_FUNC_STATIC(QNETWORKREPLY_ONSSLERRORS)
 {
-  QNetworkReplySlots_connect_signal("sslErrors(QList<QSslError>)", "sslErrors(QList<QSslError>)");
+  CONNECT_SIGNAL("sslErrors(QList<QSslError>)");
 }
 
 HB_FUNC_STATIC(QNETWORKREPLY_ONUPLOADPROGRESS)
 {
-  QNetworkReplySlots_connect_signal("uploadProgress(qint64,qint64)", "uploadProgress(qint64,qint64)");
+  CONNECT_SIGNAL("uploadProgress(qint64,qint64)");
 }
 
 #pragma ENDDUMP

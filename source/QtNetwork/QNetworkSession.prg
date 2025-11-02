@@ -463,35 +463,36 @@ HB_FUNC_STATIC(QNETWORKSESSION_STOP)
 
 void QNetworkSessionSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QNetworkSessionSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QNETWORKSESSION_ONCLOSED)
 {
-  QNetworkSessionSlots_connect_signal("closed()", "closed()");
+  CONNECT_SIGNAL("closed()");
 }
 
 HB_FUNC_STATIC(QNETWORKSESSION_ONERROR)
 {
-  QNetworkSessionSlots_connect_signal("error(QNetworkSession::SessionError)", "error(QNetworkSession::SessionError)");
+  CONNECT_SIGNAL("error(QNetworkSession::SessionError)");
 }
 
 HB_FUNC_STATIC(QNETWORKSESSION_ONNEWCONFIGURATIONACTIVATED)
 {
-  QNetworkSessionSlots_connect_signal("newConfigurationActivated()", "newConfigurationActivated()");
+  CONNECT_SIGNAL("newConfigurationActivated()");
 }
 
 HB_FUNC_STATIC(QNETWORKSESSION_ONOPENED)
 {
-  QNetworkSessionSlots_connect_signal("opened()", "opened()");
+  CONNECT_SIGNAL("opened()");
 }
 
 HB_FUNC_STATIC(QNETWORKSESSION_ONPREFERREDCONFIGURATIONCHANGED)
 {
-  QNetworkSessionSlots_connect_signal("preferredConfigurationChanged(QNetworkConfiguration,bool)",
-                                      "preferredConfigurationChanged(QNetworkConfiguration,bool)");
+  CONNECT_SIGNAL("preferredConfigurationChanged(QNetworkConfiguration,bool)");
 }
 
 HB_FUNC_STATIC(QNETWORKSESSION_ONSTATECHANGED)
 {
-  QNetworkSessionSlots_connect_signal("stateChanged(QNetworkSession::State)", "stateChanged(QNetworkSession::State)");
+  CONNECT_SIGNAL("stateChanged(QNetworkSession::State)");
 }
 
 #pragma ENDDUMP

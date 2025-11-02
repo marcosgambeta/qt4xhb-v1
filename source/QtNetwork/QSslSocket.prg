@@ -1464,29 +1464,31 @@ HB_FUNC_STATIC(QSSLSOCKET_SYSTEMCACERTIFICATES)
 
 void QSslSocketSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QSslSocketSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QSSLSOCKET_ONENCRYPTED)
 {
-  QSslSocketSlots_connect_signal("encrypted()", "encrypted()");
+  CONNECT_SIGNAL("encrypted()");
 }
 
 HB_FUNC_STATIC(QSSLSOCKET_ONENCRYPTEDBYTESWRITTEN)
 {
-  QSslSocketSlots_connect_signal("encryptedBytesWritten(qint64)", "encryptedBytesWritten(qint64)");
+  CONNECT_SIGNAL("encryptedBytesWritten(qint64)");
 }
 
 HB_FUNC_STATIC(QSSLSOCKET_ONMODECHANGED)
 {
-  QSslSocketSlots_connect_signal("modeChanged(QSslSocket::SslMode)", "modeChanged(QSslSocket::SslMode)");
+  CONNECT_SIGNAL("modeChanged(QSslSocket::SslMode)");
 }
 
 HB_FUNC_STATIC(QSSLSOCKET_ONPEERVERIFYERROR)
 {
-  QSslSocketSlots_connect_signal("peerVerifyError(QSslError)", "peerVerifyError(QSslError)");
+  CONNECT_SIGNAL("peerVerifyError(QSslError)");
 }
 
 HB_FUNC_STATIC(QSSLSOCKET_ONSSLERRORS)
 {
-  QSslSocketSlots_connect_signal("sslErrors(QList<QSslError>)", "sslErrors(QList<QSslError>)");
+  CONNECT_SIGNAL("sslErrors(QList<QSslError>)");
 }
 
 #pragma ENDDUMP

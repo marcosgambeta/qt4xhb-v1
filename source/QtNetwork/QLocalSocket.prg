@@ -468,25 +468,26 @@ HB_FUNC_STATIC(QLOCALSOCKET_WAITFORREADYREAD)
 
 void QLocalSocketSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QLocalSocketSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QLOCALSOCKET_ONCONNECTED)
 {
-  QLocalSocketSlots_connect_signal("connected()", "connected()");
+  CONNECT_SIGNAL("connected()");
 }
 
 HB_FUNC_STATIC(QLOCALSOCKET_ONDISCONNECTED)
 {
-  QLocalSocketSlots_connect_signal("disconnected()", "disconnected()");
+  CONNECT_SIGNAL("disconnected()");
 }
 
 HB_FUNC_STATIC(QLOCALSOCKET_ONERROR)
 {
-  QLocalSocketSlots_connect_signal("error(QLocalSocket::LocalSocketError)", "error(QLocalSocket::LocalSocketError)");
+  CONNECT_SIGNAL("error(QLocalSocket::LocalSocketError)");
 }
 
 HB_FUNC_STATIC(QLOCALSOCKET_ONSTATECHANGED)
 {
-  QLocalSocketSlots_connect_signal("stateChanged(QLocalSocket::LocalSocketState)",
-                                   "stateChanged(QLocalSocket::LocalSocketState)");
+  CONNECT_SIGNAL("stateChanged(QLocalSocket::LocalSocketState)");
 }
 
 #pragma ENDDUMP

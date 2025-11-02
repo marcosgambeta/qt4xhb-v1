@@ -396,9 +396,11 @@ HB_FUNC_STATIC(QTCPSERVER_WAITFORNEWCONNECTION)
 
 void QTcpServerSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QTcpServerSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QTCPSERVER_ONNEWCONNECTION)
 {
-  QTcpServerSlots_connect_signal("newConnection()", "newConnection()");
+  CONNECT_SIGNAL("newConnection()");
 }
 
 #pragma ENDDUMP

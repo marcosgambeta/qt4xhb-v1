@@ -709,36 +709,36 @@ HB_FUNC_STATIC(QABSTRACTSOCKET_WAITFORREADYREAD)
 
 void QAbstractSocketSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QAbstractSocketSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QABSTRACTSOCKET_ONCONNECTED)
 {
-  QAbstractSocketSlots_connect_signal("connected()", "connected()");
+  CONNECT_SIGNAL("connected()");
 }
 
 HB_FUNC_STATIC(QABSTRACTSOCKET_ONDISCONNECTED)
 {
-  QAbstractSocketSlots_connect_signal("disconnected()", "disconnected()");
+  CONNECT_SIGNAL("disconnected()");
 }
 
 HB_FUNC_STATIC(QABSTRACTSOCKET_ONERROR)
 {
-  QAbstractSocketSlots_connect_signal("error(QAbstractSocket::SocketError)", "error(QAbstractSocket::SocketError)");
+  CONNECT_SIGNAL("error(QAbstractSocket::SocketError)");
 }
 
 HB_FUNC_STATIC(QABSTRACTSOCKET_ONHOSTFOUND)
 {
-  QAbstractSocketSlots_connect_signal("hostFound()", "hostFound()");
+  CONNECT_SIGNAL("hostFound()");
 }
 
 HB_FUNC_STATIC(QABSTRACTSOCKET_ONPROXYAUTHENTICATIONREQUIRED)
 {
-  QAbstractSocketSlots_connect_signal("proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)",
-                                      "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)");
+  CONNECT_SIGNAL("proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)");
 }
 
 HB_FUNC_STATIC(QABSTRACTSOCKET_ONSTATECHANGED)
 {
-  QAbstractSocketSlots_connect_signal("stateChanged(QAbstractSocket::SocketState)",
-                                      "stateChanged(QAbstractSocket::SocketState)");
+  CONNECT_SIGNAL("stateChanged(QAbstractSocket::SocketState)");
 }
 
 #pragma ENDDUMP

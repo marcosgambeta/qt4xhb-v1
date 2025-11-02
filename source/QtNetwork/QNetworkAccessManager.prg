@@ -484,33 +484,31 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETPROXYFACTORY)
 
 void QNetworkAccessManagerSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QNetworkAccessManagerSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ONAUTHENTICATIONREQUIRED)
 {
-  QNetworkAccessManagerSlots_connect_signal("authenticationRequired(QNetworkReply*,QAuthenticator*)",
-                                            "authenticationRequired(QNetworkReply*,QAuthenticator*)");
+  CONNECT_SIGNAL("authenticationRequired(QNetworkReply*,QAuthenticator*)");
 }
 
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ONFINISHED)
 {
-  QNetworkAccessManagerSlots_connect_signal("finished(QNetworkReply*)", "finished(QNetworkReply*)");
+  CONNECT_SIGNAL("finished(QNetworkReply*)");
 }
 
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ONNETWORKACCESSIBLECHANGED)
 {
-  QNetworkAccessManagerSlots_connect_signal("networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)",
-                                            "networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)");
+  CONNECT_SIGNAL("networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)");
 }
 
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ONPROXYAUTHENTICATIONREQUIRED)
 {
-  QNetworkAccessManagerSlots_connect_signal("proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)",
-                                            "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)");
+  CONNECT_SIGNAL("proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)");
 }
 
 HB_FUNC_STATIC(QNETWORKACCESSMANAGER_ONSSLERRORS)
 {
-  QNetworkAccessManagerSlots_connect_signal("sslErrors(QNetworkReply*,QList<QSslError>)",
-                                            "sslErrors(QNetworkReply*,QList<QSslError>)");
+  CONNECT_SIGNAL("sslErrors(QNetworkReply*,QList<QSslError>)");
 }
 
 #pragma ENDDUMP

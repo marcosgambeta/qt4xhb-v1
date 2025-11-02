@@ -592,44 +592,46 @@ HB_FUNC_STATIC(QFTP_ABORT)
 
 void QFtpSlots_connect_signal(const QString &signal, const QString &slot);
 
+#define CONNECT_SIGNAL(signal) QFtpSlots_connect_signal(signal, signal)
+
 HB_FUNC_STATIC(QFTP_ONCOMMANDFINISHED)
 {
-  QFtpSlots_connect_signal("commandFinished(int,bool)", "commandFinished(int,bool)");
+  CONNECT_SIGNAL("commandFinished(int,bool)");
 }
 
 HB_FUNC_STATIC(QFTP_ONCOMMANDSTARTED)
 {
-  QFtpSlots_connect_signal("commandStarted(int)", "commandStarted(int)");
+  CONNECT_SIGNAL("commandStarted(int)");
 }
 
 HB_FUNC_STATIC(QFTP_ONDATATRANSFERPROGRESS)
 {
-  QFtpSlots_connect_signal("dataTransferProgress(qint64,qint64)", "dataTransferProgress(qint64,qint64)");
+  CONNECT_SIGNAL("dataTransferProgress(qint64,qint64)");
 }
 
 HB_FUNC_STATIC(QFTP_ONDONE)
 {
-  QFtpSlots_connect_signal("done(bool)", "done(bool)");
+  CONNECT_SIGNAL("done(bool)");
 }
 
 HB_FUNC_STATIC(QFTP_ONLISTINFO)
 {
-  QFtpSlots_connect_signal("listInfo(QUrlInfo)", "listInfo(QUrlInfo)");
+  CONNECT_SIGNAL("listInfo(QUrlInfo)");
 }
 
 HB_FUNC_STATIC(QFTP_ONRAWCOMMANDREPLY)
 {
-  QFtpSlots_connect_signal("rawCommandReply(int,QString)", "rawCommandReply(int,QString)");
+  CONNECT_SIGNAL("rawCommandReply(int,QString)");
 }
 
 HB_FUNC_STATIC(QFTP_ONREADYREAD)
 {
-  QFtpSlots_connect_signal("readyRead()", "readyRead()");
+  CONNECT_SIGNAL("readyRead()");
 }
 
 HB_FUNC_STATIC(QFTP_ONSTATECHANGED)
 {
-  QFtpSlots_connect_signal("stateChanged(int)", "stateChanged(int)");
+  CONNECT_SIGNAL("stateChanged(int)");
 }
 
 #pragma ENDDUMP
