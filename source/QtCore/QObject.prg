@@ -914,13 +914,13 @@ static void _qtxhb_processOnEventMethod(QEvent::Type event)
       // hb_retl( Events_connect_event( obj, QEvent::Close, item ) );
       hb_retl(Qt4xHb::Events_connect_event(obj, event, item));
     } else {
-      hb_retl(0);
+      hb_retl(false);
     }
   } else if (hb_pcount() == 0) {
     // hb_retl( Events_disconnect_event( obj, QEvent::Close ) );
     hb_retl(Qt4xHb::Events_disconnect_event(obj, event));
   } else {
-    hb_retl(0);
+    hb_retl(false);
   }
 }
 
@@ -934,13 +934,13 @@ static void _qtxhb_processOnEventMethod2(QEvent::Type event)
       // hb_retl( Events_connect_event( obj, QEvent::Close, item ) );
       hb_retl(Qt4xHb::Events_connect_event(obj, event, item));
     } else {
-      hb_retl(0);
+      hb_retl(false);
     }
   } else if (hb_pcount() == 1) {
     // hb_retl( Events_disconnect_event( obj, QEvent::Close ) );
     hb_retl(Qt4xHb::Events_disconnect_event(obj, event));
   } else {
-    hb_retl(0);
+    hb_retl(false);
   }
 }
 
