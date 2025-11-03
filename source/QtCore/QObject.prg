@@ -234,8 +234,8 @@ RETURN
 
 #define GET_PTR_FROM_SELF(p) QObject *p = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem())
 
-    void _qtxhb_processOnEventMethod(QEvent::Type event);
-void _qtxhb_processOnEventMethod2(QEvent::Type event);
+static void _qtxhb_processOnEventMethod(QEvent::Type event);
+static void _qtxhb_processOnEventMethod2(QEvent::Type event);
 
 // QObject(QObject *parent = 0)
 HB_FUNC_STATIC(QOBJECT_NEW)
@@ -904,7 +904,7 @@ HB_FUNC_STATIC(QOBJECT_DISCONNECTALLSIGNALS)
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void _qtxhb_processOnEventMethod(QEvent::Type event)
+static void _qtxhb_processOnEventMethod(QEvent::Type event)
 {
   GET_PTR_FROM_SELF(obj);
 
@@ -924,7 +924,7 @@ void _qtxhb_processOnEventMethod(QEvent::Type event)
   }
 }
 
-void _qtxhb_processOnEventMethod2(QEvent::Type event)
+static void _qtxhb_processOnEventMethod2(QEvent::Type event)
 {
   GET_PTR_FROM_SELF(obj);
 
