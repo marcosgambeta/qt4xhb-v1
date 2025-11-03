@@ -853,7 +853,7 @@ HB_FUNC_STATIC(QOBJECT_DELETELATER)
 
 HB_FUNC_STATIC(QOBJECT_DISCONNECTALL)
 {
-  QObject *obj = (QObject *)hb_itemGetPtr(hb_objSendMsg(hb_stackSelfItem(), "POINTER", 0));
+  GET_PTR_FROM_SELF(obj);
 
   if (obj) {
     if (hb_pcount() == 0) {
@@ -872,7 +872,7 @@ HB_FUNC_STATIC(QOBJECT_DISCONNECTALL)
 
 HB_FUNC_STATIC(QOBJECT_DISCONNECTALLEVENTS)
 {
-  QObject *obj = (QObject *)hb_itemGetPtr(hb_objSendMsg(hb_stackSelfItem(), "POINTER", 0));
+  GET_PTR_FROM_SELF(obj);
 
   if (obj) {
     if (hb_pcount() == 0) {
@@ -889,7 +889,7 @@ HB_FUNC_STATIC(QOBJECT_DISCONNECTALLEVENTS)
 
 HB_FUNC_STATIC(QOBJECT_DISCONNECTALLSIGNALS)
 {
-  QObject *obj = (QObject *)hb_itemGetPtr(hb_objSendMsg(hb_stackSelfItem(), "POINTER", 0));
+  GET_PTR_FROM_SELF(obj);
 
   if (obj) {
     if (hb_pcount() == 0) {
@@ -906,7 +906,7 @@ HB_FUNC_STATIC(QOBJECT_DISCONNECTALLSIGNALS)
 
 void _qtxhb_processOnEventMethod(QEvent::Type event)
 {
-  QObject *obj = (QObject *)hb_itemGetPtr(hb_objSendMsg(hb_stackSelfItem(), "POINTER", 0));
+  GET_PTR_FROM_SELF(obj);
 
   if (hb_pcount() == 1) {
     PHB_ITEM item = hb_itemNew(hb_param(1, HB_IT_BLOCK | HB_IT_SYMBOL));
@@ -926,7 +926,7 @@ void _qtxhb_processOnEventMethod(QEvent::Type event)
 
 void _qtxhb_processOnEventMethod2(QEvent::Type event)
 {
-  QObject *obj = (QObject *)hb_itemGetPtr(hb_objSendMsg(hb_stackSelfItem(), "POINTER", 0));
+  GET_PTR_FROM_SELF(obj);
 
   if (hb_pcount() == 2) {
     PHB_ITEM item = hb_itemNew(hb_param(2, HB_IT_BLOCK | HB_IT_SYMBOL));
@@ -1487,7 +1487,7 @@ HB_FUNC_STATIC(QOBJECT_ONGESTUREOVERRIDEEVENT)
 
 HB_FUNC_STATIC(QOBJECT_CONNECT)
 {
-  QObject *obj = (QObject *)Qt4xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj) {
     if (ISNUMPAR(2) && HB_ISCHAR(1)) {
@@ -1536,7 +1536,7 @@ HB_FUNC_STATIC(QOBJECT_CONNECT)
 
 HB_FUNC_STATIC(QOBJECT_DISCONNECT)
 {
-  QObject *obj = (QObject *)Qt4xHb::itemGetPtrStackSelfItem();
+  GET_PTR_FROM_SELF(obj);
 
   if (obj) {
     if (ISNUMPAR(1) && HB_ISCHAR(1)) {
