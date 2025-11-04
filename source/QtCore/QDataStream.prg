@@ -185,7 +185,7 @@ HB_FUNC_STATIC(QDATASTREAM_READRAWDATA)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
 #endif
-      RINT(obj->readRawData((char *)hb_parc(1), PINT(2)));
+      RINT(obj->readRawData(const_cast<char *>(hb_parc(1)), PINT(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

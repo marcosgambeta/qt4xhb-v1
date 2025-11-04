@@ -798,7 +798,7 @@ HB_FUNC_STATIC(QPIXMAP_GRABWINDOW)
   if (ISBETWEEN(1, 5) && HB_ISPOINTER(1) && ISNUMORNIL(2) && ISNUMORNIL(3) && ISNUMORNIL(4) && ISNUMORNIL(5)) {
 #endif
     QPixmap *ptr =
-        new QPixmap(QPixmap::grabWindow((WId)hb_parptr(1), OPINT(2, 0), OPINT(3, 0), OPINT(4, -1), OPINT(5, -1)));
+        new QPixmap(QPixmap::grabWindow(static_cast<WId>(hb_parptr(1)), OPINT(2, 0), OPINT(3, 0), OPINT(4, -1), OPINT(5, -1)));
     Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {

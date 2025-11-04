@@ -211,7 +211,7 @@ HB_FUNC_STATIC(QIODEVICE_GETCHAR)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
-      RBOOL(obj->getChar((char *)hb_parc(1)));
+      RBOOL(obj->getChar(const_cast<char *>(hb_parc(1))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -353,7 +353,7 @@ HB_FUNC_STATIC(QIODEVICE_PEEK)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RQINT64(obj->peek((char *)hb_parc(1), PQINT64(2)));
+      RQINT64(obj->peek(const_cast<char *>(hb_parc(1)), PQINT64(2)));
     }
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QByteArray peek(qint64 maxSize)
@@ -411,7 +411,7 @@ HB_FUNC_STATIC(QIODEVICE_READ)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RQINT64(obj->read((char *)hb_parc(1), PQINT64(2)));
+      RQINT64(obj->read(const_cast<char *>(hb_parc(1)), PQINT64(2)));
     }
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QByteArray read(qint64 maxSize)
@@ -452,7 +452,7 @@ HB_FUNC_STATIC(QIODEVICE_READLINE)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RQINT64(obj->readLine((char *)hb_parc(1), PQINT64(2)));
+      RQINT64(obj->readLine(const_cast<char *>(hb_parc(1)), PQINT64(2)));
     }
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QByteArray readLine(qint64 maxSize = 0)

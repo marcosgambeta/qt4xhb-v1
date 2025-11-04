@@ -4613,7 +4613,7 @@ HB_FUNC_STATIC(QWIDGET_FIND)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
 #endif
-    QWidget *ptr = QWidget::find((WId)hb_parptr(1));
+    QWidget *ptr = QWidget::find(static_cast<WId>(hb_parptr(1)));
     Qt4xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
