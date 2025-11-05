@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QBYTEARRAY
-REQUEST QURL
-REQUEST QVARIANT
+REQUEST QByteArray
+REQUEST QUrl
+REQUEST QVariant
 #endif
 
 CLASS QHelpEngineCore INHERIT QObject

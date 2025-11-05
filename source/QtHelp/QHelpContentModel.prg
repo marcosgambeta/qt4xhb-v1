@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QHELPCONTENTITEM
-REQUEST QMODELINDEX
-REQUEST QVARIANT
+REQUEST QHelpContentItem
+REQUEST QModelIndex
+REQUEST QVariant
 #endif
 
 CLASS QHelpContentModel INHERIT QAbstractItemModel
