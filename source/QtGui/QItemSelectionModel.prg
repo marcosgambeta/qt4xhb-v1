@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QABSTRACTITEMMODEL
-REQUEST QITEMSELECTION
-REQUEST QMODELINDEX
+REQUEST QAbstractItemModel
+REQUEST QItemSelection
+REQUEST QModelIndex
 #endif
 
 CLASS QItemSelectionModel INHERIT QObject

@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QFONT
-REQUEST QSIZE
+REQUEST QFont
+REQUEST QSize
 #endif
 
 CLASS QStyleOptionViewItem INHERIT QStyleOption

@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QBYTEARRAY
-REQUEST QSIZE
+REQUEST QByteArray
+REQUEST QSize
 #endif
 
 CLASS QHeaderView INHERIT QAbstractItemView

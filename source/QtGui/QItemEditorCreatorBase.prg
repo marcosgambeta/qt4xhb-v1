@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QBYTEARRAY
-REQUEST QWIDGET
+REQUEST QByteArray
+REQUEST QWidget
 #endif
 
 CLASS QItemEditorCreatorBase

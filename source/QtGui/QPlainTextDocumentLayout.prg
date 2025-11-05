@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QRECTF
-REQUEST QSIZEF
+REQUEST QRectF
+REQUEST QSizeF
 #endif
 
 CLASS QPlainTextDocumentLayout INHERIT QAbstractTextDocumentLayout

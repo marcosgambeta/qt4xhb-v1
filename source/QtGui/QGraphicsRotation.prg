@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QVECTOR3D
+REQUEST QVector3D
 #endif
 
 CLASS QGraphicsRotation INHERIT QGraphicsTransform

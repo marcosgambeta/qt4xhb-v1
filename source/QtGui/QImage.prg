@@ -11,11 +11,11 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QMATRIX
-REQUEST QPOINT
-REQUEST QRECT
-REQUEST QSIZE
-REQUEST QTRANSFORM
+REQUEST QMatrix
+REQUEST QPoint
+REQUEST QRect
+REQUEST QSize
+REQUEST QTransform
 #endif
 
 CLASS QImage INHERIT QPaintDevice
@@ -118,7 +118,8 @@ HB_FUNC_STATIC(QIMAGE_NEW)
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // QImage(uchar *data, int width, int height, QImage::Format format)
-    QImage *obj = new QImage(reinterpret_cast<uchar *>(const_cast<char *>(hb_parc(1))), PINT(2), PINT(3), static_cast<QImage::Format>(hb_parni(4)));
+    QImage *obj = new QImage(reinterpret_cast<uchar *>(const_cast<char *>(hb_parc(1))), PINT(2), PINT(3),
+                             static_cast<QImage::Format>(hb_parni(4)));
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // QImage(const uchar *data, int width, int height, QImage::Format format)
@@ -126,7 +127,8 @@ HB_FUNC_STATIC(QIMAGE_NEW)
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(5) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5)) {
     // QImage(uchar *data, int width, int height, int bytesPerLine, QImage::Format format)
-    QImage *obj = new QImage(reinterpret_cast<uchar *>(const_cast<char *>(hb_parc(1))), PINT(2), PINT(3), PINT(4), static_cast<QImage::Format>(hb_parni(5)));
+    QImage *obj = new QImage(reinterpret_cast<uchar *>(const_cast<char *>(hb_parc(1))), PINT(2), PINT(3), PINT(4),
+                             static_cast<QImage::Format>(hb_parni(5)));
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(5) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5)) {
     // QImage(const uchar *data, int width, int height, int bytesPerLine, QImage::Format format)

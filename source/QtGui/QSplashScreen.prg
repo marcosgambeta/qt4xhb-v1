@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QPIXMAP
+REQUEST QPixmap
 #endif
 
 CLASS QSplashScreen INHERIT QWidget

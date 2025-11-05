@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QPOINTF
-REQUEST QRAWFONT
+REQUEST QPointF
+REQUEST QRawFont
 #endif
 
 CLASS QGlyphRun

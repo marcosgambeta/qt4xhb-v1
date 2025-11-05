@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QVARIANT
+REQUEST QVariant
 #endif
 
 CLASS QAbstractFontEngine INHERIT QObject
@@ -109,7 +109,8 @@ HB_FUNC_STATIC(QABSTRACTFONTENGINE_RENDERGLYPH)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISCHAR(5)) {
 #endif
-      RBOOL(obj->renderGlyph(PUINT(1), PINT(2), PINT(3), PINT(4), reinterpret_cast<uchar *>(const_cast<char *>(hb_parc(5)))));
+      RBOOL(obj->renderGlyph(PUINT(1), PINT(2), PINT(3), PINT(4),
+                             reinterpret_cast<uchar *>(const_cast<char *>(hb_parc(5)))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QPOINTF
-REQUEST QRECTF
+REQUEST QPointF
+REQUEST QRectF
 #endif
 
 CLASS QTextLine

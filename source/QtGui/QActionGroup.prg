@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QACTION
+REQUEST QAction
 #endif
 
 CLASS QActionGroup INHERIT QObject

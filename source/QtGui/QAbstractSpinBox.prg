@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QSIZE
-REQUEST QVARIANT
+REQUEST QSize
+REQUEST QVariant
 #endif
 
 CLASS QAbstractSpinBox INHERIT QWidget

@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QFONT
-REQUEST QICON
-REQUEST QRECT
+REQUEST QFont
+REQUEST QIcon
+REQUEST QRect
 #endif
 
 CLASS QStyleOptionMenuItem INHERIT QStyleOption

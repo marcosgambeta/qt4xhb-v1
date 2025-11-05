@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QGRAPHICSANCHOR
-REQUEST QGRAPHICSLAYOUTITEM
+REQUEST QGraphicsAnchor
+REQUEST QGraphicsLayoutItem
 #endif
 
 CLASS QGraphicsAnchorLayout INHERIT QGraphicsLayout

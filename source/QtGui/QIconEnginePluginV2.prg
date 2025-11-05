@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QICONENGINEV2
+REQUEST QIconEngineV2
 #endif
 
 CLASS QIconEnginePluginV2 INHERIT QObject

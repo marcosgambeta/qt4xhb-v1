@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QIMAGE
-REQUEST QPOINT
+REQUEST QImage
+REQUEST QPoint
 #endif
 
 CLASS QPlatformCursorImage

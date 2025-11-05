@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QICON
+REQUEST QIcon
 #endif
 
 CLASS QStyleOptionHeader INHERIT QStyleOption

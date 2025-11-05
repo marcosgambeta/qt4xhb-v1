@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QURL
-REQUEST QVARIANT
+REQUEST QUrl
+REQUEST QVariant
 #endif
 
 CLASS QTextBrowser INHERIT QTextEdit

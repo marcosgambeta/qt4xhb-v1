@@ -1762,13 +1762,13 @@ HB_FUNC_STATIC(QCOLOR_ISVALIDCOLOR)
 // int qAlpha ( QRgb rgba )
 HB_FUNC(QALPHA)
 {
-  RINT(qAlpha(static_cast<QRgb>(hb_parni(1))));
+  RINT(qAlpha((QRgb)hb_parni(1)));
 }
 
 // int qBlue ( QRgb rgb )
 HB_FUNC(QBLUE)
 {
-  RINT(qBlue(static_cast<QRgb>(hb_parni(1))));
+  RINT(qBlue((QRgb)hb_parni(1)));
 }
 
 // int qGray ( int r, int g, int b )
@@ -1780,7 +1780,7 @@ HB_FUNC(QGRAY1)
 // int qGray ( QRgb rgb )
 HB_FUNC(QGRAY2)
 {
-  RINT(qGray(static_cast<QRgb>(hb_parni(1))));
+  RINT(qGray((QRgb)hb_parni(1)));
 }
 
 HB_FUNC(QGRAY)
@@ -1795,13 +1795,13 @@ HB_FUNC(QGRAY)
 // int qGreen ( QRgb rgb )
 HB_FUNC(QGREEN)
 {
-  RINT(qGreen(static_cast<QRgb>(hb_parni(1))));
+  RINT(qGreen((QRgb)hb_parni(1)));
 }
 
 // int qRed ( QRgb rgb )
 HB_FUNC(QRED)
 {
-  RINT(qRed(static_cast<QRgb>(hb_parni(1))));
+  RINT(qRed((QRgb)hb_parni(1)));
 }
 
 // QRgb qRgb ( int r, int g, int b )

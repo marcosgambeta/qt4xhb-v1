@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QRECT
-REQUEST QREGION
+REQUEST QRect
+REQUEST QRegion
 #endif
 
 CLASS QPaintEvent INHERIT QEvent

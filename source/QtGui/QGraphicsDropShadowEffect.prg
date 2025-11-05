@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QCOLOR
-REQUEST QPOINTF
-REQUEST QRECTF
+REQUEST QColor
+REQUEST QPointF
+REQUEST QRectF
 #endif
 
 CLASS QGraphicsDropShadowEffect INHERIT QGraphicsEffect

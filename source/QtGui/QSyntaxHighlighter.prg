@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QTEXTDOCUMENT
+REQUEST QTextDocument
 #endif
 
 CLASS QSyntaxHighlighter INHERIT QObject

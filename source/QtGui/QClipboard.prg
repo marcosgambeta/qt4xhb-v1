@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QIMAGE
-REQUEST QMIMEDATA
-REQUEST QPIXMAP
+REQUEST QImage
+REQUEST QMimeData
+REQUEST QPixmap
 #endif
 
 CLASS QClipboard INHERIT QObject

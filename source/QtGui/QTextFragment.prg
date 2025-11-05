@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QGLYPHRUN
-REQUEST QTEXTCHARFORMAT
+REQUEST QGlyphRun
+REQUEST QTextCharFormat
 #endif
 
 CLASS QTextFragment

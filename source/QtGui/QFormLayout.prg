@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QLAYOUTITEM
-REQUEST QSIZE
-REQUEST QWIDGET
+REQUEST QLayoutItem
+REQUEST QSize
+REQUEST QWidget
 #endif
 
 CLASS QFormLayout INHERIT QLayout

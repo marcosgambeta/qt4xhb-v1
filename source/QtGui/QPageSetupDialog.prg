@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QPRINTER
+REQUEST QPrinter
 #endif
 
 CLASS QPageSetupDialog INHERIT QDialog

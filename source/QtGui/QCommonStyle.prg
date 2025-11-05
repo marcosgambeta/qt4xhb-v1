@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QPIXMAP
-REQUEST QRECT
-REQUEST QSIZE
+REQUEST QPixmap
+REQUEST QRect
+REQUEST QSize
 #endif
 
 CLASS QCommonStyle INHERIT QStyle

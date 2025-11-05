@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QTEXTCHARFORMAT
-REQUEST QTEXTCURSOR
+REQUEST QTextCharFormat
+REQUEST QTextCursor
 #endif
 
 CLASS QTextTableCell

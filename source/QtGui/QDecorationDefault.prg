@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QREGION
+REQUEST QRegion
 #endif
 
 CLASS QDecorationDefault INHERIT QDecoration

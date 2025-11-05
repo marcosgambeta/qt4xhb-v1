@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QMODELINDEX
-REQUEST QRECT
-REQUEST QSIZE
+REQUEST QModelIndex
+REQUEST QRect
+REQUEST QSize
 #endif
 
 CLASS QListView INHERIT QAbstractItemView

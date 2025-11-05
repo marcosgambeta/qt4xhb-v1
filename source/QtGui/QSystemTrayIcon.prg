@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QICON
-REQUEST QMENU
-REQUEST QRECT
+REQUEST QIcon
+REQUEST QMenu
+REQUEST QRect
 #endif
 
 CLASS QSystemTrayIcon INHERIT QObject

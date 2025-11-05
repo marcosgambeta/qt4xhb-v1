@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QGESTURE
-REQUEST QPOINTF
-REQUEST QWIDGET
+REQUEST QGesture
+REQUEST QPointF
+REQUEST QWidget
 #endif
 
 CLASS QGestureEvent INHERIT QEvent

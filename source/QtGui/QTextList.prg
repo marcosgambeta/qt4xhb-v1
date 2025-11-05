@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QTEXTBLOCK
-REQUEST QTEXTLISTFORMAT
+REQUEST QTextBlock
+REQUEST QTextListFormat
 #endif
 
 CLASS QTextList INHERIT QTextBlockGroup

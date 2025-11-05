@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QBRUSH
-REQUEST QSIZE
-REQUEST QWIDGET
+REQUEST QBrush
+REQUEST QSize
+REQUEST QWidget
 #endif
 
 CLASS QWorkspace INHERIT QWidget

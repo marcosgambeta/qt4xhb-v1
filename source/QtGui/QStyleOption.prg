@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QFONTMETRICS
-REQUEST QPALETTE
-REQUEST QRECT
+REQUEST QFontMetrics
+REQUEST QPalette
+REQUEST QRect
 #endif
 
 CLASS QStyleOption

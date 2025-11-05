@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QSIZEF
-REQUEST QTEXTOPTION
+REQUEST QSizeF
+REQUEST QTextOption
 #endif
 
 CLASS QStaticText

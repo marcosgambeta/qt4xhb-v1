@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QSIZEF
+REQUEST QSizeF
 #endif
 
 CLASS QGraphicsSceneResizeEvent INHERIT QGraphicsSceneEvent

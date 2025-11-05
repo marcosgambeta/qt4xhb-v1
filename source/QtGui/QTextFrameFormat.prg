@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QBRUSH
-REQUEST QTEXTLENGTH
+REQUEST QBrush
+REQUEST QTextLength
 #endif
 
 CLASS QTextFrameFormat INHERIT QTextFormat

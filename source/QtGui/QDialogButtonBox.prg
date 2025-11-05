@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QABSTRACTBUTTON
-REQUEST QPUSHBUTTON
+REQUEST QAbstractButton
+REQUEST QPushButton
 #endif
 
 CLASS QDialogButtonBox INHERIT QWidget

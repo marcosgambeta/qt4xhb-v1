@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QLAYOUTITEM
-REQUEST QRECT
-REQUEST QSIZE
+REQUEST QLayoutItem
+REQUEST QRect
+REQUEST QSize
 #endif
 
 CLASS QGridLayout INHERIT QLayout

@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QPALETTE
+REQUEST QPalette
 #endif
 
 CLASS QCDEStyle INHERIT QMotifStyle

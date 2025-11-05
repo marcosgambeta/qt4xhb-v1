@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QITEMSELECTION
-REQUEST QMODELINDEX
+REQUEST QItemSelection
+REQUEST QModelIndex
 #endif
 
 CLASS QIdentityProxyModel INHERIT QAbstractProxyModel

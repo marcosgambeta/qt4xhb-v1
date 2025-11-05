@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QPIXMAP
-REQUEST QSIZE
+REQUEST QPixmap
+REQUEST QSize
 #endif
 
 CLASS QIconEngine

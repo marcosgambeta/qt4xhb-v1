@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QITEMEDITORFACTORY
-REQUEST QSIZE
-REQUEST QWIDGET
+REQUEST QItemEditorFactory
+REQUEST QSize
+REQUEST QWidget
 #endif
 
 CLASS QStyledItemDelegate INHERIT QAbstractItemDelegate

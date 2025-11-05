@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QRECTF
-REQUEST QWIDGET
+REQUEST QRectF
+REQUEST QWidget
 #endif
 
 CLASS QGraphicsProxyWidget INHERIT QGraphicsWidget

@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QPAINTDEVICE
-REQUEST QPAINTER
+REQUEST QPaintDevice
+REQUEST QPainter
 #endif
 
 CLASS QPaintEngine

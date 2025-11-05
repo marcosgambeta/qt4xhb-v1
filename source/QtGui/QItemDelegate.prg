@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QITEMEDITORFACTORY
+REQUEST QItemEditorFactory
 #endif
 
 CLASS QItemDelegate INHERIT QAbstractItemDelegate

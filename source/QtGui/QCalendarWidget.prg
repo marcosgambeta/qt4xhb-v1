@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QDATE
-REQUEST QSIZE
-REQUEST QTEXTCHARFORMAT
+REQUEST QDate
+REQUEST QSize
+REQUEST QTextCharFormat
 #endif
 
 CLASS QCalendarWidget INHERIT QWidget

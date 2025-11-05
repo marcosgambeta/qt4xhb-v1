@@ -11,10 +11,10 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QMIMEDATA
-REQUEST QPOINT
-REQUEST QPOINTF
-REQUEST QWIDGET
+REQUEST QMimeData
+REQUEST QPoint
+REQUEST QPointF
+REQUEST QWidget
 #endif
 
 CLASS QGraphicsSceneDragDropEvent INHERIT QGraphicsSceneEvent

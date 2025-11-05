@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QTEXTDOCUMENT
-REQUEST QTEXTFORMAT
+REQUEST QTextDocument
+REQUEST QTextFormat
 #endif
 
 CLASS QTextObject INHERIT QObject

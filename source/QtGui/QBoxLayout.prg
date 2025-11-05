@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QLAYOUTITEM
-REQUEST QSIZE
+REQUEST QLayoutItem
+REQUEST QSize
 #endif
 
 CLASS QBoxLayout INHERIT QLayout

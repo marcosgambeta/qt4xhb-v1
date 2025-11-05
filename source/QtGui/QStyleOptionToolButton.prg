@@ -11,10 +11,10 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QFONT
-REQUEST QICON
-REQUEST QPOINT
-REQUEST QSIZE
+REQUEST QFont
+REQUEST QIcon
+REQUEST QPoint
+REQUEST QSize
 #endif
 
 CLASS QStyleOptionToolButton INHERIT QStyleOptionComplex

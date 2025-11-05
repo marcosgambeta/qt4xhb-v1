@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QBRUSH
-REQUEST QPAINTERPATH
-REQUEST QPEN
+REQUEST QBrush
+REQUEST QPainterPath
+REQUEST QPen
 #endif
 
 CLASS QAbstractGraphicsShapeItem INHERIT QGraphicsItem

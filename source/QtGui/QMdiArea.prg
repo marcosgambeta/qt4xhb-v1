@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QBRUSH
-REQUEST QMDISUBWINDOW
-REQUEST QSIZE
+REQUEST QBrush
+REQUEST QMdiSubWindow
+REQUEST QSize
 #endif
 
 CLASS QMdiArea INHERIT QAbstractScrollArea

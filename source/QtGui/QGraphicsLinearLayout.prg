@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QGRAPHICSLAYOUTITEM
-REQUEST QSIZEF
+REQUEST QGraphicsLayoutItem
+REQUEST QSizeF
 #endif
 
 CLASS QGraphicsLinearLayout INHERIT QGraphicsLayout

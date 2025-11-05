@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QSIZE
-REQUEST QSPLITTER
+REQUEST QSize
+REQUEST QSplitter
 #endif
 
 CLASS QSplitterHandle INHERIT QWidget

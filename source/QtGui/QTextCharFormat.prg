@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QCOLOR
-REQUEST QFONT
-REQUEST QPEN
+REQUEST QColor
+REQUEST QFont
+REQUEST QPen
 #endif
 
 CLASS QTextCharFormat INHERIT QTextFormat

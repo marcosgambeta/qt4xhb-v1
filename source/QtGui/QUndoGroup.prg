@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QACTION
-REQUEST QUNDOSTACK
+REQUEST QAction
+REQUEST QUndoStack
 #endif
 
 CLASS QUndoGroup INHERIT QObject

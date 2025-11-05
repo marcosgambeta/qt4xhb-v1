@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QMATRIX
-REQUEST QRECTF
+REQUEST QMatrix
+REQUEST QRectF
 #endif
 
 CLASS QStyleOptionGraphicsItem INHERIT QStyleOption

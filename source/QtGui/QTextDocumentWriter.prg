@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QBYTEARRAY
-REQUEST QIODEVICE
-REQUEST QTEXTCODEC
+REQUEST QByteArray
+REQUEST QIODevice
+REQUEST QTextCodec
 #endif
 
 CLASS QTextDocumentWriter

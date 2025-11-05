@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QACTION
-REQUEST QWIDGET
+REQUEST QAction
+REQUEST QWidget
 #endif
 
 CLASS QDockWidget INHERIT QWidget

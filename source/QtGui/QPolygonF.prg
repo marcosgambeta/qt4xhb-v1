@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QPOLYGON
-REQUEST QRECTF
+REQUEST QPolygon
+REQUEST QRectF
 #endif
 
 CLASS QPolygonF

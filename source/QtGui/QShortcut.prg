@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QKEYSEQUENCE
-REQUEST QWIDGET
+REQUEST QKeySequence
+REQUEST QWidget
 #endif
 
 CLASS QShortcut INHERIT QObject

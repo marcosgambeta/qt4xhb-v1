@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QBRUSH
+REQUEST QBrush
 #endif
 
 CLASS QGraphicsOpacityEffect INHERIT QGraphicsEffect

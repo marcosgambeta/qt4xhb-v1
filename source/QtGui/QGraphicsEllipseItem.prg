@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QPAINTERPATH
-REQUEST QRECTF
+REQUEST QPainterPath
+REQUEST QRectF
 #endif
 
 CLASS QGraphicsEllipseItem INHERIT QAbstractGraphicsShapeItem

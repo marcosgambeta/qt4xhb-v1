@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QICON
-REQUEST QRECT
-REQUEST QSIZE
+REQUEST QIcon
+REQUEST QRect
+REQUEST QSize
 #endif
 
 CLASS QStyleOptionComboBox INHERIT QStyleOptionComplex

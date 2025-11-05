@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QBITMAP
-REQUEST QPIXMAP
-REQUEST QPOINT
+REQUEST QBitmap
+REQUEST QPixmap
+REQUEST QPoint
 #endif
 
 CLASS QCursor
