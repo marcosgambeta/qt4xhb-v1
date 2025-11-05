@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QDATE
-REQUEST QTIME
+REQUEST QDate
+REQUEST QTime
 #endif
 
 CLASS QDateTime

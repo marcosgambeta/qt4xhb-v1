@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QCHAR
-REQUEST QFILEINFO
+REQUEST QChar
+REQUEST QFileInfo
 #endif
 
 CLASS QDir

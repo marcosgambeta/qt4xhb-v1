@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QSTATE
-REQUEST QSTATEMACHINE
+REQUEST QState
+REQUEST QStateMachine
 #endif
 
 CLASS QAbstractState INHERIT QObject

@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QDATETIME
-REQUEST QFILEINFO
+REQUEST QDateTime
+REQUEST QFileInfo
 #endif
 
 CLASS QFSFileEngine INHERIT QAbstractFileEngine

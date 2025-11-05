@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QBYTEARRAY
-REQUEST QPROCESSENVIRONMENT
+REQUEST QByteArray
+REQUEST QProcessEnvironment
 #endif
 
 CLASS QProcess INHERIT QIODevice

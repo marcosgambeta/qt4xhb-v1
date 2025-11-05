@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QEASINGCURVE
-REQUEST QVARIANT
+REQUEST QEasingCurve
+REQUEST QVariant
 #endif
 
 CLASS QVariantAnimation INHERIT QAbstractAnimation

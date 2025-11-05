@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QIODEVICE
-REQUEST QTEXTCODEC
+REQUEST QIODevice
+REQUEST QTextCodec
 #endif
 
 CLASS QXmlStreamWriter

@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QBYTEARRAY
-REQUEST QMETAOBJECT
+REQUEST QByteArray
+REQUEST QMetaObject
 #endif
 
 CLASS QMetaEnum

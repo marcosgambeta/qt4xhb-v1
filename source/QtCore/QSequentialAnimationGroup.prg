@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QABSTRACTANIMATION
-REQUEST QPAUSEANIMATION
+REQUEST QAbstractAnimation
+REQUEST QPauseAnimation
 #endif
 
 CLASS QSequentialAnimationGroup INHERIT QAnimationGroup

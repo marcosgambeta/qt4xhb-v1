@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QABSTRACTITEMMODEL
-REQUEST QVARIANT
+REQUEST QAbstractItemModel
+REQUEST QVariant
 #endif
 
 CLASS QModelIndex

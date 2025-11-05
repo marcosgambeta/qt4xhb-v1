@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QDATETIME
-REQUEST QDIR
+REQUEST QDateTime
+REQUEST QDir
 #endif
 
 CLASS QFileInfo

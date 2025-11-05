@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QTEXTCODEC
-REQUEST QVARIANT
+REQUEST QTextCodec
+REQUEST QVariant
 #endif
 
 CLASS QSettings INHERIT QObject

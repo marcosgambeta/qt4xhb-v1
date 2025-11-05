@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QLOCALE
-REQUEST QVARIANT
+REQUEST QLocale
+REQUEST QVariant
 #endif
 
 CLASS QSystemLocale
