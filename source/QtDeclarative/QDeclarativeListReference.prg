@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QMETAOBJECT
-REQUEST QOBJECT
+REQUEST QMetaObject
+REQUEST QObject
 #endif
 
 CLASS QDeclarativeListReference

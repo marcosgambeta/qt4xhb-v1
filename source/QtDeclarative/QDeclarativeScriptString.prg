@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QDECLARATIVECONTEXT
-REQUEST QOBJECT
+REQUEST QDeclarativeContext
+REQUEST QObject
 #endif
 
 CLASS QDeclarativeScriptString

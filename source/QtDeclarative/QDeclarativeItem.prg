@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QRECTF
-REQUEST QSCRIPTVALUE
+REQUEST QRectF
+REQUEST QScriptValue
 #endif
 
 CLASS QDeclarativeItem INHERIT QGraphicsObject,QDeclarativeParserStatus
