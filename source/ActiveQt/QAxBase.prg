@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QAXOBJECT
-REQUEST QVARIANT
+REQUEST QAxObject
+REQUEST QVariant
 #endif
 
 CLASS QAxBase

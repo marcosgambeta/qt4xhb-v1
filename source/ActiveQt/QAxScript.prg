@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QAXSCRIPTENGINE
-REQUEST QVARIANT
+REQUEST QAxScriptEngine
+REQUEST QVariant
 #endif
 
 CLASS QAxScript INHERIT QObject
