@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QDESIGNERFORMEDITORINTERFACE
-REQUEST QOBJECT
+REQUEST QDesignerFormEditorInterface
+REQUEST QObject
 #endif
 
 CLASS QDesignerPropertyEditorInterface INHERIT QWidget

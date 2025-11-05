@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QEXTENSIONMANAGER
-REQUEST QOBJECT
+REQUEST QExtensionManager
+REQUEST QObject
 #endif
 
 CLASS QExtensionFactory INHERIT QObject,QAbstractExtensionFactory

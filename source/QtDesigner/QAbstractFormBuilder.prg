@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QDIR
-REQUEST QWIDGET
+REQUEST QDir
+REQUEST QWidget
 #endif
 
 CLASS QAbstractFormBuilder

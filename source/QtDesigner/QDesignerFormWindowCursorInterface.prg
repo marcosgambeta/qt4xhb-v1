@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QDESIGNERFORMWINDOWINTERFACE
-REQUEST QWIDGET
+REQUEST QDesignerFormWindowInterface
+REQUEST QWidget
 #endif
 
 CLASS QDesignerFormWindowCursorInterface
