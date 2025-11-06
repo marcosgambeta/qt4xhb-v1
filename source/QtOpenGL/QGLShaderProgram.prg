@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QGLSHADER
+REQUEST QGLShader
 #endif
 
 CLASS QGLShaderProgram INHERIT QObject
