@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QSQLDATABASE
-REQUEST QSQLINDEX
-REQUEST QVARIANT
+REQUEST QSqlDatabase
+REQUEST QSqlIndex
+REQUEST QVariant
 #endif
 
 CLASS QSqlTableModel INHERIT QSqlQueryModel

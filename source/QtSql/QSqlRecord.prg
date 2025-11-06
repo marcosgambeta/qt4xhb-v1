@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QSQLFIELD
-REQUEST QVARIANT
+REQUEST QSqlField
+REQUEST QVariant
 #endif
 
 CLASS QSqlRecord

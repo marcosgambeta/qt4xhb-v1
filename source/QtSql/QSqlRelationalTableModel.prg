@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QSQLRELATION
-REQUEST QSQLTABLEMODEL
-REQUEST QVARIANT
+REQUEST QSqlRelation
+REQUEST QSqlTableModel
+REQUEST QVariant
 #endif
 
 CLASS QSqlRelationalTableModel INHERIT QSqlTableModel
