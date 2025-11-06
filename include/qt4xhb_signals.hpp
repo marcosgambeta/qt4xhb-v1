@@ -4,8 +4,8 @@
 // Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
-#ifndef QT4XHB_SIGNALS_H
-#define QT4XHB_SIGNALS_H
+#ifndef QT4XHB_SIGNALS_HPP
+#define QT4XHB_SIGNALS_HPP
 
 namespace Qt4xHb
 {
@@ -19,4 +19,4 @@ namespace Qt4xHb
   PHB_ITEM Signals_return_qobject(QObject * ptr, const char * classname);
 }
 
-#endif // QT4XHB_SIGNALS_H
+#endif // QT4XHB_SIGNALS_HPP

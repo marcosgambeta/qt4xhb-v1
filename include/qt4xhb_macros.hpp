@@ -4,8 +4,8 @@
 // Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
-#ifndef QT4XHB_MACROS_H
-#define QT4XHB_MACROS_H
+#ifndef QT4XHB_MACROS_HPP
+#define QT4XHB_MACROS_HPP
 
 #include "qt4xhb_macros_activeqt.hpp"
 #include "qt4xhb_macros_qtcore.hpp"
@@ -166,4 +166,4 @@
 
 #define ISBLOCKORSYMBOL(n) (HB_ISBLOCK(n) || HB_ISSYMBOL(n))
 
-#endif // QT4XHB_MACROS_H
+#endif // QT4XHB_MACROS_HPP

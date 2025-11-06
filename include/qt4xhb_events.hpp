@@ -4,8 +4,8 @@
 // Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
-#ifndef QT4XHB_EVENTS_H
-#define QT4XHB_EVENTS_H
+#ifndef QT4XHB_EVENTS_HPP
+#define QT4XHB_EVENTS_HPP
 
 namespace Qt4xHb
 {
@@ -14,4 +14,4 @@ namespace Qt4xHb
   void Events_disconnect_all_events(QObject * obj, bool children);
 }
 
-#endif // QT4XHB_EVENTS_H
+#endif // QT4XHB_EVENTS_HPP
