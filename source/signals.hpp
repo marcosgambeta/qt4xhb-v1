@@ -4,8 +4,8 @@
 // Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
-#ifndef SIGNALS_H
-#define SIGNALS_H
+#ifndef SIGNALS_HPP
+#define SIGNALS_HPP
 
 #include <QtCore/QObject>
 #include <QtCore/QMetaObject>
@@ -62,4 +62,4 @@ public:
   int active();
 };
 
-#endif // SIGNALS_H
+#endif // SIGNALS_HPP
