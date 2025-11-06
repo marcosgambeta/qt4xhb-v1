@@ -4,8 +4,8 @@
 // Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
-#ifndef EVENTS_H
-#define EVENTS_H
+#ifndef EVENTS_HPP
+#define EVENTS_HPP
 
 #include <QtCore/QObject>
 #include <QtCore/QEvent>
@@ -57,4 +57,4 @@ public:
   int active();
 };
 
-#endif // EVENTS_H
+#endif // EVENTS_HPP
