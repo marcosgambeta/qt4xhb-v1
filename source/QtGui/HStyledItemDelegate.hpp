@@ -4,8 +4,8 @@
 // Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
-#ifndef HSTYLEDITEMDELEGATE_H
-#define HSTYLEDITEMDELEGATE_H
+#ifndef HSTYLEDITEMDELEGATE_HPP
+#define HSTYLEDITEMDELEGATE_HPP
 
 #include <QtGui/QStyledItemDelegate>
 
@@ -50,4 +50,4 @@ public:
   void setUpdateEditorGeometryCB(PHB_ITEM block);
 };
 
-#endif // HSTYLEDITEMDELEGATE_H
+#endif // HSTYLEDITEMDELEGATE_HPP

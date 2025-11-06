@@ -4,8 +4,8 @@
 // Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
-#ifndef HABSTRACTTABLEMODEL_H
-#define HABSTRACTTABLEMODEL_H
+#ifndef HABSTRACTTABLEMODEL_HPP
+#define HABSTRACTTABLEMODEL_HPP
 
 #include <QtCore/QAbstractTableModel>
 #include <QtCore/QDate>
@@ -121,4 +121,4 @@ public:
   bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole);
 };
 
-#endif // HABSTRACTTABLEMODEL_H
+#endif // HABSTRACTTABLEMODEL_HPP

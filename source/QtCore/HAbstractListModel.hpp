@@ -4,8 +4,8 @@
 // Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
-#ifndef HABSTRACTLISTMODEL_H
-#define HABSTRACTLISTMODEL_H
+#ifndef HABSTRACTLISTMODEL_HPP
+#define HABSTRACTLISTMODEL_HPP
 
 #include <QtCore/QAbstractListModel>
 #include <QtCore/QDate>
@@ -157,4 +157,4 @@ public:
   bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole);
 };
 
-#endif // HABSTRACTLISTMODEL_H
+#endif // HABSTRACTLISTMODEL_HPP
