@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QSIZE
-REQUEST QSVGRENDERER
+REQUEST QSize
+REQUEST QSvgRenderer
 #endif
 
 CLASS QSvgWidget INHERIT QWidget

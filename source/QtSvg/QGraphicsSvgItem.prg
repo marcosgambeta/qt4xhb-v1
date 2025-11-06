@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QRECTF
-REQUEST QSIZE
-REQUEST QSVGRENDERER
+REQUEST QRectF
+REQUEST QSize
+REQUEST QSvgRenderer
 #endif
 
 CLASS QGraphicsSvgItem INHERIT QGraphicsObject
