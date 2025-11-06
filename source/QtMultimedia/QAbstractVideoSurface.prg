@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QVIDEOSURFACEFORMAT
+REQUEST QVideoSurfaceFormat
 #endif
 
 CLASS QAbstractVideoSurface INHERIT QObject

@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QAUDIOFORMAT
-REQUEST QIODEVICE
+REQUEST QAudioFormat
+REQUEST QIODevice
 #endif
 
 CLASS QAudioOutput INHERIT QObject
