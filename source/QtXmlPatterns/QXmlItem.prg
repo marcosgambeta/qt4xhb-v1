@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QVARIANT
-REQUEST QXMLNODEMODELINDEX
+REQUEST QVariant
+REQUEST QXmlNodeModelIndex
 #endif
 
 CLASS QXmlItem
