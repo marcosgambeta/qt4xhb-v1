@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QSCRIPTVALUE
+REQUEST QScriptValue
 #endif
 
 CLASS QScriptExtensionPlugin INHERIT QObject

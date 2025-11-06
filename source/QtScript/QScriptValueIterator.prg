@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QSCRIPTSTRING
-REQUEST QSCRIPTVALUE
+REQUEST QScriptString
+REQUEST QScriptValue
 #endif
 
 CLASS QScriptValueIterator

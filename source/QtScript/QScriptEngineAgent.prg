@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QSCRIPTENGINE
-REQUEST QVARIANT
+REQUEST QScriptEngine
+REQUEST QVariant
 #endif
 
 CLASS QScriptEngineAgent

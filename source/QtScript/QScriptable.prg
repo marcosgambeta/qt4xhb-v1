@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QSCRIPTCONTEXT
-REQUEST QSCRIPTENGINE
-REQUEST QSCRIPTVALUE
+REQUEST QScriptContext
+REQUEST QScriptEngine
+REQUEST QScriptValue
 #endif
 
 CLASS QScriptable
