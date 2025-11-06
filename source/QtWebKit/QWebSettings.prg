@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QICON
-REQUEST QPIXMAP
-REQUEST QURL
+REQUEST QIcon
+REQUEST QPixmap
+REQUEST QUrl
 #endif
 
 CLASS QWebSettings
