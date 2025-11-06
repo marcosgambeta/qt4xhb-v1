@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QHOSTADDRESS
-REQUEST QNETWORKPROXY
-REQUEST QVARIANT
+REQUEST QHostAddress
+REQUEST QNetworkProxy
+REQUEST QVariant
 #endif
 
 CLASS QAbstractSocket INHERIT QIODevice

@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QNETWORKCONFIGURATION
-REQUEST QNETWORKINTERFACE
-REQUEST QVARIANT
+REQUEST QNetworkConfiguration
+REQUEST QNetworkInterface
+REQUEST QVariant
 #endif
 
 CLASS QNetworkSession INHERIT QObject

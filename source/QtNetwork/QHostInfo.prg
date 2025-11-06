@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QHOSTADDRESS
+REQUEST QHostAddress
 #endif
 
 CLASS QHostInfo

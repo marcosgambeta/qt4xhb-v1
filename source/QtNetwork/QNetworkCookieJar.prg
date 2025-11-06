@@ -11,7 +11,7 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QNETWORKCOOKIE
+REQUEST QNetworkCookie
 #endif
 
 CLASS QNetworkCookieJar INHERIT QObject

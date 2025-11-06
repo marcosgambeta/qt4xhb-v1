@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QIODEVICE
-REQUEST QNETWORKCACHEMETADATA
+REQUEST QIODevice
+REQUEST QNetworkCacheMetaData
 #endif
 
 CLASS QNetworkDiskCache INHERIT QAbstractNetworkCache

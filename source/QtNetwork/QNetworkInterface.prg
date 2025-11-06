@@ -11,8 +11,8 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QHOSTADDRESS
-REQUEST QNETWORKADDRESSENTRY
+REQUEST QHostAddress
+REQUEST QNetworkAddressEntry
 #endif
 
 CLASS QNetworkInterface

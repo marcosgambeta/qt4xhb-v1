@@ -11,9 +11,9 @@
 #include <hbclass.ch>
 
 #ifndef QT4XHB_NO_REQUESTS
-REQUEST QSSLCERTIFICATE
-REQUEST QSSLCIPHER
-REQUEST QSSLKEY
+REQUEST QSslCertificate
+REQUEST QSslCipher
+REQUEST QSslKey
 #endif
 
 CLASS QSslConfiguration
