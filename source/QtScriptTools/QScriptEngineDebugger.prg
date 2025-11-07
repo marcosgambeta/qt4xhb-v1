@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_ACTION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QAction *ptr = obj->action(static_cast<QScriptEngineDebugger::DebuggerAction>(hb_parni(1)));
+      QAction *ptr = obj->action(PQSCRIPTENGINEDEBUGGER_DEBUGGERACTION(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -275,7 +275,7 @@ HB_FUNC_STATIC(QSCRIPTENGINEDEBUGGER_WIDGET)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QWidget *ptr = obj->widget(static_cast<QScriptEngineDebugger::DebuggerWidget>(hb_parni(1)));
+      QWidget *ptr = obj->widget(PQSCRIPTENGINEDEBUGGER_DEBUGGERWIDGET(1));
       Qt4xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
