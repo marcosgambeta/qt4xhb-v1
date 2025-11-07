@@ -77,4 +77,15 @@
 #define OPQSQLRESULT(n, v)                                  HB_ISNIL(n) ? v : static_cast<QSqlResult *>(Qt4xHb::itemGetPtr(n))
 #define OPQSQLTABLEMODEL(n, v)                              HB_ISNIL(n) ? v : static_cast<QSqlTableModel *>(Qt4xHb::itemGetPtr(n))
 
+#define PQSQL_NUMERICALPRECISIONPOLICY(n)                   static_cast<QSql::NumericalPrecisionPolicy>(hb_parni(n))
+#define PQSQL_PARAMTYPE(n)                                  static_cast<QSql::ParamType>(hb_parni(n))
+#define PQSQL_TABLETYPE(n)                                  static_cast<QSql::TableType>(hb_parni(n))
+#define PQSQLDRIVER_DRIVERFEATURE(n)                        static_cast<QSqlDriver::DriverFeature>(hb_parni(n))
+#define PQSQLDRIVER_IDENTIFIERTYPE(n)                       static_cast<QSqlDriver::IdentifierType>(hb_parni(n))
+#define PQSQLDRIVER_STATEMENTTYPE(n)                        static_cast<QSqlDriver::StatementType>(hb_parni(n))
+#define PQSQLERROR_ERRORTYPE(n)                             static_cast<QSqlError::ErrorType>(hb_parni(n))
+#define PQSQLFIELD_REQUIREDSTATUS(n)                        static_cast<QSqlField::RequiredStatus>(hb_parni(n))
+#define PQSQLQUERY_BATCHEXECUTIONMODE(n)                    static_cast<QSqlQuery::BatchExecutionMode>(hb_parni(n))
+#define PQSQLTABLEMODEL_EDITSTRATEGY(n)                     static_cast<QSqlTableModel::EditStrategy>(hb_parni(n))
+
 #endif // QT4XHB_MACROS_QTSQL_HPP

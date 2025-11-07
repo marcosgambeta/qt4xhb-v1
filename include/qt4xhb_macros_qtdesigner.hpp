@@ -97,4 +97,8 @@
 #define OPQEXTENSIONMANAGER(n, v)                           HB_ISNIL(n) ? v : static_cast<QExtensionManager *>(Qt4xHb::itemGetPtr(n))
 #define OPQFORMBUILDER(n, v)                                HB_ISNIL(n) ? v : static_cast<QFormBuilder *>(Qt4xHb::itemGetPtr(n))
 
+#define PQDESIGNERFORMWINDOWCURSORINTERFACE_MOVEMODE(n)     static_cast<QDesignerFormWindowCursorInterface::MoveMode>(hb_parni(n))
+#define PQDESIGNERFORMWINDOWCURSORINTERFACE_MOVEOPERATION(n)static_cast<QDesignerFormWindowCursorInterface::MoveOperation>(hb_parni(n))
+#define PQDESIGNERFORMWINDOWINTERFACE_FEATURE(n)            static_cast<QDesignerFormWindowInterface::Feature>(hb_parni(n))
+
 #endif // QT4XHB_MACROS_QTDESIGNER_HPP

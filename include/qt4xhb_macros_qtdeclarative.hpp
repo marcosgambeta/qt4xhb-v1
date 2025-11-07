@@ -77,4 +77,13 @@
 #define OPQDECLARATIVESCRIPTSTRING(n, v)                    HB_ISNIL(n) ? v : static_cast<QDeclarativeScriptString *>(Qt4xHb::itemGetPtr(n))
 #define OPQDECLARATIVEVIEW(n, v)                            HB_ISNIL(n) ? v : static_cast<QDeclarativeView *>(Qt4xHb::itemGetPtr(n))
 
+#define PQDECLARATIVECOMPONENT_STATUS(n)                    static_cast<QDeclarativeComponent::Status>(hb_parni(n))
+#define PQDECLARATIVEENGINE_OBJECTOWNERSHIP(n)              static_cast<QDeclarativeEngine::ObjectOwnership>(hb_parni(n))
+#define PQDECLARATIVEIMAGEPROVIDER_IMAGETYPE(n)             static_cast<QDeclarativeImageProvider::ImageType>(hb_parni(n))
+#define PQDECLARATIVEITEM_TRANSFORMORIGIN(n)                static_cast<QDeclarativeItem::TransformOrigin>(hb_parni(n))
+#define PQDECLARATIVEPROPERTY_PROPERTYTYPECATEGORY(n)       static_cast<QDeclarativeProperty::PropertyTypeCategory>(hb_parni(n))
+#define PQDECLARATIVEPROPERTY_TYPE(n)                       static_cast<QDeclarativeProperty::Type>(hb_parni(n))
+#define PQDECLARATIVEVIEW_RESIZEMODE(n)                     static_cast<QDeclarativeView::ResizeMode>(hb_parni(n))
+#define PQDECLARATIVEVIEW_STATUS(n)                         static_cast<QDeclarativeView::Status>(hb_parni(n))
+
 #endif // QT4XHB_MACROS_QTDECLARATIVE_HPP

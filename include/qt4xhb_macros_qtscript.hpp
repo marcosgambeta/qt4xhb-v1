@@ -65,4 +65,15 @@
 #define OPQSCRIPTVALUE(n, v)                                HB_ISNIL(n) ? v : static_cast<QScriptValue *>(Qt4xHb::itemGetPtr(n))
 #define OPQSCRIPTVALUEITERATOR(n, v)                        HB_ISNIL(n) ? v : static_cast<QScriptValueIterator *>(Qt4xHb::itemGetPtr(n))
 
+#define PQSCRIPTCLASS_EXTENSION(n)                          static_cast<QScriptClass::Extension>(hb_parni(n))
+#define PQSCRIPTCLASS_QUERYFLAGS(n)                         static_cast<QScriptClass::QueryFlags>(hb_parni(n))
+#define PQSCRIPTCONTEXT_ERROR(n)                            static_cast<QScriptContext::Error>(hb_parni(n))
+#define PQSCRIPTCONTEXT_EXECUTIONSTATE(n)                   static_cast<QScriptContext::ExecutionState>(hb_parni(n))
+#define PQSCRIPTCONTEXTINFO_FUNCTIONTYPE(n)                 static_cast<QScriptContextInfo::FunctionType>(hb_parni(n))
+#define PQSCRIPTENGINE_VALUEOWNERSHIP(n)                    static_cast<QScriptEngine::ValueOwnership>(hb_parni(n))
+#define PQSCRIPTENGINEAGENT_EXTENSION(n)                    static_cast<QScriptEngineAgent::Extension>(hb_parni(n))
+#define PQSCRIPTSYNTAXCHECKRESULT_STATE(n)                  static_cast<QScriptSyntaxCheckResult::State>(hb_parni(n))
+#define PQSCRIPTVALUE_PROPERTYFLAGS(n)                      static_cast<QScriptValue::PropertyFlags>(hb_parni(n))
+#define PQSCRIPTVALUE_SPECIALVALUE(n)                       static_cast<QScriptValue::SpecialValue>(hb_parni(n))
+
 #endif // QT4XHB_MACROS_QTSCRIPT_HPP

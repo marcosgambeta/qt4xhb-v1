@@ -57,4 +57,16 @@
 #define OPQGLSHADERPROGRAM(n, v)                            HB_ISNIL(n) ? v : static_cast<QGLShaderProgram *>(Qt4xHb::itemGetPtr(n))
 #define OPQGLWIDGET(n, v)                                   HB_ISNIL(n) ? v : static_cast<QGLWidget *>(Qt4xHb::itemGetPtr(n))
 
+#define PQGL_FORMATOPTIONS(n)                               static_cast<QGL::FormatOptions>(hb_parni(n))
+#define PQGLBUFFER_ACCESS(n)                                static_cast<QGLBuffer::Access>(hb_parni(n))
+#define PQGLBUFFER_TYPE(n)                                  static_cast<QGLBuffer::Type>(hb_parni(n))
+#define PQGLBUFFER_USAGEPATTERN(n)                          static_cast<QGLBuffer::UsagePattern>(hb_parni(n))
+#define PQGLCONTEXT_BINDOPTIONS(n)                          static_cast<QGLContext::BindOptions>(hb_parni(n))
+#define PQGLFORMAT_OPENGLCONTEXTPROFILE(n)                  static_cast<QGLFormat::OpenGLContextProfile>(hb_parni(n))
+#define PQGLFORMAT_OPENGLVERSIONFLAGS(n)                    static_cast<QGLFormat::OpenGLVersionFlags>(hb_parni(n))
+#define PQGLFRAMEBUFFEROBJECT_ATTACHMENT(n)                 static_cast<QGLFramebufferObject::Attachment>(hb_parni(n))
+#define PQGLFUNCTIONS_OPENGLFEATURE(n)                      static_cast<QGLFunctions::OpenGLFeature>(hb_parni(n))
+#define PQGLFUNCTIONS_OPENGLFEATURES(n)                     static_cast<QGLFunctions::OpenGLFeatures>(hb_parni(n))
+#define PQGLSHADER_SHADERTYPE(n)                            static_cast<QGLShader::ShaderType>(hb_parni(n))
+
 #endif // QT4XHB_MACROS_QTOPENGL_HPP

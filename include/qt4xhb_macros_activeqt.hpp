@@ -45,4 +45,8 @@
 #define OPQAXSCRIPTMANAGER(n, v)                            HB_ISNIL(n) ? v : static_cast<QAxScriptManager *>(Qt4xHb::itemGetPtr(n))
 #define OPQAXWIDGET(n, v)                                   HB_ISNIL(n) ? v : static_cast<QAxWidget *>(Qt4xHb::itemGetPtr(n))
 
+#define PQAXFACTORY_SERVERTYPE(n)                           static_cast<QAxFactory::ServerType>(hb_parni(n))
+#define PQAXSCRIPT_FUNCTIONFLAGS(n)                         static_cast<QAxScript::FunctionFlags>(hb_parni(n))
+#define PQAXSCRIPTENGINE_STATE(n)                           static_cast<QAxScriptEngine::State>(hb_parni(n))
+
 #endif // QT4XHB_MACROS_ACTIVEQT_HPP

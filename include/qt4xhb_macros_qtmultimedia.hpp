@@ -45,4 +45,14 @@
 #define OPQVIDEOFRAME(n, v)                                 HB_ISNIL(n) ? v : static_cast<QVideoFrame *>(Qt4xHb::itemGetPtr(n))
 #define OPQVIDEOSURFACEFORMAT(n, v)                         HB_ISNIL(n) ? v : static_cast<QVideoSurfaceFormat *>(Qt4xHb::itemGetPtr(n))
 
+#define PQABSTRACTVIDEOBUFFER_HANDLETYPE(n)                 static_cast<QAbstractVideoBuffer::HandleType>(hb_parni(n))
+#define PQABSTRACTVIDEOBUFFER_MAPMODE(n)                    static_cast<QAbstractVideoBuffer::MapMode>(hb_parni(n))
+#define PQABSTRACTVIDEOSURFACE_ERROR(n)                     static_cast<QAbstractVideoSurface::Error>(hb_parni(n))
+#define PQAUDIOFORMAT_ENDIAN(n)                             static_cast<QAudioFormat::Endian>(hb_parni(n))
+#define PQAUDIOFORMAT_SAMPLETYPE(n)                         static_cast<QAudioFormat::SampleType>(hb_parni(n))
+#define PQVIDEOFRAME_FIELDTYPE(n)                           static_cast<QVideoFrame::FieldType>(hb_parni(n))
+#define PQVIDEOFRAME_PIXELFORMAT(n)                         static_cast<QVideoFrame::PixelFormat>(hb_parni(n))
+#define PQVIDEOSURFACEFORMAT_DIRECTION(n)                   static_cast<QVideoSurfaceFormat::Direction>(hb_parni(n))
+#define PQVIDEOSURFACEFORMAT_YCBCRCOLORSPACE(n)             static_cast<QVideoSurfaceFormat::YCbCrColorSpace>(hb_parni(n))
+
 #endif // QT4XHB_MACROS_QTMULTIMEDIA_HPP

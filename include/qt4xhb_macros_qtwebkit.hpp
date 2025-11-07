@@ -73,4 +73,15 @@
 #define OPQWEBSETTINGS(n, v)                                HB_ISNIL(n) ? v : static_cast<QWebSettings *>(Qt4xHb::itemGetPtr(n))
 #define OPQWEBVIEW(n, v)                                    HB_ISNIL(n) ? v : static_cast<QWebView *>(Qt4xHb::itemGetPtr(n))
 
+#define PQWEBELEMENT_STYLERESOLVESTRATEGY(n)                static_cast<QWebElement::StyleResolveStrategy>(hb_parni(n))
+#define PQWEBFRAME_RENDERLAYER(n)                           static_cast<QWebFrame::RenderLayer>(hb_parni(n))
+#define PQWEBPAGE_EXTENSION(n)                              static_cast<QWebPage::Extension>(hb_parni(n))
+#define PQWEBPAGE_FINDFLAGS(n)                              static_cast<QWebPage::FindFlags>(hb_parni(n))
+#define PQWEBPAGE_LINKDELEGATIONPOLICY(n)                   static_cast<QWebPage::LinkDelegationPolicy>(hb_parni(n))
+#define PQWEBPAGE_WEBACTION(n)                              static_cast<QWebPage::WebAction>(hb_parni(n))
+#define PQWEBSETTINGS_FONTFAMILY(n)                         static_cast<QWebSettings::FontFamily>(hb_parni(n))
+#define PQWEBSETTINGS_FONTSIZE(n)                           static_cast<QWebSettings::FontSize>(hb_parni(n))
+#define PQWEBSETTINGS_WEBATTRIBUTE(n)                       static_cast<QWebSettings::WebAttribute>(hb_parni(n))
+#define PQWEBSETTINGS_WEBGRAPHIC(n)                         static_cast<QWebSettings::WebGraphic>(hb_parni(n))
+
 #endif // QT4XHB_MACROS_QTWEBKIT_HPP

@@ -57,4 +57,6 @@
 #define OPQHELPSEARCHQUERYWIDGET(n, v)                      HB_ISNIL(n) ? v : static_cast<QHelpSearchQueryWidget *>(Qt4xHb::itemGetPtr(n))
 #define OPQHELPSEARCHRESULTWIDGET(n, v)                     HB_ISNIL(n) ? v : static_cast<QHelpSearchResultWidget *>(Qt4xHb::itemGetPtr(n))
 
+#define PQHELPSEARCHQUERY_FIELDNAME(n)                      static_cast<QHelpSearchQuery::FieldName>(hb_parni(n))
+
 #endif // QT4XHB_MACROS_QTHELP_HPP

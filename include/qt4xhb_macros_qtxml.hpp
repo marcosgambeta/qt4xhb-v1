@@ -137,4 +137,8 @@
 #define OPQXMLREADER(n, v)                                  HB_ISNIL(n) ? v : static_cast<QXmlReader *>(Qt4xHb::itemGetPtr(n))
 #define OPQXMLSIMPLEREADER(n, v)                            HB_ISNIL(n) ? v : static_cast<QXmlSimpleReader *>(Qt4xHb::itemGetPtr(n))
 
+#define PQDOMIMPLEMENTATION_INVALIDDATAPOLICY(n)            static_cast<QDomImplementation::InvalidDataPolicy>(hb_parni(n))
+#define PQDOMNODE_ENCODINGPOLICY(n)                         static_cast<QDomNode::EncodingPolicy>(hb_parni(n))
+#define PQDOMNODE_NODETYPE(n)                               static_cast<QDomNode::NodeType>(hb_parni(n))
+
 #endif // QT4XHB_MACROS_QTXML_HPP

@@ -77,4 +77,8 @@
 #define OPQXMLSCHEMAVALIDATOR(n, v)                         HB_ISNIL(n) ? v : static_cast<QXmlSchemaValidator *>(Qt4xHb::itemGetPtr(n))
 #define OPQXMLSERIALIZER(n, v)                              HB_ISNIL(n) ? v : static_cast<QXmlSerializer *>(Qt4xHb::itemGetPtr(n))
 
+#define PQXMLNODEMODELINDEX_DOCUMENTORDER(n)                static_cast<QXmlNodeModelIndex::DocumentOrder>(hb_parni(n))
+#define PQXMLNODEMODELINDEX_NODEKIND(n)                     static_cast<QXmlNodeModelIndex::NodeKind>(hb_parni(n))
+#define PQXMLQUERY_QUERYLANGUAGE(n)                         static_cast<QXmlQuery::QueryLanguage>(hb_parni(n))
+
 #endif // QT4XHB_MACROS_QTXMLPATTERNS_HPP
