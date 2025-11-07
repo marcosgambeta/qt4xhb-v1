@@ -56,8 +56,7 @@ HB_FUNC_STATIC(QHELPSEARCHQUERY_NEW)
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISARRAY(2)) {
     // QHelpSearchQuery(QHelpSearchQuery::FieldName field, const QStringList &wordList)
-    QHelpSearchQuery *obj =
-        new QHelpSearchQuery(static_cast<QHelpSearchQuery::FieldName>(hb_parni(1)), PQSTRINGLIST(2));
+    QHelpSearchQuery *obj = new QHelpSearchQuery(PQHELPSEARCHQUERY_FIELDNAME(1), PQSTRINGLIST(2));
     Qt4xHb::returnNewObject(obj, true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
