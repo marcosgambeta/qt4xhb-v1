@@ -75,23 +75,20 @@ HB_FUNC_STATIC(QGLWIDGET_NEW)
 {
   if (ISBETWEEN(0, 3) && ISQWIDGETORNIL(1) && (ISQGLWIDGET(2) || HB_ISNIL(2)) && ISNUMORNIL(3)) {
     // QGLWidget(QWidget *parent = 0, const QGLWidget *shareWidget = 0, Qt::WindowFlags f = 0)
-    QGLWidget *obj =
-        new QGLWidget(OPQWIDGET(1, 0), OPQGLWIDGET(2, 0),
-                      HB_ISNIL(3) ? static_cast<Qt::WindowFlags>(0) : static_cast<Qt::WindowFlags>(hb_parni(3)));
+    QGLWidget *obj = new QGLWidget(OPQWIDGET(1, 0), OPQGLWIDGET(2, 0),
+                                   HB_ISNIL(3) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(3));
     Qt4xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(1, 4) && ISQGLCONTEXT(1) && ISQWIDGETORNIL(2) && (ISQGLWIDGET(3) || HB_ISNIL(3)) &&
              ISNUMORNIL(4)) {
     // QGLWidget(QGLContext *context, QWidget *parent = 0, const QGLWidget *shareWidget = 0, Qt::WindowFlags f = 0)
-    QGLWidget *obj =
-        new QGLWidget(PQGLCONTEXT(1), OPQWIDGET(2, 0), OPQGLWIDGET(3, 0),
-                      HB_ISNIL(4) ? static_cast<Qt::WindowFlags>(0) : static_cast<Qt::WindowFlags>(hb_parni(4)));
+    QGLWidget *obj = new QGLWidget(PQGLCONTEXT(1), OPQWIDGET(2, 0), OPQGLWIDGET(3, 0),
+                                   HB_ISNIL(4) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(4));
     Qt4xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(1, 4) && ISQGLFORMAT(1) && ISQWIDGETORNIL(2) && (ISQGLWIDGET(3) || HB_ISNIL(3)) &&
              ISNUMORNIL(4)) {
     // QGLWidget(const QGLFormat &format, QWidget *parent = 0, const QGLWidget *shareWidget = 0, Qt::WindowFlags f = 0)
-    QGLWidget *obj =
-        new QGLWidget(*PQGLFORMAT(1), OPQWIDGET(2, 0), OPQGLWIDGET(3, 0),
-                      HB_ISNIL(4) ? static_cast<Qt::WindowFlags>(0) : static_cast<Qt::WindowFlags>(hb_parni(4)));
+    QGLWidget *obj = new QGLWidget(*PQGLFORMAT(1), OPQWIDGET(2, 0), OPQGLWIDGET(3, 0),
+                                   HB_ISNIL(4) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(4));
     Qt4xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -136,14 +133,14 @@ HB_FUNC_STATIC(QGLWIDGET_BINDTEXTURE)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RGLUINT(obj->bindTexture(*PQIMAGE(1), PGLENUM(2), PGLINT(3), static_cast<QGLContext::BindOptions>(hb_parni(4))));
+      RGLUINT(obj->bindTexture(*PQIMAGE(1), PGLENUM(2), PGLINT(3), PQGLCONTEXT_BINDOPTIONS(4)));
     }
   } else if (ISBETWEEN(3, 4) && ISQPIXMAP(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISNUMORNIL(4)) {
     // GLuint bindTexture(const QPixmap &pixmap, GLenum target, GLint format, QGLContext::BindOptions options)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RGLUINT(obj->bindTexture(*PQPIXMAP(1), PGLENUM(2), PGLINT(3), static_cast<QGLContext::BindOptions>(hb_parni(4))));
+      RGLUINT(obj->bindTexture(*PQPIXMAP(1), PGLENUM(2), PGLINT(3), PQGLCONTEXT_BINDOPTIONS(4)));
     }
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // GLuint bindTexture(const QString &fileName)
