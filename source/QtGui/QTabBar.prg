@@ -444,7 +444,7 @@ HB_FUNC_STATIC(QTABBAR_SETELIDEMODE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setElideMode(static_cast<Qt::TextElideMode>(hb_parni(1)));
+      obj->setElideMode(PQT_TEXTELIDEMODE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -524,7 +524,7 @@ HB_FUNC_STATIC(QTABBAR_SETSELECTIONBEHAVIORONREMOVE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setSelectionBehaviorOnRemove(static_cast<QTabBar::SelectionBehavior>(hb_parni(1)));
+      obj->setSelectionBehaviorOnRemove(PQTABBAR_SELECTIONBEHAVIOR(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -544,7 +544,7 @@ HB_FUNC_STATIC(QTABBAR_SETSHAPE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setShape(static_cast<QTabBar::Shape>(hb_parni(1)));
+      obj->setShape(PQTABBAR_SHAPE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -564,7 +564,7 @@ HB_FUNC_STATIC(QTABBAR_SETTABBUTTON)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQWIDGET(3)) {
 #endif
-      obj->setTabButton(PINT(1), static_cast<QTabBar::ButtonPosition>(hb_parni(2)), PQWIDGET(3));
+      obj->setTabButton(PINT(1), PQTABBAR_BUTTONPOSITION(2), PQWIDGET(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -801,7 +801,7 @@ HB_FUNC_STATIC(QTABBAR_TABBUTTON)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-      QWidget *ptr = obj->tabButton(PINT(1), static_cast<QTabBar::ButtonPosition>(hb_parni(2)));
+      QWidget *ptr = obj->tabButton(PINT(1), PQTABBAR_BUTTONPOSITION(2));
       Qt4xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {

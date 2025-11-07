@@ -61,7 +61,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEMITERATOR_NEW)
     // QTreeWidgetItemIterator::All)
     QTreeWidgetItemIterator *obj = new QTreeWidgetItemIterator(
         PQTREEWIDGET(1), HB_ISNIL(2) ? static_cast<QTreeWidgetItemIterator::IteratorFlags>(QTreeWidgetItemIterator::All)
-                                     : static_cast<QTreeWidgetItemIterator::IteratorFlags>(hb_parni(2)));
+                                     : PQTREEWIDGETITEMITERATOR_ITERATORFLAGS(2));
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 2) && ISQTREEWIDGETITEM(1) && ISNUMORNIL(2)) {
     // QTreeWidgetItemIterator(QTreeWidgetItem *item, QTreeWidgetItemIterator::IteratorFlags flags =
@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QTREEWIDGETITEMITERATOR_NEW)
     QTreeWidgetItemIterator *obj = new QTreeWidgetItemIterator(
         PQTREEWIDGETITEM(1), HB_ISNIL(2)
                                  ? static_cast<QTreeWidgetItemIterator::IteratorFlags>(QTreeWidgetItemIterator::All)
-                                 : static_cast<QTreeWidgetItemIterator::IteratorFlags>(hb_parni(2)));
+                                 : PQTREEWIDGETITEMITERATOR_ITERATORFLAGS(2));
     Qt4xHb::returnNewObject(obj, true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

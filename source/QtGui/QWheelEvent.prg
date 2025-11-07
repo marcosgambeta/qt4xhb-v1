@@ -55,19 +55,15 @@ HB_FUNC_STATIC(QWHEELEVENT_NEW)
   if (ISBETWEEN(4, 5) && ISQPOINT(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISNUMORNIL(5)) {
     // QWheelEvent(const QPoint &pos, int delta, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,
     // Qt::Orientation orient = Qt::Vertical)
-    QWheelEvent *obj = new QWheelEvent(*PQPOINT(1), PINT(2), static_cast<Qt::MouseButtons>(hb_parni(3)),
-                                       static_cast<Qt::KeyboardModifiers>(hb_parni(4)),
-                                       HB_ISNIL(5) ? static_cast<Qt::Orientation>(Qt::Vertical)
-                                                   : static_cast<Qt::Orientation>(hb_parni(5)));
+    QWheelEvent *obj = new QWheelEvent(*PQPOINT(1), PINT(2), PQT_MOUSEBUTTONS(3), PQT_KEYBOARDMODIFIERS(4),
+                                       HB_ISNIL(5) ? static_cast<Qt::Orientation>(Qt::Vertical) : PQT_ORIENTATION(5));
     Qt4xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(5, 6) && ISQPOINT(1) && ISQPOINT(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
              ISNUMORNIL(6)) {
     // QWheelEvent(const QPoint &pos, const QPoint &globalPos, int delta, Qt::MouseButtons buttons,
     // Qt::KeyboardModifiers modifiers, Qt::Orientation orient = Qt::Vertical)
-    QWheelEvent *obj = new QWheelEvent(*PQPOINT(1), *PQPOINT(2), PINT(3), static_cast<Qt::MouseButtons>(hb_parni(4)),
-                                       static_cast<Qt::KeyboardModifiers>(hb_parni(5)),
-                                       HB_ISNIL(6) ? static_cast<Qt::Orientation>(Qt::Vertical)
-                                                   : static_cast<Qt::Orientation>(hb_parni(6)));
+    QWheelEvent *obj = new QWheelEvent(*PQPOINT(1), *PQPOINT(2), PINT(3), PQT_MOUSEBUTTONS(4), PQT_KEYBOARDMODIFIERS(5),
+                                       HB_ISNIL(6) ? static_cast<Qt::Orientation>(Qt::Vertical) : PQT_ORIENTATION(6));
     Qt4xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

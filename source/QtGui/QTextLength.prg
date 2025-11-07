@@ -60,7 +60,7 @@ HB_FUNC_STATIC(QTEXTLENGTH_NEW)
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // QTextLength(QTextLength::Type type, qreal value)
-    QTextLength *obj = new QTextLength(static_cast<QTextLength::Type>(hb_parni(1)), PQREAL(2));
+    QTextLength *obj = new QTextLength(PQTEXTLENGTH_TYPE(1), PQREAL(2));
     Qt4xHb::returnNewObject(obj, true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

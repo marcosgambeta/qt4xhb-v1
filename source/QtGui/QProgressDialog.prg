@@ -74,16 +74,15 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_NEW)
 {
   if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
     // QProgressDialog(QWidget *parent = 0, Qt::WindowFlags f = 0)
-    QProgressDialog *obj = new QProgressDialog(
-        OPQWIDGET(1, 0), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : static_cast<Qt::WindowFlags>(hb_parni(2)));
+    QProgressDialog *obj =
+        new QProgressDialog(OPQWIDGET(1, 0), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(2));
     Qt4xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(4, 6) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQWIDGETORNIL(5) &&
              ISNUMORNIL(6)) {
     // QProgressDialog(const QString &labelText, const QString &cancelButtonText, int minimum, int maximum, QWidget
     // *parent = 0, Qt::WindowFlags f = 0)
-    QProgressDialog *obj =
-        new QProgressDialog(PQSTRING(1), PQSTRING(2), PINT(3), PINT(4), OPQWIDGET(5, 0),
-                            HB_ISNIL(6) ? static_cast<Qt::WindowFlags>(0) : static_cast<Qt::WindowFlags>(hb_parni(6)));
+    QProgressDialog *obj = new QProgressDialog(PQSTRING(1), PQSTRING(2), PINT(3), PINT(4), OPQWIDGET(5, 0),
+                                               HB_ISNIL(6) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(6));
     Qt4xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

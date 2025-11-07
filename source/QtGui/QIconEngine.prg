@@ -79,8 +79,7 @@ HB_FUNC_STATIC(QICONENGINE_ACTUALSIZE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQSIZE(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
-      QSize *ptr = new QSize(
-          obj->actualSize(*PQSIZE(1), static_cast<QIcon::Mode>(hb_parni(2)), static_cast<QIcon::State>(hb_parni(3))));
+      QSize *ptr = new QSize(obj->actualSize(*PQSIZE(1), PQICON_MODE(2), PQICON_STATE(3)));
       Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -99,8 +98,7 @@ HB_FUNC_STATIC(QICONENGINE_ADDFILE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(4) && HB_ISCHAR(1) && ISQSIZE(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
 #endif
-      obj->addFile(PQSTRING(1), *PQSIZE(2), static_cast<QIcon::Mode>(hb_parni(3)),
-                   static_cast<QIcon::State>(hb_parni(4)));
+      obj->addFile(PQSTRING(1), *PQSIZE(2), PQICON_MODE(3), PQICON_STATE(4));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -120,7 +118,7 @@ HB_FUNC_STATIC(QICONENGINE_ADDPIXMAP)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQPIXMAP(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
-      obj->addPixmap(*PQPIXMAP(1), static_cast<QIcon::Mode>(hb_parni(2)), static_cast<QIcon::State>(hb_parni(3)));
+      obj->addPixmap(*PQPIXMAP(1), PQICON_MODE(2), PQICON_STATE(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -140,8 +138,7 @@ HB_FUNC_STATIC(QICONENGINE_PAINT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(4) && ISQPAINTER(1) && ISQRECT(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
 #endif
-      obj->paint(PQPAINTER(1), *PQRECT(2), static_cast<QIcon::Mode>(hb_parni(3)),
-                 static_cast<QIcon::State>(hb_parni(4)));
+      obj->paint(PQPAINTER(1), *PQRECT(2), PQICON_MODE(3), PQICON_STATE(4));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -161,8 +158,7 @@ HB_FUNC_STATIC(QICONENGINE_PIXMAP)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQSIZE(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
-      QPixmap *ptr = new QPixmap(
-          obj->pixmap(*PQSIZE(1), static_cast<QIcon::Mode>(hb_parni(2)), static_cast<QIcon::State>(hb_parni(3))));
+      QPixmap *ptr = new QPixmap(obj->pixmap(*PQSIZE(1), PQICON_MODE(2), PQICON_STATE(3)));
       Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {

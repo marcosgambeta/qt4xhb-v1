@@ -85,8 +85,7 @@ HB_FUNC_STATIC(QCDESTYLE_DRAWCONTROL)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && ISQWIDGETORNIL(4)) {
 #endif
-      obj->drawControl(static_cast<QStyle::ControlElement>(hb_parni(1)), PQSTYLEOPTION(2), PQPAINTER(3),
-                       OPQWIDGET(4, 0));
+      obj->drawControl(PQSTYLE_CONTROLELEMENT(1), PQSTYLEOPTION(2), PQPAINTER(3), OPQWIDGET(4, 0));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -107,8 +106,7 @@ HB_FUNC_STATIC(QCDESTYLE_DRAWPRIMITIVE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && ISQWIDGETORNIL(4)) {
 #endif
-      obj->drawPrimitive(static_cast<QStyle::PrimitiveElement>(hb_parni(1)), PQSTYLEOPTION(2), PQPAINTER(3),
-                         OPQWIDGET(4, 0));
+      obj->drawPrimitive(PQSTYLE_PRIMITIVEELEMENT(1), PQSTYLEOPTION(2), PQPAINTER(3), OPQWIDGET(4, 0));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -128,7 +126,7 @@ HB_FUNC_STATIC(QCDESTYLE_PIXELMETRIC)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISQSTYLEOPTIONORNIL(2) && ISQWIDGETORNIL(3)) {
 #endif
-      RINT(obj->pixelMetric(static_cast<QStyle::PixelMetric>(hb_parni(1)),
+      RINT(obj->pixelMetric(PQSTYLE_PIXELMETRIC(1),
                             HB_ISNIL(2) ? 0 : static_cast<QStyleOption *>(Qt4xHb::itemGetPtr(2)), OPQWIDGET(3, 0)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {

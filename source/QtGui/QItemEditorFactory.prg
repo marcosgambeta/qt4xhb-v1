@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QITEMEDITORFACTORY_CREATEEDITOR)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQWIDGET(2)) {
 #endif
-      QWidget *ptr = obj->createEditor(static_cast<QVariant::Type>(hb_parni(1)), PQWIDGET(2));
+      QWidget *ptr = obj->createEditor(PQVARIANT_TYPE(1), PQWIDGET(2));
       Qt4xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QITEMEDITORFACTORY_REGISTEREDITOR)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQITEMEDITORCREATORBASE(2)) {
 #endif
-      obj->registerEditor(static_cast<QVariant::Type>(hb_parni(1)), PQITEMEDITORCREATORBASE(2));
+      obj->registerEditor(PQVARIANT_TYPE(1), PQITEMEDITORCREATORBASE(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QITEMEDITORFACTORY_VALUEPROPERTYNAME)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QByteArray *ptr = new QByteArray(obj->valuePropertyName(static_cast<QVariant::Type>(hb_parni(1))));
+      QByteArray *ptr = new QByteArray(obj->valuePropertyName(PQVARIANT_TYPE(1)));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {

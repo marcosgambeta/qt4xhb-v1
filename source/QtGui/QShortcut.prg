@@ -69,9 +69,9 @@ HB_FUNC_STATIC(QSHORTCUT_NEW)
              ISNUMORNIL(5)) {
     // QShortcut(const QKeySequence &key, QWidget *parent, const char *member = 0, const char *ambiguousMember = 0,
     // Qt::ShortcutContext context = Qt::WindowShortcut)
-    QShortcut *obj = new QShortcut(*PQKEYSEQUENCE(1), PQWIDGET(2), OPCONSTCHAR(3, 0), OPCONSTCHAR(4, 0),
-                                   HB_ISNIL(5) ? static_cast<Qt::ShortcutContext>(Qt::WindowShortcut)
-                                               : static_cast<Qt::ShortcutContext>(hb_parni(5)));
+    QShortcut *obj =
+        new QShortcut(*PQKEYSEQUENCE(1), PQWIDGET(2), OPCONSTCHAR(3, 0), OPCONSTCHAR(4, 0),
+                      HB_ISNIL(5) ? static_cast<Qt::ShortcutContext>(Qt::WindowShortcut) : PQT_SHORTCUTCONTEXT(5));
     Qt4xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -234,7 +234,7 @@ HB_FUNC_STATIC(QSHORTCUT_SETCONTEXT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setContext(static_cast<Qt::ShortcutContext>(hb_parni(1)));
+      obj->setContext(PQT_SHORTCUTCONTEXT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

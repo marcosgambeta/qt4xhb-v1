@@ -119,8 +119,7 @@ HB_FUNC_STATIC(QWORKSPACE_ADDWINDOW)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQWIDGET(1) && ISNUMORNIL(2)) {
 #endif
-      QWidget *ptr = obj->addWindow(PQWIDGET(1), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0)
-                                                             : static_cast<Qt::WindowFlags>(hb_parni(2)));
+      QWidget *ptr = obj->addWindow(PQWIDGET(1), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(2));
       Qt4xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -217,7 +216,7 @@ HB_FUNC_STATIC(QWORKSPACE_WINDOWLIST)
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       QWidgetList list = obj->windowList(HB_ISNIL(1) ? static_cast<QWorkspace::WindowOrder>(QWorkspace::CreationOrder)
-                                                     : static_cast<QWorkspace::WindowOrder>(hb_parni(1)));
+                                                     : PQWORKSPACE_WINDOWORDER(1));
       PHB_DYNS pDynSym = hb_dynsymFindName("QWIDGET");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if (pDynSym != NULL) {

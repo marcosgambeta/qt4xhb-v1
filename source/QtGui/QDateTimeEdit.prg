@@ -567,7 +567,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SECTIONTEXT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RQSTRING(obj->sectionText(static_cast<QDateTimeEdit::Section>(hb_parni(1))));
+      RQSTRING(obj->sectionText(PQDATETIMEEDIT_SECTION(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -625,7 +625,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETCURRENTSECTION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setCurrentSection(static_cast<QDateTimeEdit::Section>(hb_parni(1)));
+      obj->setCurrentSection(PQDATETIMEEDIT_SECTION(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -845,7 +845,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETSELECTEDSECTION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setSelectedSection(static_cast<QDateTimeEdit::Section>(hb_parni(1)));
+      obj->setSelectedSection(PQDATETIMEEDIT_SECTION(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -885,7 +885,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_SETTIMESPEC)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setTimeSpec(static_cast<Qt::TimeSpec>(hb_parni(1)));
+      obj->setTimeSpec(PQT_TIMESPEC(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

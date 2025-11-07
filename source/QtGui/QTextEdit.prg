@@ -448,8 +448,8 @@ HB_FUNC_STATIC(QTEXTEDIT_FIND)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
 #endif
-      RBOOL(obj->find(PQSTRING(1), HB_ISNIL(2) ? static_cast<QTextDocument::FindFlags>(0)
-                                               : static_cast<QTextDocument::FindFlags>(hb_parni(2))));
+      RBOOL(
+          obj->find(PQSTRING(1), HB_ISNIL(2) ? static_cast<QTextDocument::FindFlags>(0) : PQTEXTDOCUMENT_FINDFLAGS(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -668,9 +668,9 @@ HB_FUNC_STATIC(QTEXTEDIT_MOVECURSOR)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
-      obj->moveCursor(static_cast<QTextCursor::MoveOperation>(hb_parni(1)),
-                      HB_ISNIL(2) ? static_cast<QTextCursor::MoveMode>(QTextCursor::MoveAnchor)
-                                  : static_cast<QTextCursor::MoveMode>(hb_parni(2)));
+      obj->moveCursor(PQTEXTCURSOR_MOVEOPERATION(1), HB_ISNIL(2)
+                                                         ? static_cast<QTextCursor::MoveMode>(QTextCursor::MoveAnchor)
+                                                         : PQTEXTCURSOR_MOVEMODE(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -748,7 +748,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETAUTOFORMATTING)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setAutoFormatting(static_cast<QTextEdit::AutoFormatting>(hb_parni(1)));
+      obj->setAutoFormatting(PQTEXTEDIT_AUTOFORMATTING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -868,7 +868,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETLINEWRAPMODE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setLineWrapMode(static_cast<QTextEdit::LineWrapMode>(hb_parni(1)));
+      obj->setLineWrapMode(PQTEXTEDIT_LINEWRAPMODE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -988,7 +988,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETTEXTINTERACTIONFLAGS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setTextInteractionFlags(static_cast<Qt::TextInteractionFlags>(hb_parni(1)));
+      obj->setTextInteractionFlags(PQT_TEXTINTERACTIONFLAGS(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1028,7 +1028,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETWORDWRAPMODE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setWordWrapMode(static_cast<QTextOption::WrapMode>(hb_parni(1)));
+      obj->setWordWrapMode(PQTEXTOPTION_WRAPMODE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1413,7 +1413,7 @@ HB_FUNC_STATIC(QTEXTEDIT_SETALIGNMENT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setAlignment(static_cast<Qt::Alignment>(hb_parni(1)));
+      obj->setAlignment(PQT_ALIGNMENT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

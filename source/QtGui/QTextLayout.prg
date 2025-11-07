@@ -501,7 +501,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_NEXTCURSORPOSITION)
 #endif
       RINT(obj->nextCursorPosition(PINT(1), HB_ISNIL(2)
                                                 ? static_cast<QTextLayout::CursorMode>(QTextLayout::SkipCharacters)
-                                                : static_cast<QTextLayout::CursorMode>(hb_parni(2))));
+                                                : PQTEXTLAYOUT_CURSORMODE(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -576,7 +576,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_PREVIOUSCURSORPOSITION)
 #endif
       RINT(obj->previousCursorPosition(PINT(1), HB_ISNIL(2)
                                                     ? static_cast<QTextLayout::CursorMode>(QTextLayout::SkipCharacters)
-                                                    : static_cast<QTextLayout::CursorMode>(hb_parni(2))));
+                                                    : PQTEXTLAYOUT_CURSORMODE(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -632,7 +632,7 @@ HB_FUNC_STATIC(QTEXTLAYOUT_SETCURSORMOVESTYLE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setCursorMoveStyle(static_cast<Qt::CursorMoveStyle>(hb_parni(1)));
+      obj->setCursorMoveStyle(PQT_CURSORMOVESTYLE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

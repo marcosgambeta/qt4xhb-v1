@@ -254,8 +254,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ADDROUNDEDRECT)
 
     if (obj != NULL) {
       obj->addRoundedRect(*PQRECTF(1), PQREAL(2), PQREAL(3),
-                          HB_ISNIL(4) ? static_cast<Qt::SizeMode>(Qt::AbsoluteSize)
-                                      : static_cast<Qt::SizeMode>(hb_parni(4)));
+                          HB_ISNIL(4) ? static_cast<Qt::SizeMode>(Qt::AbsoluteSize) : PQT_SIZEMODE(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -267,8 +266,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ADDROUNDEDRECT)
 
     if (obj != NULL) {
       obj->addRoundedRect(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6),
-                          HB_ISNIL(7) ? static_cast<Qt::SizeMode>(Qt::AbsoluteSize)
-                                      : static_cast<Qt::SizeMode>(hb_parni(7)));
+                          HB_ISNIL(7) ? static_cast<Qt::SizeMode>(Qt::AbsoluteSize) : PQT_SIZEMODE(7));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -773,7 +771,7 @@ HB_FUNC_STATIC(QPAINTERPATH_SETFILLRULE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setFillRule(static_cast<Qt::FillRule>(hb_parni(1)));
+      obj->setFillRule(PQT_FILLRULE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

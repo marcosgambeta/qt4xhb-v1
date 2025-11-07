@@ -47,11 +47,11 @@ HB_FUNC_STATIC(QWINDOWSTATECHANGEEVENT_NEW)
 {
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QWindowStateChangeEvent(Qt::WindowStates aOldState)
-    QWindowStateChangeEvent *obj = new QWindowStateChangeEvent(static_cast<Qt::WindowStates>(hb_parni(1)));
+    QWindowStateChangeEvent *obj = new QWindowStateChangeEvent(PQT_WINDOWSTATES(1));
     Qt4xHb::returnNewObject(obj, false);
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2)) {
     // QWindowStateChangeEvent(Qt::WindowStates aOldState, bool isOverride)
-    QWindowStateChangeEvent *obj = new QWindowStateChangeEvent(static_cast<Qt::WindowStates>(hb_parni(1)), PBOOL(2));
+    QWindowStateChangeEvent *obj = new QWindowStateChangeEvent(PQT_WINDOWSTATES(1), PBOOL(2));
     Qt4xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

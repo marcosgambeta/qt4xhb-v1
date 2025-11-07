@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SETORIENTATION)
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->orientation = static_cast<Qt::Orientation>(hb_parni(1));
+      obj->orientation = PQT_ORIENTATION(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONSLIDER_SETTICKPOSITION)
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->tickPosition = static_cast<QSlider::TickPosition>(hb_parni(1));
+      obj->tickPosition = PQSLIDER_TICKPOSITION(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }

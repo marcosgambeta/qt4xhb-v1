@@ -769,7 +769,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETALIGNMENT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setAlignment(static_cast<Qt::Alignment>(hb_parni(1)));
+      obj->setAlignment(PQT_ALIGNMENT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -849,7 +849,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETECHOMODE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setEchoMode(static_cast<QLineEdit::EchoMode>(hb_parni(1)));
+      obj->setEchoMode(PQLINEEDIT_ECHOMODE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1147,7 +1147,7 @@ HB_FUNC_STATIC(QLINEEDIT_INPUTMETHODQUERY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QVariant *ptr = new QVariant(obj->inputMethodQuery(static_cast<Qt::InputMethodQuery>(hb_parni(1))));
+      QVariant *ptr = new QVariant(obj->inputMethodQuery(PQT_INPUTMETHODQUERY(1)));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {

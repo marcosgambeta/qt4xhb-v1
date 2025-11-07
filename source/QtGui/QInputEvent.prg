@@ -46,9 +46,8 @@ RETURN
 HB_FUNC_STATIC(QINPUTEVENT_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
-    QInputEvent *obj = new QInputEvent(static_cast<QEvent::Type>(hb_parni(1)),
-                                       HB_ISNIL(2) ? static_cast<Qt::KeyboardModifiers>(Qt::NoModifier)
-                                                   : static_cast<Qt::KeyboardModifiers>(hb_parni(2)));
+    QInputEvent *obj = new QInputEvent(PQEVENT_TYPE(1), HB_ISNIL(2) ? static_cast<Qt::KeyboardModifiers>(Qt::NoModifier)
+                                                                    : PQT_KEYBOARDMODIFIERS(2));
     Qt4xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -97,7 +96,7 @@ HB_FUNC_STATIC(QINPUTEVENT_SETMODIFIERS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setModifiers(static_cast<Qt::KeyboardModifiers>(hb_parni(1)));
+      obj->setModifiers(PQT_KEYBOARDMODIFIERS(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

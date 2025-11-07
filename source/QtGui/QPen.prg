@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QPEN_NEW)
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QPen(Qt::PenStyle style)
-    QPen *obj = new QPen(static_cast<Qt::PenStyle>(hb_parni(1)));
+    QPen *obj = new QPen(PQT_PENSTYLE(1));
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1))) {
     // QPen(const QColor &color)
@@ -91,11 +91,10 @@ HB_FUNC_STATIC(QPEN_NEW)
   } else if (ISBETWEEN(2, 5) && ISQBRUSH(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4) && ISNUMORNIL(5)) {
     // QPen(const QBrush &brush, qreal width, Qt::PenStyle style = Qt::SolidLine, Qt::PenCapStyle cap = Qt::SquareCap,
     // Qt::PenJoinStyle join = Qt::BevelJoin)
-    QPen *obj = new QPen(
-        *PQBRUSH(1), PQREAL(2),
-        HB_ISNIL(3) ? static_cast<Qt::PenStyle>(Qt::SolidLine) : static_cast<Qt::PenStyle>(hb_parni(3)),
-        HB_ISNIL(4) ? static_cast<Qt::PenCapStyle>(Qt::SquareCap) : static_cast<Qt::PenCapStyle>(hb_parni(4)),
-        HB_ISNIL(5) ? static_cast<Qt::PenJoinStyle>(Qt::BevelJoin) : static_cast<Qt::PenJoinStyle>(hb_parni(5)));
+    QPen *obj =
+        new QPen(*PQBRUSH(1), PQREAL(2), HB_ISNIL(3) ? static_cast<Qt::PenStyle>(Qt::SolidLine) : PQT_PENSTYLE(3),
+                 HB_ISNIL(4) ? static_cast<Qt::PenCapStyle>(Qt::SquareCap) : PQT_PENCAPSTYLE(4),
+                 HB_ISNIL(5) ? static_cast<Qt::PenJoinStyle>(Qt::BevelJoin) : PQT_PENJOINSTYLE(5));
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQPEN(1)) {
     // QPen(const QPen &pen)
@@ -322,7 +321,7 @@ HB_FUNC_STATIC(QPEN_SETCAPSTYLE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setCapStyle(static_cast<Qt::PenCapStyle>(hb_parni(1)));
+      obj->setCapStyle(PQT_PENCAPSTYLE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -430,7 +429,7 @@ HB_FUNC_STATIC(QPEN_SETJOINSTYLE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setJoinStyle(static_cast<Qt::PenJoinStyle>(hb_parni(1)));
+      obj->setJoinStyle(PQT_PENJOINSTYLE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -470,7 +469,7 @@ HB_FUNC_STATIC(QPEN_SETSTYLE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setStyle(static_cast<Qt::PenStyle>(hb_parni(1)));
+      obj->setStyle(PQT_PENSTYLE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

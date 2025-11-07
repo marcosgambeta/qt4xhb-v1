@@ -367,7 +367,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_SETFIELDGROWTHPOLICY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setFieldGrowthPolicy(static_cast<QFormLayout::FieldGrowthPolicy>(hb_parni(1)));
+      obj->setFieldGrowthPolicy(PQFORMLAYOUT_FIELDGROWTHPOLICY(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -387,7 +387,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_SETFORMALIGNMENT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setFormAlignment(static_cast<Qt::Alignment>(hb_parni(1)));
+      obj->setFormAlignment(PQT_ALIGNMENT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -427,7 +427,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_SETITEM)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQLAYOUTITEM(3)) {
 #endif
-      obj->setItem(PINT(1), static_cast<QFormLayout::ItemRole>(hb_parni(2)), PQLAYOUTITEM(3));
+      obj->setItem(PINT(1), PQFORMLAYOUT_ITEMROLE(2), PQLAYOUTITEM(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -447,7 +447,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_SETLABELALIGNMENT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setLabelAlignment(static_cast<Qt::Alignment>(hb_parni(1)));
+      obj->setLabelAlignment(PQT_ALIGNMENT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -467,7 +467,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_SETLAYOUT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQLAYOUT(3)) {
 #endif
-      obj->setLayout(PINT(1), static_cast<QFormLayout::ItemRole>(hb_parni(2)), PQLAYOUT(3));
+      obj->setLayout(PINT(1), PQFORMLAYOUT_ITEMROLE(2), PQLAYOUT(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -487,7 +487,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_SETROWWRAPPOLICY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setRowWrapPolicy(static_cast<QFormLayout::RowWrapPolicy>(hb_parni(1)));
+      obj->setRowWrapPolicy(PQFORMLAYOUT_ROWWRAPPOLICY(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -547,7 +547,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_SETWIDGET)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQWIDGET(3)) {
 #endif
-      obj->setWidget(PINT(1), static_cast<QFormLayout::ItemRole>(hb_parni(2)), PQWIDGET(3));
+      obj->setWidget(PINT(1), PQFORMLAYOUT_ITEMROLE(2), PQWIDGET(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -713,7 +713,7 @@ HB_FUNC_STATIC(QFORMLAYOUT_ITEMAT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QLayoutItem *ptr = obj->itemAt(PINT(1), static_cast<QFormLayout::ItemRole>(hb_parni(2)));
+      QLayoutItem *ptr = obj->itemAt(PINT(1), PQFORMLAYOUT_ITEMROLE(2));
       Qt4xHb::createReturnClass(ptr, "QLAYOUTITEM", false);
     }
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {

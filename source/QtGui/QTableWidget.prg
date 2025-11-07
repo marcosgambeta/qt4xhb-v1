@@ -298,7 +298,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_FINDITEMS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
 #endif
-      QList<QTableWidgetItem *> list = obj->findItems(PQSTRING(1), static_cast<Qt::MatchFlags>(hb_parni(2)));
+      QList<QTableWidgetItem *> list = obj->findItems(PQSTRING(1), PQT_MATCHFLAGS(2));
       PHB_DYNS pDynSym = hb_dynsymFindName("QTABLEWIDGETITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if (pDynSym != NULL) {
@@ -599,7 +599,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SETCURRENTCELL)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->setCurrentCell(PINT(1), PINT(2), static_cast<QItemSelectionModel::SelectionFlags>(hb_parni(3)));
+      obj->setCurrentCell(PINT(1), PINT(2), PQITEMSELECTIONMODEL_SELECTIONFLAGS(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -624,7 +624,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SETCURRENTITEM)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->setCurrentItem(PQTABLEWIDGETITEM(1), static_cast<QItemSelectionModel::SelectionFlags>(hb_parni(2)));
+      obj->setCurrentItem(PQTABLEWIDGETITEM(1), PQITEMSELECTIONMODEL_SELECTIONFLAGS(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -802,8 +802,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SORTITEMS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
-      obj->sortItems(PINT(1), HB_ISNIL(2) ? static_cast<Qt::SortOrder>(Qt::AscendingOrder)
-                                          : static_cast<Qt::SortOrder>(hb_parni(2)));
+      obj->sortItems(PINT(1), HB_ISNIL(2) ? static_cast<Qt::SortOrder>(Qt::AscendingOrder) : PQT_SORTORDER(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1077,7 +1076,7 @@ HB_FUNC_STATIC(QTABLEWIDGET_SCROLLTOITEM)
 #endif
       obj->scrollToItem(PQTABLEWIDGETITEM(1),
                         HB_ISNIL(2) ? static_cast<QAbstractItemView::ScrollHint>(QAbstractItemView::EnsureVisible)
-                                    : static_cast<QAbstractItemView::ScrollHint>(hb_parni(2)));
+                                    : PQABSTRACTITEMVIEW_SCROLLHINT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

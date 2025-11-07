@@ -62,9 +62,8 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_GRABGESTURE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
-      obj->grabGesture(static_cast<Qt::GestureType>(hb_parni(1)),
-                       HB_ISNIL(2) ? static_cast<Qt::GestureFlags>(Qt::GestureFlags())
-                                   : static_cast<Qt::GestureFlags>(hb_parni(2)));
+      obj->grabGesture(PQT_GESTURETYPE(1),
+                       HB_ISNIL(2) ? static_cast<Qt::GestureFlags>(Qt::GestureFlags()) : PQT_GESTUREFLAGS(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -84,7 +83,7 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_UNGRABGESTURE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->ungrabGesture(static_cast<Qt::GestureType>(hb_parni(1)));
+      obj->ungrabGesture(PQT_GESTURETYPE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

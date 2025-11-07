@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QFONTDIALOG_SETOPTION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
 #endif
-      obj->setOption(static_cast<QFontDialog::FontDialogOption>(hb_parni(1)), OPBOOL(2, true));
+      obj->setOption(PQFONTDIALOG_FONTDIALOGOPTION(1), OPBOOL(2, true));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -195,7 +195,7 @@ HB_FUNC_STATIC(QFONTDIALOG_SETOPTIONS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setOptions(static_cast<QFontDialog::FontDialogOptions>(hb_parni(1)));
+      obj->setOptions(PQFONTDIALOG_FONTDIALOGOPTIONS(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -215,7 +215,7 @@ HB_FUNC_STATIC(QFONTDIALOG_TESTOPTION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->testOption(static_cast<QFontDialog::FontDialogOption>(hb_parni(1))));
+      RBOOL(obj->testOption(PQFONTDIALOG_FONTDIALOGOPTION(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -251,8 +251,8 @@ HB_FUNC_STATIC(QFONTDIALOG_GETFONT)
     // QFontDialog::FontDialogOptions options)
 
     bool par1;
-    QFont *ptr = new QFont(QFontDialog::getFont(&par1, *PQFONT(2), PQWIDGET(3), PQSTRING(4),
-                                                static_cast<QFontDialog::FontDialogOptions>(hb_parni(5))));
+    QFont *ptr =
+        new QFont(QFontDialog::getFont(&par1, *PQFONT(2), PQWIDGET(3), PQSTRING(4), PQFONTDIALOG_FONTDIALOGOPTIONS(5)));
     Qt4xHb::createReturnClass(ptr, "QFONT", true);
     hb_storl(par1, 1);
   } else if (ISNUMPAR(4) && HB_ISLOG(1) && ISQFONT(2) && ISQWIDGET(3) && HB_ISCHAR(4)) {

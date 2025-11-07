@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QSUPPORTEDWRITINGSYSTEMS_SETSUPPORTED)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
 #endif
-      obj->setSupported(static_cast<QFontDatabase::WritingSystem>(hb_parni(1)), OPBOOL(2, true));
+      obj->setSupported(PQFONTDATABASE_WRITINGSYSTEM(1), OPBOOL(2, true));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QSUPPORTEDWRITINGSYSTEMS_SUPPORTED)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->supported(static_cast<QFontDatabase::WritingSystem>(hb_parni(1))));
+      RBOOL(obj->supported(PQFONTDATABASE_WRITINGSYSTEM(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

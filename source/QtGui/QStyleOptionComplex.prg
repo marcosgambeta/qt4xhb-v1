@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_SETSUBCONTROLS)
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->subControls = static_cast<QStyle::SubControls>(hb_parni(1));
+      obj->subControls = PQSTYLE_SUBCONTROLS(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMPLEX_SETACTIVESUBCONTROLS)
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->activeSubControls = static_cast<QStyle::SubControls>(hb_parni(1));
+      obj->activeSubControls = PQSTYLE_SUBCONTROLS(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }

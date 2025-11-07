@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QACCESSIBLE_UPDATEACCESSIBILITY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
-    QAccessible::updateAccessibility(PQOBJECT(1), PINT(2), static_cast<QAccessible::Event>(hb_parni(3)));
+    QAccessible::updateAccessibility(PQOBJECT(1), PINT(2), PQACCESSIBLE_EVENT(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

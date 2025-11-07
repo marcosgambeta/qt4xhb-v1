@@ -280,7 +280,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETALIGNMENT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setAlignment(static_cast<Qt::Alignment>(hb_parni(1)));
+      obj->setAlignment(PQT_ALIGNMENT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -400,7 +400,7 @@ HB_FUNC_STATIC(QTEXTBLOCKFORMAT_SETPAGEBREAKPOLICY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setPageBreakPolicy(static_cast<QTextFormat::PageBreakFlags>(hb_parni(1)));
+      obj->setPageBreakPolicy(PQTEXTFORMAT_PAGEBREAKFLAGS(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

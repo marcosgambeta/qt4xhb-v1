@@ -91,14 +91,14 @@ HB_FUNC_STATIC(QRAWFONT_NEW)
     // QFont::PreferDefaultHinting)
     QRawFont *obj = new QRawFont(PQSTRING(1), PQREAL(2),
                                  HB_ISNIL(3) ? static_cast<QFont::HintingPreference>(QFont::PreferDefaultHinting)
-                                             : static_cast<QFont::HintingPreference>(hb_parni(3)));
+                                             : PQFONT_HINTINGPREFERENCE(3));
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(2, 3) && ISQBYTEARRAY(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
     // QRawFont(const QByteArray &fontData, qreal pixelSize, QFont::HintingPreference hintingPreference =
     // QFont::PreferDefaultHinting)
     QRawFont *obj = new QRawFont(*PQBYTEARRAY(1), PQREAL(2),
                                  HB_ISNIL(3) ? static_cast<QFont::HintingPreference>(QFont::PreferDefaultHinting)
-                                             : static_cast<QFont::HintingPreference>(hb_parni(3)));
+                                             : PQFONT_HINTINGPREFERENCE(3));
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQRAWFONT(1)) {
     // QRawFont(const QRawFont &other)
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QRAWFONT_ALPHAMAPFORGLYPH)
       QImage *ptr = new QImage(
           obj->alphaMapForGlyph(PQUINT32(1),
                                 HB_ISNIL(2) ? static_cast<QRawFont::AntialiasingType>(QRawFont::SubPixelAntialiasing)
-                                            : static_cast<QRawFont::AntialiasingType>(hb_parni(2)),
+                                            : PQRAWFONT_ANTIALIASINGTYPE(2),
                                 HB_ISNIL(3) ? QTransform() : *static_cast<QTransform *>(Qt4xHb::itemGetPtr(3))));
       Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -377,7 +377,7 @@ HB_FUNC_STATIC(QRAWFONT_LOADFROMDATA)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQBYTEARRAY(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
-      obj->loadFromData(*PQBYTEARRAY(1), PQREAL(2), static_cast<QFont::HintingPreference>(hb_parni(3)));
+      obj->loadFromData(*PQBYTEARRAY(1), PQREAL(2), PQFONT_HINTINGPREFERENCE(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -397,7 +397,7 @@ HB_FUNC_STATIC(QRAWFONT_LOADFROMFILE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
-      obj->loadFromFile(PQSTRING(1), PQREAL(2), static_cast<QFont::HintingPreference>(hb_parni(3)));
+      obj->loadFromFile(PQSTRING(1), PQREAL(2), PQFONT_HINTINGPREFERENCE(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -628,7 +628,7 @@ HB_FUNC_STATIC(QRAWFONT_FROMFONT)
 #endif
     QRawFont *ptr = new QRawFont(
         QRawFont::fromFont(*PQFONT(1), HB_ISNIL(2) ? static_cast<QFontDatabase::WritingSystem>(QFontDatabase::Any)
-                                                   : static_cast<QFontDatabase::WritingSystem>(hb_parni(2))));
+                                                   : PQFONTDATABASE_WRITINGSYSTEM(2)));
     Qt4xHb::createReturnClass(ptr, "QRAWFONT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {

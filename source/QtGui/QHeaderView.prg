@@ -116,7 +116,7 @@ RETURN
 HB_FUNC_STATIC(QHEADERVIEW_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQWIDGETORNIL(2)) {
-    QHeaderView *obj = new QHeaderView(static_cast<Qt::Orientation>(hb_parni(1)), OPQWIDGET(2, 0));
+    QHeaderView *obj = new QHeaderView(PQT_ORIENTATION(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -525,7 +525,7 @@ HB_FUNC_STATIC(QHEADERVIEW_RESIZESECTIONS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->resizeSections(static_cast<QHeaderView::ResizeMode>(hb_parni(1)));
+      obj->resizeSections(PQHEADERVIEW_RESIZEMODE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -730,7 +730,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETDEFAULTALIGNMENT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setDefaultAlignment(static_cast<Qt::Alignment>(hb_parni(1)));
+      obj->setDefaultAlignment(PQT_ALIGNMENT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -828,7 +828,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETRESIZEMODE)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->setResizeMode(static_cast<QHeaderView::ResizeMode>(hb_parni(1)));
+      obj->setResizeMode(PQHEADERVIEW_RESIZEMODE(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -837,7 +837,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETRESIZEMODE)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->setResizeMode(PINT(1), static_cast<QHeaderView::ResizeMode>(hb_parni(2)));
+      obj->setResizeMode(PINT(1), PQHEADERVIEW_RESIZEMODE(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -875,7 +875,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETSORTINDICATOR)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-      obj->setSortIndicator(PINT(1), static_cast<Qt::SortOrder>(hb_parni(2)));
+      obj->setSortIndicator(PINT(1), PQT_SORTORDER(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1142,7 +1142,7 @@ HB_FUNC_STATIC(QHEADERVIEW_HEADERDATACHANGED)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
-      obj->headerDataChanged(static_cast<Qt::Orientation>(hb_parni(1)), PINT(2), PINT(3));
+      obj->headerDataChanged(PQT_ORIENTATION(1), PINT(2), PINT(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

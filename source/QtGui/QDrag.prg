@@ -98,15 +98,14 @@ HB_FUNC_STATIC(QDRAG_EXEC)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RENUM(obj->exec(HB_ISNIL(1) ? static_cast<Qt::DropActions>(Qt::MoveAction)
-                                  : static_cast<Qt::DropActions>(hb_parni(1))));
+      RENUM(obj->exec(HB_ISNIL(1) ? static_cast<Qt::DropActions>(Qt::MoveAction) : PQT_DROPACTIONS(1)));
     }
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // Qt::DropAction exec(Qt::DropActions supportedActions, Qt::DropAction defaultDropAction)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RENUM(obj->exec(static_cast<Qt::DropActions>(hb_parni(1)), static_cast<Qt::DropAction>(hb_parni(2))));
+      RENUM(obj->exec(PQT_DROPACTIONS(1), PQT_DROPACTION(2)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -179,7 +178,7 @@ HB_FUNC_STATIC(QDRAG_SETDRAGCURSOR)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQPIXMAP(1) && HB_ISNUM(2)) {
 #endif
-      obj->setDragCursor(*PQPIXMAP(1), static_cast<Qt::DropAction>(hb_parni(2)));
+      obj->setDragCursor(*PQPIXMAP(1), PQT_DROPACTION(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

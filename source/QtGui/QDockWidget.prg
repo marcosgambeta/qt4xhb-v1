@@ -68,14 +68,13 @@ HB_FUNC_STATIC(QDOCKWIDGET_NEW)
 {
   if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISQWIDGETORNIL(2) && ISNUMORNIL(3)) {
     // QDockWidget(const QString &title, QWidget *parent = 0, Qt::WindowFlags flags = 0)
-    QDockWidget *obj =
-        new QDockWidget(PQSTRING(1), OPQWIDGET(2, 0),
-                        HB_ISNIL(3) ? static_cast<Qt::WindowFlags>(0) : static_cast<Qt::WindowFlags>(hb_parni(3)));
+    QDockWidget *obj = new QDockWidget(PQSTRING(1), OPQWIDGET(2, 0),
+                                       HB_ISNIL(3) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(3));
     Qt4xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
     // QDockWidget(QWidget *parent = 0, Qt::WindowFlags flags = 0)
-    QDockWidget *obj = new QDockWidget(OPQWIDGET(1, 0), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0)
-                                                                    : static_cast<Qt::WindowFlags>(hb_parni(2)));
+    QDockWidget *obj =
+        new QDockWidget(OPQWIDGET(1, 0), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(2));
     Qt4xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -144,7 +143,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_ISAREAALLOWED)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->isAreaAllowed(static_cast<Qt::DockWidgetArea>(hb_parni(1))));
+      RBOOL(obj->isAreaAllowed(PQT_DOCKWIDGETAREA(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -180,7 +179,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_SETALLOWEDAREAS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setAllowedAreas(static_cast<Qt::DockWidgetAreas>(hb_parni(1)));
+      obj->setAllowedAreas(PQT_DOCKWIDGETAREAS(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -200,7 +199,7 @@ HB_FUNC_STATIC(QDOCKWIDGET_SETFEATURES)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setFeatures(static_cast<QDockWidget::DockWidgetFeatures>(hb_parni(1)));
+      obj->setFeatures(PQDOCKWIDGET_DOCKWIDGETFEATURES(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

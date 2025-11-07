@@ -102,8 +102,7 @@ HB_FUNC_STATIC(QPLATFORMFONTDATABASE_FONTENGINE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQBYTEARRAY(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
-      QFontEngine *ptr =
-          obj->fontEngine(*PQBYTEARRAY(1), PQREAL(2), static_cast<QFont::HintingPreference>(hb_parni(3)));
+      QFontEngine *ptr = obj->fontEngine(*PQBYTEARRAY(1), PQREAL(2), PQFONT_HINTINGPREFERENCE(3));
       Qt4xHb::createReturnClass(ptr, "QFONTENGINE", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -162,10 +161,9 @@ HB_FUNC_STATIC(QPLATFORMFONTDATABASE_REGISTERFONT)
   if (ISNUMPAR(10) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISLOG(6) &&
       HB_ISLOG(7) && HB_ISNUM(8) && ISQSUPPORTEDWRITINGSYSTEMS(9) && HB_ISPOINTER(10)) {
 #endif
-    QPlatformFontDatabase::registerFont(PQSTRING(1), PQSTRING(2), static_cast<QFont::Weight>(hb_parni(3)),
-                                        static_cast<QFont::Style>(hb_parni(4)),
-                                        static_cast<QFont::Stretch>(hb_parni(5)), PBOOL(6), PBOOL(7), PINT(8),
-                                        *PQSUPPORTEDWRITINGSYSTEMS(9), static_cast<void *>(hb_parptr(10)));
+    QPlatformFontDatabase::registerFont(PQSTRING(1), PQSTRING(2), PQFONT_WEIGHT(3), PQFONT_STYLE(4), PQFONT_STRETCH(5),
+                                        PBOOL(6), PBOOL(7), PINT(8), *PQSUPPORTEDWRITINGSYSTEMS(9),
+                                        static_cast<void *>(hb_parptr(10)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

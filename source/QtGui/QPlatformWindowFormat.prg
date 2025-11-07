@@ -105,8 +105,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_NEW)
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QPlatformWindowFormat(QPlatformWindowFormat::FormatOptions options)
-    QPlatformWindowFormat *obj =
-        new QPlatformWindowFormat(static_cast<QPlatformWindowFormat::FormatOptions>(hb_parni(1)));
+    QPlatformWindowFormat *obj = new QPlatformWindowFormat(PQPLATFORMWINDOWFORMAT_FORMATOPTIONS(1));
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQPLATFORMWINDOWFORMAT(1)) {
     // QPlatformWindowFormat(const QPlatformWindowFormat &other)
@@ -611,7 +610,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETOPTION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setOption(static_cast<QPlatformWindowFormat::FormatOptions>(hb_parni(1)));
+      obj->setOption(PQPLATFORMWINDOWFORMAT_FORMATOPTIONS(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -811,7 +810,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETWINDOWAPI)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setWindowApi(static_cast<QPlatformWindowFormat::WindowApi>(hb_parni(1)));
+      obj->setWindowApi(PQPLATFORMWINDOWFORMAT_WINDOWAPI(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -942,7 +941,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_TESTOPTION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->testOption(static_cast<QPlatformWindowFormat::FormatOptions>(hb_parni(1))));
+      RBOOL(obj->testOption(PQPLATFORMWINDOWFORMAT_FORMATOPTIONS(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

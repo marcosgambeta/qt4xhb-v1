@@ -47,9 +47,8 @@ RETURN
 HB_FUNC_STATIC(QFOCUSEVENT_NEW)
 {
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
-    QFocusEvent *obj = new QFocusEvent(static_cast<QEvent::Type>(hb_parni(1)),
-                                       HB_ISNIL(2) ? static_cast<Qt::FocusReason>(Qt::OtherFocusReason)
-                                                   : static_cast<Qt::FocusReason>(hb_parni(2)));
+    QFocusEvent *obj = new QFocusEvent(PQEVENT_TYPE(1), HB_ISNIL(2) ? static_cast<Qt::FocusReason>(Qt::OtherFocusReason)
+                                                                    : PQT_FOCUSREASON(2));
     Qt4xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

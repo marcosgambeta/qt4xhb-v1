@@ -56,9 +56,8 @@ HB_FUNC_STATIC(QKEYEVENT_NEW)
 {
   if (ISBETWEEN(3, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISCHARORNIL(4) && ISLOGORNIL(5) &&
       ISNUMORNIL(6)) {
-    QKeyEvent *obj =
-        new QKeyEvent(static_cast<QEvent::Type>(hb_parni(1)), PINT(2), static_cast<Qt::KeyboardModifiers>(hb_parni(3)),
-                      OPQSTRING(4, QString()), OPBOOL(5, false), OPUSHORT(6, 1));
+    QKeyEvent *obj = new QKeyEvent(PQEVENT_TYPE(1), PINT(2), PQT_KEYBOARDMODIFIERS(3), OPQSTRING(4, QString()),
+                                   OPBOOL(5, false), OPUSHORT(6, 1));
     Qt4xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -143,7 +142,7 @@ HB_FUNC_STATIC(QKEYEVENT_MATCHES)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->matches(static_cast<QKeySequence::StandardKey>(hb_parni(1))));
+      RBOOL(obj->matches(PQKEYSEQUENCE_STANDARDKEY(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -251,9 +250,9 @@ HB_FUNC_STATIC(QKEYEVENT_CREATEEXTENDEDKEYEVENT)
   if (ISBETWEEN(6, 9) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) &&
       ISCHARORNIL(7) && ISLOGORNIL(8) && ISNUMORNIL(9)) {
 #endif
-    QKeyEvent *ptr = QKeyEvent::createExtendedKeyEvent(
-        static_cast<QEvent::Type>(hb_parni(1)), PINT(2), static_cast<Qt::KeyboardModifiers>(hb_parni(3)), PQUINT32(4),
-        PQUINT32(5), PQUINT32(6), OPQSTRING(7, QString()), OPBOOL(8, false), OPUSHORT(9, 1));
+    QKeyEvent *ptr =
+        QKeyEvent::createExtendedKeyEvent(PQEVENT_TYPE(1), PINT(2), PQT_KEYBOARDMODIFIERS(3), PQUINT32(4), PQUINT32(5),
+                                          PQUINT32(6), OPQSTRING(7, QString()), OPBOOL(8, false), OPUSHORT(9, 1));
     Qt4xHb::createReturnClass(ptr, "QKEYEVENT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {

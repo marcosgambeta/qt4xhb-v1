@@ -336,8 +336,7 @@ RETURN
 HB_FUNC_STATIC(QWIDGET_NEW)
 {
   if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
-    QWidget *obj = new QWidget(OPQWIDGET(1, 0), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0)
-                                                            : static_cast<Qt::WindowFlags>(hb_parni(2)));
+    QWidget *obj = new QWidget(OPQWIDGET(1, 0), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(2));
     Qt4xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1034,9 +1033,8 @@ HB_FUNC_STATIC(QWIDGET_GRABGESTURE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
-      obj->grabGesture(static_cast<Qt::GestureType>(hb_parni(1)),
-                       HB_ISNIL(2) ? static_cast<Qt::GestureFlags>(Qt::GestureFlags())
-                                   : static_cast<Qt::GestureFlags>(hb_parni(2)));
+      obj->grabGesture(PQT_GESTURETYPE(1),
+                       HB_ISNIL(2) ? static_cast<Qt::GestureFlags>(Qt::GestureFlags()) : PQT_GESTUREFLAGS(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1102,7 +1100,7 @@ HB_FUNC_STATIC(QWIDGET_GRABSHORTCUT)
     if (ISBETWEEN(1, 2) && ISQKEYSEQUENCE(1) && ISNUMORNIL(2)) {
 #endif
       RINT(obj->grabShortcut(*PQKEYSEQUENCE(1), HB_ISNIL(2) ? static_cast<Qt::ShortcutContext>(Qt::WindowShortcut)
-                                                            : static_cast<Qt::ShortcutContext>(hb_parni(2))));
+                                                            : PQT_SHORTCUTCONTEXT(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1267,7 +1265,7 @@ HB_FUNC_STATIC(QWIDGET_INPUTMETHODQUERY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QVariant *ptr = new QVariant(obj->inputMethodQuery(static_cast<Qt::InputMethodQuery>(hb_parni(1))));
+      QVariant *ptr = new QVariant(obj->inputMethodQuery(PQT_INPUTMETHODQUERY(1)));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -1966,7 +1964,7 @@ HB_FUNC_STATIC(QWIDGET_OVERRIDEWINDOWFLAGS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->overrideWindowFlags(static_cast<Qt::WindowFlags>(hb_parni(1)));
+      obj->overrideWindowFlags(PQT_WINDOWFLAGS(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2165,7 +2163,7 @@ HB_FUNC_STATIC(QWIDGET_RENDER)
                   HB_ISNIL(3) ? QRegion() : *static_cast<QRegion *>(Qt4xHb::itemGetPtr(3)),
                   HB_ISNIL(4) ? static_cast<QWidget::RenderFlags>(
                                     QWidget::RenderFlags(QWidget::DrawWindowBackground | QWidget::DrawChildren))
-                              : static_cast<QWidget::RenderFlags>(hb_parni(4)));
+                              : PQWIDGET_RENDERFLAGS(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -2180,7 +2178,7 @@ HB_FUNC_STATIC(QWIDGET_RENDER)
                   HB_ISNIL(3) ? QRegion() : *static_cast<QRegion *>(Qt4xHb::itemGetPtr(3)),
                   HB_ISNIL(4) ? static_cast<QWidget::RenderFlags>(
                                     QWidget::RenderFlags(QWidget::DrawWindowBackground | QWidget::DrawChildren))
-                              : static_cast<QWidget::RenderFlags>(hb_parni(4)));
+                              : PQWIDGET_RENDERFLAGS(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -2379,7 +2377,7 @@ HB_FUNC_STATIC(QWIDGET_SETATTRIBUTE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
 #endif
-      obj->setAttribute(static_cast<Qt::WidgetAttribute>(hb_parni(1)), OPBOOL(2, true));
+      obj->setAttribute(PQT_WIDGETATTRIBUTE(1), OPBOOL(2, true));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2419,7 +2417,7 @@ HB_FUNC_STATIC(QWIDGET_SETBACKGROUNDROLE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setBackgroundRole(static_cast<QPalette::ColorRole>(hb_parni(1)));
+      obj->setBackgroundRole(PQPALETTE_COLORROLE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2489,7 +2487,7 @@ HB_FUNC_STATIC(QWIDGET_SETCONTEXTMENUPOLICY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setContextMenuPolicy(static_cast<Qt::ContextMenuPolicy>(hb_parni(1)));
+      obj->setContextMenuPolicy(PQT_CONTEXTMENUPOLICY(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2592,7 +2590,7 @@ HB_FUNC_STATIC(QWIDGET_SETFOCUS)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->setFocus(static_cast<Qt::FocusReason>(hb_parni(1)));
+      obj->setFocus(PQT_FOCUSREASON(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -2619,7 +2617,7 @@ HB_FUNC_STATIC(QWIDGET_SETFOCUSPOLICY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setFocusPolicy(static_cast<Qt::FocusPolicy>(hb_parni(1)));
+      obj->setFocusPolicy(PQT_FOCUSPOLICY(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2679,7 +2677,7 @@ HB_FUNC_STATIC(QWIDGET_SETFOREGROUNDROLE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setForegroundRole(static_cast<QPalette::ColorRole>(hb_parni(1)));
+      obj->setForegroundRole(PQPALETTE_COLORROLE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2764,7 +2762,7 @@ HB_FUNC_STATIC(QWIDGET_SETINPUTMETHODHINTS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setInputMethodHints(static_cast<Qt::InputMethodHints>(hb_parni(1)));
+      obj->setInputMethodHints(PQT_INPUTMETHODHINTS(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2804,7 +2802,7 @@ HB_FUNC_STATIC(QWIDGET_SETLAYOUTDIRECTION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setLayoutDirection(static_cast<Qt::LayoutDirection>(hb_parni(1)));
+      obj->setLayoutDirection(PQT_LAYOUTDIRECTION(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -3046,7 +3044,7 @@ HB_FUNC_STATIC(QWIDGET_SETPARENT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->setParent(PQWIDGET(1), static_cast<Qt::WindowFlags>(hb_parni(2)));
+      obj->setParent(PQWIDGET(1), PQT_WINDOWFLAGS(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -3136,7 +3134,7 @@ HB_FUNC_STATIC(QWIDGET_SETSIZEPOLICY)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->setSizePolicy(static_cast<QSizePolicy::Policy>(hb_parni(1)), static_cast<QSizePolicy::Policy>(hb_parni(2)));
+      obj->setSizePolicy(PQSIZEPOLICY_POLICY(1), PQSIZEPOLICY_POLICY(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -3274,7 +3272,7 @@ HB_FUNC_STATIC(QWIDGET_SETWINDOWFLAGS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setWindowFlags(static_cast<Qt::WindowFlags>(hb_parni(1)));
+      obj->setWindowFlags(PQT_WINDOWFLAGS(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -3334,7 +3332,7 @@ HB_FUNC_STATIC(QWIDGET_SETWINDOWMODALITY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setWindowModality(static_cast<Qt::WindowModality>(hb_parni(1)));
+      obj->setWindowModality(PQT_WINDOWMODALITY(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -3394,7 +3392,7 @@ HB_FUNC_STATIC(QWIDGET_SETWINDOWSTATE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setWindowState(static_cast<Qt::WindowStates>(hb_parni(1)));
+      obj->setWindowState(PQT_WINDOWSTATES(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -3565,7 +3563,7 @@ HB_FUNC_STATIC(QWIDGET_TESTATTRIBUTE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->testAttribute(static_cast<Qt::WidgetAttribute>(hb_parni(1))));
+      RBOOL(obj->testAttribute(PQT_WIDGETATTRIBUTE(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -3619,7 +3617,7 @@ HB_FUNC_STATIC(QWIDGET_UNGRABGESTURE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->ungrabGesture(static_cast<Qt::GestureType>(hb_parni(1)));
+      obj->ungrabGesture(PQT_GESTURETYPE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -4613,7 +4611,7 @@ HB_FUNC_STATIC(QWIDGET_FIND)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISPOINTER(1)) {
 #endif
-    QWidget *ptr = QWidget::find(static_cast<WId>(hb_parptr(1)));
+    QWidget *ptr = QWidget::find((WId)hb_parptr(1));
     Qt4xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {

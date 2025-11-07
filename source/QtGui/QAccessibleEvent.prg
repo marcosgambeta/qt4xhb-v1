@@ -46,7 +46,7 @@ RETURN
 HB_FUNC_STATIC(QACCESSIBLEEVENT_NEW)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
-    QAccessibleEvent *obj = new QAccessibleEvent(static_cast<QAccessibleEvent::Type>(hb_parni(1)), PINT(2));
+    QAccessibleEvent *obj = new QAccessibleEvent(PQACCESSIBLEEVENT_TYPE(1), PINT(2));
     Qt4xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

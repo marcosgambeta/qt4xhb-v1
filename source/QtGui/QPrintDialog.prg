@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QPRINTDIALOG_SETOPTION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
 #endif
-      obj->setOption(static_cast<QPrintDialog::PrintDialogOption>(hb_parni(1)), OPBOOL(2, true));
+      obj->setOption(PQPRINTDIALOG_PRINTDIALOGOPTION(1), OPBOOL(2, true));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QPRINTDIALOG_SETOPTIONS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setOptions(static_cast<QPrintDialog::PrintDialogOptions>(hb_parni(1)));
+      obj->setOptions(PQPRINTDIALOG_PRINTDIALOGOPTIONS(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QPRINTDIALOG_TESTOPTION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->testOption(static_cast<QPrintDialog::PrintDialogOption>(hb_parni(1))));
+      RBOOL(obj->testOption(PQPRINTDIALOG_PRINTDIALOGOPTION(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

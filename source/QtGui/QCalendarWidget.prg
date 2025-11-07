@@ -429,7 +429,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_SETFIRSTDAYOFWEEK)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setFirstDayOfWeek(static_cast<Qt::DayOfWeek>(hb_parni(1)));
+      obj->setFirstDayOfWeek(PQT_DAYOFWEEK(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -469,7 +469,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_SETHORIZONTALHEADERFORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setHorizontalHeaderFormat(static_cast<QCalendarWidget::HorizontalHeaderFormat>(hb_parni(1)));
+      obj->setHorizontalHeaderFormat(PQCALENDARWIDGET_HORIZONTALHEADERFORMAT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -529,7 +529,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_SETSELECTIONMODE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setSelectionMode(static_cast<QCalendarWidget::SelectionMode>(hb_parni(1)));
+      obj->setSelectionMode(PQCALENDARWIDGET_SELECTIONMODE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -549,7 +549,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_SETVERTICALHEADERFORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setVerticalHeaderFormat(static_cast<QCalendarWidget::VerticalHeaderFormat>(hb_parni(1)));
+      obj->setVerticalHeaderFormat(PQCALENDARWIDGET_VERTICALHEADERFORMAT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -569,7 +569,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_SETWEEKDAYTEXTFORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQTEXTCHARFORMAT(2)) {
 #endif
-      obj->setWeekdayTextFormat(static_cast<Qt::DayOfWeek>(hb_parni(1)), *PQTEXTCHARFORMAT(2));
+      obj->setWeekdayTextFormat(PQT_DAYOFWEEK(1), *PQTEXTCHARFORMAT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -607,7 +607,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_WEEKDAYTEXTFORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QTextCharFormat *ptr = new QTextCharFormat(obj->weekdayTextFormat(static_cast<Qt::DayOfWeek>(hb_parni(1))));
+      QTextCharFormat *ptr = new QTextCharFormat(obj->weekdayTextFormat(PQT_DAYOFWEEK(1)));
       Qt4xHb::createReturnClass(ptr, "QTEXTCHARFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {

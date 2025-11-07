@@ -607,8 +607,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWIMAGE)
 
     if (obj != NULL) {
       obj->drawImage(*PQRECTF(1), *PQIMAGE(2), *PQRECTF(3),
-                     HB_ISNIL(4) ? static_cast<Qt::ImageConversionFlags>(Qt::AutoColor)
-                                 : static_cast<Qt::ImageConversionFlags>(hb_parni(4)));
+                     HB_ISNIL(4) ? static_cast<Qt::ImageConversionFlags>(Qt::AutoColor) : PQT_IMAGECONVERSIONFLAGS(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -619,8 +618,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWIMAGE)
 
     if (obj != NULL) {
       obj->drawImage(*PQRECT(1), *PQIMAGE(2), *PQRECT(3),
-                     HB_ISNIL(4) ? static_cast<Qt::ImageConversionFlags>(Qt::AutoColor)
-                                 : static_cast<Qt::ImageConversionFlags>(hb_parni(4)));
+                     HB_ISNIL(4) ? static_cast<Qt::ImageConversionFlags>(Qt::AutoColor) : PQT_IMAGECONVERSIONFLAGS(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -649,8 +647,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWIMAGE)
 
     if (obj != NULL) {
       obj->drawImage(*PQPOINTF(1), *PQIMAGE(2), *PQRECTF(3),
-                     HB_ISNIL(4) ? static_cast<Qt::ImageConversionFlags>(Qt::AutoColor)
-                                 : static_cast<Qt::ImageConversionFlags>(hb_parni(4)));
+                     HB_ISNIL(4) ? static_cast<Qt::ImageConversionFlags>(Qt::AutoColor) : PQT_IMAGECONVERSIONFLAGS(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -661,8 +658,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWIMAGE)
 
     if (obj != NULL) {
       obj->drawImage(*PQPOINT(1), *PQIMAGE(2), *PQRECT(3),
-                     HB_ISNIL(4) ? static_cast<Qt::ImageConversionFlags>(Qt::AutoColor)
-                                 : static_cast<Qt::ImageConversionFlags>(hb_parni(4)));
+                     HB_ISNIL(4) ? static_cast<Qt::ImageConversionFlags>(Qt::AutoColor) : PQT_IMAGECONVERSIONFLAGS(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -692,8 +688,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWIMAGE)
 
     if (obj != NULL) {
       obj->drawImage(PINT(1), PINT(2), *PQIMAGE(3), OPINT(4, 0), OPINT(5, 0), OPINT(6, -1), OPINT(7, -1),
-                     HB_ISNIL(8) ? static_cast<Qt::ImageConversionFlags>(Qt::AutoColor)
-                                 : static_cast<Qt::ImageConversionFlags>(hb_parni(8)));
+                     HB_ISNIL(8) ? static_cast<Qt::ImageConversionFlags>(Qt::AutoColor) : PQT_IMAGECONVERSIONFLAGS(8));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1124,8 +1119,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWPOLYGON)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->drawPolygon(*PQPOLYGONF(1), HB_ISNIL(2) ? static_cast<Qt::FillRule>(Qt::OddEvenFill)
-                                                   : static_cast<Qt::FillRule>(hb_parni(2)));
+      obj->drawPolygon(*PQPOLYGONF(1), HB_ISNIL(2) ? static_cast<Qt::FillRule>(Qt::OddEvenFill) : PQT_FILLRULE(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1134,8 +1128,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWPOLYGON)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->drawPolygon(*PQPOLYGON(1), HB_ISNIL(2) ? static_cast<Qt::FillRule>(Qt::OddEvenFill)
-                                                  : static_cast<Qt::FillRule>(hb_parni(2)));
+      obj->drawPolygon(*PQPOLYGON(1), HB_ISNIL(2) ? static_cast<Qt::FillRule>(Qt::OddEvenFill) : PQT_FILLRULE(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1211,8 +1204,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWROUNDEDRECT)
 
     if (obj != NULL) {
       obj->drawRoundedRect(*PQRECTF(1), PQREAL(2), PQREAL(3),
-                           HB_ISNIL(4) ? static_cast<Qt::SizeMode>(Qt::AbsoluteSize)
-                                       : static_cast<Qt::SizeMode>(hb_parni(4)));
+                           HB_ISNIL(4) ? static_cast<Qt::SizeMode>(Qt::AbsoluteSize) : PQT_SIZEMODE(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1222,8 +1214,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWROUNDEDRECT)
 
     if (obj != NULL) {
       obj->drawRoundedRect(*PQRECT(1), PQREAL(2), PQREAL(3),
-                           HB_ISNIL(4) ? static_cast<Qt::SizeMode>(Qt::AbsoluteSize)
-                                       : static_cast<Qt::SizeMode>(hb_parni(4)));
+                           HB_ISNIL(4) ? static_cast<Qt::SizeMode>(Qt::AbsoluteSize) : PQT_SIZEMODE(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1235,8 +1226,7 @@ HB_FUNC_STATIC(QPAINTER_DRAWROUNDEDRECT)
 
     if (obj != NULL) {
       obj->drawRoundedRect(PINT(1), PINT(2), PINT(3), PINT(4), PQREAL(5), PQREAL(6),
-                           HB_ISNIL(7) ? static_cast<Qt::SizeMode>(Qt::AbsoluteSize)
-                                       : static_cast<Qt::SizeMode>(hb_parni(7)));
+                           HB_ISNIL(7) ? static_cast<Qt::SizeMode>(Qt::AbsoluteSize) : PQT_SIZEMODE(7));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1490,7 +1480,7 @@ HB_FUNC_STATIC(QPAINTER_FILLRECT2)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5)) {
 #endif
-      obj->fillRect(PINT(1), PINT(2), PINT(3), PINT(4), static_cast<Qt::BrushStyle>(hb_parni(5)));
+      obj->fillRect(PINT(1), PINT(2), PINT(3), PINT(4), PQT_BRUSHSTYLE(5));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1510,7 +1500,7 @@ HB_FUNC_STATIC(QPAINTER_FILLRECT3)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQRECT(1) && HB_ISNUM(2)) {
 #endif
-      obj->fillRect(*PQRECT(1), static_cast<Qt::BrushStyle>(hb_parni(2)));
+      obj->fillRect(*PQRECT(1), PQT_BRUSHSTYLE(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1530,7 +1520,7 @@ HB_FUNC_STATIC(QPAINTER_FILLRECT4)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQRECTF(1) && HB_ISNUM(2)) {
 #endif
-      obj->fillRect(*PQRECTF(1), static_cast<Qt::BrushStyle>(hb_parni(2)));
+      obj->fillRect(*PQRECTF(1), PQT_BRUSHSTYLE(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1550,7 +1540,7 @@ HB_FUNC_STATIC(QPAINTER_FILLRECT10)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5)) {
 #endif
-      obj->fillRect(PINT(1), PINT(2), PINT(3), PINT(4), static_cast<Qt::GlobalColor>(hb_parni(5)));
+      obj->fillRect(PINT(1), PINT(2), PINT(3), PINT(4), PQT_GLOBALCOLOR(5));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1570,7 +1560,7 @@ HB_FUNC_STATIC(QPAINTER_FILLRECT11)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQRECT(1) && HB_ISNUM(2)) {
 #endif
-      obj->fillRect(*PQRECT(1), static_cast<Qt::GlobalColor>(hb_parni(2)));
+      obj->fillRect(*PQRECT(1), PQT_GLOBALCOLOR(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1590,7 +1580,7 @@ HB_FUNC_STATIC(QPAINTER_FILLRECT12)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQRECTF(1) && HB_ISNUM(2)) {
 #endif
-      obj->fillRect(*PQRECTF(1), static_cast<Qt::GlobalColor>(hb_parni(2)));
+      obj->fillRect(*PQRECTF(1), PQT_GLOBALCOLOR(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2009,7 +1999,7 @@ HB_FUNC_STATIC(QPAINTER_SETBACKGROUNDMODE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setBackgroundMode(static_cast<Qt::BGMode>(hb_parni(1)));
+      obj->setBackgroundMode(PQT_BGMODE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2036,7 +2026,7 @@ HB_FUNC_STATIC(QPAINTER_SETBRUSH)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->setBrush(static_cast<Qt::BrushStyle>(hb_parni(1)));
+      obj->setBrush(PQT_BRUSHSTYLE(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -2088,8 +2078,8 @@ HB_FUNC_STATIC(QPAINTER_SETCLIPPATH)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQPAINTERPATH(1) && ISNUMORNIL(2)) {
 #endif
-      obj->setClipPath(*PQPAINTERPATH(1), HB_ISNIL(2) ? static_cast<Qt::ClipOperation>(Qt::ReplaceClip)
-                                                      : static_cast<Qt::ClipOperation>(hb_parni(2)));
+      obj->setClipPath(*PQPAINTERPATH(1),
+                       HB_ISNIL(2) ? static_cast<Qt::ClipOperation>(Qt::ReplaceClip) : PQT_CLIPOPERATION(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2107,8 +2097,8 @@ HB_FUNC_STATIC(QPAINTER_SETCLIPRECT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->setClipRect(*PQRECTF(1), HB_ISNIL(2) ? static_cast<Qt::ClipOperation>(Qt::ReplaceClip)
-                                                : static_cast<Qt::ClipOperation>(hb_parni(2)));
+      obj->setClipRect(*PQRECTF(1),
+                       HB_ISNIL(2) ? static_cast<Qt::ClipOperation>(Qt::ReplaceClip) : PQT_CLIPOPERATION(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -2118,8 +2108,7 @@ HB_FUNC_STATIC(QPAINTER_SETCLIPRECT)
 
     if (obj != NULL) {
       obj->setClipRect(PINT(1), PINT(2), PINT(3), PINT(4),
-                       HB_ISNIL(5) ? static_cast<Qt::ClipOperation>(Qt::ReplaceClip)
-                                   : static_cast<Qt::ClipOperation>(hb_parni(5)));
+                       HB_ISNIL(5) ? static_cast<Qt::ClipOperation>(Qt::ReplaceClip) : PQT_CLIPOPERATION(5));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -2128,8 +2117,8 @@ HB_FUNC_STATIC(QPAINTER_SETCLIPRECT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->setClipRect(*PQRECT(1), HB_ISNIL(2) ? static_cast<Qt::ClipOperation>(Qt::ReplaceClip)
-                                               : static_cast<Qt::ClipOperation>(hb_parni(2)));
+      obj->setClipRect(*PQRECT(1),
+                       HB_ISNIL(2) ? static_cast<Qt::ClipOperation>(Qt::ReplaceClip) : PQT_CLIPOPERATION(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -2147,8 +2136,8 @@ HB_FUNC_STATIC(QPAINTER_SETCLIPREGION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && ISQREGION(1) && ISNUMORNIL(2)) {
 #endif
-      obj->setClipRegion(*PQREGION(1), HB_ISNIL(2) ? static_cast<Qt::ClipOperation>(Qt::ReplaceClip)
-                                                   : static_cast<Qt::ClipOperation>(hb_parni(2)));
+      obj->setClipRegion(*PQREGION(1),
+                         HB_ISNIL(2) ? static_cast<Qt::ClipOperation>(Qt::ReplaceClip) : PQT_CLIPOPERATION(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2188,7 +2177,7 @@ HB_FUNC_STATIC(QPAINTER_SETCOMPOSITIONMODE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setCompositionMode(static_cast<QPainter::CompositionMode>(hb_parni(1)));
+      obj->setCompositionMode(PQPAINTER_COMPOSITIONMODE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2228,7 +2217,7 @@ HB_FUNC_STATIC(QPAINTER_SETLAYOUTDIRECTION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setLayoutDirection(static_cast<Qt::LayoutDirection>(hb_parni(1)));
+      obj->setLayoutDirection(PQT_LAYOUTDIRECTION(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2284,7 +2273,7 @@ HB_FUNC_STATIC(QPAINTER_SETPEN)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->setPen(static_cast<Qt::PenStyle>(hb_parni(1)));
+      obj->setPen(PQT_PENSTYLE(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -2302,7 +2291,7 @@ HB_FUNC_STATIC(QPAINTER_SETRENDERHINT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
 #endif
-      obj->setRenderHint(static_cast<QPainter::RenderHint>(hb_parni(1)), OPBOOL(2, true));
+      obj->setRenderHint(PQPAINTER_RENDERHINT(1), OPBOOL(2, true));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2322,7 +2311,7 @@ HB_FUNC_STATIC(QPAINTER_SETRENDERHINTS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
 #endif
-      obj->setRenderHints(static_cast<QPainter::RenderHints>(hb_parni(1)), OPBOOL(2, true));
+      obj->setRenderHints(PQPAINTER_RENDERHINTS(1), OPBOOL(2, true));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2512,7 +2501,7 @@ HB_FUNC_STATIC(QPAINTER_TESTRENDERHINT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->testRenderHint(static_cast<QPainter::RenderHint>(hb_parni(1))));
+      RBOOL(obj->testRenderHint(PQPAINTER_RENDERHINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

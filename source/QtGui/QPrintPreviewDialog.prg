@@ -54,14 +54,13 @@ HB_FUNC_STATIC(QPRINTPREVIEWDIALOG_NEW)
 {
   if (ISBETWEEN(1, 3) && ISQPRINTER(1) && ISQWIDGETORNIL(2) && ISNUMORNIL(3)) {
     // QPrintPreviewDialog(QPrinter *printer, QWidget *parent = 0, Qt::WindowFlags flags = 0)
-    QPrintPreviewDialog *obj = new QPrintPreviewDialog(PQPRINTER(1), OPQWIDGET(2, 0),
-                                                       HB_ISNIL(3) ? static_cast<Qt::WindowFlags>(0)
-                                                                   : static_cast<Qt::WindowFlags>(hb_parni(3)));
+    QPrintPreviewDialog *obj = new QPrintPreviewDialog(
+        PQPRINTER(1), OPQWIDGET(2, 0), HB_ISNIL(3) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(3));
     Qt4xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(0, 2) && ISQWIDGETORNIL(1) && ISNUMORNIL(2)) {
     // QPrintPreviewDialog(QWidget *parent = 0, Qt::WindowFlags flags = 0)
-    QPrintPreviewDialog *obj = new QPrintPreviewDialog(
-        OPQWIDGET(1, 0), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : static_cast<Qt::WindowFlags>(hb_parni(2)));
+    QPrintPreviewDialog *obj =
+        new QPrintPreviewDialog(OPQWIDGET(1, 0), HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(2));
     Qt4xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

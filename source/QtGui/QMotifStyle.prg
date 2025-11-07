@@ -136,8 +136,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_DRAWCOMPLEXCONTROL)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && ISQPAINTER(3) && ISQWIDGETORNIL(4)) {
 #endif
-      obj->drawComplexControl(static_cast<QStyle::ComplexControl>(hb_parni(1)), PQSTYLEOPTIONCOMPLEX(2), PQPAINTER(3),
-                              OPQWIDGET(4, 0));
+      obj->drawComplexControl(PQSTYLE_COMPLEXCONTROL(1), PQSTYLEOPTIONCOMPLEX(2), PQPAINTER(3), OPQWIDGET(4, 0));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -158,8 +157,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_DRAWCONTROL)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && ISQWIDGETORNIL(4)) {
 #endif
-      obj->drawControl(static_cast<QStyle::ControlElement>(hb_parni(1)), PQSTYLEOPTION(2), PQPAINTER(3),
-                       OPQWIDGET(4, 0));
+      obj->drawControl(PQSTYLE_CONTROLELEMENT(1), PQSTYLEOPTION(2), PQPAINTER(3), OPQWIDGET(4, 0));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -180,8 +178,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_DRAWPRIMITIVE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && ISQWIDGETORNIL(4)) {
 #endif
-      obj->drawPrimitive(static_cast<QStyle::PrimitiveElement>(hb_parni(1)), PQSTYLEOPTION(2), PQPAINTER(3),
-                         OPQWIDGET(4, 0));
+      obj->drawPrimitive(PQSTYLE_PRIMITIVEELEMENT(1), PQSTYLEOPTION(2), PQPAINTER(3), OPQWIDGET(4, 0));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -219,7 +216,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_PIXELMETRIC)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISQSTYLEOPTIONORNIL(2) && ISQWIDGETORNIL(3)) {
 #endif
-      RINT(obj->pixelMetric(static_cast<QStyle::PixelMetric>(hb_parni(1)),
+      RINT(obj->pixelMetric(PQSTYLE_PIXELMETRIC(1),
                             HB_ISNIL(2) ? 0 : static_cast<QStyleOption *>(Qt4xHb::itemGetPtr(2)), OPQWIDGET(3, 0)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -259,8 +256,8 @@ HB_FUNC_STATIC(QMOTIFSTYLE_SIZEFROMCONTENTS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQSIZE(3) && ISQWIDGETORNIL(4)) {
 #endif
-      QSize *ptr = new QSize(obj->sizeFromContents(static_cast<QStyle::ContentsType>(hb_parni(1)), PQSTYLEOPTION(2),
-                                                   *PQSIZE(3), OPQWIDGET(4, 0)));
+      QSize *ptr =
+          new QSize(obj->sizeFromContents(PQSTYLE_CONTENTSTYPE(1), PQSTYLEOPTION(2), *PQSIZE(3), OPQWIDGET(4, 0)));
       Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -299,8 +296,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_STANDARDPIXMAP)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQWIDGETORNIL(3)) {
 #endif
-      QPixmap *ptr = new QPixmap(
-          obj->standardPixmap(static_cast<QStyle::StandardPixmap>(hb_parni(1)), PQSTYLEOPTION(2), OPQWIDGET(3, 0)));
+      QPixmap *ptr = new QPixmap(obj->standardPixmap(PQSTYLE_STANDARDPIXMAP(1), PQSTYLEOPTION(2), OPQWIDGET(3, 0)));
       Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -320,9 +316,8 @@ HB_FUNC_STATIC(QMOTIFSTYLE_STYLEHINT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 4) && HB_ISNUM(1) && ISQSTYLEOPTIONORNIL(2) && ISQWIDGETORNIL(3) && ISQSTYLEHINTRETURNORNIL(4)) {
 #endif
-      RINT(obj->styleHint(static_cast<QStyle::StyleHint>(hb_parni(1)),
-                          HB_ISNIL(2) ? 0 : static_cast<QStyleOption *>(Qt4xHb::itemGetPtr(2)), OPQWIDGET(3, 0),
-                          HB_ISNIL(4) ? 0 : static_cast<QStyleHintReturn *>(Qt4xHb::itemGetPtr(4))));
+      RINT(obj->styleHint(PQSTYLE_STYLEHINT(1), HB_ISNIL(2) ? 0 : static_cast<QStyleOption *>(Qt4xHb::itemGetPtr(2)),
+                          OPQWIDGET(3, 0), HB_ISNIL(4) ? 0 : static_cast<QStyleHintReturn *>(Qt4xHb::itemGetPtr(4))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -341,9 +336,8 @@ HB_FUNC_STATIC(QMOTIFSTYLE_SUBCONTROLRECT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && HB_ISNUM(3) && ISQWIDGETORNIL(4)) {
 #endif
-      QRect *ptr =
-          new QRect(obj->subControlRect(static_cast<QStyle::ComplexControl>(hb_parni(1)), PQSTYLEOPTIONCOMPLEX(2),
-                                        static_cast<QStyle::SubControl>(hb_parni(3)), OPQWIDGET(4, 0)));
+      QRect *ptr = new QRect(obj->subControlRect(PQSTYLE_COMPLEXCONTROL(1), PQSTYLEOPTIONCOMPLEX(2),
+                                                 PQSTYLE_SUBCONTROL(3), OPQWIDGET(4, 0)));
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -362,8 +356,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_SUBELEMENTRECT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQWIDGETORNIL(3)) {
 #endif
-      QRect *ptr = new QRect(
-          obj->subElementRect(static_cast<QStyle::SubElement>(hb_parni(1)), PQSTYLEOPTION(2), OPQWIDGET(3, 0)));
+      QRect *ptr = new QRect(obj->subElementRect(PQSTYLE_SUBELEMENT(1), PQSTYLEOPTION(2), OPQWIDGET(3, 0)));
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {

@@ -203,7 +203,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_SETOPTION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
 #endif
-      obj->setOption(static_cast<QColorDialog::ColorDialogOption>(hb_parni(1)), OPBOOL(2, true));
+      obj->setOption(PQCOLORDIALOG_COLORDIALOGOPTION(1), OPBOOL(2, true));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -223,7 +223,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_SETOPTIONS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setOptions(static_cast<QColorDialog::ColorDialogOptions>(hb_parni(1)));
+      obj->setOptions(PQCOLORDIALOG_COLORDIALOGOPTIONS(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -243,7 +243,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_TESTOPTION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->testOption(static_cast<QColorDialog::ColorDialogOption>(hb_parni(1))));
+      RBOOL(obj->testOption(PQCOLORDIALOG_COLORDIALOGOPTION(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -308,8 +308,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_GETCOLOR)
 
     QColor *ptr = new QColor(QColorDialog::getColor(
         HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(1)) : QColor(hb_parc(1)), PQWIDGET(2), PQSTRING(3),
-        HB_ISNIL(4) ? static_cast<QColorDialog::ColorDialogOptions>(0)
-                    : static_cast<QColorDialog::ColorDialogOptions>(hb_parni(4))));
+        HB_ISNIL(4) ? static_cast<QColorDialog::ColorDialogOptions>(0) : PQCOLORDIALOG_COLORDIALOGOPTIONS(4)));
     Qt4xHb::createReturnClass(ptr, "QCOLOR", true);
   } else if (ISBETWEEN(0, 2) && (ISQCOLOR(1) || HB_ISCHAR(1) || HB_ISNIL(1)) && ISQWIDGETORNIL(2)) {
     // static QColor getColor(const QColor &initial = Qt::white, QWidget *parent = 0)

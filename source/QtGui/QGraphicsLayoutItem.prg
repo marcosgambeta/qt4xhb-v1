@@ -118,9 +118,8 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_EFFECTIVESIZEHINT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQSIZEFORNIL(2)) {
 #endif
-      QSizeF *ptr =
-          new QSizeF(obj->effectiveSizeHint(static_cast<Qt::SizeHint>(hb_parni(1)),
-                                            HB_ISNIL(2) ? QSizeF() : *static_cast<QSizeF *>(Qt4xHb::itemGetPtr(2))));
+      QSizeF *ptr = new QSizeF(obj->effectiveSizeHint(
+          PQT_SIZEHINT(1), HB_ISNIL(2) ? QSizeF() : *static_cast<QSizeF *>(Qt4xHb::itemGetPtr(2))));
       Qt4xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -668,9 +667,9 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SETSIZEPOLICY)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->setSizePolicy(static_cast<QSizePolicy::Policy>(hb_parni(1)), static_cast<QSizePolicy::Policy>(hb_parni(2)),
+      obj->setSizePolicy(PQSIZEPOLICY_POLICY(1), PQSIZEPOLICY_POLICY(2),
                          HB_ISNIL(3) ? static_cast<QSizePolicy::ControlType>(QSizePolicy::DefaultType)
-                                     : static_cast<QSizePolicy::ControlType>(hb_parni(3)));
+                                     : PQSIZEPOLICY_CONTROLTYPE(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());

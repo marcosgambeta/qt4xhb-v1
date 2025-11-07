@@ -419,7 +419,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_CREATELIST)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QTextList *ptr = obj->createList(static_cast<QTextListFormat::Style>(hb_parni(1)));
+      QTextList *ptr = obj->createList(PQTEXTLISTFORMAT_STYLE(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QTEXTLIST");
     }
   } else {
@@ -708,7 +708,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTIMAGE)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->insertImage(*PQTEXTIMAGEFORMAT(1), static_cast<QTextFrameFormat::Position>(hb_parni(2)));
+      obj->insertImage(*PQTEXTIMAGEFORMAT(1), PQTEXTFRAMEFORMAT_POSITION(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -750,7 +750,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_INSERTLIST)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QTextList *ptr = obj->insertList(static_cast<QTextListFormat::Style>(hb_parni(1)));
+      QTextList *ptr = obj->insertList(PQTEXTLISTFORMAT_STYLE(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QTEXTLIST");
     }
   } else {
@@ -950,9 +950,9 @@ HB_FUNC_STATIC(QTEXTCURSOR_MOVEPOSITION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
-      RBOOL(obj->movePosition(static_cast<QTextCursor::MoveOperation>(hb_parni(1)),
+      RBOOL(obj->movePosition(PQTEXTCURSOR_MOVEOPERATION(1),
                               HB_ISNIL(2) ? static_cast<QTextCursor::MoveMode>(QTextCursor::MoveAnchor)
-                                          : static_cast<QTextCursor::MoveMode>(hb_parni(2)),
+                                          : PQTEXTCURSOR_MOVEMODE(2),
                               OPINT(3, 1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -1027,7 +1027,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SELECT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->select(static_cast<QTextCursor::SelectionType>(hb_parni(1)));
+      obj->select(PQTEXTCURSOR_SELECTIONTYPE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1229,7 +1229,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SETPOSITION)
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
       obj->setPosition(PINT(1), HB_ISNIL(2) ? static_cast<QTextCursor::MoveMode>(QTextCursor::MoveAnchor)
-                                            : static_cast<QTextCursor::MoveMode>(hb_parni(2)));
+                                            : PQTEXTCURSOR_MOVEMODE(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETDISPLAYALIGNMENT)
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->displayAlignment = static_cast<Qt::Alignment>(hb_parni(1));
+      obj->displayAlignment = PQT_ALIGNMENT(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETDECORATIONALIGNMENT)
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->decorationAlignment = static_cast<Qt::Alignment>(hb_parni(1));
+      obj->decorationAlignment = PQT_ALIGNMENT(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETTEXTELIDEMODE)
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->textElideMode = static_cast<Qt::TextElideMode>(hb_parni(1));
+      obj->textElideMode = PQT_TEXTELIDEMODE(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
@@ -174,7 +174,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONVIEWITEM_SETDECORATIONPOSITION)
 
   if (obj != NULL) {
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
-      obj->decorationPosition = static_cast<QStyleOptionViewItem::Position>(hb_parni(1));
+      obj->decorationPosition = PQSTYLEOPTIONVIEWITEM_POSITION(1);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }

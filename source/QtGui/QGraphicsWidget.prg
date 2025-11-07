@@ -112,9 +112,8 @@ RETURN
 HB_FUNC_STATIC(QGRAPHICSWIDGET_NEW)
 {
   if (ISBETWEEN(0, 2) && ISQGRAPHICSITEMORNIL(1) && ISNUMORNIL(2)) {
-    QGraphicsWidget *obj =
-        new QGraphicsWidget(HB_ISNIL(1) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(1)),
-                            HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : static_cast<Qt::WindowFlags>(hb_parni(2)));
+    QGraphicsWidget *obj = new QGraphicsWidget(HB_ISNIL(1) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(1)),
+                                               HB_ISNIL(2) ? static_cast<Qt::WindowFlags>(0) : PQT_WINDOWFLAGS(2));
     Qt4xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -354,7 +353,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_GRABSHORTCUT)
     if (ISBETWEEN(1, 2) && ISQKEYSEQUENCE(1) && ISNUMORNIL(2)) {
 #endif
       RINT(obj->grabShortcut(*PQKEYSEQUENCE(1), HB_ISNIL(2) ? static_cast<Qt::ShortcutContext>(Qt::WindowShortcut)
-                                                            : static_cast<Qt::ShortcutContext>(hb_parni(2))));
+                                                            : PQT_SHORTCUTCONTEXT(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -596,7 +595,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_SETATTRIBUTE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
 #endif
-      obj->setAttribute(static_cast<Qt::WidgetAttribute>(hb_parni(1)), OPBOOL(2, true));
+      obj->setAttribute(PQT_WIDGETATTRIBUTE(1), OPBOOL(2, true));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -656,7 +655,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_SETFOCUSPOLICY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setFocusPolicy(static_cast<Qt::FocusPolicy>(hb_parni(1)));
+      obj->setFocusPolicy(PQT_FOCUSPOLICY(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -716,7 +715,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_SETLAYOUTDIRECTION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setLayoutDirection(static_cast<Qt::LayoutDirection>(hb_parni(1)));
+      obj->setLayoutDirection(PQT_LAYOUTDIRECTION(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -816,7 +815,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_SETWINDOWFLAGS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setWindowFlags(static_cast<Qt::WindowFlags>(hb_parni(1)));
+      obj->setWindowFlags(PQT_WINDOWFLAGS(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -914,7 +913,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_TESTATTRIBUTE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->testAttribute(static_cast<Qt::WidgetAttribute>(hb_parni(1))));
+      RBOOL(obj->testAttribute(PQT_WIDGETATTRIBUTE(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
