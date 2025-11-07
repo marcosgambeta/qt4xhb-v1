@@ -189,11 +189,9 @@ HB_FUNC_STATIC(QSSLSOCKET_ADDCACERTIFICATES)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RBOOL(obj->addCaCertificates(PQSTRING(1),
-                                   HB_ISNIL(2) ? static_cast<QSsl::EncodingFormat>(QSsl::Pem)
-                                               : static_cast<QSsl::EncodingFormat>(hb_parni(2)),
-                                   HB_ISNIL(3) ? static_cast<QRegExp::PatternSyntax>(QRegExp::FixedString)
-                                               : static_cast<QRegExp::PatternSyntax>(hb_parni(3))));
+      RBOOL(obj->addCaCertificates(
+          PQSTRING(1), HB_ISNIL(2) ? static_cast<QSsl::EncodingFormat>(QSsl::Pem) : PQSSL_ENCODINGFORMAT(2),
+          HB_ISNIL(3) ? static_cast<QRegExp::PatternSyntax>(QRegExp::FixedString) : PQREGEXP_PATTERNSYNTAX(3)));
     }
   } else if (ISNUMPAR(1) && HB_ISARRAY(1)) {
     // void addCaCertificates(const QList<QSslCertificate> &certificates)
@@ -308,7 +306,7 @@ HB_FUNC_STATIC(QSSLSOCKET_CONNECTTOHOSTENCRYPTED)
     if (obj != NULL) {
       obj->connectToHostEncrypted(PQSTRING(1), PQUINT16(2),
                                   HB_ISNIL(3) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
-                                              : static_cast<QIODevice::OpenMode>(hb_parni(3)));
+                                              : PQIODEVICE_OPENMODE(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -320,7 +318,7 @@ HB_FUNC_STATIC(QSSLSOCKET_CONNECTTOHOSTENCRYPTED)
     if (obj != NULL) {
       obj->connectToHostEncrypted(PQSTRING(1), PQUINT16(2), PQSTRING(3),
                                   HB_ISNIL(4) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
-                                              : static_cast<QIODevice::OpenMode>(hb_parni(4)));
+                                              : PQIODEVICE_OPENMODE(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -697,8 +695,8 @@ HB_FUNC_STATIC(QSSLSOCKET_SETLOCALCERTIFICATE)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->setLocalCertificate(PQSTRING(1), HB_ISNIL(2) ? static_cast<QSsl::EncodingFormat>(QSsl::Pem)
-                                                        : static_cast<QSsl::EncodingFormat>(hb_parni(2)));
+      obj->setLocalCertificate(PQSTRING(1),
+                               HB_ISNIL(2) ? static_cast<QSsl::EncodingFormat>(QSsl::Pem) : PQSSL_ENCODINGFORMAT(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -736,7 +734,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETPEERVERIFYMODE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setPeerVerifyMode(static_cast<QSslSocket::PeerVerifyMode>(hb_parni(1)));
+      obj->setPeerVerifyMode(PQSSLSOCKET_PEERVERIFYMODE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -764,11 +762,9 @@ HB_FUNC_STATIC(QSSLSOCKET_SETPRIVATEKEY)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->setPrivateKey(
-          PQSTRING(1),
-          HB_ISNIL(2) ? static_cast<QSsl::KeyAlgorithm>(QSsl::Rsa) : static_cast<QSsl::KeyAlgorithm>(hb_parni(2)),
-          HB_ISNIL(3) ? static_cast<QSsl::EncodingFormat>(QSsl::Pem) : static_cast<QSsl::EncodingFormat>(hb_parni(3)),
-          HB_ISNIL(4) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(4)));
+      obj->setPrivateKey(PQSTRING(1), HB_ISNIL(2) ? static_cast<QSsl::KeyAlgorithm>(QSsl::Rsa) : PQSSL_KEYALGORITHM(2),
+                         HB_ISNIL(3) ? static_cast<QSsl::EncodingFormat>(QSsl::Pem) : PQSSL_ENCODINGFORMAT(3),
+                         HB_ISNIL(4) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(4)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -786,7 +782,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETPROTOCOL)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setProtocol(static_cast<QSsl::SslProtocol>(hb_parni(1)));
+      obj->setProtocol(PQSSL_SSLPROTOCOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -827,12 +823,11 @@ HB_FUNC_STATIC(QSSLSOCKET_SETSOCKETDESCRIPTOR)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
-      RBOOL(obj->setSocketDescriptor(PINT(1),
-                                     HB_ISNIL(2)
-                                         ? static_cast<QAbstractSocket::SocketState>(QAbstractSocket::ConnectedState)
-                                         : static_cast<QAbstractSocket::SocketState>(hb_parni(2)),
-                                     HB_ISNIL(3) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
-                                                 : static_cast<QIODevice::OpenMode>(hb_parni(3))));
+      RBOOL(obj->setSocketDescriptor(
+          PINT(1),
+          HB_ISNIL(2) ? static_cast<QAbstractSocket::SocketState>(QAbstractSocket::ConnectedState)
+                      : PQABSTRACTSOCKET_SOCKETSTATE(2),
+          HB_ISNIL(3) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite) : PQIODEVICE_OPENMODE(3)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -850,7 +845,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SETSOCKETOPTION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2)) {
 #endif
-      obj->setSocketOption(static_cast<QAbstractSocket::SocketOption>(hb_parni(1)), *PQVARIANT(2));
+      obj->setSocketOption(PQABSTRACTSOCKET_SOCKETOPTION(1), *PQVARIANT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -890,7 +885,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SOCKETOPTION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QVariant *ptr = new QVariant(obj->socketOption(static_cast<QAbstractSocket::SocketOption>(hb_parni(1))));
+      QVariant *ptr = new QVariant(obj->socketOption(PQABSTRACTSOCKET_SOCKETOPTION(1)));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -1204,11 +1199,9 @@ HB_FUNC_STATIC(QSSLSOCKET_ADDDEFAULTCACERTIFICATES)
     // static bool addDefaultCaCertificates(const QString &path, QSsl::EncodingFormat encoding = QSsl::Pem,
     // QRegExp::PatternSyntax syntax = QRegExp::FixedString)
 
-    RBOOL(QSslSocket::addDefaultCaCertificates(PQSTRING(1),
-                                               HB_ISNIL(2) ? static_cast<QSsl::EncodingFormat>(QSsl::Pem)
-                                                           : static_cast<QSsl::EncodingFormat>(hb_parni(2)),
-                                               HB_ISNIL(3) ? static_cast<QRegExp::PatternSyntax>(QRegExp::FixedString)
-                                                           : static_cast<QRegExp::PatternSyntax>(hb_parni(3))));
+    RBOOL(QSslSocket::addDefaultCaCertificates(
+        PQSTRING(1), HB_ISNIL(2) ? static_cast<QSsl::EncodingFormat>(QSsl::Pem) : PQSSL_ENCODINGFORMAT(2),
+        HB_ISNIL(3) ? static_cast<QRegExp::PatternSyntax>(QRegExp::FixedString) : PQREGEXP_PATTERNSYNTAX(3)));
   } else if (ISNUMPAR(1) && HB_ISARRAY(1)) {
     // void addDefaultCaCertificates(const QList<QSslCertificate> &certificates)
     GET_PTR_FROM_SELF(obj);

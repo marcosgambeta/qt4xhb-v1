@@ -379,9 +379,8 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_TORAWFORM)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      QByteArray *ptr =
-          new QByteArray(obj->toRawForm(HB_ISNIL(1) ? static_cast<QNetworkCookie::RawForm>(QNetworkCookie::Full)
-                                                    : static_cast<QNetworkCookie::RawForm>(hb_parni(1))));
+      QByteArray *ptr = new QByteArray(obj->toRawForm(
+          HB_ISNIL(1) ? static_cast<QNetworkCookie::RawForm>(QNetworkCookie::Full) : PQNETWORKCOOKIE_RAWFORM(1)));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {

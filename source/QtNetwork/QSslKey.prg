@@ -67,21 +67,19 @@ HB_FUNC_STATIC(QSSLKEY_NEW)
              (ISQBYTEARRAY(5) || HB_ISNIL(5))) {
     // QSslKey(const QByteArray &encoded, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem,
     // QSsl::KeyType type = QSsl::PrivateKey, const QByteArray &passPhrase = QByteArray())
-    QSslKey *obj = new QSslKey(
-        *PQBYTEARRAY(1), static_cast<QSsl::KeyAlgorithm>(hb_parni(2)),
-        HB_ISNIL(3) ? static_cast<QSsl::EncodingFormat>(QSsl::Pem) : static_cast<QSsl::EncodingFormat>(hb_parni(3)),
-        HB_ISNIL(4) ? static_cast<QSsl::KeyType>(QSsl::PrivateKey) : static_cast<QSsl::KeyType>(hb_parni(4)),
-        HB_ISNIL(5) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(5)));
+    QSslKey *obj = new QSslKey(*PQBYTEARRAY(1), PQSSL_KEYALGORITHM(2),
+                               HB_ISNIL(3) ? static_cast<QSsl::EncodingFormat>(QSsl::Pem) : PQSSL_ENCODINGFORMAT(3),
+                               HB_ISNIL(4) ? static_cast<QSsl::KeyType>(QSsl::PrivateKey) : PQSSL_KEYTYPE(4),
+                               HB_ISNIL(5) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(5)));
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(2, 5) && ISQIODEVICE(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4) &&
              (ISQBYTEARRAY(5) || HB_ISNIL(5))) {
     // QSslKey(QIODevice *device, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType
     // type = QSsl::PrivateKey, const QByteArray &passPhrase = QByteArray())
-    QSslKey *obj = new QSslKey(
-        PQIODEVICE(1), static_cast<QSsl::KeyAlgorithm>(hb_parni(2)),
-        HB_ISNIL(3) ? static_cast<QSsl::EncodingFormat>(QSsl::Pem) : static_cast<QSsl::EncodingFormat>(hb_parni(3)),
-        HB_ISNIL(4) ? static_cast<QSsl::KeyType>(QSsl::PrivateKey) : static_cast<QSsl::KeyType>(hb_parni(4)),
-        HB_ISNIL(5) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(5)));
+    QSslKey *obj = new QSslKey(PQIODEVICE(1), PQSSL_KEYALGORITHM(2),
+                               HB_ISNIL(3) ? static_cast<QSsl::EncodingFormat>(QSsl::Pem) : PQSSL_ENCODINGFORMAT(3),
+                               HB_ISNIL(4) ? static_cast<QSsl::KeyType>(QSsl::PrivateKey) : PQSSL_KEYTYPE(4),
+                               HB_ISNIL(5) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(5)));
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQSSLKEY(1)) {
     // QSslKey(const QSslKey &other)

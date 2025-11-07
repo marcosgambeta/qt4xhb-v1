@@ -74,8 +74,8 @@ HB_FUNC_STATIC(QNETWORKPROXY_NEW)
   } else if (ISBETWEEN(1, 5) && HB_ISNUM(1) && ISCHARORNIL(2) && ISCHARORNIL(3) && ISCHARORNIL(4) && ISCHARORNIL(5)) {
     // QNetworkProxy(QNetworkProxy::ProxyType type, const QString &hostName = QString(), quint16 port = 0, const QString
     // &user = QString(), const QString &password = QString())
-    QNetworkProxy *obj = new QNetworkProxy(static_cast<QNetworkProxy::ProxyType>(hb_parni(1)), OPQSTRING(2, QString()),
-                                           OPQUINT16(3, 0), OPQSTRING(4, QString()), OPQSTRING(5, QString()));
+    QNetworkProxy *obj = new QNetworkProxy(PQNETWORKPROXY_PROXYTYPE(1), OPQSTRING(2, QString()), OPQUINT16(3, 0),
+                                           OPQSTRING(4, QString()), OPQSTRING(5, QString()));
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQNETWORKPROXY(1)) {
     // QNetworkProxy(const QNetworkProxy &other)
@@ -218,7 +218,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_SETCAPABILITIES)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setCapabilities(static_cast<QNetworkProxy::Capabilities>(hb_parni(1)));
+      obj->setCapabilities(PQNETWORKPROXY_CAPABILITIES(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -298,7 +298,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_SETTYPE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setType(static_cast<QNetworkProxy::ProxyType>(hb_parni(1)));
+      obj->setType(PQNETWORKPROXY_PROXYTYPE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

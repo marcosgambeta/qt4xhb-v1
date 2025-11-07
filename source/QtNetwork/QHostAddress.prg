@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_NEW2)
 // QHostAddress(QHostAddress::SpecialAddress address)
 HB_FUNC_STATIC(QHOSTADDRESS_NEW8)
 {
-  QHostAddress *obj = new QHostAddress(static_cast<QHostAddress::SpecialAddress>(hb_parni(1)));
+  QHostAddress *obj = new QHostAddress(PQHOSTADDRESS_SPECIALADDRESS(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 

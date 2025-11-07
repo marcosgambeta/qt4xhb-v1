@@ -66,7 +66,7 @@ HB_FUNC_STATIC(QSSLCIPHER_NEW)
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     // QSslCipher(const QString &name, QSsl::SslProtocol protocol)
-    QSslCipher *obj = new QSslCipher(PQSTRING(1), static_cast<QSsl::SslProtocol>(hb_parni(2)));
+    QSslCipher *obj = new QSslCipher(PQSTRING(1), PQSSL_SSLPROTOCOL(2));
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQSSLCIPHER(1)) {
     // QSslCipher(const QSslCipher &other)

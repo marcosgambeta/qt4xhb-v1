@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QLOCALSOCKET_CONNECTTOSERVER)
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
 #endif
       obj->connectToServer(PQSTRING(1), HB_ISNIL(2) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
-                                                    : static_cast<QIODevice::OpenMode>(hb_parni(2)));
+                                                    : PQIODEVICE_OPENMODE(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

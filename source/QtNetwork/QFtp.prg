@@ -300,8 +300,7 @@ HB_FUNC_STATIC(QFTP_GET)
     if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && ISQIODEVICEORNIL(2) && ISNUMORNIL(3)) {
 #endif
       RINT(obj->get(PQSTRING(1), OPQIODEVICE(2, 0),
-                    HB_ISNIL(3) ? static_cast<QFtp::TransferType>(QFtp::Binary)
-                                : static_cast<QFtp::TransferType>(hb_parni(3))));
+                    HB_ISNIL(3) ? static_cast<QFtp::TransferType>(QFtp::Binary) : PQFTP_TRANSFERTYPE(3)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -390,8 +389,7 @@ HB_FUNC_STATIC(QFTP_PUT)
 
     if (obj != NULL) {
       RINT(obj->put(PQIODEVICE(1), PQSTRING(2),
-                    HB_ISNIL(3) ? static_cast<QFtp::TransferType>(QFtp::Binary)
-                                : static_cast<QFtp::TransferType>(hb_parni(3))));
+                    HB_ISNIL(3) ? static_cast<QFtp::TransferType>(QFtp::Binary) : PQFTP_TRANSFERTYPE(3)));
     }
   } else if (ISBETWEEN(2, 3) && ISQBYTEARRAY(1) && HB_ISCHAR(2) && ISNUMORNIL(3)) {
     // int put(const QByteArray &data, const QString &file, QFtp::TransferType type = QFtp::Binary)
@@ -399,8 +397,7 @@ HB_FUNC_STATIC(QFTP_PUT)
 
     if (obj != NULL) {
       RINT(obj->put(*PQBYTEARRAY(1), PQSTRING(2),
-                    HB_ISNIL(3) ? static_cast<QFtp::TransferType>(QFtp::Binary)
-                                : static_cast<QFtp::TransferType>(hb_parni(3))));
+                    HB_ISNIL(3) ? static_cast<QFtp::TransferType>(QFtp::Binary) : PQFTP_TRANSFERTYPE(3)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -543,7 +540,7 @@ HB_FUNC_STATIC(QFTP_SETTRANSFERMODE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RINT(obj->setTransferMode(static_cast<QFtp::TransferMode>(hb_parni(1))));
+      RINT(obj->setTransferMode(PQFTP_TRANSFERMODE(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
