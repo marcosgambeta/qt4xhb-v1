@@ -20,19 +20,25 @@ FUNCTION Main()
 
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new():resize(320, 240)
 
+   // create button 1
    oButton1 := QPushButton():new("PushButton 1", oWindow):move(20, 20):setObjectName("button1")
    ? oButton1:onClicked(@buttonClicked())
 
+   // create button 2
    oButton2 := QPushButton():new("PushButton 2", oWindow):move(20, 70):setObjectName("button2")
    ? oButton2:onClicked(@buttonClicked())
 
+   // create button 3
    oButton3 := QPushButton():new("PushButton 3", oWindow):move(20, 120):setObjectName("button3")
    ? oButton3:onClicked(@buttonClicked())
 
+   // show window
    oWindow:show()
 
+   // start event loop
    oApp:exec()
 
    oWindow:delete()

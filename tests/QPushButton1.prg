@@ -14,16 +14,20 @@ FUNCTION Main()
 
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
 
-   oButton := QPushButton():new("Clique aqui", oWindow)
+   // create button
+   oButton := QPushButton():new("Click here", oWindow)
    oButton:move(20, 20)
    oButton:onClicked({||QOut("clicked")})
    oButton:onPressed({||QOut("pressed")})
    oButton:onReleased({||QOut("released")})
 
+   // show window
    oWindow:show()
 
+   // start event loop
    oApp:exec()
 
    oWindow:delete()
