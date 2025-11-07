@@ -49,7 +49,7 @@ RETURN
 HB_FUNC_STATIC(QCHILDEVENT_NEW)
 {
   if (ISNUMPAR(2) && HB_ISNUM(1) && ISQOBJECT(2)) {
-    QChildEvent *obj = new QChildEvent(static_cast<QEvent::Type>(hb_parni(1)), PQOBJECT(2));
+    QChildEvent *obj = new QChildEvent(PQEVENT_TYPE(1), PQOBJECT(2));
     Qt4xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

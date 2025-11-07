@@ -297,37 +297,35 @@ HB_FUNC_STATIC(QFILE_OPEN)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RBOOL(obj->open(static_cast<FILE *>(hb_parptr(1)), static_cast<QIODevice::OpenMode>(hb_parni(2))));
+      RBOOL(obj->open(static_cast<FILE *>(hb_parptr(1)), PQIODEVICE_OPENMODE(2)));
     }
   } else if (ISNUMPAR(3) && HB_ISPOINTER(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
     // bool open(FILE *fh, QIODevice::OpenMode mode, QFile::FileHandleFlags handleFlags)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RBOOL(obj->open(static_cast<FILE *>(hb_parptr(1)), static_cast<QIODevice::OpenMode>(hb_parni(2)),
-                      static_cast<QFile::FileHandleFlags>(hb_parni(3))));
+      RBOOL(obj->open(static_cast<FILE *>(hb_parptr(1)), PQIODEVICE_OPENMODE(2), PQFILE_FILEHANDLEFLAGS(3)));
     }
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // bool open(int fd, QIODevice::OpenMode mode)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RBOOL(obj->open(PINT(1), static_cast<QIODevice::OpenMode>(hb_parni(2))));
+      RBOOL(obj->open(PINT(1), PQIODEVICE_OPENMODE(2)));
     }
   } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
     // bool open(int fd, QIODevice::OpenMode mode, QFile::FileHandleFlags handleFlags)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RBOOL(obj->open(PINT(1), static_cast<QIODevice::OpenMode>(hb_parni(2)),
-                      static_cast<QFile::FileHandleFlags>(hb_parni(3))));
+      RBOOL(obj->open(PINT(1), PQIODEVICE_OPENMODE(2), PQFILE_FILEHANDLEFLAGS(3)));
     }
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // virtual bool open(QIODevice::OpenMode mode)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RBOOL(obj->open(static_cast<QIODevice::OpenMode>(hb_parni(1))));
+      RBOOL(obj->open(PQIODEVICE_OPENMODE(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -551,12 +549,12 @@ HB_FUNC_STATIC(QFILE_SETPERMISSIONS)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RBOOL(obj->setPermissions(static_cast<QFile::Permissions>(hb_parni(1))));
+      RBOOL(obj->setPermissions(PQFILE_PERMISSIONS(1)));
     }
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     // static bool setPermissions(const QString &fileName, QFile::Permissions permissions)
 
-    RBOOL(QFile::setPermissions(PQSTRING(1), static_cast<QFile::Permissions>(hb_parni(2))));
+    RBOOL(QFile::setPermissions(PQSTRING(1), PQFILE_PERMISSIONS(2)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

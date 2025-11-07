@@ -441,13 +441,13 @@ HB_FUNC_STATIC(QCOREAPPLICATION_PROCESSEVENTS)
     // static void processEvents(QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents)
 
     QCoreApplication::processEvents(HB_ISNIL(1) ? static_cast<QEventLoop::ProcessEventsFlags>(QEventLoop::AllEvents)
-                                                : static_cast<QEventLoop::ProcessEventsFlags>(hb_parni(1)));
+                                                : PQEVENTLOOP_PROCESSEVENTSFLAGS(1));
 
     hb_itemReturn(hb_stackSelfItem());
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // static void processEvents(QEventLoop::ProcessEventsFlags flags, int maxtime)
 
-    QCoreApplication::processEvents(static_cast<QEventLoop::ProcessEventsFlags>(hb_parni(1)), PINT(2));
+    QCoreApplication::processEvents(PQEVENTLOOP_PROCESSEVENTSFLAGS(1), PINT(2));
 
     hb_itemReturn(hb_stackSelfItem());
   } else {
@@ -577,7 +577,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_SETATTRIBUTE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISLOGORNIL(2)) {
 #endif
-    QCoreApplication::setAttribute(static_cast<Qt::ApplicationAttribute>(hb_parni(1)), OPBOOL(2, true));
+    QCoreApplication::setAttribute(PQT_APPLICATIONATTRIBUTE(1), OPBOOL(2, true));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -655,7 +655,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_TESTATTRIBUTE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-    RBOOL(QCoreApplication::testAttribute(static_cast<Qt::ApplicationAttribute>(hb_parni(1))));
+    RBOOL(QCoreApplication::testAttribute(PQT_APPLICATIONATTRIBUTE(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -669,8 +669,8 @@ HB_FUNC_STATIC(QCOREAPPLICATION_TRANSLATE)
     // static QString translate(const char *context, const char *sourceText, const char *disambiguation,
     // QCoreApplication::Encoding encoding, int n)
 
-    RQSTRING(QCoreApplication::translate(PCONSTCHAR(1), PCONSTCHAR(2), PCONSTCHAR(3),
-                                         static_cast<QCoreApplication::Encoding>(hb_parni(4)), PINT(5)));
+    RQSTRING(QCoreApplication::translate(PCONSTCHAR(1), PCONSTCHAR(2), PCONSTCHAR(3), PQCOREAPPLICATION_ENCODING(4),
+                                         PINT(5)));
   } else if (ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISNUM(4)) {
     // static QString translate(const char *context, const char *sourceText, const char *disambiguation = 0,
     // QCoreApplication::Encoding encoding = QCoreApplication::CodecForTr)
@@ -678,7 +678,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_TRANSLATE)
     RQSTRING(QCoreApplication::translate(PCONSTCHAR(1), PCONSTCHAR(2), OPCONSTCHAR(3, 0),
                                          HB_ISNIL(4)
                                              ? static_cast<QCoreApplication::Encoding>(QCoreApplication::CodecForTr)
-                                             : static_cast<QCoreApplication::Encoding>(hb_parni(4))));
+                                             : PQCOREAPPLICATION_ENCODING(4)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

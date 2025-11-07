@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QPROCESS_CLOSEREADCHANNEL)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->closeReadChannel(static_cast<QProcess::ProcessChannel>(hb_parni(1)));
+      obj->closeReadChannel(PQPROCESS_PROCESSCHANNEL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -393,7 +393,7 @@ HB_FUNC_STATIC(QPROCESS_SETPROCESSCHANNELMODE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setProcessChannelMode(static_cast<QProcess::ProcessChannelMode>(hb_parni(1)));
+      obj->setProcessChannelMode(PQPROCESS_PROCESSCHANNELMODE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -433,7 +433,7 @@ HB_FUNC_STATIC(QPROCESS_SETREADCHANNEL)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setReadChannel(static_cast<QProcess::ProcessChannel>(hb_parni(1)));
+      obj->setReadChannel(PQPROCESS_PROCESSCHANNEL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -454,7 +454,7 @@ HB_FUNC_STATIC(QPROCESS_SETSTANDARDERRORFILE)
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
 #endif
       obj->setStandardErrorFile(PQSTRING(1), HB_ISNIL(2) ? static_cast<QIODevice::OpenMode>(QIODevice::Truncate)
-                                                         : static_cast<QIODevice::OpenMode>(hb_parni(2)));
+                                                         : PQIODEVICE_OPENMODE(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -495,7 +495,7 @@ HB_FUNC_STATIC(QPROCESS_SETSTANDARDOUTPUTFILE)
     if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
 #endif
       obj->setStandardOutputFile(PQSTRING(1), HB_ISNIL(2) ? static_cast<QIODevice::OpenMode>(QIODevice::Truncate)
-                                                          : static_cast<QIODevice::OpenMode>(hb_parni(2)));
+                                                          : PQIODEVICE_OPENMODE(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -554,8 +554,7 @@ HB_FUNC_STATIC(QPROCESS_START)
 
     if (obj != NULL) {
       obj->start(PQSTRING(1), PQSTRINGLIST(2),
-                 HB_ISNIL(3) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
-                             : static_cast<QIODevice::OpenMode>(hb_parni(3)));
+                 HB_ISNIL(3) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite) : PQIODEVICE_OPENMODE(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -564,8 +563,8 @@ HB_FUNC_STATIC(QPROCESS_START)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->start(PQSTRING(1), HB_ISNIL(2) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
-                                          : static_cast<QIODevice::OpenMode>(hb_parni(2)));
+      obj->start(PQSTRING(1),
+                 HB_ISNIL(2) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite) : PQIODEVICE_OPENMODE(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());

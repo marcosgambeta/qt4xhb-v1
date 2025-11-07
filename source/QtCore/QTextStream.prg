@@ -101,21 +101,19 @@ HB_FUNC_STATIC(QTEXTSTREAM_NEW)
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 2) && HB_ISPOINTER(1) && ISNUMORNIL(2)) {
     // QTextStream(FILE *fileHandle, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
-    QTextStream *obj = new QTextStream(static_cast<FILE *>(hb_parptr(1)),
-                                       HB_ISNIL(2) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
-                                                   : static_cast<QIODevice::OpenMode>(hb_parni(2)));
+    QTextStream *obj =
+        new QTextStream(static_cast<FILE *>(hb_parptr(1)),
+                        HB_ISNIL(2) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite) : PQIODEVICE_OPENMODE(2));
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISNUMORNIL(2)) {
     // QTextStream(QByteArray *array, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
-    QTextStream *obj =
-        new QTextStream(PQBYTEARRAY(1), HB_ISNIL(2) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite)
-                                                    : static_cast<QIODevice::OpenMode>(hb_parni(2)));
+    QTextStream *obj = new QTextStream(
+        PQBYTEARRAY(1), HB_ISNIL(2) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite) : PQIODEVICE_OPENMODE(2));
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISNUMORNIL(2)) {
     // QTextStream(const QByteArray &array, QIODevice::OpenMode openMode = QIODevice::ReadOnly)
-    QTextStream *obj =
-        new QTextStream(*PQBYTEARRAY(1), HB_ISNIL(2) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadOnly)
-                                                     : static_cast<QIODevice::OpenMode>(hb_parni(2)));
+    QTextStream *obj = new QTextStream(
+        *PQBYTEARRAY(1), HB_ISNIL(2) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadOnly) : PQIODEVICE_OPENMODE(2));
     Qt4xHb::returnNewObject(obj, true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -362,7 +360,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETSTATUS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setStatus(static_cast<QTextStream::Status>(hb_parni(1)));
+      obj->setStatus(PQTEXTSTREAM_STATUS(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -570,7 +568,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETFIELDALIGNMENT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setFieldAlignment(static_cast<QTextStream::FieldAlignment>(hb_parni(1)));
+      obj->setFieldAlignment(PQTEXTSTREAM_FIELDALIGNMENT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -685,7 +683,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETNUMBERFLAGS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setNumberFlags(static_cast<QTextStream::NumberFlags>(hb_parni(1)));
+      obj->setNumberFlags(PQTEXTSTREAM_NUMBERFLAGS(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -761,7 +759,7 @@ HB_FUNC_STATIC(QTEXTSTREAM_SETREALNUMBERNOTATION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setRealNumberNotation(static_cast<QTextStream::RealNumberNotation>(hb_parni(1)));
+      obj->setRealNumberNotation(PQTEXTSTREAM_REALNUMBERNOTATION(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

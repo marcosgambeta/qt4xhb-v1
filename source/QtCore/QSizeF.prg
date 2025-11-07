@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QSIZEF_SCALE)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->scale(PQREAL(1), PQREAL(2), static_cast<Qt::AspectRatioMode>(hb_parni(3)));
+      obj->scale(PQREAL(1), PQREAL(2), PQT_ASPECTRATIOMODE(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -222,7 +222,7 @@ HB_FUNC_STATIC(QSIZEF_SCALE)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      obj->scale(*PQSIZEF(1), static_cast<Qt::AspectRatioMode>(hb_parni(2)));
+      obj->scale(*PQSIZEF(1), PQT_ASPECTRATIOMODE(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());

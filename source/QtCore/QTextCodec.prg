@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QTEXTCODEC_MAKEDECODER)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QTextDecoder *ptr = obj->makeDecoder(static_cast<QTextCodec::ConversionFlags>(hb_parni(1)));
+      QTextDecoder *ptr = obj->makeDecoder(PQTEXTCODEC_CONVERSIONFLAGS(1));
       Qt4xHb::createReturnClass(ptr, "QTEXTDECODER", false);
     }
   } else {
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QTEXTCODEC_MAKEENCODER)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QTextEncoder *ptr = obj->makeEncoder(static_cast<QTextCodec::ConversionFlags>(hb_parni(1)));
+      QTextEncoder *ptr = obj->makeEncoder(PQTEXTCODEC_CONVERSIONFLAGS(1));
       Qt4xHb::createReturnClass(ptr, "QTEXTENCODER", false);
     }
   } else {

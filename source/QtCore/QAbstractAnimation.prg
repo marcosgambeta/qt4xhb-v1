@@ -220,7 +220,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_SETDIRECTION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setDirection(static_cast<QAbstractAnimation::Direction>(hb_parni(1)));
+      obj->setDirection(PQABSTRACTANIMATION_DIRECTION(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -377,7 +377,7 @@ HB_FUNC_STATIC(QABSTRACTANIMATION_START)
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       obj->start(HB_ISNIL(1) ? static_cast<QAbstractAnimation::DeletionPolicy>(QAbstractAnimation::KeepWhenStopped)
-                             : static_cast<QAbstractAnimation::DeletionPolicy>(hb_parni(1)));
+                             : PQABSTRACTANIMATION_DELETIONPOLICY(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

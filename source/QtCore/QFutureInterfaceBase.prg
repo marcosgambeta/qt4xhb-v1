@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_NEW)
     // QFutureInterfaceBase(QFutureInterfaceBase::State initialState = QFutureInterfaceBase::NoState)
     QFutureInterfaceBase *obj =
         new QFutureInterfaceBase(HB_ISNIL(1) ? static_cast<QFutureInterfaceBase::State>(QFutureInterfaceBase::NoState)
-                                             : static_cast<QFutureInterfaceBase::State>(hb_parni(1)));
+                                             : PQFUTUREINTERFACEBASE_STATE(1));
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQFUTUREINTERFACEBASE(1)) {
     // QFutureInterfaceBase(const QFutureInterfaceBase &other)
@@ -452,7 +452,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_QUERYSTATE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      RBOOL(obj->queryState(static_cast<QFutureInterfaceBase::State>(hb_parni(1))));
+      RBOOL(obj->queryState(PQFUTUREINTERFACEBASE_STATE(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

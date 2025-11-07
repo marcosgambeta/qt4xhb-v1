@@ -62,15 +62,13 @@ HB_FUNC_STATIC(QSTRINGMATCHER_NEW)
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
     // QStringMatcher(const QString &pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive)
-    QStringMatcher *obj =
-        new QStringMatcher(PQSTRING(1), HB_ISNIL(2) ? static_cast<Qt::CaseSensitivity>(Qt::CaseSensitive)
-                                                    : static_cast<Qt::CaseSensitivity>(hb_parni(2)));
+    QStringMatcher *obj = new QStringMatcher(
+        PQSTRING(1), HB_ISNIL(2) ? static_cast<Qt::CaseSensitivity>(Qt::CaseSensitive) : PQT_CASESENSITIVITY(2));
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(2, 3) && ISQCHAR(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
     // QStringMatcher(const QChar *uc, int len, Qt::CaseSensitivity cs = Qt::CaseSensitive)
-    QStringMatcher *obj = new QStringMatcher(PQCHAR(1), PINT(2),
-                                             HB_ISNIL(3) ? static_cast<Qt::CaseSensitivity>(Qt::CaseSensitive)
-                                                         : static_cast<Qt::CaseSensitivity>(hb_parni(3)));
+    QStringMatcher *obj = new QStringMatcher(
+        PQCHAR(1), PINT(2), HB_ISNIL(3) ? static_cast<Qt::CaseSensitivity>(Qt::CaseSensitive) : PQT_CASESENSITIVITY(3));
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && ISQSTRINGMATCHER(1)) {
     // QStringMatcher(const QStringMatcher &other)
@@ -125,7 +123,7 @@ HB_FUNC_STATIC(QSTRINGMATCHER_SETCASESENSITIVITY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setCaseSensitivity(static_cast<Qt::CaseSensitivity>(hb_parni(1)));
+      obj->setCaseSensitivity(PQT_CASESENSITIVITY(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

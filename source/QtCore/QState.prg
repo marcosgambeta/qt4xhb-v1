@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QSTATE_NEW)
     Qt4xHb::returnNewObject(obj, false);
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQSTATE(2) || HB_ISNIL(2))) {
     // QState(QState::ChildMode childMode, QState *parent = 0)
-    QState *obj = new QState(static_cast<QState::ChildMode>(hb_parni(1)), OPQSTATE(2, 0));
+    QState *obj = new QState(PQSTATE_CHILDMODE(1), OPQSTATE(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -231,7 +231,7 @@ HB_FUNC_STATIC(QSTATE_SETCHILDMODE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      obj->setChildMode(static_cast<QState::ChildMode>(hb_parni(1)));
+      obj->setChildMode(PQSTATE_CHILDMODE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

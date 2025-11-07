@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_NEW)
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QReadWriteLock(QReadWriteLock::RecursionMode recursionMode)
-    QReadWriteLock *obj = new QReadWriteLock(static_cast<QReadWriteLock::RecursionMode>(hb_parni(1)));
+    QReadWriteLock *obj = new QReadWriteLock(PQREADWRITELOCK_RECURSIONMODE(1));
     Qt4xHb::returnNewObject(obj, true);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
