@@ -216,7 +216,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_SUPPORTEDPIXELFORMATS)
 #endif
       QList<QVideoFrame::PixelFormat> list = obj->supportedPixelFormats(
           HB_ISNIL(1) ? static_cast<QAbstractVideoBuffer::HandleType>(QAbstractVideoBuffer::NoHandle)
-                      : static_cast<QAbstractVideoBuffer::HandleType>(hb_parni(1)));
+                      : PQABSTRACTVIDEOBUFFER_HANDLETYPE(1));
       PHB_ITEM pArray = hb_itemArrayNew(0);
       const int count = list.count();
       for (int i = 0; i < count; i++) {

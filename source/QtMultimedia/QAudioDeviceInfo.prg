@@ -359,7 +359,7 @@ HB_FUNC_STATIC(QAUDIODEVICEINFO_AVAILABLEDEVICES)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-    QList<QAudioDeviceInfo> list = QAudioDeviceInfo::availableDevices(static_cast<QAudio::Mode>(hb_parni(1)));
+    QList<QAudioDeviceInfo> list = QAudioDeviceInfo::availableDevices(PQAUDIO_MODE(1));
     PHB_DYNS pDynSym = hb_dynsymFindName("QAUDIODEVICEINFO");
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if (pDynSym != NULL) {
