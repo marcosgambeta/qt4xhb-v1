@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QXMLQUERY_NEW)
     Qt4xHb::returnNewObject(obj, true);
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQXMLNAMEPOOL(2) || HB_ISNIL(2))) {
     // QXmlQuery(QXmlQuery::QueryLanguage, QXmlNamePool &np = QXmlNamePool())
-    QXmlQuery *obj = new QXmlQuery(static_cast<QXmlQuery::QueryLanguage>(hb_parni(1)),
+    QXmlQuery *obj = new QXmlQuery(PQXMLQUERY_QUERYLANGUAGE(1),
                                    HB_ISNIL(2) ? QXmlNamePool() : *static_cast<QXmlNamePool *>(Qt4xHb::itemGetPtr(2)));
     Qt4xHb::returnNewObject(obj, true);
   } else {

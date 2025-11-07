@@ -70,8 +70,7 @@ HB_FUNC_STATIC(QABSTRACTMESSAGEHANDLER_MESSAGE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQURLORNIL(3) && ISQSOURCELOCATIONORNIL(4)) {
 #endif
-      obj->message(static_cast<QtMsgType>(hb_parni(1)), PQSTRING(2),
-                   HB_ISNIL(3) ? QUrl() : *static_cast<QUrl *>(Qt4xHb::itemGetPtr(3)),
+      obj->message(PQTMSGTYPE(1), PQSTRING(2), HB_ISNIL(3) ? QUrl() : *static_cast<QUrl *>(Qt4xHb::itemGetPtr(3)),
                    HB_ISNIL(4) ? QSourceLocation() : *static_cast<QSourceLocation *>(Qt4xHb::itemGetPtr(4)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
