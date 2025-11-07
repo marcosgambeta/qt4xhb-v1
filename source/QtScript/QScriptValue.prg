@@ -105,7 +105,7 @@ RETURN
 // QScriptValue(QScriptValue::SpecialValue value)
 HB_FUNC_STATIC(QSCRIPTVALUE_NEW3)
 {
-  QScriptValue *obj = new QScriptValue(static_cast<QScriptValue::SpecialValue>(hb_parni(1)));
+  QScriptValue *obj = new QScriptValue(PQSCRIPTVALUE_SPECIALVALUE(1));
   Qt4xHb::returnNewObject(obj, true);
 }
 
