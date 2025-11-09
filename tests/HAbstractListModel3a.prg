@@ -51,7 +51,7 @@ FUNCTION Main()
    AAdd(aEstados, {"images\estados\tocantins.png"       , "Tocantins"          })
 
    oModel := HAbstractListModel():new(oWindow)
-   oModel:setRowCountCB({||Len(aEstados)})
+   oModel:setRowCountCB({||len(aEstados)})
    oModel:setDisplayRoleCB({|nRow|aEstados[nRow + 1, 2]})
    oModel:setDecorationRoleCB({|nRow|aEstados[nRow + 1, 1]})
 
@@ -59,7 +59,7 @@ FUNCTION Main()
    oComboBox:move(10, 10)
    oComboBox:resize(200, 20)
    oComboBox:setModel(oModel)
-   ? oComboBox:onActivated({|oSender, nIndex|QOut(StrZero(nIndex, 4)), QOut(aEstados[nIndex + 1, 2])})
+   ? oComboBox:onActivated({|oSender, nIndex|qout(strzero(nIndex, 4)), qout(aEstados[nIndex + 1, 2])})
 
    oWindow:show()
 

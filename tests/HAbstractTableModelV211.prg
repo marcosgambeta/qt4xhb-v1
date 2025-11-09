@@ -95,7 +95,7 @@ METHOD new(...) CLASS myModel
 RETURN self
 
 METHOD rowCount() CLASS myModel
-RETURN Len(s_aEstados)
+RETURN len(s_aEstados)
 
 METHOD columnCount() CLASS myModel
 RETURN 2 // coluna 1=imagem coluna 2=nome
@@ -127,7 +127,7 @@ METHOD headerData(nSection, nOrientation, nRole) CLASS myModel
    IF nOrientation == Qt_Horizontal .AND. nRole == Qt_DisplayRole
       oVariant := QVariant():new({"Bandeira", "Estado"}[nSection + 1])
    ELSEIF nOrientation == Qt_Vertical .AND. nRole == Qt_DisplayRole
-      oVariant := QVariant():new("Linha " + AllTrim(Str(nSection)))
+      oVariant := QVariant():new("Linha " + alltrim(str(nSection)))
    ENDIF
 
 RETURN oVariant
