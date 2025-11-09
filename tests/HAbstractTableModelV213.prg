@@ -14,8 +14,8 @@ FUNCTION Main()
    LOCAL oView
    LOCAL nRow
 
-   IF !File("test.dbf")
-      DBCreate("test", {{"field1    ", "c", 20, 0}, ;
+   IF !file("test.dbf")
+      dbcreate("test", {{"field1    ", "c", 20, 0}, ;
                         {"field2    ", "c", 20, 0}, ;
                         {"field3    ", "c", 20, 0}, ;
                         {"field4    ", "c", 20, 0}, ;
@@ -39,7 +39,7 @@ FUNCTION Main()
 
    USE test ALIAS test
 
-   IF RecCount() == 0
+   IF reccount() == 0
 
       FOR nRow := 1 TO 10000
          APPEND BLANK
@@ -122,10 +122,10 @@ METHOD new(...) CLASS myModel
 RETURN self
 
 METHOD rowCount() CLASS myModel
-RETURN RecCount()
+RETURN reccount()
 
 METHOD columnCount() CLASS myModel
-RETURN FCount()
+RETURN fcount()
 
 METHOD data(oIndex, nRole) CLASS myModel
 
@@ -135,12 +135,12 @@ METHOD data(oIndex, nRole) CLASS myModel
 
    IF oIndex:isValid()
 
-      DBGoTo(nRow + 1)
+      dbgoto(nRow + 1)
 
       IF nRole == Qt_DisplayRole
-         oVariant := QVariant():new(FieldGet(nColumn + 1))
+         oVariant := QVariant():new(fieldget(nColumn + 1))
       ELSEIF nRole == Qt_EditRole
-         oVariant := QVariant():new(FieldGet(nColumn + 1))
+         oVariant := QVariant():new(fieldget(nColumn + 1))
       ENDIF
 
    ENDIF
@@ -178,12 +178,12 @@ METHOD setData(oIndex, oVariant, nRole) CLASS myModel
 
       IF nRole == Qt_EditRole
 
-         DBGoTo(nRow + 1)
+         dbgoto(nRow + 1)
 
          cValue := oVariant:toString()
 
-         IF !Empty(cValue)
-            FieldPut(nColumn + 1, oVariant:toString())
+         IF !empty(cValue)
+            fieldput(nColumn + 1, oVariant:toString())
             lSuccess := .T.
          ENDIF
 
