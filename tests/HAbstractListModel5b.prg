@@ -17,7 +17,7 @@ FUNCTION Main()
    LOCAL nRow
    LOCAL aData
 
-   aData := Array(NUMR_ROWS)
+   aData := array(NUMR_ROWS)
    FOR nRow := 1 TO NUMR_ROWS
       aData[nRow] := {"Linha " + alltrim(str(nRow)), Qt_Checked}
    NEXT nRow
@@ -45,7 +45,7 @@ FUNCTION Main()
          RETURN .T.
       ENDIF
       IF nRole == Qt_CheckStateRole
-         aData[nRow + 1, 2] := Val(oVariant:toString())
+         aData[nRow + 1, 2] := val(oVariant:toString())
          RETURN .T.
       ENDIF
       }) // grava conteúdo da linha se não for vazio
