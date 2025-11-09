@@ -31,7 +31,7 @@ FUNCTION Main()
       QUIT
    ENDIF
 
-   IF AScan(oDB:tables(QSql_Tables), "cadastro") == 0
+   IF ascan(oDB:tables(QSql_Tables), "cadastro") == 0
       // cria a tabela
       oDB:exec("CREATE TABLE cadastro(id INTEGER PRIMARY KEY AUTOINCREMENT, nome TEXT, saldo REAL)")
       // insere dados
@@ -215,15 +215,15 @@ METHOD paint(pPainter, pOption, pIndex) CLASS ValueDelegate
    nValue := oIndex:data(Qt_DisplayRole):toReal()
 
    // formata o valor
-   cValue := Transform(nValue, "@E 999,999,999.99") + Space(1)
+   cValue := transform(nValue, "@E 999,999,999.99") + space(1)
 
    IF nValue < 0
       oPen := oPainter:pen()
-      oPen:setColor(QColor():new("red"))
+      oPen:setcolor(QColor():new("red"))
       oPainter:setPen(oPen)
    ELSE
       oPen := oPainter:pen()
-      oPen:setColor(QColor():new("blue"))
+      oPen:setcolor(QColor():new("blue"))
       oPainter:setPen(oPen)
    ENDIF
 
