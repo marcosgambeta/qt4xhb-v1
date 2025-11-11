@@ -67,34 +67,39 @@ FUNCTION Main()
 
    ENDIF
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
+   oWindow:setWindowTitle("Test with HAbstractTableModelV2 class")
    oWindow:resize(800, 600)
 
+   // create model
    oModel := myModel():new()
 
+   // create view
    oView := QTableView():new(oWindow)
    oView:move(10, 10)
    oView:resize(800 - 20, 600 - 20)
    oView:setModel(oModel)
 
+   // show window
    oWindow:show()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oModel:delete()
-
    oWindow:delete()
-
    oApp:delete()
 
    USE
 
 RETURN NIL
 
-#include "hbclass.ch"
+#include <hbclass.ch>
 
 CLASS myModel INHERIT HAbstractTableModelV2
 

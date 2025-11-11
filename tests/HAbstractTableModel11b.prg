@@ -14,10 +14,12 @@ FUNCTION Main()
    LOCAL oView
    LOCAL aEstados
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
+   oWindow:setWindowTitle("Test with HAbstractTableModel class")
    oWindow:resize(800, 600)
 
    aEstados := {}
@@ -49,6 +51,7 @@ FUNCTION Main()
    aadd(aEstados, {"images\estados\sergipe.png"         , "Sergipe"            })
    aadd(aEstados, {"images\estados\tocantins.png"       , "Tocantins"          })
 
+   // create model
    oModel := HAbstractTableModel():new()
 
    // total de linhas
@@ -68,6 +71,7 @@ FUNCTION Main()
    // títulos das linhas
    oModel:setVerticalHeaderCB(Qt_DisplayRole, {|nRow|alltrim(str(nRow))})
 
+   // create view
    oView := QTableView():new(oWindow)
    oView:move(10, 10)
    oView:resize(800 - 20, 600 - 20)
@@ -75,14 +79,15 @@ FUNCTION Main()
    oView:resizeRowsToContents()
    oView:resizeColumnsToContents()
 
+   // show window
    oWindow:show()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oModel:delete()
-
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

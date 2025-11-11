@@ -13,32 +13,37 @@ FUNCTION Main()
    LOCAL oModel
    LOCAL oView
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
+   oWindow:setWindowTitle("Test with HAbstractTableModelV2 class")
    oWindow:resize(800, 600)
 
+   // create model
    oModel := myModel():new()
 
+   // create view
    oView := QTableView():new(oWindow)
    oView:move(10, 10)
    oView:resize(800 - 20, 600 - 20)
    oView:setModel(oModel)
 
+   // show window
    oWindow:show()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oModel:delete()
-
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL
 
-#include "hbclass.ch"
+#include <hbclass.ch>
 
 CLASS myModel INHERIT HAbstractTableModelV2
 
@@ -76,7 +81,7 @@ METHOD data(oIndex, nRole) CLASS myModel
    IF oIndex:isValid()
 
       IF nRole == Qt_DisplayRole
-         oVariant := QVariant():new("Célula " + alltrim(str(nRow)) + "," + alltrim(str(nColumn)))
+         oVariant := QVariant():new("Cell " + alltrim(str(nRow)) + "," + alltrim(str(nColumn)))
       ELSEIF nRole == Qt_BackgroundRole
          oVariant := iif(nColumn / 2 == int(nColumn / 2), QColor():new("red"):toVariant(), QColor():new("yellow"):toVariant())
       ENDIF
@@ -90,9 +95,9 @@ METHOD headerData(nSection, nOrientation, nRole) CLASS myModel
    LOCAL oVariant := QVariant():new()
 
    IF nOrientation == Qt_Horizontal .AND. nRole == Qt_DisplayRole
-      oVariant := QVariant():new("Coluna " + alltrim(str(nSection)))
+      oVariant := QVariant():new("Column " + alltrim(str(nSection)))
    ELSEIF nOrientation == Qt_Vertical .AND. nRole == Qt_DisplayRole
-      oVariant := QVariant():new("Linha " + alltrim(str(nSection)))
+      oVariant := QVariant():new("Row " + alltrim(str(nSection)))
    ENDIF
 
 RETURN oVariant

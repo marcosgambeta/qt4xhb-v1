@@ -19,15 +19,18 @@ FUNCTION Main()
 
    aData := array(NUMR_ROWS)
    FOR nRow := 1 TO NUMR_ROWS
-      aData[nRow] := {"Linha " + alltrim(str(nRow)), Qt_Checked}
+      aData[nRow] := {"Row " + alltrim(str(nRow)), Qt_Checked}
    NEXT nRow
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
+   oWindow:setWindowTitle("Test with HAbstractListModel class")
    oWindow:resize(800, 600)
 
+   // create model
    oModel := HAbstractListModel():new()
    // total de linhas
    oModel:setRowCountCB({||NUMR_ROWS})
@@ -50,19 +53,21 @@ FUNCTION Main()
       ENDIF
       }) // grava conteúdo da linha se não for vazio
 
+   // create view
    oView := QListView():new(oWindow)
    oView:move(10, 10)
    oView:resize(800 - 20, 600 - 20)
    oView:setModel(oModel)
 
+   // show window
    oWindow:show()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oModel:delete()
-
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL
