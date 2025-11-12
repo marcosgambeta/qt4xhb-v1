@@ -79,6 +79,7 @@ CLASS QVariant
    METHOD userType
    METHOD nameToType
    METHOD typeToName
+   METHOD setValue
 
    METHOD newFrom
    METHOD newFromObject
@@ -938,6 +939,258 @@ HB_FUNC_STATIC(QVARIANT_TYPETONAME)
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
+}
+
+HB_FUNC_STATIC(QVARIANT_SETVALUE)
+{
+  if (ISNUMPAR(1) && HB_ISCHAR(1)) {
+    // void setValue(const QString &val)
+    GET_PTR_FROM_SELF(obj);
+
+    if (obj != NULL) {
+      obj->setValue(PQSTRING(1));
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
+  } else if (ISNUMPAR(1) && HB_ISLOG(1)) {
+    // void setValue(bool val)
+    GET_PTR_FROM_SELF(obj);
+
+    if (obj != NULL) {
+      obj->setValue(PBOOL(1));
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
+  } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
+    if (hb_param(1, HB_IT_DOUBLE) != NULL) {
+      // void setValue(double val)
+      GET_PTR_FROM_SELF(obj);
+
+      if (obj != NULL) {
+        obj->setValue(PDOUBLE(1));
+      }
+
+      hb_itemReturn(hb_stackSelfItem());
+    } else if (hb_param(1, HB_IT_LONG) != NULL) {
+      // void setValue(qlonglong val)
+      GET_PTR_FROM_SELF(obj);
+
+      if (obj != NULL) {
+        obj->setValue(PQLONGLONG(1));
+      }
+
+      hb_itemReturn(hb_stackSelfItem());
+    } else {
+      // void setValue(int val)
+      GET_PTR_FROM_SELF(obj);
+
+      if (obj != NULL) {
+        obj->setValue(PINT(1));
+      }
+
+      hb_itemReturn(hb_stackSelfItem());
+    }
+  } else if (ISNUMPAR(1) && ISQLOCALE(1)) {
+    // void setValue(const QLocale &l)
+    GET_PTR_FROM_SELF(obj);
+
+    if (obj != NULL) {
+      obj->setValue(*PQLOCALE(1));
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
+  } else if (ISNUMPAR(1) && ISQREGEXP(1)) {
+    // void setValue(const QRegExp &regExp)
+    GET_PTR_FROM_SELF(obj);
+
+    if (obj != NULL) {
+      obj->setValue(*PQREGEXP(1));
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
+  } else if (ISNUMPAR(1) && ISQEASINGCURVE(1)) {
+    // void setValue(const QEasingCurve &val)
+    GET_PTR_FROM_SELF(obj);
+
+    if (obj != NULL) {
+      obj->setValue(*PQEASINGCURVE(1));
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
+  } else if (ISNUMPAR(1) && ISQVARIANT(1)) {
+    // void setValue(const QVariant &p)
+    GET_PTR_FROM_SELF(obj);
+
+    if (obj != NULL) {
+      obj->setValue(*PQVARIANT(1));
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
+//   } else if (ISNUMPAR(1) && ISQDATASTREAM(1)) {
+//     // void setValue(QDataStream &s)
+//     GET_PTR_FROM_SELF(obj);
+// 
+//     if (obj != NULL) {
+//       obj->setValue(*PQDATASTREAM(1));
+//     }
+// 
+//     hb_itemReturn(hb_stackSelfItem());
+  } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
+    // void setValue(const QByteArray &val)
+    GET_PTR_FROM_SELF(obj);
+
+    if (obj != NULL) {
+      obj->setValue(*PQBYTEARRAY(1));
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
+  } else if (ISNUMPAR(1) && ISQBITARRAY(1)) {
+    // void setValue(const QBitArray &val)
+    GET_PTR_FROM_SELF(obj);
+
+    if (obj != NULL) {
+      obj->setValue(*PQBITARRAY(1));
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
+  } else if (ISNUMPAR(1) && ISQCHAR(1)) {
+    // void setValue(const QChar &c)
+    GET_PTR_FROM_SELF(obj);
+
+    if (obj != NULL) {
+      obj->setValue(*PQCHAR(1));
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
+//   } else if (ISNUMPAR(1) && ISQLATIN1STRING(1)) {
+//     // void setValue(const QLatin1String &val)
+//     GET_PTR_FROM_SELF(obj);
+//
+//     if (obj != NULL) {
+//       obj->setValue(*PQLATIN1STRING(1));
+//     }
+//
+//     hb_itemReturn(hb_stackSelfItem());
+  } else if (ISNUMPAR(1) && ISQDATE(1)) {
+    // void setValue(const QDate &val)
+    GET_PTR_FROM_SELF(obj);
+
+    if (obj != NULL) {
+      obj->setValue(*PQDATE(1));
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
+  } else if (ISNUMPAR(1) && ISQTIME(1)) {
+    // void setValue(const QTime &val)
+    GET_PTR_FROM_SELF(obj);
+
+    if (obj != NULL) {
+      obj->setValue(*PQTIME(1));
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
+  } else if (ISNUMPAR(1) && ISQDATETIME(1)) {
+    // void setValue(const QDateTime &val)
+    GET_PTR_FROM_SELF(obj);
+
+    if (obj != NULL) {
+      obj->setValue(*PQDATETIME(1));
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
+  } else if (ISNUMPAR(1) && ISQSIZE(1)) {
+    // void setValue(const QSize &val)
+    GET_PTR_FROM_SELF(obj);
+
+    if (obj != NULL) {
+      obj->setValue(*PQSIZE(1));
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
+  } else if (ISNUMPAR(1) && ISQSIZEF(1)) {
+    // void setValue(const QSizeF &val)
+    GET_PTR_FROM_SELF(obj);
+
+    if (obj != NULL) {
+      obj->setValue(*PQSIZEF(1));
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
+  } else if (ISNUMPAR(1) && ISQPOINT(1)) {
+    // void setValue(const QPoint &val)
+    GET_PTR_FROM_SELF(obj);
+
+    if (obj != NULL) {
+      obj->setValue(*PQPOINT(1));
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
+  } else if (ISNUMPAR(1) && ISQPOINTF(1)) {
+    // void setValue(const QPointF &val)
+    GET_PTR_FROM_SELF(obj);
+
+    if (obj != NULL) {
+      obj->setValue(*PQPOINTF(1));
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
+  } else if (ISNUMPAR(1) && ISQLINE(1)) {
+    // void setValue(const QLine &val)
+    GET_PTR_FROM_SELF(obj);
+
+    if (obj != NULL) {
+      obj->setValue(*PQLINE(1));
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
+  } else if (ISNUMPAR(1) && ISQLINEF(1)) {
+    // void setValue(const QLineF &val)
+    GET_PTR_FROM_SELF(obj);
+
+    if (obj != NULL) {
+      obj->setValue(*PQLINEF(1));
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
+  } else if (ISNUMPAR(1) && ISQRECT(1)) {
+    // void setValue(const QRect &val)
+    GET_PTR_FROM_SELF(obj);
+
+    if (obj != NULL) {
+      obj->setValue(*PQRECT(1));
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
+  } else if (ISNUMPAR(1) && ISQRECTF(1)) {
+    // void setValue(const QRectF &val)
+    GET_PTR_FROM_SELF(obj);
+
+    if (obj != NULL) {
+      obj->setValue(*PQRECTF(1));
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
+  } else if (ISNUMPAR(1) && ISQURL(1)) {
+    // void setValue(const QUrl &val)
+    GET_PTR_FROM_SELF(obj);
+
+    if (obj != NULL) {
+      obj->setValue(*PQURL(1));
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
+  } else if (ISNUMPAR(1) && HB_ISARRAY(1)) {
+    // void setValue(const QStringList &val)
+    GET_PTR_FROM_SELF(obj);
+
+    if (obj != NULL) {
+      obj->setValue(PQSTRINGLIST(1));
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
+  } else {
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+  }
 }
 
 HB_FUNC_STATIC(QVARIANT_NEWFROM)
