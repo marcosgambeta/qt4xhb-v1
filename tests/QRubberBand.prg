@@ -12,8 +12,10 @@ FUNCTION Main()
    LOCAL oWindow
    LOCAL oRubberBand
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
 
    oRubberBand := QRubberBand():new(QRubberBand_Rectangle, oWindow)
@@ -21,12 +23,14 @@ FUNCTION Main()
    oRubberBand:resize(100, 100)
    oRubberBand:show()
 
+   // show window
    oWindow:show()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

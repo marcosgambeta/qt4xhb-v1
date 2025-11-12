@@ -12,23 +12,27 @@ FUNCTION Main()
    LOCAL oWindow
    LOCAL oProgressBar
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
    oWindow:setWindowTitle("Teste")
    oWindow:resize(640, 480)
-   oWindow:show()
 
    oProgressBar := QProgressBar():new(oWindow)
    oProgressBar:move(20, 20)
    oProgressBar:setTooltip("Eu sou um ProgressBar")
    oProgressBar:setValue(50)
-   oProgressBar:show()
 
+   // show window
+   oWindow:show()
+
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

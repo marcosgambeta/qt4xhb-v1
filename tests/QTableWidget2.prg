@@ -16,8 +16,10 @@ FUNCTION Main()
    LOCAL nRows := 1000
    LOCAL nCols := 100
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
    oWindow:setWindowTitle("Qt4xHb - teste")
    oWindow:resize(800, 600)
@@ -34,12 +36,14 @@ FUNCTION Main()
       NEXT c
    NEXT r
 
+   // show window
    oWindow:show()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

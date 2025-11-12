@@ -14,10 +14,12 @@ FUNCTION Main()
    LOCAL oModel
    LOCAL oView
 
+   // create application
    oApp := QApplication():new()
 
    aColorsNames := QColor():colorNames()
 
+   // create window
    oWindow := QWidget():new()
    oWindow:setWindowTitle("Tabela de cores")
    oWindow:resize(800, 600)
@@ -47,14 +49,15 @@ FUNCTION Main()
    // ajusta a largura da coluna que exibe a cor
    oView:horizontalHeader():setStretchLastSection(.T.)
 
+   // show window
    oWindow:show()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oModel:delete()
-
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

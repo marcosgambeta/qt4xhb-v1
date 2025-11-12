@@ -20,13 +20,13 @@ FUNCTION Main()
    LOCAL oShortcut8
    LOCAL oShortcut9
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QMainWindow():new()
    oWindow:setWindowTitle("Teste")
    oWindow:resize(640, 480)
-
-   oWindow:show()
 
    oShortcut1 := QShortcut():new(QKeySequence():new("F1"), oWindow)
    oShortcut1:onActivated({||qout("F1 pressionado")})
@@ -55,10 +55,14 @@ FUNCTION Main()
    oShortcut9 := QShortcut():new(QKeySequence():new("ALT+F3"), oWindow)
    oShortcut9:onActivated({||qout("ALT+F3 pressionado")})
 
+   // show window
+   oWindow:show()
+
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

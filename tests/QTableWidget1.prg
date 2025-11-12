@@ -12,8 +12,10 @@ FUNCTION Main()
    LOCAL oWindow
    LOCAL oTable
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
    oWindow:setWindowTitle("Qt4xHb - teste")
    oWindow:resize(320, 240)
@@ -22,12 +24,14 @@ FUNCTION Main()
 
    oTable:move(10, 10)
 
+   // show window
    oWindow:show()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

@@ -12,22 +12,26 @@ FUNCTION Main()
    LOCAL oWindow
    LOCAL oCal
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
+   oWindow:setWindowTitle("Test with QCalendarWidget class")
    oWindow:resize(640, 480)
-   oWindow:show()
 
    oCal := QCalendarWidget():new(oWindow)
    oCal:move(20, 20)
-   oCal:setTooltip("Eu sou um CalendarWidget")
-   oCal:show()
+   oCal:setTooltip("I am a CalendarWidget")
 
+   // show window
+   oWindow:show()
+
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

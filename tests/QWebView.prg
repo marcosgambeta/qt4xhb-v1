@@ -12,21 +12,25 @@ FUNCTION Main()
    LOCAL oWindow
    LOCAL oWebView
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste da classe QWebView")
+   oWindow:setWindowTitle("Test with QWebView class")
    oWindow:resize(800, 600)
-   oWindow:show()
 
    oWebView := QWebView():new(oWindow)
    oWebView:setUrl(QUrl():new("https://github.com/marcosgambeta"))
-   oWebView:show()
 
+   // show window
+   oWindow:show()
+
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

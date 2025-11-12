@@ -22,10 +22,12 @@ FUNCTION Main()
    LOCAL oActionC1
    LOCAL oLabel
 
+   // create application
    oApp := QApplication():new()
 
    oApp:setFont(QFont():new("Helvetica", 12))
 
+   // create window
    oMainWindow := QMainWindow():new()
    oMainWindow:setWindowTitle("Exemplo")
    oMainWindow:resize(640, 480)
@@ -56,16 +58,18 @@ FUNCTION Main()
    oActionC1 := oMenuC:addAction("Opção C1")
    oActionC1:onTriggered({||QMessageBox():information(oMainWindow, "Aviso", "Você escolheu a opção C1")})
 
-   oMainWindow:Show()
-
    oLabel := QLabel():new("<center><font color=red>Exemplo de como definir uma fonte para a aplicação inteira</font></center>")
 
    oMainWindow:setCentralWidget(oLabel)
 
+   // show window
+   oMainWindow:Show()
+
+   // start application
    oApp:exec()
 
+   // delete objects
    oMainWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

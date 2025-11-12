@@ -21,14 +21,13 @@ FUNCTION Main()
    LOCAL oLineEdit
    LOCAL oLCDNumber
 
+   // create application
    oApp := QApplication():new()
 
-   // aqui criamos a janela
-
+   // create window
    oWindow := QWidget():new()
    oWindow:setWindowTitle("Qt4xHb - teste com a classe QUiLoader")
    oWindow:resize(800, 600)
-   oWindow:show()
 
    // aqui carregamos o conteúdo do arquivo quiloader.ui
 
@@ -65,10 +64,14 @@ FUNCTION Main()
    oLCDNumber := QLCDNumber():newFrom(oWidgets:findChild("lcdNumber"))
    oLCDNumber:display(1234)
 
+   // show window
+   oWindow:show()
+
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

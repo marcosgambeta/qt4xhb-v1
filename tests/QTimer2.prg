@@ -17,13 +17,13 @@ FUNCTION Main()
    LOCAL oTimer1
    LOCAL oTimer2
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
    oWindow:setWindowTitle("Teste")
    oWindow:resize(640, 480)
-
-   oWindow:show()
 
    oTimer1 := QTimer():new(oWindow)
    ? oTimer1:onTimeout({||qout("timer 1 executado")})
@@ -35,10 +35,14 @@ FUNCTION Main()
    oTimer2:setInterval(2000)
    oTimer2:start()
 
+   // show window
+   oWindow:show()
+
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

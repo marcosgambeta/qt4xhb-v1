@@ -12,22 +12,26 @@ FUNCTION Main()
    LOCAL oWindow
    LOCAL oLabel
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
    oWindow:setWindowTitle("Teste")
    oWindow:resize(640, 480)
-   oWindow:show()
 
    oLabel := QLabel():new("Label", oWindow)
    oLabel:move(20, 20)
    oLabel:setTooltip("Eu sou um Label")
-   oLabel:show()
 
+   // show window
+   oWindow:show()
+
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

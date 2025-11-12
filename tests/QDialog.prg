@@ -12,31 +12,41 @@ FUNCTION Main()
    LOCAL oWindow
    LOCAL oButton
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
    oWindow:resize(640, 480)
-   oWindow:show()
 
-   oButton := QPushButton():new("Mostrar janela de diálogo", oWindow)
+   // create button
+   oButton := QPushButton():new("Show dialog window", oWindow)
    oButton:move(20, 20)
-   oButton:show()
    oButton:onClicked({||ShowDialog()})
 
+   // show window
+   oWindow:show()
+
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL
 
 STATIC FUNCTION ShowDialog()
 
-   LOCAL oDialog := QDialog():new()
+   LOCAL oDialog
 
+   // create dialog window
+   oDialog := QDialog():new()
+
+   // execute dialog window
    oDialog:exec()
 
+   // delete dialog window
    oDialog:delete()
 
 RETURN NIL

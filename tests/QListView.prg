@@ -13,28 +13,31 @@ FUNCTION Main()
    LOCAL oListView
    LOCAL oSLM
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
    oWindow:setWindowTitle("Teste")
    oWindow:resize(640, 480)
-   oWindow:show()
 
    oListView := QListView():new(oWindow)
    oListView:move(20, 20)
    oListView:setTooltip("Eu sou um ListView")
-   oListView:show()
 
    oSLM := QStringListModel():new({"um", "dois", "três", "quatro", "cinco", "seis"})
 
    oListView:setModel(oSLM)
 
+   // show window
+   oWindow:show()
+
+   // start application
    oApp:exec()
 
+   // delete objects
    oSLM:delete()
-
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

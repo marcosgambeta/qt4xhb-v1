@@ -13,20 +13,24 @@ FUNCTION Main()
    ? "using Qt4xHb (prg)"
 #endif
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
    oWindow:setWindowTitle("Test")
    oWindow:resize(640, 480)
 
+   // show window
    oWindow:show()
 
    test()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

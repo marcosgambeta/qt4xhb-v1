@@ -12,22 +12,26 @@ FUNCTION Main()
    LOCAL oWindow
    LOCAL oTimeEdit
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
    oWindow:setWindowTitle("Teste")
    oWindow:resize(640, 480)
-   oWindow:show()
 
    oTimeEdit := QTimeEdit():new(oWindow)
    oTimeEdit:move(20, 20)
    oTimeEdit:setTooltip("Eu sou um TimeEdit")
-   oTimeEdit:show()
 
+   // show window
+   oWindow:show()
+
+   // start application
    oApp:exec()
-   
+
+   // delete objects
    oWindow:delete()
-   
    oApp:delete()
 
 RETURN NIL

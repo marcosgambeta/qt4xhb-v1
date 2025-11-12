@@ -12,31 +12,40 @@ FUNCTION Main()
    LOCAL oWindow
    LOCAL oButton
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
    oWindow:resize(640, 480)
-   oWindow:show()
 
-   oButton := QPushButton():new("Mostrar janela de diálogo", oWindow)
+   oButton := QPushButton():new("Show dialog window", oWindow)
    oButton:move(20, 20)
-   oButton:show()
    oButton:onClicked({||ShowColorDialog(oWindow)})
 
-   oApp:exec()
-   
-   oWindow:delete()
+   // show window
+   oWindow:show()
 
+   // start application
+   oApp:exec()
+
+   // delete objects
+   oWindow:delete()
    oApp:delete()
 
 RETURN NIL
 
 STATIC FUNCTION ShowColorDialog(oWindow)
 
-   LOCAL oColorDialog := QColorDialog():new(oWindow)
+   LOCAL oColorDialog
 
+   // create dialog window
+   oColorDialog := QColorDialog():new(oWindow)
+
+   // execute dialog window
    oColorDialog:exec()
 
+   // delete dialog window
    oColorDialog:delete()
 
 RETURN NIL

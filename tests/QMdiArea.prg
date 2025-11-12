@@ -16,12 +16,13 @@ FUNCTION Main()
    LOCAL oMdiSubWindow3
    LOCAL oMdiSubWindow4
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oMainWindow := QMainWindow():new()
    oMainWindow:setWindowTitle("Qt4xHb - teste com MDI")
    oMainWindow:resize(800, 600)
-   oMainWindow:show()
 
    oMdiArea := QMdiArea():new()
    oMainWindow:setCentralWidget(oMdiArea)
@@ -42,10 +43,14 @@ FUNCTION Main()
    oMdiSubWindow4:setWindowTitle("Janela 4")
    oMdiSubWindow4:resize(320, 240)
 
+   // show window
+   oMainWindow:show()
+
+   // start application
    oApp:exec()
 
+   // delete objects
    oMainWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

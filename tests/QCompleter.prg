@@ -14,13 +14,15 @@ FUNCTION Main()
    LOCAL oLineEdit
    LOCAL aDados
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste com a classe QCompleter")
+   oWindow:setWindowTitle("Test with QCompleter class")
    oWindow:resize(640, 480)
 
-   // array de strings
+   // string array
    aDados := {}
    aadd(aDados, "Marcia"   )
    aadd(aDados, "Marcelo"  )
@@ -32,22 +34,25 @@ FUNCTION Main()
    aadd(aDados, "Mario"    )
    aadd(aDados, "Maristela")
 
-   // cria o objeto QCompleter usando a array como fonte de dados
+   // create the object QCompleter using the array as data source
    oCompleter := QCompleter():new(aDados, oWindow)
    oCompleter:setCaseSensitivity(Qt_CaseInsensitive)
 
-   // cria o objeto QLineEdit, ligado ao objeto QCompleter
+   // create the object QLineEdit
    oLineEdit := QLineEdit():new(oWindow)
    oLineEdit:move(10, 10)
    oLineEdit:resize(200, 20)
+   // link with the object QCompleter
    oLineEdit:setCompleter(oCompleter)
 
+   // show window
    oWindow:show()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

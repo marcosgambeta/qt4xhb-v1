@@ -12,24 +12,28 @@ FUNCTION Main()
    LOCAL oWindow
    LOCAL oSlider
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
    oWindow:setWindowTitle("Teste")
    oWindow:resize(640, 480)
-   oWindow:show()
 
    oSlider := QSlider():new(oWindow)
    oSlider:move(20, 20)
    oSlider:resize(20, 400)
    oSlider:setTooltip("Eu sou um Slider")
    oSlider:onSliderMoved({|oSender, nValue|test(oSender, nValue)})
-   oSlider:show()
 
+   // show window
+   oWindow:show()
+
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

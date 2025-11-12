@@ -12,22 +12,26 @@ FUNCTION Main()
    LOCAL oWindow
    LOCAL oLCDNumber
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
    oWindow:setWindowTitle("Teste")
    oWindow:resize(640, 480)
-   oWindow:show()
 
    oLCDNumber := QLCDNumber():new(oWindow)
    oLCDNumber:move(20, 20)
    oLCDNumber:setTooltip("Eu sou um LCDNumber")
-   oLCDNumber:show()
 
+   // show window
+   oWindow:show()
+
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

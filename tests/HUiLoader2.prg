@@ -41,8 +41,10 @@ FUNCTION Main()
    LOCAL oLineEdit
    LOCAL oLCDNumber
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := loadUI("HUiLoader.ui")
 
    oPushButton := oWindow:findChild("pushButton")
@@ -59,12 +61,14 @@ FUNCTION Main()
 
    oLCDNumber := oWindow:findChild("lcdNumber")
 
+   // show window
    oWindow:show()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

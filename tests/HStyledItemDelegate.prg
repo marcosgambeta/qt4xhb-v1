@@ -16,6 +16,7 @@ FUNCTION Main()
    LOCAL oTextDelegate
    LOCAL oValueDelegate
 
+   // create application
    oApp := QApplication():new()
 
    // cria um objeto da classe QSqlDatabase
@@ -75,7 +76,7 @@ FUNCTION Main()
    oModel:setHeaderData(1, Qt_Horizontal, QVariant():new("Nome"))
    oModel:setHeaderData(2, Qt_Horizontal, QVariant():new("Saldo"))
 
-   // cria a janela
+   // create window
    oWindow := QWidget():new():setWindowTitle("Teste"):resize(640, 480)
 
    // cria um objeto da classe QTableView
@@ -99,14 +100,15 @@ FUNCTION Main()
    oValueDelegate:onCommitData({|oSender, oEditor|qout("oValueDelegate - commitData")})
    oView:setItemDelegateForColumn(2, oValueDelegate)
 
+   // show window
    oWindow:show()
 
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oModel:delete()
-
    oApp:delete()
 
 RETURN NIL

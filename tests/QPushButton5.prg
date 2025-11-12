@@ -18,6 +18,7 @@ FUNCTION Main()
    LOCAL oButton2
    LOCAL oButton3
 
+   // create application
    oApp := QApplication():new()
 
    // create window
@@ -38,11 +39,11 @@ FUNCTION Main()
    // show window
    oWindow:show()
 
-   // start event loop
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL

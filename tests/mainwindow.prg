@@ -16,16 +16,20 @@ STATIC s_oMainWindow
 
 FUNCTION Main()
 
+   // create application
    s_oApp := QApplication():new()
 
+   // create window
    s_oMainWindow := HMainWindow():new()
 
+   // show window
    s_oMainWindow:show()
 
+   // start application
    s_oApp:exec()
 
+   // delete objects
    s_oMainWindow:delete()
-
    s_oApp:delete()
 
 RETURN NIL

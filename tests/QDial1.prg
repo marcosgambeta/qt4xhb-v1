@@ -12,23 +12,28 @@ FUNCTION Main()
    LOCAL oWindow
    LOCAL oDial
 
+   // create application
    oApp := QApplication():new()
 
+   // create window
    oWindow := QWidget():new()
    oWindow:setWindowTitle("Teste")
    oWindow:resize(640, 480)
-   oWindow:show()
 
+   // create the object QDial
    oDial := QDial():new(oWindow)
    oDial:move(20, 20)
-   oDial:setTooltip("Eu sou um Dial")
+   oDial:setTooltip("I am a Dial")
    oDial:onSliderMoved({|oSender, nValue|test(oSender, nValue)})
-   oDial:show()
 
+   // show window
+   oWindow:show()
+
+   // start application
    oApp:exec()
 
+   // delete objects
    oWindow:delete()
-
    oApp:delete()
 
 RETURN NIL
