@@ -142,7 +142,7 @@ METHOD setData(oIndex, oVariant, nRole) CLASS myModel
          cValue := oVariant:toString()
 
          IF !empty(cValue)
-            s_aDados[nRow + 1, nColumn + 1] := oVariant:toString()
+            s_aDados[nRow + 1, nColumn + 1] := cValue
             lSuccess := .T.
          ENDIF
 
