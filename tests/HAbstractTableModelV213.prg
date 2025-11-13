@@ -188,7 +188,7 @@ METHOD setData(oIndex, oVariant, nRole) CLASS myModel
          cValue := oVariant:toString()
 
          IF !empty(cValue)
-            fieldput(nColumn + 1, oVariant:toString())
+            fieldput(nColumn + 1, cValue)
             lSuccess := .T.
          ENDIF
 
