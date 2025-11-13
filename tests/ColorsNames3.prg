@@ -86,7 +86,7 @@ METHOD data(oIndex, nRole) CLASS myModel
 
       IF nRole == Qt_DisplayRole
          IF nColumn == 0
-            oVariant := QVariant():new(s_aColorsNames[nRow + 1])
+            oVariant:setValue(s_aColorsNames[nRow + 1])
          ENDIF
       ELSEIF nRole == Qt_FontRole
          IF nColumn == 0
@@ -108,12 +108,12 @@ METHOD headerData(nSection, nOrientation, nRole) CLASS myModel
 
    IF nOrientation == Qt_Horizontal .AND. nRole == Qt_DisplayRole
       IF nSection == 0
-         oVariant := QVariant():new("Nome")
+         oVariant:setValue("Nome")
       ELSEIF nSection == 1
-         oVariant := QVariant():new("Cor")
+         oVariant:setValue("Cor")
       ENDIF
    ELSEIF nOrientation == Qt_Vertical .AND. nRole == Qt_DisplayRole
-      oVariant := QVariant():new(alltrim(str(nSection + 1)))
+      oVariant:setValue(alltrim(str(nSection + 1)))
    ENDIF
 
 RETURN oVariant

@@ -114,11 +114,11 @@ METHOD data(oIndex, nRole) CLASS myModel
    IF oIndex:isValid()
 
       IF nRole == Qt_DisplayRole .AND. nColumn == 1
-         oVariant := QVariant():new(s_aEstados[nRow + 1, 2])
+         oVariant:setValue(s_aEstados[nRow + 1, 2])
       ELSEIF nRole == Qt_DecorationRole .AND. nColumn == 0
          oVariant := QVariant():new(QPixmap():new(s_aEstados[nRow + 1, 1]):toVariant())
       ELSEIF nRole == Qt_SizeHintRole .AND. nColumn == 0
-         oVariant := QVariant():new(QSize():new(150, 107))
+         oVariant:setValue(QSize():new(150, 107))
       ENDIF
 
    ENDIF
@@ -130,9 +130,9 @@ METHOD headerData(nSection, nOrientation, nRole) CLASS myModel
    LOCAL oVariant := QVariant():new()
 
    IF nOrientation == Qt_Horizontal .AND. nRole == Qt_DisplayRole
-      oVariant := QVariant():new({"Bandeira", "Estado"}[nSection + 1])
+      oVariant:setValue({"Bandeira", "Estado"}[nSection + 1])
    ELSEIF nOrientation == Qt_Vertical .AND. nRole == Qt_DisplayRole
-      oVariant := QVariant():new("Row " + alltrim(str(nSection)))
+      oVariant:setValue("Row " + alltrim(str(nSection)))
    ENDIF
 
 RETURN oVariant

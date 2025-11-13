@@ -143,9 +143,9 @@ METHOD data(oIndex, nRole) CLASS myModel
       dbgoto(nRow + 1)
 
       IF nRole == Qt_DisplayRole
-         oVariant := QVariant():new(fieldget(nColumn + 1))
+         oVariant:setValue(fieldget(nColumn + 1))
       ELSEIF nRole == Qt_EditRole
-         oVariant := QVariant():new(fieldget(nColumn + 1))
+         oVariant:setValue(fieldget(nColumn + 1))
       ENDIF
 
    ENDIF
@@ -157,9 +157,9 @@ METHOD headerData(nSection, nOrientation, nRole) CLASS myModel
    LOCAL oVariant := QVariant():new()
 
    IF nOrientation == Qt_Horizontal .AND. nRole == Qt_DisplayRole
-      oVariant := QVariant():new("Campo " + alltrim(str(nSection + 1)))
+      oVariant:setValue("Campo " + alltrim(str(nSection + 1)))
    ELSEIF nOrientation == Qt_Vertical .AND. nRole == Qt_DisplayRole
-      oVariant := QVariant():new("Registro " + alltrim(str(nSection + 1)))
+      oVariant:setValue("Registro " + alltrim(str(nSection + 1)))
    ENDIF
 
 RETURN oVariant

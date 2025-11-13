@@ -99,9 +99,9 @@ METHOD data(oIndex, nRole) CLASS myModel
    IF oIndex:isValid()
 
       IF nRole == Qt_DisplayRole
-         oVariant := QVariant():new(s_aDados[nRow + 1, nColumn + 1])
+         oVariant:setValue(s_aDados[nRow + 1, nColumn + 1])
       ELSEIF nRole == Qt_EditRole
-         oVariant := QVariant():new(s_aDados[nRow + 1, nColumn + 1])
+         oVariant:setValue(s_aDados[nRow + 1, nColumn + 1])
       ENDIF
 
    ENDIF
@@ -113,9 +113,9 @@ METHOD headerData(nSection, nOrientation, nRole) CLASS myModel
    LOCAL oVariant := QVariant():new()
 
    IF nOrientation == Qt_Horizontal .AND. nRole == Qt_DisplayRole
-      oVariant := QVariant():new("Column " + alltrim(str(nSection)))
+      oVariant:setValue("Column " + alltrim(str(nSection)))
    ELSEIF nOrientation == Qt_Vertical .AND. nRole == Qt_DisplayRole
-      oVariant := QVariant():new("Row " + alltrim(str(nSection)))
+      oVariant:setValue("Row " + alltrim(str(nSection)))
    ENDIF
 
 RETURN oVariant
