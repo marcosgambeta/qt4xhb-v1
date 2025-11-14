@@ -17,12 +17,12 @@ FUNCTION Main()
 
    // create window
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
+   oWindow:setWindowTitle("Test with QFontComboBox class")
    oWindow:resize(640, 480)
 
    oFontComboBox := QFontComboBox():new(oWindow)
    oFontComboBox:move(20, 20)
-   oFontComboBox:setTooltip("Eu sou um FontComboBox")
+   oFontComboBox:setTooltip("I am a QFontComboBox object")
 
    // show window
    oWindow:show()

@@ -17,7 +17,7 @@ FUNCTION Main()
 
    // create window
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
+   oWindow:setWindowTitle("Test with QDesktopWidget class")
    oWindow:resize(640, 480)
 
    // get the object QDesktopWidget

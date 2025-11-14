@@ -21,7 +21,6 @@ FUNCTION Main()
 
    oButton := QPushButton():new("Mostrar janela de diálogo", oWindow)
    oButton:move(20, 20)
-   oButton:show()
    oButton:onClicked({||dialog(oWindow)})
 
    // show window

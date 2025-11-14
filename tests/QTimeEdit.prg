@@ -17,12 +17,12 @@ FUNCTION Main()
 
    // create window
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
+   oWindow:setWindowTitle("Test with QTimeEdit class")
    oWindow:resize(640, 480)
 
    oTimeEdit := QTimeEdit():new(oWindow)
    oTimeEdit:move(20, 20)
-   oTimeEdit:setTooltip("Eu sou um TimeEdit")
+   oTimeEdit:setTooltip("I am a QTimeEdit object")
 
    // show window
    oWindow:show()

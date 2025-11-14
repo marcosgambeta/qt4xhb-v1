@@ -21,10 +21,11 @@ FUNCTION Main()
 
    // create window
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
+   oWindow:setWindowTitle("Test with HEventFilter class")
    oWindow:resize(640, 480)
 
-   oButton := QPushButton():new("dialog", oWindow)
+   // create button
+   oButton := QPushButton():new("show dialog", oWindow)
    oButton:move(20, 20)
    oButton:onClicked({||dialog(oWindow)})
 
@@ -48,26 +49,31 @@ STATIC FUNCTION dialog(oParent)
    LOCAL oLineEdit3
    LOCAL oEventFilter
 
+   // create dialog window
    oDialog := QDialog():new(oParent)
    oDialog:setObjectName("oDialog")
    oDialog:setWindowTitle("Dialog")
    oDialog:resize(320, 240)
 
+   // create line edit 1
    oLineEdit1 := QLineEdit():new(oDialog)
    oLineEdit1:setObjectName("oLineEdit1")
    oLineEdit1:move(20, 20)
    oLineEdit1:resize(100, 30)
 
+   // create line edit 2
    oLineEdit2 := QLineEdit():new(oDialog)
    oLineEdit2:setObjectName("oLineEdit2")
    oLineEdit2:move(20, 80)
    oLineEdit2:resize(100, 30)
 
+   // create line edit 3
    oLineEdit3 := QLineEdit():new(oDialog)
    oLineEdit3:setObjectName("oLineEdit3")
    oLineEdit3:move(20, 140)
    oLineEdit3:resize(100, 30)
 
+   // create event filter
    oEventFilter := HEventFilter():new(oDialog)
    oEventFilter:onDestroyed({||qout("oEventFilter-destroyed")})
    oEventFilter:setEventFilterCB({|oObject, oEvent|
@@ -88,13 +94,16 @@ STATIC FUNCTION dialog(oParent)
       RETURN .F.
       })
 
+   // install event filter on dialog window
    oDialog:installEventFilter(oEventFilter)
    oLineEdit1:installEventFilter(oEventFilter)
    oLineEdit2:installEventFilter(oEventFilter)
    oLineEdit3:installEventFilter(oEventFilter)
 
+   // execute dialog window
    oDialog:exec()
 
+   // delete dialog window
    oDialog:delete()
 
 RETURN NIL

@@ -17,12 +17,12 @@ FUNCTION Main()
 
    // create window
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
+   oWindow:setWindowTitle("Test with QProgressBar class")
    oWindow:resize(640, 480)
 
    oProgressBar := QProgressBar():new(oWindow)
    oProgressBar:move(20, 20)
-   oProgressBar:setTooltip("Eu sou um ProgressBar")
+   oProgressBar:setTooltip("I am a QProgressBar object")
    oProgressBar:setValue(50)
 
    // show window

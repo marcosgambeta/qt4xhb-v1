@@ -17,7 +17,7 @@ FUNCTION Main()
    oApp := QApplication():new()
 
    // create window
-   oWindow := QWidget():new():setWindowTitle("Teste do evento resize"):resize(640, 480)
+   oWindow := QWidget():new():setWindowTitle("Test with resize event"):resize(640, 480)
 
    oLabelWidth := QLabel():new("0", oWindow):move(20, 20):resize(100, 30)
    oLabelHeight := QLabel():new("0", oWindow):move(20, 80):resize(100, 30)

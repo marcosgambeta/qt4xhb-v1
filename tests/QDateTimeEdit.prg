@@ -17,13 +17,13 @@ FUNCTION Main()
 
    // create window
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
+   oWindow:setWindowTitle("Test with QDateTimeEdit class")
    oWindow:resize(640, 480)
 
    // create the object QDateTimeEdit
    oDateTimeEdit := QDateTimeEdit():new(oWindow)
    oDateTimeEdit:move(20, 20)
-   oDateTimeEdit:setTooltip("I am a DateTimeEdit")
+   oDateTimeEdit:setTooltip("I am a QDateTimeEdit object")
 
    // show window
    oWindow:show()

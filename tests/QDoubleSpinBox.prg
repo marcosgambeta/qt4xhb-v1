@@ -17,12 +17,12 @@ FUNCTION Main()
 
    // create window
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
+   oWindow:setWindowTitle("Test with QDoubleSpinBox class")
    oWindow:resize(640, 480)
 
    oDoubleSpinBox := QDoubleSpinBox():new(oWindow)
    oDoubleSpinBox:move(20, 20)
-   oDoubleSpinBox:setTooltip("Eu sou um DoubleSpinBox")
+   oDoubleSpinBox:setTooltip("I am a QDoubleSpinBox object")
 
    // show window
    oWindow:show()

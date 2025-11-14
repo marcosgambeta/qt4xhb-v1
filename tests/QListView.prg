@@ -18,14 +18,14 @@ FUNCTION Main()
 
    // create window
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
+   oWindow:setWindowTitle("Test with QListView class")
    oWindow:resize(640, 480)
 
    oListView := QListView():new(oWindow)
    oListView:move(20, 20)
-   oListView:setTooltip("Eu sou um ListView")
+   oListView:setTooltip("I am a QListView object")
 
-   oSLM := QStringListModel():new({"um", "dois", "três", "quatro", "cinco", "seis"})
+   oSLM := QStringListModel():new({"one", "two", "three", "four", "five", "six"})
 
    oListView:setModel(oSLM)
 

@@ -17,12 +17,12 @@ FUNCTION Main()
 
    // create window
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
+   oWindow:setWindowTitle("Test with QSpinBox class")
    oWindow:resize(640, 480)
 
    oSpinBox := QSpinBox():new(oWindow)
    oSpinBox:move(20, 20)
-   oSpinBox:setTooltip("Eu sou um SpinBox")
+   oSpinBox:setTooltip("I am a QSpinBox object")
 
    // show window
    oWindow:show()

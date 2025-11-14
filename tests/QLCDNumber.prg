@@ -17,12 +17,12 @@ FUNCTION Main()
 
    // create window
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
+   oWindow:setWindowTitle("Test with QLCDNumber class")
    oWindow:resize(640, 480)
 
    oLCDNumber := QLCDNumber():new(oWindow)
    oLCDNumber:move(20, 20)
-   oLCDNumber:setTooltip("Eu sou um LCDNumber")
+   oLCDNumber:setTooltip("I am a QLCDNumber object")
 
    // show window
    oWindow:show()

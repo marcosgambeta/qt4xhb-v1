@@ -22,7 +22,7 @@ FUNCTION Main()
 
    oCal := QCalendarWidget():new(oWindow)
    oCal:move(20, 20)
-   oCal:setTooltip("I am a CalendarWidget")
+   oCal:setTooltip("I am a QCalendarWidget object")
 
    // show window
    oWindow:show()

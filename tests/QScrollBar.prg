@@ -17,13 +17,13 @@ FUNCTION Main()
 
    // create window
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
+   oWindow:setWindowTitle("Test with QScrollBar class")
    oWindow:resize(640, 480)
 
    oScrollBar := QScrollBar():new(oWindow)
    oScrollBar:move(20, 20)
    oScrollBar:resize(20, 400)
-   oScrollBar:setTooltip("Eu sou um ScrollBar")
+   oScrollBar:setTooltip("I am a QScrollBar object")
    oScrollBar:onSliderMoved({|oSender, nValue|test(oSender, nValue)})
 
    // show window

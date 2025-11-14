@@ -17,13 +17,13 @@ FUNCTION Main()
 
    // create window
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
+   oWindow:setWindowTitle("Test with QSlider class")
    oWindow:resize(640, 480)
 
    oSlider := QSlider():new(oWindow)
    oSlider:move(20, 20)
    oSlider:resize(20, 400)
-   oSlider:setTooltip("Eu sou um Slider")
+   oSlider:setTooltip("I am a QSlider object")
    oSlider:onSliderMoved({|oSender, nValue|test(oSender, nValue)})
 
    // show window

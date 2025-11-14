@@ -17,8 +17,9 @@ FUNCTION Main()
 
    // create window
    oMainWindow := QMainWindow():new()
+   oMainWindow:setWindowTitle("Test with QDockWidget class")
 
-   oDockWidget := QDockWidget():new("Teste", oMainWindow)
+   oDockWidget := QDockWidget():new("QDockWidget", oMainWindow)
 
    // show window
    oMainWindow:show()

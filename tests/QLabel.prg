@@ -17,12 +17,12 @@ FUNCTION Main()
 
    // create window
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
+   oWindow:setWindowTitle("Test with QLabel class")
    oWindow:resize(640, 480)
 
    oLabel := QLabel():new("Label", oWindow)
    oLabel:move(20, 20)
-   oLabel:setTooltip("Eu sou um Label")
+   oLabel:setTooltip("I am a QLabel object")
 
    // show window
    oWindow:show()

@@ -21,7 +21,6 @@ FUNCTION Main()
    oRubberBand := QRubberBand():new(QRubberBand_Rectangle, oWindow)
    oRubberBand:move(20, 20)
    oRubberBand:resize(100, 100)
-   oRubberBand:show()
 
    // show window
    oWindow:show()

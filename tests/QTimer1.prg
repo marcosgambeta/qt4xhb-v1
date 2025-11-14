@@ -21,7 +21,7 @@ FUNCTION Main()
 
    // create window
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
+   oWindow:setWindowTitle("Test with QTimer class")
    oWindow:resize(640, 480)
 
    oTimer := QTimer():new(oWindow)

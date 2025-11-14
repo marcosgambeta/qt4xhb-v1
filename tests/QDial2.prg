@@ -17,13 +17,13 @@ FUNCTION Main()
 
    // create window
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
+   oWindow:setWindowTitle("Test with QDial class")
    oWindow:resize(640, 480)
 
    // create the object QDial
    oDial := QDial():new(oWindow)
    oDial:move(20, 20)
-   oDial:setTooltip("I am a Dial")
+   oDial:setTooltip("I am a QDial object")
    oDial:onActionTriggered({|oSender, nAction|test(oSender, nAction)})
    oDial:onSliderPressed({|oSender|test2(oSender)})
    oDial:onSliderReleased({|oSender|test3(oSender)})

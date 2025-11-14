@@ -23,7 +23,7 @@ FUNCTION Main()
    // create combobox
    oComboBox := QComboBox():new(oWindow)
    oComboBox:move(20, 20)
-   oComboBox:setTooltip("I am a ComboBox")
+   oComboBox:setTooltip("I am a QComboBox object")
 
    // add items to combobox
    oComboBox:addItem("Item 1")

@@ -16,7 +16,7 @@ FUNCTION Main()
 
    // create window
    oWindow := QMainWindow():new()
-   oWindow:setWindowTitle("Teste")
+   oWindow:setWindowTitle("Test with QMainWindow class")
    oWindow:resize(640, 480)
 
    // show window
