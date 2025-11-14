@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QAXWIDGET_ASVARIANT)
     if (ISNUMPAR(0)) {
 #endif
       QVariant *ptr = new QVariant(obj->asVariant());
-      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
+      RQVARIANT(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -319,7 +319,7 @@ HB_FUNC_STATIC(QAXWIDGET_DYNAMICCALL)
                            HB_ISNIL(7) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(7)),
                            HB_ISNIL(8) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(8)),
                            HB_ISNIL(9) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(9))));
-      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
+      RQVARIANT(ptr);
     }
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
     // QVariant dynamicCall(const char *function, QList<QVariant> &vars)
@@ -327,7 +327,7 @@ HB_FUNC_STATIC(QAXWIDGET_DYNAMICCALL)
 
     if (obj != NULL) {
       QVariant *ptr = new QVariant(obj->dynamicCall(PCONSTCHAR(1), PQVARIANTLIST(2)));
-      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
+      RQVARIANT(ptr);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
