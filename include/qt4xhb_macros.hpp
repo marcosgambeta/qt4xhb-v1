@@ -155,6 +155,7 @@
 #define RGLSIZEI(x)                                         hb_parni(static_cast<GLsizei>(x))
 #define RQSTRINGLIST(x)                                     Qt4xHb::convert_qstringlist_to_array(x)
 #define RQRGB(x)                                            hb_retni(x)
+#define RQVARIANT(p)                                        Qt4xHb::createReturnClass(p, "QVARIANT", true)
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  static_cast<const char*>(x.toAscii().data())
