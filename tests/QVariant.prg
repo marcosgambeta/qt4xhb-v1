@@ -10,7 +10,7 @@ FUNCTION Main()
 
    LOCAL oVariant
    LOCAL lOk
-   
+
    oVariant := QVariant():new()
 
    oVariant:setValue(12345)
@@ -20,5 +20,7 @@ FUNCTION Main()
    ? lOk
    ? oVariant:toInt(@lOk)
    ? lOk
+   
+   WAIT
 
 RETURN NIL
