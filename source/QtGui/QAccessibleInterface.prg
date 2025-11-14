@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_INVOKEMETHOD)
         }
       }
       QVariant *ptr = new QVariant(obj->invokeMethod(PQACCESSIBLE_METHOD(1), OPINT(2, 0), par3));
-      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
+      RQVARIANT(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
