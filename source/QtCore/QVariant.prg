@@ -1301,129 +1301,129 @@ HB_FUNC_STATIC(QVARIANT_FROMVALUE)
     // static QVariant fromValue(const QString &val)
 
     QVariant *ptr = new QVariant(QVariant::fromValue(PQSTRING(1)));
-    Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
+    RQVARIANT(ptr);
   } else if (ISNUMPAR(1) && HB_ISLOG(1)) {
     // static QVariant fromValue(bool val)
 
     QVariant *ptr = new QVariant(QVariant::fromValue(PBOOL(1)));
-    Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
+    RQVARIANT(ptr);
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     if (hb_param(1, HB_IT_DOUBLE) != NULL) {
       // static QVariant fromValue(double val)
 
       QVariant *ptr = new QVariant(QVariant::fromValue(PDOUBLE(1)));
-      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
+      RQVARIANT(ptr);
     } else if (hb_param(1, HB_IT_LONG) != NULL) {
       // static QVariant fromValue(qlonglong val)
 
       QVariant *ptr = new QVariant(QVariant::fromValue(PQLONGLONG(1)));
-      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
+      RQVARIANT(ptr);
     } else {
       // static QVariant fromValue(int val)
 
       QVariant *ptr = new QVariant(QVariant::fromValue(PINT(1)));
-      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
+      RQVARIANT(ptr);
     }
   } else if (ISNUMPAR(1) && ISQLOCALE(1)) {
     // static QVariant fromValue(const QLocale &l)
 
     QVariant *ptr = new QVariant(QVariant::fromValue(*PQLOCALE(1)));
-    Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
+    RQVARIANT(ptr);
   } else if (ISNUMPAR(1) && ISQREGEXP(1)) {
     // static QVariant fromValue(const QRegExp &regExp)
 
     QVariant *ptr = new QVariant(QVariant::fromValue(*PQREGEXP(1)));
-    Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
+    RQVARIANT(ptr);
   } else if (ISNUMPAR(1) && ISQEASINGCURVE(1)) {
     // static QVariant fromValue(const QEasingCurve &val)
 
     QVariant *ptr = new QVariant(QVariant::fromValue(*PQEASINGCURVE(1)));
-    Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
+    RQVARIANT(ptr);
   } else if (ISNUMPAR(1) && ISQVARIANT(1)) {
     // static QVariant fromValue(const QVariant &p)
 
     QVariant *ptr = new QVariant(QVariant::fromValue(*PQVARIANT(1)));
-    Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
+    RQVARIANT(ptr);
   } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     // static QVariant fromValue(const QByteArray &val)
 
     QVariant *ptr = new QVariant(QVariant::fromValue(*PQBYTEARRAY(1)));
-    Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
+    RQVARIANT(ptr);
   } else if (ISNUMPAR(1) && ISQBITARRAY(1)) {
     // static QVariant fromValue(const QBitArray &val)
 
     QVariant *ptr = new QVariant(QVariant::fromValue(*PQBITARRAY(1)));
-    Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
+    RQVARIANT(ptr);
   } else if (ISNUMPAR(1) && ISQCHAR(1)) {
     // static QVariant fromValue(const QChar &c)
 
     QVariant *ptr = new QVariant(QVariant::fromValue(*PQCHAR(1)));
-    Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
+    RQVARIANT(ptr);
   } else if (ISNUMPAR(1) && ISQDATE(1)) {
     // static QVariant fromValue(const QDate &val)
 
     QVariant *ptr = new QVariant(QVariant::fromValue(*PQDATE(1)));
-    Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
+    RQVARIANT(ptr);
   } else if (ISNUMPAR(1) && ISQTIME(1)) {
     // static QVariant fromValue(const QTime &val)
 
     QVariant *ptr = new QVariant(QVariant::fromValue(*PQTIME(1)));
-    Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
+    RQVARIANT(ptr);
   } else if (ISNUMPAR(1) && ISQDATETIME(1)) {
     // static QVariant fromValue(const QDateTime &val)
 
     QVariant *ptr = new QVariant(QVariant::fromValue(*PQDATETIME(1)));
-    Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
+    RQVARIANT(ptr);
   } else if (ISNUMPAR(1) && ISQSIZE(1)) {
     // static QVariant fromValue(const QSize &val)
 
     QVariant *ptr = new QVariant(QVariant::fromValue(*PQSIZE(1)));
-    Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
+    RQVARIANT(ptr);
   } else if (ISNUMPAR(1) && ISQSIZEF(1)) {
     // static QVariant fromValue(const QSizeF &val)
 
     QVariant *ptr = new QVariant(QVariant::fromValue(*PQSIZEF(1)));
-    Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
+    RQVARIANT(ptr);
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // static QVariant fromValue(const QPoint &val)
 
     QVariant *ptr = new QVariant(QVariant::fromValue(*PQPOINT(1)));
-    Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
+    RQVARIANT(ptr);
   } else if (ISNUMPAR(1) && ISQPOINTF(1)) {
     // static QVariant fromValue(const QPointF &val)
 
     QVariant *ptr = new QVariant(QVariant::fromValue(*PQPOINTF(1)));
-    Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
+    RQVARIANT(ptr);
   } else if (ISNUMPAR(1) && ISQLINE(1)) {
     // static QVariant fromValue(const QLine &val)
 
     QVariant *ptr = new QVariant(QVariant::fromValue(*PQLINE(1)));
-    Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
+    RQVARIANT(ptr);
   } else if (ISNUMPAR(1) && ISQLINEF(1)) {
     // static QVariant fromValue(const QLineF &val)
 
     QVariant *ptr = new QVariant(QVariant::fromValue(*PQLINEF(1)));
-    Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
+    RQVARIANT(ptr);
   } else if (ISNUMPAR(1) && ISQRECT(1)) {
     // static QVariant fromValue(const QRect &val)
 
     QVariant *ptr = new QVariant(QVariant::fromValue(*PQRECT(1)));
-    Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
+    RQVARIANT(ptr);
   } else if (ISNUMPAR(1) && ISQRECTF(1)) {
     // static QVariant fromValue(const QRectF &val)
 
     QVariant *ptr = new QVariant(QVariant::fromValue(*PQRECTF(1)));
-    Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
+    RQVARIANT(ptr);
   } else if (ISNUMPAR(1) && ISQURL(1)) {
     // static QVariant fromValue(const QUrl &val)
 
     QVariant *ptr = new QVariant(QVariant::fromValue(*PQURL(1)));
-    Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
+    RQVARIANT(ptr);
   } else if (ISNUMPAR(1) && HB_ISARRAY(1)) {
     // static QVariant fromValue(const QStringList &val)
 
     QVariant *ptr = new QVariant(QVariant::fromValue(PQSTRINGLIST(1)));
-    Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
+    RQVARIANT(ptr);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

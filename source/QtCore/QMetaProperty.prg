@@ -515,7 +515,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_READ)
     if (ISNUMPAR(1) && ISQOBJECT(1)) {
 #endif
       QVariant *ptr = new QVariant(obj->read(PQOBJECT(1)));
-      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
+      RQVARIANT(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
