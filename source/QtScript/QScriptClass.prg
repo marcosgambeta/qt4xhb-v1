@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_EXTENSION)
 #endif
       QVariant *ptr = new QVariant(obj->extension(
           PQSCRIPTCLASS_EXTENSION(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(2))));
-      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
+      RQVARIANT(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
