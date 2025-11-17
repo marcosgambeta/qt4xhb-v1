@@ -463,7 +463,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_BUDDY)
     if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
 #endif
       QModelIndex *ptr = new QModelIndex(obj->buddy(*PQMODELINDEX(1)));
-      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
+      RQMODELINDEX(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -632,7 +632,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_INDEX)
 #endif
       QModelIndex *ptr = new QModelIndex(obj->index(
           PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex *>(Qt4xHb::itemGetPtr(3))));
-      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
+      RQMODELINDEX(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -689,7 +689,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MAPFROMSOURCE)
     if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
 #endif
       QModelIndex *ptr = new QModelIndex(obj->mapFromSource(*PQMODELINDEX(1)));
-      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
+      RQMODELINDEX(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -746,7 +746,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_MAPTOSOURCE)
     if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
 #endif
       QModelIndex *ptr = new QModelIndex(obj->mapToSource(*PQMODELINDEX(1)));
-      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
+      RQMODELINDEX(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -854,7 +854,7 @@ HB_FUNC_STATIC(QSORTFILTERPROXYMODEL_PARENT)
     if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
 #endif
       QModelIndex *ptr = new QModelIndex(obj->parent(*PQMODELINDEX(1)));
-      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
+      RQMODELINDEX(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

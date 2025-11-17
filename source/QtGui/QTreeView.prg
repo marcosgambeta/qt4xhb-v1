@@ -290,7 +290,7 @@ HB_FUNC_STATIC(QTREEVIEW_INDEXABOVE)
     if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
 #endif
       QModelIndex *ptr = new QModelIndex(obj->indexAbove(*PQMODELINDEX(1)));
-      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
+      RQMODELINDEX(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -309,7 +309,7 @@ HB_FUNC_STATIC(QTREEVIEW_INDEXBELOW)
     if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
 #endif
       QModelIndex *ptr = new QModelIndex(obj->indexBelow(*PQMODELINDEX(1)));
-      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
+      RQMODELINDEX(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -906,7 +906,7 @@ HB_FUNC_STATIC(QTREEVIEW_INDEXAT)
     if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
       QModelIndex *ptr = new QModelIndex(obj->indexAt(*PQPOINT(1)));
-      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
+      RQMODELINDEX(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
