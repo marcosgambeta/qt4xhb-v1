@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QMODELINDEX_CHILD)
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       QModelIndex *ptr = new QModelIndex(obj->child(PINT(1), PINT(2)));
-      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
+      RQMODELINDEX(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QMODELINDEX_PARENT)
     if (ISNUMPAR(0)) {
 #endif
       QModelIndex *ptr = new QModelIndex(obj->parent());
-      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
+      RQMODELINDEX(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -286,7 +286,7 @@ HB_FUNC_STATIC(QMODELINDEX_SIBLING)
     if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
       QModelIndex *ptr = new QModelIndex(obj->sibling(PINT(1), PINT(2)));
-      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
+      RQMODELINDEX(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
