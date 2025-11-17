@@ -3908,7 +3908,7 @@ HB_FUNC_STATIC(QWIDGET_WINDOWICON)
     if (ISNUMPAR(0)) {
 #endif
       QIcon *ptr = new QIcon(obj->windowIcon());
-      Qt4xHb::createReturnClass(ptr, "QICON", true);
+      RQICON(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

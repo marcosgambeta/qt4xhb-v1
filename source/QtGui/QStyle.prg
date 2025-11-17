@@ -428,7 +428,7 @@ HB_FUNC_STATIC(QSTYLE_STANDARDICON)
       QIcon *ptr = new QIcon(obj->standardIcon(PQSTYLE_STANDARDPIXMAP(1),
                                                HB_ISNIL(2) ? 0 : static_cast<QStyleOption *>(Qt4xHb::itemGetPtr(2)),
                                                OPQWIDGET(3, 0)));
-      Qt4xHb::createReturnClass(ptr, "QICON", true);
+      RQICON(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

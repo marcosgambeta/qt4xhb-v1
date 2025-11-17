@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_CURRENTICON)
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
       QIcon *ptr = new QIcon(obj->currentIcon);
-      Qt4xHb::createReturnClass(ptr, "QICON", true);
+      RQICON(ptr);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }

@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QFILEICONPROVIDER_ICON)
 
     if (obj != NULL) {
       QIcon *ptr = new QIcon(obj->icon(PQFILEICONPROVIDER_ICONTYPE(1)));
-      Qt4xHb::createReturnClass(ptr, "QICON", true);
+      RQICON(ptr);
     }
   } else if (ISNUMPAR(1) && ISQFILEINFO(1)) {
     // virtual QIcon icon(const QFileInfo &info) const
@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QFILEICONPROVIDER_ICON)
 
     if (obj != NULL) {
       QIcon *ptr = new QIcon(obj->icon(*PQFILEINFO(1)));
-      Qt4xHb::createReturnClass(ptr, "QICON", true);
+      RQICON(ptr);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
