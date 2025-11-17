@@ -30,7 +30,7 @@ FUNCTION Main()
    // conteúdo da célula
    oModel:setDisplayRoleCB({|nRow, nCol|"Cell " + alltrim(str(nRow)) + "," + alltrim(str(nCol))})
    // cor de frente da célula
-   oModel:setForegroundRoleCB({|nRow, nCol|iif(nRow / 2 == int(nRow / 2), "blue", "dark green")})
+   oModel:setForegroundRoleCB({|nRow, nCol|HB_SYMBOL_UNUSED(nCol), iif(nRow / 2 == int(nRow / 2), "blue", "dark green")})
    // títulos das colunas
    oModel:setHorizontalHeaderDisplayRoleCB({|nCol|"Column " + strzero(nCol, 5)})
    // títulos das linhas

@@ -71,7 +71,7 @@ FUNCTION Main()
    ? oLineEdit:onFocusOutEvent({||qout("focusout")})
 
    oLCDNumber := oWindow:findChild("lcdNumber")
-
+   
    // show window
    oWindow:show()
 
@@ -81,5 +81,8 @@ FUNCTION Main()
    // delete objects
    oWindow:delete()
    oApp:delete()
+
+   HB_SYMBOL_UNUSED(oComboBox)
+   HB_SYMBOL_UNUSED(oLCDNumber)
 
 RETURN NIL

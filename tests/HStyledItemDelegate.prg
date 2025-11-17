@@ -90,14 +90,14 @@ FUNCTION Main()
 
    // cria um objeto da classe TextDelegate para uso na coluna 1
    oTextDelegate := TextDelegate():new(oView)
-   oTextDelegate:onCloseEditor({|oSender, oEditor, nHint|qout("oTextDelegate - closeEditor - " + alltrim(str(nHint)))})
-   oTextDelegate:onCommitData({|oSender, oEditor|qout("oTextDelegate - commitData")})
+   oTextDelegate:onCloseEditor({|oSender, oEditor, nHint|HB_SYMBOL_UNUSED(oSender), HB_SYMBOL_UNUSED(oEditor), qout("oTextDelegate - closeEditor - " + alltrim(str(nHint)))})
+   oTextDelegate:onCommitData({|oSender, oEditor|HB_SYMBOL_UNUSED(oSender), HB_SYMBOL_UNUSED(oEditor), qout("oTextDelegate - commitData")})
    oView:setItemDelegateForColumn(1, oTextDelegate)
 
    // cria um objeto da classe ValueDelegate para uso na coluna 2
    oValueDelegate := ValueDelegate():new(oView)
-   oValueDelegate:onCloseEditor({|oSender, oEditor, nHint|qout("oValueDelegate - closeEditor - " + alltrim(str(nHint)))})
-   oValueDelegate:onCommitData({|oSender, oEditor|qout("oValueDelegate - commitData")})
+   oValueDelegate:onCloseEditor({|oSender, oEditor, nHint|HB_SYMBOL_UNUSED(oSender), HB_SYMBOL_UNUSED(oEditor), qout("oValueDelegate - closeEditor - " + alltrim(str(nHint)))})
+   oValueDelegate:onCommitData({|oSender, oEditor|HB_SYMBOL_UNUSED(oSender), HB_SYMBOL_UNUSED(oEditor), qout("oValueDelegate - commitData")})
    oView:setItemDelegateForColumn(2, oValueDelegate)
 
    // show window
@@ -140,14 +140,19 @@ RETURN self
 
 METHOD displayText(pVariant, pLocale) CLASS TextDelegate
 
+   HB_SYMBOL_UNUSED(pLocale)
+
 RETURN QVariant():newFrom(pVariant):toString()
 
 METHOD createEditor(pParent, pOption, pIndex) CLASS TextDelegate
 
    LOCAL oParent := QWidget():newFrom(pParent)
-   LOCAL oOption := QStyleOptionViewItem():newFrom(pOption)
-   LOCAL oIndex := QModelIndex():newFrom(pIndex)
+   // LOCAL oOption := QStyleOptionViewItem():newFrom(pOption)
+   // LOCAL oIndex := QModelIndex():newFrom(pIndex)
    LOCAL oEditor
+   
+   HB_SYMBOL_UNUSED(pOption)
+   HB_SYMBOL_UNUSED(pIndex)
 
    oEditor := QLineEdit():new(oParent)
 
@@ -207,6 +212,8 @@ METHOD paint(pPainter, pOption, pIndex) CLASS ValueDelegate
    LOCAL oOption := QStyleOptionViewItem():newFrom(pOption)
    LOCAL oIndex := QModelIndex():newFrom(pIndex)
    LOCAL nValue
+   LOCAL cValue
+   LOCAL oPen
 
    // checa se o estado da celula = selecionado e preenche o fundo de acordo
    IF hb_bitand(oOption:state(), QStyle_State_Selected) != 0
@@ -237,9 +244,12 @@ RETURN NIL
 METHOD createEditor(pParent, pOption, pIndex) CLASS ValueDelegate
 
    LOCAL oParent := QWidget():newFrom(pParent)
-   LOCAL oOption := QStyleOptionViewItem():newFrom(pOption)
-   LOCAL oIndex := QModelIndex():newFrom(pIndex)
+   // LOCAL oOption := QStyleOptionViewItem():newFrom(pOption)
+   // LOCAL oIndex := QModelIndex():newFrom(pIndex)
    LOCAL oEditor
+   
+   HB_SYMBOL_UNUSED(pOption)
+   HB_SYMBOL_UNUSED(pIndex)
 
    oEditor := QDoubleSpinBox():new(oParent)
    oEditor:setSingleStep(0.01)

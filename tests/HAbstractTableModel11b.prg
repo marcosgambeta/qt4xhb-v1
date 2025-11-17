@@ -64,7 +64,7 @@ FUNCTION Main()
    // conteúdo da célula (coluna 1)
    oModel:setCB(Qt_DecorationRole, {|nRow, nCol|iif(nCol == 0, QPixmap():new(aEstados[nRow + 1, 1]), NIL)})
    // tamanho da célula (coluna 1)
-   oModel:setCB(Qt_SizeHintRole, {|nRow, nCol|iif(nCol == 0, QSize():new(150, 107), NIL)})
+   oModel:setCB(Qt_SizeHintRole, {|nRow, nCol|HB_SYMBOL_UNUSED(nRow), iif(nCol == 0, QSize():new(150, 107), NIL)})
 
    // títulos das colunas
    oModel:setHorizontalHeaderCB(Qt_DisplayRole, {|nCol|{"Bandeira", "Estado"}[nCol + 1]})

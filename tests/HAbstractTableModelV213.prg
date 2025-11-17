@@ -167,8 +167,10 @@ RETURN oVariant
 METHOD flags(oIndex) CLASS myModel
 
    LOCAL nFlags := Qt_ItemIsSelectable + Qt_ItemIsEditable + Qt_ItemIsEnabled
-   LOCAL nRow := oIndex:row()
-   LOCAL nColumn := oIndex:column()
+   //LOCAL nRow := oIndex:row()
+   //LOCAL nColumn := oIndex:column()
+   
+   HB_SYMBOL_UNUSED(oIndex)
 
 RETURN nFlags
 
@@ -177,7 +179,7 @@ METHOD setData(oIndex, oVariant, nRole) CLASS myModel
    LOCAL lSuccess := .F.
    LOCAL nRow := oIndex:row()
    LOCAL nColumn := oIndex:column()
-   LOCAL cValue := ""
+   LOCAL cValue
 
    IF oIndex:isValid()
 

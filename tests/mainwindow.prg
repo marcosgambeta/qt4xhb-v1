@@ -200,6 +200,8 @@ METHOD closeMainWindow(oSender, oCloseEvent) CLASS HMainWindow
 
    LOCAL oMB
    LOCAL nRet
+   
+   HB_SYMBOL_UNUSED(oSender)
 
    oMB := QMessageBox():new(QMessageBox_Question, ;
                             "Atenção", ;

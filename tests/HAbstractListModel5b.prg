@@ -51,6 +51,7 @@ FUNCTION Main()
          aData[nRow + 1, 2] := val(oVariant:toString())
          RETURN .T.
       ENDIF
+      RETURN .F.
       }) // grava conteúdo da linha se não for vazio
 
    // create view

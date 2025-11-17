@@ -71,6 +71,9 @@ FUNCTION Main()
    oWindow:delete()
    oApp:delete()
 
+   HB_SYMBOL_UNUSED(oComboBox)
+   HB_SYMBOL_UNUSED(oLCDNumber)
+
 RETURN NIL
 
 STATIC FUNCTION loadUI(cFileName)
@@ -101,6 +104,7 @@ STATIC FUNCTION loadUI(cFileName)
       ?? " "
       ?? oWidget:parent():metaObject():className()
       ?? " "
+      RETURN NIL
       })
    oFile := QFile():new(cFileName)
    oFile:open(QIODevice_ReadOnly)

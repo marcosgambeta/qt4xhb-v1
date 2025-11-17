@@ -23,8 +23,10 @@ FUNCTION Main()
    oLabelHeight := QLabel():new("0", oWindow):move(20, 80):resize(100, 30)
 
    oWindow:onResizeEvent({|oSender, oResizeEvent|
+      HB_SYMBOL_UNUSED(oSender)
       oLabelWidth:setText(alltrim(str(oResizeEvent:size():width())))
       oLabelHeight:setText(alltrim(str(oResizeEvent:size():height())))
+      RETURN NIL
       })
 
    // show window

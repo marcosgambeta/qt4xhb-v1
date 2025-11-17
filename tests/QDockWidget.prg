@@ -20,6 +20,8 @@ FUNCTION Main()
    oMainWindow:setWindowTitle("Test with QDockWidget class")
 
    oDockWidget := QDockWidget():new("QDockWidget", oMainWindow)
+   
+   HB_SYMBOL_UNUSED(oDockWidget)
 
    // show window
    oMainWindow:show()

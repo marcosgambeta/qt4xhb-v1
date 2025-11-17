@@ -63,7 +63,7 @@ FUNCTION Main()
    oComboBox:move(10, 10)
    oComboBox:resize(200, 20)
    oComboBox:setModel(oModel)
-   ? oComboBox:onActivated({|oSender, nIndex|qout(strzero(nIndex, 4)), qout(aEstados[nIndex + 1, 2])})
+   ? oComboBox:onActivated({|oSender, nIndex|HB_SYMBOL_UNUSED(oSender), qout(strzero(nIndex, 4)), qout(aEstados[nIndex + 1, 2])})
 
    // show window
    oWindow:show()

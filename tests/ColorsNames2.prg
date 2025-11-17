@@ -32,7 +32,7 @@ FUNCTION Main()
    // conteúdo da célula
    oModel:setDisplayRoleCB({|nRow, nCol|{aColorsNames[nRow + 1], NIL}[nCol + 1]})
    // fonte da célula
-   oModel:setFontRoleCB({|nRow, nCol|iif(nCol == 0, QFont():new("Arial Black", 12), NIL)})
+   oModel:setFontRoleCB({|nRow, nCol|HB_SYMBOL_UNUSED(nRow), iif(nCol == 0, QFont():new("Arial Black", 12), NIL)})
    // cor de fundo da célula
    oModel:setBackgroundRoleCB({|nRow, nCol|iif(nCol == 0, NIL, aColorsNames[nRow + 1])})
    // títulos das colunas

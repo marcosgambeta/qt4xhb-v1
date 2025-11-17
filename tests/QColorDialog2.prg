@@ -42,7 +42,7 @@ STATIC FUNCTION ShowColorDialog(oWindow)
    // create dialog window
    oColorDialog := QColorDialog():new(oWindow)
 
-   oColorDialog:onColorSelected({|oSender, oColor|ShowColorSelected(oColor)})
+   oColorDialog:onColorSelected({|oSender, oColor|HB_SYMBOL_UNUSED(oSender), ShowColorSelected(oColor)})
 
    // execute dialog window
    oColorDialog:exec()
