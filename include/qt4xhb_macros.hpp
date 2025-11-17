@@ -157,6 +157,7 @@
 #define RQRGB(x)                                            hb_retni(x)
 #define RQVARIANT(p)                                        Qt4xHb::createReturnClass(p, "QVARIANT", true)
 #define RQMODELINDEX(p)                                     Qt4xHb::createReturnClass(p, "QMODELINDEX", true)
+#define RQICON(p)                                           Qt4xHb::createReturnClass(p, "QICON", true)
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  static_cast<const char*>(x.toAscii().data())
