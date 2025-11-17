@@ -138,30 +138,25 @@ METHOD new(...) CLASS TextDelegate
 
 RETURN self
 
-METHOD displayText(pVariant, pLocale) CLASS TextDelegate
+METHOD displayText(oVariant, oLocale) CLASS TextDelegate
 
-   HB_SYMBOL_UNUSED(pLocale)
+   HB_SYMBOL_UNUSED(oLocale)
 
-RETURN QVariant():newFrom(pVariant):toString()
+RETURN oVariant:toString()
 
-METHOD createEditor(pParent, pOption, pIndex) CLASS TextDelegate
+METHOD createEditor(oParent, oOption, oIndex) CLASS TextDelegate
 
-   LOCAL oParent := QWidget():newFrom(pParent)
-   // LOCAL oOption := QStyleOptionViewItem():newFrom(pOption)
-   // LOCAL oIndex := QModelIndex():newFrom(pIndex)
    LOCAL oEditor
-   
-   HB_SYMBOL_UNUSED(pOption)
-   HB_SYMBOL_UNUSED(pIndex)
+
+   HB_SYMBOL_UNUSED(oOption)
+   HB_SYMBOL_UNUSED(oIndex)
 
    oEditor := QLineEdit():new(oParent)
 
 RETURN oEditor
 
-METHOD setEditorData(pEditor, pIndex) CLASS TextDelegate
+METHOD setEditorData(oEditor, oIndex) CLASS TextDelegate
 
-   LOCAL oEditor := QLineEdit():newFrom(pEditor)
-   LOCAL oIndex := QModelIndex():newFrom(pIndex)
    LOCAL cValue
 
    cValue := oIndex:model():data(oIndex, Qt_EditRole):toString()
@@ -170,11 +165,8 @@ METHOD setEditorData(pEditor, pIndex) CLASS TextDelegate
 
 RETURN NIL
 
-METHOD setModelData(pEditor, pModel, pIndex) CLASS TextDelegate
+METHOD setModelData(oEditor, oModel, oIndex) CLASS TextDelegate
 
-   LOCAL oEditor := QLineEdit():newFrom(pEditor)
-   LOCAL oModel := QSqlTableModel():newFrom(pModel)
-   LOCAL oIndex := QModelIndex():newFrom(pIndex)
    LOCAL cValue
 
    cValue := oEditor:text()
@@ -241,15 +233,12 @@ METHOD paint(pPainter, pOption, pIndex) CLASS ValueDelegate
 
 RETURN NIL
 
-METHOD createEditor(pParent, pOption, pIndex) CLASS ValueDelegate
+METHOD createEditor(oParent, oOption, oIndex) CLASS ValueDelegate
 
-   LOCAL oParent := QWidget():newFrom(pParent)
-   // LOCAL oOption := QStyleOptionViewItem():newFrom(pOption)
-   // LOCAL oIndex := QModelIndex():newFrom(pIndex)
    LOCAL oEditor
-   
-   HB_SYMBOL_UNUSED(pOption)
-   HB_SYMBOL_UNUSED(pIndex)
+
+   HB_SYMBOL_UNUSED(oOption)
+   HB_SYMBOL_UNUSED(oIndex)
 
    oEditor := QDoubleSpinBox():new(oParent)
    oEditor:setSingleStep(0.01)
@@ -258,10 +247,8 @@ METHOD createEditor(pParent, pOption, pIndex) CLASS ValueDelegate
 
 RETURN oEditor
 
-METHOD setEditorData(pEditor, pIndex) CLASS ValueDelegate
+METHOD setEditorData(oEditor, oIndex) CLASS ValueDelegate
 
-   LOCAL oEditor := QDoubleSpinBox():newFrom(pEditor)
-   LOCAL oIndex := QModelIndex():newFrom(pIndex)
    LOCAL nValue
 
    nValue := oIndex:model():data(oIndex, Qt_EditRole):toReal()
@@ -270,11 +257,8 @@ METHOD setEditorData(pEditor, pIndex) CLASS ValueDelegate
 
 RETURN NIL
 
-METHOD setModelData(pEditor, pModel, pIndex) CLASS ValueDelegate
+METHOD setModelData(oEditor, oModel, oIndex) CLASS ValueDelegate
 
-   LOCAL oEditor := QDoubleSpinBox():newFrom(pEditor)
-   LOCAL oModel := QSqlTableModel():newFrom(pModel)
-   LOCAL oIndex := QModelIndex():newFrom(pIndex)
    LOCAL nValue
 
    nValue := oEditor:value()
