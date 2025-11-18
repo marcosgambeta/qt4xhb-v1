@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_DIGEST)
       QByteArray *ptr =
           new QByteArray(obj->digest(HB_ISNIL(1) ? static_cast<QCryptographicHash::Algorithm>(QCryptographicHash::Md5)
                                                  : PQCRYPTOGRAPHICHASH_ALGORITHM(1)));
-      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+      RQBYTEARRAY(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -273,7 +273,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_SERIALNUMBER)
     if (ISNUMPAR(0)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->serialNumber());
-      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+      RQBYTEARRAY(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -313,7 +313,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_TODER)
     if (ISNUMPAR(0)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->toDer());
-      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+      RQBYTEARRAY(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -332,7 +332,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_TOPEM)
     if (ISNUMPAR(0)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->toPem());
-      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+      RQBYTEARRAY(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -351,7 +351,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_VERSION)
     if (ISNUMPAR(0)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->version());
-      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+      RQBYTEARRAY(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
