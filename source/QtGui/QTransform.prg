@@ -564,7 +564,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
 
     if (obj != NULL) {
       QPoint *ptr = new QPoint(obj->map(*PQPOINT(1)));
-      Qt4xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(ptr);
     }
   } else if (ISNUMPAR(1) && ISQLINE(1)) {
     // QLine map(const QLine &l) const

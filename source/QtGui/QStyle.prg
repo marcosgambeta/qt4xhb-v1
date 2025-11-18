@@ -610,7 +610,7 @@ HB_FUNC_STATIC(QSTYLE_VISUALPOS)
   if (ISNUMPAR(3) && HB_ISNUM(1) && ISQRECT(2) && ISQPOINT(3)) {
 #endif
     QPoint *ptr = new QPoint(QStyle::visualPos(PQT_LAYOUTDIRECTION(1), *PQRECT(2), *PQPOINT(3)));
-    Qt4xHb::createReturnClass(ptr, "QPOINT", true);
+    RQPOINT(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

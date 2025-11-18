@@ -287,7 +287,7 @@ HB_FUNC_STATIC(QMATRIX4X4_MAP)
 
     if (obj != NULL) {
       QPoint *ptr = new QPoint(obj->map(*PQPOINT(1)));
-      Qt4xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(ptr);
     }
   } else if (ISNUMPAR(1) && ISQPOINTF(1)) {
     // QPointF map(const QPointF &point) const

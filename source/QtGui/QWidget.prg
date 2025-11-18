@@ -1621,7 +1621,7 @@ HB_FUNC_STATIC(QWIDGET_MAPFROM)
     if (ISNUMPAR(2) && ISQWIDGET(1) && ISQPOINT(2)) {
 #endif
       QPoint *ptr = new QPoint(obj->mapFrom(PQWIDGET(1), *PQPOINT(2)));
-      Qt4xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1640,7 +1640,7 @@ HB_FUNC_STATIC(QWIDGET_MAPFROMGLOBAL)
     if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
       QPoint *ptr = new QPoint(obj->mapFromGlobal(*PQPOINT(1)));
-      Qt4xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1659,7 +1659,7 @@ HB_FUNC_STATIC(QWIDGET_MAPFROMPARENT)
     if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
       QPoint *ptr = new QPoint(obj->mapFromParent(*PQPOINT(1)));
-      Qt4xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1678,7 +1678,7 @@ HB_FUNC_STATIC(QWIDGET_MAPTO)
     if (ISNUMPAR(2) && ISQWIDGET(1) && ISQPOINT(2)) {
 #endif
       QPoint *ptr = new QPoint(obj->mapTo(PQWIDGET(1), *PQPOINT(2)));
-      Qt4xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1697,7 +1697,7 @@ HB_FUNC_STATIC(QWIDGET_MAPTOGLOBAL)
     if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
       QPoint *ptr = new QPoint(obj->mapToGlobal(*PQPOINT(1)));
-      Qt4xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1716,7 +1716,7 @@ HB_FUNC_STATIC(QWIDGET_MAPTOPARENT)
     if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
       QPoint *ptr = new QPoint(obj->mapToParent(*PQPOINT(1)));
-      Qt4xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2023,7 +2023,7 @@ HB_FUNC_STATIC(QWIDGET_POS)
     if (ISNUMPAR(0)) {
 #endif
       QPoint *ptr = new QPoint(obj->pos());
-      Qt4xHb::createReturnClass(ptr, "QPOINT", true);
+      RQPOINT(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
