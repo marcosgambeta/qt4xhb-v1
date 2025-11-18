@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_CENTER)
     if (ISNUMPAR(0)) {
 #endif
       QPointF *ptr = new QPointF(obj->center());
-      Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QRADIALGRADIENT_FOCALPOINT)
     if (ISNUMPAR(0)) {
 #endif
       QPointF *ptr = new QPointF(obj->focalPoint());
-      Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -671,7 +671,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPTOSCENE)
 
     if (obj != NULL) {
       QPointF *ptr = new QPointF(obj->mapToScene(*PQPOINT(1)));
-      Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
     }
   } else if (ISNUMPAR(1) && ISQRECT(1)) {
     // QPolygonF mapToScene(const QRect &rect) const
@@ -703,7 +703,7 @@ HB_FUNC_STATIC(QGRAPHICSVIEW_MAPTOSCENE)
 
     if (obj != NULL) {
       QPointF *ptr = new QPointF(obj->mapToScene(PINT(1), PINT(2)));
-      Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
     }
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // QPolygonF mapToScene(int x, int y, int w, int h) const
