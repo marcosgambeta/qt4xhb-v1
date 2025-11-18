@@ -454,7 +454,7 @@ HB_FUNC_STATIC(QFONTMETRICS_SIZE)
 #endif
       int par4;
       QSize *ptr = new QSize(obj->size(PINT(1), PQSTRING(2), OPINT(3, 0), &par4));
-      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(ptr);
       hb_storni(par4, 4);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {

@@ -303,7 +303,7 @@ HB_FUNC_STATIC(QLAYOUT_MAXIMUMSIZE)
     if (ISNUMPAR(0)) {
 #endif
       QSize *ptr = new QSize(obj->maximumSize());
-      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -341,7 +341,7 @@ HB_FUNC_STATIC(QLAYOUT_MINIMUMSIZE)
     if (ISNUMPAR(0)) {
 #endif
       QSize *ptr = new QSize(obj->minimumSize());
-      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -722,7 +722,7 @@ HB_FUNC_STATIC(QLAYOUT_CLOSESTACCEPTABLESIZE)
   if (ISNUMPAR(2) && ISQWIDGET(1) && ISQSIZE(2)) {
 #endif
     QSize *ptr = new QSize(QLayout::closestAcceptableSize(PQWIDGET(1), *PQSIZE(2)));
-    Qt4xHb::createReturnClass(ptr, "QSIZE", true);
+    RQSIZE(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

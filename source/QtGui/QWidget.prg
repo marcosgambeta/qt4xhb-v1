@@ -584,7 +584,7 @@ HB_FUNC_STATIC(QWIDGET_BASESIZE)
     if (ISNUMPAR(0)) {
 #endif
       QSize *ptr = new QSize(obj->baseSize());
-      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -968,7 +968,7 @@ HB_FUNC_STATIC(QWIDGET_FRAMESIZE)
     if (ISNUMPAR(0)) {
 #endif
       QSize *ptr = new QSize(obj->frameSize());
-      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1772,7 +1772,7 @@ HB_FUNC_STATIC(QWIDGET_MAXIMUMSIZE)
     if (ISNUMPAR(0)) {
 #endif
       QSize *ptr = new QSize(obj->maximumSize());
-      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1827,7 +1827,7 @@ HB_FUNC_STATIC(QWIDGET_MINIMUMSIZE)
     if (ISNUMPAR(0)) {
 #endif
       QSize *ptr = new QSize(obj->minimumSize());
-      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1846,7 +1846,7 @@ HB_FUNC_STATIC(QWIDGET_MINIMUMSIZEHINT)
     if (ISNUMPAR(0)) {
 #endif
       QSize *ptr = new QSize(obj->minimumSizeHint());
-      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -3413,7 +3413,7 @@ HB_FUNC_STATIC(QWIDGET_SIZE)
     if (ISNUMPAR(0)) {
 #endif
       QSize *ptr = new QSize(obj->size());
-      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -3432,7 +3432,7 @@ HB_FUNC_STATIC(QWIDGET_SIZEHINT)
     if (ISNUMPAR(0)) {
 #endif
       QSize *ptr = new QSize(obj->sizeHint());
-      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -3451,7 +3451,7 @@ HB_FUNC_STATIC(QWIDGET_SIZEINCREMENT)
     if (ISNUMPAR(0)) {
 #endif
       QSize *ptr = new QSize(obj->sizeIncrement());
-      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

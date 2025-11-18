@@ -258,7 +258,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_SIZEFROMCONTENTS)
 #endif
       QSize *ptr =
           new QSize(obj->sizeFromContents(PQSTYLE_CONTENTSTYPE(1), PQSTYLEOPTION(2), *PQSIZE(3), OPQWIDGET(4, 0)));
-      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
