@@ -216,7 +216,7 @@ HB_FUNC_STATIC(QRECTF_BOTTOMLEFT)
     if (ISNUMPAR(0)) {
 #endif
       QPointF *ptr = new QPointF(obj->bottomLeft());
-      Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QRECTF_BOTTOMRIGHT)
     if (ISNUMPAR(0)) {
 #endif
       QPointF *ptr = new QPointF(obj->bottomRight());
-      Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -254,7 +254,7 @@ HB_FUNC_STATIC(QRECTF_CENTER)
     if (ISNUMPAR(0)) {
 #endif
       QPointF *ptr = new QPointF(obj->center());
-      Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1101,7 +1101,7 @@ HB_FUNC_STATIC(QRECTF_TOPLEFT)
     if (ISNUMPAR(0)) {
 #endif
       QPointF *ptr = new QPointF(obj->topLeft());
-      Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1120,7 +1120,7 @@ HB_FUNC_STATIC(QRECTF_TOPRIGHT)
     if (ISNUMPAR(0)) {
 #endif
       QPointF *ptr = new QPointF(obj->topRight());
-      Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
+      RQPOINTF(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
