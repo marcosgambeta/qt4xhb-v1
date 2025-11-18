@@ -198,7 +198,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_MAPPEDPROPERTYNAME)
     if (ISNUMPAR(1) && ISQWIDGET(1)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->mappedPropertyName(PQWIDGET(1)));
-      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+      RQBYTEARRAY(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
