@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QTEXTENCODER_FROMUNICODE)
 
     if (obj != NULL) {
       QByteArray *ptr = new QByteArray(obj->fromUnicode(PQSTRING(1)));
-      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+      RQBYTEARRAY(ptr);
     }
   } else if (ISNUMPAR(2) && ISQCHAR(1) && HB_ISNUM(2)) {
     // QByteArray fromUnicode(const QChar *uc, int len)
@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QTEXTENCODER_FROMUNICODE)
 
     if (obj != NULL) {
       QByteArray *ptr = new QByteArray(obj->fromUnicode(PQCHAR(1), PINT(2)));
-      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+      RQBYTEARRAY(ptr);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

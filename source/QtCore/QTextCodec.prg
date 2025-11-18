@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QTEXTCODEC_FROMUNICODE)
     if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->fromUnicode(PQSTRING(1)));
-      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+      RQBYTEARRAY(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QTEXTCODEC_NAME)
     if (ISNUMPAR(0)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->name());
-      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+      RQBYTEARRAY(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

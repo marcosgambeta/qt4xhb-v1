@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QUUID_TOBYTEARRAY)
     if (ISNUMPAR(0)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->toByteArray());
-      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+      RQBYTEARRAY(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QUUID_TORFC4122)
     if (ISNUMPAR(0)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->toRfc4122());
-      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+      RQBYTEARRAY(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

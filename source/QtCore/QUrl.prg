@@ -306,7 +306,7 @@ HB_FUNC_STATIC(QURL_ENCODEDFRAGMENT)
     if (ISNUMPAR(0)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->encodedFragment());
-      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+      RQBYTEARRAY(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -325,7 +325,7 @@ HB_FUNC_STATIC(QURL_ENCODEDHOST)
     if (ISNUMPAR(0)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->encodedHost());
-      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+      RQBYTEARRAY(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -344,7 +344,7 @@ HB_FUNC_STATIC(QURL_ENCODEDPASSWORD)
     if (ISNUMPAR(0)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->encodedPassword());
-      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+      RQBYTEARRAY(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -363,7 +363,7 @@ HB_FUNC_STATIC(QURL_ENCODEDPATH)
     if (ISNUMPAR(0)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->encodedPath());
-      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+      RQBYTEARRAY(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -382,7 +382,7 @@ HB_FUNC_STATIC(QURL_ENCODEDQUERY)
     if (ISNUMPAR(0)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->encodedQuery());
-      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+      RQBYTEARRAY(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -401,7 +401,7 @@ HB_FUNC_STATIC(QURL_ENCODEDQUERYITEMVALUE)
     if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->encodedQueryItemValue(*PQBYTEARRAY(1)));
-      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+      RQBYTEARRAY(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -420,7 +420,7 @@ HB_FUNC_STATIC(QURL_ENCODEDUSERNAME)
     if (ISNUMPAR(0)) {
 #endif
       QByteArray *ptr = new QByteArray(obj->encodedUserName());
-      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+      RQBYTEARRAY(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1238,7 +1238,7 @@ HB_FUNC_STATIC(QURL_TOENCODED)
 #endif
       QByteArray *ptr = new QByteArray(
           obj->toEncoded(HB_ISNIL(1) ? static_cast<QUrl::FormattingOptions>(QUrl::None) : PQURL_FORMATTINGOPTIONS(1)));
-      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+      RQBYTEARRAY(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1450,7 +1450,7 @@ HB_FUNC_STATIC(QURL_TOACE)
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
     QByteArray *ptr = new QByteArray(QUrl::toAce(PQSTRING(1)));
-    Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+    RQBYTEARRAY(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1468,7 +1468,7 @@ HB_FUNC_STATIC(QURL_TOPERCENTENCODING)
     QByteArray *ptr = new QByteArray(QUrl::toPercentEncoding(
         PQSTRING(1), HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(2)),
         HB_ISNIL(3) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(3))));
-    Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+    RQBYTEARRAY(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
