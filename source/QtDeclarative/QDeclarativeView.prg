@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QDECLARATIVEVIEW_INITIALSIZE)
     if (ISNUMPAR(0)) {
 #endif
       QSize *ptr = new QSize(obj->initialSize());
-      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
+      RQSIZE(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
