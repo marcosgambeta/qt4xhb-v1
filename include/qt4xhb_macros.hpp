@@ -161,6 +161,7 @@
 #define RQSIZE(p)                                           Qt4xHb::createReturnClass(p, "QSIZE", true)
 #define RQCOLOR(p)                                          Qt4xHb::createReturnClass(p, "QCOLOR", true)
 #define RQBYTEARRAY(p)                                      Qt4xHb::createReturnClass(p, "QBYTEARRAY", true)
+#define RQPOINT(p)                                          Qt4xHb::createReturnClass(p, "QPOINT", true)
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  static_cast<const char*>(x.toAscii().data())
