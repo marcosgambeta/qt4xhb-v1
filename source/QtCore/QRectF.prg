@@ -1045,7 +1045,7 @@ HB_FUNC_STATIC(QRECTF_TOALIGNEDRECT)
     if (ISNUMPAR(0)) {
 #endif
       QRect *ptr = new QRect(obj->toAlignedRect());
-      Qt4xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1064,7 +1064,7 @@ HB_FUNC_STATIC(QRECTF_TORECT)
     if (ISNUMPAR(0)) {
 #endif
       QRect *ptr = new QRect(obj->toRect());
-      Qt4xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QRECT_ADJUSTED)
     if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
 #endif
       QRect *ptr = new QRect(obj->adjusted(PINT(1), PINT(2), PINT(3), PINT(4)));
-      Qt4xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -375,7 +375,7 @@ HB_FUNC_STATIC(QRECT_INTERSECTED)
     if (ISNUMPAR(1) && ISQRECT(1)) {
 #endif
       QRect *ptr = new QRect(obj->intersected(*PQRECT(1)));
-      Qt4xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -689,7 +689,7 @@ HB_FUNC_STATIC(QRECT_NORMALIZED)
     if (ISNUMPAR(0)) {
 #endif
       QRect *ptr = new QRect(obj->normalized());
-      Qt4xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1124,7 +1124,7 @@ HB_FUNC_STATIC(QRECT_TRANSLATED)
 
     if (obj != NULL) {
       QRect *ptr = new QRect(obj->translated(PINT(1), PINT(2)));
-      Qt4xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
     }
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // QRect translated(const QPoint &offset) const
@@ -1132,7 +1132,7 @@ HB_FUNC_STATIC(QRECT_TRANSLATED)
 
     if (obj != NULL) {
       QRect *ptr = new QRect(obj->translated(*PQPOINT(1)));
-      Qt4xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1149,7 +1149,7 @@ HB_FUNC_STATIC(QRECT_UNITED)
     if (ISNUMPAR(1) && ISQRECT(1)) {
 #endif
       QRect *ptr = new QRect(obj->united(*PQRECT(1)));
-      Qt4xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
