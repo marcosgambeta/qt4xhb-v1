@@ -449,7 +449,7 @@ HB_FUNC_STATIC(QPRINTER_PAGERECT)
 
     if (obj != NULL) {
       QRect *ptr = new QRect(obj->pageRect());
-      Qt4xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
     }
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QRectF pageRect(QPrinter::Unit unit) const
@@ -472,7 +472,7 @@ HB_FUNC_STATIC(QPRINTER_PAPERRECT)
 
     if (obj != NULL) {
       QRect *ptr = new QRect(obj->paperRect());
-      Qt4xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
     }
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QRectF paperRect(QPrinter::Unit unit) const

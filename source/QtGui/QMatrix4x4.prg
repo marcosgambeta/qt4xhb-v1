@@ -326,7 +326,7 @@ HB_FUNC_STATIC(QMATRIX4X4_MAPRECT)
 
     if (obj != NULL) {
       QRect *ptr = new QRect(obj->mapRect(*PQRECT(1)));
-      Qt4xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
     }
   } else if (ISNUMPAR(1) && ISQRECTF(1)) {
     // QRectF mapRect(const QRectF &rect) const

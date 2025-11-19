@@ -304,7 +304,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_CURSORRECT)
 
     if (obj != NULL) {
       QRect *ptr = new QRect(obj->cursorRect(*PQTEXTCURSOR(1)));
-      Qt4xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
     }
   } else if (ISNUMPAR(0)) {
     // QRect cursorRect() const
@@ -312,7 +312,7 @@ HB_FUNC_STATIC(QPLAINTEXTEDIT_CURSORRECT)
 
     if (obj != NULL) {
       QRect *ptr = new QRect(obj->cursorRect());
-      Qt4xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

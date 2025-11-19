@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QMENU_ACTIONGEOMETRY)
     if (ISNUMPAR(1) && ISQACTION(1)) {
 #endif
       QRect *ptr = new QRect(obj->actionGeometry(PQACTION(1)));
-      Qt4xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -637,7 +637,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAPRECT)
 
     if (obj != NULL) {
       QRect *ptr = new QRect(obj->mapRect(*PQRECT(1)));
-      Qt4xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

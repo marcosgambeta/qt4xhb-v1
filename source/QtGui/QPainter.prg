@@ -278,7 +278,7 @@ HB_FUNC_STATIC(QPAINTER_BOUNDINGRECT)
 
     if (obj != NULL) {
       QRect *ptr = new QRect(obj->boundingRect(*PQRECT(1), PINT(2), PQSTRING(3)));
-      Qt4xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
     }
   } else if (ISNUMPAR(6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISCHAR(6)) {
     // QRect boundingRect(int x, int y, int w, int h, int flags, const QString &text)
@@ -286,7 +286,7 @@ HB_FUNC_STATIC(QPAINTER_BOUNDINGRECT)
 
     if (obj != NULL) {
       QRect *ptr = new QRect(obj->boundingRect(PINT(1), PINT(2), PINT(3), PINT(4), PINT(5), PQSTRING(6)));
-      Qt4xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
     }
   } else if (ISBETWEEN(2, 3) && ISQRECTF(1) && HB_ISCHAR(2) && (ISQTEXTOPTION(3) || HB_ISNIL(3))) {
     // QRectF boundingRect(const QRectF &rectangle, const QString &text, const QTextOption &option = QTextOption())
@@ -2591,7 +2591,7 @@ HB_FUNC_STATIC(QPAINTER_VIEWPORT)
     if (ISNUMPAR(0)) {
 #endif
       QRect *ptr = new QRect(obj->viewport());
-      Qt4xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2610,7 +2610,7 @@ HB_FUNC_STATIC(QPAINTER_WINDOW)
     if (ISNUMPAR(0)) {
 #endif
       QRect *ptr = new QRect(obj->window());
-      Qt4xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

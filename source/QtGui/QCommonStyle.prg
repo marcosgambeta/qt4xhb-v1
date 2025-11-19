@@ -316,7 +316,7 @@ HB_FUNC_STATIC(QCOMMONSTYLE_SUBCONTROLRECT)
 #endif
       QRect *ptr = new QRect(obj->subControlRect(PQSTYLE_COMPLEXCONTROL(1), PQSTYLEOPTIONCOMPLEX(2),
                                                  PQSTYLE_SUBCONTROL(3), OPQWIDGET(4, 0)));
-      Qt4xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -335,7 +335,7 @@ HB_FUNC_STATIC(QCOMMONSTYLE_SUBELEMENTRECT)
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQWIDGETORNIL(3)) {
 #endif
       QRect *ptr = new QRect(obj->subElementRect(PQSTYLE_SUBELEMENT(1), PQSTYLEOPTION(2), OPQWIDGET(3, 0)));
-      Qt4xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

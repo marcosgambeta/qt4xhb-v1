@@ -272,7 +272,7 @@ HB_FUNC_STATIC(QSTYLE_ITEMPIXMAPRECT)
     if (ISNUMPAR(3) && ISQRECT(1) && HB_ISNUM(2) && ISQPIXMAP(3)) {
 #endif
       QRect *ptr = new QRect(obj->itemPixmapRect(*PQRECT(1), PINT(2), *PQPIXMAP(3)));
-      Qt4xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -292,7 +292,7 @@ HB_FUNC_STATIC(QSTYLE_ITEMTEXTRECT)
     if (ISNUMPAR(5) && ISQFONTMETRICS(1) && ISQRECT(2) && HB_ISNUM(3) && HB_ISLOG(4) && HB_ISCHAR(5)) {
 #endif
       QRect *ptr = new QRect(obj->itemTextRect(*PQFONTMETRICS(1), *PQRECT(2), PINT(3), PBOOL(4), PQSTRING(5)));
-      Qt4xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -488,7 +488,7 @@ HB_FUNC_STATIC(QSTYLE_SUBCONTROLRECT)
 #endif
       QRect *ptr = new QRect(obj->subControlRect(PQSTYLE_COMPLEXCONTROL(1), PQSTYLEOPTIONCOMPLEX(2),
                                                  PQSTYLE_SUBCONTROL(3), OPQWIDGET(4, 0)));
-      Qt4xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -508,7 +508,7 @@ HB_FUNC_STATIC(QSTYLE_SUBELEMENTRECT)
     if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQWIDGETORNIL(3)) {
 #endif
       QRect *ptr = new QRect(obj->subElementRect(PQSTYLE_SUBELEMENT(1), PQSTYLEOPTION(2), OPQWIDGET(3, 0)));
-      Qt4xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -552,7 +552,7 @@ HB_FUNC_STATIC(QSTYLE_ALIGNEDRECT)
     if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && ISQSIZE(3) && ISQRECT(4)) {
 #endif
       QRect *ptr = new QRect(obj->alignedRect(PQT_LAYOUTDIRECTION(1), PQT_ALIGNMENT(2), *PQSIZE(3), *PQRECT(4)));
-      Qt4xHb::createReturnClass(ptr, "QRECT", true);
+      RQRECT(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -625,7 +625,7 @@ HB_FUNC_STATIC(QSTYLE_VISUALRECT)
   if (ISNUMPAR(3) && HB_ISNUM(1) && ISQRECT(2) && ISQRECT(3)) {
 #endif
     QRect *ptr = new QRect(QStyle::visualRect(PQT_LAYOUTDIRECTION(1), *PQRECT(2), *PQRECT(3)));
-    Qt4xHb::createReturnClass(ptr, "QRECT", true);
+    RQRECT(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
