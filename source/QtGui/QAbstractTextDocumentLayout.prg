@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT)
     if (ISNUMPAR(1) && ISQTEXTBLOCK(1)) {
 #endif
       QRectF *ptr = new QRectF(obj->blockBoundingRect(*PQTEXTBLOCK(1)));
-      Qt4xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT)
     if (ISNUMPAR(1) && ISQTEXTFRAME(1)) {
 #endif
       QRectF *ptr = new QRectF(obj->frameBoundingRect(PQTEXTFRAME(1)));
-      Qt4xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

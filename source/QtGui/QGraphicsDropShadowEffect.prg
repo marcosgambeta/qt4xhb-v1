@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QGRAPHICSDROPSHADOWEFFECT_BOUNDINGRECTFOR)
     if (ISNUMPAR(1) && ISQRECTF(1)) {
 #endif
       QRectF *ptr = new QRectF(obj->boundingRectFor(*PQRECTF(1)));
-      Qt4xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

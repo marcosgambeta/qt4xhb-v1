@@ -270,7 +270,7 @@ HB_FUNC_STATIC(QPAINTER_BOUNDINGRECT)
 
     if (obj != NULL) {
       QRectF *ptr = new QRectF(obj->boundingRect(*PQRECTF(1), PINT(2), PQSTRING(3)));
-      Qt4xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
     }
   } else if (ISNUMPAR(3) && ISQRECT(1) && HB_ISNUM(2) && HB_ISCHAR(3)) {
     // QRect boundingRect(const QRect &rectangle, int flags, const QString &text)
@@ -295,7 +295,7 @@ HB_FUNC_STATIC(QPAINTER_BOUNDINGRECT)
     if (obj != NULL) {
       QRectF *ptr = new QRectF(obj->boundingRect(
           *PQRECTF(1), PQSTRING(2), HB_ISNIL(3) ? QTextOption() : *static_cast<QTextOption *>(Qt4xHb::itemGetPtr(3))));
-      Qt4xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
