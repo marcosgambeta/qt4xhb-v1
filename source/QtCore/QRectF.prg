@@ -179,7 +179,7 @@ HB_FUNC_STATIC(QRECTF_ADJUSTED)
     if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
 #endif
       QRectF *ptr = new QRectF(obj->adjusted(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
-      Qt4xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -375,7 +375,7 @@ HB_FUNC_STATIC(QRECTF_INTERSECTED)
     if (ISNUMPAR(1) && ISQRECTF(1)) {
 #endif
       QRectF *ptr = new QRectF(obj->intersected(*PQRECTF(1)));
-      Qt4xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -689,7 +689,7 @@ HB_FUNC_STATIC(QRECTF_NORMALIZED)
     if (ISNUMPAR(0)) {
 #endif
       QRectF *ptr = new QRectF(obj->normalized());
-      Qt4xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1162,7 +1162,7 @@ HB_FUNC_STATIC(QRECTF_TRANSLATED)
 
     if (obj != NULL) {
       QRectF *ptr = new QRectF(obj->translated(PQREAL(1), PQREAL(2)));
-      Qt4xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
     }
   } else if (ISNUMPAR(1) && ISQPOINTF(1)) {
     // QRectF translated(const QPointF &offset) const
@@ -1170,7 +1170,7 @@ HB_FUNC_STATIC(QRECTF_TRANSLATED)
 
     if (obj != NULL) {
       QRectF *ptr = new QRectF(obj->translated(*PQPOINTF(1)));
-      Qt4xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1187,7 +1187,7 @@ HB_FUNC_STATIC(QRECTF_UNITED)
     if (ISNUMPAR(1) && ISQRECTF(1)) {
 #endif
       QRectF *ptr = new QRectF(obj->united(*PQRECTF(1)));
-      Qt4xHb::createReturnClass(ptr, "QRECTF", true);
+      RQRECTF(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
