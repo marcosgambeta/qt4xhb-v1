@@ -102,8 +102,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_CURRENTCOLOR)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QColor *ptr = new QColor(obj->currentColor());
-      RQCOLOR(ptr);
+      RQCOLOR(obj->currentColor());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -164,8 +163,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_SELECTEDCOLOR)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QColor *ptr = new QColor(obj->selectedColor());
-      RQCOLOR(ptr);
+      RQCOLOR(obj->selectedColor());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -306,16 +304,14 @@ HB_FUNC_STATIC(QCOLORDIALOG_GETCOLOR)
     // static QColor getColor(const QColor &initial, QWidget *parent, const QString &title,
     // QColorDialog::ColorDialogOptions options = 0)
 
-    QColor *ptr = new QColor(QColorDialog::getColor(
+    RQCOLOR(QColorDialog::getColor(
         HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(1)) : QColor(hb_parc(1)), PQWIDGET(2), PQSTRING(3),
         HB_ISNIL(4) ? static_cast<QColorDialog::ColorDialogOptions>(0) : PQCOLORDIALOG_COLORDIALOGOPTIONS(4)));
-    RQCOLOR(ptr);
   } else if (ISBETWEEN(0, 2) && (ISQCOLOR(1) || HB_ISCHAR(1) || HB_ISNIL(1)) && ISQWIDGETORNIL(2)) {
     // static QColor getColor(const QColor &initial = Qt::white, QWidget *parent = 0)
 
-    QColor *ptr = new QColor(QColorDialog::getColor(
+    RQCOLOR(QColorDialog::getColor(
         HB_ISNIL(1) ? Qt::white : *static_cast<QColor *>(Qt4xHb::itemGetPtr(1)), OPQWIDGET(2, 0)));
-    RQCOLOR(ptr);
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
