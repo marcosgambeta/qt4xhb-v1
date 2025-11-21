@@ -155,7 +155,8 @@
 #define RGLSIZEI(x)                                         hb_parni(static_cast<GLsizei>(x))
 #define RQSTRINGLIST(x)                                     Qt4xHb::convert_qstringlist_to_array(x)
 #define RQRGB(x)                                            hb_retni(x)
-#define RQVARIANT(p)                                        Qt4xHb::createReturnClass(p, "QVARIANT", true)
+
+#define RQVARIANT(exp)                                      Qt4xHb::createReturnClass(new QVariant(exp), "QVARIANT", true)
 #define RQMODELINDEX(p)                                     Qt4xHb::createReturnClass(p, "QMODELINDEX", true)
 #define RQICON(p)                                           Qt4xHb::createReturnClass(p, "QICON", true)
 #define RQSIZE(p)                                           Qt4xHb::createReturnClass(p, "QSIZE", true)

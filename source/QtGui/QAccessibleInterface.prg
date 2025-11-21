@@ -190,8 +190,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_INVOKEMETHOD)
               hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList3, i3 + 1), "POINTER", 0)));
         }
       }
-      QVariant *ptr = new QVariant(obj->invokeMethod(PQACCESSIBLE_METHOD(1), OPINT(2, 0), par3));
-      RQVARIANT(ptr);
+      RQVARIANT(obj->invokeMethod(PQACCESSIBLE_METHOD(1), OPINT(2, 0), par3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -202,16 +202,14 @@ HB_FUNC_STATIC(QSQLQUERY_BOUNDVALUE)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QVariant *ptr = new QVariant(obj->boundValue(PQSTRING(1)));
-      RQVARIANT(ptr);
+      RQVARIANT(obj->boundValue(PQSTRING(1)));
     }
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QVariant boundValue(int pos) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QVariant *ptr = new QVariant(obj->boundValue(PINT(1)));
-      RQVARIANT(ptr);
+      RQVARIANT(obj->boundValue(PINT(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -489,8 +487,7 @@ HB_FUNC_STATIC(QSQLQUERY_LASTINSERTID)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QVariant *ptr = new QVariant(obj->lastInsertId());
-      RQVARIANT(ptr);
+      RQVARIANT(obj->lastInsertId());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -748,8 +745,7 @@ HB_FUNC_STATIC(QSQLQUERY_VALUE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QVariant *ptr = new QVariant(obj->value(PINT(1)));
-      RQVARIANT(ptr);
+      RQVARIANT(obj->value(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

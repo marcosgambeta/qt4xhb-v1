@@ -187,8 +187,7 @@ HB_FUNC_STATIC(QDECLARATIVEEXPRESSION_EVALUATE)
     if (ISBETWEEN(0, 1) && ISLOGORNIL(1)) {
 #endif
       bool par1;
-      QVariant *ptr = new QVariant(obj->evaluate(&par1));
-      RQVARIANT(ptr);
+      RQVARIANT(obj->evaluate(&par1));
       hb_storl(par1, 1);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
