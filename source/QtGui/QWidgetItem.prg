@@ -179,8 +179,7 @@ HB_FUNC_STATIC(QWIDGETITEM_MAXIMUMSIZE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSize *ptr = new QSize(obj->maximumSize());
-      RQSIZE(ptr);
+      RQSIZE(obj->maximumSize());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -198,8 +197,7 @@ HB_FUNC_STATIC(QWIDGETITEM_MINIMUMSIZE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSize *ptr = new QSize(obj->minimumSize());
-      RQSIZE(ptr);
+      RQSIZE(obj->minimumSize());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -237,8 +235,7 @@ HB_FUNC_STATIC(QWIDGETITEM_SIZEHINT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSize *ptr = new QSize(obj->sizeHint());
-      RQSIZE(ptr);
+      RQSIZE(obj->sizeHint());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

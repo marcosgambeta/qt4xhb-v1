@@ -269,8 +269,7 @@ HB_FUNC_STATIC(QTABBAR_ICONSIZE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSize *ptr = new QSize(obj->iconSize());
-      RQSIZE(ptr);
+      RQSIZE(obj->iconSize());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -984,8 +983,7 @@ HB_FUNC_STATIC(QTABBAR_MINIMUMSIZEHINT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSize *ptr = new QSize(obj->minimumSizeHint());
-      RQSIZE(ptr);
+      RQSIZE(obj->minimumSizeHint());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1003,8 +1001,7 @@ HB_FUNC_STATIC(QTABBAR_SIZEHINT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSize *ptr = new QSize(obj->sizeHint());
-      RQSIZE(ptr);
+      RQSIZE(obj->sizeHint());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

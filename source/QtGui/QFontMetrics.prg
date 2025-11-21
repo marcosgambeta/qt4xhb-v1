@@ -453,8 +453,7 @@ HB_FUNC_STATIC(QFONTMETRICS_SIZE)
     if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
 #endif
       int par4;
-      QSize *ptr = new QSize(obj->size(PINT(1), PQSTRING(2), OPINT(3, 0), &par4));
-      RQSIZE(ptr);
+      RQSIZE(obj->size(PINT(1), PQSTRING(2), OPINT(3, 0), &par4));
       hb_storni(par4, 4);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
