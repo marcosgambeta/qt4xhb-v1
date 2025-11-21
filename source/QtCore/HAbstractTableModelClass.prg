@@ -906,8 +906,7 @@ HB_FUNC_STATIC(HABSTRACTTABLEMODEL_RELOADDATA)
 // {
 //   GET_PTR_FROM_SELF(obj);
 //   if (obj) {
-//     QModelIndex *ptr = new QModelIndex(obj->createIndex(hb_parni(1), hb_parni(2)));
-//     RQMODELINDEX(ptr);
+//     RQMODELINDEX(obj->createIndex(hb_parni(1), hb_parni(2)));
 //   }
 // }
 

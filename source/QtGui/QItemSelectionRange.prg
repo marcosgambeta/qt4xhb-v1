@@ -133,8 +133,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_BOTTOMRIGHT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QModelIndex *ptr = new QModelIndex(obj->bottomRight());
-      RQMODELINDEX(ptr);
+      RQMODELINDEX(obj->bottomRight());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -342,8 +341,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_PARENT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QModelIndex *ptr = new QModelIndex(obj->parent());
-      RQMODELINDEX(ptr);
+      RQMODELINDEX(obj->parent());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -397,8 +395,7 @@ HB_FUNC_STATIC(QITEMSELECTIONRANGE_TOPLEFT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QModelIndex *ptr = new QModelIndex(obj->topLeft());
-      RQMODELINDEX(ptr);
+      RQMODELINDEX(obj->topLeft());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

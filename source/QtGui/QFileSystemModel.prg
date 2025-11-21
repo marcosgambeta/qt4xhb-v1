@@ -305,8 +305,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_MKDIR)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISCHAR(2)) {
 #endif
-      QModelIndex *ptr = new QModelIndex(obj->mkdir(*PQMODELINDEX(1), PQSTRING(2)));
-      RQMODELINDEX(ptr);
+      RQMODELINDEX(obj->mkdir(*PQMODELINDEX(1), PQSTRING(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -607,8 +606,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETROOTPATH)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
-      QModelIndex *ptr = new QModelIndex(obj->setRootPath(PQSTRING(1)));
-      RQMODELINDEX(ptr);
+      RQMODELINDEX(obj->setRootPath(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -807,17 +805,15 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_INDEX)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QModelIndex *ptr = new QModelIndex(obj->index(PQSTRING(1), OPINT(2, 0)));
-      RQMODELINDEX(ptr);
+      RQMODELINDEX(obj->index(PQSTRING(1), OPINT(2, 0)));
     }
   } else if (ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEXORNIL(3)) {
     // virtual QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QModelIndex *ptr = new QModelIndex(obj->index(
+      RQMODELINDEX(obj->index(
           PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex *>(Qt4xHb::itemGetPtr(3))));
-      RQMODELINDEX(ptr);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -877,8 +873,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_PARENT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
 #endif
-      QModelIndex *ptr = new QModelIndex(obj->parent(*PQMODELINDEX(1)));
-      RQMODELINDEX(ptr);
+      RQMODELINDEX(obj->parent(*PQMODELINDEX(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
