@@ -85,16 +85,14 @@ HB_FUNC_STATIC(QFILEICONPROVIDER_ICON)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QIcon *ptr = new QIcon(obj->icon(PQFILEICONPROVIDER_ICONTYPE(1)));
-      RQICON(ptr);
+      RQICON(obj->icon(PQFILEICONPROVIDER_ICONTYPE(1)));
     }
   } else if (ISNUMPAR(1) && ISQFILEINFO(1)) {
     // virtual QIcon icon(const QFileInfo &info) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QIcon *ptr = new QIcon(obj->icon(*PQFILEINFO(1)));
-      RQICON(ptr);
+      RQICON(obj->icon(*PQFILEINFO(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
