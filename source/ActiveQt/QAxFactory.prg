@@ -91,8 +91,7 @@ HB_FUNC_STATIC(QAXFACTORY_APPID)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QUuid *ptr = new QUuid(obj->appID());
-      Qt4xHb::createReturnClass(ptr, "QUUID", true);
+      RQUUID(obj->appID());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -110,8 +109,7 @@ HB_FUNC_STATIC(QAXFACTORY_CLASSID)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
-      QUuid *ptr = new QUuid(obj->classID(PQSTRING(1)));
-      Qt4xHb::createReturnClass(ptr, "QUUID", true);
+      RQUUID(obj->classID(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -148,8 +146,7 @@ HB_FUNC_STATIC(QAXFACTORY_EVENTSID)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
-      QUuid *ptr = new QUuid(obj->eventsID(PQSTRING(1)));
-      Qt4xHb::createReturnClass(ptr, "QUUID", true);
+      RQUUID(obj->eventsID(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -221,8 +218,7 @@ HB_FUNC_STATIC(QAXFACTORY_INTERFACEID)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
-      QUuid *ptr = new QUuid(obj->interfaceID(PQSTRING(1)));
-      Qt4xHb::createReturnClass(ptr, "QUUID", true);
+      RQUUID(obj->interfaceID(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -315,8 +311,7 @@ HB_FUNC_STATIC(QAXFACTORY_TYPELIBID)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QUuid *ptr = new QUuid(obj->typeLibID());
-      Qt4xHb::createReturnClass(ptr, "QUUID", true);
+      RQUUID(obj->typeLibID());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

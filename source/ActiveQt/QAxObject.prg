@@ -244,14 +244,15 @@ HB_FUNC_STATIC(QAXOBJECT_DYNAMICCALL)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RQVARIANT(obj->dynamicCall(PCONSTCHAR(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(2)),
-                           HB_ISNIL(3) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(3)),
-                           HB_ISNIL(4) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(4)),
-                           HB_ISNIL(5) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(5)),
-                           HB_ISNIL(6) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(6)),
-                           HB_ISNIL(7) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(7)),
-                           HB_ISNIL(8) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(8)),
-                           HB_ISNIL(9) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(9))));
+      RQVARIANT(obj->dynamicCall(PCONSTCHAR(1),
+                                 HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(2)),
+                                 HB_ISNIL(3) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(3)),
+                                 HB_ISNIL(4) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(4)),
+                                 HB_ISNIL(5) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(5)),
+                                 HB_ISNIL(6) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(6)),
+                                 HB_ISNIL(7) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(7)),
+                                 HB_ISNIL(8) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(8)),
+                                 HB_ISNIL(9) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(9))));
     }
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2)) {
     // QVariant dynamicCall(const char *function, QList<QVariant> &vars)
