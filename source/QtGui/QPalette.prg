@@ -524,8 +524,7 @@ HB_FUNC_STATIC(QPALETTE_RESOLVE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPALETTE(1)) {
 #endif
-      QPalette *ptr = new QPalette(obj->resolve(*PQPALETTE(1)));
-      Qt4xHb::createReturnClass(ptr, "QPALETTE", true);
+      RQPALETTE(obj->resolve(*PQPALETTE(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -248,8 +248,7 @@ HB_FUNC_STATIC(QVECTOR3D_NORMALIZED)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QVector3D *ptr = new QVector3D(obj->normalized());
-      Qt4xHb::createReturnClass(ptr, "QVECTOR3D", true);
+      RQVECTOR3D(obj->normalized());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -363,8 +362,7 @@ HB_FUNC_STATIC(QVECTOR3D_TOVECTOR2D)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QVector2D *ptr = new QVector2D(obj->toVector2D());
-      Qt4xHb::createReturnClass(ptr, "QVECTOR2D", true);
+      RQVECTOR2D(obj->toVector2D());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -382,8 +380,7 @@ HB_FUNC_STATIC(QVECTOR3D_TOVECTOR4D)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QVector4D *ptr = new QVector4D(obj->toVector4D());
-      Qt4xHb::createReturnClass(ptr, "QVECTOR4D", true);
+      RQVECTOR4D(obj->toVector4D());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -452,8 +449,7 @@ HB_FUNC_STATIC(QVECTOR3D_CROSSPRODUCT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(2) && ISQVECTOR3D(1) && ISQVECTOR3D(2)) {
 #endif
-    QVector3D *ptr = new QVector3D(QVector3D::crossProduct(*PQVECTOR3D(1), *PQVECTOR3D(2)));
-    Qt4xHb::createReturnClass(ptr, "QVECTOR3D", true);
+    RQVECTOR3D(QVector3D::crossProduct(*PQVECTOR3D(1), *PQVECTOR3D(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -480,13 +476,11 @@ HB_FUNC_STATIC(QVECTOR3D_NORMAL)
   if (ISNUMPAR(2) && ISQVECTOR3D(1) && ISQVECTOR3D(2)) {
     // static QVector3D normal(const QVector3D &v1, const QVector3D &v2)
 
-    QVector3D *ptr = new QVector3D(QVector3D::normal(*PQVECTOR3D(1), *PQVECTOR3D(2)));
-    Qt4xHb::createReturnClass(ptr, "QVECTOR3D", true);
+    RQVECTOR3D(QVector3D::normal(*PQVECTOR3D(1), *PQVECTOR3D(2)));
   } else if (ISNUMPAR(3) && ISQVECTOR3D(1) && ISQVECTOR3D(2) && ISQVECTOR3D(3)) {
     // static QVector3D normal(const QVector3D &v1, const QVector3D &v2, const QVector3D &v3)
 
-    QVector3D *ptr = new QVector3D(QVector3D::normal(*PQVECTOR3D(1), *PQVECTOR3D(2), *PQVECTOR3D(3)));
-    Qt4xHb::createReturnClass(ptr, "QVECTOR3D", true);
+    RQVECTOR3D(QVector3D::normal(*PQVECTOR3D(1), *PQVECTOR3D(2), *PQVECTOR3D(3)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

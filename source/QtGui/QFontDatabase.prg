@@ -131,8 +131,7 @@ HB_FUNC_STATIC(QFONTDATABASE_FONT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3)) {
 #endif
-      QFont *ptr = new QFont(obj->font(PQSTRING(1), PQSTRING(2), PINT(3)));
-      Qt4xHb::createReturnClass(ptr, "QFONT", true);
+      RQFONT(obj->font(PQSTRING(1), PQSTRING(2), PINT(3)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

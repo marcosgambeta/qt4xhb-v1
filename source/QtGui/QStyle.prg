@@ -232,8 +232,7 @@ HB_FUNC_STATIC(QSTYLE_GENERATEDICONPIXMAP)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && HB_ISNUM(1) && ISQPIXMAP(2) && ISQSTYLEOPTION(3)) {
 #endif
-      QPixmap *ptr = new QPixmap(obj->generatedIconPixmap(PQICON_MODE(1), *PQPIXMAP(2), PQSTYLEOPTION(3)));
-      Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
+      RQPIXMAP(obj->generatedIconPixmap(PQICON_MODE(1), *PQPIXMAP(2), PQSTYLEOPTION(3)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -422,8 +421,7 @@ HB_FUNC_STATIC(QSTYLE_STANDARDICON)
     if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISQSTYLEOPTIONORNIL(2) && ISQWIDGETORNIL(3)) {
 #endif
       RQICON(obj->standardIcon(PQSTYLE_STANDARDPIXMAP(1),
-                                               HB_ISNIL(2) ? 0 : static_cast<QStyleOption *>(Qt4xHb::itemGetPtr(2)),
-                                               OPQWIDGET(3, 0)));
+                               HB_ISNIL(2) ? 0 : static_cast<QStyleOption *>(Qt4xHb::itemGetPtr(2)), OPQWIDGET(3, 0)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -441,8 +439,7 @@ HB_FUNC_STATIC(QSTYLE_STANDARDPALETTE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QPalette *ptr = new QPalette(obj->standardPalette());
-      Qt4xHb::createReturnClass(ptr, "QPALETTE", true);
+      RQPALETTE(obj->standardPalette());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -481,8 +478,8 @@ HB_FUNC_STATIC(QSTYLE_SUBCONTROLRECT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && HB_ISNUM(3) && ISQWIDGETORNIL(4)) {
 #endif
-      RQRECT(obj->subControlRect(PQSTYLE_COMPLEXCONTROL(1), PQSTYLEOPTIONCOMPLEX(2),
-                                                 PQSTYLE_SUBCONTROL(3), OPQWIDGET(4, 0)));
+      RQRECT(obj->subControlRect(PQSTYLE_COMPLEXCONTROL(1), PQSTYLEOPTIONCOMPLEX(2), PQSTYLE_SUBCONTROL(3),
+                                 OPQWIDGET(4, 0)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

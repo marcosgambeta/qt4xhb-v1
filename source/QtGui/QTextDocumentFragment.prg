@@ -155,14 +155,11 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_FROMHTML)
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // static QTextDocumentFragment fromHtml(const QString &text)
 
-    QTextDocumentFragment *ptr = new QTextDocumentFragment(QTextDocumentFragment::fromHtml(PQSTRING(1)));
-    Qt4xHb::createReturnClass(ptr, "QTEXTDOCUMENTFRAGMENT", true);
+    RQTEXTDOCUMENTFRAGMENT(QTextDocumentFragment::fromHtml(PQSTRING(1)));
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQTEXTDOCUMENT(2)) {
     // static QTextDocumentFragment fromHtml(const QString &text, const QTextDocument *resourceProvider)
 
-    QTextDocumentFragment *ptr =
-        new QTextDocumentFragment(QTextDocumentFragment::fromHtml(PQSTRING(1), PQTEXTDOCUMENT(2)));
-    Qt4xHb::createReturnClass(ptr, "QTEXTDOCUMENTFRAGMENT", true);
+    RQTEXTDOCUMENTFRAGMENT(QTextDocumentFragment::fromHtml(PQSTRING(1), PQTEXTDOCUMENT(2)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -174,8 +171,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTFRAGMENT_FROMPLAINTEXT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
-    QTextDocumentFragment *ptr = new QTextDocumentFragment(QTextDocumentFragment::fromPlainText(PQSTRING(1)));
-    Qt4xHb::createReturnClass(ptr, "QTEXTDOCUMENTFRAGMENT", true);
+    RQTEXTDOCUMENTFRAGMENT(QTextDocumentFragment::fromPlainText(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -110,8 +110,7 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_AXIS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QVector3D *ptr = new QVector3D(obj->axis());
-      Qt4xHb::createReturnClass(ptr, "QVECTOR3D", true);
+      RQVECTOR3D(obj->axis());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -129,8 +128,7 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_ORIGIN)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QVector3D *ptr = new QVector3D(obj->origin());
-      Qt4xHb::createReturnClass(ptr, "QVECTOR3D", true);
+      RQVECTOR3D(obj->origin());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

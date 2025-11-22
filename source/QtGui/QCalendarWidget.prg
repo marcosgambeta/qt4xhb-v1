@@ -148,8 +148,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_DATETEXTFORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQDATE(1)) {
 #endif
-      QTextCharFormat *ptr = new QTextCharFormat(obj->dateTextFormat(*PQDATE(1)));
-      Qt4xHb::createReturnClass(ptr, "QTEXTCHARFORMAT", true);
+      RQTEXTCHARFORMAT(obj->dateTextFormat(*PQDATE(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -185,8 +184,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_HEADERTEXTFORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QTextCharFormat *ptr = new QTextCharFormat(obj->headerTextFormat());
-      Qt4xHb::createReturnClass(ptr, "QTEXTCHARFORMAT", true);
+      RQTEXTCHARFORMAT(obj->headerTextFormat());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -276,8 +274,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_MAXIMUMDATE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QDate *ptr = new QDate(obj->maximumDate());
-      Qt4xHb::createReturnClass(ptr, "QDATE", true);
+      RQDATE(obj->maximumDate());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -295,8 +292,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_MINIMUMDATE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QDate *ptr = new QDate(obj->minimumDate());
-      Qt4xHb::createReturnClass(ptr, "QDATE", true);
+      RQDATE(obj->minimumDate());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -332,8 +328,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_SELECTEDDATE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QDate *ptr = new QDate(obj->selectedDate());
-      Qt4xHb::createReturnClass(ptr, "QDATE", true);
+      RQDATE(obj->selectedDate());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -607,8 +602,7 @@ HB_FUNC_STATIC(QCALENDARWIDGET_WEEKDAYTEXTFORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QTextCharFormat *ptr = new QTextCharFormat(obj->weekdayTextFormat(PQT_DAYOFWEEK(1)));
-      Qt4xHb::createReturnClass(ptr, "QTEXTCHARFORMAT", true);
+      RQTEXTCHARFORMAT(obj->weekdayTextFormat(PQT_DAYOFWEEK(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

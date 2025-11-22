@@ -305,8 +305,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_FONT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QFont *ptr = new QFont(obj->font());
-      Qt4xHb::createReturnClass(ptr, "QFONT", true);
+      RQFONT(obj->font());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -492,8 +491,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_PALETTE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QPalette *ptr = new QPalette(obj->palette());
-      Qt4xHb::createReturnClass(ptr, "QPALETTE", true);
+      RQPALETTE(obj->palette());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -874,8 +872,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_SIZE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSizeF *ptr = new QSizeF(obj->size());
-      Qt4xHb::createReturnClass(ptr, "QSIZEF", true);
+      RQSIZEF(obj->size());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1151,8 +1148,7 @@ HB_FUNC_STATIC(QGRAPHICSWIDGET_SHAPE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QPainterPath *ptr = new QPainterPath(obj->shape());
-      Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
+      RQPAINTERPATH(obj->shape());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

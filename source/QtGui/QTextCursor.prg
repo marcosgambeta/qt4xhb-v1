@@ -281,8 +281,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_BLOCK)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QTextBlock *ptr = new QTextBlock(obj->block());
-      Qt4xHb::createReturnClass(ptr, "QTEXTBLOCK", true);
+      RQTEXTBLOCK(obj->block());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -300,8 +299,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_BLOCKCHARFORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QTextCharFormat *ptr = new QTextCharFormat(obj->blockCharFormat());
-      Qt4xHb::createReturnClass(ptr, "QTEXTCHARFORMAT", true);
+      RQTEXTCHARFORMAT(obj->blockCharFormat());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -319,8 +317,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_BLOCKFORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QTextBlockFormat *ptr = new QTextBlockFormat(obj->blockFormat());
-      Qt4xHb::createReturnClass(ptr, "QTEXTBLOCKFORMAT", true);
+      RQTEXTBLOCKFORMAT(obj->blockFormat());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -356,8 +353,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_CHARFORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QTextCharFormat *ptr = new QTextCharFormat(obj->charFormat());
-      Qt4xHb::createReturnClass(ptr, "QTEXTCHARFORMAT", true);
+      RQTEXTCHARFORMAT(obj->charFormat());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1093,8 +1089,7 @@ HB_FUNC_STATIC(QTEXTCURSOR_SELECTION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QTextDocumentFragment *ptr = new QTextDocumentFragment(obj->selection());
-      Qt4xHb::createReturnClass(ptr, "QTEXTDOCUMENTFRAGMENT", true);
+      RQTEXTDOCUMENTFRAGMENT(obj->selection());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

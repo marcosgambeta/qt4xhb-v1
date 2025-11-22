@@ -286,8 +286,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_FONTMETRICS)
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
-      QFontMetrics *ptr = new QFontMetrics(obj->fontMetrics);
-      Qt4xHb::createReturnClass(ptr, "QFONTMETRICS", true);
+      RQFONTMETRICS(obj->fontMetrics);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
@@ -315,8 +314,7 @@ HB_FUNC_STATIC(QSTYLEOPTION_PALETTE)
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
-      QPalette *ptr = new QPalette(obj->palette);
-      Qt4xHb::createReturnClass(ptr, "QPALETTE", true);
+      RQPALETTE(obj->palette);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }

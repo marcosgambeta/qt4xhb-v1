@@ -76,8 +76,7 @@ HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_BRUSH)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QBrush *ptr = new QBrush(obj->brush());
-      Qt4xHb::createReturnClass(ptr, "QBRUSH", true);
+      RQBRUSH(obj->brush());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -95,8 +94,7 @@ HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_PEN)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QPen *ptr = new QPen(obj->pen());
-      Qt4xHb::createReturnClass(ptr, "QPEN", true);
+      RQPEN(obj->pen());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -172,8 +170,7 @@ HB_FUNC_STATIC(QABSTRACTGRAPHICSSHAPEITEM_OPAQUEAREA)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QPainterPath *ptr = new QPainterPath(obj->opaqueArea());
-      Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
+      RQPAINTERPATH(obj->opaqueArea());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

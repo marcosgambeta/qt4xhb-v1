@@ -365,8 +365,7 @@ HB_FUNC_STATIC(QBRUSH_TEXTURE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QPixmap *ptr = new QPixmap(obj->texture());
-      Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
+      RQPIXMAP(obj->texture());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -384,8 +383,7 @@ HB_FUNC_STATIC(QBRUSH_TEXTUREIMAGE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QImage *ptr = new QImage(obj->textureImage());
-      Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
+      RQIMAGE(obj->textureImage());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -403,8 +401,7 @@ HB_FUNC_STATIC(QBRUSH_TRANSFORM)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QTransform *ptr = new QTransform(obj->transform());
-      Qt4xHb::createReturnClass(ptr, "QTRANSFORM", true);
+      RQTRANSFORM(obj->transform());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -95,9 +95,7 @@ HB_FUNC_STATIC(QCLIPBOARD_IMAGE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      QImage *ptr = new QImage(
-          obj->image(HB_ISNIL(1) ? static_cast<QClipboard::Mode>(QClipboard::Clipboard) : PQCLIPBOARD_MODE(1)));
-      Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
+      RQIMAGE(obj->image(HB_ISNIL(1) ? static_cast<QClipboard::Mode>(QClipboard::Clipboard) : PQCLIPBOARD_MODE(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -189,9 +187,7 @@ HB_FUNC_STATIC(QCLIPBOARD_PIXMAP)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      QPixmap *ptr = new QPixmap(
-          obj->pixmap(HB_ISNIL(1) ? static_cast<QClipboard::Mode>(QClipboard::Clipboard) : PQCLIPBOARD_MODE(1)));
-      Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
+      RQPIXMAP(obj->pixmap(HB_ISNIL(1) ? static_cast<QClipboard::Mode>(QClipboard::Clipboard) : PQCLIPBOARD_MODE(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

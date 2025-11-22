@@ -147,8 +147,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_BACKGROUND)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QBrush *ptr = new QBrush(obj->background());
-      Qt4xHb::createReturnClass(ptr, "QBRUSH", true);
+      RQBRUSH(obj->background());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -184,8 +183,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_BRUSHPROPERTY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QBrush *ptr = new QBrush(obj->brushProperty(PINT(1)));
-      Qt4xHb::createReturnClass(ptr, "QBRUSH", true);
+      RQBRUSH(obj->brushProperty(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -299,8 +297,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_FOREGROUND)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QBrush *ptr = new QBrush(obj->foreground());
-      Qt4xHb::createReturnClass(ptr, "QBRUSH", true);
+      RQBRUSH(obj->foreground());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -516,8 +513,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_LENGTHPROPERTY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QTextLength *ptr = new QTextLength(obj->lengthProperty(PINT(1)));
-      Qt4xHb::createReturnClass(ptr, "QTEXTLENGTH", true);
+      RQTEXTLENGTH(obj->lengthProperty(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -632,8 +628,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_PENPROPERTY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QPen *ptr = new QPen(obj->penProperty(PINT(1)));
-      Qt4xHb::createReturnClass(ptr, "QPEN", true);
+      RQPEN(obj->penProperty(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -837,8 +832,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_TOBLOCKFORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QTextBlockFormat *ptr = new QTextBlockFormat(obj->toBlockFormat());
-      Qt4xHb::createReturnClass(ptr, "QTEXTBLOCKFORMAT", true);
+      RQTEXTBLOCKFORMAT(obj->toBlockFormat());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -856,8 +850,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_TOCHARFORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QTextCharFormat *ptr = new QTextCharFormat(obj->toCharFormat());
-      Qt4xHb::createReturnClass(ptr, "QTEXTCHARFORMAT", true);
+      RQTEXTCHARFORMAT(obj->toCharFormat());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -875,8 +868,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_TOFRAMEFORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QTextFrameFormat *ptr = new QTextFrameFormat(obj->toFrameFormat());
-      Qt4xHb::createReturnClass(ptr, "QTEXTFRAMEFORMAT", true);
+      RQTEXTFRAMEFORMAT(obj->toFrameFormat());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -894,8 +886,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_TOIMAGEFORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QTextImageFormat *ptr = new QTextImageFormat(obj->toImageFormat());
-      Qt4xHb::createReturnClass(ptr, "QTEXTIMAGEFORMAT", true);
+      RQTEXTIMAGEFORMAT(obj->toImageFormat());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -913,8 +904,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_TOLISTFORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QTextListFormat *ptr = new QTextListFormat(obj->toListFormat());
-      Qt4xHb::createReturnClass(ptr, "QTEXTLISTFORMAT", true);
+      RQTEXTLISTFORMAT(obj->toListFormat());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -932,8 +922,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_TOTABLECELLFORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QTextTableCellFormat *ptr = new QTextTableCellFormat(obj->toTableCellFormat());
-      Qt4xHb::createReturnClass(ptr, "QTEXTTABLECELLFORMAT", true);
+      RQTEXTTABLECELLFORMAT(obj->toTableCellFormat());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -951,8 +940,7 @@ HB_FUNC_STATIC(QTEXTFORMAT_TOTABLEFORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QTextTableFormat *ptr = new QTextTableFormat(obj->toTableFormat());
-      Qt4xHb::createReturnClass(ptr, "QTEXTTABLEFORMAT", true);
+      RQTEXTTABLEFORMAT(obj->toTableFormat());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

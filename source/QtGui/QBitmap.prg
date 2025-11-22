@@ -119,8 +119,7 @@ HB_FUNC_STATIC(QBITMAP_TRANSFORMED)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTRANSFORM(1)) {
 #endif
-      QBitmap *ptr = new QBitmap(obj->transformed(*PQTRANSFORM(1)));
-      Qt4xHb::createReturnClass(ptr, "QBITMAP", true);
+      RQBITMAP(obj->transformed(*PQTRANSFORM(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -135,10 +134,8 @@ HB_FUNC_STATIC(QBITMAP_FROMDATA)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(2, 3) && ISQSIZE(1) && HB_ISCHAR(2) && ISNUMORNIL(3)) {
 #endif
-    QBitmap *ptr = new QBitmap(
-        QBitmap::fromData(*PQSIZE(1), PCONSTUCHAR(2),
-                          HB_ISNIL(3) ? static_cast<QImage::Format>(QImage::Format_MonoLSB) : PQIMAGE_FORMAT(3)));
-    Qt4xHb::createReturnClass(ptr, "QBITMAP", true);
+    RQBITMAP(QBitmap::fromData(*PQSIZE(1), PCONSTUCHAR(2),
+                               HB_ISNIL(3) ? static_cast<QImage::Format>(QImage::Format_MonoLSB) : PQIMAGE_FORMAT(3)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -152,9 +149,8 @@ HB_FUNC_STATIC(QBITMAP_FROMIMAGE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISBETWEEN(1, 2) && ISQIMAGE(1) && ISNUMORNIL(2)) {
 #endif
-    QBitmap *ptr = new QBitmap(QBitmap::fromImage(
-        *PQIMAGE(1), HB_ISNIL(2) ? static_cast<Qt::ImageConversionFlags>(Qt::AutoColor) : PQT_IMAGECONVERSIONFLAGS(2)));
-    Qt4xHb::createReturnClass(ptr, "QBITMAP", true);
+    RQBITMAP(QBitmap::fromImage(*PQIMAGE(1), HB_ISNIL(2) ? static_cast<Qt::ImageConversionFlags>(Qt::AutoColor)
+                                                         : PQT_IMAGECONVERSIONFLAGS(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

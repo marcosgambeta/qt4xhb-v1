@@ -129,8 +129,7 @@ HB_FUNC_STATIC(QTEXTFRAME_FIRSTCURSORPOSITION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QTextCursor *ptr = new QTextCursor(obj->firstCursorPosition());
-      Qt4xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
+      RQTEXTCURSOR(obj->firstCursorPosition());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -166,8 +165,7 @@ HB_FUNC_STATIC(QTEXTFRAME_FRAMEFORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QTextFrameFormat *ptr = new QTextFrameFormat(obj->frameFormat());
-      Qt4xHb::createReturnClass(ptr, "QTEXTFRAMEFORMAT", true);
+      RQTEXTFRAMEFORMAT(obj->frameFormat());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -185,8 +183,7 @@ HB_FUNC_STATIC(QTEXTFRAME_LASTCURSORPOSITION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QTextCursor *ptr = new QTextCursor(obj->lastCursorPosition());
-      Qt4xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
+      RQTEXTCURSOR(obj->lastCursorPosition());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

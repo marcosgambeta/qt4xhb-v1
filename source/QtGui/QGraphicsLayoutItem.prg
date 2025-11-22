@@ -117,9 +117,8 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_EFFECTIVESIZEHINT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQSIZEFORNIL(2)) {
 #endif
-      QSizeF *ptr = new QSizeF(obj->effectiveSizeHint(
-          PQT_SIZEHINT(1), HB_ISNIL(2) ? QSizeF() : *static_cast<QSizeF *>(Qt4xHb::itemGetPtr(2))));
-      Qt4xHb::createReturnClass(ptr, "QSIZEF", true);
+      RQSIZEF(obj->effectiveSizeHint(PQT_SIZEHINT(1),
+                                     HB_ISNIL(2) ? QSizeF() : *static_cast<QSizeF *>(Qt4xHb::itemGetPtr(2))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -238,8 +237,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_MAXIMUMSIZE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSizeF *ptr = new QSizeF(obj->maximumSize());
-      Qt4xHb::createReturnClass(ptr, "QSIZEF", true);
+      RQSIZEF(obj->maximumSize());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -293,8 +291,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_MINIMUMSIZE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSizeF *ptr = new QSizeF(obj->minimumSize());
-      Qt4xHb::createReturnClass(ptr, "QSIZEF", true);
+      RQSIZEF(obj->minimumSize());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -385,8 +382,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_PREFERREDSIZE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSizeF *ptr = new QSizeF(obj->preferredSize());
-      Qt4xHb::createReturnClass(ptr, "QSIZEF", true);
+      RQSIZEF(obj->preferredSize());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -685,8 +681,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_SIZEPOLICY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSizePolicy *ptr = new QSizePolicy(obj->sizePolicy());
-      Qt4xHb::createReturnClass(ptr, "QSIZEPOLICY", true);
+      RQSIZEPOLICY(obj->sizePolicy());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

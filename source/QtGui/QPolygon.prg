@@ -155,8 +155,7 @@ HB_FUNC_STATIC(QPOLYGON_INTERSECTED)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOLYGON(1)) {
 #endif
-      QPolygon *ptr = new QPolygon(obj->intersected(*PQPOLYGON(1)));
-      Qt4xHb::createReturnClass(ptr, "QPOLYGON", true);
+      RQPOLYGON(obj->intersected(*PQPOLYGON(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -246,8 +245,7 @@ HB_FUNC_STATIC(QPOLYGON_SUBTRACTED)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOLYGON(1)) {
 #endif
-      QPolygon *ptr = new QPolygon(obj->subtracted(*PQPOLYGON(1)));
-      Qt4xHb::createReturnClass(ptr, "QPOLYGON", true);
+      RQPOLYGON(obj->subtracted(*PQPOLYGON(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -308,16 +306,14 @@ HB_FUNC_STATIC(QPOLYGON_TRANSLATED)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QPolygon *ptr = new QPolygon(obj->translated(PINT(1), PINT(2)));
-      Qt4xHb::createReturnClass(ptr, "QPOLYGON", true);
+      RQPOLYGON(obj->translated(PINT(1), PINT(2)));
     }
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // QPolygon translated(const QPoint &offset) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QPolygon *ptr = new QPolygon(obj->translated(*PQPOINT(1)));
-      Qt4xHb::createReturnClass(ptr, "QPOLYGON", true);
+      RQPOLYGON(obj->translated(*PQPOINT(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -333,8 +329,7 @@ HB_FUNC_STATIC(QPOLYGON_UNITED)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOLYGON(1)) {
 #endif
-      QPolygon *ptr = new QPolygon(obj->united(*PQPOLYGON(1)));
-      Qt4xHb::createReturnClass(ptr, "QPOLYGON", true);
+      RQPOLYGON(obj->united(*PQPOLYGON(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

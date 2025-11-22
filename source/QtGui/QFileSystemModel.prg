@@ -157,8 +157,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_FILEINFO)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
 #endif
-      QFileInfo *ptr = new QFileInfo(obj->fileInfo(*PQMODELINDEX(1)));
-      Qt4xHb::createReturnClass(ptr, "QFILEINFO", true);
+      RQFILEINFO(obj->fileInfo(*PQMODELINDEX(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -285,8 +284,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_LASTMODIFIED)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQMODELINDEX(1)) {
 #endif
-      QDateTime *ptr = new QDateTime(obj->lastModified(*PQMODELINDEX(1)));
-      Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
+      RQDATETIME(obj->lastModified(*PQMODELINDEX(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -448,8 +446,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_ROOTDIRECTORY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QDir *ptr = new QDir(obj->rootDirectory());
-      Qt4xHb::createReturnClass(ptr, "QDIR", true);
+      RQDIR(obj->rootDirectory());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -811,8 +808,8 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_INDEX)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RQMODELINDEX(obj->index(
-          PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex *>(Qt4xHb::itemGetPtr(3))));
+      RQMODELINDEX(obj->index(PINT(1), PINT(2),
+                              HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex *>(Qt4xHb::itemGetPtr(3))));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

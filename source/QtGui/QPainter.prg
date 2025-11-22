@@ -290,8 +290,8 @@ HB_FUNC_STATIC(QPAINTER_BOUNDINGRECT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RQRECTF(obj->boundingRect(
-          *PQRECTF(1), PQSTRING(2), HB_ISNIL(3) ? QTextOption() : *static_cast<QTextOption *>(Qt4xHb::itemGetPtr(3))));
+      RQRECTF(obj->boundingRect(*PQRECTF(1), PQSTRING(2),
+                                HB_ISNIL(3) ? QTextOption() : *static_cast<QTextOption *>(Qt4xHb::itemGetPtr(3))));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -344,8 +344,7 @@ HB_FUNC_STATIC(QPAINTER_CLIPPATH)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QPainterPath *ptr = new QPainterPath(obj->clipPath());
-      Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
+      RQPAINTERPATH(obj->clipPath());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -363,8 +362,7 @@ HB_FUNC_STATIC(QPAINTER_CLIPREGION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRegion *ptr = new QRegion(obj->clipRegion());
-      Qt4xHb::createReturnClass(ptr, "QREGION", true);
+      RQREGION(obj->clipRegion());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -382,8 +380,7 @@ HB_FUNC_STATIC(QPAINTER_COMBINEDTRANSFORM)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QTransform *ptr = new QTransform(obj->combinedTransform());
-      Qt4xHb::createReturnClass(ptr, "QTRANSFORM", true);
+      RQTRANSFORM(obj->combinedTransform());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1688,8 +1685,7 @@ HB_FUNC_STATIC(QPAINTER_FONTINFO)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QFontInfo *ptr = new QFontInfo(obj->fontInfo());
-      Qt4xHb::createReturnClass(ptr, "QFONTINFO", true);
+      RQFONTINFO(obj->fontInfo());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1707,8 +1703,7 @@ HB_FUNC_STATIC(QPAINTER_FONTMETRICS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QFontMetrics *ptr = new QFontMetrics(obj->fontMetrics());
-      Qt4xHb::createReturnClass(ptr, "QFONTMETRICS", true);
+      RQFONTMETRICS(obj->fontMetrics());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -98,8 +98,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_BACKGROUNDBRUSH)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QBrush *ptr = new QBrush(obj->backgroundBrush());
-      Qt4xHb::createReturnClass(ptr, "QBRUSH", true);
+      RQBRUSH(obj->backgroundBrush());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -135,8 +134,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_BRUSH)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QBrush *ptr = new QBrush(obj->brush());
-      Qt4xHb::createReturnClass(ptr, "QBRUSH", true);
+      RQBRUSH(obj->brush());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -208,8 +206,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_CLIPPATH)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QPainterPath *ptr = new QPainterPath(obj->clipPath());
-      Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
+      RQPAINTERPATH(obj->clipPath());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -227,8 +224,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_CLIPREGION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRegion *ptr = new QRegion(obj->clipRegion());
-      Qt4xHb::createReturnClass(ptr, "QREGION", true);
+      RQREGION(obj->clipRegion());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -264,8 +260,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_FONT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QFont *ptr = new QFont(obj->font());
-      Qt4xHb::createReturnClass(ptr, "QFONT", true);
+      RQFONT(obj->font());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -338,8 +333,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_PEN)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QPen *ptr = new QPen(obj->pen());
-      Qt4xHb::createReturnClass(ptr, "QPEN", true);
+      RQPEN(obj->pen());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -411,8 +405,7 @@ HB_FUNC_STATIC(QPAINTENGINESTATE_TRANSFORM)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QTransform *ptr = new QTransform(obj->transform());
-      Qt4xHb::createReturnClass(ptr, "QTRANSFORM", true);
+      RQTRANSFORM(obj->transform());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

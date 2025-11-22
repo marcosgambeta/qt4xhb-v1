@@ -938,9 +938,7 @@ HB_FUNC_STATIC(QGRAPHICSGRIDLAYOUT_SIZEHINT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQSIZEFORNIL(2)) {
 #endif
-      QSizeF *ptr = new QSizeF(
-          obj->sizeHint(PQT_SIZEHINT(1), HB_ISNIL(2) ? QSizeF() : *static_cast<QSizeF *>(Qt4xHb::itemGetPtr(2))));
-      Qt4xHb::createReturnClass(ptr, "QSIZEF", true);
+      RQSIZEF(obj->sizeHint(PQT_SIZEHINT(1), HB_ISNIL(2) ? QSizeF() : *static_cast<QSizeF *>(Qt4xHb::itemGetPtr(2))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

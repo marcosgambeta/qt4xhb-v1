@@ -310,8 +310,8 @@ HB_FUNC_STATIC(QCOLORDIALOG_GETCOLOR)
   } else if (ISBETWEEN(0, 2) && (ISQCOLOR(1) || HB_ISCHAR(1) || HB_ISNIL(1)) && ISQWIDGETORNIL(2)) {
     // static QColor getColor(const QColor &initial = Qt::white, QWidget *parent = 0)
 
-    RQCOLOR(QColorDialog::getColor(
-        HB_ISNIL(1) ? Qt::white : *static_cast<QColor *>(Qt4xHb::itemGetPtr(1)), OPQWIDGET(2, 0)));
+    RQCOLOR(QColorDialog::getColor(HB_ISNIL(1) ? Qt::white : *static_cast<QColor *>(Qt4xHb::itemGetPtr(1)),
+                                   OPQWIDGET(2, 0)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

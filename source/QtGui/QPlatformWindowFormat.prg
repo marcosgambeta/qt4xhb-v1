@@ -974,8 +974,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_DEFAULTFORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0)) {
 #endif
-    QPlatformWindowFormat *ptr = new QPlatformWindowFormat(QPlatformWindowFormat::defaultFormat());
-    Qt4xHb::createReturnClass(ptr, "QPLATFORMWINDOWFORMAT", true);
+    RQPLATFORMWINDOWFORMAT(QPlatformWindowFormat::defaultFormat());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

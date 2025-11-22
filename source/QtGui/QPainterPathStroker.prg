@@ -119,8 +119,7 @@ HB_FUNC_STATIC(QPAINTERPATHSTROKER_CREATESTROKE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPAINTERPATH(1)) {
 #endif
-      QPainterPath *ptr = new QPainterPath(obj->createStroke(*PQPAINTERPATH(1)));
-      Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
+      RQPAINTERPATH(obj->createStroke(*PQPAINTERPATH(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

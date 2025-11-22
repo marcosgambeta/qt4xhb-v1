@@ -132,8 +132,7 @@ HB_FUNC_STATIC(QMATRIX4X4_COLUMN)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QVector4D *ptr = new QVector4D(obj->column(PINT(1)));
-      Qt4xHb::createReturnClass(ptr, "QVECTOR4D", true);
+      RQVECTOR4D(obj->column(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -230,8 +229,7 @@ HB_FUNC_STATIC(QMATRIX4X4_INVERTED)
     if (ISBETWEEN(0, 1) && ISLOGORNIL(1)) {
 #endif
       bool par1;
-      QMatrix4x4 *ptr = new QMatrix4x4(obj->inverted(&par1));
-      Qt4xHb::createReturnClass(ptr, "QMATRIX4X4", true);
+      RQMATRIX4X4(obj->inverted(&par1));
       hb_storl(par1, 1);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
@@ -300,16 +298,14 @@ HB_FUNC_STATIC(QMATRIX4X4_MAP)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QVector3D *ptr = new QVector3D(obj->map(*PQVECTOR3D(1)));
-      Qt4xHb::createReturnClass(ptr, "QVECTOR3D", true);
+      RQVECTOR3D(obj->map(*PQVECTOR3D(1)));
     }
   } else if (ISNUMPAR(1) && ISQVECTOR4D(1)) {
     // QVector4D map(const QVector4D &point) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QVector4D *ptr = new QVector4D(obj->map(*PQVECTOR4D(1)));
-      Qt4xHb::createReturnClass(ptr, "QVECTOR4D", true);
+      RQVECTOR4D(obj->map(*PQVECTOR4D(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -346,8 +342,7 @@ HB_FUNC_STATIC(QMATRIX4X4_MAPVECTOR)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQVECTOR3D(1)) {
 #endif
-      QVector3D *ptr = new QVector3D(obj->mapVector(*PQVECTOR3D(1)));
-      Qt4xHb::createReturnClass(ptr, "QVECTOR3D", true);
+      RQVECTOR3D(obj->mapVector(*PQVECTOR3D(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -492,8 +487,7 @@ HB_FUNC_STATIC(QMATRIX4X4_ROW)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QVector4D *ptr = new QVector4D(obj->row(PINT(1)));
-      Qt4xHb::createReturnClass(ptr, "QVECTOR4D", true);
+      RQVECTOR4D(obj->row(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -612,16 +606,14 @@ HB_FUNC_STATIC(QMATRIX4X4_TOTRANSFORM)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QTransform *ptr = new QTransform(obj->toTransform());
-      Qt4xHb::createReturnClass(ptr, "QTRANSFORM", true);
+      RQTRANSFORM(obj->toTransform());
     }
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QTransform toTransform(qreal distanceToPlane) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QTransform *ptr = new QTransform(obj->toTransform(PQREAL(1)));
-      Qt4xHb::createReturnClass(ptr, "QTRANSFORM", true);
+      RQTRANSFORM(obj->toTransform(PQREAL(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -671,8 +663,7 @@ HB_FUNC_STATIC(QMATRIX4X4_TRANSPOSED)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QMatrix4x4 *ptr = new QMatrix4x4(obj->transposed());
-      Qt4xHb::createReturnClass(ptr, "QMATRIX4X4", true);
+      RQMATRIX4X4(obj->transposed());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

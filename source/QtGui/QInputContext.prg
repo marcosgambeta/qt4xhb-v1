@@ -162,8 +162,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_FONT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QFont *ptr = new QFont(obj->font());
-      Qt4xHb::createReturnClass(ptr, "QFONT", true);
+      RQFONT(obj->font());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -315,8 +314,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_STANDARDFORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QTextFormat *ptr = new QTextFormat(obj->standardFormat(PQINPUTCONTEXT_STANDARDFORMAT(1)));
-      Qt4xHb::createReturnClass(ptr, "QTEXTFORMAT", true);
+      RQTEXTFORMAT(obj->standardFormat(PQINPUTCONTEXT_STANDARDFORMAT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

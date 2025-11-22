@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QICON_ACTUALSIZE)
     if (ISBETWEEN(1, 3) && ISQSIZE(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
 #endif
       RQSIZE(obj->actualSize(*PQSIZE(1), HB_ISNIL(2) ? static_cast<QIcon::Mode>(QIcon::Normal) : PQICON_MODE(2),
-                                    HB_ISNIL(3) ? static_cast<QIcon::State>(QIcon::Off) : PQICON_STATE(3)));
+                             HB_ISNIL(3) ? static_cast<QIcon::State>(QIcon::Off) : PQICON_STATE(3)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -315,30 +315,24 @@ HB_FUNC_STATIC(QICON_PIXMAP)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QPixmap *ptr =
-          new QPixmap(obj->pixmap(*PQSIZE(1), HB_ISNIL(2) ? static_cast<QIcon::Mode>(QIcon::Normal) : PQICON_MODE(2),
-                                  HB_ISNIL(3) ? static_cast<QIcon::State>(QIcon::Off) : PQICON_STATE(3)));
-      Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
+      RQPIXMAP(obj->pixmap(*PQSIZE(1), HB_ISNIL(2) ? static_cast<QIcon::Mode>(QIcon::Normal) : PQICON_MODE(2),
+                           HB_ISNIL(3) ? static_cast<QIcon::State>(QIcon::Off) : PQICON_STATE(3)));
     }
   } else if (ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
     // QPixmap pixmap(int w, int h, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QPixmap *ptr = new QPixmap(obj->pixmap(PINT(1), PINT(2),
-                                             HB_ISNIL(3) ? static_cast<QIcon::Mode>(QIcon::Normal) : PQICON_MODE(3),
-                                             HB_ISNIL(4) ? static_cast<QIcon::State>(QIcon::Off) : PQICON_STATE(4)));
-      Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
+      RQPIXMAP(obj->pixmap(PINT(1), PINT(2), HB_ISNIL(3) ? static_cast<QIcon::Mode>(QIcon::Normal) : PQICON_MODE(3),
+                           HB_ISNIL(4) ? static_cast<QIcon::State>(QIcon::Off) : PQICON_STATE(4)));
     }
   } else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && ISNUMORNIL(2) && ISNUMORNIL(3)) {
     // QPixmap pixmap(int extent, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QPixmap *ptr =
-          new QPixmap(obj->pixmap(PINT(1), HB_ISNIL(2) ? static_cast<QIcon::Mode>(QIcon::Normal) : PQICON_MODE(2),
-                                  HB_ISNIL(3) ? static_cast<QIcon::State>(QIcon::Off) : PQICON_STATE(3)));
-      Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
+      RQPIXMAP(obj->pixmap(PINT(1), HB_ISNIL(2) ? static_cast<QIcon::Mode>(QIcon::Normal) : PQICON_MODE(2),
+                           HB_ISNIL(3) ? static_cast<QIcon::State>(QIcon::Off) : PQICON_STATE(3)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

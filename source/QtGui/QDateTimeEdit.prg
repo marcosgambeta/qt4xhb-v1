@@ -343,8 +343,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_DATE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QDate *ptr = new QDate(obj->date());
-      Qt4xHb::createReturnClass(ptr, "QDATE", true);
+      RQDATE(obj->date());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -362,8 +361,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_DATETIME)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QDateTime *ptr = new QDateTime(obj->dateTime());
-      Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
+      RQDATETIME(obj->dateTime());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -417,8 +415,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_MAXIMUMDATE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QDate *ptr = new QDate(obj->maximumDate());
-      Qt4xHb::createReturnClass(ptr, "QDATE", true);
+      RQDATE(obj->maximumDate());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -436,8 +433,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_MAXIMUMDATETIME)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QDateTime *ptr = new QDateTime(obj->maximumDateTime());
-      Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
+      RQDATETIME(obj->maximumDateTime());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -455,8 +451,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_MAXIMUMTIME)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QTime *ptr = new QTime(obj->maximumTime());
-      Qt4xHb::createReturnClass(ptr, "QTIME", true);
+      RQTIME(obj->maximumTime());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -474,8 +469,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_MINIMUMDATE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QDate *ptr = new QDate(obj->minimumDate());
-      Qt4xHb::createReturnClass(ptr, "QDATE", true);
+      RQDATE(obj->minimumDate());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -493,8 +487,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_MINIMUMDATETIME)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QDateTime *ptr = new QDateTime(obj->minimumDateTime());
-      Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
+      RQDATETIME(obj->minimumDateTime());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -512,8 +505,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_MINIMUMTIME)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QTime *ptr = new QTime(obj->minimumTime());
-      Qt4xHb::createReturnClass(ptr, "QTIME", true);
+      RQTIME(obj->minimumTime());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -905,8 +897,7 @@ HB_FUNC_STATIC(QDATETIMEEDIT_TIME)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QTime *ptr = new QTime(obj->time());
-      Qt4xHb::createReturnClass(ptr, "QTIME", true);
+      RQTIME(obj->time());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

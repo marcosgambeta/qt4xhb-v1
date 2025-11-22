@@ -158,8 +158,7 @@ HB_FUNC_STATIC(QPOLYGONF_INTERSECTED)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOLYGONF(1)) {
 #endif
-      QPolygonF *ptr = new QPolygonF(obj->intersected(*PQPOLYGONF(1)));
-      Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
+      RQPOLYGONF(obj->intersected(*PQPOLYGONF(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -195,8 +194,7 @@ HB_FUNC_STATIC(QPOLYGONF_SUBTRACTED)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOLYGONF(1)) {
 #endif
-      QPolygonF *ptr = new QPolygonF(obj->subtracted(*PQPOLYGONF(1)));
-      Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
+      RQPOLYGONF(obj->subtracted(*PQPOLYGONF(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -234,8 +232,7 @@ HB_FUNC_STATIC(QPOLYGONF_TOPOLYGON)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QPolygon *ptr = new QPolygon(obj->toPolygon());
-      Qt4xHb::createReturnClass(ptr, "QPOLYGON", true);
+      RQPOLYGON(obj->toPolygon());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -276,16 +273,14 @@ HB_FUNC_STATIC(QPOLYGONF_TRANSLATED)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QPolygonF *ptr = new QPolygonF(obj->translated(*PQPOINTF(1)));
-      Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
+      RQPOLYGONF(obj->translated(*PQPOINTF(1)));
     }
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // QPolygonF translated(qreal dx, qreal dy) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QPolygonF *ptr = new QPolygonF(obj->translated(PQREAL(1), PQREAL(2)));
-      Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
+      RQPOLYGONF(obj->translated(PQREAL(1), PQREAL(2)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -301,8 +296,7 @@ HB_FUNC_STATIC(QPOLYGONF_UNITED)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOLYGONF(1)) {
 #endif
-      QPolygonF *ptr = new QPolygonF(obj->united(*PQPOLYGONF(1)));
-      Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
+      RQPOLYGONF(obj->united(*PQPOLYGONF(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

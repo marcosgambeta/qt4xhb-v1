@@ -122,8 +122,7 @@ HB_FUNC_STATIC(QTEXTFRAMEFORMAT_BORDERBRUSH)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QBrush *ptr = new QBrush(obj->borderBrush());
-      Qt4xHb::createReturnClass(ptr, "QBRUSH", true);
+      RQBRUSH(obj->borderBrush());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -177,8 +176,7 @@ HB_FUNC_STATIC(QTEXTFRAMEFORMAT_HEIGHT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QTextLength *ptr = new QTextLength(obj->height());
-      Qt4xHb::createReturnClass(ptr, "QTEXTLENGTH", true);
+      RQTEXTLENGTH(obj->height());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -610,8 +608,7 @@ HB_FUNC_STATIC(QTEXTFRAMEFORMAT_WIDTH)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QTextLength *ptr = new QTextLength(obj->width());
-      Qt4xHb::createReturnClass(ptr, "QTEXTLENGTH", true);
+      RQTEXTLENGTH(obj->width());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

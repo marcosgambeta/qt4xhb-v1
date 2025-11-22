@@ -126,24 +126,21 @@ HB_FUNC_STATIC(QTEXTTABLE_CELLAT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QTextTableCell *ptr = new QTextTableCell(obj->cellAt(PINT(1), PINT(2)));
-      Qt4xHb::createReturnClass(ptr, "QTEXTTABLECELL", true);
+      RQTEXTTABLECELL(obj->cellAt(PINT(1), PINT(2)));
     }
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QTextTableCell cellAt(int position) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QTextTableCell *ptr = new QTextTableCell(obj->cellAt(PINT(1)));
-      Qt4xHb::createReturnClass(ptr, "QTEXTTABLECELL", true);
+      RQTEXTTABLECELL(obj->cellAt(PINT(1)));
     }
   } else if (ISNUMPAR(1) && ISQTEXTCURSOR(1)) {
     // QTextTableCell cellAt(const QTextCursor &cursor) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QTextTableCell *ptr = new QTextTableCell(obj->cellAt(*PQTEXTCURSOR(1)));
-      Qt4xHb::createReturnClass(ptr, "QTEXTTABLECELL", true);
+      RQTEXTTABLECELL(obj->cellAt(*PQTEXTCURSOR(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -177,8 +174,7 @@ HB_FUNC_STATIC(QTEXTTABLE_FORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QTextTableFormat *ptr = new QTextTableFormat(obj->format());
-      Qt4xHb::createReturnClass(ptr, "QTEXTTABLEFORMAT", true);
+      RQTEXTTABLEFORMAT(obj->format());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -321,8 +317,7 @@ HB_FUNC_STATIC(QTEXTTABLE_ROWEND)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTEXTCURSOR(1)) {
 #endif
-      QTextCursor *ptr = new QTextCursor(obj->rowEnd(*PQTEXTCURSOR(1)));
-      Qt4xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
+      RQTEXTCURSOR(obj->rowEnd(*PQTEXTCURSOR(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -340,8 +335,7 @@ HB_FUNC_STATIC(QTEXTTABLE_ROWSTART)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQTEXTCURSOR(1)) {
 #endif
-      QTextCursor *ptr = new QTextCursor(obj->rowStart(*PQTEXTCURSOR(1)));
-      Qt4xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
+      RQTEXTCURSOR(obj->rowStart(*PQTEXTCURSOR(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

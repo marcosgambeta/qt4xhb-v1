@@ -100,8 +100,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_ALLOCATEDREGION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRegion *ptr = new QRegion(obj->allocatedRegion());
-      Qt4xHb::createReturnClass(ptr, "QREGION", true);
+      RQREGION(obj->allocatedRegion());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -242,8 +241,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_REQUESTEDREGION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRegion *ptr = new QRegion(obj->requestedRegion());
-      Qt4xHb::createReturnClass(ptr, "QREGION", true);
+      RQREGION(obj->requestedRegion());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

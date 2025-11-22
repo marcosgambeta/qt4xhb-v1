@@ -157,8 +157,7 @@ HB_FUNC_STATIC(QICONENGINE_PIXMAP)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQSIZE(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
 #endif
-      QPixmap *ptr = new QPixmap(obj->pixmap(*PQSIZE(1), PQICON_MODE(2), PQICON_STATE(3)));
-      Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
+      RQPIXMAP(obj->pixmap(*PQSIZE(1), PQICON_MODE(2), PQICON_STATE(3)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

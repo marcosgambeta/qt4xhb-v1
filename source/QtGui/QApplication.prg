@@ -650,18 +650,15 @@ HB_FUNC_STATIC(QAPPLICATION_FONT)
   if (ISNUMPAR(0)) {
     // static QFont font()
 
-    QFont *ptr = new QFont(QApplication::font());
-    Qt4xHb::createReturnClass(ptr, "QFONT", true);
+    RQFONT(QApplication::font());
   } else if (ISNUMPAR(1) && ISQWIDGET(1)) {
     // static QFont font(const QWidget *widget)
 
-    QFont *ptr = new QFont(QApplication::font(PQWIDGET(1)));
-    Qt4xHb::createReturnClass(ptr, "QFONT", true);
+    RQFONT(QApplication::font(PQWIDGET(1)));
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // static QFont font(const char *className)
 
-    QFont *ptr = new QFont(QApplication::font(PCONSTCHAR(1)));
-    Qt4xHb::createReturnClass(ptr, "QFONT", true);
+    RQFONT(QApplication::font(PCONSTCHAR(1)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -673,8 +670,7 @@ HB_FUNC_STATIC(QAPPLICATION_FONTMETRICS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0)) {
 #endif
-    QFontMetrics *ptr = new QFontMetrics(QApplication::fontMetrics());
-    Qt4xHb::createReturnClass(ptr, "QFONTMETRICS", true);
+    RQFONTMETRICS(QApplication::fontMetrics());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -772,8 +768,7 @@ HB_FUNC_STATIC(QAPPLICATION_KEYBOARDINPUTLOCALE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0)) {
 #endif
-    QLocale *ptr = new QLocale(QApplication::keyboardInputLocale());
-    Qt4xHb::createReturnClass(ptr, "QLOCALE", true);
+    RQLOCALE(QApplication::keyboardInputLocale());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -843,18 +838,15 @@ HB_FUNC_STATIC(QAPPLICATION_PALETTE)
   if (ISNUMPAR(0)) {
     // static QPalette palette()
 
-    QPalette *ptr = new QPalette(QApplication::palette());
-    Qt4xHb::createReturnClass(ptr, "QPALETTE", true);
+    RQPALETTE(QApplication::palette());
   } else if (ISNUMPAR(1) && ISQWIDGET(1)) {
     // static QPalette palette(const QWidget *widget)
 
-    QPalette *ptr = new QPalette(QApplication::palette(PQWIDGET(1)));
-    Qt4xHb::createReturnClass(ptr, "QPALETTE", true);
+    RQPALETTE(QApplication::palette(PQWIDGET(1)));
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // static QPalette palette(const char *className)
 
-    QPalette *ptr = new QPalette(QApplication::palette(PCONSTCHAR(1)));
-    Qt4xHb::createReturnClass(ptr, "QPALETTE", true);
+    RQPALETTE(QApplication::palette(PCONSTCHAR(1)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

@@ -642,8 +642,7 @@ HB_FUNC_STATIC(QWIDGET_CHILDRENREGION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRegion *ptr = new QRegion(obj->childrenRegion());
-      Qt4xHb::createReturnClass(ptr, "QREGION", true);
+      RQREGION(obj->childrenRegion());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -701,8 +700,7 @@ HB_FUNC_STATIC(QWIDGET_CONTENTSMARGINS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QMargins *ptr = new QMargins(obj->contentsMargins());
-      Qt4xHb::createReturnClass(ptr, "QMARGINS", true);
+      RQMARGINS(obj->contentsMargins());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -756,8 +754,7 @@ HB_FUNC_STATIC(QWIDGET_CURSOR)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QCursor *ptr = new QCursor(obj->cursor());
-      Qt4xHb::createReturnClass(ptr, "QCURSOR", true);
+      RQCURSOR(obj->cursor());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -889,8 +886,7 @@ HB_FUNC_STATIC(QWIDGET_FONTINFO)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QFontInfo *ptr = new QFontInfo(obj->fontInfo());
-      Qt4xHb::createReturnClass(ptr, "QFONTINFO", true);
+      RQFONTINFO(obj->fontInfo());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -908,8 +904,7 @@ HB_FUNC_STATIC(QWIDGET_FONTMETRICS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QFontMetrics *ptr = new QFontMetrics(obj->fontMetrics());
-      Qt4xHb::createReturnClass(ptr, "QFONTMETRICS", true);
+      RQFONTMETRICS(obj->fontMetrics());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1595,8 +1590,7 @@ HB_FUNC_STATIC(QWIDGET_LOCALE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QLocale *ptr = new QLocale(obj->locale());
-      Qt4xHb::createReturnClass(ptr, "QLOCALE", true);
+      RQLOCALE(obj->locale());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1722,8 +1716,7 @@ HB_FUNC_STATIC(QWIDGET_MASK)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRegion *ptr = new QRegion(obj->mask());
-      Qt4xHb::createReturnClass(ptr, "QREGION", true);
+      RQREGION(obj->mask());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -3447,8 +3440,7 @@ HB_FUNC_STATIC(QWIDGET_SIZEPOLICY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSizePolicy *ptr = new QSizePolicy(obj->sizePolicy());
-      Qt4xHb::createReturnClass(ptr, "QSIZEPOLICY", true);
+      RQSIZEPOLICY(obj->sizePolicy());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -3756,8 +3748,7 @@ HB_FUNC_STATIC(QWIDGET_VISIBLEREGION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRegion *ptr = new QRegion(obj->visibleRegion());
-      Qt4xHb::createReturnClass(ptr, "QREGION", true);
+      RQREGION(obj->visibleRegion());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

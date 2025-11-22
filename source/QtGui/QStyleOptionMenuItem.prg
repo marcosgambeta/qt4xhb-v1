@@ -337,8 +337,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONMENUITEM_FONT)
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
-      QFont *ptr = new QFont(obj->font);
-      Qt4xHb::createReturnClass(ptr, "QFONT", true);
+      RQFONT(obj->font);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }

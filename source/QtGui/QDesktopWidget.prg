@@ -60,21 +60,24 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_AVAILABLEGEOMETRY)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RQRECT(obj->availableGeometry(OPINT(1, -1)));
+      QRect *ptr = new QRect(obj->availableGeometry(OPINT(1, -1)));
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
   } else if (ISNUMPAR(1) && ISQWIDGET(1)) {
     // const QRect availableGeometry(const QWidget *widget) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RQRECT(obj->availableGeometry(PQWIDGET(1)));
+      QRect *ptr = new QRect(obj->availableGeometry(PQWIDGET(1)));
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // const QRect availableGeometry(const QPoint &p) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RQRECT(obj->availableGeometry(*PQPOINT(1)));
+      QRect *ptr = new QRect(obj->availableGeometry(*PQPOINT(1)));
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -161,21 +164,24 @@ HB_FUNC_STATIC(QDESKTOPWIDGET_SCREENGEOMETRY)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RQRECT(obj->screenGeometry(OPINT(1, -1)));
+      QRect *ptr = new QRect(obj->screenGeometry(OPINT(1, -1)));
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
   } else if (ISNUMPAR(1) && ISQWIDGET(1)) {
     // const QRect screenGeometry(const QWidget *widget) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RQRECT(obj->screenGeometry(PQWIDGET(1)));
+      QRect *ptr = new QRect(obj->screenGeometry(PQWIDGET(1)));
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // const QRect screenGeometry(const QPoint &p) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      RQRECT(obj->screenGeometry(*PQPOINT(1)));
+      QRect *ptr = new QRect(obj->screenGeometry(*PQPOINT(1)));
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

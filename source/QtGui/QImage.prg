@@ -325,10 +325,8 @@ HB_FUNC_STATIC(QIMAGE_CONVERTTOFORMAT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QImage *ptr = new QImage(
-          obj->convertToFormat(PQIMAGE_FORMAT(1), HB_ISNIL(2) ? static_cast<Qt::ImageConversionFlags>(Qt::AutoColor)
-                                                              : PQT_IMAGECONVERSIONFLAGS(2)));
-      Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
+      RQIMAGE(obj->convertToFormat(PQIMAGE_FORMAT(1), HB_ISNIL(2) ? static_cast<Qt::ImageConversionFlags>(Qt::AutoColor)
+                                                                  : PQT_IMAGECONVERSIONFLAGS(2)));
     }
   } else if (ISBETWEEN(1, 3) && HB_ISNUM(1) && HB_ISARRAY(2) && ISNUMORNIL(3)) {
     // QImage convertToFormat(QImage::Format format, const QVector<QRgb> &colorTable, Qt::ImageConversionFlags flags =
@@ -344,10 +342,9 @@ HB_FUNC_STATIC(QIMAGE_CONVERTTOFORMAT)
         temp2 = (QRgb)hb_arrayGetNI(aList2, i2 + 1);
         par2 << temp2;
       }
-      QImage *ptr = new QImage(obj->convertToFormat(PQIMAGE_FORMAT(1), par2,
-                                                    HB_ISNIL(3) ? static_cast<Qt::ImageConversionFlags>(Qt::AutoColor)
-                                                                : PQT_IMAGECONVERSIONFLAGS(3)));
-      Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
+      RQIMAGE(obj->convertToFormat(PQIMAGE_FORMAT(1), par2,
+                                   HB_ISNIL(3) ? static_cast<Qt::ImageConversionFlags>(Qt::AutoColor)
+                                               : PQT_IMAGECONVERSIONFLAGS(3)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -361,16 +358,14 @@ HB_FUNC_STATIC(QIMAGE_COPY)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QImage *ptr = new QImage(obj->copy(HB_ISNIL(1) ? QRect() : *static_cast<QRect *>(Qt4xHb::itemGetPtr(1))));
-      Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
+      RQIMAGE(obj->copy(HB_ISNIL(1) ? QRect() : *static_cast<QRect *>(Qt4xHb::itemGetPtr(1))));
     }
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // QImage copy(int x, int y, int width, int height) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QImage *ptr = new QImage(obj->copy(PINT(1), PINT(2), PINT(3), PINT(4)));
-      Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
+      RQIMAGE(obj->copy(PINT(1), PINT(2), PINT(3), PINT(4)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -386,9 +381,8 @@ HB_FUNC_STATIC(QIMAGE_CREATEALPHAMASK)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      QImage *ptr = new QImage(obj->createAlphaMask(HB_ISNIL(1) ? static_cast<Qt::ImageConversionFlags>(Qt::AutoColor)
-                                                                : PQT_IMAGECONVERSIONFLAGS(1)));
-      Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
+      RQIMAGE(obj->createAlphaMask(HB_ISNIL(1) ? static_cast<Qt::ImageConversionFlags>(Qt::AutoColor)
+                                               : PQT_IMAGECONVERSIONFLAGS(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -406,8 +400,7 @@ HB_FUNC_STATIC(QIMAGE_CREATEHEURISTICMASK)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISLOGORNIL(1)) {
 #endif
-      QImage *ptr = new QImage(obj->createHeuristicMask(OPBOOL(1, true)));
-      Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
+      RQIMAGE(obj->createHeuristicMask(OPBOOL(1, true)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -425,9 +418,8 @@ HB_FUNC_STATIC(QIMAGE_CREATEMASKFROMCOLOR)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
-      QImage *ptr = new QImage(obj->createMaskFromColor(
-          PQRGB(1), HB_ISNIL(2) ? static_cast<Qt::MaskMode>(Qt::MaskInColor) : PQT_MASKMODE(2)));
-      Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
+      RQIMAGE(obj->createMaskFromColor(PQRGB(1),
+                                       HB_ISNIL(2) ? static_cast<Qt::MaskMode>(Qt::MaskInColor) : PQT_MASKMODE(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -685,8 +677,7 @@ HB_FUNC_STATIC(QIMAGE_MIRRORED)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 2) && ISLOGORNIL(1) && ISLOGORNIL(2)) {
 #endif
-      QImage *ptr = new QImage(obj->mirrored(OPBOOL(1, false), OPBOOL(2, true)));
-      Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
+      RQIMAGE(obj->mirrored(OPBOOL(1, false), OPBOOL(2, true)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -782,8 +773,7 @@ HB_FUNC_STATIC(QIMAGE_RGBSWAPPED)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QImage *ptr = new QImage(obj->rgbSwapped());
-      Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
+      RQIMAGE(obj->rgbSwapped());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -821,10 +811,9 @@ HB_FUNC_STATIC(QIMAGE_SCALED)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QImage *ptr = new QImage(obj->scaled(
+      RQIMAGE(obj->scaled(
           *PQSIZE(1), HB_ISNIL(2) ? static_cast<Qt::AspectRatioMode>(Qt::IgnoreAspectRatio) : PQT_ASPECTRATIOMODE(2),
           HB_ISNIL(3) ? static_cast<Qt::TransformationMode>(Qt::FastTransformation) : PQT_TRANSFORMATIONMODE(3)));
-      Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
     }
   } else if (ISBETWEEN(1, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISNUMORNIL(3) && ISNUMORNIL(4)) {
     // QImage scaled(int width, int height, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio,
@@ -832,11 +821,10 @@ HB_FUNC_STATIC(QIMAGE_SCALED)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QImage *ptr = new QImage(obj->scaled(
+      RQIMAGE(obj->scaled(
           PINT(1), PINT(2),
           HB_ISNIL(3) ? static_cast<Qt::AspectRatioMode>(Qt::IgnoreAspectRatio) : PQT_ASPECTRATIOMODE(3),
           HB_ISNIL(4) ? static_cast<Qt::TransformationMode>(Qt::FastTransformation) : PQT_TRANSFORMATIONMODE(4)));
-      Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -852,10 +840,8 @@ HB_FUNC_STATIC(QIMAGE_SCALEDTOHEIGHT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
-      QImage *ptr = new QImage(
-          obj->scaledToHeight(PINT(1), HB_ISNIL(2) ? static_cast<Qt::TransformationMode>(Qt::FastTransformation)
-                                                   : PQT_TRANSFORMATIONMODE(2)));
-      Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
+      RQIMAGE(obj->scaledToHeight(PINT(1), HB_ISNIL(2) ? static_cast<Qt::TransformationMode>(Qt::FastTransformation)
+                                                       : PQT_TRANSFORMATIONMODE(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -873,10 +859,8 @@ HB_FUNC_STATIC(QIMAGE_SCALEDTOWIDTH)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISNUMORNIL(2)) {
 #endif
-      QImage *ptr = new QImage(
-          obj->scaledToWidth(PINT(1), HB_ISNIL(2) ? static_cast<Qt::TransformationMode>(Qt::FastTransformation)
-                                                  : PQT_TRANSFORMATIONMODE(2)));
-      Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
+      RQIMAGE(obj->scaledToWidth(PINT(1), HB_ISNIL(2) ? static_cast<Qt::TransformationMode>(Qt::FastTransformation)
+                                                      : PQT_TRANSFORMATIONMODE(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1139,20 +1123,17 @@ HB_FUNC_STATIC(QIMAGE_TRANSFORMED)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QImage *ptr = new QImage(
-          obj->transformed(*PQMATRIX(1), HB_ISNIL(2) ? static_cast<Qt::TransformationMode>(Qt::FastTransformation)
-                                                     : PQT_TRANSFORMATIONMODE(2)));
-      Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
+      RQIMAGE(obj->transformed(*PQMATRIX(1), HB_ISNIL(2) ? static_cast<Qt::TransformationMode>(Qt::FastTransformation)
+                                                         : PQT_TRANSFORMATIONMODE(2)));
     }
   } else if (ISBETWEEN(1, 2) && ISQTRANSFORM(1) && ISNUMORNIL(2)) {
     // QImage transformed(const QTransform &matrix, Qt::TransformationMode mode = Qt::FastTransformation) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QImage *ptr = new QImage(
-          obj->transformed(*PQTRANSFORM(1), HB_ISNIL(2) ? static_cast<Qt::TransformationMode>(Qt::FastTransformation)
-                                                        : PQT_TRANSFORMATIONMODE(2)));
-      Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
+      RQIMAGE(obj->transformed(*PQTRANSFORM(1), HB_ISNIL(2)
+                                                    ? static_cast<Qt::TransformationMode>(Qt::FastTransformation)
+                                                    : PQT_TRANSFORMATIONMODE(2)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1203,13 +1184,11 @@ HB_FUNC_STATIC(QIMAGE_FROMDATA)
   if (ISBETWEEN(1, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ISCHARORNIL(3)) {
     // static QImage fromData(const uchar *data, int size, const char *format = 0)
 
-    QImage *ptr = new QImage(QImage::fromData(PCONSTUCHAR(1), PINT(2), OPCONSTCHAR(3, 0)));
-    Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
+    RQIMAGE(QImage::fromData(PCONSTUCHAR(1), PINT(2), OPCONSTCHAR(3, 0)));
   } else if (ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ISCHARORNIL(2)) {
     // static QImage fromData(const QByteArray &data, const char *format = 0)
 
-    QImage *ptr = new QImage(QImage::fromData(*PQBYTEARRAY(1), OPCONSTCHAR(2, 0)));
-    Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
+    RQIMAGE(QImage::fromData(*PQBYTEARRAY(1), OPCONSTCHAR(2, 0)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -1225,8 +1204,7 @@ HB_FUNC_STATIC(QIMAGE_TRUEMATRIX)
   } else if (ISNUMPAR(3) && ISQTRANSFORM(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
     // static QTransform trueMatrix(const QTransform &matrix, int width, int height)
 
-    QTransform *ptr = new QTransform(QImage::trueMatrix(*PQTRANSFORM(1), PINT(2), PINT(3)));
-    Qt4xHb::createReturnClass(ptr, "QTRANSFORM", true);
+    RQTRANSFORM(QImage::trueMatrix(*PQTRANSFORM(1), PINT(2), PINT(3)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

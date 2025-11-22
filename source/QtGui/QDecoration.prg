@@ -142,16 +142,14 @@ HB_FUNC_STATIC(QDECORATION_REGION)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QRegion *ptr = new QRegion(obj->region(PQWIDGET(1), *PQRECT(2), OPINT(3, QDecoration::All)));
-      Qt4xHb::createReturnClass(ptr, "QREGION", true);
+      RQREGION(obj->region(PQWIDGET(1), *PQRECT(2), OPINT(3, QDecoration::All)));
     }
   } else if (ISBETWEEN(1, 2) && ISQWIDGET(1) && ISNUMORNIL(2)) {
     // QRegion region(const QWidget *widget, int decorationRegion = QDecoration::All)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QRegion *ptr = new QRegion(obj->region(PQWIDGET(1), OPINT(2, QDecoration::All)));
-      Qt4xHb::createReturnClass(ptr, "QREGION", true);
+      RQREGION(obj->region(PQWIDGET(1), OPINT(2, QDecoration::All)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
