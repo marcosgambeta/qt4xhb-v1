@@ -113,8 +113,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_FILEMETADATA)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
-      QNetworkCacheMetaData *ptr = new QNetworkCacheMetaData(obj->fileMetaData(PQSTRING(1)));
-      Qt4xHb::createReturnClass(ptr, "QNETWORKCACHEMETADATA", true);
+      RQNETWORKCACHEMETADATA(obj->fileMetaData(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -247,8 +246,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_METADATA)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
-      QNetworkCacheMetaData *ptr = new QNetworkCacheMetaData(obj->metaData(*PQURL(1)));
-      Qt4xHb::createReturnClass(ptr, "QNETWORKCACHEMETADATA", true);
+      RQNETWORKCACHEMETADATA(obj->metaData(*PQURL(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

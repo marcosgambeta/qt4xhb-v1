@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_DIGEST)
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
       RQBYTEARRAY(obj->digest(HB_ISNIL(1) ? static_cast<QCryptographicHash::Algorithm>(QCryptographicHash::Md5)
-                                                 : PQCRYPTOGRAPHICHASH_ALGORITHM(1)));
+                                          : PQCRYPTOGRAPHICHASH_ALGORITHM(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -156,8 +156,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_EFFECTIVEDATE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QDateTime *ptr = new QDateTime(obj->effectiveDate());
-      Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
+      RQDATETIME(obj->effectiveDate());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -175,8 +174,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_EXPIRYDATE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QDateTime *ptr = new QDateTime(obj->expiryDate());
-      Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
+      RQDATETIME(obj->expiryDate());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -251,8 +249,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_PUBLICKEY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSslKey *ptr = new QSslKey(obj->publicKey());
-      Qt4xHb::createReturnClass(ptr, "QSSLKEY", true);
+      RQSSLKEY(obj->publicKey());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

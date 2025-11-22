@@ -375,8 +375,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_REQUEST)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QNetworkRequest *ptr = new QNetworkRequest(obj->request());
-      Qt4xHb::createReturnClass(ptr, "QNETWORKREQUEST", true);
+      RQNETWORKREQUEST(obj->request());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -434,8 +433,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_SSLCONFIGURATION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSslConfiguration *ptr = new QSslConfiguration(obj->sslConfiguration());
-      Qt4xHb::createReturnClass(ptr, "QSSLCONFIGURATION", true);
+      RQSSLCONFIGURATION(obj->sslConfiguration());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -453,8 +451,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_URL)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QUrl *ptr = new QUrl(obj->url());
-      Qt4xHb::createReturnClass(ptr, "QURL", true);
+      RQURL(obj->url());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

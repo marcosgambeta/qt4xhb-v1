@@ -440,8 +440,7 @@ HB_FUNC_STATIC(QSSLSOCKET_LOCALCERTIFICATE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSslCertificate *ptr = new QSslCertificate(obj->localCertificate());
-      Qt4xHb::createReturnClass(ptr, "QSSLCERTIFICATE", true);
+      RQSSLCERTIFICATE(obj->localCertificate());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -477,8 +476,7 @@ HB_FUNC_STATIC(QSSLSOCKET_PEERCERTIFICATE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSslCertificate *ptr = new QSslCertificate(obj->peerCertificate());
-      Qt4xHb::createReturnClass(ptr, "QSSLCERTIFICATE", true);
+      RQSSLCERTIFICATE(obj->peerCertificate());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -573,8 +571,7 @@ HB_FUNC_STATIC(QSSLSOCKET_PRIVATEKEY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSslKey *ptr = new QSslKey(obj->privateKey());
-      Qt4xHb::createReturnClass(ptr, "QSSLKEY", true);
+      RQSSLKEY(obj->privateKey());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -610,8 +607,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SESSIONCIPHER)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSslCipher *ptr = new QSslCipher(obj->sessionCipher());
-      Qt4xHb::createReturnClass(ptr, "QSSLCIPHER", true);
+      RQSSLCIPHER(obj->sessionCipher());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -903,8 +899,7 @@ HB_FUNC_STATIC(QSSLSOCKET_SSLCONFIGURATION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSslConfiguration *ptr = new QSslConfiguration(obj->sslConfiguration());
-      Qt4xHb::createReturnClass(ptr, "QSSLCONFIGURATION", true);
+      RQSSLCONFIGURATION(obj->sslConfiguration());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

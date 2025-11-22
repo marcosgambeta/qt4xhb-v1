@@ -233,8 +233,7 @@ HB_FUNC_STATIC(QTCPSERVER_PROXY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QNetworkProxy *ptr = new QNetworkProxy(obj->proxy());
-      Qt4xHb::createReturnClass(ptr, "QNETWORKPROXY", true);
+      RQNETWORKPROXY(obj->proxy());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -252,8 +251,7 @@ HB_FUNC_STATIC(QTCPSERVER_SERVERADDRESS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QHostAddress *ptr = new QHostAddress(obj->serverAddress());
-      Qt4xHb::createReturnClass(ptr, "QHOSTADDRESS", true);
+      RQHOSTADDRESS(obj->serverAddress());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
