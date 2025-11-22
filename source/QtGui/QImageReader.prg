@@ -341,8 +341,7 @@ HB_FUNC_STATIC(QIMAGEREADER_FORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QByteArray *ptr = new QByteArray(obj->format());
-      RQBYTEARRAY(ptr);
+      RQBYTEARRAY(obj->format());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -820,13 +819,11 @@ HB_FUNC_STATIC(QIMAGEREADER_IMAGEFORMAT)
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // static QByteArray imageFormat(const QString &fileName)
 
-    QByteArray *ptr = new QByteArray(QImageReader::imageFormat(PQSTRING(1)));
-    RQBYTEARRAY(ptr);
+    RQBYTEARRAY(QImageReader::imageFormat(PQSTRING(1)));
   } else if (ISNUMPAR(1) && ISQIODEVICE(1)) {
     // static QByteArray imageFormat(QIODevice *device)
 
-    QByteArray *ptr = new QByteArray(QImageReader::imageFormat(PQIODEVICE(1)));
-    RQBYTEARRAY(ptr);
+    RQBYTEARRAY(QImageReader::imageFormat(PQIODEVICE(1)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

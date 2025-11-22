@@ -425,8 +425,7 @@ HB_FUNC_STATIC(QFILE_ENCODENAME)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
-    QByteArray *ptr = new QByteArray(QFile::encodeName(PQSTRING(1)));
-    RQBYTEARRAY(ptr);
+    RQBYTEARRAY(QFile::encodeName(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

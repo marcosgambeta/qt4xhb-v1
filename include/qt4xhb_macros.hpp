@@ -161,7 +161,7 @@
 #define RQICON(exp)                                         Qt4xHb::createReturnClass(new QIcon(exp), "QICON", true)
 #define RQSIZE(exp)                                         Qt4xHb::createReturnClass(new QSize(exp), "QSIZE", true)
 #define RQCOLOR(exp)                                        Qt4xHb::createReturnClass(new QColor(exp), "QCOLOR", true)
-#define RQBYTEARRAY(p)                                      Qt4xHb::createReturnClass(p, "QBYTEARRAY", true)
+#define RQBYTEARRAY(exp)                                    Qt4xHb::createReturnClass(new QByteArray(exp), "QBYTEARRAY", true)
 #define RQPOINT(p)                                          Qt4xHb::createReturnClass(p, "QPOINT", true)
 #define RQPOINTF(p)                                         Qt4xHb::createReturnClass(p, "QPOINTF", true)
 #define RQRECT(p)                                           Qt4xHb::createReturnClass(p, "QRECT", true)

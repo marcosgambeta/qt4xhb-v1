@@ -202,8 +202,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_NAME)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QByteArray *ptr = new QByteArray(obj->name());
-      RQBYTEARRAY(ptr);
+      RQBYTEARRAY(obj->name());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -379,9 +378,8 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_TORAWFORM)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      QByteArray *ptr = new QByteArray(obj->toRawForm(
+      RQBYTEARRAY(obj->toRawForm(
           HB_ISNIL(1) ? static_cast<QNetworkCookie::RawForm>(QNetworkCookie::Full) : PQNETWORKCOOKIE_RAWFORM(1)));
-      RQBYTEARRAY(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -399,8 +397,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_VALUE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QByteArray *ptr = new QByteArray(obj->value());
-      RQBYTEARRAY(ptr);
+      RQBYTEARRAY(obj->value());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

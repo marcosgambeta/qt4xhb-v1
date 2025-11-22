@@ -137,10 +137,8 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_DIGEST)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      QByteArray *ptr =
-          new QByteArray(obj->digest(HB_ISNIL(1) ? static_cast<QCryptographicHash::Algorithm>(QCryptographicHash::Md5)
+      RQBYTEARRAY(obj->digest(HB_ISNIL(1) ? static_cast<QCryptographicHash::Algorithm>(QCryptographicHash::Md5)
                                                  : PQCRYPTOGRAPHICHASH_ALGORITHM(1)));
-      RQBYTEARRAY(ptr);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -272,8 +270,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_SERIALNUMBER)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QByteArray *ptr = new QByteArray(obj->serialNumber());
-      RQBYTEARRAY(ptr);
+      RQBYTEARRAY(obj->serialNumber());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -312,8 +309,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_TODER)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QByteArray *ptr = new QByteArray(obj->toDer());
-      RQBYTEARRAY(ptr);
+      RQBYTEARRAY(obj->toDer());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -331,8 +327,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_TOPEM)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QByteArray *ptr = new QByteArray(obj->toPem());
-      RQBYTEARRAY(ptr);
+      RQBYTEARRAY(obj->toPem());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -350,8 +345,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_VERSION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QByteArray *ptr = new QByteArray(obj->version());
-      RQBYTEARRAY(ptr);
+      RQBYTEARRAY(obj->version());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
