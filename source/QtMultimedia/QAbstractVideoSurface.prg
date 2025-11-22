@@ -138,8 +138,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_NEARESTFORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1)) {
 #endif
-      QVideoSurfaceFormat *ptr = new QVideoSurfaceFormat(obj->nearestFormat(*PQVIDEOSURFACEFORMAT(1)));
-      Qt4xHb::createReturnClass(ptr, "QVIDEOSURFACEFORMAT", true);
+      RQVIDEOSURFACEFORMAT(obj->nearestFormat(*PQVIDEOSURFACEFORMAT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -242,8 +241,7 @@ HB_FUNC_STATIC(QABSTRACTVIDEOSURFACE_SURFACEFORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QVideoSurfaceFormat *ptr = new QVideoSurfaceFormat(obj->surfaceFormat());
-      Qt4xHb::createReturnClass(ptr, "QVIDEOSURFACEFORMAT", true);
+      RQVIDEOSURFACEFORMAT(obj->surfaceFormat());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
