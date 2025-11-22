@@ -287,8 +287,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_METHOD)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QMetaMethod *ptr = new QMetaMethod(obj->method());
-      Qt4xHb::createReturnClass(ptr, "QMETAMETHOD", true);
+      RQMETAMETHOD(obj->method());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -361,8 +360,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTY_PROPERTY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QMetaProperty *ptr = new QMetaProperty(obj->property());
-      Qt4xHb::createReturnClass(ptr, "QMETAPROPERTY", true);
+      RQMETAPROPERTY(obj->property());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
