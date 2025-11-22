@@ -128,8 +128,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_NAMEPOOL)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QXmlNamePool *ptr = new QXmlNamePool(obj->namePool());
-      Qt4xHb::createReturnClass(ptr, "QXMLNAMEPOOL", true);
+      RQXMLNAMEPOOL(obj->namePool());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -166,8 +165,7 @@ HB_FUNC_STATIC(QXMLSCHEMAVALIDATOR_SCHEMA)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QXmlSchema *ptr = new QXmlSchema(obj->schema());
-      Qt4xHb::createReturnClass(ptr, "QXMLSCHEMA", true);
+      RQXMLSCHEMA(obj->schema());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

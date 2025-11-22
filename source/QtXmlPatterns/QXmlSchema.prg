@@ -107,8 +107,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_DOCUMENTURI)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QUrl *ptr = new QUrl(obj->documentUri());
-      Qt4xHb::createReturnClass(ptr, "QURL", true);
+      RQURL(obj->documentUri());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -191,8 +190,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_NAMEPOOL)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QXmlNamePool *ptr = new QXmlNamePool(obj->namePool());
-      Qt4xHb::createReturnClass(ptr, "QXMLNAMEPOOL", true);
+      RQXMLNAMEPOOL(obj->namePool());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
