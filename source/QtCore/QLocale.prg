@@ -316,8 +316,7 @@ HB_FUNC_STATIC(QLOCALE_DECIMALPOINT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QChar *ptr = new QChar(obj->decimalPoint());
-      Qt4xHb::createReturnClass(ptr, "QCHAR", true);
+      RQCHAR(obj->decimalPoint());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -335,8 +334,7 @@ HB_FUNC_STATIC(QLOCALE_EXPONENTIAL)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QChar *ptr = new QChar(obj->exponential());
-      Qt4xHb::createReturnClass(ptr, "QCHAR", true);
+      RQCHAR(obj->exponential());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -372,8 +370,7 @@ HB_FUNC_STATIC(QLOCALE_GROUPSEPARATOR)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QChar *ptr = new QChar(obj->groupSeparator());
-      Qt4xHb::createReturnClass(ptr, "QCHAR", true);
+      RQCHAR(obj->groupSeparator());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -500,8 +497,7 @@ HB_FUNC_STATIC(QLOCALE_NEGATIVESIGN)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QChar *ptr = new QChar(obj->negativeSign());
-      Qt4xHb::createReturnClass(ptr, "QCHAR", true);
+      RQCHAR(obj->negativeSign());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -537,8 +533,7 @@ HB_FUNC_STATIC(QLOCALE_PERCENT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QChar *ptr = new QChar(obj->percent());
-      Qt4xHb::createReturnClass(ptr, "QCHAR", true);
+      RQCHAR(obj->percent());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -574,8 +569,7 @@ HB_FUNC_STATIC(QLOCALE_POSITIVESIGN)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QChar *ptr = new QChar(obj->positiveSign());
-      Qt4xHb::createReturnClass(ptr, "QCHAR", true);
+      RQCHAR(obj->positiveSign());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -877,17 +871,15 @@ HB_FUNC_STATIC(QLOCALE_TODATE)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QDate *ptr = new QDate(obj->toDate(
-          PQSTRING(1), HB_ISNIL(2) ? static_cast<QLocale::FormatType>(QLocale::LongFormat) : PQLOCALE_FORMATTYPE(2)));
-      Qt4xHb::createReturnClass(ptr, "QDATE", true);
+      RQDATE(obj->toDate(PQSTRING(1),
+                         HB_ISNIL(2) ? static_cast<QLocale::FormatType>(QLocale::LongFormat) : PQLOCALE_FORMATTYPE(2)));
     }
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     // QDate toDate(const QString &string, const QString &format) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QDate *ptr = new QDate(obj->toDate(PQSTRING(1), PQSTRING(2)));
-      Qt4xHb::createReturnClass(ptr, "QDATE", true);
+      RQDATE(obj->toDate(PQSTRING(1), PQSTRING(2)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -901,17 +893,15 @@ HB_FUNC_STATIC(QLOCALE_TODATETIME)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QDateTime *ptr = new QDateTime(obj->toDateTime(
-          PQSTRING(1), HB_ISNIL(2) ? static_cast<QLocale::FormatType>(QLocale::LongFormat) : PQLOCALE_FORMATTYPE(2)));
-      Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
+      RQDATETIME(obj->toDateTime(PQSTRING(1), HB_ISNIL(2) ? static_cast<QLocale::FormatType>(QLocale::LongFormat)
+                                                          : PQLOCALE_FORMATTYPE(2)));
     }
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     // QDateTime toDateTime(const QString &string, const QString &format) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QDateTime *ptr = new QDateTime(obj->toDateTime(PQSTRING(1), PQSTRING(2)));
-      Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
+      RQDATETIME(obj->toDateTime(PQSTRING(1), PQSTRING(2)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1302,17 +1292,15 @@ HB_FUNC_STATIC(QLOCALE_TOTIME)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QTime *ptr = new QTime(obj->toTime(
-          PQSTRING(1), HB_ISNIL(2) ? static_cast<QLocale::FormatType>(QLocale::LongFormat) : PQLOCALE_FORMATTYPE(2)));
-      Qt4xHb::createReturnClass(ptr, "QTIME", true);
+      RQTIME(obj->toTime(PQSTRING(1),
+                         HB_ISNIL(2) ? static_cast<QLocale::FormatType>(QLocale::LongFormat) : PQLOCALE_FORMATTYPE(2)));
     }
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     // QTime toTime(const QString &string, const QString &format) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QTime *ptr = new QTime(obj->toTime(PQSTRING(1), PQSTRING(2)));
-      Qt4xHb::createReturnClass(ptr, "QTIME", true);
+      RQTIME(obj->toTime(PQSTRING(1), PQSTRING(2)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1447,8 +1435,7 @@ HB_FUNC_STATIC(QLOCALE_C)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0)) {
 #endif
-    QLocale *ptr = new QLocale(QLocale::c());
-    Qt4xHb::createReturnClass(ptr, "QLOCALE", true);
+    RQLOCALE(QLocale::c());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1557,8 +1544,7 @@ HB_FUNC_STATIC(QLOCALE_SYSTEM)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0)) {
 #endif
-    QLocale *ptr = new QLocale(QLocale::system());
-    Qt4xHb::createReturnClass(ptr, "QLOCALE", true);
+    RQLOCALE(QLocale::system());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

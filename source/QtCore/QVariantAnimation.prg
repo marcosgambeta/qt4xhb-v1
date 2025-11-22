@@ -100,8 +100,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_EASINGCURVE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QEasingCurve *ptr = new QEasingCurve(obj->easingCurve());
-      Qt4xHb::createReturnClass(ptr, "QEASINGCURVE", true);
+      RQEASINGCURVE(obj->easingCurve());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

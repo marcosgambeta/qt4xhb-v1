@@ -434,8 +434,7 @@ HB_FUNC_STATIC(QVARIANT_TOBITARRAY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QBitArray *ptr = new QBitArray(obj->toBitArray());
-      Qt4xHb::createReturnClass(ptr, "QBITARRAY", true);
+      RQBITARRAY(obj->toBitArray());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -489,8 +488,7 @@ HB_FUNC_STATIC(QVARIANT_TOCHAR)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QChar *ptr = new QChar(obj->toChar());
-      Qt4xHb::createReturnClass(ptr, "QCHAR", true);
+      RQCHAR(obj->toChar());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -508,8 +506,7 @@ HB_FUNC_STATIC(QVARIANT_TODATE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QDate *ptr = new QDate(obj->toDate());
-      Qt4xHb::createReturnClass(ptr, "QDATE", true);
+      RQDATE(obj->toDate());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -527,8 +524,7 @@ HB_FUNC_STATIC(QVARIANT_TODATETIME)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QDateTime *ptr = new QDateTime(obj->toDateTime());
-      Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
+      RQDATETIME(obj->toDateTime());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -566,8 +562,7 @@ HB_FUNC_STATIC(QVARIANT_TOEASINGCURVE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QEasingCurve *ptr = new QEasingCurve(obj->toEasingCurve());
-      Qt4xHb::createReturnClass(ptr, "QEASINGCURVE", true);
+      RQEASINGCURVE(obj->toEasingCurve());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -625,8 +620,7 @@ HB_FUNC_STATIC(QVARIANT_TOLINE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QLine *ptr = new QLine(obj->toLine());
-      Qt4xHb::createReturnClass(ptr, "QLINE", true);
+      RQLINE(obj->toLine());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -644,8 +638,7 @@ HB_FUNC_STATIC(QVARIANT_TOLINEF)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QLineF *ptr = new QLineF(obj->toLineF());
-      Qt4xHb::createReturnClass(ptr, "QLINEF", true);
+      RQLINEF(obj->toLineF());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -681,8 +674,7 @@ HB_FUNC_STATIC(QVARIANT_TOLOCALE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QLocale *ptr = new QLocale(obj->toLocale());
-      Qt4xHb::createReturnClass(ptr, "QLOCALE", true);
+      RQLOCALE(obj->toLocale());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -812,8 +804,7 @@ HB_FUNC_STATIC(QVARIANT_TOREGEXP)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRegExp *ptr = new QRegExp(obj->toRegExp());
-      Qt4xHb::createReturnClass(ptr, "QREGEXP", true);
+      RQREGEXP(obj->toRegExp());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -849,8 +840,7 @@ HB_FUNC_STATIC(QVARIANT_TOSIZEF)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSizeF *ptr = new QSizeF(obj->toSizeF());
-      Qt4xHb::createReturnClass(ptr, "QSIZEF", true);
+      RQSIZEF(obj->toSizeF());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -904,8 +894,7 @@ HB_FUNC_STATIC(QVARIANT_TOTIME)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QTime *ptr = new QTime(obj->toTime());
-      Qt4xHb::createReturnClass(ptr, "QTIME", true);
+      RQTIME(obj->toTime());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -963,8 +952,7 @@ HB_FUNC_STATIC(QVARIANT_TOURL)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QUrl *ptr = new QUrl(obj->toUrl());
-      Qt4xHb::createReturnClass(ptr, "QURL", true);
+      RQURL(obj->toUrl());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

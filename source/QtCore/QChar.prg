@@ -567,8 +567,7 @@ HB_FUNC_STATIC(QCHAR_MIRROREDCHAR)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QChar *ptr = new QChar(obj->mirroredChar());
-      Qt4xHb::createReturnClass(ptr, "QCHAR", true);
+      RQCHAR(obj->mirroredChar());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -586,8 +585,7 @@ HB_FUNC_STATIC(QCHAR_TOCASEFOLDED)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QChar *ptr = new QChar(obj->toCaseFolded());
-      Qt4xHb::createReturnClass(ptr, "QCHAR", true);
+      RQCHAR(obj->toCaseFolded());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -605,8 +603,7 @@ HB_FUNC_STATIC(QCHAR_TOLOWER)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QChar *ptr = new QChar(obj->toLower());
-      Qt4xHb::createReturnClass(ptr, "QCHAR", true);
+      RQCHAR(obj->toLower());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -624,8 +621,7 @@ HB_FUNC_STATIC(QCHAR_TOTITLECASE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QChar *ptr = new QChar(obj->toTitleCase());
-      Qt4xHb::createReturnClass(ptr, "QCHAR", true);
+      RQCHAR(obj->toTitleCase());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -643,8 +639,7 @@ HB_FUNC_STATIC(QCHAR_TOUPPER)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QChar *ptr = new QChar(obj->toUpper());
-      Qt4xHb::createReturnClass(ptr, "QCHAR", true);
+      RQCHAR(obj->toUpper());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

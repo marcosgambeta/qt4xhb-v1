@@ -234,7 +234,7 @@ RETURN
 
 #define GET_PTR_FROM_SELF(p) QObject *p = qobject_cast<QObject *>(Qt4xHb::getQObjectPointerFromSelfItem())
 
-static void _qtxhb_processOnEventMethod(QEvent::Type event);
+    static void _qtxhb_processOnEventMethod(QEvent::Type event);
 static void _qtxhb_processOnEventMethod2(QEvent::Type event);
 
 // QObject(QObject *parent = 0)

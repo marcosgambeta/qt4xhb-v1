@@ -245,8 +245,7 @@ HB_FUNC_STATIC(QUUID_FROMRFC4122)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
 #endif
-    QUuid *ptr = new QUuid(QUuid::fromRfc4122(*PQBYTEARRAY(1)));
-    Qt4xHb::createReturnClass(ptr, "QUUID", true);
+    RQUUID(QUuid::fromRfc4122(*PQBYTEARRAY(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -260,8 +259,7 @@ HB_FUNC_STATIC(QUUID_CREATEUUID)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0)) {
 #endif
-    QUuid *ptr = new QUuid(QUuid::createUuid());
-    Qt4xHb::createReturnClass(ptr, "QUUID", true);
+    RQUUID(QUuid::createUuid());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

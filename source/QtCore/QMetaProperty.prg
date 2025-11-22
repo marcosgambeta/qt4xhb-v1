@@ -422,8 +422,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_ENUMERATOR)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QMetaEnum *ptr = new QMetaEnum(obj->enumerator());
-      Qt4xHb::createReturnClass(ptr, "QMETAENUM", true);
+      RQMETAENUM(obj->enumerator());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -459,8 +458,7 @@ HB_FUNC_STATIC(QMETAPROPERTY_NOTIFYSIGNAL)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QMetaMethod *ptr = new QMetaMethod(obj->notifySignal());
-      Qt4xHb::createReturnClass(ptr, "QMETAMETHOD", true);
+      RQMETAMETHOD(obj->notifySignal());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

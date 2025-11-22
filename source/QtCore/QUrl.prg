@@ -802,8 +802,7 @@ HB_FUNC_STATIC(QURL_RESOLVED)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQURL(1)) {
 #endif
-      QUrl *ptr = new QUrl(obj->resolved(*PQURL(1)));
-      Qt4xHb::createReturnClass(ptr, "QURL", true);
+      RQURL(obj->resolved(*PQURL(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1229,7 +1228,8 @@ HB_FUNC_STATIC(QURL_TOENCODED)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 1) && ISNUMORNIL(1)) {
 #endif
-      RQBYTEARRAY(obj->toEncoded(HB_ISNIL(1) ? static_cast<QUrl::FormattingOptions>(QUrl::None) : PQURL_FORMATTINGOPTIONS(1)));
+      RQBYTEARRAY(
+          obj->toEncoded(HB_ISNIL(1) ? static_cast<QUrl::FormattingOptions>(QUrl::None) : PQURL_FORMATTINGOPTIONS(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1348,13 +1348,11 @@ HB_FUNC_STATIC(QURL_FROMENCODED)
   if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     // static QUrl fromEncoded(const QByteArray &input)
 
-    QUrl *ptr = new QUrl(QUrl::fromEncoded(*PQBYTEARRAY(1)));
-    Qt4xHb::createReturnClass(ptr, "QURL", true);
+    RQURL(QUrl::fromEncoded(*PQBYTEARRAY(1)));
   } else if (ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISNUM(2)) {
     // static QUrl fromEncoded(const QByteArray &input, QUrl::ParsingMode parsingMode)
 
-    QUrl *ptr = new QUrl(QUrl::fromEncoded(*PQBYTEARRAY(1), PQURL_PARSINGMODE(2)));
-    Qt4xHb::createReturnClass(ptr, "QURL", true);
+    RQURL(QUrl::fromEncoded(*PQBYTEARRAY(1), PQURL_PARSINGMODE(2)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -1366,8 +1364,7 @@ HB_FUNC_STATIC(QURL_FROMLOCALFILE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
-    QUrl *ptr = new QUrl(QUrl::fromLocalFile(PQSTRING(1)));
-    Qt4xHb::createReturnClass(ptr, "QURL", true);
+    RQURL(QUrl::fromLocalFile(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1395,8 +1392,7 @@ HB_FUNC_STATIC(QURL_FROMUSERINPUT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
-    QUrl *ptr = new QUrl(QUrl::fromUserInput(PQSTRING(1)));
-    Qt4xHb::createReturnClass(ptr, "QURL", true);
+    RQURL(QUrl::fromUserInput(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

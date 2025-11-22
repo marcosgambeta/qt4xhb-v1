@@ -1963,9 +1963,9 @@ HB_FUNC_STATIC(QBYTEARRAY_TOPERCENTENCODING)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(0, 3) && ISQBYTEARRAYORNIL(1) && ISQBYTEARRAYORNIL(2) && ISNUMORNIL(3)) {
 #endif
-      RQBYTEARRAY(obj->toPercentEncoding(
-          HB_ISNIL(1) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(1)),
-          HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(2)), OPCHAR(3, '%')));
+      RQBYTEARRAY(obj->toPercentEncoding(HB_ISNIL(1) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(1)),
+                                         HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(2)),
+                                         OPCHAR(3, '%')));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

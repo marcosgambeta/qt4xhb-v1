@@ -339,8 +339,7 @@ HB_FUNC_STATIC(QLINEF_NORMALVECTOR)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QLineF *ptr = new QLineF(obj->normalVector());
-      Qt4xHb::createReturnClass(ptr, "QLINEF", true);
+      RQLINEF(obj->normalVector());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -496,8 +495,7 @@ HB_FUNC_STATIC(QLINEF_TOLINE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QLine *ptr = new QLine(obj->toLine());
-      Qt4xHb::createReturnClass(ptr, "QLINE", true);
+      RQLINE(obj->toLine());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -538,16 +536,14 @@ HB_FUNC_STATIC(QLINEF_TRANSLATED)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QLineF *ptr = new QLineF(obj->translated(*PQPOINTF(1)));
-      Qt4xHb::createReturnClass(ptr, "QLINEF", true);
+      RQLINEF(obj->translated(*PQPOINTF(1)));
     }
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // QLineF translated(qreal dx, qreal dy) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QLineF *ptr = new QLineF(obj->translated(PQREAL(1), PQREAL(2)));
-      Qt4xHb::createReturnClass(ptr, "QLINEF", true);
+      RQLINEF(obj->translated(PQREAL(1), PQREAL(2)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -563,8 +559,7 @@ HB_FUNC_STATIC(QLINEF_UNITVECTOR)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QLineF *ptr = new QLineF(obj->unitVector());
-      Qt4xHb::createReturnClass(ptr, "QLINEF", true);
+      RQLINEF(obj->unitVector());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -579,8 +574,7 @@ HB_FUNC_STATIC(QLINEF_FROMPOLAR)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
 #endif
-    QLineF *ptr = new QLineF(QLineF::fromPolar(PQREAL(1), PQREAL(2)));
-    Qt4xHb::createReturnClass(ptr, "QLINEF", true);
+    RQLINEF(QLineF::fromPolar(PQREAL(1), PQREAL(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

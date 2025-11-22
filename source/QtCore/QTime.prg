@@ -105,8 +105,7 @@ HB_FUNC_STATIC(QTIME_ADDMSECS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QTime *ptr = new QTime(obj->addMSecs(PINT(1)));
-      Qt4xHb::createReturnClass(ptr, "QTIME", true);
+      RQTIME(obj->addMSecs(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -124,8 +123,7 @@ HB_FUNC_STATIC(QTIME_ADDSECS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QTime *ptr = new QTime(obj->addSecs(PINT(1)));
-      Qt4xHb::createReturnClass(ptr, "QTIME", true);
+      RQTIME(obj->addSecs(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -361,8 +359,7 @@ HB_FUNC_STATIC(QTIME_CURRENTTIME)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0)) {
 #endif
-    QTime *ptr = new QTime(QTime::currentTime());
-    Qt4xHb::createReturnClass(ptr, "QTIME", true);
+    RQTIME(QTime::currentTime());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -375,16 +372,13 @@ HB_FUNC_STATIC(QTIME_FROMSTRING)
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
     // static QTime fromString(const QString &string, Qt::DateFormat format = Qt::TextDate)
 
-    QTime *ptr = new QTime(
-        QTime::fromString(PQSTRING(1), HB_ISNIL(2) ? static_cast<Qt::DateFormat>(Qt::TextDate) : PQT_DATEFORMAT(2)));
-    Qt4xHb::createReturnClass(ptr, "QTIME", true);
+    RQTIME(QTime::fromString(PQSTRING(1), HB_ISNIL(2) ? static_cast<Qt::DateFormat>(Qt::TextDate) : PQT_DATEFORMAT(2)));
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     // QTime fromString(const QString &string, const QString &format)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QTime *ptr = new QTime(obj->fromString(PQSTRING(1), PQSTRING(2)));
-      Qt4xHb::createReturnClass(ptr, "QTIME", true);
+      RQTIME(obj->fromString(PQSTRING(1), PQSTRING(2)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

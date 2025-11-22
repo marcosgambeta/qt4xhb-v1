@@ -114,8 +114,7 @@ HB_FUNC_STATIC(QDATE_ADDDAYS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QDate *ptr = new QDate(obj->addDays(PINT(1)));
-      Qt4xHb::createReturnClass(ptr, "QDATE", true);
+      RQDATE(obj->addDays(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -133,8 +132,7 @@ HB_FUNC_STATIC(QDATE_ADDMONTHS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QDate *ptr = new QDate(obj->addMonths(PINT(1)));
-      Qt4xHb::createReturnClass(ptr, "QDATE", true);
+      RQDATE(obj->addMonths(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -152,8 +150,7 @@ HB_FUNC_STATIC(QDATE_ADDYEARS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QDate *ptr = new QDate(obj->addYears(PINT(1)));
-      Qt4xHb::createReturnClass(ptr, "QDATE", true);
+      RQDATE(obj->addYears(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -433,8 +430,7 @@ HB_FUNC_STATIC(QDATE_CURRENTDATE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0)) {
 #endif
-    QDate *ptr = new QDate(QDate::currentDate());
-    Qt4xHb::createReturnClass(ptr, "QDATE", true);
+    RQDATE(QDate::currentDate());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -448,8 +444,7 @@ HB_FUNC_STATIC(QDATE_FROMJULIANDAY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-    QDate *ptr = new QDate(QDate::fromJulianDay(PINT(1)));
-    Qt4xHb::createReturnClass(ptr, "QDATE", true);
+    RQDATE(QDate::fromJulianDay(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -462,14 +457,11 @@ HB_FUNC_STATIC(QDATE_FROMSTRING)
   if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
     // static QDate fromString(const QString &string, Qt::DateFormat format = Qt::TextDate)
 
-    QDate *ptr = new QDate(
-        QDate::fromString(PQSTRING(1), HB_ISNIL(2) ? static_cast<Qt::DateFormat>(Qt::TextDate) : PQT_DATEFORMAT(2)));
-    Qt4xHb::createReturnClass(ptr, "QDATE", true);
+    RQDATE(QDate::fromString(PQSTRING(1), HB_ISNIL(2) ? static_cast<Qt::DateFormat>(Qt::TextDate) : PQT_DATEFORMAT(2)));
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2)) {
     // static QDate fromString(const QString &string, const QString &format)
 
-    QDate *ptr = new QDate(QDate::fromString(PQSTRING(1), PQSTRING(2)));
-    Qt4xHb::createReturnClass(ptr, "QDATE", true);
+    RQDATE(QDate::fromString(PQSTRING(1), PQSTRING(2)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

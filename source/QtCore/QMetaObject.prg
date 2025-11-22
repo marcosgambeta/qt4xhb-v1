@@ -112,8 +112,7 @@ HB_FUNC_STATIC(QMETAOBJECT_CLASSINFO)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QMetaClassInfo *ptr = new QMetaClassInfo(obj->classInfo(PINT(1)));
-      Qt4xHb::createReturnClass(ptr, "QMETACLASSINFO", true);
+      RQMETACLASSINFO(obj->classInfo(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -185,8 +184,7 @@ HB_FUNC_STATIC(QMETAOBJECT_CONSTRUCTOR)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QMetaMethod *ptr = new QMetaMethod(obj->constructor(PINT(1)));
-      Qt4xHb::createReturnClass(ptr, "QMETAMETHOD", true);
+      RQMETAMETHOD(obj->constructor(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -222,8 +220,7 @@ HB_FUNC_STATIC(QMETAOBJECT_ENUMERATOR)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QMetaEnum *ptr = new QMetaEnum(obj->enumerator(PINT(1)));
-      Qt4xHb::createReturnClass(ptr, "QMETAENUM", true);
+      RQMETAENUM(obj->enumerator(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -403,8 +400,7 @@ HB_FUNC_STATIC(QMETAOBJECT_METHOD)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QMetaMethod *ptr = new QMetaMethod(obj->method(PINT(1)));
-      Qt4xHb::createReturnClass(ptr, "QMETAMETHOD", true);
+      RQMETAMETHOD(obj->method(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -458,8 +454,7 @@ HB_FUNC_STATIC(QMETAOBJECT_PROPERTY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QMetaProperty *ptr = new QMetaProperty(obj->property(PINT(1)));
-      Qt4xHb::createReturnClass(ptr, "QMETAPROPERTY", true);
+      RQMETAPROPERTY(obj->property(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -532,8 +527,7 @@ HB_FUNC_STATIC(QMETAOBJECT_USERPROPERTY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QMetaProperty *ptr = new QMetaProperty(obj->userProperty());
-      Qt4xHb::createReturnClass(ptr, "QMETAPROPERTY", true);
+      RQMETAPROPERTY(obj->userProperty());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
