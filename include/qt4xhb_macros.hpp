@@ -156,17 +156,6 @@
 #define RQSTRINGLIST(x)                                     Qt4xHb::convert_qstringlist_to_array(x)
 #define RQRGB(x)                                            hb_retni(x)
 
-#define RQVARIANT(exp)                                      Qt4xHb::createReturnClass(new QVariant(exp), "QVARIANT", true)
-#define RQMODELINDEX(exp)                                   Qt4xHb::createReturnClass(new QModelIndex(exp), "QMODELINDEX", true)
-#define RQICON(exp)                                         Qt4xHb::createReturnClass(new QIcon(exp), "QICON", true)
-#define RQSIZE(exp)                                         Qt4xHb::createReturnClass(new QSize(exp), "QSIZE", true)
-#define RQCOLOR(exp)                                        Qt4xHb::createReturnClass(new QColor(exp), "QCOLOR", true)
-#define RQBYTEARRAY(exp)                                    Qt4xHb::createReturnClass(new QByteArray(exp), "QBYTEARRAY", true)
-#define RQPOINT(exp)                                        Qt4xHb::createReturnClass(new QPoint(exp), "QPOINT", true)
-#define RQPOINTF(exp)                                       Qt4xHb::createReturnClass(new QPointF(exp), "QPOINTF", true)
-#define RQRECT(exp)                                         Qt4xHb::createReturnClass(new QRect(exp), "QRECT", true)
-#define RQRECTF(exp)                                        Qt4xHb::createReturnClass(new QRectF(exp), "QRECTF", true)
-
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  static_cast<const char*>(x.toAscii().data())
 

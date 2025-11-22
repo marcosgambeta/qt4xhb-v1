@@ -59,4 +59,7 @@
 
 #define PQHELPSEARCHQUERY_FIELDNAME(n)                      static_cast<QHelpSearchQuery::FieldName>(hb_parni(n))
 
+#define RQHELPCONTENTITEM(exp)                              Qt4xHb::createReturnClass(new QHelpContentItem(exp), "QHELPCONTENTITEM", true)
+#define RQHELPSEARCHQUERY(exp)                              Qt4xHb::createReturnClass(new QHelpSearchQuery(exp), "QHELPSEARCHQUERY", true)
+
 #endif // QT4XHB_MACROS_QTHELP_HPP

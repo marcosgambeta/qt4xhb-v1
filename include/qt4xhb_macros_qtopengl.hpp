@@ -69,4 +69,13 @@
 #define PQGLFUNCTIONS_OPENGLFEATURES(n)                     static_cast<QGLFunctions::OpenGLFeatures>(hb_parni(n))
 #define PQGLSHADER_SHADERTYPE(n)                            static_cast<QGLShader::ShaderType>(hb_parni(n))
 
+#define RQGLBUFFER(exp)                                     Qt4xHb::createReturnClass(new QGLBuffer(exp), "QGLBUFFER", true)
+#define RQGLCOLORMAP(exp)                                   Qt4xHb::createReturnClass(new QGLColormap(exp), "QGLCOLORMAP", true)
+#define RQGLCONTEXT(exp)                                    Qt4xHb::createReturnClass(new QGLContext(exp), "QGLCONTEXT", true)
+#define RQGLFORMAT(exp)                                     Qt4xHb::createReturnClass(new QGLFormat(exp), "QGLFORMAT", true)
+#define RQGLFRAMEBUFFEROBJECT(exp)                          Qt4xHb::createReturnClass(new QGLFramebufferObject(exp), "QGLFRAMEBUFFEROBJECT", true)
+#define RQGLFRAMEBUFFEROBJECTFORMAT(exp)                    Qt4xHb::createReturnClass(new QGLFramebufferObjectFormat(exp), "QGLFRAMEBUFFEROBJECTFORMAT", true)
+#define RQGLFUNCTIONS(exp)                                  Qt4xHb::createReturnClass(new QGLFunctions(exp), "QGLFUNCTIONS", true)
+#define RQGLPIXELBUFFER(exp)                                Qt4xHb::createReturnClass(new QGLPixelBuffer(exp), "QGLPIXELBUFFER", true)
+
 #endif // QT4XHB_MACROS_QTOPENGL_HPP

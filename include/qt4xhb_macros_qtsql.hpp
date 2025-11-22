@@ -88,4 +88,15 @@
 #define PQSQLQUERY_BATCHEXECUTIONMODE(n)                    static_cast<QSqlQuery::BatchExecutionMode>(hb_parni(n))
 #define PQSQLTABLEMODEL_EDITSTRATEGY(n)                     static_cast<QSqlTableModel::EditStrategy>(hb_parni(n))
 
+#define RQSQLDATABASE(exp)                                  Qt4xHb::createReturnClass(new QSqlDatabase(exp), "QSQLDATABASE", true)
+#define RQSQLDRIVERCREATOR(exp)                             Qt4xHb::createReturnClass(new QSqlDriverCreator(exp), "QSQLDRIVERCREATOR", true)
+#define RQSQLDRIVERCREATORBASE(exp)                         Qt4xHb::createReturnClass(new QSqlDriverCreatorBase(exp), "QSQLDRIVERCREATORBASE", true)
+#define RQSQLERROR(exp)                                     Qt4xHb::createReturnClass(new QSqlError(exp), "QSQLERROR", true)
+#define RQSQLFIELD(exp)                                     Qt4xHb::createReturnClass(new QSqlField(exp), "QSQLFIELD", true)
+#define RQSQLINDEX(exp)                                     Qt4xHb::createReturnClass(new QSqlIndex(exp), "QSQLINDEX", true)
+#define RQSQLQUERY(exp)                                     Qt4xHb::createReturnClass(new QSqlQuery(exp), "QSQLQUERY", true)
+#define RQSQLRECORD(exp)                                    Qt4xHb::createReturnClass(new QSqlRecord(exp), "QSQLRECORD", true)
+#define RQSQLRELATION(exp)                                  Qt4xHb::createReturnClass(new QSqlRelation(exp), "QSQLRELATION", true)
+#define RQSQLRESULT(exp)                                    Qt4xHb::createReturnClass(new QSqlResult(exp), "QSQLRESULT", true)
+
 #endif // QT4XHB_MACROS_QTSQL_HPP

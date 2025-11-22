@@ -81,4 +81,19 @@
 #define PQXMLNODEMODELINDEX_NODEKIND(n)                     static_cast<QXmlNodeModelIndex::NodeKind>(hb_parni(n))
 #define PQXMLQUERY_QUERYLANGUAGE(n)                         static_cast<QXmlQuery::QueryLanguage>(hb_parni(n))
 
+#define RQABSTRACTXMLNODEMODEL(exp)                         Qt4xHb::createReturnClass(new QAbstractXmlNodeModel(exp), "QABSTRACTXMLNODEMODEL", true)
+#define RQABSTRACTXMLRECEIVER(exp)                          Qt4xHb::createReturnClass(new QAbstractXmlReceiver(exp), "QABSTRACTXMLRECEIVER", true)
+#define RQSIMPLEXMLNODEMODEL(exp)                           Qt4xHb::createReturnClass(new QSimpleXmlNodeModel(exp), "QSIMPLEXMLNODEMODEL", true)
+#define RQSOURCELOCATION(exp)                               Qt4xHb::createReturnClass(new QSourceLocation(exp), "QSOURCELOCATION", true)
+#define RQXMLFORMATTER(exp)                                 Qt4xHb::createReturnClass(new QXmlFormatter(exp), "QXMLFORMATTER", true)
+#define RQXMLITEM(exp)                                      Qt4xHb::createReturnClass(new QXmlItem(exp), "QXMLITEM", true)
+#define RQXMLNAME(exp)                                      Qt4xHb::createReturnClass(new QXmlName(exp), "QXMLNAME", true)
+#define RQXMLNAMEPOOL(exp)                                  Qt4xHb::createReturnClass(new QXmlNamePool(exp), "QXMLNAMEPOOL", true)
+#define RQXMLNODEMODELINDEX(exp)                            Qt4xHb::createReturnClass(new QXmlNodeModelIndex(exp), "QXMLNODEMODELINDEX", true)
+#define RQXMLQUERY(exp)                                     Qt4xHb::createReturnClass(new QXmlQuery(exp), "QXMLQUERY", true)
+#define RQXMLRESULTITEMS(exp)                               Qt4xHb::createReturnClass(new QXmlResultItems(exp), "QXMLRESULTITEMS", true)
+#define RQXMLSCHEMA(exp)                                    Qt4xHb::createReturnClass(new QXmlSchema(exp), "QXMLSCHEMA", true)
+#define RQXMLSCHEMAVALIDATOR(exp)                           Qt4xHb::createReturnClass(new QXmlSchemaValidator(exp), "QXMLSCHEMAVALIDATOR", true)
+#define RQXMLSERIALIZER(exp)                                Qt4xHb::createReturnClass(new QXmlSerializer(exp), "QXMLSERIALIZER", true)
+
 #endif // QT4XHB_MACROS_QTXMLPATTERNS_HPP

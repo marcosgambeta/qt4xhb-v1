@@ -76,4 +76,16 @@
 #define PQSCRIPTVALUE_PROPERTYFLAGS(n)                      static_cast<QScriptValue::PropertyFlags>(hb_parni(n))
 #define PQSCRIPTVALUE_SPECIALVALUE(n)                       static_cast<QScriptValue::SpecialValue>(hb_parni(n))
 
+#define RQSCRIPTABLE(exp)                                   Qt4xHb::createReturnClass(new QScriptable(exp), "QSCRIPTABLE", true)
+#define RQSCRIPTCLASS(exp)                                  Qt4xHb::createReturnClass(new QScriptClass(exp), "QSCRIPTCLASS", true)
+#define RQSCRIPTCLASSPROPERTYITERATOR(exp)                  Qt4xHb::createReturnClass(new QScriptClassPropertyIterator(exp), "QSCRIPTCLASSPROPERTYITERATOR", true)
+#define RQSCRIPTCONTEXT(exp)                                Qt4xHb::createReturnClass(new QScriptContext(exp), "QSCRIPTCONTEXT", true)
+#define RQSCRIPTCONTEXTINFO(exp)                            Qt4xHb::createReturnClass(new QScriptContextInfo(exp), "QSCRIPTCONTEXTINFO", true)
+#define RQSCRIPTENGINEAGENT(exp)                            Qt4xHb::createReturnClass(new QScriptEngineAgent(exp), "QSCRIPTENGINEAGENT", true)
+#define RQSCRIPTPROGRAM(exp)                                Qt4xHb::createReturnClass(new QScriptProgram(exp), "QSCRIPTPROGRAM", true)
+#define RQSCRIPTSTRING(exp)                                 Qt4xHb::createReturnClass(new QScriptString(exp), "QSCRIPTSTRING", true)
+#define RQSCRIPTSYNTAXCHECKRESULT(exp)                      Qt4xHb::createReturnClass(new QScriptSyntaxCheckResult(exp), "QSCRIPTSYNTAXCHECKRESULT", true)
+#define RQSCRIPTVALUE(exp)                                  Qt4xHb::createReturnClass(new QScriptValue(exp), "QSCRIPTVALUE", true)
+#define RQSCRIPTVALUEITERATOR(exp)                          Qt4xHb::createReturnClass(new QScriptValueIterator(exp), "QSCRIPTVALUEITERATOR", true)
+
 #endif // QT4XHB_MACROS_QTSCRIPT_HPP

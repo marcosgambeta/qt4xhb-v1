@@ -49,4 +49,7 @@
 #define PQAXSCRIPT_FUNCTIONFLAGS(n)                         static_cast<QAxScript::FunctionFlags>(hb_parni(n))
 #define PQAXSCRIPTENGINE_STATE(n)                           static_cast<QAxScriptEngine::State>(hb_parni(n))
 
+#define RQAXBASE(exp)                                       Qt4xHb::createReturnClass(new QAxBase(exp), "QAXBASE", true)
+#define RQAXBINDABLE(exp)                                   Qt4xHb::createReturnClass(new QAxBindable(exp), "QAXBINDABLE", true)
+
 #endif // QT4XHB_MACROS_ACTIVEQT_HPP

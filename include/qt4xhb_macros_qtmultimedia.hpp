@@ -55,4 +55,10 @@
 #define PQVIDEOSURFACEFORMAT_DIRECTION(n)                   static_cast<QVideoSurfaceFormat::Direction>(hb_parni(n))
 #define PQVIDEOSURFACEFORMAT_YCBCRCOLORSPACE(n)             static_cast<QVideoSurfaceFormat::YCbCrColorSpace>(hb_parni(n))
 
+#define RQABSTRACTVIDEOBUFFER(exp)                          Qt4xHb::createReturnClass(new QAbstractVideoBuffer(exp), "QABSTRACTVIDEOBUFFER", true)
+#define RQAUDIODEVICEINFO(exp)                              Qt4xHb::createReturnClass(new QAudioDeviceInfo(exp), "QAUDIODEVICEINFO", true)
+#define RQAUDIOFORMAT(exp)                                  Qt4xHb::createReturnClass(new QAudioFormat(exp), "QAUDIOFORMAT", true)
+#define RQVIDEOFRAME(exp)                                   Qt4xHb::createReturnClass(new QVideoFrame(exp), "QVIDEOFRAME", true)
+#define RQVIDEOSURFACEFORMAT(exp)                           Qt4xHb::createReturnClass(new QVideoSurfaceFormat(exp), "QVIDEOSURFACEFORMAT", true)
+
 #endif // QT4XHB_MACROS_QTMULTIMEDIA_HPP

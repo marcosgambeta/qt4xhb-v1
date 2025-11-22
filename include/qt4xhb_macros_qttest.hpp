@@ -17,4 +17,7 @@
 
 #define OPQTESTEVENTLIST(n, v)                              HB_ISNIL(n) ? v : static_cast<QTestEventList *>(Qt4xHb::itemGetPtr(n))
 
+
+#define RQTESTEVENTLIST(exp)                                Qt4xHb::createReturnClass(new QTestEventList(exp), "QTESTEVENTLIST", true)
+
 #endif // QT4XHB_MACROS_QTTEST_HPP

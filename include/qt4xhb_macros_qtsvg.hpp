@@ -29,4 +29,7 @@
 #define OPQSVGRENDERER(n, v)                                HB_ISNIL(n) ? v : static_cast<QSvgRenderer *>(Qt4xHb::itemGetPtr(n))
 #define OPQSVGWIDGET(n, v)                                  HB_ISNIL(n) ? v : static_cast<QSvgWidget *>(Qt4xHb::itemGetPtr(n))
 
+
+#define RQSVGGENERATOR(exp)                                 Qt4xHb::createReturnClass(new QSvgGenerator(exp), "QSVGGENERATOR", true)
+
 #endif // QT4XHB_MACROS_QTSVG_HPP

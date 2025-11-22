@@ -84,4 +84,13 @@
 #define PQWEBSETTINGS_WEBATTRIBUTE(n)                       static_cast<QWebSettings::WebAttribute>(hb_parni(n))
 #define PQWEBSETTINGS_WEBGRAPHIC(n)                         static_cast<QWebSettings::WebGraphic>(hb_parni(n))
 
+#define RQWEBDATABASE(exp)                                  Qt4xHb::createReturnClass(new QWebDatabase(exp), "QWEBDATABASE", true)
+#define RQWEBELEMENT(exp)                                   Qt4xHb::createReturnClass(new QWebElement(exp), "QWEBELEMENT", true)
+#define RQWEBELEMENTCOLLECTION(exp)                         Qt4xHb::createReturnClass(new QWebElementCollection(exp), "QWEBELEMENTCOLLECTION", true)
+#define RQWEBHISTORY(exp)                                   Qt4xHb::createReturnClass(new QWebHistory(exp), "QWEBHISTORY", true)
+#define RQWEBHISTORYITEM(exp)                               Qt4xHb::createReturnClass(new QWebHistoryItem(exp), "QWEBHISTORYITEM", true)
+#define RQWEBHITTESTRESULT(exp)                             Qt4xHb::createReturnClass(new QWebHitTestResult(exp), "QWEBHITTESTRESULT", true)
+#define RQWEBSECURITYORIGIN(exp)                            Qt4xHb::createReturnClass(new QWebSecurityOrigin(exp), "QWEBSECURITYORIGIN", true)
+#define RQWEBSETTINGS(exp)                                  Qt4xHb::createReturnClass(new QWebSettings(exp), "QWEBSETTINGS", true)
+
 #endif // QT4XHB_MACROS_QTWEBKIT_HPP

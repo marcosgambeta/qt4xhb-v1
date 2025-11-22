@@ -101,4 +101,16 @@
 #define PQDESIGNERFORMWINDOWCURSORINTERFACE_MOVEOPERATION(n)static_cast<QDesignerFormWindowCursorInterface::MoveOperation>(hb_parni(n))
 #define PQDESIGNERFORMWINDOWINTERFACE_FEATURE(n)            static_cast<QDesignerFormWindowInterface::Feature>(hb_parni(n))
 
+#define RQABSTRACTEXTENSIONFACTORY(exp)                     Qt4xHb::createReturnClass(new QAbstractExtensionFactory(exp), "QABSTRACTEXTENSIONFACTORY", true)
+#define RQABSTRACTEXTENSIONMANAGER(exp)                     Qt4xHb::createReturnClass(new QAbstractExtensionManager(exp), "QABSTRACTEXTENSIONMANAGER", true)
+#define RQABSTRACTFORMBUILDER(exp)                          Qt4xHb::createReturnClass(new QAbstractFormBuilder(exp), "QABSTRACTFORMBUILDER", true)
+#define RQDESIGNERCONTAINEREXTENSION(exp)                   Qt4xHb::createReturnClass(new QDesignerContainerExtension(exp), "QDESIGNERCONTAINEREXTENSION", true)
+#define RQDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE(exp)      Qt4xHb::createReturnClass(new QDesignerCustomWidgetCollectionInterface(exp), "QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE", true)
+#define RQDESIGNERDYNAMICPROPERTYSHEETEXTENSION(exp)        Qt4xHb::createReturnClass(new QDesignerDynamicPropertySheetExtension(exp), "QDESIGNERDYNAMICPROPERTYSHEETEXTENSION", true)
+#define RQDESIGNERFORMWINDOWCURSORINTERFACE(exp)            Qt4xHb::createReturnClass(new QDesignerFormWindowCursorInterface(exp), "QDESIGNERFORMWINDOWCURSORINTERFACE", true)
+#define RQDESIGNERMEMBERSHEETEXTENSION(exp)                 Qt4xHb::createReturnClass(new QDesignerMemberSheetExtension(exp), "QDESIGNERMEMBERSHEETEXTENSION", true)
+#define RQDESIGNERPROPERTYSHEETEXTENSION(exp)               Qt4xHb::createReturnClass(new QDesignerPropertySheetExtension(exp), "QDESIGNERPROPERTYSHEETEXTENSION", true)
+#define RQDESIGNERTASKMENUEXTENSION(exp)                    Qt4xHb::createReturnClass(new QDesignerTaskMenuExtension(exp), "QDESIGNERTASKMENUEXTENSION", true)
+#define RQFORMBUILDER(exp)                                  Qt4xHb::createReturnClass(new QFormBuilder(exp), "QFORMBUILDER", true)
+
 #endif // QT4XHB_MACROS_QTDESIGNER_HPP

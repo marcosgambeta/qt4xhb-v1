@@ -86,4 +86,13 @@
 #define PQDECLARATIVEVIEW_RESIZEMODE(n)                     static_cast<QDeclarativeView::ResizeMode>(hb_parni(n))
 #define PQDECLARATIVEVIEW_STATUS(n)                         static_cast<QDeclarativeView::Status>(hb_parni(n))
 
+#define RQDECLARATIVEERROR(exp)                             Qt4xHb::createReturnClass(new QDeclarativeError(exp), "QDECLARATIVEERROR", true)
+#define RQDECLARATIVEIMAGEPROVIDER(exp)                     Qt4xHb::createReturnClass(new QDeclarativeImageProvider(exp), "QDECLARATIVEIMAGEPROVIDER", true)
+#define RQDECLARATIVELISTREFERENCE(exp)                     Qt4xHb::createReturnClass(new QDeclarativeListReference(exp), "QDECLARATIVELISTREFERENCE", true)
+#define RQDECLARATIVENETWORKACCESSMANAGERFACTORY(exp)       Qt4xHb::createReturnClass(new QDeclarativeNetworkAccessManagerFactory(exp), "QDECLARATIVENETWORKACCESSMANAGERFACTORY", true)
+#define RQDECLARATIVEPARSERSTATUS(exp)                      Qt4xHb::createReturnClass(new QDeclarativeParserStatus(exp), "QDECLARATIVEPARSERSTATUS", true)
+#define RQDECLARATIVEPROPERTY(exp)                          Qt4xHb::createReturnClass(new QDeclarativeProperty(exp), "QDECLARATIVEPROPERTY", true)
+#define RQDECLARATIVEPROPERTYVALUESOURCE(exp)               Qt4xHb::createReturnClass(new QDeclarativePropertyValueSource(exp), "QDECLARATIVEPROPERTYVALUESOURCE", true)
+#define RQDECLARATIVESCRIPTSTRING(exp)                      Qt4xHb::createReturnClass(new QDeclarativeScriptString(exp), "QDECLARATIVESCRIPTSTRING", true)
+
 #endif // QT4XHB_MACROS_QTDECLARATIVE_HPP

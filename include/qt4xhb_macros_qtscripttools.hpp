@@ -21,4 +21,5 @@
 #define PQSCRIPTENGINEDEBUGGER_DEBUGGERSTATE(n)             static_cast<QScriptEngineDebugger::DebuggerState>(hb_parni(n))
 #define PQSCRIPTENGINEDEBUGGER_DEBUGGERWIDGET(n)            static_cast<QScriptEngineDebugger::DebuggerWidget>(hb_parni(n))
 
+
 #endif // QT4XHB_MACROS_QTSCRIPTTOOLS_HPP
