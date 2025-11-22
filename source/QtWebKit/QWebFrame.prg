@@ -144,8 +144,7 @@ HB_FUNC_STATIC(QWEBFRAME_BASEURL)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QUrl *ptr = new QUrl(obj->baseUrl());
-      Qt4xHb::createReturnClass(ptr, "QURL", true);
+      RQURL(obj->baseUrl());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -219,8 +218,7 @@ HB_FUNC_STATIC(QWEBFRAME_DOCUMENTELEMENT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QWebElement *ptr = new QWebElement(obj->documentElement());
-      Qt4xHb::createReturnClass(ptr, "QWEBELEMENT", true);
+      RQWEBELEMENT(obj->documentElement());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -238,8 +236,7 @@ HB_FUNC_STATIC(QWEBFRAME_FINDALLELEMENTS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
-      QWebElementCollection *ptr = new QWebElementCollection(obj->findAllElements(PQSTRING(1)));
-      Qt4xHb::createReturnClass(ptr, "QWEBELEMENTCOLLECTION", true);
+      RQWEBELEMENTCOLLECTION(obj->findAllElements(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -257,8 +254,7 @@ HB_FUNC_STATIC(QWEBFRAME_FINDFIRSTELEMENT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISCHAR(1)) {
 #endif
-      QWebElement *ptr = new QWebElement(obj->findFirstElement(PQSTRING(1)));
-      Qt4xHb::createReturnClass(ptr, "QWEBELEMENT", true);
+      RQWEBELEMENT(obj->findFirstElement(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -330,8 +326,7 @@ HB_FUNC_STATIC(QWEBFRAME_HITTESTCONTENT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
-      QWebHitTestResult *ptr = new QWebHitTestResult(obj->hitTestContent(*PQPOINT(1)));
-      Qt4xHb::createReturnClass(ptr, "QWEBHITTESTRESULT", true);
+      RQWEBHITTESTRESULT(obj->hitTestContent(*PQPOINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -505,8 +500,7 @@ HB_FUNC_STATIC(QWEBFRAME_REQUESTEDURL)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QUrl *ptr = new QUrl(obj->requestedUrl());
-      Qt4xHb::createReturnClass(ptr, "QURL", true);
+      RQURL(obj->requestedUrl());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -672,8 +666,7 @@ HB_FUNC_STATIC(QWEBFRAME_SECURITYORIGIN)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QWebSecurityOrigin *ptr = new QWebSecurityOrigin(obj->securityOrigin());
-      Qt4xHb::createReturnClass(ptr, "QWEBSECURITYORIGIN", true);
+      RQWEBSECURITYORIGIN(obj->securityOrigin());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -944,8 +937,7 @@ HB_FUNC_STATIC(QWEBFRAME_URL)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QUrl *ptr = new QUrl(obj->url());
-      Qt4xHb::createReturnClass(ptr, "QURL", true);
+      RQURL(obj->url());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

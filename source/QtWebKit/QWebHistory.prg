@@ -94,8 +94,7 @@ HB_FUNC_STATIC(QWEBHISTORY_BACKITEM)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QWebHistoryItem *ptr = new QWebHistoryItem(obj->backItem());
-      Qt4xHb::createReturnClass(ptr, "QWEBHISTORYITEM", true);
+      RQWEBHISTORYITEM(obj->backItem());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -228,8 +227,7 @@ HB_FUNC_STATIC(QWEBHISTORY_CURRENTITEM)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QWebHistoryItem *ptr = new QWebHistoryItem(obj->currentItem());
-      Qt4xHb::createReturnClass(ptr, "QWEBHISTORYITEM", true);
+      RQWEBHISTORYITEM(obj->currentItem());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -285,8 +283,7 @@ HB_FUNC_STATIC(QWEBHISTORY_FORWARDITEM)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QWebHistoryItem *ptr = new QWebHistoryItem(obj->forwardItem());
-      Qt4xHb::createReturnClass(ptr, "QWEBHISTORYITEM", true);
+      RQWEBHISTORYITEM(obj->forwardItem());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -365,8 +362,7 @@ HB_FUNC_STATIC(QWEBHISTORY_ITEMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QWebHistoryItem *ptr = new QWebHistoryItem(obj->itemAt(PINT(1)));
-      Qt4xHb::createReturnClass(ptr, "QWEBHISTORYITEM", true);
+      RQWEBHISTORYITEM(obj->itemAt(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
