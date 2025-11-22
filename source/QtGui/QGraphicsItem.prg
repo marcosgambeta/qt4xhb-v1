@@ -316,8 +316,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_BOUNDINGRECT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRectF *ptr = new QRectF(obj->boundingRect());
-      RQRECTF(ptr);
+      RQRECTF(obj->boundingRect());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -428,8 +427,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_CHILDRENBOUNDINGRECT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRectF *ptr = new QRectF(obj->childrenBoundingRect());
-      RQRECTF(ptr);
+      RQRECTF(obj->childrenBoundingRect());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1371,16 +1369,14 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTFROMITEM)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QRectF *ptr = new QRectF(obj->mapRectFromItem(PQGRAPHICSITEM(1), *PQRECTF(2)));
-      RQRECTF(ptr);
+      RQRECTF(obj->mapRectFromItem(PQGRAPHICSITEM(1), *PQRECTF(2)));
     }
   } else if (ISNUMPAR(5) && ISQGRAPHICSITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5)) {
     // QRectF mapRectFromItem(const QGraphicsItem *item, qreal x, qreal y, qreal w, qreal h) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QRectF *ptr = new QRectF(obj->mapRectFromItem(PQGRAPHICSITEM(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5)));
-      RQRECTF(ptr);
+      RQRECTF(obj->mapRectFromItem(PQGRAPHICSITEM(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1394,16 +1390,14 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTFROMPARENT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QRectF *ptr = new QRectF(obj->mapRectFromParent(*PQRECTF(1)));
-      RQRECTF(ptr);
+      RQRECTF(obj->mapRectFromParent(*PQRECTF(1)));
     }
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // QRectF mapRectFromParent(qreal x, qreal y, qreal w, qreal h) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QRectF *ptr = new QRectF(obj->mapRectFromParent(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
-      RQRECTF(ptr);
+      RQRECTF(obj->mapRectFromParent(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1417,16 +1411,14 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTFROMSCENE)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QRectF *ptr = new QRectF(obj->mapRectFromScene(*PQRECTF(1)));
-      RQRECTF(ptr);
+      RQRECTF(obj->mapRectFromScene(*PQRECTF(1)));
     }
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // QRectF mapRectFromScene(qreal x, qreal y, qreal w, qreal h) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QRectF *ptr = new QRectF(obj->mapRectFromScene(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
-      RQRECTF(ptr);
+      RQRECTF(obj->mapRectFromScene(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1440,17 +1432,15 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTTOITEM)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QRectF *ptr = new QRectF(obj->mapRectToItem(PQGRAPHICSITEM(1), *PQRECTF(2)));
-      RQRECTF(ptr);
+      RQRECTF(obj->mapRectToItem(PQGRAPHICSITEM(1), *PQRECTF(2)));
     }
   } else if (ISNUMPAR(5) && ISQGRAPHICSITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5)) {
     // QRectF mapRectToItem(const QGraphicsItem *item, qreal x, qreal y, qreal w, qreal h) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QRectF *ptr = new QRectF(obj->mapRectToItem(PQGRAPHICSITEM(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5)));
-      RQRECTF(ptr);
-    }
+      RQRECTF(obj->mapRectToItem(PQGRAPHICSITEM(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5)));
+   }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -1463,16 +1453,14 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTTOPARENT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QRectF *ptr = new QRectF(obj->mapRectToParent(*PQRECTF(1)));
-      RQRECTF(ptr);
+      RQRECTF(obj->mapRectToParent(*PQRECTF(1)));
     }
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // QRectF mapRectToParent(qreal x, qreal y, qreal w, qreal h) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QRectF *ptr = new QRectF(obj->mapRectToParent(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
-      RQRECTF(ptr);
+      RQRECTF(obj->mapRectToParent(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1486,16 +1474,14 @@ HB_FUNC_STATIC(QGRAPHICSITEM_MAPRECTTOSCENE)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QRectF *ptr = new QRectF(obj->mapRectToScene(*PQRECTF(1)));
-      RQRECTF(ptr);
+      RQRECTF(obj->mapRectToScene(*PQRECTF(1)));
     }
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // QRectF mapRectToScene(qreal x, qreal y, qreal w, qreal h) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QRectF *ptr = new QRectF(obj->mapRectToScene(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
-      RQRECTF(ptr);
+      RQRECTF(obj->mapRectToScene(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1954,8 +1940,7 @@ HB_FUNC_STATIC(QGRAPHICSITEM_SCENEBOUNDINGRECT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRectF *ptr = new QRectF(obj->sceneBoundingRect());
-      RQRECTF(ptr);
+      RQRECTF(obj->sceneBoundingRect());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

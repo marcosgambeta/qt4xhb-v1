@@ -99,8 +99,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_CONTENTSRECT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRectF *ptr = new QRectF(obj->contentsRect());
-      RQRECTF(ptr);
+      RQRECTF(obj->contentsRect());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -138,8 +137,7 @@ HB_FUNC_STATIC(QGRAPHICSLAYOUTITEM_GEOMETRY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRectF *ptr = new QRectF(obj->geometry());
-      RQRECTF(ptr);
+      RQRECTF(obj->geometry());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

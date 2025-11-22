@@ -776,8 +776,7 @@ HB_FUNC_STATIC(QVARIANT_TORECT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRect *ptr = new QRect(obj->toRect());
-      RQRECT(ptr);
+      RQRECT(obj->toRect());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -795,8 +794,7 @@ HB_FUNC_STATIC(QVARIANT_TORECTF)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRectF *ptr = new QRectF(obj->toRectF());
-      RQRECTF(ptr);
+      RQRECTF(obj->toRectF());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

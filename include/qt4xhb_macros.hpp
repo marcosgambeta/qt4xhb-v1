@@ -164,8 +164,8 @@
 #define RQBYTEARRAY(exp)                                    Qt4xHb::createReturnClass(new QByteArray(exp), "QBYTEARRAY", true)
 #define RQPOINT(exp)                                        Qt4xHb::createReturnClass(new QPoint(exp), "QPOINT", true)
 #define RQPOINTF(exp)                                       Qt4xHb::createReturnClass(new QPointF(exp), "QPOINTF", true)
-#define RQRECT(p)                                           Qt4xHb::createReturnClass(p, "QRECT", true)
-#define RQRECTF(p)                                          Qt4xHb::createReturnClass(p, "QRECTF", true)
+#define RQRECT(exp)                                         Qt4xHb::createReturnClass(new QRect(exp), "QRECT", true)
+#define RQRECTF(exp)                                        Qt4xHb::createReturnClass(new QRectF(exp), "QRECTF", true)
 
 // conversion from QString to string
 #define QSTRINGTOSTRING(x)                                  static_cast<const char*>(x.toAscii().data())

@@ -764,8 +764,7 @@ HB_FUNC_STATIC(QIMAGE_RECT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRect *ptr = new QRect(obj->rect());
-      RQRECT(ptr);
+      RQRECT(obj->rect());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

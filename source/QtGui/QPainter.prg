@@ -269,33 +269,29 @@ HB_FUNC_STATIC(QPAINTER_BOUNDINGRECT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QRectF *ptr = new QRectF(obj->boundingRect(*PQRECTF(1), PINT(2), PQSTRING(3)));
-      RQRECTF(ptr);
+      RQRECTF(obj->boundingRect(*PQRECTF(1), PINT(2), PQSTRING(3)));
     }
   } else if (ISNUMPAR(3) && ISQRECT(1) && HB_ISNUM(2) && HB_ISCHAR(3)) {
     // QRect boundingRect(const QRect &rectangle, int flags, const QString &text)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QRect *ptr = new QRect(obj->boundingRect(*PQRECT(1), PINT(2), PQSTRING(3)));
-      RQRECT(ptr);
+      RQRECT(obj->boundingRect(*PQRECT(1), PINT(2), PQSTRING(3)));
     }
   } else if (ISNUMPAR(6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISCHAR(6)) {
     // QRect boundingRect(int x, int y, int w, int h, int flags, const QString &text)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QRect *ptr = new QRect(obj->boundingRect(PINT(1), PINT(2), PINT(3), PINT(4), PINT(5), PQSTRING(6)));
-      RQRECT(ptr);
+      RQRECT(obj->boundingRect(PINT(1), PINT(2), PINT(3), PINT(4), PINT(5), PQSTRING(6)));
     }
   } else if (ISBETWEEN(2, 3) && ISQRECTF(1) && HB_ISCHAR(2) && (ISQTEXTOPTION(3) || HB_ISNIL(3))) {
     // QRectF boundingRect(const QRectF &rectangle, const QString &text, const QTextOption &option = QTextOption())
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QRectF *ptr = new QRectF(obj->boundingRect(
+      RQRECTF(obj->boundingRect(
           *PQRECTF(1), PQSTRING(2), HB_ISNIL(3) ? QTextOption() : *static_cast<QTextOption *>(Qt4xHb::itemGetPtr(3))));
-      RQRECTF(ptr);
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2589,8 +2585,7 @@ HB_FUNC_STATIC(QPAINTER_VIEWPORT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRect *ptr = new QRect(obj->viewport());
-      RQRECT(ptr);
+      RQRECT(obj->viewport());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2608,8 +2603,7 @@ HB_FUNC_STATIC(QPAINTER_WINDOW)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRect *ptr = new QRect(obj->window());
-      RQRECT(ptr);
+      RQRECT(obj->window());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

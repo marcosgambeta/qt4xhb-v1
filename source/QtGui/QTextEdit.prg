@@ -348,16 +348,14 @@ HB_FUNC_STATIC(QTEXTEDIT_CURSORRECT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QRect *ptr = new QRect(obj->cursorRect(*PQTEXTCURSOR(1)));
-      RQRECT(ptr);
+      RQRECT(obj->cursorRect(*PQTEXTCURSOR(1)));
     }
   } else if (ISNUMPAR(0)) {
     // QRect cursorRect() const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QRect *ptr = new QRect(obj->cursorRect());
-      RQRECT(ptr);
+      RQRECT(obj->cursorRect());
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

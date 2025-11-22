@@ -194,8 +194,7 @@ HB_FUNC_STATIC(QIMAGEREADER_CLIPRECT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRect *ptr = new QRect(obj->clipRect());
-      RQRECT(ptr);
+      RQRECT(obj->clipRect());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -231,8 +230,7 @@ HB_FUNC_STATIC(QIMAGEREADER_CURRENTIMAGERECT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRect *ptr = new QRect(obj->currentImageRect());
-      RQRECT(ptr);
+      RQRECT(obj->currentImageRect());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -489,8 +487,7 @@ HB_FUNC_STATIC(QIMAGEREADER_SCALEDCLIPRECT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QRect *ptr = new QRect(obj->scaledClipRect());
-      RQRECT(ptr);
+      RQRECT(obj->scaledClipRect());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

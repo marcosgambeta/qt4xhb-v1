@@ -105,8 +105,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONCOMBOBOX_POPUPRECT)
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
-      QRect *ptr = new QRect(obj->popupRect);
-      RQRECT(ptr);
+      RQRECT(obj->popupRect);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }

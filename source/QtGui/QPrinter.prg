@@ -448,16 +448,14 @@ HB_FUNC_STATIC(QPRINTER_PAGERECT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QRect *ptr = new QRect(obj->pageRect());
-      RQRECT(ptr);
+      RQRECT(obj->pageRect());
     }
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QRectF pageRect(QPrinter::Unit unit) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QRectF *ptr = new QRectF(obj->pageRect(PQPRINTER_UNIT(1)));
-      RQRECTF(ptr);
+      RQRECTF(obj->pageRect(PQPRINTER_UNIT(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -471,16 +469,14 @@ HB_FUNC_STATIC(QPRINTER_PAPERRECT)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QRect *ptr = new QRect(obj->paperRect());
-      RQRECT(ptr);
+      RQRECT(obj->paperRect());
     }
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // QRectF paperRect(QPrinter::Unit unit) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QRectF *ptr = new QRectF(obj->paperRect(PQPRINTER_UNIT(1)));
-      RQRECTF(ptr);
+      RQRECTF(obj->paperRect(PQPRINTER_UNIT(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -97,8 +97,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_TABBARRECT)
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
-      QRect *ptr = new QRect(obj->tabBarRect);
-      RQRECT(ptr);
+      RQRECT(obj->tabBarRect);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
@@ -126,8 +125,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTABBARBASE_SELECTEDTABRECT)
 
   if (obj != NULL) {
     if (ISNUMPAR(0)) {
-      QRect *ptr = new QRect(obj->selectedTabRect);
-      RQRECT(ptr);
+      RQRECT(obj->selectedTabRect);
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
