@@ -95,8 +95,8 @@ HB_FUNC_STATIC(QSCRIPTCLASS_EXTENSION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQVARIANTORNIL(2)) {
 #endif
-      RQVARIANT(obj->extension(
-          PQSCRIPTCLASS_EXTENSION(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(2))));
+      RQVARIANT(obj->extension(PQSCRIPTCLASS_EXTENSION(1),
+                               HB_ISNIL(2) ? QVariant() : *static_cast<QVariant *>(Qt4xHb::itemGetPtr(2))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -151,8 +151,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_PROPERTY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(3) && ISQSCRIPTVALUE(1) && ISQSCRIPTSTRING(2) && HB_ISNUM(3)) {
 #endif
-      QScriptValue *ptr = new QScriptValue(obj->property(*PQSCRIPTVALUE(1), *PQSCRIPTSTRING(2), PUINT(3)));
-      Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
+      RQSCRIPTVALUE(obj->property(*PQSCRIPTVALUE(1), *PQSCRIPTSTRING(2), PUINT(3)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -188,8 +187,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_PROTOTYPE)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QScriptValue *ptr = new QScriptValue(obj->prototype());
-      Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
+      RQSCRIPTVALUE(obj->prototype());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

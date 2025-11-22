@@ -159,8 +159,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_NAME)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QScriptString *ptr = new QScriptString(obj->name());
-      Qt4xHb::createReturnClass(ptr, "QSCRIPTSTRING", true);
+      RQSCRIPTSTRING(obj->name());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -198,8 +197,7 @@ HB_FUNC_STATIC(QSCRIPTCLASSPROPERTYITERATOR_OBJECT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QScriptValue *ptr = new QScriptValue(obj->object());
-      Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
+      RQSCRIPTVALUE(obj->object());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
