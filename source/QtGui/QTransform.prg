@@ -555,16 +555,14 @@ HB_FUNC_STATIC(QTRANSFORM_MAP)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QPointF *ptr = new QPointF(obj->map(*PQPOINTF(1)));
-      RQPOINTF(ptr);
+      RQPOINTF(obj->map(*PQPOINTF(1)));
     }
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // QPoint map(const QPoint &point) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QPoint *ptr = new QPoint(obj->map(*PQPOINT(1)));
-      RQPOINT(ptr);
+      RQPOINT(obj->map(*PQPOINT(1)));
     }
   } else if (ISNUMPAR(1) && ISQLINE(1)) {
     // QLine map(const QLine &l) const

@@ -1617,8 +1617,7 @@ HB_FUNC_STATIC(QWIDGET_MAPFROM)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQWIDGET(1) && ISQPOINT(2)) {
 #endif
-      QPoint *ptr = new QPoint(obj->mapFrom(PQWIDGET(1), *PQPOINT(2)));
-      RQPOINT(ptr);
+      RQPOINT(obj->mapFrom(PQWIDGET(1), *PQPOINT(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1636,8 +1635,7 @@ HB_FUNC_STATIC(QWIDGET_MAPFROMGLOBAL)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
-      QPoint *ptr = new QPoint(obj->mapFromGlobal(*PQPOINT(1)));
-      RQPOINT(ptr);
+      RQPOINT(obj->mapFromGlobal(*PQPOINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1655,8 +1653,7 @@ HB_FUNC_STATIC(QWIDGET_MAPFROMPARENT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
-      QPoint *ptr = new QPoint(obj->mapFromParent(*PQPOINT(1)));
-      RQPOINT(ptr);
+      RQPOINT(obj->mapFromParent(*PQPOINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1674,8 +1671,7 @@ HB_FUNC_STATIC(QWIDGET_MAPTO)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(2) && ISQWIDGET(1) && ISQPOINT(2)) {
 #endif
-      QPoint *ptr = new QPoint(obj->mapTo(PQWIDGET(1), *PQPOINT(2)));
-      RQPOINT(ptr);
+      RQPOINT(obj->mapTo(PQWIDGET(1), *PQPOINT(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1693,8 +1689,7 @@ HB_FUNC_STATIC(QWIDGET_MAPTOGLOBAL)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
-      QPoint *ptr = new QPoint(obj->mapToGlobal(*PQPOINT(1)));
-      RQPOINT(ptr);
+      RQPOINT(obj->mapToGlobal(*PQPOINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1712,8 +1707,7 @@ HB_FUNC_STATIC(QWIDGET_MAPTOPARENT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && ISQPOINT(1)) {
 #endif
-      QPoint *ptr = new QPoint(obj->mapToParent(*PQPOINT(1)));
-      RQPOINT(ptr);
+      RQPOINT(obj->mapToParent(*PQPOINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -2016,8 +2010,7 @@ HB_FUNC_STATIC(QWIDGET_POS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QPoint *ptr = new QPoint(obj->pos());
-      RQPOINT(ptr);
+      RQPOINT(obj->pos());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

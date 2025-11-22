@@ -73,8 +73,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEHOVEREVENT_LASTPOS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QPointF *ptr = new QPointF(obj->lastPos());
-      RQPOINTF(ptr);
+      RQPOINTF(obj->lastPos());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -92,8 +91,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEHOVEREVENT_LASTSCENEPOS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QPointF *ptr = new QPointF(obj->lastScenePos());
-      RQPOINTF(ptr);
+      RQPOINTF(obj->lastScenePos());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -111,8 +109,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEHOVEREVENT_LASTSCREENPOS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QPoint *ptr = new QPoint(obj->lastScreenPos());
-      RQPOINT(ptr);
+      RQPOINT(obj->lastScreenPos());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -148,8 +145,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEHOVEREVENT_POS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QPointF *ptr = new QPointF(obj->pos());
-      RQPOINTF(ptr);
+      RQPOINTF(obj->pos());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -167,8 +163,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEHOVEREVENT_SCENEPOS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QPointF *ptr = new QPointF(obj->scenePos());
-      RQPOINTF(ptr);
+      RQPOINTF(obj->scenePos());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -186,8 +181,7 @@ HB_FUNC_STATIC(QGRAPHICSSCENEHOVEREVENT_SCREENPOS)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QPoint *ptr = new QPoint(obj->screenPos());
-      RQPOINT(ptr);
+      RQPOINT(obj->screenPos());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

@@ -508,8 +508,7 @@ HB_FUNC_STATIC(QPAINTERPATH_CURRENTPOSITION)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QPointF *ptr = new QPointF(obj->currentPosition());
-      RQPOINTF(ptr);
+      RQPOINTF(obj->currentPosition());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -707,8 +706,7 @@ HB_FUNC_STATIC(QPAINTERPATH_POINTATPERCENT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QPointF *ptr = new QPointF(obj->pointAtPercent(PQREAL(1)));
-      RQPOINTF(ptr);
+      RQPOINTF(obj->pointAtPercent(PQREAL(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
