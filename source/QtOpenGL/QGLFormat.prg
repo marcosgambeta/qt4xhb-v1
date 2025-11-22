@@ -1039,8 +1039,7 @@ HB_FUNC_STATIC(QGLFORMAT_DEFAULTFORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0)) {
 #endif
-    QGLFormat *ptr = new QGLFormat(QGLFormat::defaultFormat());
-    Qt4xHb::createReturnClass(ptr, "QGLFORMAT", true);
+    RQGLFORMAT(QGLFormat::defaultFormat());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1054,8 +1053,7 @@ HB_FUNC_STATIC(QGLFORMAT_DEFAULTOVERLAYFORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(0)) {
 #endif
-    QGLFormat *ptr = new QGLFormat(QGLFormat::defaultOverlayFormat());
-    Qt4xHb::createReturnClass(ptr, "QGLFORMAT", true);
+    RQGLFORMAT(QGLFormat::defaultOverlayFormat());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1144,8 +1142,7 @@ HB_FUNC_STATIC(QGLFORMAT_FROMPLATFORMWINDOWFORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && ISQPLATFORMWINDOWFORMAT(1)) {
 #endif
-    QGLFormat *ptr = new QGLFormat(QGLFormat::fromPlatformWindowFormat(*PQPLATFORMWINDOWFORMAT(1)));
-    Qt4xHb::createReturnClass(ptr, "QGLFORMAT", true);
+    RQGLFORMAT(QGLFormat::fromPlatformWindowFormat(*PQPLATFORMWINDOWFORMAT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -1160,8 +1157,7 @@ HB_FUNC_STATIC(QGLFORMAT_TOPLATFORMWINDOWFORMAT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   if (ISNUMPAR(1) && ISQGLFORMAT(1)) {
 #endif
-    QPlatformWindowFormat *ptr = new QPlatformWindowFormat(QGLFormat::toPlatformWindowFormat(*PQGLFORMAT(1)));
-    Qt4xHb::createReturnClass(ptr, "QPLATFORMWINDOWFORMAT", true);
+    RQPLATFORMWINDOWFORMAT(QGLFormat::toPlatformWindowFormat(*PQGLFORMAT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
