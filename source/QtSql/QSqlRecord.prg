@@ -205,16 +205,14 @@ HB_FUNC_STATIC(QSQLRECORD_FIELD)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QSqlField *ptr = new QSqlField(obj->field(PINT(1)));
-      Qt4xHb::createReturnClass(ptr, "QSQLFIELD", true);
+      RQSQLFIELD(obj->field(PINT(1)));
     }
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // QSqlField field(const QString &name) const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QSqlField *ptr = new QSqlField(obj->field(PQSTRING(1)));
-      Qt4xHb::createReturnClass(ptr, "QSQLFIELD", true);
+      RQSQLFIELD(obj->field(PQSTRING(1)));
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);

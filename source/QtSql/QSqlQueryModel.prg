@@ -121,8 +121,7 @@ HB_FUNC_STATIC(QSQLQUERYMODEL_LASTERROR)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSqlError *ptr = new QSqlError(obj->lastError());
-      Qt4xHb::createReturnClass(ptr, "QSQLERROR", true);
+      RQSQLERROR(obj->lastError());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -140,8 +139,7 @@ HB_FUNC_STATIC(QSQLQUERYMODEL_QUERY)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(0)) {
 #endif
-      QSqlQuery *ptr = new QSqlQuery(obj->query());
-      Qt4xHb::createReturnClass(ptr, "QSQLQUERY", true);
+      RQSQLQUERY(obj->query());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -157,16 +155,14 @@ HB_FUNC_STATIC(QSQLQUERYMODEL_RECORD)
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QSqlRecord *ptr = new QSqlRecord(obj->record(PINT(1)));
-      Qt4xHb::createReturnClass(ptr, "QSQLRECORD", true);
+      RQSQLRECORD(obj->record(PINT(1)));
     }
   } else if (ISNUMPAR(0)) {
     // QSqlRecord record() const
     GET_PTR_FROM_SELF(obj);
 
     if (obj != NULL) {
-      QSqlRecord *ptr = new QSqlRecord(obj->record());
-      Qt4xHb::createReturnClass(ptr, "QSQLRECORD", true);
+      RQSQLRECORD(obj->record());
     }
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
