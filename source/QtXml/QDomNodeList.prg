@@ -95,8 +95,7 @@ HB_FUNC_STATIC(QDOMNODELIST_AT)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QDomNode *ptr = new QDomNode(obj->at(PINT(1)));
-      Qt4xHb::createReturnClass(ptr, "QDOMNODE", true);
+      RQDOMNODE(obj->at(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
@@ -150,8 +149,7 @@ HB_FUNC_STATIC(QDOMNODELIST_ITEM)
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     if (ISNUMPAR(1) && HB_ISNUM(1)) {
 #endif
-      QDomNode *ptr = new QDomNode(obj->item(PINT(1)));
-      Qt4xHb::createReturnClass(ptr, "QDOMNODE", true);
+      RQDOMNODE(obj->item(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     } else {
       hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
