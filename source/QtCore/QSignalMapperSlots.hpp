@@ -20,7 +20,7 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-#include <QWidget>
+#include <QtGui/QWidget>
 
 class QSignalMapperSlots : public QObject
 {
