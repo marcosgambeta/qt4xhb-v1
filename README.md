@@ -18,19 +18,3 @@ https://github.com/marcosgambeta/harbourpp-v1
 Open a issue if you have problems with the compilation:
 
 https://github.com/marcosgambeta/qt4xhb/issues  
-
-### To contact the developer
-
-Send your message using one of the options below:
-
-E-mail:  
-marcosgambeta@outlook.com
-
-Telegram:  
-https://t.me/marcosgambeta
-
-### More info and extra content
-
-Follow the blog below for more info and extra content:
-
-https://magsoftinfo.com/blog/
