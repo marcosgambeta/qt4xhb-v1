@@ -30,7 +30,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
       run("del source\ActiveQt\QAxScriptManagerSlotsMoc.cpp")
       run("del source\ActiveQt\QAxScriptSlotsMoc.cpp")
       run("del source\ActiveQt\QAxWidgetSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

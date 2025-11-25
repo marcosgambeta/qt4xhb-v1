@@ -26,7 +26,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
       run("del source\QtMultimedia\QAbstractVideoSurfaceSlotsMoc.cpp")
       run("del source\QtMultimedia\QAudioInputSlotsMoc.cpp")
       run("del source\QtMultimedia\QAudioOutputSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

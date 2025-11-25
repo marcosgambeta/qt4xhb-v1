@@ -28,7 +28,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
       run("del source\QtWebKit\QWebFrameSlotsMoc.cpp")
       run("del source\QtWebKit\QWebPageSlotsMoc.cpp")
       run("del source\QtWebKit\QWebViewSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

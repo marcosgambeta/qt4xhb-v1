@@ -70,7 +70,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
       run("del source\QtCore\QTimeLineSlotsMoc.cpp")
       run("del source\QtCore\QTimerSlotsMoc.cpp")
       run("del source\QtCore\QVariantAnimationSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

@@ -36,7 +36,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
       run("del source\QtHelp\QHelpSearchEngineSlotsMoc.cpp")
       run("del source\QtHelp\QHelpSearchQueryWidgetSlotsMoc.cpp")
       run("del source\QtHelp\QHelpSearchResultWidgetSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

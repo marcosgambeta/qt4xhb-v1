@@ -30,7 +30,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
       run("del source\QtDeclarative\QDeclarativeExpressionSlotsMoc.cpp")
       run("del source\QtDeclarative\QDeclarativePropertyMapSlotsMoc.cpp")
       run("del source\QtDeclarative\QDeclarativeViewSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

@@ -22,7 +22,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
 
    CASE "post_all"
       run("del source\QtScriptTools\QScriptEngineDebuggerSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

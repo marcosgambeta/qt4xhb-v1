@@ -22,7 +22,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
 
    CASE "post_all"
       run("del source\QtSvg\QSvgRendererSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

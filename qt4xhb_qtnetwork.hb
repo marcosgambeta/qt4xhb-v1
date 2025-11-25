@@ -40,7 +40,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
       run("del source\QtNetwork\QNetworkSessionSlotsMoc.cpp")
       run("del source\QtNetwork\QSslSocketSlotsMoc.cpp")
       run("del source\QtNetwork\QTcpServerSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

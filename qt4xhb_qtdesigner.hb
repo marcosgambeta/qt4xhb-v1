@@ -26,7 +26,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
       run("del source\QtDesigner\QDesignerFormWindowInterfaceSlotsMoc.cpp")
       run("del source\QtDesigner\QDesignerFormWindowManagerInterfaceSlotsMoc.cpp")
       run("del source\QtDesigner\QDesignerPropertyEditorInterfaceSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

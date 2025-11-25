@@ -200,7 +200,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
       run("del source\QtGui\QWizardPageSlotsMoc.cpp")
       run("del source\QtGui\QWizardSlotsMoc.cpp")
       run("del source\QtGui\QWorkspaceSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 

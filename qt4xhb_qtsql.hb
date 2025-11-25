@@ -24,7 +24,6 @@ FUNCTION hbmk_plugin_qt(hbmk)
    CASE "post_all"
       run("del source\QtSql\QSqlDriverSlotsMoc.cpp")
       run("del source\QtSql\QSqlTableModelSlotsMoc.cpp")
-      EXIT
 
    ENDSWITCH
 
