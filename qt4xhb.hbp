@@ -1,0 +1,32 @@
+#
+# Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
+#
+# Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
+#
+
+# Before use this file:
+# (1) create a folder called obj
+# (2) define the variable QT_INC_DIR
+#     set QT_INC_DIR=<Qt include path>
+
+-hbcontainer
+
+qt4xhb_qaxcontainer.hbp
+qt4xhb_qaxserver.hbp
+qt4xhb_qtcore.hbp
+qt4xhb_qtdeclarative.hbp
+qt4xhb_qtdesigner.hbp
+qt4xhb_qtgui.hbp
+qt4xhb_qthelp.hbp
+qt4xhb_qtmultimedia.hbp
+qt4xhb_qtnetwork.hbp
+qt4xhb_qtopengl.hbp
+qt4xhb_qtscript.hbp
+qt4xhb_qtscripttools.hbp
+qt4xhb_qtsql.hbp
+qt4xhb_qtsvg.hbp
+qt4xhb_qttest.hbp
+qt4xhb_qtuitools.hbp
+qt4xhb_qtwebkit.hbp
+qt4xhb_qtxml.hbp
+qt4xhb_qtxmlpatterns.hbp
