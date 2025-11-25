@@ -20,8 +20,8 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-#include <QWebFrame>
-#include <QNetworkReply>
+#include <QtWebKit/QWebFrame>
+#include <QtNetwork/QNetworkReply>
 
 class QWebPageSlots : public QObject
 {
