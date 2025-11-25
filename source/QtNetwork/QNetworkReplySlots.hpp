@@ -20,7 +20,7 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-#include <QSslError>
+#include <QtNetwork/QSslError>
 
 class QNetworkReplySlots : public QObject
 {
