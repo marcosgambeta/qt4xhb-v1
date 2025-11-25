@@ -33,7 +33,7 @@
 -cflag=-DQT_ACTIVEQT_LIB
 -cflag=-DQT_QAXSERVER_LIB
 
--plugin=qt4xhb_qaxserver4.hb
+-plugin=qt4xhb_qaxserver.hb
 
 source/ActiveQt/QAxBindable.prg
 source/ActiveQt/QAxFactory.prg
