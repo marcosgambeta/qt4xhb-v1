@@ -23,9 +23,9 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "post_all"
-      run("del source\QtMultimedia\QAbstractVideoSurfaceSlotsMoc.cpp")
-      run("del source\QtMultimedia\QAudioInputSlotsMoc.cpp")
-      run("del source\QtMultimedia\QAudioOutputSlotsMoc.cpp")
+      ferase("source\QtMultimedia\QAbstractVideoSurfaceSlotsMoc.cpp")
+      ferase("source\QtMultimedia\QAudioInputSlotsMoc.cpp")
+      ferase("source\QtMultimedia\QAudioOutputSlotsMoc.cpp")
 
    ENDSWITCH
 
