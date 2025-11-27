@@ -4,6 +4,8 @@
 // Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
+#define RUNMOC(file) run("moc " + file + " -o " + strtran(file, ".hpp", "Moc.cpp"))
+
 FUNCTION hbmk_plugin_qt(hbmk)
 
    LOCAL cRetVal := ""
@@ -17,7 +19,7 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      run("moc source\QtSvg\QSvgRendererSlots.hpp -o source\QtSvg\QSvgRendererSlotsMoc.cpp")
+      RUNMOC("source\QtSvg\QSvgRendererSlots.hpp")
       EXIT
 
    CASE "post_all"

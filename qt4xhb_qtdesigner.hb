@@ -4,6 +4,8 @@
 // Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
+#define RUNMOC(file) run("moc " + file + " -o " + strtran(file, ".hpp", "Moc.cpp"))
+
 FUNCTION hbmk_plugin_qt(hbmk)
 
    LOCAL cRetVal := ""
@@ -17,9 +19,9 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      run("moc source\QtDesigner\QDesignerFormWindowInterfaceSlots.hpp -o source\QtDesigner\QDesignerFormWindowInterfaceSlotsMoc.cpp")
-      run("moc source\QtDesigner\QDesignerFormWindowManagerInterfaceSlots.hpp -o source\QtDesigner\QDesignerFormWindowManagerInterfaceSlotsMoc.cpp")
-      run("moc source\QtDesigner\QDesignerPropertyEditorInterfaceSlots.hpp -o source\QtDesigner\QDesignerPropertyEditorInterfaceSlotsMoc.cpp")
+      RUNMOC("source\QtDesigner\QDesignerFormWindowInterfaceSlots.hpp")
+      RUNMOC("source\QtDesigner\QDesignerFormWindowManagerInterfaceSlots.hpp")
+      RUNMOC("source\QtDesigner\QDesignerPropertyEditorInterfaceSlots.hpp")
       EXIT
 
    CASE "post_all"

@@ -4,6 +4,8 @@
 // Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
+#define RUNMOC(file) run("moc " + file + " -o " + strtran(file, ".hpp", "Moc.cpp"))
+
 FUNCTION hbmk_plugin_qt(hbmk)
 
    LOCAL cRetVal := ""
@@ -17,8 +19,8 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      run("moc source\QtSql\QSqlDriverSlots.hpp -o source\QtSql\QSqlDriverSlotsMoc.cpp")
-      run("moc source\QtSql\QSqlTableModelSlots.hpp -o source\QtSql\QSqlTableModelSlotsMoc.cpp")
+      RUNMOC("source\QtSql\QSqlDriverSlots.hpp")
+      RUNMOC("source\QtSql\QSqlTableModelSlots.hpp")
       EXIT
 
    CASE "post_all"

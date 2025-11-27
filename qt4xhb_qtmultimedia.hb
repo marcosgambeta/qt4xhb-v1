@@ -4,6 +4,8 @@
 // Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
+#define RUNMOC(file) run("moc " + file + " -o " + strtran(file, ".hpp", "Moc.cpp"))
+
 FUNCTION hbmk_plugin_qt(hbmk)
 
    LOCAL cRetVal := ""
@@ -17,9 +19,9 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      run("moc source\QtMultimedia\QAbstractVideoSurfaceSlots.hpp -o source\QtMultimedia\QAbstractVideoSurfaceSlotsMoc.cpp")
-      run("moc source\QtMultimedia\QAudioInputSlots.hpp -o source\QtMultimedia\QAudioInputSlotsMoc.cpp")
-      run("moc source\QtMultimedia\QAudioOutputSlots.hpp -o source\QtMultimedia\QAudioOutputSlotsMoc.cpp")
+      RUNMOC("source\QtMultimedia\QAbstractVideoSurfaceSlots.hpp")
+      RUNMOC("source\QtMultimedia\QAudioInputSlots.hpp")
+      RUNMOC("source\QtMultimedia\QAudioOutputSlots.hpp")
       EXIT
 
    CASE "post_all"

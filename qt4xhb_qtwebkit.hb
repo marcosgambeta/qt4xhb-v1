@@ -4,6 +4,8 @@
 // Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
+#define RUNMOC(file) run("moc " + file + " -o " + strtran(file, ".hpp", "Moc.cpp"))
+
 FUNCTION hbmk_plugin_qt(hbmk)
 
    LOCAL cRetVal := ""
@@ -17,10 +19,10 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      run("moc source\QtWebKit\QGraphicsWebViewSlots.hpp -o source\QtWebKit\QGraphicsWebViewSlotsMoc.cpp")
-      run("moc source\QtWebKit\QWebFrameSlots.hpp -o source\QtWebKit\QWebFrameSlotsMoc.cpp")
-      run("moc source\QtWebKit\QWebPageSlots.hpp -o source\QtWebKit\QWebPageSlotsMoc.cpp")
-      run("moc source\QtWebKit\QWebViewSlots.hpp -o source\QtWebKit\QWebViewSlotsMoc.cpp")
+      RUNMOC("source\QtWebKit\QGraphicsWebViewSlots.hpp")
+      RUNMOC("source\QtWebKit\QWebFrameSlots.hpp")
+      RUNMOC("source\QtWebKit\QWebPageSlots.hpp")
+      RUNMOC("source\QtWebKit\QWebViewSlots.hpp")
       EXIT
 
    CASE "post_all"

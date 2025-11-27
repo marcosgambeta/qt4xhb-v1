@@ -4,6 +4,8 @@
 // Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
+#define RUNMOC(file) run("moc " + file + " -o " + strtran(file, ".hpp", "Moc.cpp"))
+
 FUNCTION hbmk_plugin_qt(hbmk)
 
    LOCAL cRetVal := ""
@@ -17,16 +19,16 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      run("moc source\QtNetwork\QAbstractSocketSlots.hpp -o source\QtNetwork\QAbstractSocketSlotsMoc.cpp")
-      run("moc source\QtNetwork\QFtpSlots.hpp -o source\QtNetwork\QFtpSlotsMoc.cpp")
-      run("moc source\QtNetwork\QLocalServerSlots.hpp -o source\QtNetwork\QLocalServerSlotsMoc.cpp")
-      run("moc source\QtNetwork\QLocalSocketSlots.hpp -o source\QtNetwork\QLocalSocketSlotsMoc.cpp")
-      run("moc source\QtNetwork\QNetworkAccessManagerSlots.hpp -o source\QtNetwork\QNetworkAccessManagerSlotsMoc.cpp")
-      run("moc source\QtNetwork\QNetworkConfigurationManagerSlots.hpp -o source\QtNetwork\QNetworkConfigurationManagerSlotsMoc.cpp")
-      run("moc source\QtNetwork\QNetworkReplySlots.hpp -o source\QtNetwork\QNetworkReplySlotsMoc.cpp")
-      run("moc source\QtNetwork\QNetworkSessionSlots.hpp -o source\QtNetwork\QNetworkSessionSlotsMoc.cpp")
-      run("moc source\QtNetwork\QSslSocketSlots.hpp -o source\QtNetwork\QSslSocketSlotsMoc.cpp")
-      run("moc source\QtNetwork\QTcpServerSlots.hpp -o source\QtNetwork\QTcpServerSlotsMoc.cpp")
+      RUNMOC("source\QtNetwork\QAbstractSocketSlots.hpp")
+      RUNMOC("source\QtNetwork\QFtpSlots.hpp")
+      RUNMOC("source\QtNetwork\QLocalServerSlots.hpp")
+      RUNMOC("source\QtNetwork\QLocalSocketSlots.hpp")
+      RUNMOC("source\QtNetwork\QNetworkAccessManagerSlots.hpp")
+      RUNMOC("source\QtNetwork\QNetworkConfigurationManagerSlots.hpp")
+      RUNMOC("source\QtNetwork\QNetworkReplySlots.hpp")
+      RUNMOC("source\QtNetwork\QNetworkSessionSlots.hpp")
+      RUNMOC("source\QtNetwork\QSslSocketSlots.hpp")
+      RUNMOC("source\QtNetwork\QTcpServerSlots.hpp")
       EXIT
 
    CASE "post_all"

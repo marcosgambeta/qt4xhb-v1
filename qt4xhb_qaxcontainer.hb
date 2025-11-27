@@ -4,6 +4,8 @@
 // Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
+#define RUNMOC(file) run("moc " + file + " -o " + strtran(file, ".hpp", "Moc.cpp"))
+
 FUNCTION hbmk_plugin_qt(hbmk)
 
    LOCAL cRetVal := ""
@@ -17,11 +19,11 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      run("moc source\ActiveQt\QAxBaseSlots.hpp -o source\ActiveQt\QAxBaseSlotsMoc.cpp")
-      run("moc source\ActiveQt\QAxObjectSlots.hpp -o source\ActiveQt\QAxObjectSlotsMoc.cpp")
-      run("moc source\ActiveQt\QAxScriptManagerSlots.hpp -o source\ActiveQt\QAxScriptManagerSlotsMoc.cpp")
-      run("moc source\ActiveQt\QAxScriptSlots.hpp -o source\ActiveQt\QAxScriptSlotsMoc.cpp")
-      run("moc source\ActiveQt\QAxWidgetSlots.hpp -o source\ActiveQt\QAxWidgetSlotsMoc.cpp")
+      RUNMOC("source\ActiveQt\QAxBaseSlots.hpp")
+      RUNMOC("source\ActiveQt\QAxObjectSlots.hpp")
+      RUNMOC("source\ActiveQt\QAxScriptManagerSlots.hpp")
+      RUNMOC("source\ActiveQt\QAxScriptSlots.hpp")
+      RUNMOC("source\ActiveQt\QAxWidgetSlots.hpp")
       EXIT
 
    CASE "post_all"
