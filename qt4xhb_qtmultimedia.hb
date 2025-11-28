@@ -24,15 +24,15 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      RUNMOC("source\QtMultimedia\QAbstractVideoSurfaceSlots.hpp")
-      RUNMOC("source\QtMultimedia\QAudioInputSlots.hpp")
-      RUNMOC("source\QtMultimedia\QAudioOutputSlots.hpp")
+      RUNMOC("source/QtMultimedia/QAbstractVideoSurfaceSlots.hpp")
+      RUNMOC("source/QtMultimedia/QAudioInputSlots.hpp")
+      RUNMOC("source/QtMultimedia/QAudioOutputSlots.hpp")
       EXIT
 
    CASE "post_all"
-      ferase("source\QtMultimedia\QAbstractVideoSurfaceSlotsMoc.cpp")
-      ferase("source\QtMultimedia\QAudioInputSlotsMoc.cpp")
-      ferase("source\QtMultimedia\QAudioOutputSlotsMoc.cpp")
+      ferase("source/QtMultimedia/QAbstractVideoSurfaceSlotsMoc.cpp")
+      ferase("source/QtMultimedia/QAudioInputSlotsMoc.cpp")
+      ferase("source/QtMultimedia/QAudioOutputSlotsMoc.cpp")
 
    ENDSWITCH
 

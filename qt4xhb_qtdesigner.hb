@@ -24,15 +24,15 @@ FUNCTION hbmk_plugin_qt(hbmk)
       EXIT
 
    CASE "pre_c"
-      RUNMOC("source\QtDesigner\QDesignerFormWindowInterfaceSlots.hpp")
-      RUNMOC("source\QtDesigner\QDesignerFormWindowManagerInterfaceSlots.hpp")
-      RUNMOC("source\QtDesigner\QDesignerPropertyEditorInterfaceSlots.hpp")
+      RUNMOC("source/QtDesigner/QDesignerFormWindowInterfaceSlots.hpp")
+      RUNMOC("source/QtDesigner/QDesignerFormWindowManagerInterfaceSlots.hpp")
+      RUNMOC("source/QtDesigner/QDesignerPropertyEditorInterfaceSlots.hpp")
       EXIT
 
    CASE "post_all"
-      ferase("source\QtDesigner\QDesignerFormWindowInterfaceSlotsMoc.cpp")
-      ferase("source\QtDesigner\QDesignerFormWindowManagerInterfaceSlotsMoc.cpp")
-      ferase("source\QtDesigner\QDesignerPropertyEditorInterfaceSlotsMoc.cpp")
+      ferase("source/QtDesigner/QDesignerFormWindowInterfaceSlotsMoc.cpp")
+      ferase("source/QtDesigner/QDesignerFormWindowManagerInterfaceSlotsMoc.cpp")
+      ferase("source/QtDesigner/QDesignerPropertyEditorInterfaceSlotsMoc.cpp")
 
    ENDSWITCH
 
