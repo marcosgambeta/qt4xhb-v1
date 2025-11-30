@@ -88,9 +88,9 @@ STATIC FUNCTION CriarBancoDeDados()
 
    // comente esta linha para o arquivo não ser recriado
    // cada vez que o exemplo for executado
-   FErase("teste.mdb")
+   ferase("teste.mdb")
 
-   IF !File(QDir():currentPath() + "\teste.mdb")
+   IF !file(QDir():currentPath() + "\teste.mdb")
 
       oCatalog := win_OleCreateObject("ADOX.Catalog")
 
@@ -116,7 +116,7 @@ STATIC FUNCTION CriarBancoDeDados()
       FOR n := 1 TO 1000
          oRecordset:AddNew()
          oRecordset:Fields(0):Value := n
-         oRecordset:Fields(1):Value := "Nome do cliente " + AllTrim(Str(n))
+         oRecordset:Fields(1):Value := "Nome do cliente " + alltrim(str(n))
          oRecordset:Fields(2):Value := n * 10
          oRecordset:Update()
       NEXT n
@@ -127,7 +127,7 @@ STATIC FUNCTION CriarBancoDeDados()
 
 RETURN NIL
 
-#include "hbclass.ch"
+#include <hbclass.ch>
 
 // A classe AdoTableModel deriva da classe HAbstractTableModel,
 // sendo que não adiciona nenhum recurso extra. O desenvolvedor

@@ -7,7 +7,7 @@
 // Baseado no exemplo "Config Dialog" do Qt Framework
 
 #include "qt4xhb.ch"
-#include "hbclass.ch"
+#include <hbclass.ch>
 
 PROCEDURE Main()
 
@@ -151,7 +151,7 @@ METHOD changePage(pCurrent, pPrevious) CLASS ConfigDialog
    oCurrent := QListWidgetItem():newFrom(pCurrent)
    oPrevious := QListWidgetItem():newFrom(pPrevious)
 
-   IF Empty(oCurrent:pointer)
+   IF empty(oCurrent:pointer)
       oCurrent := oPrevious
    ENDIF
 

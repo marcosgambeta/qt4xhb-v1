@@ -7,7 +7,7 @@
 // Baseado no exemplo "Image Viewer" do Qt Framework
 
 #include "qt4xhb.ch"
-#include "hbclass.ch"
+#include <hbclass.ch>
 
 PROCEDURE Main()
 
@@ -101,7 +101,7 @@ METHOD open() CLASS ImageViewer
 
    cFileName := QFileDialog():getOpenFileName(SELF, "Open File", QDir():currentPath())
 
-   IF !Empty(cFileName)
+   IF !empty(cFileName)
       oImage := QImage():new(cFileName)
       IF oImage:isNull()
          QMessageBox():information(SELF, "Image Viewer", "Cannot load " + cFileName + ".")
@@ -290,6 +290,6 @@ RETURN NIL
 
 METHOD adjustScrollBar(oScrollBar, nFactor) CLASS ImageViewer
 
-   oScrollBar:setValue(Int(nFactor * oScrollBar:value() + ((nFactor - 1) * oScrollBar:pageStep() / 2)))
+   oScrollBar:setValue(int(nFactor * oScrollBar:value() + ((nFactor - 1) * oScrollBar:pageStep() / 2)))
 
 RETURN NIL
