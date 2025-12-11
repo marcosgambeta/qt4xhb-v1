@@ -149,12 +149,16 @@ RETURN
 // QApplication( int & argc, char ** argv )
 HB_FUNC_STATIC(QAPPLICATION_NEW)
 {
-  int argc;
-  char **argv;
-  argc = hb_cmdargARGC();
-  argv = hb_cmdargARGV();
-  QApplication *o = new QApplication(argc, argv);
-  Qt4xHb::storePointerAndFlag(o, false);
+  if (ISNUMPAR(0)) {
+    int argc;
+    char **argv;
+    argc = hb_cmdargARGC();
+    argv = hb_cmdargARGV();
+    QApplication *o = new QApplication(argc, argv);
+    Qt4xHb::storePointerAndFlag(o, false);
+  } else {
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+  }
 }
 
 HB_FUNC_STATIC(QAPPLICATION_DELETE)
