@@ -49,7 +49,6 @@ CLASS QDomDocument INHERIT QDomNode
    METHOD importNode
    METHOD nodeType
    METHOD setContent
-   METHOD setContext
    METHOD toByteArray
    METHOD toString
 
