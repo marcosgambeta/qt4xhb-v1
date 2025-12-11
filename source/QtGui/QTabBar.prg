@@ -32,7 +32,6 @@ CLASS QTabBar INHERIT QWidget
    METHOD expanding
    METHOD iconSize
    METHOD insertTab
-   METHOD inserTab
    METHOD isMovable
    METHOD isTabEnabled
    METHOD moveTab
