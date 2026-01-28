@@ -178,4 +178,14 @@
     hb_itemRelease(ptr); \
   }
 
+// delete object macro
+#define DELETE_OBJECT(object) \
+  if (object != NULL) { \
+    delete object; \
+    object = NULL; \
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL); \
+    hb_objSendMsg(hb_stackSelfItem(), "_POINTER", 1, ptr); \
+    hb_itemRelease(ptr); \
+  }
+
 #endif // QT4XHB_MACROS_HPP
