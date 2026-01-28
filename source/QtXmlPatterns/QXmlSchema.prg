@@ -87,13 +87,7 @@ HB_FUNC_STATIC(QXMLSCHEMA_DELETE)
 {
   GET_PTR_FROM_SELF(obj);
 
-  if (obj != NULL) {
-    delete obj;
-    obj = NULL;
-    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
-    hb_objSendMsg(hb_stackSelfItem(), "_POINTER", 1, ptr);
-    hb_itemRelease(ptr);
-  }
+  DELETE_OBJECT(obj);
 
   hb_itemReturn(hb_stackSelfItem());
 }
