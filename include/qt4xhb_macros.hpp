@@ -188,4 +188,6 @@
     hb_itemRelease(ptr); \
   }
 
+#define RETURN_SELF() hb_itemReturn(hb_stackSelfItem())
+
 #endif // QT4XHB_MACROS_HPP
