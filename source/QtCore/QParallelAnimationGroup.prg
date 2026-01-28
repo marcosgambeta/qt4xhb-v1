@@ -59,15 +59,7 @@ HB_FUNC_STATIC(QPARALLELANIMATIONGROUP_DELETE)
 {
   GET_PTR_FROM_SELF(obj);
 
-  if (obj != NULL) {
-    Qt4xHb::Events_disconnect_all_events(obj, true);
-    Qt4xHb::Signals_disconnect_all_signals(obj, true);
-    delete obj;
-    obj = NULL;
-    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
-    hb_objSendMsg(hb_stackSelfItem(), "_POINTER", 1, ptr);
-    hb_itemRelease(ptr);
-  }
+  DELETE_QOBJECT(obj);
 
   hb_itemReturn(hb_stackSelfItem());
 }
