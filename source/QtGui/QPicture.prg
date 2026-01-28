@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QPICTURE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QRect boundingRect() const
@@ -206,7 +206,7 @@ HB_FUNC_STATIC(QPICTURE_SETBOUNDINGRECT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setData(const char *data, uint size)
@@ -226,7 +226,7 @@ HB_FUNC_STATIC(QPICTURE_SETDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // uint size() const
@@ -264,7 +264,7 @@ HB_FUNC_STATIC(QPICTURE_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

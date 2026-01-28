@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QBRUSH_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // const QColor &color() const
@@ -217,7 +217,7 @@ HB_FUNC_STATIC(QBRUSH_SETCOLOR)
       obj->setColor(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void setColor(Qt::GlobalColor color)
     GET_PTR_FROM_SELF(obj);
@@ -226,7 +226,7 @@ HB_FUNC_STATIC(QBRUSH_SETCOLOR)
       obj->setColor(PQT_GLOBALCOLOR(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QBRUSH_SETMATRIX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStyle(Qt::BrushStyle style)
@@ -269,7 +269,7 @@ HB_FUNC_STATIC(QBRUSH_SETSTYLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTexture(const QPixmap &pixmap)
@@ -289,7 +289,7 @@ HB_FUNC_STATIC(QBRUSH_SETTEXTURE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTextureImage(const QImage &image)
@@ -309,7 +309,7 @@ HB_FUNC_STATIC(QBRUSH_SETTEXTUREIMAGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTransform(const QTransform &matrix)
@@ -329,7 +329,7 @@ HB_FUNC_STATIC(QBRUSH_SETTRANSFORM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::BrushStyle style() const

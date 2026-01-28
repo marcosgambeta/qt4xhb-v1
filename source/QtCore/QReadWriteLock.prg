@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void lockForRead()
@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_LOCKFORREAD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void lockForWrite()
@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_LOCKFORWRITE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QREADWRITELOCK_TRYLOCKFORREAD)
@@ -177,7 +177,7 @@ HB_FUNC_STATIC(QREADWRITELOCK_UNLOCK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QREADWRITELOCK_NEWFROM)

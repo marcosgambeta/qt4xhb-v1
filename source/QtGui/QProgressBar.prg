@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::Alignment alignment() const
@@ -231,7 +231,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_SETALIGNMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFormat(const QString &format)
@@ -251,7 +251,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_SETFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setInvertedAppearance(bool invert)
@@ -271,7 +271,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_SETINVERTEDAPPEARANCE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTextDirection(QProgressBar::Direction textDirection)
@@ -291,7 +291,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_SETTEXTDIRECTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTextVisible(bool visible)
@@ -311,7 +311,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_SETTEXTVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QString text() const
@@ -421,7 +421,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_RESET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMaximum(int maximum)
@@ -441,7 +441,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_SETMAXIMUM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMinimum(int minimum)
@@ -461,7 +461,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_SETMINIMUM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOrientation(Qt::Orientation)
@@ -481,7 +481,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_SETORIENTATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRange(int minimum, int maximum)
@@ -501,7 +501,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_SETRANGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setValue(int value)
@@ -521,7 +521,7 @@ HB_FUNC_STATIC(QPROGRESSBAR_SETVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QProgressBarSlots_connect_signal(const QString &signal, const QString &slot);

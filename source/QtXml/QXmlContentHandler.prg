@@ -67,7 +67,7 @@ HB_FUNC_STATIC(QXMLCONTENTHANDLER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool characters(const QString &ch) = 0
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QXMLCONTENTHANDLER_SETDOCUMENTLOCATOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool skippedEntity(const QString &name) = 0

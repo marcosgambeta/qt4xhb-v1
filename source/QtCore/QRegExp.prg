@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QREGEXP_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString cap(int nth = 0) const
@@ -392,7 +392,7 @@ HB_FUNC_STATIC(QREGEXP_SETCASESENSITIVITY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMinimal(bool minimal)
@@ -412,7 +412,7 @@ HB_FUNC_STATIC(QREGEXP_SETMINIMAL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPattern(const QString &pattern)
@@ -432,7 +432,7 @@ HB_FUNC_STATIC(QREGEXP_SETPATTERN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPatternSyntax(QRegExp::PatternSyntax syntax)
@@ -452,7 +452,7 @@ HB_FUNC_STATIC(QREGEXP_SETPATTERNSYNTAX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QString escape(const QString &str)

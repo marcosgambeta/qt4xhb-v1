@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QTOOLBOX_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QTOOLBOX_ADDITEM)
@@ -291,7 +291,7 @@ HB_FUNC_STATIC(QTOOLBOX_REMOVEITEM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setItemEnabled(int index, bool enabled)
@@ -311,7 +311,7 @@ HB_FUNC_STATIC(QTOOLBOX_SETITEMENABLED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setItemIcon(int index, const QIcon &icon)
@@ -331,7 +331,7 @@ HB_FUNC_STATIC(QTOOLBOX_SETITEMICON)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setItemText(int index, const QString &text)
@@ -351,7 +351,7 @@ HB_FUNC_STATIC(QTOOLBOX_SETITEMTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setItemToolTip(int index, const QString &toolTip)
@@ -371,7 +371,7 @@ HB_FUNC_STATIC(QTOOLBOX_SETITEMTOOLTIP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QWidget *widget(int index) const
@@ -410,7 +410,7 @@ HB_FUNC_STATIC(QTOOLBOX_SETCURRENTINDEX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCurrentWidget(QWidget *widget)
@@ -430,7 +430,7 @@ HB_FUNC_STATIC(QTOOLBOX_SETCURRENTWIDGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QToolBoxSlots_connect_signal(const QString &signal, const QString &slot);

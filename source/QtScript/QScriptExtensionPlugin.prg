@@ -54,7 +54,7 @@ HB_FUNC_STATIC(QSCRIPTEXTENSIONPLUGIN_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QScriptValue setupPackage(const QString &key, QScriptEngine *engine) const
@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QSCRIPTEXTENSIONPLUGIN_INITIALIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QStringList keys() const = 0

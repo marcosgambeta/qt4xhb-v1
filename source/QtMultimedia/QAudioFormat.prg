@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isValid() const
@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_SETFREQUENCY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int frequency() const
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_SETSAMPLERATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int sampleRate() const
@@ -201,7 +201,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_SETCHANNELS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int channels() const
@@ -239,7 +239,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_SETCHANNELCOUNT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int channelCount() const
@@ -277,7 +277,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_SETSAMPLESIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int sampleSize() const
@@ -315,7 +315,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_SETCODEC)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString codec() const
@@ -353,7 +353,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_SETBYTEORDER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QAudioFormat::Endian byteOrder() const
@@ -409,7 +409,7 @@ HB_FUNC_STATIC(QAUDIOFORMAT_SETSAMPLETYPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QAUDIOFORMAT_NEWFROM)

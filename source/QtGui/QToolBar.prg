@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QTOOLBAR_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QTOOLBAR_ACTIONAT)
@@ -137,7 +137,7 @@ HB_FUNC_STATIC(QTOOLBAR_ADDACTION)
       obj->addAction(PQACTION(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // QAction *addAction(const QString &text)
     GET_PTR_FROM_SELF(obj);
@@ -250,7 +250,7 @@ HB_FUNC_STATIC(QTOOLBAR_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSize iconSize() const
@@ -416,7 +416,7 @@ HB_FUNC_STATIC(QTOOLBAR_SETALLOWEDAREAS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFloatable(bool floatable)
@@ -436,7 +436,7 @@ HB_FUNC_STATIC(QTOOLBAR_SETFLOATABLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMovable(bool movable)
@@ -456,7 +456,7 @@ HB_FUNC_STATIC(QTOOLBAR_SETMOVABLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOrientation(Qt::Orientation orientation)
@@ -476,7 +476,7 @@ HB_FUNC_STATIC(QTOOLBAR_SETORIENTATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QAction *toggleViewAction() const
@@ -552,7 +552,7 @@ HB_FUNC_STATIC(QTOOLBAR_SETICONSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setToolButtonStyle(Qt::ToolButtonStyle toolButtonStyle)
@@ -572,7 +572,7 @@ HB_FUNC_STATIC(QTOOLBAR_SETTOOLBUTTONSTYLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QToolBarSlots_connect_signal(const QString &signal, const QString &slot);

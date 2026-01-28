@@ -64,7 +64,7 @@ HB_FUNC_STATIC(QCDESTYLE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void drawControl(QStyle::ControlElement element, const QStyleOption *opt, QPainter *p, const QWidget *widget
@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QCDESTYLE_DRAWCONTROL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void drawPrimitive(QStyle::PrimitiveElement pe, const QStyleOption *opt, QPainter *p, const QWidget *widget =
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QCDESTYLE_DRAWPRIMITIVE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual int pixelMetric(QStyle::PixelMetric metric, const QStyleOption *option = 0, const QWidget *widget = 0) const

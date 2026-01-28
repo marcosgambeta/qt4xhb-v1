@@ -51,7 +51,7 @@ HB_FUNC_STATIC(QSWIPEGESTURE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSwipeGesture::SwipeDirection horizontalDirection() const
@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QSWIPEGESTURE_SETSWIPEANGLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qreal swipeAngle() const

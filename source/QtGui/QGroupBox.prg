@@ -160,7 +160,7 @@ HB_FUNC_STATIC(QGROUPBOX_SETALIGNMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCheckable(bool checkable)
@@ -180,7 +180,7 @@ HB_FUNC_STATIC(QGROUPBOX_SETCHECKABLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFlat(bool flat)
@@ -200,7 +200,7 @@ HB_FUNC_STATIC(QGROUPBOX_SETFLAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTitle(const QString &title)
@@ -220,7 +220,7 @@ HB_FUNC_STATIC(QGROUPBOX_SETTITLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString title() const
@@ -276,7 +276,7 @@ HB_FUNC_STATIC(QGROUPBOX_SETCHECKED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QGroupBoxSlots_connect_signal(const QString &signal, const QString &slot);

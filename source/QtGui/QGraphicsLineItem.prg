@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QLineF line() const
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_SETLINE)
       obj->setLine(*PQLINEF(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // void setLine(qreal x1, qreal y1, qreal x2, qreal y2)
     GET_PTR_FROM_SELF(obj);
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_SETLINE)
       obj->setLine(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_SETPEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QRectF boundingRect() const
@@ -260,7 +260,7 @@ HB_FUNC_STATIC(QGRAPHICSLINEITEM_PAINT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QPainterPath shape() const

@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QWEBHISTORYITEM_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QIcon icon() const
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QWEBHISTORYITEM_SETUSERDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString title() const

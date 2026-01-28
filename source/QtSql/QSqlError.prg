@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QSQLERROR_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString databaseText() const
@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QSQLERROR_SETDATABASETEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDriverText(const QString &driverText)
@@ -195,7 +195,7 @@ HB_FUNC_STATIC(QSQLERROR_SETDRIVERTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setNumber(int number)
@@ -215,7 +215,7 @@ HB_FUNC_STATIC(QSQLERROR_SETNUMBER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setType(QSqlError::ErrorType type)
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QSQLERROR_SETTYPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString text() const

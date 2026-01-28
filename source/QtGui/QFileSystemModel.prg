@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QIcon fileIcon(const QModelIndex &index) const
@@ -482,7 +482,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETFILTER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setIconProvider(QFileIconProvider *provider)
@@ -502,7 +502,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETICONPROVIDER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setNameFilterDisables(bool enable)
@@ -522,7 +522,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETNAMEFILTERDISABLES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setNameFilters(const QStringList &filters)
@@ -542,7 +542,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETNAMEFILTERS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setReadOnly(bool enable)
@@ -562,7 +562,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETREADONLY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setResolveSymlinks(bool enable)
@@ -582,7 +582,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SETRESOLVESYMLINKS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QModelIndex setRootPath(const QString &newPath)
@@ -729,7 +729,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_FETCHMORE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual Qt::ItemFlags flags(const QModelIndex &index) const
@@ -923,7 +923,7 @@ HB_FUNC_STATIC(QFILESYSTEMMODEL_SORT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual Qt::DropActions supportedDropActions() const

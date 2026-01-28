@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QPAINTERPATH_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QPAINTERPATH_ADDELLIPSE)
@@ -131,7 +131,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ADDELLIPSE)
       obj->addEllipse(*PQRECTF(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // void addEllipse(qreal x, qreal y, qreal width, qreal height)
     GET_PTR_FROM_SELF(obj);
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ADDELLIPSE)
       obj->addEllipse(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(3) && ISQPOINTF(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
     // void addEllipse(const QPointF &center, qreal rx, qreal ry)
     GET_PTR_FROM_SELF(obj);
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ADDELLIPSE)
       obj->addEllipse(*PQPOINTF(1), PQREAL(2), PQREAL(3));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ADDPATH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addPolygon(const QPolygonF &polygon)
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ADDPOLYGON)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QPAINTERPATH_ADDRECT)
@@ -205,7 +205,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ADDRECT)
       obj->addRect(*PQRECTF(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // void addRect(qreal x, qreal y, qreal width, qreal height)
     GET_PTR_FROM_SELF(obj);
@@ -214,7 +214,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ADDRECT)
       obj->addRect(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -237,7 +237,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ADDREGION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QPAINTERPATH_ADDROUNDEDRECT)
@@ -251,7 +251,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ADDROUNDEDRECT)
                           HB_ISNIL(4) ? static_cast<Qt::SizeMode>(Qt::AbsoluteSize) : PQT_SIZEMODE(4));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISBETWEEN(6, 7) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
              HB_ISNUM(6) && ISNUMORNIL(7)) {
     // void addRoundedRect(qreal x, qreal y, qreal w, qreal h, qreal xRadius, qreal yRadius, Qt::SizeMode mode =
@@ -263,7 +263,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ADDROUNDEDRECT)
                           HB_ISNIL(7) ? static_cast<Qt::SizeMode>(Qt::AbsoluteSize) : PQT_SIZEMODE(7));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -279,7 +279,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ADDTEXT)
       obj->addText(*PQPOINTF(1), *PQFONT(2), PQSTRING(3));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && ISQFONT(3) && HB_ISCHAR(4)) {
     // void addText(qreal x, qreal y, const QFont &font, const QString &text)
     GET_PTR_FROM_SELF(obj);
@@ -288,7 +288,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ADDTEXT)
       obj->addText(PQREAL(1), PQREAL(2), *PQFONT(3), PQSTRING(4));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -322,7 +322,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ARCMOVETO)
       obj->arcMoveTo(*PQRECTF(1), PQREAL(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5)) {
     // void arcMoveTo(qreal x, qreal y, qreal width, qreal height, qreal angle)
     GET_PTR_FROM_SELF(obj);
@@ -331,7 +331,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ARCMOVETO)
       obj->arcMoveTo(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -347,7 +347,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ARCTO)
       obj->arcTo(*PQRECTF(1), PQREAL(2), PQREAL(3));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6)) {
     // void arcTo(qreal x, qreal y, qreal width, qreal height, qreal startAngle, qreal sweepLength)
     GET_PTR_FROM_SELF(obj);
@@ -356,7 +356,7 @@ HB_FUNC_STATIC(QPAINTERPATH_ARCTO)
       obj->arcTo(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -397,7 +397,7 @@ HB_FUNC_STATIC(QPAINTERPATH_CLOSESUBPATH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void connectPath(const QPainterPath &path)
@@ -417,7 +417,7 @@ HB_FUNC_STATIC(QPAINTERPATH_CONNECTPATH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QPAINTERPATH_CONTAINS)
@@ -476,7 +476,7 @@ HB_FUNC_STATIC(QPAINTERPATH_CUBICTO)
       obj->cubicTo(*PQPOINTF(1), *PQPOINTF(2), *PQPOINTF(3));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6)) {
     // void cubicTo(qreal c1X, qreal c1Y, qreal c2X, qreal c2Y, qreal endPointX, qreal endPointY)
     GET_PTR_FROM_SELF(obj);
@@ -485,7 +485,7 @@ HB_FUNC_STATIC(QPAINTERPATH_CUBICTO)
       obj->cubicTo(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -630,7 +630,7 @@ HB_FUNC_STATIC(QPAINTERPATH_LINETO)
       obj->lineTo(*PQPOINTF(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void lineTo(qreal x, qreal y)
     GET_PTR_FROM_SELF(obj);
@@ -639,7 +639,7 @@ HB_FUNC_STATIC(QPAINTERPATH_LINETO)
       obj->lineTo(PQREAL(1), PQREAL(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -655,7 +655,7 @@ HB_FUNC_STATIC(QPAINTERPATH_MOVETO)
       obj->moveTo(*PQPOINTF(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void moveTo(qreal x, qreal y)
     GET_PTR_FROM_SELF(obj);
@@ -664,7 +664,7 @@ HB_FUNC_STATIC(QPAINTERPATH_MOVETO)
       obj->moveTo(PQREAL(1), PQREAL(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -716,7 +716,7 @@ HB_FUNC_STATIC(QPAINTERPATH_QUADTO)
       obj->quadTo(*PQPOINTF(1), *PQPOINTF(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // void quadTo(qreal cx, qreal cy, qreal endPointX, qreal endPointY)
     GET_PTR_FROM_SELF(obj);
@@ -725,7 +725,7 @@ HB_FUNC_STATIC(QPAINTERPATH_QUADTO)
       obj->quadTo(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -748,7 +748,7 @@ HB_FUNC_STATIC(QPAINTERPATH_SETELEMENTPOSITIONAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFillRule(Qt::FillRule fillRule)
@@ -768,7 +768,7 @@ HB_FUNC_STATIC(QPAINTERPATH_SETFILLRULE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QPainterPath simplified() const
@@ -842,7 +842,7 @@ HB_FUNC_STATIC(QPAINTERPATH_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QPAINTERPATH_TOFILLPOLYGON)
@@ -1030,7 +1030,7 @@ HB_FUNC_STATIC(QPAINTERPATH_TRANSLATE)
       obj->translate(PQREAL(1), PQREAL(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQPOINTF(1)) {
     // void translate(const QPointF &offset)
     GET_PTR_FROM_SELF(obj);
@@ -1039,7 +1039,7 @@ HB_FUNC_STATIC(QPAINTERPATH_TRANSLATE)
       obj->translate(*PQPOINTF(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

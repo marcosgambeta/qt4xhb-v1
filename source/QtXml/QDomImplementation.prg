@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QDOMIMPLEMENTATION_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QDomDocument createDocument(const QString &nsURI, const QString &qName, const QDomDocumentType &doctype)
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QDOMIMPLEMENTATION_SETINVALIDDATAPOLICY)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QDOMIMPLEMENTATION_NEWFROM)

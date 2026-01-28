@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QSTATICTEXT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QStaticText::PerformanceHint performanceHint() const
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QSTATICTEXT_PREPARE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPerformanceHint(QStaticText::PerformanceHint performanceHint)
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QSTATICTEXT_SETPERFORMANCEHINT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setText(const QString &text)
@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QSTATICTEXT_SETTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTextFormat(Qt::TextFormat textFormat)
@@ -187,7 +187,7 @@ HB_FUNC_STATIC(QSTATICTEXT_SETTEXTFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTextOption(const QTextOption &textOption)
@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QSTATICTEXT_SETTEXTOPTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTextWidth(qreal textWidth)
@@ -227,7 +227,7 @@ HB_FUNC_STATIC(QSTATICTEXT_SETTEXTWIDTH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSizeF size() const

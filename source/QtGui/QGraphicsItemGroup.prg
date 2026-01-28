@@ -68,7 +68,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMGROUP_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addToGroup(QGraphicsItem *item)
@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMGROUP_ADDTOGROUP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void removeFromGroup(QGraphicsItem *item)
@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMGROUP_REMOVEFROMGROUP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QRectF boundingRect() const
@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMGROUP_PAINT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual int type() const

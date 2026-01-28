@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QVECTOR3D_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qreal distanceToLine(const QVector3D &point, const QVector3D &direction) const
@@ -230,7 +230,7 @@ HB_FUNC_STATIC(QVECTOR3D_NORMALIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QVector3D normalized() const
@@ -268,7 +268,7 @@ HB_FUNC_STATIC(QVECTOR3D_SETX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setY(qreal y)
@@ -288,7 +288,7 @@ HB_FUNC_STATIC(QVECTOR3D_SETY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setZ(qreal z)
@@ -308,7 +308,7 @@ HB_FUNC_STATIC(QVECTOR3D_SETZ)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QPoint toPoint() const

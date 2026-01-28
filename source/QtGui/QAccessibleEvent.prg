@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QACCESSIBLEEVENT_SETVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString value() const

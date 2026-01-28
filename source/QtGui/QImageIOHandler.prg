@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool canRead() const = 0
@@ -315,7 +315,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_SETDEVICE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFormat(const QByteArray &format)
@@ -335,7 +335,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_SETFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setOption(QImageIOHandler::ImageOption option, const QVariant &value)
@@ -355,7 +355,7 @@ HB_FUNC_STATIC(QIMAGEIOHANDLER_SETOPTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool supportsOption(QImageIOHandler::ImageOption option) const

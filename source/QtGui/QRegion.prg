@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QREGION_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QRect boundingRect() const
@@ -302,7 +302,7 @@ HB_FUNC_STATIC(QREGION_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QREGION_TRANSLATE)
@@ -315,7 +315,7 @@ HB_FUNC_STATIC(QREGION_TRANSLATE)
       obj->translate(PINT(1), PINT(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQPOINT(1)) {
     // void translate(const QPoint &point)
     GET_PTR_FROM_SELF(obj);
@@ -324,7 +324,7 @@ HB_FUNC_STATIC(QREGION_TRANSLATE)
       obj->translate(*PQPOINT(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

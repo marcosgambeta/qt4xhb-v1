@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QSPLITTER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addWidget(QWidget *widget)
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QSPLITTER_ADDWIDGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool childrenCollapsible() const
@@ -174,7 +174,7 @@ HB_FUNC_STATIC(QSPLITTER_GETRANGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSplitterHandle *handle(int index) const
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QSPLITTER_INSERTWIDGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isCollapsible(int index) const
@@ -323,7 +323,7 @@ HB_FUNC_STATIC(QSPLITTER_REFRESH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool restoreState(const QByteArray &state)
@@ -379,7 +379,7 @@ HB_FUNC_STATIC(QSPLITTER_SETCHILDRENCOLLAPSIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCollapsible(int index, bool collapse)
@@ -399,7 +399,7 @@ HB_FUNC_STATIC(QSPLITTER_SETCOLLAPSIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setHandleWidth(int)
@@ -419,7 +419,7 @@ HB_FUNC_STATIC(QSPLITTER_SETHANDLEWIDTH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOpaqueResize(bool opaque = true)
@@ -439,7 +439,7 @@ HB_FUNC_STATIC(QSPLITTER_SETOPAQUERESIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOrientation(Qt::Orientation)
@@ -459,7 +459,7 @@ HB_FUNC_STATIC(QSPLITTER_SETORIENTATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSizes(const QList<int> &list)
@@ -487,7 +487,7 @@ HB_FUNC_STATIC(QSPLITTER_SETSIZES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStretchFactor(int index, int stretch)
@@ -507,7 +507,7 @@ HB_FUNC_STATIC(QSPLITTER_SETSTRETCHFACTOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QList<int> sizes() const

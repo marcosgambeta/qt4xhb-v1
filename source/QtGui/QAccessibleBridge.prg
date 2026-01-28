@@ -56,7 +56,7 @@ HB_FUNC_STATIC(QACCESSIBLEBRIDGE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void notifyAccessibilityUpdate(int reason, QAccessibleInterface *interface, int child) = 0
@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QACCESSIBLEBRIDGE_NOTIFYACCESSIBILITYUPDATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setRootObject(QAccessibleInterface *object) = 0
@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QACCESSIBLEBRIDGE_SETROOTOBJECT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QACCESSIBLEBRIDGE_NEWFROM)

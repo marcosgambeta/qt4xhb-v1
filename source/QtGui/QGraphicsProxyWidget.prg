@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QGraphicsProxyWidget *createProxyForChildWidget(QWidget *child)
@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_SETWIDGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QRectF subWidgetRect(const QWidget *widget) const
@@ -167,7 +167,7 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_PAINT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setGeometry(const QRectF &rect)
@@ -187,7 +187,7 @@ HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_SETGEOMETRY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual int type() const

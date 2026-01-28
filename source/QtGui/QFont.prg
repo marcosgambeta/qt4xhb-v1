@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QFONT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool bold() const
@@ -557,7 +557,7 @@ HB_FUNC_STATIC(QFONT_SETBOLD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCapitalization(QFont::Capitalization caps)
@@ -577,7 +577,7 @@ HB_FUNC_STATIC(QFONT_SETCAPITALIZATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFamily(const QString &family)
@@ -597,7 +597,7 @@ HB_FUNC_STATIC(QFONT_SETFAMILY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFixedPitch(bool enable)
@@ -617,7 +617,7 @@ HB_FUNC_STATIC(QFONT_SETFIXEDPITCH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setItalic(bool enable)
@@ -637,7 +637,7 @@ HB_FUNC_STATIC(QFONT_SETITALIC)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setKerning(bool enable)
@@ -657,7 +657,7 @@ HB_FUNC_STATIC(QFONT_SETKERNING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setLetterSpacing(QFont::SpacingType type, qreal spacing)
@@ -677,7 +677,7 @@ HB_FUNC_STATIC(QFONT_SETLETTERSPACING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOverline(bool enable)
@@ -697,7 +697,7 @@ HB_FUNC_STATIC(QFONT_SETOVERLINE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPixelSize(int pixelSize)
@@ -717,7 +717,7 @@ HB_FUNC_STATIC(QFONT_SETPIXELSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPointSize(int pointSize)
@@ -737,7 +737,7 @@ HB_FUNC_STATIC(QFONT_SETPOINTSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPointSizeF(qreal pointSize)
@@ -757,7 +757,7 @@ HB_FUNC_STATIC(QFONT_SETPOINTSIZEF)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRawMode(bool enable)
@@ -777,7 +777,7 @@ HB_FUNC_STATIC(QFONT_SETRAWMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRawName(const QString &name)
@@ -797,7 +797,7 @@ HB_FUNC_STATIC(QFONT_SETRAWNAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStretch(int factor)
@@ -817,7 +817,7 @@ HB_FUNC_STATIC(QFONT_SETSTRETCH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStrikeOut(bool enable)
@@ -837,7 +837,7 @@ HB_FUNC_STATIC(QFONT_SETSTRIKEOUT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStyle(QFont::Style style)
@@ -857,7 +857,7 @@ HB_FUNC_STATIC(QFONT_SETSTYLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStyleHint(QFont::StyleHint hint, QFont::StyleStrategy strategy = QFont::PreferDefault)
@@ -878,7 +878,7 @@ HB_FUNC_STATIC(QFONT_SETSTYLEHINT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStyleStrategy(QFont::StyleStrategy s)
@@ -898,7 +898,7 @@ HB_FUNC_STATIC(QFONT_SETSTYLESTRATEGY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUnderline(bool enable)
@@ -918,7 +918,7 @@ HB_FUNC_STATIC(QFONT_SETUNDERLINE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWeight(int weight)
@@ -938,7 +938,7 @@ HB_FUNC_STATIC(QFONT_SETWEIGHT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWordSpacing(qreal spacing)
@@ -958,7 +958,7 @@ HB_FUNC_STATIC(QFONT_SETWORDSPACING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int stretch() const
@@ -1136,7 +1136,7 @@ HB_FUNC_STATIC(QFONT_INSERTSUBSTITUTION)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void insertSubstitutions(const QString &familyName, const QStringList &substituteNames)
@@ -1152,7 +1152,7 @@ HB_FUNC_STATIC(QFONT_INSERTSUBSTITUTIONS)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void removeSubstitution(const QString &familyName)
@@ -1168,7 +1168,7 @@ HB_FUNC_STATIC(QFONT_REMOVESUBSTITUTION)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QString substitute(const QString &familyName)

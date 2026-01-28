@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qreal angle() const
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_SETANGLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QGRAPHICSROTATION_SETAXIS)
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_SETAXIS)
       obj->setAxis(*PQVECTOR3D(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void setAxis(Qt::Axis axis)
     GET_PTR_FROM_SELF(obj);
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_SETAXIS)
       obj->setAxis(PQT_AXIS(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_SETORIGIN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void applyTo(QMatrix4x4 *matrix) const
@@ -211,7 +211,7 @@ HB_FUNC_STATIC(QGRAPHICSROTATION_APPLYTO)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QGraphicsRotationSlots_connect_signal(const QString &signal, const QString &slot);

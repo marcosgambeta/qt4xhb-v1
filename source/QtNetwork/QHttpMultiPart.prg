@@ -68,7 +68,7 @@ HB_FUNC_STATIC(QHTTPMULTIPART_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void append(const QHttpPart &httpPart)
@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QHTTPMULTIPART_APPEND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QByteArray boundary() const
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QHTTPMULTIPART_SETBOUNDARY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setContentType(QHttpMultiPart::ContentType contentType)
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QHTTPMULTIPART_SETCONTENTTYPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

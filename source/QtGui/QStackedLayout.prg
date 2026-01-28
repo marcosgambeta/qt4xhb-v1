@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int addWidget(QWidget *widget)
@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_SETSTACKINGMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QStackedLayout::StackingMode stackingMode() const
@@ -230,7 +230,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_SETCURRENTINDEX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCurrentWidget(QWidget *widget)
@@ -250,7 +250,7 @@ HB_FUNC_STATIC(QSTACKEDLAYOUT_SETCURRENTWIDGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QStackedLayoutSlots_connect_signal(const QString &signal, const QString &slot);

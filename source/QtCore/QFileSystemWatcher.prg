@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addPath(const QString &path)
@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_ADDPATH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addPaths(const QStringList &paths)
@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_ADDPATHS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QStringList directories() const
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_REMOVEPATH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void removePaths(const QStringList &paths)
@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QFILESYSTEMWATCHER_REMOVEPATHS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QFileSystemWatcherSlots_connect_signal(const QString &signal, const QString &slot);

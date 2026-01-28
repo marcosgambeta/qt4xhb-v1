@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QPRINTDIALOG_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void open(QObject *receiver, const char *member)
@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QPRINTDIALOG_OPEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QPrintDialog::PrintDialogOptions options() const
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QPRINTDIALOG_SETOPTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOptions(QPrintDialog::PrintDialogOptions options)
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QPRINTDIALOG_SETOPTIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool testOption(QPrintDialog::PrintDialogOption option) const
@@ -210,7 +210,7 @@ HB_FUNC_STATIC(QPRINTDIALOG_DONE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual int exec()
@@ -248,7 +248,7 @@ HB_FUNC_STATIC(QPRINTDIALOG_SETVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QPrintDialogSlots_connect_signal(const QString &signal, const QString &slot);

@@ -68,7 +68,7 @@ HB_FUNC_STATIC(QWAITCONDITION_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void wakeAll()
@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QWAITCONDITION_WAKEALL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void wakeOne()
@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QWAITCONDITION_WAKEONE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QWAITCONDITION_NEWFROM)

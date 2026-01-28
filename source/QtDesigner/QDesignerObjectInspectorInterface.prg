@@ -54,7 +54,7 @@ HB_FUNC_STATIC(QDESIGNEROBJECTINSPECTORINTERFACE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QDesignerFormEditorInterface *core() const
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QDESIGNEROBJECTINSPECTORINTERFACE_SETFORMWINDOW)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

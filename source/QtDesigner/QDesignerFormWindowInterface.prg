@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QDir absoluteDir() const = 0
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_ADDRESOURCEFILE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QString author() const = 0
@@ -260,7 +260,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_EMITSELECTIONCHANGED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QString exportMacro() const = 0
@@ -428,7 +428,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_LAYOUTDEFAULT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QWidget *mainContainer() const = 0
@@ -485,7 +485,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_REMOVERESOURCEFILE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QStringList resourceFiles() const = 0
@@ -523,7 +523,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETAUTHOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setComment(const QString &comment) = 0
@@ -543,7 +543,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETCOMMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setExportMacro(const QString &exportMacro) = 0
@@ -563,7 +563,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETEXPORTMACRO)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setIncludeHints(const QStringList &includeHints) = 0
@@ -583,7 +583,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETINCLUDEHINTS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setLayoutDefault(int margin, int spacing) = 0
@@ -603,7 +603,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETLAYOUTDEFAULT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setLayoutFunction(const QString &margin, const QString &spacing) = 0
@@ -623,7 +623,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETLAYOUTFUNCTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setMainContainer(QWidget *mainContainer) = 0
@@ -643,7 +643,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETMAINCONTAINER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setPixmapFunction(const QString &pixmapFunction) = 0
@@ -663,7 +663,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETPIXMAPFUNCTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void clearSelection(bool update = true) = 0
@@ -683,7 +683,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_CLEARSELECTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void manageWidget(QWidget *widget) = 0
@@ -703,7 +703,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_MANAGEWIDGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void selectWidget(QWidget *widget, bool select = true) = 0
@@ -723,7 +723,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SELECTWIDGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETCONTENTS)
@@ -736,7 +736,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETCONTENTS)
       obj->setContents(PQIODEVICE(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // virtual void setContents(const QString &contents) = 0
     GET_PTR_FROM_SELF(obj);
@@ -745,7 +745,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETCONTENTS)
       obj->setContents(PQSTRING(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -768,7 +768,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETDIRTY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setFeatures(QDesignerFormWindowInterface::Feature features) = 0
@@ -788,7 +788,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETFEATURES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setFileName(const QString &fileName) = 0
@@ -808,7 +808,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETFILENAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setGrid(const QPoint &grid) = 0
@@ -828,7 +828,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_SETGRID)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void unmanageWidget(QWidget *widget) = 0
@@ -848,7 +848,7 @@ HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_UNMANAGEWIDGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW)

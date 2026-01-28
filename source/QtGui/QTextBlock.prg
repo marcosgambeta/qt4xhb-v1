@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QTextBlockFormat blockFormat() const
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_CLEARLAYOUT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool contains(int position) const
@@ -451,7 +451,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_SETLINECOUNT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRevision(int rev)
@@ -471,7 +471,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_SETREVISION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUserData(QTextBlockUserData *data)
@@ -491,7 +491,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_SETUSERDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUserState(int state)
@@ -511,7 +511,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_SETUSERSTATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setVisible(bool visible)
@@ -531,7 +531,7 @@ HB_FUNC_STATIC(QTEXTBLOCK_SETVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString text() const

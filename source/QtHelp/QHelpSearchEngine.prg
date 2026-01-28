@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int hitCount() const
@@ -196,7 +196,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_CANCELINDEXING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void cancelSearching()
@@ -216,7 +216,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_CANCELSEARCHING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void reindexDocumentation()
@@ -236,7 +236,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_REINDEXDOCUMENTATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void search(const QList<QHelpSearchQuery> &queryList)
@@ -263,7 +263,7 @@ HB_FUNC_STATIC(QHELPSEARCHENGINE_SEARCH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QHelpSearchEngineSlots_connect_signal(const QString &signal, const QString &slot);

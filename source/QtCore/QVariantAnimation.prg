@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QVariant currentValue() const
@@ -154,7 +154,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_SETDURATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setEasingCurve(const QEasingCurve &easing)
@@ -174,7 +174,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_SETEASINGCURVE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setEndValue(const QVariant &value)
@@ -194,7 +194,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_SETENDVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setKeyValueAt(qreal step, const QVariant &value)
@@ -214,7 +214,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_SETKEYVALUEAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStartValue(const QVariant &value)
@@ -234,7 +234,7 @@ HB_FUNC_STATIC(QVARIANTANIMATION_SETSTARTVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QVariant startValue() const

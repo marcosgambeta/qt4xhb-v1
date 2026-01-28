@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QCLIPBOARD_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QImage image(QClipboard::Mode mode = QClipboard::Clipboard) const
@@ -214,7 +214,7 @@ HB_FUNC_STATIC(QCLIPBOARD_SETIMAGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMimeData(QMimeData *src, QClipboard::Mode mode = QClipboard::Clipboard)
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QCLIPBOARD_SETMIMEDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPixmap(const QPixmap &pixmap, QClipboard::Mode mode = QClipboard::Clipboard)
@@ -256,7 +256,7 @@ HB_FUNC_STATIC(QCLIPBOARD_SETPIXMAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setText(const QString &text, QClipboard::Mode mode = QClipboard::Clipboard)
@@ -277,7 +277,7 @@ HB_FUNC_STATIC(QCLIPBOARD_SETTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool supportsFindBuffer() const

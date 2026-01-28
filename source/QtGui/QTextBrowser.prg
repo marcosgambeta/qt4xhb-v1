@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_CLEARHISTORY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int forwardHistoryCount() const
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_SETOPENEXTERNALLINKS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOpenLinks(bool open)
@@ -301,7 +301,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_SETOPENLINKS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSearchPaths(const QStringList &paths)
@@ -321,7 +321,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_SETSEARCHPATHS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QUrl source() const
@@ -377,7 +377,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_BACKWARD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void forward()
@@ -397,7 +397,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_FORWARD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void home()
@@ -417,7 +417,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_HOME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void reload()
@@ -437,7 +437,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_RELOAD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setSource(const QUrl &name)
@@ -457,7 +457,7 @@ HB_FUNC_STATIC(QTEXTBROWSER_SETSOURCE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QTextBrowserSlots_connect_signal(const QString &signal, const QString &slot);

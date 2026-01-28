@@ -139,7 +139,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool addShader(QGLShader *shader)
@@ -347,7 +347,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_BINDATTRIBUTELOCATION1)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void bindAttributeLocation(const QByteArray &name, int location)
@@ -367,7 +367,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_BINDATTRIBUTELOCATION2)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void bindAttributeLocation(const QString &name, int location)
@@ -387,7 +387,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_BINDATTRIBUTELOCATION3)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QGLSHADERPROGRAM_BINDATTRIBUTELOCATION)
@@ -413,7 +413,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_DISABLEATTRIBUTEARRAY)
       obj->disableAttributeArray(PINT(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // void disableAttributeArray(const char *name)
     GET_PTR_FROM_SELF(obj);
@@ -422,7 +422,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_DISABLEATTRIBUTEARRAY)
       obj->disableAttributeArray(PCONSTCHAR(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -438,7 +438,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_ENABLEATTRIBUTEARRAY)
       obj->enableAttributeArray(PINT(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // void enableAttributeArray(const char *name)
     GET_PTR_FROM_SELF(obj);
@@ -447,7 +447,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_ENABLEATTRIBUTEARRAY)
       obj->enableAttributeArray(PCONSTCHAR(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -614,7 +614,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_RELEASE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void removeAllShaders()
@@ -634,7 +634,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_REMOVEALLSHADERS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void removeShader(QGLShader *shader)
@@ -654,7 +654,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_REMOVESHADER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEBUFFER)
@@ -667,7 +667,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEBUFFER)
       obj->setAttributeBuffer(PINT(1), PGLENUM(2), PINT(3), PINT(4), OPINT(5, 0));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISBETWEEN(4, 5) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISNUMORNIL(5)) {
     // void setAttributeBuffer(const char *name, GLenum type, int offset, int tupleSize, int stride = 0)
     GET_PTR_FROM_SELF(obj);
@@ -676,7 +676,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEBUFFER)
       obj->setAttributeBuffer(PCONSTCHAR(1), PGLENUM(2), PINT(3), PINT(4), OPINT(5, 0));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -699,7 +699,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE1)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAttributeValue(int location, GLfloat x, GLfloat y)
@@ -719,7 +719,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE2)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAttributeValue(int location, GLfloat x, GLfloat y, GLfloat z)
@@ -739,7 +739,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE3)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAttributeValue(int location, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
@@ -759,7 +759,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE4)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAttributeValue(int location, const QColor &value)
@@ -780,7 +780,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE8)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAttributeValue(const char *name, GLfloat value)
@@ -800,7 +800,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE10)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAttributeValue(const char *name, GLfloat x, GLfloat y)
@@ -820,7 +820,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE11)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAttributeValue(const char *name, GLfloat x, GLfloat y, GLfloat z)
@@ -840,7 +840,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE12)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAttributeValue(const char *name, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
@@ -860,7 +860,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE13)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAttributeValue(const char *name, const QColor &value)
@@ -881,7 +881,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE17)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETATTRIBUTEVALUE)
@@ -928,7 +928,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETGEOMETRYINPUTTYPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setGeometryOutputType(GLenum outputType)
@@ -948,7 +948,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETGEOMETRYOUTPUTTYPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setGeometryOutputVertexCount(int count)
@@ -968,7 +968,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETGEOMETRYOUTPUTVERTEXCOUNT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUniformValue(int location, GLfloat value)
@@ -988,7 +988,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE1)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUniformValue(const char *name, const QPointF &point)
@@ -1008,7 +1008,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE2)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUniformValue(const char *name, const QSize &size)
@@ -1028,7 +1028,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE3)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUniformValue(const char *name, const QSizeF &size)
@@ -1048,7 +1048,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE4)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUniformValue(const char *name, const QTransform &value)
@@ -1068,7 +1068,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE20)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUniformValue(int location, GLint value)
@@ -1088,7 +1088,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE21)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUniformValue(int location, GLuint value)
@@ -1108,7 +1108,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE22)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUniformValue(int location, GLfloat x, GLfloat y)
@@ -1128,7 +1128,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE23)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUniformValue(int location, GLfloat x, GLfloat y, GLfloat z)
@@ -1148,7 +1148,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE24)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUniformValue(int location, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
@@ -1168,7 +1168,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE25)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUniformValue(int location, const QColor &color)
@@ -1189,7 +1189,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE29)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUniformValue(int location, const QPoint &point)
@@ -1209,7 +1209,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE30)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUniformValue(int location, const QPointF &point)
@@ -1229,7 +1229,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE31)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUniformValue(int location, const QSize &size)
@@ -1249,7 +1249,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE32)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUniformValue(int location, const QSizeF &size)
@@ -1269,7 +1269,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE33)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUniformValue(int location, const QTransform &value)
@@ -1289,7 +1289,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE43)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUniformValue(const char *name, GLfloat value)
@@ -1309,7 +1309,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE44)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUniformValue(const char *name, GLint value)
@@ -1329,7 +1329,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE45)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUniformValue(const char *name, GLuint value)
@@ -1349,7 +1349,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE46)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUniformValue(const char *name, GLfloat x, GLfloat y)
@@ -1369,7 +1369,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE47)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUniformValue(const char *name, GLfloat x, GLfloat y, GLfloat z)
@@ -1389,7 +1389,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE48)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUniformValue(const char *name, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
@@ -1409,7 +1409,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE49)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUniformValue(const char *name, const QColor &color)
@@ -1430,7 +1430,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE53)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUniformValue(const char *name, const QPoint &point)
@@ -1450,7 +1450,7 @@ HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE54)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QGLSHADERPROGRAM_SETUNIFORMVALUE)

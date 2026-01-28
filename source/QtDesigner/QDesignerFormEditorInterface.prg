@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QDesignerActionEditorInterface *actionEditor() const
@@ -201,7 +201,7 @@ HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_SETACTIONEDITOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setObjectInspector(QDesignerObjectInspectorInterface *objectInspector)
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_SETOBJECTINSPECTOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPropertyEditor(QDesignerPropertyEditorInterface *propertyEditor)
@@ -241,7 +241,7 @@ HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_SETPROPERTYEDITOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWidgetBox(QDesignerWidgetBoxInterface *widgetBox)
@@ -261,7 +261,7 @@ HB_FUNC_STATIC(QDESIGNERFORMEDITORINTERFACE_SETWIDGETBOX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QWidget *topLevel() const

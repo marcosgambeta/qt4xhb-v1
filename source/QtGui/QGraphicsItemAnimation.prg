@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void clear()
@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qreal horizontalScaleAt(qreal step) const
@@ -238,7 +238,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETITEM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPosAt(qreal step, const QPointF &point)
@@ -258,7 +258,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETPOSAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRotationAt(qreal step, qreal angle)
@@ -278,7 +278,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETROTATIONAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setScaleAt(qreal step, qreal sx, qreal sy)
@@ -298,7 +298,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETSCALEAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setShearAt(qreal step, qreal sh, qreal sv)
@@ -318,7 +318,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETSHEARAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTimeLine(QTimeLine *timeLine)
@@ -338,7 +338,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETTIMELINE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTranslationAt(qreal step, qreal dx, qreal dy)
@@ -358,7 +358,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETTRANSLATIONAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QTimeLine *timeLine() const
@@ -469,7 +469,7 @@ HB_FUNC_STATIC(QGRAPHICSITEMANIMATION_SETSTEP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QSPACERITEM_CHANGESIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual Qt::Orientations expandingDirections() const
@@ -194,7 +194,7 @@ HB_FUNC_STATIC(QSPACERITEM_SETGEOMETRY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QSize sizeHint() const

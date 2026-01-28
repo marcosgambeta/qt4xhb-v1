@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addDelay(int msecs)
@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDDELAY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addKeyClick(Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1)
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYCLICK1)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addKeyClick(char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1)
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYCLICK2)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYCLICK)
@@ -185,7 +185,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYCLICKS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addKeyPress(Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1)
@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYPRESS1)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addKeyPress(char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1)
@@ -229,7 +229,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYPRESS2)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYPRESS)
@@ -262,7 +262,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYRELEASE1)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addKeyRelease(char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1)
@@ -284,7 +284,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYRELEASE2)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QTESTEVENTLIST_ADDKEYRELEASE)
@@ -318,7 +318,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSECLICK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addMouseDClick(Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay =
@@ -341,7 +341,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSEDCLICK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addMouseMove(QPoint pos = QPoint(), int delay = -1)
@@ -361,7 +361,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSEMOVE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addMousePress(Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay =
@@ -384,7 +384,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSEPRESS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addMouseRelease(Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay =
@@ -407,7 +407,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_ADDMOUSERELEASE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void clear()
@@ -427,7 +427,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void simulate(QWidget *w)
@@ -447,7 +447,7 @@ HB_FUNC_STATIC(QTESTEVENTLIST_SIMULATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QTESTEVENTLIST_NEWFROM)

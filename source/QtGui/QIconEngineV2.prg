@@ -53,7 +53,7 @@ HB_FUNC_STATIC(QICONENGINEV2_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QList<QSize> availableSizes(QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off)
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QICONENGINEV2_VIRTUAL_HOOK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool write(QDataStream &out) const

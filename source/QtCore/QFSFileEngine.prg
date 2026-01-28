@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QFSFILEENGINE_OPEN)
@@ -532,7 +532,7 @@ HB_FUNC_STATIC(QFSFILEENGINE_SETFILENAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool setPermissions(uint perms)

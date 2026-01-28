@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QURLINFO_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString group() const
@@ -372,7 +372,7 @@ HB_FUNC_STATIC(QURLINFO_SETDIR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setFile(bool b)
@@ -392,7 +392,7 @@ HB_FUNC_STATIC(QURLINFO_SETFILE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setGroup(const QString &s)
@@ -412,7 +412,7 @@ HB_FUNC_STATIC(QURLINFO_SETGROUP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setLastModified(const QDateTime &dt)
@@ -432,7 +432,7 @@ HB_FUNC_STATIC(QURLINFO_SETLASTMODIFIED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setLastRead(const QDateTime &dt)
@@ -452,7 +452,7 @@ HB_FUNC_STATIC(QURLINFO_SETLASTREAD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setName(const QString &name)
@@ -472,7 +472,7 @@ HB_FUNC_STATIC(QURLINFO_SETNAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setOwner(const QString &s)
@@ -492,7 +492,7 @@ HB_FUNC_STATIC(QURLINFO_SETOWNER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setPermissions(int p)
@@ -512,7 +512,7 @@ HB_FUNC_STATIC(QURLINFO_SETPERMISSIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setReadable(bool b)
@@ -532,7 +532,7 @@ HB_FUNC_STATIC(QURLINFO_SETREADABLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setSize(qint64 size)
@@ -552,7 +552,7 @@ HB_FUNC_STATIC(QURLINFO_SETSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setSymLink(bool b)
@@ -572,7 +572,7 @@ HB_FUNC_STATIC(QURLINFO_SETSYMLINK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setWritable(bool b)
@@ -592,7 +592,7 @@ HB_FUNC_STATIC(QURLINFO_SETWRITABLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qint64 size() const

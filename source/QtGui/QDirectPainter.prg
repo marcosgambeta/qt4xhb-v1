@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QRegion allocatedRegion() const
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_ENDPAINTING)
       obj->endPainting();
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQREGION(1)) {
     // void endPainting(const QRegion &region)
     GET_PTR_FROM_SELF(obj);
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_ENDPAINTING)
       obj->endPainting(*PQREGION(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_FLUSH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QRect geometry() const
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_LOWER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void raise()
@@ -201,7 +201,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_RAISE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void regionChanged(const QRegion &newRegion)
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_REGIONCHANGED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QRegion requestedRegion() const
@@ -259,7 +259,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_SETGEOMETRY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRegion(const QRegion &region)
@@ -279,7 +279,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_SETREGION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void startPainting(bool lockDisplay = true)
@@ -299,7 +299,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_STARTPAINTING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static int linestep()
@@ -329,7 +329,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_LOCK)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static int screenDepth()
@@ -387,7 +387,7 @@ HB_FUNC_STATIC(QDIRECTPAINTER_UNLOCK)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

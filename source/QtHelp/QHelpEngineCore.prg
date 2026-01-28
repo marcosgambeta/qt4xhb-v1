@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool addCustomFilter(const QString &filterName, const QStringList &attributes)
@@ -449,7 +449,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_SETAUTOSAVEFILTER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCollectionFile(const QString &fileName)
@@ -469,7 +469,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_SETCOLLECTIONFILE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCurrentFilter(const QString &filterName)
@@ -489,7 +489,7 @@ HB_FUNC_STATIC(QHELPENGINECORE_SETCURRENTFILTER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool setCustomValue(const QString &key, const QVariant &value)

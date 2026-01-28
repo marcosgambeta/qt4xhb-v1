@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QFILEINFO_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QDir absoluteDir() const
@@ -797,7 +797,7 @@ HB_FUNC_STATIC(QFILEINFO_REFRESH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCaching(bool enable)
@@ -817,7 +817,7 @@ HB_FUNC_STATIC(QFILEINFO_SETCACHING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QFILEINFO_SETFILE)
@@ -830,7 +830,7 @@ HB_FUNC_STATIC(QFILEINFO_SETFILE)
       obj->setFile(PQSTRING(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQFILE(1)) {
     // void setFile(const QFile &file)
     GET_PTR_FROM_SELF(obj);
@@ -839,7 +839,7 @@ HB_FUNC_STATIC(QFILEINFO_SETFILE)
       obj->setFile(*PQFILE(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && ISQDIR(1) && HB_ISCHAR(2)) {
     // void setFile(const QDir &dir, const QString &file)
     GET_PTR_FROM_SELF(obj);
@@ -848,7 +848,7 @@ HB_FUNC_STATIC(QFILEINFO_SETFILE)
       obj->setFile(*PQDIR(1), PQSTRING(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

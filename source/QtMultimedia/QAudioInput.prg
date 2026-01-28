@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QAUDIOINPUT_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int bufferSize() const
@@ -252,7 +252,7 @@ HB_FUNC_STATIC(QAUDIOINPUT_RESET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void resume()
@@ -272,7 +272,7 @@ HB_FUNC_STATIC(QAUDIOINPUT_RESUME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setBufferSize(int value)
@@ -292,7 +292,7 @@ HB_FUNC_STATIC(QAUDIOINPUT_SETBUFFERSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setNotifyInterval(int ms)
@@ -312,7 +312,7 @@ HB_FUNC_STATIC(QAUDIOINPUT_SETNOTIFYINTERVAL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QAUDIOINPUT_START)
@@ -325,7 +325,7 @@ HB_FUNC_STATIC(QAUDIOINPUT_START)
       obj->start(PQIODEVICE(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(0)) {
     // QIODevice *start()
     GET_PTR_FROM_SELF(obj);
@@ -374,7 +374,7 @@ HB_FUNC_STATIC(QAUDIOINPUT_STOP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void suspend()
@@ -394,7 +394,7 @@ HB_FUNC_STATIC(QAUDIOINPUT_SUSPEND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QAudioInputSlots_connect_signal(const QString &signal, const QString &slot);

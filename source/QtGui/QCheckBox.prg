@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QCHECKBOX_SETCHECKSTATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTristate(bool y = true)
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QCHECKBOX_SETTRISTATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QSize minimumSizeHint() const

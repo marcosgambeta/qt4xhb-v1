@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool autoClose() const
@@ -223,7 +223,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_OPEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAutoClose(bool close)
@@ -243,7 +243,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETAUTOCLOSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAutoReset(bool reset)
@@ -263,7 +263,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETAUTORESET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setBar(QProgressBar *bar)
@@ -283,7 +283,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETBAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCancelButton(QPushButton *cancelButton)
@@ -303,7 +303,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETCANCELBUTTON)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setLabel(QLabel *label)
@@ -323,7 +323,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETLABEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int value() const
@@ -397,7 +397,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_CANCEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void reset()
@@ -417,7 +417,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_RESET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCancelButtonText(const QString &cancelButtonText)
@@ -437,7 +437,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETCANCELBUTTONTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setLabelText(const QString &text)
@@ -457,7 +457,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETLABELTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMaximum(int maximum)
@@ -477,7 +477,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETMAXIMUM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMinimum(int minimum)
@@ -497,7 +497,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETMINIMUM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMinimumDuration(int ms)
@@ -517,7 +517,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETMINIMUMDURATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRange(int minimum, int maximum)
@@ -537,7 +537,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETRANGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setValue(int progress)
@@ -557,7 +557,7 @@ HB_FUNC_STATIC(QPROGRESSDIALOG_SETVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QProgressDialogSlots_connect_signal(const QString &signal, const QString &slot);

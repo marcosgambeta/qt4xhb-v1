@@ -52,7 +52,7 @@ HB_FUNC_STATIC(QABSTRACTFONTENGINE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QAbstractFontEngine::Capabilities capabilities() const = 0

@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QLINE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QPoint p1() const
@@ -272,7 +272,7 @@ HB_FUNC_STATIC(QLINE_SETP1)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setP2(const QPoint &p2)
@@ -292,7 +292,7 @@ HB_FUNC_STATIC(QLINE_SETP2)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setLine(int x1, int y1, int x2, int y2)
@@ -312,7 +312,7 @@ HB_FUNC_STATIC(QLINE_SETLINE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPoints(const QPoint &p1, const QPoint &p2)
@@ -332,7 +332,7 @@ HB_FUNC_STATIC(QLINE_SETPOINTS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QLINE_TRANSLATE)
@@ -345,7 +345,7 @@ HB_FUNC_STATIC(QLINE_TRANSLATE)
       obj->translate(*PQPOINT(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void translate(int dx, int dy)
     GET_PTR_FROM_SELF(obj);
@@ -354,7 +354,7 @@ HB_FUNC_STATIC(QLINE_TRANSLATE)
       obj->translate(PINT(1), PINT(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

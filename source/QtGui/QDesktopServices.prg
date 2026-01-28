@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QDESKTOPSERVICES_SETURLHANDLER)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QString storageLocation(QDesktopServices::StandardLocation type)
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QDESKTOPSERVICES_UNSETURLHANDLER)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QDESKTOPSERVICES_NEWFROM)

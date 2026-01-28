@@ -65,7 +65,7 @@ HB_FUNC_STATIC(QAXSCRIPTENGINE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addItem(const QString &name)
@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QAXSCRIPTENGINE_ADDITEM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool hasIntrospection() const
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QAXSCRIPTENGINE_SETSTATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QAxScriptEngine::State state() const

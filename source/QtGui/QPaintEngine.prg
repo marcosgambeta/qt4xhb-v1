@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QPAINTENGINE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool begin(QPaintDevice *pdev) = 0
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QPAINTENGINE_DRAWELLIPSE)
       obj->drawEllipse(*PQRECTF(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQRECT(1)) {
     // virtual void drawEllipse(const QRect &rect)
     GET_PTR_FROM_SELF(obj);
@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QPAINTENGINE_DRAWELLIPSE)
       obj->drawEllipse(*PQRECT(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QPAINTENGINE_DRAWIMAGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QPAINTENGINE_DRAWLINES)
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QPAINTENGINE_DRAWPATH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void drawPixmap(const QRectF &r, const QPixmap &pm, const QRectF &sr) = 0
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QPAINTENGINE_DRAWPIXMAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QPAINTENGINE_DRAWPOINTS)
@@ -216,7 +216,7 @@ HB_FUNC_STATIC(QPAINTENGINE_DRAWTEXTITEM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void drawTiledPixmap(const QRectF &rect, const QPixmap &pixmap, const QPointF &p)
@@ -236,7 +236,7 @@ HB_FUNC_STATIC(QPAINTENGINE_DRAWTILEDPIXMAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool end() = 0
@@ -348,7 +348,7 @@ HB_FUNC_STATIC(QPAINTENGINE_SETACTIVE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QPaintEngine::Type type() const = 0
@@ -386,7 +386,7 @@ HB_FUNC_STATIC(QPAINTENGINE_UPDATESTATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QPAINTENGINE_NEWFROM)

@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_SETSTRINGLIST)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QStringList stringList() const
@@ -233,7 +233,7 @@ HB_FUNC_STATIC(QSTRINGLISTMODEL_SORT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual Qt::DropActions supportedDropActions() const

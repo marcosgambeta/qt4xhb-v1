@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QLCDNUMBER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool checkOverflow(double num) const
@@ -225,7 +225,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETDIGITCOUNT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMode(QLCDNumber::Mode)
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSegmentStyle(QLCDNumber::SegmentStyle)
@@ -265,7 +265,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETSEGMENTSTYLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool smallDecimalPoint() const
@@ -339,7 +339,7 @@ HB_FUNC_STATIC(QLCDNUMBER_DISPLAY1)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void display(double num)
@@ -359,7 +359,7 @@ HB_FUNC_STATIC(QLCDNUMBER_DISPLAY2)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void display(int num)
@@ -379,7 +379,7 @@ HB_FUNC_STATIC(QLCDNUMBER_DISPLAY3)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QLCDNUMBER_DISPLAY)
@@ -410,7 +410,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETBINMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDecMode()
@@ -430,7 +430,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETDECMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setHexMode()
@@ -450,7 +450,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETHEXMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOctMode()
@@ -470,7 +470,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETOCTMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSmallDecimalPoint(bool)
@@ -490,7 +490,7 @@ HB_FUNC_STATIC(QLCDNUMBER_SETSMALLDECIMALPOINT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QLCDNumberSlots_connect_signal(const QString &signal, const QString &slot);

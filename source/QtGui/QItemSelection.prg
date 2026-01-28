@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QITEMSELECTION_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool contains(const QModelIndex &index) const
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QITEMSELECTION_MERGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void select(const QModelIndex &topLeft, const QModelIndex &bottomRight)
@@ -175,7 +175,7 @@ HB_FUNC_STATIC(QITEMSELECTION_SELECT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void split(const QItemSelectionRange &range, const QItemSelectionRange &other, QItemSelection *result)
@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QITEMSELECTION_SPLIT)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QITEMSELECTION_NEWFROM)

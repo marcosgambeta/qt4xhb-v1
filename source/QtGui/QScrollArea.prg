@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QSCROLLAREA_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::Alignment alignment() const
@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QSCROLLAREA_ENSUREVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void ensureWidgetVisible(QWidget *childWidget, int xmargin = 50, int ymargin = 50)
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QSCROLLAREA_ENSUREWIDGETVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAlignment(Qt::Alignment)
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QSCROLLAREA_SETALIGNMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWidget(QWidget *widget)
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QSCROLLAREA_SETWIDGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWidgetResizable(bool resizable)
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QSCROLLAREA_SETWIDGETRESIZABLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QWidget *takeWidget()

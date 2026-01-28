@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_RESETATTRIBUTE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void resetFontFamily(QWebSettings::FontFamily which)
@@ -196,7 +196,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_RESETFONTFAMILY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void resetFontSize(QWebSettings::FontSize type)
@@ -216,7 +216,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_RESETFONTSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAttribute(QWebSettings::WebAttribute attribute, bool on)
@@ -236,7 +236,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETATTRIBUTE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDefaultTextEncoding(const QString &encoding)
@@ -256,7 +256,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETDEFAULTTEXTENCODING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFontFamily(QWebSettings::FontFamily which, const QString &family)
@@ -276,7 +276,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETFONTFAMILY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFontSize(QWebSettings::FontSize type, int size)
@@ -296,7 +296,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETFONTSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setLocalStoragePath(const QString &path)
@@ -316,7 +316,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETLOCALSTORAGEPATH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUserStyleSheetUrl(const QUrl &location)
@@ -336,7 +336,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETUSERSTYLESHEETURL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool testAttribute(QWebSettings::WebAttribute attribute) const
@@ -388,7 +388,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_CLEARICONDATABASE)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void clearMemoryCaches()
@@ -404,7 +404,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_CLEARMEMORYCACHES)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void enablePersistentStorage(const QString &path = QString())
@@ -420,7 +420,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_ENABLEPERSISTENTSTORAGE)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QWebSettings *globalSettings()
@@ -549,7 +549,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETICONDATABASEPATH)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setMaximumPagesInCache(int pages)
@@ -565,7 +565,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETMAXIMUMPAGESINCACHE)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setObjectCacheCapacities(int cacheMinDeadCapacity, int cacheMaxDead, int totalCapacity)
@@ -581,7 +581,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETOBJECTCACHECAPACITIES)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setOfflineStorageDefaultQuota(qint64 maximumSize)
@@ -597,7 +597,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETOFFLINESTORAGEDEFAULTQUOTA)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setOfflineStoragePath(const QString &path)
@@ -613,7 +613,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETOFFLINESTORAGEPATH)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setOfflineWebApplicationCachePath(const QString &path)
@@ -629,7 +629,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETOFFLINEWEBAPPLICATIONCACHEPATH)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setOfflineWebApplicationCacheQuota(qint64 maximumSize)
@@ -645,7 +645,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETOFFLINEWEBAPPLICATIONCACHEQUOTA)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setWebGraphic(QWebSettings::WebGraphic type, const QPixmap &graphic)
@@ -661,7 +661,7 @@ HB_FUNC_STATIC(QWEBSETTINGS_SETWEBGRAPHIC)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QPixmap webGraphic(QWebSettings::WebGraphic type)

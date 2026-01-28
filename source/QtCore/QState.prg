@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QSTATE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QSTATE_ADDTRANSITION)
@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QSTATE_ADDTRANSITION)
       obj->addTransition(PQABSTRACTTRANSITION(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQABSTRACTSTATE(3)) {
     // QSignalTransition *addTransition(QObject *sender, const char *signal, QAbstractState *target)
     GET_PTR_FROM_SELF(obj);
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QSTATE_ASSIGNPROPERTY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QState::ChildMode childMode() const
@@ -211,7 +211,7 @@ HB_FUNC_STATIC(QSTATE_REMOVETRANSITION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setChildMode(QState::ChildMode mode)
@@ -231,7 +231,7 @@ HB_FUNC_STATIC(QSTATE_SETCHILDMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setErrorState(QAbstractState *state)
@@ -251,7 +251,7 @@ HB_FUNC_STATIC(QSTATE_SETERRORSTATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setInitialState(QAbstractState *state)
@@ -271,7 +271,7 @@ HB_FUNC_STATIC(QSTATE_SETINITIALSTATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QList<QAbstractTransition *> transitions() const

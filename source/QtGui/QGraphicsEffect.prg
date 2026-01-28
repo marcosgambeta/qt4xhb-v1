@@ -56,7 +56,7 @@ HB_FUNC_STATIC(QGRAPHICSEFFECT_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QRectF boundingRect() const
@@ -130,7 +130,7 @@ HB_FUNC_STATIC(QGRAPHICSEFFECT_SETENABLED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void update()
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QGRAPHICSEFFECT_UPDATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QGraphicsEffectSlots_connect_signal(const QString &signal, const QString &slot);

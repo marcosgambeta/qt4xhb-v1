@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QNetworkConfiguration activeConfiguration() const
@@ -368,7 +368,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETCACHE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setConfiguration(const QNetworkConfiguration &config)
@@ -388,7 +388,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETCONFIGURATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCookieJar(QNetworkCookieJar *cookieJar)
@@ -408,7 +408,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETCOOKIEJAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setNetworkAccessible(QNetworkAccessManager::NetworkAccessibility accessible)
@@ -428,7 +428,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETNETWORKACCESSIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setProxy(const QNetworkProxy &proxy)
@@ -448,7 +448,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETPROXY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setProxyFactory(QNetworkProxyFactory *factory)
@@ -468,7 +468,7 @@ HB_FUNC_STATIC(QNETWORKACCESSMANAGER_SETPROXYFACTORY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QNetworkAccessManagerSlots_connect_signal(const QString &signal, const QString &slot);

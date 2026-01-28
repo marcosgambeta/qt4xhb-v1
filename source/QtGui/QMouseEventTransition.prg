@@ -74,7 +74,7 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::MouseButton button() const
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_SETBUTTON)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setHitTestPath(const QPainterPath &path)
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_SETHITTESTPATH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setModifierMask(Qt::KeyboardModifiers modifierMask)
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QMOUSEEVENTTRANSITION_SETMODIFIERMASK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

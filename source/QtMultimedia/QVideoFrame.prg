@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int bytesPerLine() const
@@ -381,7 +381,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_SETENDTIME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFieldType(QVideoFrame::FieldType field)
@@ -401,7 +401,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_SETFIELDTYPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStartTime(qint64 time)
@@ -421,7 +421,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_SETSTARTTIME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSize size() const
@@ -477,7 +477,7 @@ HB_FUNC_STATIC(QVIDEOFRAME_UNMAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int width() const

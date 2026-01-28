@@ -51,7 +51,7 @@ HB_FUNC_STATIC(QWEBPLUGINFACTORY_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QObject *create(const QString &mimeType, const QUrl &url, const QStringList &argumentNames, const QStringList
@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QWEBPLUGINFACTORY_REFRESHPLUGINS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

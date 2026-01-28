@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QXMLREADER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QXmlDTDHandler *DTDHandler() const = 0
@@ -307,7 +307,7 @@ HB_FUNC_STATIC(QXMLREADER_SETCONTENTHANDLER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setDTDHandler(QXmlDTDHandler *handler) = 0
@@ -327,7 +327,7 @@ HB_FUNC_STATIC(QXMLREADER_SETDTDHANDLER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setDeclHandler(QXmlDeclHandler *handler) = 0
@@ -347,7 +347,7 @@ HB_FUNC_STATIC(QXMLREADER_SETDECLHANDLER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setEntityResolver(QXmlEntityResolver *handler) = 0
@@ -367,7 +367,7 @@ HB_FUNC_STATIC(QXMLREADER_SETENTITYRESOLVER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setErrorHandler(QXmlErrorHandler *handler) = 0
@@ -387,7 +387,7 @@ HB_FUNC_STATIC(QXMLREADER_SETERRORHANDLER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setFeature(const QString &name, bool value) = 0
@@ -407,7 +407,7 @@ HB_FUNC_STATIC(QXMLREADER_SETFEATURE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setLexicalHandler(QXmlLexicalHandler *handler) = 0
@@ -427,7 +427,7 @@ HB_FUNC_STATIC(QXMLREADER_SETLEXICALHANDLER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setProperty(const QString &name, void *value) = 0
@@ -447,7 +447,7 @@ HB_FUNC_STATIC(QXMLREADER_SETPROPERTY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QXMLREADER_NEWFROM)

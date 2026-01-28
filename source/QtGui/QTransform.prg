@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QTRANSFORM_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qreal m11() const
@@ -511,7 +511,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP1)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void map(int x, int y, int *tx, int *ty) const
@@ -535,7 +535,7 @@ HB_FUNC_STATIC(QTRANSFORM_MAP10)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QTRANSFORM_MAP)
@@ -661,7 +661,7 @@ HB_FUNC_STATIC(QTRANSFORM_RESET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMatrix(qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33)
@@ -682,7 +682,7 @@ HB_FUNC_STATIC(QTRANSFORM_SETMATRIX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QTransform transposed() const

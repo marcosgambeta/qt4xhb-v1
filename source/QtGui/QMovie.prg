@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QMOVIE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QColor backgroundColor() const
@@ -407,7 +407,7 @@ HB_FUNC_STATIC(QMOVIE_SETBACKGROUNDCOLOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCacheMode(QMovie::CacheMode mode)
@@ -427,7 +427,7 @@ HB_FUNC_STATIC(QMOVIE_SETCACHEMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDevice(QIODevice *device)
@@ -447,7 +447,7 @@ HB_FUNC_STATIC(QMOVIE_SETDEVICE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFileName(const QString &fileName)
@@ -467,7 +467,7 @@ HB_FUNC_STATIC(QMOVIE_SETFILENAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFormat(const QByteArray &format)
@@ -487,7 +487,7 @@ HB_FUNC_STATIC(QMOVIE_SETFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setScaledSize(const QSize &size)
@@ -507,7 +507,7 @@ HB_FUNC_STATIC(QMOVIE_SETSCALEDSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int speed() const
@@ -581,7 +581,7 @@ HB_FUNC_STATIC(QMOVIE_SETPAUSED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSpeed(int percentSpeed)
@@ -601,7 +601,7 @@ HB_FUNC_STATIC(QMOVIE_SETSPEED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void start()
@@ -621,7 +621,7 @@ HB_FUNC_STATIC(QMOVIE_START)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void stop()
@@ -641,7 +641,7 @@ HB_FUNC_STATIC(QMOVIE_STOP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QList<QByteArray> supportedFormats()

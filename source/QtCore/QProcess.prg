@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QPROCESS_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void closeReadChannel(QProcess::ProcessChannel channel)
@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QPROCESS_CLOSEREADCHANNEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void closeWriteChannel()
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QPROCESS_CLOSEWRITECHANNEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QStringList environment() const
@@ -349,7 +349,7 @@ HB_FUNC_STATIC(QPROCESS_SETENVIRONMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setNativeArguments ( const QString & arguments )
@@ -370,7 +370,7 @@ HB_FUNC_STATIC(QPROCESS_SETNATIVEARGUMENTS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 #endif
 }
 // void setProcessChannelMode(QProcess::ProcessChannelMode mode)
@@ -390,7 +390,7 @@ HB_FUNC_STATIC(QPROCESS_SETPROCESSCHANNELMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setProcessEnvironment(const QProcessEnvironment &environment)
@@ -410,7 +410,7 @@ HB_FUNC_STATIC(QPROCESS_SETPROCESSENVIRONMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setReadChannel(QProcess::ProcessChannel channel)
@@ -430,7 +430,7 @@ HB_FUNC_STATIC(QPROCESS_SETREADCHANNEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStandardErrorFile(const QString &fileName, QIODevice::OpenMode mode = QIODevice::Truncate)
@@ -451,7 +451,7 @@ HB_FUNC_STATIC(QPROCESS_SETSTANDARDERRORFILE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStandardInputFile(const QString &fileName)
@@ -471,7 +471,7 @@ HB_FUNC_STATIC(QPROCESS_SETSTANDARDINPUTFILE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStandardOutputFile(const QString &fileName, QIODevice::OpenMode mode = QIODevice::Truncate)
@@ -492,7 +492,7 @@ HB_FUNC_STATIC(QPROCESS_SETSTANDARDOUTPUTFILE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStandardOutputProcess(QProcess *destination)
@@ -512,7 +512,7 @@ HB_FUNC_STATIC(QPROCESS_SETSTANDARDOUTPUTPROCESS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWorkingDirectory(const QString &dir)
@@ -532,7 +532,7 @@ HB_FUNC_STATIC(QPROCESS_SETWORKINGDIRECTORY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QPROCESS_START)
@@ -546,7 +546,7 @@ HB_FUNC_STATIC(QPROCESS_START)
                  HB_ISNIL(3) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite) : PQIODEVICE_OPENMODE(3));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && ISNUMORNIL(2)) {
     // void start(const QString &program, QIODevice::OpenMode mode = QIODevice::ReadWrite)
     GET_PTR_FROM_SELF(obj);
@@ -556,7 +556,7 @@ HB_FUNC_STATIC(QPROCESS_START)
                  HB_ISNIL(2) ? static_cast<QIODevice::OpenMode>(QIODevice::ReadWrite) : PQIODEVICE_OPENMODE(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -723,7 +723,7 @@ HB_FUNC_STATIC(QPROCESS_CLOSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool isSequential() const
@@ -797,7 +797,7 @@ HB_FUNC_STATIC(QPROCESS_KILL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void terminate()
@@ -817,7 +817,7 @@ HB_FUNC_STATIC(QPROCESS_TERMINATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QPROCESS_EXECUTE)

@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void append(const QString &qName, const QString &uri, const QString &localPart, const QString &value)
@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_APPEND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void clear()
@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QXMLATTRIBUTES_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int count() const

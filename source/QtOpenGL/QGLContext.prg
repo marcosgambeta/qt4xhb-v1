@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QGLCONTEXT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QGLCONTEXT_BINDTEXTURE)
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QGLCONTEXT_DELETETEXTURE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QPaintDevice *device() const
@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QGLCONTEXT_DONECURRENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QGLCONTEXT_DRAWTEXTURE)
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QGLCONTEXT_DRAWTEXTURE)
       obj->drawTexture(*PQRECTF(1), PGLUINT(2), OPGLENUM(3, GL_TEXTURE_2D));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISBETWEEN(2, 3) && ISQPOINTF(1) && HB_ISNUM(2) && ISNUMORNIL(3)) {
     // void drawTexture(const QPointF &point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D)
     GET_PTR_FROM_SELF(obj);
@@ -230,7 +230,7 @@ HB_FUNC_STATIC(QGLCONTEXT_DRAWTEXTURE)
       obj->drawTexture(*PQPOINTF(1), PGLUINT(2), OPGLENUM(3, GL_TEXTURE_2D));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -325,7 +325,7 @@ HB_FUNC_STATIC(QGLCONTEXT_MAKECURRENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QColor overlayTransparentColor() const
@@ -381,7 +381,7 @@ HB_FUNC_STATIC(QGLCONTEXT_RESET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFormat(const QGLFormat &format)
@@ -401,7 +401,7 @@ HB_FUNC_STATIC(QGLCONTEXT_SETFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void swapBuffers() const
@@ -421,7 +421,7 @@ HB_FUNC_STATIC(QGLCONTEXT_SWAPBUFFERS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static bool areSharing(const QGLContext *context1, const QGLContext *context2)
@@ -466,7 +466,7 @@ HB_FUNC_STATIC(QGLCONTEXT_SETTEXTURECACHELIMIT)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static int textureCacheLimit()

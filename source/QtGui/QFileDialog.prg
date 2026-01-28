@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QFILEDIALOG_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QFileDialog::AcceptMode acceptMode() const
@@ -388,7 +388,7 @@ HB_FUNC_STATIC(QFILEDIALOG_OPEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QFileDialog::Options options() const
@@ -499,7 +499,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SELECTFILE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void selectNameFilter(const QString &filter)
@@ -519,7 +519,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SELECTNAMEFILTER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QStringList selectedFiles() const
@@ -575,7 +575,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETACCEPTMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setConfirmOverwrite(bool enabled)
@@ -595,7 +595,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETCONFIRMOVERWRITE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDefaultSuffix(const QString &suffix)
@@ -615,7 +615,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETDEFAULTSUFFIX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QFILEDIALOG_SETDIRECTORY)
@@ -628,7 +628,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETDIRECTORY)
       obj->setDirectory(PQSTRING(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQDIR(1)) {
     // void setDirectory(const QDir &directory)
     GET_PTR_FROM_SELF(obj);
@@ -637,7 +637,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETDIRECTORY)
       obj->setDirectory(*PQDIR(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -660,7 +660,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETFILEMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFilter(QDir::Filters filters)
@@ -680,7 +680,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETFILTER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setHistory(const QStringList &paths)
@@ -700,7 +700,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETHISTORY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setIconProvider(QFileIconProvider *provider)
@@ -720,7 +720,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETICONPROVIDER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setItemDelegate(QAbstractItemDelegate *delegate)
@@ -740,7 +740,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETITEMDELEGATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setLabelText(QFileDialog::DialogLabel label, const QString &text)
@@ -760,7 +760,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETLABELTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setNameFilter(const QString &filter)
@@ -780,7 +780,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETNAMEFILTER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setNameFilterDetailsVisible(bool enabled)
@@ -800,7 +800,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETNAMEFILTERDETAILSVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setNameFilters(const QStringList &filters)
@@ -820,7 +820,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETNAMEFILTERS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOption(QFileDialog::Option option, bool on = true)
@@ -840,7 +840,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETOPTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOptions(QFileDialog::Options options)
@@ -860,7 +860,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETOPTIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setProxyModel(QAbstractProxyModel *proxyModel)
@@ -880,7 +880,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETPROXYMODEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setReadOnly(bool enabled)
@@ -900,7 +900,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETREADONLY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setResolveSymlinks(bool enabled)
@@ -920,7 +920,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETRESOLVESYMLINKS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSidebarUrls(const QList<QUrl> &urls)
@@ -946,7 +946,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETSIDEBARURLS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setViewMode(QFileDialog::ViewMode mode)
@@ -966,7 +966,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETVIEWMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QList<QUrl> sidebarUrls() const
@@ -1063,7 +1063,7 @@ HB_FUNC_STATIC(QFILEDIALOG_SETVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QString getExistingDirectory(QWidget *parent = 0, const QString &caption = QString(), const QString &dir =

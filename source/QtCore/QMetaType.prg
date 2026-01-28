@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QMETATYPE_DESTROY)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void unregisterType(const char *typeName)
@@ -156,7 +156,7 @@ HB_FUNC_STATIC(QMETATYPE_UNREGISTERTYPE)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static bool save(QDataStream &stream, int type, const void *data)

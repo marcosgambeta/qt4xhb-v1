@@ -59,7 +59,7 @@ HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QObject *extension(QObject *object, const QString &iid) const = 0
@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_REGISTEREXTENSIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void unregisterExtensions(QAbstractExtensionFactory *factory, const QString &iid) = 0
@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_UNREGISTEREXTENSIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QABSTRACTEXTENSIONMANAGER_NEWFROM)

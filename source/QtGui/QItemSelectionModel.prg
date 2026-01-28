@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool columnIntersectsSelection(int column, const QModelIndex &parent) const
@@ -396,7 +396,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void clearSelection()
@@ -416,7 +416,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_CLEARSELECTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void reset()
@@ -436,7 +436,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_RESET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECT)
@@ -449,7 +449,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECT)
       obj->select(*PQMODELINDEX(1), PQITEMSELECTIONMODEL_SELECTIONFLAGS(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && ISQITEMSELECTION(1) && HB_ISNUM(2)) {
     // virtual void select(const QItemSelection &selection, QItemSelectionModel::SelectionFlags command)
     GET_PTR_FROM_SELF(obj);
@@ -458,7 +458,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SELECT)
       obj->select(*PQITEMSELECTION(1), PQITEMSELECTIONMODEL_SELECTIONFLAGS(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -481,7 +481,7 @@ HB_FUNC_STATIC(QITEMSELECTIONMODEL_SETCURRENTINDEX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QItemSelectionModelSlots_connect_signal(const QString &signal, const QString &slot);

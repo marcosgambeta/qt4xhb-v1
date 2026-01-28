@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QDATAWIDGETMAPPER_ADDMAPPING)
@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_ADDMAPPING)
       obj->addMapping(PQWIDGET(1), PINT(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(3) && ISQWIDGET(1) && HB_ISNUM(2) && ISQBYTEARRAY(3)) {
     // void addMapping(QWidget *widget, int section, const QByteArray &propertyName)
     GET_PTR_FROM_SELF(obj);
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_ADDMAPPING)
       obj->addMapping(PQWIDGET(1), PINT(2), *PQBYTEARRAY(3));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_CLEARMAPPING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int currentIndex() const
@@ -289,7 +289,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_REMOVEMAPPING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QModelIndex rootIndex() const
@@ -327,7 +327,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETITEMDELEGATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setModel(QAbstractItemModel *model)
@@ -347,7 +347,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETMODEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOrientation(Qt::Orientation aOrientation)
@@ -367,7 +367,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETORIENTATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRootIndex(const QModelIndex &index)
@@ -387,7 +387,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETROOTINDEX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSubmitPolicy(QDataWidgetMapper::SubmitPolicy policy)
@@ -407,7 +407,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETSUBMITPOLICY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QDataWidgetMapper::SubmitPolicy submitPolicy() const
@@ -445,7 +445,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_REVERT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setCurrentIndex(int index)
@@ -465,7 +465,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETCURRENTINDEX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCurrentModelIndex(const QModelIndex &index)
@@ -485,7 +485,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_SETCURRENTMODELINDEX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool submit()
@@ -523,7 +523,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_TOFIRST)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void toLast()
@@ -543,7 +543,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_TOLAST)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void toNext()
@@ -563,7 +563,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_TONEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void toPrevious()
@@ -583,7 +583,7 @@ HB_FUNC_STATIC(QDATAWIDGETMAPPER_TOPREVIOUS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QDataWidgetMapperSlots_connect_signal(const QString &signal, const QString &slot);

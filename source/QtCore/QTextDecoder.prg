@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QTEXTDECODER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QTEXTDECODER_TOUNICODE)
@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QTEXTDECODER_TOUNICODE)
       obj->toUnicode(NULL, PCONSTCHAR(2), PINT(3));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     // QString toUnicode(const QByteArray &ba)
     GET_PTR_FROM_SELF(obj);

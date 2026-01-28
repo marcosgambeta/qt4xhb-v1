@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QMETAOBJECT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QMetaClassInfo classInfo(int index) const
@@ -557,7 +557,7 @@ HB_FUNC_STATIC(QMETAOBJECT_CONNECTSLOTSBYNAME)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QMETAOBJECT_INVOKEMETHOD)

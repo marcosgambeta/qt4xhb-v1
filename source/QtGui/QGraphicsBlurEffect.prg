@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QGraphicsBlurEffect::BlurHints blurHints() const
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_SETBLURHINTS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setBlurRadius(qreal blurRadius)
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QGRAPHICSBLUREFFECT_SETBLURRADIUS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QGraphicsBlurEffectSlots_connect_signal(const QString &signal, const QString &slot);

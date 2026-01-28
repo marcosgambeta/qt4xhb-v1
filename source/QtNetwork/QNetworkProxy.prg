@@ -92,7 +92,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QNetworkProxy::Capabilities capabilities() const
@@ -220,7 +220,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_SETCAPABILITIES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setHostName(const QString &hostName)
@@ -240,7 +240,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_SETHOSTNAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPassword(const QString &password)
@@ -260,7 +260,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_SETPASSWORD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPort(quint16 port)
@@ -280,7 +280,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_SETPORT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setType(QNetworkProxy::ProxyType type)
@@ -300,7 +300,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_SETTYPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUser(const QString &user)
@@ -320,7 +320,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_SETUSER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QNetworkProxy::ProxyType type() const
@@ -386,7 +386,7 @@ HB_FUNC_STATIC(QNETWORKPROXY_SETAPPLICATIONPROXY)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QNETWORKPROXY_NEWFROM)

@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void abortEvaluation(const QScriptValue &result = QScriptValue())
@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_ABORTEVALUATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QScriptEngineAgent *agent() const
@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_CLEAREXCEPTIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void collectGarbage()
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_COLLECTGARBAGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QScriptContext *currentContext() const
@@ -353,7 +353,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_INSTALLTRANSLATORFUNCTIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isEvaluating() const
@@ -469,7 +469,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_POPCONTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int processEventsInterval() const
@@ -526,7 +526,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_REPORTADDITIONALMEMORYCOST)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAgent(QScriptEngineAgent *agent)
@@ -546,7 +546,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_SETAGENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDefaultPrototype(int metaTypeId, const QScriptValue &prototype)
@@ -566,7 +566,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_SETDEFAULTPROTOTYPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setGlobalObject(const QScriptValue &object)
@@ -586,7 +586,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_SETGLOBALOBJECT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setProcessEventsInterval(int interval)
@@ -606,7 +606,7 @@ HB_FUNC_STATIC(QSCRIPTENGINE_SETPROCESSEVENTSINTERVAL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QScriptValue toObject(const QScriptValue &value)

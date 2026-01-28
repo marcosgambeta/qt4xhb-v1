@@ -49,7 +49,7 @@ HB_FUNC_STATIC(QTOUCHEVENT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QWidget *widget() const

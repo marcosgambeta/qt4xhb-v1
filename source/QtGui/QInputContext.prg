@@ -67,7 +67,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QList<QAction *> actions()
@@ -234,7 +234,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_MOUSEHANDLER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void reset() = 0
@@ -254,7 +254,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_RESET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void sendEvent(const QInputMethodEvent &event)
@@ -274,7 +274,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_SENDEVENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setFocusWidget(QWidget *widget)
@@ -294,7 +294,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_SETFOCUSWIDGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QTextFormat standardFormat(QInputContext::StandardFormat s) const
@@ -332,7 +332,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_UPDATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void widgetDestroyed(QWidget *widget)
@@ -352,7 +352,7 @@ HB_FUNC_STATIC(QINPUTCONTEXT_WIDGETDESTROYED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

@@ -77,7 +77,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QVariant extension(QScriptClass::Extension extension, const QVariant &argument = QVariant())
@@ -207,7 +207,7 @@ HB_FUNC_STATIC(QSCRIPTCLASS_SETPROPERTY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool supportsExtension(QScriptClass::Extension extension) const

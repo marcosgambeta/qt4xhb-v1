@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QUNDOVIEW_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QIcon cleanIcon() const
@@ -156,7 +156,7 @@ HB_FUNC_STATIC(QUNDOVIEW_SETCLEANICON)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setEmptyLabel(const QString &label)
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(QUNDOVIEW_SETEMPTYLABEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QUndoStack *stack() const
@@ -215,7 +215,7 @@ HB_FUNC_STATIC(QUNDOVIEW_SETGROUP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStack(QUndoStack *stack)
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QUNDOVIEW_SETSTACK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

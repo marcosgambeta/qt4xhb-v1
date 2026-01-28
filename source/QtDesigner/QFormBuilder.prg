@@ -63,7 +63,7 @@ HB_FUNC_STATIC(QFORMBUILDER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addPluginPath(const QString &pluginPath)
@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QFORMBUILDER_ADDPLUGINPATH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void clearPluginPaths()
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QFORMBUILDER_CLEARPLUGINPATHS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QList<QDesignerCustomWidgetInterface *> customWidgets() const
@@ -179,7 +179,7 @@ HB_FUNC_STATIC(QFORMBUILDER_SETPLUGINPATH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

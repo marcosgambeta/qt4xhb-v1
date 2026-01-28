@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void finish(QWidget *mainWin)
@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_FINISH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // const QPixmap pixmap() const
@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_REPAINT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPixmap(const QPixmap &pixmap)
@@ -154,7 +154,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_SETPIXMAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void clearMessage()
@@ -174,7 +174,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_CLEARMESSAGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void showMessage(const QString &message, int alignment = Qt::AlignLeft, const QColor &color = Qt::black)
@@ -195,7 +195,7 @@ HB_FUNC_STATIC(QSPLASHSCREEN_SHOWMESSAGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QSplashScreenSlots_connect_signal(const QString &signal, const QString &slot);

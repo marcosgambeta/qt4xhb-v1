@@ -112,7 +112,7 @@ HB_FUNC_STATIC(QSETTINGS_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QStringList allKeys() const
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QSETTINGS_BEGINGROUP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int beginReadArray(const QString &prefix)
@@ -206,7 +206,7 @@ HB_FUNC_STATIC(QSETTINGS_BEGINWRITEARRAY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QStringList childGroups() const
@@ -262,7 +262,7 @@ HB_FUNC_STATIC(QSETTINGS_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool contains(const QString &key) const
@@ -300,7 +300,7 @@ HB_FUNC_STATIC(QSETTINGS_ENDARRAY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void endGroup()
@@ -320,7 +320,7 @@ HB_FUNC_STATIC(QSETTINGS_ENDGROUP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool fallbacksEnabled() const
@@ -467,7 +467,7 @@ HB_FUNC_STATIC(QSETTINGS_REMOVE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSettings::Scope scope() const
@@ -505,7 +505,7 @@ HB_FUNC_STATIC(QSETTINGS_SETARRAYINDEX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFallbacksEnabled(bool b)
@@ -525,7 +525,7 @@ HB_FUNC_STATIC(QSETTINGS_SETFALLBACKSENABLED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QSETTINGS_SETINICODEC)
@@ -538,7 +538,7 @@ HB_FUNC_STATIC(QSETTINGS_SETINICODEC)
       obj->setIniCodec(PQTEXTCODEC(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // void setIniCodec(const char *codecName)
     GET_PTR_FROM_SELF(obj);
@@ -547,7 +547,7 @@ HB_FUNC_STATIC(QSETTINGS_SETINICODEC)
       obj->setIniCodec(PCONSTCHAR(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -570,7 +570,7 @@ HB_FUNC_STATIC(QSETTINGS_SETVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSettings::Status status() const
@@ -608,7 +608,7 @@ HB_FUNC_STATIC(QSETTINGS_SYNC)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QVariant value(const QString &key, const QVariant &defaultValue = QVariant()) const
@@ -656,7 +656,7 @@ HB_FUNC_STATIC(QSETTINGS_SETDEFAULTFORMAT)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setPath(QSettings::Format format, QSettings::Scope scope, const QString &path)
@@ -672,7 +672,7 @@ HB_FUNC_STATIC(QSETTINGS_SETPATH)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

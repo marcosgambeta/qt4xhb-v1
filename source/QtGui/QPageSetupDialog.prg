@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_OPEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QPageSetupDialog::PageSetupDialogOptions options() const
@@ -135,7 +135,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_SETOPTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOptions(QPageSetupDialog::PageSetupDialogOptions options)
@@ -155,7 +155,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_SETOPTIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool testOption(QPageSetupDialog::PageSetupDialogOption option) const
@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QPAGESETUPDIALOG_SETVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

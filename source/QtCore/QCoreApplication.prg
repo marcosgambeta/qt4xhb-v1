@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool filterEvent(void *message, long *result)
@@ -162,7 +162,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_QUIT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void addLibraryPath(const QString &path)
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_ADDLIBRARYPATH)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QString applicationDirPath()
@@ -306,7 +306,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_EXIT)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void flush()
@@ -322,7 +322,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_FLUSH)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static bool hasPendingEvents()
@@ -352,7 +352,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_INSTALLTRANSLATOR)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QCoreApplication *instance()
@@ -419,13 +419,13 @@ HB_FUNC_STATIC(QCOREAPPLICATION_POSTEVENT)
 
     QCoreApplication::postEvent(PQOBJECT(1), PQEVENT(2));
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISOBJECT(2) && HB_ISNUM(3)) {
     // static void postEvent(QObject *receiver, QEvent *event, int priority)
 
     QCoreApplication::postEvent(PQOBJECT(1), PQEVENT(2), PINT(3));
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -439,13 +439,13 @@ HB_FUNC_STATIC(QCOREAPPLICATION_PROCESSEVENTS)
     QCoreApplication::processEvents(HB_ISNIL(1) ? static_cast<QEventLoop::ProcessEventsFlags>(QEventLoop::AllEvents)
                                                 : PQEVENTLOOP_PROCESSEVENTSFLAGS(1));
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // static void processEvents(QEventLoop::ProcessEventsFlags flags, int maxtime)
 
     QCoreApplication::processEvents(PQEVENTLOOP_PROCESSEVENTSFLAGS(1), PINT(2));
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -464,7 +464,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_REMOVELIBRARYPATH)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QCOREAPPLICATION_REMOVEPOSTEDEVENTS)
@@ -474,13 +474,13 @@ HB_FUNC_STATIC(QCOREAPPLICATION_REMOVEPOSTEDEVENTS)
 
     QCoreApplication::removePostedEvents(PQOBJECT(1));
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2)) {
     // static void removePostedEvents(QObject *receiver, int eventType)
 
     QCoreApplication::removePostedEvents(PQOBJECT(1), PINT(2));
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -499,7 +499,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_REMOVETRANSLATOR)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static bool sendEvent(QObject *receiver, QEvent *event)
@@ -523,13 +523,13 @@ HB_FUNC_STATIC(QCOREAPPLICATION_SENDPOSTEDEVENTS)
 
     QCoreApplication::sendPostedEvents(PQOBJECT(1), PINT(2));
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(0)) {
     // static void sendPostedEvents()
 
     QCoreApplication::sendPostedEvents();
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -548,7 +548,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_SETAPPLICATIONNAME)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setApplicationVersion(const QString &version)
@@ -564,7 +564,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_SETAPPLICATIONVERSION)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setAttribute(Qt::ApplicationAttribute attribute, bool on = true)
@@ -580,7 +580,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_SETATTRIBUTE)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setLibraryPaths(const QStringList &paths)
@@ -596,7 +596,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_SETLIBRARYPATHS)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setOrganizationDomain(const QString &orgDomain)
@@ -612,7 +612,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_SETORGANIZATIONDOMAIN)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setOrganizationName(const QString &orgName)
@@ -628,7 +628,7 @@ HB_FUNC_STATIC(QCOREAPPLICATION_SETORGANIZATIONNAME)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static bool startingUp()

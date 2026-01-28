@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QDIALOGBUTTONBOX_ADDBUTTON)
@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_ADDBUTTON)
       obj->addButton(PQABSTRACTBUTTON(1), PQDIALOGBUTTONBOX_BUTTONROLE(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2)) {
     // QPushButton *addButton(const QString &text, QDialogButtonBox::ButtonRole role)
     GET_PTR_FROM_SELF(obj);
@@ -238,7 +238,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::Orientation orientation() const
@@ -276,7 +276,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_REMOVEBUTTON)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCenterButtons(bool center)
@@ -296,7 +296,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_SETCENTERBUTTONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOrientation(Qt::Orientation orientation)
@@ -316,7 +316,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_SETORIENTATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStandardButtons(QDialogButtonBox::StandardButtons buttons)
@@ -336,7 +336,7 @@ HB_FUNC_STATIC(QDIALOGBUTTONBOX_SETSTANDARDBUTTONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QDialogButtonBox::StandardButton standardButton(QAbstractButton *button) const

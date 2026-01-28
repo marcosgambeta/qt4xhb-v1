@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool hasTracking() const
@@ -243,7 +243,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETINVERTEDAPPEARANCE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setInvertedControls(bool)
@@ -263,7 +263,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETINVERTEDCONTROLS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMaximum(int)
@@ -283,7 +283,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETMAXIMUM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMinimum(int)
@@ -303,7 +303,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETMINIMUM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPageStep(int)
@@ -323,7 +323,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETPAGESTEP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRange(int min, int max)
@@ -343,7 +343,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETRANGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSingleStep(int)
@@ -363,7 +363,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETSINGLESTEP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSliderDown(bool)
@@ -383,7 +383,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETSLIDERDOWN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSliderPosition(int)
@@ -403,7 +403,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETSLIDERPOSITION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTracking(bool enable)
@@ -423,7 +423,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETTRACKING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int singleStep() const
@@ -479,7 +479,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_TRIGGERACTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int value() const
@@ -517,7 +517,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETORIENTATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setValue(int)
@@ -537,7 +537,7 @@ HB_FUNC_STATIC(QABSTRACTSLIDER_SETVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QAbstractSliderSlots_connect_signal(const QString &signal, const QString &slot);

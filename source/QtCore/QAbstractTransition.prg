@@ -67,7 +67,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addAnimation(QAbstractAnimation *animation)
@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_ADDANIMATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QList<QAbstractAnimation *> animations() const
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_REMOVEANIMATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTargetState(QAbstractState *target)
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_SETTARGETSTATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTargetStates(const QList<QAbstractState *> &targets)
@@ -211,7 +211,7 @@ HB_FUNC_STATIC(QABSTRACTTRANSITION_SETTARGETSTATES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QState *sourceState() const

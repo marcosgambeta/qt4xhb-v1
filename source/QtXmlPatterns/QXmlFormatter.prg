@@ -98,7 +98,7 @@ HB_FUNC_STATIC(QXMLFORMATTER_SETINDENTATIONDEPTH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void atomicValue(const QVariant &value)
@@ -118,7 +118,7 @@ HB_FUNC_STATIC(QXMLFORMATTER_ATOMICVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void attribute(const QXmlName &name, const QStringRef &value)
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QXMLFORMATTER_ATTRIBUTE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void characters(const QStringRef &value)
@@ -158,7 +158,7 @@ HB_FUNC_STATIC(QXMLFORMATTER_CHARACTERS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void comment(const QString &value)
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QXMLFORMATTER_COMMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void endDocument()
@@ -198,7 +198,7 @@ HB_FUNC_STATIC(QXMLFORMATTER_ENDDOCUMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void endElement()
@@ -218,7 +218,7 @@ HB_FUNC_STATIC(QXMLFORMATTER_ENDELEMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void endOfSequence()
@@ -238,7 +238,7 @@ HB_FUNC_STATIC(QXMLFORMATTER_ENDOFSEQUENCE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void processingInstruction(const QXmlName &name, const QString &value)
@@ -258,7 +258,7 @@ HB_FUNC_STATIC(QXMLFORMATTER_PROCESSINGINSTRUCTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void startDocument()
@@ -278,7 +278,7 @@ HB_FUNC_STATIC(QXMLFORMATTER_STARTDOCUMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void startElement(const QXmlName &name)
@@ -298,7 +298,7 @@ HB_FUNC_STATIC(QXMLFORMATTER_STARTELEMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void startOfSequence()
@@ -318,7 +318,7 @@ HB_FUNC_STATIC(QXMLFORMATTER_STARTOFSEQUENCE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

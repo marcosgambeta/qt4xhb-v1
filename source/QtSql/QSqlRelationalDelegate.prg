@@ -64,7 +64,7 @@ HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_SETEDITORDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QSQLRELATIONALDELEGATE_SETMODELDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

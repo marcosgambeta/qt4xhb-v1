@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QPOLYGONF_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QRectF boundingRect() const
@@ -214,7 +214,7 @@ HB_FUNC_STATIC(QPOLYGONF_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QPolygon toPolygon() const
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QPOLYGONF_TRANSLATE)
       obj->translate(*PQPOINTF(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void translate(qreal dx, qreal dy)
     GET_PTR_FROM_SELF(obj);
@@ -254,7 +254,7 @@ HB_FUNC_STATIC(QPOLYGONF_TRANSLATE)
       obj->translate(PQREAL(1), PQREAL(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

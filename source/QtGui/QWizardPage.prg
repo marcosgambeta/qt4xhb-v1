@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_CLEANUPPAGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void initializePage()
@@ -127,7 +127,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_INITIALIZEPAGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isCommitPage() const
@@ -237,7 +237,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_SETBUTTONTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCommitPage(bool commitPage)
@@ -257,7 +257,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_SETCOMMITPAGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFinalPage(bool finalPage)
@@ -277,7 +277,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_SETFINALPAGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPixmap(QWizard::WizardPixmap which, const QPixmap &pixmap)
@@ -297,7 +297,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_SETPIXMAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSubTitle(const QString &subTitle)
@@ -317,7 +317,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_SETSUBTITLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTitle(const QString &title)
@@ -337,7 +337,7 @@ HB_FUNC_STATIC(QWIZARDPAGE_SETTITLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString subTitle() const

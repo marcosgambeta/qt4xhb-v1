@@ -53,7 +53,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHOR_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSizePolicy(QSizePolicy::Policy policy)
@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHOR_SETSIZEPOLICY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSpacing(qreal spacing)
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHOR_SETSPACING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSizePolicy::Policy sizePolicy() const
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QGRAPHICSANCHOR_UNSETSPACING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

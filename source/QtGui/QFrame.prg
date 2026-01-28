@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QFRAME_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QRect frameRect() const
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QFRAME_SETFRAMERECT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFrameShadow(QFrame::Shadow)
@@ -241,7 +241,7 @@ HB_FUNC_STATIC(QFRAME_SETFRAMESHADOW)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFrameShape(QFrame::Shape)
@@ -261,7 +261,7 @@ HB_FUNC_STATIC(QFRAME_SETFRAMESHAPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFrameStyle(int style)
@@ -281,7 +281,7 @@ HB_FUNC_STATIC(QFRAME_SETFRAMESTYLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setLineWidth(int)
@@ -301,7 +301,7 @@ HB_FUNC_STATIC(QFRAME_SETLINEWIDTH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMidLineWidth(int)
@@ -321,7 +321,7 @@ HB_FUNC_STATIC(QFRAME_SETMIDLINEWIDTH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QSize sizeHint() const

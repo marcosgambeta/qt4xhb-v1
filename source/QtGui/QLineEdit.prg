@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QLINEEDIT_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::Alignment alignment() const
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QLINEEDIT_BACKSPACE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QCompleter *completer() const
@@ -236,7 +236,7 @@ HB_FUNC_STATIC(QLINEEDIT_CURSORBACKWARD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void cursorForward(bool mark, int steps = 1)
@@ -256,7 +256,7 @@ HB_FUNC_STATIC(QLINEEDIT_CURSORFORWARD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int cursorPosition() const
@@ -312,7 +312,7 @@ HB_FUNC_STATIC(QLINEEDIT_CURSORWORDBACKWARD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void cursorWordForward(bool mark)
@@ -332,7 +332,7 @@ HB_FUNC_STATIC(QLINEEDIT_CURSORWORDFORWARD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void del()
@@ -352,7 +352,7 @@ HB_FUNC_STATIC(QLINEEDIT_DEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void deselect()
@@ -372,7 +372,7 @@ HB_FUNC_STATIC(QLINEEDIT_DESELECT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString displayText() const
@@ -446,7 +446,7 @@ HB_FUNC_STATIC(QLINEEDIT_END)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void getTextMargins(int *left, int *top, int *right, int *bottom) const
@@ -474,7 +474,7 @@ HB_FUNC_STATIC(QLINEEDIT_GETTEXTMARGINS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool hasAcceptableInput() const
@@ -548,7 +548,7 @@ HB_FUNC_STATIC(QLINEEDIT_HOME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString inputMask() const
@@ -586,7 +586,7 @@ HB_FUNC_STATIC(QLINEEDIT_INSERT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isModified() const
@@ -768,7 +768,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETALIGNMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCompleter(QCompleter *c)
@@ -788,7 +788,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETCOMPLETER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCursorPosition(int)
@@ -808,7 +808,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETCURSORPOSITION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDragEnabled(bool b)
@@ -828,7 +828,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETDRAGENABLED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setEchoMode(QLineEdit::EchoMode)
@@ -848,7 +848,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETECHOMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFrame(bool)
@@ -868,7 +868,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETFRAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setInputMask(const QString &inputMask)
@@ -888,7 +888,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETINPUTMASK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMaxLength(int)
@@ -908,7 +908,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETMAXLENGTH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setModified(bool)
@@ -928,7 +928,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETMODIFIED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPlaceholderText(const QString &)
@@ -948,7 +948,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETPLACEHOLDERTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setReadOnly(bool)
@@ -968,7 +968,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETREADONLY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSelection(int start, int length)
@@ -988,7 +988,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETSELECTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QLINEEDIT_SETTEXTMARGINS)
@@ -1001,7 +1001,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETTEXTMARGINS)
       obj->setTextMargins(PINT(1), PINT(2), PINT(3), PINT(4));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQMARGINS(1)) {
     // void setTextMargins(const QMargins &margins)
     GET_PTR_FROM_SELF(obj);
@@ -1010,7 +1010,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETTEXTMARGINS)
       obj->setTextMargins(*PQMARGINS(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -1033,7 +1033,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETVALIDATOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QSize sizeHint() const
@@ -1162,7 +1162,7 @@ HB_FUNC_STATIC(QLINEEDIT_COPY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void cut()
@@ -1182,7 +1182,7 @@ HB_FUNC_STATIC(QLINEEDIT_CUT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void paste()
@@ -1202,7 +1202,7 @@ HB_FUNC_STATIC(QLINEEDIT_PASTE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void redo()
@@ -1222,7 +1222,7 @@ HB_FUNC_STATIC(QLINEEDIT_REDO)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void selectAll()
@@ -1242,7 +1242,7 @@ HB_FUNC_STATIC(QLINEEDIT_SELECTALL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setText(const QString &)
@@ -1262,7 +1262,7 @@ HB_FUNC_STATIC(QLINEEDIT_SETTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void undo()
@@ -1282,7 +1282,7 @@ HB_FUNC_STATIC(QLINEEDIT_UNDO)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QLineEditSlots_connect_signal(const QString &signal, const QString &slot);

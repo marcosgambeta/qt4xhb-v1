@@ -63,7 +63,7 @@ HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QInputContext *create(const QString &key, QObject *parent)

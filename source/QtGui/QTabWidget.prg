@@ -106,7 +106,7 @@ HB_FUNC_STATIC(QTABWIDGET_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QTABWIDGET_ADDTAB)
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QTABWIDGET_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QWidget *cornerWidget(Qt::Corner corner = Qt::TopRightCorner) const
@@ -373,7 +373,7 @@ HB_FUNC_STATIC(QTABWIDGET_REMOVETAB)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCornerWidget(QWidget *widget, Qt::Corner corner = Qt::TopRightCorner)
@@ -393,7 +393,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETCORNERWIDGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDocumentMode(bool set)
@@ -413,7 +413,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETDOCUMENTMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setElideMode(Qt::TextElideMode)
@@ -433,7 +433,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETELIDEMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setIconSize(const QSize &size)
@@ -453,7 +453,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETICONSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMovable(bool movable)
@@ -473,7 +473,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETMOVABLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTabEnabled(int index, bool enable)
@@ -493,7 +493,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETTABENABLED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTabIcon(int index, const QIcon &icon)
@@ -513,7 +513,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETTABICON)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTabPosition(QTabWidget::TabPosition)
@@ -533,7 +533,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETTABPOSITION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTabShape(QTabWidget::TabShape s)
@@ -553,7 +553,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETTABSHAPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTabText(int index, const QString &label)
@@ -573,7 +573,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETTABTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTabToolTip(int index, const QString &tip)
@@ -593,7 +593,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETTABTOOLTIP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTabWhatsThis(int index, const QString &text)
@@ -613,7 +613,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETTABWHATSTHIS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTabsClosable(bool closeable)
@@ -633,7 +633,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETTABSCLOSABLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUsesScrollButtons(bool useButtons)
@@ -653,7 +653,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETUSESSCROLLBUTTONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QIcon tabIcon(int index) const
@@ -872,7 +872,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETCURRENTINDEX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCurrentWidget(QWidget *widget)
@@ -892,7 +892,7 @@ HB_FUNC_STATIC(QTABWIDGET_SETCURRENTWIDGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QTabWidgetSlots_connect_signal(const QString &signal, const QString &slot);

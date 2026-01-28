@@ -58,7 +58,7 @@ HB_FUNC_STATIC(QXMLERRORHANDLER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool error(const QXmlParseException &exception) = 0

@@ -64,7 +64,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QDRAGMOVEEVENT_ACCEPT)
@@ -77,7 +77,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_ACCEPT)
       obj->accept(*PQRECT(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(0)) {
     // void accept()
     GET_PTR_FROM_SELF(obj);
@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_ACCEPT)
       obj->accept();
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_IGNORE)
       obj->ignore(*PQRECT(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(0)) {
     // void ignore()
     GET_PTR_FROM_SELF(obj);
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QDRAGMOVEEVENT_IGNORE)
       obj->ignore();
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

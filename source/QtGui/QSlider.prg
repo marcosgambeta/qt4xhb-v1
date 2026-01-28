@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QSLIDER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTickInterval(int ti)
@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QSLIDER_SETTICKINTERVAL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTickPosition(QSlider::TickPosition position)
@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QSLIDER_SETTICKPOSITION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int tickInterval() const

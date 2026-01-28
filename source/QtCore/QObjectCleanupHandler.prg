@@ -65,7 +65,7 @@ HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QObject *add(QObject *object)
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_REMOVE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isEmpty() const
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QOBJECTCLEANUPHANDLER_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

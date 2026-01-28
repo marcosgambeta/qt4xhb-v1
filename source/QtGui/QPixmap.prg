@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QPIXMAP_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qint64 cacheKey() const
@@ -257,7 +257,7 @@ HB_FUNC_STATIC(QPIXMAP_DETACH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QPIXMAP_FILL)
@@ -270,7 +270,7 @@ HB_FUNC_STATIC(QPIXMAP_FILL)
       obj->fill(HB_ISNIL(1) ? Qt::white : *static_cast<QColor *>(Qt4xHb::itemGetPtr(1)));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && ISQWIDGET(1) && ISQPOINT(2)) {
     // void fill(const QWidget *widget, const QPoint &offset)
     GET_PTR_FROM_SELF(obj);
@@ -279,7 +279,7 @@ HB_FUNC_STATIC(QPIXMAP_FILL)
       obj->fill(PQWIDGET(1), *PQPOINT(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(3) && ISQWIDGET(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
     // void fill(const QWidget *widget, int x, int y)
     GET_PTR_FROM_SELF(obj);
@@ -288,7 +288,7 @@ HB_FUNC_STATIC(QPIXMAP_FILL)
       obj->fill(PQWIDGET(1), PINT(2), PINT(3));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -565,7 +565,7 @@ HB_FUNC_STATIC(QPIXMAP_SCROLL)
                   HB_ISNIL(7) ? 0 : static_cast<QRegion *>(Qt4xHb::itemGetPtr(7)));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISQRECT(3) && (ISQREGION(4) || HB_ISNIL(4))) {
     // void scroll(int dx, int dy, const QRect &rect, QRegion *exposed = 0)
     GET_PTR_FROM_SELF(obj);
@@ -574,7 +574,7 @@ HB_FUNC_STATIC(QPIXMAP_SCROLL)
       obj->scroll(PINT(1), PINT(2), *PQRECT(3), HB_ISNIL(4) ? 0 : static_cast<QRegion *>(Qt4xHb::itemGetPtr(4)));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -597,7 +597,7 @@ HB_FUNC_STATIC(QPIXMAP_SETMASK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSize size() const
@@ -635,7 +635,7 @@ HB_FUNC_STATIC(QPIXMAP_SWAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QImage toImage() const

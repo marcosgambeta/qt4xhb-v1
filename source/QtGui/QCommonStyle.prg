@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QCOMMONSTYLE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void drawComplexControl(QStyle::ComplexControl cc, const QStyleOptionComplex *opt, QPainter *p, const QWidget
@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QCOMMONSTYLE_DRAWCOMPLEXCONTROL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void drawControl(QStyle::ControlElement element, const QStyleOption *opt, QPainter *p, const QWidget *widget
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QCOMMONSTYLE_DRAWCONTROL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void drawPrimitive(QStyle::PrimitiveElement pe, const QStyleOption *opt, QPainter *p, const QWidget *widget =
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QCOMMONSTYLE_DRAWPRIMITIVE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QPixmap generatedIconPixmap(QIcon::Mode iconMode, const QPixmap &pixmap, const QStyleOption *opt) const
@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QCOMMONSTYLE_POLISH)
       obj->polish(*PQPALETTE(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQAPPLICATION(1)) {
     // virtual void polish(QApplication *app)
     GET_PTR_FROM_SELF(obj);
@@ -217,7 +217,7 @@ HB_FUNC_STATIC(QCOMMONSTYLE_POLISH)
       obj->polish(PQAPPLICATION(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQWIDGET(1)) {
     // virtual void polish(QWidget *widget)
     GET_PTR_FROM_SELF(obj);
@@ -226,7 +226,7 @@ HB_FUNC_STATIC(QCOMMONSTYLE_POLISH)
       obj->polish(PQWIDGET(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -340,7 +340,7 @@ HB_FUNC_STATIC(QCOMMONSTYLE_UNPOLISH)
       obj->unpolish(PQWIDGET(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQAPPLICATION(1)) {
     // virtual void unpolish(QApplication *application)
     GET_PTR_FROM_SELF(obj);
@@ -349,7 +349,7 @@ HB_FUNC_STATIC(QCOMMONSTYLE_UNPOLISH)
       obj->unpolish(PQAPPLICATION(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

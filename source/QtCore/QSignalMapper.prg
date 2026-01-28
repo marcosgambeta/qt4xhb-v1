@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QSIGNALMAPPER_SETMAPPING)
@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_SETMAPPING)
       obj->setMapping(PQOBJECT(1), PINT(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2)) {
     // void setMapping(QObject *sender, const QString &text)
     GET_PTR_FROM_SELF(obj);
@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_SETMAPPING)
       obj->setMapping(PQOBJECT(1), PQSTRING(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && ISQOBJECT(1) && ISQWIDGET(2)) {
     // void setMapping(QObject *sender, QWidget *widget)
     GET_PTR_FROM_SELF(obj);
@@ -100,7 +100,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_SETMAPPING)
       obj->setMapping(PQOBJECT(1), PQWIDGET(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && ISQOBJECT(1) && ISQOBJECT(2)) {
     // void setMapping(QObject *sender, QObject *object)
     GET_PTR_FROM_SELF(obj);
@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_SETMAPPING)
       obj->setMapping(PQOBJECT(1), PQOBJECT(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_REMOVEMAPPINGS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QSIGNALMAPPER_MAPPING)
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_MAP)
       obj->map();
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQOBJECT(1)) {
     // void map(QObject *sender)
     GET_PTR_FROM_SELF(obj);
@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QSIGNALMAPPER_MAP)
       obj->map(PQOBJECT(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

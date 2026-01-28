@@ -64,7 +64,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QString actionText(int action, QAccessible::Text t, int child) const = 0
@@ -301,7 +301,7 @@ HB_FUNC_STATIC(QACCESSIBLEINTERFACE_SETTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QAccessible::State state(int child) const = 0

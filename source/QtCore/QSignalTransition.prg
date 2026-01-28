@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QSIGNALTRANSITION_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QObject *senderObject() const
@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QSIGNALTRANSITION_SETSENDEROBJECT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QByteArray signal() const
@@ -147,7 +147,7 @@ HB_FUNC_STATIC(QSIGNALTRANSITION_SETSIGNAL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QAXSCRIPT_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QAXSCRIPT_CALL)

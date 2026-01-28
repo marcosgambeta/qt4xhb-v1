@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QModelIndex mapFromSource(const QModelIndex &sourceIndex) const = 0
@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SETSOURCEMODEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QAbstractItemModel *sourceModel() const
@@ -266,7 +266,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_FETCHMORE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual Qt::ItemFlags flags(const QModelIndex &index) const
@@ -384,7 +384,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_REVERT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole)
@@ -440,7 +440,7 @@ HB_FUNC_STATIC(QABSTRACTPROXYMODEL_SORT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QSize span(const QModelIndex &index) const

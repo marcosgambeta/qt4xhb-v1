@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT)
       obj->addToJavaScriptWindowObject(PQSTRING(1), PQOBJECT(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(3) && HB_ISCHAR(1) && ISQOBJECT(2) && HB_ISNUM(3)) {
     // void addToJavaScriptWindowObject(const QString &name, QObject *object, QScriptEngine::ValueOwnership own)
     GET_PTR_FROM_SELF(obj);
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT)
       obj->addToJavaScriptWindowObject(PQSTRING(1), PQOBJECT(2), PQSCRIPTENGINE_VALUEOWNERSHIP(3));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -363,7 +363,7 @@ HB_FUNC_STATIC(QWEBFRAME_LOAD)
       obj->load(*PQURL(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISBETWEEN(1, 3) && ISQNETWORKREQUEST(1) && ISNUMORNIL(2) && (ISQBYTEARRAY(3) || HB_ISNIL(3))) {
     // void load(const QNetworkRequest &req, QNetworkAccessManager::Operation operation =
     // QNetworkAccessManager::GetOperation, const QByteArray &body = QByteArray())
@@ -376,7 +376,7 @@ HB_FUNC_STATIC(QWEBFRAME_LOAD)
                 HB_ISNIL(3) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(3)));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -448,7 +448,7 @@ HB_FUNC_STATIC(QWEBFRAME_RENDER)
       obj->render(PQPAINTER(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && ISQPAINTER(1) && ISQREGION(2)) {
     // void render(QPainter *painter, const QRegion &clip)
     GET_PTR_FROM_SELF(obj);
@@ -457,7 +457,7 @@ HB_FUNC_STATIC(QWEBFRAME_RENDER)
       obj->render(PQPAINTER(1), *PQREGION(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISBETWEEN(2, 3) && ISQPAINTER(1) && HB_ISNUM(2) && (ISQREGION(3) || HB_ISNIL(3))) {
     // void render(QPainter *painter, QWebFrame::RenderLayer layer, const QRegion &clip = QRegion())
     GET_PTR_FROM_SELF(obj);
@@ -467,7 +467,7 @@ HB_FUNC_STATIC(QWEBFRAME_RENDER)
                   HB_ISNIL(3) ? QRegion() : *static_cast<QRegion *>(Qt4xHb::itemGetPtr(3)));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -526,7 +526,7 @@ HB_FUNC_STATIC(QWEBFRAME_SCROLL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QRect scrollBarGeometry(Qt::Orientation orientation) const
@@ -654,7 +654,7 @@ HB_FUNC_STATIC(QWEBFRAME_SCROLLTOANCHOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QWebSecurityOrigin securityOrigin() const
@@ -693,7 +693,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETCONTENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFocus()
@@ -713,7 +713,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETFOCUS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setHtml(const QString &html, const QUrl &baseUrl = QUrl())
@@ -733,7 +733,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETHTML)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setScrollBarPolicy(Qt::Orientation orientation, Qt::ScrollBarPolicy policy)
@@ -753,7 +753,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETSCROLLBARPOLICY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setScrollBarValue(Qt::Orientation orientation, int value)
@@ -773,7 +773,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETSCROLLBARVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setScrollPosition(const QPoint &pos)
@@ -793,7 +793,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETSCROLLPOSITION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTextSizeMultiplier(qreal factor)
@@ -813,7 +813,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETTEXTSIZEMULTIPLIER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUrl(const QUrl &url)
@@ -833,7 +833,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETURL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setZoomFactor(qreal factor)
@@ -853,7 +853,7 @@ HB_FUNC_STATIC(QWEBFRAME_SETZOOMFACTOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qreal textSizeMultiplier() const
@@ -999,7 +999,7 @@ HB_FUNC_STATIC(QWEBFRAME_PRINT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QWebFrameSlots_connect_signal(const QString &signal, const QString &slot);

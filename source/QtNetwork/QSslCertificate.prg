@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void clear()
@@ -119,7 +119,7 @@ HB_FUNC_STATIC(QSSLCERTIFICATE_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QByteArray digest(QCryptographicHash::Algorithm algorithm = QCryptographicHash::Md5) const

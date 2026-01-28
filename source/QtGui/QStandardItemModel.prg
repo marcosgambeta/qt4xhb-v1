@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
@@ -419,7 +419,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
@@ -439,7 +439,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_SORT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QStandardItem *itemFromIndex(const QModelIndex &index) const
@@ -508,7 +508,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_SETITEM)
       obj->setItem(PINT(1), PINT(2), PQSTANDARDITEM(3));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTANDARDITEM(2)) {
     // void setItem(int row, QStandardItem *item)
     GET_PTR_FROM_SELF(obj);
@@ -517,7 +517,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_SETITEM)
       obj->setItem(PINT(1), PQSTANDARDITEM(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -578,7 +578,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_SETHORIZONTALHEADERITEM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QStandardItem *verticalHeaderItem(int row) const
@@ -617,7 +617,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_SETVERTICALHEADERITEM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setHorizontalHeaderLabels(const QStringList &labels)
@@ -637,7 +637,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_SETHORIZONTALHEADERLABELS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setVerticalHeaderLabels(const QStringList &labels)
@@ -657,7 +657,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_SETVERTICALHEADERLABELS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRowCount(int rows)
@@ -677,7 +677,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_SETROWCOUNT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setColumnCount(int columns)
@@ -697,7 +697,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_SETCOLUMNCOUNT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QSTANDARDITEMMODEL_APPENDROW)
@@ -717,7 +717,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_APPENDROW)
       obj->appendRow(par1);
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQSTANDARDITEM(1)) {
     // void appendRow(QStandardItem *item)
     GET_PTR_FROM_SELF(obj);
@@ -726,7 +726,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_APPENDROW)
       obj->appendRow(PQSTANDARDITEM(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -756,7 +756,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_APPENDCOLUMN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QSTANDARDITEMMODEL_INSERTROW)
@@ -776,7 +776,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_INSERTROW)
       obj->insertRow(PINT(1), par2);
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && ISQSTANDARDITEM(2)) {
     // void insertRow(int row, QStandardItem *item)
     GET_PTR_FROM_SELF(obj);
@@ -785,7 +785,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_INSERTROW)
       obj->insertRow(PINT(1), PQSTANDARDITEM(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQMODELINDEXORNIL(2)) {
     // bool insertRow(int row, const QModelIndex &parent = QModelIndex())
     GET_PTR_FROM_SELF(obj);
@@ -815,7 +815,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_INSERTCOLUMN)
       obj->insertColumn(PINT(1), par2);
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && ISQMODELINDEXORNIL(2)) {
     // bool insertColumn(int column, const QModelIndex &parent = QModelIndex())
     GET_PTR_FROM_SELF(obj);
@@ -998,7 +998,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_SETITEMPROTOTYPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QList<QStandardItem *> findItems(const QString &text, Qt::MatchFlags flags = Qt::MatchExactly, int column = 0) const
@@ -1075,7 +1075,7 @@ HB_FUNC_STATIC(QSTANDARDITEMMODEL_SETSORTROLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QStringList mimeTypes() const

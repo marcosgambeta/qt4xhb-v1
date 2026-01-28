@@ -57,7 +57,7 @@ HB_FUNC_STATIC(QRUNNABLE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool autoDelete() const
@@ -95,7 +95,7 @@ HB_FUNC_STATIC(QRUNNABLE_RUN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAutoDelete(bool autoDelete)
@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QRUNNABLE_SETAUTODELETE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QRUNNABLE_NEWFROM)

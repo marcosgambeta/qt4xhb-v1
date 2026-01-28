@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QTCPSERVER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void close()
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QTCPSERVER_CLOSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString errorString() const
@@ -305,7 +305,7 @@ HB_FUNC_STATIC(QTCPSERVER_SETMAXPENDINGCONNECTIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setProxy(const QNetworkProxy &networkProxy)
@@ -325,7 +325,7 @@ HB_FUNC_STATIC(QTCPSERVER_SETPROXY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool setSocketDescriptor(int socketDescriptor)

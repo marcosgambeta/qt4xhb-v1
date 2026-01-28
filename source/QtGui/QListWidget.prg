@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QLISTWIDGET_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QLISTWIDGET_ADDITEM)
@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QLISTWIDGET_ADDITEM)
       obj->addItem(PQSTRING(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQLISTWIDGETITEM(1)) {
     // void addItem(QListWidgetItem *item)
     GET_PTR_FROM_SELF(obj);
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QLISTWIDGET_ADDITEM)
       obj->addItem(PQLISTWIDGETITEM(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QLISTWIDGET_ADDITEMS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void closePersistentEditor(QListWidgetItem *item)
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QLISTWIDGET_CLOSEPERSISTENTEDITOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int count() const
@@ -241,7 +241,7 @@ HB_FUNC_STATIC(QLISTWIDGET_EDITITEM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QList<QListWidgetItem *> findItems(const QString &text, Qt::MatchFlags flags) const
@@ -292,7 +292,7 @@ HB_FUNC_STATIC(QLISTWIDGET_INSERTITEM)
       obj->insertItem(PINT(1), PQLISTWIDGETITEM(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2)) {
     // void insertItem(int row, const QString &label)
     GET_PTR_FROM_SELF(obj);
@@ -301,7 +301,7 @@ HB_FUNC_STATIC(QLISTWIDGET_INSERTITEM)
       obj->insertItem(PINT(1), PQSTRING(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -324,7 +324,7 @@ HB_FUNC_STATIC(QLISTWIDGET_INSERTITEMS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isSortingEnabled() const
@@ -423,7 +423,7 @@ HB_FUNC_STATIC(QLISTWIDGET_OPENPERSISTENTEDITOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void removeItemWidget(QListWidgetItem *item)
@@ -443,7 +443,7 @@ HB_FUNC_STATIC(QLISTWIDGET_REMOVEITEMWIDGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int row(const QListWidgetItem *item) const
@@ -512,7 +512,7 @@ HB_FUNC_STATIC(QLISTWIDGET_SETCURRENTITEM)
       obj->setCurrentItem(PQLISTWIDGETITEM(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && ISQLISTWIDGETITEM(1) && HB_ISNUM(2)) {
     // void setCurrentItem(QListWidgetItem *item, QItemSelectionModel::SelectionFlags command)
     GET_PTR_FROM_SELF(obj);
@@ -521,7 +521,7 @@ HB_FUNC_STATIC(QLISTWIDGET_SETCURRENTITEM)
       obj->setCurrentItem(PQLISTWIDGETITEM(1), PQITEMSELECTIONMODEL_SELECTIONFLAGS(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -537,7 +537,7 @@ HB_FUNC_STATIC(QLISTWIDGET_SETCURRENTROW)
       obj->setCurrentRow(PINT(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setCurrentRow(int row, QItemSelectionModel::SelectionFlags command)
     GET_PTR_FROM_SELF(obj);
@@ -546,7 +546,7 @@ HB_FUNC_STATIC(QLISTWIDGET_SETCURRENTROW)
       obj->setCurrentRow(PINT(1), PQITEMSELECTIONMODEL_SELECTIONFLAGS(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -569,7 +569,7 @@ HB_FUNC_STATIC(QLISTWIDGET_SETITEMWIDGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSortingEnabled(bool enable)
@@ -589,7 +589,7 @@ HB_FUNC_STATIC(QLISTWIDGET_SETSORTINGENABLED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void sortItems(Qt::SortOrder order = Qt::AscendingOrder)
@@ -609,7 +609,7 @@ HB_FUNC_STATIC(QLISTWIDGET_SORTITEMS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QListWidgetItem *takeItem(int row)
@@ -666,7 +666,7 @@ HB_FUNC_STATIC(QLISTWIDGET_DROPEVENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void clear()
@@ -686,7 +686,7 @@ HB_FUNC_STATIC(QLISTWIDGET_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void scrollToItem(const QListWidgetItem *item, QAbstractItemView::ScrollHint hint = QAbstractItemView::EnsureVisible)
@@ -708,7 +708,7 @@ HB_FUNC_STATIC(QLISTWIDGET_SCROLLTOITEM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QListWidgetSlots_connect_signal(const QString &signal, const QString &slot);

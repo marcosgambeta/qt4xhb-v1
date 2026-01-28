@@ -124,7 +124,7 @@ HB_FUNC_STATIC(QTREEVIEW_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool allColumnsShowFocus() const
@@ -487,7 +487,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETALLCOLUMNSSHOWFOCUS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAnimated(bool enable)
@@ -507,7 +507,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETANIMATED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAutoExpandDelay(int delay)
@@ -527,7 +527,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETAUTOEXPANDDELAY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setColumnHidden(int column, bool hide)
@@ -547,7 +547,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETCOLUMNHIDDEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setColumnWidth(int column, int width)
@@ -567,7 +567,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETCOLUMNWIDTH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setExpanded(const QModelIndex &index, bool expanded)
@@ -587,7 +587,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETEXPANDED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setExpandsOnDoubleClick(bool enable)
@@ -607,7 +607,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETEXPANDSONDOUBLECLICK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFirstColumnSpanned(int row, const QModelIndex &parent, bool span)
@@ -627,7 +627,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETFIRSTCOLUMNSPANNED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setHeader(QHeaderView *header)
@@ -647,7 +647,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETHEADER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setHeaderHidden(bool hide)
@@ -667,7 +667,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETHEADERHIDDEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setIndentation(int i)
@@ -687,7 +687,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETINDENTATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setItemsExpandable(bool enable)
@@ -707,7 +707,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETITEMSEXPANDABLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRootIsDecorated(bool show)
@@ -727,7 +727,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETROOTISDECORATED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRowHidden(int row, const QModelIndex &parent, bool hide)
@@ -747,7 +747,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETROWHIDDEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSortingEnabled(bool enable)
@@ -767,7 +767,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETSORTINGENABLED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUniformRowHeights(bool uniform)
@@ -787,7 +787,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETUNIFORMROWHEIGHTS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWordWrap(bool on)
@@ -807,7 +807,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETWORDWRAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void sortByColumn(int column, Qt::SortOrder order)
@@ -827,7 +827,7 @@ HB_FUNC_STATIC(QTREEVIEW_SORTBYCOLUMN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool uniformRowHeights() const
@@ -883,7 +883,7 @@ HB_FUNC_STATIC(QTREEVIEW_DATACHANGED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QModelIndex indexAt(const QPoint &point) const
@@ -921,7 +921,7 @@ HB_FUNC_STATIC(QTREEVIEW_KEYBOARDSEARCH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void reset()
@@ -941,7 +941,7 @@ HB_FUNC_STATIC(QTREEVIEW_RESET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void scrollTo(const QModelIndex &index, QTreeView::ScrollHint hint = QTreeView::EnsureVisible)
@@ -962,7 +962,7 @@ HB_FUNC_STATIC(QTREEVIEW_SCROLLTO)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void selectAll()
@@ -982,7 +982,7 @@ HB_FUNC_STATIC(QTREEVIEW_SELECTALL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setModel(QAbstractItemModel *model)
@@ -1002,7 +1002,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETMODEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setRootIndex(const QModelIndex &index)
@@ -1022,7 +1022,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETROOTINDEX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setSelectionModel(QItemSelectionModel *selectionModel)
@@ -1042,7 +1042,7 @@ HB_FUNC_STATIC(QTREEVIEW_SETSELECTIONMODEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QRect visualRect(const QModelIndex &index) const
@@ -1080,7 +1080,7 @@ HB_FUNC_STATIC(QTREEVIEW_COLLAPSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void collapseAll()
@@ -1100,7 +1100,7 @@ HB_FUNC_STATIC(QTREEVIEW_COLLAPSEALL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void expand(const QModelIndex &index)
@@ -1120,7 +1120,7 @@ HB_FUNC_STATIC(QTREEVIEW_EXPAND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void expandAll()
@@ -1140,7 +1140,7 @@ HB_FUNC_STATIC(QTREEVIEW_EXPANDALL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void expandToDepth(int depth)
@@ -1160,7 +1160,7 @@ HB_FUNC_STATIC(QTREEVIEW_EXPANDTODEPTH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void hideColumn(int column)
@@ -1180,7 +1180,7 @@ HB_FUNC_STATIC(QTREEVIEW_HIDECOLUMN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void resizeColumnToContents(int column)
@@ -1200,7 +1200,7 @@ HB_FUNC_STATIC(QTREEVIEW_RESIZECOLUMNTOCONTENTS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void showColumn(int column)
@@ -1220,7 +1220,7 @@ HB_FUNC_STATIC(QTREEVIEW_SHOWCOLUMN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QTreeViewSlots_connect_signal(const QString &signal, const QString &slot);

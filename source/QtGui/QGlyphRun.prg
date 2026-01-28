@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QGLYPHRUN_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void clear()
@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QGLYPHRUN_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QVector<quint32> glyphIndexes() const
@@ -236,7 +236,7 @@ HB_FUNC_STATIC(QGLYPHRUN_SETGLYPHINDEXES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOverline(bool overline)
@@ -256,7 +256,7 @@ HB_FUNC_STATIC(QGLYPHRUN_SETOVERLINE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPositions(const QVector<QPointF> &positions)
@@ -282,7 +282,7 @@ HB_FUNC_STATIC(QGLYPHRUN_SETPOSITIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRawFont(const QRawFont &rawFont)
@@ -302,7 +302,7 @@ HB_FUNC_STATIC(QGLYPHRUN_SETRAWFONT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStrikeOut(bool strikeOut)
@@ -322,7 +322,7 @@ HB_FUNC_STATIC(QGLYPHRUN_SETSTRIKEOUT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUnderline(bool underline)
@@ -342,7 +342,7 @@ HB_FUNC_STATIC(QGLYPHRUN_SETUNDERLINE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool strikeOut() const

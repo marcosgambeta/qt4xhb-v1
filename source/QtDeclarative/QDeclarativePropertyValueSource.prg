@@ -56,7 +56,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYVALUESOURCE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setTarget(const QDeclarativeProperty &property) = 0
@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QDECLARATIVEPROPERTYVALUESOURCE_SETTARGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QDECLARATIVEPROPERTYVALUESOURCE_NEWFROM)

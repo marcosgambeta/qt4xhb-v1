@@ -58,7 +58,7 @@ HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void drawObject(QPainter *painter, const QRectF &rect, QTextDocument *doc, int posInDocument, const
@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QTEXTOBJECTINTERFACE_DRAWOBJECT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QSizeF intrinsicSize(QTextDocument *doc, int posInDocument, const QTextFormat &format) = 0

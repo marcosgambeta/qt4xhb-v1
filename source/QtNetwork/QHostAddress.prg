@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void clear()
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isInSubnet(const QHostAddress &subnet, int netmask) const
@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SETADDRESS)
       obj->setAddress(PQUINT32(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // bool setAddress(const QString &address)
     GET_PTR_FROM_SELF(obj);
@@ -238,7 +238,7 @@ HB_FUNC_STATIC(QHOSTADDRESS_SETSCOPEID)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // quint32 toIPv4Address() const

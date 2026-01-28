@@ -638,7 +638,7 @@ HB_FUNC_STATIC(QLOCALE_SETNUMBEROPTIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString standaloneDayName(int day, QLocale::FormatType type = QLocale::LongFormat) const
@@ -1535,7 +1535,7 @@ HB_FUNC_STATIC(QLOCALE_SETDEFAULT)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QLocale system()

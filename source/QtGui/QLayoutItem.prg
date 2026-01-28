@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QLAYOUTITEM_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::Alignment alignment() const
@@ -206,7 +206,7 @@ HB_FUNC_STATIC(QLAYOUTITEM_INVALIDATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool isEmpty() const = 0
@@ -317,7 +317,7 @@ HB_FUNC_STATIC(QLAYOUTITEM_SETALIGNMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setGeometry(const QRect &r) = 0
@@ -337,7 +337,7 @@ HB_FUNC_STATIC(QLAYOUTITEM_SETGEOMETRY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QSize sizeHint() const = 0

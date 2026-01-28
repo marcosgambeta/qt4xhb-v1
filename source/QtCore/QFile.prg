@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QFILE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QFile::FileError error() const
@@ -185,7 +185,7 @@ HB_FUNC_STATIC(QFILE_SETFILENAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool unmap(uchar *address)
@@ -223,7 +223,7 @@ HB_FUNC_STATIC(QFILE_UNSETERROR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool atEnd() const
@@ -261,7 +261,7 @@ HB_FUNC_STATIC(QFILE_CLOSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool isSequential() const

@@ -77,7 +77,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUseHighlightColors(bool arg)
@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_SETUSEHIGHLIGHTCOLORS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool useHighlightColors() const
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_DRAWCOMPLEXCONTROL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void drawControl(QStyle::ControlElement element, const QStyleOption *opt, QPainter *p, const QWidget *widget
@@ -157,7 +157,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_DRAWCONTROL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void drawPrimitive(QStyle::PrimitiveElement pe, const QStyleOption *opt, QPainter *p, const QWidget *w = 0)
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_DRAWPRIMITIVE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool event(QEvent *e)
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QMOTIFSTYLE_POLISH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QSize sizeFromContents(QStyle::ContentsType ct, const QStyleOption *opt, const QSize &contentsSize, const

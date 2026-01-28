@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void drawComplexControl(QStyle::ComplexControl control, const QStyleOptionComplex *option, QPainter *painter,
@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_DRAWCOMPLEXCONTROL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void drawControl(QStyle::ControlElement element, const QStyleOption *option, QPainter *painter, const QWidget
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_DRAWCONTROL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void drawItemPixmap(QPainter *painter, const QRect &rect, int alignment, const QPixmap &pixmap) const
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_DRAWITEMPIXMAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void drawItemText(QPainter *painter, const QRect &rectangle, int alignment, const QPalette &palette, bool
@@ -166,7 +166,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_DRAWITEMTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void drawPrimitive(QStyle::PrimitiveElement elem, const QStyleOption *option, QPainter *painter, const
@@ -187,7 +187,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_DRAWPRIMITIVE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QPixmap generatedIconPixmap(QIcon::Mode iconMode, const QPixmap &pixmap, const QStyleOption *opt) const
@@ -275,7 +275,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_POLISH)
       obj->polish(PQWIDGET(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQAPPLICATION(1)) {
     // virtual void polish(QApplication *app)
     GET_PTR_FROM_SELF(obj);
@@ -284,7 +284,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_POLISH)
       obj->polish(PQAPPLICATION(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQPALETTE(1)) {
     // virtual void polish(QPalette &pal)
     GET_PTR_FROM_SELF(obj);
@@ -293,7 +293,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_POLISH)
       obj->polish(*PQPALETTE(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -423,7 +423,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_UNPOLISH)
       obj->unpolish(PQWIDGET(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQAPPLICATION(1)) {
     // virtual void unpolish(QApplication *app)
     GET_PTR_FROM_SELF(obj);
@@ -432,7 +432,7 @@ HB_FUNC_STATIC(QCLEANLOOKSSTYLE_UNPOLISH)
       obj->unpolish(PQAPPLICATION(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

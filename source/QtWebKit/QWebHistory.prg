@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QWEBHISTORY_BACK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QWebHistoryItem backItem() const
@@ -197,7 +197,7 @@ HB_FUNC_STATIC(QWEBHISTORY_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int count() const
@@ -271,7 +271,7 @@ HB_FUNC_STATIC(QWEBHISTORY_FORWARD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QWebHistoryItem forwardItem() const
@@ -350,7 +350,7 @@ HB_FUNC_STATIC(QWEBHISTORY_GOTOITEM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QWebHistoryItem itemAt(int i) const
@@ -447,7 +447,7 @@ HB_FUNC_STATIC(QWEBHISTORY_SETMAXIMUMITEMCOUNT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QWEBHISTORY_NEWFROM)

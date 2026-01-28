@@ -75,7 +75,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString cacheDirectory() const
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_SETCACHEDIRECTORY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMaximumCacheSize(qint64 size)
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_SETMAXIMUMCACHESIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual qint64 cacheSize() const
@@ -226,7 +226,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_INSERT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QNetworkCacheMetaData metaData(const QUrl &url)
@@ -301,7 +301,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_UPDATEMETADATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void clear()
@@ -321,7 +321,7 @@ HB_FUNC_STATIC(QNETWORKDISKCACHE_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

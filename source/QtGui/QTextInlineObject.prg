@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QTEXTINLINEOBJECT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qreal ascent() const
@@ -215,7 +215,7 @@ HB_FUNC_STATIC(QTEXTINLINEOBJECT_SETASCENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDescent(qreal d)
@@ -235,7 +235,7 @@ HB_FUNC_STATIC(QTEXTINLINEOBJECT_SETDESCENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWidth(qreal w)
@@ -255,7 +255,7 @@ HB_FUNC_STATIC(QTEXTINLINEOBJECT_SETWIDTH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::LayoutDirection textDirection() const

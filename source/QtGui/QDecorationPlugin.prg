@@ -51,7 +51,7 @@ HB_FUNC_STATIC(QDECORATIONPLUGIN_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QDecoration *create(const QString &key) = 0

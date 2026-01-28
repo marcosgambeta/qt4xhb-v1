@@ -115,7 +115,7 @@ HB_FUNC_STATIC(QRAWFONT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QVector<QPointF> advancesForGlyphIndexes(const QVector<quint32> &glyphIndexes) const
@@ -377,7 +377,7 @@ HB_FUNC_STATIC(QRAWFONT_LOADFROMDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void loadFromFile(const QString &fileName, qreal pixelSize, QFont::HintingPreference hintingPreference)
@@ -397,7 +397,7 @@ HB_FUNC_STATIC(QRAWFONT_LOADFROMFILE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qreal maxCharWidth() const
@@ -471,7 +471,7 @@ HB_FUNC_STATIC(QRAWFONT_SETPIXELSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QFont::Style style() const

@@ -83,7 +83,7 @@ HB_FUNC_STATIC(QMODELINDEX_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QModelIndex child(int row, int column) const

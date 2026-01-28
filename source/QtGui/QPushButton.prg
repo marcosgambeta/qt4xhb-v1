@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QPUSHBUTTON_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool autoDefault() const
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QPUSHBUTTON_SETAUTODEFAULT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDefault(bool)
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QPUSHBUTTON_SETDEFAULT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFlat(bool)
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QPUSHBUTTON_SETFLAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void showMenu()
@@ -210,7 +210,7 @@ HB_FUNC_STATIC(QPUSHBUTTON_SHOWMENU)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QGRADIENT_SETCOLORAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCoordinateMode(QGradient::CoordinateMode mode)
@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QGRADIENT_SETCOORDINATEMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSpread(QGradient::Spread method)
@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QGRADIENT_SETSPREAD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QGradient::Spread spread() const

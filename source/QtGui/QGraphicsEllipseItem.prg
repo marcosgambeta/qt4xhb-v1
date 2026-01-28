@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QRectF rect() const
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_SETRECT)
       obj->setRect(*PQRECTF(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4)) {
     // void setRect(qreal x, qreal y, qreal width, qreal height)
     GET_PTR_FROM_SELF(obj);
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_SETRECT)
       obj->setRect(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_SETSPANANGLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStartAngle(int angle)
@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_SETSTARTANGLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int spanAngle() const
@@ -297,7 +297,7 @@ HB_FUNC_STATIC(QGRAPHICSELLIPSEITEM_PAINT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QPainterPath shape() const

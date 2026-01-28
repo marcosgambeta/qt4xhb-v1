@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QSPINBOX_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString cleanText() const
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QSPINBOX_SETMAXIMUM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMinimum(int min)
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QSPINBOX_SETMINIMUM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPrefix(const QString &prefix)
@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QSPINBOX_SETPREFIX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRange(int minimum, int maximum)
@@ -228,7 +228,7 @@ HB_FUNC_STATIC(QSPINBOX_SETRANGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSingleStep(int val)
@@ -248,7 +248,7 @@ HB_FUNC_STATIC(QSPINBOX_SETSINGLESTEP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSuffix(const QString &suffix)
@@ -268,7 +268,7 @@ HB_FUNC_STATIC(QSPINBOX_SETSUFFIX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int singleStep() const
@@ -342,7 +342,7 @@ HB_FUNC_STATIC(QSPINBOX_SETVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QSpinBoxSlots_connect_signal(const QString &signal, const QString &slot);

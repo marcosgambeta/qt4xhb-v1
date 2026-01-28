@@ -64,7 +64,7 @@ HB_FUNC_STATIC(QWIDGETACTION_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QWidget *defaultWidget() const
@@ -103,7 +103,7 @@ HB_FUNC_STATIC(QWIDGETACTION_RELEASEWIDGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QWidget *requestWidget(QWidget *parent)
@@ -142,7 +142,7 @@ HB_FUNC_STATIC(QWIDGETACTION_SETDEFAULTWIDGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

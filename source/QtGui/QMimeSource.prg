@@ -58,7 +58,7 @@ HB_FUNC_STATIC(QMIMESOURCE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QByteArray encodedData(const char *format) const = 0

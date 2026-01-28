@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QAUTHENTICATOR_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isNull() const
@@ -171,7 +171,7 @@ HB_FUNC_STATIC(QAUTHENTICATOR_SETOPTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPassword(const QString &password)
@@ -191,7 +191,7 @@ HB_FUNC_STATIC(QAUTHENTICATOR_SETPASSWORD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUser(const QString &user)
@@ -211,7 +211,7 @@ HB_FUNC_STATIC(QAUTHENTICATOR_SETUSER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString user() const

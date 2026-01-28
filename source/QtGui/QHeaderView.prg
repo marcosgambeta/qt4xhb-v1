@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QHEADERVIEW_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool cascadingSectionResizes() const
@@ -239,7 +239,7 @@ HB_FUNC_STATIC(QHEADERVIEW_HIDESECTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool highlightSections() const
@@ -431,7 +431,7 @@ HB_FUNC_STATIC(QHEADERVIEW_MOVESECTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int offset() const
@@ -505,7 +505,7 @@ HB_FUNC_STATIC(QHEADERVIEW_RESIZESECTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void resizeSections(QHeaderView::ResizeMode mode)
@@ -525,7 +525,7 @@ HB_FUNC_STATIC(QHEADERVIEW_RESIZESECTIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool restoreState(const QByteArray &state)
@@ -689,7 +689,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETCASCADINGSECTIONRESIZES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setClickable(bool clickable)
@@ -709,7 +709,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETCLICKABLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDefaultAlignment(Qt::Alignment alignment)
@@ -729,7 +729,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETDEFAULTALIGNMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDefaultSectionSize(int size)
@@ -749,7 +749,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETDEFAULTSECTIONSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setHighlightSections(bool highlight)
@@ -769,7 +769,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETHIGHLIGHTSECTIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMinimumSectionSize(int size)
@@ -789,7 +789,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETMINIMUMSECTIONSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMovable(bool movable)
@@ -809,7 +809,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETMOVABLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QHEADERVIEW_SETRESIZEMODE)
@@ -822,7 +822,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETRESIZEMODE)
       obj->setResizeMode(PQHEADERVIEW_RESIZEMODE(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setResizeMode(int logicalIndex, QHeaderView::ResizeMode mode)
     GET_PTR_FROM_SELF(obj);
@@ -831,7 +831,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETRESIZEMODE)
       obj->setResizeMode(PINT(1), PQHEADERVIEW_RESIZEMODE(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -854,7 +854,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETSECTIONHIDDEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSortIndicator(int logicalIndex, Qt::SortOrder order)
@@ -874,7 +874,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETSORTINDICATOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSortIndicatorShown(bool show)
@@ -894,7 +894,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETSORTINDICATORSHOWN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStretchLastSection(bool stretch)
@@ -914,7 +914,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETSTRETCHLASTSECTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void showSection(int logicalIndex)
@@ -934,7 +934,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SHOWSECTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::SortOrder sortIndicatorOrder() const
@@ -1026,7 +1026,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SWAPSECTIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int visualIndex(int logicalIndex) const
@@ -1082,7 +1082,7 @@ HB_FUNC_STATIC(QHEADERVIEW_RESET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setModel(QAbstractItemModel *model)
@@ -1102,7 +1102,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETMODEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QSize sizeHint() const
@@ -1140,7 +1140,7 @@ HB_FUNC_STATIC(QHEADERVIEW_HEADERDATACHANGED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOffset(int offset)
@@ -1160,7 +1160,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETOFFSET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOffsetToLastSection()
@@ -1180,7 +1180,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETOFFSETTOLASTSECTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOffsetToSectionPosition(int visualIndex)
@@ -1200,7 +1200,7 @@ HB_FUNC_STATIC(QHEADERVIEW_SETOFFSETTOSECTIONPOSITION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QHeaderViewSlots_connect_signal(const QString &signal, const QString &slot);

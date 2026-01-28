@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QBrush background() const
@@ -343,7 +343,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_READ)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setBackground(const QBrush &brush)
@@ -363,7 +363,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETBACKGROUND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCheckState(Qt::CheckState state)
@@ -383,7 +383,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETCHECKSTATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setData(int role, const QVariant &value)
@@ -403,7 +403,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFlags(Qt::ItemFlags flags)
@@ -423,7 +423,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETFLAGS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFont(const QFont &font)
@@ -443,7 +443,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETFONT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setForeground(const QBrush &brush)
@@ -463,7 +463,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETFOREGROUND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setHidden(bool hide)
@@ -483,7 +483,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETHIDDEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setIcon(const QIcon &icon)
@@ -503,7 +503,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETICON)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSelected(bool select)
@@ -523,7 +523,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETSELECTED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSizeHint(const QSize &size)
@@ -543,7 +543,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETSIZEHINT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStatusTip(const QString &statusTip)
@@ -563,7 +563,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETSTATUSTIP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setText(const QString &text)
@@ -583,7 +583,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTextAlignment(int alignment)
@@ -603,7 +603,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETTEXTALIGNMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setToolTip(const QString &toolTip)
@@ -623,7 +623,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETTOOLTIP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWhatsThis(const QString &whatsThis)
@@ -643,7 +643,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_SETWHATSTHIS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSize sizeHint() const
@@ -789,7 +789,7 @@ HB_FUNC_STATIC(QLISTWIDGETITEM_WRITE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QLISTWIDGETITEM_NEWFROM)

@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool acquire()
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QSYSTEMSEMAPHORE_SETKEY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QSYSTEMSEMAPHORE_NEWFROM)

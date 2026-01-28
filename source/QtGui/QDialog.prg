@@ -77,7 +77,7 @@ HB_FUNC_STATIC(QDIALOG_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isSizeGripEnabled() const
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QDIALOG_SETMODAL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setResult(int i)
@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QDIALOG_SETRESULT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSizeGripEnabled(bool)
@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QDIALOG_SETSIZEGRIPENABLED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QSize minimumSizeHint() const
@@ -211,7 +211,7 @@ HB_FUNC_STATIC(QDIALOG_SETVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QSize sizeHint() const
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QDIALOG_ACCEPT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void done(int r)
@@ -269,7 +269,7 @@ HB_FUNC_STATIC(QDIALOG_DONE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int exec()
@@ -307,7 +307,7 @@ HB_FUNC_STATIC(QDIALOG_OPEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void reject()
@@ -327,7 +327,7 @@ HB_FUNC_STATIC(QDIALOG_REJECT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QDialogSlots_connect_signal(const QString &signal, const QString &slot);

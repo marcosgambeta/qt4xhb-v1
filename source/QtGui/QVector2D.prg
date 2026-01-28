@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QVECTOR2D_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isNull() const
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QVECTOR2D_NORMALIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QVector2D normalized() const
@@ -219,7 +219,7 @@ HB_FUNC_STATIC(QVECTOR2D_SETX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setY(qreal y)
@@ -239,7 +239,7 @@ HB_FUNC_STATIC(QVECTOR2D_SETY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QPoint toPoint() const

@@ -86,7 +86,7 @@ HB_FUNC_STATIC(QHOSTINFO_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QList<QHostAddress> addresses() const
@@ -226,7 +226,7 @@ HB_FUNC_STATIC(QHOSTINFO_SETADDRESSES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setError(QHostInfo::HostInfoError error)
@@ -246,7 +246,7 @@ HB_FUNC_STATIC(QHOSTINFO_SETERROR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setErrorString(const QString &str)
@@ -266,7 +266,7 @@ HB_FUNC_STATIC(QHOSTINFO_SETERRORSTRING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setHostName(const QString &hostName)
@@ -286,7 +286,7 @@ HB_FUNC_STATIC(QHOSTINFO_SETHOSTNAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setLookupId(int id)
@@ -306,7 +306,7 @@ HB_FUNC_STATIC(QHOSTINFO_SETLOOKUPID)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void abortHostLookup(int id)
@@ -322,7 +322,7 @@ HB_FUNC_STATIC(QHOSTINFO_ABORTHOSTLOOKUP)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QHostInfo fromName(const QString &name)

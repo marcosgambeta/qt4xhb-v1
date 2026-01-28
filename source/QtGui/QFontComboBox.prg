@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QFont currentFont() const
@@ -126,7 +126,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_SETFONTFILTERS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWritingSystem(QFontDatabase::WritingSystem script)
@@ -146,7 +146,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_SETWRITINGSYSTEM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QFontDatabase::WritingSystem writingSystem() const
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QFONTCOMBOBOX_SETCURRENTFONT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QFontComboBoxSlots_connect_signal(const QString &signal, const QString &slot);

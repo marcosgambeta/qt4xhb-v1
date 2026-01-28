@@ -367,7 +367,7 @@ HB_FUNC_STATIC(QTEXTCODEC_SETCODECFORLOCALE)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QTextCodec *codecForTr()
@@ -398,7 +398,7 @@ HB_FUNC_STATIC(QTEXTCODEC_SETCODECFORTR)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QTextCodec *codecForCStrings()
@@ -429,7 +429,7 @@ HB_FUNC_STATIC(QTEXTCODEC_SETCODECFORCSTRINGS)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QTEXTCODEC_CODECFORHTML)

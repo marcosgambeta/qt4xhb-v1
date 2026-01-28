@@ -68,7 +68,7 @@ HB_FUNC_STATIC(QHISTORYSTATE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QAbstractState *defaultState() const
@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QHISTORYSTATE_SETDEFAULTSTATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QHistoryState::HistoryType historyType() const
@@ -145,7 +145,7 @@ HB_FUNC_STATIC(QHISTORYSTATE_SETHISTORYTYPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

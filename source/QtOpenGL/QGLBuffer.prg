@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QGLBUFFER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QGLBUFFER_ALLOCATE)
@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QGLBUFFER_ALLOCATE)
       obj->allocate(static_cast<const void *>(hb_parptr(1)), PINT(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void allocate(int count)
     GET_PTR_FROM_SELF(obj);
@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QGLBUFFER_ALLOCATE)
       obj->allocate(PINT(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -187,7 +187,7 @@ HB_FUNC_STATIC(QGLBUFFER_DESTROY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isCreated() const
@@ -261,7 +261,7 @@ HB_FUNC_STATIC(QGLBUFFER_SETUSAGEPATTERN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int size() const
@@ -346,13 +346,13 @@ HB_FUNC_STATIC(QGLBUFFER_RELEASE)
       obj->release();
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // static void release(QGLBuffer::Type type)
 
     QGLBuffer::release(PQGLBUFFER_TYPE(1));
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

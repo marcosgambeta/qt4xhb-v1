@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool accum() const
@@ -412,7 +412,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETACCUM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAccumBufferSize(int size)
@@ -432,7 +432,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETACCUMBUFFERSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAlpha(bool enable)
@@ -452,7 +452,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETALPHA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAlphaBufferSize(int size)
@@ -472,7 +472,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETALPHABUFFERSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setBlueBufferSize(int size)
@@ -492,7 +492,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETBLUEBUFFERSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDepth(bool enable)
@@ -512,7 +512,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETDEPTH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDepthBufferSize(int size)
@@ -532,7 +532,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETDEPTHBUFFERSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDirectRendering(bool enable)
@@ -552,7 +552,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETDIRECTRENDERING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDoubleBuffer(bool enable)
@@ -572,7 +572,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETDOUBLEBUFFER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setGreenBufferSize(int size)
@@ -592,7 +592,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETGREENBUFFERSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOption(QPlatformWindowFormat::FormatOptions opt)
@@ -612,7 +612,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETOPTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRedBufferSize(int size)
@@ -632,7 +632,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETREDBUFFERSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRgba(bool enable)
@@ -652,7 +652,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETRGBA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSampleBuffers(bool enable)
@@ -672,7 +672,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSAMPLEBUFFERS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSamples(int numSamples)
@@ -692,7 +692,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSAMPLES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSharedContext(QPlatformGLContext *context)
@@ -712,7 +712,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSHAREDCONTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStencil(bool enable)
@@ -732,7 +732,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSTENCIL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStencilBufferSize(int size)
@@ -752,7 +752,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSTENCILBUFFERSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStereo(bool enable)
@@ -772,7 +772,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSTEREO)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSwapInterval(int interval)
@@ -792,7 +792,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETSWAPINTERVAL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWindowApi(QPlatformWindowFormat::WindowApi api)
@@ -812,7 +812,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETWINDOWAPI)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWindowSurface(bool enable)
@@ -832,7 +832,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETWINDOWSURFACE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QPlatformGLContext *sharedGLContext() const
@@ -989,7 +989,7 @@ HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_SETDEFAULTFORMAT)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QPLATFORMWINDOWFORMAT_NEWFROM)

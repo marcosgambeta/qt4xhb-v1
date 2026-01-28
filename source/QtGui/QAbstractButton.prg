@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool autoExclusive() const
@@ -286,7 +286,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETAUTOEXCLUSIVE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAutoRepeat(bool)
@@ -306,7 +306,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETAUTOREPEAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAutoRepeatDelay(int)
@@ -326,7 +326,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETAUTOREPEATDELAY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setAutoRepeatInterval(int)
@@ -346,7 +346,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETAUTOREPEATINTERVAL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCheckable(bool)
@@ -366,7 +366,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETCHECKABLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDown(bool)
@@ -386,7 +386,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETDOWN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setIcon(const QIcon &icon)
@@ -406,7 +406,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETICON)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setShortcut(const QKeySequence &key)
@@ -426,7 +426,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETSHORTCUT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setText(const QString &text)
@@ -446,7 +446,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QKeySequence shortcut() const
@@ -502,7 +502,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_ANIMATECLICK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void click()
@@ -522,7 +522,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_CLICK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setChecked(bool)
@@ -542,7 +542,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETCHECKED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setIconSize(const QSize &size)
@@ -562,7 +562,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_SETICONSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void toggle()
@@ -582,7 +582,7 @@ HB_FUNC_STATIC(QABSTRACTBUTTON_TOGGLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QAbstractButtonSlots_connect_signal(const QString &signal, const QString &slot);

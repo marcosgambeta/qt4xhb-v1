@@ -254,7 +254,7 @@ HB_FUNC_STATIC(QOBJECT_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool blockSignals(bool block)
@@ -330,7 +330,7 @@ HB_FUNC_STATIC(QOBJECT_DUMPOBJECTINFO)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void dumpObjectTree()
@@ -350,7 +350,7 @@ HB_FUNC_STATIC(QOBJECT_DUMPOBJECTTREE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QList<QByteArray> dynamicPropertyNames() const
@@ -554,7 +554,7 @@ HB_FUNC_STATIC(QOBJECT_INSTALLEVENTFILTER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isWidgetType() const
@@ -592,7 +592,7 @@ HB_FUNC_STATIC(QOBJECT_KILLTIMER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual const QMetaObject *metaObject() const
@@ -631,7 +631,7 @@ HB_FUNC_STATIC(QOBJECT_MOVETOTHREAD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString objectName() const
@@ -706,7 +706,7 @@ HB_FUNC_STATIC(QOBJECT_REMOVEEVENTFILTER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setObjectName(const QString &name)
@@ -726,7 +726,7 @@ HB_FUNC_STATIC(QOBJECT_SETOBJECTNAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setParent(QObject *parent)
@@ -746,7 +746,7 @@ HB_FUNC_STATIC(QOBJECT_SETPARENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool setProperty(const char *name, const QVariant &value)
@@ -839,7 +839,7 @@ HB_FUNC_STATIC(QOBJECT_DELETELATER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QOBJECT_DISCONNECTALL)
@@ -858,7 +858,7 @@ HB_FUNC_STATIC(QOBJECT_DISCONNECTALL)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QOBJECT_DISCONNECTALLEVENTS)
@@ -875,7 +875,7 @@ HB_FUNC_STATIC(QOBJECT_DISCONNECTALLEVENTS)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QOBJECT_DISCONNECTALLSIGNALS)
@@ -892,7 +892,7 @@ HB_FUNC_STATIC(QOBJECT_DISCONNECTALLSIGNALS)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 static void _qtxhb_processOnEventMethod(QEvent::Type event)

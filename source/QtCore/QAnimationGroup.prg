@@ -57,7 +57,7 @@ HB_FUNC_STATIC(QANIMATIONGROUP_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addAnimation(QAbstractAnimation *animation)
@@ -77,7 +77,7 @@ HB_FUNC_STATIC(QANIMATIONGROUP_ADDANIMATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QAbstractAnimation *animationAt(int index) const
@@ -134,7 +134,7 @@ HB_FUNC_STATIC(QANIMATIONGROUP_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int indexOfAnimation(QAbstractAnimation *animation) const
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QANIMATIONGROUP_INSERTANIMATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void removeAnimation(QAbstractAnimation *animation)
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QANIMATIONGROUP_REMOVEANIMATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QAbstractAnimation *takeAnimation(int index)

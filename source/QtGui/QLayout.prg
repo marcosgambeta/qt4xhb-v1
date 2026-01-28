@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QLAYOUT_ADDITEM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addWidget(QWidget *w)
@@ -133,7 +133,7 @@ HB_FUNC_STATIC(QLAYOUT_ADDWIDGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QMargins contentsMargins() const
@@ -233,7 +233,7 @@ HB_FUNC_STATIC(QLAYOUT_GETCONTENTSMARGINS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual int indexOf(QWidget *widget) const
@@ -382,7 +382,7 @@ HB_FUNC_STATIC(QLAYOUT_REMOVEITEM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void removeWidget(QWidget *widget)
@@ -402,7 +402,7 @@ HB_FUNC_STATIC(QLAYOUT_REMOVEWIDGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QLAYOUT_SETALIGNMENT)
@@ -422,7 +422,7 @@ HB_FUNC_STATIC(QLAYOUT_SETALIGNMENT)
       obj->setAlignment(PQT_ALIGNMENT(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && ISQLAYOUT(1) && HB_ISNUM(2)) {
     // bool setAlignment(QLayout *l, Qt::Alignment alignment)
     GET_PTR_FROM_SELF(obj);
@@ -445,7 +445,7 @@ HB_FUNC_STATIC(QLAYOUT_SETCONTENTSMARGINS)
       obj->setContentsMargins(PINT(1), PINT(2), PINT(3), PINT(4));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQMARGINS(1)) {
     // void setContentsMargins(const QMargins &margins)
     GET_PTR_FROM_SELF(obj);
@@ -454,7 +454,7 @@ HB_FUNC_STATIC(QLAYOUT_SETCONTENTSMARGINS)
       obj->setContentsMargins(*PQMARGINS(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -477,7 +477,7 @@ HB_FUNC_STATIC(QLAYOUT_SETENABLED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMenuBar(QWidget *widget)
@@ -497,7 +497,7 @@ HB_FUNC_STATIC(QLAYOUT_SETMENUBAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSizeConstraint(QLayout::SizeConstraint)
@@ -517,7 +517,7 @@ HB_FUNC_STATIC(QLAYOUT_SETSIZECONSTRAINT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSpacing(int)
@@ -537,7 +537,7 @@ HB_FUNC_STATIC(QLAYOUT_SETSPACING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QLayout::SizeConstraint sizeConstraint() const
@@ -612,7 +612,7 @@ HB_FUNC_STATIC(QLAYOUT_UPDATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QRect geometry() const
@@ -650,7 +650,7 @@ HB_FUNC_STATIC(QLAYOUT_INVALIDATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool isEmpty() const
@@ -707,7 +707,7 @@ HB_FUNC_STATIC(QLAYOUT_SETGEOMETRY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QSize closestAcceptableSize(const QWidget *widget, const QSize &size)

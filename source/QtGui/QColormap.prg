@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QCOLORMAP_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // const QColor colorAt(uint pixel) const

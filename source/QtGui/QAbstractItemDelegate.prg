@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
@@ -120,7 +120,7 @@ HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_PAINT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setEditorData(QWidget *editor, const QModelIndex &index) const
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_SETEDITORDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
@@ -160,7 +160,7 @@ HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_SETMODELDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const = 0
@@ -199,7 +199,7 @@ HB_FUNC_STATIC(QABSTRACTITEMDELEGATE_UPDATEEDITORGEOMETRY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool helpEvent(QHelpEvent *event, QAbstractItemView *view, const QStyleOptionViewItem &option, const QModelIndex

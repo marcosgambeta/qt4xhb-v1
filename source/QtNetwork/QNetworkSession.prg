@@ -89,7 +89,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // quint64 activeTime() const
@@ -271,7 +271,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_SETSESSIONPROPERTY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QNetworkSession::State state() const
@@ -327,7 +327,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_ACCEPT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void close()
@@ -347,7 +347,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_CLOSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void ignore()
@@ -367,7 +367,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_IGNORE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void migrate()
@@ -387,7 +387,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_MIGRATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void open()
@@ -407,7 +407,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_OPEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void reject()
@@ -427,7 +427,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_REJECT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void stop()
@@ -447,7 +447,7 @@ HB_FUNC_STATIC(QNETWORKSESSION_STOP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QNetworkSessionSlots_connect_signal(const QString &signal, const QString &slot);

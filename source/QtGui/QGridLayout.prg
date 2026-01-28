@@ -102,7 +102,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addItem(QLayoutItem *item, int row, int column, int rowSpan = 1, int columnSpan = 1, Qt::Alignment alignment =
@@ -125,7 +125,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ADDITEM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QGRIDLAYOUT_ADDLAYOUT)
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ADDLAYOUT)
       obj->addLayout(PQLAYOUT(1), PINT(2), PINT(3), HB_ISNIL(4) ? static_cast<Qt::Alignment>(0) : PQT_ALIGNMENT(4));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISBETWEEN(5, 6) && ISQLAYOUT(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
              ISNUMORNIL(6)) {
     // void addLayout(QLayout *layout, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0)
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ADDLAYOUT)
                      HB_ISNIL(6) ? static_cast<Qt::Alignment>(0) : PQT_ALIGNMENT(6));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ADDWIDGET)
       obj->addWidget(PQWIDGET(1), PINT(2), PINT(3), HB_ISNIL(4) ? static_cast<Qt::Alignment>(0) : PQT_ALIGNMENT(4));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISBETWEEN(5, 6) && ISQWIDGET(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) &&
              ISNUMORNIL(6)) {
     // void addWidget(QWidget *widget, int fromRow, int fromColumn, int rowSpan, int columnSpan, Qt::Alignment alignment
@@ -177,7 +177,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_ADDWIDGET)
                      HB_ISNIL(6) ? static_cast<Qt::Alignment>(0) : PQT_ALIGNMENT(6));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -280,7 +280,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_GETITEMPOSITION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int horizontalSpacing() const
@@ -409,7 +409,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_SETCOLUMNMINIMUMWIDTH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setColumnStretch(int column, int stretch)
@@ -429,7 +429,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_SETCOLUMNSTRETCH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setHorizontalSpacing(int spacing)
@@ -449,7 +449,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_SETHORIZONTALSPACING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOriginCorner(Qt::Corner corner)
@@ -469,7 +469,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_SETORIGINCORNER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRowMinimumHeight(int row, int minSize)
@@ -489,7 +489,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_SETROWMINIMUMHEIGHT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRowStretch(int row, int stretch)
@@ -509,7 +509,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_SETROWSTRETCH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSpacing(int spacing)
@@ -529,7 +529,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_SETSPACING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setVerticalSpacing(int spacing)
@@ -549,7 +549,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_SETVERTICALSPACING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int spacing() const
@@ -677,7 +677,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_INVALIDATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QLayoutItem *itemAt(int index) const
@@ -770,7 +770,7 @@ HB_FUNC_STATIC(QGRIDLAYOUT_SETGEOMETRY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QSize sizeHint() const

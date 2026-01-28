@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSqlDatabase database() const
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_REVERTROW)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool select()
@@ -283,7 +283,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETEDITSTRATEGY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setFilter(const QString &filter)
@@ -303,7 +303,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETFILTER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool setRecord(int row, const QSqlRecord &record)
@@ -341,7 +341,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETSORT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setTable(const QString &tableName)
@@ -361,7 +361,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SETTABLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString tableName() const
@@ -399,7 +399,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
@@ -566,7 +566,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_SORT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void revert()
@@ -586,7 +586,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_REVERT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void revertAll()
@@ -606,7 +606,7 @@ HB_FUNC_STATIC(QSQLTABLEMODEL_REVERTALL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool submit()

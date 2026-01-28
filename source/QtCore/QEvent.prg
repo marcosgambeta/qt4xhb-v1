@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QEVENT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void accept()
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QEVENT_ACCEPT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void ignore()
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QEVENT_IGNORE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool isAccepted() const
@@ -151,7 +151,7 @@ HB_FUNC_STATIC(QEVENT_SETACCEPTED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool spontaneous() const

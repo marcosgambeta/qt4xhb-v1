@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QFONTENGINEINFO_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString family() const
@@ -140,7 +140,7 @@ HB_FUNC_STATIC(QFONTENGINEINFO_SETFAMILY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPixelSize(qreal size)
@@ -160,7 +160,7 @@ HB_FUNC_STATIC(QFONTENGINEINFO_SETPIXELSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStyle(QFont::Style style)
@@ -180,7 +180,7 @@ HB_FUNC_STATIC(QFONTENGINEINFO_SETSTYLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWeight(int weight)
@@ -200,7 +200,7 @@ HB_FUNC_STATIC(QFONTENGINEINFO_SETWEIGHT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWritingSystems(const QList<QFontDatabase::WritingSystem> &writingSystems)
@@ -226,7 +226,7 @@ HB_FUNC_STATIC(QFONTENGINEINFO_SETWRITINGSYSTEMS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QFont::Style style() const

@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QEASINGCURVE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qreal amplitude() const
@@ -153,7 +153,7 @@ HB_FUNC_STATIC(QEASINGCURVE_SETAMPLITUDE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOvershoot(qreal overshoot)
@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QEASINGCURVE_SETOVERSHOOT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPeriod(qreal period)
@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QEASINGCURVE_SETPERIOD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setType(QEasingCurve::Type type)
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QEASINGCURVE_SETTYPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QEasingCurve::Type type() const

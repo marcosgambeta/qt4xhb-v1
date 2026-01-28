@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // const QUndoCommand *child(int index) const
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_REDO)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setText(const QString &text)
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_SETTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString text() const
@@ -230,7 +230,7 @@ HB_FUNC_STATIC(QUNDOCOMMAND_UNDO)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QUNDOCOMMAND_NEWFROM)

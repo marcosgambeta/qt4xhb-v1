@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QACTIONEVENT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QAction *action() const

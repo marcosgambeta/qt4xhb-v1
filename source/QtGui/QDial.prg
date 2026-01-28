@@ -69,7 +69,7 @@ HB_FUNC_STATIC(QDIAL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int notchSize() const
@@ -143,7 +143,7 @@ HB_FUNC_STATIC(QDIAL_SETNOTCHTARGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool wrapping() const
@@ -217,7 +217,7 @@ HB_FUNC_STATIC(QDIAL_SETNOTCHESVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWrapping(bool on)
@@ -237,7 +237,7 @@ HB_FUNC_STATIC(QDIAL_SETWRAPPING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

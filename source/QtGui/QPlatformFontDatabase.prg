@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QPLATFORMFONTDATABASE_POPULATEFONTDATABASE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void releaseHandle(void *handle)
@@ -149,7 +149,7 @@ HB_FUNC_STATIC(QPLATFORMFONTDATABASE_RELEASEHANDLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void registerFont(const QString &familyName, const QString &foundryName, QFont::Weight weight, QFont::Style
@@ -170,7 +170,7 @@ HB_FUNC_STATIC(QPLATFORMFONTDATABASE_REGISTERFONT)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void registerQPF2Font(const QByteArray &dataArray, void *handle)
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QPLATFORMFONTDATABASE_REGISTERQPF2FONT)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QPLATFORMFONTDATABASE_NEWFROM)

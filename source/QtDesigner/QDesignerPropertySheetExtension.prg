@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual int count() const = 0
@@ -273,7 +273,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_SETATTRIBUTE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setChanged(int index, bool changed) = 0
@@ -293,7 +293,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_SETCHANGED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setProperty(int index, const QVariant &value) = 0
@@ -313,7 +313,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_SETPROPERTY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setPropertyGroup(int index, const QString &group) = 0
@@ -333,7 +333,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_SETPROPERTYGROUP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setVisible(int index, bool visible) = 0
@@ -353,7 +353,7 @@ HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_SETVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QDESIGNERPROPERTYSHEETEXTENSION_NEWFROM)

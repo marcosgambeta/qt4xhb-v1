@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QColor entryColor(int idx) const
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_SETENTRY)
       obj->setEntry(PINT(1), PQRGB(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2) || HB_ISCHAR(2))) {
     // void setEntry(int idx, const QColor &color)
     GET_PTR_FROM_SELF(obj);
@@ -190,7 +190,7 @@ HB_FUNC_STATIC(QGLCOLORMAP_SETENTRY)
       obj->setEntry(PINT(1), HB_ISOBJECT(2) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(2)) : QColor(hb_parc(2)));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

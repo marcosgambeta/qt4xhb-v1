@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QPALETTE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // const QBrush &alternateBase() const
@@ -537,7 +537,7 @@ HB_FUNC_STATIC(QPALETTE_SETBRUSH)
       obj->setBrush(PQPALETTE_COLORROLE(1), *PQBRUSH(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQBRUSH(3)) {
     // void setBrush(QPalette::ColorGroup group, QPalette::ColorRole role, const QBrush &brush)
     GET_PTR_FROM_SELF(obj);
@@ -546,7 +546,7 @@ HB_FUNC_STATIC(QPALETTE_SETBRUSH)
       obj->setBrush(PQPALETTE_COLORGROUP(1), PQPALETTE_COLORROLE(2), *PQBRUSH(3));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -563,7 +563,7 @@ HB_FUNC_STATIC(QPALETTE_SETCOLOR)
                     HB_ISOBJECT(3) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(3)) : QColor(hb_parc(3)));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2) || HB_ISCHAR(3))) {
     // void setColor(QPalette::ColorRole role, const QColor &color)
     GET_PTR_FROM_SELF(obj);
@@ -573,7 +573,7 @@ HB_FUNC_STATIC(QPALETTE_SETCOLOR)
                     HB_ISOBJECT(2) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(2)) : QColor(hb_parc(2)));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -600,7 +600,7 @@ HB_FUNC_STATIC(QPALETTE_SETCOLORGROUP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCurrentColorGroup(QPalette::ColorGroup cg)
@@ -620,7 +620,7 @@ HB_FUNC_STATIC(QPALETTE_SETCURRENTCOLORGROUP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // const QBrush &shadow() const

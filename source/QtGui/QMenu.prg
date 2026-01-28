@@ -99,7 +99,7 @@ HB_FUNC_STATIC(QMENU_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QAction *actionAt(const QPoint &pt) const
@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QMENU_ADDACTION)
       obj->addAction(PQACTION(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -282,7 +282,7 @@ HB_FUNC_STATIC(QMENU_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QAction *defaultAction() const
@@ -321,7 +321,7 @@ HB_FUNC_STATIC(QMENU_HIDETEAROFFMENU)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QIcon icon() const
@@ -470,7 +470,7 @@ HB_FUNC_STATIC(QMENU_POPUP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool separatorsCollapsible() const
@@ -508,7 +508,7 @@ HB_FUNC_STATIC(QMENU_SETACTIVEACTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDefaultAction(QAction *act)
@@ -528,7 +528,7 @@ HB_FUNC_STATIC(QMENU_SETDEFAULTACTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setIcon(const QIcon &icon)
@@ -548,7 +548,7 @@ HB_FUNC_STATIC(QMENU_SETICON)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSeparatorsCollapsible(bool collapse)
@@ -568,7 +568,7 @@ HB_FUNC_STATIC(QMENU_SETSEPARATORSCOLLAPSIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTearOffEnabled(bool)
@@ -588,7 +588,7 @@ HB_FUNC_STATIC(QMENU_SETTEAROFFENABLED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTitle(const QString &title)
@@ -608,7 +608,7 @@ HB_FUNC_STATIC(QMENU_SETTITLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString title() const

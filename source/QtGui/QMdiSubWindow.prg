@@ -169,7 +169,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_SETKEYBOARDPAGESTEP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setKeyboardSingleStep(int step)
@@ -189,7 +189,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_SETKEYBOARDSINGLESTEP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOption(QMdiSubWindow::SubWindowOption option, bool on = true)
@@ -209,7 +209,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_SETOPTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSystemMenu(QMenu *systemMenu)
@@ -229,7 +229,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_SETSYSTEMMENU)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWidget(QWidget *widget)
@@ -249,7 +249,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_SETWIDGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QMenu *systemMenu() const
@@ -361,7 +361,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_SHOWSHADED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void showSystemMenu()
@@ -381,7 +381,7 @@ HB_FUNC_STATIC(QMDISUBWINDOW_SHOWSYSTEMMENU)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QMdiSubWindowSlots_connect_signal(const QString &signal, const QString &slot);

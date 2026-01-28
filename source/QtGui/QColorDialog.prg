@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QColor currentColor() const
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_OPEN)
       obj->open();
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2)) {
     // void open(QObject *receiver, const char *member)
     GET_PTR_FROM_SELF(obj);
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_OPEN)
       obj->open(PQOBJECT(1), PCONSTCHAR(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_SETCURRENTCOLOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOption(QColorDialog::ColorDialogOption option, bool on = true)
@@ -201,7 +201,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_SETOPTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOptions(QColorDialog::ColorDialogOptions options)
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_SETOPTIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool testOption(QColorDialog::ColorDialogOption option) const
@@ -259,7 +259,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_SETVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QRgb customColor(int index)
@@ -322,7 +322,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_SETCUSTOMCOLOR)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setStandardColor(int index, QRgb color)
@@ -338,7 +338,7 @@ HB_FUNC_STATIC(QCOLORDIALOG_SETSTANDARDCOLOR)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QColorDialogSlots_connect_signal(const QString &signal, const QString &slot);

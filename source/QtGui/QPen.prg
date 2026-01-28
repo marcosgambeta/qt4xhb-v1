@@ -111,7 +111,7 @@ HB_FUNC_STATIC(QPEN_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QBrush brush() const
@@ -301,7 +301,7 @@ HB_FUNC_STATIC(QPEN_SETBRUSH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCapStyle(Qt::PenCapStyle style)
@@ -321,7 +321,7 @@ HB_FUNC_STATIC(QPEN_SETCAPSTYLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setColor(const QColor &color)
@@ -341,7 +341,7 @@ HB_FUNC_STATIC(QPEN_SETCOLOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCosmetic(bool cosmetic)
@@ -361,7 +361,7 @@ HB_FUNC_STATIC(QPEN_SETCOSMETIC)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDashOffset(qreal offset)
@@ -381,7 +381,7 @@ HB_FUNC_STATIC(QPEN_SETDASHOFFSET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDashPattern(const QVector<qreal> &pattern)
@@ -409,7 +409,7 @@ HB_FUNC_STATIC(QPEN_SETDASHPATTERN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setJoinStyle(Qt::PenJoinStyle style)
@@ -429,7 +429,7 @@ HB_FUNC_STATIC(QPEN_SETJOINSTYLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMiterLimit(qreal limit)
@@ -449,7 +449,7 @@ HB_FUNC_STATIC(QPEN_SETMITERLIMIT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStyle(Qt::PenStyle style)
@@ -469,7 +469,7 @@ HB_FUNC_STATIC(QPEN_SETSTYLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWidth(int width)
@@ -489,7 +489,7 @@ HB_FUNC_STATIC(QPEN_SETWIDTH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWidthF(qreal width)
@@ -509,7 +509,7 @@ HB_FUNC_STATIC(QPEN_SETWIDTHF)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::PenStyle style() const

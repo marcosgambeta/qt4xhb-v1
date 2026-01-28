@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETSHAPE)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString text
@@ -122,7 +122,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETTEXT)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QIcon icon
@@ -150,7 +150,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETICON)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int row
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETROW)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // TabPosition position
@@ -206,7 +206,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETPOSITION)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // SelectedPosition selectedPosition
@@ -234,7 +234,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETSELECTEDPOSITION)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // CornerWidgets cornerWidgets
@@ -262,7 +262,7 @@ HB_FUNC_STATIC(QSTYLEOPTIONTAB_SETCORNERWIDGETS)
     }
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

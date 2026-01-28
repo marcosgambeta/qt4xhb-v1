@@ -72,7 +72,7 @@ HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_ADDDATA)
@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_ADDDATA)
       obj->addData(PCONSTCHAR(1), PINT(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && ISQBYTEARRAY(1)) {
     // void addData(const QByteArray &data)
     GET_PTR_FROM_SELF(obj);
@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_ADDDATA)
       obj->addData(*PQBYTEARRAY(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -117,7 +117,7 @@ HB_FUNC_STATIC(QCRYPTOGRAPHICHASH_RESET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QByteArray result() const

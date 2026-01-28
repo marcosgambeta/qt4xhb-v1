@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QACCESSIBLE_SETROOTOBJECT)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void updateAccessibility(QObject *object, int child, QAccessible::Event reason)
@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QACCESSIBLE_UPDATEACCESSIBILITY)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QACCESSIBLE_NEWFROM)

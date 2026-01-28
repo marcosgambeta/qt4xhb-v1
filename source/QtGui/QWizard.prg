@@ -114,7 +114,7 @@ HB_FUNC_STATIC(QWIZARD_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int addPage(QWizardPage *page)
@@ -354,7 +354,7 @@ HB_FUNC_STATIC(QWIZARD_REMOVEPAGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setButton(QWizard::WizardButton which, QAbstractButton *button)
@@ -374,7 +374,7 @@ HB_FUNC_STATIC(QWIZARD_SETBUTTON)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setButtonLayout(const QList<QWizard::WizardButton> &layout)
@@ -400,7 +400,7 @@ HB_FUNC_STATIC(QWIZARD_SETBUTTONLAYOUT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setButtonText(QWizard::WizardButton which, const QString &text)
@@ -420,7 +420,7 @@ HB_FUNC_STATIC(QWIZARD_SETBUTTONTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDefaultProperty(const char *className, const char *property, const char *changedSignal)
@@ -440,7 +440,7 @@ HB_FUNC_STATIC(QWIZARD_SETDEFAULTPROPERTY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setField(const QString &name, const QVariant &value)
@@ -460,7 +460,7 @@ HB_FUNC_STATIC(QWIZARD_SETFIELD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOption(QWizard::WizardOption option, bool on = true)
@@ -480,7 +480,7 @@ HB_FUNC_STATIC(QWIZARD_SETOPTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOptions(QWizard::WizardOptions options)
@@ -500,7 +500,7 @@ HB_FUNC_STATIC(QWIZARD_SETOPTIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPage(int id, QWizardPage *page)
@@ -520,7 +520,7 @@ HB_FUNC_STATIC(QWIZARD_SETPAGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPixmap(QWizard::WizardPixmap which, const QPixmap &pixmap)
@@ -540,7 +540,7 @@ HB_FUNC_STATIC(QWIZARD_SETPIXMAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSideWidget(QWidget *widget)
@@ -560,7 +560,7 @@ HB_FUNC_STATIC(QWIZARD_SETSIDEWIDGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStartId(int id)
@@ -580,7 +580,7 @@ HB_FUNC_STATIC(QWIZARD_SETSTARTID)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSubTitleFormat(Qt::TextFormat format)
@@ -600,7 +600,7 @@ HB_FUNC_STATIC(QWIZARD_SETSUBTITLEFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTitleFormat(Qt::TextFormat format)
@@ -620,7 +620,7 @@ HB_FUNC_STATIC(QWIZARD_SETTITLEFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWizardStyle(QWizard::WizardStyle style)
@@ -640,7 +640,7 @@ HB_FUNC_STATIC(QWIZARD_SETWIZARDSTYLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QWidget *sideWidget() const
@@ -806,7 +806,7 @@ HB_FUNC_STATIC(QWIZARD_SETVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QSize sizeHint() const
@@ -844,7 +844,7 @@ HB_FUNC_STATIC(QWIZARD_BACK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void next()
@@ -864,7 +864,7 @@ HB_FUNC_STATIC(QWIZARD_NEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void restart()
@@ -884,7 +884,7 @@ HB_FUNC_STATIC(QWIZARD_RESTART)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QWizardSlots_connect_signal(const QString &signal, const QString &slot);

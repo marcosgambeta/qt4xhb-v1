@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QFTP_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qint64 bytesAvailable() const
@@ -152,7 +152,7 @@ HB_FUNC_STATIC(QFTP_CLEARPENDINGCOMMANDS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int close()
@@ -575,7 +575,7 @@ HB_FUNC_STATIC(QFTP_ABORT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QFtpSlots_connect_signal(const QString &signal, const QString &slot);

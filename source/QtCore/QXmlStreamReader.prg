@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QXMLSTREAMREADER_ADDDATA)
@@ -154,7 +154,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ADDDATA)
       obj->addData(*PQBYTEARRAY(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && HB_ISCHAR(1)) {
     // void addData(const QString &data)
     GET_PTR_FROM_SELF(obj);
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ADDDATA)
       obj->addData(PQSTRING(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -186,7 +186,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ADDEXTRANAMESPACEDECLARATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void addExtraNamespaceDeclarations(const QXmlStreamNamespaceDeclarations &extraNamespaceDeclarations)
@@ -213,7 +213,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_ADDEXTRANAMESPACEDECLARATIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool atEnd() const
@@ -287,7 +287,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qint64 columnNumber() const
@@ -1001,7 +1001,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_RAISEERROR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString readElementText(QXmlStreamReader::ReadElementTextBehaviour behaviour =
@@ -1078,7 +1078,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_SETDEVICE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setEntityResolver(QXmlStreamEntityResolver *resolver)
@@ -1098,7 +1098,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_SETENTITYRESOLVER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setNamespaceProcessing(bool)
@@ -1118,7 +1118,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_SETNAMESPACEPROCESSING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void skipCurrentElement()
@@ -1138,7 +1138,7 @@ HB_FUNC_STATIC(QXMLSTREAMREADER_SKIPCURRENTELEMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QStringRef text() const

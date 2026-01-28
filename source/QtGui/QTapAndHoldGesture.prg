@@ -53,7 +53,7 @@ HB_FUNC_STATIC(QTAPANDHOLDGESTURE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QPointF position() const
@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QTAPANDHOLDGESTURE_SETPOSITION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void setTimeout(int msecs)
@@ -107,7 +107,7 @@ HB_FUNC_STATIC(QTAPANDHOLDGESTURE_SETTIMEOUT)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static int timeout()

@@ -77,7 +77,7 @@ HB_FUNC_STATIC(QDROPEVENT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void acceptProposedAction()
@@ -97,7 +97,7 @@ HB_FUNC_STATIC(QDROPEVENT_ACCEPTPROPOSEDACTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::DropAction dropAction() const
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QDROPEVENT_SETDROPACTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QWidget *source() const

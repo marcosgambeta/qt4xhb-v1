@@ -165,7 +165,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QScriptValue call ( const QScriptValue & thisObject = QScriptValue(), const QScriptValueList & args =
@@ -662,7 +662,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_SETDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPrototype(const QScriptValue &prototype)
@@ -682,7 +682,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_SETPROTOTYPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setScriptClass(QScriptClass *scriptClass)
@@ -702,7 +702,7 @@ HB_FUNC_STATIC(QSCRIPTVALUE_SETSCRIPTCLASS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool strictlyEquals(const QScriptValue &other) const

@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QMUTEXLOCKER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QMutex *mutex() const
@@ -109,7 +109,7 @@ HB_FUNC_STATIC(QMUTEXLOCKER_RELOCK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void unlock()
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QMUTEXLOCKER_UNLOCK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QMUTEXLOCKER_NEWFROM)

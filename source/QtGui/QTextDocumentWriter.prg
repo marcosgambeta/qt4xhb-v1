@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QTextCodec *codec() const
@@ -185,7 +185,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_SETCODEC)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDevice(QIODevice *device)
@@ -205,7 +205,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_SETDEVICE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFileName(const QString &fileName)
@@ -225,7 +225,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_SETFILENAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFormat(const QByteArray &format)
@@ -245,7 +245,7 @@ HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_SETFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QTEXTDOCUMENTWRITER_WRITE)

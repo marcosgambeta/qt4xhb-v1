@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QTIME_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QTime addMSecs(int ms) const
@@ -323,7 +323,7 @@ HB_FUNC_STATIC(QTIME_START)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QTIME_TOSTRING)

@@ -74,7 +74,7 @@ HB_FUNC_STATIC(QITEMEDITORFACTORY_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QWidget *createEditor(QVariant::Type type, QWidget *parent) const
@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QITEMEDITORFACTORY_REGISTEREDITOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QByteArray valuePropertyName(QVariant::Type type) const
@@ -162,7 +162,7 @@ HB_FUNC_STATIC(QITEMEDITORFACTORY_SETDEFAULTFACTORY)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QITEMEDITORFACTORY_NEWFROM)

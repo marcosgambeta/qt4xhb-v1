@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void popContext()
@@ -96,7 +96,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_POPCONTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString prefix(const QString &uri) const
@@ -159,7 +159,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_PROCESSNAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void pushContext()
@@ -179,7 +179,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_PUSHCONTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void reset()
@@ -199,7 +199,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_RESET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPrefix(const QString &pre, const QString &uri)
@@ -219,7 +219,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_SETPREFIX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void splitName(const QString &qname, QString &prefix, QString &localname) const
@@ -243,7 +243,7 @@ HB_FUNC_STATIC(QXMLNAMESPACESUPPORT_SPLITNAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString uri(const QString &prefix) const

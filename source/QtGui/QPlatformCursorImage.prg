@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QPLATFORMCURSORIMAGE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QPoint hotspot()
@@ -123,7 +123,7 @@ HB_FUNC_STATIC(QPLATFORMCURSORIMAGE_SET)
       obj->set(PCONSTUCHAR(1), PCONSTUCHAR(2), PINT(3), PINT(4), PINT(5), PINT(6));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(3) && ISQIMAGE(1) && HB_ISNUM(2) && HB_ISNUM(3)) {
     // void set(const QImage &image, int hx, int hy)
     GET_PTR_FROM_SELF(obj);
@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QPLATFORMCURSORIMAGE_SET)
       obj->set(*PQIMAGE(1), PINT(2), PINT(3));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // void set(Qt::CursorShape id)
     GET_PTR_FROM_SELF(obj);
@@ -141,7 +141,7 @@ HB_FUNC_STATIC(QPLATFORMCURSORIMAGE_SET)
       obj->set(PQT_CURSORSHAPE(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

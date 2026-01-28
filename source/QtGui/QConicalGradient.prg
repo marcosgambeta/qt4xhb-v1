@@ -116,7 +116,7 @@ HB_FUNC_STATIC(QCONICALGRADIENT_SETANGLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QCONICALGRADIENT_SETCENTER)
@@ -129,7 +129,7 @@ HB_FUNC_STATIC(QCONICALGRADIENT_SETCENTER)
       obj->setCenter(*PQPOINTF(1));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2)) {
     // void setCenter(qreal x, qreal y)
     GET_PTR_FROM_SELF(obj);
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QCONICALGRADIENT_SETCENTER)
       obj->setCenter(PQREAL(1), PQREAL(2));
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

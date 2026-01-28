@@ -61,7 +61,7 @@ HB_FUNC_STATIC(QDECORATIONDEFAULT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool paint(QPainter *painter, const QWidget *widget, int decorationRegion = QDecoration::All,

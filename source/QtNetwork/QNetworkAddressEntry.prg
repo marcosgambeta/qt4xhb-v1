@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QHostAddress broadcast() const
@@ -172,7 +172,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_SETBROADCAST)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setIp(const QHostAddress &newIp)
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_SETIP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setNetmask(const QHostAddress &newNetmask)
@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_SETNETMASK)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPrefixLength(int length)
@@ -232,7 +232,7 @@ HB_FUNC_STATIC(QNETWORKADDRESSENTRY_SETPREFIXLENGTH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QNETWORKADDRESSENTRY_NEWFROM)

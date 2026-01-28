@@ -105,7 +105,7 @@ HB_FUNC_STATIC(QFONTDIALOG_OPEN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QFontDialog::FontDialogOptions options() const
@@ -161,7 +161,7 @@ HB_FUNC_STATIC(QFONTDIALOG_SETCURRENTFONT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOption(QFontDialog::FontDialogOption option, bool on = true)
@@ -181,7 +181,7 @@ HB_FUNC_STATIC(QFONTDIALOG_SETOPTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOptions(QFontDialog::FontDialogOptions options)
@@ -201,7 +201,7 @@ HB_FUNC_STATIC(QFONTDIALOG_SETOPTIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool testOption(QFontDialog::FontDialogOption option) const
@@ -239,7 +239,7 @@ HB_FUNC_STATIC(QFONTDIALOG_SETVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QFONTDIALOG_GETFONT)

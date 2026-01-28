@@ -49,7 +49,7 @@ HB_FUNC_STATIC(QABSTRACTMESSAGEHANDLER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void message(QtMsgType type, const QString &description, const QUrl &identifier = QUrl(), const QSourceLocation
@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QABSTRACTMESSAGEHANDLER_MESSAGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

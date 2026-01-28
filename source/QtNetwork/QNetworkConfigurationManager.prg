@@ -74,7 +74,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QList<QNetworkConfiguration> allConfigurations(QNetworkConfiguration::StateFlags filter = 0) const
@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QNETWORKCONFIGURATIONMANAGER_UPDATECONFIGURATIONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QNetworkConfigurationManagerSlots_connect_signal(const QString &signal, const QString &slot);

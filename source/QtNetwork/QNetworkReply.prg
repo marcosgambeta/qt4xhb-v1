@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void abort() = 0
@@ -101,7 +101,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_ABORT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QVariant attribute(QNetworkRequest::Attribute code) const
@@ -193,7 +193,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_IGNORESSLERRORS)
       obj->ignoreSslErrors(par1);
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(0)) {
     // virtual void ignoreSslErrors()
     GET_PTR_FROM_SELF(obj);
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_IGNORESSLERRORS)
       obj->ignoreSslErrors();
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
@@ -393,7 +393,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_SETREADBUFFERSIZE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSslConfiguration(const QSslConfiguration &config)
@@ -413,7 +413,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_SETSSLCONFIGURATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSslConfiguration sslConfiguration() const
@@ -469,7 +469,7 @@ HB_FUNC_STATIC(QNETWORKREPLY_CLOSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QNetworkReplySlots_connect_signal(const QString &signal, const QString &slot);

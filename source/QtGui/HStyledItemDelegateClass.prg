@@ -76,7 +76,7 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
@@ -101,7 +101,7 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_DEFAULTPAINT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const
@@ -136,7 +136,7 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETPAINTCB)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSizeHintCB(PHB_ITEM block)
@@ -156,7 +156,7 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETSIZEHINTCB)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDisplayTextCB(PHB_ITEM block)
@@ -176,7 +176,7 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETDISPLAYTEXTCB)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCreateEditorCB(PHB_ITEM block)
@@ -196,7 +196,7 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETCREATEEDITORCB)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setEditorDataCB(PHB_ITEM block)
@@ -216,7 +216,7 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETEDITORDATACB)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setModelDataCB(PHB_ITEM block)
@@ -236,7 +236,7 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETMODELDATACB)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUpdateEditorGeometryCB(PHB_ITEM block)
@@ -256,7 +256,7 @@ HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETUPDATEEDITORGEOMETRYCB)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 #pragma ENDDUMP

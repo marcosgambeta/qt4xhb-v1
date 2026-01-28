@@ -162,7 +162,7 @@ HB_FUNC_STATIC(QACCESSIBLEOBJECT_SETTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual int userActionCount(int child) const

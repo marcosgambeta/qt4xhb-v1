@@ -94,7 +94,7 @@ HB_FUNC_STATIC(QMDIAREA_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QMdiArea::WindowOrder activationOrder() const
@@ -226,7 +226,7 @@ HB_FUNC_STATIC(QMDIAREA_REMOVESUBWINDOW)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setActivationOrder(QMdiArea::WindowOrder order)
@@ -246,7 +246,7 @@ HB_FUNC_STATIC(QMDIAREA_SETACTIVATIONORDER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setBackground(const QBrush &background)
@@ -266,7 +266,7 @@ HB_FUNC_STATIC(QMDIAREA_SETBACKGROUND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setDocumentMode(bool enabled)
@@ -286,7 +286,7 @@ HB_FUNC_STATIC(QMDIAREA_SETDOCUMENTMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOption(QMdiArea::AreaOption option, bool on = true)
@@ -306,7 +306,7 @@ HB_FUNC_STATIC(QMDIAREA_SETOPTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTabPosition(QTabWidget::TabPosition position)
@@ -326,7 +326,7 @@ HB_FUNC_STATIC(QMDIAREA_SETTABPOSITION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTabShape(QTabWidget::TabShape shape)
@@ -346,7 +346,7 @@ HB_FUNC_STATIC(QMDIAREA_SETTABSHAPE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setViewMode(QMdiArea::ViewMode mode)
@@ -366,7 +366,7 @@ HB_FUNC_STATIC(QMDIAREA_SETVIEWMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QList<QMdiSubWindow *> subWindowList(QMdiArea::WindowOrder order = QMdiArea::CreationOrder) const
@@ -533,7 +533,7 @@ HB_FUNC_STATIC(QMDIAREA_ACTIVATENEXTSUBWINDOW)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void activatePreviousSubWindow()
@@ -553,7 +553,7 @@ HB_FUNC_STATIC(QMDIAREA_ACTIVATEPREVIOUSSUBWINDOW)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void cascadeSubWindows()
@@ -573,7 +573,7 @@ HB_FUNC_STATIC(QMDIAREA_CASCADESUBWINDOWS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void closeActiveSubWindow()
@@ -593,7 +593,7 @@ HB_FUNC_STATIC(QMDIAREA_CLOSEACTIVESUBWINDOW)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void closeAllSubWindows()
@@ -613,7 +613,7 @@ HB_FUNC_STATIC(QMDIAREA_CLOSEALLSUBWINDOWS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setActiveSubWindow(QMdiSubWindow *window)
@@ -633,7 +633,7 @@ HB_FUNC_STATIC(QMDIAREA_SETACTIVESUBWINDOW)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void tileSubWindows()
@@ -653,7 +653,7 @@ HB_FUNC_STATIC(QMDIAREA_TILESUBWINDOWS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QMdiAreaSlots_connect_signal(const QString &signal, const QString &slot);

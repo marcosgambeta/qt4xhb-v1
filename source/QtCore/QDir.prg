@@ -132,7 +132,7 @@ HB_FUNC_STATIC(QDIR_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString absoluteFilePath(const QString &fileName) const
@@ -594,7 +594,7 @@ HB_FUNC_STATIC(QDIR_REFRESH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString relativeFilePath(const QString &fileName) const
@@ -704,7 +704,7 @@ HB_FUNC_STATIC(QDIR_SETFILTER)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setNameFilters(const QStringList &nameFilters)
@@ -724,7 +724,7 @@ HB_FUNC_STATIC(QDIR_SETNAMEFILTERS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPath(const QString &path)
@@ -744,7 +744,7 @@ HB_FUNC_STATIC(QDIR_SETPATH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSorting(QDir::SortFlags sort)
@@ -764,7 +764,7 @@ HB_FUNC_STATIC(QDIR_SETSORTING)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QDir::SortFlags sorting() const
@@ -798,7 +798,7 @@ HB_FUNC_STATIC(QDIR_ADDSEARCHPATH)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QString cleanPath(const QString &path)
@@ -1048,7 +1048,7 @@ HB_FUNC_STATIC(QDIR_SETSEARCHPATHS)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static QDir temp()

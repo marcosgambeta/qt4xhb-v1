@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString domain() const
@@ -239,7 +239,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETDOMAIN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setExpirationDate(const QDateTime &date)
@@ -259,7 +259,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETEXPIRATIONDATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setHttpOnly(bool enable)
@@ -279,7 +279,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETHTTPONLY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setName(const QByteArray &cookieName)
@@ -299,7 +299,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETNAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPath(const QString &path)
@@ -319,7 +319,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETPATH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSecure(bool enable)
@@ -339,7 +339,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETSECURE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setValue(const QByteArray &value)
@@ -359,7 +359,7 @@ HB_FUNC_STATIC(QNETWORKCOOKIE_SETVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QByteArray toRawForm(QNetworkCookie::RawForm form = QNetworkCookie::Full) const

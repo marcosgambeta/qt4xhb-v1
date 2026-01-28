@@ -78,7 +78,7 @@ HB_FUNC_STATIC(QXMLPARSEEXCEPTION_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int columnNumber() const

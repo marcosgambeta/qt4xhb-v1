@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QTHREADPOOL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int activeThreadCount() const
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QTHREADPOOL_RELEASETHREAD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void reserveThread()
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QTHREADPOOL_RESERVETHREAD)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setExpiryTimeout(int expiryTimeout)
@@ -184,7 +184,7 @@ HB_FUNC_STATIC(QTHREADPOOL_SETEXPIRYTIMEOUT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMaxThreadCount(int maxThreadCount)
@@ -204,7 +204,7 @@ HB_FUNC_STATIC(QTHREADPOOL_SETMAXTHREADCOUNT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void start(QRunnable *runnable, int priority = 0)
@@ -224,7 +224,7 @@ HB_FUNC_STATIC(QTHREADPOOL_START)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool tryStart(QRunnable *runnable)
@@ -255,7 +255,7 @@ HB_FUNC_STATIC(QTHREADPOOL_WAITFORDONE)
       obj->waitForDone();
     }
 
-    hb_itemReturn(hb_stackSelfItem());
+    RETURN_SELF();
   } else if (ISNUMPAR(1) && HB_ISNUM(1)) {
     // bool waitForDone(int msecs)
     GET_PTR_FROM_SELF(obj);

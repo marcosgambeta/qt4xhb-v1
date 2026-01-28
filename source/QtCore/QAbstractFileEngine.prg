@@ -90,7 +90,7 @@ HB_FUNC_STATIC(QABSTRACTFILEENGINE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool atEnd() const
@@ -563,7 +563,7 @@ HB_FUNC_STATIC(QABSTRACTFILEENGINE_SETFILENAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool setPermissions(uint perms)

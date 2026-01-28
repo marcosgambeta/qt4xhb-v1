@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QAXFACTORY_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QUuid appID() const
@@ -273,7 +273,7 @@ HB_FUNC_STATIC(QAXFACTORY_REGISTERCLASS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool stayTopLevel(const QString &key) const
@@ -329,7 +329,7 @@ HB_FUNC_STATIC(QAXFACTORY_UNREGISTERCLASS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool validateLicenseKey(const QString &key, const QString &licenseKey) const

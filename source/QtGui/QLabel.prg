@@ -110,7 +110,7 @@ HB_FUNC_STATIC(QLABEL_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::Alignment alignment() const
@@ -332,7 +332,7 @@ HB_FUNC_STATIC(QLABEL_SETALIGNMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setBuddy(QWidget *buddy)
@@ -352,7 +352,7 @@ HB_FUNC_STATIC(QLABEL_SETBUDDY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setIndent(int)
@@ -372,7 +372,7 @@ HB_FUNC_STATIC(QLABEL_SETINDENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMargin(int)
@@ -392,7 +392,7 @@ HB_FUNC_STATIC(QLABEL_SETMARGIN)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setOpenExternalLinks(bool open)
@@ -412,7 +412,7 @@ HB_FUNC_STATIC(QLABEL_SETOPENEXTERNALLINKS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setScaledContents(bool)
@@ -432,7 +432,7 @@ HB_FUNC_STATIC(QLABEL_SETSCALEDCONTENTS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSelection(int start, int length)
@@ -452,7 +452,7 @@ HB_FUNC_STATIC(QLABEL_SETSELECTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTextFormat(Qt::TextFormat)
@@ -472,7 +472,7 @@ HB_FUNC_STATIC(QLABEL_SETTEXTFORMAT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTextInteractionFlags(Qt::TextInteractionFlags flags)
@@ -492,7 +492,7 @@ HB_FUNC_STATIC(QLABEL_SETTEXTINTERACTIONFLAGS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWordWrap(bool on)
@@ -512,7 +512,7 @@ HB_FUNC_STATIC(QLABEL_SETWORDWRAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString text() const
@@ -658,7 +658,7 @@ HB_FUNC_STATIC(QLABEL_CLEAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMovie(QMovie *movie)
@@ -678,7 +678,7 @@ HB_FUNC_STATIC(QLABEL_SETMOVIE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setNum(int num)
@@ -698,7 +698,7 @@ HB_FUNC_STATIC(QLABEL_SETNUM1)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setNum(double num)
@@ -718,7 +718,7 @@ HB_FUNC_STATIC(QLABEL_SETNUM2)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QLABEL_SETNUM)
@@ -747,7 +747,7 @@ HB_FUNC_STATIC(QLABEL_SETPICTURE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPixmap(const QPixmap &)
@@ -767,7 +767,7 @@ HB_FUNC_STATIC(QLABEL_SETPIXMAP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setText(const QString &)
@@ -787,7 +787,7 @@ HB_FUNC_STATIC(QLABEL_SETTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QLabelSlots_connect_signal(const QString &signal, const QString &slot);

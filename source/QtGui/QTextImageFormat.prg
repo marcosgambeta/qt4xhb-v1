@@ -64,7 +64,7 @@ HB_FUNC_STATIC(QTEXTIMAGEFORMAT_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qreal height() const
@@ -138,7 +138,7 @@ HB_FUNC_STATIC(QTEXTIMAGEFORMAT_SETHEIGHT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setName(const QString &name)
@@ -158,7 +158,7 @@ HB_FUNC_STATIC(QTEXTIMAGEFORMAT_SETNAME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWidth(qreal width)
@@ -178,7 +178,7 @@ HB_FUNC_STATIC(QTEXTIMAGEFORMAT_SETWIDTH)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // qreal width() const

@@ -121,7 +121,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QBrush background() const
@@ -322,7 +322,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_READ)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int row() const
@@ -360,7 +360,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_SETBACKGROUND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setCheckState(Qt::CheckState state)
@@ -380,7 +380,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_SETCHECKSTATE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setData(int role, const QVariant &value)
@@ -400,7 +400,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_SETDATA)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFlags(Qt::ItemFlags flags)
@@ -420,7 +420,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_SETFLAGS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFont(const QFont &font)
@@ -440,7 +440,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_SETFONT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setForeground(const QBrush &brush)
@@ -460,7 +460,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_SETFOREGROUND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setIcon(const QIcon &icon)
@@ -480,7 +480,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_SETICON)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSelected(bool select)
@@ -500,7 +500,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_SETSELECTED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSizeHint(const QSize &size)
@@ -520,7 +520,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_SETSIZEHINT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setStatusTip(const QString &statusTip)
@@ -540,7 +540,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_SETSTATUSTIP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setText(const QString &text)
@@ -560,7 +560,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_SETTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTextAlignment(int alignment)
@@ -580,7 +580,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_SETTEXTALIGNMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setToolTip(const QString &toolTip)
@@ -600,7 +600,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_SETTOOLTIP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWhatsThis(const QString &whatsThis)
@@ -620,7 +620,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_SETWHATSTHIS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSize sizeHint() const
@@ -785,7 +785,7 @@ HB_FUNC_STATIC(QTABLEWIDGETITEM_WRITE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QTABLEWIDGETITEM_NEWFROM)

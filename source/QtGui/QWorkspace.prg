@@ -80,7 +80,7 @@ HB_FUNC_STATIC(QWORKSPACE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QWidget *activeWindow() const
@@ -174,7 +174,7 @@ HB_FUNC_STATIC(QWORKSPACE_SETBACKGROUND)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setScrollBarsEnabled(bool enable)
@@ -194,7 +194,7 @@ HB_FUNC_STATIC(QWORKSPACE_SETSCROLLBARSENABLED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QWidgetList windowList(QWorkspace::WindowOrder order = QWorkspace::CreationOrder) const
@@ -271,7 +271,7 @@ HB_FUNC_STATIC(QWORKSPACE_ACTIVATENEXTWINDOW)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void activatePreviousWindow()
@@ -291,7 +291,7 @@ HB_FUNC_STATIC(QWORKSPACE_ACTIVATEPREVIOUSWINDOW)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void arrangeIcons()
@@ -311,7 +311,7 @@ HB_FUNC_STATIC(QWORKSPACE_ARRANGEICONS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void cascade()
@@ -331,7 +331,7 @@ HB_FUNC_STATIC(QWORKSPACE_CASCADE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void closeActiveWindow()
@@ -351,7 +351,7 @@ HB_FUNC_STATIC(QWORKSPACE_CLOSEACTIVEWINDOW)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void closeAllWindows()
@@ -371,7 +371,7 @@ HB_FUNC_STATIC(QWORKSPACE_CLOSEALLWINDOWS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setActiveWindow(QWidget *w)
@@ -391,7 +391,7 @@ HB_FUNC_STATIC(QWORKSPACE_SETACTIVEWINDOW)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void tile()
@@ -411,7 +411,7 @@ HB_FUNC_STATIC(QWORKSPACE_TILE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QWorkspaceSlots_connect_signal(const QString &signal, const QString &slot);

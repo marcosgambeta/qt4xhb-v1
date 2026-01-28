@@ -71,7 +71,7 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_GRABGESTURE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void ungrabGesture(Qt::GestureType gesture)
@@ -91,7 +91,7 @@ HB_FUNC_STATIC(QGRAPHICSOBJECT_UNGRABGESTURE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QGraphicsObjectSlots_connect_signal(const QString &signal, const QString &slot);

@@ -73,7 +73,7 @@ HB_FUNC_STATIC(QSUPPORTEDWRITINGSYSTEMS_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSupported(QFontDatabase::WritingSystem writingSystem, bool support = true)
@@ -93,7 +93,7 @@ HB_FUNC_STATIC(QSUPPORTEDWRITINGSYSTEMS_SETSUPPORTED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool supported(QFontDatabase::WritingSystem writingSystem) const

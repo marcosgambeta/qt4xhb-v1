@@ -87,7 +87,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QMenu *contextMenu() const
@@ -180,7 +180,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_SETCONTEXTMENU)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setIcon(const QIcon &icon)
@@ -200,7 +200,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_SETICON)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setToolTip(const QString &tip)
@@ -220,7 +220,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_SETTOOLTIP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void showMessage(const QString &title, const QString &message, QSystemTrayIcon::MessageIcon icon =
@@ -244,7 +244,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_SHOWMESSAGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString toolTip() const
@@ -282,7 +282,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_HIDE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setVisible(bool visible)
@@ -302,7 +302,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_SETVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void show()
@@ -322,7 +322,7 @@ HB_FUNC_STATIC(QSYSTEMTRAYICON_SHOW)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static bool isSystemTrayAvailable()

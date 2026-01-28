@@ -113,7 +113,7 @@ HB_FUNC_STATIC(QSPLITTERHANDLE_SETORIENTATION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QSplitter *splitter() const

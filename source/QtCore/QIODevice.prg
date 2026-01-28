@@ -81,7 +81,7 @@ HB_FUNC_STATIC(QIODEVICE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool atEnd() const
@@ -173,7 +173,7 @@ HB_FUNC_STATIC(QIODEVICE_CLOSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString errorString() const
@@ -508,7 +508,7 @@ HB_FUNC_STATIC(QIODEVICE_SETTEXTMODEENABLED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual qint64 size() const
@@ -546,7 +546,7 @@ HB_FUNC_STATIC(QIODEVICE_UNGETCHAR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool waitForBytesWritten(int msecs)

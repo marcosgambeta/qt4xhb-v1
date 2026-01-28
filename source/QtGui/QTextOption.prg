@@ -88,7 +88,7 @@ HB_FUNC_STATIC(QTEXTOPTION_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // Qt::Alignment alignment() const
@@ -144,7 +144,7 @@ HB_FUNC_STATIC(QTEXTOPTION_SETALIGNMENT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFlags(QTextOption::Flags flags)
@@ -164,7 +164,7 @@ HB_FUNC_STATIC(QTEXTOPTION_SETFLAGS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTabArray(QList<qreal> tabStops)
@@ -192,7 +192,7 @@ HB_FUNC_STATIC(QTEXTOPTION_SETTABARRAY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTabStop(qreal tabStop)
@@ -212,7 +212,7 @@ HB_FUNC_STATIC(QTEXTOPTION_SETTABSTOP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTextDirection(Qt::LayoutDirection direction)
@@ -232,7 +232,7 @@ HB_FUNC_STATIC(QTEXTOPTION_SETTEXTDIRECTION)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setUseDesignMetrics(bool enable)
@@ -252,7 +252,7 @@ HB_FUNC_STATIC(QTEXTOPTION_SETUSEDESIGNMETRICS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setWrapMode(QTextOption::WrapMode mode)
@@ -272,7 +272,7 @@ HB_FUNC_STATIC(QTEXTOPTION_SETWRAPMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QList<qreal> tabArray() const

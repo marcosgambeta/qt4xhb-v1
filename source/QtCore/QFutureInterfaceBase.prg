@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void reportStarted()
@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_REPORTSTARTED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void reportFinished()
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_REPORTFINISHED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void reportCanceled()
@@ -168,7 +168,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_REPORTCANCELED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void reportResultsReady(int beginIndex, int endIndex)
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_REPORTRESULTSREADY)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRunnable(QRunnable *runnable)
@@ -208,7 +208,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_SETRUNNABLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setFilterMode(bool enable)
@@ -228,7 +228,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_SETFILTERMODE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setProgressRange(int minimum, int maximum)
@@ -248,7 +248,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_SETPROGRESSRANGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int progressMinimum() const
@@ -322,7 +322,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_SETPROGRESSVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int progressValue() const
@@ -360,7 +360,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_SETPROGRESSVALUEANDTEXT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QString progressText() const
@@ -398,7 +398,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_SETEXPECTEDRESULTCOUNT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int expectedResultCount()
@@ -598,7 +598,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_CANCEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPaused(bool paused)
@@ -618,7 +618,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_SETPAUSED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void togglePaused()
@@ -638,7 +638,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_TOGGLEPAUSED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setThrottled(bool enable)
@@ -658,7 +658,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_SETTHROTTLED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void waitForFinished()
@@ -678,7 +678,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_WAITFORFINISHED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool waitForNextResult()
@@ -716,7 +716,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_WAITFORRESULT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void waitForResume()
@@ -736,7 +736,7 @@ HB_FUNC_STATIC(QFUTUREINTERFACEBASE_WAITFORRESUME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QMutex *mutex() const

@@ -62,7 +62,7 @@ HB_FUNC_STATIC(QHELPINDEXWIDGET_ACTIVATECURRENTITEM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void filterIndices(const QString &filter, const QString &wildcard = QString())
@@ -82,7 +82,7 @@ HB_FUNC_STATIC(QHELPINDEXWIDGET_FILTERINDICES)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QHelpIndexWidgetSlots_connect_signal(const QString &signal, const QString &slot);

@@ -182,7 +182,7 @@ HB_FUNC_STATIC(QDOUBLESPINBOX_SETDECIMALS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMaximum(double max)
@@ -202,7 +202,7 @@ HB_FUNC_STATIC(QDOUBLESPINBOX_SETMAXIMUM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setMinimum(double min)
@@ -222,7 +222,7 @@ HB_FUNC_STATIC(QDOUBLESPINBOX_SETMINIMUM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPrefix(const QString &prefix)
@@ -242,7 +242,7 @@ HB_FUNC_STATIC(QDOUBLESPINBOX_SETPREFIX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setRange(double minimum, double maximum)
@@ -262,7 +262,7 @@ HB_FUNC_STATIC(QDOUBLESPINBOX_SETRANGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSingleStep(double val)
@@ -282,7 +282,7 @@ HB_FUNC_STATIC(QDOUBLESPINBOX_SETSINGLESTEP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setSuffix(const QString &suffix)
@@ -302,7 +302,7 @@ HB_FUNC_STATIC(QDOUBLESPINBOX_SETSUFFIX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // double singleStep() const
@@ -414,7 +414,7 @@ HB_FUNC_STATIC(QDOUBLESPINBOX_FIXUP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QValidator::State validate(QString &text, int &pos) const
@@ -456,7 +456,7 @@ HB_FUNC_STATIC(QDOUBLESPINBOX_SETVALUE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QDoubleSpinBoxSlots_connect_signal(const QString &signal, const QString &slot);

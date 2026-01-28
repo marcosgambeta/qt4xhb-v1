@@ -79,7 +79,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // QList<int> columnWidths() const
@@ -163,7 +163,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETCOLUMNWIDTHS)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPreviewWidget(QWidget *widget)
@@ -183,7 +183,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETPREVIEWWIDGET)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setResizeGripsVisible(bool visible)
@@ -203,7 +203,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETRESIZEGRIPSVISIBLE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QModelIndex indexAt(const QPoint &point) const
@@ -242,7 +242,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SCROLLTO)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void selectAll()
@@ -262,7 +262,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SELECTALL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setModel(QAbstractItemModel *model)
@@ -282,7 +282,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETMODEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setRootIndex(const QModelIndex &index)
@@ -302,7 +302,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETROOTINDEX)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setSelectionModel(QItemSelectionModel *newSelectionModel)
@@ -322,7 +322,7 @@ HB_FUNC_STATIC(QCOLUMNVIEW_SETSELECTIONMODEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QSize sizeHint() const

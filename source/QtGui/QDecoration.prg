@@ -64,7 +64,7 @@ HB_FUNC_STATIC(QDECORATION_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void buildSysMenu(QWidget *widget, QMenu *menu)
@@ -84,7 +84,7 @@ HB_FUNC_STATIC(QDECORATION_BUILDSYSMENU)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void menuTriggered(QWidget *widget, QAction *action)
@@ -104,7 +104,7 @@ HB_FUNC_STATIC(QDECORATION_MENUTRIGGERED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool paint(QPainter *painter, const QWidget *widget, int decorationRegion = QDecoration::All,
@@ -185,7 +185,7 @@ HB_FUNC_STATIC(QDECORATION_REGIONCLICKED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void regionDoubleClicked(QWidget *widget, int region)
@@ -205,7 +205,7 @@ HB_FUNC_STATIC(QDECORATION_REGIONDOUBLECLICKED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void startMove(QWidget *widget)
@@ -221,7 +221,7 @@ HB_FUNC_STATIC(QDECORATION_STARTMOVE)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // static void startResize(QWidget *widget)
@@ -237,7 +237,7 @@ HB_FUNC_STATIC(QDECORATION_STARTRESIZE)
   }
 #endif
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 HB_FUNC_STATIC(QDECORATION_NEWFROM)

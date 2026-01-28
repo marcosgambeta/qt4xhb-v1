@@ -85,7 +85,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_DELETE)
 
   DELETE_OBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool attributeDecl(const QString &eName, const QString &aName, const QString &type, const QString
@@ -412,7 +412,7 @@ HB_FUNC_STATIC(QXMLDEFAULTHANDLER_SETDOCUMENTLOCATOR)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual bool skippedEntity(const QString &name)

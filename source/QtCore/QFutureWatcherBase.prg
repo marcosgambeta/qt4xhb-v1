@@ -76,7 +76,7 @@ HB_FUNC_STATIC(QFUTUREWATCHERBASE_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int progressValue() const
@@ -258,7 +258,7 @@ HB_FUNC_STATIC(QFUTUREWATCHERBASE_WAITFORFINISHED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPendingResultsLimit(int limit)
@@ -278,7 +278,7 @@ HB_FUNC_STATIC(QFUTUREWATCHERBASE_SETPENDINGRESULTSLIMIT)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // bool event(QEvent *event)
@@ -316,7 +316,7 @@ HB_FUNC_STATIC(QFUTUREWATCHERBASE_CANCEL)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setPaused(bool paused)
@@ -336,7 +336,7 @@ HB_FUNC_STATIC(QFUTUREWATCHERBASE_SETPAUSED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void pause()
@@ -356,7 +356,7 @@ HB_FUNC_STATIC(QFUTUREWATCHERBASE_PAUSE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void resume()
@@ -376,7 +376,7 @@ HB_FUNC_STATIC(QFUTUREWATCHERBASE_RESUME)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void togglePaused()
@@ -396,7 +396,7 @@ HB_FUNC_STATIC(QFUTUREWATCHERBASE_TOGGLEPAUSED)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 void QFutureWatcherBaseSlots_connect_signal(const QString &signal, const QString &slot);

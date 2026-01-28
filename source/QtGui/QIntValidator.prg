@@ -70,7 +70,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_DELETE)
 
   DELETE_QOBJECT(obj);
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int bottom() const
@@ -108,7 +108,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_SETBOTTOM)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual void setRange(int bottom, int top)
@@ -128,7 +128,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_SETRANGE)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // void setTop(int)
@@ -148,7 +148,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_SETTOP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // int top() const
@@ -188,7 +188,7 @@ HB_FUNC_STATIC(QINTVALIDATOR_FIXUP)
 #endif
   }
 
-  hb_itemReturn(hb_stackSelfItem());
+  RETURN_SELF();
 }
 
 // virtual QValidator::State validate(QString &input, int &pos) const
