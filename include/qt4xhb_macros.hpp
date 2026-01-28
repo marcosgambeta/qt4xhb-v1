@@ -166,4 +166,16 @@
 
 #define ISBLOCKORSYMBOL(n) (HB_ISBLOCK(n) || HB_ISSYMBOL(n))
 
+// delete qobject macro
+#define DELETE_QOBJECT(object) \
+  if (object != NULL) { \
+    Qt4xHb::Events_disconnect_all_events(object, true); \
+    Qt4xHb::Signals_disconnect_all_signals(object, true); \
+    delete object; \
+    obj = NULL; \
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL); \
+    hb_objSendMsg(hb_stackSelfItem(), "_POINTER", 1, ptr); \
+    hb_itemRelease(ptr); \
+  }
+
 #endif // QT4XHB_MACROS_HPP
