@@ -2,7 +2,7 @@
 
 Bibliotecas de ligação para Harbour++/Harbour/xHarbour e Qt Framework 4
 
-### Passos básicos
+## Passos básicos
 
 1. Instale o Qt Framework 4 de sua escolha e o compilador C++.
 
@@ -18,3 +18,14 @@ https://github.com/marcosgambeta/harbourpp-v1
 Use a seção 'Issues' caso tenha problemas com a compilação:
 
 https://github.com/marcosgambeta/qt4xhb/issues  
+
+## Links
+
+Qt5xHb v1  
+https://github.com/marcosgambeta/qt5xhb-v1
+
+Qt5xHb v2  
+https://github.com/marcosgambeta/qt5xhb-v2
+
+Versões comerciais de bibliotecas para Harbour/xHarbour e Qt Framework 5/6  
+https://magsoftinfo.com/
