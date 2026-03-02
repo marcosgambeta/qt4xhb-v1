@@ -8,7 +8,7 @@
 
 -hblib
 
--o../lib/${hb_plat}/${hb_comp}/hbqaxcontainer
+-o../lib/${hb_plat}/${hb_comp}/hbqaxcontainer4
 
 -inc
 
