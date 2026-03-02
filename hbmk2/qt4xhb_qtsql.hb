@@ -1,7 +1,7 @@
 //
 // Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 //
-// Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
+// Copyright (c) 2026 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
 #define RUNMOC(file) run(cMocExe + " " + file + " -o " + strtran(file, ".hpp", "Moc.cpp"))
