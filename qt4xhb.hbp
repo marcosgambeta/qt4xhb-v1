@@ -1,7 +1,7 @@
 #
 # Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 #
-# Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
+# Copyright (c) 2026 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 #
 
 # Before use this file:
@@ -11,22 +11,22 @@
 
 -hbcontainer
 
-qt4xhb_qaxcontainer.hbp
-qt4xhb_qaxserver.hbp
-qt4xhb_qtcore.hbp
-qt4xhb_qtdeclarative.hbp
-qt4xhb_qtdesigner.hbp
-qt4xhb_qtgui.hbp
-qt4xhb_qthelp.hbp
-qt4xhb_qtmultimedia.hbp
-qt4xhb_qtnetwork.hbp
-qt4xhb_qtopengl.hbp
-qt4xhb_qtscript.hbp
-qt4xhb_qtscripttools.hbp
-qt4xhb_qtsql.hbp
-qt4xhb_qtsvg.hbp
-qt4xhb_qttest.hbp
-qt4xhb_qtuitools.hbp
-qt4xhb_qtwebkit.hbp
-qt4xhb_qtxml.hbp
-qt4xhb_qtxmlpatterns.hbp
+hbmk2/qt4xhb_qaxcontainer.hbp
+hbmk2/qt4xhb_qaxserver.hbp
+hbmk2/qt4xhb_qtcore.hbp
+hbmk2/qt4xhb_qtdeclarative.hbp
+hbmk2/qt4xhb_qtdesigner.hbp
+hbmk2/qt4xhb_qtgui.hbp
+hbmk2/qt4xhb_qthelp.hbp
+hbmk2/qt4xhb_qtmultimedia.hbp
+hbmk2/qt4xhb_qtnetwork.hbp
+hbmk2/qt4xhb_qtopengl.hbp
+hbmk2/qt4xhb_qtscript.hbp
+hbmk2/qt4xhb_qtscripttools.hbp
+hbmk2/qt4xhb_qtsql.hbp
+hbmk2/qt4xhb_qtsvg.hbp
+hbmk2/qt4xhb_qttest.hbp
+hbmk2/qt4xhb_qtuitools.hbp
+hbmk2/qt4xhb_qtwebkit.hbp
+hbmk2/qt4xhb_qtxml.hbp
+hbmk2/qt4xhb_qtxmlpatterns.hbp
